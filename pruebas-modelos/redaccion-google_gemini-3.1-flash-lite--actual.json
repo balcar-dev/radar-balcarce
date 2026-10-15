@@ -1,0 +1,589 @@
+{
+ "modelo": "google/gemini-3.1-flash-lite",
+ "prompt": "actual",
+ "fecha": "2026-10-11T15:58:13.379Z",
+ "precios": {
+  "entrada": 2.5e-7,
+  "salida": 0.0000015
+ },
+ "historias": {
+  "23005298": {
+   "id": "23005298",
+   "titulo_original": "RECONOCIMIENTO A LA PRECISIÓN Y EL COMPROMISO EN EL DÍA DEL TÉCNICO DE LABORATORIO",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 3911,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 5786,
+    "salida": 627,
+    "costo": 0.00147035
+   },
+   "escrito": {
+    "titulo": "La Municipalidad saluda a los técnicos de laboratorio en su día",
+    "copete": "El municipio y el Hospital Fossati destacaron la labor de estos profesionales el pasado viernes 9 de octubre. Subrayaron su importancia para el sistema de salud local.",
+    "cuerpo": "La Municipalidad de Balcarce y el Hospital Municipal Dr. Felipe Antonio Fossati enviaron un reconocimiento a los técnicos de laboratorio durante la jornada del viernes 9 de octubre. El saludo se realizó en el marco de la celebración de su día profesional.\n\nDesde el ámbito sanitario local resaltaron que el trabajo de estos especialistas resulta esencial para la atención médica diaria. Según indicaron, su labor permite anticipar diagnósticos y definir tratamientos a través del análisis de muestras con rigor científico.\n\nEl municipio valoró el compromiso de quienes integran el sistema de salud pública, señalando que su tarea aporta bienestar y cuidado para toda la comunidad.",
+    "guion": "La Municipalidad saluda a los técnicos de laboratorio en su día",
+    "textoRedes": "La Municipalidad y el Hospital Municipal Dr. Felipe Antonio Fossati enviaron un saludo a los técnicos de laboratorio en su día. Destacaron la importancia de su trabajo para el diagnóstico y la atención médica en el sistema de salud local.",
+    "claves": [
+     "El municipio y el Hospital Fossati reconocieron a los técnicos de laboratorio.",
+     "La celebración tuvo lugar el viernes 9 de octubre.",
+     "Destacaron el rol clave del área en el diagnóstico y tratamiento médico.",
+     "Valoraron el aporte de estos profesionales a la salud pública local."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el copete menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el copete menciona \"octubre\" y la fuente no"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    },
+    {
+     "tipo": "relleno",
+     "detalle": "el cuerpo tiene una frase de relleno sin dato: \"en el marco de\""
+    }
+   ],
+   "palabrasCuerpo": 105,
+   "palabrasBajada": 27,
+   "caracteresTitulo": 63
+  },
+  "0305adf0": {
+   "id": "0305adf0",
+   "titulo_original": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal “Suavecita”",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 4022,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6215,
+    "salida": 893,
+    "costo": 0.001517825
+   },
+   "escrito": {
+    "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
+    "copete": "La actriz balcarceña regresa a la cartelera marplatense con la obra dirigida por Martín Bontempo. La función será el sábado 17 de octubre en el teatro Roxy.",
+    "cuerpo": "La actriz nacida en Balcarce, Camila Peralta, subirá a escena el sábado 17 de octubre a las 21.30 en el teatro Roxy de Mar del Plata, ubicado en San Luis 1750. La presentación del unipersonal Suavecita, escrito y dirigido por Martín Bontempo, llega tras varias funciones con entradas agotadas en la misma ciudad.\n\nLa trama sigue a una mujer que trabaja en un hospital público y descubre que posee un don para sanar, situación que la convierte en un mito dentro del centro de salud. La historia mezcla elementos de misterio, ciencia ficción y erotismo. Desde su estreno en 2023, la obra alcanzó las 150 funciones en Buenos Aires y recorrió cuatro países, acumulando siete premios y 16 nominaciones. Peralta obtuvo por este trabajo los reconocimientos María Guerrero, Trinidad Guevara y Teatro del Mundo.\n\nLas entradas están disponibles en la boletería del teatro y mediante el sistema Plateanet. Se dispusieron descuentos especiales para estudiantes del Polivalente y de la Escuela Municipal de Arte Dramático.",
+    "guion": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
+    "textoRedes": "La actriz balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal Suavecita. La función será el sábado 17 de octubre a las 21.30 en el teatro Roxy. Las entradas ya están a la venta.",
+    "claves": [
+     "La función será el sábado 17 de octubre a las 21.30 en el teatro Roxy.",
+     "La obra es un unipersonal escrito y dirigido por Martín Bontempo.",
+     "Camila Peralta obtuvo tres premios por su actuación en esta pieza.",
+     "Las entradas pueden adquirirse en la boletería o a través de Plateanet."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "copia",
+     "detalle": "copia 13 palabras seguidas del original (\"el sabado 17 de octubre a las 21 30 en el teatro roxy\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 164,
+   "palabrasBajada": 27,
+   "caracteresTitulo": 65
+  },
+  "2d82c63c": {
+   "id": "2d82c63c",
+   "titulo_original": "Declararon de interés Legislativo los 75 años del Club Amigos Unidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 4204,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6082,
+    "salida": 879,
+    "costo": 0.002839
+   },
+   "escrito": {
+    "titulo": "El Concejo declara de interés el 75° aniversario del Club Amigos Unidos",
+    "copete": "El cuerpo legislativo reconoció la trayectoria deportiva y el rol social de la institución fundada en 1951. Durante la sesión, los concejales destacaron el trabajo formativo y la labor comunitaria que realiza el club en Balcarce.",
+    "cuerpo": "El Concejo Deliberante otorgó la declaración de interés legislativo, social y comunitario al Club Amigos Unidos por cumplir 75 años de vida institucional. La entidad, que fue fundada el 9 de septiembre de 1951, recibió este reconocimiento por su historia deportiva y su tarea en el tejido social de la ciudad.\n\nDurante el debate, el concejal Javier Menonne repasó hitos históricos del club, entre ellos el invicto de 47 partidos registrado entre 1977 y 1978 y la obtención de cuatro campeonatos entre 1985 y 1988. Además, resaltó el trabajo actual en categorías formativas y fútbol femenino. Por su parte, la concejal Sol Di Gerónimo valoró el vínculo de la institución con el barrio, aunque alertó que los clubes atraviesan un momento económico delicado. En el mismo sentido, el concejal Leandro Spinelli subrayó la importancia de la entidad como espacio de contención para los vecinos.",
+    "guion": "El Concejo declara de interés el 75° aniversario del Club Amigos Unidos",
+    "textoRedes": "El Concejo Deliberante declaró de interés legislativo, social y comunitario el 75° aniversario del Club Amigos Unidos. El reconocimiento destaca la trayectoria deportiva y el rol de contención que la institución desarrolla en la comunidad de Balcarce.",
+    "claves": [
+     "El Concejo reconoció los 75 años del Club Amigos Unidos.",
+     "La institución fue fundada el 9 de septiembre de 1951.",
+     "Destacaron logros deportivos históricos y su rol social.",
+     "Concejales advirtieron sobre la compleja situación económica actual."
+    ]
+   },
+   "problemas": [],
+   "palabrasCuerpo": 144,
+   "palabrasBajada": 36,
+   "caracteresTitulo": 71
+  },
+  "445a709e": {
+   "id": "445a709e",
+   "titulo_original": "Reconocen proyecto de la EEPA N°701 sobre el descarte de medicamentos vencidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 4786,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 5949,
+    "salida": 806,
+    "costo": 0.00269625
+   },
+   "escrito": {
+    "titulo": "El Concejo reconoce un proyecto escolar sobre el descarte de medicamentos",
+    "copete": "La iniciativa de la Escuela Primaria de Adultos N° 701 busca concientizar sobre el impacto ambiental de los residuos farmacéuticos. El relevamiento realizado por los estudiantes reveló que la mayoría de los vecinos desconoce cómo eliminar estos productos correctamente.",
+    "cuerpo": "El Concejo Deliberante declaró de interés legislativo, educativo y ambiental el proyecto denominado “El descarte importa, medicamentos vencidos”, desarrollado por alumnos de la Escuela Primaria de Adultos N° 701. La propuesta nació como una investigación escolar sobre los hábitos de desecho de la población y el daño ambiental que provoca tirar fármacos en desagües o residuos domiciliarios.\n\nDurante el relevamiento, que alcanzó a 206 personas, los estudiantes detectaron que el 77% de los consultados arroja los medicamentos vencidos o sobrantes a la basura común. Además, el 93% admitió no saber dónde llevar estos elementos para su tratamiento adecuado. La concejal Alejandra Marchegiani valoró la labor de los alumnos, quienes llevaron adelante encuestas, talleres y consultas con el Colegio de Farmacéuticos y el Club Rotario.\n\nTras el reconocimiento recibido en la Feria Distrital de Educación, Arte, Ciencia y Tecnología, Marchegiani planteó la necesidad de establecer un punto de recepción oficial y mejorar la difusión para que los vecinos sepan cómo actuar ante esta problemática.",
+    "guion": "El Concejo reconoce un proyecto escolar sobre el descarte de medicamentos",
+    "textoRedes": "El Concejo Deliberante reconoció un proyecto de la EEPA N° 701 sobre el descarte de medicamentos vencidos. Un relevamiento escolar reveló que gran parte de los vecinos desconoce cómo eliminar estos residuos correctamente y propusieron crear un punto de recepción oficial.",
+    "claves": [
+     "El Concejo Deliberante declaró de interés el proyecto de la EEPA N° 701.",
+     "Estudiantes investigaron el descarte inadecuado de medicamentos vencidos.",
+     "Un relevamiento mostró que el 77% de los vecinos los tira a la basura.",
+     "El 93% de los encuestados desconoce el método correcto de eliminación.",
+     "Proponen crear un punto de recepción oficial para residuos farmacéuticos."
+    ]
+   },
+   "problemas": [],
+   "palabrasCuerpo": 163,
+   "palabrasBajada": 39,
+   "caracteresTitulo": 73
+  },
+  "d00b6002": {
+   "id": "d00b6002",
+   "titulo_original": "El fútbol se atrasó tres meses, y volvería a terminar en enero",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 3931,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6217,
+    "salida": 851,
+    "costo": 0.00283075
+   },
+   "escrito": {
+    "titulo": "El torneo de fútbol local se retrasa y finalizaría en enero",
+    "copete": "El campeonato Oficial acumula once fechas suspendidas debido a las condiciones climáticas. La fase Clausura aún no comenzó y el calendario se extendería hasta principios del año próximo.",
+    "cuerpo": "El torneo Oficial de fútbol, que cuenta con la participación de 12 equipos locales en diversas categorías, presenta un retraso de tres meses en su cronograma. Según informó un medio local, esta demora se debe a las reiteradas suspensiones provocadas por el mal tiempo, que ya suman once jornadas postergadas desde el inicio de la temporada.\n\nLa fase Clausura, que aún no pudo ponerse en marcha, debe completar seis fechas regulares, sumado a las instancias eliminatorias de cuartos de final, semifinales y la definición. La actividad se encuentra interrumpida y no se reanudaría este fin de semana debido a la celebración del Día de la Madre. Además, el reinicio previsto para el 24 de octubre permanece sujeto a la disponibilidad de personal policial, que deberá cubrir la carrera Zonal del Atlántico.\n\nDe mantenerse el ritmo de juego sin nuevas interrupciones, el certamen concluiría potencialmente el 3 de enero de 2027. Esta situación marca el segundo año consecutivo en que el torneo finaliza en el mes de enero.",
+    "guion": "El torneo de fútbol local se retrasa y finalizaría en enero",
+    "textoRedes": "El torneo de fútbol local acumula tres meses de retraso debido a las condiciones climáticas y suma once fechas suspendidas. La fase Clausura aún no comenzó y, de no mediar nuevos cambios, el campeonato finalizaría el 3 de enero.",
+    "claves": [
+     "El torneo acumula tres meses de demora y once fechas suspendidas.",
+     "La fase Clausura aún no comenzó y tiene diez jornadas pendientes.",
+     "La actividad está frenada por el clima y el Día de la Madre.",
+     "El reinicio depende de la disponibilidad policial por el Zonal del Atlántico.",
+     "El campeonato terminaría, potencialmente, el 3 de enero."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 2.027 y la fuente no lo dice"
+    }
+   ],
+   "palabrasCuerpo": 167,
+   "palabrasBajada": 28,
+   "caracteresTitulo": 59
+  },
+  "c959337d": {
+   "id": "c959337d",
+   "titulo_original": "Sol Di Gerónimo pidió informes por una posible bajada privada a la Laguna La Brava",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 3839,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6397,
+    "salida": 749,
+    "costo": 0.00272275
+   },
+   "escrito": {
+    "titulo": "Sol Di Gerónimo pide informes por una posible bajada privada en La Brava",
+    "copete": "La concejal solicitó al Departamento Ejecutivo datos sobre obras en la Manzana 333 E de la villa turística. El proyecto busca determinar la titularidad del predio y si existen autorizaciones para restringir el acceso al espejo de agua.",
+    "cuerpo": "La concejal de Fuerza Patria, Sol Di Gerónimo, presentó un proyecto de comunicación dirigido al Ejecutivo Municipal para esclarecer la situación de la Manzana 333 E en Villa Laguna La Brava. La presentación responde a inquietudes de vecinos que alertaron sobre tareas de nivelación y la construcción de infraestructura que limitaría el ingreso público al espejo de agua.\n\nEl pedido solicita precisar la titularidad del inmueble, al considerar que el sector formaría parte de bienes del dominio provincial. Asimismo, requiere información sobre si las obras cuentan con permisos municipales o provinciales, y si existen convenios o concesiones que habiliten al particular a intervenir en el espacio.\n\nAdemás, la iniciativa demanda conocer si el Municipio recibió denuncias previas, si se efectuaron inspecciones técnicas en la zona y qué actuaciones administrativas realizó el área de Asesoría Legal. El proyecto subraya la importancia de garantizar el acceso público a los atractivos naturales del partido de Balcarce.",
+    "guion": "Sol Di Gerónimo pide informes por una posible bajada privada en La Brava",
+    "textoRedes": "La concejal Sol Di Gerónimo presentó un pedido de informes al Ejecutivo Municipal por obras en la Manzana 333 E de Villa Laguna La Brava. El proyecto busca determinar si los trabajos cuentan con autorizaciones y si afectan el acceso público al espejo de agua.",
+    "claves": [
+     "La concejal solicitó informes sobre obras en la Manzana 333 E de La Brava.",
+     "Vecinos denunciaron que una bajada privada restringiría el acceso a la laguna.",
+     "El proyecto busca confirmar si el terreno es de dominio provincial.",
+     "Se requiere saber si el Municipio autorizó las tareas y realizó inspecciones."
+    ]
+   },
+   "problemas": [],
+   "palabrasCuerpo": 153,
+   "palabrasBajada": 38,
+   "caracteresTitulo": 72
+  },
+  "86c9586c": {
+   "id": "86c9586c",
+   "titulo_original": "Atletismo: Destacada actuación de balcarceños en el Torneo de la Diversidad Cultural",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 3688,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 5977,
+    "salida": 807,
+    "costo": 0.00270475
+   },
+   "escrito": {
+    "titulo": "Atletas de AACYC logran once podios en Mar del Plata",
+    "copete": "Cuatro representantes de la institución local participaron del Torneo de la Diversidad Cultural. El grupo obtuvo cinco victorias y seis posiciones en el podio durante la competencia desarrollada en Mar del Plata.",
+    "cuerpo": "Cuatro deportistas de la agrupación AACYC Balcarce compitieron el sábado 3 de octubre en el Torneo de la Diversidad Cultural, organizado por la Federación Marplatense de Atletismo. La delegación local alcanzó cinco primeros puestos y seis podios en total.\n\nBenicio Caro, en la categoría U12, obtuvo tres victorias: los 50 metros llanos con 7\"99, los 500 metros con 1'32\"76 y el salto en largo U14 con 4,27 metros. Por su parte, Elías Aguer ganó los 80 metros U16 en 11\"21 y alcanzó el tercer lugar en salto en largo con 4,05 metros. En la categoría U18, Jesús Coria se impuso en lanzamiento de bala con 11,01 metros.\n\nFinalmente, Juan Andrés Solar participó en los 1.500 metros de la categoría Mayores. Finalizó en el puesto 14 de la general con un tiempo de 5'12\"63, ocupando el quinto lugar entre los atletas de su propia categoría.",
+    "guion": "Atletas de AACYC logran once podios en Mar del Plata",
+    "textoRedes": "Atletas de AACYC Balcarce tuvieron una destacada participación en el Torneo de la Diversidad Cultural en Mar del Plata. El equipo local consiguió cinco primeros puestos y seis podios en diversas categorías durante la jornada del 3 de octubre.",
+    "claves": [
+     "Cuatro atletas de AACYC compitieron en Mar del Plata.",
+     "Benicio Caro logró tres victorias en distintas pruebas.",
+     "Elías Aguer ganó en 80 metros y subió al podio en salto.",
+     "Jesús Coria fue primero en lanzamiento de bala.",
+     "Juan Andrés Solar participó en los 1.500 metros."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "cita",
+     "detalle": "el cuerpo pone entre comillas algo que la fuente no dice: \"99, los 500 metros con 1'32\""
+    },
+    {
+     "tipo": "cita",
+     "detalle": "el cuerpo pone entre comillas algo que la fuente no dice: \"21 y alcanzó el tercer lugar en salto en\""
+    },
+    {
+     "tipo": "promesa",
+     "detalle": "el título nombra a \"mar\", \"plata\" y el cuerpo no los explica"
+    }
+   ],
+   "palabrasCuerpo": 144,
+   "palabrasBajada": 32,
+   "caracteresTitulo": 52
+  },
+  "c9127ae7": {
+   "id": "c9127ae7",
+   "titulo_original": "Maxivóley femenino avanza en el Top 6",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 3795,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 5847,
+    "salida": 822,
+    "costo": 0.00269475
+   },
+   "escrito": {
+    "titulo": "El Maxivóley femenino de Balcarce suma un triunfo y una derrota en Tandil",
+    "copete": "El conjunto local disputó dos partidos por el Top 6 de la Liga Marplatense Federada de Vóley en el Club Edal. Venció al último campeón y cayó ante el equipo tandilense.",
+    "cuerpo": "El equipo de Maxivóley femenino de Balcarce tuvo una jornada de resultados divididos en el marco del Top 6 de la Liga Marplatense Federada de Vóley. Los encuentros se desarrollaron el sábado 10 de octubre en las instalaciones del Club Edal, en la ciudad de Tandil.\n\nEn el primer turno, las balcarceñas superaron por 2 a 0 a Atlético Villa Gesell, equipo que ostenta el título de campeón vigente del certamen. Más tarde, el conjunto local se impuso en un partido que se presentó con mayor paridad entre ambos planteles.\n\nEsta instancia del torneo reúne a los equipos que compiten por el campeonato de la temporada. Una vez concluida la etapa actual, se llevarán a cabo los cruces de cuartos de final, los cuales se determinarán según la ubicación de cada club en la tabla de posiciones.",
+    "guion": "El Maxivóley femenino de Balcarce suma un triunfo y una derrota en Tandil",
+    "textoRedes": "El Maxivóley femenino de Balcarce disputó una nueva fecha del Top 6 de la Liga Marplatense en Tandil. El equipo local logró una victoria frente al campeón vigente, Atlético Villa Gesell, y cayó en su segundo encuentro ante el conjunto tandilense.",
+    "claves": [
+     "El equipo compitió en el Club Edal de Tandil por el Top 6 de la Liga Marplatense.",
+     "Balcarce logró una victoria por 2 a 0 ante el campeón, Atlético Villa Gesell.",
+     "El conjunto local derrotó a las balcarceñas en el segundo compromiso de la fecha.",
+     "Los cuartos de final se definirán por la posición final en la tabla."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"sabado\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    }
+   ],
+   "palabrasCuerpo": 137,
+   "palabrasBajada": 31,
+   "caracteresTitulo": 73
+  },
+  "a7da5534": {
+   "id": "a7da5534",
+   "titulo_original": "Un auto se prendió fuego y sufrió daños totales",
+   "fuentes": 1,
+   "serio": true,
+   "status": 200,
+   "ms": 3274,
+   "caracteresDelPrompt": 20447,
+   "uso": {
+    "entrada": 5566,
+    "salida": 600,
+    "costo": 0.0022915
+   },
+   "escrito": {
+    "titulo": "Un Ford Ka sufre daños totales tras incendiarse en la Ruta 226",
+    "copete": "El vehículo se prendió fuego el jueves por la tarde en la colectora de la ruta. La dueña advirtió el foco ígneo al regresar de realizar compras y debieron intervenir los bomberos.",
+    "cuerpo": "Un automóvil Ford Ka resultó destruido por un incendio ocurrido el jueves 8 de octubre en la colectora de la Ruta Nacional 226. Según informó la fuente consultada, la propietaria del rodado detectó el inicio del fuego al volver de realizar unas compras.\n\nUna dotación de Bomberos Voluntarios se desplazó hasta el lugar para combatir las llamas y evitar que el siniestro se extendiera hacia otros puntos. A pesar de las tareas realizadas por el personal, el vehículo sufrió daños totales.\n\nEn el procedimiento también trabajaron agentes de Tránsito y efectivos de la Estación de Policía Comunal.",
+    "guion": "Un Ford Ka sufre daños totales tras incendiarse en la Ruta 226",
+    "textoRedes": "Un Ford Ka sufrió daños totales tras incendiarse el jueves por la tarde en la colectora de la Ruta Nacional 226. La propietaria advirtió el fuego al regresar de hacer compras y debieron intervenir los Bomberos Voluntarios.",
+    "claves": [
+     "El incendio ocurrió el jueves 8 de octubre.",
+     "El rodado se encontraba en la colectora de la Ruta 226.",
+     "La propietaria advirtió el fuego al volver de comprar.",
+     "Bomberos Voluntarios trabajaron para extinguir las llamas."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 8 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    }
+   ],
+   "palabrasCuerpo": 97,
+   "palabrasBajada": 32,
+   "caracteresTitulo": 62
+  },
+  "276dcf9f": {
+   "id": "276dcf9f",
+   "titulo_original": "Cambió la Ley de Tránsito: cómo queda la prioridad de paso en la Provincia",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 4868,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6490,
+    "salida": 1068,
+    "costo": 0.0032245
+   },
+   "escrito": {
+    "titulo": "La Provincia modifica la Ley de Tránsito y cambia la prioridad de paso",
+    "copete": "La Legislatura sancionó una reforma que establece un orden de jerarquía entre arterias. La prioridad por derecha dejará de ser absoluta al cruzar vías de distinta importancia, como avenidas y calles.",
+    "cuerpo": "La Legislatura bonaerense aprobó una modificación en la Ley de Tránsito que altera el criterio para determinar quién tiene prioridad en las esquinas. Si bien la regla de ceder el paso a quien circula por la derecha se mantiene, esta dejará de ser absoluta cuando se crucen vías de diferente jerarquía.\n\nLa normativa define una escala de importancia que comienza por autopistas, semiautopistas, rutas, carreteras, avenidas, calles y pasajes. Bajo este esquema, un conductor que transite por una calle deberá ceder el paso a quien circule por una avenida, independientemente de si este llega desde la izquierda. La prioridad por derecha seguirá vigente exclusivamente cuando ambos vehículos circulen por arterias de igual jerarquía y no existan señales de tránsito como semáforos o carteles de pare.\n\nLa reforma busca unificar criterios ante interpretaciones judiciales contradictorias que surgieron tras la adhesión a la ley nacional. Aunque la norma ya fue sancionada, aún resta su reglamentación para que los cambios se apliquen en la vía pública.",
+    "guion": "La Provincia modifica la Ley de Tránsito y cambia la prioridad de paso",
+    "textoRedes": "La Legislatura bonaerense sancionó una reforma a la Ley de Tránsito. El cambio establece una jerarquía entre vías, por lo que la prioridad por derecha ya no será absoluta al cruzar arterias de distinta importancia. La norma aún debe ser reglamentada.",
+    "claves": [
+     "La prioridad por derecha ya no será absoluta en todos los casos.",
+     "Se establece un orden de jerarquía entre autopistas, avenidas y calles.",
+     "Quien circula por una avenida tendrá prioridad sobre quien llega desde una calle.",
+     "La ley aún debe ser reglamentada para entrar en vigencia."
+    ]
+   },
+   "problemas": [],
+   "palabrasCuerpo": 163,
+   "palabrasBajada": 31,
+   "caracteresTitulo": 70
+  },
+  "9c7ee7d5": {
+   "id": "9c7ee7d5",
+   "titulo_original": "FIESTA NACIONAL DEL POSTRE: CONFIRMACIÓN DE LA NUEVA FECHA PARA LA 22ª EDICIÓN",
+   "fuentes": 5,
+   "serio": false,
+   "status": 200,
+   "ms": 4250,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6455,
+    "salida": 1083,
+    "costo": 0.00323825
+   },
+   "escrito": {
+    "titulo": "La Fiesta Nacional del Postre tiene nueva fecha para octubre",
+    "copete": "Tras la postergación por mal tiempo, la 22ª edición del evento se realizará a fin de mes. La celebración gastronómica tendrá lugar en el predio de la Sociedad Rural.",
+    "cuerpo": "La Subsecretaría de Turismo confirmó que la vigésima segunda edición de la Fiesta Nacional del Postre se llevará a cabo los días 30 y 31 de octubre y 1 de noviembre. El encuentro, que debió suspenderse el fin de semana pasado debido a las condiciones climáticas adversas, tendrá lugar en el predio de la Sociedad Rural de Balcarce.\n\nLa nueva programación del evento, que originalmente estaba prevista con una jornada adicional, se desarrollará durante tres días. Según informaron desde el área organizativa, la fiesta mantendrá sus propuestas gastronómicas, los concursos tradicionales y las actividades recreativas para vecinos y visitantes.\n\nEn los próximos días se dará a conocer el cronograma detallado de las actividades que incluirán cocina en vivo e invitados especiales.",
+    "guion": "La Fiesta Nacional del Postre tiene nueva fecha para octubre",
+    "textoRedes": "La 22ª Fiesta Nacional del Postre ya tiene fecha confirmada tras la postergación por mal tiempo. El evento se realizará del 30 de octubre al 1 de noviembre en el predio de la Sociedad Rural con propuestas gastronómicas y concursos.",
+    "claves": [
+     "El evento se desarrollará del 30 de octubre al 1 de noviembre.",
+     "La sede será el predio de la Sociedad Rural de Balcarce.",
+     "La reprogramación responde a las condiciones climáticas adversas previas.",
+     "El cronograma completo será confirmado en los próximos días."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "copia",
+     "detalle": "copia 15 palabras seguidas del original (\"se llevara a cabo los dias 30 y 31 de octubre y 1 de…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 121,
+   "palabrasBajada": 29,
+   "caracteresTitulo": 60
+  },
+  "badcdcaa": {
+   "id": "badcdcaa",
+   "titulo_original": "Cuatro gimnastas de UP clasificaron a la Final Regional del Centro",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 3325,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6104,
+    "salida": 649,
+    "costo": 0.0024995
+   },
+   "escrito": {
+    "titulo": "Cuatro gimnastas de UP clasifican a la Final Regional del Centro",
+    "copete": "Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet lograron su pase tras participar en la final provincial de niveles 1 y 2. La competencia regional se disputará en diciembre con representantes de tres provincias.",
+    "cuerpo": "Cuatro gimnastas de la institución UP obtuvieron la clasificación para la Final Regional del Centro durante la competencia provincial de niveles 1 y 2. El evento se desarrolló en el Polideportivo de Aguas Verdes con la participación de casi treinta deportistas de la entidad.\n\nLas atletas que lograron avanzar a la siguiente instancia son Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet. La delegación balcarceña estuvo compuesta por representantes de diversas categorías que compitieron en la final provincial.\n\nLa próxima etapa se llevará a cabo en diciembre. Allí se medirán gimnastas provenientes de las provincias de Buenos Aires, Córdoba y Santa Fe.",
+    "guion": "Cuatro gimnastas de UP clasifican a la Final Regional del Centro",
+    "textoRedes": "Cuatro gimnastas de UP clasificaron a la Final Regional del Centro tras su desempeño en el torneo provincial de niveles 1 y 2. La próxima instancia, que se disputará en diciembre, reunirá a competidoras de Buenos Aires, Córdoba y Santa Fe.",
+    "claves": [
+     "Cuatro deportistas de UP lograron la clasificación regional.",
+     "La competencia provincial se realizó en Aguas Verdes.",
+     "La final regional se disputará en diciembre.",
+     "Participarán gimnastas de Buenos Aires, Córdoba y Santa Fe."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 3 y la fuente no lo dice"
+    }
+   ],
+   "palabrasCuerpo": 103,
+   "palabrasBajada": 35,
+   "caracteresTitulo": 64
+  },
+  "04f90bd3": {
+   "id": "04f90bd3",
+   "titulo_original": "El Concejo Deliberante aprobó la creación de un registro de acompañantes terapéuticos",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 3894,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6051,
+    "salida": 788,
+    "costo": 0.00269475
+   },
+   "escrito": {
+    "titulo": "El Concejo Deliberante crea un registro municipal de acompañantes terapéuticos",
+    "copete": "El cuerpo legislativo aprobó por unanimidad la iniciativa. El sistema funcionará a través de una plataforma digital para vincular a profesionales con familias e instituciones que requieran el servicio.",
+    "cuerpo": "El Honorable Concejo Deliberante de Balcarce aprobó el viernes 9 de octubre la creación de un registro municipal destinado a los acompañantes terapéuticos. La medida, impulsada por los concejales Gonzalo Scioli y Fara Amado Cunqueiro, busca facilitar la inserción laboral de los profesionales y mejorar el acceso de los vecinos a este servicio.\n\nLa herramienta consistirá en una plataforma digital, desarrollada junto al área de Modernización del municipio, donde se podrá consultar la formación, experiencia y áreas de desempeño de los trabajadores. Para integrar este listado, será obligatorio presentar el título habilitante, en cumplimiento con la Resolución Ministerial 1221/15.\n\nDurante la sesión, los ediles también manifestaron su preocupación por la situación económica del sector. Según se informó, el debate incluyó reclamos por los bajos honorarios que abonan algunas obras sociales, lo cual podría dificultar la continuidad en la atención de pacientes. El diseño final del sistema contará con la participación de estudiantes y profesionales del área.",
+    "guion": "El Concejo Deliberante crea un registro municipal de acompañantes terapéuticos",
+    "textoRedes": "El Concejo Deliberante de Balcarce aprobó la creación de un registro municipal de acompañantes terapéuticos. La herramienta buscará conectar a profesionales con familias e instituciones a través de una plataforma digital.",
+    "claves": [
+     "El Concejo aprobó por unanimidad la creación del registro municipal.",
+     "Se implementará una plataforma digital para conectar profesionales con pacientes.",
+     "Es obligatorio contar con título habilitante para integrar el listado.",
+     "Los concejales reclamaron mejoras en los honorarios del sector."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    }
+   ],
+   "palabrasCuerpo": 156,
+   "palabrasBajada": 29,
+   "caracteresTitulo": 78
+  },
+  "6e45a05f": {
+   "id": "6e45a05f",
+   "titulo_original": "Investigan el faltante de dinero en la Escuela Emilio Lamarca",
+   "fuentes": 2,
+   "serio": true,
+   "status": 200,
+   "ms": 3217,
+   "caracteresDelPrompt": 20447,
+   "uso": {
+    "entrada": 5725,
+    "salida": 693,
+    "costo": 0.00247075
+   },
+   "escrito": {
+    "titulo": "Investigan la desaparición de dinero en el Colegio Emilio Lamarca",
+    "copete": "El faltante fue detectado el viernes pasado en la preceptoría del Nivel Inicial. El dinero recaudado correspondía a la venta de entradas para un evento escolar previsto para el 23 de octubre.",
+    "cuerpo": "Autoridades del Colegio Parroquial Emilio Lamarca detectaron la desaparición de dinero en efectivo durante la tarde del viernes 9 de octubre. Según la información disponible, los fondos estaban guardados en una caja ubicada dentro de la preceptoría del Nivel Inicial.\n\nEl dinero faltante pertenecía a la recaudación por la venta de entradas anticipadas para un evento que los alumnos del Jardín realizarán el viernes 23 de octubre en el Teatro Municipal Luis Conti.",
+    "guion": "Investigan la desaparición de dinero en el Colegio Emilio Lamarca",
+    "textoRedes": "Investigan la desaparición de dinero recaudado por la venta de entradas anticipadas en el Colegio Parroquial Emilio Lamarca. El faltante fue detectado el viernes en la preceptoría del Nivel Inicial del establecimiento.",
+    "claves": [
+     "El faltante ocurrió en el Colegio Parroquial Emilio Lamarca.",
+     "El dinero estaba en la preceptoría del Nivel Inicial.",
+     "Se trata de la recaudación por entradas para un evento escolar.",
+     "El evento está programado para el viernes 23 de octubre."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"conti\" y la fuente no"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 14 palabras seguidas del original (\"a la recaudacion por la venta de entradas anticipadas para un evento que los\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 73,
+   "palabrasBajada": 32,
+   "caracteresTitulo": 65
+  },
+  "869434ae": {
+   "id": "869434ae",
+   "titulo_original": "SE PRESENTÓ LA PRIMERA EXPO SALUD, DEPORTE Y TECNOLOGÍA",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 3501,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6648,
+    "salida": 749,
+    "costo": 0.0027855
+   },
+   "escrito": {
+    "titulo": "La Sociedad Española recibe la primera Expo Salud, Deporte y Tecnología",
+    "copete": "El evento se realizará el sábado 24 de octubre de 9 a 19. La propuesta reunirá a instituciones, empresas y profesionales locales para visibilizar las disciplinas deportivas, los avances tecnológicos y los servicios de salud de la ciudad.",
+    "cuerpo": "La primera edición de la Expo Salud, Deporte y Tecnología se desarrollará el sábado 24 de octubre en la sede de la Sociedad Española. La jornada, que se extenderá de 9 a 19, fue presentada en la Sala de los Intendentes por la subsecretaria de Deporte y Recreación, Soledad Vivio, junto a los organizadores Jorge Romero y Mariano Lauro.\n\nEl encuentro busca integrar y difundir las propuestas locales vinculadas a estas tres áreas. Según explicó Romero, el objetivo es mostrar el crecimiento deportivo de la ciudad y cómo la tecnología atraviesa las distintas disciplinas. La exposición contará con stands, demostraciones y un ciclo de charlas a cargo de especialistas.\n\nParticiparán clubes, instituciones educativas como la Escuela Industrial, empresas tecnológicas, centros de salud y emprendedores del rubro nutricional. Entre las actividades previstas, se exhibirán disciplinas como taekwondo, kickboxing, karate, ajedrez, chikung, tai chi y yoga. Los organizadores destacaron la importancia de este espacio para que los vecinos conozcan la oferta local disponible.",
+    "guion": "La Sociedad Española recibe la primera Expo Salud, Deporte y Tecnología",
+    "textoRedes": "El sábado 24 de octubre se realizará la primera Expo Salud, Deporte y Tecnología en la Sociedad Española. De 9 a 19, la comunidad podrá conocer propuestas locales de instituciones, empresas y profesionales del sector. Habrá charlas, stands y demostraciones.",
+    "claves": [
+     "El evento será el sábado 24 de octubre en la Sociedad Española.",
+     "El horario de la jornada será de 9 a 19.",
+     "Participarán instituciones, clubes, empresas y profesionales de la ciudad.",
+     "La propuesta incluye charlas, stands y demostraciones deportivas."
+    ]
+   },
+   "problemas": [],
+   "palabrasCuerpo": 161,
+   "palabrasBajada": 38,
+   "caracteresTitulo": 71
+  }
+ }
+}

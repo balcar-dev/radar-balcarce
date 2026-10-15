@@ -1,0 +1,545 @@
+{
+ "modelo": "deepseek/deepseek-v4-pro",
+ "prompt": "nuevo",
+ "fecha": "2026-10-11T16:26:24.994Z",
+ "precios": {
+  "entrada": 2.088e-7,
+  "salida": 4.176e-7
+ },
+ "historias": {
+  "23005298": {
+   "id": "23005298",
+   "titulo_original": "RECONOCIMIENTO A LA PRECISIÓN Y EL COMPROMISO EN EL DÍA DEL TÉCNICO DE LABORATORIO",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 6572,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5512,
+    "salida": 668,
+    "costo": 0.0128016
+   },
+   "escrito": {
+    "titulo": "El municipio y el Hospital saludan a los técnicos de laboratorio en su día",
+    "copete": "La Municipalidad y el Hospital Municipal Dr. Felipe Antonio Fossati reconocieron el trabajo de los profesionales del laboratorio. Destacaron su rol en la anticipación de diagnósticos y la orientación de tratamientos.",
+    "cuerpo": "El saludo se publicó el viernes, en el marco del Día del Técnico de Laboratorio. Las autoridades municipales y del hospital destacaron la labor de estos profesionales dentro de la cadena sanitaria de Balcarce.\n\nExplicaron que cada muestra analizada es un eslabón crítico que permite anticipar diagnósticos, orientar tratamientos y sostener la calidad de la atención médica cotidiana. Detrás de cada resultado, señalaron, hay rigor científico, vocación de servicio y una responsabilidad humana que fortalece el sistema de salud pública.",
+    "guion": "El municipio y el Hospital saludan a los técnicos de laboratorio en su día",
+    "textoRedes": "La Municipalidad y el Hospital Municipal Dr. Felipe Antonio Fossati saludaron a los técnicos de laboratorio en su día. Destacaron su rol clave para anticipar diagnósticos y orientar tratamientos en la salud pública de Balcarce.",
+    "claves": [
+     "El saludo fue por el Día del Técnico de Laboratorio.",
+     "Lo publicaron la Municipalidad y el Hospital Municipal Dr. Felipe Antonio Fossati.",
+     "Destacaron que su trabajo anticipa diagnósticos y orienta tratamientos.",
+     "Resaltaron el rigor científico y la vocación de servicio de los profesionales."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"viernes\" y la fuente no"
+    }
+   ],
+   "palabrasCuerpo": 80,
+   "palabrasBajada": 31,
+   "caracteresTitulo": 74
+  },
+  "0305adf0": {
+   "id": "0305adf0",
+   "titulo_original": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal “Suavecita”",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 10184,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5996,
+    "salida": 1190,
+    "costo": 0.0108888
+   },
+   "escrito": {
+    "titulo": "Camila Peralta presenta “Suavecita” en Mar del Plata",
+    "copete": "La actriz de Balcarce vuelve al teatro Roxy con el unipersonal que acumula siete premios. La función única es el sábado 17 de octubre a las 21.30. Las entradas están a la venta por Plateanet y en la boletería.",
+    "cuerpo": "La obra, escrita y dirigida por Martín Bontempo, narra la historia de una mujer que descubre un don para curar en un hospital público del conurbano bonaerense. El personaje se convierte en rumor y mito mientras un médico la utiliza para probar una terapia alternativa en pacientes terminales. La propuesta combina erotismo, ciencia ficción y misterio en una comedia dramática.\n\nDesde su estreno en 2023, \"Suavecita\" lleva 150 funciones en Buenos Aires, 38 presentaciones en gira y actuó en cuatro países. Por su interpretación, Camila Peralta recibió el premio María Guerrero 2023 a la mejor actuación unipersonal, el Trinidad Guevara 2023 como revelación femenina y el premio Teatro del Mundo 2023 como mejor actriz. La producción también fue nominada a los Martín Fierro de Teatro 2025 en la categoría mejor unipersonal.\n\nPeralta, nacida en Balcarce, construyó una trayectoria en cine, series y teatro. Participó en las películas \"Cambio cambio\" y \"Puan\", y en las series \"División Palermo\" y \"Envidiosa\", ambas disponibles en Netflix. Actualmente rueda \"Gordon\", una nueva serie para la plataforma. La obra ya se presentó en el Teatro Municipal Luis Conti de Balcarce. Las entradas para la función en el teatro Roxy, en San Luis 1750, tienen descuentos para estudiantes de la Escuela Municipal de Arte Dramático y del Polivalente.",
+    "guion": "Camila Peralta presenta “Suavecita” en Mar del Plata",
+    "textoRedes": "La actriz balcarceña Camila Peralta vuelve a Mar del Plata con su unipersonal “Suavecita”. La función es el sábado 17 de octubre a las 21.30 en el teatro Roxy. La obra ganó siete premios y entradas están en Plateanet.",
+    "claves": [
+     "La actriz balcarceña Camila Peralta presenta su unipersonal premiado.",
+     "La función es el sábado 17 de octubre a las 21.30 en el teatro Roxy.",
+     "La obra acumula siete premios y 16 nominaciones desde 2023.",
+     "Entradas en Plateanet y boletería, con descuentos para estudiantes."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "cita",
+     "detalle": "el cuerpo pone entre comillas algo que la fuente no dice: \", y en las series \""
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 33 palabras seguidas del original (\"por su interpretacion camila peralta recibio el premio maria guerrero 2023 a la mejor…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 212,
+   "palabrasBajada": 39,
+   "caracteresTitulo": 52
+  },
+  "2d82c63c": {
+   "id": "2d82c63c",
+   "titulo_original": "Declararon de interés Legislativo los 75 años del Club Amigos Unidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 0,
+   "ms": 120019,
+   "caracteresDelPrompt": 17448,
+   "error": "The operation was aborted due to timeout"
+  },
+  "445a709e": {
+   "id": "445a709e",
+   "titulo_original": "Reconocen proyecto de la EEPA N°701 sobre el descarte de medicamentos vencidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 0,
+   "ms": 120005,
+   "caracteresDelPrompt": 17448,
+   "error": "The operation was aborted due to timeout"
+  },
+  "d00b6002": {
+   "id": "d00b6002",
+   "titulo_original": "El fútbol se atrasó tres meses, y volvería a terminar en enero",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 100051,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 6004,
+    "salida": 8000,
+    "costo": 0.00375586276
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "c959337d": {
+   "id": "c959337d",
+   "titulo_original": "Sol Di Gerónimo pidió informes por una posible bajada privada a la Laguna La Brava",
+   "fuentes": 1,
+   "serio": false,
+   "status": 0,
+   "ms": 120006,
+   "caracteresDelPrompt": 17448,
+   "error": "The operation was aborted due to timeout"
+  },
+  "86c9586c": {
+   "id": "86c9586c",
+   "titulo_original": "Atletismo: Destacada actuación de balcarceños en el Torneo de la Diversidad Cultural",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 113452,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5687,
+    "salida": 7727,
+    "costo": 0.00360855729
+   },
+   "escrito": {
+    "titulo": "AACYC Balarce logra cin co primeros puestos en Mar del Plata",
+    "copete": "Los cuatro represen tantes locales participaron el sá bado 3 del Torneo de la Diversidad Cultural, organi zado por la Federación Marplatense de Atletismo. Obtuvieron cin co primeros puestos y seis podios. Un taleta U12 ganó en 50m, 500m y salto en largo U14.",
+    "cuerpo": "Según informó un medio marplatense, cuatro atletas de la AACYC Balarce compitieron el sá bado 3 de octubre en el Torneo de la Diversidad Cultural, en Mar del Plata, organi zado por la Federación Marplatense de Atletismo. La delegación local consiguió cinco primeros puestos y seis podios.\n\nDe acuerdo con la misma información, en la categoría U12 un representante balcarceño ganó los 50 metros llanos con 7\"99, los 500 metros con 1'32\"76 y el salto en largo de la categoría U14, en la que compitió por encima de su edad, con una marca de 4,27 metros.\n\nEn U16, otro atleta de Balarce se impuso en los 80 metros llanos (11\"21) y finalizó tercero en salto en largo (4,05 metros). En U18, un lanzador local logró el primer puesto en lanzamiento de bala de 5 kilogramos, con 11,01 metros, mientras que otro competidor de la misma categoría corrió los 1.500 metros de Mayores y terminó 14° en la clasificación general con 5'12\"63 y quinto en su categoría.",
+    "guion": "AACYC Balarce logra cin co primeros puestos en Mar del Plata",
+    "textoRedes": "Cuatro atletas de AACYC Balarce compitieron en el Torneo de la Diversidad Cultural de Mar del Plata y lograron cin co primeros puestos y seis podios. Un taleta U12 ganó en 50m, 500m y salto en largo U14.",
+    "claves": [
+     "Cuatro atletas de AACYC Balarce compitieron en el Torneo de la Diversidad Cultural en Mar del Plata.",
+     "Obtuvieron cin co primeros puestos y seis ubicaciones en el podio.",
+     "El competidor U12 ganó 50m, 500m y salto en largo U14.",
+     "El representante U16 se impuso en 80m llanos y fue tercero en salto en largo.",
+     "En U18, un lanzador ganó en bala y otro compitió en 1500m Mayores (14°)."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "nombre",
+     "detalle": "el titulo nombra a \"balarce\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"balarce\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"balarce\" y la fuente no"
+    },
+    {
+     "tipo": "cita",
+     "detalle": "el cuerpo pone entre comillas algo que la fuente no dice: \"99, los 500 metros con 1'32\""
+    },
+    {
+     "tipo": "cita",
+     "detalle": "el cuerpo pone entre comillas algo que la fuente no dice: \"21) y finalizó tercero en salto en largo\""
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el guion nombra a \"balarce\" y la fuente no"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 15 palabras seguidas del original (\"por la federacion marplatense de atletismo la delegacion local consiguio cinco primeros puestos y…\"): decilo con otras"
+    }
+   ],
+   "palabrasCuerpo": 166,
+   "palabrasBajada": 44,
+   "caracteresTitulo": 60
+  },
+  "c9127ae7": {
+   "id": "c9127ae7",
+   "titulo_original": "Maxivóley femenino avanza en el Top 6",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 97706,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5586,
+    "salida": 7167,
+    "costo": 0.0034001448
+   },
+   "escrito": {
+    "titulo": "Maxivóley femenino vence al campeón y pierde con Tandil",
+    "copete": "El equipo balcarceño venció 2-0 a Atlético Villa Gesel l, actual campeón, y luego cayó ante el conjunto tandilense en la jornada disputada en el Club Edal. Con estos resultados, sumó una victoria y una derrota en el Top 6 de la Liga Marplatense Federada de Vóley.",
+    "cuerpo": "El sábado 10 de octubre, el maxivóley femenino de Balcarce disputó una nueva fecha del Top 6 de la Liga Marplatense Federada de Vóley en el Club Edal de Tandil, según informó un medio local. En el primer encuentro, venció 2-0 a Atlético Villa Gesel l, actual campeón del certamen. Más tarde, se midió con el equipo tandilense y cayó en un partido mucho más parejo, sin que se conociera el marcador final.\n\nCon estos resultados, el conjunto balcarceño sumó una victoria y una derrota en esta instancia que reúne a los equipos que pelean por el título. Una vez finalizado el Top 6, comenzarán los cuartos de final, que cruzarán al primero con el sexto, al segundo con el quinto y al tercero con el cuarto, según precisó el mismo medio.",
+    "guion": "Maxivóley femenino vence al campeón y pierde con Tandil",
+    "textoRedes": "El maxivóley femenino de Balcarce venció 2-0 al campeón, Atlético Villa Gesel l, y luego perdió con el local en una nueva fecha del Top 6 de la Liga Marplatense Federada de Vóley, disputada en Tandil. Con estos resultados, sigue en carrera por el título.",
+    "claves": [
+     "El maxivóley femenino de Balcarce jugó el sábado en Tandil por el Top 6.",
+     "Venció 2-0 a Atlético Villa Gesel l, el actual campeón.",
+     "Perdió ante el local tandilense, en un partido más parejo.",
+     "Sumó una victoria y una derrota en la etapa.",
+     "Al terminar el Top 6 se vienen los cuartos de final."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"sabado\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    }
+   ],
+   "palabrasCuerpo": 132,
+   "palabrasBajada": 47,
+   "caracteresTitulo": 55
+  },
+  "a7da5534": {
+   "id": "a7da5534",
+   "titulo_original": "Un auto se prendió fuego y sufrió daños totales",
+   "fuentes": 1,
+   "serio": true,
+   "status": 200,
+   "ms": 82846,
+   "caracteresDelPrompt": 17288,
+   "uso": {
+    "entrada": 5282,
+    "salida": 6168,
+    "costo": 0.00236598762
+   },
+   "escrito": {
+    "titulo": "Un auto se prende fuego en la colectora de la Ruta 226 y sufre daños totales",
+    "copete": "Un Ford Ka se incendi el jueves 8 de octubre por la tarde en la colectora de la Ruta 226. La propietaria advirtió el inicio del fuego al regresar de hacer compras. Una dotación de Bomberos Voluntarios controló las llamas, pero el auto sufrió daños totales. No se informó sobre personas heridas.",
+    "cuerpo": "",
+    "guion": "",
+    "textoRedes": "Un Ford Ka se incendi el jueves en la colectora de la Ruta 226. Bomberos Voluntarios controlaron el fuego, pero el auto sufió daños totales. La propietaria advirtió el inicio del incendio al regresar de compras. No se informó sobre heridos.",
+    "claves": [
+     "Un automóvil Ford Ka se incendió el jueves 8 de octubre en la colectora de la Ruta 226.",
+     "Bomberos Voluntarios controlaron el fuego, pero el vehículo sufrió daños totales.",
+     "La propietaria advirtió el inicio del incendio al volver de hacer compras.",
+     "No se reportaron personas heridas."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 8 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el copete menciona \"octubre\" y la fuente no"
+    },
+    {
+     "tipo": "negacion",
+     "detalle": "agrega una negación que la fuente no tiene"
+    }
+   ],
+   "palabrasCuerpo": 0,
+   "palabrasBajada": 52,
+   "caracteresTitulo": 76
+  },
+  "276dcf9f": {
+   "id": "276dcf9f",
+   "titulo_original": "Cambió la Ley de Tránsito: cómo queda la prioridad de paso en la Provincia",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 106504,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 6388,
+    "salida": 8000,
+    "costo": 0.00382140772
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "9c7ee7d5": {
+   "id": "9c7ee7d5",
+   "titulo_original": "FIESTA NACIONAL DEL POSTRE: CONFIRMACIÓN DE LA NUEVA FECHA PARA LA 22ª EDICIÓN",
+   "fuentes": 5,
+   "serio": false,
+   "status": 200,
+   "ms": 75792,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 6235,
+    "salida": 5221,
+    "costo": 0.00220536833
+   },
+   "escrito": {
+    "titulo": "La Fiesta Nacional del Postre se reprograma para el 30 de octubre",
+    "copete": "La 22ª edición se hará en el predio de la Sociedad Rural los días 30 y 31 de octubre y el 1 de noviembre. La reprogramación responde al mal tiempo que impidió celebrarla el fin de semana del 10 de octubre.",
+    "cuerpo": "La Subsecretaría de Turismo de Balcarce confirmó que la 22ª Fiesta Nacional del Postre se realizará el 30 y 31 de octubre y el 1 de noviembre en el predio de la Sociedad Rural. El evento originalmente estabaa previstoo para el fin de semana del10 de octubre, peroo debioó postergarse por las condicioones climáticas adversas.\n\n El encuentroo, que en su programacioón inicial se extendíía durante cuatro jornadas, quedó reduciido a tres díías, según informó un medio local. La organizacióón adelantó que en los próoximos días se difundirá la programación completa, que incluirá cocina en vivo, invitados especiales, actividades educativas y el clásico concurso de postres.\n\n Desde la Subsecretaría invitaron a la comunidad y a los visitantes a sumarse a las actividades y a disfrutar de los concursos y las propuestas gastronómicas.",
+    "guion": "La Fiesta Nacional del Postre se reprograma para el treinta de octubre.",
+    "textoRedes": "La 22ª Fiesta Nacional del Postre ya tiene nueva fecha: será el 30 y 31 de octubre y el 1 de noviembre en la Sociedad Rural. Se postergó por el mal tiempo del fin de semana pasado. La organización acortó el evento a tres jornadas y en los próximos días dará a conocer la programación.",
+    "claves": [
+     "La 22ª Fiesta Nacional del Postre se realizará el 30 y 31 de octubre y el 1 de noviembre en la Sociedad Rural.",
+     "El evento se postergó por el mal tiempo, suspendiendo la fecha original del fin de semana del 10 de octubre.",
+     "La organización acortó la fiesta de cuatro a tres jornadas y anunciará la nueva programación en los próximos días."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 15 palabras seguidas del original (\"del postre se realizara el 30 y 31 de octubre y el 1 de…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 131,
+   "palabrasBajada": 41,
+   "caracteresTitulo": 65
+  },
+  "badcdcaa": {
+   "id": "badcdcaa",
+   "titulo_original": "Cuatro gimnastas de UP clasificaron a la Final Regional del Centro",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 62219,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5871,
+    "salida": 4725,
+    "costo": 0.00197391269
+   },
+   "escrito": {
+    "titulo": "Cuatro gimnastas de UP clasifican a la Final Regional del Centro",
+    "copete": "Casi treinta gimnastas de Unión Progresista participaron el viernes en la final provincial de los Niveles 1 y 2 en el Polideportivo de Aguas Verdes. Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet obtuvieron el pasaje a la Final Regional del Centro, que se disputará en diciembre.",
+    "cuerpo": "Casi 30 gimnastas de UP compitieron el viernes en el Polideportivo de Aguas Verdes, según informó la Municipalidad de Balcarce. Allí se desarrolló la final provincial de los niveles 1 y 2, con las categorías Mini, Preinfantil, Infantil y Juvenil.\nMorena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet lograron la clasificación a la Final Regional del Centro, que se disputará en diciembre y congregará a representantes de Buenos Aires, Córdoba y Santa Fe.",
+    "guion": "Cuatro gimnastas de U Pe clasifican a la Final Regional del Centro",
+    "textoRedes": "Cuatro gimnastas de UP representarán a Balcarce en la Final Regional del Centro tras clasificar en el provincial de Aguas Verdes. Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet lograron el pasaje. La cita regional será en diciembre.",
+    "claves": [
+     "Casi 30 gimnastas de UP participaron en la final provincial en Aguas Verdes.",
+     "Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet obtuvieron la clasificación.",
+     "La Final Regional del Centro se realizará en diciembre con gimnastas de Buenos Aires, Córdoba y Santa Fe.",
+     "La competencia provincial incluyó las categorías Mini, Preinfantil, Infantil y Juvenil."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "nombre",
+     "detalle": "el copete nombra a \"union\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el copete nombra a \"progresista\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el copete menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"municipalidad\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el guion nombra a \"pe\" y la fuente no"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 24 palabras seguidas del original (\"morena marino ingrid unales giovana rios y felicitas larroquet lograron la clasificacion a la…\"): decilo con otras pal"
+    },
+    {
+     "tipo": "promesa",
+     "detalle": "el título dice 4 y el cuerpo no lo explica"
+    }
+   ],
+   "palabrasCuerpo": 74,
+   "palabrasBajada": 48,
+   "caracteresTitulo": 64
+  },
+  "04f90bd3": {
+   "id": "04f90bd3",
+   "titulo_original": "El Concejo Deliberante aprobó la creación de un registro de acompañantes terapéuticos",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 89559,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5793,
+    "salida": 6880,
+    "costo": 0.00333750157
+   },
+   "escrito": {
+    "titulo": "El Concejo aprueba un registro de acompañantes terapéuticos",
+    "copete": "El Honorable Concejo Deliberante aprobó por unanimidad la creación del registro municipal de acompañantes terapéuticos. La iniciativa, impulsada por concejales del oficialismo, busca vincular a profesionales con familias e instituciones que necesiten el servicio. La plataforma digital incluirá datos sobre formación, experiencia y cobertura de obras sociales.",
+    "cuerpo": "El Honorable Concejo Deliberante aprobó por unanimidad la creación de un registro municipal de acompañantes terapéuticos. La iniciativa fue impulsada por los concejales del oficialismo Gonzalo Scioli y Fara Amado Cunqueiro, que recogieron inquietudes de acompañantes terapéuticos recibidos y estudiantes avanzados de la carrera, quienes expusieron las dificultades para insertarse laboralmente a pesar de la demanda de este tipo de asistencia.\nEl registro se materializará a través de una plataforma digital, en articulación con el área de Modernización del Municipio. Allí, quienes necesiten un acompañante podrán consultar información sobre la formación, experiencia laboral, áreas de desempeño, población con la que trabaajan y si atienden a través de obras sociales. La ordenanza también establece que para integrar el registro será obligatorio contar con título habilitante, según la Resolución Ministerial 1221/15.\nDurante el debate, los concejales reclamaron mejores remuneraciones y más oportunidades laborales para el sector. Advirtieron que los bajos honorarios que abonan algunas obras sociales pueden afectar la cantidad de horas de atención y el acseso al acompañamiento de pacientes, incluidos niños sin cobertura médica. El diseño de la plataforma continuará en una etapa de desarrollo, con la participación de profesionales, estudiantes y representantes del ámbito eductivo.",
+    "guion": "El Concejo aprueba un registro de acompañantes terapéuticos",
+    "textoRedes": "El Concejo Deliberante aprobó la creación de un registro municipal de acompañantes terapéuticos. La iniciativa busca vincular a profesionales locales con quienes necesiten acompañamiento en salud, educación y ámbito social. La plataforma digital permitirá consultar formación, experiencia y cobertura de obras sociales.",
+    "claves": [
+     "El Concejo Deliberante aprobó por unanimidad la creación del registro municipal de acompañantes terapéuticos.",
+     "La plataforma digital vinculará a profesionales con quienes necesitan el servicio.",
+     "Para inscribirse será obligatorio presentar título habilitante, según resolución ministerial.",
+     "Los concejales reclamaron mejores remuneraciones y advirtieron sobre el impacto de los bajos honorarios de obras sociales."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 21 palabras seguidas del original (\"el diseno de la plataforma continuara en una etapa de desarrollo con la participacion…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 196,
+   "palabrasBajada": 47,
+   "caracteresTitulo": 59
+  },
+  "6e45a05f": {
+   "id": "6e45a05f",
+   "titulo_original": "Investigan el faltante de dinero en la Escuela Emilio Lamarca",
+   "fuentes": 2,
+   "serio": true,
+   "status": 200,
+   "ms": 92282,
+   "caracteresDelPrompt": 17288,
+   "uso": {
+    "entrada": 5451,
+    "salida": 7087,
+    "costo": 0.00334979125
+   },
+   "escrito": {
+    "titulo": "Investigan el dinero desaparecido en la Escuela Emilio Lamarca",
+    "copete": "Se trata de la recaudación de la venta anticipada de entradas para un evento del jardín de infantes. El faltante fue advertido el viernes 9 de octubre en la preceptoría del Nivel Inicial; el dinero estaba guardado en una caja, según se informó. El evento se hará el viernes 23 en el Teatro Municipal.",
+    "cuerpo": "La desaparición fue notificada durante la tarde del viernes 9 de octubre en el nivel inicial del establecimiento educativo. La suma de dinero, cuyo monto no fue precisado, correspondía a la venta por adelantado de las entradas para la actividad que los chicos del jardín iban a realizar el viernes 23 de octubre en el Teatro Municipal.\n\nEl efectivo se encontraba dentro de una caja en la preceptoría del jardín, de acuerdo con la información a la que accedieron medios locales. Hasta el momento, la institución no emitió un comunicado oficial sobre lo ocurrido, y la investigación está en marcha, sin que se hayan dado a conocer sospechas ni personas identificadas.",
+    "guion": "Investigan el dinero desaparecido en la Escuela Emilio Lamarca",
+    "textoRedes": "Se investiga la desaparición de dinero de la venta de entradas para un acto del jardín en la Escuela Emilio Lamarca. El faltante fue descubierto el viernes 9 en la preceptoría del nivel inicial. El evento se hará el viernes 23 en el Teatro Municipal.",
+    "claves": [
+     "El faltante fue descubierto el viernes 9 de octubre en la preceptoría del Nivel Inicial de la Escuela Emilio Lamarca.",
+     "El dinero provenía de la venta de entradas para un acto del jardín del viernes 23 en el Teatro Municipal.",
+     "El efectivo estaba guardado en una caja y no se informó el monto.",
+     "La investigación está en curso y no hay imputados."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "promesa",
+     "detalle": "el título nombra a \"escuela\", \"emilio\", \"lamarca\" y el cuerpo no los explica"
+    }
+   ],
+   "palabrasCuerpo": 111,
+   "palabrasBajada": 54,
+   "caracteresTitulo": 62
+  },
+  "869434ae": {
+   "id": "869434ae",
+   "titulo_original": "SE PRESENTÓ LA PRIMERA EXPO SALUD, DEPORTE Y TECNOLOGÍA",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 96238,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 6503,
+    "salida": 6816,
+    "costo": 0.00343684315
+   },
+   "escrito": {
+    "titulo": "Se presenta la primera Expo Salud, Deporte y Tecnología",
+    "copete": "La presentación oficial fue el jueves en la Municipalidad. La expo se desarrollará el sábado 24 de octubree, de 9 a 19, en la Sociedad Española. Habrá stands, charlas y demostraciones de una decena de disciplinas deportivas, además de tecnología y salud.",
+    "cuerpo": "La presentación de la primera Expo Salud, Deporte y Tecnología se realizó el jueves 8 de octubree en la Sala de los Intendentes de la Municipalidad de Balcarce. Encabezaron el anuncio la subsecretaria de Deporte y Recreación, Soledad Vivio, y los organizadores Jorge Romereo y Mariano Lauro.\n\nLa expo se hará el sábado 24 de octubree, de 9 a 19, en la sede de la Socidad Española. La jornada reunirá stands, charlas, capacitaciones y demostraciones. Entre las disciplinas deportivas que dirán presente hay taekwondo, kickboxing, karate, ajedrez, chikung, tai chi y yoga, entre otras. Clubes locales, emprendimientos de salud y nutrición, y desarrollos tecnológicos de estudiantes de la Escuela Industrial y de empresas del sector también tendrán su espacio. Según detalló un medio local, además se sumarán áreas para microemprendedores y sectores de prevención.\n\nMariano Lauro explicó que uno de los objetivos es mostrar cóm el deporte, la salud y la tecnología se vinculan. \"Tecnología es un botín, tecnología es un guante, tecnología es un vendaje que unifica deporte y salud\", ejemplificó. La expo incluirá un ciclo de charlas a cargo de profesional de la salud y el deporte, con exposiciones de 40 minutoss y un espacio para preguntass del públic. Según se informó, participarán nutricionistas.",
+    "guion": "Se presenta la primera expo salud, deporte y tecnología.",
+    "textoRedes": "El sábado 24 de octubree se hará en Balcarce la primera Expo Salud, Deporte y Tecnología. De 9 a 19, en la Socidad Española, habrá stands, charlas y demostraciones de clubes, empresas y profesional. La iniciativa busca dar a conocer toda la oferta deportiva y tecnológica de la ciudad.",
+    "claves": [
+     "La presentación fue el jueves 8 de octubree en la Municipalidad, con Soledad Vivio y los organizadores.",
+     "La expo será el sábado 24 de octubree, de 9 a 19, en la Socidad Española.",
+     "Incluye disciplinas como taekwondo, kickboxing, karate, ajedrez, chikung, tai chi y yoga.",
+     "Participan la Escuela Industrial, empresas tecnológicas, nutricionistas y clubs locales.",
+     "Habrá charlas de 40 minutoss con preguntass del públic, y espacios para microemprendedores y prevención."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "fecha",
+     "detalle": "el copete menciona \"jueves\" y la fuente no"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 8 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"jueves\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"romereo\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"socidad\" y la fuente no"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 17 palabras seguidas del original (\"tecnologia es un botin tecnologia es un guante tecnologia es un vendaje que unifica…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 206,
+   "palabrasBajada": 42,
+   "caracteresTitulo": 55
+  }
+ }
+}

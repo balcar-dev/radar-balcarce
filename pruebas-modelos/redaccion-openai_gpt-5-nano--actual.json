@@ -1,0 +1,471 @@
+{
+ "modelo": "openai/gpt-5-nano",
+ "prompt": "actual",
+ "fecha": "2026-10-11T15:58:15.306Z",
+ "precios": {
+  "entrada": 5e-8,
+  "salida": 4e-7
+ },
+ "historias": {
+  "23005298": {
+   "id": "23005298",
+   "titulo_original": "RECONOCIMIENTO A LA PRECISIÓN Y EL COMPROMISO EN EL DÍA DEL TÉCNICO DE LABORATORIO",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 38062,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 5734,
+    "salida": 7671,
+    "costo": 0.0033551
+   },
+   "escrito": {
+    "titulo": "La Municipalidad de Balcarce y el Hospital Municipal reconocen a los técnicos de laboratorio",
+    "copete": "El Municipio de Balcarce y el Hospital Municipal reconocen a los técnicos de laboratorio en su día, destacando su labor en diagnósticos y tratamientos dentro de la atención sanitaria local. El mensaje subraya que ese trabajo, aunque silencioso, es clave para la salud de la comunidad.",
+    "cuerpo": "En Balcarce, la Municipalidad y el Hospital Municipal \"Dr. Felipe Antonio Fossati\" emitieron un reconocimiento a los técnicos de laboratorio con motivo del Día del Técnico de Laboratorio. La publicación, fechada el 9 de octubre de 2026, destaca que su labor es esencial para la cadena sanitaria local, ya que cada muestra analizada anticipa diagnósticos y orienta tratamientos. El texto subraya el rigor científico, la vocación de servicio y la responsabilidad humana que fortalecen la calidad de la atención médica cotidiana en la salud pública. El comunicado no detalla acciones concretas, pero valida el rol de estos profesionales dentro del sistema de salud de la comunidad y de Balcarce en general.",
+    "guion": "La Municipalidad de Balcarce y el Hospital Municipal reconocen a los técnicos de laboratorio",
+    "textoRedes": "La Municipalidad de Balcarce y el Hospital Municipal reconocen a los técnicos de laboratorio en su día, destacando su papel en diagnósticos y tratamientos dentro de la salud local. Publicado por la Municipalidad y el Hospital Fossati el 9/10/2026.",
+    "claves": [
+     "Reconocimiento oficial a técnicos de laboratorio en Balcarce",
+     "Publicación el 9/10/2026",
+     "Destaca rol clave en diagnóstico y tratamiento",
+     "Labor silenciosa pero insustituible en la salud local"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "largo",
+     "detalle": "el titulo tiene 92 caracteres, el máximo es 90"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el copete nombra a \"municipio\" y la fuente no"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 2.026 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    }
+   ],
+   "palabrasCuerpo": 111,
+   "palabrasBajada": 46,
+   "caracteresTitulo": 92
+  },
+  "0305adf0": {
+   "id": "0305adf0",
+   "titulo_original": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal “Suavecita”",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 35353,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6155,
+    "salida": 7786,
+    "costo": 0.00342215
+   },
+   "escrito": {
+    "titulo": "Camila Peralta regresa a Mar del Plata con Suavecita este 17 de octubre",
+    "copete": "La balcarceña Camila Peralta regresa a Mar del Plata con Suavecita, unipersonal escrito y dirigido por Martín Bontempo. La función es el 17 de octubre a las 21:30 en el Teatro Roxy. Entradas por Plateanet y boletería.",
+    "cuerpo": "Camila Peralta regresa a Mar del Plata con Suavecita, unipersonal escrito y dirigido por Martín Bontempo. La función será el sábado 17 de octubre a las 21:30 en el teatro Roxy, San Luis 1750. Las entradas se venden en Plateanet y en la boletería del teatro. Tras agotar funciones anteriores, la actriz balcarceña regresa a la ciudad con una propuesta que acumula reconocimientos. \n\nDesde su estreno en 2023 en NÜN Teatro Bar, Suavecita acumula 150 funciones en Buenos Aires, 38 en gira y se presentó en cuatro países. La obra recibió siete premios y 16 nominaciones; Peralta obtuvo el Maria Guerrero 2023 como mejor actuación unipersonal y el Trinidad Guevara 2023 como revelación femenina, entre otros reconocimientos. Además, la producción fue nominada a los Martín Fierro de Teatro 2025 en la categoría mejor unipersonal. \n\nLa trayectoria de Peralta en Balcarce quedó reflejada en las presentaciones de Suavecita en el Teatro Municipal Luis Conti de la ciudad. El regreso a Mar del Plata representa una nueva oportunidad para que el público de la región siga acompañando a la actriz en una propuesta que ya obtuvo reconocimiento de la crítica y del público.",
+    "guion": "Camila Peralta regresa a Mar del Plata con Suavecita, unipersonal escrito y dirigido por Martín Bontempo. La función es el sábado 17 de octubre a las 21:30 en el Teatro Roxy, San Luis 1750. Entradas en Plateanet y boletería del teatro.",
+    "textoRedes": "Camila Peralta regresa a Mar del Plata con Suavecita, unipersonal escrito y dirigido por Martín Bontempo. La función es el 17 de octubre a las 21:30 en el Teatro Roxy (San Luis 1750). Entradas en Plateanet y boletería.",
+    "claves": [
+     "Camila Peralta regresa a Mar del Plata",
+     "Suavecita es unipersonal",
+     "Función 17 de octubre a las 21:30",
+     "Teatro Roxy, San Luis 1750",
+     "Entrada por Plateanet y boletería"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 21 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 30 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 21 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 30 y la fuente no lo dice"
+    },
+    {
+     "tipo": "largo",
+     "detalle": "el guion tiene 235 caracteres, el máximo es 200"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el guion dice 21 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el guion dice 30 y la fuente no lo dice"
+    },
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 17 palabras seguidas del original (\"desde su estreno en 2023 en nun teatro bar suavecita acumula 150 funciones en…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 191,
+   "palabrasBajada": 37,
+   "caracteresTitulo": 71
+  },
+  "2d82c63c": {
+   "id": "2d82c63c",
+   "titulo_original": "Declararon de interés Legislativo los 75 años del Club Amigos Unidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 31288,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6004,
+    "salida": 6587,
+    "costo": 0.00269884
+   },
+   "escrito": {
+    "titulo": "El Concejo Deliberante declara de interés el 75° aniversario del Club Amigos Unidos",
+    "copete": "La declaración reconoce la trayectoria deportiva y la labor social del Club Amigos Unidos, fundado el 9 de septiembre de 1951. Se destacan hitos deportivos y el trabajo con formativas y fútbol femenino, además del aporte a Balcarce y la zona.",
+    "cuerpo": "La declaración fue aprobada por el Concejo Deliberante y declara de interés legislativo, social y comunitario el 75° aniversario del Club Amigos Unidos; el fundamentó recoge la historia deportiva y la función social de la institución. Según la fuente, el fundador de la entidad es posterior a 1951, y se mencionan hitos como un invicto de 47 partidos entre 1977 y 1978 y cuatro campeonatos entre 1985 y 1988. El concejal Javier Menonne, de Primero la Patria, recordó esos logros y señaló el trabajo con categorías formativas y fútbol femenino, además del rol educativo y de salud emocional que el club propone. Por su parte, Sol Di Gerónimo, de Fuerza Patria, valoró el vínculo del club con el barrio y advirtió sobre la situación económica que atraviesan los clubes de barrio; Leandro Spinelli, de Juntos, acompañó la declaración y destacó el esfuerzo de quienes sostienen la institución. La declaración destaca que Amigos Unidos mantiene un rol activo en la vida social de Balcarce y la zona.",
+    "guion": "El Concejo Deliberante declara de interés el 75° aniversario del Club Amigos Unidos",
+    "textoRedes": "El Concejo Deliberante declara de interés el 75° aniversario del Club Amigos Unidos, fundado en 1951, destacando su trayectoria deportiva y su labor social en Balcarce y la zona.",
+    "claves": [
+     "Concejo Deliberante declaró interés del 75° aniversario",
+     "Club fundado el 9 de septiembre de 1951",
+     "Hitos: invicto de 47 partidos y 4 campeonatos",
+     "Trabajos formativos y fútbol femenino",
+     "Aporte social en Balcarce y la zona"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "copia",
+     "detalle": "copia 13 palabras seguidas del original (\"de interes legislativo social y comunitario el 75 aniversario del club amigos unidos\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 166,
+   "palabrasBajada": 41,
+   "caracteresTitulo": 83
+  },
+  "445a709e": {
+   "id": "445a709e",
+   "titulo_original": "Reconocen proyecto de la EEPA N°701 sobre el descarte de medicamentos vencidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 38094,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 5883,
+    "salida": 8000,
+    "costo": 0.00325799
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "d00b6002": {
+   "id": "d00b6002",
+   "titulo_original": "El fútbol se atrasó tres meses, y volvería a terminar en enero",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 98386,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6153,
+    "salida": 8000,
+    "costo": 0.00327149
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "c959337d": {
+   "id": "c959337d",
+   "titulo_original": "Sol Di Gerónimo pidió informes por una posible bajada privada a la Laguna La Brava",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 39566,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6332,
+    "salida": 8000,
+    "costo": 0.00328044
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "86c9586c": {
+   "id": "86c9586c",
+   "titulo_original": "Atletismo: Destacada actuación de balcarceños en el Torneo de la Diversidad Cultural",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 89103,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 5893,
+    "salida": 8000,
+    "costo": 0.00325849
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "c9127ae7": {
+   "id": "c9127ae7",
+   "titulo_original": "Maxivóley femenino avanza en el Top 6",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 22418,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 5785,
+    "salida": 4737,
+    "costo": 0.00194789
+   },
+   "escrito": {
+    "titulo": "Maxivóley femenino avanza en el Top 6",
+    "copete": "Las balcarceñas disputaron dos encuentros en Tandil, dentro de la Liga Marplatense Federada de Vóley Top 6. Ganaron ante Villa Gesell y cayeron ante el equipo local, en una jornada que podría definir cruces de cuartos. El certamen continúa con la definición de la tabla.",
+    "cuerpo": "El Maxivóley femenino de Balcarce participa en el Top 6 de la Liga Marplatense Federada de Vóley. La jornada, disputada en el Club Edal de Tandil, incluyó dos compromisos para el conjunto balcarceño. En el primer encuentro, Balcarce derrotó 2-0 a Atlético Villa Gesell, actual campeón de la competencia. Posteriormente, el equipo fue medirse ante el conjunto local de Tandil, en un partido más parejo, que terminó con victoria para el equipo tandilense. Con este resultado, Balcarce suma una victoria y una derrota en la fase actual del Top 6. En su formato, los cuartos de final se definirácen en cruces 1º contra 6º, 2º contra 5º y 3º contra 4º, según la posición en la tabla. El certamen continúa a la espera de las definiciones para la etapa siguiente.",
+    "guion": "Maxivóley femenino de Balcarce avanza en el Top 6 de la Liga Marplatense Federada de Vóley: derrotó 2-0 a Villa Gesell y luego cayó ante el equipo local en Tandil, en una jornada que deja definiciones próximas para los cuartos de final.",
+    "textoRedes": "Balcarce afronta la definición del Top 6: ganó 2-0 a Villa Gesell y cayó ante Tandil en Tandil, con cuartos ya por definirse.",
+    "claves": [
+     "Balcarce: victoria y derrota en Tandil",
+     "Top 6 de la Liga Marplatense Federada de Vóley",
+     "Cruces de cuartos 1-6, 2-5, 3-4",
+     "Sede de los partidos: Club Edal, Tandil",
+     "Resto de la temporada por definir"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 1 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 5 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 3 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 4 y la fuente no lo dice"
+    },
+    {
+     "tipo": "largo",
+     "detalle": "el guion tiene 236 caracteres, el máximo es 200"
+    }
+   ],
+   "palabrasCuerpo": 130,
+   "palabrasBajada": 45,
+   "caracteresTitulo": 37
+  },
+  "a7da5534": {
+   "id": "a7da5534",
+   "titulo_original": "Un auto se prendió fuego y sufrió daños totales",
+   "fuentes": 1,
+   "serio": true,
+   "status": 200,
+   "ms": 41205,
+   "caracteresDelPrompt": 20447,
+   "uso": {
+    "entrada": 5506,
+    "salida": 7340,
+    "costo": 0.00311914
+   },
+   "escrito": {
+    "titulo": "Un Ford Ka se prende fuego en la colectora de la RN 226 y queda con daños totales",
+    "copete": "Un Ford Ka se incendió este jueves por la tarde en la colectora de la RN 226. La propietaria observó el inicio del incendio al volver de compras. Bomberos voluntarios controlaron las llamas; el coche quedó destruido. Intervinieron Tránsito y la Policía Comunal.",
+    "cuerpo": "Un Ford Ka se incendió este jueves por la tarde en la colectora de la RN 226. La propietaria advirtió el inicio del incendio al regresar de realizar compras. Una dotación de Bomberos Voluntarios acudió al lugar y trabajó para controlar el fuego y evitar su propagación. En el lugar también intervino personal de Tránsito y de la Estación de Policía Comunal. Pese a la intervención, el vehículo sufrió daños totales.",
+    "guion": "Un Ford Ka se prende fuego en la colectora de la RN 226 y queda con daños totales",
+    "textoRedes": "Un Ford Ka se incendió este jueves por la tarde en la colectora de la RN 226. Bomberos Voluntarios controlaron el fuego; el automóvil quedó dañado en su totalidad. Intervinieron Tránsito y la Policía Comunal.",
+    "claves": [
+     "Incendio automotor en RN 226",
+     "Ford Ka",
+     "Bomberos Voluntarios",
+     "Tránsito y Policía Comunal",
+     "Daños totales"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "nombre",
+     "detalle": "el titulo nombra a \"rn\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el copete nombra a \"rn\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"rn\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el guion nombra a \"rn\" y la fuente no"
+    },
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 17 palabras seguidas del original (\"compras una dotacion de bomberos voluntarios acudio al lugar y trabajo para controlar el…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 71,
+   "palabrasBajada": 43,
+   "caracteresTitulo": 81
+  },
+  "276dcf9f": {
+   "id": "276dcf9f",
+   "titulo_original": "Cambió la Ley de Tránsito: cómo queda la prioridad de paso en la Provincia",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 88190,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6454,
+    "salida": 8000,
+    "costo": 0.00328654
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "9c7ee7d5": {
+   "id": "9c7ee7d5",
+   "titulo_original": "FIESTA NACIONAL DEL POSTRE: CONFIRMACIÓN DE LA NUEVA FECHA PARA LA 22ª EDICIÓN",
+   "fuentes": 5,
+   "serio": false,
+   "status": 200,
+   "ms": 97336,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6360,
+    "salida": 8000,
+    "costo": 0.00328184
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "badcdcaa": {
+   "id": "badcdcaa",
+   "titulo_original": "Cuatro gimnastas de UP clasificaron a la Final Regional del Centro",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 36782,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6041,
+    "salida": 8000,
+    "costo": 0.00326589
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "04f90bd3": {
+   "id": "04f90bd3",
+   "titulo_original": "El Concejo Deliberante aprobó la creación de un registro de acompañantes terapéuticos",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 32220,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 5988,
+    "salida": 5799,
+    "costo": 0.00238284
+   },
+   "escrito": {
+    "titulo": "El Concejo Deliberante aprueba la creación de un registro de acompañantes terapéuticos",
+    "copete": "El Honorable Concejo Deliberante de Balcarce aprueba por unanimidad la creación de un registro municipal de acompañantes terapéuticos, que incluirá una plataforma digital para vincular a profesionales y familias. Se establece un marco de licenciamiento y se anticipa desarrollo conjunto con áreas municipales, con debates sobre remuneraciones del sector.",
+    "cuerpo": "En la sesión del viernes 9 de octubre de 2026, el Concejo Deliberante de Balcarce aprobó por unanimidad la creación de un registro municipal de acompañantes terapéuticos. El registro prevé una plataforma digital, en articulación con la Secretaría de Modernización, para que quienes necesiten el servicio consulten información sobre profesionales, su formación, experiencia y áreas de desempeño, y para verificar si atienden a través de obras sociales. Para integrar el registro, la normativa señala que será obligatorio contar con título habilitante, conforme a la Resolución Ministerial 1221/15. La iniciativa fue impulsada por los concejales del oficialismo Gonzalo Scioli y Fara Amado Cunqueiro, a partir de inquietudes planteadas por acompañantes terapéuticos y estudiantes de la carrera. En el debate también se mencionaron dificultades económicas del sector debido a bajos honorarios de algunas obras sociales, lo que podría afectar la disponibilidad de horas de atención. El diseño de la plataforma se desarrollará en una próxima etapa con la participación de profesionales, estudiantes y representantes del ámbito educativo, según se indicó. También se subrayó la intención de dar mayor visibilidad a quienes cuentan con formación y experiencia, y facilitar el contacto con familias e instituciones.",
+    "guion": "El Concejo Deliberante aprueba la creación de un registro de acompañantes terapéuticos",
+    "textoRedes": "El Concejo Deliberante de Balcarce aprueba la creación de un registro municipal de acompañantes terapéuticos. Se busca una plataforma para vincular profesionales y familias, y se discuten remuneraciones y empleo en el sector.",
+    "claves": [
+     "Aprobación por unanimidad del registro de acompañantes terapéuticos",
+     "Plataforma digital para consultar profesionales",
+     "Requisito de título habilitante (Resolución 1221/15)",
+     "Impulso de Scioli y Cunqueiro",
+     "Debate sobre remuneraciones y horas de atención"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 2.026 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"secretaria\" y la fuente no"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 23 palabras seguidas del original (\"la iniciativa fue impulsada por los concejales del oficialismo gonzalo scioli y fara amado…\"): decilo con otras palabr"
+    }
+   ],
+   "palabrasCuerpo": 192,
+   "palabrasBajada": 49,
+   "caracteresTitulo": 86
+  },
+  "6e45a05f": {
+   "id": "6e45a05f",
+   "titulo_original": "Investigan el faltante de dinero en la Escuela Emilio Lamarca",
+   "fuentes": 2,
+   "serio": true,
+   "status": 200,
+   "ms": 101422,
+   "caracteresDelPrompt": 20447,
+   "uso": {
+    "entrada": 5653,
+    "salida": 8000,
+    "costo": 0.00324649
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "869434ae": {
+   "id": "869434ae",
+   "titulo_original": "SE PRESENTÓ LA PRIMERA EXPO SALUD, DEPORTE Y TECNOLOGÍA",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 84480,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6580,
+    "salida": 8000,
+    "costo": 0.00329284
+   },
+   "error": "respuesta ilegible o sin título"
+  }
+ }
+}

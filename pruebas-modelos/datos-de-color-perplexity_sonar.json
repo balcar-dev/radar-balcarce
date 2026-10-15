@@ -1,0 +1,639 @@
+{
+ "modelo": "perplexity/sonar",
+ "usado": "perplexity/sonar",
+ "fecha": "2026-10-11T23:48:47.782Z",
+ "notas": {
+  "n1": {
+   "titulo": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal “Suavecita”",
+   "status": 200,
+   "ms": 5652,
+   "error": null,
+   "datos": [
+    {
+     "dato": "Desde su estreno en 2023 en Nün Teatro Bar, Suavecita suma 150 funciones en Buenos Aires y 38 funciones en una gira por cuatro países.",
+     "cifra": "150 funciones en Buenos Aires y 38 en gira por cuatro países",
+     "fecha_del_dato": "Desde su estreno en 2023 hasta octubre de 2026",
+     "fuente_url": "https://www.lacapitalmdp.com/la-suavecita-con-la-actuacion-de-camila-peralta-regresa-a-mar-del-plata/",
+     "fuente_nombre": "La Capital de Mar del Plata",
+     "por_que_suma": "Aporta escala y recorrido internacional de la obra, más allá de premios y funciones locales."
+    },
+    {
+     "dato": "Camila Peralta ganó el premio ACE 2024 a Mejor actuación femenina en obra de un solo personaje por Suavecita.",
+     "cifra": "Premio ACE 2024",
+     "fecha_del_dato": "2024",
+     "fuente_url": "https://teatrolacomedia.gob.ar/espectaculo/suavecita/",
+     "fuente_nombre": "Teatro La Comedia",
+     "por_que_suma": "Da un antecedente oficial y reconocido que refuerza la relevancia artística de la obra."
+    },
+    {
+     "dato": "Suavecita obtuvo nominaciones a los Premios Martín Fierro de Teatro 2025, incluyendo Mejor unipersonal y Mejor actriz protagónica off para Camila Peralta.",
+     "cifra": "Premios Martín Fierro de Teatro 2025",
+     "fecha_del_dato": "2025",
+     "fuente_url": "https://coliseopodesta.laplata.gob.ar/actividad/comedia-dramatica/suavecita",
+     "fuente_nombre": "Teatro Municipal Coliseo Podestá",
+     "por_que_suma": "Suma un dato reciente y verificable que muestra vigencia y reconocimiento contemporáneo."
+    }
+   ],
+   "citadas": [
+    "https://teatrolacomedia.gob.ar/espectaculo/suavecita/",
+    "https://coliseopodesta.laplata.gob.ar/actividad/comedia-dramatica/suavecita",
+    "https://www.espectaculosdeaca.com.ar/suavcita/",
+    "https://elretratodehoy.com.ar/2026/10/01/suavecita-de-la-mano-de-camila-peralta-en-el-roxy/",
+    "https://www.marquesina.com.ar/producciones/suavecita-alt83564",
+    "https://www.teatroelgalpon.org.uy/espectaculos/el-galpon-internacional-suavecita-arg/",
+    "https://www.revistameta.com.ar/teatro-resena-de-suavecita/",
+    "https://www.lacapitalmdp.com/la-suavecita-con-la-actuacion-de-camila-peralta-regresa-a-mar-del-plata/",
+    "https://www.rionegro.com.ar/cultura/suavecita-el-unipersonal-protagonizado-por-camila-peralta-llega-al-festival-nevadas-escenicas-de-bariloche/",
+    "https://www.surcapitalino.com.ar/seccion/culturas/ciudad/suavecita-el-don-de-sobrevivir",
+    "https://es.wikipedia.org/wiki/Camila_Peralta",
+    "https://www.infobae.com/cultura/2023/08/01/suavecita-entre-la-explotacion-sexual-y-la-santidad-uno-de-los-fenomenos-del-teatro-off/",
+    "https://www.alternativateatral.com/obra83564-suavecita",
+    "https://sergiolapegue.com/site/2025/10/30/suavecita/",
+    "https://www.telonpampeano.com.ar/teatro-y-danza/3519-suavecita-en-el-teatro-espanol"
+   ],
+   "uso": {
+    "entrada": 740,
+    "salida": 432,
+    "costo": 0.00617
+   }
+  },
+  "n2": {
+   "titulo": "Declararon de interés Legislativo los 75 años del Club Amigos Unidos",
+   "status": 200,
+   "ms": 6816,
+   "error": null,
+   "datos": [
+    {
+     "dato": "Amigos Unidos fue uno de los siete equipos que participaron del primer torneo oficial de la Liga Balcarceña de Fútbol en 1922.",
+     "cifra": "7 equipos",
+     "fecha_del_dato": "1922",
+     "fuente_url": "https://es.wikipedia.org/wiki/Liga_Balcarce%C3%B1a_de_F%C3%BAtbol",
+     "fuente_nombre": "Wikipedia, Liga Balcarceña de Fútbol",
+     "por_que_suma": "Aporta un antecedente histórico local que ubica al club entre los fundadores de la competencia de la ciudad."
+    },
+    {
+     "dato": "El predio principal del club es el estadio Antonio Cerono, ubicado en avenida Virgen de Luján y calle 46, en Balcarce.",
+     "cifra": "1 estadio identificado por nombre",
+     "fecha_del_dato": "2026",
+     "fuente_url": "https://www.puntonueve.com.ar/volvieron-a-robar-en-el-predio-de-amigos-unidos/",
+     "fuente_nombre": "Puntonueve Noticias de Balcarce",
+     "por_que_suma": "Suma una referencia geográfica concreta y reconocible del club, útil para contextualizar su presencia barrial."
+    },
+    {
+     "dato": "El club participó en un torneo de fútbol femenino cuyo nombre llevaba el 75° aniversario de Bomberos Voluntarios de Balcarce, y su equipo fue brillante ganador invicto de la primera fase.",
+     "cifra": "75° aniversario / invicto",
+     "fecha_del_dato": "2026",
+     "fuente_url": "https://www.diariolavanguardia.com/deportes/14095-femenino-amigos-unidos-brillante-ganador-invicto-de-la-primera-fase/",
+     "fuente_nombre": "Diario La Vanguardia",
+     "por_que_suma": "Agrega una comparación reciente y muestra vigencia competitiva más allá de la conmemoración institucional."
+    }
+   ],
+   "citadas": [
+    "https://radiogabal.com.ar/index.php/comunidad/declararon-de-interes-legislativo-los-75-anos-del-club-amigos-unidos",
+    "https://es.wikipedia.org/wiki/Liga_Balcarce%C3%B1a_de_F%C3%BAtbol",
+    "https://clubes.com.ar/liga/liga-balcarcena-de-futbol",
+    "https://puntonueve.com.ar/volvieron-a-robar-en-el-predio-de-amigos-unidos/",
+    "https://www.informeseprimero.com.ar/search/label/La%20Ma%C3%B1ana",
+    "https://www.diariolavanguardia.com/deportes/14095-femenino-amigos-unidos-brillante-ganador-invicto-de-la-primera-fase/",
+    "https://www.diariolavanguardia.com/deportes/13842-oficial-amigos-unidos-gano-y-se-puso-a-tiro-de-la-punta/",
+    "https://concejodeliberantebalcarce.gob.ar/",
+    "https://www.diariolavanguardia.com/deportes/12910-se-jugaron-los-cotejos-pendientes-de-la-fecha-17/",
+    "https://sibom.slyt.gba.gov.ar/bulletins/15519.pdf",
+    "https://es.wikipedia.org/wiki/Balcarce_(Buenos_Aires)",
+    "https://balcarce.gob.ar/2024/07/05/exitoso-encuentro-regional-de-gimnasia-ritmica/",
+    "https://es.wikipedia.org/wiki/Partido_de_Balcarce",
+    "https://eldiariobalcarce.com.ar/nestor-pecora-el-coleccionista-de-historias-321",
+    "https://www.legislaturasconectadas.gob.ar/Concejos/Argentina"
+   ],
+   "uso": {
+    "entrada": 706,
+    "salida": 447,
+    "costo": 0.00615
+   }
+  },
+  "n3": {
+   "titulo": "Reconocen proyecto de la EEPA N°701 sobre el descarte de medicamentos vencidos",
+   "status": 200,
+   "ms": 6068,
+   "error": null,
+   "datos": [
+    {
+     "dato": "En Argentina, los medicamentos vencidos o deteriorados no deben devolverse a los pacientes y la ANMAT recuerda que no está permitida su devolución comercial.",
+     "cifra": "No permitida",
+     "fecha_del_dato": "Comunicado vigente publicado por ANMAT en 2026",
+     "fuente_url": "https://www.anmat.gob.ar/comunicados/Devoluciones_Medicam_Farmacias.pdf",
+     "fuente_nombre": "ANMAT",
+     "por_que_suma": "Aporta un respaldo oficial claro sobre por qué el descarte correcto es un tema regulatorio y de salud pública."
+    },
+    {
+     "dato": "En Mar del Plata, el sitio oficial municipal informa que los medicamentos a desechar pueden ser vencidos, parcialmente utilizados o sobrantes de una caja.",
+     "cifra": "3 tipos de medicamentos",
+     "fecha_del_dato": "Publicación oficial municipal consultada en 2026",
+     "fuente_url": "https://www.mardelplata.gob.ar/medicamentosfueradeuso",
+     "fuente_nombre": "Municipalidad de General Pueyrredon",
+     "por_que_suma": "Sirve para ampliar el alcance de la nota con un antecedente local comparable y verificable."
+    },
+    {
+     "dato": "El Colegio de Farmacéuticos de Morón publica una red de farmacias adheridas al convenio de descarte de medicamentos en mal estado, en desuso o vencidos.",
+     "cifra": "Farmacias adheridas al convenio",
+     "fecha_del_dato": "Listado vigente consultado en 2026",
+     "fuente_url": "https://www.colfarmamoron.org.ar/FarmaciaSearch.aspx?a=2&l=0&t=1",
+     "fuente_nombre": "Colegio de Farmacéuticos de Morón",
+     "por_que_suma": "Agrega un dato concreto sobre un modelo de recepción ya existente que puede contextualizar el reclamo local de implementar un punto de recepción."
+    }
+   ],
+   "citadas": [
+    "https://www.caeme.org.ar/wp-content/uploads/2026/09/Como-conservar-los-medicamentos-y-como-descartarlos-correctamente.pdf",
+    "https://www.anmat.gob.ar/comunicados/Devoluciones_Medicam_Farmacias.pdf",
+    "https://sibom.slyt.gba.gob.ar/bulletins/4410/contents/1501838",
+    "https://www.colfarmamoron.org.ar/FarmaciaSearch.aspx?a=2&l=0&t=1",
+    "https://www.osde.com.ar/informacion-al-socio/servicios-y-cobertura/farmacias",
+    "https://www.cofatuc.org.ar/sec_ap/trabajo_gestion_medicamentos_vencidos.pdf",
+    "https://www.mardelplata.gob.ar/medicamentosfueradeuso",
+    "https://www.noticiasnqn.com.ar/noticias/2026/09/02/350780-medicamentos-vencidos-como-descartarlos-correctamente",
+    "https://www.centraloeste.com.ar/central-consciente",
+    "https://www.fefara.org.ar/wp-content/uploads/2022/11/Documento-Disposicion-Final-ATM-Vencidos-SADI-FEFARA.pdf",
+    "https://web.legisrn.gov.ar/legislativa/proyectos/documento?c=P&n=1275&a=2025&e=original",
+    "https://www.lavoz.com.ar/ciudadanos/residuos-peligrosos-como-desechamos-los-medicamentos-vencidos-en-cordoba/",
+    "https://rest.hcdn.gob.ar/web/proyectos/288696/adjuntos/60819",
+    "https://denverfarma.com.ar/como-desechar-los-medicamentos/",
+    "https://www.saludyfarmacos.org/lang/es/boletin-farmacos/boletines/feb202205/55_ar"
+   ],
+   "uso": {
+    "entrada": 700,
+    "salida": 437,
+    "costo": 0.00614
+   }
+  },
+  "n4": {
+   "titulo": "Sol Di Gerónimo pidió informes por una posible bajada privada a la Laguna La Brava",
+   "status": 200,
+   "ms": 4723,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La Laguna La Brava tiene una superficie de 4 km², un dato útil para dimensionar la importancia del espejo de agua en la discusión sobre su acceso público.",
+     "cifra": "4 km²",
+     "fecha_del_dato": "sin fecha precisa en el registro, citado en un trabajo académico disponible en línea",
+     "fuente_url": "https://bicyt.conicet.gov.ar/fichas/produccion/2549281",
+     "fuente_nombre": "BICYT-CONICET",
+     "por_que_suma": "Aporta una medida concreta del tamaño de la laguna y refuerza por qué cualquier restricción de acceso tiene impacto territorial y turístico."
+    },
+    {
+     "dato": "Otra referencia académica la describe con una profundidad máxima de 4,10 metros, lo que ayuda a caracterizar el tipo de cuerpo de agua del que se habla.",
+     "cifra": "4,10 m",
+     "fecha_del_dato": "sin fecha precisa en el registro, citando bibliografía técnica",
+     "fuente_url": "https://www.studocu.com/es-ar/document/instituto-superior-de-formacion-docente-y-tecnica-n0-123/biologia/informe-tecnico-iimyc-biodiversidad-y-estado-ambiental-de-laguna-la-brava/134306312?origin=related-document",
+     "fuente_nombre": "Informe técnico IIMyC reproducido en Studocu",
+     "por_que_suma": "Sirve como dato físico de contexto para una nota centrada en intervenciones sobre la ribera y la bajada."
+    },
+    {
+     "dato": "La historia del lugar registra que en 1877 Agustín Molina y Juana Leloir adquirieron 8 mil hectáreas sobre la laguna y crearon la Estancia Laguna Brava.",
+     "cifra": "8.000 hectáreas",
+     "fecha_del_dato": "1877",
+     "fuente_url": "https://es.wikipedia.org/wiki/Villa_Laguna_La_Brava",
+     "fuente_nombre": "Wikipedia",
+     "por_que_suma": "Sumar un antecedente histórico ayuda a explicar por qué la zona tiene una larga tradición de ocupación privada y uso productivo."
+    }
+   ],
+   "citadas": [
+    "https://es.wikipedia.org/wiki/Laguna_La_Brava",
+    "https://www.welcomeargentina.com/balcarce/laguna-la-brava.html",
+    "https://en.wikipedia.org/wiki/La_Brava_Lake",
+    "https://www.diarioregistrado.com/sociedad/esta-escapada-esta-a-una-hora-de-mar-del-plata-y-combina-lagunas-y-sierras_a6ab2b79fa2dcdcb7adef46d9",
+    "https://www.pagina12.com.ar/diario/suplementos/turismo/9-1913-2010-10-03.html",
+    "https://bicyt.conicet.gov.ar/fichas/produccion/2549281",
+    "https://www.revista-airelibre.com/2023/01/19/turismo-bonaerense-16/",
+    "https://www.studocu.com/es-ar/document/instituto-superior-de-formacion-docente-y-tecnica-n0-123/biologia/informe-tecnico-iimyc-biodiversidad-y-estado-ambiental-de-laguna-la-brava/134306312?origin=related-document",
+    "https://www.argentinaturismo.com.ar/balcarce/pesca.php",
+    "https://tripomatic.com/es/poi/laguna-la-brava-poi:26894983",
+    "https://www.eldestapeweb.com/sociedad/parece-patagonia-asi-espejo-agua-bonaerense-combina-sierras-relax-202692417044",
+    "https://noticiasargentinas.com/sociedad/escapada-a-laguna-la-brava-muy-cerca-de-mar-del-plata-pero-con-paisaje-patagonico",
+    "https://es.wikipedia.org/wiki/Villa_Laguna_La_Brava",
+    "http://www.telefax.com.ar/balcarce/turismo/atrac2.html",
+    "https://www.eldestapeweb.com/atr/turismo/esta-a-kilometros-de-buenos-aires-y-es-ideal-para-pasar-el-verano-la-laguna-paradisiaca-que-pocos-conocen-20242118240"
+   ],
+   "uso": {
+    "entrada": 683,
+    "salida": 485,
+    "costo": 0.00617
+   }
+  },
+  "n5": {
+   "titulo": "Cambió la Ley de Tránsito: cómo queda la prioridad de paso en la Provincia",
+   "status": 200,
+   "ms": 4512,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La modificación incorpora el artículo 28 quater a la Ley 13.927 y alcanza a los 135 municipios bonaerenses.",
+     "cifra": "135 municipios",
+     "fecha_del_dato": "2026-10-09",
+     "fuente_url": "https://www.laplata1.com/2026-10-09/cambian-las-reglas-de-transito-en-la-plata-quien-tiene-prioridad-de-paso-en-las-esquinas-y-cuales-son-las-excepciones-126598/",
+     "fuente_nombre": "La Plata 1",
+     "por_que_suma": "Aporta un alcance territorial concreto y deja claro que el cambio impacta en toda la provincia, no solo en la ciudad o el AMBA."
+    },
+    {
+     "dato": "El texto actualiza el Código de Tránsito bonaerense y modifica el artículo 57 de la Ley 11.430, además de incorporar el artículo 28 quater a la Ley 13.927.",
+     "cifra": "28 quater / artículo 57 / Ley 13.927 y 11.430",
+     "fecha_del_dato": "2026-10-09",
+     "fuente_url": "https://www.diariodemocracia.com/provinciales/346360-cambios-en-la-ley-de-transito/",
+     "fuente_nombre": "Diario Democracia",
+     "por_que_suma": "Precisa la base legal exacta del cambio y le da a la nota un anclaje normativo más sólido."
+    },
+    {
+     "dato": "En la normativa vial bonaerense ya existía la regla de que en los cruces entre calles de igual categoría o entre dos avenidas tiene prioridad de paso el vehículo que viene por la derecha, salvo señalización como el cartel de PARE.",
+     "cifra": "igual categoría / dos avenidas",
+     "fecha_del_dato": "1978",
+     "fuente_url": "https://boletinoficial.buenosaires.gob.ar/normativaba/norma/53692",
+     "fuente_nombre": "Boletín Oficial de la Ciudad de Buenos Aires",
+     "por_que_suma": "Agrega un antecedente histórico verificable que muestra que la prioridad por derecha tiene raíces normativas de larga data."
+    }
+   ],
+   "citadas": [
+    "https://buenosaires.gob.ar/areas/seguridad_justicia/seguridad_urbana/seguridad_vial/codigo_transito_06.pdf",
+    "https://boletinoficial.buenosaires.gob.ar/normativaba/norma/53692",
+    "https://boletinoficial.buenosaires.gob.ar/normativaba/norma/28053",
+    "https://www.diariodemocracia.com/provinciales/346360-cambios-en-la-ley-de-transito/",
+    "https://boletinoficial.buenosaires.gob.ar/normativaba/norma/469164",
+    "https://juristeca.jusbaires.gob.ar/compilacion-normativa-juristeca/ley-2148/h-tit-2/",
+    "https://juristeca.jusbaires.gob.ar/compilacion-normativa-juristeca/ley-2148/tit-2/",
+    "https://www.eldia.com/la-ciudad/la-provincia-modifico-la-ley-de-transito-uno-por-uno-los-cambios-con-impacto-en-la-plata-la-ciudad_1791546240",
+    "https://boletinoficial.buenosaires.gob.ar/normativaba/norma/43449",
+    "https://www.rpba.gov.ar/files/Normas/Leyes/Ley-5800-BsAs.pdf",
+    "https://www.argentina.gob.ar/normativa/provincial/ley-532-123456789-0abc-235-0000-9002bvorpced/actualizacion",
+    "https://www.gba.gob.ar/seguridadvial/normativa_vial_0",
+    "https://www.argentina.gob.ar/normativa/provincial/ley-40-123456789-0abc-040-0001-7002bvorpced/actualizacion",
+    "https://www.argentina.gob.ar/normativa/provincial/ley-13927-123456789-0abc-defg-729-3100bvorpyel/actualizacion",
+    "https://www.laplata1.com/2026-10-09/cambian-las-reglas-de-transito-en-la-plata-quien-tiene-prioridad-de-paso-en-las-esquinas-y-cuales-son-las-excepciones-126598/"
+   ],
+   "uso": {
+    "entrada": 722,
+    "salida": 501,
+    "costo": 0.00622
+   }
+  },
+  "n6": {
+   "titulo": "FIESTA NACIONAL DEL POSTRE: CONFIRMACIÓN DE LA NUEVA FECHA PARA LA 22ª EDICIÓN",
+   "status": 200,
+   "ms": 5567,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La fiesta se hace en la Sociedad Rural de Balcarce y en 2026 fue presentada como una propuesta de cuatro días con entrada libre y gratuita.",
+     "cifra": "4 días",
+     "fecha_del_dato": "2026-08-27 / 2026-10-08",
+     "fuente_url": "https://balcarce.gob.ar/2026/10/08/22a-fiesta-nacional-del-postre-de-balcarce/",
+     "fuente_nombre": "Municipalidad de Balcarce",
+     "por_que_suma": "Aporta un dato concreto de extensión y acceso que enriquece la nota sin repetir la reprogramación."
+    },
+    {
+     "dato": "Un boletín oficial municipal informó que la edición 2025 de la Fiesta Nacional del Postre tuvo un promedio de 1.000 personas por jornada y cerca de 3.000 asistentes en total.",
+     "cifra": "3.000 personas",
+     "fecha_del_dato": "18 al 20 de julio de 2025",
+     "fuente_url": "https://sibom.slyt.gba.gob.ar/bulletins/13600.pdf",
+     "fuente_nombre": "Boletín Oficial de la Provincia de Buenos Aires / Municipio de Balcarce",
+     "por_que_suma": "Sirve como antecedente verificable de convocatoria para dimensionar el evento."
+    },
+    {
+     "dato": "La receta del postre Balcarce se originó en 1950, atribuida a Guillermo Talou.",
+     "cifra": "1950",
+     "fecha_del_dato": "1950",
+     "fuente_url": "https://www.canal26.com/turismo/2026/10/02/se-celebra-durante-4-dias-pero-pocos-lo-saben-la-fiesta-nacional-del-postre-regresa-con-degustaciones-shows-en-vivo-y-entrada-gratis/",
+     "fuente_nombre": "Canal 26",
+     "por_que_suma": "Agrega un antecedente histórico breve y original sobre el origen del postre que da nombre a la fiesta."
+    }
+   ],
+   "citadas": [
+    "https://balcarce.gob.ar/",
+    "https://www.clarin.com/viajes/tesoro-dulce-balcarce-historia-secreta-postre-nacio-sierras-bonaerenses-hizo-famoso-costa-hoy-disfruta-lugar-origen_0_Cto9woKwmf.html",
+    "https://balcarce.gob.ar/category/subsecretaria-de-turismo/",
+    "https://noticiasconenfoque.com.ar/nota/44303/cuatro-fiestas-para-comer-rico-los-grandes-eventos-gastronomicos-de-la-provincia",
+    "https://www.minutouno.com/lifestyle/las-lluvias-pararon-la-fiesta-la-que-iban-cocinar-el-postre-balcarce-mas-largo-del-mundo-cuando-se-hace-n6332271",
+    "https://turismo.satsaid.com.ar/mar-del-plata-y-balcarce-primavera-postres-y-playa/",
+    "https://sibom.slyt.gba.gob.ar/bulletins/13600.pdf",
+    "https://www.infocielo.com/sociedad/el-mapa-de-los-sabores-y-las-tradiciones-una-hoja-de-ruta-para-palpitar-el-fin-de-semana-largo-en-la-provincia",
+    "https://balcarce.gob.ar/2026/10/08/22a-fiesta-nacional-del-postre-de-balcarce/",
+    "https://www.canal26.com/turismo/2026/10/02/se-celebra-durante-4-dias-pero-pocos-lo-saben-la-fiesta-nacional-del-postre-regresa-con-degustaciones-shows-en-vivo-y-entrada-gratis/",
+    "https://www.eldestapeweb.com/sociedad/cuatro-dias-no-parar-comer-postre-balcarce-fiesta-regional-verdaderos-amantes-dulce-2026106192532",
+    "https://es.wikipedia.org/wiki/Balcarce_(Buenos_Aires)",
+    "https://es.wikipedia.org/wiki/Postre_Balcarce",
+    "https://balcarce.gob.ar/tag/cafe-concert/",
+    "https://la100.cienradios.com/sociedad/llega-la-fiesta-nacional-del-postre-con-sabores-y-musica-como-se-puede-viajar-desde-caba-para-disfrutar-de-la-gastronomia/"
+   ],
+   "uso": {
+    "entrada": 618,
+    "salida": 455,
+    "costo": 0.00607
+   }
+  },
+  "n7": {
+   "titulo": "SE PRESENTÓ LA PRIMERA EXPO SALUD, DEPORTE Y TECNOLOGÍA",
+   "status": 200,
+   "ms": 4091,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La actividad se hará en la sede de la Sociedad Española de Balcarce, ubicada en un inmueble con más de un siglo de historia: la institución fue fundada en 1889.",
+     "cifra": "1889",
+     "fecha_del_dato": "1889 (fundación de la Sociedad Española de Socorros Mutuos de Balcarce)",
+     "fuente_url": "https://www.sociedadespanolab.com.ar/institucion/",
+     "fuente_nombre": "Sociedad Española de Balcarce",
+     "por_que_suma": "Aporta antecedente histórico del lugar donde se hará la expo y le da identidad local a la nota."
+    }
+   ],
+   "citadas": [
+    "https://radiogabal.com.ar/index.php/comunidad/balcarce-tendra-su-primera-expo-de-salud-deporte-y-tecnologia-el-24-de-octubre",
+    "https://www.diariolavanguardia.com/noticias/44787-la-educoagro-2026-cerro-con-una-gran-convocatoria-en-el-colegio-san-jose/",
+    "https://balcarce.gob.ar/category/direccion-de-los-geriatricos-municipales/",
+    "https://balcarce.gob.ar/event/expo-balcarce-2026/",
+    "https://balcarce.gob.ar/2025/10/28/mejoras-en-la-infraestructura-urbana/",
+    "https://newsbalcarce.com.ar/",
+    "https://balcarce.gob.ar/2026/",
+    "https://balcarce.gob.ar/2025/11/18/una-jornada-que-fortalecio-la-participacion-comunitaria/",
+    "https://www.expofinder.com/en/detail/7qYfCPkc?from=detail",
+    "https://www.expo-salud.cl/en/",
+    "https://www.expofinder.com/detail/7qYfCPkc",
+    "https://globalsportsarchive.com/team/basketball/club-sociedad-espanola/51586/",
+    "https://visionrural.ar/pt-agenda/expo-balcarce-2026/",
+    "https://contrataciondelestado.es/wps/portal/plataforma/buscador/",
+    "https://balcarce.gob.ar/category/subsecretaria-de-turismo/"
+   ],
+   "uso": {
+    "entrada": 712,
+    "salida": 157,
+    "costo": 0.00587
+   }
+  },
+  "n8": {
+   "titulo": "River Plate le ganó 1-0 a Estudiantes de Río Cuarto, se arrimó a puestos de Playoffs y selló el descenso de su rival a la B Nacional",
+   "status": 200,
+   "ms": 5121,
+   "error": null,
+   "datos": [
+    {
+     "dato": "El descenso de Estudiantes de Río Cuarto se consumó con cinco fechas por disputar en la fase regular del Torneo Clausura 2026.",
+     "cifra": "5 fechas",
+     "fecha_del_dato": "10 de octubre de 2026",
+     "fuente_url": "https://www.espn.com.gt/futbol/argentina/nota/_/id/17349891/river-vs-estudiantes-rc-torneo-clausura-2026-equipo-fecha-hora-y-tv-en-vivo",
+     "fuente_nombre": "ESPN",
+     "por_que_suma": "Aporta un dato de contexto temporal concreto y hace más impactante el descenso."
+    },
+    {
+     "dato": "River ganó cuatro de los cinco partidos que dirigió de manera interina Leonardo Ponzio.",
+     "cifra": "4 de 5 triunfos",
+     "fecha_del_dato": "11 de octubre de 2026",
+     "fuente_url": "https://www.france24.com/es/minuto-a-minuto/20261011-river-gana-con-lo-justo-y-decreta-el-descenso-de-estudiantes-de-r%C3%ADo-cuarto",
+     "fuente_nombre": "France 24 / AFP",
+     "por_que_suma": "Agrega un antecedente reciente que contextualiza el buen presente del equipo sin repetir la nota."
+    },
+    {
+     "dato": "La derrota dejó a Estudiantes de Río Cuarto último en la tabla anual y sin chance de salvarse por ninguna de las vías de descenso.",
+     "cifra": "último en la tabla anual",
+     "fecha_del_dato": "10 de octubre de 2026",
+     "fuente_url": "https://noticiasargentinas.com/deportes/river-recibe-a-estudiantes-de-rio-cuarto--con-la-obligacion-de-ganar-para-volver-a-los-puestos-de-playoffs_a6ac8dd958e24c1a50aca70ca",
+     "fuente_nombre": "Noticias Argentinas",
+     "por_que_suma": "Precisa el motivo reglamentario del descenso y refuerza el cierre de la nota con un dato oficial de contexto."
+    }
+   ],
+   "citadas": [
+    "https://www.france24.com/es/minuto-a-minuto/20261011-river-gana-con-lo-justo-y-decreta-el-descenso-de-estudiantes-de-r%C3%ADo-cuarto",
+    "https://noticiasargentinas.com/deportes/river-recibe-a-estudiantes-de-rio-cuarto--con-la-obligacion-de-ganar-para-volver-a-los-puestos-de-playoffs_a6ac8dd958e24c1a50aca70ca",
+    "https://www.analisisdigital.com.ar/deportes/2026/10/10/river-vencio-ajustadamente-estudiantes-de-rio-cuarto-y-decreto-su-descenso",
+    "https://www.infobae.com/deportes/2026/10/10/river-plate-buscara-ingresar-a-zona-de-playoffs-ante-un-estudiantes-de-rio-cuarto-que-puede-descender-hora-tv-y-formaciones/",
+    "https://www.elonce.com/deportes/river-le-gano-a-estudiantes-de-rio-cuarto-se-acerco-a-los-playoffs-y-condeno-a-su-rival-al-descenso.htm",
+    "https://www.espn.com.gt/futbol/argentina/nota/_/id/17349891/river-vs-estudiantes-rc-torneo-clausura-2026-equipo-fecha-hora-y-tv-en-vivo",
+    "https://442.perfil.com/noticias/futbol/river-vs-estudiantes-de-rio-cuarto-por-el-torneo-clausura-2026.phtml",
+    "https://www.unoentrerios.com.ar/ovacion/river-plate-le-gana-estudiantes-rio-cuarto-y-lo-hunde-el-descenso-n10286060.html/amp",
+    "https://www.directvsports.com/futbol/river-golpeo-de-entrada-y-vencio-1-0-a-un-estudiantes-de-rio-cuarto-que-consumo-su-descenso-20261010-0014.html",
+    "https://www.mixvale.com.br/2026/10/10/marcos-acuna-scores-early-as-river-plate-defeat-estudiantes-de-rio/",
+    "https://www.lanacion.com.ar/deportes/futbol/river-plate/river-vs-estudiantes-de-rio-cuarto-en-vivo-nid10102026/",
+    "https://www.espn.com.ar/futbol/argentina/nota/_/id/16230661/el-fixture-de-torneo-clausura-2026-fecha-hora-y-resultados-de-los-partidos",
+    "https://www.espn.com.co/futbol/argentina/nota/_/id/16230661/el-fixture-de-torneo-clausura-2026-fecha-hora-y-resultados-de-los-partidos",
+    "https://www.unoentrerios.com.ar/ovacion/river-recibe-estudiantes-rio-cuarto-el-monumental-n10285911.html/amp",
+    "https://www.espn.com.ar/futbol/argentina/nota/_/id/17364870/video-resumen-river-vs-estudiantes-rio-cuarto-torneo-clausura-2026"
+   ],
+   "uso": {
+    "entrada": 476,
+    "salida": 473,
+    "costo": 0.00595
+   }
+  },
+  "n9": {
+   "titulo": "Franco Colapinto abandonó el Gran Premio de Singapur tras una falla en su monoplaza",
+   "status": 200,
+   "ms": 6331,
+   "error": null,
+   "datos": [
+    {
+     "dato": "El circuito callejero de Marina Bay tiene 4,927 kilómetros, 19 curvas y 62 vueltas, para una distancia total de 305,337 kilómetros.",
+     "cifra": "4,927 km; 19 curvas; 62 vueltas; 305,337 km",
+     "fecha_del_dato": "Temporada 2026 de Fórmula 1",
+     "fuente_url": "https://www.formula1.com/en/latest/article/circuit-guide-everything-you-need-to-know-about-the-marina-bay-street-circuit.3d9yfiqIKoQhcMnRLESWbz",
+     "fuente_nombre": "Formula 1",
+     "por_que_suma": "Aporta el contexto técnico del escenario donde abandonó, y ayuda a dimensionar la exigencia del GP."
+    },
+    {
+     "dato": "Colapinto llegó a Singapur con 27 puntos en el campeonato y figura 12.º en el Mundial de 2026 antes de la carrera.",
+     "cifra": "27 puntos; 12.º puesto",
+     "fecha_del_dato": "11 de octubre de 2026",
+     "fuente_url": "https://www.formula1.com/en/drivers/franco-colapinto",
+     "fuente_nombre": "Formula 1",
+     "por_que_suma": "Sitúa el abandono dentro de su campaña 2026 y permite explicar su situación en el torneo."
+    },
+    {
+     "dato": "En la clasificación de Singapur, Colapinto había quedado 16.º con un tiempo de 1:33.787 en Q2.",
+     "cifra": "16.º; 1:33.787",
+     "fecha_del_dato": "Clasificación del 10 de octubre de 2026",
+     "fuente_url": "https://www.fia.com/events/fia-formula-one-world-championship/season-2026/singapore-grand-prix/qualifying-classification",
+     "fuente_nombre": "FIA",
+     "por_que_suma": "Agrega un antecedente inmediato del fin de semana y mejora la cronología de su actuación."
+    }
+   ],
+   "citadas": [
+    "https://www.bbc.com/sport/formula1/live/c5ylg2wwlnjt",
+    "https://www.formula1.com/en/latest/article/circuit-guide-everything-you-need-to-know-about-the-marina-bay-street-circuit.3d9yfiqIKoQhcMnRLESWbz",
+    "https://www.fia.com/events/fia-formula-one-world-championship/season-2026/singapore-grand-prix/qualifying-classification",
+    "https://sports.yahoo.com/f1/races/singapore-grand-prix-2026-3046/",
+    "https://www.planetf1.com/news/f1-results-singapore-grand-prix-2026-race",
+    "https://wtop.com/sports/2026/10/f1-singapore-grand-prix-results/",
+    "https://www.formula1.com/en/drivers/franco-colapinto",
+    "https://ground.news/article/formula-1-after-the-start-franco-colapinto-is-ranked-14th-in-the-singapore-gp",
+    "https://www.f1-fansite.com/f1-drivers/franco-colapinto/",
+    "https://www.formula1.com/en/results/2026/drivers/FRACOL01/franco-colapinto",
+    "https://www.formula1.com/en/racing/2026/singapore",
+    "https://www.skysports.com/f1/drivers/franco-colapinto/results",
+    "https://www.formula1.com/en/information/singapore-marina-baystreetcircuit.7LXNQUCHTyR5yMQPlIk7Lv",
+    "http://www.espn.com.ar/racing/driver/_/id/5823/franco-colapinto",
+    "https://www.formule1.nl/coureur/franco-colapinto/"
+   ],
+   "uso": {
+    "entrada": 456,
+    "salida": 456,
+    "costo": 0.00591
+   }
+  },
+  "n10": {
+   "titulo": "La Corte Suprema suspendió el artículo del DNU 70 que deroga la Ley de Tierras",
+   "status": 200,
+   "ms": 5981,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La Ley 26.737 fija que la titularidad extranjera no puede superar el 15% de las tierras rurales del país, con límites también a nivel provincial y de departamentos o equivalentes.",
+     "cifra": "15%",
+     "fecha_del_dato": "vigente desde la sanción de la ley en 2011",
+     "fuente_url": "https://magyp.gob.ar/sitio/areas/tierras/ley/?accion=imp",
+     "fuente_nombre": "Secretaría de Agricultura, Ganadería y Pesca",
+     "por_que_suma": "Aclara cuál era el tope que quedaba en suspenso y le da dimensión concreta al impacto de la medida."
+    },
+    {
+     "dato": "La Ley 26.737 fue sancionada el 22 de diciembre de 2011 y promulgada el 27 de diciembre de 2011.",
+     "cifra": "2011",
+     "fecha_del_dato": "22 y 27 de diciembre de 2011",
+     "fuente_url": "https://www.mininterior.gov.ar/fronteras/pdf/ley-26737.pdf",
+     "fuente_nombre": "Ministerio del Interior",
+     "por_que_suma": "Aporta un antecedente histórico preciso para ubicar la norma en el tiempo y mostrar su antigüedad."
+    },
+    {
+     "dato": "El texto oficial de la normativa argentina consigna que la Ley 26.737 fue abrogada por el artículo 154 del DNU 70/2023, publicado en el Boletín Oficial el 21 de diciembre de 2023.",
+     "cifra": "artículo 154 del DNU 70/2023",
+     "fecha_del_dato": "21 de diciembre de 2023",
+     "fuente_url": "https://www.argentina.gob.ar/normativa/nacional/norma-192150",
+     "fuente_nombre": "Argentina.gob.ar",
+     "por_que_suma": "Permite precisar exactamente qué disposición fue suspendida y cuándo quedó formalmente registrada su derogación."
+    }
+   ],
+   "citadas": [
+    "https://www.mininterior.gov.ar/fronteras/pdf/ley-26737.pdf",
+    "https://www.argentina.gob.ar/normativa/nacional/192150/actualizacion",
+    "https://magyp.gob.ar/sitio/areas/tierras/ley/?accion=imp",
+    "https://www.argentina.gob.ar/normativa/nacional/norma-192150",
+    "https://www.argentina.gob.ar/normativa/nacional/norma-194378/texto",
+    "https://www.argentina.gob.ar/normativa/nacional/192150/normas-modifican",
+    "https://www.c5n.com/politica/la-corte-suprema-suspendio-el-articulo-del-dnu-70-que-derogaba-la-ley-tierras-n251183",
+    "https://www.diariopopular.com.ar/politica/ley-tierras-la-corte-suspendio-su-derogacion-el-dnu-70-n923748",
+    "https://www.todojujuy.com/ley-tierras-la-corte-suprema-suspendio-el-dnu-milei-y-vuelven-las-restricciones-extranjeros-n297226",
+    "https://www.unoentrerios.com.ar/el-pais/ley-tierras-la-corte-suprema-dio-marcha-atras-y-restituye-la-norma-n10285814.html/amp",
+    "https://www.radiosudamericana.com/m-chaco/politica/politica/politica/politica/politica/politica/politica/politica/politica/politica/politica/331069-La-Corte-suspendio-el-articulo-que-derogaba-la-Ley-de-Tierras.htm",
+    "https://www.unosantafe.com.ar/informacion-general/ley-tierras-la-corte-suprema-aclaro-el-alcance-su-fallo-y-cuestiono-los-discursos-odio-n10284252.html/amp",
+    "https://www.youtube.com/watch?v=01AOic6oaTs",
+    "https://www.eldestapeweb.com/politica/trampa-corte-dejar-vigente-entrega-tierras-extranjeros-2026930212750",
+    "https://www.facebook.com/Canal.10.SRT/posts/%EF%B8%8F-la-corte-dej%C3%B3-vigente-la-derogaci%C3%B3n-de-la-ley-de-tierras-la-corte-suprema-revo/1552324686939319/"
+   ],
+   "uso": {
+    "entrada": 352,
+    "salida": 451,
+    "costo": 0.0058
+   }
+  },
+  "n11": {
+   "titulo": "Comenzó el traslado de presos desde la cárcel de Devoto al penal de Marcos Paz",
+   "status": 200,
+   "ms": 4336,
+   "error": null,
+   "datos": [
+    {
+     "dato": "El complejo penitenciario de Marcos Paz tiene capacidad para 2.240 internos y fue construido por la Ciudad de Buenos Aires.",
+     "cifra": "2.240 internos",
+     "fecha_del_dato": "2026-10-08",
+     "fuente_url": "https://www.infobae.com/politica/2026/10/08/la-carcel-de-devoto-paso-a-manos-del-gobierno-nacional-y-avanza-el-traslado-de-los-presos-al-penal-de-marcos-paz/",
+     "fuente_nombre": "Infobae",
+     "por_que_suma": "Aporta una cifra concreta sobre el destino de los detenidos y dimensiona la magnitud del traslado."
+    },
+    {
+     "dato": "La primera etapa del operativo incluyó el traslado de 326 detenidos desde Devoto a Marcos Paz.",
+     "cifra": "326 detenidos",
+     "fecha_del_dato": "2026-10-11",
+     "fuente_url": "https://www.lanacion.com.ar/seguridad/el-gobierno-comenzo-el-traslado-de-presos-de-la-carcel-de-devoto-a-marcos-paz-nid11102026/",
+     "fuente_nombre": "LA NACION",
+     "por_que_suma": "Da un dato puntual y reciente sobre el avance efectivo del operativo, no solo sobre el anuncio."
+    },
+    {
+     "dato": "El penal de Marcos Paz se levanta sobre un predio de 80 hectáreas, con 60 cubiertas.",
+     "cifra": "80 hectáreas",
+     "fecha_del_dato": "2026-10-08",
+     "fuente_url": "https://www.lanacion.com.ar/seguridad/el-gobierno-formalizo-el-traslado-de-los-presos-a-marcos-paz-y-avanza-con-el-cierre-de-la-carcel-de-nid08102026/",
+     "fuente_nombre": "LA NACION",
+     "por_que_suma": "Sirve para dimensionar el tamaño del complejo y darle más contexto espacial a la nota."
+    }
+   ],
+   "citadas": [
+    "https://buenosaires.gob.ar/gcaba_historico/noticias/avanza-la-obra-del-complejo-penitenciario-que-permitira-cerrar-la-carcel",
+    "https://www.lanacion.com.ar/seguridad/el-gobierno-comenzo-el-traslado-de-presos-de-la-carcel-de-devoto-a-marcos-paz-nid11102026/",
+    "https://www.infobae.com/politica/2026/10/11/comenzo-el-traslado-de-presos-desde-la-carcel-de-devoto-al-penal-de-marcos-paz/",
+    "https://www.a24.com/politica/comenzo-el-traslado-presos-devoto-marcos-paz-asi-fue-el-primer-operativo-cerrar-la-carcel-portena-n1605355",
+    "https://www.c5n.com/politica/con-un-fuerte-operativo-seguridad-trasladaron-los-primeros-326-presos-devoto-marcos-paz-n251339",
+    "https://www.diariodecuyo.com.ar/argentina/comenzo-el-traslado-presos-devoto-la-nueva-carcel-marcos-paz-n6585583",
+    "https://misionesonline.net/2026/10/11/comenzo-el-historico-traslado-de-1500-presos-de-devoto-a-la-nueva-carcel-de-marcos-paz/",
+    "https://tn.com.ar/politica/2026/10/06/la-ciudad-entregara-a-la-nacion-la-carcel-de-marcos-paz-y-avanza-el-plan-para-cerrar-devoto/",
+    "https://www.lanacion.com.ar/seguridad/el-gobierno-formalizo-el-traslado-de-los-presos-a-marcos-paz-y-avanza-con-el-cierre-de-la-carcel-de-nid08102026/",
+    "https://www.a24.com/politica/el-gobierno-y-la-ciudad-acordaron-el-traspaso-marcos-paz-y-activaron-el-traslado-los-presos-devoto-n1604615",
+    "https://www.diariopopular.com.ar/politica/comenzo-el-traslado-presos-devoto-marcos-paz-llevaron-los-primeros-326-internos-n924057",
+    "https://www.infobae.com/politica/2026/10/08/la-carcel-de-devoto-paso-a-manos-del-gobierno-nacional-y-avanza-el-traslado-de-los-presos-al-penal-de-marcos-paz/",
+    "https://www.a24.com/politica/el-gobierno-revelo-los-detalles-del-operativo-traslado-1500-presos-devoto-marcos-paz-n1604918",
+    "https://www.a24.com/politica/adios-la-carcel-devoto-como-sera-el-operativo-trasladar-los-presos-marcos-paz-n1604367",
+    "https://elintransigente.com/2026/10/11/devoto-traslado-presos-marcos-paz/"
+   ],
+   "uso": {
+    "entrada": 448,
+    "salida": 451,
+    "costo": 0.0059
+   }
+  },
+  "n12": {
+   "titulo": "Lionel Messi brilló con un doblete en la goleada del Inter Miami ante DC United",
+   "status": 200,
+   "ms": 6242,
+   "error": null,
+   "datos": [
+    {
+     "dato": "Con sus dos goles ante DC United, Messi llegó a 23 tantos en la MLS 2026 y quedó como máximo goleador de la liga en ese momento.",
+     "cifra": "23",
+     "fecha_del_dato": "10 de octubre de 2026",
+     "fuente_url": "https://www.espn.com/soccer/match/_/gameId/761847",
+     "fuente_nombre": "ESPN",
+     "por_que_suma": "Aporta un dato de contexto estadístico claro y actual que refuerza el impacto del partido."
+    },
+    {
+     "dato": "Inter Miami ganó 4-0 y alcanzó 49 puntos en la temporada regular, con registro de 13 victorias, 5 derrotas y 10 empates.",
+     "cifra": "49 puntos",
+     "fecha_del_dato": "10 de octubre de 2026",
+     "fuente_url": "https://www.intermiamicf.com/news/match-recap-inter-miami-cf-secures-4-0-shutout-of-d-c-united",
+     "fuente_nombre": "Inter Miami CF",
+     "por_que_suma": "Da contexto oficial sobre la campaña del equipo más allá del resultado puntual."
+    },
+    {
+     "dato": "Messi llegó a 104 goles para Inter Miami en todas las competiciones, según el balance posterior al partido.",
+     "cifra": "104",
+     "fecha_del_dato": "11 de octubre de 2026",
+     "fuente_url": "https://www.beinsports.com/en-us/soccer/mls/articles/lionel-messi-sets-new-inter-miami-records-after-scoring-brace-following-argentina-retirement-2026-10-11?du=9M",
+     "fuente_nombre": "beIN SPORTS",
+     "por_que_suma": "Agrega una marca histórica del jugador con valor de récord y vuelve más original la nota."
+    }
+   ],
+   "citadas": [
+    "https://www.espn.com/soccer/team-stats/_/gameId/761847",
+    "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats",
+    "https://www.espn.com/soccer/match/_/gameId/761847",
+    "https://apnews.com/article/inter-miami-dc-united-score-messi-7898542fa6d6a42ca51ccec44fdc4be1",
+    "https://www.espn.com/soccer/report/_/gameId/761847",
+    "https://www.bbc.co.uk/sport/football/live/c6gqwykg77lqt",
+    "https://www.intermiamicf.com/news/match-recap-inter-miami-cf-secures-4-0-shutout-of-d-c-united",
+    "https://www.espn.com/soccer/player-stats/_/gameId/761847",
+    "https://www.beinsports.com/en-us/soccer/mls/articles/lionel-messi-sets-new-inter-miami-records-after-scoring-brace-following-argentina-retirement-2026-10-11?du=9M",
+    "https://en.as.com/soccer/inter-miami-vs-dc-united-live-online-score-stats-goals-updates-mls-2026-f202610-n/",
+    "https://www.nytimes.com/athletic/football/game/dc-united-vs-inter-miami/A2Kt9u3y9RB8iCMc/?eafs_enabled=false",
+    "https://www.fotmob.com/en-GB/matches/dc-united-vs-inter-miami-cf/5yxi759r",
+    "https://www.foxsports.com/soccer/mls-inter-miami-cf-vs-dc-united-oct-10-2026-game-boxscore-647377",
+    "https://apnews.com/article/inter-miami-cf-d-c-united-mls-soccer-soccer-lionel-messi-251bb1b7e580496a89362ba14238505c",
+    "https://www.flashscore.com/match/football/dc-united-O6hjfSXE/inter-miami-0AheRyBg/"
+   ],
+   "uso": {
+    "entrada": 440,
+    "salida": 404,
+    "costo": 0.00584
+   }
+  }
+ }
+}

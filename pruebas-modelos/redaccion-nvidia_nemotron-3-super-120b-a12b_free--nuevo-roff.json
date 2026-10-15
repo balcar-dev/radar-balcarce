@@ -1,0 +1,194 @@
+{
+ "modelo": "nvidia/nemotron-3-super-120b-a12b:free",
+ "prompt": "nuevo",
+ "razonamiento": "off",
+ "fecha": "2026-10-11T21:54:37.205Z",
+ "precios": {
+  "entrada": 0,
+  "salida": 0
+ },
+ "historias": {
+  "23005298": {
+   "id": "23005298",
+   "titulo_original": "RECONOCIMIENTO A LA PRECISIÓN Y EL COMPROMISO EN EL DÍA DEL TÉCNICO DE LABORATORIO",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 3529,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5178,
+    "salida": 613,
+    "costo": 0
+   },
+   "escrito": {
+    "titulo": "La Municipalidad reconoce a los técnicos de laboratorio en su día",
+    "copete": "La Municipalidad de Balcarce y el Hospital Municipal 'Dr. Felipe Antonio Fossati' saludaron a los técnicos de laboratorio por su labor en la cadena sanitaria local, destacando su rol en diagnósticos y tratamientos.",
+    "cuerpo": "Desde la Municipalidad de Balcarce y el Hospital Municipal 'Dr. Felipe Antonio Fossati' se saludó con especial reconocimiento a los técnicos de laboratorio en su día, destacando su labor silenciosa pero insustituible dentro de la cadena sanitaria local. Cada muestra analizada representa un eslabón crítico que anticipa diagnósticos, orienta tratamientos y sostiene la calidad de la atención médica cotidiana. Detrás de cada resultado hay rigor científico, vocación de servicio y una responsabilidad humana que fortalece todo el sistema de salud pública.",
+    "guion": "La Municipalidad reconoce a los técnicos de laboratorio en su día",
+    "textoRedes": "La Municipalidad de Balcarce y el Hospital Municipal 'Dr. Felipe Antonio Fossati' reconocieron a los técnicos de laboratorio por su labor en diagnósticos y tratamientos, destacando su rol en la cadena sanitaria local.",
+    "claves": [
+     "Reconocimiento a técnicos de laboratorio",
+     "Labor silenciosa pero insustituible",
+     "Rol en diagnósticos y tratamientos"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 66 palabras seguidas del original (\"con especial reconocimiento a los tecnicos de laboratorio en su dia destacando su labor…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 81,
+   "palabrasBajada": 33,
+   "caracteresTitulo": 65
+  },
+  "0305adf0": {
+   "id": "0305adf0",
+   "titulo_original": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal “Suavecita”",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 5326,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5610,
+    "salida": 1162,
+    "costo": 0
+   },
+   "escrito": {
+    "titulo": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal 'Suavecita'",
+    "copete": "La obra 'Suavecita', escrita y dirigida por Martín Bontempo, se presentará el sábado 17 de octubre a las 21:30 en el teatro Roxy de Mar del Plata. Camila Peralta, nacida en Balcarce, regresa tras funciones con entradas agotadas y siete premios obtenidos.",
+    "cuerpo": "La actriz balcarceña Camila Peralta volverá a presentarse en Mar del Plata con el unipersonal 'Suavecita', el sábado 17 de octubre de 2026 a las 21:30 en el teatro Roxy, ubicado en San Luis 1750. La obra, escrita y dirigida por Martín Bontempo, regresa tras agotar sus funciones anteriores en la ciudad. Las entradas se encuentran a la venta a través de Plateanet y en la boletería del teatro, con descuentos para estudiantes de la Escuela Municipal de Arte Dramático (EMAD) y del Polivalente. 'Suavecita' acumula siete premios y 16 nominaciones desde su estreno en 2023 en NÜN Teatro Bar. Por su interpretación, Camila Peralta recibió el premio María Guerrero 2023 a la mejor actuación unipersonal, el Trinidad Guevara 2023 como revelación femenina y el premio Teatro del Mundo 2023 como mejor actriz. Nacida en Balcarce, Peralta ya había presentado 'Suavecita' previamente en el Teatro Municipal Luis Conti de la ciudad. La propuesta combina erotismo, ciencia ficción y misterio en una comedia dramática que transita entre lo mágico y lo cotidiano.",
+    "guion": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal Suavecita",
+    "textoRedes": "La balcarceña Camila Peralta vuelve a Mar del Plata con su unipersonal 'Suavecita' el sábado 17 de octubre a las 21:30 en el teatro Roxy. Entradas a la venta con descuentos para estudiantes de EMAD y Polivalente.",
+    "claves": [
+     "Función el sábado 17 de octubre a las 21:30 en el teatro Roxy de Mar del Plata",
+     "Entradas a la venta con descuentos para estudiantes de EMAD y Polivalente",
+     "Obra con siete premios y 16 nominaciones desde su estreno en 2023",
+     "Camila Peralta, nacida en Balcarce, obtuvo premios María Guerrero, Trinidad Guevara y Teatro del Mundo 2023",
+     "La obra ya se presentó en el Teatro Municipal Luis Conti de Balcarce"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 21 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 30 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 2.026 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 21 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 30 y la fuente no lo dice"
+    },
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 33 palabras seguidas del original (\"por su interpretacion camila peralta recibio el premio maria guerrero 2023 a la mejor…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 171,
+   "palabrasBajada": 42,
+   "caracteresTitulo": 82
+  },
+  "2d82c63c": {
+   "id": "2d82c63c",
+   "titulo_original": "Declararon de interés Legislativo los 75 años del Club Amigos Unidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 5914,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5471,
+    "salida": 1164,
+    "costo": 0
+   },
+   "escrito": {
+    "titulo": "El Concejo declara de interés legislativo el 75° aniversario del Club Amigos Unidos",
+    "copete": "El Concejo Deliberante aprobó por unanimidad el reconocimiento al club por su trayectoria deportiva y social. Destacaron su trabajo con infancias, fútbol femenino y acompañamiento a familias. El club fue fundado en 1951 y tiene logros como el invicto de 47 partidos entre 1977 y 1978.",
+    "cuerpo": "El Concejo Deliberante declaró de interés legislativo, social y comunitario el 75° aniversario del Club Amigos Unidos. El club fue fundado el 9 de septiembre de 1951. Durante el tratamiento, el concejal Javier Menonne de Primero la Patria repasó los principales hitos, incluyendo el invicto de 47 partidos consecutivos entre 1977 y 1978 y los cuatro campeonatos obtenidos entre 1985 y 1988. También destacó el trabajo con las categorías formativas y el fútbol femenino. Menonne sostuvo que el club busca formar ciudadanos comprometidos, educando en valores y salud emocional. La concejal Sol Di Gerónimo de Fuerza Patria felicitó a los integrantes y resaltó el vínculo construido con el barrio durante 75 años. Advirtió sobre la situación económica delicada que atraviesan los clubes de barrio, incluyendo a Amigos Unidos. El concejal Leandro Spinelli de Juntos acompañó la declaración y destacó el esfuerzo de quienes sostienen la institución, remarcando que los clubes funcionan como espacios de contención y promueven el desarrollo deportivo. La declaración reconoció el rol activo del club en la vida social de la comunidad a través de sus actividades deportivas y comunitarias.",
+    "guion": "El Concejo declara de interés legislativo el 75 aniversario del Club Amigos Unidos",
+    "textoRedes": "El Concejo Deliberante declaró de interés legislativo el 75 aniversario del Club Amigos Unidos. Destacaron su trayectoria deportiva, trabajo con infancias y fútbol femenino, y advirtieron sobre la situación económica de los clubes de barrio.",
+    "claves": [
+     "Reconocimiento legislativo al 75 aniversario del Club Amigos Unidos",
+     "Fundado en 1951, con logros deportivos como el invicto de 47 partidos (1977-1978)",
+     "Destacado el trabajo social, formativo y con fútbol femenino",
+     "Concejales advirtieron sobre la situación económica de los clubes de barrio",
+     "Reconocido el rol de contención y desarrollo deportivo de la institución"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "copia",
+     "detalle": "copia 31 palabras seguidas del original (\"el invicto de 47 partidos consecutivos entre 1977 y 1978 y los cuatro campeonatos…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 183,
+   "palabrasBajada": 46,
+   "caracteresTitulo": 83
+  },
+  "445a709e": {
+   "id": "445a709e",
+   "titulo_original": "Reconocen proyecto de la EEPA N°701 sobre el descarte de medicamentos vencidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 11022,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5357,
+    "salida": 1385,
+    "costo": 0
+   },
+   "escrito": {
+    "titulo": "El Concejo declara de interés el proyecto de la EEPA N° 701 sobre descarte de medicamentos vencidos",
+    "copete": "El Concejo Deliberante aprobó el proyecto impulsado por estudiantes de la Escuela Primaria de Adultos N° 701, que busca concientizar sobre el descarte adecuado de medicamentos. Un relevamiento mostró que el 77% tira los vencidos a la basura o desagües y el 93% no sabe dónde llevarlos.",
+    "cuerpo": "El Concejo Deliberante declaró de interés legislativo, educativo y ambiental el proyecto “El descarte importa, medicamentos vencidos”, impulsado por la Escuela Primaria de Adultos N° 701. La iniciativa surgió de una pregunta en el aula y se desarrolló mediante entrevistas, talleres, encuestas y consultas al Colegio de Farmacéuticos y al Club Rotario. Un relevamiento realizado a 206 personas reveló que el 77% reconoce tirar medicamentos vencidos o sobrantes a la basura o desagües, mientras que el 93% desconoce dónde llevarlos para su descarte adecuado. La concejal Alejandra Marchegiani, de La Libertad Avanza, destacó el trabajo de los estudiantes y señaló que lograron transformar el conocimiento del aula para llegar a la comunidad. Además, planteó la necesidad de establecer un punto de recepción debidamente establecido y aumentar la difusión para que los vecinos sepan cómo actuar. El proyecto fue presentado en la Feria Distrital de Educación, Arte, Ciencia y Tecnología, donde recibió un reconocimiento. Scioli alentó a los integrantes de la escuela a continuar con este tipo de iniciativas y aseguró que podrán contar con el acompañamiento del Concejo Deliberante para impulsar sus propuestas.",
+    "guion": "El Concejo declara de interés el proyecto de la EEPA N° setecientos uno sobre descarte de medicamentos vencidos",
+    "textoRedes": "El Concejo Deliberante declaró de interés el proyecto de la EEPA N° 701 sobre descarte de medicamentos vencidos. Un relevamiento mostró que el 77% tira los vencidos a la basura o desagües y el 93% no sabe dónde llevarlos para su descarte adecuado.",
+    "claves": [
+     "Proyecto declarado de interés por el Concejo Deliberante",
+     "Impulsado por estudiantes de la EEPA N° 701",
+     "El 77% tira medicamentos vencidos a la basura o desagües",
+     "El 93% desconoce dónde llevarlos para descarte adecuado",
+     "Presentado en la Feria Distrital de Educación, Arte, Ciencia y Tecnología"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "largo",
+     "detalle": "el titulo tiene 99 caracteres, el máximo es 90"
+    },
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 30 palabras seguidas del original (\"scioli alento a los integrantes de la escuela a continuar con este tipo de…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 183,
+   "palabrasBajada": 47,
+   "caracteresTitulo": 99
+  }
+ }
+}

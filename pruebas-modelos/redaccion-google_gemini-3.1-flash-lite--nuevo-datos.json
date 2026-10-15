@@ -1,0 +1,94 @@
+{
+ "modelo": "google/gemini-3.1-flash-lite",
+ "prompt": "nuevo",
+ "razonamiento": null,
+ "fecha": "2026-10-12T02:27:06.078Z",
+ "precios": {
+  "entrada": 2.5e-7,
+  "salida": 0.0000015
+ },
+ "historias": {
+  "23005298": {
+   "id": "23005298",
+   "titulo_original": "RECONOCIMIENTO A LA PRECISIÓN Y EL COMPROMISO EN EL DÍA DEL TÉCNICO DE LABORATORIO",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 2854,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5019,
+    "salida": 569,
+    "costo": 0.0011925
+   },
+   "escrito": {
+    "titulo": "El municipio saluda a los técnicos de laboratorio en su día",
+    "copete": "La Municipalidad y el Hospital Municipal Dr. Felipe Antonio Fossati reconocieron la labor de estos profesionales. Destacaron su tarea en el análisis de muestras y el impacto en la atención médica local.",
+    "cuerpo": "El viernes 9 de octubre se conmemoró el Día del Técnico de Laboratorio. Con motivo de la fecha, las autoridades municipales y del Hospital Municipal Dr. Felipe Antonio Fossati hicieron llegar un saludo a quienes se desempeñan en el área.\n\nDesde el municipio señalaron que el trabajo de estos profesionales es fundamental para el funcionamiento del sistema sanitario. Según explicaron, el análisis de muestras permite anticipar diagnósticos y definir los tratamientos médicos que recibe la comunidad de manera cotidiana.",
+    "guion": "El municipio saluda a los técnicos de laboratorio en su día.",
+    "textoRedes": "En el marco del Día del Técnico de Laboratorio, la Municipalidad y el Hospital Municipal Dr. Felipe Antonio Fossati destacaron la labor de estos profesionales en el sistema de salud local y su rol clave en la atención médica.",
+    "claves": [
+     "La fecha se conmemoró el viernes 9 de octubre.",
+     "El reconocimiento fue emitido por la Municipalidad y el Hospital Fossati.",
+     "Las autoridades destacaron el rol del laboratorio en los diagnósticos médicos."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    }
+   ],
+   "palabrasCuerpo": 79,
+   "palabrasBajada": 32,
+   "caracteresTitulo": 59
+  },
+  "0305adf0": {
+   "id": "0305adf0",
+   "titulo_original": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal “Suavecita”",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 3775,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5858,
+    "salida": 950,
+    "costo": 0.0028895
+   },
+   "escrito": {
+    "titulo": "Camila Peralta presenta su unipersonal en Mar del Plata",
+    "copete": "La actriz balcarceña llevará la obra Suavecita al teatro Roxy el sábado 17 de octubre. La pieza, que ya pasó por el Teatro Municipal Luis Conti, cuenta con múltiples distinciones y fue escrita y dirigida por Martín Bontempo.",
+    "cuerpo": "La actriz balcarceña Camila Peralta se presentará el sábado 17 de octubre, a las 21.30, en el teatro Roxy de Mar del Plata con el unipersonal Suavecita. La función tendrá lugar en la sala ubicada en San Luis 1750, que cuenta con una capacidad de 954 butacas. Las entradas se encuentran disponibles a través de la plataforma Plateanet y en la boletería del establecimiento, donde se ofrecen descuentos para estudiantes de la Escuela Municipal de Arte Dramático (EMAD) y del Polivalente.\n\nLa obra, escrita y dirigida por Martín Bontempo, narra la historia de una mujer que desarrolla un don para sanar en un hospital público. La trama mezcla elementos de comedia dramática, ciencia ficción y misterio. Desde su estreno en 2023, la producción acumula 150 funciones en Buenos Aires, 38 presentaciones en gira y actuaciones en el exterior.\n\nEl trabajo de Peralta ha sido reconocido con diversos galardones, entre ellos el premio María Guerrero, el Trinidad Guevara y el Teatro del Mundo, todos obtenidos en 2023. Además, la Asociación de Cronistas del Espectáculo le otorgó el Premio ACE 2023/2024 a la mejor actuación femenina en obra para un solo personaje. La actriz, que participó en producciones como División Palermo y Envidiosa, ya había presentado esta propuesta en el Teatro Municipal Luis Conti de Balcarce.",
+    "guion": "Camila Peralta presenta su unipersonal en Mar del Plata. La actriz balcarceña llevará la obra Suavecita al teatro Roxy el sábado diecisiete de octubre a las veintiuna treinta.",
+    "textoRedes": "La actriz balcarceña Camila Peralta vuelve a escena con el unipersonal Suavecita. La función será el sábado 17 de octubre, a las 21.30, en el teatro Roxy de Mar del Plata. Las entradas ya están a la venta.",
+    "claves": [
+     "La función será el sábado 17 de octubre a las 21.30 en el teatro Roxy de Mar del Plata.",
+     "La obra acumula siete premios y 16 nominaciones desde su estreno en 2023.",
+     "Las entradas pueden adquirirse mediante Plateanet o en la boletería del teatro."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el guion dice 30 y la fuente no lo dice"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 16 palabras seguidas del original (\"se ofrecen descuentos para estudiantes de la escuela municipal de arte dramatico emad y…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 214,
+   "palabrasBajada": 38,
+   "caracteresTitulo": 55
+  }
+ }
+}

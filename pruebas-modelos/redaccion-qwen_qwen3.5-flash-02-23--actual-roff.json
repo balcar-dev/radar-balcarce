@@ -1,0 +1,458 @@
+{
+ "modelo": "qwen/qwen3.5-flash-02-23",
+ "prompt": "actual",
+ "razonamiento": "off",
+ "fecha": "2026-10-11T21:33:42.443Z",
+ "precios": {
+  "entrada": 6.5e-8,
+  "salida": 2.6e-7
+ },
+ "historias": {
+  "23005298": {
+   "id": "23005298",
+   "titulo_original": "RECONOCIMIENTO A LA PRECISIÓN Y EL COMPROMISO EN EL DÍA DEL TÉCNICO DE LABORATORIO",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 5653,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 5913,
+    "salida": 723,
+    "costo": 0.000572325
+   },
+   "escrito": {
+    "titulo": "Municipalidad y hospital saludan a los técnicos de laboratorio",
+    "copete": "Desde la Municipalidad y el Hospital Municipal Dr. Felipe Antonio Fossati reconocieron este viernes la labor de los técnicos de laboratorio. Destacaron su rol clave en diagnósticos y tratamientos para la salud pública balcarceña.",
+    "cuerpo": "La Municipalidad de Balcarce y el Hospital Municipal Dr. Felipe Antonio Fossati emitieron un comunicado reconociendo a los técnicos de laboratorio en su día. Este reconocimiento se realizó el viernes 09 de octubre, fecha dedicada a la profesión.\n\nLas autoridades destacaron que el trabajo silencioso de estos profesionales es insustituible dentro de la cadena sanitaria local. Según el mensaje oficial, cada muestra analizada por ellos representa un eslabón crítico para anticipar diagnósticos y orientar tratamientos médicos con calidad.\n\nEl texto finalizó felicitando a quienes aplican rigor científico y vocación de servicio para fortalecer el sistema de salud pública y brindar bienestar a la comunidad.",
+    "guion": "Municipalidad y hospital saludan a los técnicos de laboratorio",
+    "textoRedes": "La Municipalidad y el Hospital Fossati reconocieron este viernes la labor de los técnicos de laboratorio. Destacaron su rol clave en diagnósticos y tratamientos para la salud pública.",
+    "claves": [
+     "Reconocimiento conjunto entre Municipio y Hospital Fossati.",
+     "Se destacó la importancia de las muestras para los diagnósticos.",
+     "El evento se llevó a cabo el viernes 09 de octubre.",
+     "Se valoró la responsabilidad humana detrás de cada resultado."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "fecha",
+     "detalle": "el copete menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    }
+   ],
+   "palabrasCuerpo": 104,
+   "palabrasBajada": 34,
+   "caracteresTitulo": 62
+  },
+  "0305adf0": {
+   "id": "0305adf0",
+   "titulo_original": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal “Suavecita”",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 6046,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6382,
+    "salida": 985,
+    "costo": 0.00067093
+   },
+   "escrito": {
+    "titulo": "Camila Peralta actúa este sábado en Mar del Plata con Suavecita",
+    "copete": "La actriz balcarceña regresa al escenario del Roxy en una función única tras agotar localidades previas. La entrada cuesta lo establecido por la taquilla, con descuentos para estudiantes locales.",
+    "cuerpo": "La actriz balcarceña Camila Peralta volverá a presentarse en Mar del Plata con el unipersonal Suavecita. La función se llevará a cabo el próximo sábado 17 de octubre a las 21.30 horas en el teatro Roxy, sito en San Luis 1750. Tras agotar sus funciones anteriores en la ciudad costera, la propuesta regresa para una sola noche más.\n\nEscrita y dirigida por Martín Bontempo, la obra acumula siete premios y 16 nominaciones desde su estreno en 2023. Peralta obtuvo distinciones como el premio María Guerrero y el Trinidad Guevara por su actuación. La pieza también transitó por el Teatro Municipal Luis Conti de Balcarce en fechas previas.\n\nLas entradas se venden actualmente a través de la plataforma Plateanet y en la boletería del teatro. Se aplicarán descuentos específicos para alumnos de la Escuela Municipal de Arte Dramático y del Polivalente local. La obra narra la historia de una mujer que descubre un don para curar en un hospital público.",
+    "guion": "Camila Peralta actúa este sábado en Mar del Plata con Suavecita",
+    "textoRedes": "La actriz balcarceña Camila Peralta vuelve a actuar en Mar del Plata con Suavecita. Este sábado 17 de octubre a las 21.30 en el teatro Roxy. Entradas a la venta.",
+    "claves": [
+     "Camila Peralta vuelve a actuar en Mar del Plata este 17 de octubre.",
+     "La función es única y se realiza en el teatro Roxy.",
+     "La obra tiene siete premios y 16 nominaciones.",
+     "Hay descuentos para estudiantes de escuelas locales.",
+     "Peralta ya presentó la obra en el teatro municipal de Balcarce."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "copia",
+     "detalle": "copia 13 palabras seguidas del original (\"la actriz balcarcena camila peralta volvera a presentarse en mar del plata con\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 159,
+   "palabrasBajada": 29,
+   "caracteresTitulo": 63
+  },
+  "2d82c63c": {
+   "id": "2d82c63c",
+   "titulo_original": "Declararon de interés Legislativo los 75 años del Club Amigos Unidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 5676,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6211,
+    "salida": 943,
+    "costo": 0.000648895
+   },
+   "escrito": {
+    "titulo": "Concejo declara de interés los 75 años de Amigos Unidos",
+    "copete": "El Concejo Deliberante reconoció este sábado la trayectoria deportiva y social del club fundado en 1951. Concejales destacaron su trabajo con infancias y familias, aunque advirtieron sobre la crisis económica que enfrentan las entidades barriales.",
+    "cuerpo": "El Concejo Deliberante aprobó el sábado 10 de octubre una declaración que eleva a interés legislativo, social y comunitario el 75 aniversario del Club Amigos Unidos. El reconocimiento busca destacar la historia de la institución fundada el 9 de septiembre de 1951 y su aporte a la comunidad balcarceña.\n\nDurante el tratamiento, el concejal Javier Menonne recordó hitos históricos como el invicto de 47 partidos consecutivos logrado entre 1977 y 1978, además de cuatro campeonatos obtenidos entre 1985 y 1988. Menonne subrayó que la entidad forma ciudadanos comprometidos mediante valores y salud emocional, no solo jugadores.\n\nLa concejal Sol Di Gerónimo felicitó a los integrantes por el vínculo construido con el barrio durante siete décadas, pero advirtió sobre la delicada situación económica actual de los clubes de barrio. Otros ediles acompañaron la iniciativa resaltando el esfuerzo por sostener espacios de contención y desarrollo deportivo en la ciudad.",
+    "guion": "Concejo declara de interés los 75 años de Amigos Unidos",
+    "textoRedes": "El Concejo Deliberante reconoció este sábado los 75 años del Club Amigos Unidos por su trayectoria deportiva y social. Concejales destacaron su labor con las familias locales y advirtieron sobre la difícil situación económica que viven los clubes de barrio.",
+    "claves": [
+     "Reconocimiento oficial por 75 años de actividad.",
+     "Se destaca un invicto histórico de 47 partidos en los 70.",
+     "Se alerta sobre la crisis económica de los clubes de barrio.",
+     "El club fue fundado en 1951 y tiene fuerte vinculación social."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "fecha",
+     "detalle": "el copete menciona \"sabado\" y la fuente no"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"sabado\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 7 y la fuente no lo dice"
+    }
+   ],
+   "palabrasCuerpo": 147,
+   "palabrasBajada": 35,
+   "caracteresTitulo": 55
+  },
+  "445a709e": {
+   "id": "445a709e",
+   "titulo_original": "Reconocen proyecto de la EEPA N°701 sobre el descarte de medicamentos vencidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 6691,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6072,
+    "salida": 1047,
+    "costo": 0.0006669
+   },
+   "escrito": {
+    "titulo": "Concejo declara de interés proyecto de EEPA 701 sobre medicamentos vencidos",
+    "copete": "El Concejo Deliberante reconoció una iniciativa de estudiantes de la escuela primaria de adultos que investigó los hábitos de descarte de fármacos. El 93% de los vecinos encuestados desconoce dónde llevarlos correctamente.",
+    "cuerpo": "El Concejo Deliberante declaró de interés legislativo, educativo y ambiental el proyecto \"El descarte importa, medicamentos vencidos\", desarrollado por alumnos de la Escuela Primaria de Adultos N° 701. La sesión se llevó a cabo el sábado 10 de octubre. La propuesta surgió tras una consulta en clase y derivó en una investigación sobre la contaminación por residuos farmacéuticos.\n\nLa concejal Alejandra Marchegiani resaltó las entrevistas y talleres realizados por los estudiantes, quienes consultaron al Colegio de Farmacéuticos y al Club Rotario. Los datos revelaron que el 77% de los 206 vecinos encuestados desecha los medicamentos en la basura o cañerías, mientras que el 93% no sabe cuál es el lugar adecuado para hacerlo. La iniciativa también obtuvo un premio en la Feria Distrital de Educación, Arte, Ciencia y Tecnología.\n\nEl intendente Scioli alentó a los jóvenes a continuar con estas acciones y aseguró el apoyo del cuerpo deliberante para gestionar puntos de recolección específicos. La medida busca modificar los hábitos ciudadanos ante el impacto ambiental que genera este tipo de residuos.",
+    "guion": "El Concejo declara de interés proyecto de la escuela 701 sobre medicamentos vencidos",
+    "textoRedes": "El Concejo Deliberante reconoció el proyecto de estudiantes de la EEPA 701 sobre el descarte de medicamentos vencidos. Un 93% de los vecinos encuestados desconoce dónde llevarlos correctamente.",
+    "claves": [
+     "El Concejo declaró de interés el proyecto estudiantil sobre descarte de medicamentos.",
+     "El 93% de los vecinos encuestados desconoce dónde tirar los fármacos vencidos.",
+     "El 77% de los vecinos tira los medicamentos a la basura o desagües.",
+     "El intendente promete apoyo para instalar puntos de recepción adecuados.",
+     "Los estudiantes recibieron un reconocimiento en la Feria Distrital de Educación."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"sabado\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 17 palabras seguidas del original (\"el concejo deliberante declaro de interes legislativo educativo y ambiental el proyecto el descarte…\"): decilo con otr"
+    }
+   ],
+   "palabrasCuerpo": 171,
+   "palabrasBajada": 32,
+   "caracteresTitulo": 75
+  },
+  "d00b6002": {
+   "id": "d00b6002",
+   "titulo_original": "El fútbol se atrasó tres meses, y volvería a terminar en enero",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 6428,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6344,
+    "salida": 902,
+    "costo": 0.00064688
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "c959337d": {
+   "id": "c959337d",
+   "titulo_original": "Sol Di Gerónimo pidió informes por una posible bajada privada a la Laguna La Brava",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 7977,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6552,
+    "salida": 909,
+    "costo": 0.00066222
+   },
+   "escrito": {
+    "titulo": "Sol Di Gerónimo pide informes por bajada privada a Laguna La Brava",
+    "copete": "La concejal de Fuerza Patria solicitó al municipio detalles sobre una posible obra privada en la Manzana 333 E. La iniciativa busca verificar si el acceso a la laguna está restringido y si existen los permisos necesarios para las tareas realizadas.",
+    "cuerpo": "La concejal Sol Di Gerónimo presentó un proyecto de comunicación dirigido al Departamento Ejecutivo Municipal para investigar intervenciones en la Manzana 333 E de Villa Laguna La Brava. Según plantean vecinos, un particular estaría ejecutando tareas de movimiento de suelo y construcción de una bajada hacia el espejo de agua, lo que podría limitar el ingreso público al sector.\n\nLa iniciativa cuestiona la titularidad del inmueble, ya que el terreno podría pertenecer al dominio provincial. Di Gerónimo solicita a Asesoría Legal que informe sobre la existencia de convenios, concesiones o comodatos que habiliten dichas obras, además de detallar los expedientes y controles realizados hasta el momento. El objetivo es garantizar el acceso ordenado a este atractivo turístico y asegurar que cualquier actuación cumpla con la normativa vigente.",
+    "guion": "Sol Di Gerónimo pide informes por bajada privada a Laguna La Brava",
+    "textoRedes": "La concejal Sol Di Gerónimo pidió informes al municipio sobre una posible bajada privada en Laguna La Brava. Se busca verificar si el acceso público a la laguna está restringido y si las obras tienen los permisos correspondientes.",
+    "claves": [
+     "Se investiga la situación dominial de la Manzana 333 E.",
+     "Vecinos denuncian restricción de acceso a la laguna.",
+     "Se exige conocer los permisos municipales y provinciales de la obra.",
+     "La concejal pide informes a Asesoría Legal.",
+     "El proyecto busca preservar el acceso público al área turística."
+    ]
+   },
+   "problemas": [],
+   "palabrasCuerpo": 127,
+   "palabrasBajada": 41,
+   "caracteresTitulo": 66
+  },
+  "86c9586c": {
+   "id": "86c9586c",
+   "titulo_original": "Atletismo: Destacada actuación de balcarceños en el Torneo de la Diversidad Cultural",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 6066,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6100,
+    "salida": 1057,
+    "costo": 0.00067132
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "c9127ae7": {
+   "id": "c9127ae7",
+   "titulo_original": "Maxivóley femenino avanza en el Top 6",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 4789,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 5967,
+    "salida": 762,
+    "costo": 0.000585975
+   },
+   "escrito": {
+    "titulo": "Maxivóley femenino de Balcarce suma una victoria y una derrota",
+    "copete": "El equipo balcarceño jugó dos partidos en Tandil dentro del Top 6. Ganó al actual campeón por 2 a 0 y cayó ante el local. Los cruces de cuartos de final dependen de la tabla de posiciones.",
+    "cuerpo": "El equipo femenino de Maxivóley de Balcarce disputó dos encuentros en Tandil para definir su lugar en el Top 6 de la Liga Marplatense Federada de Vóley. En la primera fecha, las jugadoras locales derrotaron al actual campeón, Atlético Villa Gesell, con un resultado contundente de 2 a 0. Posteriormente, se midieron ante el anfitrión, el Club Edal, donde la victoria quedó en manos del equipo local tras un partido parejo. Con este balance de un triunfo y una caída, el equipo busca mejorar su posición para acceder a los cruces de cuartos de final que se definirán según la tabla general.",
+    "guion": "Maxivóley femenino de Balcarce suma una victoria y una derrota",
+    "textoRedes": "El Maxivóley femenino de Balcarce jugó en Tandil. Ganó al actual campeón por 2 a 0 y cayó ante el local. Los cruces de cuartos de final dependen de la tabla de posiciones.",
+    "claves": [
+     "Balcarce venció al actual campeón por 2 a 0",
+     "Cayó ante el equipo local del Club Edal",
+     "Se juega en Tandil dentro del Top 6",
+     "Los cruces de cuartos dependen de la tabla"
+    ]
+   },
+   "problemas": [],
+   "palabrasCuerpo": 102,
+   "palabrasBajada": 37,
+   "caracteresTitulo": 62
+  },
+  "a7da5534": {
+   "id": "a7da5534",
+   "titulo_original": "Un auto se prendió fuego y sufrió daños totales",
+   "fuentes": 1,
+   "serio": true,
+   "status": 200,
+   "ms": 4679,
+   "caracteresDelPrompt": 20447,
+   "uso": {
+    "entrada": 5688,
+    "salida": 723,
+    "costo": 0.0005577
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "276dcf9f": {
+   "id": "276dcf9f",
+   "titulo_original": "Cambió la Ley de Tránsito: cómo queda la prioridad de paso en la Provincia",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 6420,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6648,
+    "salida": 1056,
+    "costo": 0.00070668
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "9c7ee7d5": {
+   "id": "9c7ee7d5",
+   "titulo_original": "FIESTA NACIONAL DEL POSTRE: CONFIRMACIÓN DE LA NUEVA FECHA PARA LA 22ª EDICIÓN",
+   "fuentes": 5,
+   "serio": false,
+   "status": 200,
+   "ms": 6009,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6586,
+    "salida": 996,
+    "costo": 0.00068705
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "badcdcaa": {
+   "id": "badcdcaa",
+   "titulo_original": "Cuatro gimnastas de UP clasificaron a la Final Regional del Centro",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 5522,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6248,
+    "salida": 887,
+    "costo": 0.00063674
+   },
+   "escrito": {
+    "titulo": "Cuatro gimnastas de UP clasifican a la Final Regional del Centro",
+    "copete": "Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet lograron su pase tras competir en Aguas Verdes. La final regional se jugará en diciembre con representantes de tres provincias.",
+    "cuerpo": "Cuatro atletas de Unión Personal clasificaron a la Final Regional del Centro tras participar en la final provincial de los niveles 1 y 2. Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet fueron las seleccionadas que obtuvieron el cupo para la siguiente etapa. La competencia provincial se desarrolló en el Polideportivo de Aguas Verdes y contó con la presencia de casi 30 gimnastas de la institución balcarceña. La instancia regional está programada para disputarse en diciembre y congregará a participantes de las provincias de Buenos Aires, Córdoba y Santa Fe. La delegación local abarcó distintas categorías, desde Mini hasta Juvenil, con un total de más de treinta competidoras representando a la entidad.",
+    "guion": "Cuatro gimnastas de UP clasifican a la Final Regional del Centro",
+    "textoRedes": "Cuatro gimnastas de UP clasificaron a la Final Regional del Centro. Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet avanzarán a una instancia que reunirá a deportistas de tres provincias en diciembre.",
+    "claves": [
+     "Más de 30 gimnastas de UP participaron en la final provincial.",
+     "Las clasificadas compiten en diciembre contra rivales de tres provincias.",
+     "La competencia se realizó en el Polideportivo de Aguas Verdes.",
+     "UP envió atletas en todas las categorías desde Mini a Juvenil."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 3 y la fuente no lo dice"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"union\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"personal\" y la fuente no"
+    },
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    }
+   ],
+   "palabrasCuerpo": 113,
+   "palabrasBajada": 29,
+   "caracteresTitulo": 64
+  },
+  "04f90bd3": {
+   "id": "04f90bd3",
+   "titulo_original": "El Concejo Deliberante aprobó la creación de un registro de acompañantes terapéuticos",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 5382,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6184,
+    "salida": 888,
+    "costo": 0.00063284
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "6e45a05f": {
+   "id": "6e45a05f",
+   "titulo_original": "Investigan el faltante de dinero en la Escuela Emilio Lamarca",
+   "fuentes": 2,
+   "serio": true,
+   "status": 200,
+   "ms": 5467,
+   "caracteresDelPrompt": 20447,
+   "uso": {
+    "entrada": 5856,
+    "salida": 775,
+    "costo": 0.00058214
+   },
+   "escrito": {
+    "titulo": "Investigan desaparición de dinero en la Escuela Emilio Lamarca",
+    "copete": "La Policía investiga el faltante de fondos recaudados por entradas anticipadas en el colegio parroquial. El dinero, destinado al evento del Jardín, se hallaba en la preceptoría del Nivel Inicial cuando se constató su ausencia.",
+    "cuerpo": "La Policía investiga la desaparición de una suma de dinero en la Escuela Parroquial Emilio Lamarca. El faltante fue advertido durante la tarde del viernes pasado. Los fondos correspondían a la venta de entradas anticipadas para una actividad que realizarán los alumnos del Nivel Inicial. Según las fuentes consultadas, el dinero se encontraba resguardado en una caja ubicada en la preceptoría de dicho nivel educativo. La recaudación estaba destinada a un evento que se llevará a cabo el próximo viernes 23 de octubre en el Teatro Municipal Luis C.",
+    "guion": "Investigan desaparición de dinero en la Escuela Emilio Lamarca",
+    "textoRedes": "La Policía investiga el faltante de dinero recaudado por entradas anticipadas en la Escuela Emilio Lamarca. Los fondos, destinados al evento del Nivel Inicial, estaban guardados en la preceptoría cuando se constató su ausencia.",
+    "claves": [
+     "Se investiga el faltante de fondos en el colegio parroquial Emilio Lamarca.",
+     "El dinero era de entradas anticipadas para el evento del Nivel Inicial.",
+     "El hecho se detectó el viernes a la tarde en la preceptoría.",
+     "El evento con los niños está programado para el 23 de octubre."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "nombre",
+     "detalle": "el copete nombra a \"policia\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"policia\" y la fuente no"
+    },
+    {
+     "tipo": "relleno",
+     "detalle": "el cuerpo tiene una frase de relleno sin dato: \"fuentes consultadas\""
+    }
+   ],
+   "palabrasCuerpo": 89,
+   "palabrasBajada": 35,
+   "caracteresTitulo": 62
+  },
+  "869434ae": {
+   "id": "869434ae",
+   "titulo_original": "SE PRESENTÓ LA PRIMERA EXPO SALUD, DEPORTE Y TECNOLOGÍA",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 6482,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6791,
+    "salida": 971,
+    "costo": 0.000693875
+   },
+   "error": "respuesta ilegible o sin título"
+  }
+ }
+}

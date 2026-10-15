@@ -1,0 +1,823 @@
+{
+ "modelo": "typesafe/jev-1.13",
+ "lote": 12,
+ "soloPares": true,
+ "paresArchivo": "pares-200.json",
+ "muestra": "muestra-200.json",
+ "modo": "decisiones",
+ "fecha": "2026-10-11T02:58:05.673Z",
+ "precios": {
+  "entrada": 4.2e-8,
+  "salida": 0
+ },
+ "caracteresFijos": 4530,
+ "notas": {},
+ "pares": {
+  "p00": {
+   "status": 200,
+   "ms": 49,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.96}",
+   "mismo": true,
+   "noul": 0.96,
+   "uso": {
+    "entrada": 418.25,
+    "salida": 17.583333333333332,
+    "costo": 0.0000175665
+   }
+  },
+  "p01": {
+   "status": 200,
+   "ms": 49,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.07}",
+   "mismo": false,
+   "noul": 0.07,
+   "uso": {
+    "entrada": 418.25,
+    "salida": 17.583333333333332,
+    "costo": 0.0000175665
+   }
+  },
+  "p02": {
+   "status": 200,
+   "ms": 49,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.93}",
+   "mismo": true,
+   "noul": 0.93,
+   "uso": {
+    "entrada": 418.25,
+    "salida": 17.583333333333332,
+    "costo": 0.0000175665
+   }
+  },
+  "p03": {
+   "status": 200,
+   "ms": 49,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.06}",
+   "mismo": false,
+   "noul": 0.06,
+   "uso": {
+    "entrada": 418.25,
+    "salida": 17.583333333333332,
+    "costo": 0.0000175665
+   }
+  },
+  "p04": {
+   "status": 200,
+   "ms": 49,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.06}",
+   "mismo": false,
+   "noul": 0.06,
+   "uso": {
+    "entrada": 418.25,
+    "salida": 17.583333333333332,
+    "costo": 0.0000175665
+   }
+  },
+  "p05": {
+   "status": 200,
+   "ms": 49,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.93}",
+   "mismo": true,
+   "noul": 0.93,
+   "uso": {
+    "entrada": 418.25,
+    "salida": 17.583333333333332,
+    "costo": 0.0000175665
+   }
+  },
+  "p06": {
+   "status": 200,
+   "ms": 49,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9}",
+   "mismo": true,
+   "noul": 0.9,
+   "uso": {
+    "entrada": 418.25,
+    "salida": 17.583333333333332,
+    "costo": 0.0000175665
+   }
+  },
+  "p07": {
+   "status": 200,
+   "ms": 49,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.94}",
+   "mismo": true,
+   "noul": 0.94,
+   "uso": {
+    "entrada": 418.25,
+    "salida": 17.583333333333332,
+    "costo": 0.0000175665
+   }
+  },
+  "p08": {
+   "status": 200,
+   "ms": 49,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.07}",
+   "mismo": false,
+   "noul": 0.07,
+   "uso": {
+    "entrada": 418.25,
+    "salida": 17.583333333333332,
+    "costo": 0.0000175665
+   }
+  },
+  "p09": {
+   "status": 200,
+   "ms": 49,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.08}",
+   "mismo": false,
+   "noul": 0.08,
+   "uso": {
+    "entrada": 418.25,
+    "salida": 17.583333333333332,
+    "costo": 0.0000175665
+   }
+  },
+  "p10": {
+   "status": 200,
+   "ms": 49,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.96}",
+   "mismo": true,
+   "noul": 0.96,
+   "uso": {
+    "entrada": 418.25,
+    "salida": 17.583333333333332,
+    "costo": 0.0000175665
+   }
+  },
+  "p11": {
+   "status": 200,
+   "ms": 49,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.89}",
+   "mismo": true,
+   "noul": 0.89,
+   "uso": {
+    "entrada": 418.25,
+    "salida": 17.583333333333332,
+    "costo": 0.0000175665
+   }
+  },
+  "p12": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.85}",
+   "mismo": true,
+   "noul": 0.85,
+   "uso": {
+    "entrada": 402.5833333333333,
+    "salida": 17.583333333333332,
+    "costo": 0.0000169085
+   }
+  },
+  "p13": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.87}",
+   "mismo": true,
+   "noul": 0.87,
+   "uso": {
+    "entrada": 402.5833333333333,
+    "salida": 17.583333333333332,
+    "costo": 0.0000169085
+   }
+  },
+  "p14": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.83}",
+   "mismo": true,
+   "noul": 0.83,
+   "uso": {
+    "entrada": 402.5833333333333,
+    "salida": 17.583333333333332,
+    "costo": 0.0000169085
+   }
+  },
+  "p15": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.18}",
+   "mismo": false,
+   "noul": 0.18,
+   "uso": {
+    "entrada": 402.5833333333333,
+    "salida": 17.583333333333332,
+    "costo": 0.0000169085
+   }
+  },
+  "p16": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.04}",
+   "mismo": false,
+   "noul": 0.04,
+   "uso": {
+    "entrada": 402.5833333333333,
+    "salida": 17.583333333333332,
+    "costo": 0.0000169085
+   }
+  },
+  "p17": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.11}",
+   "mismo": false,
+   "noul": 0.11,
+   "uso": {
+    "entrada": 402.5833333333333,
+    "salida": 17.583333333333332,
+    "costo": 0.0000169085
+   }
+  },
+  "p18": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.23}",
+   "mismo": false,
+   "noul": 0.23,
+   "uso": {
+    "entrada": 402.5833333333333,
+    "salida": 17.583333333333332,
+    "costo": 0.0000169085
+   }
+  },
+  "p19": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.85}",
+   "mismo": true,
+   "noul": 0.85,
+   "uso": {
+    "entrada": 402.5833333333333,
+    "salida": 17.583333333333332,
+    "costo": 0.0000169085
+   }
+  },
+  "p20": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.09}",
+   "mismo": false,
+   "noul": 0.09,
+   "uso": {
+    "entrada": 402.5833333333333,
+    "salida": 17.583333333333332,
+    "costo": 0.0000169085
+   }
+  },
+  "p21": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.09}",
+   "mismo": false,
+   "noul": 0.09,
+   "uso": {
+    "entrada": 402.5833333333333,
+    "salida": 17.583333333333332,
+    "costo": 0.0000169085
+   }
+  },
+  "p22": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.15}",
+   "mismo": false,
+   "noul": 0.15,
+   "uso": {
+    "entrada": 402.5833333333333,
+    "salida": 17.583333333333332,
+    "costo": 0.0000169085
+   }
+  },
+  "p23": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9}",
+   "mismo": true,
+   "noul": 0.9,
+   "uso": {
+    "entrada": 402.5833333333333,
+    "salida": 17.583333333333332,
+    "costo": 0.0000169085
+   }
+  },
+  "p24": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.28}",
+   "mismo": false,
+   "noul": 0.28,
+   "uso": {
+    "entrada": 398.1666666666667,
+    "salida": 17.583333333333332,
+    "costo": 0.000016723
+   }
+  },
+  "p25": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.29}",
+   "mismo": false,
+   "noul": 0.29,
+   "uso": {
+    "entrada": 398.1666666666667,
+    "salida": 17.583333333333332,
+    "costo": 0.000016723
+   }
+  },
+  "p26": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.67}",
+   "mismo": true,
+   "noul": 0.67,
+   "uso": {
+    "entrada": 398.1666666666667,
+    "salida": 17.583333333333332,
+    "costo": 0.000016723
+   }
+  },
+  "p27": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.46}",
+   "mismo": false,
+   "noul": 0.46,
+   "uso": {
+    "entrada": 398.1666666666667,
+    "salida": 17.583333333333332,
+    "costo": 0.000016723
+   }
+  },
+  "p28": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.13}",
+   "mismo": false,
+   "noul": 0.13,
+   "uso": {
+    "entrada": 398.1666666666667,
+    "salida": 17.583333333333332,
+    "costo": 0.000016723
+   }
+  },
+  "p29": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.14}",
+   "mismo": false,
+   "noul": 0.14,
+   "uso": {
+    "entrada": 398.1666666666667,
+    "salida": 17.583333333333332,
+    "costo": 0.000016723
+   }
+  },
+  "p30": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.19}",
+   "mismo": false,
+   "noul": 0.19,
+   "uso": {
+    "entrada": 398.1666666666667,
+    "salida": 17.583333333333332,
+    "costo": 0.000016723
+   }
+  },
+  "p31": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.03}",
+   "mismo": false,
+   "noul": 0.03,
+   "uso": {
+    "entrada": 398.1666666666667,
+    "salida": 17.583333333333332,
+    "costo": 0.000016723
+   }
+  },
+  "p32": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.44}",
+   "mismo": false,
+   "noul": 0.44,
+   "uso": {
+    "entrada": 398.1666666666667,
+    "salida": 17.583333333333332,
+    "costo": 0.000016723
+   }
+  },
+  "p33": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.52}",
+   "mismo": true,
+   "noul": 0.52,
+   "uso": {
+    "entrada": 398.1666666666667,
+    "salida": 17.583333333333332,
+    "costo": 0.000016723
+   }
+  },
+  "p34": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.88}",
+   "mismo": true,
+   "noul": 0.88,
+   "uso": {
+    "entrada": 398.1666666666667,
+    "salida": 17.583333333333332,
+    "costo": 0.000016723
+   }
+  },
+  "p35": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9}",
+   "mismo": true,
+   "noul": 0.9,
+   "uso": {
+    "entrada": 398.1666666666667,
+    "salida": 17.583333333333332,
+    "costo": 0.000016723
+   }
+  },
+  "p36": {
+   "status": 200,
+   "ms": 40,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.23}",
+   "mismo": false,
+   "noul": 0.23,
+   "uso": {
+    "entrada": 408.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017157000000000002
+   }
+  },
+  "p37": {
+   "status": 200,
+   "ms": 40,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.78}",
+   "mismo": true,
+   "noul": 0.78,
+   "uso": {
+    "entrada": 408.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017157000000000002
+   }
+  },
+  "p38": {
+   "status": 200,
+   "ms": 40,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.75}",
+   "mismo": true,
+   "noul": 0.75,
+   "uso": {
+    "entrada": 408.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017157000000000002
+   }
+  },
+  "p39": {
+   "status": 200,
+   "ms": 40,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.05}",
+   "mismo": false,
+   "noul": 0.05,
+   "uso": {
+    "entrada": 408.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017157000000000002
+   }
+  },
+  "p40": {
+   "status": 200,
+   "ms": 40,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.16}",
+   "mismo": false,
+   "noul": 0.16,
+   "uso": {
+    "entrada": 408.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017157000000000002
+   }
+  },
+  "p41": {
+   "status": 200,
+   "ms": 40,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.04}",
+   "mismo": false,
+   "noul": 0.04,
+   "uso": {
+    "entrada": 408.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017157000000000002
+   }
+  },
+  "p42": {
+   "status": 200,
+   "ms": 40,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.1}",
+   "mismo": false,
+   "noul": 0.1,
+   "uso": {
+    "entrada": 408.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017157000000000002
+   }
+  },
+  "p43": {
+   "status": 200,
+   "ms": 40,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.16}",
+   "mismo": false,
+   "noul": 0.16,
+   "uso": {
+    "entrada": 408.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017157000000000002
+   }
+  },
+  "p44": {
+   "status": 200,
+   "ms": 40,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.11}",
+   "mismo": false,
+   "noul": 0.11,
+   "uso": {
+    "entrada": 408.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017157000000000002
+   }
+  },
+  "p45": {
+   "status": 200,
+   "ms": 40,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.48}",
+   "mismo": false,
+   "noul": 0.48,
+   "uso": {
+    "entrada": 408.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017157000000000002
+   }
+  },
+  "p46": {
+   "status": 200,
+   "ms": 40,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.91}",
+   "mismo": true,
+   "noul": 0.91,
+   "uso": {
+    "entrada": 408.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017157000000000002
+   }
+  },
+  "p47": {
+   "status": 200,
+   "ms": 40,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.93}",
+   "mismo": true,
+   "noul": 0.93,
+   "uso": {
+    "entrada": 408.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017157000000000002
+   }
+  },
+  "p48": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.08}",
+   "mismo": false,
+   "noul": 0.08,
+   "uso": {
+    "entrada": 421.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017703
+   }
+  },
+  "p49": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.71}",
+   "mismo": true,
+   "noul": 0.71,
+   "uso": {
+    "entrada": 421.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017703
+   }
+  },
+  "p50": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.2}",
+   "mismo": false,
+   "noul": 0.2,
+   "uso": {
+    "entrada": 421.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017703
+   }
+  },
+  "p51": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.08}",
+   "mismo": false,
+   "noul": 0.08,
+   "uso": {
+    "entrada": 421.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017703
+   }
+  },
+  "p52": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.25}",
+   "mismo": false,
+   "noul": 0.25,
+   "uso": {
+    "entrada": 421.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017703
+   }
+  },
+  "p53": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.14}",
+   "mismo": false,
+   "noul": 0.14,
+   "uso": {
+    "entrada": 421.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017703
+   }
+  },
+  "p54": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.05}",
+   "mismo": false,
+   "noul": 0.05,
+   "uso": {
+    "entrada": 421.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017703
+   }
+  },
+  "p55": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.1}",
+   "mismo": false,
+   "noul": 0.1,
+   "uso": {
+    "entrada": 421.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017703
+   }
+  },
+  "p56": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.2}",
+   "mismo": false,
+   "noul": 0.2,
+   "uso": {
+    "entrada": 421.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017703
+   }
+  },
+  "p57": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.34}",
+   "mismo": false,
+   "noul": 0.34,
+   "uso": {
+    "entrada": 421.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017703
+   }
+  },
+  "p58": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.88}",
+   "mismo": true,
+   "noul": 0.88,
+   "uso": {
+    "entrada": 421.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017703
+   }
+  },
+  "p59": {
+   "status": 200,
+   "ms": 39,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.92}",
+   "mismo": true,
+   "noul": 0.92,
+   "uso": {
+    "entrada": 421.5,
+    "salida": 17.583333333333332,
+    "costo": 0.000017703
+   }
+  },
+  "p60": {
+   "status": 200,
+   "ms": 256,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.63}",
+   "mismo": true,
+   "noul": 0.63,
+   "uso": {
+    "entrada": 503,
+    "salida": 19,
+    "costo": 0.000021126
+   }
+  },
+  "p61": {
+   "status": 200,
+   "ms": 256,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.13}",
+   "mismo": false,
+   "noul": 0.13,
+   "uso": {
+    "entrada": 503,
+    "salida": 19,
+    "costo": 0.000021126
+   }
+  }
+ }
+}

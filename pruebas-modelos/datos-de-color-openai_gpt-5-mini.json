@@ -1,0 +1,447 @@
+{
+ "modelo": "openai/gpt-5-mini",
+ "usado": "openai/gpt-5-mini:online",
+ "fecha": "2026-10-11T23:48:46.428Z",
+ "notas": {
+  "n1": {
+   "titulo": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal “Suavecita”",
+   "status": 200,
+   "ms": 16192,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La sala Roxy del Centro de Arte Radio City + Roxy + Melany tiene 954 butacas, por lo que la función del sábado podría recibir hasta esa cantidad de espectadores si se agota.",
+     "cifra": "954",
+     "fecha_del_dato": "informes y notas de temporada publicadas en 2025-2026 (ej. nota del 6/1/2026)",
+     "fuente_url": "https://telegrafo.com.ar/escenas/132516-el-centro-de-arte-mdq-ofrece-64-espectaculos-y-mas-de-200-funciones-este-verano",
+     "fuente_nombre": "Telégrafo (nota sobre la temporada del Centro de Arte MDQ)",
+     "por_que_suma": "permite dimensionar la escala del teatro donde se presenta la obra (capacidad máxima de público disponible)."
+    },
+    {
+     "dato": "“Suavecita” y su intérprete Camila Peralta obtuvieron premios importantes: entre ellos, Camila Peralta ganó el premio a Actuación Unipersonal en los Premios María Guerrero 2023 por Suavecita.",
+     "cifra": "Premio María Guerrero 2023 — Actuación Unipersonal (Camila Peralta)",
+     "fecha_del_dato": "ceremonia de entrega de los Premios María Guerrero, 6 de noviembre de 2023 (informes posteriores)",
+     "fuente_url": "https://escenariosnacionales.ar/noticias/2024/11/06/se-entregaron-los-premios-maria-guerrero-2023/",
+     "fuente_nombre": "Escenarios Nacionales (crónica de entrega de los Premios María Guerrero 2023)",
+     "por_que_suma": "ofrece un antecedente verificable sobre el reconocimiento profesional que respalda la afirmación de la nota sobre los premios del unipersonal."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 28109,
+    "salida": 1537,
+    "costo": 0.07929485
+   }
+  },
+  "n2": {
+   "titulo": "Declararon de interés Legislativo los 75 años del Club Amigos Unidos",
+   "status": 200,
+   "ms": 7308,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La sede del Club Amigos Unidos está ubicada en René Favaloro 972, B7620 Balcarce (dirección oficial usada en actividades municipales).",
+     "cifra": "René Favaloro 972",
+     "fecha_del_dato": "pagina municipal (fecha de publicación variable, consultada 2026)",
+     "fuente_url": "https://balcarce.gob.ar/event/torneo-de-truco/",
+     "fuente_nombre": "Municipalidad de Balcarce",
+     "por_que_suma": "Añade información práctica y verificable sobre la ubicación física del club, útil para lectores y para vincular la nota con la comunidad local."
+    },
+    {
+     "dato": "El equipo femenino de Amigos Unidos terminó primero e invicto la fase regular del torneo Clausura al completar 11 jornadas sin perder, asegurando su lugar en un eventual playoff final.",
+     "cifra": "11 jornadas (invicto en la fase regular)",
+     "fecha_del_dato": "Publicado en El Diario Balcarce, consultado septiembre/octubre 2026 (artículo reciente)",
+     "fuente_url": "https://eldiariobalcarce.com.ar/amigos-unidos-se-adjudico-la-fase-regular-del-apertura-257",
+     "fuente_nombre": "El Diario Balcarce",
+     "por_que_suma": "Complementa la mención al fútbol femenino en la nota con un dato competitivo reciente que muestra la vigencia y el desempeño actual de las categorías formativas/femeninas."
+    },
+    {
+     "dato": "Amigos Unidos se afilió a la Liga Balcarceña en 1952 y ese mismo año logró el ascenso a la Primera División, perdiendo sólo un partido en la temporada de afiliación.",
+     "cifra": "Afiliación en 1952 (ascenso ese año; sólo 1 derrota)",
+     "fecha_del_dato": "Publicación de Radio Sudestada sobre la historia del club (2019), consultada online",
+     "fuente_url": "https://radiosudestada.com.ar/2019/09/fiesta-tricolor-68-anos-de-la-fundacion-de-amigos-unidos/",
+     "fuente_nombre": "Radio Sudestada Balcarce",
+     "por_que_suma": "Ofrece un antecedente histórico verificable sobre los primeros pasos competitivos del club, enriqueciendo la cronología más allá de la fecha de fundación."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 9430,
+    "salida": 847,
+    "costo": 0.0132451
+   }
+  },
+  "n3": {
+   "titulo": "Reconocen proyecto de la EEPA N°701 sobre el descarte de medicamentos vencidos",
+   "status": 200,
+   "ms": 6427,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La Ley Nacional 24.051 clasifica los medicamentos vencidos y productos farmacéuticos como residuos peligrosos, por lo que su tratamiento y disposición final están regulados por la normativa de residuos peligrosos de Argentina.",
+     "cifra": "Ley 24.051 (y su categoría Y3 para desechos farmacéuticos en la normativa de residuos peligrosos).",
+     "fecha_del_dato": "vigente (texto consolidado y vigente a 2024 según fuentes oficiales citadas).",
+     "fuente_url": "https://www.argentina.gob.ar/normativa/nacional/ley-24051-450/actualizacion",
+     "fuente_nombre": "Argentina.gob.ar (normativa nacional)",
+     "por_que_suma": "Muestra que el descarte de medicamentos no es solo una cuestión educativa sino que tiene un marco legal nacional que exige gestión especial y disposición controlada."
+    },
+    {
+     "dato": "Un estudio publicado en la revista Salud Colectiva (Universidad Nacional de Lanús) halló que 83,3% de los encuestados admitió haber arrojado alguna vez medicamentos íntegros en la basura común y 30,3% los descartó por el inodoro o desagüe al menos una vez.",
+     "cifra": "83,3% (basura común); 30,3% (inodoro/desagüe).",
+     "fecha_del_dato": "publicado en 2021 (artículo consultado en 2026).",
+     "fuente_url": "https://revistas.unla.edu.ar/saludcolectiva/article/view/3599",
+     "fuente_nombre": "Revista Salud Colectiva (Universidad Nacional de Lanús)",
+     "por_que_suma": "Ofrece un antecedente científico nacional que refuerza y contextualiza los resultados del relevamiento local (confirma que prácticas de descarte inadecuadas son frecuentes en otros estudios argentinos)."
+    },
+    {
+     "dato": "Existen programas municipales/provinciales que establecen adhesión de farmacias como puntos de depósito de medicamentos vencidos, con requisitos para señalización y recipientes especiales para recepción transitoria.",
+     "cifra": "normas y programa descritos (requisitos de identificación y recipientes para farmacias adheridas).",
+     "fecha_del_dato": "texto del programa municipal/provincial publicado en la web del Sistema de Boletín Oficial de la Provincia de Buenos Aires (2019/2020; consultado en 2026).",
+     "fuente_url": "https://sibom.slyt.gba.gob.ar/bulletins/2609/contents/1366023",
+     "fuente_nombre": "SIBOM - Sistema de Boletín Oficial de la Provincia de Buenos Aires",
+     "por_que_suma": "Indica que hay mecanismos formales para el descarte domiciliario (puntos de recepción en farmacias), útil para contrastar con el dato de la encuesta local sobre desconocimiento de dónde llevar los medicamentos."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 9186,
+    "salida": 909,
+    "costo": 0.0133081
+   }
+  },
+  "n4": {
+   "titulo": "Sol Di Gerónimo pidió informes por una posible bajada privada a la Laguna La Brava",
+   "status": 200,
+   "ms": 9106,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La laguna tiene una superficie de aproximadamente 4,1 km².",
+     "cifra": "4,115 km²",
+     "fecha_del_dato": "Inventario (publicación provincial/UNLP, años previos a 2020)",
+     "fuente_url": "https://libros.unlp.edu.ar/index.php/unlp/catalog/download/1364/1348/4405-1",
+     "fuente_nombre": "Inventario de Recursos Turísticos (Universidad Nacional de La Plata / Provincia de Buenos Aires)",
+     "por_que_suma": "Aporta una cifra verificable sobre el tamaño del espejo de agua que complementa la nota sobre accesos y usos."
+    },
+    {
+     "dato": "La profundidad máxima registrada en estudios es de 4,57 metros.",
+     "cifra": "4,57 m",
+     "fecha_del_dato": "Datos de estudios hidrogeológicos publicados (citas académicas, años previos a 2015)",
+     "fuente_url": "https://www.researchgate.net/publication/277266900_Validacion_y_ajuste_del_modelo_hidrogeologico_conceptual_de_un_humedal_de_la_Llanura_Pampeana_Provincia_de_Buenos_Aires_Argentina",
+     "fuente_nombre": "ResearchGate (artículo/estudio sobre modelo hidrogeológico de la cuenca)",
+     "por_que_suma": "Ofrece un dato físico (profundidad máxima) relevante para evaluar impacto de obras y accesos al espejo de agua."
+    },
+    {
+     "dato": "El área de la laguna y su entorno fue declarada “Paisaje Protegido de Interés Provincial” por Ley Nº 15.095, que comprende la laguna y su entorno cercano (zona protegida de ~13 km² según informes técnicos).",
+     "cifra": "Ley Nº 15.095; área protegida ~13 km² (zona declarada)",
+     "fecha_del_dato": "Declaración y estudios asociados (Ley 15.095 / informes institucionales, 2018 y posteriores; informe IIMyC 2023)",
+     "fuente_url": "https://www.iimyc.gob.ar/iimyc/wp-content/uploads/2023/12/Informe19.pdf",
+     "fuente_nombre": "IIMyC - Instituto de Investigaciones Marinas y Costeras (informe técnico sobre biodiversidad y estado ambiental)",
+     "por_que_suma": "Indica que existe un marco legal provincial de protección del área, lo que es clave para la discusión sobre permisos, accesos y obras privadas."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 13549,
+    "salida": 1119,
+    "costo": 0.02481885
+   }
+  },
+  "n5": {
+   "titulo": "Cambió la Ley de Tránsito: cómo queda la prioridad de paso en la Provincia",
+   "status": 200,
+   "ms": 10901,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La sanción definitiva del expediente que incorpora el artículo 28 quater a la Ley 13.927 (D-541/24-25) quedó registrada el 6 de octubre de 2026.",
+     "cifra": "6/10/2026",
+     "fecha_del_dato": "6 de octubre de 2026",
+     "fuente_url": "https://estudiovilaplana.com.ar/2026/10/11/prioridad-paso-avenidas-reforma-buenos-aires-2026/",
+     "fuente_nombre": "Estudio Vilaplana (análisis legal)",
+     "por_que_suma": "Proporciona la fecha precisa de sanción que permite situar desde cuándo rige la modificación."
+    },
+    {
+     "dato": "La autora e impulsora del proyecto convertido en ley es la diputada provincial Silvina Vaccarezza (bloque UCR + Cambio Federal).",
+     "cifra": "Silvina Vaccarezza",
+     "fecha_del_dato": "nota de prensa vinculada a la sanción, octubre de 2026",
+     "fuente_url": "https://www.senado-ba.gov.ar/Prensa_Noticia_Individual.aspx?IdNoticia=18526",
+     "fuente_nombre": "Senado de la Provincia de Buenos Aires (prensa)",
+     "por_que_suma": "Identifica al/los legisladores responsables de la iniciativa, contextualizando el origen político de la reforma."
+    },
+    {
+     "dato": "La Suprema Corte de Justicia de la Provincia de Buenos Aires, en fallos previos (entre ellos resoluciones de 2018), sostuvo interpretaciones que mantenían la prioridad de quien viene por la derecha frente a quien circula por una avenida, lo que generó la controversia que motivó la reforma.",
+     "cifra": "fallos de la Suprema Corte - 2018 (varios pronunciamientos)",
+     "fecha_del_dato": "2018 (sentencias y doctrina jurisprudencial citadas)",
+     "fuente_url": "https://juba.scba.gov.ar/VerTextoCompleto.aspx?idFallo=160547",
+     "fuente_nombre": "JUBA - Suprema Corte de Justicia de la Provincia de Buenos Aires (texto de fallos)",
+     "por_que_suma": "Muestra el antecedente jurisprudencial que dejó vacíos interpretativos y justifica por qué la Legislatura buscó precisar la norma."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 17474,
+    "salida": 1162,
+    "costo": 0.0358861
+   }
+  },
+  "n6": {
+   "titulo": "FIESTA NACIONAL DEL POSTRE: CONFIRMACIÓN DE LA NUEVA FECHA PARA LA 22ª EDICIÓN",
+   "status": 200,
+   "ms": 8969,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La primera edición de la Fiesta Nacional del Postre se realizó en 2003.",
+     "cifra": "2003",
+     "fecha_del_dato": "según el boletín municipal (referencia histórica)",
+     "fuente_url": "https://sibom.slyt.gba.gov.ar/bulletins/1199/contents/1232604",
+     "fuente_nombre": "Sistema de Boletín Oficial Municipal (Provincia de Buenos Aires)",
+     "por_que_suma": "Aporta el antecedente histórico de origen del evento, útil para contextualizar que la edición 22ª continúa una tradición iniciada en 2003."
+    },
+    {
+     "dato": "La Fiesta fue consagrada como 'Fiesta Nacional del Postre' en 2013.",
+     "cifra": "2013",
+     "fecha_del_dato": "año de consagración nacional (según el boletín municipal)",
+     "fuente_url": "https://sibom.slyt.gba.gov.ar/bulletins/1199.pdf",
+     "fuente_nombre": "Sistema de Boletín Oficial Municipal (documento PDF)",
+     "por_que_suma": "Confirma el reconocimiento oficial que le da carácter nacional y explica el uso del título en la nota."
+    },
+    {
+     "dato": "En la edición 2022 se elaboró una versión gigante del postre Balcarce de más de 6 metros de longitud, que fue presentada como el más largo del mundo.",
+     "cifra": "más de 6 metros",
+     "fecha_del_dato": "edición 2022 (reportada en nota sobre la historia del postre y la fiesta)",
+     "fuente_url": "https://fiestasycaminos.com.ar/cuatro-dias-de-gastronomia-y-espectaculos-en-la-fiesta-nacional-del-postre-de-balcarce/",
+     "fuente_nombre": "Fiestas y Caminos (nota sobre la Fiesta Nacional del Postre)",
+     "por_que_suma": "Agrega un récord referente a la tradicional elaboración del 'postre gigante', dato atractivo y verificable que enriquece la cobertura del evento."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 13408,
+    "salida": 979,
+    "costo": 0.0245036
+   }
+  },
+  "n7": {
+   "titulo": "SE PRESENTÓ LA PRIMERA EXPO SALUD, DEPORTE Y TECNOLOGÍA",
+   "status": 200,
+   "ms": 10110,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La Sociedad Española de Socorros Mutuos de Balcarce fue constituida formalmente el 20 de agosto de 1882.",
+     "cifra": "20 de agosto de 1882",
+     "fecha_del_dato": "constitución formal (1882)",
+     "fuente_url": "https://balcarce.gob.ar/2026/06/12/de-la-madre-patria-a-balcarce-la-huella-espanola-que-ayudo-a-construir-una-ciudad/",
+     "fuente_nombre": "Municipalidad de Balcarce",
+     "por_que_suma": "Aporta un antecedente histórico de la sede donde se realizará la Expo, mostrando la antigüedad institucional del lugar."
+    },
+    {
+     "dato": "La sede de la Sociedad Española de Socorros Mutuos de Balcarce está ubicada en Av. Aristóbulo del Valle 519 (Bv. A. Del Valle 519).",
+     "cifra": "Av. Aristóbulo del Valle 519",
+     "fecha_del_dato": "registro de asociaciones (listado publicado 2019/previo)",
+     "fuente_url": "https://www.mites.gob.es/mundo/consejerias/argentina/ficheros/asociaciones_y_centros_espanoles.pdf",
+     "fuente_nombre": "Ministerio de Asuntos Exteriores, Unión Europea y Cooperación (España) — listado de asociaciones",
+     "por_que_suma": "Ofrece la dirección exacta de la sede anunciada en la nota, útil para que lectores sepan dónde se realizará la jornada."
+    },
+    {
+     "dato": "Según los resultados del Censo Nacional 2022, la población total del partido de Balcarce fue de 48.982 habitantes (dato publicado por la Provincia/estadística provincial con base en el censo).",
+     "cifra": "48.982 habitantes",
+     "fecha_del_dato": "Censo Nacional de Población 2022 (resultados definitivos)",
+     "fuente_url": "https://www.scba.gob.ar/planificacion/poblacion%20sup%20dens%20x%20partido%202022%20departamental.pdf",
+     "fuente_nombre": "Dirección Provincial de Estadística (Provincia de Buenos Aires) — datos del Censo 2022",
+     "por_que_suma": "Da contexto demográfico local para dimensionar el alcance potencial del evento en la comunidad."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 13765,
+    "salida": 1064,
+    "costo": 0.02476285
+   }
+  },
+  "n8": {
+   "titulo": "River Plate le ganó 1-0 a Estudiantes de Río Cuarto, se arrimó a puestos de Playoffs y selló el descenso de su rival a la B Nacional",
+   "status": 200,
+   "ms": 9277,
+   "error": null,
+   "datos": [
+    {
+     "dato": "Estudiantes de Río Cuarto llegó a 11 puntos en la temporada y tiene un coeficiente de promedios de 0,393, que lo dejó último en la tabla de promedios y confirmó su descenso.",
+     "cifra": "11 puntos; coeficiente 0,393",
+     "fecha_del_dato": "temporada 2026 (tras la fecha 12 del Clausura)",
+     "fuente_url": "https://www.tycsports.com/liga-profesional-de-futbol/estudiantes-rio-cuarto-descenso-liga-profesional-2026-torneo-clausura-river--id765634.html",
+     "fuente_nombre": "TyC Sports",
+     "por_que_suma": "explica la razón estadística (tabla de promedios) por la que se consumó el descenso y cuantifica la mala campaña del equipo."
+    },
+    {
+     "dato": "Con la derrota ante River, Estudiantes (RC) acumuló sólo dos victorias y 20 derrotas en la campaña hasta ese momento.",
+     "cifra": "2 victorias; 20 derrotas",
+     "fecha_del_dato": "temporada 2026 (registro actualizado tras la fecha 12 del Clausura)",
+     "fuente_url": "https://www.tycsports.com/liga-profesional-de-futbol/los-escenarios-que-pueden-definir-un-descenso-en-esta-fecha-del-torneo-clausura-id765103.html",
+     "fuente_nombre": "TyC Sports",
+     "por_que_suma": "da contexto sobre el volumen de resultados negativos que llevó al descenso y permite comparar el rendimiento del club con otros equipos."
+    },
+    {
+     "dato": "Estudiantes de Río Cuarto fue señalado como el primer equipo oficialmente descendido de la Liga Profesional 2026 tras la fecha 12.",
+     "cifra": "primer equipo descendido de la Liga Profesional 2026",
+     "fecha_del_dato": "después de la fecha 12 del Torneo Clausura 2026 (10–11 octubre 2026)",
+     "fuente_url": "https://tntsports.com.ar/ligaprofesional/river-estudiantes-rio-cuarto-torneo-clausura-20261010-0021.html",
+     "fuente_nombre": "TNT Sports",
+     "por_que_suma": "confirma oficialmente el hecho deportivo relevante del partido (el primer descenso consumado) y respalda la noticia principal de la nota."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 13163,
+    "salida": 1114,
+    "costo": 0.02471235
+   }
+  },
+  "n9": {
+   "titulo": "Franco Colapinto abandonó el Gran Premio de Singapur tras una falla en su monoplaza",
+   "status": 200,
+   "ms": 11033,
+   "error": null,
+   "datos": [
+    {
+     "dato": "El ganador del Gran Premio de Singapur 2026 fue Max Verstappen, que terminó la prueba 7.335 segundos por delante del segundo.",
+     "cifra": "7.335",
+     "fecha_del_dato": "11 de octubre de 2026 (Gran Premio de Singapur 2026)",
+     "fuente_url": "https://www.formula1.com/en/results/2026/races/1296/singapore/race-result.html",
+     "fuente_nombre": "Formula1.com (Resultados oficiales)",
+     "por_que_suma": "Añade el contexto del resultado general de la carrera (ganador y margen) que la nota no menciona."
+    },
+    {
+     "dato": "Franco Colapinto figura en la clasificación de la carrera como 'No Clasificado (NC)' tras completar 29 vueltas antes del abandono.",
+     "cifra": "29",
+     "fecha_del_dato": "11 de octubre de 2026 (clasificación final del GP de Singapur 2026)",
+     "fuente_url": "https://www.formula1.com/en/results/2026/races/1296/singapore/race-result.html",
+     "fuente_nombre": "Formula1.com (Resultados oficiales)",
+     "por_que_suma": "Precisa la vuelta efectiva completada y el estado final (NC), información verificable que complementa la descripción del abandono."
+    },
+    {
+     "dato": "Franco Colapinto se convirtió en 2024 en el primer piloto argentino en sumar puntos en la Fórmula 1 desde Carlos Reutemann (1982) cuando terminó 8º en el GP de Azerbaiyán y obtuvo 4 puntos.",
+     "cifra": "4 (puntos en el GP de Azerbaiyán 2024)",
+     "fecha_del_dato": "15 de septiembre de 2024 (nota que recoge el antecedente histórico)",
+     "fuente_url": "https://www.sportingnews.com/ar/formula-1/news/ultimo-piloto-argentino-sumar-puntos-f1/5f66d214d3ed06b4fddf9c51",
+     "fuente_nombre": "The Sporting News (ed. Argentina)",
+     "por_que_suma": "Ofrece un antecedente histórico nacional que muestra la relevancia del piloto argentino en la F1 y sitúa su presencia en el campeonato en perspectiva."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 17305,
+    "salida": 1496,
+    "costo": 0.03651185
+   }
+  },
+  "n10": {
+   "titulo": "La Corte Suprema suspendió el artículo del DNU 70 que deroga la Ley de Tierras",
+   "status": 200,
+   "ms": 11279,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La Ley N° 26.737 fijaba un límite del 15% a la titularidad de tierras rurales en manos de extranjeros a nivel nacional (y el mismo tope por provincia/municipio).",
+     "cifra": "15%",
+     "fecha_del_dato": "texto de la ley (sancionada 22-dic-2011, página normativa oficial actualizada)",
+     "fuente_url": "https://www.argentina.gob.ar/normativa/nacional/ley-26737-192150/texto",
+     "fuente_nombre": "Argentina.gob.ar (Normativa oficial)",
+     "por_que_suma": "Aclara cuál era la restricción concreta sobre la tenencia extranjera que quedaría repuesta por la medida cautelar."
+    },
+    {
+     "dato": "La misma ley establecía topes por superficie: un máximo de 1.000 hectáreas para un titular extranjero en la \"zona núcleo\" (o su equivalente según ubicación).",
+     "cifra": "1.000 hectáreas",
+     "fecha_del_dato": "texto de la ley y su reglamentación (Ley 26.737, texto publicado y PDFs oficiales)",
+     "fuente_url": "https://www.magyp.gob.ar/sitio/areas/d_recursos_humanos/concurso/normativa/_archivos/000001_Leyes/000000_LEY%2026.737%20Tierras%20Rurales.pdf",
+     "fuente_nombre": "Ministerio de Agricultura, Ganadería y Pesca (PDF de la Ley 26.737)",
+     "por_que_suma": "Da dimensión concreta sobre los límites por titularidad individual que la cautelar vuelve a aplicar en la práctica."
+    },
+    {
+     "dato": "El DNU 70/2023 (publicado en el Boletín Oficial el 21 de diciembre de 2023) incluye el artículo 154 que deroga la Ley N° 26.737; ese artículo es el que la Corte suspendió provisoriamente.",
+     "cifra": "21 de diciembre de 2023 (fecha de publicación del DNU 70/2023)",
+     "fecha_del_dato": "publicación en Boletín Oficial / texto del DNU 70/2023",
+     "fuente_url": "https://www.argentina.gob.ar/normativa/nacional/decreto-70-2023-395521/texto",
+     "fuente_nombre": "Argentina.gob.ar (texto oficial del DNU 70/2023)",
+     "por_que_suma": "Contextualiza exactamente qué norma fue derogada por el DNU (art.154) y la fecha en que esa derogación fue publicada."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 17374,
+    "salida": 1142,
+    "costo": 0.0358211
+   }
+  },
+  "n11": {
+   "titulo": "Comenzó el traslado de presos desde la cárcel de Devoto al penal de Marcos Paz",
+   "status": 200,
+   "ms": 11491,
+   "error": null,
+   "datos": [
+    {
+     "dato": "El Gobierno de la Ciudad informó que el traslado es gradual y alcanza a 1.500 detenidos del penal de Villa Devoto.",
+     "cifra": "1.500",
+     "fecha_del_dato": "publicado el 11 de octubre de 2026 (nota del GCBA)",
+     "fuente_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/historico-empezo-el-traslado-de-presos-del-penal-de-devoto-la-nueva-carcel",
+     "fuente_nombre": "Gobierno de la Ciudad Autónoma de Buenos Aires (buenosaires.gob.ar)",
+     "por_que_suma": "Aporta el número exacto de personas implicadas en el traslado, que la nota original no especifica."
+    },
+    {
+     "dato": "La resolución ministerial que formaliza el traspaso y la relocalización indica que el nuevo Complejo Penitenciario de Marcos Paz tiene una capacidad prevista de 2.240 plazas de alojamiento.",
+     "cifra": "2.240 plazas",
+     "fecha_del_dato": "Resolución publicada en 2026 (Resolución 439/2026, mayo de 2026)",
+     "fuente_url": "https://www.argentina.gob.ar/noticias/nacion-y-ciudad-firmaron-el-traspaso-de-la-carcel-de-devoto",
+     "fuente_nombre": "Sitio oficial del Gobierno Nacional (argentina.gob.ar)",
+     "por_que_suma": "Permite comparar la cantidad de detenidos trasladados con la capacidad oficial del nuevo penal."
+    },
+    {
+     "dato": "En un fallo del Juzgado Federal n.º 2 de Morón (causa 2019) se fijó un cupo máximo para el Complejo de Marcos Paz en 1.883 plazas, distinto de la capacidad proyectada.",
+     "cifra": "1.883 plazas (cupo judicial fijado)",
+     "fecha_del_dato": "fallo del 7 de noviembre de 2019 (cupo fijado en 2019)",
+     "fuente_url": "https://dpf.ppn.gov.ar/index.php/informes-unidades/complejo-penitenciario-federal-ii-marcos-paz-buenos-aires/",
+     "fuente_nombre": "Diagnóstico Penitenciario Federal (dpf.ppn.gov.ar)",
+     "por_que_suma": "Ofrece un antecedente judicial relevante que permite contextualizar discrepancias entre la capacidad proyectada y los límites fijados por la Justicia."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 9122,
+    "salida": 1065,
+    "costo": 0.0136041
+   }
+  },
+  "n12": {
+   "titulo": "Lionel Messi brilló con un doblete en la goleada del Inter Miami ante DC United",
+   "status": 200,
+   "ms": 10417,
+   "error": null,
+   "datos": [
+    {
+     "dato": "Messi llegó a 23 goles en la temporada regular de la MLS tras su doblete ante D.C. United, quedando como máximo anotador del torneo.",
+     "cifra": "23",
+     "fecha_del_dato": "10 de octubre de 2026 (temporada 2026, tras el partido Inter Miami vs D.C. United)",
+     "fuente_url": "https://www.intermiamicf.com/news/match-recap-inter-miami-cf-secures-4-0-shutout-of-d-c-united",
+     "fuente_nombre": "Inter Miami CF (match recap)",
+     "por_que_suma": "Añade contexto numérico sobre el impacto del doblete de Messi en la pelea por el Golden Boot y la magnitud de su contribución en la temporada."
+    },
+    {
+     "dato": "La victoria 4-0 fue la primera triunfo de liga para Cristian 'Kily' González desde que asumió como entrenador del equipo el 16 de septiembre.",
+     "cifra": "1 (primera victoria de liga desde asumir)",
+     "fecha_del_dato": "16 de septiembre de 2026 (fecha en la que González asumió); victoria registrada el 10 de octubre de 2026",
+     "fuente_url": "https://www.foxsports.com/stories/soccer/lionel-messi-scores-twice-inter-miami-1st-game-since-argentina-retirement",
+     "fuente_nombre": "FOX Sports (nota publicada 11 de octubre de 2026)",
+     "por_que_suma": "Ofrece un antecedente sobre el contexto del cuerpo técnico y la relevancia del triunfo en la gestión de González."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 12753,
+    "salida": 1363,
+    "costo": 0.02510785
+   }
+  }
+ }
+}

@@ -1,0 +1,355 @@
+{
+ "modelo": "deepseek/deepseek-v4-pro",
+ "prompt": "actual",
+ "fecha": "2026-10-11T15:58:16.132Z",
+ "precios": {
+  "entrada": 2.088e-7,
+  "salida": 4.176e-7
+ },
+ "historias": {
+  "23005298": {
+   "id": "23005298",
+   "titulo_original": "RECONOCIMIENTO A LA PRECISIÓN Y EL COMPROMISO EN EL DÍA DEL TÉCNICO DE LABORATORIO",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 114334,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6388,
+    "salida": 5059,
+    "costo": 0.0025260102
+   },
+   "escrito": {
+    "titulo": "Municipio y Hospital saludan a los técnicos de laboratorio en su día",
+    "copete": "La Municipalidad y el Hospital Municipal “Dr. Felipe Antonio Fossati” emitieron un saludo por el Día del Técnico de Laboratorio, que se celebró el viernes 9 de octubre. Destacaron el rol silencioso pero insustituible de estos profesionales en la cadena sanitaria local.",
+    "cuerpo": "La Municipalidad de Balcarce y el Hospital Municipal “Dr. Felipe Antonio Fossati” saludaron el viernes 9 de octubre a los técnicos de laboratorio en su día, con un reconocimiento especial a su tarea.\n\nEn el mensaje, destacaron que el trabajo de estos profesionales es silencioso pero insustituible dentro de la cadena sanitaria local. Explicaron que cada muestra analizada representa un paso crítico: anticipa diagnósticos, orienta tratamientos y sostiene la calidad de la atención médica cotidiana.\n\nAgregaron que detrás de cada resultado hay rigor científico, vocación de servicio y una responsabilidad humana que fortalece el sistema de salud pública. El saludo concluyó con una felicitación a quienes transforman la precisión en bienestar y cuidado para toda la comunidad.",
+    "guion": "Municipio y Hospital saludan a los técnicos de laboratorio en su día",
+    "textoRedes": "La Municipalidad y el Hospital Municipal saludaron a los técnicos de laboratorio en su día, celebrado el viernes 9. Destacaron su labor silenciosa pero insustituible en la cadena sanitaria local, donde cada muestra analizada es clave para diagnósticos y tratamientos.",
+    "claves": [
+     "El Municipio y el Hospital reconocieron a los técnicos de laboratorio en su día.",
+     "Destacaron que cada muestra analizada es un eslabón crítico para diagnósticos y tratamientos.",
+     "Resaltaron el rigor científico, la vocación de servicio y la responsabilidad humana detrás de cada resultado.",
+     "El saludo fue emitido el viernes 9 de octubre, Día del Técnico de Laboratorio."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el copete menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el copete menciona \"octubre\" y la fuente no"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 16 palabras seguidas del original (\"detras de cada resultado hay rigor cientifico vocacion de servicio y una responsabilidad humana…\"): decilo con otras p"
+    }
+   ],
+   "palabrasCuerpo": 117,
+   "palabrasBajada": 42,
+   "caracteresTitulo": 68
+  },
+  "0305adf0": {
+   "id": "0305adf0",
+   "titulo_original": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal “Suavecita”",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 73704,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6872,
+    "salida": 3213,
+    "costo": 0.0017373204
+   },
+   "escrito": {
+    "titulo": "La balcarceña Camila Peralta vuelve a Mar del Plata con “Suavecita”",
+    "copete": "La función única será el sábado 17 de octubre a las 21.30 en el teatro Roxy. La obra, que ya agotó entradas en sus presentaciones anteriores, acumula siete premios y 16 nominaciones. Las entradas se venden por Plateanet y en la boletería del teatro.",
+    "cuerpo": "La actriz balcarceña Camila Peralta se presentará el sábado 17 de octubre a las 21.30 en el teatro Roxy de Mar del Plata con el unipersonal “Suavecita”, según informó Puntonueve. Las entradas están disponibles a través de Plateanet y en la boletería del teatro, con descuentos para estudiantes de la Escuela Municipal de Arte Dramático (EMAD) y del Polivalente.\n\nEscrita y dirigida por Martín Bontempo, la obra narra la historia de una mujer que descubre un don para curar en un hospital público del conurbano y se convierte en mito. La propuesta combina erotismo, ciencia ficción y misterio en una comedia dramática. Desde su estreno en 2023, “Suavecita” acumuló 150 funciones en Buenos Aires, 38 presentaciones en gira y pasó por cuatro países. En ese recorrido obtuvo siete premios y 16 nominaciones. Camila Peralta recibió el María Guerrero 2023 a mejor actuación unipersonal, el Trinidad Guevara 2023 como revelación femenina y el premio Teatro del Mundo 2023 como mejor actriz. Además, la producción fue nominada al Martín Fierro de Teatro 2025 en la categoría mejor unipersonal.\n\nNacida en Balcarce, Peralta construyó una trayectoria en cine, series y teatro. Participó en las películas Cambio cambio y Puan, y en las series División Palermo y Envidiosa, ambas de Netflix. Actualmente rueda Gordon, una nueva serie para la plataforma de streaming. Su vínculo con la región también se reflejó en las presentaciones de “Suavecita” en el Teatro Municipal Luis Conti de Balcarce.",
+    "guion": "La balcarceña Camila Peralta vuelve a Mar del Plata con “Suavecita”",
+    "textoRedes": "La actriz balcarceña Camila Peralta vuelve a Mar del Plata con “Suavecita”, el unipersonal que acumula premios y nominaciones. La función única será el sábado 17 de octubre a las 21.30 en el teatro Roxy. Entradas por Plateanet y boletería.",
+    "claves": [
+     "Función única el sábado 17 de octubre a las 21.30 en el teatro Roxy de Mar del Plata.",
+     "Entradas a la venta por Plateanet y boletería, con descuentos para estudiantes de EMAD y Polivalente.",
+     "La obra suma siete premios y 16 nominaciones desde su estreno en 2023.",
+     "Camila Peralta ganó los premios María Guerrero, Trinidad Guevara y Teatro del Mundo por esta interpretación.",
+     "La actriz balcarceña participó en películas como Puan y series como División Palermo."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "copia",
+     "detalle": "copia 25 palabras seguidas del original (\"mejor actuacion unipersonal el trinidad guevara 2023 como revelacion femenina y el premio teatro…\"): decilo con otras "
+    }
+   ],
+   "palabrasCuerpo": 239,
+   "palabrasBajada": 44,
+   "caracteresTitulo": 67
+  },
+  "2d82c63c": {
+   "id": "2d82c63c",
+   "titulo_original": "Declararon de interés Legislativo los 75 años del Club Amigos Unidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 0,
+   "ms": 120024,
+   "caracteresDelPrompt": 20606,
+   "error": "The operation was aborted due to timeout"
+  },
+  "445a709e": {
+   "id": "445a709e",
+   "titulo_original": "Reconocen proyecto de la EEPA N°701 sobre el descarte de medicamentos vencidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 0,
+   "ms": 120018,
+   "caracteresDelPrompt": 20606,
+   "error": "The operation was aborted due to timeout"
+  },
+  "d00b6002": {
+   "id": "d00b6002",
+   "titulo_original": "El fútbol se atrasó tres meses, y volvería a terminar en enero",
+   "fuentes": 1,
+   "serio": false,
+   "status": 0,
+   "ms": 120012,
+   "caracteresDelPrompt": 20606,
+   "error": "The operation was aborted due to timeout"
+  },
+  "c959337d": {
+   "id": "c959337d",
+   "titulo_original": "Sol Di Gerónimo pidió informes por una posible bajada privada a la Laguna La Brava",
+   "fuentes": 1,
+   "serio": false,
+   "status": 0,
+   "ms": 120009,
+   "caracteresDelPrompt": 20606,
+   "error": "The operation was aborted due to timeout"
+  },
+  "86c9586c": {
+   "id": "86c9586c",
+   "titulo_original": "Atletismo: Destacada actuación de balcarceños en el Torneo de la Diversidad Cultural",
+   "fuentes": 1,
+   "serio": false,
+   "status": 0,
+   "ms": 120000,
+   "caracteresDelPrompt": 20606,
+   "error": "The operation was aborted due to timeout"
+  },
+  "c9127ae7": {
+   "id": "c9127ae7",
+   "titulo_original": "Maxivóley femenino avanza en el Top 6",
+   "fuentes": 1,
+   "serio": false,
+   "status": 0,
+   "ms": 120015,
+   "caracteresDelPrompt": 20606,
+   "error": "The operation was aborted due to timeout"
+  },
+  "a7da5534": {
+   "id": "a7da5534",
+   "titulo_original": "Un auto se prendió fuego y sufrió daños totales",
+   "fuentes": 1,
+   "serio": true,
+   "status": 0,
+   "ms": 120003,
+   "caracteresDelPrompt": 20447,
+   "error": "The operation was aborted due to timeout"
+  },
+  "276dcf9f": {
+   "id": "276dcf9f",
+   "titulo_original": "Cambió la Ley de Tránsito: cómo queda la prioridad de paso en la Provincia",
+   "fuentes": 1,
+   "serio": false,
+   "status": 0,
+   "ms": 120008,
+   "caracteresDelPrompt": 20606,
+   "error": "The operation was aborted due to timeout"
+  },
+  "9c7ee7d5": {
+   "id": "9c7ee7d5",
+   "titulo_original": "FIESTA NACIONAL DEL POSTRE: CONFIRMACIÓN DE LA NUEVA FECHA PARA LA 22ª EDICIÓN",
+   "fuentes": 5,
+   "serio": false,
+   "status": 200,
+   "ms": 88903,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 7111,
+    "salida": 3814,
+    "costo": 0.002100789
+   },
+   "escrito": {
+    "titulo": "La Fiesta del Postre ya tiene nueva fecha: del 30 de octubre al 1 de noviembre",
+    "copete": "La 22ª edición se postergó por mal tiempo este fin de semana. Ahora se hará en tres jornadas en la Sociedad Rural. La nueva programación se confirmará en los próximos días.",
+    "cuerpo": "La Subsecretaría de Turismo de Balcarce informó que la 22ª Fiesta Nacional del Postre se reprogramó para el viernes 30 y sábado 31 de octubre y el domingo 1° de noviembre. El evento se realizará en el predio de la Sociedad Rural y reemplaza a la fecha original de este fin de semana, que debió suspenderse por condiciones climáticas adversas.\n\nLa edición de este año tendrá tres jornadas, una menos que las cuatro previstas inicialmente, según precisó el medio Acción 5. La organización adelantó que en los próximos días se difundirá la nueva grilla con las actividades, los concursos y las propuestas gastronómicas.\n\nDesde el área de Turismo invitaron a vecinos y visitantes a sumarse a la celebración, que cada año reúne a productores regionales y amantes de la pastelería.",
+    "guion": "La Fiesta del Postre ya tiene nueva fecha: del treinta de octubre al uno de noviembre",
+    "textoRedes": "La Fiesta Nacional del Postre ya tiene nueva fecha: se hará el 30 y 31 de octubre y 1° de noviembre en la Sociedad Rural, tras la postergación por mal tiempo. La 22ª edición se acorta a tres jornadas y la grilla se conocerá en los próximos días.",
+    "claves": [
+     "La Fiesta Nacional del Postre se reprogramó para el 30 y 31 de octubre y 1° de noviembre.",
+     "La suspensión del fin de semana fue por mal tiempo.",
+     "El encuentro será en la Sociedad Rural de Balcarce.",
+     "La 22ª edición pasa de cuatro a tres días de actividades.",
+     "La nueva programación se conocerá en los próximos días."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"sabado\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"domingo\" y la fuente no"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 5 y la fuente no lo dice"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"accion\" y la fuente no"
+    }
+   ],
+   "palabrasCuerpo": 130,
+   "palabrasBajada": 31,
+   "caracteresTitulo": 78
+  },
+  "badcdcaa": {
+   "id": "badcdcaa",
+   "titulo_original": "Cuatro gimnastas de UP clasificaron a la Final Regional del Centro",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 93057,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 6747,
+    "salida": 4071,
+    "costo": 0.002172303
+   },
+   "escrito": {
+    "titulo": "Cuatro gimnastas de UP clasifican a la Final Regional del Centro",
+    "copete": "Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet lograron la clasificación en la final provincial de los Niveles 1 y 2, disputada en el Polideportivo de Aguas Verdes. La instancia regional será en diciembre y reunirá a gimnastas de Buenos Aires, Córdoba y Santa Fe.",
+    "cuerpo": "El viernes 9 de octubre, casi una treintena de gimnastas de UP participaron de la final provincial de los Niveles 1 y 2 en el Polideportivo de Aguas Verdes. Cuatro de ellas consiguieron la clasificación a la Final Regional del Centro: Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet.\n\nSegún informó la Municipalidad de Balcarce, Larroquet compitió en la categoría Mini, Ríos en Preinfantil, Marino en Infantil y Unales en Juvenil. La delegación incluyó cerca de 30 deportistas de distintas categorías, cuyos nombres fueron difundidos por la institución.\n\nLa Final Regional del Centro se disputará en diciembre y convocará a gimnastas de las provincias de Buenos Aires, Córdoba y Santa Fe. Todavía no se informaron la fecha exacta ni la sede de esa competencia.",
+    "guion": "Cuatro gimnastas de UP clasifican a la Final Regional del Centro",
+    "textoRedes": "Cuatro gimnastas de UP clasificaron a la Final Regional del Centro tras la final provincial de Niveles 1 y 2 en Aguas Verdes. La competencia regional será en diciembre con representantes de Buenos Aires, Córdoba y Santa Fe.",
+    "claves": [
+     "Cuatro gimnastas de UP clasificaron a la Final Regional del Centro.",
+     "La clasificación se dio en la final provincial de Niveles 1 y 2, en Aguas Verdes.",
+     "Las clasificadas son Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet.",
+     "La Final Regional será en diciembre con representantes de Buenos Aires, Córdoba y Santa Fe.",
+     "La delegación de UP estuvo integrada por cerca de 30 gimnastas."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"municipalidad\" y la fuente no"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 18 palabras seguidas del original (\"casi una treintena de gimnastas de up participaron de la final provincial de los…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 125,
+   "palabrasBajada": 46,
+   "caracteresTitulo": 64
+  },
+  "04f90bd3": {
+   "id": "04f90bd3",
+   "titulo_original": "El Concejo Deliberante aprobó la creación de un registro de acompañantes terapéuticos",
+   "fuentes": 2,
+   "serio": false,
+   "status": 0,
+   "ms": 120003,
+   "caracteresDelPrompt": 20606,
+   "error": "The operation was aborted due to timeout"
+  },
+  "6e45a05f": {
+   "id": "6e45a05f",
+   "titulo_original": "Investigan el faltante de dinero en la Escuela Emilio Lamarca",
+   "fuentes": 2,
+   "serio": true,
+   "status": 0,
+   "ms": 120004,
+   "caracteresDelPrompt": 20447,
+   "error": "The operation was aborted due to timeout"
+  },
+  "869434ae": {
+   "id": "869434ae",
+   "titulo_original": "SE PRESENTÓ LA PRIMERA EXPO SALUD, DEPORTE Y TECNOLOGÍA",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 118284,
+   "caracteresDelPrompt": 20606,
+   "uso": {
+    "entrada": 7379,
+    "salida": 5101,
+    "costo": 0.0026107482
+   },
+   "escrito": {
+    "titulo": "Se presenta la primera Expo Salud, Deporte y Tecnología el 24 de octubre",
+    "copete": "La Subsecretaría de Deporte y Recreación y los organizadores anunciaron la jornada, que se hará en la Sociedad Española de 9 a 19. Habrá stands, charlas y demostraciones de clubes, empresas y profesionales locales.",
+    "cuerpo": "El jueves 8 de octubre, en la Sala de los Intendentes, la subsecretaria de Deporte y Recreación, Soledad Vivio, y los organizadores Jorge Romero y Mariano Lauro presentaron la primera Expo Salud, Deporte y Tecnología. El evento se llevará a cabo el sábado 24 de octubre, de 9 a 19, en la sede de la Sociedad Española.\n\nLa jornada incluirá stands, charlas, capacitaciones y demostraciones a cargo de instituciones, empresas y profesionales de la ciudad. Participarán clubes de disciplinas como taekwondo, kickboxing, karate, ajedrez, chikung, tai chi y yoga, además de estudiantes de la Escuela Industrial, firmas tecnológicas locales y emprendimientos de salud y nutrición. También se anunció un ciclo de exposiciones de hasta 40 minutos con especialistas en salud y deporte, seguido de un espacio de preguntas.\n\nRomero explicó que la iniciativa busca reunir y visibilizar todas las alternativas deportivas, sanitarias y tecnológicas que existen en Balcarce, especialmente para los jóvenes. Lauro remarcó que la tecnología unifica el deporte y la salud, y puso como ejemplo que “un botín, un guante o un vendaje” son tecnología aplicada. Vivio destacó el trabajo conjunto entre el municipio y los impulsores privados.",
+    "guion": "Se presenta la primera Expo Salud, Deporte y Tecnología el veinticuatro de octubre.",
+    "textoRedes": "Se presentó la primera Expo Salud, Deporte y Tecnología, que se realizará el sábado 24 de octubre de 9 a 19 en la Sociedad Española. Habrá stands, charlas y demostraciones de clubes, empresas y profesionales locales de la salud, el deporte y la tecnología.",
+    "claves": [
+     "La primera Expo Salud, Deporte y Tecnología se presentó el jueves 8 en la Sala de los Intendentes.",
+     "La jornada será el sábado 24 de octubre, de 9 a 19, en la Sociedad Española.",
+     "Habrá stands, charlas, capacitaciones y demostraciones de clubes, empresas y profesionales locales.",
+     "Participarán disciplinas como taekwondo, kickboxing, karate, ajedrez, chikung, tai chi y yoga.",
+     "El sector salud estará representado por centros de imágenes, mutuales, farmacias y nutricionistas."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 8 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"jueves\" y la fuente no"
+    },
+    {
+     "tipo": "cita",
+     "detalle": "el cuerpo pone entre comillas algo que la fuente no dice: \"un botín, un guante o un vendaje\""
+    }
+   ],
+   "palabrasCuerpo": 190,
+   "palabrasBajada": 34,
+   "caracteresTitulo": 72
+  }
+ }
+}

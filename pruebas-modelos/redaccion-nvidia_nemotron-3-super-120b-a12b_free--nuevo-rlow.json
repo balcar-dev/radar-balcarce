@@ -1,0 +1,737 @@
+{
+ "modelo": "nvidia/nemotron-3-super-120b-a12b:free",
+ "prompt": "nuevo",
+ "razonamiento": "low",
+ "fecha": "2026-10-11T21:45:18.983Z",
+ "precios": {
+  "entrada": 0,
+  "salida": 0
+ },
+ "historias": {
+  "23005298": {
+   "id": "23005298",
+   "titulo_original": "RECONOCIMIENTO A LA PRECISIÓN Y EL COMPROMISO EN EL DÍA DEL TÉCNICO DE LABORATORIO",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 16449,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5178,
+    "salida": 3210,
+    "costo": 0
+   },
+   "escrito": {
+    "titulo": "La Municipalidad y el Hospital reconocen a los técnicos de laboratorio en su día",
+    "copete": "La Municipalidad de Balcarce y el Hospital Municipal “Dr. Felipe Antonio Fossati” saludaron a los técnicos de laboratorio en su día, resaltando su papel esencial en la atención sanitaria del partido. La nota se publicó el viernes 09/10/2026.",
+    "cuerpo": "La Municipalidad de Balcarce y el Hospital Municipal “Dr. Felipe Antonio Fossati” emitieron un reconocimiento a los técnicos de laboratorio con motivo de su día.\nLa publicación se hizo el viernes 09/10/2026 mediante un comunicado oficial.\nEn el texto se destaca que su labor es silenciosa pero insustituible dentro de la cadena sanitaria local.\nSe señala que cada muestra analizada actúa como un eslabón crítico que anticipa diagnósticos, orienta tratamientos y sostiene la calidad de la atención médica cotidiana.\nAdemás, se menciona que detrás de cada resultado hay rigor científico, vocación de servicio y responsabilidad humana que fortalece todo el sistema de salud pública.\nEl mensaje concluye deseando un feliz día a quienes transforman la precisión en bienestar y cuidado para toda la comunidad.",
+    "guion": "La Municipalidad y el Hospital reconocen a los técnicos de laboratorio en su día",
+    "textoRedes": "La Municipalidad de Balcarce y el Hospital Municipal “Dr. Felipe Antonio Fossati” reconocieron a los técnicos de laboratorio en su día, resaltando su papel esencial en la salud local. La nota se publicó el viernes 09/10/2026.",
+    "claves": [
+     "Reconocimiento a técnicos de laboratorio en su día",
+     "Emitido por Municipalidad y Hospital Municipal “Dr. Felipe Antonio Fossati”",
+     "Publicado el viernes 09/10/2026",
+     "Se destaca su papel esencial en la cadena sanitaria local",
+     "Se les desea un feliz día por su contribución al bienestar comunitario"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 2.026 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el copete menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 2.026 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 17 palabras seguidas del original (\"un eslabon critico que anticipa diagnosticos orienta tratamientos y sostiene la calidad de la…\"): decilo con otras pal"
+    }
+   ],
+   "palabrasCuerpo": 124,
+   "palabrasBajada": 38,
+   "caracteresTitulo": 80
+  },
+  "0305adf0": {
+   "id": "0305adf0",
+   "titulo_original": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal “Suavecita”",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 38181,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5610,
+    "salida": 6700,
+    "costo": 0
+   },
+   "escrito": {
+    "titulo": "Camila Peralta presenta “Suavecita” en Mar del Plata el sábado 17",
+    "copete": "Camila Peralta, actriz nacida en Balcarce, presentará el unipersonal “Suavecita” el sábado 17 de octubre a las 21.30 en el teatro Roxy de Mar del Plata. Las entradas están a la venta con descuentos para estudiantes de EMAD y del Polivalente. La obra tiene siete premios y 16 nominaciones.",
+    "cuerpo": "Según un medio local, la función será el sábado 17 de octubre a las 21.30 en el teatro Roxy de Mar del Plata. Las entradas se venden a través de Plateanet y en la boletería del teatro, con descuentos para estudiantes de la Escuela Municipal de Arte Dramático (EMAD) y del Polivalente. La obra “Suavecita” acumula siete premios y dieciséis nominaciones desde su estreno en 2023, con 150 funciones en Buenos Aires, 38 en gira y presentaciones en cuatro países. Camila Peralta, nacida en Balcarce, ha trabajado en cine, series y teatro; entre sus reconocimientos están el premio María Guerrero 2023, el Trinidad Guevara 2023 y el premio Teatro del Mundo 2023. Actualmente está rodando una nueva serie para una plataforma de streaming y previamente la obra se presentó con entradas agotadas en Mar del Plata.",
+    "guion": "Camila Peralta presenta “Suavecita” en Mar del Plata el sábado 17",
+    "textoRedes": "La actriz balcarceña Camila Peralta presentará el unipersonal “Suavecita” el sábado 17 de octubre a las 21.30 en el teatro Roxy de Mar del Plata. Entradas a la venta con descuentos para estudiantes de EMAD y del Polivalente. La obra suma siete premios y 16 nominaciones.",
+    "claves": [
+     "Función el sábado 17 de octubre a las 21.30 en el teatro Roxy de Mar del Plata.",
+     "Entradas a la venta con descuentos para estudiantes de EMAD y del Polivalente.",
+     "Obra con siete premios y dieciséis nominaciones; 150 funciones en BA y 38 en gira.",
+     "Camila Peralta, actriz balcarceña, tiene premios María Guerrero, Trinidad Guevara y Teatro del Mundo 2023.",
+     "Obra escrita y dirigida por Martín Bontempo."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 16 palabras seguidas del original (\"la funcion sera el sabado 17 de octubre a las 21 30 en el…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 136,
+   "palabrasBajada": 49,
+   "caracteresTitulo": 65
+  },
+  "2d82c63c": {
+   "id": "2d82c63c",
+   "titulo_original": "Declararon de interés Legislativo los 75 años del Club Amigos Unidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 28867,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5471,
+    "salida": 4153,
+    "costo": 0
+   },
+   "escrito": {
+    "titulo": "El Concejo declara de interés legislativo el setenta y cinco aniversario del Club Amigos Unidos",
+    "copete": "El Concejo Deliberante declaró de interés legislativo, social y comunitario el 75° aniversario del Club Amigos Unidos, fundado en 1951. El reconocimiento destaca su trayectoria deportiva, el trabajo con categorías formativas y fútbol femenino, y sus actividades sociales para chicos y familias de Balcarce y la zona.",
+    "cuerpo": "Según informó Radio Gabal, el Concejo Deliberante declaró de interés legislativo, social y comunitario el 75° aniversario del Club Amigos Unidos durante la sesión del sábado 10 de octubre de 2026.\nSegún Radio Gabal, el club fue fundado el 9 de septiembre de 1951.\nSegún Radio Gabal, se destacaron el invicto de 47 partidos consecutivos entre 1977 y 1978 y los cuatro campeonatos obtenidos entre 1985 y 1988.\nSegún Radio Gabal, se resaltó el trabajo con las categorías formativas y el fútbol femenino, así como las actividades sociales y comunitarias para chicos y chicas de Balcarce y la zona y el acompañamiento a las familias.\nSegún Radio Gabal, los concejales Javier Menonne, Sol Di Gerónimo y Leandro Spinelli enfatizaron la trayectoria del club, su vínculo con el barrio y la situación económica delicada que atraviesan los clubes de barrio.",
+    "guion": "El Concejo declara de interés legislativo el setenta y cinco aniversario del Club Amigos Unidos",
+    "textoRedes": "El Concejo declaró de interés legislativo el 75 aniversario del Club Amigos Unidos, resaltando su trayectoria deportiva, el trabajo con infancias y fútbol femenino y su aporte social a Balcarce y la zona.",
+    "claves": [
+     "Declaración de interés legislativo del 75 aniversario del Club Amigos Unidos",
+     "Fundación del club en 1951 y logros deportivos destacados",
+     "Trabajo social y deportivo con infancias, mujeres y familias de Balcarce",
+     "Comentarios de concejales sobre trayectoria y situación económica de clubes de barrio",
+     "Reconocimiento del rol activo del club en la vida social de la comunidad"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "largo",
+     "detalle": "el titulo tiene 95 caracteres, el máximo es 90"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el titulo dice 70 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el titulo dice 5 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 2.026 y la fuente no lo dice"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"radio\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"gabal\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"sabado\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"radio\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"gabal\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"radio\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"gabal\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"radio\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"gabal\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"radio\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"gabal\" y la fuente no"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el guion dice 70 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el guion dice 5 y la fuente no lo dice"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 19 palabras seguidas del original (\"el invicto de 47 partidos consecutivos entre 1977 y 1978 y los cuatro campeonatos…\"): decilo con otras palabras"
+    },
+    {
+     "tipo": "promesa",
+     "detalle": "el título dice 70 y el cuerpo no lo explica"
+    },
+    {
+     "tipo": "promesa",
+     "detalle": "el título dice 5 y el cuerpo no lo explica"
+    }
+   ],
+   "palabrasCuerpo": 139,
+   "palabrasBajada": 47,
+   "caracteresTitulo": 95
+  },
+  "445a709e": {
+   "id": "445a709e",
+   "titulo_original": "Reconocen proyecto de la EEPA N°701 sobre el descarte de medicamentos vencidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 43678,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5357,
+    "salida": 8000,
+    "costo": 0
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "d00b6002": {
+   "id": "d00b6002",
+   "titulo_original": "El fútbol se atrasó tres meses, y volvería a terminar en enero",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 25616,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5594,
+    "salida": 4109,
+    "costo": 0
+   },
+   "escrito": {
+    "titulo": "El fútbol local se atrasa tres meses y se espera que termine en enero",
+    "copete": "El Oficial de fútbol de Balcarce acumula once fechas suspendidas por el clima y está tres meses atrasado; la actividad podría reactivarse el último fin de semana de octubre y finalizar en enero.",
+    "cuerpo": "Según informó Acción 5, el Oficial de fútbol de Balcarce acumula once fechas suspendidas debido al clima adverso.\nEste retraso coloca al torneo tres meses detrás del cronograma original.\nAún no se pudo iniciar la fase Clausura del Oficial.\nLa fuente indica que la actividad podría reactivarse el último fin de semana de octubre, específicamente el 24 y 25 de octubre.\nSin embargo, la reactivación depende de que la Policía disponga personal para la carrera Zonal del Atlántico y para el operativo del Día de la Madre.\nEl clima ha sido señalado como el factor principal que afectó el desarrollo del fútbol local en los últimos tiempos.\nSi se logra la reactivación, la etapa Clausura contempla seis fechas regulares, equivalente a otro mes y medio de competencia.\nTras esas fechas, se jugarán las eliminatorias a un partido en cuartos, semifinal y final, lo que podría demandar un fin de semana adicional.\nQuedan por disputarse diez fechas más, lo que representa aproximadamente dos meses y medio de torneo.\nDe mantenerse el ritmo sin pausas, el torneo finalizaría el domingo 3 de enero de 2027.\nPara referencia, la final del torneo anterior se jugó el 11 de enero de 2026.",
+    "guion": "El fútbol local se atrasa tres meses y se espera que termine en enero",
+    "textoRedes": "El Oficial de fútbol de Balcarce está tres meses atrasado por once fechas suspendidas por el clima; podría reactivarse fin de octubre y terminar en enero.",
+    "claves": [
+     "Atraso de tres meses en el Oficial de fútbol",
+     "Once fechas suspendidas por el clima",
+     "Posible reactivación el último fin de semana de octubre",
+     "Etapa Clausura con seis fechas y eliminatorias a un partido",
+     "Final estimada el 3 de enero de 2027, similar al año anterior"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 5 y la fuente no lo dice"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"accion\" y la fuente no"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 2.027 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 2.026 y la fuente no lo dice"
+    }
+   ],
+   "palabrasCuerpo": 198,
+   "palabrasBajada": 33,
+   "caracteresTitulo": 69
+  },
+  "c959337d": {
+   "id": "c959337d",
+   "titulo_original": "Sol Di Gerónimo pidió informes por una posible bajada privada a la Laguna La Brava",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 31329,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5828,
+    "salida": 5293,
+    "costo": 0
+   },
+   "escrito": {
+    "titulo": "Concejal Sol Di Gerónimo pide informes sobre posible bajada privada a Laguna La Brava",
+    "copete": "La concejal de Fuerza Patria, Sol Di Gerónimo, presentó un proyecto de comunicación al Departamento Ejecutivo Municipal para solicitar información sobre las intervenciones realizadas en la Manzana 333 E de Villa Laguna La Brava, donde un particular estaría realizando trabajos de acondicionamiento y una posible bajada privada a la laguna. La iniciativa busca conocer la situación dominial del terreno, los permisos necesarios y garantizar el acceso público al espejo de agua.",
+    "cuerpo": "Según informó la fuente, el sábado 10/10/2026 la concejal Sol Di Gerónimo presentó un proyecto de comunicación al Departamento Ejecutivo Municipal para solicitar información sobre las intervenciones realizadas en la Manzana 333 E de Villa Laguna La Brava, donde un particular estaría realizando trabajos de acondicionamiento, movimiento de suelo, nivelación e infraestructura vinculada con una posible bajada privada a la laguna.\n\nSegún la fuente, los vecinos de la villa turística advirtieron que el acceso al espejo de agua podría quedar restringido o condicionado por esas obras, lo que motivó el pedido de la concejal. En los fundamentos del proyecto se destaca la importancia de la Laguna La Brava como uno de los principales atractivos naturales, turísticos y recreativos del partido de Balcarce.\n\nSegún la fuente, el proyecto solicita conocer la situación dominial de la Manzana 333 E y determinar si pertenece al dominio provincial, así como verificar si las tareas cuentan con los permisos municipales y provinciales correspondientes. También pide información sobre inspecciones realizadas, actas técnicas, y sobre la existencia de instrumentos jurídicos que habiliten al particular a intervenir en el lugar.",
+    "guion": "Concejal Sol Di Gerónimo pide informes sobre posible bajada privada a Laguna La Brava",
+    "textoRedes": "La concejal Sol Di Gerónimo pidió informes sobre una posible bajada privada a la Laguna La Brava tras denuncias de vecinos que temen que el acceso público quede restringido. La Laguna es un atractivo turístico clave para Balcarce.",
+    "claves": [
+     "La concejal Sol Di Gerónimo pidió información sobre posibles obras privadas en la Manzana 333 E de Villa Laguna La Brava.",
+     "Vecinos advirtieron que el acceso público a la Laguna La Brava podría quedar restringido.",
+     "El proyecto busca aclarar la situación dominial, los permisos y la existencia de instrumentos jurídicos.",
+     "La Laguna La Brava es un atractivo turístico clave para Balcarce.",
+     "La presentación ocorreu el sábado 10/10/2026 ante el Departamento Ejecutivo Municipal."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "largo",
+     "detalle": "el copete tiene 476 caracteres, el máximo es 360"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 2.026 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"sabado\" y la fuente no"
+    },
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 28 palabras seguidas del original (\"en los fundamentos del proyecto se destaca la importancia de la laguna la brava…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 182,
+   "palabrasBajada": 71,
+   "caracteresTitulo": 85
+  },
+  "86c9586c": {
+   "id": "86c9586c",
+   "titulo_original": "Atletismo: Destacada actuación de balcarceños en el Torneo de la Diversidad Cultural",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 25848,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5347,
+    "salida": 5047,
+    "costo": 0
+   },
+   "escrito": {
+    "titulo": "Atletas de Balcarce obtienen cinco primeros puestos en Mar del Plata",
+    "copete": "Cuatro atletas del AACYC Balcarce compitieron el sábado 3 de octubre en el Torneo de la Diversidad Cultural en Mar del Plata, donde la delegación local logró cinco primeros puestos y seis ubicaciones en el podio. Benicio Caro ganó tres pruebas: 50 metros llanos (7\"99), 500 metros (1'32\"76) y salto en largo U14 (4,27 m).",
+    "cuerpo": "El sábado 3 de octubre, cuatro integrantes del AACYC Balcarce viajaron a Mar del Plata para participar del Torneo de la Diversidad Cultural organizado por la Federación Marplatense de Atletismo.\n\nLa delegación obtuvo cinco primeros puestos y seis podios en total. Benicio Caro, en categoría U12, se impuso en los 50 metros llanos con un tiempo de 7\"99, ganó los 500 metros con registro 1'32\"76 y obtuvo el primer puesto en salto en largo U14 con una marca de 4,27 metros.\n\nElías Aguer (U16) ganó los 80 metros llanos con 11\"21 y quedó tercero en salto en largo con 4,05 metros. Jesús Coria (U18) se adjudicó el lanzamiento de bala de 5 kg con 11,01 metros. Juan Andrés Solar (U18) compitió en los 1.500 metros de Mayores, finalizó 14° en la clasificación general y 5° en su categoría, con un tiempo de 5'12\"63.",
+    "guion": "Atletas de Balcarce obtienen cinco primeros puestos en Mar del Plata",
+    "textoRedes": "Cuatro atletas de AACYC Balcarce obtuvieron cinco primeros puestos y seis podios en el Torneo de la Diversidad Cultural en Mar del Plata. Benicio Caro ganó tres pruebas: 50 m llanos, 500 m y salto largo U14.",
+    "claves": [
+     "Cuatro atletas de AACYC Balcarce participaron en Mar del Plata.",
+     "Obtuvieron cinco primeros puestos y seis podios.",
+     "Benicio Caro ganó tres pruebas: 50 m llanos, 500 m y salto largo U14.",
+     "Elías Aguer ganó 80 m llanos y fue tercero en salto largo.",
+     "Jesús Coria ganó lanzamiento de bala de 5 kg.",
+     "Juan Andrés Solar quedó 14° en 1.500 m Mayores y 5° en su categoría."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "cita",
+     "detalle": "el copete pone entre comillas algo que la fuente no dice: \"99), 500 metros (1'32\""
+    },
+    {
+     "tipo": "cita",
+     "detalle": "el cuerpo pone entre comillas algo que la fuente no dice: \"99, ganó los 500 metros con registro 1'3\""
+    },
+    {
+     "tipo": "cita",
+     "detalle": "el cuerpo pone entre comillas algo que la fuente no dice: \"21 y quedó tercero en salto en largo con\""
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 13 palabras seguidas del original (\"se impuso en los 50 metros llanos con un tiempo de 7 99\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 143,
+   "palabrasBajada": 55,
+   "caracteresTitulo": 68
+  },
+  "c9127ae7": {
+   "id": "c9127ae7",
+   "titulo_original": "Maxivóley femenino avanza en el Top 6",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 25214,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5217,
+    "salida": 4430,
+    "costo": 0
+   },
+   "escrito": {
+    "titulo": "El Maxivóley femenino de Balcarce suma una victoria y una derrota en Tandil",
+    "copete": "El sábado 10/10/2026, en Tandil, el Maxivóley femenino de Balcarce ganó 2-0 a Atlético Villa Gesell y perdió luego ante el equipo local.",
+    "cuerpo": "El Maxivóley femenino de Balcarce jugó dos partidos el sábado 10/10/2026 en el Club Edal de Tandil, dentro del Top 6 de la Liga Marplatense Federada de Vóley. En el primero, derrotó 2-0 a Atlético Villa Gesell, actual campeón de la competencia. En el segundo, enfrentó al conjunto local y perdió tras un partido parejo. De esta manera, el equipo balcarceño sumó una victoria y una derrota en esa fecha. El Top 6 define al campeón y los cuartos de final se disputarán según la posición de cada equipo en la tabla. Los cruces serán: primero contra sexto, segundo contra quinto y tercero contra cuarto.",
+    "guion": "El Maxivóley femenino de Balcarce suma una victoria y una derrota en Tandil",
+    "textoRedes": "El Maxivóley femenino de Balcarce sumó una victoria y una derrota en el Top 6 de la Liga Marplatense, tras ganar 2-0 a Atlético Villa Gesell y perder ante el local en Tandil.",
+    "claves": [
+     "El Maxivóley femenino de Balcarce venció 2-0 a Atlético Villa Gesell.",
+     "Luego perdió ante el conjunto local en un partido parejo.",
+     "Obtuvo una victoria y una derrota en la jornada del Top 6.",
+     "El Top 6 define al campeón y lleva a cuartos de final.",
+     "Los cuartos se cruzarán 1 vs 6, 2 vs 5 y 3 vs 4."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 2.026 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el copete menciona \"sabado\" y la fuente no"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 2.026 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"sabado\" y la fuente no"
+    },
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    }
+   ],
+   "palabrasCuerpo": 105,
+   "palabrasBajada": 23,
+   "caracteresTitulo": 75
+  },
+  "a7da5534": {
+   "id": "a7da5534",
+   "titulo_original": "Un auto se prendió fuego y sufrió daños totales",
+   "fuentes": 1,
+   "serio": true,
+   "status": 200,
+   "ms": 22763,
+   "caracteresDelPrompt": 17288,
+   "uso": {
+    "entrada": 4944,
+    "salida": 3986,
+    "costo": 0
+   },
+   "escrito": {
+    "titulo": "Un Ford Ka se incendia y sufre daños totales en la colectora de la Ruta 226",
+    "copete": "El jueves por la tarde, la propietaria de un Ford Ka notó el inicio del incendio al volver de hacer compras en la colectora de la Ruta Nacional 226. Bomberos Voluntarios, personal de Tránsito y de la Estación de Policía Comunal acudieron al lugar, controlaron el fuego y evitaron su propagación, aunque el vehículo resultó con daños totales.",
+    "cuerpo": "Según informó un medio local, un automóvil Ford Ka se incendió el jueves por la tarde en la colectora de la Ruta Nacional 226.\nLa propietaria advirtió el inicio del fuego al regresar de realizar unas compras y dio aviso de inmediato.\nUna dotación de Bomberos Voluntarios llegó al sitio, trabajó para controlar las llamas y evitar que se propagara a otros vehículos o al entorno.\nPersonal de Tránsito y de la Estación de Policía Comunal también estuvo presente, colaborando en la seguridad del lugar y en el registro del incidente.\nPese a la intervención, el vehículo sufrió daños totales y fue declarado pérdida total.",
+    "guion": "Un Ford Ka se incendia y sufre daños totales en la colectora de la Ruta doscientos veintiséis",
+    "textoRedes": "Un Ford Ka se incendió este jueves por la tarde en la colectora de la Ruta Nacional 226, en Balcarce. La propietaria notó el fuego al volver de compras; bomberos, tránsito y policía actuaron y el vehículo sufrió daños totales.",
+    "claves": [
+     "Incendio de un Ford Ka en la colectora de la Ruta 226, Balcarce.",
+     "La propietaria detectó el fuego al regresar de compras.",
+     "Bomberos, tránsito y policía actuaron; el vehículo sufrió daños totales."
+    ]
+   },
+   "problemas": [],
+   "palabrasCuerpo": 105,
+   "palabrasBajada": 58,
+   "caracteresTitulo": 75
+  },
+  "276dcf9f": {
+   "id": "276dcf9f",
+   "titulo_original": "Cambió la Ley de Tránsito: cómo queda la prioridad de paso en la Provincia",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 47525,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5935,
+    "salida": 8000,
+    "costo": 0
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "9c7ee7d5": {
+   "id": "9c7ee7d5",
+   "titulo_original": "FIESTA NACIONAL DEL POSTRE: CONFIRMACIÓN DE LA NUEVA FECHA PARA LA 22ª EDICIÓN",
+   "fuentes": 5,
+   "serio": false,
+   "status": 200,
+   "ms": 51502,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5881,
+    "salida": 8000,
+    "costo": 0
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "badcdcaa": {
+   "id": "badcdcaa",
+   "titulo_original": "Cuatro gimnastas de UP clasificaron a la Final Regional del Centro",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 38679,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5488,
+    "salida": 5081,
+    "costo": 0
+   },
+   "escrito": {
+    "titulo": "Cuatro gimnastas de UP logran la clasificación a la Final Regional del Centro",
+    "copete": "El viernes 9 de octubre de 2026, en el Polideportivo de Aguas Verdes, Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet, del club UP de Balcarce, se clasificaron para la Final Regional del Centro que se jugará en diciembre con participación de gimnastas de Buenos Aires, Córdoba y Santa Fe.",
+    "cuerpo": "Según informó la Municipalidad de Balcarce, el viernes 9 de octubre de 2026 se realizó la final provincial de los niveles 1 y 2 de gimnasia en el Polideportivo de Aguas Verdes. En esa competencia participaron casi 30 gimnastas del club UP, entre ellas Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet.\n\nEstas cuatro gimnastas lograron la clasificación a la Final Regional del Centro, que se disputará en diciembre y reunirá a deportistas de las provincias de Buenos Aires, Córdoba y Santa Fe. La delegación de UP estuvo integrada por deportistas de las categorías Mini, Preinfantil, Infantil y Juvenil, con sus respectivas listas de nombres.",
+    "guion": "Cuatro gimnastas de U P logran la clasificación a la Final Regional del Centro",
+    "textoRedes": "Cuatro gimnastas del club UP de Balcarce se clasificaron para la Final Regional del Centro tras la final provincial realizada el 9 de octubre en Aguas Verdes. La competencia nacional se jugará en diciembre con participación de provincias vecinas.",
+    "claves": [
+     "Cuatro gimnastas del club UP de Balcarce se clasificaron para la Final Regional del Centro.",
+     "La clasificación se obtuvo tras la final provincial de los niveles 1 y 2 realizada el 9 de octubre de 2026 en Aguas Verdes.",
+     "La Final Regional del Centro se disputará en diciembre y reunirá a gimnastas de Buenos Aires, Córdoba y Santa Fe.",
+     "La delegación UP incluyó deportistas de las categorías Mini, Preinfantil, Infantil y Juvenil.",
+     "La Municipalidad de Balcarce confirmó la información."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 2.026 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el copete menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el copete menciona \"octubre\" y la fuente no"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 2.026 y la fuente no lo dice"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"municipalidad\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 19 palabras seguidas del original (\"de las provincias de buenos aires cordoba y santa fe la delegacion de up…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 106,
+   "palabrasBajada": 51,
+   "caracteresTitulo": 77
+  },
+  "04f90bd3": {
+   "id": "04f90bd3",
+   "titulo_original": "El Concejo Deliberante aprobó la creación de un registro de acompañantes terapéuticos",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 24482,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5451,
+    "salida": 3933,
+    "costo": 0
+   },
+   "escrito": {
+    "titulo": "El Concejo Deliberante aprueba la creación de un registro de acompañantes terapéuticos",
+    "copete": "El Concejo Deliberante de Balcarce aprobó por unanimidad la creación de un registro municipal de acompañantes terapéuticos, una plataforma digital que facilitará el contacto entre profesionales y usuarios y busca mejorar las condiciones laborales del sector.",
+    "cuerpo": "El viernes 09/10/2026 el Honorable Concejo Deliberante de Balcarce aprobó por unanimidad la creación de un registro municipal de acompañantes terapéuticos. La iniciativa fue impulsada por los concejales Gonzalo Scioli y Fara Amado Cunqueiro, a partir de inquietudes planteadas por profesionales y estudiantes de la carrera.\n\nEl registro incluirá una plataforma digital desarrollada en articulación con el área de Modernización del Municipio. Allí se podrán consultar datos de los profesionales, su formación, experiencia, áreas de desempeño y si atienden a través de obras sociales. Para integrarlo será necesario presentar título habilitante conforme a la Resolución Ministerial 1221/15.\n\nDurante el debate los concejales señalaron que los bajos honorarios de algunas obras sociales limitan la cantidad de horas de atención y el acceso al servicio, sobre todo para niños sin cobertura médica. Además, pidieron mejores remuneraciones y más oportunidades laborales para el sector, mientras la plataforma continuará en etapa de desarrollo con la participación de profesionales, estudiantes y representantes educativos.",
+    "guion": "El Concejo Deliberante aprueba la creación de un registro de acompañantes terapéuticos",
+    "textoRedes": "El Concejo Deliberante de Balcarce aprobó por unanimidad un registro municipal de acompañantes terapéuticos que incluirá una plataforma digital para facilitar el acceso al servicio y mejorar las condiciones laborales del sector.",
+    "claves": [
+     "Aprobación unánime del Concejo Deliberante.",
+     "Impulso de los concejales Gonzalo Scioli y Fara Amado Cunqueiro.",
+     "Plataforma digital en articulación con Modernización.",
+     "Requisito de título habilitante (Resolución Ministerial 1221/15).",
+     "Objetivo de mejorar acceso y condiciones laborales del sector."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 10 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 2.026 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 15 palabras seguidas del original (\"de balcarce aprobo por unanimidad la creacion de un registro municipal de acompanantes terapeuticos…\"): decilo con otr"
+    }
+   ],
+   "palabrasCuerpo": 158,
+   "palabrasBajada": 36,
+   "caracteresTitulo": 86
+  },
+  "6e45a05f": {
+   "id": "6e45a05f",
+   "titulo_original": "Investigan el faltante de dinero en la Escuela Emilio Lamarca",
+   "fuentes": 2,
+   "serio": true,
+   "status": 200,
+   "ms": 44340,
+   "caracteresDelPrompt": 17288,
+   "uso": {
+    "entrada": 5106,
+    "salida": 8000,
+    "costo": 0
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "869434ae": {
+   "id": "869434ae",
+   "titulo_original": "SE PRESENTÓ LA PRIMERA EXPO SALUD, DEPORTE Y TECNOLOGÍA",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 25884,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 6103,
+    "salida": 4241,
+    "costo": 0
+   },
+   "escrito": {
+    "titulo": "Se presenta la primera Expo Salud, Deporte y Tecnología",
+    "copete": "Esta mañana, en la Sala de los Intendentes de la Municipalidad de Balcarce, se presentó la primera edición de la Expo Salud, Deporte y Tecnología, que se realizará el sábado 24 de octubre de 9 a 19 en la sede de la Sociedad Española. El evento reunirá instituciones, empresas y profesionales de la ciudad.",
+    "cuerpo": "La presentación se realizó este jueves 8 de octubre en la Sala de los Intendentes. Participaron la subsecretaria de Deporte y Recreación, Soledad Vivio, y los impulsores de la iniciativa, Jorge Romero y Mariano Lauro, quienes brindaron detalles sobre la jornada. Según explicó Romero, la iniciativa busca reunir y visibilizar las alternativas locales de deporte, salud y tecnología, ofreciendo a la sociedad y especialmente a los niños todas las propuestas disponibles en la ciudad. La exposición incluirá stands de clubes de taekwondo, kickboxing, karate, ajedrez, chikung, tai chi y yoga, además de espacios tecnológicos con desarrollos de estudiantes de la Escuela Industrial y empresas locales. Vivio destacó el vínculo entre el municipio y los organizadores y señaló que Balcarce ha crecido como polo de atracción deportiva, por lo que es fundamental difundir esas actividades. La jornada también contará con un sector sanitario que reunirá centros de imágenes, mutuales, prepagas, farmacias y profesionales de diversas especialidades, y un ciclo de charlas de hasta 40 minutos seguido de preguntas del público.",
+    "guion": "Se presenta la primera Expo Salud, Deporte y Tecnología",
+    "textoRedes": "Se presentó la primera Expo Salud, Deporte y Tecnología que se realizará el 24 de octubre en la Sociedad Española, con stands deportivos, tecnológicos y un sector sanitario, organizada por el municipio y promotores locales.",
+    "claves": [
+     "Se presentó la primera Expo Salud, Deporte y Tecnología en Balcarce.",
+     "La exposición será el sábado 24 de octubre, de 9 a 19, en la Sociedad Española.",
+     "Participaron la subsecretaria Vivio y los promotores Romero y Lauro.",
+     "Incluirá stands deportivos, tecnológicos y un sector sanitario.",
+     "Habrá charlas, capacitaciones y espacio para microemprendedores."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 8 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"jueves\" y la fuente no"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 24 palabras seguidas del original (\"participaron la subsecretaria de deporte y recreacion soledad vivio y los impulsores de la…\"): decilo con otras palabr"
+    }
+   ],
+   "palabrasCuerpo": 169,
+   "palabrasBajada": 54,
+   "caracteresTitulo": 55
+  }
+ }
+}

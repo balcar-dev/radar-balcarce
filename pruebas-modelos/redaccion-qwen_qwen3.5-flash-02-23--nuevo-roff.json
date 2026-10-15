@@ -1,0 +1,438 @@
+{
+ "modelo": "qwen/qwen3.5-flash-02-23",
+ "prompt": "nuevo",
+ "razonamiento": "off",
+ "fecha": "2026-10-11T21:35:12.331Z",
+ "precios": {
+  "entrada": 6.5e-8,
+  "salida": 2.6e-7
+ },
+ "historias": {
+  "23005298": {
+   "id": "23005298",
+   "titulo_original": "RECONOCIMIENTO A LA PRECISIÓN Y EL COMPROMISO EN EL DÍA DEL TÉCNICO DE LABORATORIO",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 4720,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5136,
+    "salida": 777,
+    "costo": 0.00053586
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "0305adf0": {
+   "id": "0305adf0",
+   "titulo_original": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal “Suavecita”",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 5790,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5605,
+    "salida": 1005,
+    "costo": 0.000625625
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "2d82c63c": {
+   "id": "2d82c63c",
+   "titulo_original": "Declararon de interés Legislativo los 75 años del Club Amigos Unidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 5258,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5434,
+    "salida": 873,
+    "costo": 0.00058019
+   },
+   "escrito": {
+    "titulo": "El Concejo declara de interés los 75 años del Club Amigos Unidos",
+    "copete": "La institución fue fundada en 1951 y cuenta con una trayectoria deportiva que incluye un invicto de 47 partidos. Concejales destacaron su labor formativa y social, aunque alertaron por la crisis económica actual de los clubes barriales.",
+    "cuerpo": "El Concejo Deliberante aprobó una declaración que eleva a interés legislativo, social y comunitario el 75° aniversario del Club Amigos Unidos. La medida reconoce la historia de la entidad, fundada el 9 de septiembre de 1951, y su función activa en la comunidad balcarceña.\n\nDurante el tratamiento, el concejal Javier Menonne repasó hitos deportivos como el invicto de 47 partidos consecutivos logrado entre 1977 y 1978, además de los cuatro campeonatos obtenidos entre 1985 y 1988. Menonne subrayó que la institución busca formar ciudadanos comprometidos a través de sus categorías formativas y el fútbol femenino.\n\nPor su parte, la concejal Sol Di Gerónimo felicitó a los integrantes y valoró el vínculo con el barrio. No obstante, advirtió que los clubes de barrio atraviesan una situación económica muy delicada. Leandro Spinelli acompañó la iniciativa y remarcó que estas instituciones funcionan como espacios de contención para la sociedad.",
+    "guion": "El Concejo declara de interés los setenta y cinco años del Club Amigos Unidos",
+    "textoRedes": "El Concejo Deliberante reconoció los 75 años del Club Amigos Unidos. La institución fue fundada en 1951 y se destaca por su trabajo deportivo y social en la comunidad.",
+    "claves": [
+     "Se reconoció el trabajo deportivo y social de la institución.",
+     "El club cumple 75 años desde su fundación en 1951.",
+     "Concejales alertaron por la crisis económica de los clubes barriales."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el guion dice 70 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el guion dice 5 y la fuente no lo dice"
+    }
+   ],
+   "palabrasCuerpo": 146,
+   "palabrasBajada": 37,
+   "caracteresTitulo": 64
+  },
+  "445a709e": {
+   "id": "445a709e",
+   "titulo_original": "Reconocen proyecto de la EEPA N°701 sobre el descarte de medicamentos vencidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 6430,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5295,
+    "salida": 1060,
+    "costo": 0.000619775
+   },
+   "escrito": {
+    "titulo": "Concejo reconoce proyecto de EEPA 701 sobre descarte de medicamentos vencidos",
+    "copete": "El Concejo Deliberante declaró de interés legislativo, educativo y ambiental la iniciativa de la escuela primaria de adultos. Un relevamiento local mostró que el 77% de los vecinos elimina estos residuos en la basura o caños, y el 93% no sabe dónde entregarlos correctamente.",
+    "cuerpo": "El Concejo Deliberante declaró de interés legislativo, educativo y ambiental el proyecto \"El descarte importa, medicamentos vencidos\", impulsado por estudiantes de la Escuela Primaria de Adultos (EEPA) N° 701. La propuesta nació de una inquietud surgida en el aula y derivó en una investigación sobre los hábitos de la población respecto a la contaminación por eliminación inadecuada de fármacos.\n\nLa concejal Alejandra Marchegiani, del partido La Libertad Avanza, resaltó el esfuerzo de los alumnos, quienes realizaron entrevistas, talleres y encuestas a 206 personas. Entre los datos obtenidos, el 77% reconoció que desecha medicamentos vencidos o sobrantes en la basura o en los desagües, mientras que el 93% manifestó desconocer el lugar correcto para su entrega.\n\nLa iniciativa también obtuvo un reconocimiento en la Feria Distrital de Educación, Arte, Ciencia y Tecnología. Durante la sesión, se planteó la necesidad de habilitar un punto de recepción debidamente establecido y con mayor difusión para facilitar la acción de los vecinos. El presidente del Concejo, Scioli, alentó a los integrantes de la escuela a continuar con estas propuestas y aseguró el acompañamiento del cuerpo deliberante.",
+    "guion": "Concejo reconoce proyecto de EEPA setecientos uno sobre descarte de medicamentos vencidos",
+    "textoRedes": "El Concejo Deliberante reconoció el trabajo de los estudiantes de la EEPA 701 sobre el descarte de medicamentos. Un estudio local muestra que el 77% de los vecinos tira estos productos a la basura o desagües sin saber cómo hacerlo bien.",
+    "claves": [
+     "El Concejo declaró de interés el proyecto de la EEPA 701.",
+     "El 77% de los vecinos tira medicamentos a la basura o caños.",
+     "El 93% no sabe dónde entregarlos correctamente.",
+     "Se solicitó crear un punto de recepción oficial.",
+     "El proyecto recibió un reconocimiento en la feria distrital."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 19 palabras seguidas del original (\"el concejo deliberante declaro de interes legislativo educativo y ambiental el proyecto el descarte…\"): decilo con otr"
+    }
+   ],
+   "palabrasCuerpo": 181,
+   "palabrasBajada": 44,
+   "caracteresTitulo": 77
+  },
+  "d00b6002": {
+   "id": "d00b6002",
+   "titulo_original": "El fútbol se atrasó tres meses, y volvería a terminar en enero",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 6358,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5567,
+    "salida": 1067,
+    "costo": 0.000639275
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "c959337d": {
+   "id": "c959337d",
+   "titulo_original": "Sol Di Gerónimo pidió informes por una posible bajada privada a la Laguna La Brava",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 7096,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5775,
+    "salida": 1075,
+    "costo": 0.000654875
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "86c9586c": {
+   "id": "86c9586c",
+   "titulo_original": "Atletismo: Destacada actuación de balcarceños en el Torneo de la Diversidad Cultural",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 5908,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5323,
+    "salida": 1139,
+    "costo": 0.000642135
+   },
+   "escrito": {
+    "titulo": "Atletas de AACYC logran cinco victorias en Mar del Plata",
+    "copete": "Cuatro deportistas balcarceños representaron a la Asociación Atlética y Cultural Club Balcarce en el Torneo de la Diversidad Cultural. Benicio Caro se destacó con tres triunfos, mientras que Elías Aguer y Jesús Coria también ganaron sus respectivas pruebas.",
+    "cuerpo": "Cuatro atletas de AACYC Balcarce compitieron el pasado sábado 3 de octubre en Mar del Plata por el Torneo de la Diversidad Cultural. La Federación Marplatense de Atletismo organizó el evento, donde la delegación local logró cinco primeros puestos y seis ubicaciones en el podio. Benicio Caro, de la categoría U12, fue uno de los protagonistas al obtener tres victorias. Se impuso en los 50 metros llanos con un tiempo de 7 segundos y 99 centésimas, y en los 500 metros con un registro de 1 minuto, 32 segundos y 76 centésimas. Además, participó en salto en largo de la categoría U14, superior a la suya, y cerró con una marca de 4,27 metros para quedarse con el primer lugar. En la categoría U16, Elías Aguer se adjudicó la victoria en los 80 metros llanos con 11 segundos y 21 centésimas. También finalizó tercero en salto en largo con 4,05 metros. Por su parte, Jesús Coria obtuvo el primer puesto en lanzamiento de bala de 5 kilogramos de la categoría U18, con una marca de 11,01 metros. Finalmente, Juan Andrés Solar, también de la categoría U18, participó en los 1.500 metros de Mayores. Terminó en el 14° puesto de la clasificación general con un tiempo de 5 minutos, 12 segundos y 63 centésimas. Entre los competidores de su categoría, se ubicó quinto.",
+    "guion": "Atletas de AACYC logran cinco victorias en Mar del Plata",
+    "textoRedes": "Cuatro atletas de AACYC Balcarce lograron cinco victorias en el Torneo de la Diversidad Cultural en Mar del Plata. Benicio Caro se destacó con tres triunfos y Elías Aguer y Jesús Coria también ganaron sus pruebas.",
+    "claves": [
+     "Cuatro atletas de AACYC Balcarce compitieron en Mar del Plata.",
+     "Benicio Caro obtuvo tres victorias en distintas pruebas.",
+     "Elías Aguer y Jesús Coria ganaron sus respectivas categorías.",
+     "La delegación local sumó cinco primeros puestos y seis podios."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "nombre",
+     "detalle": "el copete nombra a \"asociacion\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el copete nombra a \"atletica\" y la fuente no"
+    },
+    {
+     "tipo": "nombre",
+     "detalle": "el copete nombra a \"club\" y la fuente no"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 21 palabras seguidas del original (\"de 11 01 metros finalmente juan andres solar tambien de la categoria u18 participo…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 222,
+   "palabrasBajada": 38,
+   "caracteresTitulo": 56
+  },
+  "c9127ae7": {
+   "id": "c9127ae7",
+   "titulo_original": "Maxivóley femenino avanza en el Top 6",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 4480,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5190,
+    "salida": 758,
+    "costo": 0.00053443
+   },
+   "escrito": {
+    "titulo": "Maxivóley femenino suma una victoria y una derrota en Tandil",
+    "copete": "El equipo balcarceño venció al actual campeón, Atlético Villa Gesell, por 2 a 0, pero cayó frente al local en la jornada del sábado. Con este resultado, sigue en la lucha por los cuartos de final de la Liga Marplatense Federada.",
+    "cuerpo": "El Maxivóley femenino de Balcarce disputó dos encuentros en Tandil para seguir definiendo su participación en el Top 6 de la Liga Marplatense Federada de Vóley. En el primer partido, el conjunto local logró un triunfo contundente por 2 a 0 sobre Atlético Villa Gesell, actual campeón de la competencia. Posteriormente, las jugadoras enfrentaron al equipo anfitrión, Club Edal, en un duelo muy parejo que terminó con la victoria de las tandilenses. De esta manera, Balcarce acumula una victoria y una derrota en esta nueva fecha del certamen. Una vez finalizada esta instancia, comenzarán los cruces de cuartos de final, que se definirán según la posición de cada equipo en la tabla general.",
+    "guion": "Maxivoley femenino suma una victoria y una derrota en Tandil",
+    "textoRedes": "El Maxivóley femenino de Balcarce jugó dos partidos en Tandil. Ganó al actual campeón, Atlético Villa Gesell, por 2 a 0, pero cayó ante el local. Sigue en la lucha por los cuartos de final.",
+    "claves": [
+     "Victoria 2 a 0 sobre el campeón Villa Gesell",
+     "Derrota ante el local Club Edal",
+     "Jornada jugada en Tandil el sábado 10"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "fecha",
+     "detalle": "el copete menciona \"sabado\" y la fuente no"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 24 palabras seguidas del original (\"una vez finalizada esta instancia comenzaran los cruces de cuartos de final que se…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 113,
+   "palabrasBajada": 41,
+   "caracteresTitulo": 60
+  },
+  "a7da5534": {
+   "id": "a7da5534",
+   "titulo_original": "Un auto se prendió fuego y sufrió daños totales",
+   "fuentes": 1,
+   "serio": true,
+   "status": 200,
+   "ms": 4191,
+   "caracteresDelPrompt": 17288,
+   "uso": {
+    "entrada": 4916,
+    "salida": 674,
+    "costo": 0.00049478
+   },
+   "escrito": {
+    "titulo": "Un Ford Ka queda destruido tras un incendio en la ruta 226",
+    "copete": "El siniestro ocurrió este jueves por la tarde en la colectora de la Ruta 226. La dueña detectó el fuego al volver de comprar; el auto quedó con daños totales pese a la intervención de Bomberos.",
+    "cuerpo": "Un incendio consumió totalmente un automóvil Ford Ka en la tarde del jueves 8 de octubre. El hecho se registró en la colectora de la Ruta Nacional 226, en el partido de Balcarce. La propietaria del vehículo advirtió el inicio del fuego al regresar de realizar algunas compras.",
+    "guion": "Un Ford Ka queda destruido tras un incendio en la ruta doscientos veintiséis",
+    "textoRedes": "Un Ford Ka quedó destruido por un incendio en la colectora de la Ruta 226 este jueves. La dueña detectó las llamas al volver de comprar. Bomberos controló el fuego.",
+    "claves": [
+     "Incendio total en Ruta 226",
+     "Ford Ka perdido",
+     "Intervención de Bomberos"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 8 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"octubre\" y la fuente no"
+    }
+   ],
+   "palabrasCuerpo": 48,
+   "palabrasBajada": 36,
+   "caracteresTitulo": 58
+  },
+  "276dcf9f": {
+   "id": "276dcf9f",
+   "titulo_original": "Cambió la Ley de Tránsito: cómo queda la prioridad de paso en la Provincia",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 8809,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5871,
+    "salida": 842,
+    "costo": 0.000600535
+   },
+   "escrito": {
+    "titulo": "Provincia define nueva prioridad de paso por jerarquía de vía",
+    "copete": "La Legislatura bonaerense aprobó cambios en la Ley de Tránsito que establecen que una avenida tiene prioridad sobre una calle. La regla de la derecha sigue vigente solo entre vías de igual nivel. La norma entra en vigencia tras completar los trámites correspondientes.",
+    "cuerpo": "La Legislatura bonaerense sancionó una modificación en la Ley de Tránsito que ordena la prioridad de paso según la categoría de la vía. La normativa establece un esquema claro: autopistas, semiautopistas, rutas, carreteras, avenidas, calles y pasajes. Esto significa que un vehículo que transita por una calle deberá ceder el paso a otro que circule por una avenida, incluso si llega desde su derecha.",
+    "guion": "Provincia define nueva prioridad de paso por jerarquia de via",
+    "textoRedes": "La Provincia cambió las reglas de prioridad de paso. Ahora la jerarquía de la vía manda: una avenida tiene preferencia sobre una calle. La regla de la derecha sigue vigente solo entre caminos del mismo nivel. Falta saber cuándo empieza a regir.",
+    "claves": [
+     "La provincia prioriza la jerarquía de la vía sobre la regla de la derecha.",
+     "Una avenida gana prioridad sobre una calle en cruces sin semáforos.",
+     "La regla de la derecha se mantiene solo en vías de igual nivel.",
+     "El objetivo es reducir conflictos judiciales por accidentes en esquinas.",
+     "La norma aún no rige inmediatamente."
+    ]
+   },
+   "problemas": [],
+   "palabrasCuerpo": 64,
+   "palabrasBajada": 43,
+   "caracteresTitulo": 61
+  },
+  "9c7ee7d5": {
+   "id": "9c7ee7d5",
+   "titulo_original": "FIESTA NACIONAL DEL POSTRE: CONFIRMACIÓN DE LA NUEVA FECHA PARA LA 22ª EDICIÓN",
+   "fuentes": 5,
+   "serio": false,
+   "status": 200,
+   "ms": 8877,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5809,
+    "salida": 903,
+    "costo": 0.000612365
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "badcdcaa": {
+   "id": "badcdcaa",
+   "titulo_original": "Cuatro gimnastas de UP clasificaron a la Final Regional del Centro",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 6716,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5471,
+    "salida": 963,
+    "costo": 0.000605995
+   },
+   "escrito": {
+    "titulo": "Cuatro gimnastas de UP clasifican a la Final Regional del Centro",
+    "copete": "Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet lograron su cupo tras competir en la final provincial. El evento regional se jugará en diciembre y reunirá a atletas de tres provincias.",
+    "cuerpo": "Cerca de 30 gimnastas de la institución UP compitieron el viernes 9 en la final provincial de los niveles 1 y 2. La prueba se desarrolló en el Polideportivo de Aguas Verdes. Cuatro representantes de la ciudad consiguieron clasificar a la Final Regional del Centro. Ellas son Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet. La instancia regional está pautada para diciembre y reunirá a participantes de las provincias de Buenos Aires, Córdoba y Santa Fe. La delegación local incluyó a deportistas de distintas categorías. En el nivel Mini participaron Amanda Hernández, Clarita Ruiz, Felicitas Larroquet, Malena Ferreyra y Joaquina Gainza. En Preinfantil estuvieron Lola Marinone, Guillermina De Luca, Jazmín Picabea, Paulina Mestralet, Juana Mutti, Ainhoa Sánchez, Giovana Ríos, Isabela Ercolano, Lola Divirgilio y Margarita López. En Infantil compitieron Renata Vega, Emilia Moreno, Amparo Grau y Morena Marino. En Juvenil participaron Allegra Cerro Bustos e Ingrid Unales.",
+    "guion": "Cuatro gimnastas de UP clasifican a la Final Regional del Centro",
+    "textoRedes": "Cuatro gimnastas de UP clasificaron a la Final Regional del Centro. Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet representaron a Balcarce en la final provincial y avanzarán a la instancia de diciembre.",
+    "claves": [
+     "Más de 30 gimnastas de UP participaron en la final provincial.",
+     "La competencia se jugó en Aguas Verdes el viernes 9.",
+     "Las cuatro clasificadas avanzarán a una instancia nacional en diciembre.",
+     "Participantes de tres provincias se reunirán en la final regional."
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 3 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 9 y la fuente no lo dice"
+    },
+    {
+     "tipo": "fecha",
+     "detalle": "el cuerpo menciona \"viernes\" y la fuente no"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 22 palabras seguidas del original (\"lola marinone guillermina de luca jazmin picabea paulina mestralet juana mutti ainhoa sanchez giovana…\"): decilo con o"
+    }
+   ],
+   "palabrasCuerpo": 148,
+   "palabrasBajada": 32,
+   "caracteresTitulo": 64
+  },
+  "04f90bd3": {
+   "id": "04f90bd3",
+   "titulo_original": "El Concejo Deliberante aprobó la creación de un registro de acompañantes terapéuticos",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 6489,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5407,
+    "salida": 1058,
+    "costo": 0.000626535
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "6e45a05f": {
+   "id": "6e45a05f",
+   "titulo_original": "Investigan el faltante de dinero en la Escuela Emilio Lamarca",
+   "fuentes": 2,
+   "serio": true,
+   "status": 200,
+   "ms": 5103,
+   "caracteresDelPrompt": 17288,
+   "uso": {
+    "entrada": 5084,
+    "salida": 753,
+    "costo": 0.00052624
+   },
+   "escrito": {
+    "titulo": "Investigan faltante de dinero en la Escuela Emilio Lamarca",
+    "copete": "Se detectó el viernes la desaparición de fondos de la venta de entradas para un evento infantil. El dinero, destinado a la actividad del Jardín, estaba custodiado en la preceptoría del Nivel Inicial.",
+    "cuerpo": "La Policía investiga la desaparición de una suma de dinero en la Escuela Parroquial Emilio Lamarca. El hecho se tomó conocimiento durante la tarde del viernes pasado. Los fondos correspondían a la recaudación obtenida por la venta de entradas anticipadas para una función que los alumnos del Nivel Inicial presentarán el próximo 23 de octubre en el Teatro Municipal Luis C.",
+    "guion": "Investigan faltante de dinero en la Escuela Emilio Lamarca",
+    "textoRedes": "La Policía investiga la desaparición de dinero en la Escuela Emilio Lamarca. Los fondos correspondían a la venta de entradas para un evento del Nivel Inicial y estaban custodiados en la preceptoría.",
+    "claves": [
+     "Desaparece dinero de la recaudación de entradas infantiles",
+     "El hallazgo fue registrado el viernes por la tarde",
+     "Los fondos estaban en la caja de la preceptoría"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "nombre",
+     "detalle": "el cuerpo nombra a \"policia\" y la fuente no"
+    }
+   ],
+   "palabrasCuerpo": 61,
+   "palabrasBajada": 33,
+   "caracteresTitulo": 58
+  },
+  "869434ae": {
+   "id": "869434ae",
+   "titulo_original": "SE PRESENTÓ LA PRIMERA EXPO SALUD, DEPORTE Y TECNOLOGÍA",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 6324,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 6014,
+    "salida": 1001,
+    "costo": 0.00065117
+   },
+   "error": "respuesta ilegible o sin título"
+  }
+ }
+}

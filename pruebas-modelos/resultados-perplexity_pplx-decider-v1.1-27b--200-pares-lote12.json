@@ -1,0 +1,823 @@
+{
+ "modelo": "perplexity/pplx-decider-v1.1-27b",
+ "lote": 12,
+ "soloPares": true,
+ "paresArchivo": "pares-200.json",
+ "muestra": "muestra-200.json",
+ "modo": "decisiones",
+ "fecha": "2026-10-11T02:59:22.792Z",
+ "precios": {
+  "entrada": 2e-8,
+  "salida": 0
+ },
+ "caracteresFijos": 4530,
+ "notas": {},
+ "pares": {
+  "p00": {
+   "status": 200,
+   "ms": 144,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9988338104582797}",
+   "mismo": true,
+   "noul": 0.9988338104582797,
+   "uso": {
+    "entrada": 2753.25,
+    "salida": 1,
+    "costo": 0.000055065
+   }
+  },
+  "p01": {
+   "status": 200,
+   "ms": 144,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.001166042831743149}",
+   "mismo": false,
+   "noul": 0.001166042831743149,
+   "uso": {
+    "entrada": 2753.25,
+    "salida": 1,
+    "costo": 0.000055065
+   }
+  },
+  "p02": {
+   "status": 200,
+   "ms": 144,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9990780254112176}",
+   "mismo": true,
+   "noul": 0.9990780254112176,
+   "uso": {
+    "entrada": 2753.25,
+    "salida": 1,
+    "costo": 0.000055065
+   }
+  },
+  "p03": {
+   "status": 200,
+   "ms": 144,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.012090776618276435}",
+   "mismo": false,
+   "noul": 0.012090776618276435,
+   "uso": {
+    "entrada": 2753.25,
+    "salida": 1,
+    "costo": 0.000055065
+   }
+  },
+  "p04": {
+   "status": 200,
+   "ms": 144,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0004207225454509062}",
+   "mismo": false,
+   "noul": 0.0004207225454509062,
+   "uso": {
+    "entrada": 2753.25,
+    "salida": 1,
+    "costo": 0.000055065
+   }
+  },
+  "p05": {
+   "status": 200,
+   "ms": 144,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9980575506981876}",
+   "mismo": true,
+   "noul": 0.9980575506981876,
+   "uso": {
+    "entrada": 2753.25,
+    "salida": 1,
+    "costo": 0.000055065
+   }
+  },
+  "p06": {
+   "status": 200,
+   "ms": 144,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9905869391566626}",
+   "mismo": true,
+   "noul": 0.9905869391566626,
+   "uso": {
+    "entrada": 2753.25,
+    "salida": 1,
+    "costo": 0.000055065
+   }
+  },
+  "p07": {
+   "status": 200,
+   "ms": 144,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9957254800876678}",
+   "mismo": true,
+   "noul": 0.9957254800876678,
+   "uso": {
+    "entrada": 2753.25,
+    "salida": 1,
+    "costo": 0.000055065
+   }
+  },
+  "p08": {
+   "status": 200,
+   "ms": 144,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0025198968304897527}",
+   "mismo": false,
+   "noul": 0.0025198968304897527,
+   "uso": {
+    "entrada": 2753.25,
+    "salida": 1,
+    "costo": 0.000055065
+   }
+  },
+  "p09": {
+   "status": 200,
+   "ms": 144,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.002843565728703315}",
+   "mismo": false,
+   "noul": 0.002843565728703315,
+   "uso": {
+    "entrada": 2753.25,
+    "salida": 1,
+    "costo": 0.000055065
+   }
+  },
+  "p10": {
+   "status": 200,
+   "ms": 144,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9978782864551747}",
+   "mismo": true,
+   "noul": 0.9978782864551747,
+   "uso": {
+    "entrada": 2753.25,
+    "salida": 1,
+    "costo": 0.000055065
+   }
+  },
+  "p11": {
+   "status": 200,
+   "ms": 144,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9923027196977328}",
+   "mismo": true,
+   "noul": 0.9923027196977328,
+   "uso": {
+    "entrada": 2753.25,
+    "salida": 1,
+    "costo": 0.000055065
+   }
+  },
+  "p12": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9987105291471853}",
+   "mismo": true,
+   "noul": 0.9987105291471853,
+   "uso": {
+    "entrada": 2587.25,
+    "salida": 1,
+    "costo": 0.00005174499999999999
+   }
+  },
+  "p13": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9977862921485863}",
+   "mismo": true,
+   "noul": 0.9977862921485863,
+   "uso": {
+    "entrada": 2587.25,
+    "salida": 1,
+    "costo": 0.00005174499999999999
+   }
+  },
+  "p14": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9453571927050903}",
+   "mismo": true,
+   "noul": 0.9453571927050903,
+   "uso": {
+    "entrada": 2587.25,
+    "salida": 1,
+    "costo": 0.00005174499999999999
+   }
+  },
+  "p15": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0858951672884099}",
+   "mismo": false,
+   "noul": 0.0858951672884099,
+   "uso": {
+    "entrada": 2587.25,
+    "salida": 1,
+    "costo": 0.00005174499999999999
+   }
+  },
+  "p16": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.00030024476376118794}",
+   "mismo": false,
+   "noul": 0.00030024476376118794,
+   "uso": {
+    "entrada": 2587.25,
+    "salida": 1,
+    "costo": 0.00005174499999999999
+   }
+  },
+  "p17": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.04194224750369688}",
+   "mismo": false,
+   "noul": 0.04194224750369688,
+   "uso": {
+    "entrada": 2587.25,
+    "salida": 1,
+    "costo": 0.00005174499999999999
+   }
+  },
+  "p18": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.02687840811777623}",
+   "mismo": false,
+   "noul": 0.02687840811777623,
+   "uso": {
+    "entrada": 2587.25,
+    "salida": 1,
+    "costo": 0.00005174499999999999
+   }
+  },
+  "p19": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9706550521762435}",
+   "mismo": true,
+   "noul": 0.9706550521762435,
+   "uso": {
+    "entrada": 2587.25,
+    "salida": 1,
+    "costo": 0.00005174499999999999
+   }
+  },
+  "p20": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.021225449763800742}",
+   "mismo": false,
+   "noul": 0.021225449763800742,
+   "uso": {
+    "entrada": 2587.25,
+    "salida": 1,
+    "costo": 0.00005174499999999999
+   }
+  },
+  "p21": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.01395202410790463}",
+   "mismo": false,
+   "noul": 0.01395202410790463,
+   "uso": {
+    "entrada": 2587.25,
+    "salida": 1,
+    "costo": 0.00005174499999999999
+   }
+  },
+  "p22": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.014043144410596857}",
+   "mismo": false,
+   "noul": 0.014043144410596857,
+   "uso": {
+    "entrada": 2587.25,
+    "salida": 1,
+    "costo": 0.00005174499999999999
+   }
+  },
+  "p23": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.998884959960121}",
+   "mismo": true,
+   "noul": 0.998884959960121,
+   "uso": {
+    "entrada": 2587.25,
+    "salida": 1,
+    "costo": 0.00005174499999999999
+   }
+  },
+  "p24": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9284108967491163}",
+   "mismo": true,
+   "noul": 0.9284108967491163,
+   "uso": {
+    "entrada": 2507.25,
+    "salida": 1,
+    "costo": 0.000050145
+   }
+  },
+  "p25": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.018607874723020553}",
+   "mismo": false,
+   "noul": 0.018607874723020553,
+   "uso": {
+    "entrada": 2507.25,
+    "salida": 1,
+    "costo": 0.000050145
+   }
+  },
+  "p26": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.018689186267598197}",
+   "mismo": false,
+   "noul": 0.018689186267598197,
+   "uso": {
+    "entrada": 2507.25,
+    "salida": 1,
+    "costo": 0.000050145
+   }
+  },
+  "p27": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0207062750257924}",
+   "mismo": false,
+   "noul": 0.0207062750257924,
+   "uso": {
+    "entrada": 2507.25,
+    "salida": 1,
+    "costo": 0.000050145
+   }
+  },
+  "p28": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.18503312878166078}",
+   "mismo": false,
+   "noul": 0.18503312878166078,
+   "uso": {
+    "entrada": 2507.25,
+    "salida": 1,
+    "costo": 0.000050145
+   }
+  },
+  "p29": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.12538746182888436}",
+   "mismo": false,
+   "noul": 0.12538746182888436,
+   "uso": {
+    "entrada": 2507.25,
+    "salida": 1,
+    "costo": 0.000050145
+   }
+  },
+  "p30": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.13977549995140642}",
+   "mismo": false,
+   "noul": 0.13977549995140642,
+   "uso": {
+    "entrada": 2507.25,
+    "salida": 1,
+    "costo": 0.000050145
+   }
+  },
+  "p31": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0003442038678084423}",
+   "mismo": false,
+   "noul": 0.0003442038678084423,
+   "uso": {
+    "entrada": 2507.25,
+    "salida": 1,
+    "costo": 0.000050145
+   }
+  },
+  "p32": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.026538060581657263}",
+   "mismo": false,
+   "noul": 0.026538060581657263,
+   "uso": {
+    "entrada": 2507.25,
+    "salida": 1,
+    "costo": 0.000050145
+   }
+  },
+  "p33": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.8547030480909847}",
+   "mismo": true,
+   "noul": 0.8547030480909847,
+   "uso": {
+    "entrada": 2507.25,
+    "salida": 1,
+    "costo": 0.000050145
+   }
+  },
+  "p34": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9818629567397453}",
+   "mismo": true,
+   "noul": 0.9818629567397453,
+   "uso": {
+    "entrada": 2507.25,
+    "salida": 1,
+    "costo": 0.000050145
+   }
+  },
+  "p35": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9831129123498479}",
+   "mismo": true,
+   "noul": 0.9831129123498479,
+   "uso": {
+    "entrada": 2507.25,
+    "salida": 1,
+    "costo": 0.000050145
+   }
+  },
+  "p36": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.025368574898804556}",
+   "mismo": false,
+   "noul": 0.025368574898804556,
+   "uso": {
+    "entrada": 2654.25,
+    "salida": 1,
+    "costo": 0.000053085
+   }
+  },
+  "p37": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9887365407782865}",
+   "mismo": true,
+   "noul": 0.9887365407782865,
+   "uso": {
+    "entrada": 2654.25,
+    "salida": 1,
+    "costo": 0.000053085
+   }
+  },
+  "p38": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9638793825808808}",
+   "mismo": true,
+   "noul": 0.9638793825808808,
+   "uso": {
+    "entrada": 2654.25,
+    "salida": 1,
+    "costo": 0.000053085
+   }
+  },
+  "p39": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0015610404858679159}",
+   "mismo": false,
+   "noul": 0.0015610404858679159,
+   "uso": {
+    "entrada": 2654.25,
+    "salida": 1,
+    "costo": 0.000053085
+   }
+  },
+  "p40": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.17207426977116946}",
+   "mismo": false,
+   "noul": 0.17207426977116946,
+   "uso": {
+    "entrada": 2654.25,
+    "salida": 1,
+    "costo": 0.000053085
+   }
+  },
+  "p41": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0002635985424659418}",
+   "mismo": false,
+   "noul": 0.0002635985424659418,
+   "uso": {
+    "entrada": 2654.25,
+    "salida": 1,
+    "costo": 0.000053085
+   }
+  },
+  "p42": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0004974721001430153}",
+   "mismo": false,
+   "noul": 0.0004974721001430153,
+   "uso": {
+    "entrada": 2654.25,
+    "salida": 1,
+    "costo": 0.000053085
+   }
+  },
+  "p43": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0007829429879729375}",
+   "mismo": false,
+   "noul": 0.0007829429879729375,
+   "uso": {
+    "entrada": 2654.25,
+    "salida": 1,
+    "costo": 0.000053085
+   }
+  },
+  "p44": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.001180859958666692}",
+   "mismo": false,
+   "noul": 0.001180859958666692,
+   "uso": {
+    "entrada": 2654.25,
+    "salida": 1,
+    "costo": 0.000053085
+   }
+  },
+  "p45": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.03663739498883998}",
+   "mismo": false,
+   "noul": 0.03663739498883998,
+   "uso": {
+    "entrada": 2654.25,
+    "salida": 1,
+    "costo": 0.000053085
+   }
+  },
+  "p46": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.998327536135708}",
+   "mismo": true,
+   "noul": 0.998327536135708,
+   "uso": {
+    "entrada": 2654.25,
+    "salida": 1,
+    "costo": 0.000053085
+   }
+  },
+  "p47": {
+   "status": 200,
+   "ms": 57,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9988278979654225}",
+   "mismo": true,
+   "noul": 0.9988278979654225,
+   "uso": {
+    "entrada": 2654.25,
+    "salida": 1,
+    "costo": 0.000053085
+   }
+  },
+  "p48": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0013979493459563238}",
+   "mismo": false,
+   "noul": 0.0013979493459563238,
+   "uso": {
+    "entrada": 2816.25,
+    "salida": 1,
+    "costo": 0.000056325
+   }
+  },
+  "p49": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9826978306118952}",
+   "mismo": true,
+   "noul": 0.9826978306118952,
+   "uso": {
+    "entrada": 2816.25,
+    "salida": 1,
+    "costo": 0.000056325
+   }
+  },
+  "p50": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.1135688324285612}",
+   "mismo": false,
+   "noul": 0.1135688324285612,
+   "uso": {
+    "entrada": 2816.25,
+    "salida": 1,
+    "costo": 0.000056325
+   }
+  },
+  "p51": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.00020246720884525005}",
+   "mismo": false,
+   "noul": 0.00020246720884525005,
+   "uso": {
+    "entrada": 2816.25,
+    "salida": 1,
+    "costo": 0.000056325
+   }
+  },
+  "p52": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0005906445615924126}",
+   "mismo": false,
+   "noul": 0.0005906445615924126,
+   "uso": {
+    "entrada": 2816.25,
+    "salida": 1,
+    "costo": 0.000056325
+   }
+  },
+  "p53": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0004059543990476792}",
+   "mismo": false,
+   "noul": 0.0004059543990476792,
+   "uso": {
+    "entrada": 2816.25,
+    "salida": 1,
+    "costo": 0.000056325
+   }
+  },
+  "p54": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0001914291426455518}",
+   "mismo": false,
+   "noul": 0.0001914291426455518,
+   "uso": {
+    "entrada": 2816.25,
+    "salida": 1,
+    "costo": 0.000056325
+   }
+  },
+  "p55": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0003508598476851147}",
+   "mismo": false,
+   "noul": 0.0003508598476851147,
+   "uso": {
+    "entrada": 2816.25,
+    "salida": 1,
+    "costo": 0.000056325
+   }
+  },
+  "p56": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0004479972245127062}",
+   "mismo": false,
+   "noul": 0.0004479972245127062,
+   "uso": {
+    "entrada": 2816.25,
+    "salida": 1,
+    "costo": 0.000056325
+   }
+  },
+  "p57": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.0004541734349043571}",
+   "mismo": false,
+   "noul": 0.0004541734349043571,
+   "uso": {
+    "entrada": 2816.25,
+    "salida": 1,
+    "costo": 0.000056325
+   }
+  },
+  "p58": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9940804061888985}",
+   "mismo": true,
+   "noul": 0.9940804061888985,
+   "uso": {
+    "entrada": 2816.25,
+    "salida": 1,
+    "costo": 0.000056325
+   }
+  },
+  "p59": {
+   "status": 200,
+   "ms": 59,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.9974280977843916}",
+   "mismo": true,
+   "noul": 0.9974280977843916,
+   "uso": {
+    "entrada": 2816.25,
+    "salida": 1,
+    "costo": 0.000056325
+   }
+  },
+  "p60": {
+   "status": 200,
+   "ms": 224,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.6808545714221457}",
+   "mismo": true,
+   "noul": 0.6808545714221457,
+   "uso": {
+    "entrada": 583,
+    "salida": 1,
+    "costo": 0.00001166
+   }
+  },
+  "p61": {
+   "status": 200,
+   "ms": 224,
+   "error": null,
+   "crudo": "{\"type\":\"noul\",\"noul\":0.14865241107077043}",
+   "mismo": false,
+   "noul": 0.14865241107077043,
+   "uso": {
+    "entrada": 583,
+    "salida": 1,
+    "costo": 0.00001166
+   }
+  }
+ }
+}

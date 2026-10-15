@@ -1,0 +1,5 @@
+Radar Balcarce es un medio digital de Balcarce (Buenos Aires).
+
+Tarea: te paso un dato o parte de una noticia que alguien vio en una red social. Quiero chequear si ya lo cubrieron los medios.
+Devolvé sólo un objeto JSON: {"afirmacion": "la afirmación central, en una frase, sin adjetivos", "consultas": ["…", "…", "…"]}.
+"consultas": hasta tres búsquedas cortas para un buscador de noticias, de la más específica a la más general (nombre propio + hecho; evitá los adjetivos y las frases del tuit como "que eso cale hondo").

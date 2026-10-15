@@ -1,0 +1,96 @@
+{
+ "modelo": "qwen/qwen3.7-flash",
+ "prompt": "nuevo",
+ "razonamiento": "off",
+ "fecha": "2026-10-11T21:54:02.407Z",
+ "precios": {
+  "entrada": 3e-8,
+  "salida": 1.3e-7
+ },
+ "historias": {
+  "23005298": {
+   "id": "23005298",
+   "titulo_original": "RECONOCIMIENTO A LA PRECISIÓN Y EL COMPROMISO EN EL DÍA DEL TÉCNICO DE LABORATORIO",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 6735,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5136,
+    "salida": 543,
+    "costo": 0.00022467
+   },
+   "error": "respuesta ilegible o sin título",
+   "corte": "stop",
+   "crudo": {
+    "largo": 2292,
+    "empieza": "{\n\"datos\": [\n\"F1: La Municipalidad de Balcarce y el Hospital Municipal Dr. Felipe Antonio Fossati saludaron a los técnicos de laboratorio en su día.\",\n\"F1: El reconocimiento destaca la labor de estos ",
+    "termina": "rio por su labor clave en el diagnóstico y tratamiento de pacientes.\",\n\"etiquetas\": [\n\"Técnicos de laboratorio\",\n\"Hospital Fossati\",\n\"Municipalidad de Balcarce\",\n\"Día del Técnico\",\n\"Salud pública\"\n]\n}"
+   }
+  },
+  "0305adf0": {
+   "id": "0305adf0",
+   "titulo_original": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal “Suavecita”",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 8785,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5605,
+    "salida": 1036,
+    "costo": 0.00030283
+   },
+   "error": "respuesta ilegible o sin título",
+   "corte": "stop",
+   "crudo": {
+    "largo": 3590,
+    "empieza": "{\n\"datos\": [\n\"F1: La actriz Camila Peralta, nacida en Balcarce, volverá a Mar del Plata con el unipersonal 'Suavecita'.\",\n\"F1: La función será el sábado 17 de octubre a las 21.30 en el teatro Roxy (Sa",
+    "termina": "el Plata con “Suavecita”. La función única será el sábado 17 de octubre a las 21.30 en el teatro Roxy.\",\n\"etiquetas\": [\n\"Cultura\",\n\"Teatro\",\n\"Mar del Plata\",\n\"Camila Peralta\",\n\"Agenda\",\n\"Balcarce\"\n]\n}"
+   }
+  },
+  "2d82c63c": {
+   "id": "2d82c63c",
+   "titulo_original": "Declararon de interés Legislativo los 75 años del Club Amigos Unidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 9540,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5434,
+    "salida": 993,
+    "costo": 0.0003359265
+   },
+   "error": "respuesta ilegible o sin título",
+   "corte": "stop",
+   "crudo": {
+    "largo": 3594,
+    "empieza": "{\n\"datos\": [\n\"F1: El Concejo Deliberante declaró de interés legislativo, social y comunitario el 75° aniversario del Club Amigos Unidos.\",\n\"F1: La resolución se aprobó durante una sesión donde conceja",
+    "termina": "ctoria deportiva y social de la institución desde su fundación en 1951.\",\n\"etiquetas\": [\n\"Club Amigos Unidos\",\n\"Concejo Deliberante\",\n\"Balcarce\",\n\"Deporte local\",\n\"Vida comunitaria\",\n\"Legislatura\"\n]\n}"
+   }
+  },
+  "445a709e": {
+   "id": "445a709e",
+   "titulo_original": "Reconocen proyecto de la EEPA N°701 sobre el descarte de medicamentos vencidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 9309,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5295,
+    "salida": 918,
+    "costo": 0.00027819
+   },
+   "error": "respuesta ilegible o sin título",
+   "corte": "stop",
+   "crudo": {
+    "largo": 3646,
+    "empieza": "{\n\"datos\": [\n\"F1: El Concejo Deliberante declaró de interés legislativo, educativo y ambiental el proyecto “El descarte importa, medicamentos vencidos” impulsado por la EEPA N° 701.\",\n\"F1: La iniciati",
+    "termina": "o los vecinos desechan medicamentos vencidos. El 93% no sabe dónde llevarlos.\",\n\"etiquetas\": [\n\"EEPA 701\",\n\"Medicamentos vencidos\",\n\"Medio ambiente\",\n\"Concejo Deliberante\",\n\"Educación\",\n\"Balcarce\"\n]\n}"
+   }
+  }
+ }
+}

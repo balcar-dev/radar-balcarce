@@ -1,0 +1,3814 @@
+{
+ "modelo": "google/gemini-3.1-flash-lite",
+ "muestra": "muestra-200.json",
+ "modo": "chat",
+ "fecha": "2026-10-11T02:35:55.587Z",
+ "precios": {
+  "entrada": 2.5e-7,
+  "salida": 0.0000015
+ },
+ "caracteresFijos": 4530,
+ "notas": {
+  "17913857": {
+   "status": 200,
+   "ms": 1626,
+   "error": null,
+   "crudo": "{\"seccion\": \"Agro\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"La nota trata sobre una investigadora del INTA Balcarce y una situación institucional relevante para el organismo local.\"}",
+   "respuesta": {
+    "seccion": "Agro",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "La nota trata sobre una investigadora del INTA Balcarce y una situación institucional relevante para el organismo local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1373,
+    "salida": 55,
+    "costo": 0.00042575
+   },
+   "caracteresDeNota": 429
+  },
+  "23005298": {
+   "status": 200,
+   "ms": 1457,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un reconocimiento institucional a trabajadores del Hospital Municipal local en su día.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un reconocimiento institucional a trabajadores del Hospital Municipal local en su día.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1416,
+    "salida": 47,
+    "costo": 0.0004245
+   },
+   "caracteresDeNota": 674
+  },
+  "23061629": {
+   "status": 200,
+   "ms": 1622,
+   "error": null,
+   "crudo": "{\"seccion\": \"Automovilismo\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Trata sobre la gestión y transparencia de una competencia en el autódromo local, un tema de interés público para la comunidad.\"}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Trata sobre la gestión y transparencia de una competencia en el autódromo local, un tema de interés público para la comunidad.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1440,
+    "salida": 58,
+    "costo": 0.000447
+   },
+   "caracteresDeNota": 710
+  },
+  "87983847": {
+   "status": 200,
+   "ms": 1576,
+   "error": null,
+   "crudo": "{\"seccion\": \"Política\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de alcance nacional sobre privatizaciones que no tiene un impacto directo o específico en la realidad local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de alcance nacional sobre privatizaciones que no tiene un impacto directo o específico en la realidad local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1417,
+    "salida": 57,
+    "costo": 0.00043975
+   },
+   "caracteresDeNota": 677
+  },
+  "4e3102c8": {
+   "status": 200,
+   "ms": 1856,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Los horóscopos son consejos genéricos y no tienen relevancia local ni informativa para el vecino.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Los horóscopos son consejos genéricos y no tienen relevancia local ni informativa para el vecino.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1444,
+    "salida": 55,
+    "costo": 0.0004435
+   },
+   "caracteresDeNota": 647
+  },
+  "e9a203d5": {
+   "status": 200,
+   "ms": 1539,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"El horóscopo es contenido genérico y no tiene relevancia local ni informativa para el vecino de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "El horóscopo es contenido genérico y no tiene relevancia local ni informativa para el vecino de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1459,
+    "salida": 59,
+    "costo": 0.00045325
+   },
+   "caracteresDeNota": 638
+  },
+  "28433d33": {
+   "status": 200,
+   "ms": 2270,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"El horóscopo es un contenido genérico que no tiene relevancia local ni utilidad práctica para el vecino de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "El horóscopo es un contenido genérico que no tiene relevancia local ni utilidad práctica para el vecino de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1351,
+    "salida": 61,
+    "costo": 0.00042925
+   },
+   "caracteresDeNota": 291
+  },
+  "fc039c04": {
+   "status": 200,
+   "ms": 1708,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"El horóscopo es un contenido genérico que no tiene relevancia local ni informativa para el vecino de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "El horóscopo es un contenido genérico que no tiene relevancia local ni informativa para el vecino de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1449,
+    "salida": 60,
+    "costo": 0.00045225
+   },
+   "caracteresDeNota": 641
+  },
+  "45db1708": {
+   "status": 200,
+   "ms": 1441,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Las notas sobre resultados de lotería y quiniela no son de interés periodístico local para el medio.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Las notas sobre resultados de lotería y quiniela no son de interés periodístico local para el medio.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1441,
+    "salida": 55,
+    "costo": 0.00044275
+   },
+   "caracteresDeNota": 651
+  },
+  "3f85efd2": {
+   "status": 200,
+   "ms": 1823,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Se trata de contenido sobre loterías y juegos de azar, los cuales están excluidos según las reglas de publicación.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Se trata de contenido sobre loterías y juegos de azar, los cuales están excluidos según las reglas de publicación.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1419,
+    "salida": 58,
+    "costo": 0.00044175
+   },
+   "caracteresDeNota": 658
+  },
+  "4add9be4": {
+   "status": 200,
+   "ms": 1583,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Las notas sobre resultados de lotería y quiniela están excluidas según las reglas de edición.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Las notas sobre resultados de lotería y quiniela están excluidas según las reglas de edición.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1442,
+    "salida": 53,
+    "costo": 0.00044
+   },
+   "caracteresDeNota": 650
+  },
+  "865ffc23": {
+   "status": 200,
+   "ms": 1796,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Las notas sobre resultados de loterías y quinielas no son de interés periodístico local.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Las notas sobre resultados de loterías y quinielas no son de interés periodístico local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1445,
+    "salida": 54,
+    "costo": 0.00044225
+   },
+   "caracteresDeNota": 652
+  },
+  "086fd4f8": {
+   "status": 200,
+   "ms": 1962,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de alcance nacional sobre redes sociales que no tiene impacto directo ni relevancia local para el vecino de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de alcance nacional sobre redes sociales que no tiene impacto directo ni relevancia local para el vecino de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1437,
+    "salida": 56,
+    "costo": 0.00044325
+   },
+   "caracteresDeNota": 698
+  },
+  "5e4c7ce0": {
+   "status": 200,
+   "ms": 1611,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una nota de análisis social nacional sin impacto directo o específico en la realidad local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una nota de análisis social nacional sin impacto directo o específico en la realidad local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1364,
+    "salida": 52,
+    "costo": 0.000419
+   },
+   "caracteresDeNota": 386
+  },
+  "41e2a899": {
+   "status": 200,
+   "ms": 1400,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia de gestión penitenciaria nacional que no tiene impacto directo ni relación con la realidad local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia de gestión penitenciaria nacional que no tiene impacto directo ni relación con la realidad local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1364,
+    "salida": 57,
+    "costo": 0.0004265
+   },
+   "caracteresDeNota": 374
+  },
+  "7cc120eb": {
+   "status": 200,
+   "ms": 1551,
+   "error": null,
+   "crudo": "{\"seccion\": \"Economía\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de alcance nacional sobre política monetaria que no tiene un impacto directo o específico en la economía local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de alcance nacional sobre política monetaria que no tiene un impacto directo o específico en la economía local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1343,
+    "salida": 59,
+    "costo": 0.00042425
+   },
+   "caracteresDeNota": 299
+  },
+  "9b3b7ca6": {
+   "status": 200,
+   "ms": 1262,
+   "error": null,
+   "crudo": "{\"seccion\": \"Policiales\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho policial ocurrido en otra provincia sin ninguna vinculación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho policial ocurrido en otra provincia sin ninguna vinculación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1437,
+    "salida": 51,
+    "costo": 0.00043575
+   },
+   "caracteresDeNota": 651
+  },
+  "8bf40aa5": {
+   "status": 200,
+   "ms": 1518,
+   "error": null,
+   "crudo": "{\"seccion\": \"Policiales\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un caso policial ocurrido en Mar del Plata, sin vinculación directa con hechos o personas de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un caso policial ocurrido en Mar del Plata, sin vinculación directa con hechos o personas de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1397,
+    "salida": 57,
+    "costo": 0.00043475
+   },
+   "caracteresDeNota": 686
+  },
+  "c1c17c9d": {
+   "status": 200,
+   "ms": 1246,
+   "error": null,
+   "crudo": "{\"seccion\": \"Policiales\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho policial ocurrido en el conurbano bonaerense sin ninguna vinculación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho policial ocurrido en el conurbano bonaerense sin ninguna vinculación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1413,
+    "salida": 56,
+    "costo": 0.00043725
+   },
+   "caracteresDeNota": 662
+  },
+  "e85deda2": {
+   "status": 200,
+   "ms": 1787,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho cultural internacional sin conexión directa con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho cultural internacional sin conexión directa con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1375,
+    "salida": 48,
+    "costo": 0.00041575
+   },
+   "caracteresDeNota": 456
+  },
+  "fde3d7d8": {
+   "status": 200,
+   "ms": 1248,
+   "error": null,
+   "crudo": "{\"seccion\": \"Economía\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de política nacional y comercio exterior sin impacto directo o específico en la economía local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de política nacional y comercio exterior sin impacto directo o específico en la economía local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1442,
+    "salida": 55,
+    "costo": 0.000443
+   },
+   "caracteresDeNota": 687
+  },
+  "f02a3d44": {
+   "status": 200,
+   "ms": 1690,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia internacional sobre el Vaticano sin ninguna vinculación con la realidad local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia internacional sobre el Vaticano sin ninguna vinculación con la realidad local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1360,
+    "salida": 53,
+    "costo": 0.0004195
+   },
+   "caracteresDeNota": 391
+  },
+  "58ee685c": {
+   "status": 200,
+   "ms": 1422,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una nota de interés deportivo general que no tiene una conexión directa con deportistas o instituciones de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una nota de interés deportivo general que no tiene una conexión directa con deportistas o instituciones de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1329,
+    "salida": 56,
+    "costo": 0.00041625
+   },
+   "caracteresDeNota": 263
+  },
+  "7628d8f9": {
+   "status": 200,
+   "ms": 1698,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia de alcance nacional sobre infraestructura en el norte del país sin impacto directo o conexión con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia de alcance nacional sobre infraestructura en el norte del país sin impacto directo o conexión con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1420,
+    "salida": 55,
+    "costo": 0.0004375
+   },
+   "caracteresDeNota": 697
+  },
+  "0305adf0": {
+   "status": 200,
+   "ms": 1476,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"medio\", \"publicar\": \"si\", \"razon\": \"La nota destaca la trayectoria de una artista local que desarrolla su actividad profesional en la región.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "La nota destaca la trayectoria de una artista local que desarrolla su actividad profesional en la región.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1441,
+    "salida": 52,
+    "costo": 0.00043825
+   },
+   "caracteresDeNota": 655
+  },
+  "2d82c63c": {
+   "status": 200,
+   "ms": 1805,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es una institución deportiva y social emblemática de la ciudad que recibe un reconocimiento oficial.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es una institución deportiva y social emblemática de la ciudad que recibe un reconocimiento oficial.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1347,
+    "salida": 50,
+    "costo": 0.00041175
+   },
+   "caracteresDeNota": 317
+  },
+  "445a709e": {
+   "status": 200,
+   "ms": 1535,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es una iniciativa educativa y ambiental desarrollada por una institución local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es una iniciativa educativa y ambiental desarrollada por una institución local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1357,
+    "salida": 49,
+    "costo": 0.00041275
+   },
+   "caracteresDeNota": 342
+  },
+  "dc4a69f3": {
+   "status": 200,
+   "ms": 1464,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Deportistas locales compiten en un torneo nacional representando a la provincia.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Deportistas locales compiten en un torneo nacional representando a la provincia.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1380,
+    "salida": 48,
+    "costo": 0.000417
+   },
+   "caracteresDeNota": 410
+  },
+  "06b555c6": {
+   "status": 200,
+   "ms": 1738,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un evento cultural y gastronómico central para la ciudad que convoca a toda la comunidad.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un evento cultural y gastronómico central para la ciudad que convoca a toda la comunidad.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1421,
+    "salida": 53,
+    "costo": 0.00043475
+   },
+   "caracteresDeNota": 634
+  },
+  "d00b6002": {
+   "status": 200,
+   "ms": 1719,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"La nota informa sobre el estado y la reprogramación del torneo de fútbol local, afectando a clubes, jugadores y familias de la ciudad.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "La nota informa sobre el estado y la reprogramación del torneo de fútbol local, afectando a clubes, jugadores y familias de la ciudad.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1433,
+    "salida": 60,
+    "costo": 0.00044825
+   },
+   "caracteresDeNota": 648
+  },
+  "2efd3d13": {
+   "status": 200,
+   "ms": 1554,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un medio de comunicación local con trayectoria en la comunidad, lo cual es de interés institucional para los vecinos.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un medio de comunicación local con trayectoria en la comunidad, lo cual es de interés institucional para los vecinos.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1437,
+    "salida": 55,
+    "costo": 0.00044175
+   },
+   "caracteresDeNota": 656
+  },
+  "6e45a05f": {
+   "status": 200,
+   "ms": 1643,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Se trata de un hecho delictivo ocurrido en una institución educativa local que afecta a la comunidad escolar de la ciudad.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Se trata de un hecho delictivo ocurrido en una institución educativa local que afecta a la comunidad escolar de la ciudad.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1410,
+    "salida": 57,
+    "costo": 0.000438
+   },
+   "caracteresDeNota": 602
+  },
+  "badcdcaa": {
+   "status": 200,
+   "ms": 1585,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Se trata de deportistas locales de una institución de Balcarce que lograron una clasificación en una competencia regional.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Se trata de deportistas locales de una institución de Balcarce que lograron una clasificación en una competencia regional.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1428,
+    "salida": 55,
+    "costo": 0.0004395
+   },
+   "caracteresDeNota": 661
+  },
+  "e672d900": {
+   "status": 200,
+   "ms": 1404,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Se trata de deportistas locales representando a una institución de Balcarce en una competencia regional.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Se trata de deportistas locales representando a una institución de Balcarce en una competencia regional.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1439,
+    "salida": 52,
+    "costo": 0.00043775
+   },
+   "caracteresDeNota": 651
+  },
+  "9c7ee7d5": {
+   "status": 200,
+   "ms": 1871,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un evento cultural y turístico central de la ciudad que afecta la agenda local.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un evento cultural y turístico central de la ciudad que afecta la agenda local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1431,
+    "salida": 50,
+    "costo": 0.00043275
+   },
+   "caracteresDeNota": 670
+  },
+  "b7944266": {
+   "status": 200,
+   "ms": 1275,
+   "error": null,
+   "crudo": "{\"seccion\": \"Agro\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"La charla se realiza en el Concejo Deliberante local y aborda una temática de alto impacto para la comunidad y el sector agropecuario de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Agro",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "La charla se realiza en el Concejo Deliberante local y aborda una temática de alto impacto para la comunidad y el sector agropecuario de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1435,
+    "salida": 66,
+    "costo": 0.00045775
+   },
+   "caracteresDeNota": 689
+  },
+  "fe15d0cd": {
+   "status": 200,
+   "ms": 1856,
+   "error": null,
+   "crudo": "{\"seccion\": \"Política\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"La nota trata sobre la sucesión política local y el futuro del oficialismo en el municipio de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "La nota trata sobre la sucesión política local y el futuro del oficialismo en el municipio de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1372,
+    "salida": 53,
+    "costo": 0.0004225
+   },
+   "caracteresDeNota": 398
+  },
+  "09b24c5f": {
+   "status": 200,
+   "ms": 1481,
+   "error": null,
+   "crudo": "{\"seccion\": \"Política\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de política nacional que no tiene un impacto directo o específico en la gestión local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de política nacional que no tiene un impacto directo o específico en la gestión local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1413,
+    "salida": 54,
+    "costo": 0.00043425
+   },
+   "caracteresDeNota": 664
+  },
+  "c959337d": {
+   "status": 200,
+   "ms": 1722,
+   "error": null,
+   "crudo": "{\"seccion\": \"Política\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"El proyecto trata sobre el acceso público a la Laguna La Brava, un punto turístico y geográfico clave del partido de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "El proyecto trata sobre el acceso público a la Laguna La Brava, un punto turístico y geográfico clave del partido de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1413,
+    "salida": 58,
+    "costo": 0.00044025
+   },
+   "caracteresDeNota": 670
+  },
+  "9cafb800": {
+   "status": 200,
+   "ms": 1567,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"La privatización de AySA es un hecho de alcance nacional que no afecta los servicios de agua y saneamiento de Balcarce, gestionados localmente.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "La privatización de AySA es un hecho de alcance nacional que no afecta los servicios de agua y saneamiento de Balcarce, gestionados localmente.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1447,
+    "salida": 64,
+    "costo": 0.00045775
+   },
+   "caracteresDeNota": 677
+  },
+  "86c9586c": {
+   "status": 200,
+   "ms": 1381,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Atletas locales de la institución AACYC Balcarce obtuvieron resultados destacados en una competencia regional.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Atletas locales de la institución AACYC Balcarce obtuvieron resultados destacados en una competencia regional.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1455,
+    "salida": 54,
+    "costo": 0.00044475
+   },
+   "caracteresDeNota": 681
+  },
+  "c4d8689d": {
+   "status": 200,
+   "ms": 1598,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"La nota trata sobre la gestión de seguridad en Mar del Plata, lo cual no tiene impacto directo ni relación con la agenda de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "La nota trata sobre la gestión de seguridad en Mar del Plata, lo cual no tiene impacto directo ni relación con la agenda de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1428,
+    "salida": 61,
+    "costo": 0.0004485
+   },
+   "caracteresDeNota": 691
+  },
+  "eb7c6026": {
+   "status": 200,
+   "ms": 1373,
+   "error": null,
+   "crudo": "{\"seccion\": \"Policiales\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un hecho delictivo ocurrido en una institución educativa local que afecta a la comunidad escolar de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un hecho delictivo ocurrido en una institución educativa local que afecta a la comunidad escolar de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1421,
+    "salida": 56,
+    "costo": 0.00043925
+   },
+   "caracteresDeNota": 673
+  },
+  "04f90bd3": {
+   "status": 200,
+   "ms": 1613,
+   "error": null,
+   "crudo": "{\"seccion\": \"Política\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es una ordenanza municipal que impacta directamente en la regulación laboral y de salud dentro del partido de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es una ordenanza municipal que impacta directamente en la regulación laboral y de salud dentro del partido de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1423,
+    "salida": 55,
+    "costo": 0.00043825
+   },
+   "caracteresDeNota": 680
+  },
+  "7ffe24a0": {
+   "status": 200,
+   "ms": 1715,
+   "error": null,
+   "crudo": "{\"seccion\": \"Política\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"El concejal analiza la situación económica y política local, un tema de interés directo para los vecinos de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "El concejal analiza la situación económica y política local, un tema de interés directo para los vecinos de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1446,
+    "salida": 55,
+    "costo": 0.000444
+   },
+   "caracteresDeNota": 749
+  },
+  "6d915039": {
+   "status": 200,
+   "ms": 1545,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un evento cultural y gastronómico central de la ciudad que afecta la agenda de los vecinos.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un evento cultural y gastronómico central de la ciudad que afecta la agenda de los vecinos.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1429,
+    "salida": 53,
+    "costo": 0.00043675
+   },
+   "caracteresDeNota": 679
+  },
+  "468977a2": {
+   "status": 200,
+   "ms": 1823,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una medida administrativa exclusiva de la ciudad de Mar del Plata que no afecta la normativa ni el transporte en Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una medida administrativa exclusiva de la ciudad de Mar del Plata que no afecta la normativa ni el transporte en Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1422,
+    "salida": 57,
+    "costo": 0.000441
+   },
+   "caracteresDeNota": 672
+  },
+  "b53b25e7": {
+   "status": 200,
+   "ms": 1375,
+   "error": null,
+   "crudo": "{\"seccion\": \"Policiales\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un reclamo directo de vecinos de la ciudad sobre la seguridad local.\"}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un reclamo directo de vecinos de la ciudad sobre la seguridad local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1367,
+    "salida": 48,
+    "costo": 0.00041375
+   },
+   "caracteresDeNota": 424
+  },
+  "0881153a": {
+   "status": 200,
+   "ms": 1575,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un evento cultural y turístico tradicional de la ciudad de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un evento cultural y turístico tradicional de la ciudad de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1426,
+    "salida": 49,
+    "costo": 0.00043
+   },
+   "caracteresDeNota": 635
+  },
+  "9cb29a54": {
+   "status": 200,
+   "ms": 1672,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de alcance nacional sobre causas judiciales que no tiene impacto directo ni relación con la realidad local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de alcance nacional sobre causas judiciales que no tiene impacto directo ni relación con la realidad local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1435,
+    "salida": 56,
+    "costo": 0.00044275
+   },
+   "caracteresDeNota": 720
+  },
+  "c9127ae7": {
+   "status": 200,
+   "ms": 1538,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Se trata de la participación y desempeño de un equipo local en una competencia federada.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Se trata de la participación y desempeño de un equipo local en una competencia federada.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1362,
+    "salida": 50,
+    "costo": 0.0004155
+   },
+   "caracteresDeNota": 323
+  },
+  "e008016c": {
+   "status": 200,
+   "ms": 1420,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es una medida legislativa local que impacta directamente en la salud y el empleo de los vecinos de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es una medida legislativa local que impacta directamente en la salud y el empleo de los vecinos de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1360,
+    "salida": 57,
+    "costo": 0.0004255
+   },
+   "caracteresDeNota": 379
+  },
+  "c525d0da": {
+   "status": 200,
+   "ms": 1408,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Una deportista local representa a la ciudad en un campeonato nacional de tenis.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Una deportista local representa a la ciudad en un campeonato nacional de tenis.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1435,
+    "salida": 48,
+    "costo": 0.00043075
+   },
+   "caracteresDeNota": 660
+  },
+  "869434ae": {
+   "status": 200,
+   "ms": 1506,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un evento local de interés comunitario que involucra a instituciones y funcionarios de la ciudad.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un evento local de interés comunitario que involucra a instituciones y funcionarios de la ciudad.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1427,
+    "salida": 51,
+    "costo": 0.00043325
+   },
+   "caracteresDeNota": 647
+  },
+  "f750ed8f": {
+   "status": 200,
+   "ms": 1543,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"La Ruta 88 conecta Mar del Plata con Necochea y no afecta la conectividad ni el tránsito directo de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "La Ruta 88 conecta Mar del Plata con Necochea y no afecta la conectividad ni el tránsito directo de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1426,
+    "salida": 59,
+    "costo": 0.000445
+   },
+   "caracteresDeNota": 694
+  },
+  "cba67395": {
+   "status": 200,
+   "ms": 1329,
+   "error": null,
+   "crudo": "{\"seccion\": \"Automovilismo\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"La suspensión afecta directamente la actividad del Auto Club Balcarce y el calendario deportivo local.\"}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "La suspensión afecta directamente la actividad del Auto Club Balcarce y el calendario deportivo local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1405,
+    "salida": 51,
+    "costo": 0.00042775
+   },
+   "caracteresDeNota": 504
+  },
+  "b8789b8c": {
+   "status": 200,
+   "ms": 1404,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un evento social y de reconocimiento a trabajadores de medios locales en la ciudad.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un evento social y de reconocimiento a trabajadores de medios locales en la ciudad.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1422,
+    "salida": 49,
+    "costo": 0.000429
+   },
+   "caracteresDeNota": 631
+  },
+  "ae8224af": {
+   "status": 200,
+   "ms": 1748,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un servicio municipal de salud animal y un aviso de utilidad pública para los vecinos sobre la ubicación de un dispositivo local.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un servicio municipal de salud animal y un aviso de utilidad pública para los vecinos sobre la ubicación de un dispositivo local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1416,
+    "salida": 57,
+    "costo": 0.0004395
+   },
+   "caracteresDeNota": 632
+  },
+  "af8b50f2": {
+   "status": 200,
+   "ms": 1464,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"medio\", \"publicar\": \"si\", \"razon\": \"La situación presupuestaria de las universidades nacionales afecta directamente a la Facultad de Ciencias Agrarias de la UNMdP, con sede en Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "La situación presupuestaria de las universidades nacionales afecta directamente a la Facultad de Ciencias Agrarias de la UNMdP, con sede en Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1407,
+    "salida": 62,
+    "costo": 0.00044475
+   },
+   "caracteresDeNota": 679
+  },
+  "fcda99ba": {
+   "status": 200,
+   "ms": 2334,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Representa un logro deportivo de un club local en una competencia provincial.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Representa un logro deportivo de un club local en una competencia provincial.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1426,
+    "salida": 47,
+    "costo": 0.000427
+   },
+   "caracteresDeNota": 660
+  },
+  "487be459": {
+   "status": 200,
+   "ms": 1549,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Balcarce es sede de un evento deportivo provincial de relevancia que moviliza a la comunidad local.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Balcarce es sede de un evento deportivo provincial de relevancia que moviliza a la comunidad local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1419,
+    "salida": 54,
+    "costo": 0.00043575
+   },
+   "caracteresDeNota": 644
+  },
+  "9529a470": {
+   "status": 200,
+   "ms": 1439,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un evento local de interés general que se realizará en la ciudad.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un evento local de interés general que se realizará en la ciudad.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1412,
+    "salida": 47,
+    "costo": 0.0004235
+   },
+   "caracteresDeNota": 645
+  },
+  "2e0992e9": {
+   "status": 200,
+   "ms": 1569,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es una noticia de interés local sobre un vecino de Balcarce que está realizando un tratamiento médico en el exterior.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es una noticia de interés local sobre un vecino de Balcarce que está realizando un tratamiento médico en el exterior.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1413,
+    "salida": 56,
+    "costo": 0.00043725
+   },
+   "caracteresDeNota": 646
+  },
+  "a7da5534": {
+   "status": 200,
+   "ms": 1550,
+   "error": null,
+   "crudo": "{\"seccion\": \"Policiales\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un hecho de inseguridad/accidente ocurrido en la Ruta 226 dentro del partido de Balcarce con intervención de fuerzas locales.\"}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un hecho de inseguridad/accidente ocurrido en la Ruta 226 dentro del partido de Balcarce con intervención de fuerzas locales.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1418,
+    "salida": 63,
+    "costo": 0.000449
+   },
+   "caracteresDeNota": 617
+  },
+  "b63ea7b3": {
+   "status": 200,
+   "ms": 1518,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Afecta directamente la actividad deportiva local y la agenda de los clubes de la Liga Balcarceña.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Afecta directamente la actividad deportiva local y la agenda de los clubes de la Liga Balcarceña.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1421,
+    "salida": 54,
+    "costo": 0.00043625
+   },
+   "caracteresDeNota": 647
+  },
+  "f8287775": {
+   "status": 200,
+   "ms": 1437,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Afecta directamente la agenda deportiva local y la actividad de los clubes de la ciudad.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Afecta directamente la agenda deportiva local y la actividad de los clubes de la ciudad.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1427,
+    "salida": 50,
+    "costo": 0.00043175
+   },
+   "caracteresDeNota": 645
+  },
+  "78bdbac0": {
+   "status": 200,
+   "ms": 1536,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un evento turístico y gastronómico central de la ciudad de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un evento turístico y gastronómico central de la ciudad de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1412,
+    "salida": 50,
+    "costo": 0.000428
+   },
+   "caracteresDeNota": 646
+  },
+  "ab40d562": {
+   "status": 200,
+   "ms": 1423,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un evento cultural y turístico central de la ciudad que afecta la agenda local.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un evento cultural y turístico central de la ciudad que afecta la agenda local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1423,
+    "salida": 50,
+    "costo": 0.00043075
+   },
+   "caracteresDeNota": 633
+  },
+  "f594dfcc": {
+   "status": 200,
+   "ms": 1444,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Es un evento local de gran relevancia para la comunidad que fue suspendido por razones climáticas.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Es un evento local de gran relevancia para la comunidad que fue suspendido por razones climáticas.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1413,
+    "salida": 53,
+    "costo": 0.00043275
+   },
+   "caracteresDeNota": 638
+  },
+  "12843f44": {
+   "status": 200,
+   "ms": 1531,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"El equipo local clasifica a una final provincial y Balcarce será sede del evento definitorio.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "El equipo local clasifica a una final provincial y Balcarce será sede del evento definitorio.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1372,
+    "salida": 53,
+    "costo": 0.0004225
+   },
+   "caracteresDeNota": 383
+  },
+  "e86c0362": {
+   "status": 200,
+   "ms": 1525,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"Se trata de una charla abierta a la comunidad en el Concejo Deliberante local sobre una temática de salud y ambiente relevante para la ciudad.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "Se trata de una charla abierta a la comunidad en el Concejo Deliberante local sobre una temática de salud y ambiente relevante para la ciudad.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1431,
+    "salida": 62,
+    "costo": 0.00045075
+   },
+   "caracteresDeNota": 705
+  },
+  "07c9acef": {
+   "status": 200,
+   "ms": 1360,
+   "error": null,
+   "crudo": "{\"seccion\": \"Economía\", \"interes_balcarce\": \"medio\", \"publicar\": \"si\", \"razon\": \"La reglamentación de la ley de modernización laboral y los nuevos fondos de cese laboral impactan directamente en la gestión de recursos humanos de las empresas locales.\"}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "La reglamentación de la ley de modernización laboral y los nuevos fondos de cese laboral impactan directamente en la gestión de recursos humanos de las empresas locales.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1403,
+    "salida": 65,
+    "costo": 0.00044825
+   },
+   "caracteresDeNota": 649
+  },
+  "74cd1da1": {
+   "status": 200,
+   "ms": 1585,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"El hecho ocurre en Mar del Plata y no afecta directamente a Balcarce, a pesar de la cercanía geográfica.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "El hecho ocurre en Mar del Plata y no afecta directamente a Balcarce, a pesar de la cercanía geográfica.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1438,
+    "salida": 56,
+    "costo": 0.0004435
+   },
+   "caracteresDeNota": 704
+  },
+  "f46b776b": {
+   "status": 200,
+   "ms": 1432,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un partido de un equipo de Mar del Plata que no involucra a clubes de Balcarce ni tiene impacto local.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un partido de un equipo de Mar del Plata que no involucra a clubes de Balcarce ni tiene impacto local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1446,
+    "salida": 58,
+    "costo": 0.0004485
+   },
+   "caracteresDeNota": 697
+  },
+  "4baa3fef": {
+   "status": 200,
+   "ms": 1538,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"El paro docente provincial afecta directamente el dictado de clases en las escuelas públicas de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "El paro docente provincial afecta directamente el dictado de clases en las escuelas públicas de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1429,
+    "salida": 53,
+    "costo": 0.00043675
+   },
+   "caracteresDeNota": 675
+  },
+  "f1216625": {
+   "status": 200,
+   "ms": 1450,
+   "error": null,
+   "crudo": "{\"seccion\": \"Tecnología\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de política nacional y geopolítica que no tiene un impacto directo o específico en la vida cotidiana de los vecinos de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Tecnología",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de política nacional y geopolítica que no tiene un impacto directo o específico en la vida cotidiana de los vecinos de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1389,
+    "salida": 62,
+    "costo": 0.00044025
+   },
+   "caracteresDeNota": 666
+  },
+  "fd46507d": {
+   "status": 200,
+   "ms": 1558,
+   "error": null,
+   "crudo": "{\"seccion\": \"Automovilismo\", \"interes_balcarce\": \"medio\", \"publicar\": \"si\", \"razon\": \"El fenómeno de Franco Colapinto en la Fórmula 1 es de alto interés para la comunidad automovilística de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "El fenómeno de Franco Colapinto en la Fórmula 1 es de alto interés para la comunidad automovilística de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1433,
+    "salida": 60,
+    "costo": 0.00044825
+   },
+   "caracteresDeNota": 661
+  },
+  "1a86e518": {
+   "status": 200,
+   "ms": 1746,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"medio\", \"publicar\": \"si\", \"razon\": \"El Superclásico es un evento de interés nacional que moviliza a gran parte de la audiencia deportiva local.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "El Superclásico es un evento de interés nacional que moviliza a gran parte de la audiencia deportiva local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1434,
+    "salida": 55,
+    "costo": 0.000441
+   },
+   "caracteresDeNota": 656
+  },
+  "66e8ca2f": {
+   "status": 200,
+   "ms": 1526,
+   "error": null,
+   "crudo": "{\"seccion\": \"Política\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"La nota refiere a actividades oficiales en la ciudad de Ayacucho, sin impacto ni relación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "La nota refiere a actividades oficiales en la ciudad de Ayacucho, sin impacto ni relación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1399,
+    "salida": 55,
+    "costo": 0.00043225
+   },
+   "caracteresDeNota": 644
+  },
+  "8d04795c": {
+   "status": 200,
+   "ms": 2178,
+   "error": null,
+   "crudo": "{\"seccion\": \"Policiales\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"El hecho ocurrió en Mar del Plata, por lo tanto no es de interés local para Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "El hecho ocurrió en Mar del Plata, por lo tanto no es de interés local para Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1425,
+    "salida": 55,
+    "costo": 0.00043875
+   },
+   "caracteresDeNota": 639
+  },
+  "50d1324c": {
+   "status": 200,
+   "ms": 1322,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia de espectáculos internacional sin ninguna conexión local o impacto en Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia de espectáculos internacional sin ninguna conexión local o impacto en Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1403,
+    "salida": 53,
+    "costo": 0.00043025
+   },
+   "caracteresDeNota": 672
+  },
+  "cf63c349": {
+   "status": 200,
+   "ms": 1486,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un evento deportivo que se desarrolla en Necochea, sin impacto ni relevancia directa para la comunidad de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un evento deportivo que se desarrolla en Necochea, sin impacto ni relevancia directa para la comunidad de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1415,
+    "salida": 59,
+    "costo": 0.00044225
+   },
+   "caracteresDeNota": 660
+  },
+  "776f8cb3": {
+   "status": 200,
+   "ms": 1332,
+   "error": null,
+   "crudo": "{\"seccion\": \"Policiales\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"El hecho ocurrió en Tandil y no involucra a vecinos ni rutas de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "El hecho ocurrió en Tandil y no involucra a vecinos ni rutas de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1430,
+    "salida": 53,
+    "costo": 0.000437
+   },
+   "caracteresDeNota": 658
+  },
+  "fef6dbba": {
+   "status": 200,
+   "ms": 1569,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una actividad cultural en Mar del Plata que no tiene impacto ni vínculo directo con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una actividad cultural en Mar del Plata que no tiene impacto ni vínculo directo con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1423,
+    "salida": 55,
+    "costo": 0.00043825
+   },
+   "caracteresDeNota": 653
+  },
+  "9d945ce9": {
+   "status": 200,
+   "ms": 1695,
+   "error": null,
+   "crudo": "{\"seccion\": \"Política\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"La nota refiere a una reglamentación específica del municipio de General Pueyrredon (Mar del Plata) que no afecta a Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "La nota refiere a una reglamentación específica del municipio de General Pueyrredon (Mar del Plata) que no afecta a Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1417,
+    "salida": 62,
+    "costo": 0.00044725
+   },
+   "caracteresDeNota": 674
+  },
+  "305c2e7f": {
+   "status": 200,
+   "ms": 1339,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"La nota refiere a actividades de salud exclusivas del municipio de San Cayetano, sin impacto ni relación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "La nota refiere a actividades de salud exclusivas del municipio de San Cayetano, sin impacto ni relación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1410,
+    "salida": 59,
+    "costo": 0.000441
+   },
+   "caracteresDeNota": 612
+  },
+  "92dcddbb": {
+   "status": 200,
+   "ms": 1522,
+   "error": null,
+   "crudo": "{\"seccion\": \"Policiales\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho policial ocurrido en otra ciudad (San Pedro) sin impacto ni relación directa con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho policial ocurrido en otra ciudad (San Pedro) sin impacto ni relación directa con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1382,
+    "salida": 56,
+    "costo": 0.0004295
+   },
+   "caracteresDeNota": 456
+  },
+  "de8aacd9": {
+   "status": 200,
+   "ms": 1438,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia de farándula local de Necochea sin impacto ni relevancia para los vecinos de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia de farándula local de Necochea sin impacto ni relevancia para los vecinos de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1420,
+    "salida": 59,
+    "costo": 0.0004435
+   },
+   "caracteresDeNota": 645
+  },
+  "276dcf9f": {
+   "status": 200,
+   "ms": 1416,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"La modificaci\\u00f3n de la Ley de Tr\\u00e1nsito provincial afecta directamente la normativa vial vigente en todas las calles y rutas de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "La modificación de la Ley de Tránsito provincial afecta directamente la normativa vial vigente en todas las calles y rutas de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1420,
+    "salida": 72,
+    "costo": 0.000463
+   },
+   "caracteresDeNota": 668
+  },
+  "7c95c3a7": {
+   "status": 200,
+   "ms": 1501,
+   "error": null,
+   "crudo": "{\"seccion\": \"Policiales\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho policial ocurrido en Mar del Plata, sin vínculo directo con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho policial ocurrido en Mar del Plata, sin vínculo directo con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1445,
+    "salida": 52,
+    "costo": 0.00043925
+   },
+   "caracteresDeNota": 750
+  },
+  "f950ffca": {
+   "status": 200,
+   "ms": 1382,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"La actividad ocurre en Mar del Plata y no tiene impacto ni relación directa con la agenda cultural de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "La actividad ocurre en Mar del Plata y no tiene impacto ni relación directa con la agenda cultural de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1414,
+    "salida": 58,
+    "costo": 0.0004405
+   },
+   "caracteresDeNota": 702
+  },
+  "d863d6d9": {
+   "status": 200,
+   "ms": 1505,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho de política internacional sin conexión directa con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho de política internacional sin conexión directa con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1418,
+    "salida": 46,
+    "costo": 0.0004235
+   },
+   "caracteresDeNota": 659
+  },
+  "ed253dd3": {
+   "status": 200,
+   "ms": 1288,
+   "error": null,
+   "crudo": "{\"seccion\": \"Policiales\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho policial ocurrido en Mar del Plata que no involucra a vecinos ni instituciones de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho policial ocurrido en Mar del Plata que no involucra a vecinos ni instituciones de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1429,
+    "salida": 56,
+    "costo": 0.00044125
+   },
+   "caracteresDeNota": 670
+  },
+  "984a04cb": {
+   "status": 200,
+   "ms": 1429,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"La nota refiere a una actividad en una parroquia de Necochea, ciudad ajena al partido de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "La nota refiere a una actividad en una parroquia de Necochea, ciudad ajena al partido de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1440,
+    "salida": 59,
+    "costo": 0.0004485
+   },
+   "caracteresDeNota": 676
+  },
+  "1c81ee8c": {
+   "status": 200,
+   "ms": 1364,
+   "error": null,
+   "crudo": "{\"seccion\": \"Economía\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"La nota trata sobre una problemática específica de la regulación de transporte en Mar del Plata, sin impacto directo en Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "La nota trata sobre una problemática específica de la regulación de transporte en Mar del Plata, sin impacto directo en Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1431,
+    "salida": 58,
+    "costo": 0.00044475
+   },
+   "caracteresDeNota": 719
+  },
+  "84d79fae": {
+   "status": 200,
+   "ms": 1581,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota sobre fútbol internacional sin conexión directa con Balcarce o deportistas locales.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota sobre fútbol internacional sin conexión directa con Balcarce o deportistas locales.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1426,
+    "salida": 51,
+    "costo": 0.000433
+   },
+   "caracteresDeNota": 660
+  },
+  "721fb499": {
+   "status": 200,
+   "ms": 1261,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho de farándula deportiva y violencia en otra provincia que no tiene ninguna relación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho de farándula deportiva y violencia en otra provincia que no tiene ninguna relación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1447,
+    "salida": 56,
+    "costo": 0.00044575
+   },
+   "caracteresDeNota": 697
+  },
+  "5490af71": {
+   "status": 200,
+   "ms": 1482,
+   "error": null,
+   "crudo": "{\"seccion\": \"Economía\", \"interes_balcarce\": \"medio\", \"publicar\": \"si\", \"razon\": \"Es una oferta laboral para ingenieros en la región, lo cual es de interés profesional para los graduados de la Facultad de Ciencias Agrarias o residentes locales.\"}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "Es una oferta laboral para ingenieros en la región, lo cual es de interés profesional para los graduados de la Facultad de Ciencias Agrarias o residentes locales.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1413,
+    "salida": 64,
+    "costo": 0.00044925
+   },
+   "caracteresDeNota": 673
+  },
+  "370f00de": {
+   "status": 200,
+   "ms": 1458,
+   "error": null,
+   "crudo": "{\"seccion\": \"Balcarce\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"La actividad se desarrolla en Mar del Plata y no tiene impacto ni relación directa con la comunidad de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "La actividad se desarrolla en Mar del Plata y no tiene impacto ni relación directa con la comunidad de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1422,
+    "salida": 57,
+    "costo": 0.000441
+   },
+   "caracteresDeNota": 665
+  },
+  "7219d7b9": {
+   "status": 200,
+   "ms": 1643,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un análisis de política internacional sin impacto directo ni conexión con la realidad local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un análisis de política internacional sin impacto directo ni conexión con la realidad local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1334,
+    "salida": 52,
+    "costo": 0.0004115
+   },
+   "caracteresDeNota": 307
+  },
+  "b3423073": {
+   "status": 200,
+   "ms": 1405,
+   "error": null,
+   "crudo": "{\"seccion\": \"Política\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota sobre política local de otros municipios (Malvinas Argentinas y Suipacha) sin impacto ni relación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota sobre política local de otros municipios (Malvinas Argentinas y Suipacha) sin impacto ni relación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1425,
+    "salida": 61,
+    "costo": 0.00044775
+   },
+   "caracteresDeNota": 701
+  },
+  "47e2f261": {
+   "status": 200,
+   "ms": 1411,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota sobre una banda extranjera sin vínculo directo con Balcarce ni impacto local.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota sobre una banda extranjera sin vínculo directo con Balcarce ni impacto local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1328,
+    "salida": 54,
+    "costo": 0.000413
+   },
+   "caracteresDeNota": 260
+  },
+  "b1fbeb30": {
+   "status": 200,
+   "ms": 1333,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"La noticia refiere a obras en rutas de acceso a Junín, una ciudad sin relación directa con el tránsito o la infraestructura de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "La noticia refiere a obras en rutas de acceso a Junín, una ciudad sin relación directa con el tránsito o la infraestructura de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1414,
+    "salida": 61,
+    "costo": 0.000445
+   },
+   "caracteresDeNota": 647
+  },
+  "1649463d": {
+   "status": 200,
+   "ms": 1454,
+   "error": null,
+   "crudo": "{\"seccion\": \"Automovilismo\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"El automovilismo de alto nivel y la participación de pilotos argentinos en la Fórmula 1 son de interés directo para la comunidad de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "El automovilismo de alto nivel y la participación de pilotos argentinos en la Fórmula 1 son de interés directo para la comunidad de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1462,
+    "salida": 63,
+    "costo": 0.00046
+   },
+   "caracteresDeNota": 648
+  },
+  "5340a7f4": {
+   "status": 200,
+   "ms": 1406,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una opinión sobre una problemática nacional general sin impacto directo o específico en la realidad local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una opinión sobre una problemática nacional general sin impacto directo o específico en la realidad local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1342,
+    "salida": 53,
+    "costo": 0.000415
+   },
+   "caracteresDeNota": 306
+  },
+  "6863ea83": {
+   "status": 200,
+   "ms": 1536,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"La ruta 205 no tiene relación con la red vial de Balcarce ni afecta la logística local.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "La ruta 205 no tiene relación con la red vial de Balcarce ni afecta la logística local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1365,
+    "salida": 55,
+    "costo": 0.00042375
+   },
+   "caracteresDeNota": 326
+  },
+  "50cb323c": {
+   "status": 200,
+   "ms": 1433,
+   "error": null,
+   "crudo": "{\"seccion\": \"Política\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es un reclamo gremial de alcance provincial en La Plata que no tiene impacto directo ni específico en la administración municipal de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es un reclamo gremial de alcance provincial en La Plata que no tiene impacto directo ni específico en la administración municipal de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1347,
+    "salida": 60,
+    "costo": 0.00042675
+   },
+   "caracteresDeNota": 276
+  },
+  "0399957f": {
+   "status": 200,
+   "ms": 1310,
+   "error": null,
+   "crudo": "{\"seccion\": \"Economía\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"La nota refiere exclusivamente a cotizaciones locales de Bahía Blanca, sin impacto directo o relevancia para la economía de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "La nota refiere exclusivamente a cotizaciones locales de Bahía Blanca, sin impacto directo o relevancia para la economía de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1449,
+    "salida": 59,
+    "costo": 0.00045075
+   },
+   "caracteresDeNota": 647
+  },
+  "4f346a3b": {
+   "status": 200,
+   "ms": 1367,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota sobre básquet de Bahía Blanca que no tiene ninguna relación con instituciones o deportistas de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota sobre básquet de Bahía Blanca que no tiene ninguna relación con instituciones o deportistas de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1442,
+    "salida": 59,
+    "costo": 0.000449
+   },
+   "caracteresDeNota": 677
+  },
+  "5144e8f2": {
+   "status": 200,
+   "ms": 1399,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia sobre el fútbol brasileño sin ninguna relevancia o conexión con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia sobre el fútbol brasileño sin ninguna relevancia o conexión con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1414,
+    "salida": 51,
+    "costo": 0.00043
+   },
+   "caracteresDeNota": 617
+  },
+  "7c36391b": {
+   "status": 200,
+   "ms": 1693,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho de fútbol internacional (Uruguay) sin relación con Balcarce ni con el fútbol local.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho de fútbol internacional (Uruguay) sin relación con Balcarce ni con el fútbol local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1362,
+    "salida": 56,
+    "costo": 0.0004245
+   },
+   "caracteresDeNota": 319
+  },
+  "137d65b0": {
+   "status": 200,
+   "ms": 1584,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"El evento ocurre en Olavarría, por lo tanto no tiene relevancia para la agenda local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "El evento ocurre en Olavarría, por lo tanto no tiene relevancia para la agenda local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1406,
+    "salida": 59,
+    "costo": 0.00044
+   },
+   "caracteresDeNota": 614
+  },
+  "a0f41160": {
+   "status": 200,
+   "ms": 1621,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia de política provincial de Salta sin impacto ni relación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia de política provincial de Salta sin impacto ni relación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1390,
+    "salida": 50,
+    "costo": 0.0004225
+   },
+   "caracteresDeNota": 449
+  },
+  "3d2c3c92": {
+   "status": 200,
+   "ms": 1636,
+   "error": null,
+   "crudo": "{\"seccion\": \"Policiales\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho policial ocurrido en el extranjero que involucra a un ciudadano de otra localidad, sin impacto ni relación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho policial ocurrido en el extranjero que involucra a un ciudadano de otra localidad, sin impacto ni relación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1413,
+    "salida": 61,
+    "costo": 0.00044475
+   },
+   "caracteresDeNota": 673
+  },
+  "309455a3": {
+   "status": 200,
+   "ms": 1382,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una nota de fútbol nacional que no involucra a clubes locales ni tiene un vínculo directo con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una nota de fútbol nacional que no involucra a clubes locales ni tiene un vínculo directo con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1432,
+    "salida": 55,
+    "costo": 0.0004405
+   },
+   "caracteresDeNota": 682
+  },
+  "d4c47d5c": {
+   "status": 200,
+   "ms": 1590,
+   "error": null,
+   "crudo": "{\"seccion\": \"Agro\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"El INTA es un actor clave para el sector agropecuario de Balcarce y la investigación sobre alternativas forrajeras impacta directamente en la producción local.\"}",
+   "respuesta": {
+    "seccion": "Agro",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "El INTA es un actor clave para el sector agropecuario de Balcarce y la investigación sobre alternativas forrajeras impacta directamente en la producción local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1419,
+    "salida": 65,
+    "costo": 0.00045225
+   },
+   "caracteresDeNota": 653
+  },
+  "53946da5": {
+   "status": 200,
+   "ms": 1384,
+   "error": null,
+   "crudo": "{\"seccion\": \"Tecnología\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una nota de divulgación científica general sin impacto directo o local en Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Tecnología",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una nota de divulgación científica general sin impacto directo o local en Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1327,
+    "salida": 51,
+    "costo": 0.00040825
+   },
+   "caracteresDeNota": 244
+  },
+  "fac54881": {
+   "status": 200,
+   "ms": 1241,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"La nota trata sobre un torneo de tenis en la ciudad de Olavarría, sin ninguna relación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "La nota trata sobre un torneo de tenis en la ciudad de Olavarría, sin ninguna relación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1410,
+    "salida": 59,
+    "costo": 0.000441
+   },
+   "caracteresDeNota": 620
+  },
+  "adc2db28": {
+   "status": 200,
+   "ms": 1430,
+   "error": null,
+   "crudo": "{\"seccion\": \"Política\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una nota de análisis político nacional sobre internas de gabinete que no tiene impacto directo ni específico en la gestión local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una nota de análisis político nacional sobre internas de gabinete que no tiene impacto directo ni específico en la gestión local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1381,
+    "salida": 58,
+    "costo": 0.00043225
+   },
+   "caracteresDeNota": 454
+  },
+  "3bfcbaaf": {
+   "status": 200,
+   "ms": 1783,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una nota de fútbol nacional que no involucra a clubes locales ni tiene impacto directo en la comunidad de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una nota de fútbol nacional que no involucra a clubes locales ni tiene impacto directo en la comunidad de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1442,
+    "salida": 57,
+    "costo": 0.000446
+   },
+   "caracteresDeNota": 659
+  },
+  "8136ed33": {
+   "status": 200,
+   "ms": 1322,
+   "error": null,
+   "crudo": "{\"seccion\": \"Economía\", \"interes_balcarce\": \"medio\", \"publicar\": \"si\", \"razon\": \"El impacto de la burocracia en la productividad afecta directamente al sector productivo y a las Pymes locales de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "El impacto de la burocracia en la productividad afecta directamente al sector productivo y a las Pymes locales de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1396,
+    "salida": 60,
+    "costo": 0.000439
+   },
+   "caracteresDeNota": 560
+  },
+  "9fe7028b": {
+   "status": 200,
+   "ms": 1490,
+   "error": null,
+   "crudo": "{\"seccion\": \"Automovilismo\", \"interes_balcarce\": \"medio\", \"publicar\": \"si\", \"razon\": \"El automovilismo de alta competencia, como MotoGP, es de interés para la audiencia de Balcarce por su fuerte cultura fierrera.\"}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "El automovilismo de alta competencia, como MotoGP, es de interés para la audiencia de Balcarce por su fuerte cultura fierrera.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1397,
+    "salida": 61,
+    "costo": 0.00044075
+   },
+   "caracteresDeNota": 559
+  },
+  "228933bd": {
+   "status": 200,
+   "ms": 1298,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es un hecho de alcance nacional que no tiene una repercusión directa o específica en la dinámica local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es un hecho de alcance nacional que no tiene una repercusión directa o específica en la dinámica local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1419,
+    "salida": 56,
+    "costo": 0.00043875
+   },
+   "caracteresDeNota": 719
+  },
+  "161fa893": {
+   "status": 200,
+   "ms": 1320,
+   "error": null,
+   "crudo": "{\"seccion\": \"Tecnología\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de alcance global sobre industria farmacéutica sin impacto directo o conexión con la realidad local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Tecnología",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de alcance global sobre industria farmacéutica sin impacto directo o conexión con la realidad local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1423,
+    "salida": 58,
+    "costo": 0.00044275
+   },
+   "caracteresDeNota": 652
+  },
+  "fadc591a": {
+   "status": 200,
+   "ms": 1331,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una nota de fútbol internacional que no involucra a deportistas locales ni tiene impacto directo en la ciudad.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una nota de fútbol internacional que no involucra a deportistas locales ni tiene impacto directo en la ciudad.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1361,
+    "salida": 54,
+    "costo": 0.00042125
+   },
+   "caracteresDeNota": 379
+  },
+  "edd58468": {
+   "status": 200,
+   "ms": 1297,
+   "error": null,
+   "crudo": "{\"seccion\": \"Tecnologia\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota técnica sobre ciberseguridad corporativa sin impacto ni relación directa con la realidad local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Tecnología",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota técnica sobre ciberseguridad corporativa sin impacto ni relación directa con la realidad local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1340,
+    "salida": 59,
+    "costo": 0.0004235
+   },
+   "caracteresDeNota": 286
+  },
+  "2a027e97": {
+   "status": 200,
+   "ms": 1501,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia de farándula deportiva internacional sin ninguna conexión con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia de farándula deportiva internacional sin ninguna conexión con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1346,
+    "salida": 49,
+    "costo": 0.00041
+   },
+   "caracteresDeNota": 351
+  },
+  "19fa5fdd": {
+   "status": 200,
+   "ms": 1380,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota de interés general sobre mascotas sin ninguna vinculación local o relevancia para Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota de interés general sobre mascotas sin ninguna vinculación local o relevancia para Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1416,
+    "salida": 52,
+    "costo": 0.000432
+   },
+   "caracteresDeNota": 687
+  },
+  "c31dbdcb": {
+   "status": 200,
+   "ms": 1390,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota de chimentos y farándula sin ninguna relación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota de chimentos y farándula sin ninguna relación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1398,
+    "salida": 53,
+    "costo": 0.000429
+   },
+   "caracteresDeNota": 510
+  },
+  "b62a86fd": {
+   "status": 200,
+   "ms": 1380,
+   "error": null,
+   "crudo": "{\"seccion\": \"Economía\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia de alcance nacional sobre hidrocarburos en Neuquén sin impacto directo en la economía o industria de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia de alcance nacional sobre hidrocarburos en Neuquén sin impacto directo en la economía o industria de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1335,
+    "salida": 60,
+    "costo": 0.00042375
+   },
+   "caracteresDeNota": 280
+  },
+  "31cdadb2": {
+   "status": 200,
+   "ms": 1933,
+   "error": null,
+   "crudo": "{\"seccion\": \"Tecnologia\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de alcance global sobre políticas de uso de una IA que no tiene impacto directo ni específico en la comunidad de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Tecnología",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de alcance global sobre políticas de uso de una IA que no tiene impacto directo ni específico en la comunidad de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1424,
+    "salida": 61,
+    "costo": 0.0004475
+   },
+   "caracteresDeNota": 681
+  },
+  "64c1b0be": {
+   "status": 200,
+   "ms": 1466,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"medio\", \"publicar\": \"si\", \"razon\": \"El financiamiento universitario impacta directamente en la Facultad de Ciencias Agrarias de la UNMDP, que tiene sede en Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "El financiamiento universitario impacta directamente en la Facultad de Ciencias Agrarias de la UNMDP, que tiene sede en Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1411,
+    "salida": 58,
+    "costo": 0.00043975
+   },
+   "caracteresDeNota": 670
+  },
+  "c8c9770b": {
+   "status": 200,
+   "ms": 1474,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una oferta de voluntariado en otra ciudad (Necochea) sin impacto ni relación directa con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una oferta de voluntariado en otra ciudad (Necochea) sin impacto ni relación directa con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1424,
+    "salida": 60,
+    "costo": 0.000446
+   },
+   "caracteresDeNota": 726
+  },
+  "b46430ac": {
+   "status": 200,
+   "ms": 1636,
+   "error": null,
+   "crudo": "{\"seccion\": \"Política\", \"interes_balcarce\": \"medio\", \"publicar\": \"si\", \"razon\": \"El debate del Presupuesto nacional y leyes de impacto federal tienen incidencia directa en la gestión y recursos de los municipios.\"}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "El debate del Presupuesto nacional y leyes de impacto federal tienen incidencia directa en la gestión y recursos de los municipios.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1393,
+    "salida": 55,
+    "costo": 0.00043075
+   },
+   "caracteresDeNota": 493
+  },
+  "3f77a883": {
+   "status": 200,
+   "ms": 1485,
+   "error": null,
+   "crudo": "{\"seccion\": \"Política\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una nota de opinión política nacional sin impacto directo o específico en la gestión o vida cotidiana de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una nota de opinión política nacional sin impacto directo o específico en la gestión o vida cotidiana de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1351,
+    "salida": 54,
+    "costo": 0.00041875
+   },
+   "caracteresDeNota": 332
+  },
+  "143da309": {
+   "status": 200,
+   "ms": 1670,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"El pronóstico se refiere exclusivamente al AMBA y no tiene impacto directo ni relevancia para Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "El pronóstico se refiere exclusivamente al AMBA y no tiene impacto directo ni relevancia para Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1429,
+    "salida": 53,
+    "costo": 0.00043675
+   },
+   "caracteresDeNota": 670
+  },
+  "b04900f9": {
+   "status": 200,
+   "ms": 1364,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un partido de fútbol nacional que no involucra a equipos locales ni tiene relevancia directa para la comunidad de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un partido de fútbol nacional que no involucra a equipos locales ni tiene relevancia directa para la comunidad de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1335,
+    "salida": 58,
+    "costo": 0.00042075
+   },
+   "caracteresDeNota": 277
+  },
+  "d06937b3": {
+   "status": 200,
+   "ms": 1582,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia sobre calzado de colección a nivel internacional sin ninguna relevancia o impacto local para Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia sobre calzado de colección a nivel internacional sin ninguna relevancia o impacto local para Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1430,
+    "salida": 57,
+    "costo": 0.000443
+   },
+   "caracteresDeNota": 718
+  },
+  "9d28ce87": {
+   "status": 200,
+   "ms": 1424,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia de fútbol internacional sin ninguna conexión con Balcarce o el deporte local.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia de fútbol internacional sin ninguna conexión con Balcarce o el deporte local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1338,
+    "salida": 50,
+    "costo": 0.0004095
+   },
+   "caracteresDeNota": 286
+  },
+  "ee0d32a7": {
+   "status": 200,
+   "ms": 1675,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una obra de teatro comercial en CABA sin ninguna vinculación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una obra de teatro comercial en CABA sin ninguna vinculación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1467,
+    "salida": 53,
+    "costo": 0.00044625
+   },
+   "caracteresDeNota": 690
+  },
+  "35af8d34": {
+   "status": 200,
+   "ms": 1399,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es un tema de política nacional y judicial que no tiene un impacto directo o específico en la vida cotidiana de los vecinos de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es un tema de política nacional y judicial que no tiene un impacto directo o específico en la vida cotidiana de los vecinos de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1423,
+    "salida": 59,
+    "costo": 0.00044425
+   },
+   "caracteresDeNota": 666
+  },
+  "de8ec1cc": {
+   "status": 200,
+   "ms": 1363,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia deportiva internacional sin impacto local ni conexión directa con la actividad deportiva de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia deportiva internacional sin impacto local ni conexión directa con la actividad deportiva de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1338,
+    "salida": 53,
+    "costo": 0.000414
+   },
+   "caracteresDeNota": 252
+  },
+  "b5dd0f44": {
+   "status": 200,
+   "ms": 1655,
+   "error": null,
+   "crudo": "{\"seccion\": \"Tecnologia\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia de tecnología internacional sin impacto local ni conexión con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Tecnología",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia de tecnología internacional sin impacto local ni conexión con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1326,
+    "salida": 50,
+    "costo": 0.0004065
+   },
+   "caracteresDeNota": 233
+  },
+  "b4455625": {
+   "status": 200,
+   "ms": 1334,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia de fútbol internacional sin ninguna conexión con Balcarce o el fútbol argentino.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia de fútbol internacional sin ninguna conexión con Balcarce o el fútbol argentino.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1407,
+    "salida": 51,
+    "costo": 0.00042825
+   },
+   "caracteresDeNota": 718
+  },
+  "aa27f8a6": {
+   "status": 200,
+   "ms": 1681,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho policial/social ocurrido en otra provincia sin impacto ni relación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho policial/social ocurrido en otra provincia sin impacto ni relación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1407,
+    "salida": 51,
+    "costo": 0.00042825
+   },
+   "caracteresDeNota": 542
+  },
+  "1d475ae6": {
+   "status": 200,
+   "ms": 1404,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota de reflexión psicológica genérica sin ninguna vinculación con la realidad local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota de reflexión psicológica genérica sin ninguna vinculación con la realidad local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1429,
+    "salida": 56,
+    "costo": 0.00044125
+   },
+   "caracteresDeNota": 717
+  },
+  "e6d6ad32": {
+   "status": 200,
+   "ms": 1472,
+   "error": null,
+   "crudo": "{\"seccion\": \"Política\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de política nacional genérica que no tiene un impacto directo o específico en la gestión local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de política nacional genérica que no tiene un impacto directo o específico en la gestión local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1331,
+    "salida": 56,
+    "costo": 0.00041675
+   },
+   "caracteresDeNota": 301
+  },
+  "8809cac6": {
+   "status": 200,
+   "ms": 1582,
+   "error": null,
+   "crudo": "{\"seccion\": \"Economía\", \"interes_balcarce\": \"medio\", \"publicar\": \"si\", \"razon\": \"La cotización del dólar impacta directamente en la economía cotidiana y los costos de los vecinos de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "La cotización del dólar impacta directamente en la economía cotidiana y los costos de los vecinos de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1455,
+    "salida": 56,
+    "costo": 0.00044775
+   },
+   "caracteresDeNota": 673
+  },
+  "7921347b": {
+   "status": 200,
+   "ms": 1445,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia deportiva nacional sin vínculo directo con deportistas o instituciones de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia deportiva nacional sin vínculo directo con deportistas o instituciones de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1435,
+    "salida": 51,
+    "costo": 0.00043525
+   },
+   "caracteresDeNota": 677
+  },
+  "3ea1e633": {
+   "status": 200,
+   "ms": 1629,
+   "error": null,
+   "crudo": "{\"seccion\": \"Política\", \"interes_balcarce\": \"medio\", \"publicar\": \"si\", \"razon\": \"La Ley de Tierras tiene un impacto directo en la estructura productiva y la propiedad rural, un tema de alta relevancia para el sector agropecuario de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "La Ley de Tierras tiene un impacto directo en la estructura productiva y la propiedad rural, un tema de alta relevancia para el sector agropecuario de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1354,
+    "salida": 66,
+    "costo": 0.0004375
+   },
+   "caracteresDeNota": 319
+  },
+  "3cea88b7": {
+   "status": 200,
+   "ms": 1444,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho policial ocurrido en el extranjero sin ninguna vinculación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho policial ocurrido en el extranjero sin ninguna vinculación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1426,
+    "salida": 49,
+    "costo": 0.00043
+   },
+   "caracteresDeNota": 677
+  },
+  "1eb0ae96": {
+   "status": 200,
+   "ms": 1402,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una medida judicial de alcance nacional que no tiene un impacto directo o específico en la gestión local o el sector productivo de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una medida judicial de alcance nacional que no tiene un impacto directo o específico en la gestión local o el sector productivo de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1370,
+    "salida": 60,
+    "costo": 0.0004325
+   },
+   "caracteresDeNota": 372
+  },
+  "e7afc743": {
+   "status": 200,
+   "ms": 1521,
+   "error": null,
+   "crudo": "{\"seccion\": \"Automovilismo\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"La presencia de un piloto argentino en la Fórmula 1 genera un alto interés en la comunidad automovilística de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "La presencia de un piloto argentino en la Fórmula 1 genera un alto interés en la comunidad automovilística de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1423,
+    "salida": 59,
+    "costo": 0.00044425
+   },
+   "caracteresDeNota": 684
+  },
+  "e63d96e6": {
+   "status": 200,
+   "ms": 1426,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una nota de análisis de fútbol nacional que no tiene impacto ni vínculo directo con la actividad deportiva local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una nota de análisis de fútbol nacional que no tiene impacto ni vínculo directo con la actividad deportiva local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1430,
+    "salida": 57,
+    "costo": 0.000443
+   },
+   "caracteresDeNota": 682
+  },
+  "f4d259b7": {
+   "status": 200,
+   "ms": 1433,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota de servicio sobre micología basada en recomendaciones para una zona específica de España, sin relevancia local.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota de servicio sobre micología basada en recomendaciones para una zona específica de España, sin relevancia local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1417,
+    "salida": 54,
+    "costo": 0.00043525
+   },
+   "caracteresDeNota": 699
+  },
+  "76903bc4": {
+   "status": 200,
+   "ms": 2062,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota de chimentos y farándula sobre una figura pública sin ninguna relación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota de chimentos y farándula sobre una figura pública sin ninguna relación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1447,
+    "salida": 57,
+    "costo": 0.00044725
+   },
+   "caracteresDeNota": 686
+  },
+  "68f6ea93": {
+   "status": 200,
+   "ms": 1459,
+   "error": null,
+   "crudo": "{\"seccion\": \"Economía\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de alcance nacional sobre política monetaria y litigios internacionales que no tiene un impacto directo o específico en la economía local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de alcance nacional sobre política monetaria y litigios internacionales que no tiene un impacto directo o específico en la economía local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1444,
+    "salida": 63,
+    "costo": 0.0004555
+   },
+   "caracteresDeNota": 668
+  },
+  "ae35c434": {
+   "status": 200,
+   "ms": 1605,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una nota de fútbol nacional que no involucra a clubes locales ni tiene impacto directo en la comunidad de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una nota de fútbol nacional que no involucra a clubes locales ni tiene impacto directo en la comunidad de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1459,
+    "salida": 57,
+    "costo": 0.00045025
+   },
+   "caracteresDeNota": 699
+  },
+  "9c1fe7e3": {
+   "status": 200,
+   "ms": 1302,
+   "error": null,
+   "crudo": "{\"seccion\": \"Automovilismo\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es información general y enciclopédica sobre automovilismo internacional sin un vínculo directo con Balcarce o el automovilismo local.\"}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es información general y enciclopédica sobre automovilismo internacional sin un vínculo directo con Balcarce o el automovilismo local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1324,
+    "salida": 62,
+    "costo": 0.000424
+   },
+   "caracteresDeNota": 235
+  },
+  "adf24fe5": {
+   "status": 200,
+   "ms": 1345,
+   "error": null,
+   "crudo": "{\"seccion\": \"Policiales\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho policial ocurrido en CABA sin ninguna relación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho policial ocurrido en CABA sin ninguna relación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1450,
+    "salida": 50,
+    "costo": 0.0004375
+   },
+   "caracteresDeNota": 704
+  },
+  "a11ca810": {
+   "status": 200,
+   "ms": 1941,
+   "error": null,
+   "crudo": "{\"seccion\": \"Policiales\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho policial ocurrido en otra localidad (Moreno) sin ninguna vinculación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho policial ocurrido en otra localidad (Moreno) sin ninguna vinculación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1348,
+    "salida": 55,
+    "costo": 0.0004195
+   },
+   "caracteresDeNota": 270
+  },
+  "69735fff": {
+   "status": 200,
+   "ms": 1978,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de alcance nacional sin impacto directo o vínculo específico con la agenda local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de alcance nacional sin impacto directo o vínculo específico con la agenda local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1330,
+    "salida": 52,
+    "costo": 0.0004105
+   },
+   "caracteresDeNota": 227
+  },
+  "04f4b872": {
+   "status": 200,
+   "ms": 1354,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota de farándula deportiva internacional sin impacto ni vínculo directo con la realidad local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota de farándula deportiva internacional sin impacto ni vínculo directo con la realidad local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1417,
+    "salida": 56,
+    "costo": 0.00043825
+   },
+   "caracteresDeNota": 706
+  },
+  "0ad89306": {
+   "status": 200,
+   "ms": 1341,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"El alerta meteorológico es exclusivo para la provincia de Misiones y no afecta a Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "El alerta meteorológico es exclusivo para la provincia de Misiones y no afecta a Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1451,
+    "salida": 52,
+    "costo": 0.00044075
+   },
+   "caracteresDeNota": 678
+  },
+  "f7fca5c6": {
+   "status": 200,
+   "ms": 1390,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una problemática específica del sistema ferroviario metropolitano de CABA y AMBA que no afecta el transporte ni la logística de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una problemática específica del sistema ferroviario metropolitano de CABA y AMBA que no afecta el transporte ni la logística de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1342,
+    "salida": 61,
+    "costo": 0.000427
+   },
+   "caracteresDeNota": 320
+  },
+  "7bc74ca4": {
+   "status": 200,
+   "ms": 1558,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un partido de fútbol de primera división sin relación con clubes locales ni jugadores de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un partido de fútbol de primera división sin relación con clubes locales ni jugadores de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1448,
+    "salida": 53,
+    "costo": 0.0004415
+   },
+   "caracteresDeNota": 660
+  },
+  "55678cb0": {
+   "status": 200,
+   "ms": 1295,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un trámite administrativo de un estado mexicano (Chihuahua) sin ninguna relevancia para los vecinos de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un trámite administrativo de un estado mexicano (Chihuahua) sin ninguna relevancia para los vecinos de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1421,
+    "salida": 56,
+    "costo": 0.00043925
+   },
+   "caracteresDeNota": 688
+  },
+  "8c8e3573": {
+   "status": 200,
+   "ms": 1910,
+   "error": null,
+   "crudo": "{\"seccion\": \"Automovilismo\", \"interes_balcarce\": \"alto\", \"publicar\": \"si\", \"razon\": \"El automovilismo y la presencia de un piloto argentino en la Fórmula 1 son temas de alto interés para la comunidad de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "El automovilismo y la presencia de un piloto argentino en la Fórmula 1 son temas de alto interés para la comunidad de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1336,
+    "salida": 62,
+    "costo": 0.000427
+   },
+   "caracteresDeNota": 273
+  },
+  "cee2afb4": {
+   "status": 200,
+   "ms": 1419,
+   "error": null,
+   "crudo": "{\"seccion\": \"Tecnología\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho policial y tecnológico ocurrido en el extranjero sin ninguna conexión directa con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Tecnología",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho policial y tecnológico ocurrido en el extranjero sin ninguna conexión directa con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1419,
+    "salida": 53,
+    "costo": 0.00043425
+   },
+   "caracteresDeNota": 661
+  },
+  "da0f3caa": {
+   "status": 200,
+   "ms": 1616,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota de interés cultural internacional sin ninguna conexión con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota de interés cultural internacional sin ninguna conexión con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1433,
+    "salida": 50,
+    "costo": 0.00043325
+   },
+   "caracteresDeNota": 681
+  },
+  "369c253f": {
+   "status": 200,
+   "ms": 1586,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho internacional sin conexión directa con Balcarce ni con Argentina.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho internacional sin conexión directa con Balcarce ni con Argentina.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1338,
+    "salida": 47,
+    "costo": 0.000405
+   },
+   "caracteresDeNota": 232
+  },
+  "8c793ea1": {
+   "status": 200,
+   "ms": 1710,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es un evento de alcance nacional en CABA sin una conexión directa o impacto específico en la comunidad de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es un evento de alcance nacional en CABA sin una conexión directa o impacto específico en la comunidad de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1330,
+    "salida": 58,
+    "costo": 0.0004195
+   },
+   "caracteresDeNota": 215
+  },
+  "c6f30841": {
+   "status": 200,
+   "ms": 1701,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota de color sobre un productor en Ushuaia sin ninguna relación con la actividad agropecuaria o la realidad de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota de color sobre un productor en Ushuaia sin ninguna relación con la actividad agropecuaria o la realidad de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1447,
+    "salida": 61,
+    "costo": 0.00045325
+   },
+   "caracteresDeNota": 703
+  },
+  "bdff37d6": {
+   "status": 200,
+   "ms": 1560,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota de opinión sobre diseño de interiores sin ninguna vinculación con Balcarce o sus vecinos.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota de opinión sobre diseño de interiores sin ninguna vinculación con Balcarce o sus vecinos.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1425,
+    "salida": 56,
+    "costo": 0.00044025
+   },
+   "caracteresDeNota": 694
+  },
+  "436166ab": {
+   "status": 200,
+   "ms": 1372,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho de política interna de Colombia sin ninguna conexión con Balcarce o Argentina.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho de política interna de Colombia sin ninguna conexión con Balcarce o Argentina.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1415,
+    "salida": 50,
+    "costo": 0.00042875
+   },
+   "caracteresDeNota": 697
+  },
+  "008df844": {
+   "status": 200,
+   "ms": 1280,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia de farándula deportiva internacional sin ninguna conexión con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia de farándula deportiva internacional sin ninguna conexión con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1423,
+    "salida": 49,
+    "costo": 0.00042925
+   },
+   "caracteresDeNota": 675
+  },
+  "d1b83305": {
+   "status": 200,
+   "ms": 1290,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota de interés general/curiosidad internacional sin ninguna vinculación con la realidad local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota de interés general/curiosidad internacional sin ninguna vinculación con la realidad local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1442,
+    "salida": 56,
+    "costo": 0.0004445
+   },
+   "caracteresDeNota": 696
+  },
+  "6700ad99": {
+   "status": 200,
+   "ms": 1412,
+   "error": null,
+   "crudo": "{\"seccion\": \"Cultura y agenda\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota biográfica sobre un autor extranjero sin ninguna vinculación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota biográfica sobre un autor extranjero sin ninguna vinculación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1431,
+    "salida": 53,
+    "costo": 0.00043725
+   },
+   "caracteresDeNota": 674
+  },
+  "97e103ee": {
+   "status": 200,
+   "ms": 1373,
+   "error": null,
+   "crudo": "{\"seccion\": \"Economía\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia de alcance nacional sobre la industria de biocombustibles en Santa Fe sin impacto directo en la economía o producción de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia de alcance nacional sobre la industria de biocombustibles en Santa Fe sin impacto directo en la economía o producción de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1357,
+    "salida": 63,
+    "costo": 0.00043375
+   },
+   "caracteresDeNota": 393
+  },
+  "7a6ad3cc": {
+   "status": 200,
+   "ms": 1304,
+   "error": null,
+   "crudo": "{\"seccion\": \"Economía\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es un análisis macroeconómico general sin impacto directo o específico en la economía local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es un análisis macroeconómico general sin impacto directo o específico en la economía local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1384,
+    "salida": 53,
+    "costo": 0.0004255
+   },
+   "caracteresDeNota": 500
+  },
+  "a4e78c07": {
+   "status": 200,
+   "ms": 1464,
+   "error": null,
+   "crudo": "{\"seccion\": \"Deportes\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia deportiva nacional sin vínculo directo con deportistas o eventos de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia deportiva nacional sin vínculo directo con deportistas o eventos de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1363,
+    "salida": 51,
+    "costo": 0.00041725
+   },
+   "caracteresDeNota": 357
+  },
+  "a98be356": {
+   "status": 200,
+   "ms": 1553,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota de color sobre un exjugador de fútbol sin ninguna vinculación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota de color sobre un exjugador de fútbol sin ninguna vinculación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1347,
+    "salida": 54,
+    "costo": 0.00041775
+   },
+   "caracteresDeNota": 328
+  },
+  "0ab280e9": {
+   "status": 200,
+   "ms": 1528,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia deportiva internacional sin ninguna conexión con Balcarce o el deporte local.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia deportiva internacional sin ninguna conexión con Balcarce o el deporte local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1426,
+    "salida": 49,
+    "costo": 0.00043
+   },
+   "caracteresDeNota": 659
+  },
+  "0e01be6b": {
+   "status": 200,
+   "ms": 1434,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"bajo\", \"publicar\": \"si\", \"razon\": \"Es una nota de fútbol de primera división que interesa al público general de la ciudad.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "bajo",
+    "publicar": true,
+    "razon": "Es una nota de fútbol de primera división que interesa al público general de la ciudad.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1370,
+    "salida": 49,
+    "costo": 0.000416
+   },
+   "caracteresDeNota": 387
+  },
+  "72580e76": {
+   "status": 200,
+   "ms": 1589,
+   "error": null,
+   "crudo": "{\"seccion\": \"Automovilismo\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia sobre el estado físico de un piloto de MotoGP sin conexión directa con Balcarce o el automovilismo local.\"}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia sobre el estado físico de un piloto de MotoGP sin conexión directa con Balcarce o el automovilismo local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1407,
+    "salida": 59,
+    "costo": 0.00044025
+   },
+   "caracteresDeNota": 570
+  },
+  "14878d7b": {
+   "status": 200,
+   "ms": 1629,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de interés general sobre el fútbol nacional que no tiene un vínculo directo con la actividad deportiva local.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de interés general sobre el fútbol nacional que no tiene un vínculo directo con la actividad deportiva local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1335,
+    "salida": 54,
+    "costo": 0.00041475
+   },
+   "caracteresDeNota": 252
+  },
+  "be56d0d1": {
+   "status": 200,
+   "ms": 2064,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de política nacional sin impacto directo o específico en la gestión o vida cotidiana de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de política nacional sin impacto directo o específico en la gestión o vida cotidiana de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1359,
+    "salida": 53,
+    "costo": 0.00041925
+   },
+   "caracteresDeNota": 364
+  },
+  "4f74938f": {
+   "status": 200,
+   "ms": 1486,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de fútbol internacional que no tiene una conexión directa con Balcarce ni con sus instituciones deportivas locales.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de fútbol internacional que no tiene una conexión directa con Balcarce ni con sus instituciones deportivas locales.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1448,
+    "salida": 55,
+    "costo": 0.0004445
+   },
+   "caracteresDeNota": 690
+  },
+  "f8e7bb4c": {
+   "status": 200,
+   "ms": 1493,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de alcance nacional sobre legislación general que no impacta de manera directa o específica en la realidad local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de alcance nacional sobre legislación general que no impacta de manera directa o específica en la realidad local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1367,
+    "salida": 58,
+    "costo": 0.00042875
+   },
+   "caracteresDeNota": 384
+  },
+  "c80b54f6": {
+   "status": 200,
+   "ms": 1414,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia internacional sin impacto ni conexión directa con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia internacional sin impacto ni conexión directa con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1320,
+    "salida": 46,
+    "costo": 0.000399
+   },
+   "caracteresDeNota": 201
+  },
+  "34d471dd": {
+   "status": 200,
+   "ms": 1384,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una cobertura de un partido de fútbol nacional sin vínculo directo con clubes o jugadores de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una cobertura de un partido de fútbol nacional sin vínculo directo con clubes o jugadores de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1460,
+    "salida": 53,
+    "costo": 0.0004445
+   },
+   "caracteresDeNota": 676
+  },
+  "5c4d8c11": {
+   "status": 200,
+   "ms": 1397,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"El clima en la provincia de San Luis no tiene impacto ni relevancia para los vecinos de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "El clima en la provincia de San Luis no tiene impacto ni relevancia para los vecinos de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1442,
+    "salida": 53,
+    "costo": 0.00044
+   },
+   "caracteresDeNota": 672
+  },
+  "35b6c6df": {
+   "status": 200,
+   "ms": 1733,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota de interés general/psicología sin ninguna relación con la realidad local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota de interés general/psicología sin ninguna relación con la realidad local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1417,
+    "salida": 54,
+    "costo": 0.00043525
+   },
+   "caracteresDeNota": 705
+  },
+  "6d2552d3": {
+   "status": 200,
+   "ms": 1505,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una nota de interés general sobre la liga estadounidense que no tiene impacto ni vínculo directo con la actividad local.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una nota de interés general sobre la liga estadounidense que no tiene impacto ni vínculo directo con la actividad local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1336,
+    "salida": 54,
+    "costo": 0.000415
+   },
+   "caracteresDeNota": 291
+  },
+  "c65531cb": {
+   "status": 200,
+   "ms": 1916,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"bajo\", \"publicar\": \"no\", \"razon\": \"Es una noticia de alcance nacional sobre causas judiciales que no tiene impacto directo ni específico en la vida cotidiana o los intereses de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "Es una noticia de alcance nacional sobre causas judiciales que no tiene impacto directo ni específico en la vida cotidiana o los intereses de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1422,
+    "salida": 59,
+    "costo": 0.000444
+   },
+   "caracteresDeNota": 695
+  },
+  "1711b56c": {
+   "status": 200,
+   "ms": 1650,
+   "error": null,
+   "crudo": "{\"seccion\": \"Fútbol\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una nota de farándula deportiva sobre un torneo privado que no tiene impacto ni relación con la actividad local.\"}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una nota de farándula deportiva sobre un torneo privado que no tiene impacto ni relación con la actividad local.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1434,
+    "salida": 56,
+    "costo": 0.0004425
+   },
+   "caracteresDeNota": 635
+  },
+  "8572f760": {
+   "status": 200,
+   "ms": 1422,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho policial/político ocurrido en Santa Cruz sin impacto ni relación con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho policial/político ocurrido en Santa Cruz sin impacto ni relación con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1435,
+    "salida": 52,
+    "costo": 0.00043675
+   },
+   "caracteresDeNota": 705
+  },
+  "e6e6aae6": {
+   "status": 200,
+   "ms": 1312,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho internacional sin impacto directo ni conexión con Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho internacional sin impacto directo ni conexión con Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1327,
+    "salida": 46,
+    "costo": 0.00040075
+   },
+   "caracteresDeNota": 266
+  },
+  "e95fcdf0": {
+   "status": 200,
+   "ms": 1324,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es una noticia sobre beneficios fiscales en Estados Unidos sin ninguna conexión con Balcarce o Argentina.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es una noticia sobre beneficios fiscales en Estados Unidos sin ninguna conexión con Balcarce o Argentina.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1443,
+    "salida": 51,
+    "costo": 0.00043725
+   },
+   "caracteresDeNota": 676
+  },
+  "820b64a0": {
+   "status": 200,
+   "ms": 1745,
+   "error": null,
+   "crudo": "{\"seccion\": \"Argentina\", \"interes_balcarce\": \"ninguno\", \"publicar\": \"no\", \"razon\": \"Es un hecho político internacional sin conexión directa con la realidad local de Balcarce.\"}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "Es un hecho político internacional sin conexión directa con la realidad local de Balcarce.",
+    "valida": true
+   },
+   "uso": {
+    "entrada": 1341,
+    "salida": 49,
+    "costo": 0.00040875
+   },
+   "caracteresDeNota": 317
+  }
+ },
+ "pares": {}
+}

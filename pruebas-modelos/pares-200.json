@@ -1,0 +1,563 @@
+{
+ "nota": "Etiquetas hechas a mano por Claude; los dudosos están marcados.",
+ "pares": [
+  {
+   "clave": "p00",
+   "a": "b7944266",
+   "b": "e86c0362",
+   "similitud": 0.9,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p01",
+   "a": "45db1708",
+   "b": "4add9be4",
+   "similitud": 0.86,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p02",
+   "a": "badcdcaa",
+   "b": "e672d900",
+   "similitud": 0.83,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p03",
+   "a": "4add9be4",
+   "b": "865ffc23",
+   "similitud": 0.75,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p04",
+   "a": "45db1708",
+   "b": "865ffc23",
+   "similitud": 0.74,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p05",
+   "a": "6d915039",
+   "b": "0881153a",
+   "similitud": 0.67,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": "fiesta-del-postre-nueva-fecha"
+  },
+  {
+   "clave": "p06",
+   "a": "9cb29a54",
+   "b": "c65531cb",
+   "similitud": 0.64,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p07",
+   "a": "78bdbac0",
+   "b": "ab40d562",
+   "similitud": 0.57,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": "fiesta-del-postre-nueva-fecha"
+  },
+  {
+   "clave": "p08",
+   "a": "4e3102c8",
+   "b": "e9a203d5",
+   "similitud": 0.5,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p09",
+   "a": "e9a203d5",
+   "b": "fc039c04",
+   "similitud": 0.5,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p10",
+   "a": "9c7ee7d5",
+   "b": "ab40d562",
+   "similitud": 0.5,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": "fiesta-del-postre-nueva-fecha"
+  },
+  {
+   "clave": "p11",
+   "a": "6e45a05f",
+   "b": "eb7c6026",
+   "similitud": 0.44,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p12",
+   "a": "9c7ee7d5",
+   "b": "78bdbac0",
+   "similitud": 0.44,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": "fiesta-del-postre-nueva-fecha"
+  },
+  {
+   "clave": "p13",
+   "a": "04f90bd3",
+   "b": "e008016c",
+   "similitud": 0.44,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p14",
+   "a": "869434ae",
+   "b": "9529a470",
+   "similitud": 0.44,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p15",
+   "a": "4e3102c8",
+   "b": "fc039c04",
+   "similitud": 0.43,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p16",
+   "a": "3bfcbaaf",
+   "b": "7bc74ca4",
+   "similitud": 0.43,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p17",
+   "a": "e9a203d5",
+   "b": "28433d33",
+   "similitud": 0.4,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p18",
+   "a": "06b555c6",
+   "b": "9c7ee7d5",
+   "similitud": 0.38,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p19",
+   "a": "fcda99ba",
+   "b": "12843f44",
+   "similitud": 0.35,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p20",
+   "a": "4e3102c8",
+   "b": "28433d33",
+   "similitud": 0.33,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p21",
+   "a": "28433d33",
+   "b": "fc039c04",
+   "similitud": 0.33,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p22",
+   "a": "06b555c6",
+   "b": "f594dfcc",
+   "similitud": 0.33,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p23",
+   "a": "84d79fae",
+   "b": "fadc591a",
+   "similitud": 0.31,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p24",
+   "a": "1649463d",
+   "b": "e7afc743",
+   "similitud": 0.31,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p25",
+   "a": "06b555c6",
+   "b": "6d915039",
+   "similitud": 0.29,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p26",
+   "a": "06b555c6",
+   "b": "0881153a",
+   "similitud": 0.29,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p27",
+   "a": "06b555c6",
+   "b": "ab40d562",
+   "similitud": 0.29,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p28",
+   "a": "6d915039",
+   "b": "f594dfcc",
+   "similitud": 0.29,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p29",
+   "a": "0881153a",
+   "b": "f594dfcc",
+   "similitud": 0.29,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p30",
+   "a": "ab40d562",
+   "b": "f594dfcc",
+   "similitud": 0.29,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p31",
+   "a": "28433d33",
+   "b": "305c2e7f",
+   "similitud": 0.25,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p32",
+   "a": "06b555c6",
+   "b": "78bdbac0",
+   "similitud": 0.25,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p33",
+   "a": "09b24c5f",
+   "b": "adc2db28",
+   "similitud": 0.25,
+   "mismo": false,
+   "dudoso": true,
+   "grupo": null
+  },
+  {
+   "clave": "p34",
+   "a": "6d915039",
+   "b": "ab40d562",
+   "similitud": 0.25,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": "fiesta-del-postre-nueva-fecha"
+  },
+  {
+   "clave": "p35",
+   "a": "0881153a",
+   "b": "ab40d562",
+   "similitud": 0.25,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": "fiesta-del-postre-nueva-fecha"
+  },
+  {
+   "clave": "p36",
+   "a": "78bdbac0",
+   "b": "f594dfcc",
+   "similitud": 0.25,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p37",
+   "a": "309455a3",
+   "b": "b04900f9",
+   "similitud": 0.25,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p38",
+   "a": "b04900f9",
+   "b": "ae35c434",
+   "similitud": 0.24,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p39",
+   "a": "1a86e518",
+   "b": "34d471dd",
+   "similitud": 0.23,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p40",
+   "a": "0399957f",
+   "b": "8809cac6",
+   "similitud": 0.23,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p41",
+   "a": "8c8e3573",
+   "b": "34d471dd",
+   "similitud": 0.23,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p42",
+   "a": "e9a203d5",
+   "b": "45db1708",
+   "similitud": 0.22,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p43",
+   "a": "e9a203d5",
+   "b": "4add9be4",
+   "similitud": 0.22,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p44",
+   "a": "e9a203d5",
+   "b": "865ffc23",
+   "similitud": 0.22,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p45",
+   "a": "9c7ee7d5",
+   "b": "f594dfcc",
+   "similitud": 0.22,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p46",
+   "a": "6d915039",
+   "b": "78bdbac0",
+   "similitud": 0.22,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": "fiesta-del-postre-nueva-fecha"
+  },
+  {
+   "clave": "p47",
+   "a": "0881153a",
+   "b": "78bdbac0",
+   "similitud": 0.22,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": "fiesta-del-postre-nueva-fecha"
+  },
+  {
+   "clave": "p48",
+   "a": "74cd1da1",
+   "b": "0ad89306",
+   "similitud": 0.21,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p49",
+   "a": "309455a3",
+   "b": "ae35c434",
+   "similitud": 0.21,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p50",
+   "a": "e7afc743",
+   "b": "8c8e3573",
+   "similitud": 0.21,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p51",
+   "a": "4e3102c8",
+   "b": "45db1708",
+   "similitud": 0.2,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p52",
+   "a": "4e3102c8",
+   "b": "4add9be4",
+   "similitud": 0.2,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p53",
+   "a": "4e3102c8",
+   "b": "865ffc23",
+   "similitud": 0.2,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p54",
+   "a": "e9a203d5",
+   "b": "305c2e7f",
+   "similitud": 0.2,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p55",
+   "a": "fc039c04",
+   "b": "45db1708",
+   "similitud": 0.2,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p56",
+   "a": "fc039c04",
+   "b": "4add9be4",
+   "similitud": 0.2,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p57",
+   "a": "fc039c04",
+   "b": "865ffc23",
+   "similitud": 0.2,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  },
+  {
+   "clave": "p58",
+   "a": "9c7ee7d5",
+   "b": "6d915039",
+   "similitud": 0.2,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": "fiesta-del-postre-nueva-fecha"
+  },
+  {
+   "clave": "p59",
+   "a": "9c7ee7d5",
+   "b": "0881153a",
+   "similitud": 0.2,
+   "mismo": true,
+   "dudoso": false,
+   "grupo": "fiesta-del-postre-nueva-fecha"
+  },
+  {
+   "clave": "p60",
+   "a": "af8b50f2",
+   "b": "64c1b0be",
+   "similitud": 0.2,
+   "mismo": false,
+   "dudoso": true,
+   "grupo": null
+  },
+  {
+   "clave": "p61",
+   "a": "1649463d",
+   "b": "8c8e3573",
+   "similitud": 0.2,
+   "mismo": false,
+   "dudoso": false,
+   "grupo": null
+  }
+ ]
+}

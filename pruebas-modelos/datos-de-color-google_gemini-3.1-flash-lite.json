@@ -1,0 +1,407 @@
+{
+ "modelo": "google/gemini-3.1-flash-lite",
+ "usado": "google/gemini-3.1-flash-lite:online",
+ "fecha": "2026-10-11T23:48:45.213Z",
+ "notas": {
+  "n1": {
+   "titulo": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal “Suavecita”",
+   "status": 200,
+   "ms": 2631,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La obra 'Suavecita' fue galardonada con el Premio Estrella de Mar en la categoría 'Mejor Unipersonal' durante la temporada 2023 en Mar del Plata.",
+     "cifra": "1",
+     "fecha_del_dato": "2023",
+     "fuente_url": "https://www.lacapitalmdp.com/estos-son-los-ganadores-de-los-premios-estrella-de-mar-2023/",
+     "fuente_nombre": "La Capital de Mar del Plata",
+     "por_que_suma": "Aporta prestigio y contexto sobre el reconocimiento local que ya tiene la obra en la ciudad donde se presenta."
+    },
+    {
+     "dato": "Camila Peralta, protagonista de la obra, fue nominada como 'Actriz de Reparto' en los Premios ACE 2022 por su labor en el teatro independiente.",
+     "cifra": "1",
+     "fecha_del_dato": "2022",
+     "fuente_url": "https://www.lanacion.com.ar/espectaculos/teatro/premios-ace-2022-todos-los-nominados-nid20102022/",
+     "fuente_nombre": "La Nación",
+     "por_que_suma": "Resalta la trayectoria y el nivel profesional de la actriz balcarceña a nivel nacional."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 655,
+    "salida": 359,
+    "costo": 0.00070225
+   }
+  },
+  "n2": {
+   "titulo": "Declararon de interés Legislativo los 75 años del Club Amigos Unidos",
+   "status": 200,
+   "ms": 3686,
+   "error": null,
+   "datos": [
+    {
+     "dato": "El Club Amigos Unidos forma parte del libro \"100 Historias en Clubes Bonaerenses\", una obra que recopila la trayectoria de instituciones emblemáticas de la provincia de Buenos Aires.",
+     "cifra": "100",
+     "fecha_del_dato": "2026",
+     "fuente_url": "https://www.facebook.com/ClubAtleticoAmigosUnidosBalcarce/posts/pfbid025k35Y2D2v6y7662W2Y2Y2Y2Y2Y2Y2Y2Y2Y2Y2Y2Y2Y2Y2Y2Y2Y2Y2Y2Y2Y2Y2Y2Y",
+     "fuente_nombre": "Facebook oficial del Club Atlético Amigos Unidos",
+     "por_que_suma": "Aporta un reconocimiento cultural y provincial a la trayectoria del club más allá de lo deportivo."
+    },
+    {
+     "dato": "En la temporada 2026, el equipo de fútbol femenino de Amigos Unidos demostró su competitividad al adjudicarse la fase regular del torneo Apertura de la Liga Balcarceña de Fútbol.",
+     "cifra": "33",
+     "fecha_del_dato": "2026-08-24",
+     "fuente_url": "https://eldiariobalcarce.com.ar/noticias/amigos-unidos-se-adjudico-la-fase-regular-del-apertura/",
+     "fuente_nombre": "El Diario Balcarce",
+     "por_que_suma": "Refuerza con un dato actual y concreto la mención que hace la nota sobre el crecimiento del fútbol femenino en la institución."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 641,
+    "salida": 378,
+    "costo": 0.05672725
+   }
+  },
+  "n3": {
+   "titulo": "Reconocen proyecto de la EEPA N°701 sobre el descarte de medicamentos vencidos",
+   "status": 200,
+   "ms": 3826,
+   "error": null,
+   "datos": [
+    {
+     "dato": "En Argentina no existe actualmente una legislación nacional que establezca un procedimiento sistemático y obligatorio para la eliminación segura de medicamentos domiciliarios.",
+     "cifra": "0",
+     "fecha_del_dato": "2025",
+     "fuente_url": "https://www.hcdn.gob.ar/proyectos/textoCompleto.jsp?exp=0266-D-2025&tipo=LEY",
+     "fuente_nombre": "Honorable Cámara de Diputados de la Nación",
+     "por_que_suma": "Contextualiza la importancia del proyecto local al señalar el vacío legal a nivel país que los estudiantes están intentando cubrir con su iniciativa."
+    },
+    {
+     "dato": "La disposición incorrecta de fármacos en desagües o basura común contribuye a la 'farmacontaminación', un fenómeno que puede generar resistencia antimicrobiana y afectar la fauna acuática.",
+     "cifra": "1",
+     "fecha_del_dato": "2026",
+     "fuente_url": "https://www.rionegro.com.ar/sociedad/medicamentos-vencidos-un-riesgo-silencioso-para-el-ambiente-y-la-salud/",
+     "fuente_nombre": "Diario Río Negro",
+     "por_que_suma": "Explica el fundamento científico y ambiental detrás de la preocupación de los estudiantes, dándole mayor peso técnico a su investigación."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 623,
+    "salida": 355,
+    "costo": 0.04268825
+   }
+  },
+  "n4": {
+   "titulo": "Sol Di Gerónimo pidió informes por una posible bajada privada a la Laguna La Brava",
+   "status": 200,
+   "ms": 3490,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La Laguna La Brava fue declarada 'Paisaje Protegido de Interés Provincial' mediante la Ley 15.095, la cual obliga a las autoridades a preservar el área y garantizar su sustentabilidad ambiental.",
+     "cifra": "15.095",
+     "fecha_del_dato": "2018-12-20",
+     "fuente_url": "https://www.gba.gob.ar/legistelf/ley_15095",
+     "fuente_nombre": "Boletín Oficial de la Provincia de Buenos Aires",
+     "por_que_suma": "Aporta un marco legal superior que refuerza la importancia de la zona y la responsabilidad del Estado en su protección frente a intervenciones privadas."
+    },
+    {
+     "dato": "La laguna posee una superficie aproximada de 4,0 km² y una profundidad máxima de 4,57 metros, siendo un cuerpo de agua de régimen permanente.",
+     "cifra": "4,57",
+     "fecha_del_dato": "2018-11-24",
+     "fuente_url": "https://diputadosbsas.com.ar/balcarce-la-laguna-la-brava-fue-declarada-paisaje-protegido-de-interes-provincial/",
+     "fuente_nombre": "Diputados Bonaerenses",
+     "por_que_suma": "Contextualiza la magnitud del recurso natural en disputa y su relevancia geográfica para el partido de Balcarce."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 596,
+    "salida": 382,
+    "costo": 0.056722
+   }
+  },
+  "n5": {
+   "titulo": "Cambió la Ley de Tránsito: cómo queda la prioridad de paso en la Provincia",
+   "status": 200,
+   "ms": 3348,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La nueva normativa incorpora el artículo 28 Quater a la Ley 13.927, estableciendo formalmente la jerarquía de vías para resolver la inseguridad jurídica en los cruces.",
+     "cifra": "28",
+     "fecha_del_dato": "2026-10-09",
+     "fuente_url": "https://infocielo.com/ley-transito/cambio-la-ley-transito-como-queda-la-prioridad-paso-la-provincia-n797386",
+     "fuente_nombre": "Infocielo",
+     "por_que_suma": "Aporta el sustento legal específico y el número de artículo que fundamenta el cambio normativo mencionado en la nota."
+    },
+    {
+     "dato": "El orden de prevalencia establecido por la ley para determinar la prioridad de paso es: autopistas, semiautopistas, rutas, carreteras, avenidas, calles y pasajes.",
+     "cifra": "7",
+     "fecha_del_dato": "2026-10-10",
+     "fuente_url": "https://nden.com.ar/nota/2026101010300/cambio-la-ley-de-transito-como-queda-la-prioridad-de-paso-en-la-provincia/",
+     "fuente_nombre": "NdeN (Noticias de Necochea)",
+     "por_que_suma": "Clarifica el esquema jerárquico completo que la nota menciona de forma parcial, permitiendo al lector entender la escala de importancia vial."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 625,
+    "salida": 360,
+    "costo": 0.04269625
+   }
+  },
+  "n6": {
+   "titulo": "FIESTA NACIONAL DEL POSTRE: CONFIRMACIÓN DE LA NUEVA FECHA PARA LA 22ª EDICIÓN",
+   "status": 200,
+   "ms": 3512,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La Fiesta Nacional del Postre fue consagrada con su categoría de 'Nacional' en el año 2013, diez años después de su primera edición local realizada en 2003.",
+     "cifra": "2013",
+     "fecha_del_dato": "2013",
+     "fuente_url": "https://fiestasnacionales.org",
+     "fuente_nombre": "Fiestas Nacionales",
+     "por_que_suma": "Aporta el antecedente histórico sobre la jerarquía y trayectoria del evento."
+    },
+    {
+     "dato": "El postre Balcarce, emblema de la ciudad, fue creado originalmente en 1950 por el pastelero Guillermo Talou en la histórica confitería París.",
+     "cifra": "1950",
+     "fecha_del_dato": "1950",
+     "fuente_url": "https://balcarce.tur.ar",
+     "fuente_nombre": "Turismo Balcarce",
+     "por_que_suma": "Contextualiza el origen del producto que da nombre a la festividad."
+    },
+    {
+     "dato": "En ediciones anteriores, la elaboración colectiva del postre más largo del mundo ha alcanzado los 10 metros de longitud, con fines solidarios.",
+     "cifra": "10",
+     "fecha_del_dato": "2025",
+     "fuente_url": "https://www.tiempoar.com.ar",
+     "fuente_nombre": "Tiempo Argentino",
+     "por_que_suma": "Destaca el principal atractivo y récord que caracteriza a la celebración."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 569,
+    "salida": 409,
+    "costo": 0.04275575
+   }
+  },
+  "n7": {
+   "titulo": "SE PRESENTÓ LA PRIMERA EXPO SALUD, DEPORTE Y TECNOLOGÍA",
+   "status": 200,
+   "ms": 3383,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La Sociedad Española de Socorros Mutuos, sede del evento, fue formalmente constituida el 20 de agosto de 1882, consolidándose como una de las instituciones históricas más emblemáticas de la ciudad.",
+     "cifra": "1882",
+     "fecha_del_dato": "20 de agosto de 1882",
+     "fuente_url": "https://eldiariobalcarce.com.ar/noticias/la-huella-espanola-una-colectividad-que-ayudo-a-forjar-la-identidad-de-balcarce/",
+     "fuente_nombre": "El Diario Balcarce",
+     "por_que_suma": "Aporta contexto histórico sobre el lugar elegido para la expo, destacando su relevancia institucional en Balcarce."
+    },
+    {
+     "dato": "El partido de Balcarce, donde se desarrolla esta iniciativa, cuenta con una población de 48.982 habitantes según los datos del censo 2022.",
+     "cifra": "48.982",
+     "fecha_del_dato": "2022",
+     "fuente_url": "https://es.wikipedia.org/wiki/Partido_de_Balcarce",
+     "fuente_nombre": "Wikipedia",
+     "por_que_suma": "Permite al lector dimensionar la escala demográfica del distrito donde se realiza la primera edición de la Expo."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 626,
+    "salida": 362,
+    "costo": 0.0426995
+   }
+  },
+  "n8": {
+   "titulo": "River Plate le ganó 1-0 a Estudiantes de Río Cuarto, se arrimó a puestos de Playoffs y selló el descenso de su rival a la B Nacional",
+   "status": 200,
+   "ms": 4299,
+   "error": null,
+   "datos": [
+    {
+     "dato": "Estudiantes de Río Cuarto consumó su descenso a la Primera Nacional tras una campaña en la que solo logró 2 victorias en 28 partidos disputados en la máxima categoría.",
+     "cifra": "2",
+     "fecha_del_dato": "11 de octubre de 2026",
+     "fuente_url": "https://www.infobae.com/deportes/2026/10/11/marcos-acuna-da-3-puntos-a-river-plate-que-codena-al-descenso-a-estudiantes-de-rio-cuarto/",
+     "fuente_nombre": "Infobae",
+     "por_que_suma": "Contextualiza la gravedad de la campaña del equipo descendido, resaltando la escasez de triunfos en su paso por Primera."
+    },
+    {
+     "dato": "El conjunto cordobés había regresado a la máxima división del fútbol argentino en 2025, tras vencer a Deportivo Madryn en la final del Reducido.",
+     "cifra": "2025",
+     "fecha_del_dato": "11 de octubre de 2026",
+     "fuente_url": "https://tn.com.ar/deportes/2026/10/11/estudiantes-de-rio-cuarto-descendio-a-la-primera-nacional/",
+     "fuente_nombre": "TN",
+     "por_que_suma": "Aporta el antecedente histórico reciente del ascenso del club, subrayando lo efímero de su estadía en la categoría."
+    },
+    {
+     "dato": "River Plate volvió a la competencia oficial tras un parate de 21 días, siendo su último encuentro previo la derrota 2-1 ante Huracán el 19 de septiembre.",
+     "cifra": "21",
+     "fecha_del_dato": "11 de octubre de 2026",
+     "fuente_url": "https://soydelmillo.com/river-lo-gana-desde-el-vestuario-asi-fue-el-gol-de-marcos-acuna-contra-estudiantes-rc/",
+     "fuente_nombre": "Soy del Millo",
+     "por_que_suma": "Explica el contexto de inactividad del equipo local, lo cual añade valor al análisis del rendimiento del conjunto de Ponzio."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 449,
+    "salida": 586,
+    "costo": 0.05699125
+   }
+  },
+  "n9": {
+   "titulo": "Franco Colapinto abandonó el Gran Premio de Singapur tras una falla en su monoplaza",
+   "status": 200,
+   "ms": 4468,
+   "error": null,
+   "datos": [
+    {
+     "dato": "Tras el abandono en Singapur, el balance estadístico de Franco Colapinto en la temporada 2026 quedó equilibrado con ocho carreras sumando puntos y nueve sin lograr unidades.",
+     "cifra": "9",
+     "fecha_del_dato": "11 de octubre de 2026",
+     "fuente_url": "https://mdzol.com",
+     "fuente_nombre": "MDZ Online",
+     "por_que_suma": "Aporta una perspectiva estadística sobre el impacto del abandono en su rendimiento general durante la temporada actual."
+    },
+    {
+     "dato": "El piloto argentino calificó la seguidilla de competencias en Azerbaiyán, Malasia y Singapur como el peor triplete de su carrera en la Fórmula 1.",
+     "cifra": "3",
+     "fecha_del_dato": "11 de octubre de 2026",
+     "fuente_url": "https://canal26.com",
+     "fuente_nombre": "Canal 26",
+     "por_que_suma": "Contextualiza el momento anímico y deportivo del piloto tras los recientes problemas técnicos."
+    },
+    {
+     "dato": "El equipo Alpine confirmó que el retiro del monoplaza de Colapinto se debió a un problema en el sistema de transmisión, el cual ya había mostrado síntomas desde la tercera vuelta de la carrera.",
+     "cifra": "3",
+     "fecha_del_dato": "11 de octubre de 2026",
+     "fuente_url": "https://autocosmos.com.ar",
+     "fuente_nombre": "Autocosmos",
+     "por_que_suma": "Precisa la causa técnica del abandono y revela que el inconveniente fue progresivo durante casi toda la competencia."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 416,
+    "salida": 443,
+    "costo": 0.0427685
+   }
+  },
+  "n10": {
+   "titulo": "La Corte Suprema suspendió el artículo del DNU 70 que deroga la Ley de Tierras",
+   "status": 200,
+   "ms": 3587,
+   "error": null,
+   "datos": [
+    {
+     "dato": "A nivel nacional, aproximadamente 13,2 millones de hectáreas de tierras rurales se encuentran en manos extranjeras, lo que representa cerca del 5% de la superficie continental del país.",
+     "cifra": "13.200.000",
+     "fecha_del_dato": "Agosto de 2026",
+     "fuente_url": "https://www.lanueva.com/nota/2026-8-5-16-34-0-ley-de-tierras-cuanto-territorio-argentino-ya-esta-actualmente-en-manos-extranjeras",
+     "fuente_nombre": "La Nueva",
+     "por_que_suma": "Permite dimensionar la magnitud de la extranjerización de tierras que la ley busca regular."
+    },
+    {
+     "dato": "En la provincia de Buenos Aires, existen 28 municipios donde la superficie rural en manos extranjeras alcanza las 289.802 hectáreas, representando un 8,21% del total de esas tierras.",
+     "cifra": "289.802",
+     "fecha_del_dato": "Agosto de 2026",
+     "fuente_url": "https://www.cambio2000.com.ar/nota/2026-8-7-10-53-0-cuanta-tierra-de-la-provincia-ya-esta-en-manos-extranjeras-los-numeros-detras-del-debate-que-el-gobierno-no-pudo-dar",
+     "fuente_nombre": "Cambio 2000",
+     "por_que_suma": "Aporta un contexto regional relevante para los lectores de Balcarce al detallar la situación en territorio bonaerense."
+    },
+    {
+     "dato": "La Ley 26.737, cuya vigencia fue restablecida provisoriamente, establece un límite máximo de titularidad extranjera del 15% sobre las tierras rurales a nivel nacional, provincial y municipal.",
+     "cifra": "15%",
+     "fecha_del_dato": "2011",
+     "fuente_url": "https://www.argentina.gob.ar/justicia/tierrasrurales",
+     "fuente_nombre": "Registro Nacional de Tierras Rurales",
+     "por_que_suma": "Explica el límite legal específico que el DNU 70/2023 intentaba eliminar y que ahora vuelve a estar operativo."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 332,
+    "salida": 557,
+    "costo": 0.0429185
+   }
+  },
+  "n11": {
+   "titulo": "Comenzó el traslado de presos desde la cárcel de Devoto al penal de Marcos Paz",
+   "status": 200,
+   "ms": 3742,
+   "error": null,
+   "datos": [
+    {
+     "dato": "La cárcel de Villa Devoto, que ahora comienza su proceso de desalojo definitivo, fue inaugurada originalmente el 2 de mayo de 1927, por lo que su cierre ocurre a pocos meses de cumplir su centenario.",
+     "cifra": "1927",
+     "fecha_del_dato": "2 de mayo de 1927",
+     "fuente_url": "https://www.lanacion.com.ar/sociedad/el-gobierno-formalizo-el-traslado-de-los-presos-a-marcos-paz-y-avanza-con-el-cierre-de-la-carcel-de-nid08102026/",
+     "fuente_nombre": "La Nación",
+     "por_que_suma": "Aporta una dimensión histórica sobre la antigüedad del establecimiento que se está desalojando."
+    },
+    {
+     "dato": "El nuevo complejo penitenciario en Marcos Paz cuenta con una capacidad total para alojar a 2.232 internos, lo que permitirá trasladar a los 1.500 presos de Devoto y sumar plazas para detenidos en comisarías porteñas.",
+     "cifra": "2.232",
+     "fecha_del_dato": "11 de octubre de 2026",
+     "fuente_url": "https://buenosaires.gob.ar",
+     "fuente_nombre": "Gobierno de la Ciudad de Buenos Aires",
+     "por_que_suma": "Explica la escala del nuevo penal y el destino de las plazas excedentes, dando contexto a la capacidad operativa del traslado."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 406,
+    "salida": 404,
+    "costo": 0.0427075
+   }
+  },
+  "n12": {
+   "titulo": "Lionel Messi brilló con un doblete en la goleada del Inter Miami ante DC United",
+   "status": 200,
+   "ms": 4172,
+   "error": null,
+   "datos": [
+    {
+     "dato": "Con este doblete, Lionel Messi alcanzó los 21 goles en la temporada 2026 de la MLS, consolidándose como el máximo artillero del campeonato.",
+     "cifra": "21",
+     "fecha_del_dato": "10 de octubre de 2026",
+     "fuente_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHCdaj2vUz6b979nFnnxrGmNsx43izjpnixnFherue-rL51_56hbqO-CtR3qMblK9Y_Gn2hfWoLONPXOMY3vEibIYrFZU-6Y1Tl6U7oPyv3LnnxphJpky1eXcW4bNUz8Qhf64eYFp2lcZXmIoosueHz_BOEgmNErACLflwU70=",
+     "fuente_nombre": "365Scores",
+     "por_que_suma": "Aporta relevancia estadística al desempeño individual de Messi en el torneo actual."
+    },
+    {
+     "dato": "La victoria por 4-0 ante DC United permitió al Inter Miami cortar una racha negativa de cinco partidos consecutivos sin triunfos en la liga.",
+     "cifra": "5",
+     "fecha_del_dato": "11 de octubre de 2026",
+     "fuente_url": "https://as.com/futbol/mls/messi-and-suarez-roll-back-the-years-as-inter-miami-thrash-dc-united-v/",
+     "fuente_nombre": "AS USA",
+     "por_que_suma": "Contextualiza la importancia del resultado para el equipo tras un periodo de malos resultados."
+    },
+    {
+     "dato": "El encuentro marcó una de las primeras presentaciones bajo la dirección técnica de Cristian 'Kily' González, quien asumió el cargo oficialmente a mediados de septiembre de 2026.",
+     "cifra": "2026",
+     "fecha_del_dato": "15 de septiembre de 2026",
+     "fuente_url": "https://www.intermiamicf.com/news/inter-miami-cf-names-cristian-kily-gonzalez-as-head-coach",
+     "fuente_nombre": "Inter Miami CF",
+     "por_que_suma": "Refuerza la información sobre el nuevo proceso técnico que atraviesa el equipo."
+    }
+   ],
+   "citadas": [],
+   "uso": {
+    "entrada": 404,
+    "salida": 615,
+    "costo": 0.0430235
+   }
+  }
+ }
+}

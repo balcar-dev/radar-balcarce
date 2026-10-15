@@ -1,0 +1,3984 @@
+{
+ "modelo": "openai/gpt-6-luna-decisions",
+ "muestra": "muestra-200.json",
+ "modo": "decisiones",
+ "fecha": "2026-10-11T02:35:58.145Z",
+ "precios": {
+  "entrada": 1e-7,
+  "salida": 0
+ },
+ "caracteresFijos": 4530,
+ "notas": {
+  "17913857": {
+   "status": 200,
+   "ms": 498,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Agro\",\"probabilities\":{\"Balcarce\":0.07,\"Política\":0.03,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.01,\"Agro\":0.74,\"Tecnología\":0.04,\"Cultura y agenda\":0.01,\"Argentina\":0.09},\"confidence\":0.71},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Agro",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2159,
+    "salida": 0,
+    "costo": 0.0002159
+   },
+   "caracteresDeNota": 429
+  },
+  "23005298": {
+   "status": 200,
+   "ms": 445,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Balcarce\",\"probabilities\":{\"Balcarce\":1,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0.95}}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.95,
+   "uso": {
+    "entrada": 2204,
+    "salida": 0,
+    "costo": 0.0002204
+   },
+   "caracteresDeNota": 674
+  },
+  "23061629": {
+   "status": 200,
+   "ms": 434,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Automovilismo\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":1,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2222,
+    "salida": 0,
+    "costo": 0.0002222
+   },
+   "caracteresDeNota": 710
+  },
+  "87983847": {
+   "status": 200,
+   "ms": 815,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":0.99,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.01,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.03,\"bajo\":0.43,\"ninguno\":0.53},\"confidence\":0.37},\"publicar\":{\"type\":\"noul\",\"noul\":0.24}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.24,
+   "uso": {
+    "entrada": 2199,
+    "salida": 0,
+    "costo": 0.0002199
+   },
+   "caracteresDeNota": 677
+  },
+  "4e3102c8": {
+   "status": 200,
+   "ms": 503,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.03,\"Política\":0.01,\"Policiales\":0.01,\"Fútbol\":0.01,\"Deportes\":0.01,\"Automovilismo\":0.01,\"Economía\":0.01,\"Agro\":0.01,\"Tecnología\":0.01,\"Cultura y agenda\":0.07,\"Argentina\":0.82},\"confidence\":0.8},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2218,
+    "salida": 0,
+    "costo": 0.0002218
+   },
+   "caracteresDeNota": 647
+  },
+  "e9a203d5": {
+   "status": 200,
+   "ms": 1260,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.03,\"Política\":0.01,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0.01,\"Automovilismo\":0,\"Economía\":0.01,\"Agro\":0,\"Tecnología\":0.01,\"Cultura y agenda\":0.04,\"Argentina\":0.88},\"confidence\":0.87},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2235,
+    "salida": 0,
+    "costo": 0.0002235
+   },
+   "caracteresDeNota": 638
+  },
+  "28433d33": {
+   "status": 200,
+   "ms": 550,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.03,\"Política\":0.01,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.01,\"Agro\":0.01,\"Tecnología\":0.01,\"Cultura y agenda\":0.23,\"Argentina\":0.69},\"confidence\":0.66},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2135,
+    "salida": 0,
+    "costo": 0.0002135
+   },
+   "caracteresDeNota": 291
+  },
+  "fc039c04": {
+   "status": 502,
+   "ms": 443,
+   "error": "OpenAI refused to answer question \"seccion\"",
+   "crudo": "{}",
+   "respuesta": null,
+   "noul": null,
+   "uso": null,
+   "caracteresDeNota": 641
+  },
+  "45db1708": {
+   "status": 200,
+   "ms": 504,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.09,\"Política\":0.01,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0.01,\"Automovilismo\":0,\"Economía\":0.03,\"Agro\":0,\"Tecnología\":0.01,\"Cultura y agenda\":0.01,\"Argentina\":0.83},\"confidence\":0.81},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2216,
+    "salida": 0,
+    "costo": 0.0002216
+   },
+   "caracteresDeNota": 651
+  },
+  "3f85efd2": {
+   "status": 200,
+   "ms": 436,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.02,\"Política\":0.01,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.02,\"Agro\":0.01,\"Tecnología\":0.01,\"Cultura y agenda\":0.01,\"Argentina\":0.91},\"confidence\":0.9},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2202,
+    "salida": 0,
+    "costo": 0.0002202
+   },
+   "caracteresDeNota": 658
+  },
+  "4add9be4": {
+   "status": 200,
+   "ms": 455,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.14,\"Política\":0.03,\"Policiales\":0.02,\"Fútbol\":0.01,\"Deportes\":0.02,\"Automovilismo\":0.01,\"Economía\":0.04,\"Agro\":0.02,\"Tecnología\":0.01,\"Cultura y agenda\":0.01,\"Argentina\":0.69},\"confidence\":0.66},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2216,
+    "salida": 0,
+    "costo": 0.0002216
+   },
+   "caracteresDeNota": 650
+  },
+  "865ffc23": {
+   "status": 200,
+   "ms": 481,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.02,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.03,\"Agro\":0,\"Tecnología\":0.01,\"Cultura y agenda\":0.01,\"Argentina\":0.93},\"confidence\":0.92},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2221,
+    "salida": 0,
+    "costo": 0.0002221
+   },
+   "caracteresDeNota": 652
+  },
+  "086fd4f8": {
+   "status": 200,
+   "ms": 516,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0.99,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0.02,\"medio\":0.69,\"bajo\":0.24,\"ninguno\":0.05},\"confidence\":0.59},\"publicar\":{\"type\":\"noul\",\"noul\":0.25}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "medio",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.25,
+   "uso": {
+    "entrada": 2216,
+    "salida": 0,
+    "costo": 0.0002216
+   },
+   "caracteresDeNota": 698
+  },
+  "5e4c7ce0": {
+   "status": 200,
+   "ms": 474,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.03,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.97},\"confidence\":0.97},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0.46,\"ninguno\":0.54},\"confidence\":0.39},\"publicar\":{\"type\":\"noul\",\"noul\":0.32}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.32,
+   "uso": {
+    "entrada": 2150,
+    "salida": 0,
+    "costo": 0.000215
+   },
+   "caracteresDeNota": 386
+  },
+  "41e2a899": {
+   "status": 200,
+   "ms": 544,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0.15,\"Policiales\":0.54,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.3},\"confidence\":0.49},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0.01,\"ninguno\":0.98},\"confidence\":0.97},\"publicar\":{\"type\":\"noul\",\"noul\":0.01}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.01,
+   "uso": {
+    "entrada": 2143,
+    "salida": 0,
+    "costo": 0.0002143
+   },
+   "caracteresDeNota": 374
+  },
+  "7cc120eb": {
+   "status": 200,
+   "ms": 511,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Economía\",\"probabilities\":{\"Balcarce\":0,\"Política\":0.45,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.54,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.49},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"bajo\",\"probabilities\":{\"alto\":0.01,\"medio\":0.02,\"bajo\":0.62,\"ninguno\":0.35},\"confidence\":0.49},\"publicar\":{\"type\":\"noul\",\"noul\":0.44}}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.44,
+   "uso": {
+    "entrada": 2127,
+    "salida": 0,
+    "costo": 0.0002127
+   },
+   "caracteresDeNota": 299
+  },
+  "9b3b7ca6": {
+   "status": 200,
+   "ms": 501,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0.97,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.03},\"confidence\":0.97},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2219,
+    "salida": 0,
+    "costo": 0.0002219
+   },
+   "caracteresDeNota": 651
+  },
+  "8bf40aa5": {
+   "status": 200,
+   "ms": 497,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0.98,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.02},\"confidence\":0.98},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2180,
+    "salida": 0,
+    "costo": 0.000218
+   },
+   "caracteresDeNota": 686
+  },
+  "c1c17c9d": {
+   "status": 200,
+   "ms": 459,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0.99,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2200,
+    "salida": 0,
+    "costo": 0.00022
+   },
+   "caracteresDeNota": 662
+  },
+  "e85deda2": {
+   "status": 200,
+   "ms": 476,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.87,\"Argentina\":0.11},\"confidence\":0.86},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2155,
+    "salida": 0,
+    "costo": 0.0002155
+   },
+   "caracteresDeNota": 456
+  },
+  "fde3d7d8": {
+   "status": 200,
+   "ms": 493,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Economía\",\"probabilities\":{\"Balcarce\":0,\"Política\":0.04,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.94,\"Agro\":0.02,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.93},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0.01,\"medio\":0.8,\"bajo\":0.02,\"ninguno\":0.17},\"confidence\":0.73},\"publicar\":{\"type\":\"noul\",\"noul\":0.1}}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "medio",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.1,
+   "uso": {
+    "entrada": 2220,
+    "salida": 0,
+    "costo": 0.000222
+   },
+   "caracteresDeNota": 687
+  },
+  "f02a3d44": {
+   "status": 200,
+   "ms": 450,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0.01,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.03,\"Argentina\":0.95},\"confidence\":0.95},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2140,
+    "salida": 0,
+    "costo": 0.000214
+   },
+   "caracteresDeNota": 391
+  },
+  "58ee685c": {
+   "status": 200,
+   "ms": 490,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":1,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.23,\"bajo\":0.01,\"ninguno\":0.76},\"confidence\":0.68},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2113,
+    "salida": 0,
+    "costo": 0.0002113
+   },
+   "caracteresDeNota": 263
+  },
+  "7628d8f9": {
+   "status": 200,
+   "ms": 489,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Economía\",\"probabilities\":{\"Balcarce\":0,\"Política\":0.23,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.76,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.74},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.12,\"bajo\":0.04,\"ninguno\":0.84},\"confidence\":0.79},\"publicar\":{\"type\":\"noul\",\"noul\":0.24}}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.24,
+   "uso": {
+    "entrada": 2204,
+    "salida": 0,
+    "costo": 0.0002204
+   },
+   "caracteresDeNota": 697
+  },
+  "0305adf0": {
+   "status": 200,
+   "ms": 477,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":1,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0.09,\"medio\":0.9,\"bajo\":0.01,\"ninguno\":0},\"confidence\":0.87},\"publicar\":{\"type\":\"noul\",\"noul\":0.92}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.92,
+   "uso": {
+    "entrada": 2230,
+    "salida": 0,
+    "costo": 0.000223
+   },
+   "caracteresDeNota": 655
+  },
+  "2d82c63c": {
+   "status": 200,
+   "ms": 464,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Balcarce\",\"probabilities\":{\"Balcarce\":0.46,\"Política\":0.07,\"Policiales\":0.01,\"Fútbol\":0.34,\"Deportes\":0.12,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.41},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":0.98,\"medio\":0.01,\"bajo\":0,\"ninguno\":0.01},\"confidence\":0.97},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2126,
+    "salida": 0,
+    "costo": 0.0002126
+   },
+   "caracteresDeNota": 317
+  },
+  "445a709e": {
+   "status": 200,
+   "ms": 525,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Balcarce\",\"probabilities\":{\"Balcarce\":0.93,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0.01,\"Tecnología\":0.03,\"Cultura y agenda\":0.01,\"Argentina\":0.02},\"confidence\":0.92},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":0.87,\"medio\":0.02,\"bajo\":0.01,\"ninguno\":0.1},\"confidence\":0.83},\"publicar\":{\"type\":\"noul\",\"noul\":0.93}}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.93,
+   "uso": {
+    "entrada": 2136,
+    "salida": 0,
+    "costo": 0.0002136
+   },
+   "caracteresDeNota": 342
+  },
+  "dc4a69f3": {
+   "status": 200,
+   "ms": 449,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":1,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.3,\"bajo\":0.01,\"ninguno\":0.68},\"confidence\":0.57},\"publicar\":{\"type\":\"noul\",\"noul\":0.54}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "ninguno",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.54,
+   "uso": {
+    "entrada": 2164,
+    "salida": 0,
+    "costo": 0.0002164
+   },
+   "caracteresDeNota": 410
+  },
+  "06b555c6": {
+   "status": 200,
+   "ms": 447,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":1,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2203,
+    "salida": 0,
+    "costo": 0.0002203
+   },
+   "caracteresDeNota": 634
+  },
+  "d00b6002": {
+   "status": 200,
+   "ms": 512,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0.99}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.99,
+   "uso": {
+    "entrada": 2214,
+    "salida": 0,
+    "costo": 0.0002214
+   },
+   "caracteresDeNota": 648
+  },
+  "2efd3d13": {
+   "status": 200,
+   "ms": 473,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Balcarce\",\"probabilities\":{\"Balcarce\":0.95,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.05,\"Argentina\":0},\"confidence\":0.95},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0.99}}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.99,
+   "uso": {
+    "entrada": 2218,
+    "salida": 0,
+    "costo": 0.0002218
+   },
+   "caracteresDeNota": 656
+  },
+  "6e45a05f": {
+   "status": 200,
+   "ms": 515,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0.11,\"Política\":0,\"Policiales\":0.89,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.88},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":0.99,\"medio\":0,\"bajo\":0,\"ninguno\":0.01},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0.99}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.99,
+   "uso": {
+    "entrada": 2191,
+    "salida": 0,
+    "costo": 0.0002191
+   },
+   "caracteresDeNota": 602
+  },
+  "badcdcaa": {
+   "status": 200,
+   "ms": 421,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":1,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.14,\"bajo\":0.03,\"ninguno\":0.82},\"confidence\":0.76},\"publicar\":{\"type\":\"noul\",\"noul\":0.04}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.04,
+   "uso": {
+    "entrada": 2211,
+    "salida": 0,
+    "costo": 0.0002211
+   },
+   "caracteresDeNota": 661
+  },
+  "e672d900": {
+   "status": 200,
+   "ms": 488,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0.98,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.98},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.14,\"bajo\":0.01,\"ninguno\":0.84},\"confidence\":0.79},\"publicar\":{\"type\":\"noul\",\"noul\":0.02}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.02,
+   "uso": {
+    "entrada": 2227,
+    "salida": 0,
+    "costo": 0.0002227
+   },
+   "caracteresDeNota": 651
+  },
+  "9c7ee7d5": {
+   "status": 200,
+   "ms": 431,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0.19,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.8,\"Argentina\":0.01},\"confidence\":0.78},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2215,
+    "salida": 0,
+    "costo": 0.0002215
+   },
+   "caracteresDeNota": 670
+  },
+  "b7944266": {
+   "status": 200,
+   "ms": 506,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Agro\",\"probabilities\":{\"Balcarce\":0.17,\"Política\":0.02,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.01,\"Agro\":0.54,\"Tecnología\":0.08,\"Cultura y agenda\":0.16,\"Argentina\":0.02},\"confidence\":0.49},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Agro",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2215,
+    "salida": 0,
+    "costo": 0.0002215
+   },
+   "caracteresDeNota": 689
+  },
+  "fe15d0cd": {
+   "status": 200,
+   "ms": 533,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":1,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2154,
+    "salida": 0,
+    "costo": 0.0002154
+   },
+   "caracteresDeNota": 398
+  },
+  "09b24c5f": {
+   "status": 200,
+   "ms": 485,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":1,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"bajo\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0.51,\"ninguno\":0.48},\"confidence\":0.35},\"publicar\":{\"type\":\"noul\",\"noul\":0.33}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.33,
+   "uso": {
+    "entrada": 2197,
+    "salida": 0,
+    "costo": 0.0002197
+   },
+   "caracteresDeNota": 664
+  },
+  "c959337d": {
+   "status": 200,
+   "ms": 472,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0.13,\"Política\":0.87,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.86},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2195,
+    "salida": 0,
+    "costo": 0.0002195
+   },
+   "caracteresDeNota": 670
+  },
+  "9cafb800": {
+   "status": 200,
+   "ms": 517,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Economía\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0.1,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.83,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.01,\"Argentina\":0.04},\"confidence\":0.81},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"bajo\",\"probabilities\":{\"alto\":0.01,\"medio\":0.01,\"bajo\":0.66,\"ninguno\":0.32},\"confidence\":0.55},\"publicar\":{\"type\":\"noul\",\"noul\":0.6}}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "bajo",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.6,
+   "uso": {
+    "entrada": 2221,
+    "salida": 0,
+    "costo": 0.0002221
+   },
+   "caracteresDeNota": 677
+  },
+  "86c9586c": {
+   "status": 200,
+   "ms": 481,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":1,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2232,
+    "salida": 0,
+    "costo": 0.0002232
+   },
+   "caracteresDeNota": 681
+  },
+  "c4d8689d": {
+   "status": 200,
+   "ms": 494,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0.02,\"Política\":0.88,\"Policiales\":0.07,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.01,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.02},\"confidence\":0.87},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0,\"ninguno\":0.99},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0.03}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.03,
+   "uso": {
+    "entrada": 2211,
+    "salida": 0,
+    "costo": 0.0002211
+   },
+   "caracteresDeNota": 691
+  },
+  "eb7c6026": {
+   "status": 200,
+   "ms": 492,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0.06,\"Política\":0,\"Policiales\":0.94,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.93},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":0.91,\"medio\":0.01,\"bajo\":0.01,\"ninguno\":0.07},\"confidence\":0.88},\"publicar\":{\"type\":\"noul\",\"noul\":0.98}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.98,
+   "uso": {
+    "entrada": 2203,
+    "salida": 0,
+    "costo": 0.0002203
+   },
+   "caracteresDeNota": 673
+  },
+  "04f90bd3": {
+   "status": 200,
+   "ms": 480,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0.18,\"Política\":0.82,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.8},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2211,
+    "salida": 0,
+    "costo": 0.0002211
+   },
+   "caracteresDeNota": 680
+  },
+  "7ffe24a0": {
+   "status": 200,
+   "ms": 443,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0.03,\"Política\":0.95,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.02,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.95},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2225,
+    "salida": 0,
+    "costo": 0.0002225
+   },
+   "caracteresDeNota": 749
+  },
+  "6d915039": {
+   "status": 200,
+   "ms": 469,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":1,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2209,
+    "salida": 0,
+    "costo": 0.0002209
+   },
+   "caracteresDeNota": 679
+  },
+  "468977a2": {
+   "status": 200,
+   "ms": 485,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0.99,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0.02}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.02,
+   "uso": {
+    "entrada": 2205,
+    "salida": 0,
+    "costo": 0.0002205
+   },
+   "caracteresDeNota": 672
+  },
+  "b53b25e7": {
+   "status": 200,
+   "ms": 490,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":1,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2150,
+    "salida": 0,
+    "costo": 0.000215
+   },
+   "caracteresDeNota": 424
+  },
+  "0881153a": {
+   "status": 200,
+   "ms": 446,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0.05,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.95,\"Argentina\":0},\"confidence\":0.95},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2205,
+    "salida": 0,
+    "costo": 0.0002205
+   },
+   "caracteresDeNota": 635
+  },
+  "9cb29a54": {
+   "status": 200,
+   "ms": 486,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":0.99,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"bajo\",\"probabilities\":{\"alto\":0,\"medio\":0.02,\"bajo\":0.5,\"ninguno\":0.48},\"confidence\":0.33},\"publicar\":{\"type\":\"noul\",\"noul\":0.52}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.52,
+   "uso": {
+    "entrada": 2218,
+    "salida": 0,
+    "costo": 0.0002218
+   },
+   "caracteresDeNota": 720
+  },
+  "c9127ae7": {
+   "status": 200,
+   "ms": 438,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":1,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":0.86,\"medio\":0.14,\"bajo\":0,\"ninguno\":0},\"confidence\":0.81},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2144,
+    "salida": 0,
+    "costo": 0.0002144
+   },
+   "caracteresDeNota": 323
+  },
+  "e008016c": {
+   "status": 200,
+   "ms": 493,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0.19,\"Política\":0.81,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.79},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0.97}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.97,
+   "uso": {
+    "entrada": 2140,
+    "salida": 0,
+    "costo": 0.000214
+   },
+   "caracteresDeNota": 379
+  },
+  "c525d0da": {
+   "status": 200,
+   "ms": 484,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":1,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0.03,\"medio\":0.9,\"bajo\":0.01,\"ninguno\":0.06},\"confidence\":0.87},\"publicar\":{\"type\":\"noul\",\"noul\":0.92}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.92,
+   "uso": {
+    "entrada": 2216,
+    "salida": 0,
+    "costo": 0.0002216
+   },
+   "caracteresDeNota": 660
+  },
+  "869434ae": {
+   "status": 200,
+   "ms": 475,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Balcarce\",\"probabilities\":{\"Balcarce\":0.79,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0.08,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0.03,\"Cultura y agenda\":0.1,\"Argentina\":0},\"confidence\":0.77},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0.93}}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.93,
+   "uso": {
+    "entrada": 2210,
+    "salida": 0,
+    "costo": 0.000221
+   },
+   "caracteresDeNota": 647
+  },
+  "f750ed8f": {
+   "status": 200,
+   "ms": 434,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0.1,\"Política\":0.9,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.89},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.17,\"medio\":0.37,\"bajo\":0.04,\"ninguno\":0.42},\"confidence\":0.23},\"publicar\":{\"type\":\"noul\",\"noul\":0.49}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.49,
+   "uso": {
+    "entrada": 2206,
+    "salida": 0,
+    "costo": 0.0002206
+   },
+   "caracteresDeNota": 694
+  },
+  "cba67395": {
+   "status": 200,
+   "ms": 449,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Automovilismo\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":1,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2188,
+    "salida": 0,
+    "costo": 0.0002188
+   },
+   "caracteresDeNota": 504
+  },
+  "b8789b8c": {
+   "status": 200,
+   "ms": 515,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Balcarce\",\"probabilities\":{\"Balcarce\":0.98,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.02,\"Argentina\":0},\"confidence\":0.98},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0.99}}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.99,
+   "uso": {
+    "entrada": 2203,
+    "salida": 0,
+    "costo": 0.0002203
+   },
+   "caracteresDeNota": 631
+  },
+  "ae8224af": {
+   "status": 200,
+   "ms": 648,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Balcarce\",\"probabilities\":{\"Balcarce\":1,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0.99}}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.99,
+   "uso": {
+    "entrada": 2198,
+    "salida": 0,
+    "costo": 0.0002198
+   },
+   "caracteresDeNota": 632
+  },
+  "af8b50f2": {
+   "status": 200,
+   "ms": 507,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":1,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"bajo\",\"probabilities\":{\"alto\":0.03,\"medio\":0.04,\"bajo\":0.92,\"ninguno\":0.01},\"confidence\":0.89},\"publicar\":{\"type\":\"noul\",\"noul\":0.86}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.86,
+   "uso": {
+    "entrada": 2193,
+    "salida": 0,
+    "costo": 0.0002193
+   },
+   "caracteresDeNota": 679
+  },
+  "fcda99ba": {
+   "status": 200,
+   "ms": 435,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":1,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2209,
+    "salida": 0,
+    "costo": 0.0002209
+   },
+   "caracteresDeNota": 660
+  },
+  "487be459": {
+   "status": 200,
+   "ms": 495,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":1,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2203,
+    "salida": 0,
+    "costo": 0.0002203
+   },
+   "caracteresDeNota": 644
+  },
+  "9529a470": {
+   "status": 200,
+   "ms": 490,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Balcarce\",\"probabilities\":{\"Balcarce\":0.49,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0.07,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0.1,\"Cultura y agenda\":0.33,\"Argentina\":0.01},\"confidence\":0.44},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0.94}}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.94,
+   "uso": {
+    "entrada": 2193,
+    "salida": 0,
+    "costo": 0.0002193
+   },
+   "caracteresDeNota": 645
+  },
+  "2e0992e9": {
+   "status": 200,
+   "ms": 521,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.26,\"Política\":0.01,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.73},\"confidence\":0.7},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.01,\"bajo\":0.05,\"ninguno\":0.93},\"confidence\":0.91},\"publicar\":{\"type\":\"noul\",\"noul\":0.02}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.02,
+   "uso": {
+    "entrada": 2194,
+    "salida": 0,
+    "costo": 0.0002194
+   },
+   "caracteresDeNota": 646
+  },
+  "a7da5534": {
+   "status": 200,
+   "ms": 530,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":1,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":0.99,\"medio\":0.01,\"bajo\":0,\"ninguno\":0},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2200,
+    "salida": 0,
+    "costo": 0.00022
+   },
+   "caracteresDeNota": 617
+  },
+  "b63ea7b3": {
+   "status": 200,
+   "ms": 473,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2207,
+    "salida": 0,
+    "costo": 0.0002207
+   },
+   "caracteresDeNota": 647
+  },
+  "f8287775": {
+   "status": 200,
+   "ms": 457,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2210,
+    "salida": 0,
+    "costo": 0.000221
+   },
+   "caracteresDeNota": 645
+  },
+  "78bdbac0": {
+   "status": 200,
+   "ms": 443,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0.2,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.79,\"Argentina\":0.01},\"confidence\":0.77},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2195,
+    "salida": 0,
+    "costo": 0.0002195
+   },
+   "caracteresDeNota": 646
+  },
+  "ab40d562": {
+   "status": 200,
+   "ms": 422,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0.04,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.95,\"Argentina\":0.01},\"confidence\":0.95},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":0.58,\"medio\":0.03,\"bajo\":0.02,\"ninguno\":0.37},\"confidence\":0.44},\"publicar\":{\"type\":\"noul\",\"noul\":0.84}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.84,
+   "uso": {
+    "entrada": 2204,
+    "salida": 0,
+    "costo": 0.0002204
+   },
+   "caracteresDeNota": 633
+  },
+  "f594dfcc": {
+   "status": 200,
+   "ms": 484,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0.25,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.75,\"Argentina\":0},\"confidence\":0.73},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2195,
+    "salida": 0,
+    "costo": 0.0002195
+   },
+   "caracteresDeNota": 638
+  },
+  "12843f44": {
+   "status": 200,
+   "ms": 510,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":1,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2154,
+    "salida": 0,
+    "costo": 0.0002154
+   },
+   "caracteresDeNota": 383
+  },
+  "e86c0362": {
+   "status": 200,
+   "ms": 477,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Agro\",\"probabilities\":{\"Balcarce\":0.25,\"Política\":0.01,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0.31,\"Tecnología\":0.28,\"Cultura y agenda\":0.08,\"Argentina\":0.07},\"confidence\":0.24},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":1,\"medio\":0,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":1}}",
+   "respuesta": {
+    "seccion": "Agro",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 1,
+   "uso": {
+    "entrada": 2214,
+    "salida": 0,
+    "costo": 0.0002214
+   },
+   "caracteresDeNota": 705
+  },
+  "07c9acef": {
+   "status": 200,
+   "ms": 490,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Economía\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.99,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.07,\"bajo\":0.11,\"ninguno\":0.82},\"confidence\":0.76},\"publicar\":{\"type\":\"noul\",\"noul\":0.19}}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.19,
+   "uso": {
+    "entrada": 2188,
+    "salida": 0,
+    "costo": 0.0002188
+   },
+   "caracteresDeNota": 649
+  },
+  "74cd1da1": {
+   "status": 200,
+   "ms": 468,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.09,\"Política\":0.01,\"Policiales\":0.13,\"Fútbol\":0.01,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.76},\"confidence\":0.74},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.02,\"bajo\":0,\"ninguno\":0.98},\"confidence\":0.97},\"publicar\":{\"type\":\"noul\",\"noul\":0.01}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.01,
+   "uso": {
+    "entrada": 2219,
+    "salida": 0,
+    "costo": 0.0002219
+   },
+   "caracteresDeNota": 704
+  },
+  "f46b776b": {
+   "status": 200,
+   "ms": 513,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2237,
+    "salida": 0,
+    "costo": 0.0002237
+   },
+   "caracteresDeNota": 697
+  },
+  "4baa3fef": {
+   "status": 200,
+   "ms": 470,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.04,\"Política\":0.16,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.8},\"confidence\":0.78},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":0.93,\"medio\":0.03,\"bajo\":0.02,\"ninguno\":0.02},\"confidence\":0.91},\"publicar\":{\"type\":\"noul\",\"noul\":0.93}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.93,
+   "uso": {
+    "entrada": 2205,
+    "salida": 0,
+    "costo": 0.0002205
+   },
+   "caracteresDeNota": 675
+  },
+  "f1216625": {
+   "status": 200,
+   "ms": 498,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Tecnología\",\"probabilities\":{\"Balcarce\":0,\"Política\":0.31,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0.69,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.66},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.02,\"medio\":0.05,\"bajo\":0.41,\"ninguno\":0.52},\"confidence\":0.36},\"publicar\":{\"type\":\"noul\",\"noul\":0.64}}",
+   "respuesta": {
+    "seccion": "Tecnología",
+    "interes": "ninguno",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.64,
+   "uso": {
+    "entrada": 2177,
+    "salida": 0,
+    "costo": 0.0002177
+   },
+   "caracteresDeNota": 666
+  },
+  "fd46507d": {
+   "status": 200,
+   "ms": 510,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Automovilismo\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0.03,\"Deportes\":0.01,\"Automovilismo\":0.95,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.95},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.46,\"bajo\":0.01,\"ninguno\":0.53},\"confidence\":0.37},\"publicar\":{\"type\":\"noul\",\"noul\":0.04}}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.04,
+   "uso": {
+    "entrada": 2217,
+    "salida": 0,
+    "costo": 0.0002217
+   },
+   "caracteresDeNota": 661
+  },
+  "1a86e518": {
+   "status": 200,
+   "ms": 499,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.41,\"bajo\":0.03,\"ninguno\":0.56},\"confidence\":0.41},\"publicar\":{\"type\":\"noul\",\"noul\":0.76}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.76,
+   "uso": {
+    "entrada": 2216,
+    "salida": 0,
+    "costo": 0.0002216
+   },
+   "caracteresDeNota": 656
+  },
+  "66e8ca2f": {
+   "status": 200,
+   "ms": 483,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0.02,\"Política\":0.98,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.98},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2186,
+    "salida": 0,
+    "costo": 0.0002186
+   },
+   "caracteresDeNota": 644
+  },
+  "8d04795c": {
+   "status": 200,
+   "ms": 503,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":1,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2206,
+    "salida": 0,
+    "costo": 0.0002206
+   },
+   "caracteresDeNota": 639
+  },
+  "50d1324c": {
+   "status": 200,
+   "ms": 487,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.99,\"Argentina\":0.01},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0,\"ninguno\":0.99},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2191,
+    "salida": 0,
+    "costo": 0.0002191
+   },
+   "caracteresDeNota": 672
+  },
+  "cf63c349": {
+   "status": 200,
+   "ms": 492,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0.96,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.03},\"confidence\":0.96},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0.01}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.01,
+   "uso": {
+    "entrada": 2199,
+    "salida": 0,
+    "costo": 0.0002199
+   },
+   "caracteresDeNota": 660
+  },
+  "776f8cb3": {
+   "status": 200,
+   "ms": 516,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0.99,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2212,
+    "salida": 0,
+    "costo": 0.0002212
+   },
+   "caracteresDeNota": 658
+  },
+  "fef6dbba": {
+   "status": 200,
+   "ms": 500,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.99,\"Argentina\":0.01},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.02,\"bajo\":0,\"ninguno\":0.98},\"confidence\":0.97},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2204,
+    "salida": 0,
+    "costo": 0.0002204
+   },
+   "caracteresDeNota": 653
+  },
+  "9d945ce9": {
+   "status": 200,
+   "ms": 480,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0.3,\"Política\":0.66,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.01,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.02},\"confidence\":0.63},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2200,
+    "salida": 0,
+    "costo": 0.00022
+   },
+   "caracteresDeNota": 674
+  },
+  "305c2e7f": {
+   "status": 200,
+   "ms": 623,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Balcarce\",\"probabilities\":{\"Balcarce\":0.52,\"Política\":0.01,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.01,\"Argentina\":0.46},\"confidence\":0.47},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2193,
+    "salida": 0,
+    "costo": 0.0002193
+   },
+   "caracteresDeNota": 612
+  },
+  "92dcddbb": {
+   "status": 200,
+   "ms": 522,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0.05,\"Policiales\":0.82,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.01,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.11},\"confidence\":0.8},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2164,
+    "salida": 0,
+    "costo": 0.0002164
+   },
+   "caracteresDeNota": 456
+  },
+  "de8aacd9": {
+   "status": 200,
+   "ms": 487,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.98,\"Argentina\":0.02},\"confidence\":0.98},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2210,
+    "salida": 0,
+    "costo": 0.000221
+   },
+   "caracteresDeNota": 645
+  },
+  "276dcf9f": {
+   "status": 200,
+   "ms": 470,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":1,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":0.99,\"medio\":0.01,\"bajo\":0,\"ninguno\":0},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0.99}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.99,
+   "uso": {
+    "entrada": 2207,
+    "salida": 0,
+    "costo": 0.0002207
+   },
+   "caracteresDeNota": 668
+  },
+  "7c95c3a7": {
+   "status": 200,
+   "ms": 486,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0,\"Política\":0.02,\"Policiales\":0.93,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.05},\"confidence\":0.92},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2224,
+    "salida": 0,
+    "costo": 0.0002224
+   },
+   "caracteresDeNota": 750
+  },
+  "f950ffca": {
+   "status": 200,
+   "ms": 504,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.94,\"Argentina\":0.05},\"confidence\":0.93},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2194,
+    "salida": 0,
+    "costo": 0.0002194
+   },
+   "caracteresDeNota": 702
+  },
+  "d863d6d9": {
+   "status": 200,
+   "ms": 1078,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.02,\"Política\":0.19,\"Policiales\":0.05,\"Fútbol\":0.01,\"Deportes\":0,\"Automovilismo\":0.01,\"Economía\":0.24,\"Agro\":0.01,\"Tecnología\":0.01,\"Cultura y agenda\":0.02,\"Argentina\":0.44},\"confidence\":0.38},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2202,
+    "salida": 0,
+    "costo": 0.0002202
+   },
+   "caracteresDeNota": 659
+  },
+  "ed253dd3": {
+   "status": 200,
+   "ms": 440,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0.01,\"Policiales\":0.92,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.06},\"confidence\":0.91},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2211,
+    "salida": 0,
+    "costo": 0.0002211
+   },
+   "caracteresDeNota": 670
+  },
+  "984a04cb": {
+   "status": 200,
+   "ms": 514,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.27,\"Política\":0.01,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.01,\"Agro\":0,\"Tecnología\":0.01,\"Cultura y agenda\":0.3,\"Argentina\":0.39},\"confidence\":0.33},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2223,
+    "salida": 0,
+    "costo": 0.0002223
+   },
+   "caracteresDeNota": 676
+  },
+  "1c81ee8c": {
+   "status": 200,
+   "ms": 503,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0.08,\"Política\":0.88,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.02,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.02},\"confidence\":0.87},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0,\"ninguno\":0.99},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2216,
+    "salida": 0,
+    "costo": 0.0002216
+   },
+   "caracteresDeNota": 719
+  },
+  "84d79fae": {
+   "status": 200,
+   "ms": 501,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0.92,\"Deportes\":0.04,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.03},\"confidence\":0.91},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0,\"ninguno\":0.99},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2207,
+    "salida": 0,
+    "costo": 0.0002207
+   },
+   "caracteresDeNota": 660
+  },
+  "721fb499": {
+   "status": 200,
+   "ms": 478,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0.01,\"Fútbol\":0.99,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2232,
+    "salida": 0,
+    "costo": 0.0002232
+   },
+   "caracteresDeNota": 697
+  },
+  "5490af71": {
+   "status": 200,
+   "ms": 476,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Economía\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.98,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.98},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.02,\"bajo\":0.01,\"ninguno\":0.97},\"confidence\":0.96},\"publicar\":{\"type\":\"noul\",\"noul\":0.07}}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.07,
+   "uso": {
+    "entrada": 2198,
+    "salida": 0,
+    "costo": 0.0002198
+   },
+   "caracteresDeNota": 673
+  },
+  "370f00de": {
+   "status": 200,
+   "ms": 432,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0.04,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.64,\"Argentina\":0.32},\"confidence\":0.6},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0,\"ninguno\":0.99},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2202,
+    "salida": 0,
+    "costo": 0.0002202
+   },
+   "caracteresDeNota": 665
+  },
+  "7219d7b9": {
+   "status": 200,
+   "ms": 467,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":0.94,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.06},\"confidence\":0.93},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2117,
+    "salida": 0,
+    "costo": 0.0002117
+   },
+   "caracteresDeNota": 307
+  },
+  "b3423073": {
+   "status": 200,
+   "ms": 515,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":1,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0.01,\"ninguno\":0.98},\"confidence\":0.97},\"publicar\":{\"type\":\"noul\",\"noul\":0.01}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.01,
+   "uso": {
+    "entrada": 2213,
+    "salida": 0,
+    "costo": 0.0002213
+   },
+   "caracteresDeNota": 701
+  },
+  "47e2f261": {
+   "status": 200,
+   "ms": 478,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.99,\"Argentina\":0.01},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2113,
+    "salida": 0,
+    "costo": 0.0002113
+   },
+   "caracteresDeNota": 260
+  },
+  "b1fbeb30": {
+   "status": 200,
+   "ms": 521,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Balcarce\",\"probabilities\":{\"Balcarce\":0.75,\"Política\":0.01,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.13,\"Agro\":0,\"Tecnología\":0.01,\"Cultura y agenda\":0,\"Argentina\":0.09},\"confidence\":0.73},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Balcarce",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2199,
+    "salida": 0,
+    "costo": 0.0002199
+   },
+   "caracteresDeNota": 647
+  },
+  "1649463d": {
+   "status": 200,
+   "ms": 497,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Automovilismo\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":1,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0,\"medio\":1,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0.99}}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.99,
+   "uso": {
+    "entrada": 2244,
+    "salida": 0,
+    "costo": 0.0002244
+   },
+   "caracteresDeNota": 648
+  },
+  "5340a7f4": {
+   "status": 200,
+   "ms": 1559,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Economía\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0.3,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.66,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.03},\"confidence\":0.63},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.03,\"bajo\":0.05,\"ninguno\":0.91},\"confidence\":0.88},\"publicar\":{\"type\":\"noul\",\"noul\":0.09}}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.09,
+   "uso": {
+    "entrada": 2126,
+    "salida": 0,
+    "costo": 0.0002126
+   },
+   "caracteresDeNota": 306
+  },
+  "6863ea83": {
+   "status": 200,
+   "ms": 475,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0.26,\"Política\":0.65,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.04,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.04},\"confidence\":0.62},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.01,\"bajo\":0,\"ninguno\":0.98},\"confidence\":0.97},\"publicar\":{\"type\":\"noul\",\"noul\":0.01}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.01,
+   "uso": {
+    "entrada": 2142,
+    "salida": 0,
+    "costo": 0.0002142
+   },
+   "caracteresDeNota": 326
+  },
+  "50cb323c": {
+   "status": 200,
+   "ms": 470,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0.96,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.02,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.96},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.02,\"medio\":0.14,\"bajo\":0.16,\"ninguno\":0.68},\"confidence\":0.57},\"publicar\":{\"type\":\"noul\",\"noul\":0.09}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.09,
+   "uso": {
+    "entrada": 2127,
+    "salida": 0,
+    "costo": 0.0002127
+   },
+   "caracteresDeNota": 276
+  },
+  "0399957f": {
+   "status": 200,
+   "ms": 478,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Economía\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":1,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.05,\"bajo\":0.08,\"ninguno\":0.87},\"confidence\":0.83},\"publicar\":{\"type\":\"noul\",\"noul\":0.02}}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.02,
+   "uso": {
+    "entrada": 2218,
+    "salida": 0,
+    "costo": 0.0002218
+   },
+   "caracteresDeNota": 647
+  },
+  "4f346a3b": {
+   "status": 200,
+   "ms": 1167,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":1,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2221,
+    "salida": 0,
+    "costo": 0.0002221
+   },
+   "caracteresDeNota": 677
+  },
+  "5144e8f2": {
+   "status": 200,
+   "ms": 480,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2200,
+    "salida": 0,
+    "costo": 0.00022
+   },
+   "caracteresDeNota": 617
+  },
+  "7c36391b": {
+   "status": 200,
+   "ms": 510,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2143,
+    "salida": 0,
+    "costo": 0.0002143
+   },
+   "caracteresDeNota": 319
+  },
+  "137d65b0": {
+   "status": 200,
+   "ms": 507,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.98,\"Argentina\":0.01},\"confidence\":0.98},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2193,
+    "salida": 0,
+    "costo": 0.0002193
+   },
+   "caracteresDeNota": 614
+  },
+  "a0f41160": {
+   "status": 200,
+   "ms": 502,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":1,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2173,
+    "salida": 0,
+    "costo": 0.0002173
+   },
+   "caracteresDeNota": 449
+  },
+  "3d2c3c92": {
+   "status": 200,
+   "ms": 475,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0.76,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.24},\"confidence\":0.74},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2194,
+    "salida": 0,
+    "costo": 0.0002194
+   },
+   "caracteresDeNota": 673
+  },
+  "309455a3": {
+   "status": 200,
+   "ms": 493,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.02,\"bajo\":0.01,\"ninguno\":0.97},\"confidence\":0.96},\"publicar\":{\"type\":\"noul\",\"noul\":0.02}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.02,
+   "uso": {
+    "entrada": 2218,
+    "salida": 0,
+    "costo": 0.0002218
+   },
+   "caracteresDeNota": 682
+  },
+  "d4c47d5c": {
+   "status": 200,
+   "ms": 508,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Agro\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":1,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0.01,\"medio\":0.99,\"bajo\":0,\"ninguno\":0},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0.7}}",
+   "respuesta": {
+    "seccion": "Agro",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.7,
+   "uso": {
+    "entrada": 2204,
+    "salida": 0,
+    "costo": 0.0002204
+   },
+   "caracteresDeNota": 653
+  },
+  "53946da5": {
+   "status": 200,
+   "ms": 502,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Tecnología\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0.7,\"Cultura y agenda\":0,\"Argentina\":0.29},\"confidence\":0.67},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0.01,\"ninguno\":0.98},\"confidence\":0.97},\"publicar\":{\"type\":\"noul\",\"noul\":0.01}}",
+   "respuesta": {
+    "seccion": "Tecnología",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.01,
+   "uso": {
+    "entrada": 2110,
+    "salida": 0,
+    "costo": 0.000211
+   },
+   "caracteresDeNota": 244
+  },
+  "fac54881": {
+   "status": 200,
+   "ms": 518,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":1,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2192,
+    "salida": 0,
+    "costo": 0.0002192
+   },
+   "caracteresDeNota": 620
+  },
+  "adc2db28": {
+   "status": 200,
+   "ms": 457,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":1,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"bajo\",\"probabilities\":{\"alto\":0.07,\"medio\":0.04,\"bajo\":0.67,\"ninguno\":0.22},\"confidence\":0.56},\"publicar\":{\"type\":\"noul\",\"noul\":0.08}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.08,
+   "uso": {
+    "entrada": 2166,
+    "salida": 0,
+    "costo": 0.0002166
+   },
+   "caracteresDeNota": 454
+  },
+  "3bfcbaaf": {
+   "status": 200,
+   "ms": 497,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0,\"ninguno\":0.99},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2225,
+    "salida": 0,
+    "costo": 0.0002225
+   },
+   "caracteresDeNota": 659
+  },
+  "8136ed33": {
+   "status": 200,
+   "ms": 533,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Economía\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.99,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.07,\"bajo\":0.43,\"ninguno\":0.49},\"confidence\":0.32},\"publicar\":{\"type\":\"noul\",\"noul\":0.09}}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.09,
+   "uso": {
+    "entrada": 2178,
+    "salida": 0,
+    "costo": 0.0002178
+   },
+   "caracteresDeNota": 560
+  },
+  "9fe7028b": {
+   "status": 200,
+   "ms": 1046,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Automovilismo\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":1,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.03,\"bajo\":0,\"ninguno\":0.97},\"confidence\":0.96},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2185,
+    "salida": 0,
+    "costo": 0.0002185
+   },
+   "caracteresDeNota": 559
+  },
+  "228933bd": {
+   "status": 200,
+   "ms": 909,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":1,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"bajo\",\"probabilities\":{\"alto\":0.01,\"medio\":0.01,\"bajo\":0.7,\"ninguno\":0.28},\"confidence\":0.6},\"publicar\":{\"type\":\"noul\",\"noul\":0.43}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.43,
+   "uso": {
+    "entrada": 2206,
+    "salida": 0,
+    "costo": 0.0002206
+   },
+   "caracteresDeNota": 719
+  },
+  "161fa893": {
+   "status": 200,
+   "ms": 848,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Tecnología\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0.99,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.06,\"bajo\":0.09,\"ninguno\":0.85},\"confidence\":0.8},\"publicar\":{\"type\":\"noul\",\"noul\":0.01}}",
+   "respuesta": {
+    "seccion": "Tecnología",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.01,
+   "uso": {
+    "entrada": 2206,
+    "salida": 0,
+    "costo": 0.0002206
+   },
+   "caracteresDeNota": 652
+  },
+  "fadc591a": {
+   "status": 200,
+   "ms": 812,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.18,\"bajo\":0.02,\"ninguno\":0.79},\"confidence\":0.72},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2147,
+    "salida": 0,
+    "costo": 0.0002147
+   },
+   "caracteresDeNota": 379
+  },
+  "edd58468": {
+   "status": 200,
+   "ms": 1855,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Tecnología\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.01,\"Agro\":0,\"Tecnología\":0.99,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Tecnología",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2120,
+    "salida": 0,
+    "costo": 0.000212
+   },
+   "caracteresDeNota": 286
+  },
+  "2a027e97": {
+   "status": 200,
+   "ms": 799,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0.01,\"Policiales\":0,\"Fútbol\":0.25,\"Deportes\":0.35,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.38},\"confidence\":0.32},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0,\"ninguno\":0.99},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2128,
+    "salida": 0,
+    "costo": 0.0002128
+   },
+   "caracteresDeNota": 351
+  },
+  "19fa5fdd": {
+   "status": 200,
+   "ms": 751,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.03,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.97},\"confidence\":0.97},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2201,
+    "salida": 0,
+    "costo": 0.0002201
+   },
+   "caracteresDeNota": 687
+  },
+  "c31dbdcb": {
+   "status": 200,
+   "ms": 806,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.95,\"Argentina\":0.04},\"confidence\":0.95},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0,\"ninguno\":0.99},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2183,
+    "salida": 0,
+    "costo": 0.0002183
+   },
+   "caracteresDeNota": 510
+  },
+  "b62a86fd": {
+   "status": 200,
+   "ms": 780,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Economía\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.99,\"Agro\":0.01,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.34,\"bajo\":0.03,\"ninguno\":0.63},\"confidence\":0.51},\"publicar\":{\"type\":\"noul\",\"noul\":0.12}}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.12,
+   "uso": {
+    "entrada": 2119,
+    "salida": 0,
+    "costo": 0.0002119
+   },
+   "caracteresDeNota": 280
+  },
+  "31cdadb2": {
+   "status": 200,
+   "ms": 809,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Tecnología\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":1,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Tecnología",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2205,
+    "salida": 0,
+    "costo": 0.0002205
+   },
+   "caracteresDeNota": 681
+  },
+  "64c1b0be": {
+   "status": 200,
+   "ms": 1138,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":0.91,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.09},\"confidence\":0.9},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"bajo\",\"probabilities\":{\"alto\":0.02,\"medio\":0.03,\"bajo\":0.84,\"ninguno\":0.11},\"confidence\":0.79},\"publicar\":{\"type\":\"noul\",\"noul\":0.37}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.37,
+   "uso": {
+    "entrada": 2198,
+    "salida": 0,
+    "costo": 0.0002198
+   },
+   "caracteresDeNota": 670
+  },
+  "c8c9770b": {
+   "status": 200,
+   "ms": 730,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.15,\"Política\":0.01,\"Policiales\":0.01,\"Fútbol\":0.01,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.01,\"Agro\":0,\"Tecnología\":0.01,\"Cultura y agenda\":0.24,\"Argentina\":0.56},\"confidence\":0.52},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2212,
+    "salida": 0,
+    "costo": 0.0002212
+   },
+   "caracteresDeNota": 726
+  },
+  "b46430ac": {
+   "status": 200,
+   "ms": 818,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":1,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"bajo\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0.69,\"ninguno\":0.3},\"confidence\":0.59},\"publicar\":{\"type\":\"noul\",\"noul\":0.69}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.69,
+   "uso": {
+    "entrada": 2175,
+    "salida": 0,
+    "costo": 0.0002175
+   },
+   "caracteresDeNota": 493
+  },
+  "3f77a883": {
+   "status": 200,
+   "ms": 795,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":1,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.02,\"bajo\":0.05,\"ninguno\":0.93},\"confidence\":0.91},\"publicar\":{\"type\":\"noul\",\"noul\":0.04}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.04,
+   "uso": {
+    "entrada": 2136,
+    "salida": 0,
+    "costo": 0.0002136
+   },
+   "caracteresDeNota": 332
+  },
+  "143da309": {
+   "status": 200,
+   "ms": 808,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.99},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0.01}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.01,
+   "uso": {
+    "entrada": 2215,
+    "salida": 0,
+    "costo": 0.0002215
+   },
+   "caracteresDeNota": 670
+  },
+  "b04900f9": {
+   "status": 200,
+   "ms": 484,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0,\"ninguno\":0.99},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2119,
+    "salida": 0,
+    "costo": 0.0002119
+   },
+   "caracteresDeNota": 277
+  },
+  "d06937b3": {
+   "status": 200,
+   "ms": 494,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0.05,\"Automovilismo\":0,\"Economía\":0.01,\"Agro\":0.01,\"Tecnología\":0.01,\"Cultura y agenda\":0.68,\"Argentina\":0.23},\"confidence\":0.65},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2212,
+    "salida": 0,
+    "costo": 0.0002212
+   },
+   "caracteresDeNota": 718
+  },
+  "9d28ce87": {
+   "status": 200,
+   "ms": 813,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0.99,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2122,
+    "salida": 0,
+    "costo": 0.0002122
+   },
+   "caracteresDeNota": 286
+  },
+  "ee0d32a7": {
+   "status": 200,
+   "ms": 756,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":1,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2252,
+    "salida": 0,
+    "costo": 0.0002252
+   },
+   "caracteresDeNota": 690
+  },
+  "35af8d34": {
+   "status": 200,
+   "ms": 728,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":0.99,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"bajo\",\"probabilities\":{\"alto\":0.01,\"medio\":0.27,\"bajo\":0.71,\"ninguno\":0.01},\"confidence\":0.61},\"publicar\":{\"type\":\"noul\",\"noul\":0.82}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.82,
+   "uso": {
+    "entrada": 2207,
+    "salida": 0,
+    "costo": 0.0002207
+   },
+   "caracteresDeNota": 666
+  },
+  "de8ec1cc": {
+   "status": 200,
+   "ms": 816,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":1,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0.01}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.01,
+   "uso": {
+    "entrada": 2116,
+    "salida": 0,
+    "costo": 0.0002116
+   },
+   "caracteresDeNota": 252
+  },
+  "b5dd0f44": {
+   "status": 200,
+   "ms": 791,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Tecnología\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0.9,\"Cultura y agenda\":0.08,\"Argentina\":0.01},\"confidence\":0.89},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Tecnología",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2110,
+    "salida": 0,
+    "costo": 0.000211
+   },
+   "caracteresDeNota": 233
+  },
+  "b4455625": {
+   "status": 200,
+   "ms": 713,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0.99,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0,\"ninguno\":0.99},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2193,
+    "salida": 0,
+    "costo": 0.0002193
+   },
+   "caracteresDeNota": 718
+  },
+  "aa27f8a6": {
+   "status": 200,
+   "ms": 788,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.99},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2196,
+    "salida": 0,
+    "costo": 0.0002196
+   },
+   "caracteresDeNota": 542
+  },
+  "1d475ae6": {
+   "status": 200,
+   "ms": 742,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.02,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.02,\"Argentina\":0.96},\"confidence\":0.96},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2215,
+    "salida": 0,
+    "costo": 0.0002215
+   },
+   "caracteresDeNota": 717
+  },
+  "e6d6ad32": {
+   "status": 200,
+   "ms": 466,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":1,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"bajo\",\"probabilities\":{\"alto\":0.01,\"medio\":0.02,\"bajo\":0.56,\"ninguno\":0.41},\"confidence\":0.41},\"publicar\":{\"type\":\"noul\",\"noul\":0.7}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.7,
+   "uso": {
+    "entrada": 2116,
+    "salida": 0,
+    "costo": 0.0002116
+   },
+   "caracteresDeNota": 301
+  },
+  "8809cac6": {
+   "status": 200,
+   "ms": 774,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Economía\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":1,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":0.38,\"medio\":0.02,\"bajo\":0.25,\"ninguno\":0.35},\"confidence\":0.17},\"publicar\":{\"type\":\"noul\",\"noul\":0.24}}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "alto",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.24,
+   "uso": {
+    "entrada": 2226,
+    "salida": 0,
+    "costo": 0.0002226
+   },
+   "caracteresDeNota": 673
+  },
+  "7921347b": {
+   "status": 200,
+   "ms": 791,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":1,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0,\"medio\":0.62,\"bajo\":0.01,\"ninguno\":0.37},\"confidence\":0.49},\"publicar\":{\"type\":\"noul\",\"noul\":0.04}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "medio",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.04,
+   "uso": {
+    "entrada": 2218,
+    "salida": 0,
+    "costo": 0.0002218
+   },
+   "caracteresDeNota": 677
+  },
+  "3ea1e633": {
+   "status": 200,
+   "ms": 472,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":0.97,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0.02,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.97},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"bajo\",\"probabilities\":{\"alto\":0.34,\"medio\":0.17,\"bajo\":0.34,\"ninguno\":0.15},\"confidence\":0.12},\"publicar\":{\"type\":\"noul\",\"noul\":0.62}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.62,
+   "uso": {
+    "entrada": 2132,
+    "salida": 0,
+    "costo": 0.0002132
+   },
+   "caracteresDeNota": 319
+  },
+  "3cea88b7": {
+   "status": 502,
+   "ms": 1318,
+   "error": "OpenAI refused to answer question \"seccion\"",
+   "crudo": "{}",
+   "respuesta": null,
+   "noul": null,
+   "uso": null,
+   "caracteresDeNota": 677
+  },
+  "1eb0ae96": {
+   "status": 200,
+   "ms": 874,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":0.99,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"alto\",\"probabilities\":{\"alto\":0.46,\"medio\":0.36,\"bajo\":0.05,\"ninguno\":0.13},\"confidence\":0.28},\"publicar\":{\"type\":\"noul\",\"noul\":0.75}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "alto",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.75,
+   "uso": {
+    "entrada": 2147,
+    "salida": 0,
+    "costo": 0.0002147
+   },
+   "caracteresDeNota": 372
+  },
+  "e7afc743": {
+   "status": 200,
+   "ms": 790,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Automovilismo\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":1,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0,\"medio\":1,\"bajo\":0,\"ninguno\":0},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0.99}}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.99,
+   "uso": {
+    "entrada": 2211,
+    "salida": 0,
+    "costo": 0.0002211
+   },
+   "caracteresDeNota": 684
+  },
+  "e63d96e6": {
+   "status": 200,
+   "ms": 774,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.47,\"bajo\":0.03,\"ninguno\":0.49},\"confidence\":0.32},\"publicar\":{\"type\":\"noul\",\"noul\":0.01}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.01,
+   "uso": {
+    "entrada": 2219,
+    "salida": 0,
+    "costo": 0.0002219
+   },
+   "caracteresDeNota": 682
+  },
+  "f4d259b7": {
+   "status": 200,
+   "ms": 451,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0.01,\"Tecnología\":0.04,\"Cultura y agenda\":0.01,\"Argentina\":0.93},\"confidence\":0.92},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0,\"ninguno\":0.99},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2206,
+    "salida": 0,
+    "costo": 0.0002206
+   },
+   "caracteresDeNota": 699
+  },
+  "76903bc4": {
+   "status": 200,
+   "ms": 466,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.84,\"Argentina\":0.16},\"confidence\":0.82},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.09,\"bajo\":0.02,\"ninguno\":0.89},\"confidence\":0.85},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2235,
+    "salida": 0,
+    "costo": 0.0002235
+   },
+   "caracteresDeNota": 686
+  },
+  "68f6ea93": {
+   "status": 200,
+   "ms": 438,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Economía\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0.22,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.74,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.03},\"confidence\":0.71},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0.44,\"ninguno\":0.55},\"confidence\":0.4},\"publicar\":{\"type\":\"noul\",\"noul\":0.21}}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.21,
+   "uso": {
+    "entrada": 2227,
+    "salida": 0,
+    "costo": 0.0002227
+   },
+   "caracteresDeNota": 668
+  },
+  "ae35c434": {
+   "status": 200,
+   "ms": 481,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.35,\"bajo\":0.03,\"ninguno\":0.61},\"confidence\":0.48},\"publicar\":{\"type\":\"noul\",\"noul\":0.03}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.03,
+   "uso": {
+    "entrada": 2232,
+    "salida": 0,
+    "costo": 0.0002232
+   },
+   "caracteresDeNota": 699
+  },
+  "9c1fe7e3": {
+   "status": 200,
+   "ms": 777,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Automovilismo\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0.01,\"Deportes\":0.02,\"Automovilismo\":0.95,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.95},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.16,\"bajo\":0,\"ninguno\":0.84},\"confidence\":0.79},\"publicar\":{\"type\":\"noul\",\"noul\":0.02}}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.02,
+   "uso": {
+    "entrada": 2110,
+    "salida": 0,
+    "costo": 0.000211
+   },
+   "caracteresDeNota": 235
+  },
+  "adf24fe5": {
+   "status": 200,
+   "ms": 522,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":1,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2228,
+    "salida": 0,
+    "costo": 0.0002228
+   },
+   "caracteresDeNota": 704
+  },
+  "a11ca810": {
+   "status": 200,
+   "ms": 785,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0.99,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2131,
+    "salida": 0,
+    "costo": 0.0002131
+   },
+   "caracteresDeNota": 270
+  },
+  "69735fff": {
+   "status": 200,
+   "ms": 488,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.02,\"Argentina\":0.98},\"confidence\":0.98},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.04,\"bajo\":0.15,\"ninguno\":0.8},\"confidence\":0.73},\"publicar\":{\"type\":\"noul\",\"noul\":0.01}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.01,
+   "uso": {
+    "entrada": 2110,
+    "salida": 0,
+    "costo": 0.000211
+   },
+   "caracteresDeNota": 227
+  },
+  "04f4b872": {
+   "status": 200,
+   "ms": 848,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0.03,\"medio\":0.79,\"bajo\":0.02,\"ninguno\":0.16},\"confidence\":0.72},\"publicar\":{\"type\":\"noul\",\"noul\":0.48}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "medio",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.48,
+   "uso": {
+    "entrada": 2205,
+    "salida": 0,
+    "costo": 0.0002205
+   },
+   "caracteresDeNota": 706
+  },
+  "0ad89306": {
+   "status": 200,
+   "ms": 770,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0.01,\"Cultura y agenda\":0,\"Argentina\":0.98},\"confidence\":0.98},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2227,
+    "salida": 0,
+    "costo": 0.0002227
+   },
+   "caracteresDeNota": 678
+  },
+  "f7fca5c6": {
+   "status": 200,
+   "ms": 518,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.11,\"Política\":0.01,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.87},\"confidence\":0.86},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.03,\"bajo\":0.01,\"ninguno\":0.96},\"confidence\":0.95},\"publicar\":{\"type\":\"noul\",\"noul\":0.01}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.01,
+   "uso": {
+    "entrada": 2128,
+    "salida": 0,
+    "costo": 0.0002128
+   },
+   "caracteresDeNota": 320
+  },
+  "7bc74ca4": {
+   "status": 200,
+   "ms": 754,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.01,\"bajo\":0,\"ninguno\":0.99},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2229,
+    "salida": 0,
+    "costo": 0.0002229
+   },
+   "caracteresDeNota": 660
+  },
+  "55678cb0": {
+   "status": 200,
+   "ms": 3457,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.13,\"Política\":0.05,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.02,\"Agro\":0.01,\"Tecnología\":0.01,\"Cultura y agenda\":0.01,\"Argentina\":0.76},\"confidence\":0.74},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2201,
+    "salida": 0,
+    "costo": 0.0002201
+   },
+   "caracteresDeNota": 688
+  },
+  "8c8e3573": {
+   "status": 200,
+   "ms": 503,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Automovilismo\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":1,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0.01,\"medio\":0.99,\"bajo\":0,\"ninguno\":0},\"confidence\":0.99},\"publicar\":{\"type\":\"noul\",\"noul\":0.95}}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "medio",
+    "publicar": true,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.95,
+   "uso": {
+    "entrada": 2117,
+    "salida": 0,
+    "costo": 0.0002117
+   },
+   "caracteresDeNota": 273
+  },
+  "cee2afb4": {
+   "status": 200,
+   "ms": 461,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Tecnología\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0.99,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Tecnología",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2203,
+    "salida": 0,
+    "costo": 0.0002203
+   },
+   "caracteresDeNota": 661
+  },
+  "da0f3caa": {
+   "status": 200,
+   "ms": 833,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.59,\"Argentina\":0.41},\"confidence\":0.55},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2214,
+    "salida": 0,
+    "costo": 0.0002214
+   },
+   "caracteresDeNota": 681
+  },
+  "369c253f": {
+   "status": 200,
+   "ms": 782,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0.01,\"Policiales\":0.02,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0.01,\"Cultura y agenda\":0,\"Argentina\":0.95},\"confidence\":0.95},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2118,
+    "salida": 0,
+    "costo": 0.0002118
+   },
+   "caracteresDeNota": 232
+  },
+  "8c793ea1": {
+   "status": 200,
+   "ms": 788,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.98,\"Argentina\":0.01},\"confidence\":0.98},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0.01}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.01,
+   "uso": {
+    "entrada": 2112,
+    "salida": 0,
+    "costo": 0.0002112
+   },
+   "caracteresDeNota": 215
+  },
+  "c6f30841": {
+   "status": 200,
+   "ms": 802,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Agro\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.01,\"Agro\":0.6,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.39},\"confidence\":0.56},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Agro",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2231,
+    "salida": 0,
+    "costo": 0.0002231
+   },
+   "caracteresDeNota": 703
+  },
+  "bdff37d6": {
+   "status": 200,
+   "ms": 452,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0.09,\"Política\":0.01,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.02,\"Agro\":0.01,\"Tecnología\":0.01,\"Cultura y agenda\":0.55,\"Argentina\":0.3},\"confidence\":0.51},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2209,
+    "salida": 0,
+    "costo": 0.0002209
+   },
+   "caracteresDeNota": 694
+  },
+  "436166ab": {
+   "status": 200,
+   "ms": 781,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0.89,\"Policiales\":0.03,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.07},\"confidence\":0.88},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2200,
+    "salida": 0,
+    "costo": 0.00022
+   },
+   "caracteresDeNota": 697
+  },
+  "008df844": {
+   "status": 200,
+   "ms": 738,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0.03,\"Política\":0.01,\"Policiales\":0.01,\"Fútbol\":0.64,\"Deportes\":0.18,\"Automovilismo\":0.01,\"Economía\":0.01,\"Agro\":0.01,\"Tecnología\":0.01,\"Cultura y agenda\":0.01,\"Argentina\":0.08},\"confidence\":0.6},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2209,
+    "salida": 0,
+    "costo": 0.0002209
+   },
+   "caracteresDeNota": 675
+  },
+  "d1b83305": {
+   "status": 200,
+   "ms": 760,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.01,\"Agro\":0,\"Tecnología\":0.01,\"Cultura y agenda\":0.1,\"Argentina\":0.87},\"confidence\":0.86},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2221,
+    "salida": 0,
+    "costo": 0.0002221
+   },
+   "caracteresDeNota": 696
+  },
+  "6700ad99": {
+   "status": 200,
+   "ms": 508,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Cultura y agenda\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.97,\"Argentina\":0.03},\"confidence\":0.97},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Cultura y agenda",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2212,
+    "salida": 0,
+    "costo": 0.0002212
+   },
+   "caracteresDeNota": 674
+  },
+  "97e103ee": {
+   "status": 200,
+   "ms": 782,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Economía\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.98,\"Agro\":0.01,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.98},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.16,\"bajo\":0.03,\"ninguno\":0.8},\"confidence\":0.73},\"publicar\":{\"type\":\"noul\",\"noul\":0.07}}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.07,
+   "uso": {
+    "entrada": 2143,
+    "salida": 0,
+    "costo": 0.0002143
+   },
+   "caracteresDeNota": 393
+  },
+  "7a6ad3cc": {
+   "status": 200,
+   "ms": 473,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Economía\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":1,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.02,\"bajo\":0.15,\"ninguno\":0.83},\"confidence\":0.77},\"publicar\":{\"type\":\"noul\",\"noul\":0.05}}",
+   "respuesta": {
+    "seccion": "Economía",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.05,
+   "uso": {
+    "entrada": 2164,
+    "salida": 0,
+    "costo": 0.0002164
+   },
+   "caracteresDeNota": 500
+  },
+  "a4e78c07": {
+   "status": 200,
+   "ms": 504,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":1,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.15,\"bajo\":0.01,\"ninguno\":0.83},\"confidence\":0.77},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2144,
+    "salida": 0,
+    "costo": 0.0002144
+   },
+   "caracteresDeNota": 357
+  },
+  "a98be356": {
+   "status": 200,
+   "ms": 430,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0.01,\"medio\":0.51,\"bajo\":0.03,\"ninguno\":0.45},\"confidence\":0.35},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "medio",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2131,
+    "salida": 0,
+    "costo": 0.0002131
+   },
+   "caracteresDeNota": 328
+  },
+  "0ab280e9": {
+   "status": 200,
+   "ms": 811,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Deportes\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0.01,\"Deportes\":0.98,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.98},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Deportes",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2212,
+    "salida": 0,
+    "costo": 0.0002212
+   },
+   "caracteresDeNota": 659
+  },
+  "0e01be6b": {
+   "status": 200,
+   "ms": 467,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.2,\"bajo\":0.15,\"ninguno\":0.64},\"confidence\":0.52},\"publicar\":{\"type\":\"noul\",\"noul\":0.01}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.01,
+   "uso": {
+    "entrada": 2154,
+    "salida": 0,
+    "costo": 0.0002154
+   },
+   "caracteresDeNota": 387
+  },
+  "72580e76": {
+   "status": 200,
+   "ms": 562,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Automovilismo\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":1,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0,\"medio\":0.82,\"bajo\":0.01,\"ninguno\":0.17},\"confidence\":0.76},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Automovilismo",
+    "interes": "medio",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2193,
+    "salida": 0,
+    "costo": 0.0002193
+   },
+   "caracteresDeNota": 570
+  },
+  "14878d7b": {
+   "status": 200,
+   "ms": 494,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0.09,\"bajo\":0.02,\"ninguno\":0.89},\"confidence\":0.85},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2115,
+    "salida": 0,
+    "costo": 0.0002115
+   },
+   "caracteresDeNota": 252
+  },
+  "be56d0d1": {
+   "status": 200,
+   "ms": 743,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":1,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0.42,\"ninguno\":0.58},\"confidence\":0.44},\"publicar\":{\"type\":\"noul\",\"noul\":0.21}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.21,
+   "uso": {
+    "entrada": 2142,
+    "salida": 0,
+    "costo": 0.0002142
+   },
+   "caracteresDeNota": 364
+  },
+  "4f74938f": {
+   "status": 200,
+   "ms": 778,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0.97,\"Deportes\":0.01,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.01},\"confidence\":0.97},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0.01,\"medio\":0.9,\"bajo\":0.01,\"ninguno\":0.08},\"confidence\":0.87},\"publicar\":{\"type\":\"noul\",\"noul\":0.36}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "medio",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.36,
+   "uso": {
+    "entrada": 2229,
+    "salida": 0,
+    "costo": 0.0002229
+   },
+   "caracteresDeNota": 690
+  },
+  "f8e7bb4c": {
+   "status": 200,
+   "ms": 764,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":1,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0.12,\"medio\":0.62,\"bajo\":0.11,\"ninguno\":0.15},\"confidence\":0.49},\"publicar\":{\"type\":\"noul\",\"noul\":0.28}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "medio",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.28,
+   "uso": {
+    "entrada": 2145,
+    "salida": 0,
+    "costo": 0.0002145
+   },
+   "caracteresDeNota": 384
+  },
+  "c80b54f6": {
+   "status": 200,
+   "ms": 858,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.99},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2101,
+    "salida": 0,
+    "costo": 0.0002101
+   },
+   "caracteresDeNota": 201
+  },
+  "34d471dd": {
+   "status": 200,
+   "ms": 777,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0.01,\"medio\":0.07,\"bajo\":0.01,\"ninguno\":0.91},\"confidence\":0.88},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2235,
+    "salida": 0,
+    "costo": 0.0002235
+   },
+   "caracteresDeNota": 676
+  },
+  "5c4d8c11": {
+   "status": 502,
+   "ms": 779,
+   "error": "OpenAI refused to answer question \"seccion\"",
+   "crudo": "{}",
+   "respuesta": null,
+   "noul": null,
+   "uso": null,
+   "caracteresDeNota": 672
+  },
+  "35b6c6df": {
+   "status": 200,
+   "ms": 832,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.01,\"Argentina\":0.98},\"confidence\":0.98},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2203,
+    "salida": 0,
+    "costo": 0.0002203
+   },
+   "caracteresDeNota": 705
+  },
+  "6d2552d3": {
+   "status": 200,
+   "ms": 776,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":0.99,\"Deportes\":0.01,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":0.99},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0.01,\"medio\":0.94,\"bajo\":0,\"ninguno\":0.05},\"confidence\":0.92},\"publicar\":{\"type\":\"noul\",\"noul\":0.08}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "medio",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.08,
+   "uso": {
+    "entrada": 2121,
+    "salida": 0,
+    "costo": 0.0002121
+   },
+   "caracteresDeNota": 291
+  },
+  "c65531cb": {
+   "status": 200,
+   "ms": 475,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0,\"Política\":1,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"bajo\",\"probabilities\":{\"alto\":0,\"medio\":0.33,\"bajo\":0.35,\"ninguno\":0.32},\"confidence\":0.13},\"publicar\":{\"type\":\"noul\",\"noul\":0.11}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "bajo",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.11,
+   "uso": {
+    "entrada": 2214,
+    "salida": 0,
+    "costo": 0.0002214
+   },
+   "caracteresDeNota": 695
+  },
+  "1711b56c": {
+   "status": 200,
+   "ms": 470,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Fútbol\",\"probabilities\":{\"Balcarce\":0,\"Política\":0,\"Policiales\":0,\"Fútbol\":1,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0},\"confidence\":1},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"medio\",\"probabilities\":{\"alto\":0,\"medio\":0.69,\"bajo\":0.07,\"ninguno\":0.24},\"confidence\":0.59},\"publicar\":{\"type\":\"noul\",\"noul\":0.01}}",
+   "respuesta": {
+    "seccion": "Fútbol",
+    "interes": "medio",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0.01,
+   "uso": {
+    "entrada": 2219,
+    "salida": 0,
+    "costo": 0.0002219
+   },
+   "caracteresDeNota": 635
+  },
+  "8572f760": {
+   "status": 200,
+   "ms": 790,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Policiales\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0.11,\"Policiales\":0.59,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.06,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.23},\"confidence\":0.55},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Policiales",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2220,
+    "salida": 0,
+    "costo": 0.000222
+   },
+   "caracteresDeNota": 705
+  },
+  "e6e6aae6": {
+   "status": 200,
+   "ms": 781,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.03,\"Política\":0.28,\"Policiales\":0.01,\"Fútbol\":0.01,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.01,\"Argentina\":0.66},\"confidence\":0.63},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2110,
+    "salida": 0,
+    "costo": 0.000211
+   },
+   "caracteresDeNota": 266
+  },
+  "e95fcdf0": {
+   "status": 200,
+   "ms": 472,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Argentina\",\"probabilities\":{\"Balcarce\":0.02,\"Política\":0.01,\"Policiales\":0,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0.31,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0.01,\"Argentina\":0.65},\"confidence\":0.62},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Argentina",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2212,
+    "salida": 0,
+    "costo": 0.0002212
+   },
+   "caracteresDeNota": 676
+  },
+  "820b64a0": {
+   "status": 200,
+   "ms": 773,
+   "error": null,
+   "crudo": "{\"seccion\":{\"type\":\"choice\",\"choice\":\"Política\",\"probabilities\":{\"Balcarce\":0.01,\"Política\":0.63,\"Policiales\":0.01,\"Fútbol\":0,\"Deportes\":0,\"Automovilismo\":0,\"Economía\":0,\"Agro\":0,\"Tecnología\":0,\"Cultura y agenda\":0,\"Argentina\":0.35},\"confidence\":0.59},\"interes_balcarce\":{\"type\":\"choice\",\"choice\":\"ninguno\",\"probabilities\":{\"alto\":0,\"medio\":0,\"bajo\":0,\"ninguno\":1},\"confidence\":1},\"publicar\":{\"type\":\"noul\",\"noul\":0}}",
+   "respuesta": {
+    "seccion": "Política",
+    "interes": "ninguno",
+    "publicar": false,
+    "razon": "(Mercury Decide no da razón)",
+    "valida": true
+   },
+   "noul": 0,
+   "uso": {
+    "entrada": 2124,
+    "salida": 0,
+    "costo": 0.0002124
+   },
+   "caracteresDeNota": 317
+  }
+ },
+ "pares": {}
+}

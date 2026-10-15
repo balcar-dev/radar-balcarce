@@ -1,0 +1,451 @@
+{
+ "modelo": "openai/gpt-5-nano",
+ "prompt": "nuevo",
+ "fecha": "2026-10-11T16:12:49.794Z",
+ "precios": {
+  "entrada": 5e-8,
+  "salida": 4e-7
+ },
+ "historias": {
+  "23005298": {
+   "id": "23005298",
+   "titulo_original": "RECONOCIMIENTO A LA PRECISIÓN Y EL COMPROMISO EN EL DÍA DEL TÉCNICO DE LABORATORIO",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 34358,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 4936,
+    "salida": 6526,
+    "costo": 0.0028572
+   },
+   "escrito": {
+    "titulo": "La Municipalidad de Balcarce reconoce a los técnicos de laboratorio en su día",
+    "copete": "Reconocimiento oficial a los técnicos de laboratorio en Balcarce: la Municipalidad y el Hospital Municipal destacan su labor clave para diagnósticos y la atención sanitaria cotidiana en la ciudad.",
+    "cuerpo": "Según informó la Municipalidad de Balcarce junto con el Hospital Municipal Dr. Felipe Antonio Fossati, se celebra el Día del Técnico de Laboratorio con un reconocimiento a su labor. Se subraya que su trabajo es silencioso pero insustituible dentro de la cadena sanitaria local. Cada muestra analizada representa un eslabón crítico que anticipa diagnósticos, orienta tratamientos y sostiene la calidad de la atención médica cotidiana. Detrás de cada resultado hay rigor científico, vocación de servicio y una responsabilidad humana que fortalece todo el sistema de salud pública. La nota cierra con un saludo a quienes transforman la precisión en bienestar y cuidado para toda la comunidad.",
+    "guion": "La Municipalidad de Balcarce reconoce a los técnicos de laboratorio en su día",
+    "textoRedes": "Reconocimiento oficial a los técnicos de laboratorio en Balcarce; la Municipalidad y el Hospital Municipal destacan su labor para diagnóstico y atención sanitaria en la ciudad.",
+    "claves": [
+     "Reconocimiento a técnicos de laboratorio",
+     "Salud local",
+     "Balcarce",
+     "Hospital Municipal Fossati"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 51 palabras seguidas del original (\"pero insustituible dentro de la cadena sanitaria local cada muestra analizada representa un eslabon…\"): decilo con otr"
+    }
+   ],
+   "palabrasCuerpo": 106,
+   "palabrasBajada": 29,
+   "caracteresTitulo": 77
+  },
+  "0305adf0": {
+   "id": "0305adf0",
+   "titulo_original": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal “Suavecita”",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 34531,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5357,
+    "salida": 7739,
+    "costo": 0.00336345
+   },
+   "escrito": {
+    "titulo": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal Suavecita",
+    "copete": "La actriz balcarceña regresa a Mar del Plata con Suavecita, unipersonal escrito y dirigido por Martín Bontempo. Función el sábado 17 de octubre a las 21:30 en el teatro Roxy (San Luis 1750). Entradas por Plateanet y boletería.",
+    "cuerpo": "Según informó Puntonueve, la balcarceña Camila Peralta regresa a Mar del Plata con Suavecita, unipersonal escrito y dirigido por Martín Bontempo. La función será el sábado 17 de octubre a las 21:30 en el teatro Roxy, ubicado en San Luis 1750. La obra ya había agotado funciones en la ciudad y regresa para una función única. Desde su estreno en 2023 en NÜN Teatro Bar, Suavecita acumula 150 funciones en Buenos Aires, 38 presentaciones en gira y actuaciones en cuatro países. Por su interpretación, Peralta recibió el Maria Guerrero 2023 a la mejor actuación unipersonal, el Trinidad Guevara 2023 como revelación femenina y el Teatro del Mundo 2023 como mejor actriz. Además, la producción fue nominada a los Martín Fierro de Teatro 2025 en la categoría mejor unipersonal. Nacida en Balcarce, Peralta ha desarrollado una trayectoria que abarca cine, series y teatro. Su vínculo con Balcarce y la región también quedó reflejado en las presentaciones de Suavecita en el Teatro Municipal Luis Conti de Balcarce, señal de la continuidad de su relación con la zona.",
+    "guion": "La balcarceña Camila Peralta vuelve a Mar del Plata con el unipersonal Suavecita",
+    "textoRedes": "Camila Peralta, balcarceña, regresa a Mar del Plata con Suavecita, unipersonal de Martín Bontempo. Función el sábado 17 de octubre a las 21:30 en el teatro Roxy (San Luis 1750). Entradas por Plateanet y en la boletería.",
+    "claves": [
+     "Balcarce: actriz nacida en Balcarce presenta su unipersonal en Mar del Plata",
+     "Función el sábado 17 de octubre a las 21:30 en el teatro Roxy",
+     "Obra escrita y dirigida por Martín Bontempo",
+     "Entradas a la venta por Plateanet y en la boletería"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 21 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 30 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 21 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 30 y la fuente no lo dice"
+    },
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 28 palabras seguidas del original (\"teatro del mundo 2023 como mejor actriz ademas la produccion fue nominada a los…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 175,
+   "palabrasBajada": 38,
+   "caracteresTitulo": 80
+  },
+  "2d82c63c": {
+   "id": "2d82c63c",
+   "titulo_original": "Declararon de interés Legislativo los 75 años del Club Amigos Unidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 34688,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5206,
+    "salida": 7854,
+    "costo": 0.0034019
+   },
+   "escrito": {
+    "titulo": "El Concejo Deliberante declara de interés legislativo el setenta y cinco aniversario del Club Amigos Unidos",
+    "copete": "El Concejo Deliberante declaró de interés legislativo, social y comunitario el setenta y cinco aniversario del Club Amigos Unidos, por su trayectoria deportiva y su labor social en Balcarce y la zona.",
+    "cuerpo": "El Concejo Deliberante declaró de interés legislativo, social y comunitario el setenta y cinco aniversario del Club Amigos Unidos, fundado el 9 de septiembre de 1951. El reconocimiento resalta la trayectoria deportiva y la función social de la institución en Balcarce y la zona. Durante el tratamiento, concejales de distintos bloques destacaron el esfuerzo de la entidad para sostener sus actividades a lo largo de las décadas. \n\nEntre sus hitos deportivos figuran un invicto de 47 partidos consecutivos entre 1977 y 1978 y cuatro campeonatos obtenidos entre 1985 y 1988. También se destaca el trabajo con categorías formativas y el fútbol femenino, y el acompañamiento a las familias de Balcarce y la zona. \n\nJavier Menonne, de Primero la Patria, resaltó la trayectoria y los logros del club y dijo: \"75 años de familia\". Sol Di Gerónimo, de Fuerza Patria, afirmó: \"Son familia desde hace muchísimos años\". Leandro Spinelli, de Juntos, señaló el esfuerzo para sostener una institución tan noble. La declaración también recuerda la delicada situación económica que atraviesan los clubes de barrio y subraya que Amigos Unidos mantiene una labor deportiva y social en la comunidad.",
+    "guion": "El Concejo Deliberante declara de interés legislativo el setenta y cinco aniversario del Club Amigos Unidos",
+    "textoRedes": "El Concejo Deliberante declaró de interés legislativo el setenta y cinco aniversario del Club Amigos Unidos. El club, fundado en 1951, es reconocido por su trayectoria deportiva y su labor social en Balcarce y la zona.",
+    "claves": [
+     "Club Amigos Unidos",
+     "Balcarce",
+     "75 años",
+     "Reconocimiento",
+     "Deporte y comunidad"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "largo",
+     "detalle": "el titulo tiene 107 caracteres, el máximo es 90"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el titulo dice 70 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el titulo dice 5 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 70 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el copete dice 5 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 70 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el cuerpo dice 5 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el guion dice 70 y la fuente no lo dice"
+    },
+    {
+     "tipo": "numero",
+     "detalle": "el guion dice 5 y la fuente no lo dice"
+    },
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    }
+   ],
+   "palabrasCuerpo": 187,
+   "palabrasBajada": 32,
+   "caracteresTitulo": 107
+  },
+  "445a709e": {
+   "id": "445a709e",
+   "titulo_original": "Reconocen proyecto de la EEPA N°701 sobre el descarte de medicamentos vencidos",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 34083,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5085,
+    "salida": 8000,
+    "costo": 0.00325265
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "d00b6002": {
+   "id": "d00b6002",
+   "titulo_original": "El fútbol se atrasó tres meses, y volvería a terminar en enero",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 89945,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5355,
+    "salida": 8000,
+    "costo": 0.00326615
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "c959337d": {
+   "id": "c959337d",
+   "titulo_original": "Sol Di Gerónimo pidió informes por una posible bajada privada a la Laguna La Brava",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 38195,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5534,
+    "salida": 7953,
+    "costo": 0.0032563
+   },
+   "escrito": {
+    "titulo": "Sol Di Gerónimo solicita informes por una bajada privada a la Laguna La Brava",
+    "copete": "Sol Di Gerónimo presentó un proyecto para conocer la titularidad de la Manzana 333 E de Villa Laguna La Brava y si las intervenciones de un particular cuentan con permisos. Vecinos señalan una bajada hacia la laguna y dudas sobre el acceso público.",
+    "cuerpo": "La concejal de Fuerza Patria Sol Di Gerónimo presentó una comunicación dirigida al Departamento Ejecutivo Municipal para solicitar información sobre las intervenciones realizadas en la Manzana 333 E de Villa Laguna La Brava, donde, según lo planteado por vecinos, un particular estaría llevando adelante tareas de acondicionamiento, movimiento de suelo, nivelación y ejecución de infraestructura vinculada con una bajada hacia la laguna. La presentación surge a partir de la inquietud de vecinos de la villa turística, quienes advirtieron sobre la situación del sector y señalaron que el acceso al espejo de agua no estaría habilitado para el uso público, lo que podría restringir o condicionar el ingreso al lugar. En los fundamentos del proyecto, se destaca la importancia de la Laguna La Brava como uno de los principales atractivos naturales, turísticos y recreativos del partido de Balcarce. En ese sentido, se plantea la necesidad de garantizar el acceso público a los espacios vinculados al espejo de agua y evitar que sectores de interés común queden, de hecho, bajo el control exclusivo de un particular. Uno de los puntos centrales del pedido está relacionado con la situación dominial de la Manzana 333 E. La iniciativa señala que el sector se encontraría comprendido dentro de bienes pertenecientes al dominio provincial, por lo que considera necesario determinar con precisión la titularidad del inmueble y las competencias que corresponden tanto a la Provincia de Buenos Aires como al Municipio. Además, Di Gerónimo solicita conocer si las tareas realizadas cuentan con los permisos y las autorizaciones correspondientes, tanto a nivel municipal como provincial, y si existen convenios, concesiones, permisos de uso, comodatos u otros instrumentos jurídicos que habiliten al particular a intervenir en el lugar. A través del proyecto, se requiere que el área de Asesoría Legal informe sobre las acciones, intervenciones y actuaciones administrativas o judiciales vinculadas con la situación. Entre los puntos incluidos, se solicita precisar: La situación dominial: si la Manzana 333 E pertenece al dominio de la Provincia de Buenos Aires y qué organismo tiene a su cargo su administración o competencia; Los reclamos recibidos: si el Municipio tomó conocimiento de denuncias, presentaciones o solicitudes relacionadas con las obras; Los permisos otorgados: si las tareas de acondicionamiento y la infraestructura cuentan con autorización municipal o provincial, detallando los expedientes y organismos intervinientes; Las inspecciones realizadas: si hubo controles municipales en el sector y, en ese caso, se remitan las actas, los informes técnicos y la documentación correspondiente; Las actuaciones legales: si las áreas Legal y Técnica intervinieron o emitieron dictámenes sobre la situación del inmueble y el acceso a la laguna; Los instrumentos jurídicos existentes: si hay algún convenio, concesión, permiso o autorización que habilite las intervenciones realizadas. En los fundamentos de la comunicación se remarca que Villa Laguna La Brava posee un marcado perfil turístico y recreativo, por lo que el acceso ordenado y seguro a sus espacios naturales resulta de interés para vecinos, visitantes y turistas. La iniciativa también plantea la necesidad de que cualquier intervención sobre sectores vinculados al dominio provincial cuente con los actos administrativos y las autorizaciones correspondientes, y que el Estado municipal ejerza sus competencias en materia de ordernamiento territorial, preservación ambiental y desarrollo turístico sustentable. Con este pedido, la concejal busca obtener información oficial que permita determinar la situación jurídica del sector, establecer si las obras cuentan con los permisos necesarios y conocer qué medidas adoptaron las autoridades ante los planteos de los vecinos. Por el momento, los interrogantes sobre la titularidad del inmueble, las autorizaciones para las intervenciones y las condiciones de acceso a la Laguna La Brava no estaban resueltos.",
+    "guion": "Sol Di Gerónimo solicita informes por una bajada privada a la Laguna La Brava",
+    "textoRedes": "Sol Di Gerónimo solicita informes sobre una posible bajada privada a la Laguna La Brava y la titularidad de la Manzana 333 E, ante denuncias de vecinos sobre obras y permisos.",
+    "claves": [
+     "Laguna La Brava",
+     "Manzana 333 E",
+     "titularidad",
+     "permisos municipales y provinciales",
+     "acceso público",
+     "intervenciones privadas"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "largo",
+     "detalle": "el cuerpo tiene 4022 caracteres, el máximo es 1800"
+    },
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 523 palabras seguidas del original (\"la concejal de fuerza patria sol di geronimo presento una comunicacion dirigida al departamento…\"): decilo con otras "
+    }
+   ],
+   "palabrasCuerpo": 598,
+   "palabrasBajada": 43,
+   "caracteresTitulo": 77
+  },
+  "86c9586c": {
+   "id": "86c9586c",
+   "titulo_original": "Atletismo: Destacada actuación de balcarceños en el Torneo de la Diversidad Cultural",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 33529,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5095,
+    "salida": 7364,
+    "costo": 0.00299875
+   },
+   "escrito": {
+    "titulo": "Balcarceños destacan en el Torneo de la Diversidad Cultural en Mar del Plata",
+    "copete": "Cuatro atletas de AACYC Balcarce participaron el 3 de octubre en el Torneo de la Diversidad Cultural, en Mar del Plata, organizado por la Federación Marplatense de Atletismo. La delegación logró cinco primeros puestos y seis podios; Benicio Caro, U12, sumó tres victorias, entre ellas 50 m en 7\"99 y 500 m en 1'32\"76.",
+    "cuerpo": "Cuatro atletas de AACYC Balcarce participaron el 3 de octubre en el Torneo de la Diversidad Cultural, disputado en Mar del Plata y organizado por la Federación Marplatense de Atletismo. La delegación balcarceña obtuvo cinco primeros puestos y seis podios. Benicio Caro, de la categoría U12, fue uno de los protagonistas de la jornada al obtener tres victorias. Se impuso en los 50 metros llanos, con un tiempo de 7\"99, y en los 500 metros, con un registro de 1'32\"76. Además, compitió en salto en largo de la categoría U14, superior a la suya, donde también logró el primer puesto con una marca de 4,27 metros. En la categoría U16, Elías Aguer se adjudicó la victoria en los 80 metros llanos, con un tiempo de 11\"21, y finalizó tercero en salto en largo, con una marca de 4,05 metros. Por su parte, Jesús Coria obtuvo el primer puesto en lanzamiento de bala de 5 kilogramos, correspondiente a la categoría U18, con un registro de 11,01 metros. Finalmente, Juan Andrés Solar, también de la categoría U18, participó en los 1.500 metros de Mayores, donde terminó en el 14° puesto de la clasificación general; entre los competidores de su categoría se ubicó quinto.",
+    "guion": "Balcarceños destacan en el Torneo de la Diversidad Cultural en Mar del Plata",
+    "textoRedes": "Balcarceños atletas destacan en Mar del Plata: cuatro deportistas de AACYC Balcarce compitieron el 3 de octubre en el Torneo de la Diversidad Cultural y sumaron cinco primeros puestos y seis podios.",
+    "claves": [
+     "Balcarce",
+     "Atletismo",
+     "Torneo Diversidad Cultural",
+     "Mar del Plata",
+     "AACYC Balcarce"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "cita",
+     "detalle": "el copete pone entre comillas algo que la fuente no dice: \"99 y 500 m en 1'32\""
+    },
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 160 palabras seguidas del original (\"benicio caro de la categoria u12 fue uno de los protagonistas de la jornada…\"): decilo con otras palabras"
+    }
+   ],
+   "palabrasCuerpo": 201,
+   "palabrasBajada": 54,
+   "caracteresTitulo": 76
+  },
+  "c9127ae7": {
+   "id": "c9127ae7",
+   "titulo_original": "Maxivóley femenino avanza en el Top 6",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 93398,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 4987,
+    "salida": 8000,
+    "costo": 0.00324775
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "a7da5534": {
+   "id": "a7da5534",
+   "titulo_original": "Un auto se prendió fuego y sufrió daños totales",
+   "fuentes": 1,
+   "serio": true,
+   "status": 200,
+   "ms": 86164,
+   "caracteresDelPrompt": 17288,
+   "uso": {
+    "entrada": 4714,
+    "salida": 8000,
+    "costo": 0.00327442
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "276dcf9f": {
+   "id": "276dcf9f",
+   "titulo_original": "Cambió la Ley de Tránsito: cómo queda la prioridad de paso en la Provincia",
+   "fuentes": 1,
+   "serio": false,
+   "status": 200,
+   "ms": 84899,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5656,
+    "salida": 8000,
+    "costo": 0.0032812
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "9c7ee7d5": {
+   "id": "9c7ee7d5",
+   "titulo_original": "FIESTA NACIONAL DEL POSTRE: CONFIRMACIÓN DE LA NUEVA FECHA PARA LA 22ª EDICIÓN",
+   "fuentes": 5,
+   "serio": false,
+   "status": 200,
+   "ms": 93056,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5562,
+    "salida": 8000,
+    "costo": 0.0032765
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "badcdcaa": {
+   "id": "badcdcaa",
+   "titulo_original": "Cuatro gimnastas de UP clasificaron a la Final Regional del Centro",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 64355,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5243,
+    "salida": 8000,
+    "costo": 0.00326055
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "04f90bd3": {
+   "id": "04f90bd3",
+   "titulo_original": "El Concejo Deliberante aprobó la creación de un registro de acompañantes terapéuticos",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 27269,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5190,
+    "salida": 6385,
+    "costo": 0.0026119
+   },
+   "escrito": {
+    "titulo": "El Concejo Deliberante aprueba la creación de un registro municipal de acompañantes terapéuticos",
+    "copete": "El Concejo Deliberante de Balcarce aprobó por unanimidad la creación de un registro municipal de acompañantes terapéuticos. El proyecto prevé una plataforma digital para consultar profesionales, su formación y si atienden con obras sociales, con el objetivo de facilitar el acceso y la inserción laboral en el sector.",
+    "cuerpo": "El Honorable Concejo Deliberante de Balcarce aprobó por unanimidad la creación de un registro municipal de acompañantes terapéuticos. El proyecto prevé una plataforma digital, en articulación con el área de Modernización del Municipio, para que quienes necesiten un acompañante terapéutico podrán consultar información sobre profesionales disponibles, su formación, experiencia, áreas de desempeño, población atendida y si atienden a través de obras sociales. Uno de los objetivos es dar mayor visibilidad a quienes cuentan con formación y facilitar el contacto entre familias e instituciones que requieren este servicio en los ámbitos de la salud, la educación y el acompañamiento social. La iniciativa fue impulsada por los concejales del oficialismo Gonzalo Scioli y Fara Amado Cunqueiro, a partir de inquietudes planteadas por acompañantes terapéuticos recibidos y estudiantes avanzados de la carrera. El diseño de la plataforma continuará en una etapa de desarrollo, con la participación de profesionales, estudiantes y representantes del ámbito educativo. Para integrar el registro será obligatorio contar con título habilitante, conforme a la Resolución Ministerial 1221/15. Durante el debate también se advirtió la dificultad económica que atraviesa el sector, especialmente por los bajos honorarios que abonan algunas obras sociales, lo que podría afectar la cantidad de horas de atención y el acceso a pacientes, incluidos niños sin cobertura médica. La iniciativa, según las fuentes, busca vincular a los profesionales con quienes necesitan el servicio y ampliar las oportunidades laborales para el sector.",
+    "guion": "El Concejo Deliberante aprueba la creación de un registro municipal de acompañantes terapéuticos",
+    "textoRedes": "Balcarce aprueba por unanimidad un registro municipal de acompañantes terapéuticos. Se lanza una plataforma para ubicar profesionales, ver su formación y cobertura con obras sociales. El diseño se hace con Modernización y exige título habilitante.",
+    "claves": [
+     "Balcarce",
+     "acompañantes terapéuticos",
+     "registro municipal",
+     "plataforma digital",
+     "empleabilidad"
+    ]
+   },
+   "problemas": [
+    {
+     "tipo": "largo",
+     "detalle": "el titulo tiene 96 caracteres, el máximo es 90"
+    },
+    {
+     "tipo": "repite",
+     "detalle": "el cuerpo repite el copete en vez de desarrollarlo"
+    },
+    {
+     "tipo": "copia",
+     "detalle": "copia 30 palabras seguidas del original (\"la iniciativa fue impulsada por los concejales del oficialismo gonzalo scioli y fara amado…\"): decilo con otras palabr"
+    }
+   ],
+   "palabrasCuerpo": 233,
+   "palabrasBajada": 48,
+   "caracteresTitulo": 96
+  },
+  "6e45a05f": {
+   "id": "6e45a05f",
+   "titulo_original": "Investigan el faltante de dinero en la Escuela Emilio Lamarca",
+   "fuentes": 2,
+   "serio": true,
+   "status": 200,
+   "ms": 39784,
+   "caracteresDelPrompt": 17288,
+   "uso": {
+    "entrada": 4861,
+    "salida": 8000,
+    "costo": 0.00328177
+   },
+   "error": "respuesta ilegible o sin título"
+  },
+  "869434ae": {
+   "id": "869434ae",
+   "titulo_original": "SE PRESENTÓ LA PRIMERA EXPO SALUD, DEPORTE Y TECNOLOGÍA",
+   "fuentes": 2,
+   "serio": false,
+   "status": 200,
+   "ms": 81897,
+   "caracteresDelPrompt": 17448,
+   "uso": {
+    "entrada": 5782,
+    "salida": 8000,
+    "costo": 0.0032875
+   },
+   "error": "respuesta ilegible o sin título"
+  }
+ }
+}

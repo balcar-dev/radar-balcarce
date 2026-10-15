@@ -1,0 +1,13 @@
+Radar Balcarce es un medio digital de Balcarce (Buenos Aires).
+
+Dos notas cuentan "el mismo hecho" sólo si coinciden el suceso, el día y el protagonista principal, aunque estén escritas con otras palabras o con distinto detalle.
+
+No son el mismo hecho:
+- Dos noticias distintas sobre un mismo tema: la pole y la carrera, una práctica y otra, dos partidos, la reapertura del autódromo y su estacionamiento.
+- Un anuncio y su resultado: son dos notas, y la segunda lleva a la primera como antecedente.
+- Dos notas donde cambia la persona, el lugar, la fecha o la cifra principal.
+
+Ante la duda, no es el mismo hecho.
+
+Tarea: cada par son dos notas que Radar Balcarce tiene para publicar, con poco tiempo de diferencia. Para cada par decidí si cuentan el mismo hecho, con la definición de arriba.
+Devolvé un objeto JSON {"pares":[{"clave":"…","mismo":true|false}]} con una entrada por cada par, con la clave que se te dio.
