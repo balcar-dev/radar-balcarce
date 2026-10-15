@@ -6,11 +6,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO, MOTIVO_COTIZACION, AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA, AMARILLO_QUE_SE_SUELTA_SI_LA_CONFIRMAN,
+  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, AMARILLO_SOLO_EN_EL_PRINCIPIO, REGLAS_SEMAFORO, MOTIVO_COTIZACION, AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA, AMARILLO_QUE_SE_SUELTA_SI_LA_CONFIRMAN,
   MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO, SECCIONES_QUE_NO_ENTRAN, CONEXION_ARGENTINA, TITULO_HOROSCOPO, TITULO_LOTERIA,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
 import { menorPorEdad } from './menores.mjs';
+import { sinFenomenoClimatico, sinExencionesDelAmarillo, sinSorteosDeportivos, tituloConArgentino } from './exenciones.mjs';
 import { agruparPorHecho, leerMemoria, guardarMemoria, desdeLaMemoria } from './cruce.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
 import { decodificar } from './articulo.mjs';
@@ -158,6 +159,8 @@ export function normalizar(s = '') {
 const CACHE_RE = new Map();
 // De cuántas letras para arriba se permite que la palabra siga.
 const SUFIJO_DESDE = 5;
+// Palabras que se buscan enteras aunque tengan cinco letras o más: "petro" (Gustavo Petro) no es "petróleo" (15/10/2026, regla 172).
+const PALABRAS_ENTERAS = new Set(['petro']);
 
 /**
  * ¿Aparece esa palabra en el texto?
@@ -174,7 +177,7 @@ function contiene(textoNormalizado, palabra) {
   let re = CACHE_RE.get(palabra);
   if (!re) {
     const p = normalizar(palabra).replace(/\s+/g, '\\s+');
-    const cola = p.length >= SUFIJO_DESDE ? '\\w{0,3}' : '';
+    const cola = p.length >= SUFIJO_DESDE && !PALABRAS_ENTERAS.has(p) ? '\\w{0,3}' : '';
     re = new RegExp(`\\b${p}${cola}\\b`);
     CACHE_RE.set(palabra, re);
   }
@@ -756,16 +759,20 @@ export function semaforoDelTexto(textoCrudo, {
 } = {}) {
   const texto = normalizar(String(textoCrudo ?? ''));
   if (!texto) return null;
+  // Lo rojo se mira SIEMPRE sobre el texto completo, sin ninguna exención (regla 172).
   for (const p of REGLAS_SEMAFORO.rojo) {
     if (contiene(texto, p)) return { color: 'rojo', motivo: `tema sensible: "${p}"` };
   }
+  // El amarillo se mira sobre el texto sin las pocas frases que no son lo que parecen ("El Niño" del clima, "cadáver de una ballena",
+  // "pollitos recién nacidos", "cuando era niño"): ingesta/exenciones.mjs. Una palabra sensible del mismo texto sigue frenando.
+  const textoAmarillo = sinExencionesDelAmarillo(normalizar(sinFenomenoClimatico(String(textoCrudo ?? ''))));
   // En un texto entero (el artículo completo, el cuerpo que escribió la IA)
   // sólo frena lo que cuida a chicos y víctimas: ver AMARILLO_MENORES.
-  for (const p of soloMenores ? AMARILLO_MENORES : REGLAS_SEMAFORO.amarillo) {
+  for (const p of soloMenores ? AMARILLO_MENORES : [...REGLAS_SEMAFORO.amarillo, ...AMARILLO_SOLO_EN_EL_PRINCIPIO]) {
     // Lo de acá espera menos (2/10): ver AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA.
     if (deAca && AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA.includes(p)) continue;
     if (corroborada && AMARILLO_QUE_SE_SUELTA_SI_LA_CONFIRMAN.includes(p)) continue;
-    if (contiene(texto, p)) return { color: 'amarillo', motivo: `necesita ojo humano: "${p}"` };
+    if (contiene(textoAmarillo, p)) return { color: 'amarillo', motivo: `necesita ojo humano: "${p}"` };
   }
   // Una persona menor de 18 años dicha por su edad ("una chica de 16 años"): espera a una persona, también en el texto entero.
   const menor = menorPorEdad(texto);
@@ -825,11 +832,13 @@ function semaforo(nota, seccion, medios = cuantosMedios(nota)) {
     return { color: 'amarillo', motivo: MOTIVO_COTIZACION };
   }
   // Lo internacional sin relación con Balcarce no sale solo. Sólo el título.
-  if (nota.alcance !== 'local' && !nota.nombraBalcarce
+  // Si el título nombra a un argentino (Milei, "Argentina"…) no es "sin relación con acá": sigue al control de los medios (regla 172).
+  if (nota.alcance !== 'local' && !nota.nombraBalcarce && !tituloConArgentino(delTitulo)
     && (REGLAS_SEMAFORO.internacional ?? []).some((p) => contiene(delTitulo, p))) {
     return { color: 'amarillo', motivo: MOTIVO_INTERNACIONAL };
   }
-  const texto = normalizar(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
+  // El sorteo de un fixture, de zonas o de jueces no es una rifa (regla 172): ver sinSorteosDeportivos.
+  const texto = sinSorteosDeportivos(normalizar(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`));
   // Acá había una regla para el policial de otro lugar con violencia o
   // acusados (26/09, REGLAS_SEMAFORO.policialDeAfuera). Desde el 27/09 no se
   // alcanza nunca: esPolicialDeAfuera saca antes de llegar al semáforo todo

@@ -1256,6 +1256,13 @@ export const MOTIVO_COTIZACION = 'cotización del dólar: se muestra en /dolar';
 /** El amarillo que se mira en el texto entero: menores y víctimas. */
 export const AMARILLO_MENORES = REGLAS_SEMAFORO.amarillo.filter((p) => ES_DE_MENORES.test(p));
 
+// Los chicos en plural (15/10/2026, regla 172). Las palabras de cuatro letras o menos se buscan enteras, así que "niño" no encontraba
+// "niños" ni "nena" encontraba "nenas": "Dos niñas quedaron internadas tras el choque" salía en verde (docs/etapa-6-9/ANALISIS.md, A.3).
+// Frenan como el singular, pero SÓLO en el título y los primeros 600 caracteres (la ingesta), no en el texto entero de la fuente ni en lo que
+// escribe la IA (AMARILLO_MENORES): ahí una escuela o un acto con "los niños" en el quinto párrafo frenaría de más. Sobre las notas ya
+// publicadas habrían frenado 4 de 1.339 (0,3 %). No son de la lista amarilla para que no entren en AMARILLO_MENORES.
+export const AMARILLO_SOLO_EN_EL_PRINCIPIO = ['niños', 'niñas', 'nenes', 'nenas'];
+
 // Lo de Balcarce espera menos (2/10, Hernán: "si son de Balcarce que sean un poco menos estrictas, así salen más"). Dos cosas se
 // sueltan SÓLO para lo de acá (esDeAca) y nunca para lo rojo ni para lo de menores y víctimas:
 //   · "denuncia" / "denunció" suelto: un reclamo vecinal o una denuncia de un servicio no acusa a nadie.

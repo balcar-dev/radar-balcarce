@@ -8,7 +8,8 @@
 const sinTildes = (t) => String(t ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\s+/g, ' ').trim();
 
 const PERSONA = '(?:nen[eao]s?|nin[oa]s?|chic[oa]s?|pib[ea]s?|adolescentes?|bebes?|jovencit[oa]s?|joven|jovenes|hij[oa]s?|alumn[oa]s?|criatura)';
-const CON_EDAD = new RegExp(`\\b${PERSONA}\\b,?\\s+(?:de|con|que tiene|que tenia|de unos|de apenas)?\\s*(\\d{1,2})\\s*(?:anos?|anitos)\\b`);
+// Una edad o varias ("de 15 y 16 años", "de 14, 15 y 17 años", "de entre 12 y 17 años"): alcanza con que la más chica sea menor de 18 (15/10/2026, regla 172).
+const CON_EDAD = new RegExp(`\\b${PERSONA}\\b,?\\s+(?:de|con|que tiene|que tenia|de unos|de apenas|de entre|entre)?\\s*(\\d{1,2}(?:\\s*(?:,|y|e|o|a)\\s*\\d{1,2})*)\\s*(?:anos?|anitos)\\b`);
 const MENOR_DE = /\bmenor(?:es)?\s+de\s+(\d{1,2})\s*(?:anos?|anitos)\b/;
 
 /** ¿Habla de alguien de menos de 18 años por su edad? Devuelve lo que pegó, o null. */
@@ -16,7 +17,7 @@ export function menorPorEdad(texto) {
   const t = sinTildes(texto);
   for (const re of [CON_EDAD, MENOR_DE]) {
     const m = re.exec(t);
-    if (m && Number(m[1]) < 18) return m[0];
+    if (m && Math.min(...m[1].match(/\d+/g).map(Number)) < 18) return m[0];
   }
   return null;
 }
