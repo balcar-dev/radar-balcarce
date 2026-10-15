@@ -29,6 +29,7 @@ Pasada de punta a punta, módulo por módulo, después de terminar la tanda de m
 - La base ya está hecha en las auditorías del 15/10: `docs/etapa-10-operacion/ANALISIS.md` (tabla herramienta/servicio), `docs/salud-tecnica/ANALISIS.md` (mapa de 13 módulos), `docs/auditoria-opus/ANALISIS.md`, `docs/criterio/`, `docs/analiticas/`, `docs/etapa-2-5/` y `docs/etapa-6-9/`.
 - Revisar con ojo de dueños: las redes (qué piezas rinden), el panel del celular y el de la PC, los workflows manuales, `comercial/`, `pruebas-modelos/`, `criterio-unico/`, las claves de IA y cada cuenta (cuáles se usan y cuáles no).
 - Después de esa pasada: la auditoría final con Opus sobre lo que quedó.
+- **Dos errores de escritura congelados en `web/data/correcciones.json`** (hallazgo B1 de la auditoría de Opus; no se tocaron porque lo de una persona no se edita sin decidir): en la nota `1b3umaz` dice "si el equipo se consagra **campen**" (debería ser "campeón") y en `woerbj` dice "La **Séleccion** Argentina" (debería ser "La Selección Argentina"). Como `correcciones.json` cuenta como escrito por una persona, ningún arreglo automático los toca. Decidir juntos: corregirlos a mano (con `motivo`, `cuando` y `por`) o dejarlos.
 
 ## De la consulta a ChatGPT (15/10) cruzada con la auditoría de Opus
 

@@ -392,6 +392,16 @@ function oraciones(texto) {
  * como inventado. Devuelve null si no es una fecha.
  */
 export function datosDeFecha(valor) {
+  const p = partesDeFecha(valor);
+  if (!p) return null;
+  return {
+    palabras: [p.semana, p.mesPalabra].filter(Boolean),
+    numeros: [p.dia, p.mes, p.anio].filter(Number.isFinite),
+  };
+}
+
+/** Las partes de una fecha, en la hora de Balcarce: { semana, mesPalabra, dia, mes, anio }. */
+function partesDeFecha(valor) {
   const t = valor instanceof Date ? valor.getTime() : Date.parse(valor ?? '');
   if (!Number.isFinite(t)) return null;
   const partes = new Intl.DateTimeFormat('es-AR', {
@@ -400,26 +410,66 @@ export function datosDeFecha(valor) {
   const de = (tipo) => partes.find((p) => p.type === tipo)?.value ?? '';
   const mes = new Intl.DateTimeFormat('en-US', { month: 'numeric', timeZone: ZONA }).format(new Date(t));
   return {
-    palabras: [sinTildes(de('weekday')), sinTildes(de('month'))].filter(Boolean),
-    numeros: [Number(de('day')), Number(mes), Number(de('year'))].filter(Number.isFinite),
+    semana: sinTildes(de('weekday')),
+    mesPalabra: sinTildes(de('month')),
+    dia: Number(de('day')),
+    mes: Number(mes),
+    anio: Number(de('year')),
   };
 }
 
-/** ¿La oración habla de una fecha? (un día o un mes en palabras, o "9/10") */
-const hablaDeUnaFecha = (oracion) => palabras(oracion).some((w) => CALENDARIO.has(w)) || /\d{1,2}\s*[/-]\s*\d{1,2}/.test(oracion);
+const MES_NUMERO = {
+  enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6, julio: 7, agosto: 8,
+  septiembre: 9, setiembre: 9, octubre: 10, noviembre: 11, diciembre: 12,
+};
+const RE_DIAS = [...DIAS].join('|');
+const RE_MESES = Object.keys(MES_NUMERO).join('|');
+// Una fecha escrita, ya sin tildes ni mayúsculas: "viernes 9 de octubre de 2026", "9 de octubre", "jueves 15" o "15/10(/2026)".
+const FECHA_ESCRITA = new RegExp(
+  '(?:\\b(' + RE_DIAS + ')\\s+)?\\b(\\d{1,2})\\s+de\\s+(' + RE_MESES + ')(?:\\s+de(?:l)?\\s+(\\d{4}))?\\b'
+  + '|\\b(' + RE_DIAS + ')\\s+(\\d{1,2})\\b(?!\\s*[/-]\\s*\\d)'
+  + '|(?:\\b(' + RE_DIAS + ')\\s+)?\\b(\\d{1,2})\\s*[/-]\\s*(\\d{1,2})(?:\\s*[/-]\\s*(\\d{4}|\\d{2}))?\\b',
+  'g',
+);
+
+/**
+ * Saca de la oración las fechas escritas que coinciden con una de las fechas
+ * que la IA recibió (A1, auditoría del 15/10): un número o un día de la semana
+ * sólo se aceptan por la fecha de publicación cuando forman parte de ELLA
+ * ("el jueves 15", "15 de octubre", "15/10"), no por ser iguales a su día, su
+ * mes o su año: "el jueves comenzarán 14 cuadras" con la fuente publicada un 14
+ * tiene un 14 inventado. Lo que no coincide queda en la oración y se controla
+ * como cualquier dato. Devuelve la oración sin tildes y sin esos tramos.
+ */
+function sinFechasConocidas(oracion, fechas) {
+  const t = sinTildes(oracion);
+  if (!fechas.length) return t;
+  return t.replace(FECHA_ESCRITA, (todo, s1, d1, m1, a1, s2, d2, s3, d3, m3, a3) => {
+    const semana = s1 ?? s2 ?? s3 ?? null;
+    const dia = Number(d1 ?? d2 ?? d3);
+    const mes = m1 ? MES_NUMERO[m1] : (m3 ? Number(m3) : null);
+    let anio = a1 ?? a3 ?? null;
+    anio = anio == null ? null : Number(anio);
+    const conocida = fechas.some((f) => (semana == null || semana === f.semana)
+      && dia === f.dia
+      && (mes == null || mes === f.mes)
+      && (anio == null || anio === f.anio || (anio < 100 && anio === f.anio % 100)));
+    return conocida ? ' ' : todo;
+  });
+}
 
 /** Lo que se le dio a la IA, preparado una vez para todas las comparaciones. */
 function contexto(fuente = {}) {
   const origen = `${fuente.titulo ?? ''}. ${fuente.resumen ?? ''}`;
   const previo = String(fuente.antecedentes ?? '');
-  const fechas = (Array.isArray(fuente.fechas) ? fuente.fechas : []).map(datosDeFecha).filter(Boolean);
+  const fechas = (Array.isArray(fuente.fechas) ? fuente.fechas : []).map(partesDeFecha).filter(Boolean);
   return {
     origen,
     origenNorm: sinTildes(origen),
-    palabrasOrigen: new Set([...palabras(origen), ...fechas.flatMap((f) => f.palabras)]),
+    // Del mes de una fecha recibida sí se habla ("en octubre"); el día de la semana y los números, sólo dentro de la fecha escrita (A1).
+    palabrasOrigen: new Set([...palabras(origen), ...fechas.map((f) => f.mesPalabra)]),
     numerosOrigen: numerosDe(origen),
-    // Los números de las fechas de publicación valen sólo en una oración que habla de una fecha.
-    numerosDeFecha: fechas.flatMap((f) => f.numeros),
+    fechas,
     nombresCopia: nombresSeguros(origen),
     // Las palabras como vienen escritas (con sus letras raras): las de un nombre extranjero que ya estaba en la fuente no se rechazan.
     conocidas: new Set(`${origen}\n${previo}`.normalize('NFC').match(/[\p{L}\p{M}]+/gu) ?? []),
@@ -471,9 +521,9 @@ function problemasDelTexto(ctx, campo, texto, { soloForma = false, limite = LIMI
       const marcada = admite && MARCA_ANTERIOR.test(sinTildes(oracion));
 
       // 2. Números. Cualquier cifra o número en palabras que la fuente no traiga.
-      for (const v of numerosDe(oracion)) {
+      const sinFechas = sinFechasConocidas(oracion, ctx.fechas);
+      for (const v of numerosDe(sinFechas)) {
         if (estaEnLaFuente(v, ctx.numerosOrigen)) continue;
-        if (ctx.numerosDeFecha.includes(v) && hablaDeUnaFecha(oracion)) continue;
         if (estaEnLaFuente(v, ctx.numerosPrevio)) {
           if (!marcada) agregar('antecedente', comoActual(v.toLocaleString('es-AR')));
           continue;
@@ -496,7 +546,7 @@ function problemasDelTexto(ctx, campo, texto, { soloForma = false, limite = LIMI
       // 4. Días y meses. "El viernes" no puede aparecer si la fuente no lo
       // dice. Un día de la semana de una nota anterior nunca: "el viernes"
       // de hace dos semanas se lee como el que viene.
-      for (const w of palabras(oracion)) {
+      for (const w of palabras(sinFechas)) {
         if (!CALENDARIO.has(w) || ctx.palabrasOrigen.has(w)) continue;
         if (ctx.palabrasPrevio.has(w)) {
           if (!marcada || DIAS.has(w)) agregar('antecedente', comoActual(`"${w}"`));

@@ -74,3 +74,38 @@ test('el proyecto pide Node 24 y el vigilante mira los workflows que nacieron pa
   }
   for (const necesario of ['armado-vacio.yml', 'pruebas-otra-hora.yml', 'auditoria-ia.yml', 'pistas.yml']) assert.ok(WORKFLOWS_VIGILADOS[necesario], necesario);
 });
+
+// 15/10/2026 (M1 de la auditoría de Opus): las pruebas de la suite entera no frenan la web, pero el núcleo legal sí, en cada vuelta y ANTES de
+// armar y publicar; y si falla, el aviso sale por el mismo camino que los demás.
+test('"Actualizar la web" corre el núcleo legal antes de armar los datos y avisa si falla', () => {
+  const raiz = path.join(import.meta.dirname, '..');
+  const yml = fs.readFileSync(path.join(raiz, '.github', 'workflows', 'actualizar.yml'), 'utf8').replace(/\r\n/g, '\n');
+  const sinComentarios = yml.replace(/^\s*#.*$/gm, '');
+  const nucleo = sinComentarios.indexOf('npm run test:nucleo');
+  assert.ok(nucleo > 0, 'falta el paso del núcleo legal');
+  assert.ok(nucleo < sinComentarios.indexOf('node scripts/generar-datos.mjs'), 'el núcleo legal tiene que correr antes de armar los datos');
+  assert.ok(nucleo < sinComentarios.indexOf('git push'), 'y antes de publicar');
+  const desde = yml.indexOf('- name: Núcleo legal de las pruebas');
+  const paso = yml.slice(desde, yml.indexOf('- name:', desde + 10));
+  assert.ok(!/continue-on-error/.test(paso), 'el núcleo legal tiene que frenar la vuelta si falla');
+  assert.match(yml, /if: failure\(\) && steps\.nucleo\.outcome == 'failure'/);
+  assert.match(yml, /avisar-por-mail\.mjs/);
+  assert.match(yml, /VIGILANTE_TOKEN: \$\{\{ secrets\.VIGILANTE_TOKEN \}\}/);
+  const pkg = JSON.parse(fs.readFileSync(path.join(raiz, 'package.json'), 'utf8'));
+  assert.equal(pkg.scripts['test:nucleo'], 'node pruebas/nucleo-legal.mjs');
+  const lista = fs.readFileSync(path.join(raiz, 'pruebas', 'nucleo-legal.txt'), 'utf8').split(/\r?\n/).map((l) => l.trim()).filter((l) => l && !l.startsWith('#'));
+  for (const base of ['semaforo', 'exenciones', 'verificar', 'celular', 'archivo', 'cuerpo']) assert.ok(lista.includes(`${base}.test.mjs`), `${base} falta en el núcleo legal`);
+  for (const f of lista) assert.ok(fs.existsSync(path.join(raiz, 'pruebas', f)), `${f} no existe`);
+});
+
+// 15/10/2026 (M6): la prueba de restauración dijo "git fsck sin errores" aunque fsck fallara (iba a un `| tail` sin pipefail).
+test('la prueba de restauración falla si git fsck falla y el resumen sólo dice "sano" si pasó', () => {
+  const raiz = path.join(import.meta.dirname, '..');
+  const yml = fs.readFileSync(path.join(raiz, '.github', 'workflows', 'probar-restauracion.yml'), 'utf8').replace(/\r\n/g, '\n');
+  const sinComentarios = yml.replace(/^\s*#.*$/gm, '');
+  assert.ok(!/git fsck[^\n]*\|/.test(sinComentarios), 'git fsck no puede ir a un pipe sin pipefail');
+  assert.match(sinComentarios, /if git fsck --full > \.\.\/fsck\.txt 2>&1; then/);
+  assert.match(sinComentarios, /else[\s\S]*?exit 1\n\s*fi/);
+  assert.match(sinComentarios, /echo "FSCK=ok" >> "\$GITHUB_ENV"/);
+  assert.match(sinComentarios, /if \[ "\$\{FSCK:-\}" = ok \]; then\n\s*echo "- Bundle de git: \*\*restaurado y sano\*\*/);
+});

@@ -7,6 +7,7 @@
   },
   "scripts": {
     "test": "node --import ./pruebas/datos-fijos.mjs --test \"pruebas/*.test.mjs\"",
+    "test:nucleo": "node pruebas/nucleo-legal.mjs",
     "panel": "node panel/servidor.mjs",
     "ingesta": "node ingesta/ingesta.mjs",
     "auditar": "node ingesta/auditar.mjs",

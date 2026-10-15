@@ -99,9 +99,19 @@ jobs:
       - name: Reconstruir el repositorio desde el bundle
         working-directory: restaurar
         run: |
+          set -euo pipefail
           git clone --quiet radar-balcarce.bundle repo-restaurado
           cd repo-restaurado
-          git fsck --full 2>&1 | tail -3
+          # fsck se guarda en un archivo y se mira su código de salida: antes iba a `| tail -3` sin pipefail, y el paso daba verde
+          # aunque fsck fallara (hallazgo M6 de la auditoría del 15/10/2026). Si falla, el paso falla y el resumen NO dice "sano".
+          if git fsck --full > ../fsck.txt 2>&1; then
+            tail -3 ../fsck.txt
+            echo "FSCK=ok" >> "$GITHUB_ENV"
+          else
+            tail -30 ../fsck.txt
+            echo "::error::git fsck encontró errores en el bundle restaurado"
+            exit 1
+          fi
           echo "RESTAURADO=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
           echo "Commits restaurados: $(git rev-list --count HEAD)"
           echo "Archivos en el último commit: $(git ls-files | wc -l)"
@@ -113,7 +123,11 @@ jobs:
           echo "Último commit restaurado: $RESTAURADO"
           {
             echo "### Prueba de restauración del respaldo del $FECHA"
-            echo "- Bundle de git: **restaurado y sano** (git fsck sin errores)."
+            if [ "${FSCK:-}" = ok ]; then
+              echo "- Bundle de git: **restaurado y sano** (git fsck sin errores)."
+            else
+              echo "- Bundle de git: **NO verificado** (git fsck no pasó)."
+            fi
             cat restaurar/descarga.txt
             echo "- Último commit del respaldo: \`$RESTAURADO\`"
             echo "- Último commit en GitHub ahora: \`$ACTUAL\`"

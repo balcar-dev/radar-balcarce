@@ -42,14 +42,17 @@ const RE_SORTEO_OBJETO = new RegExp(`\\b${SORTEA}\\s+${DETERMINANTE}${SE_SORTEA_
 const RE_SORTEO_COMPETENCIA = new RegExp(`\\b${SORTEA}\\s+${DETERMINANTE}${SE_SORTEA_COMPETENCIA}\\b`, 'g');
 // "El sorteo definió el fixture", "el fixture surgió del sorteo": el fixture o el bolillero a seis palabras o menos (el texto ya viene sin puntuación).
 const DEL_FIXTURE = '(?:fixture|bolillero|bombos?|cruces|llaves)';
-const RE_SORTEO_CERCA_DEL_FIXTURE = new RegExp(`\\b${SORTEA}\\b(?:\\s+\\w+){0,6}?\\s+${DEL_FIXTURE}\\b|\\b${DEL_FIXTURE}\\b(?:\\s+\\w+){0,6}?\\s+${SORTEA}\\b`, 'g');
+// Se tapa SÓLO la palabra "sorteo" (con lookahead / lookbehind), nunca el tramo del medio: lo que haya entre el sorteo y el fixture ("víctima", "menor",
+// "rifa"…) sigue a la vista de las listas del semáforo (A2 de la revisión del 15/10).
+const RE_SORTEO_ANTES_DEL_FIXTURE = new RegExp(`\\b${SORTEA}\\b(?=(?:\\s+\\w+){0,6}?\\s+${DEL_FIXTURE}\\b)`, 'g');
+const RE_SORTEO_DESPUES_DEL_FIXTURE = new RegExp(`(?<=\\b${DEL_FIXTURE}\\b(?:\\s+\\w+){0,6}?\\s+)\\b${SORTEA}\\b`, 'g');
 
 /** Tapa los sorteos que son de deportes o de un tribunal. Recibe el texto ya normalizado (sin tildes, sin puntuación). "Sorteo de una Smart TV",
  *  "sorteo de entradas" o "sorteo de camisetas" no entran: siguen frenando como promoción. */
 export function sinSorteosDeportivos(textoNormalizado) {
   let t = String(textoNormalizado ?? '');
   if (!/\bsorte\w*/.test(t)) return t;
-  t = t.replace(RE_SORTEO_OBJETO, 'definicion').replace(RE_SORTEO_CERCA_DEL_FIXTURE, 'definicion');
+  t = t.replace(RE_SORTEO_OBJETO, 'definicion').replace(RE_SORTEO_ANTES_DEL_FIXTURE, 'definicion').replace(RE_SORTEO_DESPUES_DEL_FIXTURE, 'definicion');
   if (CONTEXTO_DEPORTE.test(t)) t = t.replace(RE_SORTEO_COMPETENCIA, 'definicion');
   return t;
 }

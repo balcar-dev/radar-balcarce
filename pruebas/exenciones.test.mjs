@@ -177,7 +177,12 @@ test('una edad doble o una lista de edades: "chicos de 15 y 16 años detenidos"'
     'Dos nenes de 5 y 7 años se perdieron',
     'Dos jóvenes de 17 y 25 años chocaron en la ruta 226',     // uno solo es menor: alcanza
     'Una chica de 16 años fue golpeada',                         // lo de siempre
-  ]) assert.ok(menorPorEdad(t), t);
+  ]) {
+    assert.ok(menorPorEdad(t), t);
+    // El mismo camino que producción: semaforoDelTexto normaliza (saca las comas) antes de mirar las edades.
+    assert.ok(menorPorEdad(normalizar(t)), `normalizado: ${t}`);
+    assert.equal(color(t), 'amarillo', `semáforo: ${t}`);
+  }
   for (const t of [
     'Dos jóvenes de 19 y 25 años chocaron en la ruta',
     'Hijos de 20 y 22 años heredaron la empresa',
@@ -188,4 +193,48 @@ test('una edad doble o una lista de edades: "chicos de 15 y 16 años detenidos"'
   ]) assert.equal(menorPorEdad(t), null, t);
   assert.equal(color('Detuvieron a dos chicos de 15 y 16 años por un robo'), 'amarillo');
   assert.equal(color('Detuvieron a dos chicos de 15 y 16 años por un robo', { soloMenores: true }), 'amarillo');
+});
+
+test('A3: la lista de edades con comas frena en el semáforo real, aunque normalizar saque las comas', () => {
+  for (const t of [
+    'Tres chicos de 14, 15 y 17 años ganaron el torneo de ajedrez',
+    'Tres chicos de 14 15 y 17 años ganaron el torneo de ajedrez',
+    'Detuvieron a tres jóvenes de 14, 15 y 19 años',
+  ]) assert.equal(color(t), 'amarillo', t);
+  for (const t of [
+    'Tres jóvenes de 18, 19 y 25 años ganaron el torneo',
+    'Dos hijos de 20, 22 y 30 años heredaron el campo',
+  ]) assert.equal(color(t), 'verde', t);
+});
+
+test('A3: se mira a TODAS las personas con edad, no sólo a la primera', () => {
+  for (const t of [
+    'Una joven de 22 años y su hija de 3 años viajaban en el auto',
+    'Un joven de 20 años y su hijo de 2 años quedaron internados',
+    'Un hombre de 45 años y un menor de 14 años chocaron en la ruta',
+  ]) {
+    assert.ok(menorPorEdad(t), t);
+    assert.equal(color(t), 'amarillo', t);
+    assert.equal(color(t, { soloMenores: true }), 'amarillo', `soloMenores: ${t}`);
+  }
+  for (const t of [
+    'Una joven de 22 años y su pareja de 30 años viajaban en el auto',
+    'Un hombre de 45 años y un joven de 25 años chocaron en la ruta',
+  ]) assert.equal(color(t), 'verde', t);
+});
+
+test('A2: el sorteo del fixture sólo tapa la palabra "sorteo": víctima, menor o rifa del medio siguen frenando', () => {
+  for (const t of [
+    'En el sorteo de la Copa una víctima del bolillero',
+    'Durante el sorteo atropellaron a una nena y se suspendieron los cruces',
+    'Tras el sorteo hallaron a una víctima y se armó el fixture',
+    'Quedaron los cruces y una víctima fatal tras el sorteo',
+    'Con el fixture a la vista, un menor de edad fue al sorteo',
+  ]) assert.notEqual(color(t), 'verde', t);
+  // El tramo del medio queda a la vista.
+  assert.equal(sinSorteosDeportivos('en el sorteo de la copa una victima del bolillero'), 'en el definicion de la copa una victima del bolillero');
+  assert.equal(sinSorteosDeportivos('quedaron los cruces y una victima fatal tras el sorteo'), 'quedaron los cruces y una victima fatal tras el definicion');
+  // Lo de antes sigue pasando.
+  assert.equal(sinSorteosDeportivos('el sorteo definio el fixture'), 'el definicion definio el fixture');
+  assert.equal(color('Fin del fútbol gratis: la AFA confirmó el sorteo del fixture', { }), 'verde');
 });

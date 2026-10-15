@@ -1,0 +1,29 @@
+# El "núcleo legal" de las pruebas (15/10/2026, hallazgo M1 de docs/auditoria-opus/REVISION-CODIGO-15-10.md).
+#
+# Estas pruebas corren en CADA vuelta de "Actualizar la web" (.github/workflows/actualizar.yml, antes de armar y publicar) y a mano con
+# `npm run test:nucleo`. Si una falla, la vuelta se corta, no se publica nada y sale un aviso. La suite entera (`npm test`) corre aparte,
+# en "Pruebas" (pruebas.yml), y NO frena la web: una prueba de diseño no tiene que dejar el sitio congelado (11/10).
+#
+# Entran sólo las que cuidan lo que no se puede publicar mal: el semáforo (menores, víctimas, sepelios, exenciones), el verificador,
+# la cola de las personas (celular), las retiradas y correcciones con motivo, y el cuerpo mínimo. Una por línea, relativa a pruebas/.
+# Tienen que ser rápidas (todo el núcleo corre en unos segundos) y no tocar la red. Para sumar una: agregarla acá.
+semaforo.test.mjs
+exenciones.test.mjs
+verificar.test.mjs
+verificador-copia-fechas-letras.test.mjs
+lectura-ia.test.mjs
+reescritura.test.mjs
+cuerpo.test.mjs
+celular.test.mjs
+celular-app.test.mjs
+auditoria-correccion.test.mjs
+archivo.test.mjs
+repetidas-esperando.test.mjs
+repetidas-publicadas.test.mjs
+entrada.test.mjs
+de-aca.test.mjs
+copia-de-afuera.test.mjs
+loteria.test.mjs
+json-ia.test.mjs
+escape-en-el-texto.test.mjs
+efemerides-ajenas.test.mjs

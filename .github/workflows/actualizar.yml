@@ -74,10 +74,41 @@ jobs:
         run: |
           n=0; until npm ci --no-audit --no-fund; do n=$((n+1)); [ $n -ge 3 ] && exit 1; echo "npm ci falló (intento $n), se reintenta"; sleep 20; done
 
-      # Las pruebas YA NO corren en cada vuelta (15/10/2026). Antes corrían las 2.000 acá, 48 veces por día, y una prueba de diseño que
-      # fallaba (el 11/10, las escenas de video) dejaba la web 7 horas sin actualizarse, sin que ninguna noticia estuviera mal. Ahora corren
-      # cuando alguien cambia el código (workflow "Pruebas", pruebas.yml) y una vez por semana. Lo que protege cada vuelta es el propio
-      # armado: si generar los datos, compilar o revisar el SEO fallan, no se commitea y la web queda como estaba.
+      # El NÚCLEO LEGAL de las pruebas sí corre en cada vuelta, antes de armar y publicar (hallazgo M1 de la auditoría del 15/10/2026).
+      # La suite entera (las 2.000) NO: antes corría acá 48 veces por día y una prueba de diseño que fallaba (el 11/10, las escenas de
+      # video) dejaba la web 7 horas sin actualizarse, sin que ninguna noticia estuviera mal. Esa suite corre cuando alguien cambia el
+      # código y una vez por semana (workflow "Pruebas", pruebas.yml). Pero lo que no se puede publicar mal (semáforo, menores y
+      # víctimas, sepelios, verificador, cola de las personas, retiradas y correcciones con motivo, cuerpo mínimo) no puede esperar a
+      # un mail a quien hizo el push: la lista está en pruebas/nucleo-legal.txt, tarda unos 3 segundos y no toca la red.
+      # Si falla, la vuelta se corta acá (no se arma ni se publica nada: la web queda como estaba) y el paso de abajo avisa.
+      # Lo demás que protege cada vuelta es el propio armado: si generar los datos, compilar o revisar el SEO fallan, no se commitea.
+      - name: Núcleo legal de las pruebas
+        id: nucleo
+        run: npm run test:nucleo
+
+      # Sin esto la vuelta fallaba "en silencio" (sólo el mail de GitHub). Va por el mismo camino que los demás avisos (mail por el
+      # Worker del vigilante y, de respaldo, WhatsApp; redes/avisar-por-mail.mjs). Con `clave`, el Worker no repite el mismo aviso en
+      # 6 horas aunque la vuelta falle cada media hora. No frena nada: la vuelta ya está fallada.
+      - name: Avisar que falló el núcleo legal
+        if: failure() && steps.nucleo.outcome == 'failure'
+        continue-on-error: true
+        run: |
+          node --input-type=module <<'JS'
+          import { avisar } from './redes/avisar-por-mail.mjs';
+          const corrida = `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`;
+          const texto = [
+            'Radar Balcarce: falló una prueba del núcleo legal.',
+            'La web NO se actualizó en esta vuelta (queda como estaba) y no va a actualizarse hasta que se arregle.',
+            `Cambio: ${String(process.env.GITHUB_SHA ?? '').slice(0, 7)}`,
+            `Detalle: ${corrida}`,
+          ].join('\n');
+          const r = await avisar({ asunto: 'Falló el núcleo legal de las pruebas: la web no se actualiza', texto, clave: 'nucleo-legal-fallo', nivel: 'alta' });
+          console.log(r.ok ? `Aviso enviado por ${r.via}.` : `El aviso no salió: ${r.motivo}`);
+          JS
+        env:
+          WHATSAPP_TELEFONO: ${{ secrets.WHATSAPP_TELEFONO }}
+          WHATSAPP_APIKEY: ${{ secrets.WHATSAPP_APIKEY }}
+          VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
 
       # La ingesta en sí no necesita nada (fetch y expresiones regulares).
       # Las claves de Gemini son para la reescritura automática de las notas

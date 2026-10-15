@@ -110,6 +110,56 @@ test('la fecha de publicación no autoriza otros datos: otro día de la semana, 
   assert.ok(tipos(nueveHeridos).includes('numero'), 'el 9 del día de publicación no vale para contar heridos');
 });
 
+// A1 (revisión del 15/10): la fecha de publicación habilita sólo la fecha ESCRITA, no cualquier número o día igual.
+const ASFALTO = {
+  titulo: 'El intendente anunció un plan de asfalto',
+  resumen: 'El intendente anunció un plan de asfalto para los barrios durante el mes de octubre.',
+  fechas: ['2026-10-15T15:00:00.000Z', '2026-10-14T15:00:00.000Z'], // hoy jueves 15, la fuente del miércoles 14
+};
+
+test('A1: el número o el día igual a la fecha de publicación no se acepta si no forma parte de una fecha escrita', () => {
+  const r = verificar(ASFALTO, {
+    titulo: 'Anuncian un plan de asfalto',
+    copete: 'El intendente anunció un plan de asfalto.',
+    cuerpo: 'El intendente anunció que el jueves comenzarán 14 cuadras de asfalto en octubre.',
+  });
+  assert.ok(tipos(r).includes('numero'), 'las 14 cuadras son un dato inventado: ' + JSON.stringify(r.problemas));
+  assert.ok(tipos(r).includes('fecha'), 'el jueves, sin su número, no sale de la fecha de publicación: ' + JSON.stringify(r.problemas));
+  const heridos = verificar(ASFALTO, { titulo: 'Anuncian un plan de asfalto', copete: 'El 2026 trae 15 obras y 10 calles nuevas en octubre.' });
+  assert.ok(tipos(heridos).includes('numero'), '15, 10 y 2026 sueltos tampoco valen');
+});
+
+test('A1: las fechas escritas que coinciden con la de hoy o la de la fuente siguen pasando', () => {
+  const casos = [
+    'El jueves 15 de octubre comenzará el plan de asfalto.',
+    'El jueves 15 comenzará el plan de asfalto.',
+    'El miércoles 14 de octubre se anunció el plan de asfalto.',
+    'El 15 de octubre se anunció el plan de asfalto.',
+    'El plan de asfalto se anunció el 15/10.',
+    'El plan de asfalto se anunció el 14/10/2026.',
+    'El plan de asfalto se anunció el jueves 15/10.',
+    'El plan de asfalto se anunció el 15 de octubre de 2026.',
+  ];
+  for (const cuerpo of casos) {
+    const r = verificar(ASFALTO, { titulo: 'Anuncian un plan de asfalto', copete: 'El intendente anunció un plan de asfalto.', cuerpo });
+    assert.ok(!tipos(r).some((t) => ['numero', 'fecha'].includes(t)), cuerpo + ' -> ' + JSON.stringify(r.problemas));
+  }
+});
+
+test('A1: una fecha escrita que NO coincide con ninguna recibida se sigue marcando', () => {
+  const casos = [
+    ['El viernes 16 de octubre comenzará el plan de asfalto.', ['numero', 'fecha']], // el 16 y el viernes no son de ninguna fecha
+    ['El jueves 14 comenzará el plan de asfalto.', ['numero']], // el 14 era miércoles
+    ['El plan de asfalto se anunció el 16/10.', ['numero']],
+    ['El plan de asfalto se anunció el 15 de noviembre.', ['fecha']],
+    ['El plan de asfalto se anunció el 15/10/2025.', ['numero']],
+  ];
+  for (const [cuerpo, esperados] of casos) {
+    const r = verificar(ASFALTO, { titulo: 'Anuncian un plan de asfalto', copete: 'El intendente anunció un plan de asfalto.', cuerpo });
+    for (const t of esperados) assert.ok(tipos(r).includes(t), cuerpo + ' -> debía marcar ' + t + ': ' + JSON.stringify(r.problemas));
+  }
+});
+
 test('datosDeFecha: día de la semana y mes en palabras, día, mes y año en números, en la hora de Balcarce', () => {
   assert.deepEqual(datosDeFecha('2026-10-09T14:55:07.000Z'), { palabras: ['viernes', 'octubre'], numeros: [9, 10, 2026] });
   // 00:30 UTC del 10 es todavía el 9 a la noche en Balcarce (UTC-3).
