@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T17:45:58.993Z",
+  "generado": "2026-10-15T18:04:09.770Z",
   "notas": [
     {
       "id": "1vrfi9w",
@@ -135,7 +135,6 @@
       "seccion": "Balcarce",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
       ],
@@ -144,7 +143,7 @@
       "fecha": "2026-10-15T15:16:45.000Z",
       "sinFecha": false,
       "visto": "2026-10-15T15:33:58.707Z",
-      "relevancia": 100,
+      "relevancia": 94,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -343,6 +342,78 @@
       "foto": {
         "archivo": "fotos-notas/11lwkfl.jpg",
         "credito": "Foto: Infórmese Primero (FM 104.9)"
+      }
+    },
+    {
+      "id": "pel8ok",
+      "titulo": "LALCEC organiza actividades y mamografías gratuitas por el mes rosa",
+      "copete": "La institución local detalla su agenda de concientización contra el cáncer de mama que incluye una misa, una caminata en Plaza Libertad y estudios médicos sin cargo para mujeres sin cobertura.",
+      "cuerpo": "LALCEC Balcarce desarrolla una campaña de concientización sobre el cáncer de mama con propuestas orientadas a la detección temprana y el apoyo a pacientes. Las referentes Silvia Marinoni y Andrea Maceri informaron que el viernes 16 de octubre a las 18 horas se oficiará una misa en la Parroquia San José. En tanto, el sábado 24 de octubre desde las 15 horas la Plaza Libertad recibirá una jornada con caminata, suelta de palomas y números artísticos.\n\nAdemás, la entidad mantiene abierta la inscripción para mamografías gratuitas destinadas a mujeres sin obra social, mediante un trabajo conjunto con el Hospital Municipal y el Concejo Deliberante. Las interesadas pueden anotarse los jueves de 14 a 18 horas en la sede o comunicarse al teléfono 2266-476263 para integrar el listado de turnos.\n\nComo parte de la asistencia a pacientes, la entidad incorporó la entrega gratuita en comodato de pelucas de cabello natural. Este recurso se concretó tras enviar pelo recolectado en la Fiesta del Automovilismo a la agrupación Latidos Rosas de San Nicolás, con la colaboración del Grupo Solidario Balcarce.",
+      "guion": "LALCEC organiza actividades y mamografías gratuitas por el mes rosa",
+      "seccion": "Balcarce",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/octubre-rosa-lalcec-prepara-una-caminata-una-misa-y-distintas-actividades-de-concientizacion",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T13:34:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T14:01:31.391Z",
+      "relevancia": 74,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "LALCEC realiza actividades de prevención del cáncer de mama durante octubre.",
+        "El viernes 16 de octubre hay una misa en la Parroquia San José a las 18 horas.",
+        "El sábado 24 de octubre se hace la caminata y la jornada en Plaza Libertad desde las 15.",
+        "Ofrecen mamografías sin cargo para mujeres sin obra social y entrega de pelucas oncológicas."
+      ],
+      "seSabe": [
+        "LALCEC Balcarce impulsa una agenda comunitaria durante octubre por la concientización sobre el cáncer de mama, según informó la institución.",
+        "El viernes 16 de octubre a las 18 horas se celebra una misa en la Parroquia San José.",
+        "El sábado 24 de octubre a partir de las 15 horas se efectúa la caminata y jornada recreativa en la Plaza Libertad.",
+        "La entidad anota para mamografías sin costo a mujeres sin cobertura médica los jueves de 14 a 18 horas o mediante el teléfono 2266-476263.",
+        "Se entregan pelucas oncológicas en comodato gracias a una articulación con el Grupo Solidario Balcarce y la agrupación Latidos Rosas de San Nicolás."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "LALCEC Balcarce detalla su agenda de octubre por la concientización sobre el cáncer de mama con una misa, una caminata en Plaza Libertad y mamografías gratuitas para mujeres sin obra social.",
+      "etiquetas": [
+        "LALCEC",
+        "cáncer de mama",
+        "Plaza Libertad",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/octubre-rosa-lalcec-prepara-una-caminata-una-misa-y-distintas-actividades-de-concientizacion",
+          "fecha": "2026-10-15T13:34:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el cronograma de actividades de LALCEC por el mes rosa, la inscripción a mamografías y la entrega de pelucas oncológicas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1h3b7f0",
+          "titulo": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
+          "fecha": "2026-09-30T18:17:49.000Z",
+          "ruta": "/nota/la-fiesta-nacional-del-postre-anuncia-sus-actividades-para-octubre-1h3b7f0"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "lalcec-organiza-actividades-y-mamografias-gratuitas-por-el-mes-rosa",
+      "foto": {
+        "archivo": "fotos-notas/pel8ok.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
       }
     },
     {
@@ -621,86 +692,6 @@
       }
     },
     {
-      "id": "1ycwu60",
-      "titulo": "El Gobierno convoca a mineras para mejorar trenes de carga en Salta",
-      "copete": "El Poder Ejecutivo reunirá la próxima semana a empresas mineras y logísticas para optimizar el Ramal C14 e impulsar inversiones privadas en el C15 en territorio salteño.",
-      "cuerpo": "El Gobierno nacional reunirá la próxima semana a compañías mineras y operadores logísticos con el fin de potenciar el rendimiento del Ramal C14 en la puna salteña y conseguir financiamiento privado para habilitar de manera integral el Ramal C15. Esta acción se enmarca en el proceso de licitación pública para otorgar en concesión por medio siglo las líneas ferroviarias operadas por Belgrano Cargas y Logística S.A.\n\nLa convocatoria surge tras los pedidos formales realizados por el gobernador de Salta, Gustavo Sáenz, y por distintas cámaras empresarias y productivas provinciales. El sector busca que las mejoras en ambos ramales queden fijadas como obras obligatorias en los pliegos contractuales para evitar demoras en su ejecución.\n\nLa zona de influencia moviliza millones de toneladas de productos y derivados anualmente, cuyo traslado actual en camión hacia los puertos rosarinos genera costos elevados. Un sistema ferroviario eficiente permitiría recortar esos gastos logísticos de manera significativa.",
-      "guion": "El Gobierno convoca a mineras para mejorar trenes de carga en Salta",
-      "seccion": "Agro",
-      "medios": [
-        "Infobae",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/10/15/el-gobierno-convocara-a-mineras-y-operadoras-para-optimizar-los-trenes-de-carga-de-la-puna-saltena/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T12:58:23.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T16:33:19.652Z",
-      "relevancia": 48,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Convocatoria a empresas mineras y logísticas para la próxima semana.",
-        "Búsqueda de fondos privados para los ramales C14 y C15 en Salta.",
-        "Reclamo impulsado por el gobernador provincial y entidades productivas."
-      ],
-      "noConfirmado": [
-        "Todavía no se precisó el día exacto de la reunión prevista para la próxima semana.",
-        "No se definieron los detalles finales de cómo se integrarán las obras obligatorias en los pliegos de concesión."
-      ],
-      "textoRedes": "El Gobierno nacional convoca a empresas mineras y logísticas para optimizar los trenes de carga en Salta y buscar financiamiento privado para los ramales ferroviarios.",
-      "etiquetas": [
-        "trenes de carga",
-        "Salta",
-        "minería",
-        "Gobierno nacional",
-        "transporte ferroviario"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/15/el-gobierno-convocara-a-mineras-y-operadoras-para-optimizar-los-trenes-de-carga-de-la-puna-saltena/",
-          "fecha": "2026-10-15T12:58:23.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/economia/2026/10/15/el-gobierno-buscara-inversiones-en-dos-ramales-del-belgrano-cargas-para-facilitar-las-exportaciones-mineras/",
-          "fecha": "2026-10-15T13:22:08.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/politica/el-gobierno-convocara-a-mineras-y-operadoras-en-busca-de-fondos-para-reactivar-los-trenes-de-carga-en-salta/",
-          "fecha": "2026-10-15T16:04:50.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/energia/el-gobierno-busca-inversiones-reactivar-dos-ramales-ferroviarios-clave-la-mineria-salta-n6334032",
-          "fecha": "2026-10-15T13:43:41.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-convoca-a-mineras-para-mejorar-trenes-de-carga-en-salta",
-      "foto": {
-        "archivo": "fotos-notas/1ycwu60.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
       "id": "9s0dkq",
       "titulo": "Flavio Briatore presenta al nuevo director técnico de Alpine",
       "copete": "La escudería francesa realizó la bienvenida oficial de Mike Elliott como máximo responsable técnico. El ingeniero británico trabajará junto a Franco Colapinto y Pierre Gasly.",
@@ -853,6 +844,85 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "la-escuela-municipal-de-basquet-juega-una-nueva-fecha"
+    },
+    {
+      "id": "1xctidq",
+      "titulo": "El Gobierno nacional convoca a empresas para optimizar ramales de trenes en Salta",
+      "copete": "El Ejecutivo nacional reunirá a firmas mineras y logísticas para mejorar el funcionamiento del ramal C14 e impulsará inversiones privadas para el C15.",
+      "cuerpo": "El Gobierno nacional convoca para la próxima semana a empresas mineras y operadoras logísticas con el fin de analizar mejoras operativas en el ramal ferroviario C14, ubicado en la puna de Salta. En paralelo, impulsa la búsqueda de fondos privados para rehabilitar de manera integral el ramal C15 y asegurar la conexión con Bolivia y mercados internacionales.\n\nLa decisión surge a partir de un pedido formal realizado por el gobernador salteño, Gustavo Sáenz, y firmas del sector, según informó el Ministerio de Economía. El propósito central apunta a articular el funcionamiento de la red ferroviaria en esa provincia norteña.",
+      "guion": "El Gobierno nacional convoca a empresas para optimizar ramales de trenes en Salta",
+      "seccion": "Agro",
+      "medios": [
+        "Noticias Argentinas (NA)",
+        "Ámbito"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/buscan-optimizar-ramales-ferroviario-en-salta-pata-potenciar-produccion-minera_a6ad0c2cc88153cda2df06216",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-15T12:39:13.230Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T18:02:38.694Z",
+      "relevancia": 33,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "ferroviarios"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Convocan a empresas mineras y logísticas para la próxima semana.",
+        "Buscan optimizar el funcionamiento del ramal ferroviario C14 en Salta.",
+        "Promueven fondos privados para poner en marcha el ramal C15."
+      ],
+      "seSabe": [
+        "El Ministerio de Economía confirmó la convocatoria a firmas del sector minero y logístico.",
+        "La medida responde a una demanda del gobernador Gustavo Sáenz y las empresas.",
+        "Se busca optimizar el ramal C14 y conseguir inversiones para el C15."
+      ],
+      "noConfirmado": [
+        "No se precisó el día exacto de la reunión prevista para la próxima semana.",
+        "No trascendieron los montos necesarios para las inversiones en los ramales."
+      ],
+      "textoRedes": "El Gobierno nacional convoca a empresas mineras y logísticas para optimizar los ramales ferroviarios C14 y C15 en Salta tras un pedido del gobernador provincial.",
+      "etiquetas": [
+        "gobierno nacional",
+        "salta",
+        "economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/buscan-optimizar-ramales-ferroviario-en-salta-pata-potenciar-produccion-minera_a6ad0c2cc88153cda2df06216",
+          "fecha": "2026-10-15T12:39:13.230Z",
+          "oficial": false,
+          "aporte": "Detalló la convocatoria a empresas mineras, los planes para los ramales C14 y C15, y el pedido del gobernador salteño."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/energia/el-gobierno-busca-inversiones-reactivar-dos-ramales-ferroviarios-clave-la-mineria-salta-n6334032",
+          "fecha": "2026-10-15T13:43:41.000Z",
+          "oficial": false,
+          "aporte": "No aportó texto propio en esta edición."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ifyi35",
+          "titulo": "Balcarce Básquet sumó dos victorias en una nueva fecha de la Asociación de Mar del Plata",
+          "fecha": "2026-09-21T15:10:00.000Z",
+          "ruta": "/nota/balcarce-basquet-sumo-dos-victorias-en-una-nueva-fecha-de-la-1ifyi35"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-nacional-convoca-a-empresas-para-optimizar-ramales-de",
+      "foto": {
+        "archivo": "fotos-notas/1xctidq.jpg",
+        "credito": "Foto: Ámbito"
+      }
     },
     {
       "id": "efemeride20261015",
@@ -1300,6 +1370,275 @@
       "slug": "el-clima-de-hoy-en-balcarce-minima-de-9-y-maxima-de-15"
     },
     {
+      "id": "aa5npj",
+      "titulo": "El Ministerio de Transporte bonaerense actualiza las tarifas de la VTV",
+      "copete": "La Verificación Técnica Vehicular aumenta un 17,56% en todo el territorio provincial tras finalizar un período de noventa días con valores congelados.",
+      "cuerpo": "El Ministerio de Transporte bonaerense oficializó un incremento del 17,56% en la Verificación Técnica Vehicular, que comenzó a regir el jueves 15 de octubre tras la publicación de la medida en el Boletín Oficial. De esta manera, el trámite básico para automóviles de hasta 2.500 kilos pasó a costar $114.105,99.\n\nLa actualización llega luego de tres meses de congelamiento tarifario en el servicio obligatorio. Los nuevos valores se calculan a partir de los incrementos salariales del sector y sirven como referencia para definir los montos de las restantes categorías del cuadro vigente.\n\nEn ese sentido, las estimaciones ubican el costo para las motocicletas en unos $45.614, mientras que para los vehículos pesados que superan los 2.500 kilos alcanza los $205.264 aproximadamente.",
+      "guion": "El Ministerio de Transporte bonaerense actualiza las tarifas de la VTV",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "El Diario Balcarce",
+        "Diario La Vanguardia",
+        "0223 (Mar del Plata)",
+        "Agencia DIB",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "La Nueva",
+        "0221",
+        "La Tecla",
+        "La Verdad",
+        "QZ Noticias (Mar del Plata)",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Infobrisas (Radio Brisas)",
+        "El Eco de Tandil",
+        "Ámbito",
+        "Minuto Uno",
+        "Infoeme",
+        "Ecos Diarios (Necochea)",
+        "Clarín",
+        "NDEN – Noticias de Necochea",
+        "La Noticia 1",
+        "A24"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/aumenta-la-vtv-bonaerense-y-la-tarifa-basica-pasa-a-114106-831",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T10:15:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T18:02:38.694Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La tarifa básica de la VTV asciende a $114.105,99 en territorio bonaerense.",
+        "El incremento representa un 17,56% tras concluir el congelamiento de noventa días.",
+        "La medida se oficializó mediante una resolución publicada en el Boletín Oficial."
+      ],
+      "seSabe": [
+        "La tarifa básica de la VTV se ubica en $114.105,99 desde el jueves 15 de octubre.",
+        "El incremento en el servicio provincial alcanza el 17,56% según informó el Ministerio de Transporte.",
+        "La medida se oficializó tras finalizar un período de noventa días de congelamiento en los valores."
+      ],
+      "textoRedes": "El Ministerio de Transporte bonaerense oficializó un aumento del 17,56% en la Verificación Técnica Vehicular tras noventa días de valores congelados. La tarifa básica para automóviles pasó a costar $114.105,99 y se actualizan los montos para el resto de las categorías.",
+      "etiquetas": [
+        "VTV",
+        "provincia de Buenos Aires",
+        "Ministerio de Transporte",
+        "aumento de tarifas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/aumenta-la-vtv-bonaerense-y-la-tarifa-basica-pasa-a-114106-831",
+          "fecha": "2026-10-15T12:01:28.000Z",
+          "oficial": false,
+          "aporte": "Detalló los nuevos montos, el porcentaje de aumento y los fundamentos de la resolución ministerial."
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/aumento-un-1756-la-vtv-en-la-provincia-de-buenos-aires-cuanto-cuesta-desde-este-jueves/",
+          "fecha": "2026-10-15T14:11:33.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45084-ya-es-oficial-y-la-vtv-aumenta-un-17-6-cuanto-cuesta-desde-hoy/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-10-15-12-17-0-impagable-vuelve-a-aumentar-la-vtv-y-la-tarifa-basica-supera-los-114-mil",
+          "fecha": "2026-10-15T15:17:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/sociedad/aumenta-la-vtv-bonaerense-y-la-tarifa-basica-pasa-114106-n56517",
+          "fecha": "2026-10-15T11:52:41.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/15/aumento-la-vtv-en-la-provincia-de-buenos-aires-cuanto-hay-que-pagar-a-partir-de-hoy/",
+          "fecha": "2026-10-15T15:11:19.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/15/aumento-la-vtv-en-la-provincia-de-buenos-aires-cuanto-cuesta-hacer-el-tramite/",
+          "fecha": "2026-10-15T17:07:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/aumenta-un-17--la-vtv-en-provincia--cuanto-cuesta-hacer-la-revision-desde-octubre_a6ad0eaa788153cda2df5e931",
+          "fecha": "2026-10-15T17:24:24.052Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/la-ciudad/la-vtv-bonaerense-ya-cuesta-mas-cara-las-nuevas-tarifas-de-la-revision-del-auto-la-ciudad_1792068360",
+          "fecha": "2026-10-15T12:50:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-15-13-10-0-la-vtv-un-17-56-mas-cara-desde-hoy",
+          "fecha": "2026-10-15T17:48:31.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/provincia/la-provincia-oficializo-un-nuevo-aumento-la-vtv-y-ya-es-un-176-mas-cara-n135838",
+          "fecha": "2026-10-15T11:15:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Tecla",
+          "enlace": "https://www.latecla.info/170400-la-vtv-aumenta-en-la-provincia-desde-este-jueves-cuesta-mas-de-114-mil",
+          "fecha": "2026-10-15T11:17:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/aumenta-la-vtv-bonaerense-y-la-tarifa-basica-pasa-a-114-106/",
+          "fecha": "2026-10-15T12:15:04.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/la-provincia/aumenta-la-vtv-en-la-provincia-de-buenos-aires-la-tarifa-basica-supera-los-114000",
+          "fecha": "2026-10-15T12:50:48.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/aumento-la-vtv-en-la-provincia-de-buenos-aires",
+          "fecha": "2026-10-15T17:00:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Mi8 (Canal 8 Mar del Plata)",
+          "enlace": "https://mi8.com.ar/la-vtv-bonaerense-aumenta-casi-un-18-cuanto-cuesta-desde-hoy-para-autos-y-motos/",
+          "fecha": "2026-10-15T13:15:18.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/10/15/111542-autorizaron-nuevo-aumento-en-la-vtv",
+          "fecha": "2026-10-15T16:00:37.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/provincia/aumento-la-vtv-en-la-provincia-de-buenos-aires-cual-sera-el-valor-de-la-tarifa-basica",
+          "fecha": "2026-10-15T12:34:22.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/informacion-general/aumenta-la-vtv-la-provincia-buenos-aires-cuanto-quedo-la-tarifa-basica-n6333970",
+          "fecha": "2026-10-15T12:02:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/sociedad/tramite-la-vtv-provincia-buenos-aires-la-fecha-clave-del-calendario-que-ningun-conductor-debe-olvidar-n6333780",
+          "fecha": "2026-10-15T10:15:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infoeme",
+          "enlace": "https://www.infoeme.com/informacion-general/2026-10-15-9-38-12-aumenta-la-vtv-bonaerense-y-la-tarifa-basica-pasa-a-114-106",
+          "fecha": "2026-10-15T12:38:12.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/aumento-un-17-por-ciento-la-tarifa-de-la-verificacion-tecnica-vehicular-en-la-provincia-de-buenos-aires",
+          "fecha": "2026-10-15T13:19:42.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/sociedad/aumenta-vtv-provincia-meses-inicio-temporada-aplican-ajuste-17_0_uzpJ9im0a2.html",
+          "fecha": "2026-10-15T14:24:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/10/15/111542-autorizan-nuevo-aumento-en-la-vtv",
+          "fecha": "2026-10-15T16:00:37.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "NDEN – Noticias de Necochea",
+          "enlace": "https://nden.com.ar/nota/38409/aumento-la-vtv-en-la-provincia-cuanto-cuesta-desde-hoy-y-donde-hacerla-en-necochea",
+          "fecha": "2026-10-15T15:26:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Noticia 1",
+          "enlace": "https://www.lanoticia1.com/noticia/aumento-la-vtv-en-la-provincia-cuanto-cuesta-verificar-un-auto",
+          "fecha": "2026-10-15T16:33:01.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/economia/aumento-la-vtv-la-provincia-buenos-aires-cuanto-cuesta-hacer-la-verificacion-n1606739",
+          "fecha": "2026-10-15T16:38:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1b4z7qp",
+          "titulo": "El Ministerio de Transporte bonaerense actualiza la tarifa básica de la VTV",
+          "fecha": "2026-10-15T11:15:00.000Z",
+          "ruta": "/nota/el-ministerio-de-transporte-bonaerense-actualiza-la-tarifa-basica-de-1b4z7qp"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 26 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-ministerio-de-transporte-bonaerense-actualiza-las-tarifas-de-la-vtv"
+    },
+    {
       "id": "7tqcv3",
       "titulo": "El Gobierno nacional actualiza los aranceles de discapacidad",
       "copete": "El Ejecutivo nacional dispuso una suba del 1,9% en las prestaciones básicas para personas con discapacidad. La medida se rige por la inflación de septiembre y mantiene el adicional patagónico.",
@@ -1474,75 +1813,6 @@
       "foto": {
         "archivo": "fotos-notas/ny562k.jpg",
         "credito": "Foto: La Nación"
-      }
-    },
-    {
-      "id": "19qd45l",
-      "titulo": "Bitcoin cae hasta los 80 mil dólares por la suba de la inflación estadounidense",
-      "copete": "La cotización de la criptomoneda principal retrocede un 3% este jueves debido al impacto de los datos de precios en Estados Unidos. El mercado registra fuertes liquidaciones y caídas en otros activos digitales.",
-      "cuerpo": "El mercado de criptomonedas opera con bajas este jueves y Bitcoin retrocede un 3% para cotizar alrededor de los 80.000 dólares. El retroceso arrastra a Ethereum, que cede un 6% y perfora los 2.400 dólares, mientras que otras monedas digitales registran mermas de dos dígitos.\n\nLa baja responde al dato del Índice de Precios al Consumidor estadounidense de septiembre, que se ubicó en el 3,7% tras avanzar tres décimas respecto al mes previo y superar las previsiones del mercado. La Country Manager de Bitget en Argentina, Carolina Gama, indicó que el movimiento refleja la reacción ante la inflación y un elevado nivel de contratos de futuros.\n\nEl escenario genera liquidaciones de posiciones apalancadas por casi 1.000 millones de dólares en un día.",
-      "guion": "Bitcoin cae hasta los ochenta mil dólares por la suba de la inflación estadounidense",
-      "seccion": "Tecnología",
-      "medios": [
-        "iProUP",
-        "Ámbito"
-      ],
-      "enlace": "https://www.iproup.com/economia-digital/72331-por-que-bitcoin-baja-hasta-usd-80000-y-que-puede-pasar-con-el-precio",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-15T09:30:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T17:44:15.309Z",
-      "relevancia": 33,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Bitcoin baja a u$s80.000 tras un retroceso del 3%",
-        "Ethereum cae un 6% y perfora los u$s2.400",
-        "La inflación de septiembre en Estados Unidos se ubica en el 3,7%",
-        "Liquidaciones de posiciones apalancadas por u$s1.000 millones"
-      ],
-      "seSabe": [
-        "Bitcoin cotiza en torno a los u$s80.000 tras una baja del 3% según F2",
-        "Ethereum cae un 6% y pierde los u$s2.400 según F2",
-        "El IPC de Estados Unidos subió al 3,7% en septiembre según F2",
-        "Las liquidaciones de posiciones apalancadas alcanzan casi u$s1.000 millones según F2"
-      ],
-      "textoRedes": "Bitcoin baja hasta los u$s80.000 y Ethereum perfora los u$s2.400 este jueves en medio de una fuerte presión en el mercado cripto. La caída responde al dato de inflación en Estados Unidos y genera liquidaciones por casi u$s1.000 millones.",
-      "etiquetas": [
-        "Bitcoin",
-        "Ethereum",
-        "Criptomonedas",
-        "Inflacion",
-        "Estados Unidos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "iProUP",
-          "enlace": "https://www.iproup.com/economia-digital/72331-por-que-bitcoin-baja-hasta-usd-80000-y-que-puede-pasar-con-el-precio",
-          "fecha": "2026-10-15T09:30:00.000Z",
-          "oficial": false,
-          "aporte": "Presentación del tema sin desarrollo de texto."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/finanzas/bitcoin-se-hunde-los-us80000-las-renovadas-apuestas-una-suba-tasas-la-fed-este-mes-n6334065",
-          "fecha": "2026-10-15T14:03:34.000Z",
-          "oficial": false,
-          "aporte": "Detalles completos sobre la caída de criptomonedas, cifras de liquidación, declaraciones de Bitget y datos de inflación de Estados Unidos."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "bitcoin-cae-hasta-los-80-mil-dolares-por-la-suba-de-la-inflacion",
-      "foto": {
-        "archivo": "fotos-notas/19qd45l.jpg",
-        "credito": "Foto: Ámbito"
       }
     },
     {
@@ -2361,6 +2631,7 @@
         "Olé",
         "Crónica",
         "Radio Mitre",
+        "Noticias Argentinas (NA)",
         "La Nueva",
         "El Marplatense",
         "Doble Amarilla",
@@ -2542,124 +2813,6 @@
       "foto": {
         "archivo": "fotos-notas/2m710x.jpg",
         "credito": "Foto: La Nación"
-      }
-    },
-    {
-      "id": "zkgilr",
-      "titulo": "La oposición busca quórum en Diputados para rechazar el DNU 70",
-      "copete": "Diversos bloques opositores intentan reunir este jueves el número necesario en la Cámara de Diputados para abrir una sesión especial. El objetivo es voltear el decreto y debatir iniciativas sobre discapacidad y morosidad familiar.",
-      "cuerpo": "La Cámara de Diputados lleva adelante este jueves 15 de octubre una sesión especial impulsada por la oposición con el propósito de rechazar el DNU 70 y debatir proyectos vinculados a la morosidad familiar y la emergencia en discapacidad. El inicio del debate fue fijado para las 14.\n\nLa convocatoria perdió fuerza durante la última semana debido a factores como un fallo de la Corte Suprema sobre la norma de extranjerización, movimientos oficialistas en torno a la Ley de Tierras y la fijación de otra sesión para el 21 de octubre. Ante este escenario, los sectores opositores estiman una asistencia de entre 120 y 123 legisladores, provenientes de Unión por la Patria, el Frente de Izquierda, Provincias Unidas, Argentina Federal y otros espacios.\n\n\"Si tenemos que morir con las botas puestas, lo vamos a hacer\", advirtió un diputado nacional de Unión por la Patria en declaraciones difundidas por la Agencia Noticias Argentinas, al señalar que la intención es exponer a quienes respaldan la continuidad de la medida.",
-      "guion": "La oposición busca quórum en Diputados para rechazar el DNU setenta",
-      "seccion": "Política",
-      "medios": [
-        "Infobae",
-        "La Nación",
-        "Clarín",
-        "Perfil",
-        "TN (Todo Noticias)",
-        "El Destape",
-        "Crónica",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "QZ Noticias (Mar del Plata)",
-        "Ámbito",
-        "C5N",
-        "La Nueva",
-        "iProfesional"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/-moriremos-con-las-botas-puestas---la-oposicion-se-ve-sin-chances-de-abrir-la-sesion-para-derribar-el-dnu-70_a6ad00ed08298ee386b42327c",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T18:20:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T16:33:19.652Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La oposición intenta reunir quórum este jueves en la Cámara baja.",
-        "La sesión especial fue convocada para las 14.",
-        "Buscan rechazar el DNU 70 y tratar proyectos de emergencia.",
-        "Los bloques impulsores calculan contar con hasta 123 bancas."
-      ],
-      "seSabe": [
-        "La sesión especial en la Cámara de Diputados está programada para este jueves 15 de octubre a las 14.",
-        "El temario incluye el rechazo al DNU 70 y proyectos sobre morosidad familiar y emergencia en discapacidad, según informó la Agencia Noticias Argentinas.",
-        "La convocatoria cuenta con el impulso de Unión por la Patria, el Frente de Izquierda, Provincias Unidas, Argentina Federal y otros legisladores."
-      ],
-      "noConfirmado": [
-        "No se confirmó si la oposición logrará alcanzar el número necesario de quórum para abrir formalmente el debate."
-      ],
-      "textoRedes": "Diputados: la oposición intenta reunir quórum este jueves para debatir el rechazo al DNU 70 y tratar proyectos de emergencia en discapacidad y morosidad familiar.",
-      "etiquetas": [
-        "Diputados",
-        "DNU 70",
-        "Oposición",
-        "Política Nacional"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/-moriremos-con-las-botas-puestas---la-oposicion-se-ve-sin-chances-de-abrir-la-sesion-para-derribar-el-dnu-70_a6ad00ed08298ee386b42327c",
-          "fecha": "2026-10-15T07:00:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los motivos de la pérdida de impulso de la sesión, los proyectos en agenda y las declaraciones de un legislador opositor sobre el número de bancas."
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/politica/diputados-hoy-vivo-oposicion-busca-derribar-dnu-7023-todavia-dudas-quorum-abrir-sesion_0_Fm3GbMMPOX.html",
-          "fecha": "2026-10-15T11:45:08.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que el horario de inicio del debate está programado para las 14."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/morir-con-las-botas-puestas-la-oposicion-se-ve-sin-chances-de-abrir-la-sesion-para-derribar-el-dnu-70.phtml",
-          "fecha": "2026-10-15T13:15:14.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la convocatoria se vio afectada por movimientos políticos y judiciales recientes."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/politica-y-economia/moriremos-con-las-botas-puestas-la-oposicion-se-ve-sin-chances-de-abrir-la-sesion-para-derribar-el-dnu-70-politica-y-economia_1792077720",
-          "fecha": "2026-10-15T15:27:16.000Z",
-          "oficial": false,
-          "aporte": "Aportó la información sobre las expectativas limitadas de la oposición para conseguir quórum."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-15-7-27-0-moriremos-con-las-botas-puestas-la-oposicion-se-ve-sin-chances-de-abrir-la-sesion-para-derribar-el-dnu-70",
-          "fecha": "2026-10-15T10:45:58.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en el panorama parlamentario adverso que enfrenta el sector opositor en la previa."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "irpmd8",
-          "titulo": "El oficialismo cuestiona a la oposición por la sesión para derogar el DNU",
-          "fecha": "2026-10-09T16:06:03.000Z",
-          "ruta": "/nota/el-oficialismo-cuestiona-a-la-oposicion-por-la-sesion-para-derogar-el-irpmd8"
-        },
-        {
-          "id": "1pawdnw",
-          "titulo": "La oposición busca una sesión especial en Diputados contra el decreto de tierras",
-          "fecha": "2026-09-29T03:00:00.000Z",
-          "ruta": "/nota/la-oposicion-busca-una-sesion-especial-en-diputados-contra-el-decreto-1pawdnw"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-oposicion-busca-quorum-en-diputados-para-rechazar-el-dnu-70",
-      "foto": {
-        "archivo": "fotos-notas/zkgilr.jpg",
-        "credito": "Foto: Clarín"
       }
     },
     {
@@ -3040,17 +3193,6 @@
         "El caso involucra a un policía juzgado por un hecho de 2011",
         "Se cuestionan diferencias entre las pericias médicas",
         "El expediente está a la espera de la Corte Suprema"
-      ],
-      "seSabe": [
-        "Maximiliano Blanco Río es ex titular de la SubDDI de Balcarce según informó un medio local",
-        "Josêcute Antonio Cácere fue condenado a perpetua por un hecho en Berisso en 2011 según la fuente",
-        "La autopsia oficial atribuyó la muerte a una cardiopatía según el informe",
-        "El caso se encuentra pendiente de revisión en la Corte Suprema de Justicia de la Nación"
-      ],
-      "noConfirmado": [
-        "La validez têcutecnica definitiva de la pericia de parte frente a la autopsia oficial",
-        "El resultado que emitirá la Corte Suprema de Justicia sobre la condena",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
       "textoRedes": "El ex titular de la SubDDI de Balcarce, Maximiliano Blanco Río, reflexionó sobre la condena a perpetua a un policía en Berisso y cuestionó las pericias del caso.",
       "etiquetas": [
@@ -3994,7 +4136,6 @@
     "Argentina",
     "Economía",
     "Fútbol",
-    "Tecnología",
     "Policiales"
   ],
   "temas": [
@@ -4009,7 +4150,7 @@
       "temp": 14,
       "sensacion": 11,
       "humedad": 66,
-      "viento": 17,
+      "viento": 18,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": true
@@ -4418,6 +4559,12 @@
       "motivo": "necesita ojo humano: \"imputado\""
     },
     {
+      "id": "zwv5sw",
+      "titulo": "Causa Maradona: Fernando Burlando ratificó que Diego \"fue…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"asesinato\""
+    },
+    {
       "id": "1okotnb",
       "titulo": null,
       "seccion": "Argentina",
@@ -4456,7 +4603,7 @@
     {
       "id": "1y68acy",
       "titulo": "El escándalo del oro suma otra denuncia: el diputado…",
-      "seccion": "Economía",
+      "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
@@ -4470,12 +4617,6 @@
       "titulo": "Rechazan cerrar una de las mayores causas de lavado de…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1agbvaw",
-      "titulo": "Fuerte escándalo en los Martín Fierro de la Música: le…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "scnqab",

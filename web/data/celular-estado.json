@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T17:45:58.993Z",
+ "generado": "2026-10-15T18:04:09.770Z",
  "portada": 53,
- "archivo": 1131,
+ "archivo": 1129,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-15T17:45:59.028Z",
+  "generado": "2026-10-15T18:04:09.803Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -53,7 +53,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -124,19 +124,19 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 53,
+    "segundos": 49,
     "notas": [
-     {
-      "id": "1f8plkr",
-      "titulo": "El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre",
-      "seccion": "Balcarce"
-     },
      {
       "id": "mly1kv",
       "titulo": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
       "seccion": "Deportes"
+     },
+     {
+      "id": "aa5npj",
+      "titulo": "El Ministerio de Transporte bonaerense actualiza las tarifas de la VTV",
+      "seccion": "Balcarce"
      },
      {
       "id": "9y985f",
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 50,
     "notas": [
      {
       "id": "lf9d6b",
@@ -175,8 +175,8 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1vrfi9w",
-      "titulo": "Proyecto 10 repasa su historia social",
+      "id": "pel8ok",
+      "titulo": "LALCEC organiza actividades y mamografías gratuitas por el mes rosa",
       "seccion": "Balcarce"
      }
     ]
@@ -206,6 +206,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "aa5npj",
+     "titulo": "El Ministerio de Transporte bonaerense actualiza las tarifas de la VTV",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
     {
      "id": "1f8plkr",
      "titulo": "El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre",
