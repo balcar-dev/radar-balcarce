@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T08:01:56.164Z",
+ "generado": "2026-10-15T08:32:07.132Z",
  "portada": 44,
  "archivo": 1100,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-15T08:01:56.197Z",
+  "generado": "2026-10-15T08:32:07.171Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -98,13 +98,13 @@
     "segundos": 50,
     "notas": [
      {
-      "id": "cdnqde",
-      "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
+      "id": "1e22az3",
+      "titulo": "Cristian Méndez regresa a Balcarce tras una exitosa gira por España",
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "1e22az3",
-      "titulo": "Cristian Méndez regresa a Balcarce tras una exitosa gira por España",
+      "id": "cdnqde",
+      "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
       "seccion": "Cultura y agenda"
      },
      {
@@ -126,21 +126,11 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 45,
+    "segundos": 34,
     "notas": [
      {
       "id": "wzunxc",
       "titulo": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "wfa595",
-      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "tctot0",
-      "titulo": "Valeria Ares comparte su experiencia a dieciseis años de su doble trasplante",
       "seccion": "Balcarce"
      },
      {
@@ -157,8 +147,19 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 22,
+    "notas": [
+     {
+      "id": "wfa595",
+      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "tctot0",
+      "titulo": "Valeria Ares comparte su experiencia a dieciseis años de su doble trasplante",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
