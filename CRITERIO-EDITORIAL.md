@@ -421,8 +421,13 @@ esa lista y se arregla para siempre.
 
 **Primero se juntan.** Si varios medios contaron lo mismo, la IA los recibe a
 todos, numerados (Fuente 1, Fuente 2…), cada uno con su medio, su fecha y si
-es oficial, más el **texto completo** de la nota original (si el de la
-principal no se puede bajar, el de otra fuente que contó lo mismo). No se
+es oficial, más el **texto completo** de hasta cuatro de ellos (desde el 15/10,
+regla 174; antes, de uno solo). Van numerados por lo que aportan: primero la
+oficial, después la de más texto útil y después la que más datos agrega; los
+textos van limpios de restos de la página y de letras rotas. Si dos medios
+publicaron el mismo texto (un cable, una gacetilla), el segundo va marcado como
+copia y cuenta como una sola voz. Cuando se juntan dos notas repetidas, se
+juntan también sus fuentes, no sólo los nombres de los medios. No se
 busca nada en internet, a propósito: el verificador sólo puede controlar lo
 que la IA recibió, y un dato "encontrado" sería imposible de distinguir de
 uno inventado.
@@ -780,7 +785,12 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Notas que se le piden a la IA por día, como máximo (con la clave de lectura propia) | 450 | `REESCRITURA.porDia` |
 | Lo mismo, mientras la lectura con IA comparte la clave gratis | 330 | `REESCRITURA.porDiaSinClaveDeLectura` |
 | De esas, reservadas para lo de Balcarce (lo de afuera para antes) | 80 | `REESCRITURA.reservaParaLocales` |
-| Texto completo de la fuente: caracteres que recibe la IA | 4000 | `REESCRITURA.caracteresDelTextoCompleto` |
+| Texto completo de cada fuente: caracteres que recibe la IA | 4000 | `REESCRITURA.caracteresDelTextoCompleto` |
+| Textos completos que recibe la IA, como mucho (de fuentes distintas) | 4 | `REESCRITURA.textosCompletosMaximo` |
+| Caracteres de todos los textos completos juntos, como mucho | 12000 | `REESCRITURA.caracteresDeTextosEnTotal` |
+| Fuentes cuyo texto se intenta bajar para elegir las más completas | 6 | `REESCRITURA.fuentesQueSeBajan` |
+| Fuentes numeradas en lo que recibe la IA, como mucho (las demás, sólo nombradas) | 12 | `REESCRITURA.fuentesEnLaEntradaMaximo` |
+| Tramos de cinco palabras en común para que un texto sea copia de otro (por ciento) | 50 | `REESCRITURA.copiaEntreFuentes` |
 | Antecedentes: días hacia atrás | 30 | `REESCRITURA.diasDeAntecedentes` |
 | Antecedentes: como máximo | 3 | `REESCRITURA.antecedentesMaximo` |
 | Portada: horas que una nota está en las listas | 36 | `PORTADA.horas` |

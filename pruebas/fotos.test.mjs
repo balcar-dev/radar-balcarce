@@ -74,6 +74,20 @@ test('candidatasConDatos junta la dirección de la imagen con sus bytes', async 
   assert.deepEqual(c.datos, { mime: 'image/jpeg', base64: Buffer.from('abc').toString('base64') });
 });
 
+test('candidatasConDatos no pasa de 8 fotos (las letras A a H) y las que traen imagen van primero: una nota con 12 fuentes no se queda sin foto', async () => {
+  const fuentes = Array.from({ length: 12 }, (_, i) => ({ medio: 'M' + i, enlace: 'https://m' + i + '.com/n' }));
+  const nota = { titulo: 'x', fuentesConsultadas: fuentes };
+  const fetchFn = async (url) => {
+    // Sólo las fuentes 9 a 12 (índices 8 a 11) traen foto.
+    const m = url.match(/^https:\/\/m(\d+)\.com\/n$/);
+    if (m) return { ok: true, text: async () => (Number(m[1]) >= 8 ? '<meta property="og:image" content="https://m' + m[1] + '.com/f.jpg">' : '<p>sin foto</p>') };
+    if (url.endsWith('/f.jpg')) return { ok: true, headers: { get: () => 'image/jpeg' }, arrayBuffer: async () => Buffer.from('abc') };
+  };
+  const cs = await candidatasConDatos(nota, { fetchFn });
+  assert.equal(cs.length, 8);
+  assert.ok(cs.slice(0, 4).every((c) => c.datos), 'las 4 que traen foto van primero');
+});
+
 // Para elegirFoto no hace falta bajar de verdad: se arman candidatas ya con
 // `datos`, como si `candidatasConDatos` ya hubiera corrido.
 const conDatos = (letras) => letras.map((medio, i) => ({

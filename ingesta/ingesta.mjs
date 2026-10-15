@@ -14,7 +14,7 @@ import { menorPorEdad } from './menores.mjs';
 import { sinFenomenoClimatico, sinExencionesDelAmarillo, sinSorteosDeportivos, tituloConArgentino } from './exenciones.mjs';
 import { agruparPorHecho, leerMemoria, guardarMemoria, desdeLaMemoria } from './cruce.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
-import { decodificar } from './articulo.mjs';
+import { decodificar, decodificarPagina } from './articulo.mjs';
 import { sinTildes } from '../web/lib/texto.js';
 
 export const TODAS_LAS_FUENTES = [...FUENTES, ...FUENTES_NACIONALES, ...FUENTES_CRUCE];
@@ -96,11 +96,9 @@ export async function traer(url, { timeout = 15000, agente, sinCompresion = fals
     }
     if (!res.ok) throw new Error(motivoDeFalla(new Error(`HTTP ${res.status}`), timeout));
     // Varios sitios no declaran charset y fetch los lee como latin1: forzamos UTF-8
-    // y sólo volvemos atrás si el resultado queda lleno de caracteres rotos.
-    const buf = Buffer.from(await res.arrayBuffer());
-    const utf8 = new TextDecoder('utf-8').decode(buf);
-    const rotos = (utf8.match(/�/g) ?? []).length;
-    return rotos > utf8.length / 2000 ? buf.toString('latin1') : utf8;
+    // y sólo volvemos atrás si el resultado queda lleno de caracteres rotos
+    // (decodificarPagina, ingesta/articulo.mjs: la misma regla para la página de la nota).
+    return decodificarPagina(await res.arrayBuffer());
   } finally {
     clearTimeout(t);
   }

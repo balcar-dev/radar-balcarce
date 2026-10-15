@@ -656,7 +656,8 @@ function problemasDelTexto(ctx, campo, texto, { soloForma = false, limite = LIMI
 const LETRA_CASTELLANA = /^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑºª]$/;
 const LETRA_LATINA_DE_AFUERA = /^[\u00C0-\u024F]$/u;
 const ENTIDAD = /&(?:[a-zA-Z]{2,8}|#x?[0-9a-fA-F]{2,6});/;
-const CODIFICACION_ROTA = /[ÃÂ][\u0080-\u00BF]|â€|ï¿½|\uFFFD/u;
+// También la usa la limpieza del texto bajado de las fuentes (ingesta/fuentes-para-la-ia.mjs, regla 174).
+export const CODIFICACION_ROTA = /[ÃÂ][\u0080-\u00BF]|â€|ï¿½|\uFFFD/u;
 // Sin la bandera "i" en la primera: con ella, la "s" y la "ſ" (s larga) se confunden y "scute" dispara.
 const TILDE_PEGADA = /[\u00C0-\u024F]cute|(?:acute|ntilde|uuml)(?![a-zA-Z])/;
 // Entre dos palabras de un mismo nombre puede haber un conector ("Arcos Saneamento e Participações", "Jean-Pierre", "Juan de la Cruz").

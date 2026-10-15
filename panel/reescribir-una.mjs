@@ -11,7 +11,7 @@
 // Sin dependencias: lo que importa de reels/ y web/lib no trae paquetes.
 
 import {
-  textoCompletoDe, antecedentesDe, reescribir, materialParaVerificar, completarReescritura,
+  textosDeLasFuentes, conEntradaAmpliada, antecedentesDe, reescribir, materialParaVerificar, completarReescritura,
   semaforoDeLaReescritura, esLocal,
 } from '../reels/reescritura.mjs';
 import { arreglarEscritura, verificar, depurarCuerpo } from '../ingesta/verificar.mjs';
@@ -27,11 +27,11 @@ import { tieneCuerpo, palabrasDe, PALABRAS_MINIMAS_CUERPO } from '../web/lib/cue
 export async function reescribirUna(nota, {
   pedido = null, archivo = [], traer, opciones = {}, ahora = new Date(),
 } = {}) {
-  const completo = await textoCompletoDe(nota, traer);
+  // Los textos completos de hasta cuatro fuentes, sin copias ni restos de la página (regla 174): en las
+  // notas de Pistas, los de las páginas que trajo la búsqueda; el verificador controla contra todos.
+  const textos = await textosDeLasFuentes(nota, traer);
   const conTexto = {
-    ...nota,
-    textoDeLaFuente: completo.texto,
-    fuenteDelTexto: completo.numero,
+    ...conEntradaAmpliada(nota, textos),
     antecedentes: antecedentesDe(nota, archivo, { ahora }),
   };
   // Lo rojo (un menor, una víctima) no se escribe nunca, ni a pedido.

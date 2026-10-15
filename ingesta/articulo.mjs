@@ -63,7 +63,9 @@ function limpiar(html) {
 }
 
 // Lo que aparece en los pies y menús de los medios y no es la nota.
-const RUIDO = /(^|\s)(compartir|seguinos|suscri|newsletter|leé también|lee también|leer más|te puede interesar|todos los derechos|©|copyright|publicidad|comentarios|whatsapp|facebook|twitter|outdated browser|navegador desactualizado)(\s|$|:)/i;
+// 15/10 (regla 174): también "mirá también", "seguí leyendo", "más noticias", "últimas noticias",
+// "notas relacionadas" y "lo más leído", que dejaban en el texto el título de otra nota.
+const RUIDO = /(^|\s)(compartir|seguinos|suscri|newsletter|leé también|lee también|mirá también|mira también|seguí leyendo|segui leyendo|leer más|te puede interesar|más noticias|últimas noticias|notas relacionadas|lo más leído|todos los derechos|©|copyright|publicidad|comentarios|whatsapp|facebook|twitter|outdated browser|navegador desactualizado)(\s|$|:)/i;
 
 // Las necrológicas que El Diario Balcarce pone debajo de cada nota
 // (necrologicas-container): párrafos largos y seguidos, así que el tramo más
@@ -152,6 +154,19 @@ export function extraerTexto(html, { max = REESCRITURA.caracteresDelTextoComplet
   return texto.length >= minimo ? texto : null;
 }
 
+/**
+ * Los bytes de una página como texto. Varios sitios no declaran cómo están
+ * escritos y algunos están en Latin-1: leídos como UTF-8 quedan llenos de rombos
+ * ("Econom�a", Crónica, 15/10). Se lee como UTF-8 y, si quedan muchos rombos, como
+ * Latin-1. La misma regla que ya usaba la lectura de los feeds (ingesta/ingesta.mjs).
+ */
+export function decodificarPagina(bytes) {
+  const buf = Buffer.from(bytes);
+  const utf8 = new TextDecoder('utf-8').decode(buf);
+  const rotos = (utf8.match(/�/g) ?? []).length;
+  return rotos > utf8.length / 2000 ? buf.toString('latin1') : utf8;
+}
+
 /** Baja la página y devuelve el texto de la nota, o null si algo falla. */
 export async function traerTexto(url, { fetchFn = fetch, timeout = 8000 } = {}) {
   if (!url) return null;
@@ -161,7 +176,9 @@ export async function traerTexto(url, { fetchFn = fetch, timeout = 8000 } = {}) 
       signal: AbortSignal.timeout(timeout),
     });
     if (!res.ok) return null;
-    return extraerTexto(await res.text());
+    // Con los bytes, para poder leer una página en Latin-1 (decodificarPagina); si no los da, como texto.
+    const html = typeof res.arrayBuffer === 'function' ? decodificarPagina(await res.arrayBuffer()) : await res.text();
+    return extraerTexto(html);
   } catch {
     return null;
   }

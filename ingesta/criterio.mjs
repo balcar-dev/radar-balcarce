@@ -121,7 +121,19 @@ export const REESCRITURA = {
   // cupo (26/09: a las 21:30 ya se habían gastado los 150 y tres notas locales
   // importantes esperaban sin cuerpo).
   reservaParaLocales: 80,
+  // El texto completo de CADA fuente que recibe la IA (lo corta ingesta/articulo.mjs al bajarlo).
   caracteresDelTextoCompleto: 4000,
+  // La entrada ampliada (15/10, regla 174; ingesta/fuentes-para-la-ia.mjs): la IA recibe el texto
+  // completo de hasta `textosCompletosMaximo` fuentes (antes, de una sola), y entre todos no pasan de
+  // `caracteresDeTextosEnTotal` (con cuatro de 4.000, 3.000 cada uno). Se intenta bajar el texto de
+  // hasta `fuentesQueSeBajan` fuentes para elegir las más completas; en la entrada van numeradas hasta
+  // `fuentesEnLaEntradaMaximo` (las demás, sólo nombradas). Dos textos con `copiaEntreFuentes` % o más
+  // de sus tramos de cinco palabras en común son copia (un cable, una gacetilla): cuentan como una voz.
+  textosCompletosMaximo: 4,
+  caracteresDeTextosEnTotal: 12000,
+  fuentesQueSeBajan: 6,
+  fuentesEnLaEntradaMaximo: 12,
+  copiaEntreFuentes: 50,
   diasDeAntecedentes: 30,
   antecedentesMaximo: 3,
 };

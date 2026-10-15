@@ -283,7 +283,10 @@ test('si el texto de la nota principal no se puede bajar, se usa el de otra fuen
   const traer = async (url) => (url === 'https://b/2' ? TEXTO_COMPLETO : null);
   assert.deepEqual(await textoCompletoDe(nota, traer), { texto: TEXTO_COMPLETO, numero: 2 });
   const { pedidos } = await correr([bueno], { minimoDeMaterial: 60, traer, nota });
-  assert.match(pedidos[0], /Texto completo de la Fuente 2/);
+  // Desde el 15/10 (regla 174) la IA numera las fuentes por lo que aportan: la única con texto completo,
+  // la de B, pasa a ser su Fuente 1 (la nota sigue teniendo la dirección de la de A).
+  assert.match(pedidos[0], /Texto completo de la Fuente 1 \(B\b/);
+  assert.match(pedidos[0], /Fuente 2 \(A\): Uno\./);
 });
 
 // ------------------------------------------------- la caché con cuerpo

@@ -109,7 +109,10 @@ export async function descargarImagen(url, { fetchFn = fetch } = {}) {
 
 /** Junta candidatas + imagen bajada, para las que sirven. */
 export async function candidatasConDatos(nota, { fetchFn = fetch } = {}) {
-  const candidatas = await candidatasDeNota(nota, { fetchFn });
+  // La IA rotula las fotos con letras (A a H): una nota con más de 8 fuentes se quedaba sin foto porque de la novena en adelante no había letra
+  // (15/10/2026, hallazgo de la auditoría de fotos). Se queda con las 8 primeras, y las que traen imagen van antes.
+  const todas = await candidatasDeNota(nota, { fetchFn });
+  const candidatas = [...todas.filter((c) => c.imagen), ...todas.filter((c) => !c.imagen)].slice(0, LETRAS.length);
   const conDatos = [];
   for (const c of candidatas) {
     if (!c.imagen) { conDatos.push({ ...c, datos: null }); continue; }

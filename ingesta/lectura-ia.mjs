@@ -576,9 +576,50 @@ export function unirGrupos(anteriores = [], nuevos = [], idsVigentes = null) {
  * que la gente ya ve desaparece y queda otra que todavía no tiene cuerpo),
  * después la que puede salir sola (verde), después la que cuentan más medios
  * y por último la de más puntaje. Se le suman los medios de las otras (así
- * cuenta como contada por varios). Devuelve { notas, repetidas } sin tocar
+ * cuenta como contada por varios) y, desde el 15/10 (regla 174), también sus
+ * FUENTES (`origenes`, con el resumen y el enlace de cada una, y `fuentesTexto`):
+ * antes se sumaban sólo los nombres y la IA escribía con las fuentes de una sola
+ * (en el 43 % de las notas vio menos fuentes que los medios que se mostraban; un
+ * caso de 26 medios se escribió con 2). Devuelve { notas, repetidas } sin tocar
  * las originales.
  */
+/** Las fuentes de una nota como las arma la ingesta (`origenes`); si es de antes y no las trae, la principal sola. */
+function origenesDeLaNota(n) {
+  if (n.origenes?.length) return n.origenes;
+  return [{
+    medio: n.medio ?? n.medios?.[0] ?? null,
+    enlace: n.enlace ?? null,
+    ...(n.enlaceFeed ? { enlaceFeed: n.enlaceFeed } : {}),
+    fecha: n.cuando === 'sin fecha en la fuente' ? null : (n.fecha ?? null),
+    oficial: !!n.oficial,
+    resumen: n.resumenFuente ?? '',
+  }];
+}
+
+/**
+ * Las fuentes de la que queda más las de las repetidas, sin repetir un enlace (ni
+ * un medio con el mismo resumen): primero las suyas, en su orden (la principal
+ * sigue siendo la primera), después las de las otras. Si ninguna de las notas trae
+ * fuentes ni resúmenes de otros medios (notas viejas), no agrega nada.
+ */
+function fuentesSumadas(queda, resto) {
+  const todas = [queda, ...resto];
+  if (!todas.some((n) => n.origenes?.length || n.fuentesTexto?.length)) return {};
+  const vistos = new Set();
+  const origenes = todas.flatMap(origenesDeLaNota).filter((o) => {
+    const clave = o.enlaceFeed ?? o.enlace ?? `${o.medio ?? ''}|${o.resumen ?? ''}`;
+    if (vistos.has(clave)) return false;
+    vistos.add(clave);
+    return true;
+  });
+  const deLaQueQueda = String(queda.resumenFuente ?? '');
+  const fuentesTexto = [...new Set([
+    ...(queda.fuentesTexto ?? []),
+    ...resto.flatMap((n) => [n.resumenFuente, ...(n.fuentesTexto ?? [])]),
+  ].filter((t) => t && t !== deLaQueQueda))];
+  return { origenes, fuentesTexto };
+}
+
 export function quitarRepetidas(notas, grupos = [], { publicadas = new Set() } = {}) {
   const porId = new Map(notas.map((n) => [n.id, n]));
   const fuera = new Map();
@@ -601,7 +642,7 @@ export function quitarRepetidas(notas, grupos = [], { publicadas = new Set() } =
     const medios = [...new Set(del.flatMap((n) => n.medios ?? []))];
     const heredada = hayRoja ? { semaforo: 'rojo', motivo: 'la misma noticia, en otro medio, es un tema sensible' }
       : (sensible && queda.semaforo === 'verde' ? { semaforo: 'amarillo', motivo: `${sensible.motivo} (en otro medio que cuenta lo mismo)` } : {});
-    reemplazo.set(queda.id, { ...queda, ...heredada, medios });
+    reemplazo.set(queda.id, { ...queda, ...heredada, medios, ...fuentesSumadas(queda, resto) });
     for (const n of resto) fuera.set(n.id, { id: n.id, titulo: n.titulo, queda: queda.id });
   }
   return {
