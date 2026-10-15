@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T15:35:07.985Z",
- "portada": 48,
- "archivo": 1120,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-15T16:06:31.804Z",
+ "portada": 49,
+ "archivo": 1122,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-15T15:35:08.027Z",
+  "generado": "2026-10-15T16:06:31.851Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-15T13:09:21.887Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "La agenda del fin de semana",
     "voz": "locutora",
     "ventana": 60,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": null
    },
    {
@@ -93,7 +93,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-15T13:09:21.887Z",
     "segundos": null,
     "notas": [
@@ -126,22 +126,22 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 54,
     "notas": [
      {
-      "id": "lf9d6b",
-      "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
+      "id": "17p6j6l",
+      "titulo": "El Centro de Tenis de Mesa suma mesas de nivel internacional",
       "seccion": "Deportes"
+     },
+     {
+      "id": "1f8plkr",
+      "titulo": "El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre",
+      "seccion": "Balcarce"
      },
      {
       "id": "9y985f",
       "titulo": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "pel8ok",
-      "titulo": "LALCEC organiza actividades y mamografías gratuitas por el mes rosa",
-      "seccion": "Balcarce"
      },
      {
       "id": "1e22az3",
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 40,
+    "segundos": 50,
     "notas": [
      {
       "id": "u0hcbv",
@@ -165,18 +165,18 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "17p6j6l",
-      "titulo": "El Centro de Tenis de Mesa suma mesas de nivel internacional",
+      "id": "lf9d6b",
+      "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
       "seccion": "Deportes"
      },
      {
-      "id": "1f8plkr",
-      "titulo": "El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre",
-      "seccion": "Balcarce"
+      "id": "11lwkfl",
+      "titulo": "Pato Naranja y Pato Negro clasifican a semifinales del Torneo Desarrollo",
+      "seccion": "Deportes"
      },
      {
-      "id": "wfa595",
-      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
+      "id": "pel8ok",
+      "titulo": "LALCEC organiza actividades y mamografías gratuitas por el mes rosa",
       "seccion": "Balcarce"
      }
     ]
@@ -202,21 +202,9 @@
    ],
    "cola": [
     {
-     "id": "lf9d6b",
-     "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
-     "seccion": "Deportes",
-     "marcada": false
-    },
-    {
      "id": "1v9h1ps",
      "titulo": "La delegación local parte el lunes hacia la final provincial",
      "seccion": "Cultura y agenda",
-     "marcada": false
-    },
-    {
-     "id": "u0hcbv",
-     "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
-     "seccion": "Balcarce",
      "marcada": false
     },
     {
@@ -229,6 +217,18 @@
      "id": "1f8plkr",
      "titulo": "El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre",
      "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "u0hcbv",
+     "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "lf9d6b",
+     "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
+     "seccion": "Deportes",
      "marcada": false
     }
    ],

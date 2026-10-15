@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-15T15:35:07.985Z",
+ "generado": "2026-10-15T16:06:31.804Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -13,11 +13,87 @@
      "medio": "Municipalidad de Balcarce",
      "enlace": "https://balcarce.gob.ar/2026/10/15/arte-fusion-%c2%b7-expo-anual-2026-en-exposicion-en-el-muhba/",
      "fecha": "2026-10-15T15:23:16.000Z"
+    },
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/la-muestra-arte-fusion-expo-anual-2026.html",
+     "fecha": "2026-10-15T15:41:25.573Z"
+    }
+   ],
+   "intentos": 2,
+   "motivo": "cuerpo corto (53 palabras)",
+   "maximo": 3
+  },
+  {
+   "id": "xla8hd",
+   "titulo": "Ferreira y Cagni se destacaron en la Correcaminata Aniversario de Tamangueyú",
+   "copete": "Los atletas de AACYC Balcarce, Ariel Ferreira y Adrián Cagni, tuvieron una destacada participación en la Correcaminata Aniversario de Tamangueyú, donde compitieron en la prueba principal de 10 kilómetros y lograron ubicarse entre los seis mejores de la clasificación general…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-15T14:46:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/ferreira-y-cagni-se-destacaron-en-la.html",
+     "fecha": "2026-10-15T14:46:00.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "cuerpo corto (38 palabras)",
+   "motivo": "cuerpo: 6 problemas (numero, repite): el cuerpo dice 40 y la fuente no lo dice; sin esas oraciones quedan 0 palabras",
    "maximo": 3
+  },
+  {
+   "id": "107aa47",
+   "titulo": "Pucheta y Blanco compitieron en la UTTD 2026",
+   "copete": "Las atletas Débora “Taty” Pucheta y Lara Blanco, integrantes de AACYC Balcarce, participaron durante el último fin de semana de una nueva edición de la UTTD 2026, competencia de trail running desarrollada en los exigentes terrenos serranos de Balcarce, que reunió a numerosos…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-15T14:44:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/pucheta-y-blanco-compitieron-en-la-uttd.html",
+     "fecha": "2026-10-15T14:44:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 9 problemas (numero, nombre, repite): el cuerpo dice 104,9 y la fuente no lo dice; sin esas oraciones quedan 53 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "cq95nc",
+   "titulo": "El sentido mensaje de la mamá de Gaspi a cuatro meses de su muerte: \"Mi pedazo de estrella\"",
+   "copete": "A cuatro meses del trágico accidente aéreo en Río de Janeiro que le costó la vida a Gaspar Prim Díaz , conocido como Gaspi , su mamá Michelle volvió a expresarse públicamente para mantener viva la memoria de su hijo. En sus historias de Instagram, Michelle compartió una foto de…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-15T13:05:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/espectaculos/el-sentido-mensaje-la-mama-gaspi-cuatro-meses-su-muerte-mi-pedazo-estrella-n6334025",
+     "fecha": "2026-10-15T13:05:00.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/fama/desgarrador-mensaje-mama-gaspi-meses-muerte-solte-alas_0_l2o2qBM27P.html",
+     "fecha": "2026-10-15T15:30:44.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/show/famosos/2026/10/15/te-solte-para-que-tuvieras-alas-el-conmovedor-mensaje-de-la-mama-de-gaspi-a-cuatro-meses-de-la-muerte-del-youtuber/",
+     "fecha": "2026-10-15T15:57:35.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/espectaculos/sos-mi-pedazo-de-estrella-el-desgarrador-mensaje-de-la-mama-de-gaspi-a-cuatro-meses-de-su-muerte/",
+     "fecha": "2026-10-15T13:54:09.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/teleshow/2026/10/15/el-conmovedor-mensaje-de-la-mama-de-gaspi-a-cuatro-meses-de-su-muerte-te-solte-para-que-tuvieras-alas/",
+     "fecha": "2026-10-15T13:31:43.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 2 problemas (repite, copia): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 62 palabras",
+   "maximo": 4
   }
  ]
 }
