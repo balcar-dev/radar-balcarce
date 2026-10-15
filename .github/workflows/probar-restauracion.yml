@@ -1,6 +1,10 @@
 # Prueba que el respaldo SE PUEDE RESTAURAR (15/10/2026). Un respaldo que nunca se probó restaurar no es un respaldo.
 # Baja de Cloudflare R2 el último respaldo (el que sube "Respaldo": respaldo.yml), reconstruye el repositorio desde el bundle de git,
 # comprueba que esté sano (git fsck) y que tenga el mismo último commit que GitHub, y abre el archivo de datos y fotos.
+# Desde el 15/10/2026 "Respaldo" parte en pedazos (<archivo>.part-000, .part-001…, con un manifiesto <archivo>.partes.txt y un SHA256SUMS)
+# los archivos de más de 250 MB, porque wrangler no sube más de 300 MB por archivo (detalle en respaldo.yml). Acá, si hay manifiesto, se bajan
+# todas las partes, se juntan con cat en orden y se verifica el sha256 del archivo entero; si no hay manifiesto (respaldos anteriores o archivos
+# chicos), se baja el archivo entero como antes y se compara con SHA256SUMS cuando existe.
 # SÓLO a mano (Actions → "Probar la restauración del respaldo" → Run workflow). No escribe nada en el repositorio.
 
 name: Probar la restauración del respaldo
@@ -32,14 +36,65 @@ jobs:
 
       - name: Bajar el respaldo de R2
         run: |
+          set -euo pipefail
           if [ -z "$R2_RESPALDOS" ]; then echo "::error::Falta la variable R2_RESPALDOS"; exit 1; fi
           FECHA="${{ inputs.fecha }}"
           if [ -z "$FECHA" ]; then FECHA=$(date +%F); fi
           echo "FECHA=$FECHA" >> "$GITHUB_ENV"
+          PREFIJO="respaldos/$FECHA"
           mkdir -p restaurar && cd restaurar
-          npx --yes wrangler@4.139.0 r2 object get "$R2_RESPALDOS/respaldos/$FECHA/radar-balcarce-$FECHA.bundle" --file "radar-balcarce.bundle" --remote
-          npx --yes wrangler@4.139.0 r2 object get "$R2_RESPALDOS/respaldos/$FECHA/datos-y-fotos-$FECHA.tar.gz" --file "datos-y-fotos.tar.gz" --remote
+          mkdir -p partes
+
+          # bajar <nombre en R2> <archivo local>
+          bajar() {
+            npx --yes wrangler@4.139.0 r2 object get "$R2_RESPALDOS/$PREFIJO/$1" --file "$2" --remote
+          }
+
+          # SHA256SUMS: lo sube "Respaldo" desde el 15/10/2026; un respaldo anterior no lo tiene.
+          if bajar "SHA256SUMS" "partes/SHA256SUMS" > /dev/null 2>&1; then CON_SUMAS=si; else CON_SUMAS=no; echo "Sin SHA256SUMS en este respaldo."; fi
+
+          # bajar_archivo <nombre en R2> <archivo local> <variable que recibe el resumen>
+          # Si hay manifiesto (<nombre>.partes.txt, porque el archivo era grande y se subió partido), baja todas las partes,
+          # las junta con cat en el orden del manifiesto y verifica el sha256 del archivo entero. Si no hay manifiesto, baja el
+          # archivo entero como siempre y lo verifica con SHA256SUMS (si existe).
+          bajar_archivo() {
+            local nombre="$1" destino="$2" esperado="" partes="" parte obtenido cuantas=0 modo
+            if bajar "$nombre.partes.txt" "partes/$nombre.partes.txt" > /dev/null 2>&1; then
+              esperado=$(awk '$1=="sha256"{print $2}' "partes/$nombre.partes.txt")
+              partes=$(awk '$1=="parte"{print $2}' "partes/$nombre.partes.txt")
+              if [ -z "$partes" ]; then echo "::error::El manifiesto de $nombre no lista partes"; exit 1; fi
+              : > "$destino"
+              for parte in $partes; do
+                bajar "$parte" "partes/$parte"
+                cat "partes/$parte" >> "$destino"
+                rm -f "partes/$parte"
+                cuantas=$((cuantas + 1))
+              done
+              modo="armado con $cuantas partes"
+            else
+              bajar "$nombre" "$destino"
+              if [ "$CON_SUMAS" = si ]; then esperado=$(awk -v n="$nombre" '$2==n{print $1}' partes/SHA256SUMS); fi
+              modo="archivo entero"
+            fi
+            if [ -z "$esperado" ]; then
+              echo "::warning::$nombre: no hay suma sha256 para comparar (respaldo anterior al 15/10/2026)"
+              echo "- $nombre ($modo): sin suma sha256 para verificar" >> descarga.txt
+              return 0
+            fi
+            obtenido=$(sha256sum "$destino" | cut -d' ' -f1)
+            if [ "$obtenido" != "$esperado" ]; then
+              echo "::error::$nombre ($modo): el sha256 no coincide (esperado $esperado, obtenido $obtenido)"
+              exit 1
+            fi
+            echo "$nombre ($modo): sha256 verificado"
+            echo "- $nombre ($modo): sha256 verificado" >> descarga.txt
+          }
+
+          : > descarga.txt
+          bajar_archivo "radar-balcarce-$FECHA.bundle" "radar-balcarce.bundle"
+          bajar_archivo "datos-y-fotos-$FECHA.tar.gz" "datos-y-fotos.tar.gz"
           ls -la
+          # restaurar/descarga.txt (qué se bajó y si el sha256 coincidió) se copia al resumen en "Comparar con GitHub".
 
       - name: Reconstruir el repositorio desde el bundle
         working-directory: restaurar
@@ -59,6 +114,7 @@ jobs:
           {
             echo "### Prueba de restauración del respaldo del $FECHA"
             echo "- Bundle de git: **restaurado y sano** (git fsck sin errores)."
+            cat restaurar/descarga.txt
             echo "- Último commit del respaldo: \`$RESTAURADO\`"
             echo "- Último commit en GitHub ahora: \`$ACTUAL\`"
             echo "- (El del respaldo puede ir unas horas atrás: el robot commitea cada media hora.)"

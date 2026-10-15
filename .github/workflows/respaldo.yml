@@ -10,9 +10,21 @@
 #   2. SI HAY CUENTA DE GITLAB: sube un espejo completo del repositorio. Hace falta crear un proyecto VACÍO en gitlab.com y poner:
 #         secreto  GITLAB_TOKEN   un token de acceso del proyecto con permiso write_repository
 #         variable GITLAB_REPO    "usuario/proyecto" (por ejemplo radarbalcarce/radar-balcarce)
-#   3. SI HAY R2 (Cloudflare): sube el bundle a un depósito. Hace falta un depósito R2 y, en el token de Cloudflare
+#   3. SI HAY R2 (Cloudflare): sube el bundle y la copia de datos a un depósito. Hace falta un depósito R2 y, en el token de Cloudflare
 #      (CLOUDFLARE_API_TOKEN), el permiso "Workers R2 Storage: Edit":
 #         variable R2_RESPALDOS   el nombre del depósito (por ejemplo radar-respaldos)
+#
+# Cómo queda en R2 (15/10/2026). wrangler sube hasta 300 MB por archivo y el bundle (172-185 MB, +3,5 MB por día) los pasa hacia el
+# 20/11/2026. Por eso, dentro de respaldos/AAAA-MM-DD/:
+#   - Un archivo de hasta 250 MB (BYTES_PARA_PARTIR) se sube entero, con su nombre de siempre.
+#   - Uno más grande se parte con `split -b 200m -d -a 3` (TAMANO_DE_PARTE) en <archivo>.part-000, .part-001… y se sube cada parte, más
+#     <archivo>.partes.txt, un manifiesto de texto: "archivo", "sha256" y "bytes" del archivo ENTERO y una línea "parte <nombre> <bytes>"
+#     por parte, en orden. El manifiesto se sube después de las partes: si existe, las partes están todas.
+#   - SHA256SUMS (se sube al final) trae el sha256 de cada archivo de este respaldo (el archivo entero, aunque se haya partido, y cada
+#     parte). Para volver a armar uno partido: bajar las partes en el orden del manifiesto, `cat parte-* > archivo` y comparar el sha256.
+#     Lo hace solo "Probar la restauración del respaldo" (probar-restauracion.yml).
+#   BYTES_PARA_PARTIR y TAMANO_DE_PARTE se pueden pisar con `env:` del paso (así la prueba pruebas/respaldo-partes.test.mjs parte un
+#   archivo de 5 MB sin necesitar uno enorme); sin tocar nada valen 262144000 (250 MiB) y 200m (200 MiB).
 #
 # Lo que falte no hace fallar la corrida: queda dicho en el resumen de la corrida (lo que se hizo y lo que se saltó).
 # El vigilante (redes/vigilar.mjs) avisa si el respaldo falla o si pasan más de 10 días sin uno bueno.
@@ -94,14 +106,63 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
+          set -u
           if [ -z "$R2_RESPALDOS" ]; then
             echo "- Cloudflare R2: **no configurado** (falta la variable R2_RESPALDOS)" >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
-          if npx --yes wrangler@4.139.0 r2 object put "$R2_RESPALDOS/respaldos/$FECHA/radar-balcarce-$FECHA.bundle" --file "respaldo/radar-balcarce-$FECHA.bundle" --remote \
-             && npx --yes wrangler@4.139.0 r2 object put "$R2_RESPALDOS/respaldos/$FECHA/datos-y-fotos-$FECHA.tar.gz" --file "respaldo/datos-y-fotos-$FECHA.tar.gz" --remote; then
-            echo "- Cloudflare R2: **subido** a $R2_RESPALDOS/respaldos/$FECHA/" >> "$GITHUB_STEP_SUMMARY"
+
+          UMBRAL="${BYTES_PARA_PARTIR:-262144000}"   # más que esto se parte (250 MiB; wrangler sube hasta 300 MB por archivo)
+          TAMANO_PARTE="${TAMANO_DE_PARTE:-200m}"    # tamaño de cada parte (200 MiB)
+          PREFIJO="respaldos/$FECHA"
+          TRABAJO="respaldo-r2"                      # partes, manifiestos y SHA256SUMS; fuera de respaldo/ para no mezclarlos con el artefacto
+          SUMAS="$TRABAJO/SHA256SUMS"
+          DETALLE=""
+          rm -rf "$TRABAJO"
+          mkdir -p "$TRABAJO"
+          : > "$SUMAS"
+
+          # subir <nombre en R2> <archivo local>
+          subir() {
+            npx --yes wrangler@4.139.0 r2 object put "$R2_RESPALDOS/$PREFIJO/$1" --file "$2" --remote
+          }
+
+          # subir_archivo <nombre>: sube respaldo/<nombre> entero o en partes, y anota sus sumas en SHA256SUMS.
+          # Cualquier falla devuelve 1 (no se usa `set -e`: la llama un `if`).
+          subir_archivo() {
+            local nombre="$1" ruta="respaldo/$1" bytes hash manifiesto parte n
+            bytes=$(stat -c %s "$ruta") || return 1
+            hash=$(sha256sum "$ruta" | cut -d' ' -f1) || return 1
+            if [ "$bytes" -le "$UMBRAL" ]; then
+              subir "$nombre" "$ruta" || return 1
+              echo "$hash  $nombre" >> "$SUMAS"
+              DETALLE="$DETALLE; $nombre entero ($bytes bytes)"
+            else
+              manifiesto="$TRABAJO/$nombre.partes.txt"
+              split -b "$TAMANO_PARTE" -d -a 3 "$ruta" "$TRABAJO/$nombre.part-" || return 1
+              { echo "archivo $nombre"; echo "sha256 $hash"; echo "bytes $bytes"; } > "$manifiesto"
+              local cantidad=0
+              for parte in "$TRABAJO/$nombre.part-"*; do
+                n=$(basename "$parte")
+                subir "$n" "$parte" || return 1
+                echo "parte $n $(stat -c %s "$parte")" >> "$manifiesto"
+                echo "$(sha256sum "$parte" | cut -d' ' -f1)  $n" >> "$SUMAS"
+                cantidad=$((cantidad + 1))
+                rm -f "$parte"
+              done
+              # El manifiesto va después de las partes: si está en R2, las partes están todas.
+              subir "$nombre.partes.txt" "$manifiesto" || return 1
+              echo "$hash  $nombre" >> "$SUMAS"
+              echo "$(sha256sum "$manifiesto" | cut -d' ' -f1)  $nombre.partes.txt" >> "$SUMAS"
+              DETALLE="$DETALLE; $nombre partido en $cantidad partes ($bytes bytes)"
+            fi
+          }
+
+          if subir_archivo "radar-balcarce-$FECHA.bundle" \
+             && subir_archivo "datos-y-fotos-$FECHA.tar.gz" \
+             && subir "SHA256SUMS" "$SUMAS"; then
+            echo "- Cloudflare R2: **subido** a $R2_RESPALDOS/$PREFIJO/ (con SHA256SUMS)${DETALLE}" >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "- Cloudflare R2: **FALLÓ** (revisar que el depósito exista y que el token tenga el permiso Workers R2 Storage: Edit; wrangler sube hasta 300 MB por archivo)" >> "$GITHUB_STEP_SUMMARY"
+            echo "- Cloudflare R2: **FALLÓ** (revisar que el depósito exista y que el token tenga el permiso Workers R2 Storage: Edit; los archivos de más de 250 MB se suben partidos en pedazos de 200 MB)" >> "$GITHUB_STEP_SUMMARY"
             exit 1
           fi
