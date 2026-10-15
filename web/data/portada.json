@@ -1,6 +1,85 @@
 {
-  "generado": "2026-10-15T20:00:12.646Z",
+  "generado": "2026-10-15T20:03:43.484Z",
   "notas": [
+    {
+      "id": "fpal84",
+      "titulo": "El Gobierno repudia los incidentes en la marcha universitaria",
+      "copete": "La ministra de Seguridad, Alejandra Monteoliva, cuestionó los enfrentamientos frente al Congreso durante la Quinta Marcha Federal Universitaria. Aseguró que un sector buscó generar caos y desafiar a las fuerzas provinciales y federales.",
+      "cuerpo": "La ministra de Seguridad, Alejandra Monteoliva, sostuvo que un sector minoritario intentó generar caos y desafiar el operativo policial.\n\nLos cruces comenzaron antes de las 16 con destrozos en la vía pública y lanzamiento de piedras contra el personal policial. Ante esta situación, las fuerzas de seguridad respondieron con gases lacrimógenos y camiones hidrantes para disuadir la protesta.\n\nPor su parte, un participante de la movilización aseguró que los agentes reprimieron a quienes se manifestaban pacíficamente. El operativo incluyó la participación de estudiantes, sindicatos y agrupaciones sociales en las inmediaciones del palacio legislativo.",
+      "guion": "El Gobierno repudia los incidentes en la marcha universitaria",
+      "seccion": "Argentina",
+      "medios": [
+        "La Nación",
+        "TN (Todo Noticias)",
+        "Crónica"
+      ],
+      "enlace": "https://tn.com.ar/politica/2026/10/15/el-gobierno-condeno-los-incidentes-en-la-marcha-universitaria-los-mismos-violentos-de-siempre-quieren-imponer-el-caos/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T19:40:48.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T20:03:07.860Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Gobierno criticó los disturbios en el Congreso durante la protesta universitaria.",
+        "La ministra Alejandra Monteoliva afirmó que hubo agresiones contra los efectivos.",
+        "La policía utilizo gases y camiones hidrantes para dispersar a los manifestantes.",
+        "Participaron estudiantes, gremios y organizaciones sociales."
+      ],
+      "seSabe": [
+        "La ministra de Seguridad, Alejandra Monteoliva, repudió los incidentes ocurridos el jueves 15 de octubre de 2026.",
+        "Los disturbios comenzaron minutos antes de las 16 en los alrededores del Congreso.",
+        "Las fuerzas de seguridad utilizaron gas lacrimógeno y camión hidrante."
+      ],
+      "noConfirmado": [
+        "No se informó la cantidad exacta de detenidos ni de heridos tras los enfrentamientos."
+      ],
+      "textoRedes": "El Gobierno nacional repudió los incidentes registrados durante la marcha universitaria frente al Congreso. La ministra Alejandra Monteoliva aseguró que buscaron generar caos y la policía dispersó la protesta con gases y camión hidrante.",
+      "etiquetas": [
+        "marcha universitaria",
+        "Gobierno nacional",
+        "Congreso",
+        "Alejandra Monteoliva",
+        "incidentes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/15/el-gobierno-condeno-los-incidentes-en-la-marcha-universitaria-los-mismos-violentos-de-siempre-quieren-imponer-el-caos/",
+          "fecha": "2026-10-15T19:40:48.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles de los horarios, el uso de elementos antidisturbios y testimonios de los manifestantes."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/sociedad/marcha-federal-universitaria-en-vivo-cortes-horarios-y-ultimas-noticias-del-reclamo-nid15102026/",
+          "fecha": "2026-10-15T19:44:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó las declaraciones de la ministra Monteoliva sobre los incidentes."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/el-gobierno-apunto-contra-los-manifestantes-en-la-marcha-universitaria-los-violentos-de-siempre-quieren-imponer-el-caos/",
+          "fecha": "2026-10-15T19:43:22.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la condena oficial de la funcionaria hacia los hechos de violencia en las inmediaciones del Congreso."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-repudia-los-incidentes-en-la-marcha-universitaria",
+      "foto": {
+        "archivo": "fotos-notas/fpal84.jpg",
+        "credito": "Foto: La Nación"
+      }
+    },
     {
       "id": "1ylxz2o",
       "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
@@ -1815,99 +1894,87 @@
       }
     },
     {
-      "id": "11eytds",
-      "titulo": "La AFA fija el partido de la Supercopa Argentina para noviembre",
-      "copete": "Estudiantes e Independiente Rivadavia jugarán el viernes 13 de noviembre por la Supercopa Argentina. La Asociación del Fútbol Argentino oficializó la fecha tras meses de postergaciones.",
-      "cuerpo": "La Asociación del Fútbol Argentino (AFA) confirmó que el partido entre Estudiantes de La Plata e Independiente Rivadavia por la Supercopa Argentina se disputará el viernes 13 de noviembre. El encuentro reunirá a los ganadores del Trofeo de Campeones y de la Copa Argentina de 2025.\n\nEl choque decisivo iba a jugarse inicialmente el martes 21 de julio en el estadio de Belgrano de Córdoba, pero la entidad madre del fútbol nacional lo suspendió a pocos días del evento debido al operativo de seguridad montado por el regreso de la Selección Argentina tras el Mundial.\n\nHasta el momento, la entidad ratificó la fecha del encuentro pero restan definir de manera oficial el horario y el estadio definitivo, aunque trascendió la posibilidad de utilizar el escenario cordobés.",
-      "guion": "La AFA fija el partido de la Supercopa Argentina para noviembre",
+      "id": "ny562k",
+      "titulo": "Lautaro Martínez sufre un desgarro muscular y frena su actividad por un mes y medio",
+      "copete": "El delantero padece una dolencia en el muslo izquierdo y se perderá varios encuentros con el Inter de Milán y la selección argentina.",
+      "cuerpo": "El delantero Lautaro Martínez sufre un desgarro muscular en el flexor del muslo izquierdo y afronta una inactividad cercana al mes y medio. La información fue comunicada por el Inter de Milán tras los estudios realizados en el Instituto Humanitas de Rozzano, luego del encuentro frente a Brujas por la Champions League.\n\nLa baja afecta tanto al conjunto italiano en los próximos compromisos del campeonato local y el certamen europeo como a la selección argentina de cara a la próxima fecha FIFA.",
+      "guion": "Lautaro Martínez sufre un desgarro muscular y frena su actividad por un mes y medio",
       "seccion": "Fútbol",
       "medios": [
-        "TyC Sports",
-        "Olé",
-        "Crónica",
-        "0221",
-        "Doble Amarilla",
-        "El Gráfico"
+        "La Nación",
+        "Radio Mitre"
       ],
-      "enlace": "https://www.elgrafico.com.ar/articulo/1053/103361/supercopa-argentina-confirmada-fecha-sede-y-horario-para-el-duelo-entre-estudiantes-e-independiente-rivadavia",
+      "enlace": "https://www.lanacion.com.ar/deportes/futbol/lautaro-martinez-se-desgarro-y-estara-inactivo-durante-mas-de-un-mes-problemas-para-inter-y-la-nid15102026/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T08:00:00.000Z",
+      "fecha": "2026-10-15T10:00:00.000Z",
       "sinFecha": false,
-      "visto": "2026-10-15T19:31:43.109Z",
-      "relevancia": 73,
+      "visto": "2026-10-15T14:01:31.391Z",
+      "relevancia": 67,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "La AFA programó la Supercopa Argentina para el viernes 13 de noviembre.",
-        "Estudiantes e Independiente Rivadavia disputarán el título de la decimotercera edición.",
-        "El encuentro se postergó en julio por los festejos de la Selección Argentina."
+        "Lautaro Martínez padece un desgarro en el muslo izquierdo.",
+        "Estará inactivo aproximadamente un mes y medio.",
+        "La baja afecta al Inter de Milán y a la selección argentina."
       ],
       "seSabe": [
-        "La Asociación del Fútbol Argentino oficializó la fecha del encuentro para el viernes 13 de noviembre.",
-        "El partido enfrentará a Estudiantes de La Plata e Independiente Rivadavia, ganadores de certámenes en 2025.",
-        "El cotejo se había suspendido en julio por cuestiones vinculadas a las fuerzas de seguridad."
+        "Lautaro Martínez sufre una lesión muscular en el muslo izquierdo, según informó el Inter de Milán.",
+        "El tiempo estimado de recuperación es de un mes y medio.",
+        "La baja impacta en los compromisos del club italiano y condiciona su presencia en la fecha FIFA."
       ],
       "noConfirmado": [
-        "El horario exacto de inicio del partido.",
-        "La sede oficial donde se jugará el encuentro, aunque se evalúa el estadio de Belgrano de Córdoba."
+        "Todavía no se anunciaron los rivales ni las sedes para la próxima fecha FIFA de noviembre.",
+        "No hay confirmación oficial sobre la fecha exacta de su regreso a las canchas."
       ],
-      "textoRedes": "La AFA confirmó que Estudiantes e Independiente Rivadavia jugarán la final de la Supercopa Argentina el viernes 13 de noviembre, tras varios meses de postergaciones.",
+      "textoRedes": "El delantero Lautaro Martínez sufre un desgarro muscular en el muslo izquierdo y estará inactivo aproximadamente un mes y medio, lo que afecta los próximos compromisos del Inter de Milán y de la selección argentina.",
       "etiquetas": [
-        "Supercopa Argentina",
-        "Estudiantes de La Plata",
-        "Independiente Rivadavia",
-        "AFA",
-        "Fútbol"
+        "Lautaro Martínez",
+        "Inter de Milán",
+        "Selección Argentina",
+        "Lesión"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "El Gráfico",
-          "enlace": "https://www.elgrafico.com.ar/articulo/1053/103361/supercopa-argentina-confirmada-fecha-sede-y-horario-para-el-duelo-entre-estudiantes-e-independiente-rivadavia",
-          "fecha": "2026-10-15T08:00:00.000Z",
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/lautaro-martinez-se-desgarro-y-estara-inactivo-durante-mas-de-un-mes-problemas-para-inter-y-la-nid15102026/",
+          "fecha": "2026-10-15T11:50:35.000Z",
           "oficial": false,
-          "aporte": "Informó que la AFA confirmó el día del partido tras varios meses de incertidumbre."
+          "aporte": "Detalló el diagnóstico de la lesión, los partidos que se pierde y el comunicado del club."
         },
         {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/supercopa-argentina/estudiantes-independiente-rivadavia-fecha-supercopa-argentina-id766392.html",
-          "fecha": "2026-10-15T17:54:24.000Z",
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/lautaro-martinez-se-desgarro-y-estara-cerca-de-un-mes-y-medio-fuera-de-las-canchas/",
+          "fecha": "2026-10-15T13:28:31.000Z",
           "oficial": false,
-          "aporte": "Aportó los detalles sobre la fecha, los antecedentes de la suspensión de julio y los equipos protagonistas."
+          "aporte": "Confirmó el tiempo de baja y la afectación para el Inter y la selección."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "u3bdm4",
+          "titulo": "Román González supera un récord de Lautaro Martínez en Racing",
+          "fecha": "2026-10-10T17:03:23.000Z",
+          "ruta": "/nota/roman-gonzalez-supera-un-record-de-lautaro-martinez-en-racing-u3bdm4"
         },
         {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/depo/actualidad/la-final-de-la-supercopa-argentina-tiene-fecha-confirmada-cuando-se-juega/",
-          "fecha": "2026-10-15T19:20:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la oficialización del encuentro por parte de la AFA."
-        },
-        {
-          "medio": "0221",
-          "enlace": "https://www.0221.com.ar/estudiantes/afa-confirmo-el-cambio-fecha-la-supercopa-argentina-estudiantes-e-independiente-rivadavia-n135862",
-          "fecha": "2026-10-15T17:28:00.000Z",
-          "oficial": false,
-          "aporte": "Reprodujo la convocatoria del evento deportivo."
-        },
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/liga-/la-supercopa-argentina-2026-entre-estudiantes-e-independiente-rivadavia-ya-tiene-fecha_a6ad0fcb30735cd39a270cf3b",
-          "fecha": "2026-10-15T16:40:00.000Z",
-          "oficial": false,
-          "aporte": "Participó en la difusión del anuncio oficial."
+          "id": "1nlg6jl",
+          "titulo": "Lionel Messi vuelve a jugar en Inter Miami tras su despedida de la Selección",
+          "fecha": "2026-09-19T03:00:00.000Z",
+          "ruta": "/nota/lionel-messi-vuelve-a-jugar-en-inter-miami-tras-su-despedida-de-la-1nlg6jl"
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
+        "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "la-afa-fija-el-partido-de-la-supercopa-argentina-para-noviembre",
+      "slug": "lautaro-martinez-sufre-un-desgarro-muscular-y-frena-su-actividad-por",
       "foto": {
-        "archivo": "fotos-notas/11eytds.jpg",
-        "credito": "Foto: Crónica"
+        "archivo": "fotos-notas/ny562k.jpg",
+        "credito": "Foto: La Nación"
       }
     },
     {
@@ -4054,13 +4121,13 @@
     }
   ],
   "secciones": [
+    "Argentina",
     "Balcarce",
     "Deportes",
     "Política",
     "Agro",
     "Automovilismo",
     "Cultura y agenda",
-    "Argentina",
     "Economía",
     "Fútbol",
     "Policiales"
@@ -4438,12 +4505,6 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1k2r0zu",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"niño\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
-    },
-    {
       "id": "405jgy",
       "titulo": "Balcarce despide al “Chiqui”, un referente de la danza y…",
       "seccion": "Cultura y agenda",
@@ -4546,5 +4607,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 4
+  "esperandoCuerpo": 5
 }

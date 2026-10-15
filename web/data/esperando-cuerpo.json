@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-15T20:00:12.646Z",
+ "generado": "2026-10-15T20:03:43.484Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -62,8 +62,8 @@
      "fecha": "2026-10-15T19:39:00.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 3 problemas (numero): el guion dice 50 y la fuente no lo dice",
+   "intentos": 2,
+   "motivo": "título o bajada: 1 problema (numero): el guion dice 58 y la fuente no lo dice",
    "maximo": 4
   },
   {
@@ -84,6 +84,53 @@
    "maximo": 3
   },
   {
+   "id": "1k2r0zu",
+   "titulo": "Monteoliva encabezó una mesa de monitoreo para anticipar el impacto de El Niño en el norte del país",
+   "copete": "La ministra de Seguridad Nacional, Alejandra Monteoliva, encabezó este jueves una mesa de control y monitoreo para analizar los posibles impactos del fenómeno de El Niño en la región norte del país y reforzar la coordinación entre las distintas áreas del Gobierno nacional. El…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-15T15:29:26.000Z",
+   "fuentes": [
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/monteoliva-encabezo-una-mesa-de-monitoreo-para-anticipar-el-impacto-de-el-nino-en-el-norte-del-pais/",
+     "fecha": "2026-10-15T15:29:26.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-refuerza-su-operativo-por-el-fenomeno-de-el-nino-y-monteoliva-encabeza-una-mesa-de-nid15102026/",
+     "fecha": "2026-10-15T16:56:45.000Z"
+    },
+    {
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/politica/2026/10/15/monteoliva-encabezo-una-mesa-de-control-y-monitoreo-ante-el-fenomeno-de-el-nino/",
+     "fecha": "2026-10-15T16:09:01.000Z"
+    },
+    {
+     "medio": "Infobrisas (Radio Brisas)",
+     "enlace": "https://www.infobrisas.com/noticias/2026/10/15/111545-ante-la-llegada-de-el-nino-monteoliva-encabezo-una-mesa-de-control-y-monitoreo",
+     "fecha": "2026-10-15T16:22:30.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/politica/alejandra-monteoliva-encabezo-la-mesa-control-y-monitoreo-del-fenomeno-el-nino-n251682",
+     "fecha": "2026-10-15T15:47:00.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/sociedad/el-gobierno-activo-la-mesa-monitoreo-federal-el-impacto-del-fenomeno-el-nino-el-norte-del-pais-n6334152",
+     "fecha": "2026-10-15T15:35:00.000Z"
+    },
+    {
+     "medio": "Zona Norte Diario",
+     "enlace": "https://www.zonanortediario.com.ar/15/10/2026/monteoliva-encabezo-una-reunion-para-coordinar-la-respuesta-ante-posibles-inundaciones-por-el-fenomeno-de-el-nino/",
+     "fecha": "2026-10-15T16:25:08.000Z"
+    }
+   ],
+   "intentos": 4,
+   "motivo": "título o bajada: 2 problemas (forma, numero): el copete trae un escape sin decodificar (barra-u…): texto mal escrito, se vuelve a pedir",
+   "maximo": 4
+  },
+  {
    "id": "m2d0x8",
    "titulo": "U2 confirmó dos shows en River con Beck como invitado especial",
    "copete": "",
@@ -101,8 +148,8 @@
      "fecha": "2026-10-15T19:38:08.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (nombre, copia): el cuerpo nombra a \"marplatense\" y la fuente no; sin esas oraciones quedan 72 palabras",
+   "intentos": 2,
+   "motivo": "título o bajada: 2 problemas (nombre, relleno): el copete nombra a \"plate\" y la fuente no",
    "maximo": 3
   }
  ]

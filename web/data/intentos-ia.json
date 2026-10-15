@@ -796,9 +796,9 @@
   "motivo": "con cuerpo"
  },
  "1k2r0zu": {
-  "intentos": 3,
-  "ultimo": "2026-10-15T19:59:48.801Z",
-  "motivo": "semáforo: necesita ojo humano: \"niño\", en lo que escribió la IA (título, bajada o texto para redes)"
+  "intentos": 4,
+  "ultimo": "2026-10-15T20:03:12.630Z",
+  "motivo": "título o bajada: 2 problemas (forma, numero): el copete trae un escape sin decodificar (barra-u…): texto mal escrito, se vuelve a pedir"
  },
  "1k2xuxz": {
   "intentos": 1,
@@ -1120,11 +1120,6 @@
  "1ual5u4": {
   "intentos": 1,
   "ultimo": "2026-10-15T19:32:03.220Z",
-  "motivo": "con cuerpo"
- },
- "1ube6ai": {
-  "intentos": 1,
-  "ultimo": "2026-10-08T20:01:34.776Z",
   "motivo": "con cuerpo"
  },
  "1ummanb": {
@@ -1477,9 +1472,9 @@
   "fuentes": 1
  },
  "5yic3w": {
-  "intentos": 1,
-  "ultimo": "2026-10-15T19:59:48.801Z",
-  "motivo": "título o bajada: 3 problemas (numero): el guion dice 50 y la fuente no lo dice"
+  "intentos": 2,
+  "ultimo": "2026-10-15T20:03:12.630Z",
+  "motivo": "título o bajada: 1 problema (numero): el guion dice 58 y la fuente no lo dice"
  },
  "601x8n": {
   "intentos": 1,
@@ -1838,6 +1833,11 @@
   "ultimo": "2026-10-14T07:02:00.889Z",
   "motivo": "con cuerpo"
  },
+ "fpal84": {
+  "intentos": 1,
+  "ultimo": "2026-10-15T20:03:12.630Z",
+  "motivo": "con cuerpo"
+ },
  "fr6obg": {
   "intentos": 1,
   "ultimo": "2026-10-12T19:01:34.219Z",
@@ -2056,9 +2056,9 @@
   "motivo": "sin material"
  },
  "m2d0x8": {
-  "intentos": 1,
-  "ultimo": "2026-10-15T19:59:48.801Z",
-  "motivo": "cuerpo: 2 problemas (nombre, copia): el cuerpo nombra a \"marplatense\" y la fuente no; sin esas oraciones quedan 72 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-15T20:03:12.630Z",
+  "motivo": "título o bajada: 2 problemas (nombre, relleno): el copete nombra a \"plate\" y la fuente no"
  },
  "m8u8gq": {
   "intentos": 2,
