@@ -23,6 +23,13 @@ frenan alguna etapa están en `docs/DECISIONES.md` → "Preguntas abiertas".
 | **Una prueba de los documentos** (`pruebas/docs.test.mjs`): que existan los enlaces relativos, que "la próxima regla" coincida con `docs/10`, sin números de feeds escritos a mano | Claude |
 | **Enchufar el registro de uso de la IA** (`redes/uso-ia.mjs`, regla 170) en `ingesta/lectura-ia.mjs`, fotos, voces y pistas: hoy sólo anota la redacción. En cada llamada, después de leer el JSON de la respuesta: `anotarUsoIA({ tarea: 'lectura', modelo, clave: 'clasificacion' o 'groq', respuesta: j })` (Gemini trae `usageMetadata`, Groq `usage`; los dos los entiende) y, si la llamada falla, `anotarUsoIA({ tarea, modelo, clave, error: res.status })`. Nunca lanza. Con 2 semanas de datos se puede calcular el costo equivalente a precio de lista | Claude |
 
+## Para revisar juntos: qué sirve y qué no (pedido de Andrés, 15/10)
+
+Pasada de punta a punta, módulo por módulo, después de terminar la tanda de mejoras. Para cada herramienta, servicio, archivo y proceso: qué hace, por qué existe, si se usa de verdad (con evidencia), qué cuesta y qué conviene (mantener, reemplazar o apagar).
+- La base ya está hecha en las auditorías del 15/10: `docs/etapa-10-operacion/ANALISIS.md` (tabla herramienta/servicio), `docs/salud-tecnica/ANALISIS.md` (mapa de 13 módulos), `docs/auditoria-opus/ANALISIS.md`, `docs/criterio/`, `docs/analiticas/`, `docs/etapa-2-5/` y `docs/etapa-6-9/`.
+- Revisar con ojo de dueños: las redes (qué piezas rinden), el panel del celular y el de la PC, los workflows manuales, `comercial/`, `pruebas-modelos/`, `criterio-unico/`, las claves de IA y cada cuenta (cuáles se usan y cuáles no).
+- Después de esa pasada: la auditoría final con Opus sobre lo que quedó.
+
 ## Después de la mudanza (15/10)
 
 | Qué | Quién |

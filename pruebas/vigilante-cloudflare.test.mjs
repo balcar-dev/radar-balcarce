@@ -457,7 +457,7 @@ test('el workflow del vigilante es sólo a mano, de sólo lectura, con tope de t
   assert.match(w, /secrets\.CLOUDFLARE_API_TOKEN/);
   assert.match(w, /secrets\.CLOUDFLARE_ACCOUNT_ID/);
   assert.match(w, /secret put VIGILANTE_TOKEN/);
-  assert.match(w, /kv namespace create ESTADO/);
+  assert.match(w, /kv namespace create "\$TITULO"/);
   assert.match(w, /deploy --config wrangler\.generado\.toml/);
   assert.ok(!/git (add|commit|push)/.test(w), 'no commitea nada');
   assert.ok(!/echo[^\n]*\$\{?VIGILANTE_(GITHUB_)?TOKEN/.test(w), 'los secretos no se imprimen');

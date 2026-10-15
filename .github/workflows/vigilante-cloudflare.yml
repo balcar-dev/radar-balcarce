@@ -29,16 +29,16 @@ jobs:
         run: |
           TITULO="vigilante-ESTADO"
           buscar() {
-            npx --yes wrangler@4.139.0 kv namespace list | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{const l=JSON.parse(s.slice(s.indexOf('[')));const x=l.find(n=>n.title.includes(process.argv[1]));process.stdout.write(x?x.id:'')})" "$TITULO"
+            npx --yes wrangler@4.139.0 kv namespace list | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{const l=JSON.parse(s.slice(s.indexOf('[')));const x=l.find(n=>n.title===process.argv[1])||l.find(n=>n.title===process.argv[2]);process.stdout.write(x?x.id:'')})" "$TITULO" "ESTADO"
           }
           ID=$(buscar)
           if [ -z "$ID" ]; then
             echo "No existe el KV $TITULO: se crea."
-            npx --yes wrangler@4.139.0 kv namespace create ESTADO
+            npx --yes wrangler@4.139.0 kv namespace create "$TITULO"
             ID=$(buscar)
           fi
           test -n "$ID" || { echo "No se pudo encontrar ni crear el KV (¿el token de Cloudflare tiene 'Workers KV Storage: Edit'?)"; exit 1; }
-          echo "KV listo: $TITULO"
+          echo "KV listo (id $ID)"
           sed "s/REEMPLAZADO_POR_EL_WORKFLOW/$ID/" wrangler.toml > wrangler.generado.toml
       - name: Subir el vigilante
         working-directory: infra/vigilante-cloudflare
