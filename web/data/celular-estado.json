@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T23:32:26.516Z",
- "portada": 58,
- "archivo": 1098,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-15T00:02:22.501Z",
+ "portada": 57,
+ "archivo": 1099,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-14T23:32:26.549Z",
+  "generado": "2026-10-15T00:02:22.548Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -83,7 +83,7 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    }
   ],
@@ -155,19 +155,19 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
     "segundos": 46,
     "notas": [
      {
-      "id": "wm8hav",
-      "titulo": "El Concejo Deliberativo Estudiantil cierra su quinta edición con 25 iniciativas",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "gy4i31",
       "titulo": "Franco Colapinto pide frenar los ataques de sus fanáticos en la Fórmula 1",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "wm8hav",
+      "titulo": "El Concejo Deliberativo Estudiantil cierra su quinta edición con 25 iniciativas",
+      "seccion": "Balcarce"
      },
      {
       "id": "zfpkeo",
@@ -214,12 +214,6 @@
     {
      "id": "wm8hav",
      "titulo": "El Concejo Deliberativo Estudiantil cierra su quinta edición con 25 iniciativas",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "fav3c1",
-     "titulo": "Brooklyn Café vende 1200 cookies tras la suspensión de la Fiesta del Postre",
      "seccion": "Balcarce",
      "marcada": false
     }

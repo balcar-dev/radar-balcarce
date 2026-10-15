@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-14T23:32:25.060Z",
+ "consultado": "2026-10-15T00:02:20.635Z",
  "equipos": [
   "9739",
   "3",
@@ -846,8 +846,8 @@
     "id": "401841598",
     "competencia": "liga",
     "inicio": "2026-10-14T22:00:00.000Z",
-    "estado": "en-juego",
-    "minuto": "71'",
+    "estado": "final",
+    "minuto": "90'+8'",
     "local": {
      "id": "10158",
      "nombre": "Sarmiento (Junín)",
@@ -856,7 +856,7 @@
     "visitante": {
      "id": "16",
      "nombre": "River Plate",
-     "goles": 0
+     "goles": 1
     },
     "penales": null,
     "goles": [
@@ -864,6 +864,12 @@
       "equipo": "local",
       "jugador": "Julian Contrera",
       "minuto": "15'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Gonzalo Montiel",
+      "minuto": "71'",
       "tipo": "gol"
      }
     ],
@@ -1523,14 +1529,14 @@
       "posicion": 4,
       "id": "10158",
       "equipo": "Sarmiento (Junín)",
-      "pj": 11,
+      "pj": 12,
       "g": 6,
-      "e": 1,
+      "e": 2,
       "p": 4,
-      "gf": 20,
-      "gc": 17,
+      "gf": 21,
+      "gc": 18,
       "dif": 3,
-      "pts": 19
+      "pts": 20
      },
      {
       "posicion": 5,
@@ -1588,14 +1594,14 @@
       "posicion": 9,
       "id": "16",
       "equipo": "River Plate",
-      "pj": 11,
+      "pj": 12,
       "g": 5,
-      "e": 1,
+      "e": 2,
       "p": 5,
-      "gf": 14,
-      "gc": 12,
+      "gf": 15,
+      "gc": 13,
       "dif": 2,
-      "pts": 16
+      "pts": 17
      },
      {
       "posicion": 10,
@@ -1679,7 +1685,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-14T20:03:34.474Z",
+ "tablaCuando": "2026-10-15T00:02:20.635Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",
