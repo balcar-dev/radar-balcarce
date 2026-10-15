@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T18:04:09.770Z",
- "portada": 53,
- "archivo": 1129,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-15T18:32:37.645Z",
+ "portada": 54,
+ "archivo": 1131,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-15T18:04:09.803Z",
+  "generado": "2026-10-15T18:32:37.687Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -54,7 +54,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-15T18:07:39.825Z"
    },
    {
     "nombre": "farmacia",
@@ -125,8 +125,8 @@
     "hora": "15:00",
     "voz": "locutora",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 49,
+    "salio": "2026-10-15T18:07:39.825Z",
+    "segundos": null,
     "notas": [
      {
       "id": "mly1kv",
@@ -207,21 +207,15 @@
    ],
    "cola": [
     {
-     "id": "aa5npj",
-     "titulo": "El Ministerio de Transporte bonaerense actualiza las tarifas de la VTV",
-     "seccion": "Balcarce",
+     "id": "lf9d6b",
+     "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
+     "seccion": "Deportes",
      "marcada": false
     },
     {
      "id": "1f8plkr",
      "titulo": "El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre",
      "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "lf9d6b",
-     "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
-     "seccion": "Deportes",
      "marcada": false
     },
     {

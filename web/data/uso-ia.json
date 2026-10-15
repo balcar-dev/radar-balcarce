@@ -1,3 +1,19 @@
 {
- "dias": {}
+ "dias": {
+  "2026-10-15": {
+   "redaccion": {
+    "gemini-flash-lite-latest": {
+     "llamadas": 3,
+     "errores": 0,
+     "entrada": 19877,
+     "salida": 2353,
+     "pensamiento": 0,
+     "total": 22230,
+     "claves": {
+      "redaccion": 3
+     }
+    }
+   }
+  }
+ }
 }
