@@ -5103,6 +5103,48 @@
    "cuando": "2026-10-14T22:06:26.968Z",
    "medida": "2026-10-15T10:30:18.220Z",
    "metricas": {}
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122111534451495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "5biv0y",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T11:04:40.468Z",
+   "medida": "2026-10-15T11:28:30.559Z",
+   "metricas": {
+    "post_media_view": 3,
+    "post_total_media_view_unique": 2,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18124544794925644",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "5biv0y",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T11:04:53.409Z",
+   "medida": "2026-10-15T11:28:30.559Z",
+   "metricas": {
+    "reach": 0,
+    "views": 2,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
+  },
+  {
+   "clave": "instagram/historia/18053258882817131",
+   "red": "instagram",
+   "parte": "historia",
+   "pieza": "clima-noche",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T23:06:25.623Z",
+   "medida": "2026-10-15T11:28:30.559Z",
+   "metricas": {}
   }
  ]
 }
