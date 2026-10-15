@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T13:04:13.606Z",
- "portada": 44,
- "archivo": 1107,
+ "generado": "2026-10-15T13:34:06.099Z",
+ "portada": 47,
+ "archivo": 1114,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-15T13:04:13.638Z",
+  "generado": "2026-10-15T13:34:06.139Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -34,7 +34,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-15T13:09:21.887Z"
    },
    {
     "nombre": "agenda",
@@ -94,8 +94,8 @@
     "hora": "10:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 51,
+    "salio": "2026-10-15T13:09:21.887Z",
+    "segundos": null,
     "notas": [
      {
       "id": "1v9h1ps",
@@ -129,19 +129,24 @@
     "segundos": 53,
     "notas": [
      {
-      "id": "8q3d25",
-      "titulo": "Ariel Ferreira y Adrián Cagni se destacan en Tamangueyú",
+      "id": "u0hcbv",
+      "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "lf9d6b",
+      "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "mly1kv",
+      "titulo": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
       "seccion": "Deportes"
      },
      {
       "id": "1e22az3",
       "titulo": "Cristian Méndez regresa a Balcarce tras una exitosa gira por España",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "fav3c1",
-      "titulo": "Brooklyn Café vende 1200 cookies tras la suspensión de la Fiesta del Postre",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -152,13 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 27,
+    "segundos": 22,
     "notas": [
-     {
-      "id": "405jgy",
-      "titulo": "Balcarce despide al Chiqui Smiraglia, referente de la danza local",
-      "seccion": "Cultura y agenda"
-     },
      {
       "id": "wfa595",
       "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
@@ -188,8 +188,26 @@
      "marcada": false
     },
     {
-     "id": "8q3d25",
-     "titulo": "Ariel Ferreira y Adrián Cagni se destacan en Tamangueyú",
+     "id": "u0hcbv",
+     "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "lf9d6b",
+     "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "mly1kv",
+     "titulo": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "2g6pf5",
+     "titulo": "Atletas locales logran buenos puestos en Tamangueyú y Balcarce",
      "seccion": "Deportes",
      "marcada": false
     }
