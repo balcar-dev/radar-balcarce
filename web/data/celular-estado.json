@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T19:11:25.757Z",
- "portada": 52,
- "archivo": 1132,
+ "generado": "2026-10-15T19:32:54.633Z",
+ "portada": 54,
+ "archivo": 1135,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-15T19:11:25.782Z",
+  "generado": "2026-10-15T19:32:54.672Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -165,6 +165,11 @@
       "seccion": "Deportes"
      },
      {
+      "id": "1ylxz2o",
+      "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
+      "seccion": "Balcarce"
+     },
+     {
       "id": "u0hcbv",
       "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
       "seccion": "Balcarce"
@@ -173,11 +178,6 @@
       "id": "11lwkfl",
       "titulo": "Pato Naranja y Pato Negro clasifican a semifinales del Torneo Desarrollo",
       "seccion": "Deportes"
-     },
-     {
-      "id": "pel8ok",
-      "titulo": "LALCEC organiza actividades y mamografías gratuitas por el mes rosa",
-      "seccion": "Balcarce"
      }
     ]
    }
@@ -215,6 +215,12 @@
      "id": "lf9d6b",
      "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
      "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "1ylxz2o",
+     "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
+     "seccion": "Balcarce",
      "marcada": false
     },
     {
