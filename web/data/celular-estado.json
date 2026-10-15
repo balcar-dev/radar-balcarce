@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T13:34:06.099Z",
- "portada": 47,
- "archivo": 1114,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-15T14:04:06.542Z",
+ "portada": 45,
+ "archivo": 1117,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-15T13:34:06.139Z",
+  "generado": "2026-10-15T14:04:06.574Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-15T10:05:33.436Z"
    },
    {
@@ -126,12 +126,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 50,
     "notas": [
      {
-      "id": "u0hcbv",
-      "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
-      "seccion": "Balcarce"
+      "id": "9y985f",
+      "titulo": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección",
+      "seccion": "Fútbol"
      },
      {
       "id": "lf9d6b",
@@ -139,9 +139,9 @@
       "seccion": "Deportes"
      },
      {
-      "id": "mly1kv",
-      "titulo": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
-      "seccion": "Deportes"
+      "id": "pel8ok",
+      "titulo": "LALCEC organiza actividades y mamografías gratuitas por el mes rosa",
+      "seccion": "Balcarce"
      },
      {
       "id": "1e22az3",
@@ -157,16 +157,21 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 22,
+    "segundos": 28,
     "notas": [
      {
-      "id": "wfa595",
-      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
+      "id": "u0hcbv",
+      "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
       "seccion": "Balcarce"
      },
      {
       "id": "tctot0",
       "titulo": "Valeria Ares comparte su experiencia a dieciseis años de su doble trasplante",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "wfa595",
+      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
       "seccion": "Balcarce"
      }
     ]
@@ -178,21 +183,14 @@
      "id": "vt870i",
      "titulo": "Ángela Servín sube al podio en la Atlántica Ultra",
      "cuando": "2026-10-15T11:45:21.928Z"
+    },
+    {
+     "id": "8q3d25",
+     "titulo": "Ariel Ferreira y Adrián Cagni se destacan en Tamangueyú",
+     "cuando": "2026-10-15T13:35:24.924Z"
     }
    ],
    "cola": [
-    {
-     "id": "1v9h1ps",
-     "titulo": "La delegación local parte el lunes hacia la final provincial",
-     "seccion": "Cultura y agenda",
-     "marcada": false
-    },
-    {
-     "id": "u0hcbv",
-     "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
     {
      "id": "lf9d6b",
      "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
@@ -200,20 +198,26 @@
      "marcada": false
     },
     {
-     "id": "mly1kv",
-     "titulo": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
-     "seccion": "Deportes",
+     "id": "1v9h1ps",
+     "titulo": "La delegación local parte el lunes hacia la final provincial",
+     "seccion": "Cultura y agenda",
      "marcada": false
     },
     {
-     "id": "2g6pf5",
-     "titulo": "Atletas locales logran buenos puestos en Tamangueyú y Balcarce",
-     "seccion": "Deportes",
+     "id": "pel8ok",
+     "titulo": "LALCEC organiza actividades y mamografías gratuitas por el mes rosa",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "u0hcbv",
+     "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],
-   "cupo": 4,
-   "proximoDesde": "2026-10-15T13:15:21.928Z",
+   "cupo": 3,
+   "proximoDesde": "2026-10-15T15:05:24.924Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
