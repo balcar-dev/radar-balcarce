@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T03:02:45.897Z",
+  "generado": "2026-10-15T03:31:59.047Z",
   "notas": [
     {
       "id": "19xa7ho",
@@ -200,7 +200,7 @@
       "fecha": "2026-10-15T00:01:52.395Z",
       "sinFecha": false,
       "visto": "2026-10-15T01:46:02.690Z",
-      "relevancia": 90,
+      "relevancia": 80,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1164,77 +1164,6 @@
       }
     },
     {
-      "id": "q7bxgi",
-      "titulo": "On City ofrece descuentos y financiación por el Día de la Madre",
-      "copete": "La firma lanza una propuesta comercial con rebajas de hasta el 50% y distintas opciones de pago para compras tecnológicas y de electrodomésticos.",
-      "cuerpo": "La cadena comercial On City dispone una serie de beneficios en tecnología, electrodomésticos y artículos para el hogar con motivo del Día de la Madre. La iniciativa se desarrolla desde el 15 hasta el 18 de octubre e incluye rebajas de hasta el 50% junto con un plan de hasta 18 cuotas sin interés mediante tarjetas de entidades bancarias participantes.\n\nLa oferta comprende rubros como teléfonos celulares, tabletas, computadoras portátiles, televisores, equipos de audio y pequeños electrodomésticos. Asimismo, quienes utilicen la financiación propia de la firma acceden a un 20% de rebaja y hasta 24 cuotas fijas, con la posibilidad de postergar el primer pago para noviembre.\n\nLos compradores disponen de la alternativa de retirar los pedidos sin costo en cualquiera de los más de 180 locales distribuidos en todo el territorio nacional o mediante su plataforma digital.",
-      "guion": "On City ofrece descuentos y financiación por el Día de la Madre",
-      "seccion": "Economía",
-      "medios": [
-        "El Cronista",
-        "Ámbito"
-      ],
-      "enlace": "https://www.ambito.com/negocios/dia-la-madre-on-city-presenta-descuentos-50-y-financiacion-24-cuotas-n6333738",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T18:18:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T01:31:56.486Z",
-      "relevancia": 50,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Del 15 al 18 de octubre hay rebajas de hasta el 50%",
-        "Hasta 18 cuotas sin interés con tarjetas bancarias",
-        "Financiación propia de hasta 24 cuotas fijas con On City Crédito",
-        "Retiro gratuito en más de 180 sucursales y en la web"
-      ],
-      "seSabe": [
-        "On City presenta beneficios comerciales por el Día de la Madre",
-        "La promoción rige desde el 15 hasta el 18 de octubre",
-        "Hay rebajas de hasta el 50% y 18 cuotas sin interés con tarjetas bancarias",
-        "Con On City Crédito se puede abonar en hasta 24 cuotas fijas con inicio de pago en noviembre",
-        "La propuesta abarca celulares, notebooks, televisores y pequeños electrodomésticos"
-      ],
-      "textoRedes": "On City lanza descuentos de hasta el 50% y financiación en hasta 24 cuotas por el Día de la Madre en tecnología y electrodomésticos.",
-      "etiquetas": [
-        "On City",
-        "Día de la Madre",
-        "descuentos",
-        "financiación",
-        "electrodomésticos",
-        "tecnología"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/negocios/dia-la-madre-on-city-presenta-descuentos-50-y-financiacion-24-cuotas-n6333738",
-          "fecha": "2026-10-14T18:18:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles completos de la propuesta comercial, fechas, categorías de productos, modalidades de financiación y opciones de retiro."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/contenido-patrocinado/dia-de-la-madre-on-city-presenta-descuentos-de-hasta-40-y-financiacion-en-hasta-24-cuotas/",
-          "fecha": "2026-10-15T00:47:25.000Z",
-          "oficial": false,
-          "aporte": "Confirmó las fechas del 15 al 18 de octubre, el porcentaje de descuento y las cuotas con tarjetas bancarias."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "on-city-ofrece-descuentos-y-financiacion-por-el-dia-de-la-madre",
-      "foto": {
-        "archivo": "fotos-notas/q7bxgi.jpg",
-        "credito": "Foto: Ámbito"
-      }
-    },
-    {
       "id": "repaso20261014tarde",
       "propia": "repaso",
       "titulo": "El repaso de la tarde en Radar Balcarce: juguetes, Pádel y peregrinación",
@@ -1492,6 +1421,80 @@
       "foto": {
         "archivo": "fotos-notas/1394wxo.jpg",
         "credito": "Foto: Zona Norte Diario"
+      }
+    },
+    {
+      "id": "1qu6ie7",
+      "titulo": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
+      "copete": "El informe climático para la próxima semana anticipa registros pluviométricos modestos en gran parte del país y mínimas inferiores a 10 grados en el este bonaerense.",
+      "cuerpo": "La Bolsa de Cereales de Buenos Aires difundió el pronóstico para el período del 15 al 21 de octubre, que anticipa precipitaciones escasas en la mayor parte de la región agrícola, con la excepción del extremo norte. Según el informe, la entrada de aire marítimo mantendrá las temperaturas mínimas por debajo de los valores habituales, mientras que el este de Buenos Aires registrará marcas inferiores a 10 grados con leve riesgo de heladas localizadas. Hacia el final del periodo, el regreso de vientos tropicales provocará un ascenso térmico generalizado, aunque el sur de la Región Pampeana y la Costa Atlántica se mantendrán con máximas por debajo de los 20 grados debido a la circulación marina.",
+      "guion": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
+      "seccion": "Agro",
+      "medios": [
+        "Agrositio",
+        "TN (Todo Noticias)"
+      ],
+      "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T17:34:56.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T19:32:01.897Z",
+      "relevancia": 43,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Pronóstico vigente del 15 al 21 de octubre.",
+        "Lluvias escasas en la mayor parte del país.",
+        "Mínimas menores a 10 grados en el este bonaerense."
+      ],
+      "seSabe": [
+        "La Bolsa de Cereales de Buenos Aires informó el pronóstico para la próxima semana.",
+        "Habrá precipitaciones escasas en la mayor parte del área agrícola.",
+        "El este de Buenos Aires registrará mínimas menores a 10 grados."
+      ],
+      "textoRedes": "El informe climático para la próxima semana anticipa lluvias escasas en gran parte del país y temperaturas mínimas inferiores a 10 grados en el este de Buenos Aires.",
+      "etiquetas": [
+        "Clima",
+        "Bolsa de Cereales",
+        "Lluvias",
+        "Temperaturas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
+          "fecha": "2026-10-14T17:34:56.000Z",
+          "oficial": false,
+          "aporte": "Detalló los registros de precipitaciones, temperaturas mínimas y máximas por región según el informe de la Bolsa de Cereales."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/14/la-region-agricola-recibira-lluvias-escasas-durante-los-proximos-dias-excepto-en-el-extremo-norte/",
+          "fecha": "2026-10-14T19:09:51.000Z",
+          "oficial": false,
+          "aporte": "Informó que se esperan lluvias escasas en la mayor parte de la región agrícola para el período del 15 al 21 de octubre."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "vqv317",
+          "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
+          "fecha": "2026-10-05T11:23:01.000Z",
+          "ruta": "/nota/el-clima-muestra-cielo-nublado-y-posibles-lluvias-debiles-vqv317"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "pronostican-lluvias-escasas-y-marcada-amplitud-termica-en-el-area",
+      "foto": {
+        "archivo": "fotos-notas/1qu6ie7.jpg",
+        "credito": "Foto: Agrositio"
       }
     },
     {
@@ -1807,8 +1810,8 @@
       "guion": "Presentan un videojuego en Formosa donde un superhéroe pelea contra un león",
       "seccion": "Argentina",
       "medios": [
-        "La Nación",
         "El Eco de Tandil",
+        "La Nación",
         "Perfil",
         "Noticias Argentinas (NA)",
         "La Nueva",
@@ -1972,10 +1975,10 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
-        "A24",
-        "C5N",
+        "iProUP",
         "iProfesional",
-        "iProUP"
+        "A24",
+        "C5N"
       ],
       "enlace": "https://www.ambito.com/economia/caba-lanzo-un-plan-pagar-deudas-abl-y-patentes-100-descuento-intereses-como-acceder-n6333599",
       "teniaImagenLaFuente": true,
@@ -2065,15 +2068,16 @@
         "TyC Sports",
         "Minuto Uno",
         "Crónica",
+        "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Nueva",
+        "La Brújula 24",
         "La Voz del Pueblo",
         "Mi8 (Canal 8 Mar del Plata)",
         "Bolavip Argentina",
-        "El Gráfico",
         "Olé",
-        "La Brújula 24"
+        "El Gráfico"
       ],
       "enlace": "https://noticiasargentinas.com/deportes/colapinto-pidio-frenar-los-ataques-de-los-argentinos-en-la-formula-1---no-me-ayudan-_a6acfdbd78298ee386b39ef1a",
       "teniaImagenLaFuente": true,
@@ -2140,8 +2144,8 @@
         "El Cronista",
         "El Destape",
         "iProfesional",
-        "Ámbito",
-        "El Economista"
+        "El Economista",
+        "Ámbito"
       ],
       "enlace": "https://eleconomista.com.ar/negocios/movistar-mensaje-recibiran-millones-clientes-proximos-dias-n98856",
       "teniaImagenLaFuente": true,
@@ -2322,9 +2326,11 @@
         "QZ Noticias (Mar del Plata)",
         "Diputados Bonaerenses",
         "0221",
+        "La Tecla",
+        "La Verdad",
+        "El Marplatense",
         "Agencia DIB",
-        "Ámbito",
-        "La Verdad"
+        "Ámbito"
       ],
       "enlace": "https://www.0221.com.ar/la-plata/la-provincia-convoco-los-docentes-retomar-las-paritarias-y-definir-nuevos-aumentos-salarios-n135790",
       "teniaImagenLaFuente": true,
@@ -2926,10 +2932,10 @@
       "seccion": "Política",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "La Verdad",
         "El Marplatense",
         "El Eco de Tandil",
-        "Agencia DIB",
-        "La Verdad"
+        "Agencia DIB"
       ],
       "enlace": "https://dib.com.ar/sociedad/la-provincia-adjudico-medicamentos-trasplantes-15760-millones-n56476",
       "teniaImagenLaFuente": true,
@@ -3101,6 +3107,8 @@
         "Perfil",
         "Canal 26",
         "La Tecla",
+        "La Verdad",
+        "Infoeme",
         "QZ Noticias (Mar del Plata)",
         "Mi8 (Canal 8 Mar del Plata)",
         "Qué Digital",
@@ -3114,8 +3122,6 @@
         "0223 (Mar del Plata)",
         "La Voz del Pueblo",
         "Agencia DIB",
-        "La Verdad",
-        "Infoeme",
         "Ámbito",
         "iProfesional",
         "El Día"
@@ -3252,10 +3258,10 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
-        "Ámbito",
+        "El Economista",
         "iProfesional",
-        "Minuto Uno",
-        "El Economista"
+        "Ámbito",
+        "Minuto Uno"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
       "teniaImagenLaFuente": true,
@@ -3381,6 +3387,127 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261013noche.jpg",
         "credito": "Fotos: Infobae, Diario La Vanguardia y Minuto Uno"
+      }
+    },
+    {
+      "id": "jc61mz",
+      "titulo": "El oficialismo busca dictamen para la propiedad privada",
+      "copete": "La Cámara de Diputados debate el miércoles una versión flexible de la Ley de Tierras dentro del proyecto de Inviolabilidad de la Propiedad Privada para frenar un rechazo opositor al DNU 70/23.",
+      "cuerpo": "El plenario de las comisiones de Asuntos Constitucionales y Legislación General se reúne el miércoles a las 16 para avanzar con el dictamen del proyecto de Inviolabilidad de la Propiedad Privada que cuenta con media sanción del Senado. Según informó la Agencia Noticias Argentinas, el oficialismo incorporará una versión reducida de la Ley de Tierras que mantiene el tope del 15% de extranjerización a nivel nacional, provincial y departamental pero elimina el límite de 1.000 hectáreas en las zonas núcleo del país.\n\nEsta estrategia apunta a restarle incentivos a la oposición para revocar el decreto 70/23 en la sesión prevista para el jueves y flexibilizar los límites de compraventa mientras la Justicia define la cuestión de fondo sobre la derogación de la norma anterior del 2011. La iniciativa también contempla cambios en el régimen de desalojos con la entrega inmediata del inmueble usurpado ante un derecho verosímil y fija un tope del 30% en las indemnizaciones por lucro cesante en casos de expropiación.\n\nEl texto forma parte del temario para la sesión que el oficialismo convocó para el 21 de octubre. En un inicio, como se informó el 8 de octubre de 2026, el Gobierno había convocado al plenario para desactivar los intentos opositores de blindar el decreto, en un escenario donde el Ejecutivo debió ceder parcialmente tras haber retirado los capítulos originales de tierras en el debate del Senado hace más de dos meses.",
+      "guion": "El oficialismo busca dictamen para la propiedad privada",
+      "seccion": "Política",
+      "medios": [
+        "Infórmese Primero (FM 104.9)",
+        "0223 (Mar del Plata)",
+        "Infobae",
+        "Clarín",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "Perfil",
+        "A24",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "La Nueva",
+        "Crónica"
+      ],
+      "enlace": "https://noticiasargentinas.com/politica/en-un-dictamen-expres--el-oficialismo-incluira-la-ley-de-tierras--light--en-su-proyecto-sobre-propiedad-privada_a6acea2c706650845db81f380",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T23:24:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T15:01:49.740Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El plenario de comisiones se reúne este miércoles a las 16.",
+        "Se incorpora una versión flexible de la Ley de Tierras.",
+        "El proyecto se incluye en la sesión convocada para el 21 de octubre."
+      ],
+      "seSabe": [
+        "El plenario de Asuntos Constitucionales y Legislación General se reúne este miércoles a las 16 según Noticias Argentinas.",
+        "Se mantendrá el tope del 15% de extranjerización de tierras y se eliminará el límite de 1.000 hectáreas en zonas núcleo.",
+        "El proyecto de Inviolabilidad de la Propiedad Privada fue incluido en la sesión del 21 de octubre."
+      ],
+      "noConfirmado": [
+        "Todavía no se informó el resultado definitivo de la votación en el plenario de comisiones de este miércoles."
+      ],
+      "textoRedes": "El oficialismo en Diputados busca firmar este miércoles dictamen al proyecto de Inviolabilidad de la Propiedad Privada con una versión flexible de la Ley de Tierras para frenar rechazos al DNU 70/23.",
+      "etiquetas": [
+        "Diputados",
+        "Ley de Tierras",
+        "Propiedad Privada",
+        "Gobierno"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/en-un-dictamen-expres--el-oficialismo-incluira-la-ley-de-tierras--light--en-su-proyecto-sobre-propiedad-privada_a6acea2c706650845db81f380",
+          "fecha": "2026-10-14T09:24:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el plenario de comisiones, la inclusión de la Ley de Tierras light y los cambios en desalojos y expropiaciones."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/el-oficialismo-incluira-la-ley-de.html",
+          "fecha": "2026-10-14T14:15:59.225Z",
+          "oficial": false,
+          "aporte": "Coincidió en la convocatoria al plenario de la Cámara de Diputados para este miércoles."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/el-oficialismo-busca-avanzar-con-el-proyecto-sobre-inviolabilidad-de-la-propiedad-privada-que-pasara-con-la-ley-de-tierras/",
+          "fecha": "2026-10-14T11:46:00.000Z",
+          "oficial": false,
+          "aporte": "Agregó que La Libertad Avanza intentará emitir dictamen con restricciones de la Ley de Tierras."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/politica/el-oficialismo-incluira-la-ley-tierras-light-su-proyecto-propiedad-privada-n924479",
+          "fecha": "2026-10-14T14:11:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la noticia sin aportar datos adicionales en su resumen."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/---javier-milei-en-vivo--anuncios-y-medidas-del-gobierno-minuto-a-minuto-del-14-de-octubre-de-2026_a6acf49478298ee386b246dd1",
+          "fecha": "2026-10-14T14:20:08.000Z",
+          "oficial": false,
+          "aporte": "Indicó el carácter ultra exprés del trámite legislativo en Diputados."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-14-8-22-0-en-un-dictamen-expres-el-oficialismo-incluira-la-ley-de-tierras-light-en-su-proyecto-sobre-propiedad-privada",
+          "fecha": "2026-10-14T14:31:24.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la búsqueda de dictamen para el proyecto de Inviolabilidad de la Propiedad Privada este miércoles."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "gqh1ka",
+          "titulo": "El oficialismo convoca al plenario para debatir la Ley de Tierras",
+          "fecha": "2026-10-08T21:37:55.679Z",
+          "ruta": "/nota/el-oficialismo-convoca-al-plenario-para-debatir-la-ley-de-tierras-gqh1ka"
+        },
+        {
+          "id": "w7o4x7",
+          "titulo": "Diputados da dictamen al proyecto que castiga el vandalismo rural",
+          "fecha": "2026-10-06T12:56:37.000Z",
+          "ruta": "/nota/diputados-da-dictamen-al-proyecto-que-castiga-el-vandalismo-rural-w7o4x7"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-oficialismo-busca-dictamen-para-la-propiedad-privada",
+      "foto": {
+        "archivo": "fotos-notas/jc61mz.jpg",
+        "credito": "Foto: Diario Popular"
       }
     },
     {
@@ -3559,9 +3686,9 @@
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
         "Bolavip Argentina",
-        "Clarín",
         "0223 (Mar del Plata)",
-        "La Capital (Rosario)"
+        "La Capital (Rosario)",
+        "Clarín"
       ],
       "enlace": "https://www.clarin.com/deportes/lisandro-martinez-exploto-dirigencia-manchester-united-leyenda-club-cruzo-actuaciones-buenas_0_xNVWlGPyUT.html",
       "teniaImagenLaFuente": true,
@@ -3814,6 +3941,13 @@
           "aporte": null
         },
         {
+          "medio": "La Capital (Rosario)",
+          "enlace": "https://www.lacapital.com.ar/ovacion/las-duras-declaraciones-lisandro-martinez-que-abrieron-un-escandalo-manchester-united-n10286663.html",
+          "fecha": "2026-10-14T17:29:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/lisandro-martinez-apunto-contra-la-dirigencia-manchester-united-esperaba-mas-inversiones-n6333494",
           "fecha": "2026-10-14T12:00:00.000Z",
@@ -3824,13 +3958,6 @@
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/rooney-ferdinand-y-carragher-destrozaron-lisandro-martinez-es-una-falta-respeto-n6333629",
           "fecha": "2026-10-14T15:16:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Capital (Rosario)",
-          "enlace": "https://www.lacapital.com.ar/ovacion/las-duras-declaraciones-lisandro-martinez-que-abrieron-un-escandalo-manchester-united-n10286663.html",
-          "fecha": "2026-10-14T17:29:00.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -4410,8 +4537,8 @@
       "medios": [
         "La Nación",
         "TN (Todo Noticias)",
-        "Bichos de Campo",
-        "Agrositio"
+        "Agrositio",
+        "Bichos de Campo"
       ],
       "enlace": "https://bichosdecampo.com/esta-cara-la-papa-y-eso-les-cambio-la-cara-segun-coninagro-las-economias-regionales-no-repuntan-a-pesar-de-la-mejora-en-una-de-las-actividades/",
       "teniaImagenLaFuente": true,
@@ -4540,10 +4667,10 @@
       "medios": [
         "Clarín",
         "TN (Todo Noticias)",
+        "Agroempresario",
         "Infobae",
         "La Voz del Pueblo",
         "Noticias Agropecuarias",
-        "Agroempresario",
         "La Nueva"
       ],
       "enlace": "https://www.clarin.com/rural/dia-mundial-fertilizantes-innovacion-enfrenta-desafio-alimentar-poblacion-mundial-constante-crecimiento_0_b6eMatjB3U.html",
@@ -4703,10 +4830,10 @@
     "Política",
     "Economía",
     "Argentina",
+    "Agro",
     "Policiales",
     "Fútbol",
-    "Tecnología",
-    "Agro"
+    "Tecnología"
   ],
   "temas": [
     {
@@ -5074,12 +5201,6 @@
   },
   "pendientes": [
     {
-      "id": "1spqpr6",
-      "titulo": "Murió Norberto Di Próspero, secretario general de la…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
-    },
-    {
       "id": "1hb8gyb",
       "titulo": "Pesar por el fallecimiento de Pascualito Cerone, histórico…",
       "seccion": "Balcarce",
@@ -5140,12 +5261,6 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "183hv39",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
       "id": "zcbb3f",
       "titulo": null,
       "seccion": "Argentina",
@@ -5194,16 +5309,16 @@
       "motivo": "necesita ojo humano: \"asesinato\""
     },
     {
-      "id": "npkndz",
-      "titulo": "Inauguran una plataforma pública con datos diarios de…",
-      "seccion": "Economía",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
       "id": "lwmyim",
       "titulo": "Hotesur-Los Sauces: habrá una audiencia clave para…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
+      "id": "1o51oh5",
+      "titulo": "El Reino Unido da luz verde al proyecto Sea Lion para…",
+      "seccion": "Argentina",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "1yxi3mj",
@@ -5218,5 +5333,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 2
+  "esperandoCuerpo": 3
 }

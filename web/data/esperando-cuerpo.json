@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-15T03:02:45.897Z",
+ "generado": "2026-10-15T03:31:59.047Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -23,6 +23,63 @@
    "intentos": 3,
    "motivo": "cuerpo: 1 problema (copia): copia 14 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 94 palabras",
    "maximo": 3
+  },
+  {
+   "id": "1spqpr6",
+   "titulo": "Murió Norberto Di Próspero, secretario general de la Asociación del Personal Legislativo",
+   "copete": "Norberto Di Próspero , el dirigente sindical que durante más de dos décadas condujo los destinos de la Asociación del Personal Legislativo (APL) , murió este miércoles a los 61 años , mientras transitaba su sexto mandato consecutivo al frente del gremio de los trabajadores del…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-15T00:11:10.000Z",
+   "fuentes": [
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/politica/murio-norberto-di-prospero-secretario-general-asociacion-personal-legislativo_0_cy9oaurOgX.html",
+     "fecha": "2026-10-15T00:11:10.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/politica/2026/10/15/murio-norberto-di-prospero-historico-secretario-general-del-gremio-de-trabajadores-del-congreso/",
+     "fecha": "2026-10-15T01:43:09.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/14/murio-norberto-di-prospero-historico-dirigente-del-gremio-de-trabajadores-del-congreso/",
+     "fecha": "2026-10-15T00:51:20.000Z"
+    },
+    {
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/politica/muerte-golpea-congreso-antes-sesion-dnu-70-23-milei-202610142243",
+     "fecha": "2026-10-15T01:04:03.000Z"
+    },
+    {
+     "medio": "Página/12",
+     "enlace": "https://www.pagina12.com.ar/2026/10/15/murio-norberto-di-prospero-historico-referente-del-sindicalismo-parlamentario/",
+     "fecha": "2026-10-15T01:27:00.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/murio-norberto-di-prospero-historico-lider-apl-el-congreso-n6333926",
+     "fecha": "2026-10-15T00:59:00.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/sociedad/murio-norberto-di-prospero-historico-dirigente-gremial-los-trabajadores-legislativos-n6333941",
+     "fecha": "2026-10-15T02:50:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/sociedad/murio-norberto-di-prospero-reconocido-sindicalista-de-los-trabajadores-del-congreso/",
+     "fecha": "2026-10-15T03:16:36.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/sociedad/murio-norberto-di-prospero--historico-referente-del-sindicalismo-legislativo_a6ad016ad8298ee386b435f67",
+     "fecha": "2026-10-15T00:13:00.000Z"
+    }
+   ],
+   "intentos": 5,
+   "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)",
+   "maximo": 5
   },
   {
    "id": "7txprm",
