@@ -5277,6 +5277,46 @@
     "shares": 0,
     "saved": 0
    }
+  },
+  {
+   "clave": "instagram/reel/18103442993347023",
+   "red": "instagram",
+   "parte": "reel",
+   "pieza": "participa-reclamos",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T15:05:53.344Z",
+   "medida": "2026-10-15T15:32:20.745Z",
+   "metricas": {
+    "reach": 1,
+    "views": 2,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0
+   }
+  },
+  {
+   "clave": "facebook/reel/1411511103898015",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "participa-reclamos",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T15:06:51.628Z",
+   "medida": "2026-10-15T15:32:20.745Z",
+   "metricas": {}
+  },
+  {
+   "clave": "facebook/historia/1620392242922629",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "participa-reclamos",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T15:07:32.213Z",
+   "medida": "2026-10-15T15:32:20.745Z",
+   "metricas": {
+    "total_video_views": 0
+   }
   }
  ]
 }
