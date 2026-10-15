@@ -174,6 +174,31 @@ export const FUENTES = [
     nota: 'Sin feed: se lee la portada. Único de los siete con sección Campo y Salud propias.',
     temas: ['actualidad', 'deportes', 'campo', 'salud', 'zonales'],
   },
+  // --- Altas del 15/10/2026 (lista elegida: todo lo de Balcarce, también sus organismos) ---
+  {
+    id: 'concejo-deliberante-balcarce',
+    nombre: 'Concejo Deliberante de Balcarce',
+    medio: 'Concejo Deliberante de Balcarce',
+    url: 'https://concejodeliberantebalcarce.gob.ar/feed/',
+    tipo: 'rss',
+    alcance: 'local',
+    peso: 24,
+    oficial: true,
+    nota: 'Alta 15/10/2026. Fuente oficial: sesiones, ordenanzas y comunicados del HCD. Anda: 10 notas, 8 nombran Balcarce.',
+    temas: ['oficial', 'política', 'concejo'],
+  },
+  {
+    id: 'fca-unmdp',
+    nombre: 'Facultad de Ciencias Agrarias (UNMdP)',
+    medio: 'Facultad de Ciencias Agrarias (UNMdP)',
+    url: 'https://fca.mdp.edu.ar/feed/',
+    tipo: 'rss',
+    alcance: 'local',
+    peso: 24,
+    oficial: true,
+    nota: 'Alta 15/10/2026. La Facultad funciona en Balcarce (ruta 226), junto al INTA. Publica poco: la última nota era del 30/09.',
+    temas: ['oficial', 'agro', 'universidad'],
+  },
 ];
 
 // --- Nacionales y temáticas, ya probadas y vivas -------------------------
@@ -202,6 +227,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'clarin',
+    grupo: 'Grupo Clarín',
     nombre: 'Clarín · Lo último',
     medio: 'Clarín',
     url: 'https://www.clarin.com/rss/lo-ultimo/',
@@ -212,6 +238,9 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'ole',
+    activa: false,
+    nota: 'apagada 15/10/2026: fuera de la lista elegida',
+    grupo: 'Grupo Clarín',
     nombre: 'Olé',
     medio: 'Olé',
     url: 'https://www.ole.com.ar/rss/ultimas-noticias/',
@@ -223,6 +252,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'clarin-deportes',
+    grupo: 'Grupo Clarín',
     nombre: 'Clarín · Deportes',
     medio: 'Clarín',
     url: 'https://www.clarin.com/rss/deportes/',
@@ -273,6 +303,8 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'eleco',
+    activa: false, // apagada 15/10/2026: fuera de la lista elegida
+    grupo: 'eleco.com.ar',
     ciudad: 'Tandil',
     nombre: 'El Eco de Tandil',
     medio: 'El Eco de Tandil',
@@ -285,6 +317,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'lu9',
+    grupo: 'eleco.com.ar',
     ciudad: 'Mar del Plata',
     nombre: 'LU9 Mar del Plata',
     medio: 'LU9 Mar del Plata',
@@ -297,6 +330,8 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'qznoticias',
+    activa: false, // apagada 15/10/2026: fuera de la lista elegida
+    grupo: 'eleco.com.ar',
     ciudad: 'Mar del Plata',
     nombre: 'QZ Noticias',
     medio: 'QZ Noticias (Mar del Plata)',
@@ -309,6 +344,8 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'ecosdiarios',
+    activa: false, // apagada 15/10/2026: fuera de la lista elegida
+    grupo: 'eleco.com.ar',
     ciudad: 'Necochea',
     nombre: 'Ecos Diarios',
     medio: 'Ecos Diarios (Necochea)',
@@ -333,6 +370,8 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'lanoticia1',
+    activa: false, // apagada 15/10/2026: fuera de la lista elegida
+    grupo: 'eleco.com.ar',
     ciudad: 'provincia de Buenos Aires',
     nombre: 'La Noticia 1',
     medio: 'La Noticia 1',
@@ -345,6 +384,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'diputadosbsas',
+    activa: false, // apagada 15/10/2026: fuera de la lista elegida
     ciudad: 'La Plata',
     nombre: 'Diputados Bonaerenses',
     medio: 'Diputados Bonaerenses',
@@ -357,6 +397,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'gba',
+    activa: false, // apagada 15/10/2026: fuera de la lista elegida
     ciudad: 'La Plata',
     nombre: 'Gobierno de la Provincia',
     medio: 'Gobierno de la Provincia de Buenos Aires',
@@ -383,6 +424,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'ayacuchoaldia',
+    activa: false, // apagada 15/10/2026: fuera de la lista elegida
     ciudad: 'Ayacucho',
     nombre: 'Ayacucho al Día',
     medio: 'Ayacucho al Día',
@@ -478,6 +520,7 @@ export const FUENTES_NACIONALES = [
   // medio de Balcarce.
   {
     id: 'ambito',
+    activa: false, // apagada 15/10/2026: fuera de la lista elegida
     nombre: 'Ámbito',
     medio: 'Ámbito',
     url: 'https://www.ambito.com/rss/pages/ultimas-noticias.xml',
@@ -489,6 +532,8 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'minutouno',
+    activa: false,
+    nota: 'apagada 15/10/2026: fuera de la lista elegida',
     nombre: 'Minuto Uno',
     medio: 'Minuto Uno',
     url: 'https://www.minutouno.com/rss/pages/home.xml',
@@ -530,6 +575,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'clarin-tecno',
+    grupo: 'Grupo Clarín',
     nombre: 'Clarín · Tecnología',
     medio: 'Clarín',
     url: 'https://www.clarin.com/rss/tecnologia/',
@@ -563,6 +609,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'clarin-economia',
+    grupo: 'Grupo Clarín',
     nombre: 'Clarín · Economía',
     medio: 'Clarín',
     url: 'https://www.clarin.com/rss/economia/',
@@ -574,6 +621,8 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'ambito-economia',
+    activa: false,
+    nota: 'apagada 15/10/2026: fuera de la lista elegida',
     nombre: 'Ámbito · Economía',
     medio: 'Ámbito',
     url: 'https://www.ambito.com/rss/pages/economia.xml',
@@ -596,6 +645,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'clarin-politica',
+    grupo: 'Grupo Clarín',
     nombre: 'Clarín · Política',
     medio: 'Clarín',
     url: 'https://www.clarin.com/rss/politica/',
@@ -697,6 +747,8 @@ export const FUENTES_NACIONALES = [
   // que no habla de tecnología se clasifica por lo que dice.
   {
     id: 'lanacion-tecnologia',
+    activa: false,
+    nota: 'apagada 15/10/2026: fuera de la lista elegida',
     nombre: 'La Nación · Tecnología',
     medio: 'La Nación',
     url: 'https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/tecnologia/',
@@ -737,6 +789,7 @@ export const FUENTES_NACIONALES = [
   // es la agencia de noticias científicas de la Fundación Instituto Leloir (Argentina).
   {
     id: 'fayerwayer',
+    activa: false, // apagada 15/10/2026: fuera de la lista elegida
     nombre: 'FayerWayer',
     medio: 'FayerWayer',
     url: 'https://www.fayerwayer.com/feed',
@@ -763,6 +816,7 @@ export const FUENTES_NACIONALES = [
   // público y Balcarce tiene una de sus estaciones más grandes.
   {
     id: 'clarin-rural',
+    grupo: 'Grupo Clarín',
     nombre: 'Clarín · Rural',
     medio: 'Clarín',
     url: 'https://www.clarin.com/rss/rural/',
@@ -786,6 +840,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'bichosdecampo',
+    activa: false, // apagada 15/10/2026: fuera de la lista elegida
     nombre: 'Bichos de Campo',
     medio: 'Bichos de Campo',
     url: 'https://bichosdecampo.com/feed/',

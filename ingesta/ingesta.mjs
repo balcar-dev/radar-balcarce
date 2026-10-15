@@ -724,8 +724,13 @@ export function mediosMinimosDe(seccion, nota = {}) {
   return MEDIOS_DE_AFUERA[seccion] ?? MEDIOS_POR_DEFECTO;
 }
 
-/** Cuántos medios distintos cuentan esta nota. */
-export const cuantosMedios = (nota) => new Set((nota?.medios ?? [nota?.medio]).filter(Boolean)).size;
+/** Los medios que comparten dueño o sistema (campo `grupo` de la fuente: Grupo Clarín, eleco.com.ar) cuentan UNA vez al contar
+ *  cuántos medios cuentan una nota (15/10/2026, lista de fuentes elegida). Un medio sin grupo cuenta por su nombre. */
+const GRUPO_DE_MEDIO = new Map(TODAS_LAS_FUENTES.filter((f) => f.grupo && f.medio).map((f) => [f.medio, f.grupo]));
+export const contarMedios = (nombres) => new Set((nombres ?? []).filter(Boolean).map((m) => GRUPO_DE_MEDIO.get(m) ?? m)).size;
+
+/** Cuántos medios distintos cuentan esta nota (un grupo cuenta una vez). */
+export const cuantosMedios = (nota) => contarMedios(nota?.medios ?? [nota?.medio]);
 
 /** El comienzo del motivo con que espera lo de afuera que cuentan pocos medios. */
 export const MOTIVO_POCO_CONTADA = 'de afuera y poco contada';
@@ -1543,13 +1548,13 @@ export async function ingestar({
   }
   const portada = sinPolicialesDeAfuera.map((g) => {
     const seccion = clasificar(g.principal);
-    const rel = relevancia(g.principal, seccion, g.medios.length);
+    const rel = relevancia(g.principal, seccion, contarMedios(g.medios));
     // "Una fuente oficial alcanza sola" (CRITERIO-EDITORIAL.md § 2): vale para
     // la historia si la principal O cualquiera de sus fuentes es oficial
     // (28/09: exigirMedios y tieneRespaldo preguntaban `oficial` y la historia
     // no lo traía).
     const oficial = [g.principal, ...g.tambien].some((n) => n.oficial);
-    const sem = semaforo(oficial && !g.principal.oficial ? { ...g.principal, oficial } : g.principal, seccion, g.medios.length);
+    const sem = semaforo(oficial && !g.principal.oficial ? { ...g.principal, oficial } : g.principal, seccion, contarMedios(g.medios));
     return {
       // Con el enlace del feed si lo hay (Blogger): así el identificador es el
       // mismo que antes de que el enlace pasara a ser la página de la nota.

@@ -565,6 +565,8 @@ const MEDIOS_A_MANO = [
 const NOMBRES_QUE_SON_PALABRAS = new Set([
   'El Día', 'La Verdad', 'La Opinión', 'El Norte', 'Crónica', 'Perfil', 'Campeones', 'Motorsport', 'Olé', 'Google', 'Google DeepMind',
   'Microsoft', 'OpenAI', 'Nvidia', 'NASA', 'ESA', 'INTA', 'UAR', 'CADA', 'Teatro Colón', 'Solotc', 'Argenpapa',
+  // Altas del 15/10/2026: "los Andes" es la cordillera y "la gaceta" una palabra común; los ministerios y organismos se pueden nombrar.
+  'Los Andes', 'La Gaceta', 'Ministerio de Salud de la Nación', 'Ministerio de Capital Humano', 'Concejo Deliberante de Balcarce', 'Facultad de Ciencias Agrarias',
 ]);
 const sinParentesis = (m) => String(m).replace(/\s*\([^)]*\)/g, '').trim();
 const MEDIOS_DE_LAS_FUENTES = [...new Set([...FUENTES, ...FUENTES_NACIONALES, ...FUENTES_CRUCE]

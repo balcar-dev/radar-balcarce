@@ -24,6 +24,8 @@ test('un medio, un nombre: las secciones de un mismo diario no cuentan como dos 
     const d = dominio(f.url);
     // Siete medios distintos de la región comparten el servidor de su plataforma.
     if (d === 'eleco.com.ar' && /apiv3\./.test(f.url)) continue;
+    // Ministerios distintos en el mismo portal del Estado (alta del 15/10/2026).
+    if (d === 'argentina.gob.ar') continue;
     if (!porDominio.has(d)) porDominio.set(d, new Set());
     porDominio.get(d).add(f.medio);
   }

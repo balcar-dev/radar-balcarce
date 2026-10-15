@@ -253,8 +253,8 @@ test('el pedido de repetidas devuelve sólo grupos de dos o más con ids que exi
 test('lo de afuera necesita los medios que pide su sección; lo de acá y lo oficial, no (Hernán, 27/09)', () => {
   const notas = [
     { id: 'uno', seccion: 'Economía', semaforo: 'verde', local: false, medios: ['Ámbito'] },
-    { id: 'dos', seccion: 'Economía', semaforo: 'verde', local: false, medios: ['Olé', 'Clarín'] },
-    { id: 'futbol', seccion: 'Fútbol', semaforo: 'verde', local: false, medios: ['Olé', 'Clarín', 'TyC Sports'] },
+    { id: 'dos', seccion: 'Economía', semaforo: 'verde', local: false, medios: ['Infobae', 'Clarín'] },
+    { id: 'futbol', seccion: 'Fútbol', semaforo: 'verde', local: false, medios: ['Infobae', 'Clarín', 'TyC Sports'] },
     { id: 'aca', seccion: 'Balcarce', semaforo: 'verde', local: true, medios: ['Radio Gabal'] },
     { id: 'oficial', seccion: 'Argentina', semaforo: 'verde', local: false, oficial: true, medios: ['Gobierno de la Provincia'] },
   ];
@@ -265,11 +265,11 @@ test('lo de afuera necesita los medios que pide su sección; lo de acá y lo ofi
 });
 
 test('si al juntar repetidas una nota llega a los medios que pide, sale; y si la IA le cambió la sección, se vuelve a mirar', () => {
-  const n = { id: 'x', seccion: 'Argentina', semaforo: 'amarillo', motivo: 'de afuera y poco contada (2 medios; Argentina pide 3)', local: false, medios: ['Infobae', 'Clarín', 'TN (Todo Noticias)'] };
+  const n = { id: 'x', seccion: 'Argentina', semaforo: 'amarillo', motivo: 'de afuera y poco contada (2 medios; Argentina pide 3)', local: false, medios: ['Infobae', 'Clarín', 'Perfil'] };
   exigirMedios([n]);
   assert.equal(n.semaforo, 'verde');
   assert.equal(n.motivo, 'de afuera, contada por 3 medios');
-  const m = { id: 'y', seccion: 'Fútbol', semaforo: 'verde', local: false, medios: ['Infobae', 'Clarín', 'TN (Todo Noticias)'] };
+  const m = { id: 'y', seccion: 'Fútbol', semaforo: 'verde', local: false, medios: ['Infobae', 'Clarín', 'Perfil'] };
   exigirMedios([m]);
   assert.equal(m.semaforo, 'amarillo', 'la IA la pasó a Fútbol, que pide cuatro');
   // Lo que espera por otra cosa no se toca.
