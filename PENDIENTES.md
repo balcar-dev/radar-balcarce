@@ -30,6 +30,21 @@ Pasada de punta a punta, módulo por módulo, después de terminar la tanda de m
 - Revisar con ojo de dueños: las redes (qué piezas rinden), el panel del celular y el de la PC, los workflows manuales, `comercial/`, `pruebas-modelos/`, `criterio-unico/`, las claves de IA y cada cuenta (cuáles se usan y cuáles no).
 - Después de esa pasada: la auditoría final con Opus sobre lo que quedó.
 
+## De la consulta a ChatGPT (15/10) cruzada con la auditoría de Opus
+
+Respuesta completa en `docs/auditoria-opus/RESPUESTAS-OTRAS-IAS.md` (Grok y Meta AI piden iniciar sesión: no se consultaron). Coinciden con Opus en: abogado para la reescritura y las notas policiales, 2FA y recuperación de cuentas, respaldo fuera de GitHub, correcciones visibles, riesgo de Google por "contenido masivo sin valor propio" y más peso a lo local. Lo nuevo o distinto:
+- **Contar fuentes independientes, no direcciones** (la Municipalidad más tres diarios que copian su comunicado es UNA fuente): ampliar el campo `grupo` a "fuente primaria".
+- **Botón de emergencia** que frene toda publicación automática, y uno separado para Policiales, Política y redes.
+- **Alerta si el robot publica de más** (por ejemplo más de 10 notas en 30 minutos) y si pasa una hora sin ejecutarse (el vigilante nuevo ya cubre lo segundo).
+- **Historial de correcciones por nota** (publicado → qué cambió → por qué → quién aprobó) y una página pública de correcciones.
+- **Niveles de certeza** en las notas (confirmado, informado por una fuente, versión oficial, en desarrollo, contradictorio); si dos fuentes discrepan, la nota lo dice en vez de elegir.
+- **Hacia un medio más local:** menos peso a lo nacional, páginas permanentes de servicio (cortes, farmacias, Concejo, clubes, escuelas), fuentes primarias locales y alianzas (Bomberos, clubes, escuelas, Cámara de Comercio).
+- **Google:** News Sitemap aparte (solo las últimas 48 horas), NewsArticle completo (autor, fecha de modificación), página de transparencia (cómo trabajamos, uso de IA, correcciones, propietario).
+- **Canal de WhatsApp y una newsletter** ("Radar de la mañana", 5 notas, 7:30), antes que una guía de comercios.
+- **Etiqueta de IA visible en los videos** ("Video y voz generados con IA a partir de información periodística verificada") y nunca una voz que imite a una persona real.
+- **Un documento "si mañana falta uno de nosotros"** (dominio, cuentas, pagos, recuperación) y la prueba anual de reconstruir todo si desapareciera GitHub.
+- **Dónde NO coincide con Opus:** ChatGPT no migraría a Workers + D1 todavía (50 visitas por día). Lo que sí recomienda es sacar de git los datos que hacen de base de datos y pasar la multimedia a R2. Se discute en la revisión de punta a punta; mientras tanto el rumbo acordado sigue siendo menos GitHub y más Cloudflare. Sobre las 500 compilaciones gratis de Pages: no aplican, el sitio se sube por Direct Upload sin que Cloudflare compile.
+
 ## Después de la mudanza (15/10)
 
 | Qué | Quién |
@@ -46,7 +61,7 @@ Pasada de punta a punta, módulo por módulo, después de terminar la tanda de m
 | Desde el 20/10 | Efemérides de noviembre: se arman **después de la renovación** (decisión del 12/10); el vigilante va a avisar desde el 20 que falta el mes | Claude arma; los dos aprueban en Fechas |
 | 21/10 | Next 15 deja de recibir parches. No se pasa a Next 16 mientras el límite de 20.000 archivos de Cloudflare lo impida (regla 148) | Los dos deciden; Claude |
 | Antes del 25/10 | Piezas fijas de Participá: vencen el 31/10. Decidir si se renuevan ("Fijar piezas") | Los dos |
-| Antes del 2/12 | Archivo de notas: R2 por mes o D1 (se llega a las 3.500 notas con página) | Los dos deciden; Claude |
+| Antes del 10/12 | Archivo permanente: que el enlace de una nota que salió de las 3.700 con página no dé 404 (R2 + Worker o páginas mínimas; diseño y pasos en `docs/salud-tecnica/ARCHIVO-PERMANENTE.md`). Mientras tanto, sacar las fotos del sitio a R2 gana lugar | Los dos deciden; Claude arma; una persona crea el depósito |
 | 15/12 | Revisión general (archivo, fotos, respaldo) | Los dos, con Claude |
 | 21/09/2027 | Renovar el dominio `radarbalcarce.com` (DonWeb). El vigilante avisa 30 días antes | Los dos |
 | 29/09/2027 | Renovar la llave del panel del celular y las dos voces propias ("Crear voces", modo `recrear`; `CRITERIO-REDES.md` § 6) | Hernán; los dos |
