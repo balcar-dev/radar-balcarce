@@ -13251,16 +13251,16 @@
   "fuentes": 3
  },
  "1o7nfps": {
-  "archivo": "fotos-notas/1o7nfps.jpg",
   "medio": "TN (Todo Noticias)",
-  "credito": "Foto: TN (Todo Noticias)",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Gobierno convoca a la mesa política para definir la estrategia legislativa",
   "enlace": "https://tn.com.ar/politica/2026/10/13/el-gobierno-reunira-a-la-mesa-politica-para-frenar-a-la-oposicion-en-el-congreso-y-avanzar-en-las-negociaciones-con-gobernadores/",
   "imagenOriginal": "https://tn.com.ar/resizer/v2/el-gobierno-vuelve-a-reunir-a-su-mesa-politica-en-casa-rosada-antes-de-una-avanzada-opositora-en-el-congreso-foto-presidencia-3B6WZCER4RG53NXKXZWPKSIBBE.jpeg?auth=d68a54c4e921aafb752d8665da98476aeec471396c69a265cc38ab95510e7a55&width=1023",
   "razon": "Muestra claramente a los funcionarios reunidos, tiene buen encuadre y ninguna marca ni menores.",
-  "cuando": "2026-10-13T14:09:24.027Z"
+  "cuando": "2026-10-13T14:09:24.027Z",
+  "intentado": true,
+  "borrada": true
  },
  "sklj66": {
   "archivo": "fotos-notas/sklj66.jpg",
@@ -14390,11 +14390,10 @@
  },
  "eumyqk": {
   "intentado": true,
-  "origen": "ninguna",
-  "titulo": "San Nicolás propone eliminar tasa local si Nación quita el IVA",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-15T04:31:49.238Z",
-  "intentos": 4,
+  "origen": "medio",
+  "cuando": "2026-10-15T10:32:10.241Z",
+  "error": "no se pudo volver a bajar la elegida",
+  "intentos": 5,
   "fuentes": 5
  },
  "1ummanb": {
@@ -14698,9 +14697,9 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Cristian Méndez regresa a Balcarce tras una exitosa gira por España",
-  "razon": "sin fotos para comparar",
-  "cuando": "2026-10-15T04:31:49.238Z",
-  "intentos": 3,
+  "razon": "sin fotos para comparar (se probó una foto libre de \"Cristian Méndez\" en Wikimedia Commons, sin resultado)",
+  "cuando": "2026-10-15T10:32:10.241Z",
+  "intentos": 4,
   "fuentes": 1
  },
  "1xvsqrr": {

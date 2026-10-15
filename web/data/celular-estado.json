@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T10:02:20.225Z",
- "portada": 41,
+ "generado": "2026-10-15T10:32:25.152Z",
+ "portada": 39,
  "archivo": 1098,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-15T10:02:20.260Z",
+  "generado": "2026-10-15T10:32:25.196Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -14,7 +14,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-15T10:05:33.436Z"
    },
    {
     "nombre": "efemeride",
@@ -95,8 +95,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 53,
     "notas": [
+     {
+      "id": "cdnqde",
+      "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
+      "seccion": "Cultura y agenda"
+     },
      {
       "id": "1e22az3",
       "titulo": "Cristian Méndez regresa a Balcarce tras una exitosa gira por España",
@@ -105,11 +110,6 @@
      {
       "id": "wzunxc",
       "titulo": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "fav3c1",
-      "titulo": "Brooklyn Café vende 1200 cookies tras la suspensión de la Fiesta del Postre",
       "seccion": "Balcarce"
      },
      {
@@ -126,21 +126,11 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
-   },
-   {
-    "nombre": "podcast",
-    "titulo": "El repaso del día",
-    "hora": "21:00",
-    "voz": "locutor",
-    "momento": "antes",
-    "salio": null,
-    "segundos": 34,
+    "segundos": 50,
     "notas": [
      {
-      "id": "17v35o5",
-      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
+      "id": "fav3c1",
+      "titulo": "Brooklyn Café vende 1200 cookies tras la suspensión de la Fiesta del Postre",
       "seccion": "Balcarce"
      },
      {
@@ -152,8 +142,23 @@
       "id": "tctot0",
       "titulo": "Valeria Ares comparte su experiencia a dieciseis años de su doble trasplante",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "17v35o5",
+      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
+      "seccion": "Balcarce"
      }
     ]
+   },
+   {
+    "nombre": "podcast",
+    "titulo": "El repaso del día",
+    "hora": "21:00",
+    "voz": "locutor",
+    "momento": "antes",
+    "salio": null,
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
