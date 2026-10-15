@@ -1020,3 +1020,8 @@ probó. Las que reemplazan algo que ya existe también están en `MEJORAS.md` (s
 7. Los precios y la estrategia de lanzamiento; quién factura; la pauta oficial (sí o no, con qué tope).
 8. Quién pega "Para pegar hoy" cada mañana y quién atiende el canal de WhatsApp.
 9. El camino para YouTube, TikTok y Spotify (RS-0).
+
+## Ideas del 15/10
+
+- **Newsletter por mail para el público** (idea de Hernán, para más adelante, después de la auditoría final). Se puede hacer desde la misma cuenta de Cloudflare: "Email Sending" (en beta, entra en el plan Workers Paid que ya pagamos) permite mandar desde un Worker a cualquier destinatario. Lo que hay que sumar: formulario de suscripción en la web, lista de suscriptores (KV o D1), botón de baja en cada mail, confirmación de la suscripción (doble opt-in), y cuidar que no caiga en spam (SPF/DKIM del dominio). Contenido posible: el resumen de la mañana con las 5 notas principales, la farmacia de turno y la agenda del fin de semana. Antes de armarlo, mirar qué dice la ley de datos personales para listas de correo.
+- **Informes por mail para Hernán y Andrés, 1 o 2 por día** (en marcha el 15/10). Telegram como canal extra: ver después si sirve.
