@@ -77,7 +77,7 @@ export async function fotoDeEfemeride(nota, { carpeta, base = BASE_DE_EFEMERIDE,
     if (fs.existsSync(destino)) return foto;
     if (soloLasQueEstan) return null;
     const exe = ffmpeg ?? await ffmpegDelProyecto();
-    if (!exe) return null;
+    if (!exe) { console.warn('  efeméride: no hay ffmpeg para armar la foto'); return null; }
     const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'efemeride-'));
     try {
       const archivos = {};
@@ -90,8 +90,12 @@ export async function fotoDeEfemeride(nota, { carpeta, base = BASE_DE_EFEMERIDE,
     } finally {
       fs.rmSync(tmp, { recursive: true, force: true });
     }
-    return fs.existsSync(destino) && fs.statSync(destino).size > 20000 ? foto : null;
-  } catch {
+    if (fs.existsSync(destino) && fs.statSync(destino).size > 20000) return foto;
+    console.warn(`  efeméride: ffmpeg no dejó la foto de ${nota.diaDeLaFoto}`);
+    return null;
+  } catch (e) {
+    // Sin esto la causa se perdía (15/10: en GitHub la foto del día no se armaba y no había manera de ver por qué).
+    console.warn(`  efeméride: no se pudo armar la foto de ${nota?.diaDeLaFoto}: ${String(e?.stderr || e?.message || e).replace(/\s+/g, ' ').slice(-400)}`);
     return null;
   }
 }
