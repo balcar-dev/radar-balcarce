@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T07:19:27.580Z",
- "portada": 45,
+ "generado": "2026-10-15T07:32:04.899Z",
+ "portada": 44,
  "archivo": 1100,
- "esperandoCuerpo": 2,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-15T07:19:27.635Z",
+  "generado": "2026-10-15T07:32:04.942Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -98,6 +98,11 @@
     "segundos": 50,
     "notas": [
      {
+      "id": "cdnqde",
+      "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
+      "seccion": "Cultura y agenda"
+     },
+     {
       "id": "1e22az3",
       "titulo": "Cristian Méndez regresa a Balcarce tras una exitosa gira por España",
       "seccion": "Cultura y agenda"
@@ -111,11 +116,6 @@
       "id": "1s8weuc",
       "titulo": "El Turismo Nacional evalúa incorporar a Balcarce para su calendario",
       "seccion": "Automovilismo"
-     },
-     {
-      "id": "wzunxc",
-      "titulo": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -126,21 +126,11 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
-   },
-   {
-    "nombre": "podcast",
-    "titulo": "El repaso del día",
-    "hora": "21:00",
-    "voz": "locutor",
-    "momento": "antes",
-    "salio": null,
-    "segundos": 34,
+    "segundos": 45,
     "notas": [
      {
-      "id": "17v35o5",
-      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
+      "id": "wzunxc",
+      "titulo": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
       "seccion": "Balcarce"
      },
      {
@@ -152,8 +142,23 @@
       "id": "tctot0",
       "titulo": "Valeria Ares comparte su experiencia a dieciseis años de su doble trasplante",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "17v35o5",
+      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
+      "seccion": "Balcarce"
      }
     ]
+   },
+   {
+    "nombre": "podcast",
+    "titulo": "El repaso del día",
+    "hora": "21:00",
+    "voz": "locutor",
+    "momento": "antes",
+    "salio": null,
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
