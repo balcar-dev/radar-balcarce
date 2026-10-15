@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-15T09:31:57.784Z",
+ "generado": "2026-10-15T10:02:20.225Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -63,43 +63,6 @@
    "intentos": 5,
    "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 5
-  },
-  {
-   "id": "1oj06u0",
-   "titulo": "El reto de Nicolás Otamendi a Santiago Beltrán: \"Salí una vez\"",
-   "copete": "El defensor Nicolás Otamendi tuvo un fuerte cruce con Santiago Beltrán , arquero de River, durante el empate por 1 a 1 entre el Millonario y Sarmiento en Junín. Sobre el cierre del partido y con la igualdad en el marcador, el campeón del mundo tuvo que despejar una pelota hacia…",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-15T00:23:07.000Z",
-   "fuentes": [
-    {
-     "medio": "TyC Sports",
-     "enlace": "https://www.tycsports.com/river-plate/el-reto-de-nicolas-otamendi-a-santiago-beltran-sali-una-vez-id766269.html",
-     "fecha": "2026-10-15T00:23:07.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/deportes/futbol/el-fuerte-reclamo-de-nicolas-otamendi-a-santiago-beltran-en-el-empate-de-river-con-sarmiento-sali-nid15102026/",
-     "fecha": "2026-10-15T06:01:02.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/deportes/2026/10/15/sali-una-vez-el-grito-de-otamendi-a-santiago-beltran-durante-el-empate-de-river-plate-frente-a-sarmiento/",
-     "fecha": "2026-10-15T01:54:04.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/14/el-reclamo-de-nicolas-otamendi-a-santiago-beltran-en-el-empate-entre-river-y-sarmiento-de-junin/",
-     "fecha": "2026-10-15T01:48:01.000Z"
-    },
-    {
-     "medio": "Bolavip Argentina",
-     "enlace": "https://bolavip.com/ar/river/no-se-vio-en-tv-el-fuerte-reproche-de-nicolas-otamendi-a-santiago-beltran-en-pleno-sarmiento-vs-river",
-     "fecha": "2026-10-15T00:44:31.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (nombre, promesa): el cuerpo nombra a \"mar\" y la fuente no; sin esas oraciones quedan 124 palabras",
-   "maximo": 4
   }
  ]
 }
