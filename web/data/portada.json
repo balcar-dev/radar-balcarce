@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T05:01:55.552Z",
+  "generado": "2026-10-15T05:31:49.774Z",
   "notas": [
     {
       "id": "19xa7ho",
@@ -70,11 +70,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45083-walter-ianni-lopez-participo-en-beijing-de-encuentros-sobre-cooperacion-internacional-y-relaciones-con-china/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-15T00:31:41.256Z",
       "sinFecha": true,
       "visto": "2026-10-15T00:31:41.256Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -824,10 +824,10 @@
         "C5N",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "El Día",
         "La Nueva",
         "El Marplatense",
         "El Eco de Tandil",
+        "El Día",
         "Diputados Bonaerenses",
         "La Brújula 24"
       ],
@@ -1265,9 +1265,9 @@
         "Zona Norte Diario",
         "El Marplatense",
         "El Economista",
-        "El Día",
         "Diario Conurbano",
-        "Crónica"
+        "Crónica",
+        "El Día"
       ],
       "enlace": "https://www.zonanortediario.com.ar/14/10/2026/kicillof-y-lanus-recorrieron-la-nueva-base-de-la-utoi-en-san-isidro-que-ya-cuenta-con-100-efectivos/",
       "teniaImagenLaFuente": true,
@@ -1347,6 +1347,80 @@
       "foto": {
         "archivo": "fotos-notas/1394wxo.jpg",
         "credito": "Foto: Zona Norte Diario"
+      }
+    },
+    {
+      "id": "1qu6ie7",
+      "titulo": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
+      "copete": "El informe climático para la próxima semana anticipa registros pluviométricos modestos en gran parte del país y mínimas inferiores a 10 grados en el este bonaerense.",
+      "cuerpo": "La Bolsa de Cereales de Buenos Aires difundió el pronóstico para el período del 15 al 21 de octubre, que anticipa precipitaciones escasas en la mayor parte de la región agrícola, con la excepción del extremo norte. Según el informe, la entrada de aire marítimo mantendrá las temperaturas mínimas por debajo de los valores habituales, mientras que el este de Buenos Aires registrará marcas inferiores a 10 grados con leve riesgo de heladas localizadas. Hacia el final del periodo, el regreso de vientos tropicales provocará un ascenso térmico generalizado, aunque el sur de la Región Pampeana y la Costa Atlántica se mantendrán con máximas por debajo de los 20 grados debido a la circulación marina.",
+      "guion": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
+      "seccion": "Agro",
+      "medios": [
+        "Agrositio",
+        "TN (Todo Noticias)"
+      ],
+      "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T17:34:56.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T19:32:01.897Z",
+      "relevancia": 43,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Pronóstico vigente del 15 al 21 de octubre.",
+        "Lluvias escasas en la mayor parte del país.",
+        "Mínimas menores a 10 grados en el este bonaerense."
+      ],
+      "seSabe": [
+        "La Bolsa de Cereales de Buenos Aires informó el pronóstico para la próxima semana.",
+        "Habrá precipitaciones escasas en la mayor parte del área agrícola.",
+        "El este de Buenos Aires registrará mínimas menores a 10 grados."
+      ],
+      "textoRedes": "El informe climático para la próxima semana anticipa lluvias escasas en gran parte del país y temperaturas mínimas inferiores a 10 grados en el este de Buenos Aires.",
+      "etiquetas": [
+        "Clima",
+        "Bolsa de Cereales",
+        "Lluvias",
+        "Temperaturas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
+          "fecha": "2026-10-14T17:34:56.000Z",
+          "oficial": false,
+          "aporte": "Detalló los registros de precipitaciones, temperaturas mínimas y máximas por región según el informe de la Bolsa de Cereales."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/14/la-region-agricola-recibira-lluvias-escasas-durante-los-proximos-dias-excepto-en-el-extremo-norte/",
+          "fecha": "2026-10-14T19:09:51.000Z",
+          "oficial": false,
+          "aporte": "Informó que se esperan lluvias escasas en la mayor parte de la región agrícola para el período del 15 al 21 de octubre."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "vqv317",
+          "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
+          "fecha": "2026-10-05T11:23:01.000Z",
+          "ruta": "/nota/el-clima-muestra-cielo-nublado-y-posibles-lluvias-debiles-vqv317"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "pronostican-lluvias-escasas-y-marcada-amplitud-termica-en-el-area",
+      "foto": {
+        "archivo": "fotos-notas/1qu6ie7.jpg",
+        "credito": "Foto: Agrositio"
       }
     },
     {
@@ -1603,11 +1677,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45079-jamas-imagine-que-iba-a-necesitar-un-trasplante/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-14T16:32:12.981Z",
       "sinFecha": true,
       "visto": "2026-10-14T16:32:12.981Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1827,10 +1901,10 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
-        "A24",
-        "C5N",
+        "iProUP",
         "iProfesional",
-        "iProUP"
+        "A24",
+        "C5N"
       ],
       "enlace": "https://www.ambito.com/economia/caba-lanzo-un-plan-pagar-deudas-abl-y-patentes-100-descuento-intereses-como-acceder-n6333599",
       "teniaImagenLaFuente": true,
@@ -1919,6 +1993,7 @@
         "TyC Sports",
         "Minuto Uno",
         "Crónica",
+        "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Nueva",
@@ -1994,8 +2069,8 @@
         "El Cronista",
         "El Destape",
         "iProfesional",
-        "Ámbito",
-        "El Economista"
+        "El Economista",
+        "Ámbito"
       ],
       "enlace": "https://eleconomista.com.ar/negocios/movistar-mensaje-recibiran-millones-clientes-proximos-dias-n98856",
       "teniaImagenLaFuente": true,
@@ -2175,13 +2250,12 @@
         "LU9 Mar del Plata",
         "QZ Noticias (Mar del Plata)",
         "Diputados Bonaerenses",
-        "El Día",
         "0221",
-        "La Verdad",
-        "Agencia DIB",
-        "Ámbito",
         "La Tecla",
-        "El Marplatense"
+        "La Verdad",
+        "El Marplatense",
+        "Agencia DIB",
+        "Ámbito"
       ],
       "enlace": "https://www.0221.com.ar/la-plata/la-provincia-convoco-los-docentes-retomar-las-paritarias-y-definir-nuevos-aumentos-salarios-n135790",
       "teniaImagenLaFuente": true,
@@ -2330,15 +2404,18 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45075-presupuesto-2027-el-municipio-prepara-la-ley-de-leyes-y-los-funcionarios-deberan-explicar-sus-numeros/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-14T13:31:55.553Z",
       "sinFecha": true,
       "visto": "2026-10-14T13:31:55.553Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "concejo",
+        "hospital"
+      ],
       "como": "automatica",
       "claves": [
         "El Ejecutivo municipal prevé presentar el proyecto el 31 de octubre.",
@@ -2997,10 +3074,10 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
-        "Ámbito",
+        "El Economista",
         "iProfesional",
-        "Minuto Uno",
-        "El Economista"
+        "Ámbito",
+        "Minuto Uno"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
       "teniaImagenLaFuente": true,
@@ -3257,17 +3334,7 @@
       "guion": "Abren convocatoria para investigadores de hospitales bonaerenses",
       "seccion": "Balcarce",
       "medios": [
-        "Diario La Vanguardia",
-        "Infobae",
-        "TN (Todo Noticias)",
-        "El Destape",
-        "Perfil",
-        "Radio Mitre",
-        "Noticias Argentinas (NA)",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "La Opinión",
-        "El Cronista"
+        "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45072-abren-convocatoria-para-reconocer-a-investigadores-de-hospitales-bonaerenses/",
       "teniaImagenLaFuente": true,
@@ -3348,9 +3415,9 @@
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
         "Bolavip Argentina",
-        "Clarín",
         "0223 (Mar del Plata)",
-        "La Capital (Rosario)"
+        "La Capital (Rosario)",
+        "Clarín"
       ],
       "enlace": "https://www.clarin.com/deportes/lisandro-martinez-exploto-dirigencia-manchester-united-leyenda-club-cruzo-actuaciones-buenas_0_xNVWlGPyUT.html",
       "teniaImagenLaFuente": true,
@@ -3603,6 +3670,13 @@
           "aporte": null
         },
         {
+          "medio": "La Capital (Rosario)",
+          "enlace": "https://www.lacapital.com.ar/ovacion/las-duras-declaraciones-lisandro-martinez-que-abrieron-un-escandalo-manchester-united-n10286663.html",
+          "fecha": "2026-10-14T17:29:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/lisandro-martinez-apunto-contra-la-dirigencia-manchester-united-esperaba-mas-inversiones-n6333494",
           "fecha": "2026-10-14T12:00:00.000Z",
@@ -3613,13 +3687,6 @@
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/rooney-ferdinand-y-carragher-destrozaron-lisandro-martinez-es-una-falta-respeto-n6333629",
           "fecha": "2026-10-14T15:16:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Capital (Rosario)",
-          "enlace": "https://www.lacapital.com.ar/ovacion/las-duras-declaraciones-lisandro-martinez-que-abrieron-un-escandalo-manchester-united-n10286663.html",
-          "fecha": "2026-10-14T17:29:00.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -4199,8 +4266,8 @@
       "medios": [
         "La Nación",
         "TN (Todo Noticias)",
-        "Bichos de Campo",
-        "Agrositio"
+        "Agrositio",
+        "Bichos de Campo"
       ],
       "enlace": "https://bichosdecampo.com/esta-cara-la-papa-y-eso-les-cambio-la-cara-segun-coninagro-las-economias-regionales-no-repuntan-a-pesar-de-la-mejora-en-una-de-las-actividades/",
       "teniaImagenLaFuente": true,
@@ -4328,75 +4395,62 @@
     "Política",
     "Economía",
     "Argentina",
+    "Agro",
     "Policiales",
     "Fútbol",
-    "Tecnología",
-    "Agro"
+    "Tecnología"
   ],
   "temas": [
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
-      "cuantas": 2
+      "cuantas": 3
     }
   ],
   "clima": {
     "ahora": {
       "temp": 10,
-      "sensacion": 8,
-      "humedad": 94,
-      "viento": 11,
+      "sensacion": null,
+      "humedad": 93,
+      "viento": 13,
       "rumbo": "SE",
-      "cielo": "Nublado",
-      "esDeDia": false
+      "cielo": "Nublado"
     },
     "dias": [
       {
         "fecha": "2026-10-15",
         "dia": "jue",
         "max": 15,
-        "min": 9,
-        "lluvia": 12,
-        "codigo": 51,
-        "viento": 20,
-        "milimetros": 0,
-        "cielo": "Llovizna leve"
+        "min": 10,
+        "lluvia": null,
+        "cielo": "Nublado"
       },
       {
         "fecha": "2026-10-16",
         "dia": "vie",
         "max": 12,
         "min": 6,
-        "lluvia": 20,
-        "codigo": 51,
-        "viento": 17,
-        "milimetros": 1,
-        "cielo": "Llovizna leve"
+        "lluvia": null,
+        "cielo": "Nublado"
       },
       {
         "fecha": "2026-10-17",
         "dia": "sáb",
         "max": 11,
-        "min": 7,
-        "lluvia": 4,
-        "codigo": 51,
-        "viento": 18,
-        "milimetros": 0,
-        "cielo": "Llovizna leve"
+        "min": 5,
+        "lluvia": null,
+        "cielo": "Parcialmente nublado"
       },
       {
         "fecha": "2026-10-18",
         "dia": "dom",
-        "max": 12,
-        "min": 5,
-        "lluvia": 8,
-        "codigo": 51,
-        "viento": 12,
-        "milimetros": 1,
-        "cielo": "Llovizna leve"
+        "max": 13,
+        "min": 7,
+        "lluvia": null,
+        "cielo": "Parcialmente nublado"
       }
     ],
-    "fuente": "Open-Meteo"
+    "fuente": "MET Noruega"
   },
   "avisosClima": [],
   "farmacias": {
@@ -4694,16 +4748,16 @@
   },
   "pendientes": [
     {
-      "id": "1okotnb",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
       "id": "1hkr9k8",
       "titulo": "Gabriel Solano denunció penalmente a Javier Milei y Luis…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
+      "id": "1okotnb",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"víctima\""
     },
     {
       "id": "sngreo",
@@ -4772,6 +4826,12 @@
       "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
+      "id": "2dhhlx",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"adolescente\""
+    },
+    {
       "id": "1333xd6",
       "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
       "seccion": "Economía",
@@ -4802,18 +4862,6 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "115hicz",
-      "titulo": "El dolor de Graciela Alfano al visitar la casa de su…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"asesinato\""
-    },
-    {
-      "id": "npkndz",
-      "titulo": "Inauguran una plataforma pública con datos diarios de…",
-      "seccion": "Economía",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
       "id": "lwmyim",
       "titulo": "Hotesur-Los Sauces: habrá una audiencia clave para…",
       "seccion": "Política",
@@ -4824,12 +4872,6 @@
       "titulo": "El periodista brasileño deportado de la Argentina denunció…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
-      "id": "owe7fy",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
     }
   ],
   "esperandoCuerpo": 2
