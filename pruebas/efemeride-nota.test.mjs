@@ -3,6 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { efemeridesDelLibro, notaDeEfemeride, notasDeEfemerides, FOTO_DE_EFEMERIDE, esNotaPropia } from '../web/lib/notas-propias.js';
 import { tieneCuerpo } from '../web/lib/cuerpo.js';
 
@@ -80,4 +81,47 @@ test('la poda de fotos nunca borra la ilustración fija (14/10: la borró la cor
   const { podarFotos } = await import('../web/scripts/fotos-notas.mjs');
   const { borrar } = podarFotos({ banco: {}, enDisco: ['efemeride-fondo.jpg', 'vieja.jpg'], quedan: new Set(), retiradas: new Set() });
   assert.deepEqual(borrar, ['vieja.jpg']);
+});
+
+// ------------------------------------------------- el año y la fecha sobre la hoja del centro (15/10/2026)
+
+test('la hoja lleva el año en grande y la fecha; un "día de…" sin año lleva el día', async () => {
+  const { textosDeLaHoja, caminoParaElFiltro, filtroDeLaHoja, archivoDeLaFoto } = await import('../web/scripts/foto-efemeride.mjs');
+  assert.deepEqual(textosDeLaHoja({ dia: '2026-10-14', anio: 1959 }), { grande: '1959', fecha: '14 de octubre' });
+  assert.deepEqual(textosDeLaHoja({ dia: '2026-10-13', anio: null }), { grande: '13 oct', fecha: '13 de octubre' });
+  assert.equal(textosDeLaHoja({ dia: 'x' }), null);
+  const B = String.fromCharCode(92);
+  assert.equal(caminoParaElFiltro(`D:${B}a${B}b.ttf`), `D${B}:/a/b.ttf`, 'los dos puntos de una ruta de Windows se escapan');
+  const f = filtroDeLaHoja({ rotulo: '/t/r.txt', grande: '/t/g.txt', fecha: '/t/f.txt' }, '/fuentes');
+  assert.equal(f.split('drawtext=').length - 1, 3, 'tres renglones: rótulo, año y fecha');
+  assert.match(f, /SourceSerif4-900\.ttf/);
+  assert.equal(archivoDeLaFoto('2026-10-14'), 'efemeride-2026-10-14.jpg');
+});
+
+test('la foto de cada día se arma una vez, sin ffmpeg no rompe y la nota se queda con la ilustración', async () => {
+  const { fotoDeEfemeride } = await import('../web/scripts/foto-efemeride.mjs');
+  const os = await import('node:os');
+  const path = await import('node:path');
+  const carpeta = fs.mkdtempSync(path.join(os.tmpdir(), 'fe-prueba-'));
+  try {
+    const [s] = efemeridesDelLibro(libro(), { ahora: AHORA });
+    const nota = notaDeEfemeride(s, DIA_14);
+    assert.equal(nota.diaDeLaFoto, '2026-10-14');
+    assert.equal(nota.anioDeLaFoto, 1959);
+    const base = fileURLToPath(new URL('../web/public/fotos-notas/efemeride-fondo.jpg', import.meta.url));
+    let llamadas = 0;
+    const ejecutar = async (exe, args) => { llamadas += 1; fs.writeFileSync(args[args.length - 1], Buffer.alloc(30000, 1)); };
+    assert.equal(await fotoDeEfemeride(nota, { carpeta, base, ejecutar, ffmpeg: 'ffmpeg', soloLasQueEstan: true }), null, 'en la PC no se arma una nueva');
+    assert.equal(llamadas, 0);
+    const foto = await fotoDeEfemeride(nota, { carpeta, base, ejecutar, ffmpeg: 'ffmpeg' });
+    assert.deepEqual(foto, { archivo: 'fotos-notas/efemeride-2026-10-14.jpg', credito: nota.foto.credito });
+    assert.equal(llamadas, 1);
+    await fotoDeEfemeride(nota, { carpeta, base, ejecutar, ffmpeg: 'ffmpeg' });
+    assert.equal(llamadas, 1, 'si ya está, no se vuelve a armar');
+    assert.deepEqual(await fotoDeEfemeride(nota, { carpeta: path.join(carpeta, 'otra'), base, ejecutar: async () => { throw new Error('sin ffmpeg'); }, ffmpeg: 'ffmpeg' }), null);
+    const { podarFotos } = await import('../web/scripts/fotos-notas.mjs');
+    assert.deepEqual(podarFotos({ banco: {}, enDisco: ['efemeride-2026-10-14.jpg', 'efemeride-fondo.jpg', 'vieja.jpg'], quedan: new Set() }).borrar, ['vieja.jpg']);
+  } finally { fs.rmSync(carpeta, { recursive: true, force: true }); }
+  const g = fs.readFileSync(new URL('../web/scripts/generar-datos.mjs', import.meta.url), 'utf8');
+  assert.match(g, /n\.propia !== 'efemeride'[\s\S]{0,80}fotoDeEfemeride\(n, \{ carpeta: FOTOS_NOTAS, soloLasQueEstan: !enLaNube \}\)/);
 });

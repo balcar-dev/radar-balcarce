@@ -74,7 +74,7 @@ import {
   esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson, sePodaPorFaltaDeCuerpo,
 } from '../lib/archivo.js';
 import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
-import { esperaSoloPorCantidad, semaforoDelTexto } from '../../ingesta/ingesta.mjs';
+import { esperaSoloPorCantidad, semaforoDelTexto, esEfemerideAjena } from '../../ingesta/ingesta.mjs';
 import { conFotosDelBanco, podarFotos } from './fotos-notas.mjs';
 import { actualizarAgenda, aplicarSuspendidos, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
@@ -676,6 +676,8 @@ for (const a of archivoAnterior.notas ?? []) {
   // Lo que no se publica nunca (las listas de sepelios) no conserva la página,
   // aunque la haya aprobado una persona (28/09).
   if (nuncaSePublica(conCorreccion(a, CORRECCIONES))) retiradas.add(a.id);
+  // Una efeméride de otro medio ya archivada tampoco conserva la página (15/10: la de Radio Gabal del 14/10 salió antes de la regla 164).
+  if (!a.propia && esEfemerideAjena(a)) retiradas.add(a.id);
   if (sigueRoja(enIngesta.get(a.id), conCorreccion(a, CORRECCIONES))) retiradas.add(a.id);
   // Una página vieja que promete una cobertura "EN VIVO" o "minuto a minuto" en
   // el título (el texto de otro medio, de antes de la regla): Radar Balcarce no
@@ -784,6 +786,19 @@ if (propias.length) console.log(`  notas propias: ${propias.map((n) => n.id).joi
     if (foto) { n.foto = foto; conCollage += 1; }
   }
   if (conCollage) console.log(`  repasos con foto (collage): ${conCollage}`);
+}
+
+// La nota de "Un día como hoy" lleva la ilustración fija con el año y la fecha escritos en la hoja del centro (web/scripts/foto-efemeride.mjs, 15/10).
+// Se arma una vez por día, sólo en la nube; si falla, queda la ilustración sin texto.
+{
+  const { fotoDeEfemeride } = await import('./foto-efemeride.mjs');
+  let conFecha = 0;
+  for (const n of propias) {
+    if (n.propia !== 'efemeride') continue;
+    const foto = await fotoDeEfemeride(n, { carpeta: FOTOS_NOTAS, soloLasQueEstan: !enLaNube });
+    if (foto) { n.foto = foto; conFecha += 1; }
+  }
+  if (conFecha) console.log(`  efemérides con el año en la hoja: ${conFecha}`);
 }
 
 // Una nota propia que una persona armó (la de una pista) y a la que se le subió una foto desde el celular: la foto está en el banco con el id de la nota.

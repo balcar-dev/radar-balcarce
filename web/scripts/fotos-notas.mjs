@@ -13,7 +13,6 @@
 
 import { elegirFotoParaNota, descargarImagen, creditoDeFoto } from '../../ingesta/fotos.mjs';
 import { achicarFoto, fotoParaGuardar } from './achicar-foto.mjs';
-import { FOTO_DE_EFEMERIDE } from '../lib/notas-propias.js';
 
 // Por corrida, no por día: la corrida se repite cada media hora, así que el
 // banco se completa solo en un par de horas sin gastar de una todo el cupo
@@ -171,7 +170,7 @@ export function podarFotos({ banco = {}, enDisco = [], quedan = new Set(), retir
   // exista la nota del repaso.
   const delRepaso = (f) => f.startsWith('collage-') && quedan.has(f.slice('collage-'.length).replace(/\.\w+$/, ''));
   // La ilustración fija de las notas de efemérides (14/10/2026) tampoco es de una nota del banco: nunca se poda.
-  const fija = (f) => f === FOTO_DE_EFEMERIDE.archivo.split('/').pop();
+  const fija = (f) => /^efemeride-[\w-]+\.jpg$/.test(f); // la base (efemeride-fondo.jpg) y la de cada día (efemeride-2026-10-14.jpg, web/scripts/foto-efemeride.mjs)
   return { banco: bancoNuevo, borrar: enDisco.filter((f) => !vivas.has(f) && !delRepaso(f) && !fija(f)) };
 }
 

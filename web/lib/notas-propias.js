@@ -530,6 +530,9 @@ export function notaDeEfemeride(salio, delDia) {
     fuentesConsultadas: [fuente],
     teniaImagenLaFuente: false,
     foto: { ...FOTO_DE_EFEMERIDE },
+    // Para escribir el año y la fecha sobre la hoja en blanco de la ilustración (web/scripts/foto-efemeride.mjs).
+    diaDeLaFoto: dia,
+    anioDeLaFoto: p.anio ?? null,
     fecha: cuando,
     sinFecha: false,
     visto: cuando,

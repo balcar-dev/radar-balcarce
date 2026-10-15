@@ -30,3 +30,13 @@ test('una noticia que nombra la efeméride no es una efeméride ajena', () => {
   assert.equal(esEfemerideAjena(leida('El Concejo declara de interés el aniversario del Club Amigos Unidos')), false);
   assert.equal(esEfemerideAjena({}), false);
 });
+
+test('una efeméride de otro medio que ya estaba archivada pierde la página; las nuestras no (15/10: la de Gabal del 14/10 salió antes de la regla)', async () => {
+  const fs = await import('node:fs');
+  const g = fs.readFileSync(new URL('../web/scripts/generar-datos.mjs', import.meta.url), 'utf8');
+  assert.match(g, /if \(!a\.propia && esEfemerideAjena\(a\)\) retiradas\.add\(a\.id\);/);
+  const gabal = { titulo: 'El mundo conmemora la donación de órganos y otras efemérides', enlace: 'https://www.radiogabal.com.ar/index.php/comunidad/efemerides-14-de-octubre-se-conmemora-el-dia-mundial-de-la-donacion-de-organos' };
+  assert.equal(esEfemerideAjena(gabal), true);
+  assert.equal(esEfemerideAjena({ titulo: 'Un día como hoy, en 1959: Se funda la UTN', enlace: 'https://radarbalcarce.com', propia: 'efemeride' }), true,
+    'el título nuestro también parece de efeméride: por eso el archivo exceptúa lo propio');
+});
