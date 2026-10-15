@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T06:01:51.468Z",
+  "generado": "2026-10-15T06:31:59.118Z",
   "notas": [
     {
       "id": "19xa7ho",
@@ -1248,6 +1248,80 @@
       }
     },
     {
+      "id": "1qu6ie7",
+      "titulo": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
+      "copete": "El informe climático para la próxima semana anticipa registros pluviométricos modestos en gran parte del país y mínimas inferiores a 10 grados en el este bonaerense.",
+      "cuerpo": "La Bolsa de Cereales de Buenos Aires difundió el pronóstico para el período del 15 al 21 de octubre, que anticipa precipitaciones escasas en la mayor parte de la región agrícola, con la excepción del extremo norte. Según el informe, la entrada de aire marítimo mantendrá las temperaturas mínimas por debajo de los valores habituales, mientras que el este de Buenos Aires registrará marcas inferiores a 10 grados con leve riesgo de heladas localizadas. Hacia el final del periodo, el regreso de vientos tropicales provocará un ascenso térmico generalizado, aunque el sur de la Región Pampeana y la Costa Atlántica se mantendrán con máximas por debajo de los 20 grados debido a la circulación marina.",
+      "guion": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
+      "seccion": "Agro",
+      "medios": [
+        "Agrositio",
+        "TN (Todo Noticias)"
+      ],
+      "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T17:34:56.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T19:32:01.897Z",
+      "relevancia": 36,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Pronóstico vigente del 15 al 21 de octubre.",
+        "Lluvias escasas en la mayor parte del país.",
+        "Mínimas menores a 10 grados en el este bonaerense."
+      ],
+      "seSabe": [
+        "La Bolsa de Cereales de Buenos Aires informó el pronóstico para la próxima semana.",
+        "Habrá precipitaciones escasas en la mayor parte del área agrícola.",
+        "El este de Buenos Aires registrará mínimas menores a 10 grados."
+      ],
+      "textoRedes": "El informe climático para la próxima semana anticipa lluvias escasas en gran parte del país y temperaturas mínimas inferiores a 10 grados en el este de Buenos Aires.",
+      "etiquetas": [
+        "Clima",
+        "Bolsa de Cereales",
+        "Lluvias",
+        "Temperaturas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
+          "fecha": "2026-10-14T17:34:56.000Z",
+          "oficial": false,
+          "aporte": "Detalló los registros de precipitaciones, temperaturas mínimas y máximas por región según el informe de la Bolsa de Cereales."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/14/la-region-agricola-recibira-lluvias-escasas-durante-los-proximos-dias-excepto-en-el-extremo-norte/",
+          "fecha": "2026-10-14T19:09:51.000Z",
+          "oficial": false,
+          "aporte": "Informó que se esperan lluvias escasas en la mayor parte de la región agrícola para el período del 15 al 21 de octubre."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "vqv317",
+          "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
+          "fecha": "2026-10-05T11:23:01.000Z",
+          "ruta": "/nota/el-clima-muestra-cielo-nublado-y-posibles-lluvias-debiles-vqv317"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "pronostican-lluvias-escasas-y-marcada-amplitud-termica-en-el-area",
+      "foto": {
+        "archivo": "fotos-notas/1qu6ie7.jpg",
+        "credito": "Foto: Agrositio"
+      }
+    },
+    {
       "id": "eumyqk",
       "titulo": "San Nicolás propone eliminar tasa local si Nación quita el IVA",
       "copete": "El intendente de San Nicolás, Santiago Passaglia, desafió al Gobierno nacional a eliminar la Tasa de Seguridad e Higiene a cambio de que la Nación deje de cobrar el IVA en obras y servicios públicos municipales.",
@@ -1260,9 +1334,9 @@
         "Ámbito",
         "Minuto Uno",
         "Noticias Argentinas (NA)",
-        "El Día",
         "Agencia DIB",
-        "Ecos Diarios (Necochea)"
+        "Ecos Diarios (Necochea)",
+        "El Día"
       ],
       "enlace": "https://noticiasargentinas.com/economia/san-nicolas-propuso-eliminar-seguridad-e-higiene-si-nacion-deja-de-cobrar-iva_a6acfb3f58298ee386b33f776",
       "teniaImagenLaFuente": true,
@@ -1354,6 +1428,7 @@
         "TN (Todo Noticias)",
         "iProfesional",
         "Noticias Argentinas (NA)",
+        "El Día",
         "InfoRegión",
         "Mi8 (Canal 8 Mar del Plata)",
         "iProUP"
@@ -1725,10 +1800,10 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
+        "iProUP",
         "A24",
         "C5N",
-        "iProfesional",
-        "iProUP"
+        "iProfesional"
       ],
       "enlace": "https://www.ambito.com/economia/caba-lanzo-un-plan-pagar-deudas-abl-y-patentes-100-descuento-intereses-como-acceder-n6333599",
       "teniaImagenLaFuente": true,
@@ -1824,8 +1899,8 @@
         "La Voz del Pueblo",
         "Mi8 (Canal 8 Mar del Plata)",
         "Bolavip Argentina",
-        "El Gráfico",
-        "Olé"
+        "Olé",
+        "El Gráfico"
       ],
       "enlace": "https://noticiasargentinas.com/deportes/colapinto-pidio-frenar-los-ataques-de-los-argentinos-en-la-formula-1---no-me-ayudan-_a6acfdbd78298ee386b39ef1a",
       "teniaImagenLaFuente": true,
@@ -2073,7 +2148,6 @@
         "LU9 Mar del Plata",
         "QZ Noticias (Mar del Plata)",
         "Diputados Bonaerenses",
-        "El Día",
         "0221",
         "La Verdad",
         "Agencia DIB",
@@ -3026,128 +3100,6 @@
       }
     },
     {
-      "id": "jc61mz",
-      "titulo": "El oficialismo busca dictamen para la propiedad privada",
-      "copete": "La Cámara de Diputados debate el miércoles una versión flexible de la Ley de Tierras dentro del proyecto de Inviolabilidad de la Propiedad Privada para frenar un rechazo opositor al DNU 70/23.",
-      "cuerpo": "El plenario de las comisiones de Asuntos Constitucionales y Legislación General se reúne el miércoles a las 16 para avanzar con el dictamen del proyecto de Inviolabilidad de la Propiedad Privada que cuenta con media sanción del Senado. Según informó la Agencia Noticias Argentinas, el oficialismo incorporará una versión reducida de la Ley de Tierras que mantiene el tope del 15% de extranjerización a nivel nacional, provincial y departamental pero elimina el límite de 1.000 hectáreas en las zonas núcleo del país.\n\nEsta estrategia apunta a restarle incentivos a la oposición para revocar el decreto 70/23 en la sesión prevista para el jueves y flexibilizar los límites de compraventa mientras la Justicia define la cuestión de fondo sobre la derogación de la norma anterior del 2011. La iniciativa también contempla cambios en el régimen de desalojos con la entrega inmediata del inmueble usurpado ante un derecho verosímil y fija un tope del 30% en las indemnizaciones por lucro cesante en casos de expropiación.\n\nEl texto forma parte del temario para la sesión que el oficialismo convocó para el 21 de octubre. En un inicio, como se informó el 8 de octubre de 2026, el Gobierno había convocado al plenario para desactivar los intentos opositores de blindar el decreto, en un escenario donde el Ejecutivo debió ceder parcialmente tras haber retirado los capítulos originales de tierras en el debate del Senado hace más de dos meses.",
-      "guion": "El oficialismo busca dictamen para la propiedad privada",
-      "seccion": "Política",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "0223 (Mar del Plata)",
-        "Infobae",
-        "Clarín",
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "Perfil",
-        "A24",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "La Nueva",
-        "Crónica"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/en-un-dictamen-expres--el-oficialismo-incluira-la-ley-de-tierras--light--en-su-proyecto-sobre-propiedad-privada_a6acea2c706650845db81f380",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T23:24:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T15:01:49.740Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El plenario de comisiones se reúne este miércoles a las 16.",
-        "Se incorpora una versión flexible de la Ley de Tierras.",
-        "El proyecto se incluye en la sesión convocada para el 21 de octubre."
-      ],
-      "seSabe": [
-        "El plenario de Asuntos Constitucionales y Legislación General se reúne este miércoles a las 16 según Noticias Argentinas.",
-        "Se mantendrá el tope del 15% de extranjerización de tierras y se eliminará el límite de 1.000 hectáreas en zonas núcleo.",
-        "El proyecto de Inviolabilidad de la Propiedad Privada fue incluido en la sesión del 21 de octubre."
-      ],
-      "noConfirmado": [
-        "Todavía no se informó el resultado definitivo de la votación en el plenario de comisiones de este miércoles."
-      ],
-      "textoRedes": "El oficialismo en Diputados busca firmar este miércoles dictamen al proyecto de Inviolabilidad de la Propiedad Privada con una versión flexible de la Ley de Tierras para frenar rechazos al DNU 70/23.",
-      "etiquetas": [
-        "Diputados",
-        "Ley de Tierras",
-        "Propiedad Privada",
-        "Gobierno"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/en-un-dictamen-expres--el-oficialismo-incluira-la-ley-de-tierras--light--en-su-proyecto-sobre-propiedad-privada_a6acea2c706650845db81f380",
-          "fecha": "2026-10-14T09:24:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre el plenario de comisiones, la inclusión de la Ley de Tierras light y los cambios en desalojos y expropiaciones."
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/el-oficialismo-incluira-la-ley-de.html",
-          "fecha": "2026-10-14T14:15:59.225Z",
-          "oficial": false,
-          "aporte": "Coincidió en la convocatoria al plenario de la Cámara de Diputados para este miércoles."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/el-oficialismo-busca-avanzar-con-el-proyecto-sobre-inviolabilidad-de-la-propiedad-privada-que-pasara-con-la-ley-de-tierras/",
-          "fecha": "2026-10-14T11:46:00.000Z",
-          "oficial": false,
-          "aporte": "Agregó que La Libertad Avanza intentará emitir dictamen con restricciones de la Ley de Tierras."
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/politica/el-oficialismo-incluira-la-ley-tierras-light-su-proyecto-propiedad-privada-n924479",
-          "fecha": "2026-10-14T14:11:00.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la noticia sin aportar datos adicionales en su resumen."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/---javier-milei-en-vivo--anuncios-y-medidas-del-gobierno-minuto-a-minuto-del-14-de-octubre-de-2026_a6acf49478298ee386b246dd1",
-          "fecha": "2026-10-14T14:20:08.000Z",
-          "oficial": false,
-          "aporte": "Indicó el carácter ultra exprés del trámite legislativo en Diputados."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-14-8-22-0-en-un-dictamen-expres-el-oficialismo-incluira-la-ley-de-tierras-light-en-su-proyecto-sobre-propiedad-privada",
-          "fecha": "2026-10-14T14:31:24.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la búsqueda de dictamen para el proyecto de Inviolabilidad de la Propiedad Privada este miércoles."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "gqh1ka",
-          "titulo": "El oficialismo convoca al plenario para debatir la Ley de Tierras",
-          "fecha": "2026-10-08T21:37:55.679Z",
-          "ruta": "/nota/el-oficialismo-convoca-al-plenario-para-debatir-la-ley-de-tierras-gqh1ka"
-        },
-        {
-          "id": "w7o4x7",
-          "titulo": "Diputados da dictamen al proyecto que castiga el vandalismo rural",
-          "fecha": "2026-10-06T12:56:37.000Z",
-          "ruta": "/nota/diputados-da-dictamen-al-proyecto-que-castiga-el-vandalismo-rural-w7o4x7"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-oficialismo-busca-dictamen-para-la-propiedad-privada",
-      "foto": {
-        "archivo": "fotos-notas/jc61mz.jpg",
-        "credito": "Foto: Diario Popular"
-      }
-    },
-    {
       "id": "17v35o5",
       "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
       "copete": "El Ministerio de Salud provincial y la Comisión de Investigaciones Científicas lanzaron una convocatoria para profesionales de hospitales públicos. La inscripción funcionará desde el 15 de octubre hasta el 16 de noviembre.",
@@ -3236,8 +3188,8 @@
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
         "Bolavip Argentina",
-        "Clarín",
         "0223 (Mar del Plata)",
+        "Clarín",
         "La Capital (Rosario)"
       ],
       "enlace": "https://www.clarin.com/deportes/lisandro-martinez-exploto-dirigencia-manchester-united-leyenda-club-cruzo-actuaciones-buenas_0_xNVWlGPyUT.html",
@@ -3993,220 +3945,6 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "organizan-una-peregrinacion-a-pie-hacia-la-ermita-de-los-pinos"
-    },
-    {
-      "id": "um5udw",
-      "titulo": "Adrián Stoppelman presenta su show de humor en la Casa del Bicentenario",
-      "copete": "El humorista nacional actuó por primera vez en la sala local con su espectáculo de stand up a la gorra. La función repasó temas de la vida cotidiana, tecnología y política.",
-      "cuerpo": "El comediante Adrián Stoppelman actuó por primera vez en la Casa del Bicentenario con su propuesta de stand up titulada Total anormalidad.\n\nEl artista cuenta con una amplia trayectoria en medios nacionales y forma parte del equipo radial del conductor Víctor Hugo Morales, según informaron los medios locales. La función abordó con humor asuntos vinculados con la política, la tecnología, el lenguaje de los jóvenes y diversas situaciones cotidianas.\n\nComo parte de su gira por la zona, el comediante también realizó presentaciones en Mar del Plata.",
-      "guion": "Adrian Stoppelman presenta su show de humor en la Casa del Bicentenario",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/10/adrian-stoppelman-presento-su.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T18:28:51.909Z",
-      "sinFecha": false,
-      "visto": "2026-10-13T20:31:58.658Z",
-      "relevancia": 75,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El humorista actuó por primera vez en la ciudad",
-        "Presentó su unipersonal Total anormalidad",
-        "La función se realizó a la gorra en la Casa del Bicentenario"
-      ],
-      "seSabe": [
-        "Adrián Stoppelman se presentó en la Casa del Bicentenario con su show Total anormalidad, según las fuentes.",
-        "El espectáculo se realizó a la gorra y estuvo dirigido a público adulto, de acuerdo con la información brindada.",
-        "El artista integra el equipo radial de Víctor Hugo Morales y tiene trayectoria en medios nacionales, según los datos publicados.",
-        "La gira del comediante también incluyó presentaciones en Mar del Plata, según lo informado."
-      ],
-      "noConfirmado": [
-        "No se informó la cantidad de espectadores que asistieron a la función en la sala local."
-      ],
-      "textoRedes": "El humorista Adrián Stoppelman se presentó por primera vez en la Casa del Bicentenario con su espectáculo de stand up Total anormalidad. La función se realizó a la gorra y abordó temas de la vida cotidiana, política y tecnología.",
-      "etiquetas": [
-        "Adrián Stoppelman",
-        "Casa del Bicentenario",
-        "stand up",
-        "humor"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/adrian-stoppelman-presento-su.html",
-          "fecha": "2026-10-13T18:28:51.909Z",
-          "oficial": false,
-          "aporte": "Aportó el nombre del espectáculo, la trayectoria del humorista y los temas abordados en el show."
-        },
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45069-adrian-stoppelman-se-presento-con-su-espectaculo-total-anormalidad/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Confirmó que fue la primera presentación del comediante en la ciudad y la modalidad a la gorra."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1gkf7qu",
-          "titulo": "Adrián Stoppelman presenta su show de humor en la Casa del Bicentenario",
-          "fecha": "2026-10-11T00:18:48.204Z",
-          "ruta": "/nota/adrian-stoppelman-presenta-su-show-de-humor-en-la-casa-del-1gkf7qu"
-        },
-        {
-          "id": "repaso20261011manana",
-          "titulo": "El repaso de la mañana en Radar Balcarce: Inter, Adrián Stoppelman y Virginia Aparicio",
-          "fecha": "2026-10-11T13:04:33.867Z",
-          "ruta": "/nota/el-repaso-de-la-manana-en-radar-balcarce-inter-adrian-stoppelman-y-repaso20261011manana"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "adrian-stoppelman-presenta-su-show-de-humor-en-la-casa-del",
-      "foto": {
-        "archivo": "fotos-notas/um5udw.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "1ntre16",
-      "titulo": "La papa sube de categoría en el semáforo regional de Coninagro",
-      "copete": "La producción papera ingresa al grupo verde del relevamiento de Coninagro gracias a una suba de precios. El sudeste bonaerense reduce su superficie sembrada un 12 por ciento.",
-      "cuerpo": "La papa ingresa a la categoría verde dentro del semáforo de economías regionales elaborado por Coninagro durante agosto de 2026, tras registrar una suba mensual del 19 por ciento en los precios al productor y alcanzar los 22.163 pesos por bolsa de 20 kilos. La entidad cooperativista señala que esta actividad se suma al grupo verde junto a bovinos, ovinos, miel y granos, aunque el panorama general del sector mantiene nueve producciones en rojo y cinco en amarillo.\n\nEl relevamiento detalla que la superficie implantada en el sudeste bonaerense disminuyó un 12 por ciento y se ubicó en 33.722 hectáreas frente a la campaña previa, una contracción de la oferta que permitió recomponer los valores tras un período de abundancia y excedentes sin cosechar. Con este repunte, el productor percibe el 41 por ciento del valor final abonado por el consumidor, cuatro puntos por encima de la media histórica mensual.",
-      "guion": "La papa sube de categoría en el semáforo regional de Coninagro",
-      "seccion": "Agro",
-      "medios": [
-        "La Nación",
-        "TN (Todo Noticias)",
-        "Bichos de Campo",
-        "Agrositio"
-      ],
-      "enlace": "https://bichosdecampo.com/esta-cara-la-papa-y-eso-les-cambio-la-cara-segun-coninagro-las-economias-regionales-no-repuntan-a-pesar-de-la-mejora-en-una-de-las-actividades/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T18:24:19.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-13T21:31:43.295Z",
-      "relevancia": 52,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "seSabe": [
-        "La papa integra la categoría verde del semáforo de Coninagro según el informe de agosto de 2026.",
-        "El precio de la bolsa de 20 kilos llegó a 22.163 pesos con un incremento interanual cercano al 330 por ciento.",
-        "El área sembrada en el sudeste bonaerense abarcó 33.722 hectáreas.",
-        "Nueve producciones continúan en rojo y cinco en amarillo."
-      ],
-      "noConfirmado": [
-        "No se especificaron detalles sobre el volumen total de exportaciones e importaciones de la cadena papera al cierre del período."
-      ],
-      "textoRedes": "La papa ingresa al grupo verde del semáforo de economías regionales de Coninagro tras una suba de precios y una reducción del 12 por ciento en la superficie sembrada en el sudeste bonaerense.",
-      "etiquetas": [
-        "papa",
-        "Coninagro",
-        "economias regionales",
-        "sudeste bonaerense"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Bichos de Campo",
-          "enlace": "https://bichosdecampo.com/esta-cara-la-papa-y-eso-les-cambio-la-cara-segun-coninagro-las-economias-regionales-no-repuntan-a-pesar-de-la-mejora-en-una-de-las-actividades/",
-          "fecha": "2026-10-13T18:24:19.000Z",
-          "oficial": false,
-          "aporte": "Aportó los datos sobre la suba de precios, la reducción de superficie en el sudeste bonaerense y el estado general de las economías regionales."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/campo/subio-un-151-en-cuatro-meses-la-papa-paso-a-verde-en-un-semaforo-de-economias-regionales-nid13102026/",
-          "fecha": "2026-10-13T20:49:16.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la incorporación de la papa a la categoría verde junto con bovinos, ovinos, miel y granos."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-papa-sube-de-categoria-en-el-semaforo-regional-de-coninagro",
-      "foto": {
-        "archivo": "fotos-notas/1ntre16.jpg",
-        "credito": "Foto: Bichos de Campo"
-      }
-    },
-    {
-      "id": "repaso20261013tarde",
-      "propia": "repaso",
-      "titulo": "El repaso de la tarde en Radar Balcarce: educación, murgas y cultura",
-      "copete": "Radar Balcarce publicó a las 15:15 de este martes 13 de octubre el repaso de la tarde en Instagram y Facebook, un audio con 3 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 3 notas que se contaron en el repaso de la tarde del martes 13, en el orden en que salieron en el audio.\n\nBalcarce suma un plan provincial de seguridad y educación vial. El Gobierno bonaerense lanza una iniciativa para prevenir siniestros viales. Incluye capacitación en escuelas, formación para agentes municipales y talleres comunitarios.\n\nLa Provincia otorga ochenta millones de pesos para murgas y comparsas. El Gobierno bonaerense lanzó una convocatoria con ochenta millones de pesos en premios para murgas y comparsas. La iniciativa contempla apoyos económicos para la compra de instrumentos, confección de trajes y producción de espectáculos.\n\nFieles de Balcarce organizan viajes para recibir al Papa en noviembre. Dos colectivos de peregrinos completaron sus lugares y un tercero avanza hacia su capacidad máxima. La visita papal a la Argentina está programada para el próximo mes.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
-      "guion": null,
-      "seccion": "Balcarce",
-      "local": true,
-      "relevancia": 60,
-      "medios": [],
-      "enlace": null,
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-13T18:15:16.014Z",
-      "sinFecha": false,
-      "visto": "2026-10-13T18:15:16.014Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-13T18:15:16.014Z",
-      "temas": [],
-      "etiquetas": [
-        "educación",
-        "murgas",
-        "cultura"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
-      "notasDelRepaso": [
-        "1dun8ft",
-        "wj5hg5",
-        "uestws"
-      ],
-      "enlacesEnTexto": [
-        {
-          "texto": "Balcarce suma un plan provincial de seguridad y educación vial",
-          "href": "/nota/balcarce-suma-un-plan-provincial-de-seguridad-y-educacion-vial-1dun8ft"
-        },
-        {
-          "texto": "La Provincia otorga ochenta millones de pesos para murgas y comparsas",
-          "href": "/nota/la-provincia-otorga-ochenta-millones-de-pesos-para-murgas-y-comparsas-wj5hg5"
-        },
-        {
-          "texto": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
-          "href": "/nota/fieles-de-balcarce-organizan-viajes-para-recibir-al-papa-en-noviembre-uestws"
-        }
-      ],
-      "destacados": [
-        {
-          "texto": "Mirá y escuchá el repaso en Instagram",
-          "href": "https://www.instagram.com/reel/DecbaAnjMTN/",
-          "externo": true
-        },
-        {
-          "texto": "Mirá y escuchá el repaso en Facebook",
-          "href": "https://www.facebook.com/reel/2363128987821829/",
-          "externo": true
-        }
-      ],
-      "slug": "el-repaso-de-la-tarde-en-radar-balcarce-educacion-murgas-liga",
-      "foto": {
-        "archivo": "fotos-notas/collage-repaso20261013tarde.jpg",
-        "credito": "Fotos: Radio Gabal (FM 104.1)"
-      }
     }
   ],
   "secciones": [
@@ -4217,10 +3955,10 @@
     "Política",
     "Economía",
     "Argentina",
+    "Agro",
     "Policiales",
     "Fútbol",
-    "Tecnología",
-    "Agro"
+    "Tecnología"
   ],
   "temas": [
     {
@@ -4661,16 +4399,16 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "zcbb3f",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
       "id": "1333xd6",
       "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
+      "id": "zcbb3f",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "id5g36",
@@ -4685,10 +4423,10 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "npkndz",
-      "titulo": "Inauguran una plataforma pública con datos diarios de…",
-      "seccion": "Economía",
-      "motivo": "internacional: sin relación con Balcarce"
+      "id": "l2r69u",
+      "titulo": "Vecinos de Villa Castells piden obras urgentes en las…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "lwmyim",
