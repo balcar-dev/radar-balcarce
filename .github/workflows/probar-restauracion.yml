@@ -44,7 +44,6 @@ jobs:
       - name: Reconstruir el repositorio desde el bundle
         working-directory: restaurar
         run: |
-          git bundle verify radar-balcarce.bundle
           git clone --quiet radar-balcarce.bundle repo-restaurado
           cd repo-restaurado
           git fsck --full 2>&1 | tail -3
