@@ -37,7 +37,7 @@ cargar, en `PENDIENTES.md`.
 **Bio de Instagram (máx. 150 caracteres)**
 
 ```
-Todo lo que pasa en Balcarce, en un solo lugar. Noticias, clima y agenda. radarbalcarce.com
+Todo lo que pasa en Balcarce y la región, en un solo lugar. radarbalcarce.com
 ```
 
 La misma frase que la de Facebook y que la del video de presentación (6/10,
@@ -61,14 +61,14 @@ contar: el límite de Instagram es 150 y el de la información breve de Facebook
 **Información breve de Facebook (máx. 101 caracteres)**
 
 ```
-Todo lo que pasa en Balcarce, en un solo lugar. Noticias, clima y agenda. radarbalcarce.com
+Todo lo que pasa en Balcarce y la región, en un solo lugar. radarbalcarce.com
 ```
 
 **Descripción larga de Facebook**
 
 ```
-Radar Balcarce reúne en un solo lugar todo lo que pasa en Balcarce y la zona:
-noticias, clima, agenda y los datos del día a día. Cada nota dice quién la
+Radar Balcarce reúne en un solo lugar todo lo que pasa en Balcarce y la región:
+noticias, clima y los datos del día a día. Cada nota dice quién la
 escribió y de dónde sale la información.
 
 Las notas se escriben con inteligencia artificial y se verifican contra las
@@ -78,7 +78,7 @@ escribinos y lo corregimos.
 ¿Viste algo que tendría que ser noticia? Mandanos la foto o el dato por
 WhatsApp al 2266 51-1612.
 
-Todas las notas, la agenda y el clima, en radarbalcarce.com
+Todas las notas y el clima, en radarbalcarce.com
 ```
 
 La página nueva de Facebook tiene un solo campo de presentación, que junta la
@@ -128,8 +128,8 @@ cual: no de otro lado.
 |---|---|---|
 | Foto de perfil | Instagram: Editar perfil → tocar la foto → Cambiar foto de perfil. Facebook: la página → Editar foto de perfil | Subida el 28/09 |
 | Portada de Facebook | La página → Editar portada → Subir foto. Después mirarla en el celular **y** en la computadora: el avatar redondo tapa distinto en cada una | Subida el 28/09 (la azul) |
-| Bio de Instagram | Editar perfil → Biografía → borrar todo y pegar | **Cambiar por la nueva (6/10)** |
-| Presentación de Facebook | Configuración de la página → Información de la página | **Cambiar por la nueva (6/10)** |
+| Bio de Instagram | Editar perfil → Presentación → borrar todo y pegar | Cargada el 15/10 (la nueva, sin "agenda") |
+| Presentación de Facebook | Página → Información → Detalles → Presentación (el campo único: la bio y, detrás, la línea de IA) | Cargada el 15/10 |
 | Nombre de Instagram | Editar perfil (el usuario no se toca) | Cargado el 28/09 |
 | Categoría de Instagram | Editar perfil → Categoría | **Falta** |
 | Enlace de Instagram | Editar perfil → Enlaces; sólo desde el celular (la web no deja). Nunca `.com.ar` | **Falta** |
@@ -140,6 +140,22 @@ cual: no de otro lado.
 Nada de esto pide una clave ni un token: son textos e imágenes. Después de
 cargar algo, avisarle a Claude con una captura o el enlace público del perfil,
 para revisarlo y sacarlo de `PENDIENTES.md`.
+
+## Las otras redes (15/10/2026)
+
+El texto oficial es **uno solo** para todas: *"Todo lo que pasa en Balcarce y la región, en un solo lugar. radarbalcarce.com"*
+(78 caracteres; elegido por Andrés el 15/10, sin "agenda" porque todavía falta mejorarla, y sin "noticias de acá").
+La foto de perfil es siempre la misma (`reels/salida/avatar.png`, `node reels/avatar.mjs`).
+
+| Red | Nombre | Texto | Logo | Estado |
+|---|---|---|---|---|
+| Instagram `@radarbalcarce` | Radar Balcarce · Noticias | la bio oficial | el oficial | Hecho 15/10. El enlace al sitio sólo se carga desde el celular |
+| Facebook (página, ID 61594865361170) | Radar Balcarce | la bio oficial + "Escrito con IA y verificado contra las fuentes; lo sensible lo revisa una persona." | el oficial | Hecho 15/10 |
+| X `@RadarBalcarce` | Radar Balcarce | la bio oficial (en el sitio web, radarbalcarce.com) | el oficial | Hecho 15/10 |
+| Threads `@radarbalcarce` | Radar Balcarce · Noticias (viene de Instagram) | la bio oficial | el oficial (de Instagram) | Hecho 15/10 |
+| TikTok `@radarbalcarce` | Radar Balcarce · Noticias | la bio oficial (entra: el límite es 80) | el oficial | **Se cargó el 15/10 pero TikTok lo seguía mostrando sin bio ni logo: revisar** |
+| YouTube | — | — | — | **No tiene canal todavía** (crearlo con radarbalcarce@gmail.com) |
+| GitHub `radarbalcarce` | Radar Balcarce | "Medio digital de Balcarce, Buenos Aires…" | pendiente | Texto hecho 15/10 |
 
 ## Cuándo actualizar
 

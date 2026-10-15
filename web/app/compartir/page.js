@@ -23,7 +23,7 @@ Te pido una mano: ¿me ayudás siguiéndonos? Es un ratito y nos sirve un montó
 
 Y si podés, compartilo con alguien de Balcarce. ¡Gracias! 🙌`;
 
-const PERSONAL = `¡Hola! Quería contarte algo en lo que vengo trabajando: Radar Balcarce. Es un medio digital con las noticias de Balcarce y la región, el clima, las farmacias de turno, la agenda y más, que se actualiza todo el día.
+const PERSONAL = `¡Hola! Quería contarte algo en lo que vengo trabajando: Radar Balcarce. Es un medio digital con las noticias de Balcarce y la región, el clima, las farmacias de turno y más, que se actualiza todo el día.
 
 Recién estamos arrancando y lo que más ayuda es que nos sigan. ¿Me das una mano?
 
@@ -34,9 +34,9 @@ Recién estamos arrancando y lo que más ayuda es que nos sigan. ¿Me das una ma
 Si te gusta, compartilo con tus contactos de Balcarce. Y si ves o sabés algo que tendría que ser noticia, escribinos. ¡Mil gracias!`;
 
 // Los textos de los perfiles (PERFILES.md, el único lugar de los textos: una prueba controla que esto diga lo mismo).
-const BIO = 'Todo lo que pasa en Balcarce, en un solo lugar. Noticias, clima y agenda. radarbalcarce.com';
-const DESCRIPCION = `Radar Balcarce reúne en un solo lugar todo lo que pasa en Balcarce y la zona:
-noticias, clima, agenda y los datos del día a día. Cada nota dice quién la
+const BIO = 'Todo lo que pasa en Balcarce y la región, en un solo lugar. radarbalcarce.com';
+const DESCRIPCION = `Radar Balcarce reúne en un solo lugar todo lo que pasa en Balcarce y la región:
+noticias, clima y los datos del día a día. Cada nota dice quién la
 escribió y de dónde sale la información.
 
 Las notas se escriben con inteligencia artificial y se verifican contra las
@@ -46,7 +46,7 @@ escribinos y lo corregimos.
 ¿Viste algo que tendría que ser noticia? Mandanos la foto o el dato por
 WhatsApp al 2266 51-1612.
 
-Todas las notas, la agenda y el clima, en radarbalcarce.com`;
+Todas las notas y el clima, en radarbalcarce.com`;
 const MENSAJE_WHATSAPP = 'Hola, les escribo por Radar Balcarce: ';
 
 export default function Compartir() {

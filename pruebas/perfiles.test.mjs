@@ -46,7 +46,7 @@ test('el medio se llama siempre Radar Balcarce', () => {
 
 test('la bio es la misma en Instagram y en Facebook (6/10, Hernán), y la página /compartir tiene los mismos textos para copiar', () => {
   assert.equal(bioIG, breveFB, 'las dos redes dicen lo mismo');
-  assert.equal(bioIG, 'Todo lo que pasa en Balcarce, en un solo lugar. Noticias, clima y agenda. radarbalcarce.com');
+  assert.equal(bioIG, 'Todo lo que pasa en Balcarce y la región, en un solo lugar. radarbalcarce.com');
   const pagina = fs.readFileSync(new URL('../web/app/compartir/page.js', import.meta.url), 'utf8').replace(/\r\n/g, '\n');
   assert.ok(pagina.includes(`const BIO = '${bioIG}';`), 'la bio de /compartir es la de PERFILES.md');
   assert.ok(pagina.includes(largaFB), 'la descripción larga de /compartir es la de PERFILES.md');
