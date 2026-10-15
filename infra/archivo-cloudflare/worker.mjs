@@ -1,0 +1,205 @@
+// El archivo permanente de Radar Balcarce (15/10/2026, docs/salud-tecnica/ARCHIVO-PERMANENTE.md y ARCHIVO-PERMANENTE-IMPLEMENTACION.md).
+//
+// Cloudflare Pages acepta 20.000 archivos por sitio, y cada nota son unos 4,2: por eso el sitio sólo puede tener las últimas ~3.700 notas
+// (MAXIMO_EN_ARCHIVO, web/lib/archivo.js). Las que salen del sitio no se tiran: web/scripts/archivar-a-r2.mjs las guarda ya dibujadas en un
+// depósito R2, y este Worker las sirve con la MISMA dirección (/nota/titular-id).
+//
+// Cómo atiende (siempre pregunta primero al sitio):
+//   1. Le pide la página a Pages. Si Pages contesta (200, 301, 304...), devuelve esa respuesta TAL CUAL: las notas recientes no cambian en nada.
+//   2. Sólo si Pages dice 404 (o no contesta, 5xx), busca la nota en R2 por su identificador (lo que va después del último guion):
+//        · está y la dirección pedida es la canónica  → 200 con la página guardada (las mismas cabeceras de seguridad del sitio);
+//        · está pero la dirección es otra (titular viejo, /nota/ID a secas, ?fbclid=...) → 301 a la canónica;
+//        · no está → devuelve la respuesta 404 de Pages, sin tocarla (404 de verdad, con su página y su estado).
+//   3. Si R2 falla, no inventa nada: devuelve lo que dijo Pages. Si Pages no contesta y R2 no tiene la nota, 502 (no se sabe).
+//   4. Interruptor: ARCHIVO_ACTIVO=0 deja el Worker como un tubo (todo pasa derecho a Pages). Sacar la ruta del Worker hace lo mismo.
+//
+// Qué sirve: /nota/<titular-id> (la página), /nota/<titular-id>/opengraph-image y /nota/<titular-id>/instagram.png (las imágenes de
+// compartir) y, sólo si se pide (FOTOS_DE_RESPALDO=1 y la ruta /fotos-notas/*), /fotos-notas/<archivo>. Todo lo demás pasa derecho.
+// Qué NO hace: no escribe nunca en R2 (el binding es sólo para leer), no cambia ninguna dirección del sitio, no usa el buscador.
+//
+// Sin dependencias. Se prueba sin red importando `manejar` con un R2 simulado (pruebas/archivo-cloudflare.test.mjs).
+//
+// Configuración (wrangler.toml): binding R2 `ARCHIVO` (el depósito). Variables opcionales:
+//   ORIGEN_PAGES       https://radar-balcarce.pages.dev: de dónde se pregunta al sitio. Obligatoria en workers.dev (no hay sitio detrás); en
+//                      radarbalcarce.com puede ir vacía (el Worker deja pasar el pedido al origen, que es Pages).
+//   ARCHIVO_ACTIVO     "0" apaga el archivo (tubo puro).
+//   CACHE_SEGUNDOS     cuánto guarda Cloudflare una nota archivada (3600 = 1 hora; es lo que tarda en desaparecer una nota retirada).
+//   FOTOS_DE_RESPALDO  "1" sirve también /fotos-notas/* desde R2 si Pages no la tiene.
+//   ARCHIVO_PRIMERO    "1" mira R2 ANTES que el sitio. Sólo para el ensayo en workers.dev; en producción tiene que ser "0".
+
+export const PREFIJO_DE_NOTAS = 'nota/';
+export const PREFIJO_DE_FOTOS = 'fotos-notas/';
+export const CACHE_SEGUNDOS_POR_DEFECTO = 3600;
+
+/** Las mismas cabeceras de seguridad que web/public/_headers pone en todo el sitio (una prueba controla que no se separen). */
+export const CABECERAS_DE_SEGURIDAD = {
+  'Strict-Transport-Security': 'max-age=31536000',
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'SAMEORIGIN',
+  'Content-Security-Policy': "frame-ancestors 'self'",
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+};
+
+/** Cómo se llama cada objeto de una nota en el depósito (el exportador, web/scripts/archivar-a-r2.mjs, usa las mismas funciones). */
+export const claveDePagina = (id) => `${PREFIJO_DE_NOTAS}${id}.html`;
+export const claveDeTarjeta = (id) => `${PREFIJO_DE_NOTAS}${id}/opengraph-image`;
+export const claveDeInstagram = (id) => `${PREFIJO_DE_NOTAS}${id}/instagram.png`;
+export const claveDeFoto = (archivo) => `${PREFIJO_DE_FOTOS}${archivo}`;
+
+const PARTE_VALIDA =/^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const ID_VALIDO = /^[a-z0-9]{1,16}$/;
+const FOTO_VALIDA = /^[A-Za-z0-9][A-Za-z0-9._-]{0,120}$/;
+
+/**
+ * Qué es lo que se está pidiendo. Devuelve null si no es algo del archivo (el pedido pasa derecho).
+ *   { tipo: 'pagina' | 'tarjeta' | 'instagram', parte, id, clave, camino }   camino = la dirección limpia (sin barra final ni .html)
+ *   { tipo: 'foto', archivo, clave, camino }
+ * El identificador es lo que va después del último guion de la parte (web/lib/ruta.js, idDeRuta): nunca tiene guiones.
+ */
+export function analizarRuta(pathname, { fotos = false } = {}) {
+  let camino = String(pathname ?? '');
+  try { camino = decodeURIComponent(camino); } catch { return null; }
+  if (camino.length > 300 || camino.includes('//') || camino.includes('\\')) return null;
+
+  const foto = /^\/fotos-notas\/([^/]+)$/.exec(camino);
+  if (foto) {
+    if (!fotos || !FOTO_VALIDA.test(foto[1]) || foto[1].includes('..')) return null;
+    return { tipo: 'foto', archivo: foto[1], clave: claveDeFoto(foto[1]), camino };
+  }
+
+  const m = /^\/nota\/([^/]+?)(?:\.html)?(?:\/(opengraph-image|instagram\.png))?\/?$/.exec(camino);
+  if (!m) return null;
+  const parte = m[1];
+  if (!PARTE_VALIDA.test(parte)) return null; // indice.json, _archivo, mayúsculas, signos: no son notas
+  const id = parte.slice(parte.lastIndexOf('-') + 1);
+  if (!ID_VALIDO.test(id)) return null;
+  const tipo = m[2] === 'opengraph-image' ? 'tarjeta' : m[2] === 'instagram.png' ? 'instagram' : 'pagina';
+  const clave = tipo === 'pagina' ? claveDePagina(id) : tipo === 'tarjeta' ? claveDeTarjeta(id) : claveDeInstagram(id);
+  const limpio = `/nota/${parte}${m[2] ? `/${m[2]}` : ''}`;
+  return { tipo, parte, id, clave, camino: limpio };
+}
+
+/** La dirección canónica (sólo el camino) que declara la página guardada, o null. */
+export function rutaCanonicaDe(html) {
+  const m = /<link\b[^>]*\brel="canonical"[^>]*>/i.exec(String(html ?? ''));
+  if (!m) return null;
+  const h = /\bhref="([^"]+)"/i.exec(m[0]);
+  if (!h) return null;
+  try { return new URL(h[1], 'https://radarbalcarce.com').pathname.replace(/\/+$/, ''); } catch { return null; }
+}
+
+function segundosDeCache(env) {
+  const n = Number(env?.CACHE_SEGUNDOS);
+  return Number.isFinite(n) && n >= 0 ? Math.floor(n) : CACHE_SEGUNDOS_POR_DEFECTO;
+}
+
+function cabeceras(extra) {
+  const h = new Headers(CABECERAS_DE_SEGURIDAD);
+  for (const [k, v] of Object.entries(extra)) h.set(k, v);
+  return h;
+}
+
+/** Pregunta al sitio. Con ORIGEN_PAGES arma el pedido hacia ese origen; sin él, deja pasar el pedido original (el origen es Pages). */
+async function alOrigen(request, env, fetchFn) {
+  if (!env?.ORIGEN_PAGES) return fetchFn(request);
+  const base = new URL(env.ORIGEN_PAGES);
+  const url = new URL(request.url);
+  url.protocol = base.protocol;
+  url.host = base.host;
+  const encabezados = new Headers(request.headers);
+  encabezados.delete('host');
+  return fetchFn(new Request(url.toString(), { method: request.method, headers: encabezados, redirect: 'manual' }));
+}
+
+const TIPOS = { jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp', gif: 'image/gif' };
+
+/** La respuesta del archivo para un objeto de R2 ya leído; null si no corresponde servirlo (la dirección es otra: se redirige). */
+async function respuestaDelObjeto(request, ruta, objeto, env) {
+  const metodo = request.method;
+  const url = new URL(request.url);
+
+  if (ruta.tipo === 'pagina') {
+    const html = await objeto.text();
+    const canonica = rutaCanonicaDe(html);
+    if (canonica && canonica !== ruta.camino) {
+      // El titular de la dirección no es el de la nota (compartida antes de un arreglo), /nota/ID a secas o con .html: a la canónica, como
+      // hace el sitio con sus redirecciones.
+      return new Response(null, { status: 301, headers: cabeceras({ Location: `${canonica}${url.search}`, 'Cache-Control': `public, max-age=${segundosDeCache(env)}`, 'X-Radar-Archivo': 'redireccion' }) });
+    }
+    const etag = objeto.httpEtag ?? (objeto.etag ? `"${objeto.etag}"` : null);
+    const control = `public, max-age=300, s-maxage=${segundosDeCache(env)}`;
+    const base = { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': control, 'X-Radar-Archivo': 'r2', ...(etag ? { ETag: etag } : {}) };
+    if (etag && request.headers.get('If-None-Match') === etag) return new Response(null, { status: 304, headers: cabeceras(base) });
+    return new Response(metodo === 'HEAD' ? null : html, { status: 200, headers: cabeceras(base) });
+  }
+
+  const extension = (ruta.archivo ?? ruta.camino).split('.').pop().toLowerCase();
+  const tipo = objeto.httpMetadata?.contentType || (ruta.tipo === 'foto' ? TIPOS[extension] : 'image/png') || 'application/octet-stream';
+  const control = ruta.tipo === 'foto' ? 'public, max-age=604800' : `public, max-age=3600, s-maxage=${segundosDeCache(env)}`;
+  const etag = objeto.httpEtag ?? (objeto.etag ? `"${objeto.etag}"` : null);
+  const base = { 'Content-Type': tipo, 'Cache-Control': control, 'X-Radar-Archivo': 'r2', ...(etag ? { ETag: etag } : {}) };
+  if (etag && request.headers.get('If-None-Match') === etag) return new Response(null, { status: 304, headers: cabeceras(base) });
+  return new Response(metodo === 'HEAD' ? null : objeto.body, { status: 200, headers: cabeceras(base) });
+}
+
+/**
+ * Atiende un pedido. `fetchFn` y `cache` se pueden reemplazar para probar sin red; en Cloudflare son `fetch` y `caches.default`.
+ * Nunca lanza: cualquier falla propia termina devolviendo lo que habría devuelto el sitio solo.
+ */
+export async function manejar(request, env, ctx, { fetchFn = (r) => fetch(r), cache = globalThis.caches?.default ?? null } = {}) {
+  const metodo = request.method;
+  const apagado = ['0', 'no', 'false', 'off'].includes(String(env?.ARCHIVO_ACTIVO ?? '').toLowerCase());
+  let ruta = null;
+  if (!apagado && (metodo === 'GET' || metodo === 'HEAD')) {
+    try { ruta = analizarRuta(new URL(request.url).pathname, { fotos: String(env?.FOTOS_DE_RESPALDO ?? '') === '1' }); } catch { ruta = null; }
+  }
+  if (!ruta || !env?.ARCHIVO) return fetchFn(request); // tubo: no es del archivo (o no hay depósito conectado)
+
+  // Una nota archivada ya vista hace poco: sin preguntar a nadie.
+  const llaveDeCache = new Request(new URL(ruta.camino, request.url).toString(), { method: 'GET' });
+  if (cache && metodo === 'GET') {
+    try {
+      const guardada = await cache.match(llaveDeCache);
+      if (guardada) return guardada;
+    } catch { /* la caché es un lujo */ }
+  }
+
+  // La respuesta del archivo, si R2 tiene el objeto y se pudo armar; null si no (nunca lanza). Las respuestas 200 se guardan en la caché.
+  const deR2 = async () => {
+    let objeto = null;
+    try { objeto = await env.ARCHIVO.get(ruta.clave); } catch { return null; }
+    if (!objeto) return null;
+    let respuesta = null;
+    try { respuesta = await respuestaDelObjeto(request, ruta, objeto, env); } catch { return null; }
+    if (cache && metodo === 'GET' && respuesta.status === 200) {
+      try {
+        const copia = respuesta.clone();
+        const guardar = cache.put(llaveDeCache, copia);
+        if (ctx?.waitUntil) ctx.waitUntil(guardar); else await guardar;
+      } catch { /* sin caché sigue andando */ }
+    }
+    return respuesta;
+  };
+
+  // Sólo para el ensayo (ARCHIVO_PRIMERO=1): mira R2 antes que el sitio, así se puede probar en workers.dev una nota que el sitio todavía tiene.
+  if (String(env?.ARCHIVO_PRIMERO ?? '') === '1') {
+    const antes = await deR2();
+    if (antes) return antes;
+  }
+
+  let origen = null;
+  try { origen = await alOrigen(request, env, fetchFn); } catch { origen = null; }
+
+  // El sitio manda: todo lo que no sea "no existe" o "se rompió" se devuelve sin tocar.
+  if (origen && origen.status !== 404 && origen.status !== 410 && origen.status < 500) return origen;
+
+  const guardada = await deR2();
+  if (guardada) return guardada;
+  if (origen) return origen; // el 404 (o el 5xx) del propio sitio, con su página y su estado
+  return new Response('No se pudo consultar el sitio.', { status: 502, headers: cabeceras({ 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' }) });
+}
+
+export default {
+  async fetch(request, env, ctx) { return manejar(request, env, ctx); },
+};

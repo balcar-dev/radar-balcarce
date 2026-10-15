@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo se elige una nota</title>
+<meta name="description" content="Radar Balcarce: el recorrido de una noticia desde que se lee un feed hasta que sale (o no) en el sitio, con las barreras contra notas repetidas y dónde todavía se escapan. Basado en el código del 15/10/2026.">
+<style>
+:root {
+  --fondo: #f7f6f2;
+  --papel: #ffffff;
+  --texto: #1d1d1b;
+  --suave: #5c5b57;
+  --linea: #dedbd2;
+  --acento: #1f5fa8;
+  --acento-suave: #e6eef8;
+  --verde: #1e7a46;
+  --verde-suave: #e3f3e9;
+  --amarillo: #8a6400;
+  --amarillo-suave: #fbf1d6;
+  --rojo: #b3261e;
+  --rojo-suave: #fbe5e3;
+  --violeta: #6a3fa0;
+  --violeta-suave: #efe8f8;
+  --naranja: #a34d00;
+  --naranja-suave: #fbeadb;
+  --codigo: #f0eee8;
+  --sombra: 0 1px 2px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fondo: #141414;
+    --papel: #1d1d1d;
+    --texto: #ecebe7;
+    --suave: #a8a6a0;
+    --linea: #34332f;
+    --acento: #7fb0ec;
+    --acento-suave: #1d2a3a;
+    --verde: #6fd09a;
+    --verde-suave: #16291e;
+    --amarillo: #e9c25a;
+    --amarillo-suave: #2d2614;
+    --rojo: #f28b82;
+    --rojo-suave: #351a18;
+    --violeta: #c3a4ef;
+    --violeta-suave: #2a2136;
+    --naranja: #f3a865;
+    --naranja-suave: #33241a;
+    --codigo: #262624;
+    --sombra: none;
+  }
+}
+:root[data-theme="dark"] {
+  --fondo: #141414; --papel: #1d1d1d; --texto: #ecebe7; --suave: #a8a6a0; --linea: #34332f;
+  --acento: #7fb0ec; --acento-suave: #1d2a3a; --verde: #6fd09a; --verde-suave: #16291e;
+  --amarillo: #e9c25a; --amarillo-suave: #2d2614; --rojo: #f28b82; --rojo-suave: #351a18;
+  --violeta: #c3a4ef; --violeta-suave: #2a2136; --naranja: #f3a865; --naranja-suave: #33241a;
+  --codigo: #262624; --sombra: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--fondo); color: var(--texto);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+main { max-width: 780px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 8px 0 6px; letter-spacing: -.01em; }
+h2 { font-size: 1.4rem; line-height: 1.25; margin: 48px 0 12px; padding-top: 12px; border-top: 2px solid var(--linea); }
+h3 { font-size: 1.12rem; margin: 30px 0 8px; }
+h4 { font-size: 1rem; margin: 20px 0 6px; }
+p, li { max-width: 72ch; }
+a { color: var(--acento); }
+code, .cod { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; font-size: .82em; background: var(--codigo); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+.bajada { color: var(--suave); font-size: 1.05rem; margin: 0 0 14px; }
+.meta { color: var(--suave); font-size: .85rem; }
+.indice { background: var(--papel); border: 1px solid var(--linea); border-radius: 10px; padding: 12px 16px; box-shadow: var(--sombra); }
+.indice ol { margin: 6px 0; padding-left: 22px; }
+.indice li { margin: 3px 0; }
+.caja { background: var(--papel); border: 1px solid var(--linea); border-radius: 10px; padding: 14px 16px; margin: 16px 0; box-shadow: var(--sombra); }
+.caja.clave { border-left: 5px solid var(--acento); }
+.caja.alerta { border-left: 5px solid var(--rojo); background: var(--rojo-suave); }
+.caja.ok { border-left: 5px solid var(--verde); }
+.caja.duda { border-left: 5px solid var(--amarillo); background: var(--amarillo-suave); }
+.caja p:first-child { margin-top: 0; } .caja p:last-child { margin-bottom: 0; }
+.cifras { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 16px 0; }
+.cifra { background: var(--papel); border: 1px solid var(--linea); border-radius: 10px; padding: 12px; }
+.cifra b { display: block; font-size: 1.55rem; line-height: 1.1; }
+.cifra span { color: var(--suave); font-size: .86rem; line-height: 1.35; display: block; margin-top: 4px; }
+.tabla { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 14px 0; border: 1px solid var(--linea); border-radius: 10px; background: var(--papel); }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; line-height: 1.45; }
+th, td { text-align: left; vertical-align: top; padding: 9px 10px; border-bottom: 1px solid var(--linea); }
+th { background: var(--codigo); font-weight: 600; position: sticky; top: 0; }
+tr:last-child td { border-bottom: 0; }
+.tabla.ancha table { min-width: 720px; }
+.tabla.media table { min-width: 560px; }
+td.n { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.pill { display: inline-block; font-size: .74rem; font-weight: 700; padding: 1px 8px; border-radius: 99px; white-space: nowrap; vertical-align: 1px; }
+.p-verde { background: var(--verde-suave); color: var(--verde); }
+.p-amarillo { background: var(--amarillo-suave); color: var(--amarillo); }
+.p-rojo { background: var(--rojo-suave); color: var(--rojo); }
+.p-dup { background: var(--violeta-suave); color: var(--violeta); }
+.p-ia { background: var(--naranja-suave); color: var(--naranja); }
+.p-azul { background: var(--acento-suave); color: var(--acento); }
+
+/* El dibujo del recorrido: cajas en columna, que en el celular se leen de arriba abajo. */
+.flujo { margin: 18px 0; }
+.etapa { border-radius: 12px; padding: 10px 12px 12px; margin: 0; border: 1px solid var(--linea); background: var(--papel); }
+.etapa > .titulo-etapa { font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin: 0 0 8px; }
+.e-fuentes { border-top: 4px solid var(--suave); }
+.e-cruce { border-top: 4px solid var(--violeta); }
+.e-decide { border-top: 4px solid var(--verde); }
+.e-ia { border-top: 4px solid var(--naranja); }
+.e-sale { border-top: 4px solid var(--acento); }
+.paso { display: flex; gap: 10px; align-items: flex-start; padding: 7px 9px; border-radius: 8px; background: var(--fondo); margin: 6px 0; font-size: .93rem; line-height: 1.4; }
+.paso .num { flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-size: .78rem; font-weight: 700; background: var(--codigo); color: var(--texto); }
+.paso .que { flex: 1 1 auto; min-width: 0; }
+.paso .sale { display: block; color: var(--suave); font-size: .82rem; margin-top: 2px; }
+.paso.dup { outline: 2px solid var(--violeta); outline-offset: -2px; }
+.flecha { text-align: center; color: var(--suave); font-size: 1.2rem; line-height: 1; margin: 4px 0; }
+.leyenda { display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: .84rem; color: var(--suave); margin: 8px 0 0; }
+.leyenda span { display: inline-flex; align-items: center; gap: 6px; }
+.cuadro { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+
+ol.pasos > li { margin: 8px 0; }
+.linea-tiempo { list-style: none; padding: 0; margin: 12px 0; border-left: 3px solid var(--linea); }
+.linea-tiempo li { position: relative; padding: 4px 0 10px 18px; }
+.linea-tiempo li::before { content: ""; position: absolute; left: -8px; top: 11px; width: 13px; height: 13px; border-radius: 50%; background: var(--acento); border: 2px solid var(--fondo); }
+.linea-tiempo .hora { font-weight: 700; font-variant-numeric: tabular-nums; }
+.mejora { counter-increment: mejora; }
+.mejoras { counter-reset: mejora; }
+.mejora h3::before { content: counter(mejora) ". "; color: var(--rojo); }
+.importancia { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+details { background: var(--papel); border: 1px solid var(--linea); border-radius: 10px; padding: 8px 14px; margin: 12px 0; }
+details > summary { cursor: pointer; font-weight: 600; padding: 4px 0; }
+footer { color: var(--suave); font-size: .85rem; margin-top: 50px; border-top: 1px solid var(--linea); padding-top: 14px; }
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.55rem; }
+  h2 { font-size: 1.25rem; }
+  th, td { padding: 8px; }
+}
+</style>
+</head>
+<body>
+<main>
+
+<p class="meta">Radar Balcarce · documento interno · 15/10/2026</p>
+<h1>Cómo se elige una nota</h1>
+<p class="bajada">Desde que se lee un feed hasta que la nota sale (o no) en el sitio: qué filtros pasa, cómo se calcula el puntaje, qué es el semáforo, cómo se junta la misma noticia contada por varios medios, cómo se evita que salga repetida y dónde todavía se escapa.</p>
+<p class="meta">Escrito leyendo el código tal como está el 15/10/2026 (último commit <code>4d611157</code>) y con una corrida de prueba de la ingesta hecha ese día a las 19:21, en la PC y <b>sin IA</b> (no gasta cupo). Los datos publicados son los de la corrida de las 19:04 en la nube. Donde algo no se pudo confirmar en el código o en los datos, se dice.</p>
+
+<nav class="indice" aria-label="Índice">
+<b>Índice</b>
+<ol>
+<li><a href="#frase">En una frase, y los números de hoy</a></li>
+<li><a href="#dibujo">El recorrido, en un dibujo</a></li>
+<li><a href="#paso">Paso a paso</a></li>
+<li><a href="#repetidas">Las barreras contra notas repetidas (y por dónde se escapan)</a></li>
+<li><a href="#tabla">Tabla: cada filtro, qué mira y qué pasa si falla</a></li>
+<li><a href="#ejemplo">Un ejemplo real de punta a punta</a></li>
+<li><a href="#mejoras">Dónde se puede mejorar</a></li>
+<li><a href="#limites">Qué no se pudo confirmar</a></li>
+</ol>
+</nav>
+
+<!-- ================================================================== -->
+<h2 id="frase">1. En una frase, y los números de hoy</h2>
+
+<div class="caja clave">
+<p><b>Cada media hora</b> se leen todas las fuentes, se tira lo que por su sección nunca le importaría a Balcarce, se juntan las notas de distintos medios que cuentan el mismo hecho (eso es <b>"el cruce"</b>), a cada hecho se le pone una <b>sección</b>, un <b>puntaje</b> (que sólo ordena) y un <b>color del semáforo</b> (que decide), una IA lee cada una y puede sacarla o mandarla a esperar (nunca destrabarla), otra IA la escribe, el código compara lo escrito contra las fuentes, y <b>sale sola sólo si es verde, no llega tarde, tiene cuerpo y nadie la retiró</b>. Después de escrita, todavía pasa por tres controles más contra notas repetidas.</p>
+</div>
+
+<p>Lo que pasó en la corrida de prueba de hoy a las 19:21 (las cifras de la nube son parecidas; ahí la memoria del cruce tiene más horas guardadas):</p>
+
+<div class="cifras">
+<div class="cifra"><b>103</b><span>feeds activos, de 71 medios (15 feeds de 11 medios son de Balcarce)</span></div>
+<div class="cifra"><b>7.122</b><span>notas leídas en una sola corrida</span></div>
+<div class="cifra"><b>4.419</b><span>grupos de afuera contados por un solo medio: no entran</span></div>
+<div class="cifra"><b>530</b><span>historias después del cruce (10 policiales de afuera también se van: quedan 520)</span></div>
+<div class="cifra"><b>171 · 344 · 5</b><span>verdes · amarillas · rojas, antes de la IA</span></div>
+<div class="cifra"><b>56</b><span>notas en la portada publicada a las 19:04 (55 salieron solas, 1 la aprobó una persona)</span></div>
+</div>
+
+<p class="meta">Las 4.419 son casi todo lo nacional: una nota que cuenta un solo diario de afuera ni siquiera queda esperando. La auditoría (<code>npm run auditar</code>, minutos antes) dio números casi iguales: 518 historias y 168 que saldrían solas.</p>
+
+<!-- ================================================================== -->
+<h2 id="dibujo">2. El recorrido, en un dibujo</h2>
+
+<p>De arriba abajo. Las cajas con borde violeta son <b>barreras contra notas repetidas</b> (se explican en la <a href="#repetidas">sección 4</a>). Las etapas naranjas usan IA y corren sólo en la nube.</p>
+
+<div class="flujo" role="img" aria-label="Diagrama del recorrido de una noticia, en cinco etapas, de los feeds a la portada">
+
+<div class="etapa e-fuentes">
+<p class="titulo-etapa">A · Leer las fuentes <span class="meta">(ingesta/ingesta.mjs)</span></p>
+<div class="paso"><span class="num">1</span><span class="que">Se bajan los 103 feeds a la vez (15 s cada uno) <span class="sale">Una fuente caída no frena a las demás: aviso "Fuente caída"</span></span></div>
+<div class="paso"><span class="num">2</span><span class="que">Filtro de entrada, sólo a lo de afuera: horóscopo, lotería, secciones de otro país, policiales o consejos <span class="sale">No entra</span></span></div>
+<div class="paso dup"><span class="num">3</span><span class="que">La misma nota del mismo medio por dos feeds queda una sola <span class="sale">Barrera D0</span></span></div>
+</div>
+<div class="flecha" aria-hidden="true">↓</div>
+
+<div class="etapa e-cruce">
+<p class="titulo-etapa">B · El cruce de medios <span class="meta">(ingesta/cruce.mjs)</span></p>
+<div class="paso dup"><span class="num">4</span><span class="que">Se juntan las notas que cuentan el mismo hecho, con las de afuera de las últimas 36 horas <span class="sale">Barrera D1 · sin IA</span></span></div>
+<div class="paso"><span class="num">5</span><span class="que">¿Qué grupos quedan? Todo lo de Balcarce; de afuera, lo que nombra a Balcarce o la zona, o lo cuentan 2 medios o más <span class="sale">Un solo medio de afuera, o sólo medios de otra ciudad de la zona: no entra</span></span></div>
+<div class="paso dup"><span class="num">6</span><span class="que">De cada grupo sale una nota principal (la ya publicada, si hay; si no, la primera que salió). Su enlace da la dirección <span class="sale">Barrera D1b: la dirección no cambia cuando se suma un medio</span></span></div>
+</div>
+<div class="flecha" aria-hidden="true">↓</div>
+
+<div class="etapa e-decide">
+<p class="titulo-etapa">C · Decidir sin IA <span class="meta">(ingesta/ingesta.mjs)</span></p>
+<div class="paso"><span class="num">7</span><span class="que">Policiales de afuera: fuera</span></div>
+<div class="paso"><span class="num">8</span><span class="que">Sección (11 posibles)</span></div>
+<div class="paso"><span class="num">9</span><span class="que">Puntaje de 0 a 100: sólo ordena</span></div>
+<div class="paso"><span class="num">10</span><span class="que">Semáforo: <span class="pill p-verde">verde</span> sale sola, <span class="pill p-amarillo">amarillo</span> espera a una persona, <span class="pill p-rojo">rojo</span> nunca</span></div>
+<div class="paso dup"><span class="num">11</span><span class="que">Lo de afuera necesita 2, 3 o 4 medios según la sección; los medios del mismo dueño cuentan uno <span class="sale">Barrera D2</span></span></div>
+<div class="paso"><span class="num">12</span><span class="que">Cupo: cuántas de afuera salen solas por sección a la vez</span></div>
+</div>
+<div class="flecha" aria-hidden="true">↓</div>
+
+<div class="etapa e-ia">
+<p class="titulo-etapa">D · IA, sólo en la nube <span class="meta">(lectura-ia.mjs, reels/reescritura.mjs, verificar.mjs)</span></p>
+<div class="paso"><span class="num">13</span><span class="que">Lectura con IA: una "ficha" por nota; puede sacarla, cambiarle la sección o decir que no es de Balcarce</span></div>
+<div class="paso dup"><span class="num">14</span><span class="que">Repetidas con IA: de cada grupo que cuenta lo mismo queda una <span class="sale">Barrera D3</span></span></div>
+<div class="paso"><span class="num">15</span><span class="que">Otra vez medios y cupo</span></div>
+<div class="paso"><span class="num">16</span><span class="que">La IA escribe título, bajada y cuerpo con el texto completo de la fuente</span></div>
+<div class="paso"><span class="num">17</span><span class="que">El código verifica lo escrito contra las fuentes y vuelve a pasar el semáforo <span class="sale">Si no pasa, se pide otra vez; hasta 3 corridas</span></span></div>
+</div>
+<div class="flecha" aria-hidden="true">↓</div>
+
+<div class="etapa e-sale">
+<p class="titulo-etapa">E · Publicar <span class="meta">(web/scripts/generar-datos.mjs)</span></p>
+<div class="paso"><span class="num">18</span><span class="que">¿Retirada? ¿Decidió una persona? ¿Llega tarde (más de 12 h y nunca salió)? ¿Tiene cuerpo de 70 palabras? ¿Es una lista de sepelios?</span></div>
+<div class="paso dup"><span class="num">19</span><span class="que">Contra lo ya publicado en 72 h, sin IA (regla 171) <span class="sale">Barrera D4</span></span></div>
+<div class="paso dup"><span class="num">20</span><span class="que">Parejas sospechosas, con IA <span class="sale">Barrera D5</span></span></div>
+<div class="paso dup"><span class="num">21</span><span class="que">La misma noticia con otra dirección: queda una y la otra redirige <span class="sale">Barrera D6</span></span></div>
+<div class="paso dup"><span class="num">22</span><span class="que">Portada y secciones: las últimas 36 h, sin dos titulares casi iguales <span class="sale">Barrera D7</span></span></div>
+</div>
+
+<div class="leyenda">
+<span><i class="cuadro" style="background:var(--suave)"></i>Fuentes</span>
+<span><i class="cuadro" style="background:var(--violeta)"></i>Cruce y barreras anti-repetidas</span>
+<span><i class="cuadro" style="background:var(--verde)"></i>Decisiones sin IA</span>
+<span><i class="cuadro" style="background:var(--naranja)"></i>Con IA (nube)</span>
+<span><i class="cuadro" style="background:var(--acento)"></i>Publicación</span>
+</div>
+</div>
+
+<!-- ================================================================== -->
+<h2 id="paso">3. Paso a paso</h2>
+
+<h3>A. Leer las fuentes</h3>
+<p><b>Quién lo dispara.</b> El Worker de Cloudflare <code>radar-balcarce-reloj</code> despierta a GitHub Actions a los :00 y :30 (hora UTC); el workflow "Actualizar la web" corre <code>web/scripts/generar-datos.mjs</code>, que llama a <code>ingestar()</code>. Tarda unos 8 minutos.</p>
+<p><b>Las fuentes.</b> Viven en <code>ingesta/fuentes.mjs</code> y <code>ingesta/fuentes-cruce.mjs</code>; la lista legible es <code>FUENTES.md</code>. Hoy: <b>103 feeds activos de 71 medios</b> (265 configurados; el resto están apagados). Se leen de cuatro formas: RSS o Atom, el índice que cada diario arma para Google (trae todo el día, sin resumen), o la página misma cuando el medio no tiene feed (El Diario Balcarce y La Vanguardia). De lo que se lee de la página, lo de más de 72 horas no entra.</p>
+<p><b>El filtro de entrada</b> (<code>motivoDeDescarte</code>) mira <b>sólo lo de los medios de afuera</b>: lo de los medios de Balcarce entra todo. Se descarta:</p>
+<ul>
+<li>el horóscopo y "los números de la suerte" (por el título);</li>
+<li>la quiniela y la lotería, salvo que nombre a Balcarce;</li>
+<li>lo que el propio medio puso en una sección de <b>otro país</b> (se mira la dirección: <code>/mexico/</code>, <code>/mundo/</code>…), salvo que nombre a una figura argentina, tenga "argentino", Milei, Malvinas, Boca o River en el título, o sea de automovilismo;</li>
+<li>lo que el medio puso en <b>policiales</b> o <b>seguridad</b>, y los consejos (<code>/autos/</code>, <code>/recetas/</code>…).</li>
+</ul>
+<p><b>Marcas.</b> A lo de afuera que pasa se le ponen tres marcas posibles: <i>nombra a Balcarce</i> (sólo si lo dice el <b>título</b>), <i>figura</i> (Messi, Colapinto, la Selección…) y <i>de la zona</i> (ruta 226, ruta 55, la papa…).</p>
+<p><b>D0.</b> Si una nota llega por dos feeds del mismo medio (la portada y la sección), queda una: la clave es el medio más el título sin tildes ni espacios.</p>
+
+<h3>B. El cruce: juntar la misma noticia de varios medios</h3>
+<p>Es el corazón del sistema y no usa IA (<code>agruparPorHecho</code>, <code>ingesta/cruce.mjs</code>). Cómo decide si dos notas cuentan lo mismo, en criollo:</p>
+<ol class="pasos">
+<li>De cada nota toma <b>el título (que cuenta doble) y los primeros 400 caracteres del resumen</b>, sin tildes, sin palabras vacías ("de", "la", "hoy", "nuevo"…).</li>
+<li>Las palabras <b>raras pesan más</b> que las comunes: "VTV" o "Locomotora" dicen mucho; "gobierno" casi nada. (Técnicamente es TF-IDF con coseno, un número de 0 a 1.)</li>
+<li>Si dos notas se parecen <b>0,42 o más</b>, son el mismo hecho. El umbral se midió el 27/09 con 2.664 notas.</li>
+<li>Dos notas <b>del mismo medio nunca se juntan entre sí</b>.</li>
+<li>Los grupos <b>se encadenan</b>: si A se parece a B y B a C, A, B y C quedan juntas aunque A y C no se parezcan. (Esto es importante para la <a href="#mejoras">sección 7</a>.)</li>
+<li>Hay una <b>memoria de 36 horas</b> (<code>.cache/cruce-memoria.json</code>, en la caché de Actions) para cruzar con lo que otro medio publicó hace horas. <b>Sólo guarda lo de afuera</b>: lo de Balcarce no.</li>
+</ol>
+<div class="caja duda"><p><b>Aclaración:</b> el cruce <b>no reconoce "entidades"</b> (personas, lugares, instituciones) por separado: compara palabras. Los nombres propios se usan recién en la barrera D4, y sólo para <b>no</b> juntar dos notas.</p></div>
+
+<p><b>Qué grupos quedan:</b></p>
+<div class="tabla media"><table>
+<thead><tr><th>El grupo…</th><th>¿Queda?</th><th>Hoy</th></tr></thead>
+<tbody>
+<tr><td>tiene una nota de un medio de Balcarce</td><td>Sí</td><td></td></tr>
+<tr><td>tiene una nota de afuera que dice Balcarce en el título o toca la zona</td><td>Sí</td><td></td></tr>
+<tr><td>lo cuentan 2 medios distintos o más</td><td>Sí (cuántos hacen falta para salir sola se decide después)</td><td></td></tr>
+<tr><td>lo cuenta un solo medio de afuera</td><td>No, ni para esperar a una persona</td><td class="n">4.419</td></tr>
+<tr><td>lo cuentan sólo medios de otras ciudades de la zona (Mar del Plata, Tandil, Necochea)</td><td>No</td><td class="n">41</td></tr>
+</tbody></table></div>
+
+<p><b>La nota principal</b> de cada grupo da el título de partida, la fecha y la dirección (el identificador sale de su enlace). Se elige así: si la historia es "de acá" (la cuenta un medio de Balcarce y ningún medio de afuera, o alguno nombra a Balcarce), entre las de Balcarce; si no, entre las de afuera. Dentro de ésas, <b>la que ya está publicada</b> (para que no cambie la dirección: barrera D1b) y si ninguna, <b>la que salió primero</b>. Un medio de Balcarce que copia una noticia nacional sin nombrar nada de acá no la hace de Balcarce.</p>
+
+<h3>C. Sección, puntaje y semáforo (sin IA)</h3>
+<p><b>Policiales de afuera.</b> Lo que se clasifica como policial y no es de Balcarce ni de la zona, se va (hoy, 10).</p>
+<p><b>La sección</b> (<code>clasificar</code>), en orden: Automovilismo gana siempre si hay una palabra firme de fierros; si el feed ya viene separado por tema, se le cree (salvo Tecnología, que se confirma con el título); si no, por palabras clave (<code>REGLAS_SECCION</code>): <b>gana la palabra más larga</b> que aparece; las palabras ambiguas ("partido", "copa", "paso", "precios", "IA"…) sólo deciden desde el título y si no hay otra. Sin ninguna palabra: Balcarce si es de acá; si no, Argentina.</p>
+
+<p><b>El puntaje</b> (<code>relevancia</code>): un número de 0 a 100 que <b>sólo ordena</b> (qué va primero, qué entra en el cupo, qué va a Facebook). No decide si sale.</p>
+<div class="tabla media"><table>
+<thead><tr><th>Suma</th><th>Cuánto</th></tr></thead>
+<tbody>
+<tr><td>El peso de la fuente principal</td><td>24 a 30 los de Balcarce (la Municipalidad 24, Puntonueve 30); 8 casi todos los nacionales; 10 si no tiene</td></tr>
+<tr><td>Es de Balcarce (medio de acá o Balcarce en el título)</td><td class="n">+25</td></tr>
+<tr><td>Frescura: menos de 3 h / 12 h / 24 h</td><td class="n">+25 / +15 / +8</td></tr>
+<tr><td>Cada medio más que cuenta lo mismo</td><td class="n">+10, hasta +40</td></tr>
+<tr><td>La fuente trae imagen / texto largo</td><td class="n">+6 / +4</td></tr>
+<tr><td>Un medio de afuera dice Balcarce en el título</td><td class="n">+22</td></tr>
+<tr><td>Nombra a una figura argentina</td><td class="n">+16</td></tr>
+<tr><td>Es Automovilismo</td><td class="n">+8</td></tr>
+<tr><td>La IA dice que una nota "de Balcarce" no lo es</td><td class="n">−25</td></tr>
+</tbody></table></div>
+<p class="meta">Ejemplo: una nota de la Municipalidad de hace 7 horas, contada por 4 medios, con foto: 24 + 25 + 15 + 30 + 6 (+4 si trae texto largo) = 100 o más, y se recorta en 100. Es el caso del <a href="#ejemplo">ejemplo real</a>.</p>
+
+<p><b>El semáforo</b> (<code>semaforo</code>) mira en este orden y se queda con lo primero que encuentra:</p>
+<div class="tabla media"><table>
+<thead><tr><th>#</th><th>Qué mira</th><th>Resultado</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>La lista roja (menor de edad, abuso sexual, suicidio, femicidio, grooming…) en el título y los primeros 600 caracteres</td><td><span class="pill p-rojo">rojo</span> nunca</td></tr>
+<tr><td>2</td><td>Una efeméride de otro medio (las efemérides son propias)</td><td><span class="pill p-rojo">rojo</span></td></tr>
+<tr><td>3</td><td>Una lista de sepelios (en el título)</td><td><span class="pill p-rojo">rojo</span>, ni aprobada</td></tr>
+<tr><td>4</td><td>La lista amarilla (denuncia, detenido, imputado, homicidio, víctima, niño…), un menor dicho por su edad, y una muerte o un herido donde puede ser alguien de acá (Policiales, Balcarce, la zona o un solo medio). Algunas palabras se aflojan en lo de acá si lo confirman dos medios o una fuente oficial</td><td><span class="pill p-amarillo">amarillo</span></td></tr>
+<tr><td>5</td><td>La cotización del dólar (está en /dolar)</td><td><span class="pill p-amarillo">amarillo</span></td></tr>
+<tr><td>6</td><td>Política de otros países (Trump, Putin, Gaza…) sin un argentino en el título</td><td><span class="pill p-amarillo">amarillo</span></td></tr>
+<tr><td>7</td><td>Promoción (sorteo, ganá tu entrada, suscribite…)</td><td><span class="pill p-amarillo">amarillo</span></td></tr>
+<tr><td>8</td><td>Una fuente oficial (Municipalidad, Concejo Deliberante, Facultad de Ciencias Agrarias)</td><td><span class="pill p-verde">verde</span></td></tr>
+<tr><td>9</td><td>De afuera y contada por menos medios de los que pide su sección</td><td><span class="pill p-amarillo">amarillo</span> "poco contada"</td></tr>
+<tr><td>10</td><td>Nada la frenó</td><td><span class="pill p-verde">verde</span></td></tr>
+</tbody></table></div>
+
+<p><b>Cuántos medios tiene que tener lo de afuera para salir sola</b> (<code>MEDIOS_DE_AFUERA</code>, <code>ingesta/criterio.mjs</code>): Fútbol y Deportes, 4; Economía, Tecnología, Agro y Automovilismo, 2; el resto, 3; si nombra a una figura argentina, 2. Lo de acá, lo oficial y lo propio no piden medios.</p>
+<p><b>D2 · Medios del mismo dueño</b> (desde el 15/10): <b>Grupo Clarín</b> (Clarín, TN, Olé, Radio Mitre) y <b>eleco.com.ar</b> (LU9, QZ Noticias, El Marplatense, El Eco de Tandil) cuentan <b>como un solo medio</b> al decidir el semáforo, los medios mínimos y el puntaje (<code>contarMedios</code>). Ojo: no en todos lados (ver <a href="#mejoras">mejora 6</a>).</p>
+<p><b>El cupo</b> (<code>aplicarCupos</code>): de más a menos puntaje, por sección, sólo las primeras N de afuera salen solas: Argentina y Economía 12; Fútbol y Deportes 10; Tecnología, Política y Cultura 8; Automovilismo 6; Policiales 0; Agro 15. El resto pasa a amarillo. Lo de acá no cuenta ni ocupa lugar.</p>
+
+<h3>D. La IA (sólo en la nube)</h3>
+<p><b>Lectura con IA</b> (<code>ingesta/lectura-ia.mjs</code>). Una IA (Gemini, y Groq si Gemini falla) lee el título, 500 caracteres del resumen, el medio y la ciudad del medio, con el perfil de Balcarce al lado, y completa una <b>ficha</b>: ámbito, sección, impacto en Balcarce, razón, importancia, si es publicidad o chimento. De a 12 notas por pedido, 5 pedidos por corrida, hasta 200 por día (hoy, a las 19:04, iban 93). Lo que hace con la ficha:</p>
+<ul>
+<li><b>La saca</b> si es publicidad, chimento, del extranjero sin un argentino, sin relación con Balcarce (salvo lo nacional que importa: 3 medios o más, importancia alta o razón nacional, popular o de servicio), o un policial que no es de acá.</li>
+<li><b>Dos llaves para ser de Balcarce</b>: la de la fuente (medio de acá o Balcarce en el título) <b>y</b> la de la IA (el hecho es de Balcarce o la afecta directamente). Si falta la segunda, deja de ser local y pierde 25 puntos.</li>
+<li>La sección pasa a ser la de la IA (con dos ajustes).</li>
+<li>Lo de un medio de acá que no nombra nada de acá <b>espera a la IA</b> antes de salir.</li>
+<li><b>Nunca destraba</b>: lo amarillo o rojo sigue igual.</li>
+</ul>
+<p><b>D3 · Repetidas con IA</b>: se le muestran a la IA las notas que pueden salir (y, en otro pedido, las de afuera que esperan por pocos medios) y agrupa las que cuentan exactamente el mismo hecho. De cada grupo queda una: la ya publicada, la verde, la de más medios, la de más puntaje; se le suman los medios de las otras y <b>hereda el peor color</b> (si una versión era roja, queda roja). Sólo si cambió la lista, hasta 60 vueltas por día (hoy, a las 19:04, iban 48). Después se vuelven a mirar medios y cupo, en los dos sentidos.</p>
+
+<p><b>La escritura</b> (<code>reels/reescritura.mjs</code>). Sólo lo verde, primero lo de Balcarce y lo más nuevo; 40 por corrida y 450 por día, con las últimas 80 reservadas a lo de acá. Antes de pedir:</p>
+<ul>
+<li>se baja <b>el texto completo</b> de la nota original (hasta 4.000 caracteres) y los antecedentes (lo que el sitio publicó del tema en 30 días);</li>
+<li>el semáforo se pasa por ese texto completo: si en el tercer párrafo aparece un chico o una víctima, no se escribe y la nota deja de ser verde;</li>
+<li>si no hay texto completo y los resúmenes suman menos de 60 palabras, no se pide ("sin material").</li>
+</ul>
+<p>La IA devuelve título, bajada, cuerpo, guion y partes internas. Si no pasa el verificador, se le dice exactamente qué inventó y se pide <b>una vez más en la misma corrida</b>; si tampoco, se reintenta en otra corrida, <b>hasta 3</b> (4 si la cuentan 5 fuentes, 5 si la cuentan 8).</p>
+
+<p><b>La verificación</b> (<code>ingesta/verificar.mjs</code>) es mecánica, sin otra IA. Rechaza lo escrito si:</p>
+<ul>
+<li>tiene un <b>número</b>, un <b>nombre propio</b>, un <b>día o mes</b> o una <b>cita entre comillas</b> que no están en lo que la IA recibió;</li>
+<li>usa un dato de una nota vieja como si fuera de hoy;</li>
+<li>afirma un delito sin atribuirlo ("mató a…" sin "según la policía");</li>
+<li>agrega o pierde una negación; copia frases largas de la fuente; el cuerpo repite la bajada;</li>
+<li>tiene relleno ("cabe destacar"), gancho ("enterate"), "en vivo", localía inventada ("vecinos de Balcarce" sin que la fuente diga Balcarce), letras rotas, el título en pasado o demasiado largo.</li>
+</ul>
+<p>Si sólo algunas oraciones del cuerpo fallan, se sacan y la nota sigue si quedan 70 palabras. Al final, <b>el código</b> (no la IA) calcula el <b>nivel de verificación</b>: ALTA con una fuente oficial o 2 medios distintos; MEDIA con un medio; BAJA con un medio y una denuncia o un dato central sin confirmar. <b>BAJA no sale sola.</b> Y todo lo escrito pasa otra vez por el semáforo.</p>
+
+<h3>E. Publicar, mostrar y retirar</h3>
+<p><b>La decisión final</b> (<code>notaPublicada</code>, nota por nota):</p>
+<ol class="pasos">
+<li>¿Está en <code>web/data/retiradas.json</code>? No sale.</li>
+<li>¿Decidió una persona (celular o PC)? Manda eso. Si no, el semáforo: verde sale, amarillo espera, rojo nunca.</li>
+<li>¿<b>Llega tarde</b>? Si nunca salió y el hecho tiene más de <b>12 horas</b>, no se estrena. La fecha del hecho es <b>la más vieja</b> entre la de la nota y la de cada una de sus fuentes (una nota envejece, nunca rejuvenece).</li>
+<li>Texto: el de la persona; si no, el de la IA; si no, el resumen de la fuente. La dirección se fija la primera vez y no cambia.</li>
+<li>Las correcciones a mano pisan título, bajada, sección o cuerpo.</li>
+<li>Lista de sepelios en el texto final: no sale nunca, ni aprobada. Si era roja y el texto final sigue tocando la lista roja, tampoco.</li>
+<li><b>Sin cuerpo no se publica</b>: menos de 70 palabras, queda "esperando cuerpo" (hoy hay 6).</li>
+</ol>
+<p>Después vienen las barreras D4 a D7 (<a href="#repetidas">sección 4</a>), las fotos y el archivo.</p>
+<p><b>Cuánto se queda:</b> 36 horas en la portada y las secciones; la página dura hasta 180 días, con un tope de 3.700 notas.</p>
+<p><b>Cuándo una nota pierde su página</b>: si una persona la retira o la descarta; si hoy la ingesta la trae en rojo, o en amarillo por lo que dice (no por cupo ni por pocos medios); si la IA la sacó; si quedó como repetida y no fue a las redes; si es una lista de sepelios; si el título viejo dice "en vivo"; si es de afuera, de un solo medio, no oficial y no fue a las redes; o pasados los 180 días.</p>
+<p><b>Redes</b>: lo de Política y Policiales espera siempre a una persona antes de ir a Facebook o Instagram (<code>redes/elegir.mjs</code>).</p>
+
+<!-- ================================================================== -->
+<h2 id="repetidas">4. Las barreras contra notas repetidas</h2>
+
+<p>La idea de tener tantas fuentes es que <b>una noticia sea una sola nota</b>, con todos los medios que la contaron en "Fuentes (N)". Para eso hay ocho barreras, en orden:</p>
+
+<div class="tabla ancha"><table>
+<thead><tr><th></th><th>Barrera</th><th>Qué compara</th><th>Ventana</th><th>Qué hace</th><th>Dónde está</th></tr></thead>
+<tbody>
+<tr><td><span class="pill p-dup">D0</span></td><td>Mismo medio, dos feeds</td><td>medio + título exacto</td><td>la corrida</td><td>deja una</td><td><code>ingestar()</code></td></tr>
+<tr><td><span class="pill p-dup">D1</span></td><td>El cruce</td><td>palabras raras del título (doble) y 400 caracteres del resumen; umbral 0,42; encadena</td><td>36 h de memoria, <b>sólo lo de afuera</b></td><td>junta en una historia</td><td><code>agruparPorHecho</code> (cruce.mjs)</td></tr>
+<tr><td><span class="pill p-dup">D1b</span></td><td>La principal ya publicada</td><td>si una nota del grupo ya salió, su dirección se mantiene. Pero se busca <b>sólo entre las candidatas a principal</b> (las de Balcarce si la historia es "de acá"; las de afuera si no)</td><td>lo que está en portada o archivo</td><td>no aparece "otra" nota cuando se suma un medio</td><td><code>idsConocidos</code> en <code>ingestar()</code></td></tr>
+<tr><td><span class="pill p-dup">D2</span></td><td>Medios del mismo dueño</td><td>Grupo Clarín y eleco.com.ar cuentan uno</td><td>—</td><td>no infla la cuenta de medios en el semáforo y el puntaje</td><td><code>contarMedios</code></td></tr>
+<tr><td><span class="pill p-dup">D3</span> <span class="pill p-ia">IA</span></td><td>Repetidas con IA</td><td>título + 200 caracteres de las notas de esta corrida que pueden salir</td><td>la corrida (los grupos se acumulan)</td><td>queda una, suma los medios, hereda el peor color</td><td><code>agruparRepetidas</code>, <code>quitarRepetidas</code></td></tr>
+<tr><td><span class="pill p-dup">D4</span></td><td>Contra lo ya publicado (regla 171)</td><td>raíces de palabras del título y título + bajada (ya escritos), con reglas para <b>no</b> juntar: acá con afuera, números distintos, anuncio y resultado, hecho y contrario, protagonistas distintos</td><td>72 h</td><td>la nueva se une a la que ya estaba y redirige</td><td><code>parejasConLoPublicado</code> (repetidas-publicadas.mjs)</td></tr>
+<tr><td><span class="pill p-dup">D5</span> <span class="pill p-ia">IA</span></td><td>Parejas sospechosas</td><td>misma sección, títulos parecidos entre 0,3 y 0,8</td><td>72 h; 24 parejas por corrida, 40 pedidos por día</td><td>si la IA dice "mismo hecho", se unen</td><td><code>parejasSospechosas</code>, <code>confirmarParejas</code></td></tr>
+<tr><td><span class="pill p-dup">D6</span></td><td>Misma noticia, otra dirección</td><td>títulos con 80 % de palabras en común, o pareja confirmada por D4/D5</td><td>96 h</td><td>queda una (la que fue a redes, la de foto, la de cuerpo, la primera); la otra redirige (<code>fusionadas.json</code>)</td><td><code>repetidasConOtraDireccion</code> (web/lib/repetidas.js)</td></tr>
+<tr><td><span class="pill p-dup">D7</span></td><td>Listas sin titulares gemelos</td><td>titulares casi iguales</td><td>36 h</td><td>una sale de las listas, pero <b>las dos páginas siguen</b></td><td><code>sinNotasRepetidas</code> (web/lib/texto.js)</td></tr>
+</tbody></table></div>
+
+<h3>Por dónde todavía se escapan: casos reales</h3>
+<p>Para medirlo se buscaron, en las notas publicadas de los últimos 7 días (273, sin contar las propias), pares que <b>comparten exactamente el mismo enlace de fuente</b>. Si dos notas citan la misma nota de otro medio, casi seguro son la misma noticia. Aparecieron <b>7 pares</b>, y los 7 son repetidas de verdad:</p>
+
+<div class="tabla ancha"><table>
+<thead><tr><th>Salieron</th><th>Nota 1</th><th>Nota 2</th><th>Fuentes en común</th><th>Por qué se escapó</th></tr></thead>
+<tbody>
+<tr><td class="n">15/10</td><td>"El Ministerio de Transporte bonaerense actualiza la tarifa básica de la VTV" (Política, 9:31)</td><td>"…actualiza las tarifas de la VTV" (Balcarce, 12:03)</td><td>las 7 de la primera están en la segunda; 28 medios en común</td><td>Es <b>la misma historia</b> que cambió de principal: empezó "de afuera" y se publicó; cuando se sumaron los medios de Balcarce pasó a ser "de acá" y la publicada no estaba entre las candidatas (D1b). Después D4 no junta acá con afuera y D5 no mira otra sección. A las 12:04 se habían unido y la unión se deshizo (ver abajo). Hoy se ven las dos en el sitio, una en Política y otra en Balcarce.</td></tr>
+<tr><td class="n">14/10</td><td>"El Instituto Adventista celebra cuarenta años con un musical" (Balcarce)</td><td>"El Coro del Instituto Adventista presenta el musical Un día" (Cultura)</td><td>la misma nota de El Diario Balcarce</td><td>El grupo cambió de principal en media hora (se sumó Puntonueve) y quedaron dos direcciones. Secciones distintas (D5 no mira) y títulos poco parecidos (D4 y D6 no alcanzan).</td></tr>
+<tr><td class="n">13/10</td><td>"El Gobierno promulga la nueva ley sobre el régimen de zonas frías" (Política, 2:31)</td><td>"…la Ley 27.828 que modifica el régimen de Zona Fría" (Balcarce, 8:31)</td><td>4 enlaces; 24 de 25 medios</td><td>Igual que la VTV: la historia pasó de "de afuera" (La Nación) a "de acá" (Radio Gabal) y nació otra dirección.</td></tr>
+<tr><td class="n">13/10</td><td>"La Agencia Nacional de Seguridad Vial sanciona a miles de conductores"</td><td>"Sancionan a conductores por circular por banquinas…"</td><td>al menos 1</td><td>Títulos con otras palabras.</td></tr>
+<tr><td class="n">12/10</td><td>"Javier Milei ratifica a Luis Caputo y descarta rumores…"</td><td>"Milei ratifica a Caputo y asegura contar con millonarios fondos"</td><td>al menos 1</td><td>Títulos con otras palabras.</td></tr>
+<tr><td class="n">12/10</td><td>"Domingo Cavallo elogia un informe con reparos al plan económico"</td><td>"Domingo Cavallo cuestiona el rumbo económico…"</td><td>al menos 1</td><td>Se habían unido el 12/10 a la noche y la unión se deshizo.</td></tr>
+<tr><td class="n">11/10</td><td>"Cauan Barros choca con su auto y se pierde el partido ante Boca" (20:31)</td><td>"Cauan Barros sufre un accidente y se pierde el partido ante Boca" (22:01)</td><td>5</td><td>El grupo cambió de principal (Olé, después TyC Sports). Salieron antes de la regla 171, y D4 sólo compara una nota <b>nueva</b> contra las publicadas: dos que ya salieron no se vuelven a comparar nunca. (La regla 171, aplicada hoy a este par, diría "la misma noticia".)</td></tr>
+</tbody></table></div>
+
+<div class="caja alerta">
+<p><b>Una unión no queda firme.</b> Cuando dos notas se unen (D4, D5 o D6), la que se va queda anotada en <code>web/data/fusionadas.json</code> y su dirección redirige a la que queda. Pero ese archivo <b>sólo se usa para armar las redirecciones</b>: en cada corrida la unión se vuelve a calcular desde cero. Si en la corrida siguiente las dos notas ya no "se reconocen" (cambió una marca, una sección, o la nueva ya cuenta como publicada), la que se había ido <b>vuelve a la portada</b>.</p>
+<p>Hoy, de las 100 notas de <code>fusionadas.json</code>, <b>8 tienen otra vez página propia</b>, dos de ellas de hoy (la VTV y "El Centro de Tenis de Mesa suma mesas…" / "La Cuna del Quíntuple incorpora mesas…"). Comprobado en el sitio esa misma noche: la dirección completa de la segunda nota de la VTV abre la nota (200), mientras que su dirección corta <code>/nota/aa5npj</code> redirige a la otra (301).</p>
+</div>
+
+<p><b>El resumen del problema:</b> la mayoría de estas repetidas no son dos medios contando lo mismo con otras palabras: son <b>la misma historia del cruce que cambió de nota principal</b> y por eso de dirección (VTV, Zona Fría, Adventista, Cauan Barros). Después, cada barrera es estricta a propósito (juntar dos noticias distintas es peor que dejar pasar una repetida, y eso está bien), pero las cuatro que actúan después de escribir comparan <b>palabras de títulos</b> y tienen condiciones que la misma noticia puede no cumplir: <b>misma sección</b> (D5), <b>mismo "de acá / de afuera"</b> (D4) o <b>títulos casi idénticos</b> (D6, D7). Ninguna mira lo más seguro que hay: <b>si las dos notas citan las mismas fuentes</b>.</p>
+
+<!-- ================================================================== -->
+<h2 id="tabla">5. Tabla: cada filtro, qué mira y qué pasa si falla</h2>
+
+<p>En el orden en que actúan. "Falla" quiere decir que la nota no pasa ese control.</p>
+<div class="tabla ancha"><table>
+<thead><tr><th>Filtro</th><th>Qué mira</th><th>Qué pasa si falla</th><th>Dónde está en el código</th></tr></thead>
+<tbody>
+<tr><td>Fuente que no responde</td><td>15 s por feed, reintento si se corta</td><td>Esa fuente no aporta; aviso "Fuente caída" o "Fuente vacía"</td><td><code>traerConReintento</code>, ingesta.mjs</td></tr>
+<tr><td>Lo raspado viejo</td><td>Fecha de la página: más de 72 h</td><td>No entra</td><td><code>HORAS_DE_UNA_NOTA_NUEVA</code>, ingesta.mjs</td></tr>
+<tr><td>Horóscopo y lotería</td><td>El título (la lotería, salvo que nombre a Balcarce)</td><td>No entra (sólo medios de afuera, ver mejora 10)</td><td><code>TITULO_HOROSCOPO</code>, <code>TITULO_LOTERIA</code>, <code>motivoDeDescarte</code></td></tr>
+<tr><td>Sección del medio</td><td>La dirección de la nota: otro país, policiales, consejos</td><td>No entra (otro país, con excepciones)</td><td><code>SECCIONES_QUE_NO_ENTRAN</code>, fuentes.mjs</td></tr>
+<tr><td>Mismo medio dos veces <span class="pill p-dup">D0</span></td><td>Medio + título</td><td>Queda una</td><td><code>ingestar()</code></td></tr>
+<tr><td>El cruce <span class="pill p-dup">D1</span></td><td>Palabras del título y del resumen; 0,42</td><td>Si no se parece a nada, queda sola</td><td><code>agruparPorHecho</code>, cruce.mjs</td></tr>
+<tr><td>Un solo medio de afuera</td><td>Medios distintos del grupo (por nombre)</td><td>No entra, ni amarilla</td><td><code>ingestar()</code></td></tr>
+<tr><td>Sólo medios de la región</td><td>Alcance de todos los medios del grupo</td><td>No entra</td><td><code>ingestar()</code></td></tr>
+<tr><td>Policial de afuera</td><td>Sección Policiales, sin Balcarce ni zona</td><td>No entra</td><td><code>esPolicialDeAfuera</code></td></tr>
+<tr><td>Lista roja</td><td>Título + 600 caracteres; después el texto completo y lo que escribió la IA</td><td><span class="pill p-rojo">rojo</span>: nunca, ni aprobada (salvo que una persona la reescriba sin eso)</td><td><code>REGLAS_SEMAFORO.rojo</code>, <code>semaforoDelTexto</code>, <code>sigueRoja</code></td></tr>
+<tr><td>Efeméride ajena / sepelios</td><td>Dirección o título; los sepelios también en el texto final</td><td><span class="pill p-rojo">rojo</span></td><td><code>esEfemerideAjena</code>, <code>REGLAS_SEMAFORO.nunca</code>, <code>nuncaSePublica</code></td></tr>
+<tr><td>Lista amarilla, menores, muertes</td><td>Título + 600 caracteres (muertes sólo donde puede ser de acá)</td><td><span class="pill p-amarillo">amarillo</span>: espera a una persona</td><td><code>semaforoDelTexto</code>, <code>laMuerteFrena</code></td></tr>
+<tr><td>Dólar, internacional, promoción</td><td>Título (y 600 caracteres la promoción)</td><td><span class="pill p-amarillo">amarillo</span></td><td><code>REGLAS_SEMAFORO</code>, fuentes.mjs</td></tr>
+<tr><td>Medios mínimos <span class="pill p-dup">D2</span></td><td>Medios distintos (un grupo cuenta uno) contra lo que pide la sección</td><td><span class="pill p-amarillo">amarillo</span> "de afuera y poco contada"</td><td><code>mediosMinimosDe</code>, <code>exigirMedios</code>, <code>contarMedios</code></td></tr>
+<tr><td>Cupo de afuera</td><td>Orden por puntaje dentro de la sección</td><td><span class="pill p-amarillo">amarillo</span> "pasó el cupo"</td><td><code>aplicarCupos</code>, <code>CUPO_DE_AFUERA</code></td></tr>
+<tr><td>Ficha de la IA <span class="pill p-ia">IA</span></td><td>Publicidad, chimento, extranjero, sin relación, policial de afuera</td><td>Sale (y pierde la página)</td><td><code>aplicarFichas</code>, lectura-ia.mjs</td></tr>
+<tr><td>Medio de acá que no nombra nada de acá</td><td>Balcarce o la zona en título o comienzo</td><td>Espera a que la lea la IA</td><td><code>mencionaAca</code>, <code>MOTIVO_ESPERA_LECTURA</code></td></tr>
+<tr><td>Repetidas con IA <span class="pill p-dup">D3</span></td><td>Las notas de la corrida que pueden salir</td><td>Queda una</td><td><code>agruparRepetidas</code>, <code>quitarRepetidas</code></td></tr>
+<tr><td>Texto completo sensible</td><td>La nota original entera, antes de escribir</td><td>No se escribe; deja de ser verde</td><td><code>semaforoDeLaReescritura</code>, reescritura.mjs</td></tr>
+<tr><td>Sin material</td><td>Sin texto completo y menos de 60 palabras de resúmenes</td><td>No se pide; cuenta como intento</td><td><code>reescribirAutomaticas</code></td></tr>
+<tr><td>Verificador</td><td>Números, nombres, días, citas, acusaciones, copia, relleno, forma</td><td>Se pide de nuevo con la corrección; hasta 3 corridas</td><td><code>verificar</code>, <code>depurarCuerpo</code>, verificar.mjs</td></tr>
+<tr><td>Verificación BAJA</td><td>Un solo medio y una denuncia o un dato central sin confirmar</td><td><span class="pill p-amarillo">amarillo</span></td><td><code>nivelDeVerificacion</code></td></tr>
+<tr><td>Retirada a mano</td><td><code>web/data/retiradas.json</code></td><td>No sale y pierde la página</td><td><code>idsRetiradosAMano</code>, archivo.js</td></tr>
+<tr><td>Decisión de una persona</td><td>Celular o PC, con <code>por</code></td><td>Manda sobre el semáforo</td><td><code>decisionHumana</code>, <code>unirDecisiones</code></td></tr>
+<tr><td>Llega tarde</td><td>Fecha del hecho (la más vieja de sus fuentes) más de 12 h, si nunca salió</td><td>No se estrena</td><td><code>llegaTarde</code>, <code>fechaDeLaNota</code>, archivo.js</td></tr>
+<tr><td>Sin cuerpo</td><td>Menos de 70 palabras, o igual a la bajada</td><td>"Esperando cuerpo"</td><td><code>tieneCuerpo</code>, cuerpo.js</td></tr>
+<tr><td>Igual a una retirada</td><td>La nueva se parece más a una nota retirada que a otra cosa</td><td><span class="pill p-amarillo">amarillo</span></td><td><code>parejasConLoPublicado</code> (<code>conRetirada</code>)</td></tr>
+<tr><td>Contra lo publicado <span class="pill p-dup">D4</span></td><td>Títulos y bajadas ya escritos, 72 h</td><td>Se une a la que ya estaba</td><td><code>parejasConLoPublicado</code></td></tr>
+<tr><td>Parejas sospechosas <span class="pill p-dup">D5</span></td><td>Misma sección, parecido 0,3–0,8, 72 h</td><td>Si la IA confirma, se unen</td><td><code>parejasSospechosas</code>, <code>confirmarParejas</code></td></tr>
+<tr><td>Otra dirección <span class="pill p-dup">D6</span></td><td>Títulos 80 % iguales en 96 h, o pareja confirmada</td><td>Queda una, la otra redirige</td><td><code>repetidasConOtraDireccion</code></td></tr>
+<tr><td>Titulares gemelos <span class="pill p-dup">D7</span></td><td>Titulares casi iguales en las listas</td><td>Sale de las listas, conserva la página</td><td><code>sinNotasRepetidas</code></td></tr>
+<tr><td>Ventanas</td><td>36 h portada; 180 días o 3.700 notas</td><td>Sale de las listas / pierde la página</td><td><code>vigenteEnPortada</code>, <code>MAXIMO_EN_ARCHIVO</code></td></tr>
+<tr><td>Pierde la página</td><td>Rojo o amarillo por contenido, la sacó la IA, "en vivo", de afuera con un solo medio</td><td>La página deja de existir</td><td><code>pierdeLaPagina</code>, <code>tieneRespaldo</code></td></tr>
+</tbody></table></div>
+
+<!-- ================================================================== -->
+<h2 id="ejemplo">6. Un ejemplo real de punta a punta</h2>
+
+<h3>"El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre"</h3>
+<p class="meta">Identificador <code>1f8plkr</code>. Publicada sola el 15/10. Horas en hora de Balcarce. Fuentes: las fichas, los intentos, la primera vista y la portada de la nube, más la corrida de prueba de las 19:21.</p>
+
+<ul class="linea-tiempo">
+<li><span class="hora">12:16</span> · La Municipalidad publica en su web "El Cementerio Municipal modificará sus horarios a partir del 26 de octubre". Entra por su RSS.</li>
+<li><span class="hora">12:33</span> · <b>Primera vez que el sistema la ve</b> (<code>vistas.json</code>). Es un medio de Balcarce: no pasa por el filtro de entrada. En ese momento la historia tenía sólo el comunicado (se deduce de que la nota dice "no pudo ser contrastado de forma independiente", que el sistema pone sólo con una fuente).
+  <ul>
+    <li><b>Cruce:</b> todavía nadie más lo contó; queda igual, porque lo de Balcarce entra aunque lo cuente un solo medio.</li>
+    <li><b>Principal:</b> la de la Municipalidad; de su enlace sale <code>1f8plkr</code>.</li>
+    <li><b>Sección:</b> Balcarce.</li>
+    <li><b>Puntaje:</b> 24 (peso de la Municipalidad) + 25 (de Balcarce) + 25 (menos de 3 h) + 6 (trae imagen), más 4 si el feed trae el texto largo: 80 u 84.</li>
+    <li><b>Semáforo:</b> ninguna palabra de las listas ("cementerio" no está en la de sepelios, que busca "sepelio", "inhumación", "cochería", "servicio fúnebre"…). Fuente oficial: <span class="pill p-verde">verde</span> "comunicado oficial".</li>
+    <li><b>Medios y cupo:</b> es de acá: no pide medios ni ocupa cupo.</li>
+    <li><b>Ficha de la IA:</b> ámbito Balcarce, sección Balcarce, impacto directo, razón "servicio", importancia alta: "Modificación de horarios en el Cementerio Municipal de Balcarce, información práctica para los vecinos". No la saca; las dos llaves de Balcarce coinciden.</li>
+    <li><b>Repetidas con IA:</b> no está en ningún grupo.</li>
+  </ul>
+</li>
+<li><span class="hora">12:34</span> · <b>La IA la escribe al primer intento</b> (<code>intentos-ia.json</code>: 1 intento, "con cuerpo"). Antes de pedir, se bajó el texto completo del comunicado y el semáforo lo leyó entero. El título pasa a presente ("actualiza" en vez de "modificará"). El verificador controla que cada número del cuerpo (7, 8, 19, 11.45, 16.30, 18.30, 26) esté en la fuente, que no aparezca ningún nombre nuevo y que el cuerpo no repita la bajada: pasa. Cuerpo: 127 palabras. Nivel de verificación, calculado por el código: <b>ALTA</b>, "sale de una fuente oficial".</li>
+<li><span class="hora">12:34</span> · <b>Se publica</b>: es verde, no llega tarde (18 minutos), tiene cuerpo, nadie la retiró, no se parece a nada publicado en 72 h (D4). La dirección queda fija con el título de ese momento. La foto sale del banco propio, con el crédito "Foto: Diario La Vanguardia".</li>
+<li><span class="hora">12:36 a 16:36</span> · La cuentan Infórmese Primero (12:36), Puntonueve (16:36) y La Vanguardia (sin hora). El cruce las suma a la misma historia y, como <code>1f8plkr</code> ya está publicada, <b>la dirección no cambia</b> (D1b). A las 19:21 la historia tiene 4 medios y el puntaje llega a 104, recortado a <b>100</b>: 24 + 25 + 15 (menos de 12 h) + 30 (tres medios más) + 6 + 4.</li>
+<li><span class="hora">hasta el 17/10, 0:16</span> · Se queda en la portada 36 horas desde el hecho. Después sigue con su página.</li>
+</ul>
+
+<div class="caja duda">
+<p><b>Dos detalles que muestra este caso</b> (y que vuelven en la sección 7):</p>
+<ul>
+<li>Lo que la nota guarda de sus fuentes se congeló a las 12:34: el lector ve "Fuentes (2)" (la Municipalidad y La Vanguardia), aunque la historia ya tiene 4 medios.</li>
+<li>Los "antecedentes" que recibió la IA para dar contexto fueron dos notas de la <b>Liga Profesional de fútbol</b>: alcanzó con que compartieran dos palabras del título ("horarios" y "octubre"). No pasó nada porque la IA no los usó, pero es material que no tiene nada que ver.</li>
+</ul>
+</div>
+
+<h3>Y un caso donde falló: la VTV, dos veces</h3>
+<ol class="pasos">
+<li><b>Desde las 7:15</b> · El aumento de la VTV lo cuentan medios nacionales y de la provincia.</li>
+<li><b>9:31</b> · El sistema la ve por primera vez. Todavía no hay un medio de Balcarce que nombre a Balcarce: la historia es "de afuera", la principal es la de 0221 y sale como <code>1b4z7qp</code>. La IA dijo "sección Balcarce", pero como no es "de acá" queda en <b>Política</b>.</li>
+<li><b>12:03</b> · Ya se sumaron El Diario Balcarce, Puntonueve, Infórmese Primero y La Vanguardia. La historia pasa a ser "de acá" y la principal se elige sólo entre los medios de Balcarce: la ya publicada (de 0221) no está entre las candidatas, así que nace <code>aa5npj</code>, con los mismos 28 medios.</li>
+<li><b>12:04</b> · Una barrera de después las une: <code>aa5npj</code> pasa a redirigir a <code>1b4z7qp</code> (<code>fusionadas.json</code>).</li>
+<li><b>Hasta las 15:03</b> · En cada corrida <code>aa5npj</code> vuelve a aparecer como nueva y se escribe otra vez con IA (4 veces en el día). En algún momento la unión deja de reconocerse: D4 no junta "acá" con "afuera" y D5 no compara secciones distintas. <code>aa5npj</code> vuelve a la portada, en <b>Balcarce</b>.</li>
+<li><b>A la noche</b> · En el sitio, la sección Política muestra <code>1b4z7qp</code> y la sección Balcarce muestra <code>aa5npj</code>, y la dirección corta de la segunda redirige a la primera.</li>
+</ol>
+<p class="meta">Qué hizo que la unión dejara de reconocerse no se puede reconstruir con los datos guardados (lo más probable es que el título nuevo de alguna reescritura ya no se pareciera lo suficiente). Lo seguro es que la unión no se guarda como decisión firme: el código no lee <code>fusionadas.json</code> para mantenerla.</p>
+
+<!-- ================================================================== -->
+<h2 id="mejoras">7. Dónde se puede mejorar</h2>
+<p>Ordenado por importancia. Cada punto dice qué pasa, con qué dato real, y qué se podría hacer. No se cambió nada del código.</p>
+
+<div class="mejoras">
+
+<div class="mejora caja">
+<p class="importancia" style="color:var(--rojo)">Más importante · la causa principal de las repetidas</p>
+<h3>Cuando la historia cambia de nota principal, nace otra dirección</h3>
+<p>La dirección de una nota sale del enlace de su nota principal. Para que no cambie, el cruce busca si alguna nota del grupo ya está publicada (D1b), pero <b>sólo entre las candidatas a principal</b>: si la historia es "de acá", entre las de Balcarce; si no, entre las de afuera (<code>ingestar()</code>, <code>const base = historiaDeAca ? locales : …</code>). Entonces:</p>
+<ul>
+<li><b>VTV, 15/10:</b> a las 9:31 la historia era "de afuera" (principal: 0221) y se publicó como <code>1b4z7qp</code>. Cuando se sumaron los medios de Balcarce que nombran a Balcarce, pasó a ser "de acá"; la publicada no estaba entre las candidatas y a las 12:03 nació <code>aa5npj</code>, con los mismos 28 medios. <b>Hoy la sección Política del sitio muestra una y la sección Balcarce la otra</b> (comprobado en vivo).</li>
+<li><b>Zona Fría, 13/10:</b> lo mismo. A las 2:31 se publicó con principal La Nación; a las 8:31 nació otra con principal Radio Gabal. 24 de sus 25 medios son los mismos.</li>
+<li><b>Instituto Adventista, 14/10, y Cauan Barros, 11/10:</b> el grupo cambió de principal entre una corrida y otra (media hora y hora y media de diferencia) y quedaron dos direcciones para la misma noticia.</li>
+</ul>
+<p>Mientras una historia no se publica, además, su identificador cambia cada vez que entra al grupo una nota más vieja: se le pide otra ficha a la IA y se pierde su "primera vista". El grupo de Castro recibió su identificador actual recién hoy a las 14:44. Y la memoria del cruce no guarda lo de Balcarce: cuando una nota sale del feed de una radio, ya no se cruza con la de otra radio que la cuenta horas después.</p>
+<p><b>Qué se podría hacer:</b> buscar la nota ya publicada entre <b>todas</b> las notas del grupo, no sólo entre las candidatas (es un cambio chico); y guardar en la memoria, para cada enlace (de afuera y de acá), a qué historia pertenece, para reusar ese identificador mientras el grupo siga vivo.</p>
+</div>
+
+<div class="mejora caja">
+<p class="importancia" style="color:var(--rojo)">Muy importante</p>
+<h3>El cruce encadena noticias distintas, y la nota más vieja del grupo manda</h3>
+<p>Como los grupos se encadenan (A con B, B con C), y la memoria guarda 36 horas, se forman "mega-historias" que juntan cosas que no son el mismo hecho. En la corrida de hoy:</p>
+<ul>
+<li>La muerte de <b>Locomotora Castro</b> (unas 95 notas de unos 30 medios) quedó en un grupo cuyo título es <b>"MasterChef Celebrity Argentina 2026: qué pasó en el programa de ayer martes 13 de octubre"</b>, porque esa nota de El Destape era la más vieja del grupo (14/10, 0:14). En el mismo grupo quedó otra noticia: la muerte de una fisicoculturista. Con fecha del 14/10 a la madrugada, hoy "llega tarde" y no se puede estrenar. <b>En el sitio no hay ninguna nota sobre la muerte de Castro</b> (no se pudo confirmar qué pasó en las corridas del 14/10).</li>
+<li>Un grupo del clima de 20 medios junta pronósticos del 12, 13, 14 y 15 de octubre, de Mar del Plata, La Plata y Buenos Aires, con fecha del 12/10.</li>
+<li>"Alineaciones de Fluminense y Palmeiras" (27 medios) junta la Libertadores entera: Estudiantes, Flamengo, el caso de Marcos Rojo.</li>
+<li>La salud del Papa, los tipos de cáncer de pulmón y los feriados de noviembre: un solo grupo de 26 medios, en Cultura y agenda.</li>
+</ul>
+<p><b>Medido:</b> de 441 historias con dos fuentes o más, <b>103 tienen más de 24 horas entre su nota más vieja y la más nueva</b>, y 18 juntan 20 notas o más. Hay <b>102 historias cuya nota más vieja tiene más de 12 horas pero alguna tiene menos de 6</b>: si nunca salieron, no se estrenan por arrastre (27 de ellas son verdes).</p>
+<p><b>Por qué importa:</b> se pierden noticias reales (quedan tapadas dentro de otra), el título y la fecha salen de la nota menos representativa, la cuenta de medios se infla (y abre la puerta de "N medios"), y el verificador acepta cualquier número que esté en <b>cualquier</b> nota del grupo, aunque sea de otro hecho.</p>
+<p><b>Qué se podría hacer:</b> que una nota entre a un grupo sólo si se parece al conjunto (no a un solo miembro); poner un tope de horas entre la primera y la última nota del grupo (por ejemplo 24); elegir el título por la nota más parecida a las demás y no por la más vieja; y para "llega tarde" usar la fecha de la principal o la mediana, no la más vieja de todas.</p>
+</div>
+
+<div class="mejora caja">
+<p class="importancia" style="color:var(--rojo)">Muy importante</p>
+<h3>Ninguna barrera mira si dos notas citan las mismas fuentes</h3>
+<p>En 7 días salieron <b>7 pares de notas que comparten exactamente el mismo enlace de fuente</b>, y los 7 son la misma noticia (VTV, Zona Fría, Instituto Adventista, Seguridad Vial, Milei-Caputo, Cavallo, Cauan Barros). Es la señal más segura que existe y es gratis: está en <code>fuentesConsultadas</code> de cada nota. Sirve de red aunque se arregle el punto 1: el cruce puede partir una noticia en dos grupos por otros motivos.</p>
+<p><b>Qué se podría hacer:</b> una barrera nueva, sin IA, antes de D4: si una nota nueva comparte uno o más enlaces de fuente con otra publicada en las últimas 72 horas, es la misma noticia, sin importar sección ni "de acá / de afuera". Habría que medirla primero con lo publicado (con estos datos, 7 de 7 aciertos).</p>
+</div>
+
+<div class="mejora caja">
+<p class="importancia" style="color:var(--rojo)">Muy importante</p>
+<h3>Una unión no queda firme</h3>
+<p><code>fusionadas.json</code> sólo arma las redirecciones; el código no lo lee para mantener afuera a la nota que se unió. La unión se recalcula en cada corrida y puede deshacerse: hoy <b>8 de las 100 notas unidas tienen otra vez página propia</b> (2 de hoy), y su dirección corta redirige a la otra. Mientras tanto, la nota unida reaparece en cada corrida como nueva y <b>se vuelve a escribir con IA</b>: <code>aa5npj</code> (VTV) se escribió 4 veces hoy. Además, D4 sólo compara una nota <b>nueva</b> contra lo publicado: dos notas que ya salieron no se vuelven a comparar nunca (Cauan Barros, 9/10).</p>
+<p><b>Qué se podría hacer:</b> leer <code>fusionadas.json</code> al empezar y tratar a esas notas como unidas, salvo que una persona lo deshaga; y pasar D4 también entre pares ya publicados de las últimas 72 horas.</p>
+</div>
+
+<div class="mejora caja">
+<p class="importancia" style="color:var(--amarillo)">Importante</p>
+<h3>Las barreras de después exigen la misma sección y el mismo "de acá"</h3>
+<p>D5 sólo pregunta por parejas de la <b>misma sección</b>, y D4 nunca junta "de acá" con "de afuera". Pero la misma noticia termina seguido en dos secciones (Política y Balcarce; Balcarce y Cultura), y la marca "de acá" puede cambiar entre corridas porque depende de cuál nota quedó como principal y de la ficha de la IA. Tres de los siete pares de arriba cayeron justo ahí.</p>
+<p><b>Qué se podría hacer:</b> en D5, permitir secciones distintas cuando hay medios o fuentes en común; en D4, aflojar la regla de "acá con afuera" cuando las dos notas comparten fuentes de Balcarce.</p>
+</div>
+
+<div class="mejora caja">
+<p class="importancia" style="color:var(--amarillo)">Importante</p>
+<h3>"Medios del mismo dueño" está aplicado a medias</h3>
+<p>Los grupos (Clarín, TN, Olé, Radio Mitre; LU9, QZ, El Marplatense, El Eco de Tandil) cuentan uno en el semáforo, los medios mínimos y el puntaje. Pero <b>no</b> al entrar al cruce (ahí se cuentan por nombre: Clarín + TN alcanza para entrar), ni en la regla de la IA que perdona lo nacional "contado por 3 medios", ni en el orden de las repetidas, ni en el nivel de verificación. Ejemplo publicado el 12/10 (antes de la regla, pero el cálculo de la verificación no cambió): una nota contada sólo por Clarín, TN y Radio Mitre dice "Lo contaron tres medios independientes".</p>
+<p><b>Qué se podría hacer:</b> usar la misma cuenta (<code>contarMedios</code>) en todos lados, incluida la verificación.</p>
+</div>
+
+<div class="mejora caja">
+<p class="importancia" style="color:var(--amarillo)">Medio</p>
+<h3>Lo que ve el lector de las fuentes se congela al escribir</h3>
+<p>"Fuentes (N)" y el nivel de verificación se calculan cuando la IA escribe y no se actualizan cuando otros medios se suman. Hoy: la nota de SUTEBA (2 medios) muestra "Fuentes (1)" y dice "La informó un solo medio"; la del Cementerio (4 medios) muestra 2.</p>
+<p><b>Qué se podría hacer:</b> al revalidar lo ya escrito (no gasta IA), rearmar las fuentes y el nivel con las fuentes de hoy.</p>
+</div>
+
+<div class="mejora caja">
+<p class="importancia" style="color:var(--amarillo)">Medio</p>
+<h3>El verificador mira datos sueltos, no el sentido ni la gramática</h3>
+<p>Controla que cada número, nombre, día y cita esté en lo recibido, pero no que la frase diga lo mismo que la fuente (quién hizo qué, si ganó o perdió), ni la concordancia. Hoy salió publicado el título <b>"Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento"</b>. Y los antecedentes se eligen con dos palabras en común, aunque sean un mes ("octubre").</p>
+<p><b>Qué se podría hacer:</b> sacar meses y días de la cuenta de antecedentes; sumar un control barato de concordancia (artículo y sustantivo) en el título; y para el sentido, una verificación con IA sólo de título y bajada en lo que va a redes.</p>
+</div>
+
+<div class="mejora caja">
+<p class="importancia" style="color:var(--suave)">Menor</p>
+<h3>Los topes diarios de IA para repetidas se acaban</h3>
+<p>D3 tiene 60 vueltas por día y hoy, a las 19:04, ya iban 48: a la noche, lo nuevo deja de agruparse con IA. D5 tiene 40 pedidos por día. Si se agrega la barrera de fuentes en común (punto 2), D3 y D5 pasan a ser un complemento.</p>
+</div>
+
+<div class="mejora caja">
+<p class="importancia" style="color:var(--suave)">Menor</p>
+<h3>La lotería de un medio de Balcarce sí entra</h3>
+<p>El código dice "la quiniela y la lotería no se analizan, ni de un medio de acá", y la prueba lo confirma llamando a la función directamente. Pero en la ingesta esa función sólo se llama para los medios de afuera (<code>ingesta/ingesta.mjs</code>, línea 1442 contra la 473), así que la quiniela de una radio de Balcarce sí entra. En la práctica la frena después la espera de la IA (lo de un medio de acá que no nombra nada de acá), pero la regla no hace lo que dice.</p>
+</div>
+
+<div class="mejora caja">
+<p class="importancia" style="color:var(--suave)">Menor</p>
+<h3>Documentación desactualizada</h3>
+<p><code>CLAUDE.md</code> dice "más de 200 feeds de más de 100 medios"; <code>FUENTES.md</code> dice 103 feeds activos de 71 medios. <code>docs/02-INGESTA.md</code> y <code>docs/03-SELECCION.md</code> son del 29/09: no tienen la regla 171, los medios del mismo dueño, la espera por notas retiradas ni el reloj nuevo.</p>
+</div>
+
+</div>
+
+<h3>Qué mediría para pulir las notas</h3>
+<p>Todo esto sale de los archivos que ya se guardan, sin gastar IA. Lo ideal es una línea por semana en la pestaña Números del panel:</p>
+<div class="tabla media"><table>
+<thead><tr><th>Medida</th><th>Hoy</th><th>Qué dice</th></tr></thead>
+<tbody>
+<tr><td>Pares publicados que comparten un enlace de fuente (7 días)</td><td class="n">7</td><td>Repetidas que se escaparon. La meta es 0.</td></tr>
+<tr><td>Notas unidas que volvieron a tener página</td><td class="n">8 de 100</td><td>Uniones que se deshicieron.</td></tr>
+<tr><td>Historias con más de 24 h entre su primera y su última nota</td><td class="n">103 de 441</td><td>Encadenamiento del cruce.</td></tr>
+<tr><td>Historias con 20 notas o más</td><td class="n">18</td><td>Mega-grupos (mirar a mano las 5 más grandes).</td></tr>
+<tr><td>Historias que llegan tarde por arrastre</td><td class="n">102 (27 verdes)</td><td>Noticias frescas que no se estrenan por una nota vieja del grupo.</td></tr>
+<tr><td>Noticias de 10 medios o más que nunca salieron</td><td class="n">al menos Castro</td><td>Lo grande que se pierde.</td></tr>
+<tr><td>Notas con cuerpo al primer intento, y motivos de rechazo</td><td>—</td><td>Está en <code>intentos-ia.json</code>: qué regla del verificador tira más notas.</td></tr>
+<tr><td>Notas que una persona corrigió o retiró después de salir solas</td><td>—</td><td>Está en <code>correcciones.json</code> y <code>retiradas.json</code>: dónde se equivoca el sistema.</td></tr>
+<tr><td>Minutos entre el primer medio y la publicación</td><td>—</td><td>Si Radar llega a tiempo (el Cementerio: 18 minutos).</td></tr>
+</tbody></table></div>
+
+<!-- ================================================================== -->
+<h2 id="limites">8. Qué no se pudo confirmar</h2>
+<ul>
+<li><b>Por qué la muerte de Locomotora Castro no salió el 14/10.</b> Hoy su grupo lleva el título de MasterChef y llega tarde; no hay registro guardado de cómo era el grupo en las corridas del 14/10.</li>
+<li><b>Qué deshizo la unión de las dos notas de la VTV</b> después de las 12:04. Lo seguro es que la unión no se guarda como decisión firme.</li>
+<li><b>Los +4 de "texto largo"</b> en el puntaje del Cementerio: la salida de la ingesta no guarda ese dato.</li>
+<li><b>Las cifras de la corrida de prueba</b> son de la PC a las 19:21, con una copia de la memoria del cruce más corta que la de la nube: en la nube los grupos pueden ser algo más grandes.</li>
+<li>No se corrió nada que llame a Gemini ni a Groq. Las fichas, las repetidas y los intentos se leyeron de los archivos publicados.</li>
+</ul>
+
+<footer>
+<p>Cómo se hizo: lectura de <code>ingesta/ingesta.mjs</code>, <code>cruce.mjs</code>, <code>lectura-ia.mjs</code>, <code>fuentes.mjs</code>, <code>criterio.mjs</code>, <code>verificar.mjs</code>, <code>repetidas-publicadas.mjs</code>, <code>reels/reescritura.mjs</code>, <code>web/scripts/generar-datos.mjs</code>, <code>web/lib/repetidas.js</code>, <code>archivo.js</code>, <code>cuerpo.js</code> y <code>texto.js</code>; <code>npm run auditar</code>; una corrida de <code>ingestar()</code> sin IA y sin escribir nada en el repositorio; y los datos publicados por "Actualizar la web" a las 19:04 del 15/10/2026 (<code>portada.json</code>, <code>archivo.json</code>, <code>fichas.json</code>, <code>fusionadas.json</code>, <code>intentos-ia.json</code>, <code>vistas.json</code>). Si esto y el código no coinciden, manda el código.</p>
+</footer>
+
+</main>
+</body>
+</html>

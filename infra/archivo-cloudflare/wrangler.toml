@@ -1,0 +1,46 @@
+# El archivo permanente de Radar Balcarce en Cloudflare (ver worker.mjs y docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md).
+#
+# ESTADO (15/10/2026): sólo existe el entorno "staging", que se sube a mano con el workflow "Archivo permanente (staging)" y vive en
+# workers.dev, SIN ninguna ruta de radarbalcarce.com. El entorno de producción está escrito pero NO tiene `routes`: mientras no se agreguen
+# (paso 5 de la guía de activación), subirlo no cambia nada del sitio.
+
+name = "radar-balcarce-archivo"
+main = "worker.mjs"
+compatibility_date = "2026-10-01"
+workers_dev = false
+
+# Para activarlo (sólo cuando la guía lo diga): descomentar y subir. Con el Worker delante, cada pedido a /nota/* pasa por acá primero.
+# OJO: tiene que quedar acá arriba, antes de la primera tabla ([[r2_buckets]]); más abajo TOML lo tomaría como parte de otra tabla.
+# routes = [
+#   { pattern = "radarbalcarce.com/nota/*", zone_name = "radarbalcarce.com" },
+# ]
+
+# Producción (todavía sin activar). El depósito se crea a mano en Cloudflare → R2 (privado, sin acceso público).
+[[r2_buckets]]
+binding = "ARCHIVO"
+bucket_name = "radar-archivo"
+
+[vars]
+ORIGEN_PAGES = "https://radar-balcarce.pages.dev"
+CACHE_SEGUNDOS = "3600"
+FOTOS_DE_RESPALDO = "0"
+ARCHIVO_ACTIVO = "1"
+ARCHIVO_PRIMERO = "0"
+
+# Ensayo: un Worker aparte, en workers.dev, con su propio depósito de prueba (NUNCA el de respaldos ni el de producción).
+# Los bindings y las variables no se heredan entre entornos: se repiten acá.
+[env.staging]
+name = "radar-balcarce-archivo-staging"
+workers_dev = true
+
+[[env.staging.r2_buckets]]
+binding = "ARCHIVO"
+bucket_name = "radar-archivo-staging"
+
+[env.staging.vars]
+ORIGEN_PAGES = "https://radar-balcarce.pages.dev"
+CACHE_SEGUNDOS = "60"
+FOTOS_DE_RESPALDO = "1"
+ARCHIVO_ACTIVO = "1"
+# Sólo en el ensayo: mira R2 antes que el sitio, para poder probar en workers.dev una nota que el sitio todavía tiene.
+ARCHIVO_PRIMERO = "1"

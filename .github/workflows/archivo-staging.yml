@@ -1,0 +1,98 @@
+name: Archivo permanente (staging)
+
+# Sube el Worker del archivo permanente (infra/archivo-cloudflare/, 15/10/2026) a un nombre de ENSAYO en workers.dev y, si se pide, le carga
+# una muestra de notas en un depósito R2 de PRUEBA. Es SÓLO a mano y NO toca nada de producción:
+#   · el Worker se llama radar-balcarce-archivo-staging (el de producción, radar-balcarce-archivo, no se sube desde acá);
+#   · no tiene ninguna ruta de radarbalcarce.com: sólo responde en su dirección de workers.dev;
+#   · el depósito es radar-archivo-staging. NUNCA el de respaldos (R2_RESPALDOS) ni el de fotos (R2_FOTOS): el exportador se niega a subir a
+#     un depósito que no tenga "staging" o "prueba" en el nombre, salvo con --produccion, que este workflow no usa.
+# No commitea nada. Guía completa: docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md.
+#
+# Hace falta (ya existen; los pega una persona, nunca en un chat):
+#   secreto  CLOUDFLARE_API_TOKEN   con "Workers Scripts: Edit" y "Workers R2 Storage: Edit" (el mismo del reloj y del respaldo)
+#   secreto  CLOUDFLARE_ACCOUNT_ID
+
+on:
+  workflow_dispatch:
+    inputs:
+      cargar_muestra:
+        description: 'Compilar el sitio y subir una muestra de notas al depósito de prueba'
+        type: boolean
+        default: false
+      cuantas:
+        description: 'Cuántas notas subir como muestra (las más viejas del sitio)'
+        type: string
+        default: '20'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: archivo-staging
+  cancel-in-progress: false
+
+jobs:
+  staging:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      TZ: America/Argentina/Buenos_Aires
+      BUCKET_DE_PRUEBA: radar-archivo-staging
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # Las pruebas del Worker y del exportador (no tocan la red): si fallan, no se sube nada.
+      - name: Pruebas del archivo permanente
+        run: node --test pruebas/archivo-cloudflare.test.mjs pruebas/archivar-a-r2.test.mjs
+
+      - name: Crear el depósito de prueba si no existe
+        run: |
+          if npx --yes wrangler@4.139.0 r2 bucket list | grep -q "name:[[:space:]]*$BUCKET_DE_PRUEBA\$"; then
+            echo "El depósito $BUCKET_DE_PRUEBA ya existe."
+          else
+            npx --yes wrangler@4.139.0 r2 bucket create "$BUCKET_DE_PRUEBA"
+          fi
+
+      - name: Subir el Worker de ensayo
+        working-directory: infra/archivo-cloudflare
+        run: npx --yes wrangler@4.139.0 deploy --env staging
+
+      - name: Instalar el sitio (sólo si hay muestra)
+        if: ${{ inputs.cargar_muestra }}
+        working-directory: web
+        run: |
+          n=0; until npm ci --no-audit --no-fund; do n=$((n+1)); [ $n -ge 3 ] && exit 1; echo "npm ci falló (intento $n), se reintenta"; sleep 20; done
+
+      - name: Compilar el sitio (sólo si hay muestra)
+        if: ${{ inputs.cargar_muestra }}
+        working-directory: web
+        run: npx next build
+        env:
+          SITIO: https://radarbalcarce.com
+          FOTOS_BASE: ${{ vars.FOTOS_BASE }}
+
+      # Con un tope chico a propósito (un poco menos que las notas que hay) para que algunas cuenten como "viejas". La muestra va al
+      # depósito de PRUEBA; --subir es lo que hace que escriba, y la guarda del exportador impide otro depósito.
+      - name: Subir la muestra al depósito de prueba
+        if: ${{ inputs.cargar_muestra }}
+        env:
+          CUANTAS: ${{ inputs.cuantas }}
+        run: |
+          node web/scripts/archivar-a-r2.mjs --subir --bucket="$BUCKET_DE_PRUEBA" --tope=1 --margen=0 --max="$CUANTAS" --manifiesto="$RUNNER_TEMP/manifiesto.json" | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Qué probar ahora
+        run: |
+          {
+            echo "- Worker de ensayo: **radar-balcarce-archivo-staging** (dirección de workers.dev en Cloudflare → Workers)."
+            echo "- Depósito de prueba: **$BUCKET_DE_PRUEBA**."
+            echo "- Probar: abrir una nota subida en esa dirección (por ejemplo \`/nota/<titular-id>\`) y una que no exista (tiene que dar 404 con la página del sitio)."
+            echo "- Producción **no cambió**: ninguna ruta de radarbalcarce.com apunta a este Worker."
+          } >> "$GITHUB_STEP_SUMMARY"
