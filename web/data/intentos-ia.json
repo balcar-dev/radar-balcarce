@@ -261,11 +261,6 @@
   "ultimo": "2026-10-13T17:33:56.444Z",
   "motivo": "con cuerpo"
  },
- "170rgay": {
-  "intentos": 1,
-  "ultimo": "2026-10-08T16:32:04.668Z",
-  "motivo": "con cuerpo"
- },
  "175ztwv": {
   "intentos": 1,
   "ultimo": "2026-10-08T18:32:50.363Z",
@@ -295,6 +290,11 @@
   "intentos": 2,
   "ultimo": "2026-10-15T15:34:16.260Z",
   "motivo": "con cuerpo"
+ },
+ "17pbe2s": {
+  "intentos": 1,
+  "ultimo": "2026-10-15T16:33:45.441Z",
+  "motivo": "cuerpo: 2 problemas (relleno, copia): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 55 palabras"
  },
  "17pigci": {
   "intentos": 1,
@@ -601,6 +601,11 @@
  "1e8rdd4": {
   "intentos": 2,
   "ultimo": "2026-10-09T22:32:01.209Z",
+  "motivo": "con cuerpo"
+ },
+ "1ect1xs": {
+  "intentos": 1,
+  "ultimo": "2026-10-15T16:33:45.441Z",
   "motivo": "con cuerpo"
  },
  "1eq948q": {
@@ -975,6 +980,11 @@
   "ultimo": "2026-10-12T22:02:01.969Z",
   "motivo": "cuerpo corto (68 palabras)"
  },
+ "1o2y75j": {
+  "intentos": 1,
+  "ultimo": "2026-10-15T16:33:45.441Z",
+  "motivo": "con cuerpo"
+ },
  "1o7nfps": {
   "intentos": 1,
   "ultimo": "2026-10-13T13:02:02.564Z",
@@ -1304,6 +1314,11 @@
   "ultimo": "2026-10-13T02:02:24.723Z",
   "motivo": "con cuerpo"
  },
+ "1ycwu60": {
+  "intentos": 1,
+  "ultimo": "2026-10-15T16:33:45.441Z",
+  "motivo": "con cuerpo"
+ },
  "1ydjysy": {
   "intentos": 2,
   "ultimo": "2026-10-14T19:02:04.111Z",
@@ -1375,9 +1390,9 @@
   "motivo": "con cuerpo"
  },
  "3fo5xo": {
-  "intentos": 2,
-  "ultimo": "2026-10-15T16:04:52.138Z",
-  "motivo": "cuerpo corto (53 palabras)"
+  "intentos": 3,
+  "ultimo": "2026-10-15T16:33:45.441Z",
+  "motivo": "cuerpo corto (62 palabras)"
  },
  "3i2j4g": {
   "intentos": 1,
@@ -1669,9 +1684,9 @@
   "motivo": "con cuerpo"
  },
  "aa5npj": {
-  "intentos": 1,
-  "ultimo": "2026-10-15T15:04:12.691Z",
-  "motivo": "con cuerpo"
+  "intentos": 2,
+  "ultimo": "2026-10-15T16:33:45.441Z",
+  "motivo": "título o bajada: 2 problemas (numero): el guion dice 14.000 y la fuente no lo dice"
  },
  "ampmp1": {
   "intentos": 1,
@@ -1759,9 +1774,9 @@
   "motivo": "con cuerpo"
  },
  "cq95nc": {
-  "intentos": 1,
-  "ultimo": "2026-10-15T16:04:52.138Z",
-  "motivo": "cuerpo: 2 problemas (repite, copia): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 62 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-15T16:33:45.441Z",
+  "motivo": "con cuerpo"
  },
  "d1rexu": {
   "intentos": 1,
@@ -2297,11 +2312,6 @@
   "ultimo": "2026-10-10T01:02:01.933Z",
   "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2603 (line 27 column 14)"
  },
- "r09m78": {
-  "intentos": 1,
-  "ultimo": "2026-10-08T16:32:04.668Z",
-  "motivo": "con cuerpo"
- },
  "r0o8z3": {
   "intentos": 2,
   "ultimo": "2026-10-12T14:02:04.283Z",
@@ -2368,8 +2378,8 @@
   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 2 y la fuente no lo dice"
  },
  "sosoq0": {
-  "intentos": 1,
-  "ultimo": "2026-10-15T16:04:52.138Z",
+  "intentos": 2,
+  "ultimo": "2026-10-15T16:33:45.441Z",
   "motivo": "con cuerpo"
  },
  "sotcms": {
@@ -2480,16 +2490,6 @@
  "vn13xu": {
   "intentos": 1,
   "ultimo": "2026-10-14T13:32:14.020Z",
-  "motivo": "con cuerpo"
- },
- "vnuraj": {
-  "intentos": 1,
-  "ultimo": "2026-10-08T16:32:04.668Z",
-  "motivo": "con cuerpo"
- },
- "vr9xc5": {
-  "intentos": 2,
-  "ultimo": "2026-10-08T16:32:04.668Z",
   "motivo": "con cuerpo"
  },
  "vt870i": {
@@ -2672,6 +2672,11 @@
  "zjtene": {
   "intentos": 1,
   "ultimo": "2026-10-13T17:33:56.444Z",
+  "motivo": "con cuerpo"
+ },
+ "zkgilr": {
+  "intentos": 1,
+  "ultimo": "2026-10-15T16:33:45.441Z",
   "motivo": "con cuerpo"
  },
  "zlbsz6": {
