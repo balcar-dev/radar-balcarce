@@ -2353,63 +2353,54 @@
       }
     },
     "2026-10-05": {
-      "referentes": {
-        "facebook.com": 26,
-        "directo": 5
-      },
-      "paises": {},
-      "dispositivos": {
-        "desktop": 60,
-        "mobile": 20
-      },
       "notas": {
-        "1njgnul": 8,
-        "cn09w9": 6,
-        "12yxkc9": 5,
-        "z08pph": 4,
-        "futbolresultadosliga20261002": 4,
-        "uml8iq": 3,
-        "futbolpartidosliga20261002": 2,
-        "173ttfz": 2,
-        "1vnue0q": 2,
-        "wb8pre": 2,
-        "uzokxq": 2,
-        "n1xmig": 2,
-        "c1nalz": 2,
-        "1ni344u": 1
+        "1njgnul": 10,
+        "wb8pre": 10,
+        "futbolresultadosliga20261002": 10,
+        "n1xmig": 10
       },
       "paginas": {
-        "/": 19,
-        "/seccion/futbol": 7,
-        "/tablas/liga-profesional": 4,
-        "/seccion/tecnologia": 3,
-        "/seccion/automovilismo": 2
+        "/": 20,
+        "/seccion/futbol": 20
       },
-      "visitas": 31,
+      "dispositivos": {
+        "desktop": 50,
+        "mobile": 30
+      },
+      "paises": {
+        "US": 40,
+        "AR": 30,
+        "SE": 10
+      },
+      "visitas": 30,
       "vistas": 80,
+      "referentes": {
+        "facebook.com": 20,
+        "directo": 10
+      },
       "horas": [
         0,
         0,
-        2,
         0,
         0,
-        1,
-        0,
-        4,
         0,
         0,
-        33,
         0,
-        4,
-        0,
-        9,
-        9,
-        2,
+        10,
         0,
         0,
-        3,
+        30,
         0,
-        13,
+        0,
+        0,
+        10,
+        10,
+        10,
+        0,
+        0,
+        0,
+        0,
+        10,
         0,
         0
       ]
@@ -2665,7 +2656,50 @@
     },
     "2026-10-09": {
       "referentes": {
-        "facebook.com": 100
+        "facebook.com": 46,
+        "directo": 5,
+        "dataindex.pro": 1
+      },
+      "notas": {
+        "18jx7kk": 17,
+        "1v0pyz6": 11,
+        "14mxql1": 7,
+        "6q5i7o": 6,
+        "repaso20261009manana": 6,
+        "1j94k5u": 6,
+        "17di2tc": 5,
+        "1aizybd": 4,
+        "aqy95q": 4,
+        "175ztwv": 4,
+        "16fjrrx": 3,
+        "601x8n": 3,
+        "173ttfz": 2,
+        "l5o975": 2,
+        "ypnvl8": 2,
+        "1trv7re": 2,
+        "xlon5q": 2,
+        "5crmtt": 1
+      },
+      "paginas": {
+        "/": 19,
+        "/seccion/agro": 10,
+        "/seccion/futbol": 7,
+        "/seccion/automovilismo": 4,
+        "/seccion/cultura-2": 4,
+        "/seccion/argentina": 4,
+        "/seccion/cultura": 2,
+        "/quienes-somos": 2
+      },
+      "paises": {
+        "US": 63,
+        "AR": 62,
+        "IE": 9,
+        "SE": 4,
+        "RU": 1
+      },
+      "dispositivos": {
+        "mobile": 90,
+        "desktop": 49
       },
       "visitas": 52,
       "vistas": 139,
@@ -2678,38 +2712,55 @@
         0,
         0,
         0,
+        2,
+        11,
+        6,
+        64,
+        16,
+        2,
+        9,
+        10,
         0,
         0,
         0,
+        2,
         0,
+        16,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "paises": {},
-      "dispositivos": {
-        "mobile": 400
-      },
-      "notas": {},
-      "paginas": {}
+        1
+      ]
     },
     "2026-10-10": {
-      "paises": {
-        "US": 47,
-        "AR": 45,
-        "SE": 8,
-        "IE": 5,
-        "PL": 4,
-        "DE": 2
+      "notas": {
+        "4u38d4": 10,
+        "u6j4ho": 8,
+        "p4vc8j": 8,
+        "1cj5sd": 7,
+        "1vwpejn": 5,
+        "17wk7q3": 5,
+        "15zr9uw": 5,
+        "1nhtdpr": 4,
+        "jul3dj": 4,
+        "1u383pj": 4,
+        "2qmh95": 4,
+        "1m8dnbh": 4,
+        "1360zul": 3,
+        "1qeim0": 3,
+        "9zwjal": 3,
+        "vw0kpx": 2,
+        "k1kiay": 2,
+        "146dyw0": 2,
+        "190bbf8": 2
+      },
+      "paginas": {
+        "/": 11,
+        "/seccion/politica": 9,
+        "/seccion/automovilismo": 4,
+        "/seccion/tecnologia": 2
+      },
+      "referentes": {
+        "facebook.com": 37,
+        "directo": 3
       },
       "horas": [
         0,
@@ -2737,53 +2788,22 @@
         0,
         0
       ],
-      "referentes": {
-        "facebook.com": 37,
-        "directo": 3
-      },
-      "dispositivos": {},
-      "visitas": 40,
-      "vistas": 111,
-      "notas": {
-        "4u38d4": 10,
-        "u6j4ho": 8,
-        "p4vc8j": 8,
-        "1cj5sd": 7,
-        "1vwpejn": 5,
-        "17wk7q3": 5,
-        "15zr9uw": 5,
-        "1nhtdpr": 4,
-        "jul3dj": 4,
-        "1u383pj": 4,
-        "2qmh95": 4,
-        "1m8dnbh": 4,
-        "1360zul": 3,
-        "1qeim0": 3,
-        "9zwjal": 3,
-        "vw0kpx": 2,
-        "k1kiay": 2,
-        "146dyw0": 2,
-        "190bbf8": 2
-      },
-      "paginas": {
-        "/": 11,
-        "/seccion/politica": 9,
-        "/seccion/automovilismo": 4,
-        "/seccion/tecnologia": 2
-      }
-    },
-    "2026-10-11": {
-      "visitas": 0,
-      "vistas": 0,
-      "referentes": {
-        "facebook.com": 9,
-        "directo": 5,
-        "google.com": 1
+      "dispositivos": {
+        "mobile": 69,
+        "desktop": 42
       },
       "paises": {
-        "AR": 60,
-        "US": 40
+        "US": 47,
+        "AR": 45,
+        "SE": 8,
+        "IE": 5,
+        "PL": 4,
+        "DE": 2
       },
+      "visitas": 40,
+      "vistas": 111
+    },
+    "2026-10-11": {
       "notas": {
         "jiv3ba": 9,
         "1gkf7qu": 5,
@@ -2813,6 +2833,11 @@
         "/dolar": 2,
         "/util": 2
       },
+      "referentes": {
+        "facebook.com": 9,
+        "directo": 5,
+        "google.com": 1
+      },
       "horas": [
         0,
         0,
@@ -2839,6 +2864,12 @@
         0,
         51
       ],
+      "visitas": 15,
+      "vistas": 98,
+      "paises": {
+        "AR": 67,
+        "US": 31
+      },
       "dispositivos": {
         "mobile": 86,
         "desktop": 12
@@ -2919,11 +2950,6 @@
       }
     },
     "2026-10-13": {
-      "notas": {},
-      "paginas": {},
-      "referentes": {},
-      "visitas": 0,
-      "vistas": 0,
       "horas": [
         0,
         0,
@@ -2933,37 +2959,105 @@
         0,
         0,
         0,
+        8,
+        3,
+        14,
+        0,
+        4,
+        7,
+        8,
+        72,
+        3,
+        3,
+        6,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        10,
+        8,
         0
       ],
-      "dispositivos": {},
-      "paises": {}
+      "referentes": {
+        "facebook.com": 33,
+        "directo": 5,
+        "google.com": 4
+      },
+      "paises": {
+        "AR": 91,
+        "US": 32,
+        "IE": 8,
+        "FR": 8,
+        "SE": 6,
+        "PY": 1
+      },
+      "dispositivos": {
+        "desktop": 95,
+        "mobile": 51
+      },
+      "visitas": 42,
+      "vistas": 146,
+      "notas": {
+        "pt4b1r": 12,
+        "uestws": 9,
+        "95znl3": 9,
+        "3xm1ge": 7,
+        "1aqdhjn": 6,
+        "1dun8ft": 4,
+        "fdr535": 3,
+        "um5udw": 3,
+        "1c2cg52": 2,
+        "pl4s36": 2,
+        "1qszs3z": 2,
+        "mj08wf": 2,
+        "19xpc0o": 2,
+        "1vcnnfl": 2,
+        "br4g49": 2,
+        "1y2q715": 2,
+        "fa17ki": 2
+      },
+      "paginas": {
+        "/": 55,
+        "/farmacias": 8,
+        "/seccion/cultura": 4,
+        "/seccion/automovilismo": 2,
+        "/quienes-somos": 2,
+        "/seccion/balcarce": 2,
+        "/agenda": 2
+      }
     },
     "2026-10-14": {
-      "visitas": 0,
-      "vistas": 0,
-      "dispositivos": {},
-      "paises": {
-        "US": 33,
-        "AR": 28,
-        "IE": 9,
-        "SE": 2
+      "notas": {
+        "505otd": 12,
+        "5biv0y": 8,
+        "1ge6irq": 8,
+        "efemeride20261014": 7,
+        "u043fh": 6,
+        "11uyvlg": 4,
+        "1iy72x8": 3,
+        "1aylfrc": 2,
+        "pdqhm3": 2,
+        "wzunxc": 2,
+        "10aoo7v": 2,
+        "sklj66": 2,
+        "gy4i31": 2,
+        "1fi9fiz": 2,
+        "11eff0s": 2,
+        "zfpkeo": 2,
+        "wm8hav": 2
       },
-      "referentes": {},
+      "paginas": {
+        "/": 13
+      },
+      "visitas": 52,
+      "vistas": 81,
+      "referentes": {
+        "facebook.com": 49,
+        "directo": 2,
+        "google.com": 1
+      },
+      "dispositivos": {
+        "desktop": 46,
+        "mobile": 35
+      },
       "horas": [
         0,
         0,
@@ -2973,25 +3067,29 @@
         0,
         0,
         0,
+        16,
+        10,
+        8,
+        8,
+        7,
+        2,
+        2,
+        11,
+        8,
         0,
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        8,
+        1,
         0
       ],
-      "notas": {},
-      "paginas": {}
+      "paises": {
+        "US": 35,
+        "AR": 29,
+        "IE": 9,
+        "SE": 8
+      }
     },
     "2026-10-15": {
       "notas": {},
