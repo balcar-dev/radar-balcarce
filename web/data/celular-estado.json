@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T08:32:07.132Z",
- "portada": 44,
+ "generado": "2026-10-15T09:01:52.070Z",
+ "portada": 43,
  "archivo": 1100,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-15T08:32:07.171Z",
+  "generado": "2026-10-15T09:01:52.103Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 47,
     "notas": [
      {
       "id": "1e22az3",
@@ -103,9 +103,9 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "cdnqde",
-      "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
-      "seccion": "Cultura y agenda"
+      "id": "wzunxc",
+      "titulo": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
+      "seccion": "Balcarce"
      },
      {
       "id": "fav3c1",
@@ -126,19 +126,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 34,
-    "notas": [
-     {
-      "id": "wzunxc",
-      "titulo": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "17v35o5",
-      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    },
    {
     "nombre": "podcast",
@@ -147,8 +136,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 22,
+    "segundos": 34,
     "notas": [
+     {
+      "id": "17v35o5",
+      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
+      "seccion": "Balcarce"
+     },
      {
       "id": "wfa595",
       "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
