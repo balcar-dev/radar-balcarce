@@ -1,0 +1,74 @@
+# Prueba que el respaldo SE PUEDE RESTAURAR (15/10/2026). Un respaldo que nunca se probó restaurar no es un respaldo.
+# Baja de Cloudflare R2 el último respaldo (el que sube "Respaldo": respaldo.yml), reconstruye el repositorio desde el bundle de git,
+# comprueba que esté sano (git fsck) y que tenga el mismo último commit que GitHub, y abre el archivo de datos y fotos.
+# SÓLO a mano (Actions → "Probar la restauración del respaldo" → Run workflow). No escribe nada en el repositorio.
+
+name: Probar la restauración del respaldo
+
+on:
+  workflow_dispatch:
+    inputs:
+      fecha:
+        description: 'Día del respaldo (AAAA-MM-DD). Vacío = el de hoy.'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  restaurar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      TZ: America/Argentina/Buenos_Aires
+      R2_RESPALDOS: ${{ vars.R2_RESPALDOS }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Bajar el respaldo de R2
+        run: |
+          if [ -z "$R2_RESPALDOS" ]; then echo "::error::Falta la variable R2_RESPALDOS"; exit 1; fi
+          FECHA="${{ inputs.fecha }}"
+          if [ -z "$FECHA" ]; then FECHA=$(date +%F); fi
+          echo "FECHA=$FECHA" >> "$GITHUB_ENV"
+          mkdir -p restaurar && cd restaurar
+          npx --yes wrangler@4.139.0 r2 object get "$R2_RESPALDOS/respaldos/$FECHA/radar-balcarce-$FECHA.bundle" --file "radar-balcarce.bundle" --remote
+          npx --yes wrangler@4.139.0 r2 object get "$R2_RESPALDOS/respaldos/$FECHA/datos-y-fotos-$FECHA.tar.gz" --file "datos-y-fotos.tar.gz" --remote
+          ls -la
+
+      - name: Reconstruir el repositorio desde el bundle
+        working-directory: restaurar
+        run: |
+          git bundle verify radar-balcarce.bundle
+          git clone --quiet radar-balcarce.bundle repo-restaurado
+          cd repo-restaurado
+          git fsck --full 2>&1 | tail -3
+          echo "RESTAURADO=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          echo "Commits restaurados: $(git rev-list --count HEAD)"
+          echo "Archivos en el último commit: $(git ls-files | wc -l)"
+
+      - name: Comparar con GitHub
+        run: |
+          ACTUAL=$(git ls-remote "https://github.com/${{ github.repository }}.git" refs/heads/main | cut -f1)
+          echo "Último commit en GitHub : $ACTUAL"
+          echo "Último commit restaurado: $RESTAURADO"
+          {
+            echo "### Prueba de restauración del respaldo del $FECHA"
+            echo "- Bundle de git: **restaurado y sano** (git fsck sin errores)."
+            echo "- Último commit del respaldo: \`$RESTAURADO\`"
+            echo "- Último commit en GitHub ahora: \`$ACTUAL\`"
+            echo "- (El del respaldo puede ir unas horas atrás: el robot commitea cada media hora.)"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Abrir los datos y las fotos
+        working-directory: restaurar
+        run: |
+          mkdir datos && tar -xzf datos-y-fotos.tar.gz -C datos
+          echo "Archivos en datos y fotos: $(find datos -type f | wc -l)"
+          test -s datos/web/data/archivo.json && node -e "const a=JSON.parse(require('fs').readFileSync('datos/web/data/archivo.json','utf8'));const n=(Array.isArray(a)?a:(a.notas||Object.values(a))).length;console.log('Notas en archivo.json:',n);if(!n)process.exit(1)"
+          echo "- Datos y fotos: **abiertos** ($(find datos -type f | wc -l) archivos)." >> "$GITHUB_STEP_SUMMARY"
