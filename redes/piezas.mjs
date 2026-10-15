@@ -17,7 +17,7 @@
 //
 // Sin red y sin reloj propio: se prueba entera.
 
-import { yaPublicada } from './elegir.mjs';
+import { yaPublicada, ponerOrigen } from './elegir.mjs';
 import { diaAR, minutoDelDiaAR, diaSemanaAR, minutosDeHora } from '../ingesta/zona.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
 import { diaRotativoDeUtiles } from '../ingesta/utiles.mjs';
@@ -145,16 +145,21 @@ export const tipoInstagram = (pieza) => (pieza.tipo === 'reel' ? 'REELS' : 'STOR
 /** El aviso de que la voz es sintética, como texto en el posteo (C-9, 8/10/2026; decidido: texto, sin la etiqueta visual de Meta). */
 export const AVISO_DE_VOZ = 'Voz generada con inteligencia artificial.';
 
-export function pieDePieza(pieza) {
+/**
+ * El texto de un reel. `red` ('facebook' | 'instagram'), si se la pasa, le agrega las UTM a los enlaces de la lista de
+ * notas (campaña `repaso`, 15/10/2026): sin ella los enlaces salen limpios.
+ */
+export function pieDePieza(pieza, red = null) {
   if (pieza.tipo !== 'reel') return '';
-  return `${pieDeReel(pieza)}\n\n${AVISO_DE_VOZ}`;
+  return `${pieDeReel(pieza, red)}\n\n${AVISO_DE_VOZ}`;
 }
 
-function pieDeReel(pieza) {
+function pieDeReel(pieza, red = null) {
   // Un podcast lista las notas que cuenta, cada una con su enlace. La fuente
   // no se nombra: eso está en la nota de la web.
   if (pieza.items?.length) {
-    const lista = pieza.items.map((i) => `• ${i.titulo}${i.enlace ? `\n  ${i.enlace}` : ''}`).join('\n');
+    const conRed = (e) => (red ? ponerOrigen(e, { fuente: red, campana: 'repaso', contenido: pieza.nombre }) : e);
+    const lista = pieza.items.map((i) => `• ${i.titulo}${i.enlace ? `\n  ${conRed(i.enlace)}` : ''}`).join('\n');
     return `${pieza.titulo}\n\n${lista}\n\nMás en ${SITIO}`;
   }
   if (pieza.nombre === 'podcast') {

@@ -65,7 +65,7 @@ import {
   anotarPendientes, novedadesEnRedes, textoRedes, datosDelDia, textoResumen, armarMensaje, textoInformeDelDia,
 } from './avisos.mjs';
 import {
-  medir, tocaMedir, turnoDeMedicion, agregarPunto, textoEstadisticas, nombresDeCaminos,
+  medir, tocaMedir, turnoDeMedicion, agregarPunto, textoEstadisticas, nombresDeCaminos, esIncoherente,
 } from './estadisticas.mjs';
 import { mezclarDias } from './estadisticas-detalle.mjs';
 import { medirPiezas } from './estadisticas-piezas.mjs';
@@ -246,9 +246,27 @@ export function avisosDeEfemerides({ ahora, ultimoDia = null, fijasHasta = null 
   return avisos;
 }
 
+/**
+ * ¿La lectura de visitas de Cloudflare viene fallando? Un día es "sin lectura" si todas sus mediciones (9 y 21) quedaron
+ * incoherentes, sin sitio, o con la web en cero o contradictoria (15/10/2026: el 13, 14 y 15 figuraron en cero tres días sin
+ * que nadie lo notara). Con los dos últimos días con mediciones así, se avisa (poco urgente: no tira nada abajo).
+ * `puntos` es web/data/estadisticas.json → puntos.
+ */
+export function lecturaWebFallando(puntos = []) {
+  const malo = (p) => p.cloudflare === 'incoherente' || p.cloudflare === 'sitio-no-encontrado' || (p.web ? esIncoherente(p.web) : false);
+  const porDia = new Map();
+  for (const p of puntos ?? []) {
+    if (!p?.cuando || (!p.web && !p.cloudflare)) continue;
+    const dia = diaAR(new Date(p.cuando));
+    porDia.set(dia, [...(porDia.get(dia) ?? []), p]);
+  }
+  const ultimos = [...porDia.entries()].sort((a, b) => a[0].localeCompare(b[0])).slice(-2);
+  return ultimos.length === 2 && ultimos.every(([, ps]) => ps.every(malo));
+}
+
 export function evaluar({
   ahora, web, www = null, corridas = {}, libro = {}, contenido = null, auditoria = null, contrato = null,
-  redesActivas = true, claves = [], voces = null, copiasEnInstagram = [], efemerides = null,
+  redesActivas = true, claves = [], voces = null, copiasEnInstagram = [], efemerides = null, puntosWeb = null,
 }) {
   const problemas = [];
   const de = (clave, nivel, texto) => problemas.push({ clave, nivel, texto });
@@ -266,6 +284,11 @@ export function evaluar({
     }
   }
   if (www && !www.redirige) de('www', 'media', 'www.radarbalcarce.com ya no redirige al dominio sin www.');
+
+  // --- que las estadísticas de la web no estén fallando en silencio (15/10: tres días en cero sin aviso)
+  if (puntosWeb && lecturaWebFallando(puntosWeb)) {
+    de('estadisticas-sin-lectura', 'media', 'Las estadísticas de la web llevan dos días sin una lectura confiable de Cloudflare (números que no cierran, o todo en cero). Las visitas de esos días no son reales. Revisá CLOUDFLARE_ACCOUNT_ID y que el sitio de analítica 63fea168 aparezca en esa cuenta (docs/analiticas/ANALISIS.md, parte 1.3).');
+  }
 
   // --- lo que se pidió que NO aparezca (reglas 1 a 3, docs/10-REGLAS-Y-PRUEBAS.md): si vuelve, se avisa
   if (contenido?.home) {
@@ -751,6 +774,7 @@ async function main() {
   const efemerides = { ultimoDia: diasArmados.at(-1) ?? null, fijasHasta: vigencias[0] ?? null };
   const problemas = evaluar({
     ...obs, libro, auditoria, contrato, redesActivas, efemerides, contenido: { ...(obs.contenido ?? {}), cuerpos },
+    puntosWeb: leer(ESTADISTICAS, { puntos: [] })?.puntos ?? [],
   });
 
   if (probarCierre) {

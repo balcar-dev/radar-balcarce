@@ -38,6 +38,7 @@ import { ZONA } from '../ingesta/zona.mjs';
 import { traerTexto } from '../ingesta/articulo.mjs';
 import { MEDIOS_OFICIALES } from '../ingesta/fuentes.mjs';
 import { palabrasDeTitular } from '../redes/elegir.mjs';
+import { anotarUsoIA } from '../redes/uso-ia.mjs';
 import { rutaDeNota } from '../web/lib/ruta.js';
 import { sinTildes } from '../web/lib/texto.js';
 import { tieneCuerpo, palabrasDe } from '../web/lib/cuerpo.js';
@@ -375,9 +376,14 @@ export async function reescribir(nota, {
   }
   if (!res) throw new Error('no se pudo pedir a Gemini');
   USO_DE_CLAVES[usada] += 1;
-  if (!res.ok) throw new Error(`HTTP ${res.status} (clave ${usada}): ${(await res.text()).slice(0, 200)}`);
+  if (!res.ok) {
+    anotarUsoIA({ tarea: 'redaccion', modelo: MODELO, clave: usada, error: res.status });
+    throw new Error(`HTTP ${res.status} (clave ${usada}): ${(await res.text()).slice(0, 200)}`);
+  }
 
   const j = await res.json();
+  // Los tokens de la llamada (usageMetadata), por día: web/data/uso-ia.json (redes/uso-ia.mjs). Nunca frena la corrida.
+  anotarUsoIA({ tarea: 'redaccion', modelo: MODELO, clave: usada, respuesta: j });
   const texto = j.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') ?? '';
   const salida = limpiarJson(texto);
   if (!salida.titulo || !salida.guion) throw new Error('la respuesta no trae título o guion');

@@ -8,8 +8,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {
   turnoDeMedicion, tocaMedir, agregarPunto, puntoDeHace, variacion, tokenDeCloudflare,
-  estadisticasDeCloudflare, estadisticasDeMeta, medir, textoEstadisticas, nombresDeCaminos, MAXIMO_DE_PUNTOS,
+  estadisticasDeCloudflare, estadisticasDeMeta, medir, textoEstadisticas, nombresDeCaminos, MAXIMO_DE_PUNTOS, esIncoherente,
 } from '../redes/estadisticas.mjs';
+import { evaluar, lecturaWebFallando } from '../redes/vigilar.mjs';
 
 const A = (hhmm, dia = '25') => new Date(`2026-09-${dia}T${hhmm}:00-03:00`);
 const respuesta = (cuerpo, status = 200) => ({ ok: status >= 200 && status < 300, status, json: async () => cuerpo });
@@ -238,10 +239,104 @@ test('Cloudflare: si hay dos sitios, manda el de la etiqueta que lleva la págin
         { count: 1, dimensions: { siteTag: 'AUTOMATICO-EN-CERO', requestHost: 'radarbalcarce.com' } },
       ] }] } } });
     }
-    const g = [{ count: 0, sum: { visits: 0 } }];
-    return respuesta({ data: { viewer: { accounts: [{ u12: g, a12: g, u24: g, a24: g, top: [] }] } } });
+    const g = (n) => [{ count: n * 3, sum: { visits: n } }];
+    return respuesta({ data: { viewer: { accounts: [{ u12: g(2), a12: g(2), u24: g(4), a24: g(4), top: [] }] } } });
   };
   const r = await estadisticasDeCloudflare({ cuenta: 'C', token: 'T', ahora: A('21:00'), fetchFn });
   assert.equal(r.siteTag, tag);
   assert.match(pedidos[1], new RegExp(`siteTag: "${tag}"`));
+});
+
+// ---------------------------------------- lecturas incoherentes (15/10/2026)
+
+/** Un Cloudflare que da siempre las mismas ventanas ({vistas, visitas} por alias). */
+function cloudflareConVentanas(ventanas, { sitios = null } = {}) {
+  const pedidos = [];
+  const g = ([vistas, visitas]) => [{ count: vistas, sum: { visits: visitas } }];
+  const fetchFn = async (_url, init) => {
+    const q = JSON.parse(init.body).query;
+    pedidos.push(q);
+    if (q.includes('sitios:')) return respuesta({ data: { viewer: { accounts: [{ sitios: sitios ?? [{ count: 9, dimensions: { siteTag: 'BUENO', requestHost: 'radarbalcarce.com' } }] }] } } });
+    const v = typeof ventanas === 'function' ? ventanas(pedidos.filter((x) => x.includes('u12:')).length) : ventanas;
+    return respuesta({ data: { viewer: { accounts: [{ u12: g(v.u12), a12: g(v.a12), u24: g(v.u24), a24: g(v.a24), top: [] }] } } });
+  };
+  return { fetchFn, pedidos };
+}
+
+test('12/10: 16 visitas en 12 h y 0 en 24 h es una falla de lectura: se repite y, si sigue, no se guarda', async () => {
+  const { fetchFn, pedidos } = cloudflareConVentanas({ u12: [60, 16], a12: [0, 0], u24: [0, 0], a24: [90, 40] });
+  const r = await estadisticasDeCloudflare({ cuenta: 'C', token: 'T', ahora: A('09:00'), fetchFn, esperaReintento: 0 });
+  assert.equal(r.ok, false);
+  assert.equal(r.incoherente, true);
+  assert.equal(r.web, undefined, 'no se devuelve la lectura mala');
+  assert.equal(pedidos.filter((q) => q.includes('u12:')).length, 2, 'una sola repetición');
+});
+
+test('15/10: todo en cero tampoco es un dato', async () => {
+  const { fetchFn } = cloudflareConVentanas({ u12: [0, 0], a12: [0, 0], u24: [0, 0], a24: [0, 0] });
+  const r = await estadisticasDeCloudflare({ cuenta: 'C', token: 'T', ahora: A('09:00', '15'), fetchFn, esperaReintento: 0 });
+  assert.equal(r.ok, false);
+  assert.equal(r.incoherente, true);
+});
+
+test('si la repetición sale bien, se usa esa lectura', async () => {
+  const { fetchFn } = cloudflareConVentanas((n) => (n === 1
+    ? { u12: [0, 0], a12: [0, 0], u24: [0, 0], a24: [0, 0] }
+    : { u12: [30, 10], a12: [20, 8], u24: [70, 25], a24: [60, 20] }));
+  const r = await estadisticasDeCloudflare({ cuenta: 'C', token: 'T', ahora: A('09:00'), fetchFn, esperaReintento: 0 });
+  assert.equal(r.ok, true);
+  assert.equal(r.web.u24.vistas, 70);
+});
+
+test('esIncoherente: las 24 h incluyen a las 12 h', () => {
+  const z = { visitas: 0, vistas: 0 };
+  assert.equal(esIncoherente({ u12: { visitas: 16, vistas: 40 }, u24: z, a12: z, a24: z }), true);
+  assert.equal(esIncoherente({ u12: { visitas: 5, vistas: 10 }, u24: { visitas: 9, vistas: 20 }, a12: z, a24: z }), false);
+  assert.equal(esIncoherente({ u12: z, u24: z, a12: z, a24: z }), true);
+});
+
+test('si el sitio de analítica no aparece en la cuenta, dice "sitio no encontrado" y no mide con la etiqueta por defecto', async () => {
+  const { fetchFn, pedidos } = cloudflareConVentanas({ u12: [1, 1], a12: [1, 1], u24: [2, 2], a24: [2, 2] }, { sitios: [{ count: 4, dimensions: { siteTag: 'OTRO', requestHost: 'otro-sitio.com' } }] });
+  const r = await estadisticasDeCloudflare({ cuenta: 'CUENTA-AJENA', token: 'T', ahora: A('09:00'), fetchFn, esperaReintento: 0 });
+  assert.equal(r.ok, false);
+  assert.equal(r.sitioNoEncontrado, true);
+  assert.match(r.error, /sitio no encontrado/);
+  assert.equal(pedidos.length, 1, 'no se hizo la consulta de los números');
+});
+
+test('medir: una lectura incoherente no deja punto.web ni dias, y el mensaje lo dice como "sin lectura"', async () => {
+  const { fetchFn } = cloudflareConVentanas({ u12: [60, 16], a12: [0, 0], u24: [0, 0], a24: [0, 0] });
+  const { punto, dias, faltan } = await medir({
+    env: { CLOUDFLARE_ACCOUNT_ID: 'CUENTA', CLOUDFLARE_ANALYTICS_TOKEN: 'T' }, ahora: A('09:00'), fetchFn, log: () => {}, esperaReintento: 0,
+  });
+  assert.equal(punto.cloudflare, 'incoherente');
+  assert.equal(punto.web, undefined);
+  assert.equal(dias, null);
+  assert.ok(faltan.some((f) => /no cierran/.test(f)));
+  assert.match(textoEstadisticas({ punto, ahora: A('09:00') }), /sin lectura/);
+});
+
+const medicion = (dia, hhmm, extra) => ({ cuando: new Date(`2026-10-${dia}T${hhmm}:00-03:00`).toISOString(), ...extra });
+const BUENA = { u12: { visitas: 10, vistas: 30 }, a12: { visitas: 9, vistas: 25 }, u24: { visitas: 20, vistas: 60 }, a24: { visitas: 18, vistas: 55 } };
+
+test('el vigilante avisa (poco urgente) si la lectura de la web falla dos días seguidos', () => {
+  const puntos = [
+    medicion('13', '09:00', { cloudflare: 'incoherente' }), medicion('13', '21:00', { web: { u12: { visitas: 0, vistas: 0 }, a12: {}, u24: { visitas: 0, vistas: 0 }, a24: {} } }),
+    medicion('14', '09:00', { cloudflare: 'incoherente' }), medicion('14', '21:00', { cloudflare: 'incoherente' }),
+  ];
+  assert.equal(lecturaWebFallando(puntos), true);
+  const ahora = new Date('2026-10-15T12:00:00-03:00');
+  const base = { ahora, web: { estado: 200, actualizado: ahora.toISOString() }, www: { redirige: true } };
+  const p = evaluar({ ...base, puntosWeb: puntos }).find((x) => x.clave === 'estadisticas-sin-lectura');
+  assert.equal(p?.nivel, 'media');
+  assert.match(p.texto, /CLOUDFLARE_ACCOUNT_ID/);
+  assert.ok(!evaluar({ ...base, puntosWeb: [] }).some((x) => x.clave === 'estadisticas-sin-lectura'));
+  assert.ok(!evaluar(base).some((x) => x.clave === 'estadisticas-sin-lectura'), 'sin historia no avisa');
+});
+
+test('el vigilante NO avisa por un solo día malo, ni si algún día tuvo una medición buena', () => {
+  const malo = (d) => medicion(d, '09:00', { cloudflare: 'incoherente' });
+  assert.equal(lecturaWebFallando([medicion('13', '09:00', { web: BUENA }), malo('14')]), false, 'un solo día malo');
+  assert.equal(lecturaWebFallando([malo('13'), malo('14'), medicion('14', '21:00', { web: BUENA })]), false, 'el 14 se recuperó a la noche');
+  assert.equal(lecturaWebFallando([malo('14')]), false, 'un solo día con datos');
 });

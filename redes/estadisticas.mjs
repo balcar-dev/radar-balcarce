@@ -141,13 +141,39 @@ async function buscarSitio({ cuenta, token, ahora, fetchFn }) {
  * Visitas y páginas vistas de las últimas 12 y 24 horas, las del mismo
  * período anterior (para comparar) y las tres páginas más vistas del día.
  */
-export async function estadisticasDeCloudflare({ cuenta, token, ahora = new Date(), fetchFn = fetch, siteTag = null }) {
+export async function estadisticasDeCloudflare({ cuenta, token, ahora = new Date(), fetchFn = fetch, siteTag = null, esperaReintento = ESPERA }) {
   let sitio = siteTag;
   if (!sitio) {
     const b = await buscarSitio({ cuenta, token, ahora, fetchFn });
     if (b.sinPermiso) return { ok: false, sinPermiso: true, error: b.error };
-    sitio = b.siteTag ?? TOKEN_DEL_BEACON;
+    // Antes, si el sitio no aparecía se medía igual con la etiqueta por defecto y la consulta salía "bien" y vacía (15/10/2026).
+    if (!b.siteTag) {
+      return { ok: false, sitioNoEncontrado: true, error: `sitio no encontrado: la etiqueta de analítica ${TOKEN_DEL_BEACON.slice(0, 8)}… no aparece en la cuenta de Cloudflare (¿el secreto CLOUDFLARE_ACCOUNT_ID es de otra cuenta?)` };
+    }
+    sitio = b.siteTag;
   }
+  // Una lectura que se contradice (12 h mayor que 24 h, o todo en cero) es una falla de Cloudflare, no un dato:
+  // se repite una vez y, si sigue igual, no se guarda (12/10: 16 visitas en 12 h y 0 en 24 h; 15/10: todo en cero).
+  let r = await leerCloudflare({ cuenta, token, ahora, fetchFn, sitio });
+  if (r.ok && esIncoherente(r.web)) {
+    if (esperaReintento) await new Promise((fin) => setTimeout(fin, esperaReintento));
+    const otra = await leerCloudflare({ cuenta, token, ahora, fetchFn, sitio });
+    r = otra.ok && !esIncoherente(otra.web) ? otra : {
+      ok: false, incoherente: true,
+      error: 'las visitas que dio Cloudflare no cierran entre sí (las 12 horas superan a las 24, o todo en cero); no se guardan',
+    };
+  }
+  return r;
+}
+
+/** ¿Los números de las ventanas se contradicen? Las últimas 24 h incluyen a las últimas 12. */
+export function esIncoherente(w) {
+  if (!w?.u12 || !w?.u24) return false;
+  if (w.u24.vistas < w.u12.vistas || w.u24.visitas < w.u12.visitas) return true;
+  return [w.u12, w.u24, w.a12, w.a24].every((x) => !x?.vistas && !x?.visitas);
+}
+
+async function leerCloudflare({ cuenta, token, ahora, fetchFn, sitio }) {
   const t = ahora.getTime();
   const tramo = (alias, desdeH, hastaH, extra = '') => `${alias}: rumPageloadEventsAdaptiveGroups(limit: ${extra ? 4 : 1}${extra ? ', orderBy: [count_DESC]' : ''}, filter: { siteTag: ${texto(sitio)}, datetime_geq: ${texto(iso(t - desdeH * 3600e3))}, datetime_leq: ${texto(iso(t - hastaH * 3600e3))} }) { count sum { visits }${extra} }`;
   const query = `{ viewer { accounts(filter: { accountTag: ${texto(cuenta)} }) {
@@ -245,7 +271,7 @@ export async function estadisticasDeMeta({ token, paginaId = PAGINA_ID, ahora = 
  *
  * @returns {Promise<{ punto: object, faltan: string[] }>}
  */
-export async function medir({ env = process.env, ahora = new Date(), fetchFn = fetch, log = console.log } = {}) {
+export async function medir({ env = process.env, ahora = new Date(), fetchFn = fetch, log = console.log, esperaReintento = ESPERA } = {}) {
   const punto = { cuando: ahora.toISOString() };
   let dias = null;
   const faltan = [];
@@ -255,14 +281,14 @@ export async function medir({ env = process.env, ahora = new Date(), fetchFn = f
     punto.cloudflare = 'sin-secretos';
     faltan.push(`Cloudflare: falta ${!cuenta ? 'el secreto CLOUDFLARE_ACCOUNT_ID' : 'un token (CLOUDFLARE_ANALYTICS_TOKEN)'}`);
   } else {
-    const r = await estadisticasDeCloudflare({ cuenta, token, ahora, fetchFn, siteTag: env.CLOUDFLARE_SITE_TAG || null });
+    const r = await estadisticasDeCloudflare({ cuenta, token, ahora, fetchFn, siteTag: env.CLOUDFLARE_SITE_TAG || null, esperaReintento });
     if (r.ok) {
       punto.web = r.web;
-      const d = await detalleDeCloudflare({ consultar, cuenta, token, siteTag: r.siteTag, ahora, fetchFn });
+      const d = await detalleDeCloudflare({ consultar, cuenta, token, siteTag: r.siteTag, ahora, fetchFn, esperaReintento });
       dias = d.dias;
       faltan.push(...d.faltan);
     } else {
-      punto.cloudflare = r.sinPermiso ? 'sin-permiso' : 'error';
+      punto.cloudflare = r.sinPermiso ? 'sin-permiso' : r.incoherente ? 'incoherente' : r.sitioNoEncontrado ? 'sitio-no-encontrado' : 'error';
       faltan.push(r.sinPermiso
         ? `Falta permiso de Analytics en el token de Cloudflare (se probó con ${nombre}): ${r.error}`
         : `Cloudflare: ${r.error}`);
@@ -324,6 +350,10 @@ export function textoEstadisticas({ punto, puntos = [], ahora = new Date(), nomb
     if (w.top?.length) l.push(`Lo más visto: ${w.top.map((t) => `${nombreDeCamino(t.camino)} (${numero(t.vistas)})`).join(', ')}`);
   } else if (punto.cloudflare === 'sin-permiso') {
     l.push('Web: falta permiso de Analytics en el token de Cloudflare.');
+  } else if (punto.cloudflare === 'incoherente') {
+    l.push('Web: sin lectura (Cloudflare dio números que no cierran entre sí; no es que no haya visitas).');
+  } else if (punto.cloudflare === 'sitio-no-encontrado') {
+    l.push('Web: sin lectura (el sitio de analítica no aparece en la cuenta de Cloudflare).');
   } else if (punto.cloudflare) {
     l.push('Web: no se pudieron leer las visitas de Cloudflare.');
   }

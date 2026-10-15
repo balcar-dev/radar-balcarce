@@ -47,13 +47,19 @@ export function etiquetaDeDia(dia) {
  */
 export function datosDelDia(estadisticas, dia) {
   const d = estadisticas?.dias?.[dia];
-  if (d && (d.vistas !== undefined || d.visitas !== undefined)) return { ...d, dia, detalle: true };
-  // La medición de las 21 de Balcarce es la de las 00:00 UTC del día siguiente.
+  // Un día con todo en cero (o marcado `sinLectura`) casi nunca es un día sin lectores: es una
+  // lectura de Cloudflare que falló (15/10/2026: el 11, 13, 14 y 15/10 figuraban en cero). Se
+  // trata como "sin lectura", no como cero visitas.
+  const nula = (v) => v === undefined || v === 0;
+  const sinLectura = Boolean(d) && (d.sinLectura === true || ((d.vistas === 0 || d.visitas === 0) && nula(d.vistas) && nula(d.visitas)));
+  if (d && !sinLectura && (d.vistas !== undefined || d.visitas !== undefined)) return { ...d, dia, detalle: true };
+  // La medición de las 21 de Balcarce es la de las 00:00 UTC del día siguiente (una medición toda en cero tampoco sirve).
   const fin = Date.parse(`${dia}T00:00:00Z`) + DIA_MS;
   const p = (estadisticas?.puntos ?? [])
-    .filter((x) => x.web?.u24 && Math.abs(Date.parse(x.cuando) - fin) <= 2 * 3600e3)
+    .filter((x) => x.web?.u24 && (x.web.u24.vistas || x.web.u24.visitas) && Math.abs(Date.parse(x.cuando) - fin) <= 2 * 3600e3)
     .sort((a, b) => Math.abs(Date.parse(a.cuando) - fin) - Math.abs(Date.parse(b.cuando) - fin))[0];
   if (p) return { dia, visitas: p.web.u24.visitas, vistas: p.web.u24.vistas, detalle: false };
+  if (sinLectura) return { dia, detalle: false, sinLectura: true };
   return { ...(d ?? {}), dia, detalle: Boolean(d) };
 }
 
@@ -191,11 +197,15 @@ export function graficoDeBarras(valores, etiquetas, { resaltar = -1, titulo = ''
   const ancho = 320;
   const alto = 84;
   const n = valores.length || 1;
-  const max = Math.max(1, ...valores);
+  const max = Math.max(1, ...valores.map((v) => v ?? 0));
   const paso = ancho / n;
   const barra = Math.max(2, paso - (n > 14 ? 2 : 4));
   const cada = n > 14 ? (n > 24 ? 5 : 3) : 1;
   const barras = valores.map((v, i) => {
+    // Un valor `null` es un día sin lectura: no se dibuja como cero, se marca con una rayita punteada.
+    if (v === null || v === undefined) {
+      return `<line x1="${(i * paso + paso / 2).toFixed(1)}" y1="${alto - 14}" x2="${(i * paso + paso / 2).toFixed(1)}" y2="${alto}" stroke="var(--suave)" stroke-width="2" stroke-dasharray="2 3" opacity="0.7"><title>${esc(etiquetas[i])}: sin lectura</title></line>`;
+    }
     const h = Math.max(v ? 2 : 0, Math.round((v / max) * alto));
     return `<rect x="${(i * paso + (paso - barra) / 2).toFixed(1)}" y="${alto - h}" width="${barra.toFixed(1)}" height="${h}" rx="2" fill="${i === resaltar ? 'var(--rojo)' : 'var(--verde)'}" opacity="${i === resaltar ? 1 : 0.85}"><title>${esc(etiquetas[i])}: ${n0(v)}</title></rect>`;
   }).join('');
@@ -237,6 +247,8 @@ export function htmlDeNumeros({ estadisticas, produccion, indice, libro, corrida
   const hayPrevio = previos.some((d) => d.vistas !== undefined);
   const conDetalle = lista.filter((d) => d.detalle);
   const diasConDetalle = conDetalle.length;
+  // Los días que ya terminaron y no tienen lectura (no se cuenta hoy, que recién empieza).
+  const sinLectura = lista.filter((d) => d.dia !== hoy && d.sinLectura === true).length;
 
   const botones = RANGOS.map((r) => `<button type="button" data-accion="rango-numeros" data-rango="${r}" aria-current="${r === rango}">${r} días</button>`).join('');
   const vistasPorVisita = t.visitas ? (t.vistas / t.visitas).toFixed(1).replace('.', ',') : '–';
@@ -253,8 +265,8 @@ export function htmlDeNumeros({ estadisticas, produccion, indice, libro, corrida
       ${tarjeta('Hoy, hasta ahora', n0(hoyEnCurso.vistas ?? 0), `${n0(hoyEnCurso.visitas ?? 0)} visitas`)}
     </div>
     <h2>Por día</h2>
-    <div class="caja">${graficoDeBarras(lista.map((d) => d.vistas ?? 0), dias.map((d) => etiquetaDeDia(d).replace(/^\S+ /, '')), { resaltar: lista.length - 1, titulo: 'Páginas vistas por día' })}
-    <p class="estado">Páginas vistas por día. El último es hoy y todavía no terminó.</p></div>`;
+    <div class="caja">${graficoDeBarras(lista.map((d) => (d.vistas === undefined ? null : d.vistas)), dias.map((d) => etiquetaDeDia(d).replace(/^\S+ /, '')), { resaltar: lista.length - 1, titulo: 'Páginas vistas por día' })}
+    <p class="estado">Páginas vistas por día. El último es hoy y todavía no terminó.${sinLectura ? ` ${sinLectura === 1 ? 'Un día figura' : `${sinLectura} días figuran`} con la rayita punteada: Cloudflare no dio una lectura confiable, no es que nadie haya entrado.` : ''}</p></div>`;
 
   if (!diasConDetalle) {
     html += '<p class="problemas">El detalle (qué se lee, a qué hora, de dónde llegan) se empieza a juntar con la próxima medición de las 9 o las 21. Mientras tanto se ven los totales de arriba.</p>';

@@ -79,7 +79,7 @@ export async function reintentarPieza({
   let ultimoError = '';
   for (let intento = 1; intento <= INTENTOS; intento += 1) {
     try {
-      const subido = await api[r.metodo]({ video, tipo, pie: tipo === 'REELS' ? pieDePieza(pieza) : '' });
+      const subido = await api[r.metodo]({ video, tipo, pie: tipo === 'REELS' ? pieDePieza(pieza, red) : '' });
       if (parte === 'historia-del-reel') {
         anotar(libro, 'historiasDeReels', claveHistoria, { mediaId: subido.id, nombre, red, notaId: pieza.notaId ?? null });
       } else {

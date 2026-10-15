@@ -21,6 +21,7 @@ frenan alguna etapa están en `docs/DECISIONES.md` → "Preguntas abiertas".
 | **Elegir los modelos** de cada paso (con pruebas; `pruebas-modelos/`) y, con eso, crear las claves nuevas en cuentas de `radarbalcarce` | Claude prueba; los dos eligen; una persona pega las claves |
 | **Segunda tanda de limpieza**: revisar `prueba-whatsapp.yml`, `pruebas-otra-hora.yml`, `armado-vacio.yml`, los scripts que nadie llama y el panel de la PC; de a un grupo, con `npm test` y una corrida de "Actualizar la web" | Claude; los dos aprueban |
 | **Una prueba de los documentos** (`pruebas/docs.test.mjs`): que existan los enlaces relativos, que "la próxima regla" coincida con `docs/10`, sin números de feeds escritos a mano | Claude |
+| **Enchufar el registro de uso de la IA** (`redes/uso-ia.mjs`, regla 170) en `ingesta/lectura-ia.mjs`, fotos, voces y pistas: hoy sólo anota la redacción. En cada llamada, después de leer el JSON de la respuesta: `anotarUsoIA({ tarea: 'lectura', modelo, clave: 'clasificacion' o 'groq', respuesta: j })` (Gemini trae `usageMetadata`, Groq `usage`; los dos los entiende) y, si la llamada falla, `anotarUsoIA({ tarea, modelo, clave, error: res.status })`. Nunca lanza. Con 2 semanas de datos se puede calcular el costo equivalente a precio de lista | Claude |
 
 ## Después de la mudanza (15/10)
 

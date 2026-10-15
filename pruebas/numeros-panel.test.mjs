@@ -63,6 +63,7 @@ function cloudflareFalso({ sinGrupo = null } = {}) {
       c.horas = [
         { count: 5, dimensions: { datetimeHour: '2026-10-01T12:00:00Z' } }, // 09 en Balcarce
         { count: 7, dimensions: { datetimeHour: '2026-10-01T02:00:00Z' } }, // 23 del 30/09 en Balcarce
+        { count: 9, dimensions: { datetimeHour: '2026-09-29T15:00:00Z' } }, // 12 del 29/09 (todo día con vistas tiene horas: si no, el detalle se contradice)
       ];
     } else if (tiene('sum { visits }')) {
       for (const i of [0, 1, 2]) c[`d${i}`] = [{ count: 100 + i, sum: { visits: 10 + i } }];
@@ -120,6 +121,9 @@ test('si Cloudflare no acepta un grupo, los otros salen igual y se dice cuál fa
   assert.equal(dias['2026-10-01'].paises, undefined);
 });
 
+// 15/10/2026 (regla 167 de las analíticas): este test decía "lo nuevo pisa SIEMPRE", y por eso un cero
+// de Cloudflare (lectura fallida) borraba un dato bueno. Ahora lo nuevo pisa a lo viejo cuando trae datos
+// (acá 80 > 10), pero un valor nuevo VACÍO (0, [0…], {}) no pisa a uno viejo con datos: ver los tests de abajo.
 test('lo nuevo pisa día por día, campo por campo, y se guardan sólo los últimos días', () => {
   const guardados = { '2026-09-30': { vistas: 50, paises: { AR: 40 } }, '2026-10-01': { vistas: 10, horas: [1] } };
   const nuevos = { '2026-10-01': { vistas: 80 }, '2026-10-02': { vistas: 5 } };
@@ -128,6 +132,110 @@ test('lo nuevo pisa día por día, campo por campo, y se guardan sólo los últi
   assert.deepEqual(r['2026-10-01'].horas, [1], 'lo que no se pudo medir ahora no borra lo anterior');
   assert.equal(r['2026-09-30'].paises.AR, 40);
   assert.deepEqual(Object.keys(mezclarDias(guardados, nuevos, 2)), ['2026-10-01', '2026-10-02']);
+});
+
+test('un cero nuevo NO pisa un dato bueno (13 al 15/10: Cloudflare devolvía todo en cero)', () => {
+  const guardados = { '2026-10-12': { visitas: 40, vistas: 120, horas: [3, 4], paises: { AR: 100 }, notas: { a: 5 } } };
+  const r = mezclarDias(guardados, { '2026-10-12': { visitas: 0, vistas: 0, horas: [0, 0], paises: {}, notas: {} } });
+  assert.deepEqual(r['2026-10-12'], guardados['2026-10-12']);
+  // y un día marcado sin lectura tampoco borra uno con datos
+  assert.deepEqual(mezclarDias(guardados, { '2026-10-12': { sinLectura: true } })['2026-10-12'], guardados['2026-10-12']);
+});
+
+test('un día sin lectura se guarda como tal, y una lectura buena posterior le saca la marca', () => {
+  let r = mezclarDias({}, { '2026-10-13': { sinLectura: true } });
+  assert.deepEqual(r['2026-10-13'], { sinLectura: true });
+  r = mezclarDias(r, { '2026-10-13': { visitas: 9, vistas: 30 } });
+  assert.deepEqual(r['2026-10-13'], { visitas: 9, vistas: 30 });
+});
+
+// ----- las respuestas vacías de Cloudflare no son ceros (15/10/2026)
+
+const AHORA_PRUEBA = new Date('2026-10-15T15:00:00Z'); // 12:00 del 15/10 en Balcarce
+
+/** Un Cloudflare que contesta lo que se le diga a cada grupo (los demás, vacíos). */
+function cloudflareConRespuestas({ totales = null, horas = null, tanda = null } = {}) {
+  let llamadas = 0;
+  const fetchFn = async (_u, init) => {
+    const q = JSON.parse(init.body).query;
+    if (q.includes('sum { visits }')) llamadas += 1; // cada lectura completa empieza con la de los totales
+    const c = {};
+    const t = tanda ? tanda(llamadas) : { totales, horas };
+    if (q.includes('datetimeHour')) { if (t.horas) c.horas = t.horas; }
+    else if (q.includes('sum { visits }')) { if (t.totales) Object.assign(c, t.totales); }
+    return { status: 200, ok: true, json: async () => ({ data: { viewer: { accounts: [c] } } }) };
+  };
+  return { fetchFn, llamadas: () => llamadas };
+}
+
+test('todo vacío en un día cerrado: no hay ceros guardados, el día queda "sin lectura"', async () => {
+  const { fetchFn } = cloudflareConRespuestas();
+  const { dias } = await detalleDeCloudflare({
+    consultar, cuenta: 'C', token: 'T', siteTag: 'S', ahora: AHORA_PRUEBA, fetchFn, esperaReintento: 0,
+  });
+  assert.deepEqual(dias['2026-10-13'], { sinLectura: true });
+  assert.deepEqual(dias['2026-10-14'], { sinLectura: true });
+  assert.equal(dias['2026-10-15'], undefined, 'hoy, recién empezando, no se marca ni se guarda');
+  for (const d of Object.values(dias)) {
+    assert.equal(d.visitas, undefined);
+    assert.equal(d.vistas, undefined);
+    assert.equal(d.horas, undefined, 'las horas no se rellenan con ceros');
+  }
+});
+
+test('11/10: 0 vistas pero las horas suman 98 -> se repite la lectura; si sigue igual, el día queda sin lectura', async () => {
+  const horas = [{ count: 98, dimensions: { datetimeHour: '2026-10-14T15:00:00Z' } }];
+  const totales = { d0: [{ count: 50, sum: { visits: 5 } }], d1: [{ count: 0, sum: { visits: 0 } }], d2: [{ count: 10, sum: { visits: 3 } }] };
+  const { fetchFn, llamadas } = cloudflareConRespuestas({ totales, horas });
+  const { dias, faltan } = await detalleDeCloudflare({
+    consultar, cuenta: 'C', token: 'T', siteTag: 'S', ahora: AHORA_PRUEBA, fetchFn, esperaReintento: 0,
+  });
+  assert.equal(llamadas(), 2, 'repite una sola vez');
+  assert.deepEqual(dias['2026-10-14'], { sinLectura: true });
+  assert.ok(faltan.some((f) => /2026-10-14/.test(f)));
+});
+
+test('si la segunda lectura cierra, se usa esa', async () => {
+  const buenas = [{ count: 30, dimensions: { datetimeHour: '2026-10-14T15:00:00Z' } }];
+  const { fetchFn, llamadas } = cloudflareConRespuestas({
+    tanda: (n) => (n === 1
+      ? { totales: { d1: [{ count: 0, sum: { visits: 0 } }] }, horas: buenas }
+      : { totales: { d1: [{ count: 30, sum: { visits: 8 } }] }, horas: buenas }),
+  });
+  const { dias } = await detalleDeCloudflare({
+    consultar, cuenta: 'C', token: 'T', siteTag: 'S', ahora: AHORA_PRUEBA, fetchFn, esperaReintento: 0,
+  });
+  assert.equal(llamadas(), 2);
+  assert.equal(dias['2026-10-14'].vistas, 30);
+  assert.equal(dias['2026-10-14'].horas[12], 30);
+});
+
+test('el panel dibuja un día "sin lectura" (o en cero de verdad viejo) como faltante, no como cero visitas', () => {
+  const est = {
+    puntos: [],
+    dias: {
+      '2026-10-12': { visitas: 40, vistas: 120, horas: Array(24).fill(5) },
+      '2026-10-13': { sinLectura: true },
+      '2026-10-14': { visitas: 0, vistas: 0, horas: Array(24).fill(0), notas: {} }, // lo que dejaba el código viejo
+    },
+  };
+  assert.equal(datosDelDia(est, '2026-10-12').detalle, true);
+  for (const d of ['2026-10-13', '2026-10-14']) {
+    const r = datosDelDia(est, d);
+    assert.equal(r.sinLectura, true, d);
+    assert.equal(r.detalle, false, d);
+    assert.equal(r.vistas, undefined, d);
+  }
+  assert.deepEqual(totales(['2026-10-12', '2026-10-13', '2026-10-14'].map((d) => datosDelDia(est, d))), { visitas: 40, vistas: 120 });
+  const h = htmlDeNumeros(entrada({ estadisticas: est, hoy: '2026-10-15', rango: 7 }));
+  assert.ok(h.includes('sin lectura'), 'el gráfico marca los días sin lectura');
+  assert.match(h, /2 días figuran con la rayita punteada/);
+  assert.ok(!h.includes('NaN') && !h.includes('undefined'));
+});
+
+test('una medición de las 21 toda en cero no sirve para completar un día', () => {
+  const est = { puntos: [{ cuando: '2026-10-14T00:00:20Z', web: { u24: { visitas: 0, vistas: 0 } } }], dias: {} };
+  assert.equal(datosDelDia(est, '2026-10-13').vistas, undefined);
 });
 
 // ------------------------------------------------------------ el panel

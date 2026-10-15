@@ -66,12 +66,53 @@ const masVistos = (mapa, limite) => Object.fromEntries(
   Object.entries(mapa).sort((a, b) => b[1] - a[1]).slice(0, limite),
 );
 
+const sumaDe = (xs) => (xs ?? []).reduce((a, b) => a + (Number(b) || 0), 0);
+
+/**
+ * ¿Los números de un día se contradicen entre sí? Pasó de verdad (15/10/2026): el 11/10 figuraba con 0
+ * vistas y las horas sumaban 98; el 9/10 con 139 vistas y las horas en cero. Una lectura así no es un
+ * dato, es una falla de Cloudflare: se repite una vez y, si sigue igual, el día queda "sin lectura".
+ */
+export function diaIncoherente(d = {}) {
+  if (d.vistas === undefined && d.visitas === undefined) return false;
+  const vistas = Number(d.vistas ?? 0);
+  const visitas = Number(d.visitas ?? 0);
+  if (visitas > vistas) return true; // nadie visita sin cargar una página
+  if (Array.isArray(d.horas) && (vistas === 0) !== (sumaDe(d.horas) === 0)) return true;
+  return false;
+}
+
 /**
  * Trae el detalle de los últimos días.
  *
+ * Una respuesta vacía de Cloudflare NO es un cero: no se guarda nada de ese campo. Si los números de un día
+ * se contradicen se vuelve a pedir una vez (`esperaReintento` ms después); si siguen sin cerrar, o no llegó
+ * nada de un día que ya terminó, ese día queda `{ sinLectura: true }` y `mezclarDias` no lo deja pisar un
+ * dato bueno (15/10/2026: tres días en cero que no eran reales).
+ *
  * @returns {Promise<{ dias: Record<string, object>, faltan: string[] }>}
  */
-export async function detalleDeCloudflare({ consultar, cuenta, token, siteTag, ahora = new Date(), fetchFn = fetch }) {
+export async function detalleDeCloudflare({ consultar, cuenta, token, siteTag, ahora = new Date(), fetchFn = fetch, esperaReintento = 15000 }) {
+  let r = await juntarDetalle({ consultar, cuenta, token, siteTag, ahora, fetchFn });
+  const malos = Object.keys(r.dias).filter((d) => diaIncoherente(r.dias[d]));
+  if (malos.length) {
+    if (esperaReintento) await new Promise((fin) => setTimeout(fin, esperaReintento));
+    const otra = await juntarDetalle({ consultar, cuenta, token, siteTag, ahora, fetchFn });
+    // Lo que ahora cierra se queda; lo que sigue contradiciéndose se marca.
+    for (const d of malos) if (!diaIncoherente(otra.dias[d])) r.dias[d] = otra.dias[d]; else r.dias[d] = { sinLectura: true };
+    r = { dias: r.dias, faltan: [...r.faltan, ...otra.faltan.filter((f) => !r.faltan.includes(f))] };
+    for (const d of malos) if (r.dias[d]?.sinLectura) r.faltan.push(`Cloudflare, ${d}: los números del día no cierran entre sí (queda sin lectura)`);
+  }
+  // Un día que ya terminó y quedó sin ningún dato no es un día en cero: es un día sin lectura.
+  const hoy = diaAR(ahora);
+  for (const d of Object.keys(r.dias)) {
+    if (Object.keys(r.dias[d]).length) continue;
+    if (d === hoy) delete r.dias[d]; else r.dias[d] = { sinLectura: true };
+  }
+  return r;
+}
+
+async function juntarDetalle({ consultar, cuenta, token, siteTag, ahora, fetchFn }) {
   const rango = diasAMedir(ahora);
   const dias = Object.fromEntries(rango.map((d) => [d.dia, {}]));
   const faltan = [];
@@ -87,7 +128,15 @@ export async function detalleDeCloudflare({ consultar, cuenta, token, siteTag, a
     const r = await pedir(cuerpo);
     const c = cuentaDe(r);
     if (!c) { faltan.push(`Cloudflare, detalle de ${nombre}: ${r.error ?? 'sin datos'}`); return; }
-    rango.forEach((d, i) => alRecibir(dias[d.dia], c[`d${i}`] ?? []));
+    // Un día sin filas no escribe nada (no es un cero); si ningún día trajo filas, se deja dicho.
+    let alguno = false;
+    rango.forEach((d, i) => {
+      const filas = c[`d${i}`] ?? [];
+      if (!filas.length) return;
+      alguno = true;
+      alRecibir(dias[d.dia], filas);
+    });
+    if (!alguno) faltan.push(`Cloudflare, detalle de ${nombre}: respuesta vacía`);
   };
 
   await Promise.all([
@@ -97,22 +146,31 @@ export async function detalleDeCloudflare({ consultar, cuenta, token, siteTag, a
       const r = await pedir(cuerpo);
       const c = cuentaDe(r);
       if (!c) { faltan.push(`Cloudflare, detalle de totales: ${r.error ?? 'sin datos'}`); return; }
+      // Sin fila no hay dato: no se escribe un 0 (una respuesta vacía no es "cero visitas").
+      let alguno = false;
       rango.forEach((d, i) => {
-        dias[d.dia].visitas = c[`d${i}`]?.[0]?.sum?.visits ?? 0;
-        dias[d.dia].vistas = c[`d${i}`]?.[0]?.count ?? 0;
+        const fila = c[`d${i}`]?.[0];
+        if (!fila) return;
+        alguno = true;
+        dias[d.dia].visitas = fila.sum?.visits ?? 0;
+        dias[d.dia].vistas = fila.count ?? 0;
       });
+      if (!alguno) faltan.push('Cloudflare, detalle de totales: respuesta vacía');
     })(),
     // Hora por hora (en hora de Balcarce).
     (async () => {
       const r = await pedir(`horas: rumPageloadEventsAdaptiveGroups(limit: 100, orderBy: [datetimeHour_ASC], filter: ${filtro(rango[0].desde, ahora.getTime())}) { count dimensions { datetimeHour } }`);
       const c = cuentaDe(r);
       if (!c) { faltan.push(`Cloudflare, detalle por hora: ${r.error ?? 'sin datos'}`); return; }
-      for (const d of rango) dias[d.dia].horas = Array(24).fill(0);
+      if (!(c.horas ?? []).length) { faltan.push('Cloudflare, detalle por hora: respuesta vacía'); return; }
+      // El arreglo de horas se arma sólo para los días que recibieron alguna fila (no se inventan días en cero).
       for (const f of c.horas ?? []) {
         const cuando = new Date(f.dimensions?.datetimeHour);
         if (Number.isNaN(cuando.getTime())) continue;
         const dia = dias[diaAR(cuando)];
-        if (dia?.horas) dia.horas[horaAR(cuando)] += f.count ?? 0;
+        if (!dia) continue;
+        dia.horas ??= Array(24).fill(0);
+        dia.horas[horaAR(cuando)] += f.count ?? 0;
       }
     })(),
     // Qué se leyó: las notas por su identificador, lo demás por su dirección.
@@ -147,15 +205,35 @@ export async function detalleDeCloudflare({ consultar, cuenta, token, siteTag, a
     }),
   ]);
 
-  // Un día que quedó sin ningún dato no se guarda.
-  for (const d of Object.keys(dias)) if (!Object.keys(dias[d]).length) delete dias[d];
   return { dias, faltan };
 }
 
+/** Cuánto "hay" en un valor medido: el número, o la suma de un arreglo o de un mapa. 0 = vacío. */
+const peso = (v) => {
+  if (v && typeof v === 'object') return Object.values(v).reduce((a, b) => a + (Number(b) || 0), 0);
+  return Number(v) || 0;
+};
+
 /** Suma lo recién medido a lo guardado: campo por campo (lo que no se pudo medir
- *  no borra lo anterior) y sólo los últimos `maximo` días. */
+ *  no borra lo anterior) y sólo los últimos `maximo` días.
+ *
+ *  Un valor nuevo vacío (0, [0,0,…], {}) NO pisa uno viejo con datos, y un día `sinLectura` nunca
+ *  pisa un día con datos: un día cerrado sólo puede mejorar (15/10/2026: un cero de Cloudflare
+ *  borraba lecturas buenas). Cuando llega una lectura buena sobre un día que estaba `sinLectura`, la marca se va. */
 export function mezclarDias(guardados = {}, nuevos = {}, maximo = MAXIMO_DE_DIAS) {
   const todos = { ...(guardados ?? {}) };
-  for (const [dia, datos] of Object.entries(nuevos ?? {})) todos[dia] = { ...(todos[dia] ?? {}), ...datos };
+  for (const [dia, datos] of Object.entries(nuevos ?? {})) {
+    const viejo = todos[dia] ?? {};
+    const { sinLectura, ...campos } = datos ?? {};
+    const viejoConDatos = Object.entries(viejo).some(([k, v]) => k !== 'sinLectura' && peso(v) > 0);
+    if (sinLectura && !Object.keys(campos).length) {
+      if (!viejoConDatos) todos[dia] = { ...viejo, sinLectura: true };
+      continue;
+    }
+    const r = { ...viejo };
+    for (const [k, v] of Object.entries(campos)) if (!(peso(v) === 0 && peso(viejo[k]) > 0)) r[k] = v;
+    if (Object.values(campos).some((v) => peso(v) > 0)) delete r.sinLectura;
+    todos[dia] = r;
+  }
   return Object.fromEntries(Object.entries(todos).sort((a, b) => a[0].localeCompare(b[0])).slice(-maximo));
 }

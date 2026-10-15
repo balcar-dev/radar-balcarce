@@ -51,9 +51,10 @@ test('el cliente de Meta lee lo último publicado en la página con la misma for
 test('el posteo de Facebook usa la foto con el mismo texto que Instagram, mira si ya salió antes de dar un error por perdido, y vuelve al enlace tras tres intentos', () => {
   const c = leer('redes/publicar.mjs');
   assert.match(c, /api\.publicarFotoEnFacebook\(\{ imagenUrl: imagenDeNota\(nota, SITIO\), mensaje: pie \}\)/);
-  assert.match(c, /const pie = FOTO_EN_INSTAGRAM \? conCreditoDeFoto\(mensajeDeNota\(nota, SITIO\), nota\) : mensajeDeNota\(nota, SITIO\);\s*try \{\s*r = await api\.publicarFotoEnFacebook/);
+  // Desde el 15/10 el enlace del texto lleva las UTM de la red (utm_source=facebook en Facebook, instagram en el espejo): el resto del texto es el mismo.
+  assert.match(c, /const pie = FOTO_EN_INSTAGRAM \? conCreditoDeFoto\(mensajeDeNota\(nota, SITIO, ORIGEN_FACEBOOK\), nota\) : mensajeDeNota\(nota, SITIO, ORIGEN_FACEBOOK\);\s*try \{\s*r = await api\.publicarFotoEnFacebook/);
   assert.match(c, /posteoYaPublicado\(await api\.publicacionesRecientesDeFacebook\(\), pie\)/);
   assert.match(c, /comoSaleEnFacebook\(\{ intentosDeFoto, conFoto: FACEBOOK_COMO_FOTO \}\) === 'foto'/);
-  assert.match(c, /api\.publicarEnFacebook\(\{ mensaje: mensajeDeNota\(nota, SITIO\), enlace \}\)/, 'el enlace queda de respaldo');
+  assert.match(c, /api\.publicarEnFacebook\(\{ mensaje: mensajeDeNota\(nota, SITIO, ORIGEN_FACEBOOK\), enlace: enlaceConOrigen\(/, 'el enlace queda de respaldo');
   assert.match(c, /process\.env\.FACEBOOK_COMO_FOTO !== 'no'/);
 });

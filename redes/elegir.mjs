@@ -234,6 +234,37 @@ export function enlaceDeNota(nota, sitio) {
   return `${String(sitio).replace(/\/+$/, '')}${rutaDeNota(nota)}`;
 }
 
+const utm = (v) => String(v ?? '').toLowerCase().replace(/[^a-z0-9_-]+/g, '-').replace(/^-+|-+$/g, '');
+
+/**
+ * Le pega a un enlace NUESTRO el origen (las UTM estándar de las analíticas, 15/10/2026): de qué red sale (`fuente`:
+ * facebook | instagram | x | threads), el medio (`social` por defecto) y la campaña (el tipo de pieza: posteo, repaso,
+ * reel…); `contenido` opcional (el id de la nota o de la pieza). Sin `fuente` o `campana` devuelve el enlace tal cual.
+ * Las páginas del sitio son estáticas: Cloudflare Pages ignora la parte `?…` y el canónico de cada nota es siempre
+ * el enlace limpio (web/app/nota/[id]/page.js), así que Google no ve páginas repetidas.
+ */
+export function ponerOrigen(enlace, { fuente, medio = 'social', campana, contenido } = {}) {
+  const f = utm(fuente);
+  const c = utm(campana);
+  if (!enlace || !f || !c) return enlace;
+  let u;
+  try { u = new URL(enlace); } catch { return enlace; }
+  u.searchParams.set('utm_source', f);
+  u.searchParams.set('utm_medium', utm(medio) || 'social');
+  u.searchParams.set('utm_campaign', c);
+  if (utm(contenido)) u.searchParams.set('utm_content', utm(contenido));
+  return u.toString();
+}
+
+/**
+ * El enlace de una nota para una red, con su origen. NO reemplaza a `enlaceDeNota`: ése sigue dando la dirección limpia
+ * (la que se guarda en el libro, arma la imagen de Instagram y sirve de clave). Esto es sólo lo que se escribe en el
+ * texto de un posteo o se manda como enlace, para saber qué pieza trae visitas.
+ */
+export function enlaceConOrigen(nota, sitio, origen = {}) {
+  return ponerOrigen(enlaceDeNota(nota, sitio), origen);
+}
+
 /** La tarjeta de la nota para INSTAGRAM (web/lib/tarjeta.js, servida en
  *  /nota/ID/instagram.png): una imagen propia, pública y ya alojada — lo que
  *  pide Instagram para un posteo de foto, sin alojar nada nuevo. Es vertical
@@ -291,7 +322,7 @@ export const FRASES_DEL_ENLACE = [
   `La nota completa, en ${MEDIO}:`,
 ];
 
-const lineaDelEnlace = (nota, sitio) => `${variante(FRASES_DEL_ENLACE, `nota|${nota.id ?? nota.titulo}`, 'enlace')} ${enlaceDeNota(nota, sitio)}`;
+const lineaDelEnlace = (nota, sitio, origen = null) => `${variante(FRASES_DEL_ENLACE, `nota|${nota.id ?? nota.titulo}`, 'enlace')} ${origen ? enlaceConOrigen(nota, sitio, { campana: 'posteo', contenido: nota.id, ...origen }) : enlaceDeNota(nota, sitio)}`;
 
 /**
  * El texto del posteo: titular, copete y el enlace a la nota completa en
@@ -305,11 +336,14 @@ const lineaDelEnlace = (nota, sitio) => `${variante(FRASES_DEL_ENLACE, `nota|${n
  * medio de origen), el posteo usa ese texto en vez del titular y el copete,
  * y cierra con dos o tres hashtags. Ese texto siempre lo escribió la IA: si
  * una persona corrige la nota en el panel, se borra (panel/notas.mjs).
+ *
+ * `origen` ({ fuente: 'facebook' | 'instagram' | … }) agrega las UTM al enlace del texto (enlaceConOrigen);
+ * sin él, el enlace sale limpio como siempre.
  */
-export function mensajeDeNota(nota, sitio) {
+export function mensajeDeNota(nota, sitio, origen = null) {
   if (nota.textoRedes) {
     const partes = [String(nota.textoRedes).trim()];
-    if (sitio) partes.push(lineaDelEnlace(nota, sitio));
+    if (sitio) partes.push(lineaDelEnlace(nota, sitio, origen));
     const tags = hashtagsDe(nota);
     if (tags.length) partes.push(tags.join(' '));
     return partes.join('\n\n');
@@ -317,7 +351,7 @@ export function mensajeDeNota(nota, sitio) {
   const partes = [nota.titulo];
   const copete = recortar(nota.copete);
   if (copete) partes.push(copete);
-  if (sitio) partes.push(lineaDelEnlace(nota, sitio));
+  if (sitio) partes.push(lineaDelEnlace(nota, sitio, origen));
   // Sin "Resumen hecho con IA" (desde el 26/09, a pedido de Hernán y Andrés):
   // quién escribió la nota se dice en la nota, en la web.
   return partes.join('\n\n');

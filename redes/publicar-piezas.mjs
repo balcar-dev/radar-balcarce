@@ -165,7 +165,7 @@ export async function publicarPiezas({
       // Un reel de Instagram que ya salió aunque Meta contestó con un error (5/10/2026, cuatro copias de un posteo): antes de volver a subirlo se mira si ya está.
       const yaEstaEnInstagram = async () => {
         if (red !== 'instagram' || tipo !== 'REELS' || typeof api.publicacionesRecientesDeInstagram !== 'function') return null;
-        try { return posteoYaPublicado(await api.publicacionesRecientesDeInstagram(), pieDePieza(pieza), { ahora }); } catch { return null; }
+        try { return posteoYaPublicado(await api.publicacionesRecientesDeInstagram(), pieDePieza(pieza, red), { ahora }); } catch { return null; }
       };
       const huboFalla = Boolean(libro.problemas?.[`${clave}/${red}/${parteDe(tipo)}`]);
       if (huboFalla) {
@@ -181,7 +181,7 @@ export async function publicarPiezas({
 
       for (let intento = 1; intento <= intentos && !hecho; intento += 1) {
         try {
-          const r = await api[metodo]({ video, tipo, pie: pieDePieza(pieza) });
+          const r = await api[metodo]({ video, tipo, pie: pieDePieza(pieza, red) });
           anotar(libro, rubro, clave, {
             mediaId: r.id, nombre: pieza.nombre, tipo, notaId: pieza.notaId ?? null, notaIds: pieza.notaIds ?? [],
           });
@@ -238,7 +238,7 @@ export async function publicarPiezas({
             libro.reelsEnFacebook ??= {};
             if (!libro.reelsEnFacebook[clave]) {
               try {
-                const rr = await api[metodo]({ video: leerVideo(pieza.archivo), tipo: 'REELS', pie: pieDePieza({ ...pieza, tipo: 'reel' }) });
+                const rr = await api[metodo]({ video: leerVideo(pieza.archivo), tipo: 'REELS', pie: pieDePieza({ ...pieza, tipo: 'reel' }, red) });
                 anotar(libro, 'reelsEnFacebook', clave, { mediaId: rr.id, nombre: pieza.nombre, tipo: 'REELS' });
                 // La dirección pública: la nota del clima de la mañana (web/lib/notas-propias.js) la enlaza. Si Meta todavía no la da, la completa la vuelta siguiente.
                 const urlDelReel = await buscarEnlace(api, 'facebook', rr.id);

@@ -19,7 +19,7 @@ import { publicarPiezas, completarEnlaces } from './publicar-piezas.mjs';
 import { espejosPendientes, esLimiteDeMeta, posteoYaPublicado, comoSaleEnFacebook, ESPEJO } from './espejo.mjs';
 import { FOTO_EN_INSTAGRAM } from '../web/lib/tarjeta-diseno.js';
 import {
-  elegirParaFacebook, mensajeDeNota, enlaceDeNota, imagenDeNota, conCreditoDeFoto, libroNuevo, anotar, yaPublicada, estaActivo,
+  elegirParaFacebook, mensajeDeNota, enlaceDeNota, enlaceConOrigen, imagenDeNota, conCreditoDeFoto, libroNuevo, anotar, yaPublicada, estaActivo,
 } from './elegir.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
@@ -27,6 +27,9 @@ const PORTADA = path.join(RAIZ, 'web', 'data', 'portada.json');
 const LIBRO = path.join(RAIZ, 'web', 'data', 'redes.json');
 
 const SITIO = process.env.SITIO ?? 'https://radarbalcarce.com';
+// De qué red sale cada enlace (UTM, 15/10/2026: para saber qué posteo trae visitas). El libro sigue guardando el enlace limpio.
+const ORIGEN_FACEBOOK = { fuente: 'facebook' };
+const ORIGEN_INSTAGRAM = { fuente: 'instagram' };
 // Ojo: NO es el número de la dirección facebook.com/profile.php?id=..., que es el
 // del perfil de la página. El de la API sale de Configuración del negocio →
 // Páginas → "Identificador".
@@ -78,7 +81,7 @@ async function facebook() {
    *  (espejosPendientes) hasta un tope. */
   async function espejar(nota, enlace) {
     // Con la foto de la nota en la tarjeta, su crédito va al pie (conCreditoDeFoto).
-    const pie = FOTO_EN_INSTAGRAM ? conCreditoDeFoto(mensajeDeNota(nota, SITIO), nota) : mensajeDeNota(nota, SITIO);
+    const pie = FOTO_EN_INSTAGRAM ? conCreditoDeFoto(mensajeDeNota(nota, SITIO, ORIGEN_INSTAGRAM), nota) : mensajeDeNota(nota, SITIO, ORIGEN_INSTAGRAM);
     const anotarSalio = (id) => {
       anotar(libro, 'instagramFeed', nota.id, { mediaId: id, titulo: nota.titulo, enlace });
       if (libro.facebook[nota.id]) delete libro.facebook[nota.id].espejoDespuesDe;
@@ -150,7 +153,7 @@ async function facebook() {
       const intentosDeFoto = libro.facebookFoto[nota.id]?.intentos ?? 0;
       let r;
       if (comoSaleEnFacebook({ intentosDeFoto, conFoto: FACEBOOK_COMO_FOTO }) === 'foto') {
-        const pie = FOTO_EN_INSTAGRAM ? conCreditoDeFoto(mensajeDeNota(nota, SITIO), nota) : mensajeDeNota(nota, SITIO);
+        const pie = FOTO_EN_INSTAGRAM ? conCreditoDeFoto(mensajeDeNota(nota, SITIO, ORIGEN_FACEBOOK), nota) : mensajeDeNota(nota, SITIO, ORIGEN_FACEBOOK);
         try {
           r = await api.publicarFotoEnFacebook({ imagenUrl: imagenDeNota(nota, SITIO), mensaje: pie });
         } catch (e) {
@@ -167,7 +170,7 @@ async function facebook() {
           }
         }
       } else {
-        r = await api.publicarEnFacebook({ mensaje: mensajeDeNota(nota, SITIO), enlace });
+        r = await api.publicarEnFacebook({ mensaje: mensajeDeNota(nota, SITIO, ORIGEN_FACEBOOK), enlace: enlaceConOrigen(nota, SITIO, { ...ORIGEN_FACEBOOK, campana: 'posteo', contenido: nota.id }) });
       }
       delete libro.facebookFoto[nota.id];
       // El enlace y los temas quedan en el libro: el enlace es la dirección que
