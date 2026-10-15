@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-15T23:31:58.274Z",
+ "generado": "2026-10-15T23:54:28.270Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -129,33 +129,6 @@
    "intentos": 4,
    "motivo": "título o bajada: 2 problemas (forma, numero): el copete trae un escape sin decodificar (barra-u…): texto mal escrito, se vuelve a pedir",
    "maximo": 4
-  },
-  {
-   "id": "194e0y6",
-   "titulo": "Las reservas del BCRA volvieron a superar los u$s50.000 millones apoyadas en otra fuerte compra de dólares",
-   "copete": "El Banco Central de la República Argentina (BCRA) compró USD 182 millones este jueves y las reservas internacionales brutas cerraron la jornada por encima de los 50.000 millones de dólares. Desde que comenzó la cuarta etapa del programa monetario, en enero, el Banco Central…",
-   "seccion": "Economía",
-   "fecha": "2026-10-15T20:32:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/finanzas/las-reservas-del-bcra-volvieron-superar-los-us50000-millones-apoyadas-otra-fuerte-compra-n6334321",
-     "fecha": "2026-10-15T20:32:00.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/economia/2026/10/15/el-banco-central-volvio-a-realizar-una-fuerte-compra-de-dolares-y-las-reservas-superaron-los-usd-50000-millones/",
-     "fecha": "2026-10-15T21:19:33.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/economia/las-reservas-del-banco-central-volvieron-superar-los-us50000-millones-una-fuerte-compra-dolares-n251729",
-     "fecha": "2026-10-15T21:36:00.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 50.000 y la fuente no lo dice",
-   "maximo": 3
   },
   {
    "id": "m2d0x8",
