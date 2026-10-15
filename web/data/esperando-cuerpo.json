@@ -1,64 +1,27 @@
 {
- "generado": "2026-10-15T01:32:48.780Z",
+ "generado": "2026-10-15T01:46:48.847Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "1spqpr6",
-   "titulo": "Murió Norberto Di Próspero, secretario general de la Asociación del Personal Legislativo",
-   "copete": "Norberto Di Próspero , titular de la Asociación del Personal Legislativo (APL), murió este miércoles a los 61 años. Su fallecimiento generó repercusiones en el ámbito sindical y político, donde se desempeñó durante más de dos décadas como representante de los trabajadores del…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-15T00:11:10.000Z",
+   "id": "p1f6vz",
+   "titulo": "Convocan a una marcha por Claribel Medina este sábado en Plaza Libertad",
+   "copete": "Familiares, amigos y allegados de Claribel Medina realizarán este sábado 17 de octubre una nueva movilización en Balcarce para exigir justicia y reclamar avances en la investigación por el fallecimiento de la joven, ocurrido en diciembre de 2023. La concentración tendrá lugar a…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-14T19:46:28.000Z",
    "fuentes": [
     {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/politica/murio-norberto-di-prospero-secretario-general-asociacion-personal-legislativo_0_cy9oaurOgX.html",
-     "fecha": "2026-10-15T00:11:10.000Z"
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/convocan-a-una-marcha-por-claribel-medina-este-sabado-en-plaza-libertad",
+     "fecha": "2026-10-14T19:46:28.000Z"
     },
     {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/politica/murio-norberto-di-prospero-historico-lider-apl-el-congreso-n6333926",
-     "fecha": "2026-10-15T00:59:00.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/politica/2026/10/14/murio-norberto-di-prospero-historico-dirigente-del-gremio-de-trabajadores-del-congreso/",
-     "fecha": "2026-10-15T00:51:20.000Z"
-    },
-    {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/politica/muerte-golpea-congreso-antes-sesion-dnu-70-23-milei-202610142243",
-     "fecha": "2026-10-15T01:04:03.000Z"
-    },
-    {
-     "medio": "Página/12",
-     "enlace": "https://www.pagina12.com.ar/2026/10/15/murio-norberto-di-prospero-historico-referente-del-sindicalismo-parlamentario/",
-     "fecha": "2026-10-15T01:27:00.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/sociedad/murio-norberto-di-prospero--historico-referente-del-sindicalismo-legislativo_a6ad016ad8298ee386b435f67",
-     "fecha": "2026-10-15T00:13:00.000Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 60 y la fuente no lo dice",
-   "maximo": 4
-  },
-  {
-   "id": "19xa7ho",
-   "titulo": "Atletismo Buena tarea de atletas balcarceños de la AACyC",
-   "copete": "",
-   "seccion": "Deportes",
-   "fecha": "2026-10-15T01:31:56.486Z",
-   "fuentes": [
-    {
-     "medio": "Diario La Vanguardia",
-     "enlace": "https://www.diariolavanguardia.com/deportes/14330-buena-tarea-de-atletas-balcarcenos-de-la-aacyc/",
-     "fecha": null
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/convocan-una-nueva-movilizacion-para.html",
+     "fecha": "2026-10-14T23:42:49.607Z"
     }
    ],
    "intentos": 1,
-   "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2774 (line 27 column 13)",
+   "motivo": "cuerpo: 1 problema (copia): copia 14 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 123 palabras",
    "maximo": 3
   }
  ]

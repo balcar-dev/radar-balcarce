@@ -397,9 +397,9 @@
   "motivo": "con cuerpo"
  },
  "19xa7ho": {
-  "intentos": 1,
-  "ultimo": "2026-10-15T01:32:05.193Z",
-  "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2774 (line 27 column 13)"
+  "intentos": 2,
+  "ultimo": "2026-10-15T01:46:07.007Z",
+  "motivo": "con cuerpo"
  },
  "19xpc0o": {
   "intentos": 1,
@@ -611,6 +611,11 @@
  "1dzsvda": {
   "intentos": 1,
   "ultimo": "2026-10-14T10:31:33.954Z",
+  "motivo": "con cuerpo"
+ },
+ "1e22az3": {
+  "intentos": 1,
+  "ultimo": "2026-10-15T01:46:07.007Z",
   "motivo": "con cuerpo"
  },
  "1e8rdd4": {
@@ -1096,9 +1101,9 @@
   "motivo": "con cuerpo"
  },
  "1spqpr6": {
-  "intentos": 2,
-  "ultimo": "2026-10-15T01:32:05.193Z",
-  "motivo": "título o bajada: 2 problemas (numero): el titulo dice 60 y la fuente no lo dice"
+  "intentos": 3,
+  "ultimo": "2026-10-15T01:46:07.007Z",
+  "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "1stahh": {
   "intentos": 1,
@@ -1282,6 +1287,11 @@
  "1xc91gb": {
   "intentos": 2,
   "ultimo": "2026-10-12T14:31:43.106Z",
+  "motivo": "con cuerpo"
+ },
+ "1xvsqrr": {
+  "intentos": 1,
+  "ultimo": "2026-10-15T01:46:07.007Z",
   "motivo": "con cuerpo"
  },
  "1xwup7g": {
@@ -1577,8 +1587,8 @@
   "motivo": "con cuerpo"
  },
  "7txprm": {
-  "intentos": 1,
-  "ultimo": "2026-10-15T01:32:05.193Z",
+  "intentos": 2,
+  "ultimo": "2026-10-15T01:46:07.007Z",
   "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "7w5vsc": {
@@ -2178,6 +2188,11 @@
   "intentos": 1,
   "ultimo": "2026-10-09T00:01:57.209Z",
   "motivo": "cuerpo: 1 problema (numero): el cuerpo dice 4 y la fuente no lo dice; sin esas oraciones quedan 54 palabras"
+ },
+ "p1f6vz": {
+  "intentos": 1,
+  "ultimo": "2026-10-15T01:46:07.007Z",
+  "motivo": "cuerpo: 1 problema (copia): copia 14 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 123 palabras"
  },
  "p1wpy5": {
   "intentos": 1,
