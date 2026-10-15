@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T01:46:48.847Z",
+  "generado": "2026-10-15T02:02:27.223Z",
   "notas": [
     {
       "id": "19xa7ho",
@@ -13,7 +13,7 @@
       ],
       "enlace": "https://www.diariolavanguardia.com/deportes/14330-buena-tarea-de-atletas-balcarcenos-de-la-aacyc/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T01:31:56.486Z",
+      "fecha": "2026-10-15T01:46:02.690Z",
       "sinFecha": true,
       "visto": "2026-10-15T01:46:02.690Z",
       "relevancia": 59,
@@ -613,6 +613,141 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "el-concejo-deliberativo-estudiantil-cierra-su-quinta-edicion-con-25"
+    },
+    {
+      "id": "zfpkeo",
+      "titulo": "Incidentes y represión policial en el ingreso de River en Junín",
+      "copete": "Se registraron corridas y uso de gas pimienta en los accesos al estadio Eva Perón en la previa del partido entre Sarmiento y River por el Torneo Clausura.",
+      "cuerpo": "Se produjeron momentos de tensión y disturbios en los accesos al estadio Eva Perón de Junín en la previa del encuentro pendiente de la fecha 11 del Torneo Clausura entre Sarmiento y River.\n\nSegún informaron distintos medios y registros audiovisuales, el operativo de seguridad colapsó minutos antes del inicio y la Policía Bonaerense dispersó con gas pimienta ante la aglomeración de simpatizantes. La organización había habilitado 4500 localidades para el público visitante con un valor de 100000 pesos cada una, tras una ampliación dispuesta por APREVIDE, que inicialmente había autorizado 3000 lugares.\n\nDurante los tumultos se registraron denuncias sobre una presunta sobreventa de entradas y fallas en el sistema de lectura de códigos QR, mientras que algunos asistentes requirieron asistencia médica tras la represión en las adyacencias.",
+      "guion": "Incidentes y represión policial en el ingreso de River en Junín",
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "Clarín",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "Página/12",
+        "Olé",
+        "Crónica",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "La Página Millonaria"
+      ],
+      "enlace": "https://lapaginamillonaria.com/torneo-clausura/descontrol-y-caos-en-el-ingreso-de-los-hinchas-de-river-en-junin-la-policia-reprime-con-gas-pimienta",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T21:45:31.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T23:31:42.572Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Disturbios en los accesos al estadio Eva Perón de Junín.",
+        "La policía dispersó con gas pimienta ante la aglomeración de hinchas.",
+        "Se autorizaron 4500 localidades para el público visitante.",
+        "Denunciaron fallas en lectores de QR y supuesta sobreventa."
+      ],
+      "noConfirmado": [
+        "No se precisó la cantidad exacta de personas heridas ni el parte oficial de los atendidos por asistencia médica.",
+        "No hay confirmación oficial sobre la presunta sobreventa de entradas denunciada por los asistentes."
+      ],
+      "textoRedes": "Incidentes y represión policial con gas pimienta en el ingreso de los hinchas de River en el estadio Eva Perón de Junín en la previa del partido ante Sarmiento.",
+      "etiquetas": [
+        "River Plate",
+        "Sarmiento",
+        "Junín",
+        "Torneo Clausura",
+        "Incidentes",
+        "APREVIDE"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Página Millonaria",
+          "enlace": "https://lapaginamillonaria.com/torneo-clausura/descontrol-y-caos-en-el-ingreso-de-los-hinchas-de-river-en-junin-la-policia-reprime-con-gas-pimienta",
+          "fecha": "2026-10-14T21:45:31.000Z",
+          "oficial": false,
+          "aporte": "Informó detalles del operativo, los valores de las entradas, la actuación policial y testimonios de los hinchas."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/14/caos-y-heridos-los-incidentes-en-el-ingreso-de-la-hinchada-de-river-al-estadio-eva-peron-de-sarmiento/",
+          "fecha": "2026-10-14T22:42:28.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en la descripción del colapso en el ingreso y el uso de gas pimienta en la previa."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/descontrol-en-el-ingreso-de-hinchas-de-river-al-estadio-de-sarmiento-de-junin-nid14102026/",
+          "fecha": "2026-10-14T22:55:45.000Z",
+          "oficial": false,
+          "aporte": "Aportó que se registraron demoras y aglomeraciones en uno de los accesos al estadio."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/river-plate/river-plate-caotico-ingreso-hinchas-estadio-sarmiento-junin_0_yKITgj2tHo.html",
+          "fecha": "2026-10-14T22:17:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la existencia de corridas, empujones y personas que ingresaron sin ticket."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/incidentes-junin-hinchas-river-desbordes-ingresos-policia-arrojo-gas-pimienta-gente_0_e2BaeuPPoD.html",
+          "fecha": "2026-10-14T21:50:52.000Z",
+          "oficial": false,
+          "aporte": "Indicó la cifra de 4500 hinchas habilitados, la presunta sobreventa y fallas en el lector de QR."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/14/caos-en-el-ingreso-de-los-hinchas-de-river-al-estadio-de-sarmiento-de-junin-hubo-tumultos-y-la-policia-lanzo-gas-pimienta/",
+          "fecha": "2026-10-14T21:55:23.000Z",
+          "oficial": false,
+          "aporte": "Reportó momentos de tensión y presión de los fanáticos en los ingresos."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/river-plate/caos-acceso-hinchas-river-sarmiento-junin-id766258.html",
+          "fecha": "2026-10-14T22:53:05.000Z",
+          "oficial": false,
+          "aporte": "No aportó información en su resumen."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/actualidad/graves-incidentes-en-el-acceso-de-los-hinchas-de-river-en-junin-en-la-porev/",
+          "fecha": "2026-10-14T22:32:00.000Z",
+          "oficial": false,
+          "aporte": "Registró la represión policial a los simpatizantes que querían entrar al estadio."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/caos-e-incidentes-en-el-ingreso-de-los-hinchas-de-river-al-estadio-de-sarmiento-de-junin_a6ad0058b8298ee386b40ba2b",
+          "fecha": "2026-10-14T23:01:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "jzwgk2",
+          "titulo": "Hinchas de River insultan a Claudio Tapia en el estadio Monumental",
+          "fecha": "2026-10-11T00:49:54.000Z",
+          "ruta": "/nota/hinchas-de-river-insultan-a-claudio-tapia-en-el-estadio-monumental-jzwgk2"
+        },
+        {
+          "id": "zcn7od",
+          "titulo": "River y Boca llevan hinchas visitantes a Córdoba",
+          "fecha": "2026-09-29T13:20:32.000Z",
+          "ruta": "/nota/river-y-boca-llevan-hinchas-visitantes-a-cordoba-zcn7od"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 9 medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "incidentes-y-represion-policial-en-el-ingreso-de-river-en-junin"
     },
     {
       "id": "fav3c1",
@@ -1257,6 +1392,77 @@
       "foto": {
         "archivo": "fotos-notas/2m710x.jpg",
         "credito": "Foto: La Nación"
+      }
+    },
+    {
+      "id": "q7bxgi",
+      "titulo": "On City ofrece descuentos y financiación por el Día de la Madre",
+      "copete": "La firma lanza una propuesta comercial con rebajas de hasta el 50% y distintas opciones de pago para compras tecnológicas y de electrodomésticos.",
+      "cuerpo": "La cadena comercial On City dispone una serie de beneficios en tecnología, electrodomésticos y artículos para el hogar con motivo del Día de la Madre. La iniciativa se desarrolla desde el 15 hasta el 18 de octubre e incluye rebajas de hasta el 50% junto con un plan de hasta 18 cuotas sin interés mediante tarjetas de entidades bancarias participantes.\n\nLa oferta comprende rubros como teléfonos celulares, tabletas, computadoras portátiles, televisores, equipos de audio y pequeños electrodomésticos. Asimismo, quienes utilicen la financiación propia de la firma acceden a un 20% de rebaja y hasta 24 cuotas fijas, con la posibilidad de postergar el primer pago para noviembre.\n\nLos compradores disponen de la alternativa de retirar los pedidos sin costo en cualquiera de los más de 180 locales distribuidos en todo el territorio nacional o mediante su plataforma digital.",
+      "guion": "On City ofrece descuentos y financiación por el Día de la Madre",
+      "seccion": "Economía",
+      "medios": [
+        "El Cronista",
+        "Ámbito"
+      ],
+      "enlace": "https://www.ambito.com/negocios/dia-la-madre-on-city-presenta-descuentos-50-y-financiacion-24-cuotas-n6333738",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T18:18:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T01:31:56.486Z",
+      "relevancia": 50,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Del 15 al 18 de octubre hay rebajas de hasta el 50%",
+        "Hasta 18 cuotas sin interés con tarjetas bancarias",
+        "Financiación propia de hasta 24 cuotas fijas con On City Crédito",
+        "Retiro gratuito en más de 180 sucursales y en la web"
+      ],
+      "seSabe": [
+        "On City presenta beneficios comerciales por el Día de la Madre",
+        "La promoción rige desde el 15 hasta el 18 de octubre",
+        "Hay rebajas de hasta el 50% y 18 cuotas sin interés con tarjetas bancarias",
+        "Con On City Crédito se puede abonar en hasta 24 cuotas fijas con inicio de pago en noviembre",
+        "La propuesta abarca celulares, notebooks, televisores y pequeños electrodomésticos"
+      ],
+      "textoRedes": "On City lanza descuentos de hasta el 50% y financiación en hasta 24 cuotas por el Día de la Madre en tecnología y electrodomésticos.",
+      "etiquetas": [
+        "On City",
+        "Día de la Madre",
+        "descuentos",
+        "financiación",
+        "electrodomésticos",
+        "tecnología"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/negocios/dia-la-madre-on-city-presenta-descuentos-50-y-financiacion-24-cuotas-n6333738",
+          "fecha": "2026-10-14T18:18:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles completos de la propuesta comercial, fechas, categorías de productos, modalidades de financiación y opciones de retiro."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/contenido-patrocinado/dia-de-la-madre-on-city-presenta-descuentos-de-hasta-40-y-financiacion-en-hasta-24-cuotas/",
+          "fecha": "2026-10-15T00:47:25.000Z",
+          "oficial": false,
+          "aporte": "Confirmó las fechas del 15 al 18 de octubre, el porcentaje de descuento y las cuotas con tarjetas bancarias."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "on-city-ofrece-descuentos-y-financiacion-por-el-dia-de-la-madre",
+      "foto": {
+        "archivo": "fotos-notas/q7bxgi.jpg",
+        "credito": "Foto: Ámbito"
       }
     },
     {
@@ -2090,16 +2296,15 @@
         "TyC Sports",
         "Minuto Uno",
         "Crónica",
-        "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Nueva",
-        "La Brújula 24",
         "La Voz del Pueblo",
         "Mi8 (Canal 8 Mar del Plata)",
         "Bolavip Argentina",
+        "El Gráfico",
         "Olé",
-        "El Gráfico"
+        "La Brújula 24"
       ],
       "enlace": "https://noticiasargentinas.com/deportes/colapinto-pidio-frenar-los-ataques-de-los-argentinos-en-la-formula-1---no-me-ayudan-_a6acfdbd78298ee386b39ef1a",
       "teniaImagenLaFuente": true,
@@ -2347,12 +2552,12 @@
         "LU9 Mar del Plata",
         "QZ Noticias (Mar del Plata)",
         "Diputados Bonaerenses",
+        "El Día",
         "0221",
-        "La Tecla",
-        "La Verdad",
         "El Marplatense",
         "Agencia DIB",
-        "Ámbito"
+        "Ámbito",
+        "La Verdad"
       ],
       "enlace": "https://www.0221.com.ar/la-plata/la-provincia-convoco-los-docentes-retomar-las-paritarias-y-definir-nuevos-aumentos-salarios-n135790",
       "teniaImagenLaFuente": true,
@@ -2954,10 +3159,10 @@
       "seccion": "Política",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "La Verdad",
         "El Marplatense",
+        "Agencia DIB",
         "El Eco de Tandil",
-        "Agencia DIB"
+        "La Verdad"
       ],
       "enlace": "https://dib.com.ar/sociedad/la-provincia-adjudico-medicamentos-trasplantes-15760-millones-n56476",
       "teniaImagenLaFuente": true,
@@ -3025,6 +3230,107 @@
       }
     },
     {
+      "id": "1kavxj3",
+      "titulo": "Sebastián Villa sufre una lesión en el tobillo y enciende la alerta en Boca",
+      "copete": "El delantero colombiano terminó con una fuerte inflamación en el tobillo derecho tras la derrota frente a Vasco da Gama. El cuerpo técnico aguarda los estudios médicos de cara a la revancha por la Copa Sudamericana.",
+      "cuerpo": "Sebastián Villa sufrió un inconveniente físico en el tobillo derecho durante la caída de Boca Juniors por 1-0 ante Vasco da Gama en La Bombonera, por el partido de ida de las semifinales de la Copa Sudamericana 2026.\n\nEl delantero ingresó a los 13 minutos del segundo tiempo y se lastimó en una de sus primeras intervenciones ofensivas al ejecutar un remate de zurda. Pese a continuar en el campo hasta el final, el atacante se retiró del estadio con dificultades para caminar.\n\nEl director técnico Rodolfo Arruabarrena confirmó en conferencia de prensa que la articulación presentaba una hinchazón importante y señaló que aguardan los resultados de las evaluaciones médicas. Su participación en el encuentro de vuelta, previsto para el próximo martes en Río de Janeiro, permanece en duda.",
+      "guion": "Sebastian Villa sufre una lesión en el tobillo y enciende la alerta en Boca",
+      "seccion": "Fútbol",
+      "medios": [
+        "El Destape",
+        "Perfil",
+        "TyC Sports",
+        "Olé",
+        "Crónica",
+        "Canal 26",
+        "Diario Popular",
+        "Minuto Uno"
+      ],
+      "enlace": "https://www.minutouno.com/deportes/preocupacion-boca-sebastian-villa-sufrio-una-lesion-el-tobillo-y-se-hara-estudios-n6333481",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T11:45:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T14:31:29.582Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Sebastián Villa terminó con el tobillo derecho inflamado tras el partido ante Vasco da Gama.",
+        "El delantero colombiano se someterá a estudios médicos para conocer la gravedad de la lesión.",
+        "El cuerpo técnico liderado por Rodolfo Arruabarrena aguarda su evolución de cara a la revancha.",
+        "El partido de vuelta por las semifinales de la Copa Sudamericana se jugará el próximo martes en Brasil."
+      ],
+      "noConfirmado": [
+        "El diagnóstico médico definitivo y el grado de la lesión que padece el futbolista.",
+        "La presencia del delantero colombiano en el partido de vuelta que se disputará en Río de Janeiro."
+      ],
+      "textoRedes": "Sebastián Villa sufrió una lesión en el tobillo derecho en la derrota de Boca ante Vasco da Gama y se someterá a estudios médicos. El cuerpo técnico aguarda su evolución de cara al partido de vuelta por las semifinales de la Copa Sudamericana.",
+      "etiquetas": [
+        "Boca Juniors",
+        "Sebastián Villa",
+        "Copa Sudamericana",
+        "Fútbol",
+        "Rodolfo Arruabarrena"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/preocupacion-boca-sebastian-villa-sufrio-una-lesion-el-tobillo-y-se-hara-estudios-n6333481",
+          "fecha": "2026-10-14T11:45:00.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles de la lesión de Sebastián Villa, el desarrollo del partido ante Vasco da Gama y las declaraciones del entrenador Rodolfo Arruabarrena."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/futbol/preocupacion-en-boca-sebastian-villa-sufrio-un-esguince-de-tobillo-tras-la-derrota-ante-vasco-da-gama.phtml",
+          "fecha": "2026-10-14T11:58:14.000Z",
+          "oficial": false,
+          "aporte": "Aportó que el atacante colombiano terminó con una severa inflamación en su articulación tras el encuentro de ida."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/boca-juniors/sebastian-villa-lesion-se-hace-estudios-y-hay-alerta-en-boca-vasco-da-gama-id766119.html",
+          "fecha": "2026-10-14T12:48:20.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no registrar resumen."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/boca-juniors/sebastian-villa-lesion-boca-vasco-da-gama-id766101.html",
+          "fecha": "2026-10-14T13:20:38.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no registrar resumen."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/actualidad/boca-en-alerta-sebastian-villa-se-hace-estudios-tras-sufrir-una-lesion-en-el-tobillo/",
+          "fecha": "2026-10-14T13:39:25.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en que el delantero se someterá a estudios médicos tras la derrota frente al conjunto brasileño."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/deportes/2026/10/14/se-pierde-la-revancha-en-brasil-la-molestia-de-sebastian-villa-en-boca-que-complica-los-planes-de-arruabarrena-ante-vasco-da-gama/",
+          "fecha": "2026-10-14T14:22:07.000Z",
+          "oficial": false,
+          "aporte": "Especificó que la lesión ocurrió en La Bombonera durante la ida de las semifinales de la Copa Sudamericana 2026."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "sebastian-villa-sufre-una-lesion-en-el-tobillo-y-enciende-la-alerta",
+      "foto": {
+        "archivo": "fotos-notas/1kavxj3.jpg",
+        "credito": "Foto: Perfil"
+      }
+    },
+    {
       "id": "11uyvlg",
       "titulo": "El Gobierno prohíbe la venta de juguetes blandos por exceso de ftalatos",
       "copete": "La prohibición nacional abarca a todos los modelos de la marca Pinch Family. Un laboratorio detectó que contienen el doble del plastificante permitido por las normas de seguridad.",
@@ -3040,7 +3346,6 @@
         "A24",
         "Minuto Uno",
         "Crónica",
-        "El Día",
         "La Voz del Pueblo",
         "El Marplatense",
         "Ámbito",
@@ -3117,11 +3422,11 @@
       "medios": [
         "TN (Todo Noticias)",
         "El Cronista",
-        "Página/12",
         "Crónica",
         "Radio Mitre",
         "Noticias Argentinas (NA)",
         "El Marplatense",
+        "Página/12",
         "Infórmese Primero (FM 104.9)",
         "El Diario Balcarce",
         "Diario La Vanguardia",
@@ -3129,22 +3434,21 @@
         "Perfil",
         "Canal 26",
         "La Tecla",
-        "La Verdad",
-        "Infoeme",
         "QZ Noticias (Mar del Plata)",
         "Mi8 (Canal 8 Mar del Plata)",
         "Qué Digital",
         "Infobrisas (Radio Brisas)",
         "Punto Noticias",
-        "El Eco de Tandil",
-        "NDEN – Noticias de Necochea",
-        "La Verdad de Ayacucho",
         "La Noticia 1",
+        "La Verdad de Ayacucho",
         "Diputados Bonaerenses",
         "Clarín",
         "0223 (Mar del Plata)",
         "La Voz del Pueblo",
         "Agencia DIB",
+        "El Eco de Tandil",
+        "La Verdad",
+        "Infoeme",
         "Ámbito",
         "iProfesional",
         "El Día"
@@ -3276,15 +3580,15 @@
         "TN (Todo Noticias)",
         "El Cronista",
         "Perfil",
-        "Página/12",
         "Radio Mitre",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "El Eco de Tandil",
         "Ámbito",
         "iProfesional",
         "Minuto Uno",
-        "El Economista"
+        "El Economista",
+        "El Eco de Tandil",
+        "Página/12"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
       "teniaImagenLaFuente": true,
@@ -3707,8 +4011,8 @@
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "Doble Amarilla",
         "Bolavip Argentina",
+        "Doble Amarilla",
         "Clarín",
         "0223 (Mar del Plata)",
         "La Capital (Rosario)"
@@ -3908,44 +4212,16 @@
           "aporte": null
         },
         {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/lisandro-martinez-explico-sus-picantes-declaraciones---hable-desde-el-enojo-y-la-frustracion-_a6ad00abde063050a6963f9b8",
-          "fecha": "2026-10-14T23:26:31.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/lisandro-martinez--en-la-mira-de-las-leyendas-del-manchester-united--criticas-y-una-posible-sancion_a6acfd2c9e063050a696091f1",
-          "fecha": "2026-10-14T19:56:27.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/luego-de-sus-criticas-al-director-deportivo--lisandro-martinez-seria-sancionado-por-el-manchester-united_a6acf734d853170937806e959",
-          "fecha": "2026-10-14T13:05:36.710Z",
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/europa/lisandro-martinez-estallo-contra-la-dirigencia-de-manchester-united-esperamos-mas-de-la-gente-de-arriba",
+          "fecha": "2026-10-13T21:57:11.000Z",
           "oficial": false,
           "aporte": null
         },
         {
           "medio": "Doble Amarilla",
           "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/lisandro-martinez-apunto-contra-el-director-deportivo-del-manchester-united---esperaba-mas-de-el-_a6acead500084b16c6973c3fe",
-          "fecha": "2026-10-13T22:55:44.905Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/premier-league/manchester-united-pone-en-duda-el-futuro-de-lisandro-martinez-y-no-descarta-sanciones-por-sus-dichos-contra-la-directiva",
-          "fecha": "2026-10-14T19:39:22.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/europa/lisandro-martinez-estallo-contra-la-dirigencia-de-manchester-united-esperamos-mas-de-la-gente-de-arriba",
-          "fecha": "2026-10-14T02:30:41.000Z",
+          "fecha": "2026-10-13T22:55:44.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3964,6 +4240,13 @@
           "aporte": null
         },
         {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/luego-de-sus-criticas-al-director-deportivo--lisandro-martinez-seria-sancionado-por-el-manchester-united_a6acf734d853170937806e959",
+          "fecha": "2026-10-14T13:05:36.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/rooney-ferdinand-y-carragher-destrozaron-lisandro-martinez-es-una-falta-respeto-n6333629",
           "fecha": "2026-10-14T15:16:00.000Z",
@@ -3974,6 +4257,20 @@
           "medio": "La Capital (Rosario)",
           "enlace": "https://www.lacapital.com.ar/ovacion/las-duras-declaraciones-lisandro-martinez-que-abrieron-un-escandalo-manchester-united-n10286663.html",
           "fecha": "2026-10-14T17:29:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/lisandro-martinez--en-la-mira-de-las-leyendas-del-manchester-united--criticas-y-una-posible-sancion_a6acfd2c9e063050a696091f1",
+          "fecha": "2026-10-14T19:56:27.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/lisandro-martinez-explico-sus-picantes-declaraciones---hable-desde-el-enojo-y-la-frustracion-_a6ad00abde063050a6963f9b8",
+          "fecha": "2026-10-14T23:26:31.560Z",
           "oficial": false,
           "aporte": null
         }
@@ -4141,12 +4438,12 @@
         "Perfil",
         "TN (Todo Noticias)",
         "El Cronista",
-        "Página/12",
         "A24",
         "iProfesional",
         "C5N",
         "Crónica",
         "Noticias Argentinas (NA)",
+        "Página/12",
         "La Nación",
         "Radio Mitre"
       ],
@@ -4244,12 +4541,12 @@
         "Perfil",
         "C5N",
         "Radio Mitre",
-        "Doble Amarilla",
-        "Bolavip Argentina",
         "El Día",
+        "Bolavip Argentina",
         "Ecos Diarios (Necochea)",
         "Clarín",
-        "Minuto Uno"
+        "Minuto Uno",
+        "Doble Amarilla"
       ],
       "enlace": "https://tn.com.ar/deportes/futbol/2026/10/13/franco-mastantuono-fue-operado-luego-de-haber-recibido-un-golpe-en-el-ultimo-partido-de-la-fiorentina-el-parte-medico/",
       "teniaImagenLaFuente": true,
@@ -4907,10 +5204,10 @@
     "Automovilismo",
     "Cultura y agenda",
     "Política",
+    "Fútbol",
     "Economía",
     "Argentina",
     "Policiales",
-    "Fútbol",
     "Tecnología",
     "Agro"
   ],
@@ -5288,10 +5585,10 @@
   },
   "pendientes": [
     {
-      "id": "1spqpr6",
-      "titulo": "Murió Norberto Di Próspero, secretario general de la…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
+      "id": "p1f6vz",
+      "titulo": "Convocan a una marcha por Claribel Medina este sábado en…",
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"muerte\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
     },
     {
       "id": "1hb8gyb",
@@ -5342,12 +5639,6 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "7txprm",
-      "titulo": "Los mensajes de despedida tras la muerte de Roña Castro a…",
-      "seccion": "Deportes",
-      "motivo": "necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
-    },
-    {
       "id": "120b8gy",
       "titulo": null,
       "seccion": "Policiales",
@@ -5361,12 +5652,6 @@
     },
     {
       "id": "183hv39",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "zcbb3f",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
@@ -5390,16 +5675,16 @@
       "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
-      "id": "id5g36",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
       "id": "1333xd6",
       "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
+      "id": "id5g36",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "fp2pbw",
@@ -5444,5 +5729,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 2
 }

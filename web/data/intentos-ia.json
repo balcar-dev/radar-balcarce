@@ -301,11 +301,6 @@
   "ultimo": "2026-10-14T20:38:43.595Z",
   "motivo": "con cuerpo"
  },
- "17l1wv1": {
-  "intentos": 1,
-  "ultimo": "2026-10-08T02:01:33.215Z",
-  "motivo": "con cuerpo"
- },
  "17mqr96": {
   "intentos": 1,
   "ultimo": "2026-10-08T19:32:48.832Z",
@@ -1101,9 +1096,9 @@
   "motivo": "con cuerpo"
  },
  "1spqpr6": {
-  "intentos": 3,
-  "ultimo": "2026-10-15T01:46:07.007Z",
-  "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)"
+  "intentos": 4,
+  "ultimo": "2026-10-15T02:02:04.719Z",
+  "motivo": "título o bajada: 2 problemas (numero): el titulo dice 60 y la fuente no lo dice"
  },
  "1stahh": {
   "intentos": 1,
@@ -1576,20 +1571,15 @@
   "ultimo": "2026-10-12T13:33:06.996Z",
   "motivo": "con cuerpo"
  },
- "7gf331": {
-  "intentos": 2,
-  "ultimo": "2026-10-08T02:01:33.215Z",
-  "motivo": "con cuerpo"
- },
  "7p3nh4": {
   "intentos": 1,
   "ultimo": "2026-10-12T21:31:52.948Z",
   "motivo": "con cuerpo"
  },
  "7txprm": {
-  "intentos": 2,
-  "ultimo": "2026-10-15T01:46:07.007Z",
-  "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
+  "intentos": 3,
+  "ultimo": "2026-10-15T02:02:04.719Z",
+  "motivo": "cuerpo: 4 problemas (nombre, cita): el cuerpo nombra a \"unidad\" y la fuente no; sin esas oraciones quedan 129 palabras"
  },
  "7w5vsc": {
   "intentos": 3,
@@ -2190,9 +2180,9 @@
   "motivo": "cuerpo: 1 problema (numero): el cuerpo dice 4 y la fuente no lo dice; sin esas oraciones quedan 54 palabras"
  },
  "p1f6vz": {
-  "intentos": 1,
-  "ultimo": "2026-10-15T01:46:07.007Z",
-  "motivo": "cuerpo: 1 problema (copia): copia 14 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 123 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-15T02:02:04.719Z",
+  "motivo": "semáforo: necesita ojo humano: \"muerte\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "p1wpy5": {
   "intentos": 1,
