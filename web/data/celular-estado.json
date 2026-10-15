@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T23:01:50.540Z",
+ "generado": "2026-10-15T23:25:57.189Z",
  "portada": 55,
  "archivo": 1143,
  "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-15T23:01:50.578Z",
+  "generado": "2026-10-15T23:25:57.224Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -74,7 +74,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-15T23:05:40.639Z"
    },
    {
     "nombre": "podcast",
@@ -157,11 +157,11 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 48,
     "notas": [
      {
-      "id": "u0hcbv",
-      "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
+      "id": "1ylxz2o",
+      "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
       "seccion": "Balcarce"
      },
      {
@@ -212,12 +212,6 @@
    ],
    "cola": [
     {
-     "id": "1f8plkr",
-     "titulo": "El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
      "id": "1ylxz2o",
      "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
      "seccion": "Balcarce",
@@ -226,6 +220,12 @@
     {
      "id": "n6v2wu",
      "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "1mswi0g",
+     "titulo": "Virginia Aparicio expone sobre plaguicidas en el Concejo",
      "seccion": "Balcarce",
      "marcada": false
     }

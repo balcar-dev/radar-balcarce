@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-15T23:01:48.356Z",
+ "consultado": "2026-10-15T23:25:49.329Z",
  "equipos": [
   "9739",
   "3",
@@ -715,7 +715,7 @@
     "competencia": "liga",
     "inicio": "2026-10-15T23:00:00.000Z",
     "estado": "en-juego",
-    "minuto": "2'",
+    "minuto": "26'",
     "local": {
      "id": "10",
      "nombre": "Huracán",
@@ -724,10 +724,17 @@
     "visitante": {
      "id": "9",
      "nombre": "Gimnasia La Plata",
-     "goles": 0
+     "goles": 1
     },
     "penales": null,
-    "goles": [],
+    "goles": [
+     {
+      "equipo": "visitante",
+      "jugador": "Ignacio Fernández",
+      "minuto": "18'",
+      "tipo": "gol"
+     }
+    ],
     "estadio": "Estadio Tomás Adolfo Ducó",
     "fase": null,
     "partidoDeLaSerie": null,
@@ -1586,7 +1593,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-15T21:36:44.903Z",
+ "tablaCuando": "2026-10-15T23:25:49.329Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",

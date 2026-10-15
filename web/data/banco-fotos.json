@@ -14140,16 +14140,16 @@
   "cuando": "2026-10-14T14:04:59.567Z"
  },
  "11uyvlg": {
-  "archivo": "fotos-notas/11uyvlg.jpg",
   "medio": "El Destape",
-  "credito": "Foto: El Destape",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Gobierno prohíbe la venta de juguetes blandos por exceso de ftalatos",
   "enlace": "https://www.eldestapeweb.com/sociedad/prohiben-juguetes-infantiles-pinch-family-ser-toxicos-peligrosos-salud-2026101410146",
   "imagenOriginal": "https://cdn.eldestapeweb.com/eldestape/082026/1786553476499.jpg?&cw=1600&ch=900",
   "razon": "Muestra una juguetería completa sin marcas agregadas ni menores de edad.",
-  "cuando": "2026-10-14T14:32:14.209Z"
+  "cuando": "2026-10-14T14:32:14.209Z",
+  "intentado": true,
+  "borrada": true
  },
  "1kavxj3": {
   "archivo": "fotos-notas/1kavxj3.jpg",
@@ -15406,5 +15406,17 @@
   "imagenOriginal": "https://media.dib.com.ar/p/06ef04228bb54700dccc98f811f6adfc/adjuntos/377/imagenes/100/059/0100059232/1200x675/smart/peaje-ruta-6.jpeg",
   "razon": "Muestra claramente el peaje en la ruta con buen encuadre y sin marcas ni menores.",
   "cuando": "2026-10-15T22:29:11.200Z"
+ },
+ "1mswi0g": {
+  "archivo": "fotos-notas/1mswi0g.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Virginia Aparicio expone sobre plaguicidas en el Concejo",
+  "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/virginia-aparicio-expuso-en-el-concejo-deliberante-sobre-plaguicidas-y-resultados-del-proyecto-sprint",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/Aparicio_Concejo1.jpg",
+  "razon": "Es la única foto disponible, muestra claramente el hecho en el Concejo Deliberante y no tiene marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-15T23:25:38.623Z"
  }
 }
