@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T22:56:43.902Z",
+  "generado": "2026-10-15T23:01:50.540Z",
   "notas": [
     {
       "id": "n6v2wu",
@@ -2133,7 +2133,6 @@
         "Infórmese Primero (FM 104.9)",
         "El Diario Balcarce",
         "Diario La Vanguardia",
-        "0223 (Mar del Plata)",
         "Infobae",
         "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
@@ -2155,6 +2154,7 @@
         "Infoeme",
         "Ecos Diarios (Necochea)",
         "Clarín",
+        "0223 (Mar del Plata)",
         "NDEN – Noticias de Necochea",
         "La Noticia 1",
         "A24"
@@ -3011,94 +3011,6 @@
       }
     },
     {
-      "id": "wm8hav",
-      "titulo": "El Concejo Deliberativo Estudiantil cierra su quinta edición con 25 iniciativas",
-      "copete": "Estudiantes de escuelas secundarias locales completaron nueve encuentros y dos sesiones durante el año. La iniciativa legislativa promueve la participación democrática.",
-      "cuerpo": "El Concejo Deliberante concretó el cierre de la edición 2026 del Concejo Deliberativo Estudiantil, un programa que cumplió cinco años consecutivos de labor en el distrito. Durante el período anual se desarrollaron nueve encuentros de trabajo y dos sesiones legislativas, donde los jóvenes elaboraron iniciativas orientadas a responder a las necesidades de la comunidad local. Como saldo del ciclo, los participantes presentaron un total de 25 proyectos vinculados con inquietudes y problemáticas de la ciudad.\n\nEl presidente del cuerpo legislativo, Agustín Cassini, valoró la continuidad de la propuesta al señalar que promueve la participación como herramienta para construir ciudadanía. Del desarrollo participaron docentes, inspectores y establecimientos escolares que articularon la actividad con las instituciones locales.",
-      "guion": "El Concejo Deliberativo Estudiantil cierra su quinta edición con veinticinco iniciativas",
-      "seccion": "Balcarce",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia",
-        "Concejo Deliberante de Balcarce"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/politica/el-concejo-deliberativo-estudiantil-cerro-su-quinta-edicion-con-25-proyectos-presentados",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T20:22:24.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T23:01:59.982Z",
-      "relevancia": 93,
-      "local": true,
-      "oficial": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El Concejo Deliberativo Estudiantil completó su quinta edición en el distrito.",
-        "Los estudiantes presentaron 25 proyectos tras nueve encuentros y dos sesiones.",
-        "El presidente del cuerpo legislativo, Agustín Cassini, valoró la continuidad del programa."
-      ],
-      "seSabe": [
-        "El Concejo Deliberativo Estudiantil cumplió cinco años de vigencia en el distrito.",
-        "Los estudiantes presentaron 25 proyectos durante el ciclo 2026.",
-        "El programa incluyó nueve encuentros de trabajo y dos sesiones legislativas.",
-        "El presidente del Concejo Deliberante, Agustín Cassini, destacó la continuidad del espacio."
-      ],
-      "textoRedes": "El Concejo Deliberativo Estudiantil completó su quinta edición en Balcarce con la presentación de 25 proyectos elaborados por estudiantes secundarios tras nueve encuentros y dos sesiones.",
-      "etiquetas": [
-        "Concejo Deliberativo Estudiantil",
-        "Balcarce",
-        "jóvenes",
-        "instituciones"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/politica/el-concejo-deliberativo-estudiantil-cerro-su-quinta-edicion-con-25-proyectos-presentados",
-          "fecha": "2026-10-14T22:04:03.000Z",
-          "oficial": false,
-          "aporte": "Detalló el desarrollo de nueve encuentros, dos sesiones y la declaración del presidente del cuerpo legislativo."
-        },
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/el-concejo-deliberativo-estudiantil-cerro-su-edicion-2026-con-25-proyectos-presentados/",
-          "fecha": "2026-10-14T22:48:57.000Z",
-          "oficial": false,
-          "aporte": "Informó el cierre de la quinta edición del programa con 25 proyectos presentados."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "aabc5v",
-          "titulo": "El Concejo aprueba proyectos sobre infecciones y celiaquía",
-          "fecha": "2026-09-27T18:00:04.000Z",
-          "ruta": "/nota/el-concejo-aprueba-proyectos-sobre-infecciones-y-celiaquia-en-balcarce-aabc5v"
-        },
-        {
-          "id": "1spjzhb",
-          "titulo": "El Concejo nombra Paseo Intendente Juan José Mare a la vuelta interna del Cerro",
-          "fecha": "2026-09-25T12:46:51.000Z",
-          "ruta": "/nota/el-concejo-designa-paseo-intendente-juan-jose-mare-a-la-vuelta-1spjzhb"
-        },
-        {
-          "id": "1iv58lw",
-          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos",
-          "fecha": "2026-09-24T12:55:31.000Z",
-          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-concejo-deliberativo-estudiantil-cierra-su-quinta-edicion-con-25"
-    },
-    {
       "id": "9y985f",
       "titulo": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección",
       "copete": "El delantero argentino presenta una distensión en el muslo izquierdo, según confirmó el Inter de Milán. Estaría inactivo alrededor de un mes.",
@@ -3121,6 +3033,7 @@
         "Bolavip Argentina",
         "El Gráfico",
         "Ámbito",
+        "C5N",
         "Minuto Uno",
         "La Gaceta (Tucumán)",
         "Los Andes (Mendoza)",
@@ -4471,18 +4384,12 @@
     "Automovilismo",
     "Policiales"
   ],
-  "temas": [
-    {
-      "nombre": "El Concejo Deliberante",
-      "ranura": "concejo",
-      "cuantas": 2
-    }
-  ],
+  "temas": [],
   "clima": {
     "ahora": {
       "temp": 9,
-      "sensacion": 7,
-      "humedad": 87,
+      "sensacion": 6,
+      "humedad": 90,
       "viento": 14,
       "rumbo": "SE",
       "cielo": "Parcialmente nublado",
@@ -4494,7 +4401,7 @@
         "dia": "jue",
         "max": 14,
         "min": 8,
-        "lluvia": 10,
+        "lluvia": 22,
         "codigo": 51,
         "viento": 20,
         "milimetros": 0,
@@ -4503,7 +4410,7 @@
       {
         "fecha": "2026-10-16",
         "dia": "vie",
-        "max": 12,
+        "max": 11,
         "min": 5,
         "lluvia": 13,
         "codigo": 51,
@@ -4859,7 +4766,7 @@
       "id": "1dnzynw",
       "titulo": null,
       "seccion": "Política",
-      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
+      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente 1 (visto al reescribir)"
     },
     {
       "id": "2dhhlx",
@@ -4928,8 +4835,8 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "scnqab",
-      "titulo": "Escándalo en Azul: denuncian por estafas a un funcionario…",
+      "id": "1y68acy",
+      "titulo": "El escándalo del oro suma otra denuncia: el diputado…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
     },

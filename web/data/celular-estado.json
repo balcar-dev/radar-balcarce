@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T22:56:43.902Z",
- "portada": 56,
+ "generado": "2026-10-15T23:01:50.540Z",
+ "portada": 55,
  "archivo": 1143,
  "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-15T22:56:43.935Z",
+  "generado": "2026-10-15T23:01:50.578Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -73,7 +73,7 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
