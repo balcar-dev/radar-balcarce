@@ -1826,6 +1826,40 @@
         "vistas": 86,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-15T12:00:21.594Z",
+      "web": {
+        "u12": {
+          "visitas": 0,
+          "vistas": 0
+        },
+        "a12": {
+          "visitas": 0,
+          "vistas": 0
+        },
+        "u24": {
+          "visitas": 0,
+          "vistas": 0
+        },
+        "a24": {
+          "visitas": 0,
+          "vistas": 0
+        },
+        "top": []
+      },
+      "facebook": {
+        "seguidores": 53,
+        "vistas": 14466,
+        "interacciones": 82
+      },
+      "instagram": {
+        "seguidores": 7,
+        "publicaciones": 165,
+        "alcance": 4,
+        "vistas": 9,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -2885,39 +2919,9 @@
       }
     },
     "2026-10-13": {
-      "notas": {
-        "pt4b1r": 12,
-        "uestws": 9,
-        "95znl3": 9,
-        "3xm1ge": 7,
-        "1aqdhjn": 6,
-        "1dun8ft": 4,
-        "fdr535": 3,
-        "um5udw": 3,
-        "1c2cg52": 2,
-        "pl4s36": 2,
-        "1qszs3z": 2,
-        "mj08wf": 2,
-        "19xpc0o": 2,
-        "1vcnnfl": 2,
-        "br4g49": 2,
-        "1y2q715": 2,
-        "fa17ki": 2
-      },
-      "paginas": {
-        "/": 55,
-        "/farmacias": 8,
-        "/seccion/cultura": 4,
-        "/seccion/automovilismo": 2,
-        "/quienes-somos": 2,
-        "/seccion/balcarce": 2,
-        "/agenda": 2
-      },
-      "referentes": {
-        "facebook.com": 33,
-        "directo": 5,
-        "google.com": 4
-      },
+      "notas": {},
+      "paginas": {},
+      "referentes": {},
       "visitas": 0,
       "vistas": 0,
       "horas": [
@@ -2929,47 +2933,37 @@
         0,
         0,
         0,
-        8,
-        3,
-        14,
-        0,
-        4,
-        7,
-        8,
-        72,
-        3,
-        3,
-        6,
         0,
         0,
-        10,
-        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0
       ],
-      "dispositivos": {
-        "desktop": 95,
-        "mobile": 51
-      },
+      "dispositivos": {},
       "paises": {}
     },
     "2026-10-14": {
-      "visitas": 43,
-      "vistas": 72,
-      "dispositivos": {
-        "desktop": 50,
-        "mobile": 30
-      },
+      "visitas": 0,
+      "vistas": 0,
+      "dispositivos": {},
       "paises": {
         "US": 33,
         "AR": 28,
         "IE": 9,
         "SE": 2
       },
-      "referentes": {
-        "facebook.com": 41,
-        "directo": 1,
-        "google.com": 1
-      },
+      "referentes": {},
       "horas": [
         0,
         0,
@@ -2979,15 +2973,15 @@
         0,
         0,
         0,
-        16,
-        10,
-        8,
-        8,
-        7,
-        2,
-        2,
-        11,
-        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -2998,6 +2992,40 @@
       ],
       "notas": {},
       "paginas": {}
+    },
+    "2026-10-15": {
+      "notas": {},
+      "paginas": {},
+      "horas": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "dispositivos": {},
+      "visitas": 0,
+      "vistas": 0,
+      "referentes": {}
     }
   }
 }
