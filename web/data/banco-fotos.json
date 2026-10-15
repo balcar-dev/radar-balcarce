@@ -13963,16 +13963,16 @@
   "cuando": "2026-10-14T11:32:03.987Z"
  },
  "505otd": {
-  "archivo": "fotos-notas/505otd.jpg",
   "medio": "Radio Gabal (FM 104.1)",
-  "credito": "Foto: Radio Gabal (FM 104.1)",
   "licencia": null,
   "origen": "medio",
   "titulo": "El mundo conmemora la donación de órganos y otras efemérides",
   "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/efemerides-14-de-octubre-se-conmemora-el-dia-mundial-de-la-donacion-de-organos",
   "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/marzo/Efemrides.jpeg",
   "razon": "Es la única foto disponible, tiene buena nitidez y no contiene marcas ni menores.",
-  "cuando": "2026-10-14T11:32:03.987Z"
+  "cuando": "2026-10-14T11:32:03.987Z",
+  "intentado": true,
+  "borrada": true
  },
  "1aylfrc": {
   "intentado": true,
@@ -14766,8 +14766,8 @@
   "origen": "ninguna",
   "titulo": "La delegación local parte el lunes hacia la final provincial",
   "razon": "sin fotos para comparar",
-  "cuando": "2026-10-15T12:02:48.250Z",
-  "intentos": 1,
+  "cuando": "2026-10-15T13:03:58.752Z",
+  "intentos": 2,
   "fuentes": 1
  },
  "xzxyd1": {
@@ -14805,5 +14805,17 @@
   "imagenOriginal": "https://www.cronista.com/resizer/v2/ZZP4JD4AVNDGFBG6ZN3RMCLTYQ.png?auth=1d7c74625114dd32c6cf0112bc16e1721416cf58a2bc94e134bb799e16f61e53&height=630&width=1200&quality=70&focal=394%2C212",
   "razon": "Es la única foto sin marcas de agua ni menores reconocibles que ilustra adecuadamente la temática.",
   "cuando": "2026-10-15T12:31:54.898Z"
+ },
+ "1bavaky": {
+  "archivo": "fotos-notas/1bavaky.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Gobierno nacional convoca a inversores privados para recuperar ramales ferroviarios",
+  "enlace": "https://www.infobae.com/politica/2026/10/15/el-gobierno-convocara-a-mineras-y-operadoras-para-optimizar-los-trenes-de-carga-de-la-puna-saltena/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/4UTH5JNRHJCZLJMVTXYOOEQCOU.jpg?auth=ecd33918d9ef99b818901538be22a8b5c02386fc4535de86fd67941d45f7252f&smart=true&width=1200&height=630&quality=85",
+  "razon": "La foto B muestra un tren de cargas en vías ferroviarias con excelente encuadre y sin marcas de agua ni menores.",
+  "cuando": "2026-10-15T13:03:58.752Z"
  }
 }

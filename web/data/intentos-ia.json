@@ -19,11 +19,6 @@
   "ultimo": "2026-10-08T14:02:25.867Z",
   "motivo": "con cuerpo"
  },
- "116x391": {
-  "intentos": 1,
-  "ultimo": "2026-10-08T12:31:59.150Z",
-  "motivo": "con cuerpo"
- },
  "117ewnb": {
   "intentos": 1,
   "ultimo": "2026-10-08T13:31:28.465Z",
@@ -441,6 +436,11 @@
   "ultimo": "2026-10-15T12:31:44.691Z",
   "motivo": "con cuerpo"
  },
+ "1bavaky": {
+  "intentos": 1,
+  "ultimo": "2026-10-15T13:02:25.824Z",
+  "motivo": "con cuerpo"
+ },
  "1bb4gv8": {
   "intentos": 1,
   "ultimo": "2026-10-09T06:31:57.963Z",
@@ -490,11 +490,6 @@
   "intentos": 3,
   "ultimo": "2026-10-10T20:04:04.847Z",
   "motivo": "semáforo: necesita ojo humano: \"niño\", en lo que escribió la IA (título, bajada o texto para redes)"
- },
- "1c93acw": {
-  "intentos": 1,
-  "ultimo": "2026-10-08T12:31:59.150Z",
-  "motivo": "con cuerpo"
  },
  "1c99k48": {
   "intentos": 2,
@@ -607,6 +602,11 @@
   "intentos": 1,
   "ultimo": "2026-10-15T01:46:07.007Z",
   "motivo": "con cuerpo"
+ },
+ "1e2ml0m": {
+  "intentos": 1,
+  "ultimo": "2026-10-15T13:02:25.824Z",
+  "motivo": "título o bajada: 2 problemas (numero): el guion dice 2.000 y la fuente no lo dice"
  },
  "1e8rdd4": {
   "intentos": 2,
@@ -1526,11 +1526,6 @@
   "ultimo": "2026-10-14T11:01:53.386Z",
   "motivo": "título o bajada: 2 problemas (numero): el guion dice 50 y la fuente no lo dice"
  },
- "6izwi8": {
-  "intentos": 1,
-  "ultimo": "2026-10-08T13:01:51.438Z",
-  "motivo": "con cuerpo"
- },
  "6oh5ax": {
   "intentos": 1,
   "ultimo": "2026-10-10T15:01:57.489Z",
@@ -2055,6 +2050,11 @@
   "baja": true,
   "fuentes": 1
  },
+ "lf9d6b": {
+  "intentos": 1,
+  "ultimo": "2026-10-15T13:02:25.824Z",
+  "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 57 palabras"
+ },
  "liqt9r": {
   "intentos": 1,
   "ultimo": "2026-10-09T17:32:19.645Z",
@@ -2069,13 +2069,6 @@
   "intentos": 1,
   "ultimo": "2026-10-13T10:31:42.604Z",
   "motivo": "con cuerpo"
- },
- "mkof0b": {
-  "intentos": 1,
-  "ultimo": "2026-10-08T12:31:59.150Z",
-  "motivo": "verificación baja: espera a una persona",
-  "baja": true,
-  "fuentes": 1
  },
  "mp58gw": {
   "intentos": 5,
@@ -2494,11 +2487,6 @@
   "ultimo": "2026-10-09T13:02:13.076Z",
   "motivo": "con cuerpo"
  },
- "w1sw1n": {
-  "intentos": 1,
-  "ultimo": "2026-10-08T13:01:51.438Z",
-  "motivo": "cuerpo: 1 problema (copia): copia 21 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 96 palabras"
- },
  "w8iv0l": {
   "intentos": 1,
   "ultimo": "2026-10-09T01:31:50.058Z",
@@ -2628,13 +2616,6 @@
   "intentos": 2,
   "ultimo": "2026-10-08T17:02:27.928Z",
   "motivo": "con cuerpo"
- },
- "z14qq8": {
-  "intentos": 1,
-  "ultimo": "2026-10-08T13:01:51.438Z",
-  "motivo": "verificación baja: espera a una persona",
-  "baja": true,
-  "fuentes": 1
  },
  "z6x12n": {
   "intentos": 1,

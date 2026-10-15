@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T12:50:45.807Z",
+  "generado": "2026-10-15T13:04:13.606Z",
   "notas": [
     {
       "id": "efemeride20261015",
@@ -26,6 +26,8 @@
         "archivo": "fotos-notas/efemeride-fondo.jpg",
         "credito": "Ilustración generada con IA · Radar Balcarce"
       },
+      "diaDeLaFoto": "2026-10-15",
+      "anioDeLaFoto": 1984,
       "fecha": "2026-10-15T12:06:37.040Z",
       "sinFecha": false,
       "visto": "2026-10-15T12:06:37.040Z",
@@ -214,6 +216,81 @@
       }
     },
     {
+      "id": "1bavaky",
+      "titulo": "El Gobierno nacional convoca a inversores privados para recuperar ramales ferroviarios",
+      "copete": "La administración central reunirá la próxima semana a empresas mineras y logísticas para evaluar aportes privados destinados al sistema ferroviario en Salta y la Puna.",
+      "cuerpo": "El Gobierno nacional convoca la próxima semana a compañías mineras y operadoras logísticas para evaluar un esquema de inversiones privadas dirigido a modernizar el transporte ferroviario en la Puna y el norte salteño. Las gestiones responden a requerimientos planteados por el gobernador Gustavo Sáenz y por entidades productivas regionales para optimizar el Ramal C14.\n\nEl plan se ajusta a las pautas de equilibrio fiscal establecidas por la administración central. La iniciativa se integra dentro del proceso de licitación pública nacional e internacional para otorgar la concesión durante medio siglo sobre las trazas Belgrano, San Martín y Urquiza, operadas previamente por la firma estatal Belgrano Cargas y Logística.",
+      "guion": "El Gobierno nacional convoca a inversores privados para recuperar ramales ferroviarios",
+      "seccion": "Economía",
+      "medios": [
+        "QZ Noticias (Mar del Plata)",
+        "Infobae",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.qznoticias.com/el-pais/el-gobierno-nacional-busca-capitales-privados-para-recuperar-ramales-estrategicos-en-la-puna-y-el-norte-salteno",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T11:30:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T13:01:45.344Z",
+      "relevancia": 67,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Gobierno nacional convoca a mineras y logísticas la próxima semana.",
+        "El plan busca modernizar el Ramal C14 y el sistema ferroviario norteño.",
+        "La medida responde a reclamos del gobernador Gustavo Sáenz y entidades productivas.",
+        "La concesión de las líneas abarca un plazo de cincuenta años."
+      ],
+      "seSabe": [
+        "El Gobierno nacional reunirá a empresas mineras y logísticas la próxima semana.",
+        "El objetivo es analizar inversiones privadas para el Ramal C14 y la región norteña.",
+        "Las acciones responden a pedidos del gobernador Gustavo Sáenz y sectores productivos.",
+        "La licitación nacional e internacional contempla la concesión de las líneas por 50 años."
+      ],
+      "textoRedes": "El Gobierno nacional convoca a empresas mineras y logísticas para analizar inversiones privadas destinadas a modernizar el Ramal C14 y las trazas ferroviarias en el norte salteño.",
+      "etiquetas": [
+        "Gobierno nacional",
+        "Salta",
+        "inversiones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/el-pais/el-gobierno-nacional-busca-capitales-privados-para-recuperar-ramales-estrategicos-en-la-puna-y-el-norte-salteno",
+          "fecha": "2026-10-15T11:30:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la convocatoria a mineras y logísticas, los reclamos de Sáenz y el marco de equilibrio fiscal."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/15/el-gobierno-convocara-a-mineras-y-operadoras-para-optimizar-los-trenes-de-carga-de-la-puna-saltena/",
+          "fecha": "2026-10-15T12:58:23.000Z",
+          "oficial": false,
+          "aporte": "Especificó que la medida se centra en la optimización del Ramal C14 en la Puna salteña."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/buscan-optimizar-ramales-ferroviario-en-salta-pata-potenciar-produccion-minera_a6ad0c2cc88153cda2df06216",
+          "fecha": "2026-10-15T12:39:13.000Z",
+          "oficial": false,
+          "aporte": "Detalló que la concesión por 50 años incluye las líneas Belgrano, San Martín y Urquiza."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-nacional-convoca-a-inversores-privados-para-recuperar",
+      "foto": {
+        "archivo": "fotos-notas/1bavaky.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
       "id": "vt870i",
       "titulo": "Ángela Servín sube al podio en la Atlántica Ultra",
       "copete": "La deportista local completó el exigente trayecto de setenta kilómetros entre Mar del Plata y Villa Gesell. Obtuvo el segundo lugar en su categoría tras unas diez horas de competencia.",
@@ -290,15 +367,18 @@
       "guion": "El Ministerio de Transporte bonaerense actualiza la tarifa básica de la VTV",
       "seccion": "Política",
       "medios": [
+        "Radio Gabal (FM 104.1)",
         "El Diario Balcarce",
         "Diario La Vanguardia",
+        "El Eco de Tandil",
+        "QZ Noticias (Mar del Plata)",
         "Agencia DIB",
-        "Ámbito",
+        "El Día",
         "0221",
         "La Tecla",
         "La Verdad",
         "Infoeme",
-        "El Eco de Tandil"
+        "Ámbito"
       ],
       "enlace": "https://www.0221.com.ar/provincia/la-provincia-oficializo-un-nuevo-aumento-la-vtv-y-ya-es-un-176-mas-cara-n135838",
       "teniaImagenLaFuente": true,
@@ -469,6 +549,7 @@
       "medios": [
         "Infobae",
         "Perfil",
+        "iProfesional",
         "Noticias Argentinas (NA)"
       ],
       "enlace": "https://www.perfil.com/noticias/economia/las-grandes-inversiones-buscan-proveedores-1800-emresas .phtml",
@@ -476,7 +557,7 @@
       "fecha": "2026-10-15T10:52:54.000Z",
       "sinFecha": false,
       "visto": "2026-10-15T12:02:02.470Z",
-      "relevancia": 68,
+      "relevancia": 78,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -610,9 +691,9 @@
       "seccion": "Política",
       "medios": [
         "QZ Noticias (Mar del Plata)",
-        "Ámbito",
         "El Cronista",
         "Perfil",
+        "Ámbito",
         "Noticias Argentinas (NA)"
       ],
       "enlace": "https://noticiasargentinas.com/economia/salud-oficializo-un-aumento-en-los-aranceles-de-las-prestaciones-por-discapacidad---de-cuanto-es-_a6ad0a55888153cda2dec84c4",
@@ -1400,6 +1481,7 @@
       "medios": [
         "Infobae",
         "El Destape",
+        "Perfil",
         "TyC Sports",
         "Diario Popular",
         "Noticias Argentinas (NA)",
@@ -1665,77 +1747,6 @@
       "slug": "el-oficialismo-busca-dictaminar-la-reforma-de-salud-mental-en-el"
     },
     {
-      "id": "q7bxgi",
-      "titulo": "On City ofrece descuentos y financiación por el Día de la Madre",
-      "copete": "La firma lanza una propuesta comercial con rebajas de hasta el 50% y distintas opciones de pago para compras tecnológicas y de electrodomésticos.",
-      "cuerpo": "La cadena comercial On City dispone una serie de beneficios en tecnología, electrodomésticos y artículos para el hogar con motivo del Día de la Madre. La iniciativa se desarrolla desde el 15 hasta el 18 de octubre e incluye rebajas de hasta el 50% junto con un plan de hasta 18 cuotas sin interés mediante tarjetas de entidades bancarias participantes.\n\nLa oferta comprende rubros como teléfonos celulares, tabletas, computadoras portátiles, televisores, equipos de audio y pequeños electrodomésticos. Asimismo, quienes utilicen la financiación propia de la firma acceden a un 20% de rebaja y hasta 24 cuotas fijas, con la posibilidad de postergar el primer pago para noviembre.\n\nLos compradores disponen de la alternativa de retirar los pedidos sin costo en cualquiera de los más de 180 locales distribuidos en todo el territorio nacional o mediante su plataforma digital.",
-      "guion": "On City ofrece descuentos y financiación por el Día de la Madre",
-      "seccion": "Economía",
-      "medios": [
-        "El Cronista",
-        "Ámbito"
-      ],
-      "enlace": "https://www.ambito.com/negocios/dia-la-madre-on-city-presenta-descuentos-50-y-financiacion-24-cuotas-n6333738",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T18:18:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T01:31:56.486Z",
-      "relevancia": 43,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Del 15 al 18 de octubre hay rebajas de hasta el 50%",
-        "Hasta 18 cuotas sin interés con tarjetas bancarias",
-        "Financiación propia de hasta 24 cuotas fijas con On City Crédito",
-        "Retiro gratuito en más de 180 sucursales y en la web"
-      ],
-      "seSabe": [
-        "On City presenta beneficios comerciales por el Día de la Madre",
-        "La promoción rige desde el 15 hasta el 18 de octubre",
-        "Hay rebajas de hasta el 50% y 18 cuotas sin interés con tarjetas bancarias",
-        "Con On City Crédito se puede abonar en hasta 24 cuotas fijas con inicio de pago en noviembre",
-        "La propuesta abarca celulares, notebooks, televisores y pequeños electrodomésticos"
-      ],
-      "textoRedes": "On City lanza descuentos de hasta el 50% y financiación en hasta 24 cuotas por el Día de la Madre en tecnología y electrodomésticos.",
-      "etiquetas": [
-        "On City",
-        "Día de la Madre",
-        "descuentos",
-        "financiación",
-        "electrodomésticos",
-        "tecnología"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/negocios/dia-la-madre-on-city-presenta-descuentos-50-y-financiacion-24-cuotas-n6333738",
-          "fecha": "2026-10-14T18:18:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles completos de la propuesta comercial, fechas, categorías de productos, modalidades de financiación y opciones de retiro."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/contenido-patrocinado/dia-de-la-madre-on-city-presenta-descuentos-de-hasta-40-y-financiacion-en-hasta-24-cuotas/",
-          "fecha": "2026-10-15T00:47:25.000Z",
-          "oficial": false,
-          "aporte": "Confirmó las fechas del 15 al 18 de octubre, el porcentaje de descuento y las cuotas con tarjetas bancarias."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "on-city-ofrece-descuentos-y-financiacion-por-el-dia-de-la-madre",
-      "foto": {
-        "archivo": "fotos-notas/q7bxgi.jpg",
-        "credito": "Foto: Ámbito"
-      }
-    },
-    {
       "id": "repaso20261014tarde",
       "propia": "repaso",
       "titulo": "El repaso de la tarde en Radar Balcarce: juguetes, Pádel y peregrinación",
@@ -1808,10 +1819,10 @@
       "medios": [
         "La Noticia 1",
         "Minuto Uno",
-        "C5N",
         "Zona Norte Diario",
         "El Marplatense",
-        "El Economista"
+        "El Economista",
+        "C5N"
       ],
       "enlace": "https://www.zonanortediario.com.ar/14/10/2026/kicillof-y-lanus-recorrieron-la-nueva-base-de-la-utoi-en-san-isidro-que-ya-cuenta-con-100-efectivos/",
       "teniaImagenLaFuente": true,
@@ -1891,6 +1902,80 @@
       "foto": {
         "archivo": "fotos-notas/1394wxo.jpg",
         "credito": "Foto: Zona Norte Diario"
+      }
+    },
+    {
+      "id": "1qu6ie7",
+      "titulo": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
+      "copete": "El informe climático para la próxima semana anticipa registros pluviométricos modestos en gran parte del país y mínimas inferiores a 10 grados en el este bonaerense.",
+      "cuerpo": "La Bolsa de Cereales de Buenos Aires difundió el pronóstico para el período del 15 al 21 de octubre, que anticipa precipitaciones escasas en la mayor parte de la región agrícola, con la excepción del extremo norte. Según el informe, la entrada de aire marítimo mantendrá las temperaturas mínimas por debajo de los valores habituales, mientras que el este de Buenos Aires registrará marcas inferiores a 10 grados con leve riesgo de heladas localizadas. Hacia el final del periodo, el regreso de vientos tropicales provocará un ascenso térmico generalizado, aunque el sur de la Región Pampeana y la Costa Atlántica se mantendrán con máximas por debajo de los 20 grados debido a la circulación marina.",
+      "guion": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
+      "seccion": "Agro",
+      "medios": [
+        "Agrositio",
+        "TN (Todo Noticias)"
+      ],
+      "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T17:34:56.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T19:32:01.897Z",
+      "relevancia": 36,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Pronóstico vigente del 15 al 21 de octubre.",
+        "Lluvias escasas en la mayor parte del país.",
+        "Mínimas menores a 10 grados en el este bonaerense."
+      ],
+      "seSabe": [
+        "La Bolsa de Cereales de Buenos Aires informó el pronóstico para la próxima semana.",
+        "Habrá precipitaciones escasas en la mayor parte del área agrícola.",
+        "El este de Buenos Aires registrará mínimas menores a 10 grados."
+      ],
+      "textoRedes": "El informe climático para la próxima semana anticipa lluvias escasas en gran parte del país y temperaturas mínimas inferiores a 10 grados en el este de Buenos Aires.",
+      "etiquetas": [
+        "Clima",
+        "Bolsa de Cereales",
+        "Lluvias",
+        "Temperaturas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
+          "fecha": "2026-10-14T17:34:56.000Z",
+          "oficial": false,
+          "aporte": "Detalló los registros de precipitaciones, temperaturas mínimas y máximas por región según el informe de la Bolsa de Cereales."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/14/la-region-agricola-recibira-lluvias-escasas-durante-los-proximos-dias-excepto-en-el-extremo-norte/",
+          "fecha": "2026-10-14T19:09:51.000Z",
+          "oficial": false,
+          "aporte": "Informó que se esperan lluvias escasas en la mayor parte de la región agrícola para el período del 15 al 21 de octubre."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "vqv317",
+          "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
+          "fecha": "2026-10-05T11:23:01.000Z",
+          "ruta": "/nota/el-clima-muestra-cielo-nublado-y-posibles-lluvias-debiles-vqv317"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "pronostican-lluvias-escasas-y-marcada-amplitud-termica-en-el-area",
+      "foto": {
+        "archivo": "fotos-notas/1qu6ie7.jpg",
+        "credito": "Foto: Agrositio"
       }
     },
     {
@@ -2365,17 +2450,17 @@
         "Perfil",
         "TN (Todo Noticias)",
         "El Cronista",
-        "Minuto Uno",
         "Crónica",
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
+        "iProUP",
         "Clarín",
         "A24",
         "C5N",
+        "Minuto Uno",
         "iProfesional",
-        "iProUP",
         "El Economista"
       ],
       "enlace": "https://www.ambito.com/economia/caba-lanzo-un-plan-pagar-deudas-abl-y-patentes-100-descuento-intereses-como-acceder-n6333599",
@@ -2455,7 +2540,6 @@
       "seccion": "Automovilismo",
       "medios": [
         "Diario La Vanguardia",
-        "0223 (Mar del Plata)",
         "QZ Noticias (Mar del Plata)",
         "TN (Todo Noticias)",
         "El Destape",
@@ -2473,6 +2557,7 @@
         "Clarín",
         "El Gráfico",
         "La Nueva",
+        "0223 (Mar del Plata)",
         "La Brújula 24"
       ],
       "enlace": "https://noticiasargentinas.com/deportes/colapinto-pidio-frenar-los-ataques-de-los-argentinos-en-la-formula-1---no-me-ayudan-_a6acfdbd78298ee386b39ef1a",
@@ -2957,6 +3042,8 @@
         "archivo": "fotos-notas/efemeride-fondo.jpg",
         "credito": "Ilustración generada con IA · Radar Balcarce"
       },
+      "diaDeLaFoto": "2026-10-14",
+      "anioDeLaFoto": 1959,
       "fecha": "2026-10-14T12:05:23.923Z",
       "sinFecha": false,
       "visto": "2026-10-14T12:05:23.923Z",
@@ -3068,8 +3155,8 @@
         "Minuto Uno",
         "Ecos Diarios (Necochea)",
         "TyC Sports",
-        "C5N",
         "Radio Mitre",
+        "C5N",
         "El Destape",
         "Noticias Argentinas (NA)",
         "Infobrisas (Radio Brisas)"
@@ -3273,11 +3360,12 @@
   "secciones": [
     "Cultura y agenda",
     "Argentina",
+    "Economía",
     "Deportes",
     "Política",
-    "Economía",
     "Balcarce",
     "Automovilismo",
+    "Agro",
     "Policiales"
   ],
   "temas": [
@@ -3291,7 +3379,7 @@
     "ahora": {
       "temp": 13,
       "sensacion": 10,
-      "humedad": 69,
+      "humedad": 67,
       "viento": 19,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -3641,12 +3729,6 @@
   },
   "pendientes": [
     {
-      "id": "lf9d6b",
-      "titulo": "Sábado a puro Básquet",
-      "seccion": "Deportes",
-      "motivo": "de un medio de acá sin nombrar Balcarce ni la zona: espera la lectura con IA"
-    },
-    {
       "id": "1okotnb",
       "titulo": null,
       "seccion": "Argentina",
@@ -3731,12 +3813,6 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "yj5cn4",
-      "titulo": null,
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
       "id": "1333xd6",
       "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
       "seccion": "Economía",
@@ -3779,5 +3855,5 @@
       "motivo": "necesita ojo humano: \"denunció\""
     }
   ],
-  "esperandoCuerpo": 0
+  "esperandoCuerpo": 2
 }

@@ -1,5 +1,45 @@
 {
- "generado": "2026-10-15T12:32:20.021Z",
+ "generado": "2026-10-15T13:04:13.606Z",
  "intentosMaximos": 3,
- "notas": []
+ "notas": [
+  {
+   "id": "lf9d6b",
+   "titulo": "Sábado a puro Básquet",
+   "copete": "El próximo sábado todas las categorías de la Escuela Municipal de Básquet afrontarán una nueva fecha correspondiente a la Liga Marplatense de ese deporte Se trata de los partidos de Mini, Pre Mini y los segundos partidos de las series de play off de Cadetes y Juveniles…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-15T12:47:42.000Z",
+   "fuentes": [
+    {
+     "medio": "Municipalidad de Balcarce",
+     "enlace": "https://balcarce.gob.ar/2026/10/15/sabado-a-puro-basquet/",
+     "fecha": "2026-10-15T12:47:42.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 57 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "1e2ml0m",
+   "titulo": "La jefa del FMI dijo que confía en que la Argentina pagará su deuda con el organismo antes de 2034",
+   "copete": "La jefa del Fondo Monetario Internacional ( FMI ) , Kristalina Georgieva , aseguró que confía en que la Argentina pagará de manera anticipada la deuda que mantiene con el organismo y cuyo vencimiento original está previsto para 2034 . “Serán como Grecia, pagarán por adelantado”…",
+   "seccion": "Economía",
+   "fecha": "2026-10-15T10:39:01.000Z",
+   "fuentes": [
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/economia/2026/10/15/la-jefa-del-fmi-dijo-que-confia-en-que-la-argentina-pagara-su-deuda-con-el-organismo-antes-de-2034/",
+     "fecha": "2026-10-15T10:39:01.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/fmi-vaticina-que-argentina-pagara-su-deuda-antes-de-2034-los-desafios-para-el-gobierno/",
+     "fecha": "2026-10-15T12:27:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 2 problemas (numero): el guion dice 2.000 y la fuente no lo dice",
+   "maximo": 3
+  }
+ ]
 }
