@@ -1,5 +1,38 @@
 {
- "generado": "2026-10-15T00:31:58.805Z",
+ "generado": "2026-10-15T01:02:07.228Z",
  "intentosMaximos": 3,
- "notas": []
+ "notas": [
+  {
+   "id": "2m710x",
+   "titulo": "La Justicia declaró la quiebra de Algodonera Avellaneda, una empresa vinculada a Vicentin",
+   "copete": "La Justicia declaró la quiebra de Algodonera Avellaneda SA, la empresa textil vinculada al grupo Vicentin ubicada en la localidad santafecina de Reconquista , después de que fracasaran las negociaciones con los acreedores y no se presentaran interesados en el proceso de…",
+   "seccion": "Economía",
+   "fecha": "2026-10-14T18:37:01.000Z",
+   "fuentes": [
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/economia/campo/la-justicia-declaro-la-quiebra-de-algodonera-avellaneda-una-empresa-vinculada-a-vicentin-nid14102026/",
+     "fecha": "2026-10-14T18:37:01.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/campo/2026/10/14/fin-de-ciclo-para-algodonera-avellaneda-el-fuero-comercial-decreto-la-quiebra-y-ordeno-la-liquidacion-con-planta-abierta/",
+     "fecha": "2026-10-15T00:34:55.000Z"
+    },
+    {
+     "medio": "El Cronista",
+     "enlace": "https://www.cronista.com/negocios/sin-salida-la-justicia-decreto-la-quiebra-de-algodonera-avellaneda/",
+     "fecha": "2026-10-14T21:11:55.000Z"
+    },
+    {
+     "medio": "iProfesional",
+     "enlace": "https://www.iprofesional.com/negocios/466623-algodonera-avellaneda-quiebra-deuda-millonaria-preocupa-empleados",
+     "fecha": "2026-10-14T21:58:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
+   "maximo": 3
+  }
+ ]
 }

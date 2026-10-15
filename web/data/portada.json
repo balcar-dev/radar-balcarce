@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T00:31:58.805Z",
+  "generado": "2026-10-15T01:02:07.228Z",
   "notas": [
     {
       "id": "wfa595",
@@ -16,7 +16,7 @@
       "fecha": "2026-10-15T00:31:41.256Z",
       "sinFecha": true,
       "visto": "2026-10-15T00:31:41.256Z",
-      "relevancia": 57,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -228,7 +228,6 @@
       "guion": "Sol Di Gerónimo participa de una capacitación política en Necochea",
       "seccion": "Política",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/politica/sol-di-geronimo-participo-en-necochea-del-curso-de-formacion-politica-encabezado-por-julio-alak",
@@ -236,7 +235,7 @@
       "fecha": "2026-10-14T22:05:15.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T23:01:59.982Z",
-      "relevancia": 98,
+      "relevancia": 84,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -316,7 +315,6 @@
       "guion": "El Concejo Deliberativo Estudiantil cierra su quinta edición con veinticinco iniciativas",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
       ],
@@ -325,7 +323,7 @@
       "fecha": "2026-10-14T22:04:03.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T23:01:59.982Z",
-      "relevancia": 100,
+      "relevancia": 98,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -393,142 +391,6 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "el-concejo-deliberativo-estudiantil-cierra-su-quinta-edicion-con-25"
-    },
-    {
-      "id": "zfpkeo",
-      "titulo": "Incidentes y represión policial en el ingreso de River en Junín",
-      "copete": "Se registraron corridas y uso de gas pimienta en los accesos al estadio Eva Perón en la previa del partido entre Sarmiento y River por el Torneo Clausura.",
-      "cuerpo": "Se produjeron momentos de tensión y disturbios en los accesos al estadio Eva Perón de Junín en la previa del encuentro pendiente de la fecha 11 del Torneo Clausura entre Sarmiento y River.\n\nSegún informaron distintos medios y registros audiovisuales, el operativo de seguridad colapsó minutos antes del inicio y la Policía Bonaerense dispersó con gas pimienta ante la aglomeración de simpatizantes. La organización había habilitado 4500 localidades para el público visitante con un valor de 100000 pesos cada una, tras una ampliación dispuesta por APREVIDE, que inicialmente había autorizado 3000 lugares.\n\nDurante los tumultos se registraron denuncias sobre una presunta sobreventa de entradas y fallas en el sistema de lectura de códigos QR, mientras que algunos asistentes requirieron asistencia médica tras la represión en las adyacencias.",
-      "guion": "Incidentes y represión policial en el ingreso de River en Junín",
-      "seccion": "Fútbol",
-      "medios": [
-        "La Nación",
-        "Clarín",
-        "Infobae",
-        "TN (Todo Noticias)",
-        "Página/12",
-        "TyC Sports",
-        "Olé",
-        "Crónica",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "La Página Millonaria"
-      ],
-      "enlace": "https://lapaginamillonaria.com/torneo-clausura/descontrol-y-caos-en-el-ingreso-de-los-hinchas-de-river-en-junin-la-policia-reprime-con-gas-pimienta",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T21:45:31.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T23:31:42.572Z",
-      "relevancia": 83,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Disturbios en los accesos al estadio Eva Perón de Junín.",
-        "La policía dispersó con gas pimienta ante la aglomeración de hinchas.",
-        "Se autorizaron 4500 localidades para el público visitante.",
-        "Denunciaron fallas en lectores de QR y supuesta sobreventa."
-      ],
-      "noConfirmado": [
-        "No se precisó la cantidad exacta de personas heridas ni el parte oficial de los atendidos por asistencia médica.",
-        "No hay confirmación oficial sobre la presunta sobreventa de entradas denunciada por los asistentes."
-      ],
-      "textoRedes": "Incidentes y represión policial con gas pimienta en el ingreso de los hinchas de River en el estadio Eva Perón de Junín en la previa del partido ante Sarmiento.",
-      "etiquetas": [
-        "River Plate",
-        "Sarmiento",
-        "Junín",
-        "Torneo Clausura",
-        "Incidentes",
-        "APREVIDE"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Página Millonaria",
-          "enlace": "https://lapaginamillonaria.com/torneo-clausura/descontrol-y-caos-en-el-ingreso-de-los-hinchas-de-river-en-junin-la-policia-reprime-con-gas-pimienta",
-          "fecha": "2026-10-14T21:45:31.000Z",
-          "oficial": false,
-          "aporte": "Informó detalles del operativo, los valores de las entradas, la actuación policial y testimonios de los hinchas."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/deportes/2026/10/14/caos-y-heridos-los-incidentes-en-el-ingreso-de-la-hinchada-de-river-al-estadio-eva-peron-de-sarmiento/",
-          "fecha": "2026-10-14T22:42:28.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en la descripción del colapso en el ingreso y el uso de gas pimienta en la previa."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/descontrol-en-el-ingreso-de-hinchas-de-river-al-estadio-de-sarmiento-de-junin-nid14102026/",
-          "fecha": "2026-10-14T22:55:45.000Z",
-          "oficial": false,
-          "aporte": "Aportó que se registraron demoras y aglomeraciones en uno de los accesos al estadio."
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/river-plate/river-plate-caotico-ingreso-hinchas-estadio-sarmiento-junin_0_yKITgj2tHo.html",
-          "fecha": "2026-10-14T22:17:00.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la existencia de corridas, empujones y personas que ingresaron sin ticket."
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/deportes/incidentes-junin-hinchas-river-desbordes-ingresos-policia-arrojo-gas-pimienta-gente_0_e2BaeuPPoD.html",
-          "fecha": "2026-10-14T21:50:52.000Z",
-          "oficial": false,
-          "aporte": "Indicó la cifra de 4500 hinchas habilitados, la presunta sobreventa y fallas en el lector de QR."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/14/caos-en-el-ingreso-de-los-hinchas-de-river-al-estadio-de-sarmiento-de-junin-hubo-tumultos-y-la-policia-lanzo-gas-pimienta/",
-          "fecha": "2026-10-14T21:55:23.000Z",
-          "oficial": false,
-          "aporte": "Reportó momentos de tensión y presión de los fanáticos en los ingresos."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/river-plate/caos-acceso-hinchas-river-sarmiento-junin-id766258.html",
-          "fecha": "2026-10-14T22:53:05.000Z",
-          "oficial": false,
-          "aporte": "No aportó información en su resumen."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/depo/actualidad/graves-incidentes-en-el-acceso-de-los-hinchas-de-river-en-junin-en-la-porev/",
-          "fecha": "2026-10-14T22:32:00.000Z",
-          "oficial": false,
-          "aporte": "Registró la represión policial a los simpatizantes que querían entrar al estadio."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/deportes/caos-e-incidentes-en-el-ingreso-de-los-hinchas-de-river-al-estadio-de-sarmiento-de-junin_a6ad0058b8298ee386b40ba2b",
-          "fecha": "2026-10-14T23:01:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "jzwgk2",
-          "titulo": "Hinchas de River insultan a Claudio Tapia en el estadio Monumental",
-          "fecha": "2026-10-11T00:49:54.000Z",
-          "ruta": "/nota/hinchas-de-river-insultan-a-claudio-tapia-en-el-estadio-monumental-jzwgk2"
-        },
-        {
-          "id": "zcn7od",
-          "titulo": "River y Boca llevan hinchas visitantes a Córdoba",
-          "fecha": "2026-09-29T13:20:32.000Z",
-          "ruta": "/nota/river-y-boca-llevan-hinchas-visitantes-a-cordoba-zcn7od"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 9 medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "incidentes-y-represion-policial-en-el-ingreso-de-river-en-junin"
     },
     {
       "id": "fav3c1",
@@ -622,6 +484,7 @@
         "Infobae",
         "TN (Todo Noticias)",
         "Ámbito",
+        "C5N",
         "Radio Mitre",
         "Noticias Argentinas (NA)"
       ],
@@ -913,9 +776,9 @@
       "guion": "Franco Colapinto pide frenar los ataques de sus fanáticos en la Fórmula uno",
       "seccion": "Automovilismo",
       "medios": [
-        "La Nación",
         "Clarín",
         "0223 (Mar del Plata)",
+        "La Nación",
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
@@ -928,6 +791,7 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Nueva",
+        "La Brújula 24",
         "La Voz del Pueblo",
         "Mi8 (Canal 8 Mar del Plata)",
         "Bolavip Argentina",
@@ -1428,80 +1292,6 @@
       }
     },
     {
-      "id": "1qu6ie7",
-      "titulo": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
-      "copete": "El informe climático para la próxima semana anticipa registros pluviométricos modestos en gran parte del país y mínimas inferiores a 10 grados en el este bonaerense.",
-      "cuerpo": "La Bolsa de Cereales de Buenos Aires difundió el pronóstico para el período del 15 al 21 de octubre, que anticipa precipitaciones escasas en la mayor parte de la región agrícola, con la excepción del extremo norte. Según el informe, la entrada de aire marítimo mantendrá las temperaturas mínimas por debajo de los valores habituales, mientras que el este de Buenos Aires registrará marcas inferiores a 10 grados con leve riesgo de heladas localizadas. Hacia el final del periodo, el regreso de vientos tropicales provocará un ascenso térmico generalizado, aunque el sur de la Región Pampeana y la Costa Atlántica se mantendrán con máximas por debajo de los 20 grados debido a la circulación marina.",
-      "guion": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
-      "seccion": "Agro",
-      "medios": [
-        "Agrositio",
-        "TN (Todo Noticias)"
-      ],
-      "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T17:34:56.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T19:32:01.897Z",
-      "relevancia": 43,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Pronóstico vigente del 15 al 21 de octubre.",
-        "Lluvias escasas en la mayor parte del país.",
-        "Mínimas menores a 10 grados en el este bonaerense."
-      ],
-      "seSabe": [
-        "La Bolsa de Cereales de Buenos Aires informó el pronóstico para la próxima semana.",
-        "Habrá precipitaciones escasas en la mayor parte del área agrícola.",
-        "El este de Buenos Aires registrará mínimas menores a 10 grados."
-      ],
-      "textoRedes": "El informe climático para la próxima semana anticipa lluvias escasas en gran parte del país y temperaturas mínimas inferiores a 10 grados en el este de Buenos Aires.",
-      "etiquetas": [
-        "Clima",
-        "Bolsa de Cereales",
-        "Lluvias",
-        "Temperaturas"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
-          "fecha": "2026-10-14T17:34:56.000Z",
-          "oficial": false,
-          "aporte": "Detalló los registros de precipitaciones, temperaturas mínimas y máximas por región según el informe de la Bolsa de Cereales."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/10/14/la-region-agricola-recibira-lluvias-escasas-durante-los-proximos-dias-excepto-en-el-extremo-norte/",
-          "fecha": "2026-10-14T19:09:51.000Z",
-          "oficial": false,
-          "aporte": "Informó que se esperan lluvias escasas en la mayor parte de la región agrícola para el período del 15 al 21 de octubre."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "vqv317",
-          "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
-          "fecha": "2026-10-05T11:23:01.000Z",
-          "ruta": "/nota/el-clima-muestra-cielo-nublado-y-posibles-lluvias-debiles-vqv317"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "pronostican-lluvias-escasas-y-marcada-amplitud-termica-en-el-area",
-      "foto": {
-        "archivo": "fotos-notas/1qu6ie7.jpg",
-        "credito": "Foto: Agrositio"
-      }
-    },
-    {
       "id": "eumyqk",
       "titulo": "San Nicolás propone eliminar tasa local si Nación quita el IVA",
       "copete": "El intendente de San Nicolás, Santiago Passaglia, desafió al Gobierno nacional a eliminar la Tasa de Seguridad e Higiene a cambio de que la Nación deje de cobrar el IVA en obras y servicios públicos municipales.",
@@ -1511,6 +1301,7 @@
       "medios": [
         "Ecos Diarios (Necochea)",
         "Ámbito",
+        "Minuto Uno",
         "Infobae",
         "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
@@ -1605,6 +1396,7 @@
         "Infobae",
         "Perfil",
         "TN (Todo Noticias)",
+        "iProfesional",
         "Noticias Argentinas (NA)",
         "InfoRegión",
         "Mi8 (Canal 8 Mar del Plata)",
@@ -1753,11 +1545,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45079-jamas-imagine-que-iba-a-necesitar-un-trasplante/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-14T16:32:12.981Z",
       "sinFecha": true,
       "visto": "2026-10-14T16:32:12.981Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1895,98 +1687,6 @@
       }
     },
     {
-      "id": "gkl1ue",
-      "titulo": "El Gobierno lanza un plan nacional de salud vascular",
-      "copete": "El Ministerio de Salud presentó el plan para reducir la mortalidad por afecciones cardíacas y cerebrales en todo el país. La iniciativa incluye un registro obligatorio de infartos.",
-      "cuerpo": "La presentación ocurrió durante el Congreso Argentino de Cardiología con el objetivo de unificar las estrategias sanitarias entre la Nación y las jurisdicciones.\n\nEl programa busca prevenir factores de riesgo, mejorar la atención de emergencias y realizar un seguimiento a largo plazo de las patologías cardiovasculares. Como parte de las medidas, el infarto agudo de miocardio se incorporará al Sistema Nacional de Vigilancia de la Salud como evento de notificación obligatoria y se utilizará la aplicación Stroke App para coordinar la respuesta médica.\n\nLas enfermedades cardiovasculares provocan alrededor del 30 por ciento de los fallecimientos en el país. Según datos difundidos durante el congreso, entre 2015 y 2024 la mortalidad hospitalaria por los casos más graves de infarto se mantuvo en el 8,6 por ciento.",
-      "guion": "El Gobierno lanza un plan nacional de salud vascular",
-      "seccion": "Argentina",
-      "medios": [
-        "Ecos Diarios (Necochea)",
-        "Clarín",
-        "Crónica",
-        "Noticias Argentinas (NA)",
-        "Infobae"
-      ],
-      "enlace": "https://www.clarin.com/sociedad/gobierno-anuncio-creacion-plan-nacional-reducir-muertes-infartos-argentina_0_iTgTkiDr11.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T15:28:43.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T22:01:55.574Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Ministerio de Salud creó el plan para el período 2026-2030.",
-        "El infarto agudo de miocardio será de notificación obligatoria.",
-        "La herramienta Stroke App coordinará la atención de las emergencias.",
-        "Las afecciones cardiovasculares causan cerca del 30% de las muertes en el país."
-      ],
-      "seSabe": [
-        "El ministro Mario Lugones presentó el plan este miércoles en el Congreso Argentino de Cardiología.",
-        "La iniciativa abarca desde la prevención hasta la rehabilitación de los pacientes.",
-        "El infarto se sumará al sistema de notificación obligatoria junto al ACV y la insuficiencia cardíaca."
-      ],
-      "textoRedes": "El Gobierno nacional anunció la creación de un plan de salud vascular para reducir la mortalidad por infartos y ACV, que incluye un registro obligatorio de casos y la unificación de la respuesta médica en todo el país.",
-      "etiquetas": [
-        "salud",
-        "gobierno nacional",
-        "cardiologia",
-        "infartos",
-        "mario lugones"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/sociedad/gobierno-anuncio-creacion-plan-nacional-reducir-muertes-infartos-argentina_0_iTgTkiDr11.html",
-          "fecha": "2026-10-14T15:28:43.000Z",
-          "oficial": false,
-          "aporte": "Informó el anuncio del plan por parte del ministro de Salud y sus ejes principales."
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/lanzan-el-plan-nacional-de-salud-vascular-para-reducir-la-mortalidad-por-infartos",
-          "fecha": "2026-10-14T19:20:33.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el lanzamiento del plan vascular para el período 2026-2030."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/salud/lugones-lanzo-el-plan-nacional-de-salud-vascular-para-prevenir-muertes-por-enfermedades-cardiovasculares/",
-          "fecha": "2026-10-14T18:21:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó el dato de que las enfermedades cardiovasculares causan cerca del 30% de los decesos en el país."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/sociedad/el-ministerio-de-salud-lanzo-el-plan-nacional-de-salud-vascular-para-los-argentinos_a6acff9968298ee386b3f0221",
-          "fecha": "2026-10-14T21:55:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló que la presentación se realizó en el Congreso de Cardiología para fortalecer la atención."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/salud/2026/10/14/cada-minuto-cuenta-de-que-se-trata-el-plan-de-salud-vascular-que-anuncio-el-ministro-mario-lugones/",
-          "fecha": "2026-10-14T16:09:52.000Z",
-          "oficial": false,
-          "aporte": "Especificó que el congreso es el número 52 y está organizado por la Sociedad Argentina de Cardiología."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-lanza-un-plan-nacional-de-salud-vascular",
-      "foto": {
-        "archivo": "fotos-notas/gkl1ue.jpg",
-        "credito": "Foto: Crónica"
-      }
-    },
-    {
       "id": "1nsbz",
       "titulo": "Un ex jefe policial de Balcarce analiza un fallo judicial",
       "copete": "El comisario Maximiliano Blanco Río reflexionó sobre la condena perpetua a un efectivo en Berisso en 2011. Advirtió sobre las pericias y las garantías judiciales.",
@@ -2070,9 +1770,9 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
-        "iProUP",
+        "A24",
         "iProfesional",
-        "A24"
+        "iProUP"
       ],
       "enlace": "https://www.ambito.com/economia/caba-lanzo-un-plan-pagar-deudas-abl-y-patentes-100-descuento-intereses-como-acceder-n6333599",
       "teniaImagenLaFuente": true,
@@ -2154,8 +1854,8 @@
         "El Cronista",
         "El Destape",
         "iProfesional",
-        "El Economista",
-        "Ámbito"
+        "Ámbito",
+        "El Economista"
       ],
       "enlace": "https://eleconomista.com.ar/negocios/movistar-mensaje-recibiran-millones-clientes-proximos-dias-n98856",
       "teniaImagenLaFuente": true,
@@ -2334,11 +2034,12 @@
       "medios": [
         "LU9 Mar del Plata",
         "QZ Noticias (Mar del Plata)",
-        "Agencia DIB",
         "Diputados Bonaerenses",
         "0221",
+        "La Tecla",
         "La Verdad",
         "El Marplatense",
+        "Agencia DIB",
         "Ámbito"
       ],
       "enlace": "https://www.0221.com.ar/la-plata/la-provincia-convoco-los-docentes-retomar-las-paritarias-y-definir-nuevos-aumentos-salarios-n135790",
@@ -2488,18 +2189,15 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45075-presupuesto-2027-el-municipio-prepara-la-ley-de-leyes-y-los-funcionarios-deberan-explicar-sus-numeros/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-14T13:31:55.553Z",
       "sinFecha": true,
       "visto": "2026-10-14T13:31:55.553Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "concejo",
-        "hospital"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
         "El Ejecutivo municipal prevé presentar el proyecto el 31 de octubre.",
@@ -2633,6 +2331,73 @@
         "archivo": "fotos-notas/collage-repaso20261014manana.jpg",
         "credito": "Fotos: Clarín y Radio Gabal (FM 104.1)"
       }
+    },
+    {
+      "id": "97f98g",
+      "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
+      "copete": "El coro del establecimiento educativo presenta el viernes el espectáculo Un día en el polideportivo propio, enmarcado en los festejos por el aniversario institucional.",
+      "cuerpo": "El coro del Instituto Adventista Balcarce presenta el musical Un día el viernes a las 20 en el polideportivo de la institución. La propuesta artística cuenta con la participación de estudiantes secundarios y se suma a las celebraciones por los cuarenta años del establecimiento educativo.\n\nLa institución abrió sus puertas oficialmente el 19 de marzo de 1986 y celebró su cuadragésimo aniversario en marzo pasado. En paralelo a su fundación, el coro escolar nació en 1986 y desarrolló una extensa trayectoria con actuaciones en distintos escenarios del país y participación en certámenes corales.",
+      "guion": "El Instituto Adventista celebra cuarenta años con un musical",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-14T13:01:57.018Z",
+      "sinFecha": true,
+      "visto": "2026-10-14T13:01:57.018Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Instituto Adventista cumple cuarenta años de trayectoria.",
+        "El coro escolar presenta el musical Un día este viernes.",
+        "La función comienza a las 20 en el polideportivo institucional."
+      ],
+      "seSabe": [
+        "El Instituto Adventista Balcarce fue inaugurado el 19 de marzo de 1986.",
+        "El coro del establecimiento está integrado por alumnos de nivel secundario.",
+        "La presentación se realiza en el polideportivo de la institución educativa."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Instituto Adventista presenta este viernes el musical Un día en su polideportivo a las 20 para celebrar sus cuarenta años de trayectoria educativa y coral en la ciudad",
+      "etiquetas": [
+        "Instituto Adventista",
+        "coro",
+        "aniversario",
+        "musical",
+        "Balcarce",
+        "cultura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
+          "fecha": "2026-10-14T11:54:19.000Z",
+          "oficial": false,
+          "aporte": "Detalló la presentación del musical Un día, la fecha, el horario, el lugar y la trayectoria institucional y coral del Instituto Adventista."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "cdnqde",
+          "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
+          "fecha": "2026-10-14T11:49:03.000Z",
+          "ruta": "/nota/el-coro-del-instituto-adventista-presenta-el-musical-un-dia-cdnqde"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-instituto-adventista-celebra-cuarenta-anos-con-un-musical"
     },
     {
       "id": "15xxgpu",
@@ -2948,69 +2713,6 @@
       }
     },
     {
-      "id": "cdnqde",
-      "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
-      "copete": "El Coro del Instituto Adventista presenta el viernes a las 20 el musical \"Un día\" en el polideportivo propio. La función forma parte de los festejos por el cuadragésimo aniversario del establecimiento educativo en la ciudad.",
-      "cuerpo": "El Coro del Instituto Adventista presenta el musical titulado \"Un día\" en el polideportivo de la institución educativa. La función está programada para el viernes a las 20 ante la comunidad local.\n\nLa propuesta artística forma parte de los festejos por los 40 años de trayectoria que cumple el establecimiento en la ciudad. Durante estas cuatro décadas, la institución formó a varias generaciones de estudiantes y desarrolló una marcada presencia comunitaria.\n\nEl coro institucional nació junto con el establecimiento educativo y participa habitualmente en diversos escenarios de la zona. Esta presentación se suma al programa de actividades aniversario que valoran el recorrido y el vínculo construido con los vecinos a lo largo de este período.",
-      "guion": "El Coro del Instituto Adventista presenta el musical Un día",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://puntonueve.com.ar/188351-2/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T11:49:03.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T12:31:49.255Z",
-      "relevancia": 83,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Coro del Instituto Adventista presenta el musical Un día",
-        "La función es este viernes a las 20 en el polideportivo institucional",
-        "El evento se enmarca en los 40 años de trayectoria educativa"
-      ],
-      "seSabe": [
-        "El Coro del Instituto Adventista presenta el musical \"Un día\"",
-        "La función se realiza este viernes a las 20 en el polideportivo institucional",
-        "El evento se enmarca en el cuadragésimo aniversario del establecimiento educativo"
-      ],
-      "textoRedes": "El Coro del Instituto Adventista presenta este viernes a las 20 el musical \"Un día\" en el polideportivo institucional. La función se realiza en el marco del cuadragésimo aniversario del establecimiento educativo en la ciudad.",
-      "etiquetas": [
-        "Coro del Instituto Adventista",
-        "musical Un día",
-        "polideportivo",
-        "40 aniversario",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/188351-2/",
-          "fecha": "2026-10-14T11:49:03.000Z",
-          "oficial": false,
-          "aporte": "Detalló el horario, el lugar, el nombre de la obra y el aniversario del instituto."
-        },
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
-          "fecha": "2026-10-14T11:54:19.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la presentación del coro institucional y la función del viernes a las 20."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-coro-del-instituto-adventista-presenta-el-musical-un-dia"
-    },
-    {
       "id": "11uyvlg",
       "titulo": "El Gobierno prohíbe la venta de juguetes blandos por exceso de ftalatos",
       "copete": "La prohibición nacional abarca a todos los modelos de la marca Pinch Family. Un laboratorio detectó que contienen el doble del plastificante permitido por las normas de seguridad.",
@@ -3026,6 +2728,7 @@
         "A24",
         "Minuto Uno",
         "Crónica",
+        "El Día",
         "La Voz del Pueblo",
         "El Marplatense",
         "Ámbito",
@@ -3040,7 +2743,7 @@
       "fecha": "2026-10-14T11:17:56.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T14:31:29.582Z",
-      "relevancia": 80,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3111,7 +2814,6 @@
         "El Diario Balcarce",
         "Diario La Vanguardia",
         "Infobae",
-        "La Nación",
         "Perfil",
         "Canal 26",
         "La Tecla",
@@ -3267,10 +2969,10 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
-        "El Economista",
-        "iProfesional",
         "Ámbito",
-        "Minuto Uno"
+        "iProfesional",
+        "Minuto Uno",
+        "El Economista"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
       "teniaImagenLaFuente": true,
@@ -3409,6 +3111,7 @@
         "Infórmese Primero (FM 104.9)",
         "0223 (Mar del Plata)",
         "Infobae",
+        "Clarín",
         "TN (Todo Noticias)",
         "El Cronista",
         "Perfil",
@@ -3694,9 +3397,9 @@
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
         "Bolavip Argentina",
+        "Clarín",
         "0223 (Mar del Plata)",
-        "La Capital (Rosario)",
-        "Clarín"
+        "La Capital (Rosario)"
       ],
       "enlace": "https://www.clarin.com/deportes/lisandro-martinez-exploto-dirigencia-manchester-united-leyenda-club-cruzo-actuaciones-buenas_0_xNVWlGPyUT.html",
       "teniaImagenLaFuente": true,
@@ -3838,6 +3541,13 @@
         },
         {
           "medio": "C5N",
+          "enlace": "https://www.c5n.com/deportes/escandalo-manchester-united-el-duro-descargo-lisandro-martinez-sus-criticas-la-dirigencia-n251642",
+          "fecha": "2026-10-15T00:46:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "C5N",
           "enlace": "https://www.c5n.com/deportes/escandalo-manchester-united-las-criticas-lisandro-martinez-las-respuestas-wayne-rooney-y-rio-ferdinand-n251577",
           "fecha": "2026-10-14T16:05:00.000Z",
           "oficial": false,
@@ -3935,13 +3645,6 @@
           "aporte": null
         },
         {
-          "medio": "La Capital (Rosario)",
-          "enlace": "https://www.lacapital.com.ar/ovacion/las-duras-declaraciones-lisandro-martinez-que-abrieron-un-escandalo-manchester-united-n10286663.html",
-          "fecha": "2026-10-14T17:29:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/lisandro-martinez-apunto-contra-la-dirigencia-manchester-united-esperaba-mas-inversiones-n6333494",
           "fecha": "2026-10-14T12:00:00.000Z",
@@ -3952,6 +3655,13 @@
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/rooney-ferdinand-y-carragher-destrozaron-lisandro-martinez-es-una-falta-respeto-n6333629",
           "fecha": "2026-10-14T15:16:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Capital (Rosario)",
+          "enlace": "https://www.lacapital.com.ar/ovacion/las-duras-declaraciones-lisandro-martinez-que-abrieron-un-escandalo-manchester-united-n10286663.html",
+          "fecha": "2026-10-14T17:29:00.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -4301,6 +4011,78 @@
       }
     },
     {
+      "id": "nemgm9",
+      "titulo": "Google habilita Gemini 4 Argon para usuarios de pago",
+      "copete": "La compañía tecnológica liberó su modelo de inteligencia artificial más avanzado para suscriptores de los planes superiores y desarrolladores. Ofrece tarifas promocionales de lanzamiento y un millón de tokens por tarea.",
+      "cuerpo": "Google habilitó el acceso público a Gemini 4 Argon para los usuarios de sus planes de pago Pro y Ultra en su aplicación y en el buscador, además de abrirlo a desarrolladores y empresas. El modelo llega con una tarifa promocional de USD 2 por cada millón de tokens de entrada y USD 10 por cada millón de salida, valores que se duplicarán a fines de noviembre de 2026.\n\nLa empresa había presentado el sistema el 30 de septiembre de 2026 para pruebas cerradas de seguridad. Según informó la compañía, el nuevo desarrollo superó a competidores en pruebas comparativas de programación y ciberseguridad, y amplió a un millón de tokens el límite de texto por tarea.\n\nGoogle no detalló si la herramienta estará disponible en el futuro para los usuarios de planes gratuitos.",
+      "guion": "Google habilita Gemini 4 Argon para usuarios de pago",
+      "seccion": "Tecnología",
+      "medios": [
+        "Infobae",
+        "Radio Mitre"
+      ],
+      "enlace": "https://www.infobae.com/tecno/2026/10/13/google-activo-gemini-4-argon-centrada-en-programacion-y-ciberseguridad-compite-con-chatgpt-y-claude/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T19:24:14.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T02:31:55.756Z",
+      "relevancia": 34,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Google liberó el modelo Gemini 4 Argon para usuarios de sus planes de pago.",
+        "Tiene una tarifa promocional de dos dólares por millón de tokens de entrada.",
+        "El límite de generación se amplió a un millón de tokens por tarea.",
+        "La empresa no confirmó si llegará a usuarios gratuitos."
+      ],
+      "seSabe": [
+        "Google activó Gemini 4 Argon para los planes Pro y Ultra.",
+        "El costo inicial es de USD 2 por millón de tokens de entrada y USD 10 de salida, según Google.",
+        "El límite de texto por tarea alcanza un millón de tokens.",
+        "Google presentó el sistema inicialmente el 30 de septiembre de 2026."
+      ],
+      "noConfirmado": [
+        "La llegada del modelo a los usuarios de planes gratuitos o del nivel Plus.",
+        "La verificación independiente de las pruebas comparativas difundidas por la empresa."
+      ],
+      "textoRedes": "Google activó Gemini 4 Argon para los usuarios de sus planes de pago con tarifas promocionales de lanzamiento y mayor capacidad de procesamiento.",
+      "etiquetas": [
+        "Google",
+        "Inteligencia Artificial",
+        "Gemini 4 Argon",
+        "tecnología"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/10/13/google-activo-gemini-4-argon-centrada-en-programacion-y-ciberseguridad-compite-con-chatgpt-y-claude/",
+          "fecha": "2026-10-13T19:24:14.000Z",
+          "oficial": false,
+          "aporte": "Detalló los precios de lanzamiento, el límite de tokens y el historial de pruebas internas de Google."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/tecnologia/google-lanzo-gemini-4-argon-para-suscriptores-pagos-quienes-pueden-usar-el-nuevo-modelo-de-ia/",
+          "fecha": "2026-10-14T02:06:27.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la habilitación global del modelo para desarrolladores y empresas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "google-habilita-gemini-4-argon-para-usuarios-de-pago",
+      "foto": {
+        "archivo": "fotos-notas/nemgm9.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
       "id": "u043fh",
       "titulo": "Organizan una peregrinación a pie hacia la Ermita de Los Pinos",
       "copete": "La caminata en honor a la Virgen del Rosario de San Nicolás será el sábado 17 de octubre desde las 9. Partirá de la parroquia Santa María y finalizará con una misa.",
@@ -4458,8 +4240,8 @@
       "medios": [
         "La Nación",
         "TN (Todo Noticias)",
-        "Agrositio",
-        "Bichos de Campo"
+        "Bichos de Campo",
+        "Agrositio"
       ],
       "enlace": "https://bichosdecampo.com/esta-cara-la-papa-y-eso-les-cambio-la-cara-segun-coninagro-las-economias-regionales-no-repuntan-a-pesar-de-la-mejora-en-una-de-las-actividades/",
       "teniaImagenLaFuente": true,
@@ -4588,10 +4370,10 @@
       "medios": [
         "Clarín",
         "TN (Todo Noticias)",
-        "Agroempresario",
         "Infobae",
         "La Voz del Pueblo",
         "Noticias Agropecuarias",
+        "Agroempresario",
         "La Nueva"
       ],
       "enlace": "https://www.clarin.com/rural/dia-mundial-fertilizantes-innovacion-enfrenta-desafio-alimentar-poblacion-mundial-constante-crecimiento_0_b6eMatjB3U.html",
@@ -4727,12 +4509,12 @@
     {
       "id": "repaso20261013manana",
       "propia": "repaso",
-      "titulo": "El repaso de la mañana en Radar Balcarce: Fórmula 1, Zona Fría, pronóstico y Gabriel Deck",
-      "copete": "Radar Balcarce publicó a las 10:06 de este martes 13 de octubre el repaso de la mañana en Instagram y Facebook, un audio con 4 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 4 notas que se contaron en el repaso de la mañana del martes 13, en el orden en que salieron en el audio.\n\nLa Fórmula 1 vuelve a correr en África tras un acuerdo con Ruanda. La categoría reina del automovilismo mundial oficializó un vínculo de diez años para incorporar un Gran Premio en el continente africano a partir de la próxima década.\n\nEl Gobierno promulga la Ley 27.828 que modifica el régimen de Zona Fría. El Gobierno nacional oficializó la normativa que limita el acceso automático a las bonificaciones en las facturas de gas. La medida alcanza a Balcarce y a otros distritos bonaerenses, donde las tarifas podrían registrar subas promedio del 55%.\n\nEl pronóstico anticipa una semana fresca con lluvias y mínimas bajas. El clima se mantiene frío con temperaturas que no superarán los 15 grados y probabilidad de precipitaciones durante los primeros días.\n\nGabriel Deck pasa por el quirófano y se pierde lo que resta del año. El alero de la Selección Argentina y del Real Madrid será operado del hombro izquierdo por una lesión. Su ausencia complica al equipo nacional en la clasificación al Mundial.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
+      "titulo": "El repaso de la mañana en Radar Balcarce: Zona Fría, pronóstico y Gabriel Deck",
+      "copete": "Radar Balcarce publicó a las 10:06 de este martes 13 de octubre el repaso de la mañana en Instagram y Facebook, un audio con 3 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
+      "cuerpo": "Estas son las 3 notas que se contaron en el repaso de la mañana del martes 13, en el orden en que salieron en el audio.\n\nEl Gobierno promulga la Ley 27.828 que modifica el régimen de Zona Fría. El Gobierno nacional oficializó la normativa que limita el acceso automático a las bonificaciones en las facturas de gas. La medida alcanza a Balcarce y a otros distritos bonaerenses, donde las tarifas podrían registrar subas promedio del 55%.\n\nEl pronóstico anticipa una semana fresca con lluvias y mínimas bajas. El clima se mantiene frío con temperaturas que no superarán los 15 grados y probabilidad de precipitaciones durante los primeros días.\n\nGabriel Deck pasa por el quirófano y se pierde lo que resta del año. El alero de la Selección Argentina y del Real Madrid será operado del hombro izquierdo por una lesión. Su ausencia complica al equipo nacional en la clasificación al Mundial.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
       "guion": null,
       "seccion": "Balcarce",
-      "local": false,
+      "local": true,
       "relevancia": 60,
       "medios": [],
       "enlace": null,
@@ -4744,7 +4526,6 @@
       "publicadaCuando": "2026-10-13T13:06:44.511Z",
       "temas": [],
       "etiquetas": [
-        "Fórmula 1",
         "Zona Fría",
         "pronóstico",
         "Gabriel Deck"
@@ -4752,16 +4533,11 @@
       "como": "automatica",
       "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
       "notasDelRepaso": [
-        "19xpc0o",
         "3xm1ge",
         "fa17ki",
         "1qszs3z"
       ],
       "enlacesEnTexto": [
-        {
-          "texto": "La Fórmula 1 vuelve a correr en África tras un acuerdo con Ruanda",
-          "href": "/nota/la-formula-1-vuelve-a-correr-en-africa-tras-un-acuerdo-con-ruanda-19xpc0o"
-        },
         {
           "texto": "El Gobierno promulga la Ley 27.828 que modifica el régimen de Zona Fría",
           "href": "/nota/el-gobierno-promulga-la-ley-27-828-que-modifica-el-regimen-de-zona-3xm1ge"
@@ -4790,70 +4566,7 @@
       "slug": "el-repaso-de-la-manana-en-radar-balcarce-formula-1-zona-fria",
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261013manana.jpg",
-        "credito": "Fotos: Motorsport, Radio Gabal (FM 104.1) y 0223 (Mar del Plata)"
-      }
-    },
-    {
-      "id": "95znl3",
-      "titulo": "El Registro Civil suspende casamientos para el martes 13",
-      "copete": "La oficina del Centro Cívico no registra ceremonias de casamiento para esta jornada. El dato rompe con la tendencia de años anteriores.",
-      "cuerpo": "El Registro Provincial de las Personas que funciona en el Centro Cívico no celebrará matrimonios durante el martes 13. Según informó una fuente local, no existen uniones previstas en la dependencia para la fecha.\n\nLa situación se diferencia de lo ocurrido en temporadas pasadas, cuando varias parejas locales eligieron este día para formalizar su vínculo a pesar de la creencia popular vinculada a la mala suerte. La superstición mantiene vigencia en la cultura, aunque no hay registros que demuestren inconvenientes por casarse en esta jornada.",
-      "guion": "El Registro Civil suspende casamientos para el martes 13",
-      "seccion": "Balcarce",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/45065-martes-13-no-habra-casamientos-en-el-registro-civil-de-balcarce/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T13:01:21.378Z",
-      "sinFecha": true,
-      "visto": "2026-10-13T13:01:21.378Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "No hay casamientos previstos para este martes 13",
-        "La oficina funciona en el Centro Cívico",
-        "En años anteriores sí se celebraron bodas en esta fecha"
-      ],
-      "seSabe": [
-        "No se celebrarán matrimonios este martes 13 en la oficina local",
-        "El Registro Provincial de las Personas funciona en el Centro Cívico",
-        "En años anteriores hubo parejas que se casaron en esta fecha"
-      ],
-      "noConfirmado": [
-        "Los motivos específicos por los cuales ninguna pareja eligió la fecha actual",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Registro Provincial de las Personas no registrará ceremonias de casamiento durante este martes 13 en la oficina del Centro Cívico de Balcarce, a diferencia de años anteriores.",
-      "etiquetas": [
-        "Registro Civil",
-        "casamientos",
-        "Centro Cívico",
-        "superstición",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45065-martes-13-no-habra-casamientos-en-el-registro-civil-de-balcarce/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó la ausencia de casamientos programados para el martes 13 en el Registro Civil local y el contraste con años anteriores."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-registro-civil-suspende-casamientos-para-el-martes-13",
-      "foto": {
-        "archivo": "fotos-notas/95znl3.jpg",
-        "credito": "Foto: Diario La Vanguardia"
+        "credito": "Fotos: Radio Gabal (FM 104.1) y 0223 (Mar del Plata)"
       }
     }
   ],
@@ -4861,23 +4574,24 @@
     "Balcarce",
     "Automovilismo",
     "Política",
-    "Fútbol",
     "Economía",
     "Argentina",
-    "Agro",
     "Policiales",
     "Deportes",
-    "Cultura y agenda"
+    "Cultura y agenda",
+    "Fútbol",
+    "Tecnología",
+    "Agro"
   ],
   "temas": [
     {
-      "nombre": "El Concejo Deliberante",
-      "ranura": "concejo",
-      "cuantas": 3
-    },
-    {
       "nombre": "El autódromo",
       "ranura": "autodromo",
+      "cuantas": 2
+    },
+    {
+      "nombre": "El Concejo Deliberante",
+      "ranura": "concejo",
       "cuantas": 2
     },
     {
@@ -4890,8 +4604,8 @@
     "ahora": {
       "temp": 10,
       "sensacion": 8,
-      "humedad": 92,
-      "viento": 14,
+      "humedad": 93,
+      "viento": 13,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": false
@@ -4911,7 +4625,7 @@
       {
         "fecha": "2026-10-15",
         "dia": "jue",
-        "max": 15,
+        "max": 14,
         "min": 9,
         "lluvia": 41,
         "codigo": 51,
@@ -4934,7 +4648,7 @@
         "fecha": "2026-10-17",
         "dia": "sáb",
         "max": 11,
-        "min": 6,
+        "min": 7,
         "lluvia": 6,
         "codigo": 3,
         "viento": 17,
@@ -5243,22 +4957,16 @@
   },
   "pendientes": [
     {
-      "id": "gelhhp",
-      "titulo": "Nuevo pedido de justicia por la muerte de Claribel Medina",
+      "id": "p1f6vz",
+      "titulo": "Convocan a una marcha por Claribel Medina este sábado en…",
       "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"muerte\""
+      "motivo": "necesita ojo humano: \"murió\""
     },
     {
       "id": "1hb8gyb",
       "titulo": "Pesar por el fallecimiento de Pascualito Cerone, histórico…",
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"falleció\" (en otro medio que cuenta lo mismo)"
-    },
-    {
-      "id": "h0a84i",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1okotnb",
@@ -5271,12 +4979,6 @@
       "titulo": "Gabriel Solano denunció penalmente a Javier Milei y Luis…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
-      "id": "1o3t7bf",
-      "titulo": "Javier Milei viaja a Estados Unidos para reforzar su…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "sngreo",
@@ -5303,10 +5005,10 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1n4ytnl",
-      "titulo": "Javier Milei y sus medidas, EN VIVO: el Presidente pidió…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
+      "id": "1spqpr6",
+      "titulo": "Murió Norberto Di Próspero, secretario general de la…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
     },
     {
       "id": "120b8gy",
@@ -5321,16 +5023,22 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "zcbb3f",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
       "id": "1thkkxk",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1333xd6",
-      "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"denunció\""
+      "id": "11y8l6f",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "kcdqa8",
@@ -5345,6 +5053,12 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "1333xd6",
+      "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
       "id": "fp2pbw",
       "titulo": "Casación confirmó embargos de hasta $31 mil millones en la…",
       "seccion": "Argentina",
@@ -5357,10 +5071,22 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
+      "id": "n3o8iw",
+      "titulo": "El periodista brasileño deportado por criticar a Javier…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
       "id": "115hicz",
       "titulo": "El dolor de Graciela Alfano al visitar la casa de su…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"asesinato\""
+    },
+    {
+      "id": "npkndz",
+      "titulo": "Inauguran una plataforma pública con datos diarios de…",
+      "seccion": "Economía",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "lwmyim",
@@ -5375,5 +5101,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 0
+  "esperandoCuerpo": 1
 }
