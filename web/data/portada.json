@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T04:02:01.390Z",
+  "generado": "2026-10-15T04:31:53.818Z",
   "notas": [
     {
       "id": "19xa7ho",
@@ -70,11 +70,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45083-walter-ianni-lopez-participo-en-beijing-de-encuentros-sobre-cooperacion-internacional-y-relaciones-con-china/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-15T00:31:41.256Z",
       "sinFecha": true,
       "visto": "2026-10-15T00:31:41.256Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1352,6 +1352,80 @@
       }
     },
     {
+      "id": "1qu6ie7",
+      "titulo": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
+      "copete": "El informe climático para la próxima semana anticipa registros pluviométricos modestos en gran parte del país y mínimas inferiores a 10 grados en el este bonaerense.",
+      "cuerpo": "La Bolsa de Cereales de Buenos Aires difundió el pronóstico para el período del 15 al 21 de octubre, que anticipa precipitaciones escasas en la mayor parte de la región agrícola, con la excepción del extremo norte. Según el informe, la entrada de aire marítimo mantendrá las temperaturas mínimas por debajo de los valores habituales, mientras que el este de Buenos Aires registrará marcas inferiores a 10 grados con leve riesgo de heladas localizadas. Hacia el final del periodo, el regreso de vientos tropicales provocará un ascenso térmico generalizado, aunque el sur de la Región Pampeana y la Costa Atlántica se mantendrán con máximas por debajo de los 20 grados debido a la circulación marina.",
+      "guion": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
+      "seccion": "Agro",
+      "medios": [
+        "Agrositio",
+        "TN (Todo Noticias)"
+      ],
+      "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T17:34:56.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T19:32:01.897Z",
+      "relevancia": 43,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Pronóstico vigente del 15 al 21 de octubre.",
+        "Lluvias escasas en la mayor parte del país.",
+        "Mínimas menores a 10 grados en el este bonaerense."
+      ],
+      "seSabe": [
+        "La Bolsa de Cereales de Buenos Aires informó el pronóstico para la próxima semana.",
+        "Habrá precipitaciones escasas en la mayor parte del área agrícola.",
+        "El este de Buenos Aires registrará mínimas menores a 10 grados."
+      ],
+      "textoRedes": "El informe climático para la próxima semana anticipa lluvias escasas en gran parte del país y temperaturas mínimas inferiores a 10 grados en el este de Buenos Aires.",
+      "etiquetas": [
+        "Clima",
+        "Bolsa de Cereales",
+        "Lluvias",
+        "Temperaturas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
+          "fecha": "2026-10-14T17:34:56.000Z",
+          "oficial": false,
+          "aporte": "Detalló los registros de precipitaciones, temperaturas mínimas y máximas por región según el informe de la Bolsa de Cereales."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/14/la-region-agricola-recibira-lluvias-escasas-durante-los-proximos-dias-excepto-en-el-extremo-norte/",
+          "fecha": "2026-10-14T19:09:51.000Z",
+          "oficial": false,
+          "aporte": "Informó que se esperan lluvias escasas en la mayor parte de la región agrícola para el período del 15 al 21 de octubre."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "vqv317",
+          "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
+          "fecha": "2026-10-05T11:23:01.000Z",
+          "ruta": "/nota/el-clima-muestra-cielo-nublado-y-posibles-lluvias-debiles-vqv317"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "pronostican-lluvias-escasas-y-marcada-amplitud-termica-en-el-area",
+      "foto": {
+        "archivo": "fotos-notas/1qu6ie7.jpg",
+        "credito": "Foto: Agrositio"
+      }
+    },
+    {
       "id": "eumyqk",
       "titulo": "San Nicolás propone eliminar tasa local si Nación quita el IVA",
       "copete": "El intendente de San Nicolás, Santiago Passaglia, desafió al Gobierno nacional a eliminar la Tasa de Seguridad e Higiene a cambio de que la Nación deje de cobrar el IVA en obras y servicios públicos municipales.",
@@ -1605,11 +1679,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45079-jamas-imagine-que-iba-a-necesitar-un-trasplante/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-14T16:32:12.981Z",
       "sinFecha": true,
       "visto": "2026-10-14T16:32:12.981Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1654,6 +1728,88 @@
       "foto": {
         "archivo": "fotos-notas/tctot0.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "55gw7p",
+      "titulo": "Una psíquica de animales revela detalles sobre su vínculo con Javier Milei",
+      "copete": "Celia Melamed contó que trabajó durante dos años para comunicarse con los perros del Presidente. La veterinaria relató cómo comenzó la relación y señaló que dejó de ser contratada tras un taller en el que participó Karina Milei.",
+      "cuerpo": "Celia Melamed, una veterinaria especializada en comunicación con animales, reveló detalles sobre el vínculo profesional que mantuvo durante dos años con Javier Milei. La profesional relató al diario The New York Times que fue contratada hace una década cuando su mastín Conan atravesaba sus últimos días, y que luego continuó con consultas vinculadas a los cinco clones del animal.\n\nLa mujer aseguró que el vínculo finalizó alrededor de 2019, después de que Karina Milei participara en uno de sus talleres de capacitación. Según su interpretación, la secretaria general de la Presidencia pudo haberla reemplazado en la tarea de dialogar con las mascotas.\n\nEl Presidente y la secretaria general de la Presidencia no respondieron a las consultas del medio estadounidense para la elaboración del artículo.",
+      "guion": "Una psíquica de animales revela detalles sobre su vínculo con Javier Milei",
+      "seccion": "Argentina",
+      "medios": [
+        "Crónica",
+        "iProfesional",
+        "Ámbito",
+        "El Economista"
+      ],
+      "enlace": "https://www.iprofesional.com/actualidad/466591-perros-milei-medium-conto-secretos-ineditos-genero-polemica-vinculo",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T16:04:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T18:31:45.279Z",
+      "relevancia": 36,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Celia Melamed trabajó durante dos años con las mascotas presidenciales.",
+        "La veterinaria fue contratada hace una década para comunicarse con Conan.",
+        "Karina Milei participó de un taller de comunicación animal en 2019.",
+        "El Presidente dejó de contratar los servicios tras la capacitación de su hermana."
+      ],
+      "seSabe": [
+        "Celia Melamed brindó una entrevista al diario The New York Times.",
+        "La veterinaria trabajó durante dos años comunicándose con los perros de Javier Milei.",
+        "Karina Milei participó en un taller de la especialista alrededor de 2019.",
+        "El mandatario y su hermana no respondieron a las consultas del medio estadounidense."
+      ],
+      "noConfirmado": [
+        "No se confirmó si Karina Milei reemplazó a la veterinaria en la comunicación con los animales."
+      ],
+      "textoRedes": "Una veterinaria que se presenta como psíquica de animales contó detalles sobre las sesiones que mantuvo durante dos años con los perros de Javier Milei y señaló que dejó de trabajar con él tras un taller en el que participó Karina Milei.",
+      "etiquetas": [
+        "Celia Melamed",
+        "Javier Milei",
+        "perros",
+        "The New York Times",
+        "Karina Milei",
+        "mascotas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/actualidad/466591-perros-milei-medium-conto-secretos-ineditos-genero-polemica-vinculo",
+          "fecha": "2026-10-14T16:04:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los años de trabajo con las mascotas, el inicio del vínculo con Conan y la participación de Karina Milei en el taller."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/la-psiquica-que-se-comunicaba-con-los-perros-de-milei-hablo-en-the-new-york-times-pocas-personas-nid14102026/",
+          "fecha": "2026-10-14T16:39:30.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la publicación de la entrevista en el diario The New York Times este miércoles."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/sociedad/la-medium-de-los-perros-de-javier-milei-hablo-con-el-new-york-detalles-y-secretos/",
+          "fecha": "2026-10-14T16:18:39.000Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre el vínculo profesional y espiritual mantenido con el mandatario."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "una-psiquica-de-animales-revela-detalles-sobre-su-vinculo-con-javier",
+      "foto": {
+        "archivo": "fotos-notas/55gw7p.jpg",
+        "credito": "Foto: iProfesional"
       }
     },
     {
@@ -1829,10 +1985,10 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
-        "A24",
-        "C5N",
+        "iProUP",
         "iProfesional",
-        "iProUP"
+        "A24",
+        "C5N"
       ],
       "enlace": "https://www.ambito.com/economia/caba-lanzo-un-plan-pagar-deudas-abl-y-patentes-100-descuento-intereses-como-acceder-n6333599",
       "teniaImagenLaFuente": true,
@@ -1912,7 +2068,6 @@
       "medios": [
         "Diario La Vanguardia",
         "Clarín",
-        "0223 (Mar del Plata)",
         "La Nación",
         "TN (Todo Noticias)",
         "El Destape",
@@ -1922,6 +2077,7 @@
         "TyC Sports",
         "Minuto Uno",
         "Crónica",
+        "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Nueva",
@@ -1997,8 +2153,8 @@
         "El Cronista",
         "El Destape",
         "iProfesional",
-        "Ámbito",
-        "El Economista"
+        "El Economista",
+        "Ámbito"
       ],
       "enlace": "https://eleconomista.com.ar/negocios/movistar-mensaje-recibiran-millones-clientes-proximos-dias-n98856",
       "teniaImagenLaFuente": true,
@@ -2178,13 +2334,12 @@
         "LU9 Mar del Plata",
         "QZ Noticias (Mar del Plata)",
         "Diputados Bonaerenses",
-        "El Día",
         "0221",
-        "La Verdad",
-        "Agencia DIB",
-        "Ámbito",
         "La Tecla",
-        "El Marplatense"
+        "La Verdad",
+        "El Marplatense",
+        "Agencia DIB",
+        "Ámbito"
       ],
       "enlace": "https://www.0221.com.ar/la-plata/la-provincia-convoco-los-docentes-retomar-las-paritarias-y-definir-nuevos-aumentos-salarios-n135790",
       "teniaImagenLaFuente": true,
@@ -2333,15 +2488,18 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45075-presupuesto-2027-el-municipio-prepara-la-ley-de-leyes-y-los-funcionarios-deberan-explicar-sus-numeros/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-14T13:31:55.553Z",
       "sinFecha": true,
       "visto": "2026-10-14T13:31:55.553Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "concejo",
+        "hospital"
+      ],
       "como": "automatica",
       "claves": [
         "El Ejecutivo municipal prevé presentar el proyecto el 31 de octubre.",
@@ -2687,11 +2845,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://puntonueve.com.ar/188351-2/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-14T11:49:03.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T12:31:49.255Z",
-      "relevancia": 77,
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2754,6 +2912,7 @@
         "A24",
         "Minuto Uno",
         "Crónica",
+        "El Día",
         "La Voz del Pueblo",
         "El Marplatense",
         "Ámbito",
@@ -2843,6 +3002,7 @@
         "El Diario Balcarce",
         "Diario La Vanguardia",
         "Infobae",
+        "La Nación",
         "Perfil",
         "Canal 26",
         "La Tecla",
@@ -2997,10 +3157,10 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
-        "Ámbito",
+        "El Economista",
         "iProfesional",
-        "Minuto Uno",
-        "El Economista"
+        "Ámbito",
+        "Minuto Uno"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
       "teniaImagenLaFuente": true,
@@ -3348,9 +3508,9 @@
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
         "Bolavip Argentina",
-        "Clarín",
         "0223 (Mar del Plata)",
-        "La Capital (Rosario)"
+        "La Capital (Rosario)",
+        "Clarín"
       ],
       "enlace": "https://www.clarin.com/deportes/lisandro-martinez-exploto-dirigencia-manchester-united-leyenda-club-cruzo-actuaciones-buenas_0_xNVWlGPyUT.html",
       "teniaImagenLaFuente": true,
@@ -3603,6 +3763,13 @@
           "aporte": null
         },
         {
+          "medio": "La Capital (Rosario)",
+          "enlace": "https://www.lacapital.com.ar/ovacion/las-duras-declaraciones-lisandro-martinez-que-abrieron-un-escandalo-manchester-united-n10286663.html",
+          "fecha": "2026-10-14T17:29:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/lisandro-martinez-apunto-contra-la-dirigencia-manchester-united-esperaba-mas-inversiones-n6333494",
           "fecha": "2026-10-14T12:00:00.000Z",
@@ -3613,13 +3780,6 @@
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/rooney-ferdinand-y-carragher-destrozaron-lisandro-martinez-es-una-falta-respeto-n6333629",
           "fecha": "2026-10-14T15:16:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Capital (Rosario)",
-          "enlace": "https://www.lacapital.com.ar/ovacion/las-duras-declaraciones-lisandro-martinez-que-abrieron-un-escandalo-manchester-united-n10286663.html",
-          "fecha": "2026-10-14T17:29:00.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3970,78 +4130,6 @@
       }
     },
     {
-      "id": "nemgm9",
-      "titulo": "Google habilita Gemini 4 Argon para usuarios de pago",
-      "copete": "La compañía tecnológica liberó su modelo de inteligencia artificial más avanzado para suscriptores de los planes superiores y desarrolladores. Ofrece tarifas promocionales de lanzamiento y un millón de tokens por tarea.",
-      "cuerpo": "Google habilitó el acceso público a Gemini 4 Argon para los usuarios de sus planes de pago Pro y Ultra en su aplicación y en el buscador, además de abrirlo a desarrolladores y empresas. El modelo llega con una tarifa promocional de USD 2 por cada millón de tokens de entrada y USD 10 por cada millón de salida, valores que se duplicarán a fines de noviembre de 2026.\n\nLa empresa había presentado el sistema el 30 de septiembre de 2026 para pruebas cerradas de seguridad. Según informó la compañía, el nuevo desarrollo superó a competidores en pruebas comparativas de programación y ciberseguridad, y amplió a un millón de tokens el límite de texto por tarea.\n\nGoogle no detalló si la herramienta estará disponible en el futuro para los usuarios de planes gratuitos.",
-      "guion": "Google habilita Gemini 4 Argon para usuarios de pago",
-      "seccion": "Tecnología",
-      "medios": [
-        "Infobae",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.infobae.com/tecno/2026/10/13/google-activo-gemini-4-argon-centrada-en-programacion-y-ciberseguridad-compite-con-chatgpt-y-claude/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T19:24:14.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T02:31:55.756Z",
-      "relevancia": 34,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Google liberó el modelo Gemini 4 Argon para usuarios de sus planes de pago.",
-        "Tiene una tarifa promocional de dos dólares por millón de tokens de entrada.",
-        "El límite de generación se amplió a un millón de tokens por tarea.",
-        "La empresa no confirmó si llegará a usuarios gratuitos."
-      ],
-      "seSabe": [
-        "Google activó Gemini 4 Argon para los planes Pro y Ultra.",
-        "El costo inicial es de USD 2 por millón de tokens de entrada y USD 10 de salida, según Google.",
-        "El límite de texto por tarea alcanza un millón de tokens.",
-        "Google presentó el sistema inicialmente el 30 de septiembre de 2026."
-      ],
-      "noConfirmado": [
-        "La llegada del modelo a los usuarios de planes gratuitos o del nivel Plus.",
-        "La verificación independiente de las pruebas comparativas difundidas por la empresa."
-      ],
-      "textoRedes": "Google activó Gemini 4 Argon para los usuarios de sus planes de pago con tarifas promocionales de lanzamiento y mayor capacidad de procesamiento.",
-      "etiquetas": [
-        "Google",
-        "Inteligencia Artificial",
-        "Gemini 4 Argon",
-        "tecnología"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/tecno/2026/10/13/google-activo-gemini-4-argon-centrada-en-programacion-y-ciberseguridad-compite-con-chatgpt-y-claude/",
-          "fecha": "2026-10-13T19:24:14.000Z",
-          "oficial": false,
-          "aporte": "Detalló los precios de lanzamiento, el límite de tokens y el historial de pruebas internas de Google."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/tecnologia/google-lanzo-gemini-4-argon-para-suscriptores-pagos-quienes-pueden-usar-el-nuevo-modelo-de-ia/",
-          "fecha": "2026-10-14T02:06:27.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la habilitación global del modelo para desarrolladores y empresas."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "google-habilita-gemini-4-argon-para-usuarios-de-pago",
-      "foto": {
-        "archivo": "fotos-notas/nemgm9.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
       "id": "u043fh",
       "titulo": "Organizan una peregrinación a pie hacia la Ermita de Los Pinos",
       "copete": "La caminata en honor a la Virgen del Rosario de San Nicolás será el sábado 17 de octubre desde las 9. Partirá de la parroquia Santa María y finalizará con una misa.",
@@ -4199,8 +4287,8 @@
       "medios": [
         "La Nación",
         "TN (Todo Noticias)",
-        "Bichos de Campo",
-        "Agrositio"
+        "Agrositio",
+        "Bichos de Campo"
       ],
       "enlace": "https://bichosdecampo.com/esta-cara-la-papa-y-eso-les-cambio-la-cara-segun-coninagro-las-economias-regionales-no-repuntan-a-pesar-de-la-mejora-en-una-de-las-actividades/",
       "teniaImagenLaFuente": true,
@@ -4329,10 +4417,10 @@
       "medios": [
         "Clarín",
         "TN (Todo Noticias)",
+        "Agroempresario",
         "Infobae",
         "La Voz del Pueblo",
         "Noticias Agropecuarias",
-        "Agroempresario",
         "La Nueva"
       ],
       "enlace": "https://www.clarin.com/rural/dia-mundial-fertilizantes-innovacion-enfrenta-desafio-alimentar-poblacion-mundial-constante-crecimiento_0_b6eMatjB3U.html",
@@ -4401,87 +4489,6 @@
         "archivo": "fotos-notas/1n32m9c.jpg",
         "credito": "Foto: TN (Todo Noticias)"
       }
-    },
-    {
-      "id": "ecn3bh",
-      "titulo": "Ratones Paranoicos toca en el show solista de Ronnie Wood",
-      "copete": "La banda liderada por Juanse acompañará al histórico guitarrista de los Rolling Stones en su primer concierto solista en el país. El recital será el 6 de noviembre en el Movistar Arena y ya se pueden conseguir las últimas localidades.",
-      "cuerpo": "Ratones Paranoicos se sumó como grupo invitado para el recital que Ronnie Wood brindará el 6 de noviembre en el Movistar Arena. La presentación marcará el debut del guitarrista de los Rolling Stones como solista en Argentina, dentro de una gira sudamericana que también pasará por Brasil y Chile, según informó la producción a cargo de DF Entertainment.\n\nLas localidades restantes se encuentran disponibles a través de la plataforma oficial del estadio, con la opción de abonar en hasta seis cuotas sin interés mediante tarjetas Visa del banco Santander. El repertorio incluirá un repaso por sus seis décadas de trayectoria musical y su paso por emblemáticas agrupaciones previas.\n\nLas visitas anteriores del músico británico al país incluyeron su llegada en 1996 para una muestra de pintura y grabados, mientras que los conciertos de los Rolling Stones reunieron a más de 900 mil espectadores en sus cuatro presentaciones históricas.",
-      "guion": "Ratones Paranoicos toca en el show solista de Ronnie Wood",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Diario Popular",
-        "Ámbito",
-        "Crónica"
-      ],
-      "enlace": "https://www.ambito.com/espectaculos/ratones-paranoicos-se-suma-como-banda-invitada-al-show-ronnie-wood-buenos-aires-como-y-donde-comprar-las-entradas-n6333161",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T16:29:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T00:01:43.721Z",
-      "relevancia": 41,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Ratones Paranoicos será la banda invitada del show.",
-        "El recital de Ronnie Wood será el 6 de noviembre.",
-        "El concierto se realizará en el Movistar Arena.",
-        "Las entradas se consiguen en la web oficial del estadio."
-      ],
-      "seSabe": [
-        "Ratones Paranoicos tocará en el show de Ronnie Wood, según informó la producción.",
-        "El recital será el 6 de noviembre en el Movistar Arena.",
-        "Es el primer concierto solista del músico en el país.",
-        "Las entradas están a la venta en el sitio web oficial con financiación en cuotas."
-      ],
-      "textoRedes": "Ratones Paranoicos será la banda invitada en el primer concierto solista de Ronnie Wood en el país. El show será el 6 de noviembre en el Movistar Arena y las últimas entradas están a la venta.",
-      "etiquetas": [
-        "Ratones Paranoicos",
-        "Ronnie Wood",
-        "Movistar Arena",
-        "Música",
-        "Conciertos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/espectaculos/ratones-paranoicos-se-suma-como-banda-invitada-al-show-ronnie-wood-buenos-aires-como-y-donde-comprar-las-entradas-n6333161",
-          "fecha": "2026-10-13T16:29:00.000Z",
-          "oficial": false,
-          "aporte": "Informó la participación de Ratones Paranoicos, la fecha del show, la venta de entradas y los detalles de la gira."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/elcanaldelamusica/noticias/ratones-paranoicos-abrira-el-show-de-ronnie-wood-en-buenos-aires/",
-          "fecha": "2026-10-13T16:55:00.000Z",
-          "oficial": false,
-          "aporte": "Publicó la misma información inicial sobre el evento y la banda invitada."
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/espectaculos/los-ratones-paranoicos-abriran-el-show-ronnie-wood-argentina-n924345",
-          "fecha": "2026-10-13T22:54:00.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir texto en su registro."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "saeapr",
-          "titulo": "El MotoGP en Buenos Aires anuncia los precios de sus entradas",
-          "fecha": "2026-09-30T21:24:43.000Z",
-          "ruta": "/nota/el-motogp-en-buenos-aires-anuncia-los-precios-de-sus-entradas-saeapr"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "ratones-paranoicos-toca-en-el-show-solista-de-ronnie-wood"
     }
   ],
   "secciones": [
@@ -4492,16 +4499,15 @@
     "Política",
     "Economía",
     "Argentina",
+    "Agro",
     "Policiales",
-    "Fútbol",
-    "Tecnología",
-    "Agro"
+    "Fútbol"
   ],
   "temas": [
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
-      "cuantas": 2
+      "cuantas": 3
     }
   ],
   "clima": {
@@ -4894,12 +4900,6 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "11d0zcr",
-      "titulo": "El Museo Fangio llevó la historia de Balcarce a Autoclásica",
-      "seccion": "Automovilismo",
-      "motivo": "necesita ojo humano: \"imputado\" (en otro medio que cuenta lo mismo)"
-    },
-    {
       "id": "dffmvs",
       "titulo": null,
       "seccion": "Policiales",
@@ -4948,12 +4948,6 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "11y8l6f",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
       "id": "1333xd6",
       "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
       "seccion": "Economía",
@@ -4984,16 +4978,16 @@
       "motivo": "necesita ojo humano: \"asesinato\""
     },
     {
-      "id": "npkndz",
-      "titulo": "Inauguran una plataforma pública con datos diarios de…",
-      "seccion": "Economía",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
       "id": "lwmyim",
       "titulo": "Hotesur-Los Sauces: habrá una audiencia clave para…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
+      "id": "1o51oh5",
+      "titulo": "El Reino Unido da luz verde al proyecto Sea Lion para…",
+      "seccion": "Argentina",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "1yxi3mj",
