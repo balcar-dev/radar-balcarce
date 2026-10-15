@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T10:32:25.152Z",
- "portada": 39,
+ "generado": "2026-10-15T11:01:59.335Z",
+ "portada": 40,
  "archivo": 1098,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-15T10:32:25.196Z",
+  "generado": "2026-10-15T11:01:59.374Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,13 +95,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "cdnqde",
-      "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
-      "seccion": "Cultura y agenda"
-     },
      {
       "id": "1e22az3",
       "titulo": "Cristian Méndez regresa a Balcarce tras una exitosa gira por España",
@@ -110,6 +105,11 @@
      {
       "id": "wzunxc",
       "titulo": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "fav3c1",
+      "titulo": "Brooklyn Café vende 1200 cookies tras la suspensión de la Fiesta del Postre",
       "seccion": "Balcarce"
      },
      {
@@ -126,13 +126,18 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": null,
+    "notas": []
+   },
+   {
+    "nombre": "podcast",
+    "titulo": "El repaso del día",
+    "hora": "21:00",
+    "voz": "locutor",
+    "momento": "antes",
+    "salio": null,
+    "segundos": 22,
     "notas": [
-     {
-      "id": "fav3c1",
-      "titulo": "Brooklyn Café vende 1200 cookies tras la suspensión de la Fiesta del Postre",
-      "seccion": "Balcarce"
-     },
      {
       "id": "wfa595",
       "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
@@ -142,23 +147,8 @@
       "id": "tctot0",
       "titulo": "Valeria Ares comparte su experiencia a dieciseis años de su doble trasplante",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "17v35o5",
-      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
-      "seccion": "Balcarce"
      }
     ]
-   },
-   {
-    "nombre": "podcast",
-    "titulo": "El repaso del día",
-    "hora": "21:00",
-    "voz": "locutor",
-    "momento": "antes",
-    "salio": null,
-    "segundos": null,
-    "notas": []
    }
   ],
   "facebook": {

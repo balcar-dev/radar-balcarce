@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T10:32:25.152Z",
+  "generado": "2026-10-15T11:01:59.335Z",
   "notas": [
     {
       "id": "clima20261015",
@@ -127,11 +127,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45083-walter-ianni-lopez-participo-en-beijing-de-encuentros-sobre-cooperacion-internacional-y-relaciones-con-china/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-15T00:31:41.256Z",
       "sinFecha": true,
       "visto": "2026-10-15T00:31:41.256Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -304,6 +304,103 @@
       "slug": "cristian-mendez-regresa-a-balcarce-tras-una-exitosa-gira-por-espana"
     },
     {
+      "id": "5t76xr",
+      "titulo": "Perfeta Producciones lidera la licitación por la concesión de Tecnópolis",
+      "copete": "La firma vinculada a Marcelo Fígoli supera por $20.700 millones la oferta de Buenos Aires Arena en el concurso oficial por el predio de Villa Martelli durante 25 años.",
+      "cuerpo": "La Agencia de Administración de Bienes del Estado (AABE) encamina la definición por el uso y la explotación comercial del predio de Tecnópolis en Villa Martelli por un plazo de 25 años. Tras la apertura de sobres, la empresa Perfeta Producciones S.A. se posiciona al frente de la compulsa al ofertar $204.000 millones, lo que supera por $20.700 millones —alrededor de un 11% más— la propuesta de $183.300 millones presentada por la firma Buenos Aires Arena S.A.\n\nLa oferta de Perfeta, asociada a Fénix Entertainment y al empresario Marcelo Fígoli junto con socios internacionales, equivale a un canon mensual de $680 millones. En tanto, la propuesta de la competidora vinculada a La Nación y Live Nation alcanza los $611 millones mensuales, según la documentación oficial.\n\nCon los puntajes iniciales en los rubros objetivos, la definición final del concurso queda sujeta a la evaluación de los proyectos técnicos y los planes de inversión que realizará la AABE.",
+      "guion": "Perfeta Producciones lidera la licitación por la concesión de Tecnópolis",
+      "seccion": "Política",
+      "medios": [
+        "Infobae",
+        "A24",
+        "Noticias Argentinas (NA)",
+        "Minuto Uno",
+        "C5N"
+      ],
+      "enlace": "https://www.minutouno.com/sociedad/licitacion-tecnopolis-perfeta-producciones-supero-20700-millones-buenos-aires-arena-n6333881",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T22:17:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T00:01:52.987Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Perfeta Producciones ofertó $204.000 millones por el predio de Villa Martelli.",
+        "La cifra supera por $20.700 millones a la presentada por Buenos Aires Arena.",
+        "La licitación de la AABE contempla un plazo de concesión de 25 años.",
+        "La decisión final sobre el concurso quedará en manos del organismo estatal."
+      ],
+      "seSabe": [
+        "Perfeta Producciones S.A. ofreció $204.000 millones por la concesión de Tecnópolis por 25 años, según la AABE.",
+        "La propuesta supera por $20.700 millones a la presentada por Buenos Aires Arena S.A., que alcanzó los $183.300 millones.",
+        "El canon mensual equivale a $680 millones para la firma de Marcelo Fígoli y a $611 millones para su competidora.",
+        "La AABE tiene a su cargo la evaluación final del concurso tras la revisión de los puntajes técnicos y de inversión."
+      ],
+      "noConfirmado": [
+        "Todavía no se informó la fecha exacta en la que la Agencia de Administración de Bienes del Estado emitirá la adjudicación definitiva."
+      ],
+      "textoRedes": "Perfeta Producciones encabeza la licitación por la concesión de Tecnópolis al superar por $20.700 millones la oferta de Buenos Aires Arena.",
+      "etiquetas": [
+        "Tecnópolis",
+        "licitación",
+        "AABE",
+        "Villa Martelli",
+        "Marcelo Fígoli",
+        "Economía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/sociedad/licitacion-tecnopolis-perfeta-producciones-supero-20700-millones-buenos-aires-arena-n6333881",
+          "fecha": "2026-10-14T22:17:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las cifras globales de las ofertas, el monto del canon mensual y los porcentajes de diferencia."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/14/tecnopolis-la-oferta-economica-de-marcelo-figoli-lo-ubica-como-favorito/",
+          "fecha": "2026-10-14T23:40:24.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en los montos ofrecidos por ambas empresas y el plazo de la concesión."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/politica/tecnopolis-perfeta-producciones-marcelo-figoli-supera-20700-millones-la-oferta-buenos-aires-arena-la-nacion-n1606492",
+          "fecha": "2026-10-14T23:24:00.000Z",
+          "oficial": false,
+          "aporte": "Identificó a las empresas asociadas a los consorcios oferentes y su vinculación con los inversores."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/sociedad/privatizacion-tecnopolis-perfeta-producciones-marcelo-figoli-supera-20700-millones-la-oferta-buenos-aires-arena-la-nacion-n251631",
+          "fecha": "2026-10-14T22:21:17.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la participación de los socios internacionales y los antecedentes de las firmas."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/tecnopolis--perfeta-producciones--de-marcelo-figoli--supera-en--20-700-millones-la-oferta-de-buenos-aires-arena--de-la-nacion_a6ad015688298ee386b4331bb",
+          "fecha": "2026-10-14T23:56:33.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la intervención de la Agencia de Administración de Bienes del Estado en el concurso."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "perfeta-producciones-lidera-la-licitacion-por-la-concesion-de",
+      "foto": {
+        "archivo": "fotos-notas/5t76xr.jpg",
+        "credito": "Foto: A24"
+      }
+    },
+    {
       "id": "biercm",
       "titulo": "Sol Di Gerónimo participa de una capacitación política en Necochea",
       "copete": "La concejal local asistió al ciclo dictado por el Partido Justicialista bonaerense. El intendente platense Julio Alak encabezó el encuentro en la vecina ciudad.",
@@ -311,7 +408,6 @@
       "guion": "Sol Di Gerónimo participa de una capacitación política en Necochea",
       "seccion": "Política",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)"
       ],
@@ -320,7 +416,7 @@
       "fecha": "2026-10-14T22:05:15.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T23:01:59.982Z",
-      "relevancia": 91,
+      "relevancia": 81,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -400,7 +496,6 @@
       "guion": "El Concejo Deliberativo Estudiantil cierra su quinta edición con veinticinco iniciativas",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
@@ -410,7 +505,7 @@
       "fecha": "2026-10-14T22:04:03.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T23:01:59.982Z",
-      "relevancia": 100,
+      "relevancia": 91,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -570,17 +665,17 @@
       "medios": [
         "Infobae",
         "TN (Todo Noticias)",
-        "Ámbito",
         "C5N",
         "Radio Mitre",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "Ámbito"
       ],
       "enlace": "https://www.ambito.com/deuda-economia-aspiro-pesos-del-mercado-renovo-el-136-los-vencimientos-y-estiro-plazos-mas-alla-2027-n6333837",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-14T20:40:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T23:24:36.951Z",
-      "relevancia": 66,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -859,6 +954,93 @@
       }
     },
     {
+      "id": "2m710x",
+      "titulo": "La Justicia declara la quiebra de la textil Algodonera Avellaneda",
+      "copete": "El magistrado Fabián Lorenzini dictó la quiebra indirecta de la firma santafesina tras fracasar las negociaciones. La compañía adeuda más de 260 millones de dólares y la medida pone en riesgo a unos 360 empleos.",
+      "cuerpo": "El Juzgado Civil y Comercial de Segunda Nominación de Reconquista decretó la quiebra de Algodonera Avellaneda, una firma textil vinculada al grupo Vicentin asentada en la provincia de Santa Fe. La medida judicial llegó el miércoles por disposición del juez Fabián Lorenzini, luego de que venciera el plazo sin postulantes inscriptos para el salvataje y fracasaran los entendimientos con los acreedores.\n\nEl proceso preventivo colapsó tras el rechazo a un planteo para excluir al Banco Nación, entidad que concentra la mayor parte de las acreencias. Según el fallo, la compañía acumula obligaciones financieras superiores a los 260 millones de dólares y más de 6000 millones de pesos en pasivos postconcursales.\n\nLa resolución contempla evaluar la continuidad transitoria de la producción en las plantas para preservar los puestos de los 360 operarios mientras se procura un comprador.",
+      "guion": "La Justicia declara la quiebra de la textil Algodonera Avellaneda",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "iProfesional"
+      ],
+      "enlace": "https://www.lanacion.com.ar/economia/campo/la-justicia-declaro-la-quiebra-de-algodonera-avellaneda-una-empresa-vinculada-a-vicentin-nid14102026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T18:37:01.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T01:31:56.486Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El juez Fabián Lorenzini dictó la quiebra de la textil.",
+        "Fracasó el proceso de salvataje sin interesados anotados.",
+        "La empresa acumula deudas millonarias en dólares y pesos."
+      ],
+      "seSabe": [
+        "El Juzgado de Reconquista dictó la quiebra indirecta este miércoles.",
+        "El Banco Nación concentra más del 80 por ciento de la deuda votante.",
+        "La compañía emplea a unas 360 personas."
+      ],
+      "noConfirmado": [
+        "Todavía no se determinó si las plantas continuarán operando de forma transitoria durante el proceso de venta."
+      ],
+      "textoRedes": "La Justicia dictó la quiebra de la textil Algodonera Avellaneda tras fracasar el salvataje y las negociaciones con acreedores. La firma adeuda más de 260 millones de dólares y la medida afecta a unos 360 empleados en Santa Fe.",
+      "etiquetas": [
+        "Algodonera Avellaneda",
+        "Vicentin",
+        "quiebra",
+        "Santa Fe",
+        "textil",
+        "justicia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/la-justicia-declaro-la-quiebra-de-algodonera-avellaneda-una-empresa-vinculada-a-vicentin-nid14102026/",
+          "fecha": "2026-10-14T18:37:01.000Z",
+          "oficial": false,
+          "aporte": "Detalló la ubicación en Reconquista, el rechazo al planteo sobre el Banco Nación y los montos de la deuda."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/14/fin-de-ciclo-para-algodonera-avellaneda-el-fuero-comercial-decreto-la-quiebra-y-ordeno-la-liquidacion-con-planta-abierta/",
+          "fecha": "2026-10-15T00:34:55.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que el fallo estuvo a cargo del juez Fabián Lorenzini este miércoles."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/negocios/sin-salida-la-justicia-decreto-la-quiebra-de-algodonera-avellaneda/",
+          "fecha": "2026-10-14T21:11:55.000Z",
+          "oficial": false,
+          "aporte": "Indicó que venció el plazo de salvataje sin inscriptos para rescatar a la firma de la familia Vicentin."
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/negocios/466623-algodonera-avellaneda-quiebra-deuda-millonaria-preocupa-empleados",
+          "fecha": "2026-10-14T21:58:00.000Z",
+          "oficial": false,
+          "aporte": "Informó que la compañía textil cuenta con alrededor de 360 trabajadores."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-justicia-declara-la-quiebra-de-la-textil-algodonera-avellaneda",
+      "foto": {
+        "archivo": "fotos-notas/2m710x.jpg",
+        "credito": "Foto: La Nación"
+      }
+    },
+    {
       "id": "y1elhg",
       "titulo": "El oficialismo busca dictaminar la reforma de salud mental en el Senado",
       "copete": "El bloque libertario y sus aliados alcanzaron un entendimiento para tratar el jueves el proyecto de reforma en un plenario de comisiones. La iniciativa contempla cambios en internaciones, prioridad profesional y financiamiento.",
@@ -1018,10 +1200,10 @@
       "medios": [
         "La Noticia 1",
         "Minuto Uno",
-        "C5N",
         "Zona Norte Diario",
         "El Marplatense",
-        "El Economista"
+        "El Economista",
+        "C5N"
       ],
       "enlace": "https://www.zonanortediario.com.ar/14/10/2026/kicillof-y-lanus-recorrieron-la-nueva-base-de-la-utoi-en-san-isidro-que-ya-cuenta-con-100-efectivos/",
       "teniaImagenLaFuente": true,
@@ -1187,12 +1369,12 @@
       "medios": [
         "Infobae",
         "TN (Todo Noticias)",
-        "Ámbito",
         "Minuto Uno",
         "Noticias Argentinas (NA)",
         "Agencia DIB",
         "Ecos Diarios (Necochea)",
-        "El Día"
+        "El Día",
+        "Ámbito"
       ],
       "enlace": "https://noticiasargentinas.com/economia/san-nicolas-propuso-eliminar-seguridad-e-higiene-si-nacion-deja-de-cobrar-iva_a6acfb3f58298ee386b33f776",
       "teniaImagenLaFuente": true,
@@ -1283,10 +1465,11 @@
         "TN (Todo Noticias)",
         "iProfesional",
         "Noticias Argentinas (NA)",
+        "El Día",
+        "InfoRegión",
         "Mi8 (Canal 8 Mar del Plata)",
         "El Eco de Tandil",
-        "iProUP",
-        "InfoRegión"
+        "iProUP"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/crece-la-morosidad-empresarial-casi-59000-companias-tienen-problemas-para-pagar-sus-deudas/",
       "teniaImagenLaFuente": true,
@@ -1431,11 +1614,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45079-jamas-imagine-que-iba-a-necesitar-un-trasplante/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-14T16:32:12.981Z",
       "sinFecha": true,
       "visto": "2026-10-14T16:32:12.981Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1644,21 +1827,21 @@
       "medios": [
         "La Nación",
         "Infobae",
+        "Clarín",
         "Ámbito",
         "Perfil",
         "TN (Todo Noticias)",
         "El Cronista",
-        "Minuto Uno",
         "Crónica",
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
         "iProUP",
-        "iProfesional",
-        "Clarín",
         "A24",
-        "C5N"
+        "C5N",
+        "Minuto Uno",
+        "iProfesional"
       ],
       "enlace": "https://www.ambito.com/economia/caba-lanzo-un-plan-pagar-deudas-abl-y-patentes-100-descuento-intereses-como-acceder-n6333599",
       "teniaImagenLaFuente": true,
@@ -1744,7 +1927,6 @@
         "Página/12",
         "A24",
         "TyC Sports",
-        "Minuto Uno",
         "Crónica",
         "Diario Popular",
         "Noticias Argentinas (NA)",
@@ -1755,6 +1937,7 @@
         "El Gráfico",
         "La Nueva",
         "Clarín",
+        "Minuto Uno",
         "La Brújula 24"
       ],
       "enlace": "https://noticiasargentinas.com/deportes/colapinto-pidio-frenar-los-ataques-de-los-argentinos-en-la-formula-1---no-me-ayudan-_a6acfdbd78298ee386b39ef1a",
@@ -1822,8 +2005,8 @@
         "El Cronista",
         "El Destape",
         "iProfesional",
-        "El Economista",
-        "Ámbito"
+        "Ámbito",
+        "El Economista"
       ],
       "enlace": "https://eleconomista.com.ar/negocios/movistar-mensaje-recibiran-millones-clientes-proximos-dias-n98856",
       "teniaImagenLaFuente": true,
@@ -1920,8 +2103,8 @@
         "TN (Todo Noticias)",
         "El Cronista",
         "Página/12",
-        "Ámbito",
         "Noticias Argentinas (NA)",
+        "Ámbito",
         "Clarín"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/14/el-secretario-de-trabajo-defendio-el-presupuesto-y-dijo-que-no-todos-quieren-trabajar-en-relacion-de-dependencia/",
@@ -2004,11 +2187,9 @@
         "QZ Noticias (Mar del Plata)",
         "Diputados Bonaerenses",
         "0221",
-        "La Tecla",
-        "La Verdad",
-        "El Marplatense",
         "Agencia DIB",
-        "Ámbito"
+        "Ámbito",
+        "La Verdad"
       ],
       "enlace": "https://www.0221.com.ar/la-plata/la-provincia-convoco-los-docentes-retomar-las-paritarias-y-definir-nuevos-aumentos-salarios-n135790",
       "teniaImagenLaFuente": true,
@@ -2158,18 +2339,15 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45075-presupuesto-2027-el-municipio-prepara-la-ley-de-leyes-y-los-funcionarios-deberan-explicar-sus-numeros/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-14T13:31:55.553Z",
       "sinFecha": true,
       "visto": "2026-10-14T13:31:55.553Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "concejo",
-        "hospital"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
         "El Ejecutivo municipal prevé presentar el proyecto el 31 de octubre.",
@@ -2305,6 +2483,157 @@
       }
     },
     {
+      "id": "97f98g",
+      "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
+      "copete": "El coro del establecimiento educativo presenta el viernes el espectáculo Un día en el polideportivo propio, enmarcado en los festejos por el aniversario institucional.",
+      "cuerpo": "El coro del Instituto Adventista Balcarce presenta el musical Un día el viernes a las 20 en el polideportivo de la institución. La propuesta artística cuenta con la participación de estudiantes secundarios y se suma a las celebraciones por los cuarenta años del establecimiento educativo.\n\nLa institución abrió sus puertas oficialmente el 19 de marzo de 1986 y celebró su cuadragésimo aniversario en marzo pasado. En paralelo a su fundación, el coro escolar nació en 1986 y desarrolló una extensa trayectoria con actuaciones en distintos escenarios del país y participación en certámenes corales.",
+      "guion": "El Instituto Adventista celebra cuarenta años con un musical",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-14T13:01:57.018Z",
+      "sinFecha": true,
+      "visto": "2026-10-14T13:01:57.018Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Instituto Adventista cumple cuarenta años de trayectoria.",
+        "El coro escolar presenta el musical Un día este viernes.",
+        "La función comienza a las 20 en el polideportivo institucional."
+      ],
+      "seSabe": [
+        "El Instituto Adventista Balcarce fue inaugurado el 19 de marzo de 1986.",
+        "El coro del establecimiento está integrado por alumnos de nivel secundario.",
+        "La presentación se realiza en el polideportivo de la institución educativa."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Instituto Adventista presenta este viernes el musical Un día en su polideportivo a las 20 para celebrar sus cuarenta años de trayectoria educativa y coral en la ciudad",
+      "etiquetas": [
+        "Instituto Adventista",
+        "coro",
+        "aniversario",
+        "musical",
+        "Balcarce",
+        "cultura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
+          "fecha": "2026-10-14T11:54:19.000Z",
+          "oficial": false,
+          "aporte": "Detalló la presentación del musical Un día, la fecha, el horario, el lugar y la trayectoria institucional y coral del Instituto Adventista."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "cdnqde",
+          "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
+          "fecha": "2026-10-14T11:49:03.000Z",
+          "ruta": "/nota/el-coro-del-instituto-adventista-presenta-el-musical-un-dia-cdnqde"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-instituto-adventista-celebra-cuarenta-anos-con-un-musical"
+    },
+    {
+      "id": "55gw7p",
+      "titulo": "Una psíquica de animales revela detalles sobre su vínculo con Javier Milei",
+      "copete": "Celia Melamed contó que trabajó durante dos años para comunicarse con los perros del Presidente. La veterinaria relató cómo comenzó la relación y señaló que dejó de ser contratada tras un taller en el que participó Karina Milei.",
+      "cuerpo": "Celia Melamed, una veterinaria especializada en comunicación con animales, reveló detalles sobre el vínculo profesional que mantuvo durante dos años con Javier Milei. La profesional relató al diario The New York Times que fue contratada hace una década cuando su mastín Conan atravesaba sus últimos días, y que luego continuó con consultas vinculadas a los cinco clones del animal.\n\nLa mujer aseguró que el vínculo finalizó alrededor de 2019, después de que Karina Milei participara en uno de sus talleres de capacitación. Según su interpretación, la secretaria general de la Presidencia pudo haberla reemplazado en la tarea de dialogar con las mascotas.\n\nEl Presidente y la secretaria general de la Presidencia no respondieron a las consultas del medio estadounidense para la elaboración del artículo.",
+      "guion": "Una psíquica de animales revela detalles sobre su vínculo con Javier Milei",
+      "seccion": "Argentina",
+      "medios": [
+        "La Nación",
+        "Crónica",
+        "El Economista",
+        "iProfesional",
+        "Ámbito",
+        "Perfil"
+      ],
+      "enlace": "https://www.iprofesional.com/actualidad/466591-perros-milei-medium-conto-secretos-ineditos-genero-polemica-vinculo",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T12:52:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T18:31:45.279Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Celia Melamed trabajó durante dos años con las mascotas presidenciales.",
+        "La veterinaria fue contratada hace una década para comunicarse con Conan.",
+        "Karina Milei participó de un taller de comunicación animal en 2019.",
+        "El Presidente dejó de contratar los servicios tras la capacitación de su hermana."
+      ],
+      "seSabe": [
+        "Celia Melamed brindó una entrevista al diario The New York Times.",
+        "La veterinaria trabajó durante dos años comunicándose con los perros de Javier Milei.",
+        "Karina Milei participó en un taller de la especialista alrededor de 2019.",
+        "El mandatario y su hermana no respondieron a las consultas del medio estadounidense."
+      ],
+      "noConfirmado": [
+        "No se confirmó si Karina Milei reemplazó a la veterinaria en la comunicación con los animales."
+      ],
+      "textoRedes": "Una veterinaria que se presenta como psíquica de animales contó detalles sobre las sesiones que mantuvo durante dos años con los perros de Javier Milei y señaló que dejó de trabajar con él tras un taller en el que participó Karina Milei.",
+      "etiquetas": [
+        "Celia Melamed",
+        "Javier Milei",
+        "perros",
+        "The New York Times",
+        "Karina Milei",
+        "mascotas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/actualidad/466591-perros-milei-medium-conto-secretos-ineditos-genero-polemica-vinculo",
+          "fecha": "2026-10-14T16:04:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los años de trabajo con las mascotas, el inicio del vínculo con Conan y la participación de Karina Milei en el taller."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/la-psiquica-que-se-comunicaba-con-los-perros-de-milei-hablo-en-the-new-york-times-pocas-personas-nid14102026/",
+          "fecha": "2026-10-14T16:39:30.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la publicación de la entrevista en el diario The New York Times este miércoles."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/sociedad/la-medium-de-los-perros-de-javier-milei-hablo-con-el-new-york-detalles-y-secretos/",
+          "fecha": "2026-10-14T16:18:39.000Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre el vínculo profesional y espiritual mantenido con el mandatario."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "una-psiquica-de-animales-revela-detalles-sobre-su-vinculo-con-javier",
+      "foto": {
+        "archivo": "fotos-notas/55gw7p.jpg",
+        "credito": "Foto: iProfesional"
+      }
+    },
+    {
       "id": "1fi9fiz",
       "titulo": "Campo de Pato clasifica a sus dos equipos a las semifinales",
       "copete": "Los dos conjuntos del Club Social y Campo de Pato ganaron sus respectivos encuentros del Torneo Desarrollo y se aseguraron un lugar en la instancia de playoffs.",
@@ -2433,10 +2762,10 @@
       "seccion": "Política",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "La Verdad",
         "El Marplatense",
         "El Eco de Tandil",
-        "Agencia DIB"
+        "Agencia DIB",
+        "La Verdad"
       ],
       "enlace": "https://dib.com.ar/sociedad/la-provincia-adjudico-medicamentos-trasplantes-15760-millones-n56476",
       "teniaImagenLaFuente": true,
@@ -2504,69 +2833,6 @@
       }
     },
     {
-      "id": "cdnqde",
-      "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
-      "copete": "El Coro del Instituto Adventista presenta el viernes a las 20 el musical \"Un día\" en el polideportivo propio. La función forma parte de los festejos por el cuadragésimo aniversario del establecimiento educativo en la ciudad.",
-      "cuerpo": "El Coro del Instituto Adventista presenta el musical titulado \"Un día\" en el polideportivo de la institución educativa. La función está programada para el viernes a las 20 ante la comunidad local.\n\nLa propuesta artística forma parte de los festejos por los 40 años de trayectoria que cumple el establecimiento en la ciudad. Durante estas cuatro décadas, la institución formó a varias generaciones de estudiantes y desarrolló una marcada presencia comunitaria.\n\nEl coro institucional nació junto con el establecimiento educativo y participa habitualmente en diversos escenarios de la zona. Esta presentación se suma al programa de actividades aniversario que valoran el recorrido y el vínculo construido con los vecinos a lo largo de este período.",
-      "guion": "El Coro del Instituto Adventista presenta el musical Un día",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://puntonueve.com.ar/188351-2/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T11:49:03.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T12:31:49.255Z",
-      "relevancia": 83,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Coro del Instituto Adventista presenta el musical Un día",
-        "La función es este viernes a las 20 en el polideportivo institucional",
-        "El evento se enmarca en los 40 años de trayectoria educativa"
-      ],
-      "seSabe": [
-        "El Coro del Instituto Adventista presenta el musical \"Un día\"",
-        "La función se realiza este viernes a las 20 en el polideportivo institucional",
-        "El evento se enmarca en el cuadragésimo aniversario del establecimiento educativo"
-      ],
-      "textoRedes": "El Coro del Instituto Adventista presenta este viernes a las 20 el musical \"Un día\" en el polideportivo institucional. La función se realiza en el marco del cuadragésimo aniversario del establecimiento educativo en la ciudad.",
-      "etiquetas": [
-        "Coro del Instituto Adventista",
-        "musical Un día",
-        "polideportivo",
-        "40 aniversario",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/188351-2/",
-          "fecha": "2026-10-14T11:49:03.000Z",
-          "oficial": false,
-          "aporte": "Detalló el horario, el lugar, el nombre de la obra y el aniversario del instituto."
-        },
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
-          "fecha": "2026-10-14T11:54:19.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la presentación del coro institucional y la función del viernes a las 20."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-coro-del-instituto-adventista-presenta-el-musical-un-dia"
-    },
-    {
       "id": "11uyvlg",
       "titulo": "El Gobierno prohíbe la venta de juguetes blandos por exceso de ftalatos",
       "copete": "La prohibición nacional abarca a todos los modelos de la marca Pinch Family. Un laboratorio detectó que contienen el doble del plastificante permitido por las normas de seguridad.",
@@ -2577,10 +2843,8 @@
         "Ecos Diarios (Necochea)",
         "TN (Todo Noticias)",
         "La Nación",
-        "El Destape",
         "Página/12",
         "A24",
-        "Minuto Uno",
         "Crónica",
         "La Voz del Pueblo",
         "El Marplatense",
@@ -2591,8 +2855,10 @@
         "Agencia DIB",
         "El Día",
         "La Nueva",
-        "C5N",
+        "Minuto Uno",
+        "El Destape",
         "Radio Mitre",
+        "C5N",
         "Noticias Argentinas (NA)",
         "Infobrisas (Radio Brisas)"
       ],
@@ -2651,97 +2917,6 @@
       "foto": {
         "archivo": "fotos-notas/11uyvlg.jpg",
         "credito": "Foto: El Destape"
-      }
-    },
-    {
-      "id": "5m60mn",
-      "titulo": "El Gobierno oficializa préstamos del BID por mil trecientos millones de dólares",
-      "copete": "El Ejecutivo nacional formalizó la llegada de fondos internacionales por US$1300 millones destinados a cubrir subsidios al gas y a un programa de modernización de la administración pública.",
-      "cuerpo": "El Gobierno nacional oficializó el miércoles dos créditos otorgados por el Banco Interamericano de Desarrollo que suman un total de US$1300 millones.\n\nEl primer financiamiento, por US$500 millones, se destinará a respaldar el programa de asistencia en los consumos de gas para hogares vulnerables y usuarios de garrafas. En tanto, el segundo acuerdo contempla hasta US$800 millones para la modernización de la administración pública, de los cuales se recibirán US$300 millones en esta primera etapa.",
-      "guion": "El Gobierno oficializa préstamos del BID por mil trecientos millones de dólares",
-      "seccion": "Economía",
-      "medios": [
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "Página/12",
-        "Crónica",
-        "Radio Mitre",
-        "Noticias Argentinas (NA)",
-        "El Marplatense",
-        "Infórmese Primero (FM 104.9)",
-        "El Diario Balcarce",
-        "Diario La Vanguardia",
-        "Infobae",
-        "Perfil",
-        "Canal 26",
-        "La Tecla",
-        "La Verdad",
-        "Infoeme",
-        "QZ Noticias (Mar del Plata)",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Qué Digital",
-        "Infobrisas (Radio Brisas)",
-        "Punto Noticias",
-        "El Eco de Tandil",
-        "La Verdad de Ayacucho",
-        "Ámbito",
-        "iProfesional",
-        "El Día"
-      ],
-      "enlace": "https://tn.com.ar/economia/2026/10/14/el-gobierno-oficializo-prestamos-del-bid-por-us1300-millones-para-financiar-subsidios-al-gas-y-la-reforma-del-estado/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T10:47:14.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T12:01:33.900Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El BID otorgó financiamiento por US$1300 millones al país.",
-        "Una parte de los fondos se destina a subsidios energéticos.",
-        "Otra fracción financia la modernización de la administración pública.",
-        "La medida se oficializó mediante decretos publicados este miércoles."
-      ],
-      "seSabe": [
-        "El Gobierno aprobó dos préstamos del BID por un total de US$1300 millones.",
-        "Los fondos se distribuyen entre subsidios energéticos y la modernización del Estado.",
-        "La medida se oficializó a través de los decretos 1177 y 1178."
-      ],
-      "textoRedes": "El Gobierno nacional oficializó la aceptación de dos créditos del BID por US$1300 millones para financiar subsidios energéticos y la modernización de la administración pública.",
-      "etiquetas": [
-        "Gobierno nacional",
-        "BID",
-        "préstamos",
-        "subsidios energéticos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/economia/2026/10/14/el-gobierno-oficializo-prestamos-del-bid-por-us1300-millones-para-financiar-subsidios-al-gas-y-la-reforma-del-estado/",
-          "fecha": "2026-10-14T10:47:14.000Z",
-          "oficial": false,
-          "aporte": "Aportó los montos, los destinos de los créditos, los funcionarios firmantes y los detalles técnicos de los préstamos."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/aprueban-prestamos-del-bid-por-hasta-us-1-300-millones-para-financiar-subsidios-y-reforma-del-estado_a6acf6adb8298ee386b292861",
-          "fecha": "2026-10-14T11:42:00.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional sobre el hecho."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-oficializa-prestamos-del-bid-por-mil-trecientos-millones",
-      "foto": {
-        "archivo": "fotos-notas/5m60mn.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -2811,6 +2986,7 @@
       "medios": [
         "La Nación",
         "Infobae",
+        "Clarín",
         "TN (Todo Noticias)",
         "El Cronista",
         "Perfil",
@@ -2818,10 +2994,9 @@
         "Radio Mitre",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
-        "iProfesional",
         "Ámbito",
+        "iProfesional",
         "Minuto Uno",
-        "Clarín",
         "Canal 26"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
@@ -2949,70 +3124,6 @@
         "archivo": "fotos-notas/collage-repaso20261013noche.jpg",
         "credito": "Fotos: Infobae, Diario La Vanguardia y Minuto Uno"
       }
-    },
-    {
-      "id": "17v35o5",
-      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
-      "copete": "El Ministerio de Salud provincial y la Comisión de Investigaciones Científicas lanzaron una convocatoria para profesionales de hospitales públicos. La inscripción funcionará desde el 15 de octubre hasta el 16 de noviembre.",
-      "cuerpo": "Para participar, los aspirantes deben ser profesionales de planta permanente bajo la Ley 10.471 o la Ley 10.430 con estabilidad. La designación tendrá una duración inicial de tres años y no modificará las condiciones laborales ni salariales. Esta nueva figura surgió de un convenio firmado el año pasado entre ambas carteras para potenciar la investigación sanitaria.\n\nQuienes obtengan el reconocimiento podrán acceder a financiamiento para proyectos, participar en redes de cooperación y recibir formación especializada. Las categorías previstas abarcan desde asistente hasta principal, sin exigir título de doctor ni límite de edad.",
-      "guion": "Abren convocatoria para investigadores de hospitales bonaerenses",
-      "seccion": "Balcarce",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/45072-abren-convocatoria-para-reconocer-a-investigadores-de-hospitales-bonaerenses/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T23:01:29.650Z",
-      "sinFecha": true,
-      "visto": "2026-10-13T23:01:29.650Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Inscripción abierta del 15 de octubre al 16 de noviembre.",
-        "Destinada a profesionales de hospitales públicos bonaerenses.",
-        "Sin cupos ni concurso previo, se evaluarán trayectorias.",
-        "Designación por tres años sin alterar condiciones laborales."
-      ],
-      "seSabe": [
-        "La convocatoria fue lanzada por el Ministerio de Salud provincial y la Comisión de Investigaciones Científicas.",
-        "La inscripción se desarrollará desde el 15 de octubre hasta el 16 de noviembre.",
-        "Se exige ser personal de planta permanente bajo la Ley 10.471 o Ley 10.430 con estabilidad.",
-        "Las postulaciones serán evaluadas por una comisión asesora sin un sistema de cupos."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Lanzan una convocatoria para reconocer a profesionales que investigan en hospitales públicos bonaerenses. La inscripción se realizará desde el 15 de octubre hasta el 16 de noviembre con bases disponibles en el sitio web de la Comisión de Investigaciones Científicas.",
-      "etiquetas": [
-        "investigación",
-        "salud pública",
-        "hospitales",
-        "provincia de Buenos Aires",
-        "Ministerio de Salud"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45072-abren-convocatoria-para-reconocer-a-investigadores-de-hospitales-bonaerenses/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló las fechas, requisitos y beneficios de la convocatoria para investigadores en salud pública."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "abren-convocatoria-para-investigadores-de-hospitales-bonaerenses",
-      "foto": {
-        "archivo": "fotos-notas/17v35o5.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
     }
   ],
   "secciones": [
@@ -3030,15 +3141,15 @@
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
-      "cuantas": 3
+      "cuantas": 2
     }
   ],
   "clima": {
     "ahora": {
       "temp": 11,
       "sensacion": 8,
-      "humedad": 88,
-      "viento": 17,
+      "humedad": 86,
+      "viento": 18,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": true
@@ -3393,28 +3504,10 @@
       "motivo": "necesita ojo humano: \"imputado\" (en otro medio que cuenta lo mismo)"
     },
     {
-      "id": "gelhhp",
-      "titulo": "Nuevo pedido de justicia por la muerte de Claribel Medina",
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"muerte\""
-    },
-    {
-      "id": "1hb8gyb",
-      "titulo": "Pesar por el fallecimiento de Pascualito Cerone, histórico…",
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"falleció\" (en otro medio que cuenta lo mismo)"
-    },
-    {
       "id": "1hkr9k8",
       "titulo": "Gabriel Solano denunció penalmente a Javier Milei y Luis…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
-      "id": "h0a84i",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1okotnb",
@@ -3427,6 +3520,12 @@
       "titulo": "Alarma en Puerto Madryn por ballenas muertas",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"cadáver\""
+    },
+    {
+      "id": "1hb8gyb",
+      "titulo": "Pesar por el fallecimiento de Pascualito Cerone, histórico…",
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"falleció\" (en otro medio que cuenta lo mismo)"
     },
     {
       "id": "p582dy",
@@ -3459,13 +3558,19 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
+      "id": "1o3t7bf",
+      "titulo": "Javier Milei viaja a Estados Unidos para reforzar su…",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
       "id": "13wnp50",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1thkkxk",
+      "id": "1h1gn9v",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
@@ -3475,12 +3580,6 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
-      "id": "yj5cn4",
-      "titulo": null,
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1333xd6",
@@ -3507,8 +3606,8 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "fp2pbw",
-      "titulo": "Casación confirmó embargos de hasta $31 mil millones en la…",
+      "id": "j9v9ko",
+      "titulo": "Rechazan cerrar una de las mayores causas de lavado de…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
