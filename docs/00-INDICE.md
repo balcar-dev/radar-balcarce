@@ -1,6 +1,6 @@
 # 00 · Índice: Radar Balcarce de punta a punta
 
-*Actualizado el 29/09/2026. Es la puerta de entrada a la documentación: qué es el
+*Actualizado el 15/10/2026. Es la puerta de entrada a la documentación: qué es el
 proyecto, por dónde pasa una noticia y qué documento cuenta cada cosa. Si un
 documento y el código no coinciden, manda el código.*
 
@@ -8,8 +8,8 @@ documento y el código no coinciden, manda el código.*
 
 Un **medio digital automático** de Balcarce, provincia de Buenos Aires, en
 `radarbalcarce.com`, con Instagram `@radarbalcarce` y la página de Facebook
-"Radar Balcarce". Cada media hora lee más de 200 feeds de unos 90 medios (de
-Balcarce, la zona, la provincia y el país), junta la misma noticia contada por
+"Radar Balcarce". Cada media hora lee más de 200 feeds de más de 100 medios (de
+Balcarce, la zona, la provincia y el país; la cuenta exacta, en `FUENTES.md`), junta la misma noticia contada por
 varios, decide qué sale sola y qué espera a una persona, la escribe con IA
 (Gemini), verifica lo escrito contra las fuentes, arma el sitio y lo sube a
 Cloudflare. Varias veces por día publica en Facebook e Instagram con dos voces de
@@ -17,8 +17,13 @@ IA (una locutora y un locutor), y un vigilante avisa por WhatsApp si algo falla.
 
 **Todo eso corre en GitHub, con la PC apagada.** Lo que el sistema no puede
 decidir solo lo deciden Hernán y Andrés desde el **panel del celular**
-(`radarbalcarce.com/panel/`); el panel de la PC queda de respaldo (agenda cargada
-a mano, avisos, buzón, fuentes).
+(`radarbalcarce.com/panel/`); el panel de la PC quedó en desuso desde el 8/10
+(nunca se usó; se decide si se retira).
+
+**Desde el 15/10/2026 se rediseña todo desde cero, una etapa por vez** (fuentes →
+entrada → duplicadas → clasificación → puntaje → contexto → redacción y verificación →
+fotos → publicación y redes → operación). Lo que se decide queda en
+`docs/DECISIONES.md`; mientras tanto, este índice cuenta cómo funciona hoy.
 
 El principio que decide todo es una pregunta: **¿qué valor tiene esta nota para
 alguien que vive en Balcarce?** Lo local pesa más que cualquier cosa de afuera, se
@@ -26,13 +31,14 @@ informa sin gritar y cada nota dice de dónde sale y quién la escribió.
 
 ## El recorrido de una noticia
 
-Cada media hora cron-job.org dispara "Actualizar la web" (GitHub Actions), que
-hace los pasos 1 a 8; las redes y la vigilancia corren aparte.
+Cada media hora el reloj (el Worker de Cloudflare `radar-balcarce-reloj`, desde el
+15/10; antes, cron-job.org) dispara "Actualizar la web" (GitHub Actions), que hace
+los pasos 1 a 8; las redes y la vigilancia corren aparte.
 
 | # | Paso | Qué pasa | Dónde se cuenta |
 |---|---|---|---|
 | 1 | Ingesta | Se bajan y se leen los feeds (RSS, Atom, índices, páginas), con sus fechas; el filtro de entrada deja afuera otro país, policiales y consejos de afuera | `docs/02-INGESTA.md` |
-| 2 | Cruce | Se juntan las notas que cuentan el mismo hecho (memoria de 36 h); de afuera queda lo que cuentan 2 medios o más, dice Balcarce o toca la zona | `docs/02-INGESTA.md` (pasos 9 a 13) |
+| 2 | Cruce | Se juntan las notas que cuentan el mismo hecho (memoria de 36 h); de afuera queda lo que cuentan varios medios (de 2 a 4 según la sección: `ingesta/criterio.mjs`), dice Balcarce o toca la zona | `docs/02-INGESTA.md` (pasos 9 a 13) |
 | 3 | Selección | Sección, puntaje, semáforo (rojo, amarillo, verde), "de acá", medios que pide lo de afuera, cupos | `docs/03-SELECCION.md` |
 | 4 | Lectura con IA | Una ficha por nota: saca, cambia la sección, junta repetidas; nunca destraba | `docs/03-SELECCION.md` (paso 8) |
 | 5 | Redacción | Gemini escribe título, bajada y cuerpo con el texto completo de la fuente y `CRITERIO-EDITORIAL.md` § 12 | `docs/04-REDACCION.md` |
@@ -50,6 +56,7 @@ Un dato vive en **un** lugar; los demás documentos remiten a ése.
 |---|---|---|
 | El estado del día (qué anda, qué no, las redes, las claves) | `CLAUDE.md`, sección "Estado" | — |
 | Lo que falta hacer, con quién y qué urgencia | `PENDIENTES.md` | — |
+| Qué se decidió, por qué y quién, y las preguntas abiertas | `docs/DECISIONES.md` | — |
 | El criterio editorial (qué se publica, cómo se escribe, fuentes, verificación, firma) | `CRITERIO-EDITORIAL.md` | La IA lee su § 12 tal cual (`ingesta/prompt-editorial.mjs`); `pruebas/criterio.test.mjs` |
 | Los números del criterio (largos, topes, medios, cupos, horas, contrato) | `ingesta/criterio.mjs` **y** la tabla de `CRITERIO-EDITORIAL.md` § 11 | `pruebas/criterio.test.mjs` controla que digan lo mismo |
 | Cómo suenan y qué dicen las piezas de redes | `CRITERIO-REDES.md` | `redes/prompt-redes.mjs` lo lee tal cual; `pruebas/redes-criterio.test.mjs` |
@@ -81,12 +88,26 @@ Un dato vive en **un** lugar; los demás documentos remiten a ése.
 | `docs/05-FOTOS.md` | El banco de fotos: cómo se elige una foto sin marca de agua, Wikimedia, qué se guarda, dónde se muestra y dónde no |
 | `docs/06-WEB.md` | Cómo se arma el sitio: `generar-datos.mjs` paso a paso, los archivos de `web/data/`, la tapa, las páginas, el archivo de 180 días, la dirección fija, las repetidas, las notas propias, el SEO y el diseño |
 | `docs/07-REDES.md` | Facebook e Instagram: el interruptor, los posteos y el espejo, el reloj, las piezas, los podcasts, el contrato del día, el libro, la conexión con Meta y las auditorías |
-| `docs/08-INFRAESTRUCTURA.md` | Qué corre dónde: los workflows, cron-job.org, Cloudflare, GitHub, las claves de IA y sus topes, los secretos por nombre, la vigilancia, los vencimientos y lo que cuesta |
-| `docs/09-PANEL.md` | Los dos paneles: el del celular (el de todos los días) y el de la PC (respaldo): qué muestra cada uno, qué pasa cuando alguien decide y cómo llega a la web |
+| `docs/08-INFRAESTRUCTURA.md` | Qué corre dónde: los workflows, el reloj (Worker de Cloudflare), Cloudflare, GitHub, las claves de IA y sus topes, los secretos por nombre, la vigilancia, los vencimientos y lo que cuesta |
+| `docs/09-PANEL.md` | Los dos paneles: el del celular (el de todos los días) y el de la PC (en desuso): qué muestra cada uno, qué pasa cuando alguien decide y cómo llega a la web |
 | `docs/13-EFEMERIDES.md` | "Un día como hoy" y los feriados: la base mensual de candidatas, la pestaña Fechas del panel y cómo se afina el criterio con lo que se elige |
 | `docs/10-REGLAS-Y-PRUEBAS.md` | **Las reglas numeradas**, qué prueba cuida cada una, el mapa de `pruebas/` y la regla de la prueba después del error |
 | `docs/11-OPERACION.md` | El manual de uso diario: los enlaces, corregir, retirar, escribir cuerpos, el panel del celular, prender o apagar las redes, qué mirar cuando algo deja de salir |
 | `docs/12-GLOSARIO.md` | Cada palabra propia del proyecto, con su definición y dónde vive |
+| `docs/DECISIONES.md` | **El registro de decisiones**: fecha, qué, por qué y quién (lo nuevo arriba), y las preguntas abiertas para Hernán y para los dos |
+| `docs/efemerides-octubre-para-revisar.md` | Las efemérides de octubre para aprobar; se archiva después del 31/10 |
+
+### En `docs/propuestas/` (lo que sigue abierto)
+
+| Documento | Qué cuenta |
+|---|---|
+| `docs/propuestas/LEEME.md` | Qué queda en la carpeta y en qué estado está cada cosa |
+| `docs/propuestas/PASOS-PARA-USTEDES.md` | Lo que sólo una persona puede hacer (respaldo en GitLab y R2, fotos a R2). Lo nombra el workflow "Fotos a R2": no moverlo |
+| `docs/propuestas/PLANTILLAS-DE-PIEZAS.md` | Las reglas y variantes de las escenas animadas (aprobadas y conectadas, regla 157) |
+| `docs/propuestas/CRONOGRAMA-REDES.md` | Qué sale en las redes y a qué hora (generado con `node redes/cronograma-semana.mjs`) |
+| `docs/propuestas/CLAVES-DE-IA.md` | Las claves y servicios de IA del 9/10 |
+| `docs/propuestas/DISENOS-A-ARMAR.md` | Diseños de reels y web para elegir después del rediseño |
+| `docs/propuestas/material/` | Páginas y videos de ejemplo de la auditoría del 8/10 |
 
 ### En la raíz
 
@@ -101,10 +122,9 @@ Un dato vive en **un** lugar; los demás documentos remiten a ése.
 | `MEDIA-KIT.md` | La identidad visual: colores, tipografía, íconos, medidas, plantillas |
 | `FORMATOS.md` | Las medidas de imágenes y videos de cada red y su porqué (los números viven en `redes/formatos.mjs`) |
 | `PERFILES.md` | Las biografías, categorías y colores de las redes |
-| `PARA-CARGAR-A-MANO.md` | Las tareas para pegar a mano en Instagram y Facebook, con el texto listo |
 | `SEO.md` | Posicionamiento: qué está hecho, cómo se audita, qué falta |
 | `PUBLICIDAD.md` | Los tres avisos, sus reglas, AdSense y cómo se piensa vender |
-| `COMERCIAL.md` | La base de comercios de Balcarce (aparte del sitio), la vigencia y las propuestas |
+| `COMERCIAL.md` | La base de comercios de Balcarce (aparte del sitio), la vigencia, las propuestas y el plan del mapa comercial |
 | `INVESTIGACION.md` | Lo legal, con sus fuentes |
 | `POLITICA-PRIVACIDAD.md` | Qué se hace con los datos del buzón (el texto público es la página `/politica-de-privacidad`) |
 
@@ -132,6 +152,7 @@ vigente está en `docs/`.
 | `docs/historico/PLAN-V2.2.md` | El plan del 27/09 para elegir mejor las notas (filtro de entrada, lectura con IA) |
 | `docs/historico/VARIANTES-29-09.md` | La medición de las reglas de la IA del 29/09 y las opciones para las redes |
 | `docs/historico/REDACCION-29-09.md` | 18 notas de la IA leídas contra sus originales: qué falla, qué se arregló y qué falta probar |
+| `docs/historico/propuestas-2026-10/` | Las listas y auditorías del 8 y 9/10 (`PRIORIDADES`, `MEJORAS`, `PLAN-INTEGRAL`, `DONDE-SEGUIMOS`, `PENDIENTES-AL-9-10`, `RESUMEN-PARA-LA-PC`, `SEMAFORO-HOY`, `PANEL-NUEVO`, `IDEAS-NUEVAS`, `MAPA-COMERCIAL-PLAN`, `registro/`) y `PENDIENTES.md` como estaba hasta el 15/10. Archivadas el 15/10/2026 |
 
 ## La historia corta
 
@@ -142,6 +163,8 @@ vigente está en `docs/`.
 | 27/09 | La lectura con IA decide; el cruce de medios; lo de afuera se mide en medios; correcciones y retiradas a mano |
 | 28/09 | Portada de 36 horas; fecha única de cada nota; "de acá" con una sola definición; el banco de fotos; esta documentación |
 | 29/09 | Claves gratis nuevas y redes prendidas con las voces propias; el panel del celular; la vigilancia de claves y voces; las repetidas con otra dirección, unidas; fotos más livianas |
+| 8 y 9/10 | Auditorías; semáforo mejorado (regla 118); pantalla Hoy y Borradores en el panel del celular; escenas animadas en las piezas (regla 157) |
+| 12 a 15/10 | Decisiones del 12/10; el repositorio se muda a `radarbalcarce/radar-balcarce`, el reloj pasa al Worker de Cloudflare y empieza el rediseño desde cero (`docs/DECISIONES.md`) |
 
 El detalle, en `docs/historico/HISTORIA.md` y en los mensajes de los commits.
 
@@ -155,8 +178,8 @@ El detalle, en `docs/historico/HISTORIA.md` y en los mensajes de los commits.
 - **Una fuente** se cambia en `ingesta/fuentes.mjs` o `ingesta/fuentes-cruce.mjs`
   y después se corre `node ingesta/listar-fuentes.mjs`.
 - **Un archivo nuevo** se suma a `docs/01-ARBOL.md`; **una palabra nueva**, a
-  `docs/12-GLOSARIO.md`; **algo que falta**, a `PENDIENTES.md`; **el estado del
-  día**, a `CLAUDE.md`.
+  `docs/12-GLOSARIO.md`; **algo que falta**, a `PENDIENTES.md`; **una decisión**,
+  a `docs/DECISIONES.md`; **el estado del día**, a `CLAUDE.md`.
 - **Cada documento** empieza con la línea `*Actualizado el …*`, sigue el mismo
   orden ("En una frase", "Paso a paso", "Qué archivo hace qué", "Dónde se toca",
   "Qué puede fallar") y no guarda listas de pendientes.

@@ -101,11 +101,10 @@ export const REESCRITURA = {
   palabrasMinimasDeMaterial: 60,
   porCorrida: 40,
   // Tope de notas que se le piden a la IA en un día entero (hora de Balcarce).
-  // Se usa primero la clave gratis; la paga sólo si la gratis se queda sin cupo
-  // y Hernán y Andrés no tienen margen: el 27/09 se subió de 150 a 300 porque
-  // 150 dejaba unas 67 notas verdes esperando, y hay que mirar en Google Cloud
-  // que no aparezca ningún cargo. Primero se gasta en lo de Balcarce y en lo
-  // más nuevo (ordenarParaReescribir).
+  // Se usa primero la clave de redacción; si se queda sin cupo hay respaldos
+  // (todas las claves son gratis desde el 29/09, ninguna cobra): el 27/09 se
+  // subió de 150 a 300 porque 150 dejaba unas 67 notas verdes esperando.
+  // Primero se gasta en lo de Balcarce y en lo más nuevo (ordenarParaReescribir).
   // El 27/09 a la noche se subió a 450 (Hernán): ese día había 60 notas de
   // afuera aprobadas, contadas por dos medios o más, que nunca llegaron a
   // pedirse porque el cupo se había gastado. La clave gratis de redacción

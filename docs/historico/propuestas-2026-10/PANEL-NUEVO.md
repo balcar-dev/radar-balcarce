@@ -1,3 +1,5 @@
+> **Archivado el 15/10/2026:** el plan del panel único del 8/10; buena parte ya está hecha en el panel del celular (`docs/09-PANEL.md`). no se mantiene; los enlaces de adentro pueden no andar. Lo abierto pasó a `PENDIENTES.md` y las decisiones a `docs/DECISIONES.md`.
+
 # El panel nuevo (reemplaza al de la PC)
 
 *8/10/2026. **Decisión de Hernán y Andrés:** el panel de la PC se hace de nuevo. Este documento fija qué se hace con cada pestaña del viejo,

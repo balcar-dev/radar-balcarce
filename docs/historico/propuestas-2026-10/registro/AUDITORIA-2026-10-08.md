@@ -1,3 +1,5 @@
+> **Archivado el 15/10/2026:** registro de la auditoría del 8/10, sólo como historial; no se mantiene.
+
 # Auditoría de todo el proyecto · 8/10/2026
 
 > **Registro de la investigación del 8/10/2026.** Este archivo mezcla mejoras de lo que ya existe con ideas nuevas, y se conserva solo como historial y como fuente del detalle. **Las listas vigentes y ordenadas están en `docs/propuestas/MEJORAS.md` (sobre lo que ya existe) y `docs/propuestas/IDEAS-NUEVAS.md` (propuestas nuevas).** Algunas afirmaciones de acá se corrigieron después: manda lo que dicen esos dos archivos.

@@ -3,6 +3,9 @@
 *8/10/2026. Son las cosas que dejé preparadas pero que sólo una persona puede hacer, porque piden cuentas, tarjetas o pegar claves.
 Ninguna se pega en un chat: van a GitHub o a Cloudflare. Con cada paso hecho, avisen y sigo yo.*
 
+> **Estado (15/10/2026): sigue sin hacer.** Desde la mudanza, "GitHub, repositorio" es `radarbalcarce/radar-balcarce`. El workflow
+> "Fotos a R2" nombra este archivo: no moverlo.
+
 ## 1. Respaldo (lo primero)
 
 El workflow **"Respaldo"** ya existe y corre solo los domingos (también a mano: GitHub → Actions → Respaldo → Run workflow). Sin hacer nada
@@ -44,8 +47,8 @@ y el permiso del punto 1b, falta esto, a mano:
 
 **Qué NO hace todavía:** las fotos siguen también en el repositorio y se siguen subiendo con el sitio, porque las tarjetas para compartir
 (Instagram, Facebook) se arman en la compilación leyendo el archivo local. Sacarlas del repositorio es la etapa siguiente
-([plan](registro/AUDITORIA-EXTERNA-4-ARQUITECTURA-2026-10-08.md)), y se hace después de ver que todo anda con `FOTOS_BASE`.
+([plan](../historico/propuestas-2026-10/registro/AUDITORIA-EXTERNA-4-ARQUITECTURA-2026-10-08.md)), y se hace después de ver que todo anda con `FOTOS_BASE`.
 
 ## 3. Lo que no hace falta que hagan
 
-Nada del semáforo, las pruebas, el archivo ni las efemérides: eso ya está hecho y anotado en [`PRIORIDADES.md`](PRIORIDADES.md).
+Nada del semáforo, las pruebas, el archivo ni las efemérides: eso ya está hecho (lo que sigue abierto está en `PENDIENTES.md`).

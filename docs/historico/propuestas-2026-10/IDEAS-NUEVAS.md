@@ -1,3 +1,5 @@
+> **Archivado el 15/10/2026:** su contenido se copió entero a `IDEAS.md`, sección "Ideas del 8/10". Se guarda como estaba; no se mantiene.
+
 # Ideas nuevas
 
 *Armado el 8/10/2026. Acá va **solo lo nuevo**: notas propias, secciones, formatos de redes, canales,

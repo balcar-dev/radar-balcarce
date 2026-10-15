@@ -320,15 +320,17 @@ const probarOtraClave = (res) => !res || [401, 402, 403, 429].includes(res.statu
  * falla — quien llama decide el respaldo (ver reescribirConRespaldo).
  *
  * Prueba primero con la clave de redacción (gratis). Si esa clave devuelve
- * "sin cupo" (429) y hay una clave de redes cargada (paga), reintenta una
- * sola vez con esa — mejor gastar un poco de la paga que dejar la nota sin
- * reescribir. Cualquier otro error de pedido (400) no reintenta con otra clave:
- * no tiene sentido pagar por un pedido que ya está mal armado.
+ * "sin cupo" (429) y hay una clave de redes cargada (gratis, pero con un cupo
+ * de voz de 10 audios por día), reintenta una sola vez con esa — mejor gastar
+ * un poco de ese cupo que dejar la nota sin reescribir. Cualquier otro error de
+ * pedido (400) no reintenta con otra clave: no tiene sentido gastar cupo en un
+ * pedido que ya está mal armado.
  *
  * Último respaldo (29/09): la clave de CLASIFICACIÓN (gratis, otro proyecto de
  * Google, el mismo modelo), si las anteriores fallaron por el servicio (sin cupo,
- * saturado, clave rechazada o sin crédito). Ese día la de redacción y la paga
- * quedaron desactivadas por Google y no se publicó ninguna nota en 14 horas.
+ * saturado, clave rechazada o sin crédito). Ese día la de redacción y la de
+ * pago quedaron desactivadas por Google y no se publicó ninguna nota en 14 horas;
+ * desde entonces todas las claves son gratis.
  * Groq no sirve de respaldo acá: su plan gratis acepta 8.000 tokens por minuto y un
  * pedido de redacción ocupa unos 9.000.
  */
@@ -846,8 +848,8 @@ export function previasDeLaPortada(notas) {
 
 /** Cuántas veces, como mucho, se le pide una misma nota a Gemini, en
  *  corridas distintas (25/09). Una nota que no sale con cuerpo después de
- *  tres intentos queda sin publicar: la clave de respaldo es paga y Hernán y
- *  Andrés no quieren gastar de más en una nota que no da. */
+ *  tres intentos queda sin publicar: no vale gastar el cupo de las claves de
+ *  respaldo (el de voz de redes es de 10 audios por día) en una nota que no da. */
 export const MAXIMO_DE_INTENTOS = REESCRITURA.intentosMaximos;
 
 /** Cuántos intentos tiene una nota: los de siempre y, si la cuentan muchos medios, uno o dos más (1/10). */
@@ -859,7 +861,7 @@ export const intentosMaximosPara = (fuentes = 0, base = MAXIMO_DE_INTENTOS) => b
  * la lectura con IA cargada aparte, la redacción tiene la clave gratis para
  * ella sola: REESCRITURA.porDia. Sin esa clave, la comparte con la lectura y
  * el tope baja (REESCRITURA.porDiaSinClaveDeLectura), para no pasar de los
- * 500 pedidos gratis del día y no caer en la clave paga.
+ * 500 pedidos gratis del día y no caer en la clave de redes (cupo de voz chico).
  */
 export function topeDeReescrituras(o) {
   return leerVariable('GEMINI_API_KEY_CLASIFICACION', o) ? REESCRITURA.porDia : REESCRITURA.porDiaSinClaveDeLectura;
@@ -1106,7 +1108,7 @@ export async function reescribirAutomaticas(notas, {
     }
     if (cuenta.hechas >= tope || cuenta.fallos >= FALLOS_PARA_CORTAR) continue; // sigue por si algo más abajo está en caché
     // El tope del día (topeDeReescrituras): cuida el cupo de la clave gratis
-    // de redacción, que se usa primero, para no caer en la paga de redes. Lo
+    // de redacción, que se usa primero, para no caer en la de redes. Lo
     // que no entra hoy espera a mañana.
     const pedidasAhora = yaPedidasHoy + cuenta.hechas;
     if (pedidasAhora >= porDia || (!esLocal(nota) && pedidasAhora >= porDia - REESCRITURA.reservaParaLocales)) {

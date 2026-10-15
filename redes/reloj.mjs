@@ -32,7 +32,8 @@ const PORTADA = path.join(RAIZ, 'web', 'data', 'portada.json');
  *  `activo`: el interruptor REDES_ACTIVAS leído con estaActivo (redes/elegir.mjs),
  *  la MISMA regla que usa publicar.mjs (28/09: el workflow comparaba con seis
  *  formas fijas y " si" o "SI " daban otra respuesta). Apagado, no toca nada:
- *  no se gasta la voz paga en piezas que no se van a publicar. */
+ *  no se gasta el cupo de voz (10 audios por día) en piezas que no se van a
+ *  publicar. */
 export function estadoDelReloj({
   ahora = new Date(), libro, clima = null, activo = true,
 } = {}) {

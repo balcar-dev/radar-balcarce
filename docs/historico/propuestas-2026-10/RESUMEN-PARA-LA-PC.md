@@ -1,3 +1,5 @@
+> **Archivado el 15/10/2026:** la foto del estado al 9/10 (sus "Decisiones del 12/10" están copiadas en `docs/DECISIONES.md`); no se mantiene; los enlaces de adentro pueden no andar. Lo abierto pasó a `PENDIENTES.md` y las decisiones a `docs/DECISIONES.md`.
+
 # Resumen para la PC · 9/10/2026 (noche)
 
 *Este es el documento para retomar. Si algo de acá no coincide con el código, manda el código. Lo detallado está en

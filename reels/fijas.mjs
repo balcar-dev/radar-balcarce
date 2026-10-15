@@ -1,5 +1,5 @@
 // Piezas armadas de antemano que se reutilizan (1/10/2026, Hernán: "lo de participá se puede armar
-// antes y usar durante dos semanas el mismo, hasta que volvamos a tener la clave paga"): un video con
+// antes y usar durante dos semanas el mismo, hasta que volvamos a tener la clave paga" (no volvió; desde el 29/09 todo es gratis)): un video con
 // su voz ya grabado, guardado en reels/fijas/, que el plan sube en lugar de volver a pedir la voz.
 // Cada audio es uno de los 10 del cupo del día; una pieza fija cuesta uno UNA vez y después cero.
 //

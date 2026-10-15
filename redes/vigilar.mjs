@@ -6,7 +6,7 @@
 //   node redes/vigilar.mjs --probar-cierre  muestra el cierre del día contra Meta
 //                                           y el WhatsApp que saldría, sin mandarlo
 //
-// Corre cada 30 minutos (workflow "Vigilancia", disparado por cron-job.org) y
+// Corre cada 30 minutos (workflow "Vigilancia", disparado por el reloj de Cloudflare) y
 // mira, desde afuera, lo que un lector vería:
 //
 //   · que la web responda y se haya actualizado hace poco;
@@ -126,10 +126,8 @@ export const LIMITES = {
  * sale 30 días antes y se repite (cada seis horas, como todos).
  */
 export const VENCIMIENTOS = [
-  {
-    clave: 'vence-token-github', fecha: '2027-09-21',
-    texto: 'El token de GitHub que usa cron-job.org vence el 21/09/2027. Hay que crear otro (GitHub → Settings → Developer settings → Fine-grained tokens, sólo este repositorio, permiso Actions: lectura y escritura) y pegarlo en los tres trabajos de cron-job.org.',
-  },
+  // (15/10/2026: se sacó el aviso del token de GitHub de cron-job.org, que vencía el 21/09/2027. El reloj ahora es el Worker de
+  // Cloudflare y su token, RELOJ_GITHUB_TOKEN, se creó sin vencimiento.)
   {
     // Sumado el 25/09 (auditoría). Si el dominio vence, se cae todo junto: la
     // web, los enlaces de cada posteo de Facebook y de cada podcast.
@@ -264,7 +262,7 @@ export function evaluar({
   } else {
     const min = minutos(web.actualizado, ahora);
     if (min > LIMITES.minutosSinActualizar) {
-      de('web-vieja', 'alta', `La web no se actualiza hace ${Math.round(min / 60 * 10) / 10} horas. Revisá cron-job.org (el trabajo "Actualizar la web") y GitHub Actions.`);
+      de('web-vieja', 'alta', `La web no se actualiza hace ${Math.round(min / 60 * 10) / 10} horas. Revisá el reloj de Cloudflare (Workers → radar-balcarce-reloj) y GitHub Actions.`);
     }
   }
   if (www && !www.redirige) de('www', 'media', 'www.radarbalcarce.com ya no redirige al dominio sin www.');
@@ -357,8 +355,8 @@ export function evaluar({
   // --- que los relojes estén corriendo (sólo de día: de noche no hay nada que hacer)
   if (hora >= 7 && hora <= 23) {
     for (const [nombre, tope, texto] of [
-      ['Actualizar la web', LIMITES.minutosSinActualizar, 'No hay corridas nuevas de "Actualizar la web": cron-job.org pudo haberse desactivado solo.'],
-      ['Redes', LIMITES.minutosSinReloj, 'El reloj de Redes no corre: cron-job.org pudo haberse desactivado solo, o el workflow está apagado.'],
+      ['Actualizar la web', LIMITES.minutosSinActualizar, 'No hay corridas nuevas de "Actualizar la web": el reloj de Cloudflare pudo haber fallado (mirar sus ejecuciones en Workers → radar-balcarce-reloj).'],
+      ['Redes', LIMITES.minutosSinReloj, 'El reloj de Redes no corre: el reloj de Cloudflare pudo haber fallado (o la llave RELOJ_GITHUB_TOKEN dejó de servir), o el workflow está apagado.'],
     ]) {
       const lista = corridas[nombre];
       if (!lista) continue;

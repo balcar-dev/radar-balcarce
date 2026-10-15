@@ -7,8 +7,9 @@
 //
 //   GEMINI_API_KEY_REDACCION       reescribir y redactar notas (gratis). Acepta
 //                                  también el nombre viejo, GEMINI_API_KEY
-//   GEMINI_API_KEY_REDES           voces y reels (paga). La reescritura la usa
-//                                  sólo si la de redacción se queda sin cupo (429)
+//   GEMINI_API_KEY_REDES           voces y reels (gratis, con cupo de 10 audios por
+//                                  día). La reescritura la usa sólo si la de
+//                                  redacción se queda sin cupo (429)
 //   GEMINI_API_KEY_CLASIFICACION   la lectura con IA y el banco de fotos; si no
 //                                  está, usa la de redacción, nunca la de redes.
 //                                  Desde el 29/09 es también el último respaldo
@@ -52,7 +53,8 @@ export const claveRedes = (o) => leerVariable('GEMINI_API_KEY_REDES', o);
 
 /** La de la lectura con IA (plan V2.2): su propio proyecto de Google, para no
  *  gastarle cupo a la redacción. Mientras no esté cargada, usa la de redacción
- *  (gratis). NUNCA la de redes, que es paga (Hernán, 27/09). */
+ *  (gratis). NUNCA la de redes: su cupo de voz es chico, 10 audios por día
+ *  (Hernán, 27/09). */
 export const claveClasificacion = (o) => leerVariable('GEMINI_API_KEY_CLASIFICACION', o) ?? claveRedaccion(o);
 
 /** Groq (28/09): un segundo proveedor gratis para la lectura con IA, para

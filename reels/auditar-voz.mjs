@@ -13,7 +13,8 @@
 //   · que el saludo sea el de la hora y ningún otro.
 // Imprime un cuadro PASA/FALLA por clip y sale con error si alguno falla.
 //
-// GASTA (unos pocos audios cortos y sus transcripciones: centavos). Se corre a
+// GASTA cupo de voz (unos pocos audios cortos y sus transcripciones; el cupo es
+// de 10 audios por día, compartido con Redes, Piezas y Crear voces). Se corre a
 // mano (Actions → "Auditar voz"), nunca en lazo ni en un reloj.
 // Clave: GEMINI_API_KEY_REDES.
 

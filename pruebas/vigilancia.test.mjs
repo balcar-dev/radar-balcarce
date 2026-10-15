@@ -46,11 +46,11 @@ test('la web caída es un problema grave', () => {
   assert.equal(r[0].nivel, 'alta');
 });
 
-test('una web que no se actualiza hace horas nombra a cron-job.org', () => {
+test('una web que no se actualiza hace horas nombra al reloj de Cloudflare', () => {
   const o = sano(A('15:00')); o.web.actualizado = hace(o.ahora, 200);
   const r = evaluar(o);
   assert.ok(claves(r).includes('web-vieja'));
-  assert.match(r.find((p) => p.clave === 'web-vieja').texto, /cron-job\.org/);
+  assert.match(r.find((p) => p.clave === 'web-vieja').texto, /reloj de Cloudflare/);
 });
 
 test('con la web actualizada hace 60 minutos todavía no hay alarma', () => {
@@ -78,7 +78,7 @@ test('una corrida cancelada o salteada no cuenta como falla', () => {
   assert.deepEqual(evaluar(o), []);
 });
 
-test('si hace horas que no corre "Redes", se sospecha de cron-job.org', () => {
+test('si hace horas que no corre "Redes", se sospecha del reloj de Cloudflare', () => {
   const o = sano(A('15:00'));
   o.corridas.Redes = [corrida(o.ahora, 400)];
   assert.ok(claves(evaluar(o)).includes('reloj-Redes'));
@@ -232,33 +232,29 @@ test('sinSecretos tapa todo lo que se le pide', () => {
 
 import { VENCIMIENTOS } from '../redes/vigilar.mjs';
 
-test('un mes antes de que venza el token de GitHub, se avisa', () => {
+test('un mes antes de que venza el dominio, se avisa', () => {
   const o = sano(new Date('2027-08-25T12:00:00-03:00'));
   o.web.actualizado = hace(o.ahora, 20);
   for (const n of ['clima-manana', 'farmacia', 'clima-noche']) o.libro.instagram[claveDePieza(n, o.ahora)] = {};
   const r = evaluar(o);
-  const v = r.find((p) => p.clave === 'vence-token-github');
+  const v = r.find((p) => p.clave === 'vence-dominio');
   assert.ok(v, 'no avisó del vencimiento');
   assert.match(v.texto, /Faltan \d+ día/);
 });
 
 test('con tiempo de sobra no molesta', () => {
-  assert.ok(!claves(evaluar(sano(A('12:00')))).includes('vence-token-github'));
+  assert.ok(!claves(evaluar(sano(A('12:00')))).includes('vence-dominio'));
 });
 
 test('la última semana el aviso es grave', () => {
   const o = sano(new Date('2027-09-17T12:00:00-03:00'));
-  const v = evaluar(o).find((p) => p.clave === 'vence-token-github');
+  const v = evaluar(o).find((p) => p.clave === 'vence-dominio');
   assert.equal(v.nivel, 'alta');
 });
 
 test('pasada la fecha dice que ya venció', () => {
-  const v = evaluar(sano(new Date('2027-09-23T12:00:00-03:00'))).find((p) => p.clave === 'vence-token-github');
+  const v = evaluar(sano(new Date('2027-09-23T12:00:00-03:00'))).find((p) => p.clave === 'vence-dominio');
   assert.match(v.texto, /YA VENCIÓ/);
-});
-
-test('el vencimiento apunta al 21/09/2027, como dice docs/08-INFRAESTRUCTURA.md', () => {
-  assert.equal(VENCIMIENTOS.find((v) => v.clave === 'vence-token-github').fecha, '2027-09-21');
 });
 
 // ------------------------------------------- las claves de IA y las voces (29/09)

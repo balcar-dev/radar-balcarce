@@ -1,3 +1,5 @@
+> **Archivado el 15/10/2026:** las auditorías externas del 8/10, sólo como historial; no se mantiene.
+
 # Auditorías hechas con otras IA · 8/10/2026
 
 *Hernán y Andrés pasaron auditorías del sitio hechas con otras IA. Acá queda qué dice cada una, qué es cierto

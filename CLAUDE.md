@@ -1,11 +1,11 @@
 # Radar Balcarce
 
-*Actualizado el 29/09/2026. Corto a propósito: el detalle está en `docs/` (empezar por
+*Actualizado el 15/10/2026. Corto a propósito: el detalle está en `docs/` (empezar por
 `docs/00-INDICE.md`). Si esto y el código no coinciden, manda el código, y se corrige
 esto.*
 
 Medio digital automático de Balcarce (Buenos Aires), en `radarbalcarce.com`. Cada media
-hora lee más de 200 feeds de unos 90 medios (la lista, en `FUENTES.md`), junta la misma
+hora lee más de 200 feeds de más de 100 medios (la cuenta exacta, en `FUENTES.md`), junta la misma
 noticia contada por varios, decide qué publicar, lo escribe con IA, lo verifica contra
 las fuentes, arma el sitio y lo sube, sin nadie despierto; varias veces por día publica
 en Facebook e Instagram con voz. Los usuarios son Hernán y Andrés (no programan):
@@ -18,12 +18,13 @@ escribir siempre en castellano rioplatense, claro y sin voseo forzado.
     redes/     Facebook e Instagram (API de Meta), contrato del día, vigilante, WhatsApp. SIN dependencias
     panel/     lo del panel del celular (cifrado, pedidos a la IA) y el panel de la PC (puerto 4321), que NO se usa y queda en desuso. SIN dependencias
     web/       el sitio (Next.js 15, JavaScript, HTML estático); web/public/panel/ es el panel del celular; web/scripts/generar-datos.mjs arma los datos
-    pruebas/   `npm test`: más de 1.400 pruebas, sin red
-    docs/      la documentación: 00-INDICE a 12-GLOSARIO, e historico/
+    pruebas/   `npm test`: unas 2.000 pruebas, sin red
+    docs/      la documentación: 00-INDICE a 13-EFEMERIDES, DECISIONES.md, propuestas/ (lo abierto) e historico/
 
 Flujo: fuentes → ingesta → cruce → sección, puntaje y semáforo → lectura con IA →
 reescritura con IA → verificación → `web/data/*.json` → Cloudflare Pages; después, redes
-y vigilancia. Todo en GitHub Actions, disparado por cron-job.org. **La web, las redes, la
+y vigilancia. Todo en GitHub Actions, disparado por el Worker de Cloudflare
+`radar-balcarce-reloj` (`infra/reloj-cloudflare/`). **La web, las redes, la
 vigilancia y el panel del celular andan con la PC apagada.**
 
 ## Comandos
@@ -31,7 +32,6 @@ vigilancia y el panel del celular andan con la PC apagada.**
     npm test              las pruebas (correr SIEMPRE antes de commitear)
     npm run auditar       qué está decidiendo el filtro sobre las noticias de hoy
     npm run auditar-fotos qué notas tienen foto y, de las que no, por qué (no gasta cupo; `-- --dias=7`, `-- --html` para ver las fotos)
-    npm run panel         el panel de la PC (o ARRANCAR.bat)
     node ingesta/listar-fuentes.mjs    rehace FUENTES.md después de tocar una fuente
     cd web && npm run datos && npm run build     regenerar y compilar (en la PC trabaja en "modo PC")
     node reels/comparar-instruccion.mjs actual otra.txt   compara versiones de las reglas de la IA (gasta cupo)
@@ -59,15 +59,14 @@ próxima regla es la 167.)
   (`web/data/banco-fotos.json`). Nunca foto real de un menor o una víctima, ni en
   Policiales salvo fuente oficial (`docs/05-FOTOS.md`). La placa es lo que sale cuando no
   hay foto que sirva.
-- **Todo lo que va a Instagram es video con voz**, salvo el espejo de cada posteo de
-  Facebook.
+- **Todo lo que va a Instagram es video con voz**, salvo el espejo de cada posteo de Facebook.
 - **Tokens y claves nunca en un chat ni en el código.** Van a GitHub Secrets o al `.env`,
   y los pega una persona. El repositorio es **público**: por eso lo que espera a una
   persona viaja cifrado para el celular.
-- **Sin cuerpo no se publica**: una nota automática sin cuerpo de 70 palabras o más no va
-  a ningún lado (`web/lib/cuerpo.js`); se reintenta hasta tres veces y mientras tanto
-  figura en `web/data/esperando-cuerpo.json`. Lo que publica una persona se respeta. Un
-  cuerpo en `web/data/correcciones.json` cuenta como cuerpo.
+- **Sin cuerpo no se publica**: una nota automática sin cuerpo de 70 palabras o más no va a
+  ningún lado (`web/lib/cuerpo.js`); se reintenta hasta tres veces (mientras, en
+  `web/data/esperando-cuerpo.json`). Lo de una persona se respeta; un cuerpo en
+  `web/data/correcciones.json` cuenta como cuerpo.
 - **El lector ve la nota, no el análisis**: título, bajada, cuerpo y un desplegable
   cerrado "Fuentes (N)". Verificación BAJA y la cotización del dólar no salen solas.
 
@@ -76,8 +75,6 @@ próxima regla es la 167.)
 - **Los archivos del repo están en CRLF.** En scripts, editar por líneas; un `\n` literal
   en un reemplazo multilínea no encuentra nada. Para regex con `\b`, `\s`, `\d`: escribir
   un `.cjs` con Write, no `node -e` ni un heredoc (se comen las barras).
-- **Node carga el código al arrancar**: si se toca `ingesta/`, `panel/`, `reels/` o un
-  criterio, el panel de la PC (si está abierto) hay que reiniciarlo.
 - **GitHub Actions regenera `web/data/` cada media hora** (corre a los :00 y :30 UTC y
   tarda ~8 minutos). Antes de `git push`, `git pull --rebase`; si choca en `web/data/`,
   `git checkout --theirs` sobre esos archivos y seguir. Commitear sólo los archivos
@@ -86,11 +83,9 @@ próxima regla es la 167.)
 - **Los archivos que escribe una persona**: `web/data/celular-decisiones.json` y
   `web/data/correcciones.json` (los escribe el celular; ningún workflow los toca) y
   `web/data/retiradas.json` (a mano; los lunes "Actualizar la web" le saca las de más de
-  7 días). Siempre con `motivo`, `cuando` y `por`: sin eso la corrida de la web falla y
-  la web se congela. El panel de la PC pisa `web/data/decisiones.json` cada vez que
-  guarda.
-- **Las ventanas de tiempo**: la portada muestra **36 horas** (las secciones guardan todo, 10 por página, lo más nuevo primero)
-  (`HORAS_EN_PORTADA`); lo que nunca salió no se estrena si el hecho tiene más de **12**;
+  7 días). Siempre con `motivo`, `cuando` y `por`: sin eso la web falla y se congela.
+- **Las ventanas de tiempo**: la portada muestra **36 horas** (`HORAS_EN_PORTADA`; las secciones
+  guardan todo, 10 por página); lo que nunca salió no se estrena si el hecho tiene más de **12**;
   la página dura 180 días (hasta 3.500 notas); lo raspado de más de 72 horas no entra. Los
   números viven en `ingesta/criterio.mjs` **y** en `web/lib/archivo.js`.
 - **Una nota tiene una sola fecha**, que envejece y nunca rejuvenece (`fechaReal`,
@@ -100,9 +95,8 @@ próxima regla es la 167.)
   medio de Balcarce o lo que dice Balcarce **en el título**. Un medio de acá que copia una
   noticia de afuera no la hace de Balcarce (`historiaDeAca`), y lo de un medio de acá que
   no nombra nada de acá espera a la IA (`mencionaAca`).
-- **Lo de afuera se mide en medios**: Fútbol y Deportes 4; Economía, Tecnología, Agro y
-  Automovilismo 2; el resto 3; con una figura, 2. Con un solo medio ni pasa el cruce. Del
-  extranjero, sólo con un argentino.
+- **Lo de afuera se mide en medios**: Fútbol y Deportes 4; Economía, Tecnología, Agro y Automovilismo
+  2; el resto 3; con una figura, 2. Con uno solo ni pasa el cruce. Del extranjero, sólo con un argentino.
 - **Las listas de sepelios no se publican nunca**, ni aprobadas por una persona.
 - **Las palabras clave cortas engañan** ("gol" encontraba "golpe"): las ambiguas van en
   `PALABRAS_DEBILES` y sólo deciden desde el titular.
@@ -110,45 +104,36 @@ próxima regla es la 167.)
   Automovilismo, Agro, Economía, Cultura y agenda, Tecnología y Argentina.
 - **Los títulos automáticos se arreglan sin inventar** (`arreglarEscritura`,
   `tituloAutomatico`); lo de una persona no se toca.
-- **Las redes tienen un interruptor**: la variable de GitHub `REDES_ACTIVAS` ("Si");
-  apagado, todo simula. "Piezas" con `solo` vacío no arma nada (hay que marcar `todas`).
-  En GitHub las piezas se arman con lo ya publicado (`web/data/portada.json`) y los
-  horarios son los de `panel/horarios.mjs`.
+- **Las redes tienen un interruptor**: la variable de GitHub `REDES_ACTIVAS` ("Si"); apagado,
+  todo simula. "Piezas" con `solo` vacío no arma nada (marcar `todas`). En GitHub las piezas
+  salen de lo ya publicado (`web/data/portada.json`), con los horarios de `panel/horarios.mjs`.
 - **Cuatro claves de IA, todas gratis desde el 29/09** (`reels/claves.mjs`):
   `GEMINI_API_KEY_REDACCION` (redactar), `GEMINI_API_KEY_REDES` (las voces; respaldo de la
   redacción sólo con 429), `GEMINI_API_KEY_CLASIFICACION` (lectura con IA y fotos; último
-  respaldo de la redacción) y `GROQ_API_KEY` (respaldo de la lectura y las fotos; no sirve
-  para redactar). Aparte, `TAVILY_API_KEY` (búsqueda en internet con texto, sólo para las Pistas). **El cupo de voz es de 10 audios por día**: si se acaba, la pieza no
-  sale (nunca con otra voz). Una clave rechazada (401/402/403) no gasta los intentos de
-  una nota. Modelo de texto: `gemini-flash-lite-latest`; de voz, `gemini-3.8-flash-tts`
-  con dos voces propias que **vencen el 29/09/2027** (`CRITERIO-REDES.md` § 6). La
-  vigilancia avisa si una clave deja de andar o una voz falta o está por vencer.
+  respaldo de la redacción) y `GROQ_API_KEY` (respaldo de la lectura y las fotos; no
+  redacta); aparte, `TAVILY_API_KEY` (búsqueda, sólo Pistas). **Cupo de voz: 10 audios por
+  día**; si se acaba, la pieza no sale (nunca con otra voz). Una clave rechazada
+  (401/402/403) no gasta los intentos de una nota. Texto: `gemini-flash-lite-latest`; voz:
+  `gemini-3.8-flash-tts`, dos voces propias que **vencen el 29/09/2027** (`CRITERIO-REDES.md` § 6).
 - **Para que "hoy" sea el de Balcarce en Actions** hay que poner
   `TZ: America/Argentina/Buenos_Aires` en el workflow (`ingesta/zona.mjs`).
-- **El turno de farmacia dura hasta las 8:30 del día siguiente** y la web no dice hasta
-  qué hora está. **Si Open-Meteo falla, el clima sale de `api.met.no`**, sin sensación
-  térmica: no se inventa.
-- **cron-job.org desactiva solo** un trabajo que falla varias veces: es lo primero que se
-  mira cuando algo deja de salir. Su token de GitHub y el dominio vencen el **21/09/2027**.
+- **El turno de farmacia dura hasta las 8:30 del día siguiente** (la web no dice hasta qué
+  hora). **Si Open-Meteo falla, el clima sale de `api.met.no`**, sin sensación térmica.
+- **El reloj es el Worker `radar-balcarce-reloj`** (desde el 15/10; cron-job.org, pausado):
+  si algo deja de salir, mirar Cloudflare → Workers → radar-balcarce-reloj.
 - **El correo de los commits automáticos** es el noreply de GitHub: no cambiarlo.
 - **El panel del celular** (`web/public/panel/`) no tiene servidor: escribe con la llave de
   GitHub de quien lo usa; lo sensible viaja cifrado (`panel/cifrado.mjs`); pedirle a la IA
-  dispara el workflow "Panel del celular" (`panel.yml`), que lee las notas de la caché de
-  Actions. Su página tiene su propia CSP en `web/public/_headers`: no cargar nada de
-  afuera ahí.
+  dispara "Panel del celular" (`panel.yml`), que lee las notas de la caché de Actions. Su
+  página tiene su propia CSP en `web/public/_headers`: no cargar nada de afuera ahí.
 
-## Estado (29/09/2026, 18:30)
+## Estado (15/10/2026)
 
-- **Todo andando en la nube**: la web en Cloudflare Pages, las redes **prendidas desde el
-  29/09 a las 16:39** (el primer reel con las voces nuevas salió a las 16:46), la
-  vigilancia por WhatsApp con el resumen de las 21 y, desde hoy, el **panel del celular**
-  (falta que Hernán cree su llave y lo instale).
-- **Las claves de IA son todas gratis** (la paga quedó suspendida por Google el 29/09).
-  Las voces son la versión 2 de la locutora y el locutor, en el proyecto de la clave de
-  redes. El cupo gratis de voz (10 por día) es justo para un día normal.
-- **Las reglas de la IA cambiaron el 29/09** (regla 1 contra la copia y el campo "datos"):
-  mirar unos días cuántas notas sacan cuerpo.
-- Lo que falta, con quién y qué urgencia: **`PENDIENTES.md`**. El plan de mejoras del 8/10 (auditorías, en orden) y dónde quedó: **`docs/propuestas/DONDE-SEGUIMOS.md`**.
+- **Todo andando en la nube** (web, redes con voz y escenas animadas, vigilancia, panel del
+  celular). El 15/10 el repositorio se mudó y el reloj pasó al Worker: mirar que dispare.
+- **Rediseño desde cero, una etapa por vez** (empieza por las fuentes). Las reglas de arriba
+  valen hasta que se cambien con su prueba; las claves nuevas, cuando se elijan los modelos.
+- Lo que falta: **`PENDIENTES.md`**. Qué se decidió y las preguntas abiertas: **`docs/DECISIONES.md`**.
 
 ## Dónde tocar cada cosa
 
@@ -191,23 +176,25 @@ próxima regla es la 167.)
 | Qué vigila el vigilante o qué dice el WhatsApp | `redes/vigilar.mjs` (`evaluar`, `revisarClaves`, `VENCIMIENTOS`), `redes/avisos.mjs` |
 | Qué archivos guarda "Actualizar la web" | La línea `git add` de `.github/workflows/actualizar.yml` (un archivo nuevo de `web/data/` que no esté ahí se pierde) |
 | Los avisos publicitarios, la agenda a mano | El panel de la PC (`PUBLICIDAD.md`, `panel/agenda.mjs`) |
+| Qué se decidió, por qué y quién; las preguntas abiertas | `docs/DECISIONES.md` (lo nuevo arriba) |
 
 ## Cuentas
 
-- **GitHub:** `balcardev@gmail.com`, repositorio `balcar-dev/radar-balcarce`, **público**
-  (los públicos no gastan minutos de Actions).
-- **Todo lo demás:** `radarbalcarce@gmail.com` (Cloudflare, cron-job.org, Google/Gemini,
-  Meta, Instagram, Search Console, Tailscale; Vercel, apagado).
+- **GitHub:** cuenta de `radarbalcarce@gmail.com`, repositorio `radarbalcarce/radar-balcarce`
+  (desde el 15/10), **público** hasta que el robot salga de Actions (privado costaría unos
+  US$ 100 por mes en minutos). Colaboradores invitados: `balcardev`, Andrés y Hernán.
+- **Todo lo demás:** `radarbalcarce@gmail.com` (Cloudflare con el Worker del reloj,
+  Google/Gemini, Meta, Instagram, Search Console, Tailscale; cron-job.org, pausado;
+  Vercel, apagado).
 - **Meta:** app "Radar Balcarce Publicador" (ID 2302218363874399), usuario del sistema
   `publicador-radar`, token sin vencimiento en `META_TOKEN` (con `read_insights` e
-  `instagram_manage_insights`: las estadísticas de Meta andan). Página de Facebook "Radar Balcarce", ID para la API
-  **1254237411116171** (`PAGINA_DE_FACEBOOK`, `redes/meta.mjs`). Instagram
-  `@radarbalcarce`. WhatsApp del medio: 2266 51-1612.
+  `instagram_manage_insights`). Página de Facebook "Radar Balcarce", ID para la API
+  **1254237411116171** (`PAGINA_DE_FACEBOOK`, `redes/meta.mjs`). Instagram `@radarbalcarce`.
+- **Dominio** `radarbalcarce.com` (DonWeb), vence el **21/09/2027**. WhatsApp del medio: 2266 51-1612.
 - Secretos, workflows, costos y vencimientos: `docs/08-INFRAESTRUCTURA.md`.
 
 ## Documentos
 
-**`docs/00-INDICE.md`** tiene la lista completa. Los que más se usan: `docs/11-OPERACION.md`
-(el uso diario), `docs/10-REGLAS-Y-PRUEBAS.md` (las reglas numeradas), `docs/08-INFRAESTRUCTURA.md`
-(claves, workflows, vencimientos), `docs/09-PANEL.md` (los dos paneles), los dos criterios
-(`CRITERIO-EDITORIAL.md` y `CRITERIO-REDES.md`), `PENDIENTES.md` e `IDEAS.md`.
+**`docs/00-INDICE.md`** tiene la lista completa. Los que más se usan: `docs/11-OPERACION.md`,
+`docs/10-REGLAS-Y-PRUEBAS.md`, `docs/08-INFRAESTRUCTURA.md`, `docs/09-PANEL.md`, los dos criterios
+(`CRITERIO-EDITORIAL.md` y `CRITERIO-REDES.md`), `docs/DECISIONES.md`, `PENDIENTES.md` e `IDEAS.md`.

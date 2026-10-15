@@ -3,7 +3,7 @@
 // con datos de las fuentes y verificarla contra ellas.
 //
 // La clave (TAVILY_API_KEY) vive en GitHub Secrets y viaja en un encabezado, nunca en la dirección ni en un mensaje de error. Qué trae una
-// búsqueda se sondeó el 3/10 (redes/sondear-tavily.mjs): resultados con url, title, content (resumen), raw_content (texto) y score; las redes
+// búsqueda se sondeó el 3/10 (con un script de prueba que ya se borró, el 15/10): resultados con url, title, content (resumen), raw_content (texto) y score; las redes
 // (Facebook, Instagram) casi nunca traen texto. Sin dependencias.
 
 import { leerVariable } from '../reels/claves.mjs';

@@ -20,32 +20,33 @@ lo que falta, en [`PENDIENTES.md`](../PENDIENTES.md).*
 | El modo de prueba del panel del celular | https://radarbalcarce.com/panel/?demo | Cualquiera (notas inventadas, no guarda nada) |
 | **El panel**, desde la PC | http://localhost:4321 | Hernán y Andrés, con su usuario y contraseña |
 | El panel, desde afuera | La dirección del túnel de Tailscale, en `panel/datos/DIRECCION-DEL-PANEL.txt`, en la PC (no va al repositorio, que es público) | Igual |
-| El código y las corridas | https://github.com/balcar-dev/radar-balcarce (pestaña **Actions**) | Público desde el 25/09; cuenta `balcardev@gmail.com` |
+| El código y las corridas | https://github.com/radarbalcarce/radar-balcarce (pestaña **Actions**) | Público desde el 25/09 (sigue público: privado costaría minutos de Actions). Dueña: `radarbalcarce@gmail.com`; colaboradores: `balcardev`, Andrés (`agerace`) y Hernán (`hernanaccomo-pixel`). Hasta el 15/10/2026 fue `balcar-dev/radar-balcarce` |
 | Cloudflare (la web, el dominio, las estadísticas) | https://dash.cloudflare.com | `radarbalcarce@gmail.com` |
-| Trabajos automáticos (cron-job.org) | https://console.cron-job.org/jobs | `radarbalcarce@gmail.com` |
+| El reloj (Worker `radar-balcarce-reloj`) | https://dash.cloudflare.com → Workers y Pages | `radarbalcarce@gmail.com` |
+| cron-job.org (el reloj anterior, con sus 3 trabajos pausados) | https://console.cron-job.org/jobs | `radarbalcarce@gmail.com` |
 | Google Search Console | https://search.google.com/search-console | `radarbalcarce@gmail.com` |
 | Google AI Studio (las claves y el gasto de Gemini) | https://aistudio.google.com | `radarbalcarce@gmail.com` |
 | La guía comercial (vista previa) | https://claude.ai/artifact/EPFpaXCo83ryUimSvRnMvU | Privado |
 
 **Las cuentas:** `radarbalcarce@gmail.com` es el medio (Cloudflare, Vercel
 apagado, Tailscale, Instagram, Facebook, Meta, Gemini, cron-job.org, Search
-Console); `balcardev@gmail.com` es lo técnico (GitHub).
+Console, y desde el 15/10/2026 también GitHub: es la dueña del repositorio); `balcardev`, Andrés (`agerace`) y Hernán (`hernanaccomo-pixel`) son colaboradores del repositorio con sus propias cuentas de GitHub.
 
 ## En una frase
 
 La web, las redes y la vigilancia andan solas con la PC apagada; a una persona
 le queda decidir las notas que esperan, corregir o sacar lo que salió mal,
 mirar el WhatsApp de las 21 y, cuando algo deja de salir, revisar en orden
-cron-job.org, GitHub Actions y el interruptor de las redes.
+el reloj de Cloudflare, GitHub Actions y el interruptor de las redes.
 
 ## Antes de empezar: dónde se hace cada cosa
 
 | Dónde | Qué se hace ahí | Se puede desde el celular |
 |---|---|---|
 | **El panel del celular** (radarbalcarce.com/panel/) | Decidir lo que espera, corregir, cambiar de sección, reescribir con IA, retirar y volver a publicar, mandar una nota a las redes, ver lo que sale hoy en las redes, actualizar la web | Sí: es para eso. Con la PC apagada |
-| **GitHub** (github.com/balcar-dev/radar-balcarce, cuenta `balcardev@gmail.com`) | Ver si algo falló (pestaña **Actions**), correr un workflow a mano (**Run workflow**), corregir o retirar una nota editando un archivo, prender o apagar las redes (**Settings**) | Sí, desde el navegador |
+| **GitHub** (github.com/radarbalcarce/radar-balcarce; se entra con la cuenta de GitHub de cada uno) | Ver si algo falló (pestaña **Actions**), correr un workflow a mano (**Run workflow**), corregir o retirar una nota editando un archivo, prender o apagar las redes (**Settings**) | Sí, desde el navegador |
 | **El panel de la PC** (http://localhost:4321 en la PC; afuera, la dirección de `panel/datos/DIRECCION-DEL-PANEL.txt`) | Cargar avisos, la agenda a mano, el buzón (lo que el celular no hace) | Sí, si la PC está prendida |
-| **cron-job.org** (console.cron-job.org/jobs, cuenta `radarbalcarce@gmail.com`) | Ver y reactivar los trabajos que despiertan a GitHub | Sí |
+| **Cloudflare, Workers** (dash.cloudflare.com, cuenta `radarbalcarce@gmail.com`) | Ver que el reloj `radar-balcarce-reloj` despierte a GitHub (sus ejecuciones, a los :00, :05, :30, :35 y :45). Los trabajos viejos de cron-job.org están pausados, por si hay que volver | Sí |
 | **Claude** (una sesión de Claude Code sobre la carpeta del proyecto) | Cualquier cambio de código, escribir cuerpos, repasos editoriales, mirar la web publicada | Según dónde esté abierta la sesión |
 | **Meta, Cloudflare, Google AI Studio, DonWeb** | Cuentas: claves, borrar publicaciones, pagos, dominio | Sí, pero lo hace siempre una persona |
 
@@ -73,7 +74,7 @@ cron-job.org, GitHub Actions y el interruptor de las redes.
 | **Los lunes** | Mirar que la **Auditoría** haya corrido (Actions → Auditoría). Corrió por primera vez el 28/09; si un lunes no corre, correrla a mano (Run workflow) | 1 minuto |
 | **Principios de cada mes** | Mirar el gasto de la clave paga de Gemini en Google AI Studio (presupuesto: USD 10 por mes desde octubre) | 2 minutos |
 | **Cada 90 días** (la primera, hacia el 24/12/2026) | Volver a verificar las medidas de las redes (`FORMATOS.md`). La auditoría avisa | — |
-| **Antes del 21/09/2027** | Renovar el dominio en DonWeb y el token de GitHub de cron-job.org (el vigilante avisa 30 días antes) | — |
+| **Antes del 21/09/2027** | Renovar el dominio en DonWeb (el vigilante avisa 30 días antes); el token de GitHub de cron-job.org sólo importa si se reactivan esos trabajos | — |
 
 ## 0. El panel del celular
 
@@ -81,7 +82,7 @@ Es lo de todos los días. Cómo funciona por dentro: `09-PANEL`. Para entrar hac
 falta una **llave de GitHub** que se crea una sola vez: el mismo panel lo
 explica paso a paso la primera vez (el detalle, en `09-PANEL`, "La llave de
 GitHub"). Se instala desde Chrome: menú ⋮ → **Instalar app**. **Si se pierde
-un celular**: en GitHub (cuenta `balcardev@gmail.com`) → Settings → Developer
+un celular**: en GitHub (la cuenta con la que se creó esa llave) → Settings → Developer
 settings → Fine-grained tokens → esa llave → **Delete**.
 
 **Todo lo que se hace ahí sale en la web en la próxima actualización** (a los
@@ -311,7 +312,7 @@ panel a internet: `tailscale funnel --https=443 off`.
 
 1. **¿Llegó un WhatsApp del vigilante?** Dice qué falló. Si no llegó ni el
    resumen de las 21, el problema puede ser el vigilante mismo: seguir.
-2. **cron-job.org:** ¿están prendidos todos los trabajos? (tarea 10).
+2. **El reloj de Cloudflare:** ¿despierta a GitHub? (tarea 10).
 3. **GitHub → Actions:** ¿hay una corrida en rojo? Abrirla y leer el paso rojo.
    Un aviso amarillo de "Vigilancia" no es una falla: es lo que encontró.
 4. **`REDES_ACTIVAS`** dice `Si` (tarea 5). Desde el 28/09 está en `No` a
@@ -330,7 +331,7 @@ Se nota porque la portada no cambia o llega el aviso "La web no se actualiza
 hace N horas".
 
 1. Actions → **Actualizar la web**: ¿la última corrida cuándo fue?
-   - **No hay corridas recientes** → cron-job.org (tarea 10). Mientras tanto,
+   - **No hay corridas recientes** → el reloj de Cloudflare (tarea 10). Mientras tanto,
      Run workflow a mano.
    - **Está en rojo** → abrirla. Si el paso rojo es **"Probar que nada se
      rompió"**, una prueba falló: la causa más común es un `.json` editado a
@@ -345,22 +346,29 @@ hace N horas".
 3. Si las dos están en verde y la web sigue vieja: mirar Cloudflare
    (dash.cloudflare.com → Pages) y probar recargar sin caché.
 
-## 10. cron-job.org se apagó
+## 10. El reloj dejó de despertar
 
-cron-job.org **desactiva solo** un trabajo que falla varias veces seguidas.
-Se nota con avisos "No hay corridas nuevas de…" o "El reloj de Redes no corre",
-o porque la web se actualiza tarde (queda el respaldo de GitHub, que es
+Desde el 15/10/2026 despierta a GitHub el **reloj de Cloudflare** (el Worker
+`radar-balcarce-reloj`, `infra/reloj-cloudflare/`), a los :00 y :30 (web y
+vigilancia) y a los :05, :35 y :45 (el reloj de Redes). Se nota con avisos "No
+hay corridas nuevas de…" o "El reloj de Redes no corre" (esos textos todavía
+nombran a cron-job.org: hoy quieren decir "el reloj dejó de despertar"), o
+porque la web se actualiza tarde (queda el respaldo de GitHub, que es
 impuntual).
 
-1. Entrar a https://console.cron-job.org/jobs con `radarbalcarce@gmail.com`.
-2. Mirar que estén **prendidos** los trabajos: "Actualizar la web", el reloj
-   de "Redes" y "Vigilancia" (según GitHub, a Redes lo llaman tres veces por
-   hora: puede haber un cuarto trabajo; ver `08-INFRAESTRUCTURA`,
-   "cron-job.org").
-3. Prender el que esté apagado. En su historial se ve por qué fallaba: un
-   error 401 o 403 quiere decir que el **token de GitHub** venció o está mal
-   (lo reemplaza una persona, en el encabezado `Authorization` de **todos** los
-   trabajos).
+1. Entrar a https://dash.cloudflare.com con `radarbalcarce@gmail.com` →
+   Workers y Pages → `radar-balcarce-reloj` y mirar las ejecuciones: si salen
+   fallidas, el mensaje dice qué archivo no aceptó GitHub y con qué código.
+2. Un 401 o 403 quiere decir que el **token de GitHub** del reloj
+   (`RELOJ_GITHUB_TOKEN`) venció o está mal: una persona crea otro (de grano
+   fino, sólo este repositorio, Actions de lectura y escritura), lo pega en
+   GitHub → Settings → Secrets and variables → Actions y corre Actions →
+   **Reloj de Cloudflare** → Run workflow, que lo vuelve a cargar en el Worker.
+3. Si no se arregla rápido, **de urgencia**: reactivar los tres trabajos de
+   https://console.cron-job.org/jobs (están pausados, no borrados). Ojo: tienen
+   la dirección y el token del repositorio viejo (`balcar-dev`); hay que
+   ponerles `radarbalcarce/radar-balcarce` y un token nuevo. Y volver a pausarlos
+   cuando el reloj de Cloudflare ande de nuevo.
 4. En media hora tiene que aparecer una corrida nueva en Actions.
 
 ## 11. Gemini se quedó sin cupo
@@ -388,7 +396,7 @@ paga".
 1. Nada urgente: no se publica nada mal, sólo sale menos.
 2. Si hay notas importantes esperando: escribir sus cuerpos a mano o con
    Claude (tarea 3).
-3. Para saber si la clave gratis anda: Actions → **Prueba de Gemini**.
+3. Para saber si la clave gratis anda: el vigilante avisa por WhatsApp (`clave-<NOMBRE>`) si una clave deja de andar, y el registro de "Actualizar la web" dice cuántos pedidos fueron a cada una.
 4. **No subir los topes ni cambiar de clave sin hablarlo entre los dos**: la
    única que cobra es la de redes.
 
@@ -401,7 +409,7 @@ paga".
    va completo, con 549 adelante, sin + ni espacios. Los corrige una persona en
    GitHub Secrets.
 3. Si la prueba anda y el resumen no llega: mirar que "Vigilancia" esté
-   corriendo (Actions) y que su trabajo de cron-job.org esté prendido. El
+   corriendo (Actions) y que el reloj de Cloudflare la esté despertando. El
    registro de cada corrida de Vigilancia dice qué encontró y si mandó el
    mensaje.
 
@@ -458,7 +466,7 @@ borrar publicaciones; aceptar términos; pagar.
 |---|---|---|
 | Cargar o cambiar una clave o un token (`META_TOKEN`, las de Gemini, `GROQ_API_KEY`, Cloudflare, WhatsApp) | GitHub → Settings → Secrets and variables → Actions; en la PC, el `.env` | Cuando se crea, vence o se filtra |
 | Regenerar `META_TOKEN` con los permisos de estadísticas (`read_insights`, `instagram_manage_insights`, además de todos los de ahora) | Meta Business → usuario del sistema `publicador-radar` | Hecho (1/10/2026) |
-| Renovar el token de GitHub de cron-job.org y pegarlo en todos los trabajos | GitHub (`balcardev@gmail.com`) y cron-job.org | Antes del 21/09/2027 |
+| Renovar el token de GitHub del reloj (`RELOJ_GITHUB_TOKEN`) cuando venza y volver a cargarlo con «Reloj de Cloudflare» (el de cron-job.org, pausado, vence el 21/09/2027) | GitHub y Cloudflare | Cuando venza el que se haya elegido al crearlo |
 | Renovar el dominio | DonWeb | Antes del 21/09/2027 |
 | Borrar o editar un posteo, una historia o un reel (un duplicado, una nota retirada) | Las apps de Facebook e Instagram | Cuando haga falta |
 | Subir a mano un video que faltó (desde el artefacto de una corrida) | Las apps | Cuando haga falta |
@@ -504,7 +512,7 @@ La lista completa y al día de lo pendiente: `PENDIENTES.md`.
 | Ver cómo llegaría el resumen de las 21 | Actions → Vigilancia → Run workflow → `probar-resumen` (manda un WhatsApp, no guarda nada) |
 | Ver el cierre del día contra Meta sin mandar nada | Actions → Vigilancia → `probar-cierre` |
 | Auditar lo publicado en redes | Actions → Auditar redes |
-| Ver las estadísticas ahora | Actions → Prueba de estadísticas |
+| Ver las estadísticas ahora | Panel del celular → pestaña **Números** (las mide la vigilancia) |
 | Cargar un aviso | Panel → Avisos (tarea 13) |
 | Cambiar una regla, un número o el diseño | Pedírselo a Claude (tarea 14); la tabla completa, en `CLAUDE.md` |
 
@@ -526,4 +534,4 @@ La lista completa y al día de lo pendiente: `PENDIENTES.md`.
 En `PENDIENTES.md`: la pestaña Calendario del panel no cambia las horas de lo
 que publica GitHub (las reales son las de fábrica de `panel/horarios.mjs`), la
 Auditoría de los lunes tiene que confirmar que corre sola (la primera vez fue
-el 28/09) y hay que mirar cuántos trabajos tiene cron-job.org.
+el 28/09) y, si hiciera falta volver a cron-job.org, ver que sus tres trabajos pausados tengan la dirección nueva.

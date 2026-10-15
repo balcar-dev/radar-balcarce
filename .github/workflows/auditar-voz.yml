@@ -4,7 +4,8 @@
 # hora. Imprime un cuadro PASA/FALLA y falla si algún clip falla.
 #
 # SE CORRE A MANO (Actions → "Auditar voz" → Run workflow). Gasta unos pocos
-# audios cortos y sus transcripciones (centavos): no se dispara solo ni se repite.
+# audios cortos del cupo de voz (10 por día, compartido con Redes, Piezas y Crear
+# voces) y sus transcripciones: no se dispara solo ni se repite.
 # Detalle: CRITERIO-REDES.md, sección 7.
 #
 # SECRETO: GEMINI_API_KEY_REDES.

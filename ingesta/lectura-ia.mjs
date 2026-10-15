@@ -11,7 +11,7 @@
 // semáforo sigue mandando y sin ficha queda lo de siempre.
 //
 // Usa la clave de clasificación; mientras no esté cargada, la gratis de
-// redacción. Nunca la paga de redes (reels/claves.mjs). Sin dependencias: sólo
+// redacción. Nunca la de redes, cuyo cupo de voz es chico (reels/claves.mjs). Sin dependencias: sólo
 // fetch de Node.
 
 import fs from 'node:fs';
@@ -285,7 +285,7 @@ export async function leerNotasNuevas(notas, {
     }
     // Gemini falló (sin cupo, caído, lo que sea): con una segunda clave
     // gratis (Groq, 28/09) se prueba el mismo grupo ahí antes de darlo por
-    // perdido. Nunca se pasa a una clave paga.
+    // perdido. Nunca se pasa a la clave de redes (su cupo de voz es chico).
     if (!nuevas && claveRespaldo) {
       try {
         nuevas = await leerGrupoGroq(grupo, { clave: claveRespaldo, fetchFn });

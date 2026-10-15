@@ -14,9 +14,9 @@
 # A mano: pestaña Actions → "Piezas" → Run workflow.
 #   solo      una o varias piezas (por ejemplo clima-manana). Hay que elegir:
 #             vacío no arma nada (28/09: vacío armaba TODAS las del día y
-#             gastaba una voz paga por cada una)
-#   todas     armar todas las piezas del día a propósito (gasta una voz paga
-#             por pieza); sólo cuenta si "solo" está vacío
+#             gastaba un audio del cupo de voz por cada una)
+#   todas     armar todas las piezas del día a propósito (gasta un audio del
+#             cupo de voz, 10 por día, por pieza); sólo cuenta si "solo" está vacío
 #   publicar  además de armarlas, subirlas ya, sin esperar su hora
 #   destino   ambas (Instagram y la página de Facebook), instagram o facebook
 
@@ -30,7 +30,7 @@ on:
         type: string
         default: ''
       todas:
-        description: 'Armar TODAS las piezas del día (una voz paga por cada una). Sólo si "solo" está vacío'
+        description: 'Armar TODAS las piezas del día (un audio del cupo de voz, 10 por día, por cada una). Sólo si "solo" está vacío'
         type: boolean
         default: false
       publicar:
@@ -67,12 +67,12 @@ jobs:
           ref: main
 
       # Antes de instalar nada: sin piezas elegidas no se arma nada (28/09).
-      # Con "solo" vacío se armaban todas las del día, cada una con una voz
-      # paga de Gemini. Para eso ahora hay que marcar "todas".
+      # Con "solo" vacío se armaban todas las del día, cada una con un audio
+      # del cupo de voz de Gemini. Para eso ahora hay que marcar "todas".
       - name: Ver qué piezas se piden
         run: |
           if [ -z "$SOLO" ] && [ "$TODAS" != "true" ]; then
-            echo "::error title=Sin piezas elegidas::No se armó nada. Escribí en \"solo\" qué piezas querés (por ejemplo clima-manana) o marcá \"todas\" para armar todas las del día (una voz paga por cada una)."
+            echo "::error title=Sin piezas elegidas::No se armó nada. Escribí en \"solo\" qué piezas querés (por ejemplo clima-manana) o marcá \"todas\" para armar todas las del día (un audio del cupo de voz, 10 por día, por cada una)."
             exit 1
           fi
         env:

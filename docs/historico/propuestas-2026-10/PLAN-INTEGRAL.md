@@ -1,3 +1,5 @@
+> **Archivado el 15/10/2026:** el plan por frentes y etapas del 8/10 (antes del rediseño desde cero); no se mantiene; los enlaces de adentro pueden no andar. Lo abierto pasó a `PENDIENTES.md` y las decisiones a `docs/DECISIONES.md`.
+
 # Plan integral: web, panel y redes (reformulado el 8/10/2026)
 
 *Reordena la hoja de ruta y la lista de prioridades en **cuatro frentes** y **cuatro etapas**, y dice qué ya está hecho y qué falta. No reemplaza

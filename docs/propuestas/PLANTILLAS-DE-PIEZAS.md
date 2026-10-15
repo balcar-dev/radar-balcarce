@@ -1,9 +1,11 @@
 # Las plantillas de las piezas: reglas comunes, reglas de cada una y todas sus variantes
 
 *8/10/2026, a pedido de Hernán y Andrés ("que esté todo planificado: una regla en común para todas y una específica para cada una, con todas las
-variantes del clima, avisos, efemérides, feriados, farmacias, invitaciones a participar, teléfonos útiles y agenda"). **Es una propuesta para aprobar:
-mientras no la aprueben, lo que sale en las redes sigue como hoy.** Los ejemplos para mirar están en `docs/propuestas/material/plantillas/`
-(empezando por el clima). Cuando algo de acá se apruebe, pasa a `CRITERIO-REDES.md` y se escribe su prueba.*
+variantes del clima, avisos, efemérides, feriados, farmacias, invitaciones a participar, teléfonos útiles y agenda").*
+
+> **Estado (15/10/2026): aprobadas y conectadas (regla 157).** Desde el 9/10 las piezas de todos los días salen con su escena animada
+> (`reels/escenas/`); si algo falla, sale la placa de siempre. Las escenas de deporte están hechas y sin conectar. Falta pasar estas reglas a
+> `CRITERIO-REDES.md`, que es donde tienen que vivir; mientras tanto, este documento es la referencia de las escenas.
 
 ## 1. Las reglas comunes (valen para TODAS las piezas)
 

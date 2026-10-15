@@ -6,8 +6,9 @@
 //
 //   node redes/cronograma-semana.mjs [--desde=2026-10-05] [--dias=8] [--con-efemeride] [--fijas=a,b]
 //
-// "Un día como hoy" todavía no está en el reloj: con --con-efemeride se suma a las 9:00 (en los
-// días de feriado la reemplaza el feriado) para ver cómo quedaría. Sin dependencias.
+// "Un día como hoy" ya está en el reloj (efemeride, 9:00 a 12:00, en los días que tienen la suya
+// preparada): --con-efemeride la suma a las 9:00 aunque ese día no tenga (en los días de feriado
+// la reemplaza el feriado) para ver cómo quedaría. Sin dependencias.
 
 import { cronogramaDelDia, PODCASTS } from './piezas.mjs';
 import { vozDePieza, VOCES } from './prompt-redes.mjs';

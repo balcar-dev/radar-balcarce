@@ -1,6 +1,7 @@
 # 08 · Infraestructura: qué corre dónde
 
-*Actualizado el 29/09/2026. Si algo de acá no coincide con los `.yml` o con el
+*Actualizado el 15/10/2026 (el repositorio se mudó a `radarbalcarce/radar-balcarce`,
+el reloj pasó a Cloudflare y se borraron las herramientas de prueba sueltas). Si algo de acá no coincide con los `.yml` o con el
 código, mandan ellos.* Los secretos figuran **sólo por nombre**: sus valores no
 se escriben en ningún documento ni se pegan en un chat. Qué se publica en las
 redes: [`07-REDES.md`](07-REDES.md); los paneles: [`09-PANEL.md`](09-PANEL.md);
@@ -10,7 +11,8 @@ la web: `06-WEB`.
 ## En una frase
 
 Todo lo automático corre gratis en GitHub Actions, con la PC apagada: un
-servicio externo (cron-job.org) lo despierta cada media hora, GitHub busca las
+reloj propio (un programa chico de Cloudflare, el Worker `radar-balcarce-reloj`) lo
+despierta cada media hora, GitHub busca las
 noticias, escribe con IA (Gemini, con Groq de respaldo en la lectura), arma la
 web y la sube a Cloudflare Pages, publica en Facebook e Instagram con la API de
 Meta, y un vigilante revisa todo y avisa por WhatsApp. El panel del celular
@@ -27,12 +29,12 @@ permiso a un programa en otro servicio: se trata como una contraseña.
 ## El mapa
 
 ```
-                         cron-job.org  (cuenta radarbalcarce@gmail.com)
+                         Reloj de Cloudflare  (Worker radar-balcarce-reloj, desde el 15/10/2026)
                          │  cada 30 min: "Actualizar la web" (:00 y :30)
                          │  varias por hora: "Redes" (:05, :35, :45)
                          │  cada 30 min: "Vigilancia" (:00 y :30)
                          ▼
-GitHub Actions (repo balcar-dev/radar-balcarce, público, cuenta balcardev@gmail.com)
+GitHub Actions (repo radarbalcarce/radar-balcarce, público, cuenta radarbalcarce@gmail.com)
   ├─ Actualizar la web ──(termina bien)──▶ Cloudflare Pages ──▶ radarbalcarce.com
   │        │                                (sube web/out con wrangler)
   │        └──(termina, bien o mal)──▶ Redes
@@ -41,7 +43,7 @@ GitHub Actions (repo balcar-dev/radar-balcarce, público, cuenta balcardev@gmail
   ├─ Auditoría (lunes 9:00)
   ├─ Panel del celular (lo dispara el celular: la IA escribe una nota)
   └─ A mano: Piezas, Crear voces, Auditar redes, Auditar voz, Ver Facebook,
-     Prueba de estadísticas, Prueba de Gemini, Prueba de WhatsApp
+     Prueba de WhatsApp
 
   IA: Gemini (Google AI Studio, cuenta radarbalcarce@gmail.com) y Groq
 
@@ -53,10 +55,10 @@ PC de Hernán: el panel de la PC (puerto 4321, respaldo) ── sube sus decisio
 
 ## El recorrido, paso a paso (una media hora cualquiera)
 
-1. **:00 — cron-job.org** le pide a la API de GitHub que corra "Actualizar la
-   web" y "Vigilancia", con un token propio ("Vencimientos"). El reloj de
-   GitHub (`schedule`) es sólo el respaldo: llegó a dejar cinco horas entre dos
-   corridas.
+1. **:00 — el reloj de Cloudflare** le pide a la API de GitHub que corra
+   "Actualizar la web" y "Vigilancia", con un token propio ("Vencimientos"). El
+   reloj de GitHub (`schedule`) es sólo el respaldo: llegó a dejar cinco horas
+   entre dos corridas.
 2. **Actualizar la web** corre las pruebas (`npm test`) y, si pasan, busca
    noticias, las cruza, las lee y las escribe con IA, arma los datos (también
    la lista cifrada para el panel del celular), compila el sitio, revisa el SEO
@@ -64,7 +66,7 @@ PC de Hernán: el panel de la PC (puerto 4321, respaldo) ── sube sus decisio
    estaba** (cada paso, en `02-INGESTA` a `06-WEB`).
 3. **Si terminó bien**, arranca **Cloudflare Pages**: vuelve a compilar y sube
    `web/out`. En uno o dos minutos la web nueva está en línea.
-4. **Bien o mal**, arranca también **Redes** (que cron-job.org además llama
+4. **Bien o mal**, arranca también **Redes** (que el reloj además llama
    varias veces por hora): Facebook y las piezas que tocan (`07-REDES`).
 5. **Vigilancia** mira la web publicada, las corridas, el libro de las redes,
    el contrato del día y las claves de IA, y manda **un solo WhatsApp** si hay
@@ -76,25 +78,35 @@ Aparte, lo que decide una persona en el panel del celular se escribe en el
 repositorio con su llave de GitHub, y "Escribir con IA" dispara "Panel del
 celular", que tarda un minuto (`09-PANEL`).
 
-## Los catorce workflows
+## Los veintiún workflows
+
+(Son los 21 archivos de `.github/workflows/`. El 15/10/2026 se borraron cuatro
+de prueba suelta que ya no se usaban: Prueba de estadísticas, Prueba de Gemini,
+Sondear búsqueda y Sondear Groq; el historial de git los guarda.)
 
 | Workflow (archivo) | Cuándo corre | Qué corre | Secretos y variables | Qué commitea | Tope |
 |---|---|---|---|---|---|
-| **Actualizar la web** (`actualizar.yml`) | cron-job.org a los :00 y :30; respaldo `schedule` a los :07 y :37; a mano; "Actualizar la web ahora" del celular | `npm ci` (raíz y `web/`), `npm test`, la caché `.cache` (la memoria de 36 horas del cruce y las notas enteras para el celular), `node web/scripts/generar-datos.mjs`, `npm run build` con `SITIO`, `node web/scripts/revisar-seo.mjs` | Las cuatro claves de IA | En `web/data/`: `portada`, `archivo`, `agenda`, `intentos-ia`, `dolar-historia`, `f1`, `fichas`, `notas-por-dia`, `banco-fotos`, `esperando-cuerpo`, `vistas`, `retiradas`, `celular-pendientes` y `fusionadas` (`.json`); y `web/public/fotos-notas/`. Mensaje "Datos de la portada · dd/mm hh:mm" | 20 min |
+| **Actualizar la web** (`actualizar.yml`) | El reloj de Cloudflare a los :00 y :30; respaldo `schedule` a los :07 y :37; a mano; "Actualizar la web ahora" del celular | `npm ci` (raíz y `web/`), `npm test`, la caché `.cache` (la memoria de 36 horas del cruce y las notas enteras para el celular), `node web/scripts/generar-datos.mjs`, `npm run build` con `SITIO`, `node web/scripts/revisar-seo.mjs` | Las cuatro claves de IA | En `web/data/`: `portada`, `archivo`, `agenda`, `intentos-ia`, `dolar-historia`, `f1`, `fichas`, `notas-por-dia`, `banco-fotos`, `esperando-cuerpo`, `vistas`, `retiradas`, `celular-pendientes` y `fusionadas` (`.json`); y `web/public/fotos-notas/`. Mensaje "Datos de la portada · dd/mm hh:mm" | 20 min |
 | **Cloudflare Pages** (`cloudflare-deploy.yml`) | Al terminar **bien** "Actualizar la web"; a mano | `npm ci` y `npm run build` en `web/`, después `npx wrangler@4.139.0 pages deploy out --branch=main` | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; variable opcional `CLOUDFLARE_PROJECT` (si falta, `radar-balcarce`) | Nada | 15 min |
-| **Redes** (`redes.yml`) | cron-job.org (acción `reloj`); al terminar "Actualizar la web"; a mano: `reloj`, `verificar` o `facebook` | `redes/publicar.mjs --facebook`; `redes/reloj.mjs`; si toca: `npm ci`, `reels/plan.mjs --generar --solo=…`, `redes/publicar.mjs --piezas`; `redes/publicar.mjs --enlaces` | `META_TOKEN`, `GEMINI_API_KEY_REDES`; variable `REDES_ACTIVAS` | `web/data/redes.json` ("Redes: libro de publicaciones · …"); los videos quedan 3 días como artefacto | 25 min |
+| **Redes** (`redes.yml`) | El reloj de Cloudflare (acción `reloj`, a los :05, :35 y :45); al terminar "Actualizar la web"; a mano: `reloj`, `verificar` o `facebook` | `redes/publicar.mjs --facebook`; `redes/reloj.mjs`; si toca: `npm ci`, `reels/plan.mjs --generar --solo=…`, `redes/publicar.mjs --piezas`; `redes/publicar.mjs --enlaces` | `META_TOKEN`, `GEMINI_API_KEY_REDES`; variable `REDES_ACTIVAS` | `web/data/redes.json` ("Redes: libro de publicaciones · …"); los videos quedan 3 días como artefacto | 25 min |
 | **Piezas** (`piezas.yml`) | Sólo a mano: `solo` (nombres separados por coma; **vacío no arma nada**), `todas` (armar todas las del día, a propósito), `publicar` (sí/no), `destino` (ambas, instagram, facebook) | `npm ci`, `reels/plan.mjs --generar [--solo=…]`; si `publicar`: `redes/publicar.mjs --piezas --sin-horario --destino=…` | `GEMINI_API_KEY_REDES`, `META_TOKEN`; `REDES_ACTIVAS` | `web/data/redes.json` si publicó; artefacto "piezas" 7 días (mp4, mp3, png, manifiesto) | 30 min |
 | **Panel del celular** (`panel.yml`) | Lo dispara el panel del celular con la llave de quien lo usa ("Escribir con IA", "Reescribir con IA"): `accion` (`escribir`), `id`, `pedido` (opcional; queda a la vista), `marca` (para que el celular encuentre su corrida) | Trae la caché `.cache` (`celular-notas.json`) y corre `node panel/celular.mjs escribir --id=… --pedido=…` | `GEMINI_API_KEY_REDACCION`, `GEMINI_API_KEY_REDES`, `GEMINI_API_KEY_CLASIFICACION` | `web/data/celular-borradores.json`, cifrado ("Panel del celular: borrador · …") | 8 min |
-| **Vigilancia** (`vigilancia.yml`) | cron-job.org a los :00 y :30; respaldo `schedule` cada 3 horas (a los :17 UTC); a mano: `vigilar`, `probar-resumen`, `probar-cierre` | `node redes/vigilar.mjs` | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY`, `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ANALYTICS_TOKEN`, `CLOUDFLARE_API_TOKEN`, `META_TOKEN`, las cuatro claves de IA (sólo para preguntar si andan), `GITHUB_TOKEN` (automático); variable `REDES_ACTIVAS` | `web/data/vigilancia.json` y `web/data/estadisticas.json` (no en los modos de prueba) | 10 min |
+| **Vigilancia** (`vigilancia.yml`) | El reloj de Cloudflare a los :00 y :30; respaldo `schedule` cada 3 horas (a los :17 UTC); a mano: `vigilar`, `probar-resumen`, `probar-cierre` | `node redes/vigilar.mjs` | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY`, `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ANALYTICS_TOKEN`, `CLOUDFLARE_API_TOKEN`, `META_TOKEN`, las cuatro claves de IA (sólo para preguntar si andan), `GITHUB_TOKEN` (automático); variable `REDES_ACTIVAS` | `web/data/vigilancia.json` y `web/data/estadisticas.json` (no en los modos de prueba) | 10 min |
 | **Auditoría** (`auditoria.yml`) | Lunes 12:00 UTC (9:00 en Balcarce); a mano | `redes/auditar.mjs`; `redes/auditar-redes.mjs --semana` (si falla, sigue) | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY`, `META_TOKEN` | `web/data/auditoria.json` | El de GitHub (6 h) |
 | **Auditar redes** (`auditar-redes.yml`) | A mano (opcional: `desde`, AAAA-MM-DD) | `redes/auditar-redes.mjs` cuatro veces: hoy, ayer, la semana y "crudo" | `META_TOKEN` | Nada | 10 min |
 | **Crear voces** (`crear-voces.yml`) | A mano, con un `modo` | `npm ci`, `reels/crear-voces.mjs`. **`crear`**: seis candidatos nuevos, cada uno con un audio de prueba; **`recrear`**: dos versiones nuevas de la locutora y del locutor aprobados (por ejemplo, para una clave de otro proyecto de Google), cada una con su audio; **`listar`**: la biblioteca de voces de Google; **`borrar`**: quita una voz propia. Los modos `dialogo` fueron pruebas de una charla entre las dos voces, descartadas porque sonaban falsas | `GEMINI_API_KEY_REDES` | Nada (los audios quedan 7 días como artefacto) | 30 min |
 | **Auditar voz** (`auditar-voz.yml`) | A mano (opcional: `explorar`) | `npm ci`, `reels/auditar-voz.mjs [--explorar]` | `GEMINI_API_KEY_REDES` | Nada | 15 min |
 | **Ver Facebook** (`ver-facebook.yml`) | A mano | `redes/ver-facebook.mjs` | `META_TOKEN` | Nada | 5 min |
-| **Prueba de estadísticas** (`prueba-estadisticas.yml`) | A mano | `redes/estadisticas.mjs` | `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ANALYTICS_TOKEN`, `CLOUDFLARE_API_TOKEN`, `META_TOKEN` | Nada | 5 min |
 | **Reintentar pieza** (`reintentar.yml`) | Botón del panel o a mano | `redes/reintentar.mjs` | `META_TOKEN`, `REDES_ACTIVAS` | Nada de voz: sube de nuevo el video que "Redes" guardó tres días | 2 min |
-| **Prueba de Gemini** (`prueba-gemini.yml`) | A mano | `reels/probar-gemini.mjs` (un pedido mínimo) | `GEMINI_API_KEY_REDACCION` | Nada | El de GitHub |
 | **Prueba de WhatsApp** (`prueba-whatsapp.yml`) | A mano | `redes/probar-whatsapp.mjs` (manda un mensaje y muestra la respuesta de CallMeBot, sin la clave ni el teléfono) | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` | Nada | 5 min |
+| **Auditoría IA** (`auditoria-ia.yml`) | Cada hora, a los :41 (`schedule`); a mano (`simular`) | `redes/auditar-notas.mjs` (lee las notas nuevas con Groq y avisa lo que esté mal; corrige sola sólo la ortografía chica y segura) | `GROQ_API_KEY`, `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` | `web/data/auditoria-ia.json` (cifrado) y `web/data/correcciones-auditoria.json` | 12 min |
+| **Pistas** (`pistas.yml`) | Cada 3 horas, a los :23 (`schedule`); el botón "Volver a mirar" del panel del celular; a mano (`id`, `marca`, `simular`) | `panel/revisar-pistas.mjs` (vuelve a mirar las pistas abiertas y avisa si un medio las cubrió) | `GEMINI_API_KEY_REDACCION`, `GEMINI_API_KEY_CLASIFICACION`, `TAVILY_API_KEY`, `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` | `web/data/pistas.json` y `web/data/notas-de-pistas.json` | 10 min |
+| **Fijar piezas** (`fijar-piezas.yml`) | A mano (`piezas`, `desde`, `dias`) | `reels/plan.mjs --generar`, `reels/fijas.mjs`: arma de antemano piezas con voz y las guarda para reutilizarlas unos días | `GEMINI_API_KEY_REDES` | `reels/fijas/` | 30 min |
+| **Armado con datos vacíos** (`armado-vacio.yml`) | Al subir cambios al código de la web; lunes 9:17 UTC | `web/scripts/armado-vacio.mjs`: arma el sitio con datos vacíos o a medias, para descubrir un código que rompe esos casos antes de que congele la web | Ninguno | Nada | 25 min |
+| **Pruebas con otra hora** (`pruebas-otra-hora.yml`) | Lunes 8:43 UTC; a mano | Corre las pruebas como si fuera otra hora y otra fecha (`pruebas/hora-falsa.mjs`) | Ninguno | Nada | 40 min |
+| **Respaldo** (`respaldo.yml`) | Domingos 6:17 UTC (3:17 en Balcarce); a mano | Arma un paquete de git con todo el historial y una copia de datos y fotos (artefacto de 90 días); si hay GitLab (`GITLAB_TOKEN`, variable `GITLAB_REPO`) sube un espejo, y si hay R2 (variable `R2_RESPALDOS`) sube el paquete | `GITLAB_TOKEN`, `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; variables `GITLAB_REPO`, `R2_RESPALDOS` | Nada | 40 min |
+| **Fotos a R2** (`fotos-a-r2.yml`) | A mano | Copia `web/public/fotos-notas/` a un depósito de Cloudflare R2; no borra nada ni cambia lo que ve el lector | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; variable `R2_FOTOS` | Nada | 60 min |
+| **Reloj de Cloudflare** (`reloj-cloudflare.yml`) | A mano (cuando cambia el reloj) | Sube el Worker `radar-balcarce-reloj` (`infra/reloj-cloudflare/`) con wrangler 4.139.0 y le carga el secreto | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `RELOJ_GITHUB_TOKEN` | Nada | 10 min |
 
 **Ninguno cobra**: GitHub no cobra minutos porque el repositorio es público, y
 las claves de IA son gratis. Lo que hay que cuidar es el **cupo de voz**: los
@@ -104,13 +116,14 @@ las claves de IA son gratis. Lo que hay que cuidar es el **cupo de voz**: los
 Detalles que importan:
 
 - **La hora:** los que miran la hora ponen `TZ: America/Argentina/Buenos_Aires`
-  (GitHub corre en UTC); no lo necesitan "Crear voces", "Ver Facebook", "Prueba
-  de Gemini" ni "Prueba de WhatsApp". **Node 24** en todos; los que no arman
+  (GitHub corre en UTC); no lo necesitan "Crear voces", "Ver Facebook" ni
+  "Prueba de WhatsApp". **Node 24** en todos; los que no arman
   videos no instalan nada en la raíz (`ingesta/`, `panel/` y `redes/` no usan
   dependencias).
-- **Permisos:** los seis que commitean ("Actualizar la web", "Redes", "Piezas",
-  "Panel del celular", "Vigilancia", "Auditoría") tienen `contents: write`; los
-  demás, sólo lectura; "Vigilancia", además, `actions: read`.
+- **Permisos:** los que commitean ("Actualizar la web", "Redes", "Piezas",
+  "Panel del celular", "Vigilancia", "Auditoría", "Auditoría IA", "Pistas" y
+  "Fijar piezas") tienen `contents: write`; los demás, sólo lectura;
+  "Vigilancia", además, `actions: read`.
 - **Siempre la última versión:** "Actualizar la web", "Redes", "Piezas", "Panel
   del celular", "Vigilancia" y "Auditar redes" bajan `main` al día
   (`ref: main`), no la del momento en que se los disparó.
@@ -123,7 +136,7 @@ Detalles que importan:
   `redes` (Redes y Piezas: nunca dos publicando a la vez), `cloudflare-pages`
   (la nueva **cancela** la que estaba subiendo), `panel-celular` (un borrador
   a la vez), `vigilancia` y `auditoria`.
-- **Al commitear**, los seis hacen `git pull --rebase`; si chocan en
+- **Al commitear**, los que escriben en `main` hacen `git pull --rebase`; si chocan en
   `web/data/` (o, en "Actualizar la web", en `web/public/fotos-notas/`), gana lo
   de esa corrida; reintentan hasta tres veces y, si no pueden, terminan en
   rojo. Un choque fuera de esas carpetas corta la corrida sin tocar nada.
@@ -133,35 +146,56 @@ Detalles que importan:
   leer y reintenta. **El de la PC** sube `decisiones.json`, `avisos.json` y
   `eventos-panel.json` con `pull --rebase --autostash` (`09-PANEL`).
 
-## cron-job.org: el despertador
+## El reloj de Cloudflare: el despertador (desde el 15/10/2026)
 
-- Cuenta `radarbalcarce@gmail.com`, en https://console.cron-job.org/jobs. Cada
-  trabajo pide a la API de GitHub `…/actions/workflows/<archivo>.yml/dispatches`
-  con un encabezado `Authorization` que lleva un **token de GitHub de
-  `balcardev@gmail.com`** (de grano fino, sólo este repositorio, Actions de
-  lectura y escritura). **Vence el 21/09/2027.**
-- Son **tres trabajos**: "Actualizar la web" y "Vigilancia" a los :00 y :30, y
-  el reloj de "Redes", que según el historial llega a los **:05, :35 y :45**,
-  de 0 a 22 (puede haber un trabajo de más: `PENDIENTES.md`).
-- **Si un trabajo falla varias veces seguidas, cron-job.org lo desactiva
-  solo** (pasó el 24/09 con dos, mientras Meta tenía bloqueada la cuenta). Es
-  lo primero que hay que mirar cuando algo deja de salir. Mientras tanto,
-  "Actualizar la web" corre con su `schedule` (impuntual), "Redes" arranca al
-  final de cada "Actualizar la web" y "Vigilancia" corre cada 3 horas.
+Un programa chico de Cloudflare, el Worker **`radar-balcarce-reloj`**
+(`infra/reloj-cloudflare/`), que Cloudflare despierta solo y que le pide a la API
+de GitHub que corra los workflows. Es gratis y, a diferencia de cron-job.org, no
+se apaga solo si una vez falla. **Anda desde el 15/10/2026, 14:46 UTC (11:46 en
+Balcarce).**
 
-## El reloj de Cloudflare (preparado el 9/10/2026, sin activar)
+- **Qué pide y cuándo** (las horas del Worker son UTC, pero los minutos son los
+  mismos que en Balcarce): a los **:00 y :30**, "Actualizar la web" y
+  "Vigilancia"; a los **:05, :35 y :45**, "Redes" con la acción `reloj`. Lo
+  dicen `worker.mjs` (`trabajosDelMinuto`) y `wrangler.toml`.
+- **La llave:** un token de GitHub de grano fino, **sólo para este
+  repositorio**, con «Actions: lectura y escritura». Está guardado en el
+  secreto de GitHub **`RELOJ_GITHUB_TOKEN`**; el workflow «Reloj de Cloudflare»
+  lo carga en el Worker (que lo llama `GITHUB_TOKEN`). Nunca en un chat ni en el
+  código.
+- **Cambiar o resubir el reloj:** GitHub → Actions → «Reloj de Cloudflare» →
+  Run workflow (sube `worker.mjs` con wrangler y vuelve a cargar el secreto).
+  Si `CLOUDFLARE_API_TOKEN` no tuviera permiso para Workers, fallaría con ese
+  mensaje: habría que agregarle «Workers Scripts: edición».
+- **Para ver si está vivo:** la página del Worker responde «Reloj de Radar
+  Balcarce: en hora.»; el panel de Cloudflare (Workers) muestra cada ejecución,
+  y una que GitHub no aceptó figura como fallida.
+- **Si el reloj se rompe:** "Actualizar la web" corre con su `schedule`
+  (impuntual), "Redes" arranca al final de cada "Actualizar la web" y
+  "Vigilancia" corre cada 3 horas. El vigilante avisa (`reloj-…`, `web-vieja`).
+  Se puede volver al despertador anterior reactivando los trabajos de
+  cron-job.org (abajo), pero **no los dos juntos más de un rato**: si dos relojes
+  piden lo mismo, el `concurrency` de los workflows evita que se pisen, pero se
+  gastan corridas de más.
 
-Reemplaza a cron-job.org y evita que un trabajo se desactive solo: un programa chico (`infra/reloj-cloudflare/`) que Cloudflare despierta a los :00, :05, :30, :35 y :45
-y que le pide a GitHub, con su API, lo mismo que hoy pide cron-job.org (los :00 y :30 la web y la vigilancia; los :05, :35 y :45 el reloj de Redes). Es gratis.
+### cron-job.org: el despertador anterior (pausado)
 
-Para activarlo (una sola vez, lo hace una persona):
-
-1. Crear en GitHub un token de grano fino de la cuenta del repositorio, **sólo para este repositorio**, con el permiso «Actions: lectura y escritura» (es el mismo tipo que usa cron-job.org).
-2. Guardarlo en GitHub (Settings → Secrets and variables → Actions) con el nombre `RELOJ_GITHUB_TOKEN`. Nunca en un chat.
-3. En GitHub → Actions → «Reloj de Cloudflare» → Run workflow. Sube el programa y le carga el secreto.
-4. Mirar un día que las dos cosas corran juntas (si dos relojes piden lo mismo, el `concurrency` de los workflows evita que se pisen) y recién ahí apagar los trabajos de cron-job.org.
-
-Si el token de la cuenta de Cloudflare (`CLOUDFLARE_API_TOKEN`) no tiene permiso para Workers, el paso 3 va a fallar con ese mensaje: habría que agregarle «Workers Scripts: edición».
+- Cuenta `radarbalcarce@gmail.com`, en https://console.cron-job.org/jobs. Hasta
+  el 15/10/2026 despertó a GitHub; **sus tres trabajos están PAUSADOS, no
+  borrados** ("Actualizar la web" y "Vigilancia" a los :00 y :30, y el reloj de
+  "Redes" a los :05, :35 y :45), por si hubiera que volver.
+- Cada trabajo pide a la API de GitHub
+  `…/actions/workflows/<archivo>.yml/dispatches` con un encabezado
+  `Authorization` que lleva un token de GitHub de `balcardev@gmail.com`. **Vence
+  el 21/09/2027**; si se reactivan los trabajos con el repositorio nuevo
+  (`radarbalcarce/radar-balcarce`), hay que cambiarles también la dirección y
+  poner un token con permiso sobre ese repositorio.
+- Lo que aprendimos: **si un trabajo falla varias veces seguidas, cron-job.org
+  lo desactiva solo** (pasó el 24/09 con dos, mientras Meta tenía bloqueada la
+  cuenta).
+- Los avisos del vigilante todavía nombran a cron-job.org en su texto («cron-job.org
+  pudo haberse desactivado solo»): hoy hay que leerlos como «el reloj dejó de
+  despertar».
 
 ## Cloudflare Pages: la web
 
@@ -183,9 +217,15 @@ Si el token de la cuenta de Cloudflare (`CLOUDFLARE_API_TOKEN`) no tiene permiso
 
 ## GitHub: el repositorio
 
-- `balcar-dev/radar-balcarce`, cuenta `balcardev@gmail.com`, **público desde el
-  25/09** (los públicos no pagan minutos de Actions; se revisó el historial y
-  no hay claves). **Nada sensible va al repositorio sin cifrar**: ni claves, ni
+- `radarbalcarce/radar-balcarce`, cuenta dueña `radarbalcarce@gmail.com`;
+  colaboradores: `balcardev`, Andrés (`agerace`) y Hernán
+  (`hernanaccomo-pixel`). Hasta el 15/10/2026 fue `balcar-dev/radar-balcarce`
+  (cuenta `balcardev@gmail.com`); GitHub redirige la dirección vieja, pero lo que
+  figure en los workflows, los paneles y los tokens tiene que usar la nueva.
+  **Sigue siendo público**, desde el 25/09 (los públicos no pagan minutos de
+  Actions; se revisó el historial y no hay claves): **pasarlo a privado costaría
+  minutos de Actions**, y no conviene mientras el robot siga corriendo en
+  Actions. **Hay que mantenerlo público** hasta que eso cambie. **Nada sensible va al repositorio sin cifrar**: ni claves, ni
   datos de personas (el panel de la PC guarda los suyos en `panel/datos/`, que
   no se sube), y lo que espera a una persona viaja cifrado para el panel del
   celular (regla 79).
@@ -241,13 +281,13 @@ no se avisan: son de un rato y los maneja cada corrida.
 | No se puede leer cuándo se actualizó | `web-sin-fecha` | media |
 | `www` no redirige | `www` | media |
 | La última corrida de "Actualizar la web", "Redes" o "Cloudflare Pages" falló | `falla-<nombre>` | alta si fallaron 3 de las últimas 5 |
-| No hay corridas nuevas de "Actualizar la web" o "Redes" en 100 minutos (sólo de 7 a 23) | `reloj-<nombre>` | alta: "cron-job.org pudo haberse desactivado solo" |
+| No hay corridas nuevas de "Actualizar la web" o "Redes" en 100 minutos (sólo de 7 a 23) | `reloj-<nombre>` | alta: el texto todavía dice "cron-job.org pudo haberse desactivado solo"; hoy significa que el reloj de Cloudflare dejó de despertar |
 | Volvió algo que se pidió sacar: "la vimos hace…", hasta qué hora está la farmacia, la fuente arriba de un título (reglas 1 a 3 de `10-REGLAS-Y-PRUEBAS`) | `regla-…` | alta |
 | Menos del 35 % de las notas de las últimas 24 horas tiene cuerpo (con 10 o más) | `pocos-cuerpos` | media |
 | La auditoría semanal no corre hace más de 10 días | `auditoria-vencida` | media |
 | Una clave de IA no anda (Google o Groq contestan 400 a 403) | `clave-<NOMBRE>` | alta |
 | Una voz propia ya no existe | `voz-locutora`, `voz-locutor` | alta |
-| Faltan 30 días o menos para un vencimiento: el token de cron-job.org, el dominio o una voz (con la fecha de Google) | `vence-token-github`, `vence-dominio`, `vence-voz-…` | alta en la última semana |
+| Faltan 30 días o menos para un vencimiento: el token de GitHub del reloj viejo (cron-job.org), el dominio o una voz (con la fecha de Google) | `vence-token-github`, `vence-dominio`, `vence-voz-…` | alta en la última semana |
 | Redes: piezas fijas y contrato del día, duplicados, espejos (`07-REDES`) | `pieza-…`, `falta-…`, `duplicado-…`, `sin-espejo-…`, `redes-apagadas` | según el caso |
 
 Cómo avisa:
@@ -295,12 +335,14 @@ Qué workflow usa cada uno está en la tabla de los workflows.
 | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` | Secretos | El número de los avisos (completo con 549, sin + ni espacios) y la clave que dio CallMeBot |
 | `GITHUB_TOKEN` | Automático | Lo pone GitHub en cada corrida |
 | `REDES_ACTIVAS` | Variable | El interruptor de las redes (`07-REDES`) |
+| `RELOJ_GITHUB_TOKEN` | Secreto | El token de GitHub (de grano fino, sólo este repositorio, Actions de lectura y escritura) con el que el reloj de Cloudflare despierta a los workflows; lo carga en el Worker el workflow «Reloj de Cloudflare» |
+| `TAVILY_API_KEY` | Secreto | La búsqueda con texto de las Pistas (`ingesta/busqueda.mjs`; workflow «Pistas») |
 | `CLOUDFLARE_PROJECT` | Variable opcional | Sin ella se usa `radar-balcarce`, el nombre real del proyecto de Pages |
 
 **El panel del celular no necesita ningún secreto**: usa la llave de GitHub de
 cada persona, que vive sólo en su celular (`09-PANEL`). Fuera de GitHub están
-el token de cron-job.org (en el encabezado `Authorization` de sus trabajos) y,
-en la PC, el `.env`.
+el token del reloj de Cloudflare (cargado en el Worker `radar-balcarce-reloj`; el valor está en el secreto `RELOJ_GITHUB_TOKEN`), el de cron-job.org (pausado, en el
+encabezado `Authorization` de sus trabajos) y, en la PC, el `.env`.
 
 ## Las otras cuentas
 
@@ -322,7 +364,7 @@ vigilante (`WHATSAPP_TELEFONO`).
 
 | Qué | Cuándo | Qué hacer | Quién avisa |
 |---|---|---|---|
-| Token de GitHub de cron-job.org | **21/09/2027** | Crear otro (GitHub, cuenta `balcardev@gmail.com` → Settings → Developer settings → Fine-grained tokens; sólo este repositorio, Actions de lectura y escritura) y pegarlo en el encabezado de **todos** los trabajos de cron-job.org | El vigilante, desde 30 días antes |
+| Token de GitHub de cron-job.org (reloj viejo, pausado) | **21/09/2027** | Sólo si se vuelve a usar cron-job.org: crear otro (GitHub, cuenta `balcardev@gmail.com` → Settings → Developer settings → Fine-grained tokens; sólo este repositorio, Actions de lectura y escritura) y pegarlo en el encabezado de **todos** los trabajos de cron-job.org (con la dirección del repositorio nuevo) | El vigilante, desde 30 días antes |
 | Dominio `radarbalcarce.com` (DonWeb) | **21/09/2027** | Renovarlo en DonWeb. Si vence, se cae la web y todos los enlaces de los posteos | El vigilante, desde 30 días antes |
 | Las dos voces propias de Gemini | **29/09/2027** (la fecha la da Google) | Crearlas de nuevo con "Crear voces" y cambiar los identificadores en `CRITERIO-REDES.md` § 6 (`11-OPERACION`). Si vencen, las piezas con voz dejan de salir | El vigilante, 30 días antes, con la fecha que da Google |
 | La llave del panel del celular | Un año después de crearla (la fecha que se elige al crearla) | Crear otra igual y pegarla en el celular (`11-OPERACION`) | Nadie: al vencer, el panel dice "La llave no anda" |
@@ -333,8 +375,8 @@ vigilante (`WHATSAPP_TELEFONO`).
 
 **Lo único que se paga es el dominio**, que se renueva cada año en DonWeb (el
 precio no está en el repositorio). Todo lo demás es gratis: GitHub Actions (el
-repositorio es público), Cloudflare Pages, el DNS y Web Analytics (el plan
-gratis permite publicidad; el de Vercel no), cron-job.org, la API de Meta,
+repositorio es **público**; si se pasara a privado, Actions cobraría minutos mientras el robot siga corriendo ahí), Cloudflare Pages, el DNS y Web Analytics (el plan
+gratis permite publicidad; el de Vercel no), el reloj de Cloudflare (el Worker), la API de Meta,
 CallMeBot, las tres claves de Gemini y Groq (con sus cupos por día). Si algún
 día se vuelve a usar una clave paga de Gemini, antes hay que ponerle un límite
 de gasto en Google (`PENDIENTES.md`).
@@ -343,7 +385,7 @@ de gasto en Google (`PENDIENTES.md`).
 
 | Quiero… | Dónde |
 |---|---|
-| Cambiar cada cuánto corre algo | cron-job.org (el disparo real); el `schedule` del `.yml` es sólo el respaldo |
+| Cambiar cada cuánto corre algo | El reloj de Cloudflare (`infra/reloj-cloudflare/wrangler.toml` y `worker.mjs`, y después el workflow «Reloj de Cloudflare»); el `schedule` del `.yml` es sólo el respaldo |
 | Agregar o cambiar un secreto | GitHub → Settings → Secrets and variables → Actions (lo hace una persona) y, si un workflow nuevo lo necesita, el bloque `env:` de ese paso en el `.yml` |
 | Prender o apagar las redes | Variable `REDES_ACTIVAS` |
 | Cambiar la versión de wrangler o el proyecto de Pages | `cloudflare-deploy.yml` (versión) y variable `CLOUDFLARE_PROJECT` |
@@ -361,7 +403,7 @@ de gasto en Google (`PENDIENTES.md`).
 
 | Archivo | Qué hace | Quién lo llama | Qué lee | Qué escribe |
 |---|---|---|---|---|
-| `.github/workflows/*.yml` | Los catorce workflows (tabla de arriba) | cron-job.org, GitHub, el panel del celular, una persona | secretos y variables | commits en `main`, artefactos |
+| `.github/workflows/*.yml` | Los veintiún workflows (tabla de arriba) | El reloj de Cloudflare, GitHub, el panel del celular, una persona | secretos y variables | commits en `main`, artefactos |
 | `web/scripts/generar-datos.mjs` | Todo lo que hace "Actualizar la web" entre las pruebas y la compilación | `actualizar.yml` | fuentes, `web/data/`, claves de IA | `web/data/*.json`, `web/public/fotos-notas/`, `.cache/` |
 | `web/scripts/revisar-seo.mjs` | Que el SEO siga en el HTML compilado | `actualizar.yml` | `web/out` | — |
 | `reels/claves.mjs` | Las cuatro claves de IA y el modelo de texto | redacción, lectura, fotos, voz | entorno, `.env` | — |
@@ -369,7 +411,7 @@ de gasto en Google (`PENDIENTES.md`).
 | `redes/vigilar.mjs` | El vigilante, y la revisión de claves y voces (`revisarClaves`) | `vigilancia.yml` | la web en vivo, la API de GitHub, `web/data/`, Meta, Google y Groq | `web/data/vigilancia.json`, `estadisticas.json` |
 | `redes/avisos.mjs` | Qué se dice y cómo entra en un mensaje | vigilante | portada, libro | — |
 | `redes/whatsapp.mjs` | Manda el WhatsApp por CallMeBot sin mostrar la clave | vigilante, auditoría, "Prueba de WhatsApp" | `WHATSAPP_*` | — |
-| `redes/estadisticas.mjs` | Visitas (Cloudflare) y seguidores (Meta) | vigilante, "Prueba de estadísticas" | `CLOUDFLARE_*`, `META_TOKEN` | — |
+| `redes/estadisticas.mjs` | Visitas (Cloudflare) y seguidores (Meta) | vigilante | `CLOUDFLARE_*`, `META_TOKEN` | — |
 | `redes/auditar.mjs` | Auditoría semanal de lo publicado | `auditoria.yml` | la web en vivo, `redes/formatos.mjs` | `web/data/auditoria.json` |
 | `web/public/_headers` | Encabezados de Cloudflare (también los de `/panel/`) | Cloudflare Pages | — | — |
 | `web/next.config.mjs` | Exportación estática del sitio | `next build` | — | `web/out/` |
@@ -378,7 +420,7 @@ de gasto en Google (`PENDIENTES.md`).
 
 | Falla | Cómo se nota | Qué hacer |
 |---|---|---|
-| **cron-job.org desactivó un trabajo** | "No hay corridas nuevas de…" o "El reloj de Redes no corre"; la web deja de actualizarse puntual (queda el respaldo de GitHub, impuntual) | Reactivarlo en console.cron-job.org/jobs. Si el apagado es Vigilancia, sólo quedan los avisos del respaldo cada 3 horas: fijarse que llegue el resumen de las 21 |
+| **El reloj de Cloudflare dejó de despertar** | "No hay corridas nuevas de…" o "El reloj de Redes no corre" (los textos todavía nombran a cron-job.org); la web deja de actualizarse puntual (queda el respaldo de GitHub, impuntual) | Mirar el Worker `radar-balcarce-reloj` en Cloudflare (ejecuciones fallidas: ¿venció el token `RELOJ_GITHUB_TOKEN`?), volver a subirlo con «Reloj de Cloudflare» o, de urgencia, reactivar los trabajos pausados de cron-job.org. Si el apagado es Vigilancia, sólo quedan los avisos del respaldo cada 3 horas: fijarse que llegue el resumen de las 21 |
 | **Una prueba falla en "Actualizar la web"** | Corrida roja en "Probar que nada se rompió"; "falla-Actualizar la web" y, a los 100 minutos, "web-vieja" | Leer el paso rojo. Un JSON de `web/data/` mal escrito a mano (por ejemplo `correcciones.json`) también lo causa |
 | **La web no compila** | Corrida roja en "Compilar el sitio"; no se commitea nada | Leer el error de Next |
 | **Cloudflare no sube** | "falla-Cloudflare Pages"; la web queda con la versión anterior | Mirar el paso "Subir a Cloudflare Pages" (token vencido o sin permiso, versión de wrangler) |
@@ -393,5 +435,5 @@ de gasto en Google (`PENDIENTES.md`).
 | **El WhatsApp no llega** | No llega el resumen de las 21 | "Prueba de WhatsApp"; si CallMeBot dice "APIKey is invalid", la clave está mal copiada; revisar que el teléfono tenga 549 |
 | **Faltan permisos en un token** | El resumen dice "falta permiso de Analytics" o que faltan los de Meta | Una persona regenera el token con los permisos |
 | **La auditoría semanal no corre** | `auditoria-vencida` si `web/data/auditoria.json` tiene más de 10 días (si el archivo faltara, no avisaría) | Correrla a mano (Actions → Auditoría → Run workflow) |
-| **Se vence el token de cron-job.org, el dominio o una voz** | Aviso 30 días antes | Ver "Vencimientos" |
+| **Se vence un token, el dominio o una voz** | Aviso 30 días antes | Ver "Vencimientos" |
 | **La PC está apagada** | Sólo deja de andar el panel de la PC (agenda a mano, avisos, buzón, fuentes) | Nada se rompe: la web, las redes, la vigilancia y el panel del celular siguen |

@@ -6,7 +6,8 @@
 #
 # SE CORRE A MANO (Actions → "Crear voces" → Run workflow). "crear" CREA voces
 # nuevas en el proyecto de Google (hasta 200 por proyecto, duran un año); todos
-# los modos gastan audios de la clave paga (centavos): no correrlo de más.
+# los modos gastan audios del cupo gratis de voz (10 por día, compartido con
+# Redes, Piezas y Auditar voz): no correrlo de más.
 #
 # SECRETO: GEMINI_API_KEY_REDES.
 

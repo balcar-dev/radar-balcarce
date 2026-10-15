@@ -4,6 +4,9 @@
 lo que se pensó: si algo cambia en el código, esta tabla se rehace con ese comando. Horas de Balcarce. Facebook e Instagram reciben lo mismo,
 salvo lo que se aclara.*
 
+> **Estado (15/10/2026):** foto del 9/10; no se rehizo después de los cambios del 12/10 (reglas 161 y 162). Antes de usarla para decidir algo,
+> rehacerla con `node redes/cronograma-semana.mjs`. Desde el 15/10 el que dispara "Redes" es el Worker `radar-balcarce-reloj`, a los mismos minutos.
+
 ## Cómo leerlo
 
 - **Reel** = video vertical con voz que queda en el perfil. **Historia** = dura 24 horas. **Posteo** = una nota con su foto.

@@ -1,26 +1,16 @@
-# Propuestas de mejora · octubre de 2026
+# Propuestas que siguen abiertas
 
-*8/10/2026. Son propuestas; lo que ya se hizo figura en "Avance" de [`PRIORIDADES.md`](PRIORIDADES.md).*
+*15/10/2026. Lo que queda en esta carpeta todavía se usa o está por hacerse. Las listas y auditorías del 8 y 9/10
+(`PRIORIDADES`, `MEJORAS`, `PLAN-INTEGRAL`, `DONDE-SEGUIMOS`, `PENDIENTES-AL-9-10`, `RESUMEN-PARA-LA-PC`,
+`SEMAFORO-HOY`, `PANEL-NUEVO`, `IDEAS-NUEVAS`, `MAPA-COMERCIAL-PLAN` y `registro/`) se archivaron en
+[`../historico/propuestas-2026-10/`](../historico/propuestas-2026-10/). Lo abierto está en `PENDIENTES.md`; lo
+decidido, en [`../DECISIONES.md`](../DECISIONES.md). Si algo de acá y el código no coinciden, manda el código.*
 
-- **[`DONDE-SEGUIMOS.md`](DONDE-SEGUIMOS.md)**: **empezar por acá.** El traspaso del 8/10: qué se hizo, qué sigue y quién lo hace.
-- **[`CRONOGRAMA-REDES.md`](CRONOGRAMA-REDES.md)**: qué se publica en Facebook e Instagram, a qué hora, qué día y en qué formato (posteo, historia, reel).
-- **[`PRIORIDADES.md`](PRIORIDADES.md)**: todo lo anotado, en el orden en que conviene hacerlo.
-- **[`PASOS-PARA-USTEDES.md`](PASOS-PARA-USTEDES.md)**: lo que sólo una persona puede hacer (cuentas, tarjeta, claves), paso a paso.
-- **[`PANEL-NUEVO.md`](PANEL-NUEVO.md)**: el panel único que reemplaza al de la PC: qué pasa con cada pestaña y en qué orden.
-- **[`SEMAFORO-HOY.md`](SEMAFORO-HOY.md)**: cómo funciona hoy el semáforo (verde, amarillo, rojo), sin proponer cambios.
-
-Se separa en dos listas, para no mezclar:
-
-- **[`MEJORAS.md`](MEJORAS.md)**: arreglos, mejoras y decisiones sobre lo que **ya existe** (flujo,
-  fuentes, fotos, redacción, IA, redes, medición, documentación, plataforma), ordenados de lo más simple
-  a lo más complejo. Empieza por **lo crítico, con fecha** (por ejemplo, la prueba que congela la web el
-  lunes 12/10).
-- **[`IDEAS-NUEVAS.md`](IDEAS-NUEVAS.md)**: cosas que **hoy no existen** (notas propias por sección,
-  secciones nuevas, servicios, formatos de redes, distribución, planes comerciales). Cada una dice si hay
-  datos de verdad: **comprobado** (se bajó el dato desde GitHub y trae a Balcarce), fuente accesible, solo
-  búsqueda, bloqueada, trabajo humano o especulación.
-- **[`material/`](material/)**: las páginas y videos de ejemplo que se armaron (para abrir en la PC).
-- **[`registro/`](registro/)**: la auditoría, el plan y la hoja de ruta del 8/10 tal como se escribieron.
-  Incluye la cuarta auditoría externa (la arquitectura) con su plan por etapas. Mezclan las dos cosas; se conservan como historial y por el detalle (ejemplos de títulos, fuentes, URLs).
-
-Si una lista y el código no coinciden, manda el código.
+| Documento | Qué es | Estado |
+|---|---|---|
+| [`PASOS-PARA-USTEDES.md`](PASOS-PARA-USTEDES.md) | Lo que sólo una persona puede hacer (respaldo en GitLab y R2, fotos a R2), paso a paso | Sin hacer. El workflow "Fotos a R2" nombra este archivo: **no moverlo** |
+| [`PLANTILLAS-DE-PIEZAS.md`](PLANTILLAS-DE-PIEZAS.md) | Las reglas y variantes de las escenas animadas de las piezas | Aprobadas y conectadas (regla 157); falta pasarlas a `CRITERIO-REDES.md` |
+| [`CRONOGRAMA-REDES.md`](CRONOGRAMA-REDES.md) | Qué sale en las redes, a qué hora y en qué formato | Generado (`node redes/cronograma-semana.mjs`); foto del 9/10, rehacer antes de usar |
+| [`CLAVES-DE-IA.md`](CLAVES-DE-IA.md) | Las claves y servicios de IA: qué hay y qué se podría sumar | Del 9/10; las claves se vuelven a crear cuando se elijan los modelos |
+| [`DISENOS-A-ARMAR.md`](DISENOS-A-ARMAR.md) | 2 a 4 diseños de reels y web para elegir más adelante | Sin empezar, a propósito (después del rediseño) |
+| [`material/`](material/) | Páginas y videos de ejemplo de la auditoría del 8/10 (para abrir en la PC) | Referencia |

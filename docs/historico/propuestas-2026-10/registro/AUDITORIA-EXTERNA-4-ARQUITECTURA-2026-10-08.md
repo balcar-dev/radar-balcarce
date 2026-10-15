@@ -1,3 +1,5 @@
+> **Archivado el 15/10/2026:** la cuarta auditoría externa (arquitectura) y su plan por etapas, sólo como historial; no se mantiene.
+
 # Cuarta auditoría externa: la arquitectura (8/10/2026)
 
 *Una IA revisó la arquitectura (no el sitio): qué mantener y qué cambiar. A diferencia de las tres primeras, esta no describe un

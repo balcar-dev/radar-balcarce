@@ -118,7 +118,7 @@ figure img{width:100%;height:auto;display:block;border:1px solid var(--linea);bo
 figcaption{text-align:center;font-size:.85rem;color:var(--sub);margin-top:6px;text-transform:capitalize}
 </style></head><body><main>
 <h1>Catálogo de plantillas · versión 2</h1>
-<p class="lead">Todas las variantes de cada pieza, una al lado de la otra, con la regla común y la regla propia de cada una. Cada imagen es un cuadro ya entrado de la escena animada; deslizá hacia el costado para ver las demás. Es una propuesta: todavía no está conectada a las redes.</p>
+<p class="lead">Todas las variantes de cada pieza, una al lado de la otra, con la regla común y la regla propia de cada una. Cada imagen es un cuadro ya entrado de la escena animada; deslizá hacia el costado para ver las demás. Las escenas están en producción desde el 9/10, salvo las de deportes, que todavía no se usan.</p>
 <nav>${CATEGORIAS.map((c) => `<a href="#${c.id}">${esc(c.titulo)}</a>`).join('')}</nav>
 <div class="comunes"><h2>Reglas comunes a todas las piezas</h2><ol>${REGLAS_COMUNES.map((r) => `<li>${esc(r)}</li>`).join('')}</ol></div>
 ${secciones.join('\n')}

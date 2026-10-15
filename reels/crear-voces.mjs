@@ -17,7 +17,8 @@
 //   node reels/crear-voces.mjs            crea los candidatos y los prueba
 //   node reels/crear-voces.mjs listar     lista las voces propias del proyecto
 //
-// Clave: GEMINI_API_KEY_REDES (paga). Sin dependencias fuera de ffmpeg-static.
+// Clave: GEMINI_API_KEY_REDES (gratis; el cupo de voz es de 10 audios por día,
+// compartido con Redes, Piezas y Auditar voz). Sin dependencias fuera de ffmpeg-static.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -219,7 +220,7 @@ if (['dialogo', 'dialogo2', 'dialogo3'].includes(process.argv[2])) {
 
 const creadas = [];
 // `recrear` (29/09): las dos voces aprobadas (la locutora C y el locutor A) viven en el proyecto de Google de la
-// clave paga. Con una clave de OTRO proyecto (la gratis) esos identificadores no existen: se crean de nuevo,
+// clave que ya no anda (la paga, suspendida el 29/09). Con una clave de OTRO proyecto esos identificadores no existen: se crean de nuevo,
 // dos versiones de cada una, con las mismas descripciones, y se prueban con el mismo podcast. Voice Design no
 // devuelve dos veces la misma voz: por eso son dos versiones para elegir la más parecida a la aprobada.
 const paraCrear = process.argv[2] === 'recrear'

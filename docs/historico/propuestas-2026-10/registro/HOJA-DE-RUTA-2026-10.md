@@ -1,3 +1,5 @@
+> **Archivado el 15/10/2026:** la hoja de ruta de octubre, sólo como historial (reemplazada por el rediseño desde cero del 12/10); no se mantiene.
+
 # Hoja de ruta de mejoras · 8 de octubre de 2026
 
 > **Registro de la investigación del 8/10/2026.** Este archivo mezcla mejoras de lo que ya existe con ideas nuevas, y se conserva solo como historial y como fuente del detalle. **Las listas vigentes y ordenadas están en `docs/propuestas/MEJORAS.md` (sobre lo que ya existe) y `docs/propuestas/IDEAS-NUEVAS.md` (propuestas nuevas).** Algunas afirmaciones de acá se corrigieron después: manda lo que dicen esos dos archivos.

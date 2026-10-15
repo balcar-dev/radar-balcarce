@@ -27,7 +27,7 @@
 # INTERRUPTOR: la variable REDES_ACTIVAS ("Si") en Settings → Secrets and
 # variables → Actions → Variables. Con otro valor, Facebook sólo simula (dice qué
 # publicaría) y el reloj de Instagram ni mira la hora: no arma ninguna pieza,
-# así no se gasta la voz paga de Gemini en videos que no se van a publicar
+# así no se gasta el cupo de voz de Gemini en videos que no se van a publicar
 # (redes/reloj.mjs, con la misma regla que publicar.mjs: estaActivo, 28/09).
 #
 # SECRETOS: META_TOKEN (publicar) y GEMINI_API_KEY_REDES (la voz).
@@ -104,7 +104,7 @@ jobs:
 
       # ------------------------------------------ Instagram: el reloj y las piezas
       # Sólo con las redes prendidas (28/09): con REDES_ACTIVAS en "No" el
-      # reloj seguía pidiendo la pieza, se armaba con la voz paga de Gemini cada
+      # reloj seguía pidiendo la pieza, se armaba con la voz de Gemini (cupo de 10 audios por día) cada
       # 30 minutos y no se publicaba (no queda en el libro, así que la vuelta
       # siguiente la volvía a pedir). El interruptor lo lee el propio reloj con
       # estaActivo (redes/elegir.mjs), la misma regla que publicar.mjs: apagado,

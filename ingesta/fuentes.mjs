@@ -243,7 +243,7 @@ export const FUENTES_NACIONALES = [
     alcance: 'region',
     peso: 10,
     temas: ['región', 'agro', 'policiales', 'política'],
-    nota: 'Cubre Necochea, Lobería, San Cayetano, Balcarce y Tandil. Primera fuente de región que funciona: las otras cuatro probadas (La Capital MdP, El Retrato de Hoy, 0223, La Noticia 1) fallaron.',
+    nota: 'Cubre Necochea, Lobería, San Cayetano, Balcarce y Tandil. Fue la primera fuente de región que funcionó; después se sumaron 0223 y La Noticia 1. La Capital MdP y El Retrato de Hoy siguen sin probarse bien (devolvían 403).',
   },
   // --- Región y provincia (25/09) ------------------------------------------
   // Hernán y Andrés pidieron más fuentes de la zona para tener notas más
@@ -831,10 +831,10 @@ export const MEDIOS_OFICIALES = new Set([...FUENTES, ...FUENTES_NACIONALES]
 // Candidatos a probar para región, provincia, país, deportes y automovilismo.
 // El probador dice cuáles están vivos; los que sirvan pasan a FUENTES.
 export const CANDIDATOS = [
-  // Pendientes: región y provincia. Ninguno resolvió todavía.
+  // Pendientes de probar. 0223 y La Noticia 1 ya están activas en FUENTES.
   // La Capital de Mar del Plata y El Retrato de Hoy devuelven 403 (bloquean
-  // lectores automáticos), 0223 responde pero sin items, y La Noticia 1 no
-  // publica feed: su sección de Balcarce habría que leerla de la página.
+  // lectores automáticos): habría que probarlas de nuevo desde GitHub.
+  // Carburando y ACTC (automovilismo) y Página 12 todavía no se probaron.
   { id: 'lacapitalmdp', nombre: 'La Capital (MdP)', url: 'https://www.lacapitalmdp.com/feed/', alcance: 'region' },
   { id: 'retratodehoy', nombre: 'El Retrato de Hoy', url: 'https://elretratodehoy.com.ar/feed/', alcance: 'region' },
   { id: 'pagina12', nombre: 'Página 12', url: 'https://www.pagina12.com.ar/rss/portada', alcance: 'pais' },

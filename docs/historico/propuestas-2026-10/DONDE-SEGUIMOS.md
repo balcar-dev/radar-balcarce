@@ -1,3 +1,5 @@
+> **Archivado el 15/10/2026:** el traspaso del 8/10; no se mantiene; los enlaces de adentro pueden no andar. Lo abierto pasó a `PENDIENTES.md` y las decisiones a `docs/DECISIONES.md`.
+
 # Dónde seguimos (traspaso del 8/10/2026, a la tarde)
 
 *Para quien siga desde la PC (Hernán, Andrés o la otra sesión de Claude). Está escrito para leerse en cinco minutos. El detalle de cada

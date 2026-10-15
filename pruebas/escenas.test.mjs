@@ -1,5 +1,5 @@
-// Las escenas animadas (8/10/2026; docs/propuestas/PLANTILLAS-DE-PIEZAS.md): cada pieza tiene su escena, con todas sus variantes. Propuesta para
-// aprobar: todavía no están conectadas a las redes (los ejemplos se arman con `node reels/ejemplos-plantillas.mjs`). Acá se comprueba lo que se puede
+// Las escenas animadas (8/10/2026; docs/propuestas/PLANTILLAS-DE-PIEZAS.md): cada pieza tiene su escena, con todas sus variantes. Están en
+// producción desde el 9/10, salvo las de deportes, que todavía no se usan (los ejemplos se arman con `node reels/ejemplos-plantillas.mjs`). Acá se comprueba lo que se puede
 // sin ver el video: que cada escena dibuja un SVG entero y sano en todos sus tiempos, que lleva la firma, que no hay números rotos y que cada variante
 // del clima se reconoce.
 import { test } from 'node:test';

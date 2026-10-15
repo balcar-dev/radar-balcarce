@@ -1,3 +1,5 @@
+> **Archivado el 15/10/2026:** describe el semáforo ANTES de la regla 118 (8/10): ya no vale; el semáforo de hoy está en `docs/03-SELECCION.md` y en el código.
+
 # El semáforo, tal como funciona hoy
 
 *8/10/2026. **Actualización del mismo día:** Hernán y Andrés autorizaron mejorarlo ("lo único que importa que no salga en sí es la sección necrológicas de Balcarce") y se cerraron los huecos de la sección "Huecos conocidos" (regla 118, `docs/10-REGLAS-Y-PRUEBAS.md`). Lo que sigue describe el semáforo ANTES de ese cambio, salvo donde dice lo contrario; la regla 118 dice qué se sumó. Describe el código; no propone cambios (los huecos conocidos están al final y en

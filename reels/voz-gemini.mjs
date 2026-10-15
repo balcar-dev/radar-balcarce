@@ -40,12 +40,12 @@ export const ESTILO_POR_DEFECTO = INDICACION_BASE;
 
 const dormir = (ms) => new Promise((r) => { setTimeout(r, ms); });
 
-// La clave de redes es PAGA (desde el 25/09): no hay cupo diario gratis que
-// contar. Igual Google puede limitar pedidos por minuto, así que las llamadas se
-// espacian un poco y, si salta el límite (429), se espera lo que pide Google y
-// se reintenta. Nunca conviene disparar una atrás de la otra.
+// La clave de redes es GRATIS (desde el 29/09 la paga quedó suspendida): el cupo
+// es de 10 audios por día y además Google limita pedidos por minuto, así que las
+// llamadas se espacian un poco y, si salta el límite por minuto (429), se espera
+// lo que pide Google y se reintenta. Nunca conviene disparar una atrás de la otra.
 let ultimoPedido = 0;
-const ESPACIADO = 2000; // dos segundos entre pedidos alcanzan con la clave paga
+const ESPACIADO = 2000; // dos segundos entre pedidos alcanzan para el límite por minuto
 // Una voz de diez segundos tarda unos pocos en generarse; un podcast, más.
 // Dos minutos es de sobra, y corta un pedido que se quedó colgado.
 export const ESPERA_MAXIMA_VOZ = 120_000;

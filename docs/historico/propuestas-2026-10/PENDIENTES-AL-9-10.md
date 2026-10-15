@@ -1,3 +1,5 @@
+> **Archivado el 15/10/2026:** los pendientes consolidados del 9/10; no se mantiene; los enlaces de adentro pueden no andar. Lo abierto pasó a `PENDIENTES.md` y las decisiones a `docs/DECISIONES.md`.
+
 # Pendientes consolidados · 9/10/2026
 
 *Armado el 9/10 con dos auditorías (una de pendientes y salud de los robots, otra de rendimiento del sitio) y lo hecho en el día. Es la lista "madre" para

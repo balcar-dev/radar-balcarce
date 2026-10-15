@@ -5,7 +5,7 @@
 //
 //   node redes/estadisticas.mjs    mide ahora y muestra los números y los
 //                                  permisos que faltan (no guarda ni avisa;
-//                                  lo usa el workflow "Prueba de estadísticas")
+//                                  se corre a mano; el vigilante usa las mismas funciones)
 //
 // De dónde sale cada cosa:
 //

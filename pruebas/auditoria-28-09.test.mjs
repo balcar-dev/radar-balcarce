@@ -147,7 +147,7 @@ test('una figura que además toca la zona conserva las dos marcas', () => {
 
 test('el modelo de texto de Gemini está escrito en un solo lugar', () => {
   assert.equal(MODELO_DE_TEXTO, 'gemini-flash-lite-latest');
-  for (const f of ['ingesta/fotos.mjs', 'ingesta/lectura-ia.mjs', 'reels/reescritura.mjs', 'reels/auditar-voz.mjs', 'reels/probar-gemini.mjs']) {
+  for (const f of ['ingesta/fotos.mjs', 'ingesta/lectura-ia.mjs', 'reels/reescritura.mjs', 'reels/auditar-voz.mjs']) {
     assert.doesNotMatch(leer(f), /gemini-flash-lite-latest/, f);
   }
 });

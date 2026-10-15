@@ -245,7 +245,7 @@ repositorio con la llave de cada persona, y lo sensible viaja cifrado.
 
 ## El panel de la PC
 
-> **En desuso desde el 8/10/2026:** Hernán y Andrés confirmaron que nunca lo usaron; sólo usan el del celular (o lo abren online). No se le agregan funciones. Se retira cuando se confirme que nada depende de él (`docs/propuestas/PANEL-NUEVO.md`).
+> **En desuso desde el 8/10/2026:** Hernán y Andrés confirmaron que nunca lo usaron; sólo usan el del celular (o lo abren online). No se le agregan funciones. Se retira cuando se confirme que nada depende de él (`docs/historico/propuestas-2026-10/PANEL-NUEVO.md`, archivado el 15/10/2026).
 
 Un programa de Node que corre **sólo en la PC de Hernán**
 (`http://localhost:4321`): busca noticias cada 10 minutos, deja decidir las

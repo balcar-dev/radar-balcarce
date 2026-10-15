@@ -221,13 +221,6 @@ test('el workflow de Vigilancia corre con la hora de Balcarce y guarda las estad
   assert.match(y, /META_TOKEN: \$\{\{ secrets\.META_TOKEN \}\}/);
 });
 
-test('la prueba de estadísticas no manda WhatsApp ni guarda nada', () => {
-  const y = leer('.github/workflows/prueba-estadisticas.yml');
-  assert.ok(!/WHATSAPP/.test(y));
-  assert.match(y, /contents: read/);
-  assert.match(y, /node redes\/estadisticas\.mjs/);
-});
-
 test('estadisticas.json existe y tiene la forma que espera el vigilante', () => {
   const j = JSON.parse(leer('web/data/estadisticas.json'));
   assert.ok(Array.isArray(j.puntos));

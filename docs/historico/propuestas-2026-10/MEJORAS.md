@@ -1,3 +1,5 @@
+> **Archivado el 15/10/2026:** el detalle de cada mejora de la auditoría del 8/10; no se mantiene; los enlaces de adentro pueden no andar. Lo abierto pasó a `PENDIENTES.md` y las decisiones a `docs/DECISIONES.md`.
+
 # Mejoras y decisiones sobre lo que ya existe
 
 *Armado el 8/10/2026. Acá va **solo lo que ya existe** en Radar Balcarce: arreglos, cosas para

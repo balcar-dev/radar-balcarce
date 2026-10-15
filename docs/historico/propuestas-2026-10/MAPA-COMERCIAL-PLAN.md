@@ -1,3 +1,5 @@
+> **Archivado el 15/10/2026:** su contenido pasó a `COMERCIAL.md`, sección "El mapa comercial (plan del 9/10)". Se guarda como estaba; no se mantiene.
+
 # El mapa comercial de Balcarce: plan para cuando termine lo técnico · 9/10/2026
 
 *Pedido de Hernán (9/10): armar la base de todo lo comercial de Balcarce (comercios, profesionales, oficios, agro, servicios), con sus formas de contacto, para

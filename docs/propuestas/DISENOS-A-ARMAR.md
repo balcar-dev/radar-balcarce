@@ -2,6 +2,8 @@
 
 *No se implementa nada ahora. Es la guía para, cuando terminen de actualizar toda la web, armar entre 2 y 4 diseños distintos entre sí, mostrarlos lado a lado y elegir.*
 
+> **Estado (15/10/2026): sin empezar, a propósito.** Va después del rediseño desde cero (`docs/DECISIONES.md`).
+
 ## Qué pidieron
 - Buscar diseños que funcionan en animaciones y reels, y todo lo visual que hoy tiene un medio digital moderno.
 - Mejorar cómo se ve la web, **sin perder lo rápida y fluida que es**.

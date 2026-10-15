@@ -1,3 +1,5 @@
+> **Archivado el 15/10/2026:** la lista de 190 puntos del 8/10 con su "Avance"; no se mantiene; los enlaces de adentro pueden no andar. Lo abierto pasó a `PENDIENTES.md` y las decisiones a `docs/DECISIONES.md`.
+
 # Orden de trabajo · lista completa
 
 *8/10/2026. Junta todo lo anotado: la auditoría propia, la revisión archivo por archivo, la de SEO, las tres

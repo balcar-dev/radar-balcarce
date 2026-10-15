@@ -332,7 +332,7 @@ notas con foto en tres días; la causa principal de las que no, los menores reco
 
 ### Groq (sondeo del 1/10)
 
-La clave gratis de Groq (`redes/sondear-groq.mjs`, workflow "Sondear Groq", a mano) ve cuatro modelos de texto: `openai/gpt-oss-120b`, `openai/gpt-oss-20b` y `qwen/qwen3.8-27b` (1.000 pedidos por día y 8.000 tokens por minuto cada uno) y `allam-2-7b` (7.000 por día, 6.000 por minuto; está pensado para árabe). **El único que acepta imágenes es `qwen/qwen3.8-27b`**: los gpt-oss rechazan las imágenes. Por eso no hay un segundo modelo de visión de respaldo en Groq, y con 8.000 tokens por minuto una comparación con varias fotos puede dar 413 o 429.
+La clave gratis de Groq (se sondeó a mano el 1/10 con un script de prueba que se borró el 15/10/2026; el historial de git lo guarda) ve cuatro modelos de texto: `openai/gpt-oss-120b`, `openai/gpt-oss-20b` y `qwen/qwen3.8-27b` (1.000 pedidos por día y 8.000 tokens por minuto cada uno) y `allam-2-7b` (7.000 por día, 6.000 por minuto; está pensado para árabe). **El único que acepta imágenes es `qwen/qwen3.8-27b`**: los gpt-oss rechazan las imágenes. Por eso no hay un segundo modelo de visión de respaldo en Groq, y con 8.000 tokens por minuto una comparación con varias fotos puede dar 413 o 429.
 
 ### El repaso y las fuentes nuevas (1/10/2026)
 

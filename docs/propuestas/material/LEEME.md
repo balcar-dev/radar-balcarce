@@ -11,11 +11,10 @@ o `.mp4`. No necesitan internet ni instalar nada.
 | `panel-nuevo-maqueta.html` | Maqueta del panel nuevo del celular (para mirar, no funciona de verdad) |
 | `panel-auditoria-maqueta.html` | Segunda maqueta del panel nuevo, hecha a partir de la auditoría del panel |
 | `videos/ejemplo-*.mp4` | Ocho ejemplos de los videos animados con subtítulos (nota con foto, clima, repaso, clima de día lindo, farmacia con dos y con tres de turno, participá, efeméride, feriado) |
-| `videos/*.mjs` | Los guiones con que se armaron esos ejemplos (necesitan `ffmpeg`; son de referencia, no forman parte del sistema) |
 
 **Lo que no está acá a propósito:** los detalles de seguridad y los montos comerciales. Esos viven sólo en la pestaña "Privado" de la
 página privada de propuestas, porque este repositorio es público.
 
-Los textos de la auditoría están en la carpeta de arriba: [`PRIORIDADES.md`](../PRIORIDADES.md) (el orden de trabajo y el avance),
-[`MEJORAS.md`](../MEJORAS.md), [`IDEAS-NUEVAS.md`](../IDEAS-NUEVAS.md), [`SEMAFORO-HOY.md`](../SEMAFORO-HOY.md) y
-[`registro/`](../registro/).
+Los textos de la auditoría se archivaron el 15/10/2026 en
+[`docs/historico/propuestas-2026-10/`](../../historico/propuestas-2026-10/) (`PRIORIDADES.md`, `MEJORAS.md`, `IDEAS-NUEVAS.md`,
+`SEMAFORO-HOY.md` y `registro/`). Los guiones `.mjs` de los videos se borraron el 15/10 (siguen en el historial de git).

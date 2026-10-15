@@ -67,7 +67,7 @@ const VENTANAS = {
 /**
  * El aviso de clima (helada fuerte, granizo, viento de más de 60 km/h) no
  * tiene hora: sale apenas se detecta. Para el reloj, "su hora" es la de la
- * primera vuelta del día de cron-job.org con gente despierta (7:00) y vale
+ * primera vuelta del día del reloj con gente despierta (7:00) y vale
  * hasta las 22:00: si el aviso aparece a las 15:00, la vuelta de las 15:05 lo
  * encuentra dentro de su ventana y lo pide. Sale una vez por día y por tipo
  * (la clave del libro es el día y `aviso-<tipo>`). Antes tenía `hora: 'ahora'`,
@@ -98,8 +98,9 @@ export function avisoDeClima(clima, ahora = new Date()) {
 
 /** Las piezas por corrida. Antes eran 2, para que salieran de a poco, pero con el
  *  reloj impuntual de GitHub una pieza que quedaba para la corrida siguiente se
- *  podía perder. La clave de Gemini es paga y no hay cupo que cuidar: sale todo
- *  lo que toque, junto. */
+ *  podía perder. El cupo de voz es de 10 audios por día (compartido con las
+ *  otras corridas de voz), pero el reloj ya reparte las piezas del día y una
+ *  que se pierde no se recupera: sale todo lo que toque, junto. */
 export const POR_CORRIDA = 6;
 
 /** Los tres podcasts del día: mañana, tarde y noche. Los usa reels/plan.mjs. */

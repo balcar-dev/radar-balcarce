@@ -21,7 +21,8 @@ se listan en `docs/00-INDICE.md`.
 
 ```
 radar-balcarce/
-├── .github/workflows/   14 workflows: lo que corre solo en GitHub (docs/08)
+├── .github/workflows/   21 workflows: lo que corre solo en GitHub (docs/08)
+├── infra/               el reloj propio en Cloudflare (reloj-cloudflare/, desde el 15/10/2026; docs/08)
 ├── ingesta/             el motor: fuentes, cruce, selección, lectura con IA, verificador. SIN dependencias (docs/02, 03, 04)
 ├── reels/               placas, voz, video y la reescritura con IA. SÍ tiene dependencias (docs/04, 07)
 ├── redes/               Facebook, Instagram, contrato, vigilante, WhatsApp. SIN dependencias (docs/07, 08)
@@ -60,18 +61,27 @@ la caché de Actions), `web/.next/`, `web/out/`, `web/public/_redirects`,
 
 | Archivo | Qué hace | Quién lo llama | ¿En uso? |
 |---|---|---|---|
-| `actualizar.yml` | "Actualizar la web": pruebas, ingesta, lectura y reescritura con IA, fotos, datos, compilar, revisar SEO, commit de `web/data/` | cron-job.org cada 30 min; `schedule` 7 y 37 de respaldo; el panel del celular; a mano | Sí |
+| `actualizar.yml` | "Actualizar la web": pruebas, ingesta, lectura y reescritura con IA, fotos, datos, compilar, revisar SEO, commit de `web/data/` | El reloj de Cloudflare cada 30 min; `schedule` 7 y 37 de respaldo; el panel del celular; a mano | Sí |
 | `cloudflare-deploy.yml` | "Cloudflare Pages": compila y sube `web/out` con wrangler | Al terminar bien "Actualizar la web"; a mano | Sí |
-| `redes.yml` | "Redes": Facebook, el reloj, armar y subir piezas, completar direcciones, guardar el libro | cron-job.org; al terminar "Actualizar la web"; a mano | Sí |
+| `redes.yml` | "Redes": Facebook, el reloj, armar y subir piezas, completar direcciones, guardar el libro | El reloj de Cloudflare; al terminar "Actualizar la web"; a mano | Sí |
 | `piezas.yml` | "Piezas": armar (y publicar) una pieza a mano | A mano | A mano |
 | `panel.yml` | "Panel del celular": la IA escribe una nota a pedido y deja el borrador cifrado | El panel del celular | Sí |
-| `vigilancia.yml` | "Vigilancia": `redes/vigilar.mjs` | cron-job.org cada 30 min; `schedule` cada 3 h; a mano | Sí |
+| `vigilancia.yml` | "Vigilancia": `redes/vigilar.mjs` | El reloj de Cloudflare cada 30 min; `schedule` cada 3 h; a mano | Sí |
 | `auditoria.yml` | "Auditoría": medidas, íconos, SEO en vivo y la semana del contrato; guarda `web/data/auditoria.json` | Lunes 12:00 UTC; a mano | Sí |
 | `auditar-redes.yml` | "Auditar redes": el contrato contra Meta (hoy, ayer, semana, crudo) | A mano | A mano |
 | `auditar-voz.yml` | "Auditar voz": clips con la voz real y su transcripción (gasta cupo de voz) | A mano | A mano |
 | `crear-voces.yml` | "Crear voces": crea, recrea, lista o borra las voces propias (los modos de diálogo fueron pruebas descartadas) | A mano | A mano |
 | `ver-facebook.yml` | "Ver Facebook": qué hay publicado de verdad en la página | A mano | A mano |
-| `prueba-estadisticas.yml`, `prueba-gemini.yml`, `prueba-whatsapp.yml` | Las pruebas sueltas: visitas y seguidores (y qué permisos faltan), un pedido mínimo con la clave de redacción, un WhatsApp por CallMeBot | A mano | A mano |
+| `prueba-whatsapp.yml` | "Prueba de WhatsApp": un WhatsApp por CallMeBot (las otras pruebas sueltas, de estadísticas, de Gemini y los sondeos de Groq y de búsqueda, se borraron el 15/10/2026) | A mano | A mano |
+| `reintentar.yml` | "Reintentar pieza": vuelve a subir una parte de una pieza de redes que no salió, sin pedir la voz | El botón del panel del celular; a mano | Sí |
+| `auditoria-ia.yml` | "Auditoría IA": lee las notas nuevas con Groq y avisa lo que esté mal | `schedule` cada hora; a mano | Sí |
+| `pistas.yml` | "Pistas": vuelve a mirar las pistas abiertas | `schedule` cada 3 h; el panel del celular; a mano | Sí |
+| `fijar-piezas.yml` | "Fijar piezas": arma de antemano piezas con voz para reutilizarlas | A mano | A mano |
+| `armado-vacio.yml` | "Armado con datos vacíos": arma el sitio con datos vacíos o a medias | Al subir cambios al código de la web; lunes | Sí |
+| `pruebas-otra-hora.yml` | "Pruebas con otra hora": corre las pruebas como si fuera otra hora y otra fecha | Lunes; a mano | Sí |
+| `respaldo.yml` | "Respaldo": paquete de git, datos y fotos; espejo en GitLab y R2 si están | Domingos; a mano | Sí |
+| `fotos-a-r2.yml` | "Fotos a R2": copia las fotos de las notas a un depósito de Cloudflare R2 | A mano | A mano |
+| `reloj-cloudflare.yml` | "Reloj de Cloudflare": sube el Worker `radar-balcarce-reloj` y le carga el secreto | A mano | A mano |
 
 ## `ingesta/` — el motor, sin dependencias
 
@@ -112,7 +122,6 @@ la caché de Actions), `web/.next/`, `web/out/`, `web/public/_redirects`,
 | `duracion.mjs` | Mide un video y recorta la historia que pasa de 58 segundos | `reel.mjs` | Sí |
 | `placa.mjs` | Dibuja las placas (SVG → PNG de 1080 × 1920) | `plan.mjs`, `reel.mjs` | Sí |
 | `plan.mjs` | El plan del día: qué pieza, con qué guion, placa y hora; con `--generar`, arma los videos. Lee lo publicado (`web/data/portada.json`, `agenda.json`) | `redes.yml`, `piezas.yml` | Sí |
-| `probar-gemini.mjs` | Un pedido mínimo a Gemini con la clave de redacción | `prueba-gemini.yml` | A mano |
 | `reel.mjs` | Arma un video: placa, voz (sólo Gemini), subtítulos, ffmpeg | `plan.mjs` | Sí |
 | `reescritura.mjs` | La reescritura con IA de punta a punta: orden, topes, texto completo, pedido, verificación, partes internas, nivel de verificación, semáforo sobre lo escrito | `generar-datos.mjs` (nube), `panel/reescribir-una.mjs`, `panel/servidor.mjs` | Sí |
 | `voz-gemini.mjs` | La voz de Gemini 3.8 (Interactions API, clave de redes): texto literal, estilo aparte, la voz propia de cada pieza; corta si se acabó el cupo del día | `reel.mjs`, `auditar-voz.mjs` | Sí |
@@ -131,7 +140,7 @@ la caché de Actions), `web/.next/`, `web/out/`, `web/public/_redirects`,
 | `datos.mjs` | Traduce `web/data/portada.json` a los datos que espera el plan | `reels/plan.mjs` | Sí |
 | `elegir.mjs` | Qué se publica: reglas de Facebook (`vaAFacebookPorLoQueEs`: lo aprobado por una persona va sólo si lo marcó), texto del posteo, podcasts, `esParaLasRedes`, el interruptor (`estaActivo`) | `publicar.mjs`, `reloj.mjs`, `reels/plan.mjs`, `contrato.mjs` y más | Sí |
 | `espejo.mjs` | Qué espejos de Instagram reintentar | `publicar.mjs` | Sí |
-| `estadisticas.mjs` | Visitas (Cloudflare) y seguidores (Meta) | `vigilar.mjs`, `prueba-estadisticas.yml` | Sí |
+| `estadisticas.mjs` | Visitas (Cloudflare) y seguidores (Meta) | `vigilar.mjs` | Sí |
 | `formatos.mjs` | Las medidas de cada red, con fecha de verificación | `auditar.mjs`, pruebas | Sí |
 | `guiones.mjs` | Lo que dice la voz en cada pieza (bancos de frases) y `revisarTexto` | `reels/plan.mjs`, `elegir.mjs`, `panel/servidor.mjs`, `reels/reescritura.mjs` | Sí |
 | `meta.mjs` | Habla con Meta (Graph v23.0): posteo, foto, video, dirección pública, verificación; `PAGINA_DE_FACEBOOK`, el único identificador de la página | `publicar.mjs`, `auditar-redes.mjs`, `estadisticas.mjs`, `ver-facebook.mjs` | Sí |
