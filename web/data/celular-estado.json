@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T22:02:42.365Z",
- "portada": 56,
- "archivo": 1140,
+ "generado": "2026-10-15T22:29:30.291Z",
+ "portada": 58,
+ "archivo": 1143,
  "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-15T22:02:42.394Z",
+  "generado": "2026-10-15T22:29:30.318Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -64,7 +64,7 @@
     "voz": "locutor",
     "ventana": 300,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-15T22:02:25.531Z"
    },
    {
     "nombre": "clima-noche",
@@ -157,11 +157,11 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 54,
     "notas": [
      {
-      "id": "1ylxz2o",
-      "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
+      "id": "pel8ok",
+      "titulo": "LALCEC organiza actividades y mamografías gratuitas por el mes rosa",
       "seccion": "Balcarce"
      },
      {
@@ -212,14 +212,14 @@
    ],
    "cola": [
     {
-     "id": "1ylxz2o",
-     "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
+     "id": "1f8plkr",
+     "titulo": "El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre",
      "seccion": "Balcarce",
      "marcada": false
     },
     {
-     "id": "1f8plkr",
-     "titulo": "El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre",
+     "id": "1ylxz2o",
+     "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
      "seccion": "Balcarce",
      "marcada": false
     },
