@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T03:31:59.047Z",
- "portada": 57,
- "archivo": 1105,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-15T04:02:01.390Z",
+ "portada": 53,
+ "archivo": 1101,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-15T03:31:59.091Z",
+  "generado": "2026-10-15T04:02:01.427Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,19 +126,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 28,
-    "notas": [
-     {
-      "id": "17v35o5",
-      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "11d0zcr",
-      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
-      "seccion": "Automovilismo"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    },
    {
     "nombre": "podcast",
@@ -147,8 +136,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 22,
+    "segundos": 34,
     "notas": [
+     {
+      "id": "17v35o5",
+      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
+      "seccion": "Balcarce"
+     },
      {
       "id": "wfa595",
       "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
