@@ -120,7 +120,7 @@ const texto = (s) => JSON.stringify(String(s));
 
 /** Cuál es el siteTag de radarbalcarce.com para la API: se le pregunta a
  *  Cloudflare qué sitios de la cuenta tuvieron visitas en la última semana. */
-async function buscarSitio({ cuenta, token, ahora, fetchFn }) {
+export async function buscarSitio({ cuenta, token, ahora, fetchFn }) {
   const query = `{ viewer { accounts(filter: { accountTag: ${texto(cuenta)} }) {
     sitios: rumPageloadEventsAdaptiveGroups(limit: 50, orderBy: [count_DESC], filter: { datetime_geq: ${texto(iso(ahora.getTime() - 7 * 86400e3))}, datetime_leq: ${texto(iso(ahora.getTime()))} }) {
       count dimensions { siteTag requestHost }
@@ -413,7 +413,8 @@ async function main() {
   console.log(textoEstadisticas({ punto, puntos: historia.puntos, ahora, nombreDeCamino: nombresDeCaminos(portada.notas) }) || '(nada para mostrar)');
 }
 
-if (process.argv[1] && process.argv[1].endsWith('estadisticas.mjs')) {
+// Nombre exacto: `reparar-estadisticas.mjs` también termina en «estadisticas.mjs» y se ponía a medir al importarse/correrse.
+if (process.argv[1] && path.basename(process.argv[1]) === 'estadisticas.mjs') {
   await main().catch((e) => {
     console.error(`No se pudieron medir las estadísticas: ${e?.stack ?? e}`);
     process.exit(1);

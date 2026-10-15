@@ -92,12 +92,12 @@ export function diaIncoherente(d = {}) {
  *
  * @returns {Promise<{ dias: Record<string, object>, faltan: string[] }>}
  */
-export async function detalleDeCloudflare({ consultar, cuenta, token, siteTag, ahora = new Date(), fetchFn = fetch, esperaReintento = 15000 }) {
-  let r = await juntarDetalle({ consultar, cuenta, token, siteTag, ahora, fetchFn });
+export async function detalleDeCloudflare({ consultar, cuenta, token, siteTag, ahora = new Date(), fetchFn = fetch, esperaReintento = 15000, cuantos = DIAS_A_MEDIR }) {
+  let r = await juntarDetalle({ consultar, cuenta, token, siteTag, ahora, fetchFn, cuantos });
   const malos = Object.keys(r.dias).filter((d) => diaIncoherente(r.dias[d]));
   if (malos.length) {
     if (esperaReintento) await new Promise((fin) => setTimeout(fin, esperaReintento));
-    const otra = await juntarDetalle({ consultar, cuenta, token, siteTag, ahora, fetchFn });
+    const otra = await juntarDetalle({ consultar, cuenta, token, siteTag, ahora, fetchFn, cuantos });
     // Lo que ahora cierra se queda; lo que sigue contradiciéndose se marca.
     for (const d of malos) if (!diaIncoherente(otra.dias[d])) r.dias[d] = otra.dias[d]; else r.dias[d] = { sinLectura: true };
     r = { dias: r.dias, faltan: [...r.faltan, ...otra.faltan.filter((f) => !r.faltan.includes(f))] };
@@ -112,8 +112,8 @@ export async function detalleDeCloudflare({ consultar, cuenta, token, siteTag, a
   return r;
 }
 
-async function juntarDetalle({ consultar, cuenta, token, siteTag, ahora, fetchFn }) {
-  const rango = diasAMedir(ahora);
+async function juntarDetalle({ consultar, cuenta, token, siteTag, ahora, fetchFn, cuantos = DIAS_A_MEDIR }) {
+  const rango = diasAMedir(ahora, cuantos);
   const dias = Object.fromEntries(rango.map((d) => [d.dia, {}]));
   const faltan = [];
   const filtro = (desde, hasta) => `{ siteTag: ${texto(siteTag)}, datetime_geq: ${texto(iso(desde))}, datetime_leq: ${texto(iso(hasta))} }`;
