@@ -1,7 +1,44 @@
 {
- "generado": "2026-10-16T21:31:51.341Z",
+ "generado": "2026-10-16T22:02:06.394Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "8dpdqi",
+   "titulo": "El Colegio de Médicos bonaerense advirtió que la crisis del PAMI amenaza al sistema sanitario",
+   "copete": "La entidad denunció el desfinanciamiento del organismo y alertó sobre las consecuencias de la interrupción de prestaciones para jubilados y pensionados. Reclamó una mesa de diálogo urgente, actualización de aranceles y cancelación de las deudas con prestadores y profesionales…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-16T13:21:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/el-colegio-de-medicos-bonaerense-advirtio-que-la-crisis-del-pami-amenaza-al-sistema-sanitario/",
+     "fecha": "2026-10-16T14:26:33.000Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/la-ciudad/crisis-del-pami-los-medicos-advierten-que-pueden-colapsar-los-hospitales-publicos-la-ciudad_1792156440",
+     "fecha": "2026-10-16T13:21:00.000Z"
+    },
+    {
+     "medio": "0221",
+     "enlace": "https://www.0221.com.ar/provincia/el-colegio-medicos-advirtio-que-la-crisis-del-pami-amenaza-desbordar-los-hospitales-publicos-n135924",
+     "fecha": "2026-10-16T15:37:00.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/el-colegio-de-medicos-advirtio-que-la-crisis-del-pami-amenaza-con-desbordar-los-hospitales-publicos/",
+     "fecha": "2026-10-16T14:19:04.000Z"
+    },
+    {
+     "medio": "Punto Noticias",
+     "enlace": "https://puntonoticias.com/colegio-de-medicos-advirtio-que-la-crisis-del-pami-amenaza-con-desbordar-los-hospitales-publicos/",
+     "fecha": "2026-10-16T16:38:25.000Z"
+    }
+   ],
+   "intentos": 4,
+   "motivo": "semáforo: necesita ojo humano: \"denunció\", en lo que escribió la IA (título, bajada o texto para redes)",
+   "maximo": 4
+  },
   {
    "id": "5bzm11",
    "titulo": "Sin oferentes, finalizó el acto administrativo de la Licitación Pública nº 3/26",
@@ -18,6 +55,11 @@
      "medio": "Infórmese Primero (FM 104.9)",
      "enlace": "http://www.informeseprimero.com.ar/2026/10/sin-oferentes-la-municipalidad.html",
      "fecha": "2026-10-16T16:49:02.306Z"
+    },
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45101-el-segundo-llamado-a-licitacion-del-frigorifico-municipal-volvio-a-quedar-desierto/",
+     "fecha": null
     }
    ],
    "intentos": 1,
@@ -102,6 +144,11 @@
      "fecha": "2026-10-16T11:30:00.000Z"
     },
     {
+     "medio": "Los Andes (Mendoza)",
+     "enlace": "https://www.losandes.com.ar/politica/diego-santilli-dijo-que-los-gobernadores-deberian-estar-preocupados-un-posible-regreso-del-kirchnerismo-n6010629",
+     "fecha": "2026-10-16T21:51:00.000Z"
+    },
+    {
      "medio": "Radio Mitre",
      "enlace": "https://radiomitre.cienradios.com/videos/diego-santilli-los-que-deberian-estar-preocupados-son-los-gobernadores-si-el-kirchnerismo-vuelve-y-gana-kicillof/",
      "fecha": "2026-10-16T13:52:11.000Z"
@@ -157,288 +204,6 @@
    "intentos": 4,
    "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 4
-  },
-  {
-   "id": "dpwrvn",
-   "titulo": "Murió Fernando Confessore, el reconocido meteorólogo, a los 58 años",
-   "copete": "El reconocido meteorólogo Fernando Confessore , murió esta madrugada del viernes 16 de octubre. Al aire en Alguien tiene que decirlo, Gabriel Iezzi compartió los primeros detalles del fallecimiento, ocurrió dentro de su casa por una descompensación repentina. Fernando Confessore…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-16T09:52:44.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/sociedad/murio-fernando-confessore-el-reconocido-meteorologo-a-los-58-anos/",
-     "fecha": "2026-10-16T09:52:44.000Z"
-    },
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/murio-fernando-confessore-el-meteorologo-historico-de-tn-509",
-     "fecha": "2026-10-16T12:08:54.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/sociedad/murio-fernando-confessore-reacciones-y-mensajes-de-despedida-al-meteorologo-que-trabajaba-en-el-nid16102026/",
-     "fecha": "2026-10-16T20:32:01.000Z"
-    },
-    {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/sociedad/a-los-58-anos-murio-fernando-confessore-el-hombre-que-nos-daba-el-clima-cada-manana-n56552",
-     "fecha": "2026-10-16T12:39:00.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/show/television/2026/10/16/video-asi-fue-la-despedida-de-fernando-confessore-en-el-programa-donde-cada-tarde-daba-el-pronostico/",
-     "fecha": "2026-10-16T17:25:49.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/show/famosos/2026/10/16/murio-fernando-confessore-a-los-58-anos/",
-     "fecha": "2026-10-16T12:15:57.000Z"
-    },
-    {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/espectaculos/murio-fernando-confessore-asi-fue-desesperado-llamado-esposa-911-2026101613169",
-     "fecha": "2026-10-16T16:16:00.000Z"
-    },
-    {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/espectaculos/murio-confessore-asi-fueron-ultimos-minutos-vida-20261016124846",
-     "fecha": "2026-10-16T15:48:00.000Z"
-    },
-    {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/espectaculos/murio-historico-meteorologo-tn-fernando-confessore-2026101681957",
-     "fecha": "2026-10-16T11:19:00.000Z"
-    },
-    {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/protagonistas/a04-quien-era-fernando-confessore-la-carrera-y-la-familia-del-meteorologo-de-tn-a50-que-murio-a-los-58-anos.phtml",
-     "fecha": "2026-10-16T16:38:00.000Z"
-    },
-    {
-     "medio": "Página/12",
-     "enlace": "https://www.pagina12.com.ar/2026/10/16/murio-el-meteorologo-fernando-confessore/",
-     "fecha": "2026-10-16T11:02:43.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/conmocion-murio-fernando-confessore-el-reconocido-meteorologo-tn-los-58-anos-n1607020",
-     "fecha": "2026-10-16T10:14:00.000Z"
-    },
-    {
-     "medio": "Canal 26",
-     "enlace": "https://www.canal26.com/espectaculos/2026/10/16/murio-fernando-confessore-a-los-58-anos-que-le-paso-al-meteorologo-que-marco-una-epoca-en-la-television/",
-     "fecha": "2026-10-16T13:36:49.000Z"
-    },
-    {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/espectaculos/murio-fernando-confessore-el-historico-meteorologo-tn-los-58-anos-n924838",
-     "fecha": "2026-10-16T10:23:00.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/espectaculos/de-que-murio-fernando-confessore--el-periodista-de-tn_a6ad20a3842d6446c84850fc2",
-     "fecha": "2026-10-16T11:27:00.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/espectaculos/murio-fernando-confessore--periodista-de-tn--a-los-58-anos_a6ad1faac42d6446c848298a0",
-     "fecha": "2026-10-16T10:22:00.000Z"
-    },
-    {
-     "medio": "El Día",
-     "enlace": "https://www.eldia.com/espectaculos/de-que-murio-fernando-confessore-el-historico-meteorologo-de-tn-que-fallecio-a-los-58-anos-espectaculos_1792183440",
-     "fecha": "2026-10-16T20:45:00.000Z"
-    },
-    {
-     "medio": "El Día",
-     "enlace": "https://www.eldia.com/espectaculos/murio-fernando-confessore-el-reconocido-meteorologo-de-tn-a-los-58-anos-espectaculos_1792145040",
-     "fecha": "2026-10-16T10:11:00.000Z"
-    },
-    {
-     "medio": "0221",
-     "enlace": "https://www.0221.com.ar/nacional/murio-el-meteorologo-tn-fernando-confessore-los-58-anos-sufrir-un-infarto-n135905",
-     "fecha": "2026-10-16T11:36:00.000Z"
-    },
-    {
-     "medio": "La Tecla",
-     "enlace": "https://www.latecla.info/170427-murio-a-los-58-anos-el-meteorologo-fernando-confessore-que-le-paso",
-     "fecha": "2026-10-16T10:12:00.000Z"
-    },
-    {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/murio-fernando-confessore-periodista-de-tn-a-los-58-anos/",
-     "fecha": "2026-10-16T11:25:23.000Z"
-    },
-    {
-     "medio": "QZ Noticias (Mar del Plata)",
-     "enlace": "https://www.qznoticias.com/el-pais/murio-fernando-confessore-historico-meteorologo-de-tn-y-el-trece",
-     "fecha": "2026-10-16T11:09:43.000Z"
-    },
-    {
-     "medio": "Mi8 (Canal 8 Mar del Plata)",
-     "enlace": "https://mi8.com.ar/murio-fernando-confessore-el-meteorologo-de-tn-que-llevaba-tres-decadas-al-aire/",
-     "fecha": "2026-10-16T11:48:37.000Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/espectaculos/murio-fernando-confessore-el-historico-meteorologo-de-tn-y-el-trece",
-     "fecha": "2026-10-16T12:31:51.000Z"
-    },
-    {
-     "medio": "El Economista",
-     "enlace": "https://eleconomista.com.ar/actualidad/murio-fernando-confessore-le-paso-historico-meteorologo-tn-trece-n98906",
-     "fecha": "2026-10-16T10:52:00.000Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/informacion-general/murio-el-meteorologo-tn-fernando-confessore-n6334431",
-     "fecha": "2026-10-16T10:15:00.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/sociedad/de-que-murio-el-meteorologo-fernando-confessore-sus-58-anos-n251763",
-     "fecha": "2026-10-16T11:07:00.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/sociedad/luto-la-television-murio-el-reconocido-meteorologo-fernando-confessore-n251761",
-     "fecha": "2026-10-16T10:26:00.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/espectaculos/quienes-son-julieta-candela-y-jimena-las-tres-hijas-fernando-confessore-n6334730",
-     "fecha": "2026-10-16T19:31:00.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/espectaculos/que-dice-el-parte-policial-la-muerte-del-meteorologo-fernando-confessore-n6334473",
-     "fecha": "2026-10-16T12:33:00.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/sociedad/de-que-murio-fernando-confessore-n6334434",
-     "fecha": "2026-10-16T10:20:00.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/sociedad/murio-fernando-confessore-reconocido-meteorologo-divulgador-cientifico-y-periodista-n6334433",
-     "fecha": "2026-10-16T10:15:00.000Z"
-    },
-    {
-     "medio": "La Gaceta (Tucumán)",
-     "enlace": "https://www.lagaceta.com.ar/nota/1158311/sociedad/de-murio-fernando-confessore-historico-meteorologo-television-argentina.html",
-     "fecha": "2026-10-16T10:30:00.000Z"
-    },
-    {
-     "medio": "Los Andes (Mendoza)",
-     "enlace": "https://www.losandes.com.ar/espectaculos/murio-los-58-anos-fernando-confessore-el-historico-meteorologo-tn-y-el-trece-n6010552",
-     "fecha": "2026-10-16T10:32:00.000Z"
-    },
-    {
-     "medio": "elDiarioAR",
-     "enlace": "https://www.eldiarioar.com/medios/murio-fernando-confessore-58-anos-historico-meteorologo-tn-trece_1_13591768.html",
-     "fecha": "2026-10-16T13:16:02.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/sociedad/murio-fernando-confessore-el-meteorologo-que-trabajaba-en-el-canal-tn-nid16102026/",
-     "fecha": "2026-10-16T10:03:07.000Z"
-    },
-    {
-     "medio": "La Brújula 24",
-     "enlace": "https://www.labrujula24.com/notas/2026/10/16/a-los-58-anos-murio-el-reconocido-meteorologo-fernando-confessore-n525737/",
-     "fecha": "2026-10-16T10:03:27.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/16/murio-fernando-confessore-a-las-58-anos-historico-meteorologo-de-tn-y-el-trece/",
-     "fecha": "2026-10-16T10:27:08.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/espectaculos/de-que-murio-fernando-confessore-nid16102026/",
-     "fecha": "2026-10-16T10:24:09.000Z"
-    },
-    {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/protagonistas/a-los-58-anos-murio-el-periodista-fernando-confessore.phtml",
-     "fecha": "2026-10-16T09:55:00.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/que-se-sabe-de-la-muerte-de-fernando-confessore-el-querido-meteorologo-de-58-anos/",
-     "fecha": "2026-10-16T10:17:15.000Z"
-    },
-    {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/general/murio-fernando-confessore-el-historico-meteorologo-tn-los-58-anos-n924838",
-     "fecha": "2026-10-16T10:23:00.000Z"
-    },
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/espectaculos/murio-fernando-confessore-historicos-meteorologos-canal-noticias-tn_0_XGpw7d7UBM.html",
-     "fecha": "2026-10-16T10:09:50.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/de-que-murio-fernando-confessore-el-reconocido-meteorologo-de-la-television-a-los-58-anos/",
-     "fecha": "2026-10-16T10:54:22.000Z"
-    },
-    {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-16-7-24-0-murio-a-los-58-anos-fernando-confessore-uno-de-los-historicos-meteorologos-de-tn",
-     "fecha": "2026-10-16T10:56:29.000Z"
-    },
-    {
-     "medio": "0223 (Mar del Plata)",
-     "enlace": "https://www.0223.com.ar/nota/2026-10-16-8-15-19-conmocion-murio-fernando-confessore-referente-historico-de-la-meteorologia-a-los-58-anos",
-     "fecha": "2026-10-16T11:15:00.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/se-supo-que-murio-fernando-confessore-y-como-vivio-la-situacion-su-mujer-n1607029",
-     "fecha": "2026-10-16T11:08:00.000Z"
-    },
-    {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/sociedad/murio-el-meteorologo-fernando-confessore-a-los-58-anos/",
-     "fecha": "2026-10-16T11:55:29.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/16/mensajes-de-despedida-tras-la-muerte-de-fernando-confessore-en-vivo-ultimas-noticias-minuto-a-minuto/",
-     "fecha": "2026-10-16T13:28:46.000Z"
-    },
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/fama/murio-fernando-confessore-meteorologo-tn-58-anos_0_4qAj2WmvWD.html",
-     "fecha": "2026-10-16T13:15:56.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/la-ultima-aparicion-al-aire-fernando-confessore-y-la-frase-que-causa-conmocion-su-muerte-n1607089",
-     "fecha": "2026-10-16T13:40:00.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/espectaculos/quienes-son-las-hijas-de-fernando-confessore-el-reconocido-meteorologo-que-murio-a-los-58-anos/",
-     "fecha": "2026-10-16T15:06:28.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/fernando-confessore-se-supo-que-dice-el-parte-policial-la-muerte-del-meteorologo-tn-n1607120",
-     "fecha": "2026-10-16T14:03:00.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/16/hoy-esa-frase-tiene-otro-sentido-asi-fue-la-ultima-aparicion-de-fernando-confessore-en-tn-antes-de-su-muerte/",
-     "fecha": "2026-10-16T17:52:24.000Z"
-    }
-   ],
-   "intentos": 5,
-   "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)",
-   "maximo": 5
   },
   {
    "id": "gymja6",

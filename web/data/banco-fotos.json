@@ -15585,10 +15585,10 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Reprograman la Caravana de la Alegría para noviembre",
-  "razon": "Todas las fotos muestran menores de edad claramente reconocibles, por lo que ninguna puede ser publicada.",
-  "cuando": "2026-10-16T11:31:36.266Z",
-  "intentos": 1,
-  "fuentes": 2
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-16T22:01:35.827Z",
+  "intentos": 2,
+  "fuentes": 3
  },
  "1kd7az5": {
   "archivo": "fotos-notas/1kd7az5.jpg",
@@ -16190,8 +16190,8 @@
   "origen": "ninguna",
   "titulo": "Anses paga a jubilados y asignaciones con terminación 5",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-16T20:32:12.000Z",
-  "intentos": 2,
+  "cuando": "2026-10-16T22:01:35.827Z",
+  "intentos": 3,
   "fuentes": 4
  },
  "1wze6ju": {
@@ -16232,8 +16232,8 @@
   "origen": "ninguna",
   "titulo": "La Corte Suprema remata camiones y obradores de Austral Construcciones",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-16T20:32:12.000Z",
-  "intentos": 1,
+  "cuando": "2026-10-16T22:01:35.827Z",
+  "intentos": 2,
   "fuentes": 5
  },
  "fgcjjj": {
@@ -16246,13 +16246,16 @@
   "fuentes": 3
  },
  "bgdvlg": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/bgdvlg.jpg",
+  "medio": "Los Andes (Mendoza)",
+  "credito": "Foto: Los Andes (Mendoza)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Panichelli recuerda su grave lesión y la emoción de Scaloni",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-16T20:32:12.000Z",
-  "intentos": 1,
-  "fuentes": 4
+  "enlace": "https://www.losandes.com.ar/deportes/llanto-lionel-scaloni-y-charla-secreta-lionel-messi-los-momentos-posteriores-la-lesion-panichelli-n6010628",
+  "imagenOriginal": "https://media.losandes.com.ar/p/ccdf3c6a0ff8ab191baa280d19f68828/adjuntos/368/imagenes/100/757/0100757838/1200x675/smart/llanto-lionel-scaloni-y-charla-secreta-lionel-messi-los-momentos-posteriores-la-lesion-panichelli.png",
+  "razon": "Es la única foto que ilustra claramente el título mostrando tanto a Panichelli como a Scaloni sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-16T22:01:35.827Z"
  },
  "6m84c7": {
   "intentado": true,
@@ -16274,5 +16277,26 @@
   "imagenOriginal": "https://www.cronica.com.ar/files/image/1721/1721975/6ad2780e0beeb_600_315!.jpg?s=f324030b5b2bcb14e9adfaabb58ed5ea&d=1792119600",
   "razon": "La foto C muestra una vista cenital de las cataratas con el río crecido, sin marcas de agua ni menores reconocibles.",
   "cuando": "2026-10-16T21:31:37.230Z"
+ },
+ "1idlalr": {
+  "archivo": "fotos-notas/1idlalr.jpg",
+  "medio": "A24",
+  "credito": "Foto: A24",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Banco Central compra 642 millones de dólares y supera los 50.000 millones en reservas",
+  "enlace": "https://www.a24.com/economia/el-banco-central-compro-us-642-millones-una-semana-y-acumula-casi-us-1000-millones-octubre-n1607293",
+  "imagenOriginal": "https://media.a24.com/p/b49d1d545f58670e675ee6fc9de2f547/adjuntos/296/imagenes/009/277/0009277962/1200x675/smart/banco-central-dolaresjpg.jpg",
+  "razon": "La imagen de A24 es una composición gráfica que ilustra perfectamente el tema de la nota (reservas en dólares del Banco Central) sin mostrar personas, mientras que la foto de Infobae tiene un encuadre distorsionado y personas de fondo.",
+  "cuando": "2026-10-16T22:01:35.827Z"
+ },
+ "1ilkp5d": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El riesgo país sube a 648 puntos básicos y el dólar mayorista llega a 1518 pesos",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-16T22:01:35.827Z",
+  "intentos": 1,
+  "fuentes": 2
  }
 }
