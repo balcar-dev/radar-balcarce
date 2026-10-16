@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T07:16:44.892Z",
- "portada": 41,
- "archivo": 1141,
+ "generado": "2026-10-16T07:32:26.108Z",
+ "portada": 37,
+ "archivo": 1140,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-16T07:16:44.923Z",
+  "generado": "2026-10-16T07:32:26.149Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,27 +95,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 44,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "u0hcbv",
-      "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1m9svv0",
       "titulo": "Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027",
       "seccion": "Automovilismo"
      },
      {
-      "id": "16q0gf8",
-      "titulo": "Lalcec Balcarce ofrece mamografías y prepara la jornada comunitaria de octubre rosa",
+      "id": "u0hcbv",
+      "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
       "seccion": "Balcarce"
      },
      {
-      "id": "2g6pf5",
-      "titulo": "Atletas locales logran buenos puestos en Tamangueyú y Balcarce",
+      "id": "107aa47",
+      "titulo": "Atletas de AACYC completan exigente competencia de trail",
       "seccion": "Deportes"
+     },
+     {
+      "id": "1vrfi9w",
+      "titulo": "Proyecto 10 repasa su historia social",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -126,18 +126,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 23,
     "notas": [
-     {
-      "id": "1vrfi9w",
-      "titulo": "Proyecto 10 repasa su historia social",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1o2y75j",
-      "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1ao5ic",
       "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
@@ -157,8 +147,24 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 50,
+    "notas": [
+     {
+      "id": "16q0gf8",
+      "titulo": "Lalcec Balcarce ofrece mamografías y prepara la jornada comunitaria de octubre rosa",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "n6v2wu",
+      "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1o2y75j",
+      "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
