@@ -87,6 +87,19 @@ for (const [nombre, variable] of CLAVES) {
       decir(`[${nombre}] imagen (${idModelo}): HTTP ${img.estado}, ${dato ? `imagen de ${Buffer.from(dato, 'base64').length} bytes` : 'sin imagen'}${img.estado === 200 ? '' : ' · ' + limpiar(img.texto, clave).slice(0, 120)}`);
       if (dato) break;
     }
+    // La API nueva (Interactions, la de las voces): los modelos Nano Banana vigentes según la documentación de Google (16/10/2026).
+    for (const idModelo of ['gemini-nano-banana-2.1', 'gemini-3.1-flash-lite-image']) {
+      const r = await pedir(`${BASE}/interactions`, clave, {
+        model: idModelo,
+        input: [{ type: 'user_input', content: [{ type: 'text', text: 'Ilustración minimalista y genérica de un tractor en un campo al atardecer, estilo plano, sin texto, sin personas.' }] }],
+        response_format: { type: 'image' },
+      }, { espera: 120_000 });
+      let bytes = 0;
+      const buscar = (n) => { if (!n || typeof n !== 'object') return; if (n.type === 'image' && typeof n.data === 'string') bytes = Buffer.from(n.data, 'base64').length; for (const v of Object.values(n)) buscar(v); };
+      buscar(r.json);
+      decir(`[${nombre}] imagen/interactions (${idModelo}): HTTP ${r.estado}, ${bytes ? `imagen de ${bytes} bytes` : 'sin imagen'}${r.estado === 200 ? '' : ' · ' + limpiar(r.texto, clave).slice(0, 160)}`);
+      if (bytes) break;
+    }
   } catch (e) {
     decir(`[${nombre}] falló la prueba: ${limpiar(e?.message, clave)}`);
   }
