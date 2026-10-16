@@ -169,6 +169,23 @@ test('con los casos reales del 8/10: lo que cambia el sentido no se corrige solo
   assert.equal(cambioMecanico(orto('reunion', 'reunión'), cuerpo('reuniones')), null);
 });
 
+// 17/10/2026 (regla 188): las cuatro tildes que la auditoría puso sola entre el 8/10 y el 13/10 estaban mal. La tilde tiene que caer donde
+// la acentuación la pide, nunca en un nombre propio; y ninguna de esas cuatro queda en el libro de lo corregido.
+test('con los casos reales del 8 al 13/10: una tilde que la regla no pide no se pone sola', () => {
+  const cuerpo = (t) => nota({ cuerpo: `${CUERPO} ${t} ${CUERPO}` });
+  for (const [antes, despues] of [['entretiempo', 'entretíempo'], ['parate', 'paráte'], ['vigesimoctava', 'vigésimoctava'], ['Sanjuan', 'Sanjuán']]) {
+    assert.equal(cambioMecanico(orto(antes, despues), cuerpo(antes)), null, `${antes} → ${despues}`);
+  }
+  // Lo que sí falta sigue corrigiéndose solo: aguda en n, esdrújula, grave terminada en consonante.
+  assert.ok(cambioMecanico(orto('reunion', 'reunión'), cuerpo('reunion')));
+  assert.ok(cambioMecanico(orto('rapido', 'rápido'), cuerpo('rapido')));
+  assert.ok(cambioMecanico(orto('arbol', 'árbol'), cuerpo('arbol')));
+  assert.equal(cambioMecanico(orto('cancion', 'cancíon'), cuerpo('cancion')), null, 'en la sílaba equivocada');
+  const libro = JSON.parse(leer('web/data/correcciones-auditoria.json'));
+  const puestas = Object.values(libro.notas ?? {}).flatMap((e) => e.cambios.map((c) => c.despues));
+  for (const mala of ['entretíempo', 'paráte', 'vigésimoctava', 'Sanjuán']) assert.ok(!puestas.includes(mala), `sigue en el libro: ${mala}`);
+});
+
 test('aplicar un par dos, tres o cien veces da lo mismo: el texto nunca se estira', () => {
   const mapa = cambiosDeLaAuditoria({ notas: { n1: { cambios: [{ campo: 'cuerpo', antes: 'se contrajo 1 por ciento', despues: 'se contrajo 1 por ciento en' }] } } });
   let n = nota({ cuerpo: 'El PBI se contrajo 1 por ciento el trimestre.' });

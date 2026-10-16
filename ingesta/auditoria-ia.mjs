@@ -251,6 +251,57 @@ const TILDE_QUE_CAMBIA_EL_SENTIDO = new Set([
   'sabana', 'secretaria', 'sintesis', 'transito', 'vacuna', 'valido', 'vario', 'varia', 'jugo', 'paso', 'pasa', 'hacia', 'libero', 'continuo',
 ]);
 
+// 17/10/2026 (regla 188): las cuatro tildes que la auditoría puso sola entre el 8/10 y el 13/10 estaban MAL ("entretiempo → entretíempo",
+// "parate → paráte", "vigesimoctava → vigésimoctava", "Sanjuan → Sanjuán"). Ahora, además, la tilde tiene que caer donde la regla de
+// acentuación la pide: nunca en la sílaba que ya lleva el acento natural de la palabra (la penúltima si termina en vocal, n o s; si no, la
+// última), nunca antes de la antepenúltima, y nunca en un nombre propio (con mayúscula: el apellido se escribe como lo escribe su dueño).
+// Ante la duda, no se corrige: queda el aviso para una persona.
+const FUERTES = 'aeoáéíóú';
+const VOCALES = 'aeiouáéíóúü';
+
+/** Los núcleos de las sílabas de una palabra en minúscula: [[desde, hasta], …] (diptongos juntos, hiatos separados, la u de que/qui/gue/gui no cuenta). */
+export function nucleosDeSilabas(palabra) {
+  const p = String(palabra).toLowerCase();
+  const esVocal = (i) => {
+    const c = p[i];
+    if (!VOCALES.includes(c)) return false;
+    if (c === 'u' && (p[i - 1] === 'q' || p[i - 1] === 'g') && 'eéií'.includes(p[i + 1] ?? '')) return false;
+    return true;
+  };
+  const nucleos = [];
+  let i = 0;
+  while (i < p.length) {
+    if (!esVocal(i)) { i += 1; continue; }
+    let desde = i;
+    let j = i + 1;
+    while (j < p.length && esVocal(j)) {
+      if (FUERTES.includes(p[j - 1]) && FUERTES.includes(p[j])) { nucleos.push([desde, j - 1]); desde = j; }
+      j += 1;
+    }
+    nucleos.push([desde, j - 1]);
+    i = j;
+  }
+  return nucleos;
+}
+
+/** ¿La tilde que suma `despues` cae donde la acentuación la pide? Conservadora: ante la duda, false. */
+export function tildeEnSuLugar(antes, despues) {
+  if (/^\p{Lu}/u.test(antes)) return false;
+  const conTilde = [...String(despues).normalize('NFC')].findIndex((c, k) => c !== [...String(antes).normalize('NFC')][k]);
+  if (conTilde < 0) return false;
+  const nucleos = nucleosDeSilabas(antes);
+  const n = nucleos.length;
+  const cual = nucleos.findIndex(([d, h]) => conTilde >= d && conTilde <= h);
+  if (n < 2 || cual < 0) return false;
+  // En un diptongo la tilde va en la vocal fuerte; sobre la i o la u rompe el diptongo (país, baúl): eso lo decide una persona.
+  const [d, h] = nucleos[cual];
+  if (h > d && 'iu'.includes(sinTilde([...String(despues).normalize('NFC')][conTilde]).toLowerCase())) return false;
+  const desdeElFinal = n - cual; // 1 = última sílaba, 2 = penúltima, 3 = antepenúltima
+  if (desdeElFinal > 3) return false;
+  const natural = /[aeiouns]$/iu.test(antes) ? 2 : 1;
+  return desdeElFinal !== natural;
+}
+
 /**
  * El cambio que se puede hacer solo para este hallazgo, o null: { campo, antes, despues }. Sólo la tilde que falta en UNA palabra
  * (8/10/2026: la versión anterior dejaba pasar "suba → subida", "nodocentes → docentes", "recaudos → recursos", "quíntuple → quintuple";
@@ -266,6 +317,7 @@ export function cambioMecanico(h, nota) {
   if (sinTilde(antes) !== sinTilde(despues) || tildes(despues) !== tildes(antes) + 1) return null;
   if (/[áéíóú]$/iu.test(despues) || TILDE_QUE_CAMBIA_EL_SENTIDO.has(sinTilde(antes).toLowerCase())) return null;
   if (distanciaDeEdicion(antes, despues) > CORRECCION_AUTOMATICA.cambioMaximo) return null;
+  if (!tildeEnSuLugar(antes, despues)) return null;
   const donde = ['titulo', 'copete', 'cuerpo'].filter((c) => vecesComoPalabra(nota?.[c], antes) > 0);
   const veces = donde.reduce((s, c) => s + vecesComoPalabra(nota[c], antes), 0);
   return donde.length === 1 && veces === 1 ? { campo: donde[0], antes, despues } : null;

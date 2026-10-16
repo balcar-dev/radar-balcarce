@@ -40,7 +40,7 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 188: la 186 son las fotos con chicos de los organismos y la 187, las secciones nuevas.)
+próxima regla es la 189: la 186 son las fotos con chicos de los organismos, la 187 las secciones nuevas y la 188 las tildes que la auditoría pone sola.)
 
 - **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Una prueba lo
   vigila (sigue los imports en cadena).
