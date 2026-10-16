@@ -283,7 +283,9 @@ export const RESULTADOS_DE_PISTA = {
 /** Una nota nacida de una pista, ya revisada por una persona (web/lib/notas-de-pistas.js la lee). Lleva motivo, cuándo y quién. */
 export function conNotaDePista(json, id, { titulo, copete, cuerpo, seccion, fuentes, por, motivo }) {
   const j = { notas: {}, ...json };
-  j.notas = { ...j.notas, [id]: { titulo, copete, cuerpo, seccion, fuentes, pista: id, motivo, cuando: hoyISO(), por } };
+  // Lo que una persona publica de su mano sale en los repasos de las redes sin que lo pida aparte (16/10/2026, Hernán: "si yo pongo una nota, obviamente esa nota sale"):
+  // `aprobadaParaRedes` (la decisión ya es de ella) y `paraElRepaso` (entra al próximo repaso; vale 12 horas: web/lib/notas-de-pistas.js).
+  j.notas = { ...j.notas, [id]: { titulo, copete, cuerpo, seccion, fuentes, pista: id, motivo, cuando: hoyISO(), por, aprobadaParaRedes: true, paraElRepaso: true } };
   return j;
 }
 

@@ -43,3 +43,10 @@ test('el pedido para el repaso vence a las 12 horas, y las otras notas propias (
   assert.equal(vieja.paraElRepaso, undefined);
   for (const propia of ['dolar', 'clima', 'efemeride', 'repaso']) assert.equal(sePuedeEnUnRepaso({ id: 'x', propia, seccion: 'Economía', como: 'automatica', aprobadaParaRedes: true, semaforo: 'verde' }), false, propia);
 });
+
+import { conNotaDePista } from '../web/public/panel/github.js';
+test('lo que una persona publica desde el panel (nota de pista) queda aprobado para las redes y pedido para el próximo repaso, sin pedirlo aparte', () => {
+  const j = conNotaDePista({ notas: {} }, 'pistaprueba', { titulo: 'T', copete: 'C', cuerpo: 'x', seccion: 'Balcarce', fuentes: [], por: 'Hernán', motivo: 'm' });
+  assert.equal(j.notas.pistaprueba.aprobadaParaRedes, true);
+  assert.equal(j.notas.pistaprueba.paraElRepaso, true);
+});
