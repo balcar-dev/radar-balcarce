@@ -21,14 +21,10 @@
 name: Actualizar la web
 
 on:
-  schedule:
-    # Cada 30 minutos, pero en el minuto 7 y el 37 y no en punto ni y media:
-    # esos dos son los más cargados de GitHub y ahí las corridas se demoraban
-    # o se salteaban (cada 2 a 6 horas en vez de cada 30 minutos). El horario
-    # es UTC: en Balcarce son 3 horas menos, pero como corre todo el día da lo
-    # mismo.
-    - cron: '7,37 * * * *'
-  # Y a mano, desde la pestaña Actions, por si hace falta forzar una vuelta.
+  # 17/10/2026: SIN `schedule`. Hasta el 15/10 el reloj era cron-job.org y este horario (:07 y :37) era el respaldo; desde que el reloj es el Worker
+  # de Cloudflare (radar-balcarce-reloj, :00 y :30) GitHub empezó a cumplir también ese respaldo y la web se armaba ~92 veces por día en vez de 48
+  # (y «Redes», que arranca después de cada armado, también el doble). Ahora lo dispara sólo el Worker; si dejara de hacerlo, el vigilante de
+  # Cloudflare avisa por mail a las 3 horas. A mano, desde la pestaña Actions, por si hace falta forzar una vuelta:
   workflow_dispatch:
 
 # Que no se pisen dos corridas: la de las 10:30 no arranca si la de las 10:00
@@ -152,6 +148,13 @@ jobs:
           # docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md, paso 7.
           TOPE_DE_NOTAS: ${{ vars.TOPE_DE_NOTAS }}
           R2_ARCHIVO: ${{ vars.R2_ARCHIVO }}
+          # La excepción de las fotos con chicos de los organismos de Balcarce (regla 186, 17/10/2026; ingesta/fotos-menores.mjs). "Si" la
+          # prende; vacía o cualquier otra cosa, APAGADA (como siempre: ninguna foto real con un menor). Apagarla también saca de la web las
+          # fotos que ya habían entrado por ella. Cada foto aceptada queda en el log de este paso y en web/data/banco-fotos.json (`excepcion`).
+          FOTOS_MENORES_OFICIALES: ${{ vars.FOTOS_MENORES_OFICIALES }}
+          # Educación y Salud y el menú con "Más secciones" (regla 187, 17/10/2026; ingesta/secciones-nuevas.mjs). "Si" las prende;
+          # vacía, APAGADAS: la IA elige entre las once de siempre y el sitio sale igual que antes. Va también en "Compilar el sitio".
+          SECCIONES_NUEVAS: ${{ vars.SECCIONES_NUEVAS }}
 
       # El sitio se compila acá antes de publicar. Si no, un cambio que
       # rompía Next se descubría recién cuando fallaba el despliegue — con la
@@ -165,6 +168,8 @@ jobs:
         env:
           SITIO: https://radarbalcarce.com
           FOTOS_BASE: ${{ vars.FOTOS_BASE }}
+          # Las secciones nuevas y el menú nuevo (regla 187): vacía = el sitio de siempre.
+          SECCIONES_NUEVAS: ${{ vars.SECCIONES_NUEVAS }}
 
       # Que lo importante haya quedado en el HTML. Sin esto, alguien toca
       # layout.js dentro de seis meses, se lleva puesto el Open Graph y no
