@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T12:07:27.728Z",
+ "generado": "2026-10-16T12:33:15.995Z",
  "portada": 39,
- "archivo": 1142,
- "esperandoCuerpo": 2,
+ "archivo": 1145,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-16T12:07:27.762Z",
+  "generado": "2026-10-16T12:33:16.030Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -24,7 +24,7 @@
     "voz": "locutora",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-16T12:06:25.086Z"
    },
    {
     "nombre": "noticia1",
@@ -113,8 +113,8 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "2g6pf5",
-      "titulo": "Atletas locales logran buenos puestos en Tamangueyú y Balcarce",
+      "id": "1h2xfr3",
+      "titulo": "Jennifer Lasa gana en el campeonato argentino de powerlifting",
       "seccion": "Deportes"
      }
     ]
@@ -126,8 +126,13 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 47,
     "notas": [
+     {
+      "id": "vn4avv",
+      "titulo": "Tres deportistas locales compiten en el Torneo Nacional de Pádel",
+      "seccion": "Deportes"
+     },
      {
       "id": "1ixp88o",
       "titulo": "El abogado de Virginia Aparicio visita una radio local para hablar del caso",
@@ -142,11 +147,6 @@
       "id": "1vrfi9w",
       "titulo": "Proyecto 10 repasa su historia social",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1o2y75j",
-      "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -157,33 +157,51 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 24,
+    "segundos": 36,
     "notas": [
      {
-      "id": "1ao5ic",
-      "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
+      "id": "1o2y75j",
+      "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
       "seccion": "Balcarce"
      },
      {
-      "id": "wfa595",
-      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
+      "id": "1ao5ic",
+      "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
       "seccion": "Balcarce"
      }
     ]
    }
   ],
   "facebook": {
-   "hoy": [],
+   "hoy": [
+    {
+     "id": "1kd7az5",
+     "titulo": "El Banco Central publica el informe con los datos de morosidad",
+     "cuando": "2026-10-16T12:09:19.709Z"
+    }
+   ],
    "cola": [
     {
      "id": "aa7nni",
      "titulo": "Reprograman la Caravana de la Alegría para noviembre",
      "seccion": "Cultura y agenda",
      "marcada": false
+    },
+    {
+     "id": "1h2xfr3",
+     "titulo": "Jennifer Lasa gana en el campeonato argentino de powerlifting",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "vn4avv",
+     "titulo": "Tres deportistas locales compiten en el Torneo Nacional de Pádel",
+     "seccion": "Deportes",
+     "marcada": false
     }
    ],
-   "cupo": 5,
-   "proximoDesde": "2026-10-15T20:05:37.440Z",
+   "cupo": 4,
+   "proximoDesde": "2026-10-16T13:39:19.709Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
