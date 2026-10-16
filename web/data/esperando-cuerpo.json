@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-16T20:03:14.508Z",
+ "generado": "2026-10-16T20:32:25.397Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -176,11 +176,6 @@
      "fecha": "2026-10-16T19:56:00.000Z"
     },
     {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/espectaculos/de-que-murio-fernando-confessore-nid16102026/",
-     "fecha": "2026-10-16T16:57:13.000Z"
-    },
-    {
      "medio": "Agencia DIB",
      "enlace": "https://dib.com.ar/sociedad/a-los-58-anos-murio-fernando-confessore-el-hombre-que-nos-daba-el-clima-cada-manana-n56552",
      "fecha": "2026-10-16T12:39:00.000Z"
@@ -326,6 +321,16 @@
      "fecha": "2026-10-16T10:30:00.000Z"
     },
     {
+     "medio": "Los Andes (Mendoza)",
+     "enlace": "https://www.losandes.com.ar/espectaculos/murio-los-58-anos-fernando-confessore-el-historico-meteorologo-tn-y-el-trece-n6010552",
+     "fecha": "2026-10-16T10:32:00.000Z"
+    },
+    {
+     "medio": "elDiarioAR",
+     "enlace": "https://www.eldiarioar.com/medios/murio-fernando-confessore-58-anos-historico-meteorologo-tn-trece_1_13591768.html",
+     "fecha": "2026-10-16T13:16:02.000Z"
+    },
+    {
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/sociedad/murio-fernando-confessore-el-meteorologo-que-trabajaba-en-el-canal-tn-nid16102026/",
      "fecha": "2026-10-16T10:03:07.000Z"
@@ -339,6 +344,11 @@
      "medio": "Infobae",
      "enlace": "https://www.infobae.com/teleshow/2026/10/16/murio-fernando-confessore-a-las-58-anos-historico-meteorologo-de-tn-y-el-trece/",
      "fecha": "2026-10-16T10:27:08.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/espectaculos/de-que-murio-fernando-confessore-nid16102026/",
+     "fecha": "2026-10-16T10:24:09.000Z"
     },
     {
      "medio": "Perfil",
@@ -371,11 +381,6 @@
      "fecha": "2026-10-16T10:56:29.000Z"
     },
     {
-     "medio": "Los Andes (Mendoza)",
-     "enlace": "https://www.losandes.com.ar/espectaculos/murio-los-58-anos-fernando-confessore-el-historico-meteorologo-tn-y-el-trece-n6010552",
-     "fecha": "2026-10-16T10:32:00.000Z"
-    },
-    {
      "medio": "0223 (Mar del Plata)",
      "enlace": "https://www.0223.com.ar/nota/2026-10-16-8-15-19-conmocion-murio-fernando-confessore-referente-historico-de-la-meteorologia-a-los-58-anos",
      "fecha": "2026-10-16T11:15:00.000Z"
@@ -399,11 +404,6 @@
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/fama/murio-fernando-confessore-meteorologo-tn-58-anos_0_4qAj2WmvWD.html",
      "fecha": "2026-10-16T13:15:56.000Z"
-    },
-    {
-     "medio": "elDiarioAR",
-     "enlace": "https://www.eldiarioar.com/medios/murio-fernando-confessore-58-anos-historico-meteorologo-tn-trece_1_13591768.html",
-     "fecha": "2026-10-16T13:16:02.000Z"
     },
     {
      "medio": "A24",
@@ -614,7 +614,7 @@
      "fecha": "2026-10-16T19:40:00.000Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 3
   }

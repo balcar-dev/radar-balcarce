@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T20:03:14.508Z",
- "portada": 61,
- "archivo": 1185,
+ "generado": "2026-10-16T20:32:25.397Z",
+ "portada": 60,
+ "archivo": 1188,
  "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-16T20:03:14.549Z",
+  "generado": "2026-10-16T20:32:25.436Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 53,
     "notas": [
+     {
+      "id": "7rb12z",
+      "titulo": "Lautaro Martínez cuestiona las dudas sobre el compromiso del seleccionado",
+      "seccion": "Fútbol"
+     },
      {
       "id": "1qtfiwu",
       "titulo": "La Subsecretaría de Deporte mantiene las clases de yoga con vacantes",
@@ -168,11 +173,6 @@
       "id": "1xyp583",
       "titulo": "El Museo Histórico Municipal expone el Proyecto Cruz del Centenario",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "7rb12z",
-      "titulo": "Lautaro Martínez cuestiona las dudas sobre el compromiso del seleccionado",
-      "seccion": "Fútbol"
      },
      {
       "id": "32f6mu",
