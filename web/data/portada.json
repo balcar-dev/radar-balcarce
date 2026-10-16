@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T06:31:49.655Z",
+  "generado": "2026-10-16T06:36:01.696Z",
   "notas": [
     {
       "id": "al99go",
@@ -1009,6 +1009,86 @@
       }
     },
     {
+      "id": "1ylxz2o",
+      "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
+      "copete": "El gremio local concretó la medida de fuerza el jueves en rechazo a las políticas nacionales. Dirigentes participaron de las marchas en Buenos Aires y Mar del Plata para exigir fondos educativos.",
+      "cuerpo": "SUTEBA Balcarce concretó el jueves una medida de fuerza en adhesión a la protesta nacional convocada en defensa de la educación pública. Según el relevamiento difundido por el sindicato, la acatamiento alcanzó el 90% en el distrito.\n\nEl secretario general de la seccional local, Gerardo Mancuso, formó parte de las movilizaciones desarrolladas en la Ciudad Autónoma de Buenos Aires y Mar del Plata. Los ejes centrales del reclamo incluyeron la restitución del Fondo Nacional de Incentivo Docente y la demanda de mayores recursos para el sistema educativo, la ciencia y las escuelas técnicas.",
+      "guion": "Suteba Balcarce adhiere al paro nacional con una acatamiento del noventa por ciento",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://puntonueve.com.ar/suteba-balcarce-se-sumo-al-paro-nacional-y-a-las-movilizaciones-en-defensa-de-la-educacion-publica/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T19:27:25.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T19:31:43.109Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La adhesión al paro docente llegó al 90% en Balcarce.",
+        "El secretario general Gerardo Mancuso participó de las marchas.",
+        "Reclaman la restitución del FONID y fondos para escuelas técnicas.",
+        "Cuestionan la reducción de recursos del Gobierno nacional."
+      ],
+      "seSabe": [
+        "SUTEBA Balcarce se sumó al paro nacional docente el jueves 15/10/2026.",
+        "El acatamiento en el distrito fue del 90% según el relevamiento del gremio.",
+        "Representantes locales marcharon en Buenos Aires y Mar del Plata.",
+        "El sindicato exigió la restitución del FONID y fondos para la educación técnica."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "SUTEBA Balcarce concretó este jueves una medida de fuerza con una adhesión del 90% en el distrito. El secretario general Gerardo Mancuso participó de las movilizaciones en Buenos Aires y Mar del Plata para exigir fondos educativos y la restitución del FONID.",
+      "etiquetas": [
+        "SUTEBA Balcarce",
+        "paro docente",
+        "educación pública",
+        "Gerardo Mancuso",
+        "FONID"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/suteba-balcarce-se-sumo-al-paro-nacional-y-a-las-movilizaciones-en-defensa-de-la-educacion-publica/",
+          "fecha": "2026-10-15T19:27:25.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la adhesión del 90% al paro docente en Balcarce y la participación del gremio en las marchas."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/suteba-balcarce-informo-un-90-de.html",
+          "fecha": "2026-10-15T19:52:39.513Z",
+          "oficial": false,
+          "aporte": "Informó el porcentaje de adhesión al paro, las ciudades donde se movilizaron, los reclamos gremiales y las declaraciones del secretario general Gerardo Mancuso."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45095-paro-y-movilizacion-suteba-balcarce-se-sumo-al-reclamo-nacional-en-defensa-de-la-educacion-publica/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó el porcentaje de adhesión al paro en el distrito, los reclamos gremiales y la participación en las marchas de CABA y Mar del Plata."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "suteba-balcarce-adhiere-al-paro-nacional-con-una-acatamiento-del-90",
+      "foto": {
+        "archivo": "fotos-notas/1ylxz2o.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
       "id": "5yic3w",
       "titulo": "La industria utiliza el 58,5% de su capacidad instalada en agosto",
       "copete": "Las fábricas operaron por debajo del nivel registrado en el mismo mes del año pasado según el INDEC. La refinación de petróleo encabezó los sectores con mayor uso.",
@@ -1025,11 +1105,11 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "El Eco de Tandil",
-        "El Cronista",
         "C5N",
         "Minuto Uno",
+        "La Capital (Rosario)",
         "Los Andes (Mendoza)",
-        "La Capital (Rosario)"
+        "El Cronista"
       ],
       "enlace": "https://www.cronista.com/economia-politica/la-industria-opero-al-585-de-su-capacidad-instalada-en-agosto-y-sumo-una-nueva-caida-interanual/",
       "teniaImagenLaFuente": true,
@@ -1335,8 +1415,8 @@
         "Radio Mitre",
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
-        "Minuto Uno",
-        "C5N"
+        "C5N",
+        "Minuto Uno"
       ],
       "enlace": "https://tn.com.ar/deportes/futbol/2026/10/15/leonel-flores-el-jugador-de-boca-y-la-seleccion-que-visito-una-olla-popular-en-monte-chingolo-y-revoluciono-el-barrio/",
       "teniaImagenLaFuente": true,
@@ -1620,69 +1700,6 @@
       }
     },
     {
-      "id": "107aa47",
-      "titulo": "Atletas de AACYC completan exigente competencia de trail",
-      "copete": "Las deportistas locales Débora Pucheta y Lara Blanco corrieron en la prueba UTTD 2026 sobre los circuitos serranos del distrito y completaron sus respectivas distancias.",
-      "cuerpo": "Las atletas Débora Pucheta y Lara Blanco, representantes de AACYC Balcarce, participaron el fin de semana pasado en la edición 2026 de la competencia de trail running UTTD, desarrollada en los caminos serranos del distrito.\n\nPucheta, oriunda de Mechongué, afrontó el trayecto de 25 kilómetros y cruzó la meta tras 4 horas, 21 minutos y 7 segundos de carrera. Con ese registro, se situó en el lugar 49 de la tabla general de mujeres y en el decimoquinto peldaño de la franja de 30 a 39 años.\n\nPor su parte, Blanco intervino en la distancia de 11 kilómetros y completó el circuito en 1 hora, 34 minutos y 6 segundos. Su actuación le valió el cuadragésimo primer puesto en la general femenina y la sexta colocación en la divisional de hasta 29 años.",
-      "guion": "Atletas de AACYC completan exigente competencia de trail",
-      "seccion": "Deportes",
-      "medios": [
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/10/pucheta-y-blanco-compitieron-en-la-uttd.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T14:44:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T17:03:57.740Z",
-      "relevancia": 73,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Débora Pucheta y Lara Blanco corrieron en la UTTD 2026.",
-        "Pucheta completó los 25 kilómetros en 4 horas, 21 minutos y 7 segundos.",
-        "Blanco finalizó los 11 kilómetros en 1 hora, 34 minutos y 6 segundos.",
-        "Ambas atletas representan a AACYC Balcarce."
-      ],
-      "seSabe": [
-        "Según informó un medio local, Débora Pucheta y Lara Blanco participaron en la UTTD 2026.",
-        "De acuerdo con la fuente consultada, la competencia de trail running se realizó en los terrenos serranos de Balcarce.",
-        "Según el informe periodístico, Pucheta corrió 25 kilómetros y Blanco hizo lo propio en 11 kilómetros."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Las atletas locales Débora Pucheta y Lara Blanco, integrantes de AACYC Balcarce, completaron sus recorridos en la competencia de trail running UTTD 2026 desarrollada en los circuitos serranos del distrito.",
-      "etiquetas": [
-        "trail running",
-        "UTTD 2026",
-        "AACYC Balcarce",
-        "Débora Pucheta",
-        "Lara Blanco"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/pucheta-y-blanco-compitieron-en-la-uttd.html",
-          "fecha": "2026-10-15T14:44:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los tiempos y las ubicaciones de las atletas Débora Pucheta y Lara Blanco en la UTTD 2026."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "atletas-de-aacyc-completan-exigente-competencia-de-trail",
-      "foto": {
-        "archivo": "fotos-notas/107aa47.jpg",
-        "credito": "Foto: Infórmese Primero (FM 104.9)"
-      }
-    },
-    {
       "id": "9nw59b",
       "titulo": "El Municipio impulsa un plan de obras públicas en salud, educación y caminos",
       "copete": "La gestión del intendente Esteban Reino detalla una serie de trabajos en infraestructura sanitaria, vial, educativa y rural en todo el partido de Balcarce.",
@@ -1822,6 +1839,7 @@
       "guion": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
@@ -1831,7 +1849,7 @@
       "fecha": "2026-10-15T13:09:17.000Z",
       "sinFecha": false,
       "visto": "2026-10-15T13:31:35.699Z",
-      "relevancia": 87,
+      "relevancia": 97,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2115,6 +2133,101 @@
       "slug": "la-escuela-municipal-de-basquet-juega-una-nueva-fecha"
     },
     {
+      "id": "1xctidq",
+      "titulo": "El Gobierno nacional convoca a empresas para optimizar ramales de trenes en Salta",
+      "copete": "El Ejecutivo nacional reunirá a firmas mineras y logísticas para mejorar el funcionamiento del ramal C14 e impulsará inversiones privadas para el C15.",
+      "cuerpo": "El Gobierno nacional convoca para la próxima semana a empresas mineras y operadoras logísticas con el fin de analizar mejoras operativas en el ramal ferroviario C14, ubicado en la puna de Salta. En paralelo, impulsa la búsqueda de fondos privados para rehabilitar de manera integral el ramal C15 y asegurar la conexión con Bolivia y mercados internacionales.\n\nLa decisión surge a partir de un pedido formal realizado por el gobernador salteño, Gustavo Sáenz, y firmas del sector, según informó el Ministerio de Economía. El propósito central apunta a articular el funcionamiento de la red ferroviaria en esa provincia norteña.",
+      "guion": "El Gobierno nacional convoca a empresas para optimizar ramales de trenes en Salta",
+      "seccion": "Agro",
+      "medios": [
+        "Noticias Argentinas (NA)",
+        "Ámbito",
+        "Infobae",
+        "Radio Mitre"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/buscan-optimizar-ramales-ferroviario-en-salta-pata-potenciar-produccion-minera_a6ad0c2cc88153cda2df06216",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-15T12:39:13.230Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T18:02:38.694Z",
+      "relevancia": 26,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "ferroviarios"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Convocan a empresas mineras y logísticas para la próxima semana.",
+        "Buscan optimizar el funcionamiento del ramal ferroviario C14 en Salta.",
+        "Promueven fondos privados para poner en marcha el ramal C15."
+      ],
+      "seSabe": [
+        "El Ministerio de Economía confirmó la convocatoria a firmas del sector minero y logístico.",
+        "La medida responde a una demanda del gobernador Gustavo Sáenz y las empresas.",
+        "Se busca optimizar el ramal C14 y conseguir inversiones para el C15."
+      ],
+      "noConfirmado": [
+        "No se precisó el día exacto de la reunión prevista para la próxima semana.",
+        "No trascendieron los montos necesarios para las inversiones en los ramales."
+      ],
+      "textoRedes": "El Gobierno nacional convoca a empresas mineras y logísticas para optimizar los ramales ferroviarios C14 y C15 en Salta tras un pedido del gobernador provincial.",
+      "etiquetas": [
+        "gobierno nacional",
+        "salta",
+        "economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/buscan-optimizar-ramales-ferroviario-en-salta-pata-potenciar-produccion-minera_a6ad0c2cc88153cda2df06216",
+          "fecha": "2026-10-15T12:39:13.230Z",
+          "oficial": false,
+          "aporte": "Detalló la convocatoria a empresas mineras, los planes para los ramales C14 y C15, y el pedido del gobernador salteño."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/energia/el-gobierno-busca-inversiones-reactivar-dos-ramales-ferroviarios-clave-la-mineria-salta-n6334032",
+          "fecha": "2026-10-15T13:43:41.000Z",
+          "oficial": false,
+          "aporte": "No aportó texto propio en esta edición."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/15/el-gobierno-convocara-a-mineras-y-operadoras-para-optimizar-los-trenes-de-carga-de-la-puna-saltena/",
+          "fecha": "2026-10-15T12:58:23.000Z",
+          "oficial": false,
+          "aporte": "Detalló la convocatoria a empresas mineras y logísticas para los ramales C14 y C15, la licitación ferroviaria a 50 años y las cifras de producción y costos de transporte."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/politica/el-gobierno-convocara-a-mineras-y-operadoras-en-busca-de-fondos-para-reactivar-los-trenes-de-carga-en-salta/",
+          "fecha": "2026-10-15T16:04:50.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el Gobierno prevé reunirse la próxima semana con operadores para evaluar el servicio de trenes de carga y sumar financiamiento privado."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ifyi35",
+          "titulo": "Balcarce Básquet sumó dos victorias en una nueva fecha de la Asociación de Mar del Plata",
+          "fecha": "2026-09-21T15:10:00.000Z",
+          "ruta": "/nota/balcarce-basquet-sumo-dos-victorias-en-una-nueva-fecha-de-la-1ifyi35"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-nacional-convoca-a-empresas-para-optimizar-ramales-de",
+      "foto": {
+        "archivo": "fotos-notas/1xctidq.jpg",
+        "credito": "Foto: Ámbito"
+      }
+    },
+    {
       "id": "efemeride20261015",
       "propia": "efemeride",
       "titulo": "Un día como hoy, en 1984: Nobel de Medicina para Milstein",
@@ -2158,6 +2271,81 @@
       "enlacesEnTexto": [],
       "destacados": [],
       "slug": "un-dia-como-hoy-en-1984-nobel-de-medicina-para-milstein"
+    },
+    {
+      "id": "mly1kv",
+      "titulo": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
+      "copete": "El centro de entrenamiento local sumó dos unidades importadas de China. Las mesas cuentan con homologación internacional y mejoran la infraestructura para la práctica y la formación deportiva en la ciudad.",
+      "cuerpo": "El Centro de Entrenamiento de Tenis de Mesa La Cuna del Quíntuple sumó dos mesas profesionales importadas de China, según informó un medio local. El equipamiento corresponde a la marca Double Fish y cuenta con homologación de la Federación Internacional de Tenis de Mesa.\n\nLas mesas se instalaron en la sede ubicada en calle 13 entre 24 y 26, número 818, para acompañar el piso de goma colocado el año pasado.\n\nEl espacio funciona todos los días de 18 a 21.30 y ofrece clases para niños desde los seis años, adultos mayores y personas con discapacidad. Las prácticas están a cargo del entrenador internacional Nicolás Bianchini y el entrenador nacional Fabián Bianchini.",
+      "guion": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
+      "seccion": "Deportes",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://puntonueve.com.ar/el-centro-de-entrenamiento-la-cuna-del-quintuple-incorporo-nuevas-mesas-de-tenis-de-mesa-importadas-de-china/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T11:57:21.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T13:31:35.699Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El centro sumó dos mesas profesionales importadas de China.",
+        "El equipamiento cuenta con homologación internacional.",
+        "La compra se concretó mediante gestiones de la federación nacional.",
+        "El espacio funciona todos los días con clases para todas las edades."
+      ],
+      "seSabe": [
+        "El Centro de Entrenamiento La Cuna del Quíntuple incorporó dos mesas profesionales de la marca Double Fish.",
+        "Las mesas fueron importadas desde China y cuentan con homologación de la Federación Internacional de Tenis de Mesa.",
+        "La compra se realizó a través de gestiones de la Federación Argentina de Tenis de Mesa.",
+        "El centro funciona en calle 13 número 818 y ofrece actividades todos los días de 18 a 21.30.",
+        "Las clases están a cargo de Nicolás Bianchini y Fabián Bianchini."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El centro de entrenamiento La Cuna del Quíntuple sumó dos mesas profesionales de tenis de mesa importadas de China para mejorar la infraestructura y la formación deportiva en Balcarce.",
+      "etiquetas": [
+        "tenis de mesa",
+        "La Cuna del Quíntuple",
+        "deportes",
+        "Balcarce",
+        "entrenamiento"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/el-centro-de-entrenamiento-la-cuna-del-quintuple-incorporo-nuevas-mesas-de-tenis-de-mesa-importadas-de-china/",
+          "fecha": "2026-10-15T11:57:21.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la incorporación de las mesas profesionales, las características del equipamiento, la ubicación del centro y los horarios de entrenamiento."
+        },
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/el-centro-de-entrenamiento-de-tenis-de-mesa-incorporo-mesas-de-nivel-internacional",
+          "fecha": "2026-10-15T13:04:56.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la llegada de las mesas internacionales y los horarios de entrenamiento."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "la-cuna-del-quintuple-incorpora-mesas-profesionales-de-tenis-de-mesa",
+      "foto": {
+        "archivo": "fotos-notas/mly1kv.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
     },
     {
       "id": "nplayowbhp",
@@ -2212,6 +2400,69 @@
       "slug": "lionel-messi-despide-a-la-seleccion-argentina-con-victoria-ante-benin"
     },
     {
+      "id": "2g6pf5",
+      "titulo": "Atletas locales logran buenos puestos en Tamangueyú y Balcarce",
+      "copete": "Representantes de AACYC Balcarce cumplieron una destacada actuación en pruebas de calle y trail running durante el fin de semana, con podios en distintas categorías.",
+      "cuerpo": "Los atletas Ariel Ferreira y Adrián Cagni compitieron en la prueba principal de diez kilómetros de la Correcaminata Aniversario de Tamangueyú. Ferreira completó el recorrido en 43 minutos y 14 segundos para quedar quinto en la general y primero en la categoría de 45 a 49 años. Cagni cruzó la meta en 43 minutos y 38 segundos, ubicándose sexto en la general y segundo en la misma divisional.\n\nEn paralelo, Débora Pucheta y Lara Blanco participaron de la UTTD 2026 en los circuitos serranos locales. Pucheta afrontó los 25 kilómetros en 4 horas, 21 minutos y 7 segundos, y se ubicó en el puesto 49 de la general femenina y 15 en su categoría. En tanto, Blanco corrió los 11 kilómetros en 1 hora, 34 minutos y 6 segundos, alcanzando el puesto 41 general y el sexto lugar en la divisional hasta 29 años.",
+      "guion": "Atletas locales logran buenos puestos en Tamangueyú y Balcarce",
+      "seccion": "Deportes",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/destacada-actuacion-de-los-atletas-de-aacyc-balcarce-en-tamangueyu-y-la-uttd-2026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T11:19:17.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T13:31:35.699Z",
+      "relevancia": 83,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Ferreira y Cagni corrieron en Tamangueyú",
+        "Pucheta y Blanco participaron en la UTTD 2026",
+        "Ambos eventos se desarrollaron durante el fin de semana",
+        "Los deportistas representan a AACYC Balcarce"
+      ],
+      "seSabe": [
+        "Ariel Ferreira ganó su categoría en Tamangueyú con un tiempo de 43 minutos y 14 segundos",
+        "Adrián Cagni fue segundo en la misma categoría con 43 minutos y 38 segundos",
+        "Débora Pucheta completó los 25 kilómetros de trail en 4 horas, 21 minutos y 7 segundos",
+        "Lara Blanco corrió 11 kilómetros en 1 hora, 34 minutos y 6 segundos"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Atletas de AACYC Balcarce obtuvieron destacados resultados en la Correcaminata Aniversario de Tamangueyú y en la competencia de trail UTTD 2026.",
+      "etiquetas": [
+        "AACYC Balcarce",
+        "Tamangueyú",
+        "UTTD 2026"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/destacada-actuacion-de-los-atletas-de-aacyc-balcarce-en-tamangueyu-y-la-uttd-2026/",
+          "fecha": "2026-10-15T11:19:17.000Z",
+          "oficial": false,
+          "aporte": "Informó los resultados y tiempos de los atletas de AACYC Balcarce en las competencias de Tamangueyú y la UTTD 2026."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "atletas-locales-logran-buenos-puestos-en-tamangueyu-y-balcarce",
+      "foto": {
+        "archivo": "fotos-notas/2g6pf5.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
       "id": "xzxyd1",
       "titulo": "El Ministerio de Economía organiza una ronda de negocios para el RIGI",
       "copete": "Más de 1800 proveedores participarán de la primera ronda de negocios del régimen de grandes inversiones. El encuentro se hará el 29 de octubre en la ciudad santafesina de Rosario.",
@@ -2222,8 +2473,8 @@
         "La Nación",
         "Infobae",
         "Perfil",
-        "iProfesional",
         "Ámbito",
+        "iProfesional",
         "Clarín"
       ],
       "enlace": "https://www.perfil.com/noticias/economia/las-grandes-inversiones-buscan-proveedores-1800-emresas .phtml",
@@ -2362,8 +2613,9 @@
       "copete": "La Verificación Técnica Vehicular aumenta a 114.105,99 pesos en todo el territorio provincial tras finalizar el congelamiento de noventa días acordado con las empresas.",
       "cuerpo": "El Ministerio de Transporte bonaerense estableció que la tarifa básica de la Verificación Técnica Vehicular se eleva a 114.105,99 pesos desde el jueves 15 de octubre. La medida quedó formalizada mediante la resolución oficial tras expirar el plazo de suspensión de noventa días acordado previamente entre la cartera y las firmas concesionarias del servicio.\n\nEl incremento representa un porcentaje cercano al 18 por ciento para los automóviles de hasta 2.500 kilos, cuyo valor anterior era de 97.057,65 pesos. El monto surgió de aplicar la fórmula del régimen tarifario basada en el convenio salarial del sector mecánico.",
       "guion": "El Ministerio de Transporte bonaerense actualiza la tarifa básica de la VTV",
-      "seccion": "Política",
+      "seccion": "Argentina",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "El Diario Balcarce",
         "Diario La Vanguardia",
@@ -2382,16 +2634,16 @@
         "Infobrisas (Radio Brisas)",
         "Punto Noticias",
         "El Eco de Tandil",
-        "Agencia DIB",
         "Ámbito",
+        "Minuto Uno",
+        "Agencia DIB",
         "Infoeme",
         "Ecos Diarios (Necochea)",
         "Clarín",
         "0223 (Mar del Plata)",
         "NDEN – Noticias de Necochea",
         "La Noticia 1",
-        "A24",
-        "Minuto Uno"
+        "A24"
       ],
       "enlace": "https://www.0221.com.ar/provincia/la-provincia-oficializo-un-nuevo-aumento-la-vtv-y-ya-es-un-176-mas-cara-n135838",
       "teniaImagenLaFuente": true,
@@ -2636,6 +2888,7 @@
       "guion": "Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027",
       "seccion": "Automovilismo",
       "medios": [
+        "Campeones",
         "Motorsport",
         "La Nación",
         "Infobae",
@@ -2645,15 +2898,14 @@
         "Radio Mitre",
         "El Marplatense",
         "Bolavip Argentina",
-        "Campeones",
-        "Minuto Uno",
-        "C5N",
+        "Córdoba Competición",
         "Ámbito",
+        "C5N",
+        "Minuto Uno",
+        "La Capital (Rosario)",
         "Los Andes (Mendoza)",
         "Clarín",
         "La Gaceta (Tucumán)",
-        "La Capital (Rosario)",
-        "Córdoba Competición",
         "El Gráfico"
       ],
       "enlace": "https://es.motorsport.com/f1/news/oficial-rafael-camara-ficha-haas-debut-formula1-2027/10865294/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
@@ -2840,10 +3092,10 @@
       "medios": [
         "Ámbito",
         "TN (Todo Noticias)",
+        "Minuto Uno",
         "Infobae",
         "Radio Mitre",
         "Clarín",
-        "Minuto Uno",
         "La Gaceta (Tucumán)"
       ],
       "enlace": "https://www.ambito.com/espectaculos/el-sentido-mensaje-la-mama-gaspi-cuatro-meses-su-muerte-mi-pedazo-estrella-n6334025",
@@ -3119,6 +3371,7 @@
       "seccion": "Política",
       "medios": [
         "News Balcarce (FM 91.7)",
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
@@ -3128,7 +3381,7 @@
       "fecha": "2026-10-14T22:05:15.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T23:01:59.982Z",
-      "relevancia": 93,
+      "relevancia": 100,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3146,6 +3399,13 @@
           "medio": "News Balcarce (FM 91.7)",
           "enlace": "https://newsbalcarce.com.ar/?p=31005",
           "fecha": "2026-10-15T14:33:05.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/sergio-aranaga-participo-de-una-jornada-de-formacion-politica-del-pj-bonaerense-en-necochea/",
+          "fecha": "2026-10-15T11:32:49.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3253,6 +3513,7 @@
       "guion": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección",
       "seccion": "Fútbol",
       "medios": [
+        "0223 (Mar del Plata)",
         "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
@@ -3269,12 +3530,13 @@
         "Bolavip Argentina",
         "El Gráfico",
         "Ámbito",
+        "C5N",
         "Minuto Uno",
+        "Los Andes (Mendoza)",
+        "El Día",
         "La Nueva",
         "Clarín",
         "La Gaceta (Tucumán)",
-        "Los Andes (Mendoza)",
-        "C5N",
         "La Nación"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/italia/lautaro-martinez-lesionado-jugaria-fecha-fifa-noviembre-seleccion_0_c2p0yRIuvY.html",
@@ -3849,34 +4111,34 @@
       "motivo": "necesita ojo humano: \"falleció\" (en otro medio que cuenta lo mismo)"
     },
     {
+      "id": "du6hp3",
+      "titulo": "Marcha universitaria: tras la represión que dejó al menos…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
+      "id": "1hkr9k8",
+      "titulo": "Gabriel Solano denunció penalmente a Javier Milei y Luis…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
+      "id": "5oghzg",
+      "titulo": "Juicio por Maradona: declaran las querellas de Dalma y…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"imputado\""
+    },
+    {
       "id": "120b8gy",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "2p2n9j",
-      "titulo": "El Gobierno denunció penalmente a los manifestantes…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
-      "id": "1pzc2ub",
-      "titulo": "Juicio por Maradona: el abogado de las hermanas pidió 8…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"imputado\""
-    },
-    {
       "id": "2dhhlx",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
-      "id": "1yfj4fp",
-      "titulo": "La Corte Suprema desestimó un recurso de los condenados…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "1qzxlyd",
@@ -3909,12 +4171,6 @@
       "motivo": "necesita ojo humano: \"acusado\""
     },
     {
-      "id": "1hkr9k8",
-      "titulo": "Gabriel Solano denunció penalmente a Javier Milei y Luis…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
       "id": "17gc53m",
       "titulo": null,
       "seccion": "Agro",
@@ -3925,6 +4181,12 @@
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "1y68acy",
+      "titulo": "El escándalo del oro suma otra denuncia: el diputado…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "jrrxzw",

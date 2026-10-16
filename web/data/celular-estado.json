@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T06:31:49.655Z",
- "portada": 40,
+ "generado": "2026-10-16T06:36:01.696Z",
+ "portada": 43,
  "archivo": 1142,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-16T06:31:49.689Z",
+  "generado": "2026-10-16T06:36:01.734Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -98,6 +98,11 @@
     "segundos": 44,
     "notas": [
      {
+      "id": "u0hcbv",
+      "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
+      "seccion": "Balcarce"
+     },
+     {
       "id": "1m9svv0",
       "titulo": "Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027",
       "seccion": "Automovilismo"
@@ -108,13 +113,8 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "u0hcbv",
-      "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "107aa47",
-      "titulo": "Atletas de AACYC completan exigente competencia de trail",
+      "id": "2g6pf5",
+      "titulo": "Atletas locales logran buenos puestos en Tamangueyú y Balcarce",
       "seccion": "Deportes"
      }
     ]
@@ -126,13 +126,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 51,
     "notas": [
-     {
-      "id": "n6v2wu",
-      "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1ixp88o",
       "titulo": "Mario Bolla visita Radio Gabal para hablar sobre la situación de Virginia Aparicio",
@@ -147,6 +142,11 @@
       "id": "1o2y75j",
       "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "1ao5ic",
+      "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -157,19 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 24,
-    "notas": [
-     {
-      "id": "1ao5ic",
-      "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "wfa595",
-      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
