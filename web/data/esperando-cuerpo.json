@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-16T20:32:25.397Z",
+ "generado": "2026-10-16T21:02:15.927Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -79,6 +79,11 @@
      "fecha": "2026-10-16T13:07:14.000Z"
     },
     {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/politica/los-gobernadores-piden-mas-obras-y-santilli-lanzo-una-advertencia-deberian-estar-preocupados-si-nid16102026/",
+     "fecha": "2026-10-16T20:43:49.000Z"
+    },
+    {
      "medio": "LU9 Mar del Plata",
      "enlace": "https://www.lu9mardelplata.com.ar/diego-santilli-advirtio-que-los-gobernadores-deben-preocuparse-por-un-posible-regreso-del-kirchnerismo",
      "fecha": "2026-10-16T18:52:15.000Z"
@@ -87,11 +92,6 @@
      "medio": "Agencia DIB",
      "enlace": "https://dib.com.ar/politica/santilli-los-que-deberian-estar-preocupados-el-regreso-del-kirchnerismo-son-los-gobernadores-n56559",
      "fecha": "2026-10-16T17:53:00.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/politica/los-gobernadores-piden-mas-obras-y-santilli-lanzo-una-advertencia-deberian-estar-preocupados-si-nid16102026/",
-     "fecha": "2026-10-16T16:43:13.000Z"
     },
     {
      "medio": "A24",
@@ -111,7 +111,7 @@
     {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-16-11-48-0-para-santilli-los-gobernadores-deberian-estar-preocupados-por-un-eventual-regreso-del-kirchnerismo",
-     "fecha": "2026-10-16T19:18:19.000Z"
+     "fecha": "2026-10-16T20:36:54.000Z"
     },
     {
      "medio": "El Marplatense",
@@ -154,6 +154,53 @@
    "maximo": 5
   },
   {
+   "id": "1uey0kx",
+   "titulo": "La historia de amor de Fernando Confessore",
+   "copete": "La muerte de Fernando Confessore , a los 58 años, generó conmoción y motivó un homenaje en Mediodía Noticias , donde recordaron el vínculo que el meteorólogo mantuvo durante más de 30 años con su esposa, Paula . El programa recuperó una publicación que él había compartido…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-16T10:45:00.000Z",
+   "fuentes": [
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/espectaculos/fernando-confessore-revelo-sus-vivencias-de-30-anos-de-matrimonio-el-clima-mas-agradable-para-la-mejor-historia-de-amor-espectaculos_1792146000",
+     "fecha": "2026-10-16T10:45:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/espectaculos/el-tierno-mensaje-de-fernando-confessore-para-su-esposa-paula-que-demostro-como-era-su-romance-ella-fue-mucho-mas-que-mi-companera-de-vida/",
+     "fecha": "2026-10-16T19:11:59.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/espectaculos/la-familia-que-construyo-fernando-confessore-paula-franco-sus-tres-hijas-y-una-vida-juntos-n6334614",
+     "fecha": "2026-10-16T15:39:00.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/teleshow/2026/10/16/la-historia-de-amor-de-fernando-confessore-y-paula-tres-hijas-una-vida-juntos-y-un-apoyo-clave-para-su-carrera/",
+     "fecha": "2026-10-16T11:53:27.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/primiciasya/tras-la-muerte-fernando-confessore-la-historia-amor-su-esposa-paula-que-emociona-mucho-mas-que-mi-companera-n1607049",
+     "fecha": "2026-10-16T12:37:00.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/espectaculos/la-desconocida-historia-de-amor-de-fernando-confessore-y-paula-franco-40-anos-juntos-tres-hijas-y-nid16102026/",
+     "fecha": "2026-10-16T14:22:23.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/fama/historia-amor-fernando-confessore-paula-franco-mujer-acompano-40-anos-clave-carrera_0_9dHgDg3s3F.html",
+     "fecha": "2026-10-16T13:48:32.000Z"
+    }
+   ],
+   "intentos": 4,
+   "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)",
+   "maximo": 4
+  },
+  {
    "id": "dpwrvn",
    "titulo": "Murió Fernando Confessore, el reconocido meteorólogo, a los 58 años",
    "copete": "El reconocido meteorólogo Fernando Confessore , murió esta madrugada del viernes 16 de octubre. Al aire en Alguien tiene que decirlo, Gabriel Iezzi compartió los primeros detalles del fallecimiento, ocurrió dentro de su casa por una descompensación repentina. Fernando Confessore…",
@@ -173,7 +220,7 @@
     {
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/sociedad/murio-fernando-confessore-reacciones-y-mensajes-de-despedida-al-meteorologo-que-trabajaba-en-el-nid16102026/",
-     "fecha": "2026-10-16T19:56:00.000Z"
+     "fecha": "2026-10-16T20:32:01.000Z"
     },
     {
      "medio": "Agencia DIB",
@@ -239,6 +286,11 @@
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/espectaculos/murio-fernando-confessore--periodista-de-tn--a-los-58-anos_a6ad1faac42d6446c848298a0",
      "fecha": "2026-10-16T10:22:00.000Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/espectaculos/de-que-murio-fernando-confessore-el-historico-meteorologo-de-tn-que-fallecio-a-los-58-anos-espectaculos_1792183440",
+     "fecha": "2026-10-16T20:45:00.000Z"
     },
     {
      "medio": "El Día",
@@ -431,68 +483,6 @@
    "maximo": 5
   },
   {
-   "id": "1oye0ii",
-   "titulo": "La desgarradora despedida de Mario Massaccesi a Fernando Confessore tras su repentina muerte: “Lo vamos a recordar siempre”",
-   "copete": "Este viernes a la mañana, una triste noticia irrumpió y sorprendió a todos: el meteorólogo Fernando Confessore murió a los 58 años . Según las primeras informaciones, se descompensó en su casa a raíz de un paro cardiorrespiratorio. Trabajaba, desde hacía 30 años, en la señal de…",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-16T10:20:51.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/la-desgarradora-despedida-de-mario-massaccesi-a-fernando-confessore-tras-su-repentina-muerte-lo-vamos-a-recordar-siempre/",
-     "fecha": "2026-10-16T10:20:51.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/espectaculos/asi-anuncio-mario-massaccesi-la-muerte-de-fernando-confessore-la-ultima-noticia-la-que-no-nid16102026/",
-     "fecha": "2026-10-16T17:37:56.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/show/television/2026/10/16/la-despedida-de-mario-massaccesi-tras-la-muerte-de-fernando-confessore-lo-vamos-a-extranar-mucho/",
-     "fecha": "2026-10-16T14:05:52.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/videos/show/television/2026/10/16/la-despedida-de-mario-massaccesi-tras-la-muerte-de-fernando-confessore-lo-vamos-a-extranar-mucho/",
-     "fecha": "2026-10-16T10:42:22.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/espectaculos/asi-anuncio-mario-mario-massaccesi-la-muerte-fernando-confessore-siempre-estaba-aqui-trabajando-n6334485",
-     "fecha": "2026-10-16T12:54:00.000Z"
-    },
-    {
-     "medio": "La Gaceta (Tucumán)",
-     "enlace": "https://www.lagaceta.com.ar/nota/1158323/sociedad/conmocion-mario-massaccesi-al-anunciar-vivo-muerte-fernando-confessore-no-podemos-creer.html",
-     "fecha": "2026-10-16T11:09:00.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/16/asi-anuncio-mario-massaccesi-la-noticia-de-la-muerte-de-fernando-confessore-estamos-en-shock/",
-     "fecha": "2026-10-16T10:55:45.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/el-dolor-mario-massaccesi-al-comunicar-la-noticia-la-muerte-fernando-confessore-nos-dejo-shock-n1607022",
-     "fecha": "2026-10-16T10:43:43.000Z"
-    },
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/espectaculos/momento-mario-massaccesi-anuncio-vivo-muerte-fernando-confessore_0_dkSopl7g5d.html",
-     "fecha": "2026-10-16T12:27:17.000Z"
-    },
-    {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/actualidad/mario-massaccesi-despidio-a-fernando-confessore-en-vivo-lo-vamos-a-recordar-siempre.phtml",
-     "fecha": "2026-10-16T13:58:32.000Z"
-    }
-   ],
-   "intentos": 5,
-   "motivo": "semáforo: necesita ojo humano: \"muere\", en lo que escribió la IA (título, bajada o texto para redes)",
-   "maximo": 5
-  },
-  {
    "id": "gymja6",
    "titulo": "La desgarradora despedida de Julieta, la hija de Fernando Confessore tras su muerte: “Te voy a amar y extrañar toda la eternidad”",
    "copete": "Juliet a, una de las hijas de Fernando Confessore , despidió al meteorólogo de TN con una foto de su infancia y un mensaje cargado de dolor. Meses atrás, su papá había compartido con orgullo la graduación de la joven como ingeniera química. El emotivo mensaje de Julieta para…",
@@ -545,48 +535,6 @@
    "maximo": 5
   },
   {
-   "id": "1mru4qv",
-   "titulo": "El FMI elogió las reformas de Milei y anticipó una recuperación de la economía argentina en 2027",
-   "copete": "El organismo destacó los avances en la reducción de los subsidios energéticos y el fortalecimiento de la sostenibilidad de la deuda.",
-   "seccion": "Economía",
-   "fecha": "2026-10-16T08:37:00.000Z",
-   "fuentes": [
-    {
-     "medio": "La Gaceta (Tucumán)",
-     "enlace": "https://www.lagaceta.com.ar/nota/1158292/economia/fmi-elogio-reformas-milei-anticipo-recuperacion-economia-argentina-2027.html",
-     "fecha": "2026-10-16T08:37:00.000Z"
-    },
-    {
-     "medio": "El Cronista",
-     "enlace": "https://www.cronista.com/economia-politica/el-fmi-le-puso-fecha-a-la-recuperacion-de-la-demanda-interna-y-el-crecimiento-de-argentina/",
-     "fecha": "2026-10-16T12:22:16.797Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/economia/el-fmi-elogio-las-reformas-milei-y-proyecto-una-recuperacion-la-economia-argentina-2027-n1607018",
-     "fecha": "2026-10-16T10:24:00.000Z"
-    },
-    {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/politica/el-fmi-destaco-la-gestion-de-javier-milei-y-preve-un-repunte-de-la-economia-en-2027/",
-     "fecha": "2026-10-16T10:59:00.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/politica/el-fmi-destaco-los-progresos-de-la-argentina-y-anticipo-que-espera-para-la-economia-en-2027/",
-     "fecha": "2026-10-16T11:45:44.000Z"
-    },
-    {
-     "medio": "La Brújula 24",
-     "enlace": "https://www.labrujula24.com/notas/2026/10/16/el-fmi-elogio-reformas-de-milei-anticipa-recuperacion-de-la-economia-argentina-n525781/",
-     "fecha": "2026-10-16T12:29:31.000Z"
-    }
-   ],
-   "intentos": 4,
-   "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
-   "maximo": 4
-  },
-  {
    "id": "8sfd4e",
    "titulo": "Los precios mayoristas no ceden: aumentaron en septiembre un 3,2%",
    "copete": "",
@@ -614,9 +562,71 @@
      "fecha": "2026-10-16T19:40:00.000Z"
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 3
+  },
+  {
+   "id": "1oye0ii",
+   "titulo": "La desgarradora despedida de Mario Massaccesi a Fernando Confessore tras su repentina muerte: “Lo vamos a recordar siempre”",
+   "copete": "El conductor compartió unas sentidas palabras al recordado meteorólogo tras conocerse la noticia de su muerte a los 58 años",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-16T10:20:51.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/videos/la-desgarradora-despedida-de-mario-massaccesi-a-fernando-confessore-tras-su-repentina-muerte-lo-vamos-a-recordar-siempre/",
+     "fecha": "2026-10-16T10:20:51.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/show/television/2026/10/16/la-despedida-de-mario-massaccesi-tras-la-muerte-de-fernando-confessore-lo-vamos-a-extranar-mucho/",
+     "fecha": "2026-10-16T14:05:52.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/videos/show/television/2026/10/16/la-despedida-de-mario-massaccesi-tras-la-muerte-de-fernando-confessore-lo-vamos-a-extranar-mucho/",
+     "fecha": "2026-10-16T10:42:22.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/espectaculos/asi-anuncio-mario-mario-massaccesi-la-muerte-fernando-confessore-siempre-estaba-aqui-trabajando-n6334485",
+     "fecha": "2026-10-16T12:54:00.000Z"
+    },
+    {
+     "medio": "La Gaceta (Tucumán)",
+     "enlace": "https://www.lagaceta.com.ar/nota/1158323/sociedad/conmocion-mario-massaccesi-al-anunciar-vivo-muerte-fernando-confessore-no-podemos-creer.html",
+     "fecha": "2026-10-16T11:09:00.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/teleshow/2026/10/16/asi-anuncio-mario-massaccesi-la-noticia-de-la-muerte-de-fernando-confessore-estamos-en-shock/",
+     "fecha": "2026-10-16T10:55:45.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/espectaculos/asi-anuncio-mario-massaccesi-la-muerte-de-fernando-confessore-la-ultima-noticia-la-que-no-nid16102026/",
+     "fecha": "2026-10-16T10:39:21.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/primiciasya/el-dolor-mario-massaccesi-al-comunicar-la-noticia-la-muerte-fernando-confessore-nos-dejo-shock-n1607022",
+     "fecha": "2026-10-16T10:43:43.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/espectaculos/momento-mario-massaccesi-anuncio-vivo-muerte-fernando-confessore_0_dkSopl7g5d.html",
+     "fecha": "2026-10-16T12:27:17.000Z"
+    },
+    {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/actualidad/mario-massaccesi-despidio-a-fernando-confessore-en-vivo-lo-vamos-a-recordar-siempre.phtml",
+     "fecha": "2026-10-16T13:58:32.000Z"
+    }
+   ],
+   "intentos": 5,
+   "motivo": "semáforo: necesita ojo humano: \"muere\", en lo que escribió la IA (título, bajada o texto para redes)",
+   "maximo": 5
   }
  ]
 }
