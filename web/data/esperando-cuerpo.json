@@ -1,13 +1,35 @@
 {
- "generado": "2026-10-16T14:31:40.098Z",
+ "generado": "2026-10-16T14:38:07.439Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "8dpdqi",
+   "titulo": "El Colegio de Médicos bonaerense advirtió que la crisis del PAMI amenaza al sistema sanitario",
+   "copete": "La entidad denunció el desfinanciamiento del organismo y alertó sobre las consecuencias de la interrupción de prestaciones para jubilados y pensionados. Reclamó una mesa de diálogo urgente, actualización de aranceles y cancelación de las deudas con prestadores y profesionales…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-16T14:19:04.000Z",
+   "fuentes": [
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/el-colegio-de-medicos-bonaerense-advirtio-que-la-crisis-del-pami-amenaza-al-sistema-sanitario/",
+     "fecha": "2026-10-16T14:26:33.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/el-colegio-de-medicos-advirtio-que-la-crisis-del-pami-amenaza-con-desbordar-los-hospitales-publicos/",
+     "fecha": "2026-10-16T14:19:04.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 92 caracteres, el máximo es 90",
+   "maximo": 3
+  },
   {
    "id": "1x4gtj1",
    "titulo": "Diego Santilli: “Los que deberían estar preocupados son los gobernadores si el kirchnerismo vuelve y gana Kicillof”",
    "copete": "El jefe de Gabinete, Diego Santilli , afirmó que los mandatarios provinciales deberían inquietarse ante la posibilidad de un regreso del kirchnerismo al poder con Axel Kicillof como figura central . En una entrevista con Radio Mitre , vinculó ese escenario con una eventual…",
    "seccion": "Política",
-   "fecha": "2026-10-16T12:24:48.000Z",
+   "fecha": "2026-10-16T11:30:00.000Z",
    "fuentes": [
     {
      "medio": "Infobae",
@@ -25,6 +47,11 @@
      "fecha": "2026-10-16T13:17:05.000Z"
     },
     {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/politica/santilli-lanzo-una-advertencia-a-los-gobernadores-por-kicillof-y-agito-el-fantasma-de-la-vuelta-del-kirchnerismo.phtml",
+     "fecha": "2026-10-16T14:11:22.000Z"
+    },
+    {
      "medio": "Radio Mitre",
      "enlace": "https://radiomitre.cienradios.com/videos/diego-santilli-los-que-deberian-estar-preocupados-son-los-gobernadores-si-el-kirchnerismo-vuelve-y-gana-kicillof/",
      "fecha": "2026-10-16T13:52:11.000Z"
@@ -38,11 +65,16 @@
      "medio": "El Economista",
      "enlace": "https://eleconomista.com.ar/politica/deberian-estar-preocupados-santilli-lanzo-una-fuerte-advertencia-gobernadores-gana-kicillof-n98922",
      "fecha": "2026-10-16T13:44:00.000Z"
+    },
+    {
+     "medio": "La Gaceta (Tucumán)",
+     "enlace": "https://www.lagaceta.com.ar/nota/1158330/politica/diego-santilli-que-deberian-estar-preocupados-son-gobernadores-si-kirchnerismo-vuelve-gana-kicillof.html",
+     "fecha": "2026-10-16T11:30:00.000Z"
     }
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
-   "maximo": 4
+   "maximo": 5
   },
   {
    "id": "dpwrvn",
@@ -80,11 +112,6 @@
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/espectaculos/asi-anuncio-mario-massaccesi-la-muerte-de-fernando-confessore-la-ultima-noticia-la-que-no-nid16102026/",
      "fecha": "2026-10-16T11:02:20.000Z"
-    },
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/fama/historia-amor-fernando-confessore-paula-franco-mujer-acompano-40-anos-clave-carrera_0_9dHgDg3s3F.html",
-     "fecha": "2026-10-16T13:48:32.000Z"
     },
     {
      "medio": "0223 (Mar del Plata)",
@@ -212,11 +239,6 @@
      "fecha": "2026-10-16T14:07:56.000Z"
     },
     {
-     "medio": "0221",
-     "enlace": "https://www.0221.com.ar/nacional/murio-el-meteorologo-tn-fernando-confessore-los-58-anos-sufrir-un-infarto-n135905",
-     "fecha": "2026-10-16T11:36:00.000Z"
-    },
-    {
      "medio": "La Tecla",
      "enlace": "https://www.latecla.info/170427-murio-a-los-58-anos-el-meteorologo-fernando-confessore-que-le-paso",
      "fecha": "2026-10-16T10:12:00.000Z"
@@ -307,11 +329,6 @@
      "fecha": "2026-10-16T10:32:00.000Z"
     },
     {
-     "medio": "elDiarioAR",
-     "enlace": "https://www.eldiarioar.com/medios/murio-fernando-confessore-58-anos-historico-meteorologo-tn-trece_1_13591768.html",
-     "fecha": "2026-10-16T13:16:02.000Z"
-    },
-    {
      "medio": "La Brújula 24",
      "enlace": "https://www.labrujula24.com/notas/2026/10/16/a-los-58-anos-murio-el-reconocido-meteorologo-fernando-confessore-n525737/",
      "fecha": "2026-10-16T10:03:27.000Z"
@@ -347,6 +364,11 @@
      "fecha": "2026-10-16T11:53:27.000Z"
     },
     {
+     "medio": "0221",
+     "enlace": "https://www.0221.com.ar/nacional/murio-el-meteorologo-tn-fernando-confessore-los-58-anos-sufrir-un-infarto-n135905",
+     "fecha": "2026-10-16T11:36:00.000Z"
+    },
+    {
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/espectaculos/momento-mario-massaccesi-anuncio-vivo-muerte-fernando-confessore_0_dkSopl7g5d.html",
      "fecha": "2026-10-16T12:27:17.000Z"
@@ -355,6 +377,16 @@
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/fama/murio-fernando-confessore-meteorologo-tn-58-anos_0_4qAj2WmvWD.html",
      "fecha": "2026-10-16T13:15:56.000Z"
+    },
+    {
+     "medio": "elDiarioAR",
+     "enlace": "https://www.eldiarioar.com/medios/murio-fernando-confessore-58-anos-historico-meteorologo-tn-trece_1_13591768.html",
+     "fecha": "2026-10-16T13:16:02.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/fama/historia-amor-fernando-confessore-paula-franco-mujer-acompano-40-anos-clave-carrera_0_9dHgDg3s3F.html",
+     "fecha": "2026-10-16T13:48:32.000Z"
     }
    ],
    "intentos": 5,
