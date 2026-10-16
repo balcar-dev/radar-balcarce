@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T18:01:49.662Z",
- "portada": 53,
+ "generado": "2026-10-16T18:05:17.841Z",
+ "portada": 54,
  "archivo": 1177,
- "esperandoCuerpo": 7,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-16T18:01:49.696Z",
+  "generado": "2026-10-16T18:05:17.869Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "en-hora",
     "salio": null,
-    "segundos": 54,
+    "segundos": 46,
     "notas": [
      {
       "id": "npazulcervantino",
@@ -144,9 +144,9 @@
       "seccion": "Economía"
      },
      {
-      "id": "7rb12z",
-      "titulo": "Lautaro Martínez cuestiona las dudas sobre el compromiso del seleccionado",
-      "seccion": "Fútbol"
+      "id": "10ephb3",
+      "titulo": "La Justicia investiga el patrimonio de Claudio Tapia y pide informes a Suiza",
+      "seccion": "Argentina"
      }
     ]
    },
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 50,
     "notas": [
      {
       "id": "1qtfiwu",
@@ -170,14 +170,14 @@
       "seccion": "Cultura y agenda"
      },
      {
+      "id": "7rb12z",
+      "titulo": "Lautaro Martínez cuestiona las dudas sobre el compromiso del seleccionado",
+      "seccion": "Fútbol"
+     },
+     {
       "id": "32f6mu",
       "titulo": "Lando Norris califica a Franco Colapinto como un buen amigo",
       "seccion": "Automovilismo"
-     },
-     {
-      "id": "1mfnr70",
-      "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
-      "seccion": "Deportes"
      }
     ]
    }
