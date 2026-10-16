@@ -2411,6 +2411,20 @@
       "tipo": "REELS",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-16/noticia2": {
+      "cuando": "2026-10-16T18:09:35.412Z",
+      "mediaId": "18206090866336780",
+      "nombre": "noticia2",
+      "tipo": "REELS",
+      "notaId": "npazulcervantino",
+      "notaIds": [
+        "npazulcervantino",
+        "1jdsdep",
+        "x3s2ug",
+        "10ephb3"
+      ],
+      "permalink": "https://www.instagram.com/reel/DekJJO0EY4t/"
     }
   },
   "facebookVideos": {
@@ -4044,6 +4058,20 @@
       "tipo": "REELS",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-16/noticia2": {
+      "cuando": "2026-10-16T18:10:14.595Z",
+      "mediaId": "4606960986186525",
+      "nombre": "noticia2",
+      "tipo": "REELS",
+      "notaId": "npazulcervantino",
+      "notaIds": [
+        "npazulcervantino",
+        "1jdsdep",
+        "x3s2ug",
+        "10ephb3"
+      ],
+      "permalink": "https://www.facebook.com/reel/4606960986186525/"
     }
   },
   "instagramFeed": {
@@ -5704,6 +5732,20 @@
       "nombre": "participa-nota",
       "red": "facebook",
       "notaId": null
+    },
+    "instagram/2026-10-16/noticia2": {
+      "cuando": "2026-10-16T18:10:06.179Z",
+      "mediaId": "18239022208318571",
+      "nombre": "noticia2",
+      "red": "instagram",
+      "notaId": "npazulcervantino"
+    },
+    "facebook/2026-10-16/noticia2": {
+      "cuando": "2026-10-16T18:10:44.425Z",
+      "mediaId": "2642627379501652",
+      "nombre": "noticia2",
+      "red": "facebook",
+      "notaId": "npazulcervantino"
     }
   },
   "problemas": {
@@ -5720,13 +5762,6 @@
       "parte": "historia-del-reel",
       "error": "La subida del video falló (400) Request processing failed",
       "cuando": "2026-10-15T13:08:46.203Z"
-    },
-    "2026-10-16/noticia2/instagram/reel": {
-      "pieza": "noticia2",
-      "red": "instagram",
-      "parte": "reel",
-      "error": "La subida del video falló (400) Request processing failed",
-      "cuando": "2026-10-16T18:07:10.277Z"
     }
   },
   "facebookFoto": {
