@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-16T13:32:12.624Z",
+ "generado": "2026-10-16T14:02:44.291Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -35,14 +35,14 @@
      "fecha": "2026-10-16T11:02:20.000Z"
     },
     {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/fama/murio-fernando-confessore-meteorologo-tn-58-anos_0_4qAj2WmvWD.html",
+     "fecha": "2026-10-16T13:15:56.000Z"
+    },
+    {
      "medio": "0223 (Mar del Plata)",
      "enlace": "https://www.0223.com.ar/nota/2026-10-16-8-15-19-conmocion-murio-fernando-confessore-referente-historico-de-la-meteorologia-a-los-58-anos",
      "fecha": "2026-10-16T11:15:00.000Z"
-    },
-    {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/sociedad/a-los-58-anos-murio-fernando-confessore-el-hombre-que-nos-daba-el-clima-cada-manana-n56552",
-     "fecha": "2026-10-16T12:39:00.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
@@ -117,7 +117,7 @@
     {
      "medio": "Canal 26",
      "enlace": "https://www.canal26.com/espectaculos/2026/10/16/murio-fernando-confessore-a-los-58-anos-que-le-paso-al-meteorologo-que-marco-una-epoca-en-la-television/",
-     "fecha": "2026-10-16T10:34:04.000Z"
+     "fecha": "2026-10-16T13:36:49.000Z"
     },
     {
      "medio": "Diario Popular",
@@ -147,7 +147,7 @@
     {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-16-7-24-0-murio-a-los-58-anos-fernando-confessore-uno-de-los-historicos-meteorologos-de-tn",
-     "fecha": "2026-10-16T13:24:01.000Z"
+     "fecha": "2026-10-16T13:50:29.000Z"
     },
     {
      "medio": "0221",
@@ -225,9 +225,19 @@
      "fecha": "2026-10-16T10:45:00.000Z"
     },
     {
+     "medio": "La Gaceta (Tucumán)",
+     "enlace": "https://www.lagaceta.com.ar/nota/1158311/sociedad/de-murio-fernando-confessore-historico-meteorologo-television-argentina.html",
+     "fecha": "2026-10-16T10:30:00.000Z"
+    },
+    {
      "medio": "Los Andes (Mendoza)",
      "enlace": "https://www.losandes.com.ar/espectaculos/murio-los-58-anos-fernando-confessore-el-historico-meteorologo-tn-y-el-trece-n6010552",
      "fecha": "2026-10-16T10:32:00.000Z"
+    },
+    {
+     "medio": "elDiarioAR",
+     "enlace": "https://www.eldiarioar.com/medios/murio-fernando-confessore-58-anos-historico-meteorologo-tn-trece_1_13591768.html",
+     "fecha": "2026-10-16T13:16:02.000Z"
     },
     {
      "medio": "La Brújula 24",
@@ -268,11 +278,63 @@
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/espectaculos/momento-mario-massaccesi-anuncio-vivo-muerte-fernando-confessore_0_dkSopl7g5d.html",
      "fecha": "2026-10-16T12:27:17.000Z"
+    },
+    {
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/sociedad/a-los-58-anos-murio-fernando-confessore-el-hombre-que-nos-daba-el-clima-cada-manana-n56552",
+     "fecha": "2026-10-16T12:39:00.000Z"
     }
    ],
    "intentos": 5,
    "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 5
+  },
+  {
+   "id": "bo9vhl",
+   "titulo": "“Fue un mentor”: la emotiva despedida de Matías Bertolotti a Fernando Confessore tras su muerte",
+   "copete": "La muerte de Fernando Confessore a los 58 años provocó una fuerte conmoción entre sus compañeros de televisión. Matías Bertolotti lo despidió a través de sus redes sociales, donde compartió una foto de ambos en el estudio de televisión donde trabajaban y le dedicó un sentido…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-16T10:58:42.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/videos/fue-un-mentor-la-emotiva-despedida-de-matias-bertolotti-a-fernando-confessore-tras-su-muerte/",
+     "fecha": "2026-10-16T10:58:42.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/show/famosos/2026/10/16/matias-bertolotti-destaco-el-aporte-de-fernando-confessore-fue-un-gran-mentor-inicio-la-carrera-de-meteorologia-en-la-tv/",
+     "fecha": "2026-10-16T11:44:03.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/sociedad/el-doloroso-pedido-de-matias-bertolotti-a-fernando-confessore-tras-su-muerte/",
+     "fecha": "2026-10-16T11:10:34.000Z"
+    },
+    {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/espectaculos/la-despedida-matias-bertolotti-fernando-confessore-fue-un-gran-mentor-n924843",
+     "fecha": "2026-10-16T12:07:00.000Z"
+    },
+    {
+     "medio": "Infobrisas (Radio Brisas)",
+     "enlace": "https://www.infobrisas.com/noticias/2026/10/16/111653-marcela-pagano-despidio-a-fernando-confessore-con-un-emotivo-mensaje",
+     "fecha": "2026-10-16T13:09:47.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/teleshow/2026/10/16/la-emotiva-despedida-de-matias-bertolotti-a-fernando-confessore-se-fue-el-mentor-de-todos-nosotros/",
+     "fecha": "2026-10-16T12:53:24.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/espectaculos/matias-bertolotti-despidio-fernando-confessore-emotivo-mensaje-pedido-especial_0_WAwN1JNxOX.html",
+     "fecha": "2026-10-16T12:19:39.000Z"
+    }
+   ],
+   "intentos": 4,
+   "motivo": "título o bajada: 2 problemas (numero): el guion dice 50 y la fuente no lo dice",
+   "maximo": 4
   }
  ]
 }

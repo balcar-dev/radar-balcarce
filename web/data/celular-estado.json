@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T13:32:12.624Z",
- "portada": 48,
- "archivo": 1154,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-16T14:02:44.291Z",
+ "portada": 49,
+ "archivo": 1156,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-16T13:32:12.660Z",
+  "generado": "2026-10-16T14:02:44.320Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-16T10:05:44.326Z"
    },
    {
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 52,
     "notas": [
      {
       "id": "107aa47",
@@ -175,8 +175,8 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "130eay0",
-      "titulo": "La recolección de residuos electrónicos pasa para el lunes",
+      "id": "1eb747m",
+      "titulo": "La Estudiantina 2026 arranca el lunes con propuestas deportivas y culturales",
       "seccion": "Balcarce"
      }
     ]
@@ -188,6 +188,11 @@
      "id": "1kd7az5",
      "titulo": "El Banco Central publica el informe con los datos de morosidad",
      "cuando": "2026-10-16T12:09:19.709Z"
+    },
+    {
+     "id": "1vqqg6",
+     "titulo": "La Dirección de Juventud relanza el programa Arte Urbano",
+     "cuando": "2026-10-16T13:45:37.336Z"
     }
    ],
    "cola": [
@@ -195,18 +200,6 @@
      "id": "aa7nni",
      "titulo": "Reprograman la Caravana de la Alegría para noviembre",
      "seccion": "Cultura y agenda",
-     "marcada": false
-    },
-    {
-     "id": "1jdsdep",
-     "titulo": "La Dirección de Juventud firma un acuerdo para vender entradas online",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "1vqqg6",
-     "titulo": "La Dirección de Juventud relanza el programa Arte Urbano",
-     "seccion": "Balcarce",
      "marcada": false
     },
     {
@@ -222,8 +215,8 @@
      "marcada": false
     }
    ],
-   "cupo": 4,
-   "proximoDesde": "2026-10-16T13:39:19.709Z",
+   "cupo": 3,
+   "proximoDesde": "2026-10-16T15:15:37.336Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
