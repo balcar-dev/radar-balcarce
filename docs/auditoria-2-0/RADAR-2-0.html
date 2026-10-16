@@ -1,0 +1,466 @@
+<title>Radar 2.0 · Auditoría</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,800&family=Inter:wght@400;600;700&display=swap">
+<style>
+/* Layout: una columna de lectura tipo diario (68ch), con bandas por tema y tablas que se deslizan solas en el celular. Colores y letras del propio sitio. */
+:root {
+  --papel: #FFFFFF; --tinta: #14161A; --texto: #3B403C; --suave: #646964; --linea: #E4DFD2; --crema: #F6F3EC;
+  --rojo: #C7381C; --verde: #16615B; --ambar: #A76A0F; --azul: #1E40AF;
+  --f-titulo: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-texto: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --papel: #121417; --tinta: #F2F0EA; --texto: #D4D2CB; --suave: #A3A69F; --linea: #2E3236; --crema: #1B1E22;
+  --rojo: #F07A5C; --verde: #5CC2B5; --ambar: #E8B35A; --azul: #8FA8F5; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --papel: #121417; --tinta: #F2F0EA; --texto: #D4D2CB; --suave: #A3A69F; --linea: #2E3236; --crema: #1B1E22;
+  --rojo: #F07A5C; --verde: #5CC2B5; --ambar: #E8B35A; --azul: #8FA8F5; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--papel); color: var(--texto); font: 16px/1.6 var(--f-texto);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 64px }
+main { max-width: 68rem; margin: 0 auto }
+.lectura { max-width: 44rem }
+h1, h2, h3 { font-family: var(--f-titulo); color: var(--tinta); text-wrap: balance; line-height: 1.15 }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin: 0 }
+h2 { font-size: clamp(1.45rem, 3vw, 1.9rem); font-weight: 800; margin: 0 0 .6rem }
+h3 { font-size: 1.15rem; font-weight: 600; margin: 0 0 .35rem }
+p { margin: 0 0 .8rem }
+a { color: var(--azul) }
+.volanta { font: 700 .75rem/1 var(--f-texto); letter-spacing: .12em; text-transform: uppercase; color: var(--rojo); margin: 0 0 .6rem }
+header { border-bottom: 3px solid var(--tinta); padding-block: 40px 20px; margin-bottom: 8px }
+header .bajada { font: 400 1.15rem/1.5 var(--f-titulo); color: var(--texto); max-width: 44rem; margin-top: .8rem }
+.meta { font-size: .85rem; color: var(--suave) }
+nav.indice { display: flex; flex-wrap: wrap; gap: 6px 14px; padding-block: 12px; border-bottom: 1px solid var(--linea); font-size: .9rem }
+nav.indice a { color: var(--tinta); text-decoration: none; border-bottom: 1px solid var(--linea) }
+nav.indice a:hover, nav.indice a:focus-visible { border-color: var(--rojo) }
+section { padding-block: 36px; border-bottom: 1px solid var(--linea) }
+ul, ol { padding-left: 1.2rem; margin: 0 0 .8rem }
+li { margin-bottom: .35rem }
+strong { color: var(--tinta) }
+.claves { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) }
+.clave { border-top: 3px solid var(--tinta); padding-top: 10px; min-width: 0 }
+.clave .numero { font: 800 2rem/1 var(--f-titulo); color: var(--tinta); font-variant-numeric: tabular-nums }
+.clave p { font-size: .92rem; margin: .3rem 0 0 }
+.diagrama { overflow-x: auto; background: var(--crema); border: 1px solid var(--linea); padding: 16px; margin: 12px 0 }
+.diagrama pre { margin: 0; font-size: .8rem }
+.tabla { overflow-x: auto; margin: 12px 0 }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; min-width: 38rem }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--linea) }
+th { font: 700 .72rem/1.3 var(--f-texto); letter-spacing: .08em; text-transform: uppercase; color: var(--suave) }
+.estado { display: inline-block; font: 700 .7rem/1 var(--f-texto); letter-spacing: .06em; text-transform: uppercase; padding: 4px 7px; border: 1px solid currentColor; white-space: nowrap }
+.e-hecho { color: var(--verde) } .e-urgente { color: var(--rojo) } .e-decidir { color: var(--ambar) } .e-claude { color: var(--azul) }
+.temas { display: grid; gap: 22px 28px; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)) }
+.tema { min-width: 0 }
+.tema h3 { border-bottom: 2px solid var(--tinta); padding-bottom: 6px }
+.etapa { display: grid; grid-template-columns: 4.5rem 1fr; gap: 6px 16px; padding: 14px 0; border-bottom: 1px dashed var(--linea) }
+.etapa:last-child { border-bottom: 0 }
+.etapa .n { font: 800 1.6rem/1 var(--f-titulo); color: var(--rojo) }
+.etapa > div { min-width: 0 }
+.etapa .cuando { font-size: .8rem; color: var(--suave); text-transform: uppercase; letter-spacing: .08em }
+.agentes { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)) }
+.agente { background: var(--crema); border: 1px solid var(--linea); padding: 14px; min-width: 0 }
+.agente .rol { font-size: .78rem; color: var(--suave); text-transform: uppercase; letter-spacing: .08em }
+.agente h3 { margin: .2rem 0 .4rem }
+.agente p { font-size: .9rem; margin: 0 }
+dl.glosario { display: grid; grid-template-columns: minmax(8rem, 13rem) 1fr; gap: 8px 18px; margin: 0 }
+dl.glosario dt { font-weight: 700; color: var(--tinta) }
+dl.glosario dd { margin: 0 }
+@media (max-width: 560px) { dl.glosario { grid-template-columns: 1fr } dl.glosario dd { margin-bottom: 8px } .etapa { grid-template-columns: 1fr } }
+.nota { border-left: 3px solid var(--ambar); padding-left: 12px; font-size: .95rem }
+:focus-visible { outline: 2px solid var(--rojo); outline-offset: 2px }
+</style>
+
+<main>
+<header>
+  <p class="volanta">Radar Balcarce · auditoría completa · 16 de octubre de 2026</p>
+  <h1>Radar 2.0: qué cortar, qué achicar y qué mejorar</h1>
+  <p class="bajada">Seis revisiones en paralelo midieron con datos reales cómo llega, se elige, se escribe, se ilustra, se publica y se difunde cada nota. Acá está todo junto: el recorrido de punta a punta, lo que hoy anda mal, el sistema dividido en módulos y el plan por etapas.</p>
+  <p class="meta">Detalle completo en <code>docs/auditoria-2-0/</code> (informes 01 a 06, unas 3.400 líneas). Los números salen de 4.742 corridas reales de GitHub del 2 al 16/10, de los archivos de <code>web/data/</code> y del sitio en vivo.</p>
+</header>
+
+<nav class="indice" aria-label="Índice">
+  <a href="#resumen">Resumen</a><a href="#recorrido">El recorrido de una nota</a><a href="#mal">Lo que hoy sale mal</a><a href="#temas">Tema por tema</a><a href="#modulos">Los módulos</a><a href="#plan">El plan</a><a href="#decidir">Qué tienen que decidir</a><a href="#publico">¿Público o privado?</a><a href="#agentes">El equipo de agentes</a><a href="#redes">Las redes</a><a href="#costos">Costos</a><a href="#glosario">Glosario</a>
+</nav>
+
+<section id="resumen">
+  <h2>En diez líneas</h2>
+  <div class="lectura">
+  <ol>
+    <li><strong>La base está bien.</strong> Leer fuentes por RSS, juntar la misma noticia de varios medios, escribir con IA y verificar contra la fuente es la forma correcta para un medio así. No hay que tirar nada: hay que ordenar, cortar lo que sobra y arreglar lo que se rompe.</li>
+    <li><strong>Lo que más daño hace son las repetidas:</strong> 76 copias de más publicadas, 57 de Balcarce (Campo de Pato salió 3 veces).</li>
+    <li><strong>Las noticias nacionales más contadas no salen.</strong> El 15/10 a la noche había 24 historias contadas por muchos medios y salieron 9; faltaron Diputados (23 medios) y la Marcha Universitaria (18). La portada no ordena por cantidad de medios: a partir de 5 medios da lo mismo.</li>
+    <li><strong>Un error del semáforo frena notas buenas:</strong> cualquier «murió» o «falleció» en un título escrito por la IA queda esperando a una persona. Así no salió la muerte de Confessore (30 medios).</li>
+    <li><strong>Se publicó autobombo de los medios locales</strong> («Radio Líder alcanza cifras récord», avisos de entrevistas, pronósticos y farmacias de otros medios como notas), y el filtro que debía frenarlo frenó 10 notas que sí eran noticias.</li>
+    <li><strong>El sitio se compila dos veces cada media hora</strong> y «Redes» corre 124 veces por día cuando el 89 % de esas vueltas no hace nada.</li>
+    <li><strong>El 85 % de las notas tiene foto real.</strong> Hay errores puntuales (una captura con «Activar Windows», el flyer de una rifa, la misma foto de Messi en 7 notas, 9 imágenes rotas).</li>
+    <li><strong>Las carpetas no son módulos:</strong> se usan unas a otras en círculo. Por eso tocar una parte puede romper otra. Se propone un mapa de 20 módulos con contratos e interruptores.</li>
+    <li><strong>Facebook trae el 80 a 90 % de las visitas.</strong> Instagram tiene 7 seguidores y casi no trae nada.</li>
+    <li><strong>Hoy se paga US$ 5 por mes</strong> (más el dominio). Con todo lo recomendado serían unos US$ 10. El equipo de agentes sumaría US$ 10 a 20.</li>
+  </ol>
+  </div>
+  <div class="claves" style="margin-top:18px">
+    <div class="clave"><div class="numero">76</div><p>copias de más publicadas en dos semanas (57 de Balcarce)</p></div>
+    <div class="clave"><div class="numero">9 de 24</div><p>noticias nacionales muy contadas que salieron el 15/10 a la noche</p></div>
+    <div class="clave"><div class="numero">2×</div><p>veces que se compila el sitio en cada vuelta de 30 minutos</p></div>
+    <div class="clave"><div class="numero">85 %</div><p>de las notas de 7 días con foto real; 3 % con ilustración y 12 % con placa</p></div>
+  </div>
+</section>
+
+<section id="recorrido">
+  <h2>El recorrido de una nota, de punta a punta</h2>
+  <div class="lectura">
+  <p>Así funciona hoy. Cada media hora el reloj de Cloudflare despierta a GitHub, que hace todo esto en unos 6 minutos y medio:</p>
+  </div>
+  <div class="diagrama" role="img" aria-label="Diagrama del recorrido de una nota hoy">
+<pre class="mermaid">
+flowchart TD
+  R["Reloj de Cloudflare<br/>cada 30 minutos"] --> F
+  F["1 · Fuentes<br/>unos 100 feeds RSS de unos 70 medios<br/>(lo de las últimas 72 h)"] --> C
+  C["2 · Cruce<br/>junta la misma noticia contada por varios medios<br/>(sin encadenar temas distintos)"] --> S
+  S["3 · Criterio<br/>sección, ¿es de acá?, mínimo de medios,<br/>puntaje y semáforo (verde, amarillo, rojo, nunca)"] --> L
+  L["4 · Lectura con IA<br/>Gemini decide: sección, interés, ¿se publica?<br/>y busca repetidas (tope: 60 vueltas por día)"] --> E
+  E["5 · Redacción con IA<br/>título, bajada y cuerpo con las 4 fuentes"] --> V
+  V["6 · Verificación (código, no IA)<br/>lo escrito tiene que estar en la fuente"] --> FO
+  FO["7 · Foto<br/>la de la fuente sin marca → banco propio<br/>si no: ilustración IA o placa"] --> D
+  D["8 · Datos del sitio<br/>portada.json, archivo.json"] --> B
+  B["9 · Compilar el sitio (dos veces)<br/>y subir a Cloudflare Pages"] --> W["radarbalcarce.com"]
+  B --> AR["Archivo permanente en R2<br/>(guardado, todavía no visible)"]
+  D --> RS["10 · Redes<br/>Facebook con foto · reels con voz<br/>en Instagram y Facebook"]
+  S -. "amarillo: espera a una persona" .-> P["Panel del celular"]
+  P -. "aprobar, corregir, retirar" .-> D
+  W --> VG["Vigilancia y mails<br/>informe 8:15 y 21:15"]
+</pre>
+  </div>
+  <div class="lectura">
+  <p><strong>Cómo se evitan hoy las repetidas:</strong> el cruce junta lo parecido; la IA compara de a pares lo que quedó dudoso (pero sólo dentro de la misma sección y hasta 60 veces por día); y si una noticia vuelve con otra dirección, la web la une a la que ya estaba y redirige. Se escapan sobre todo las de Balcarce, porque la memoria del cruce guarda sólo lo de afuera y El Diario Balcarce suele publicar lo mismo uno o dos días después con otras palabras.</p>
+  <p><strong>Cómo se controlan hoy las fotos:</strong> una sola pasada de IA mira cada candidata (marca de otro medio, chicos, Policiales) y decide. No hay segunda opinión, no queda guardado qué vio y nadie revisa lo publicado. Las ilustraciones automáticas sí pasan por un segundo control con visión.</p>
+  </div>
+</section>
+
+<section id="mal">
+  <h2>Lo que hoy sale mal, por urgencia</h2>
+  <div class="tabla">
+  <table>
+    <thead><tr><th>Qué pasa</th><th>Qué hacer</th><th>Estado</th></tr></thead>
+    <tbody>
+      <tr><td>La corrección automática de ortografía puso cuatro tildes mal («entretíempo», «paráte», «vigésimoctava», «Sanjuán»).</td><td>Se sacaron y ahora sólo pone una tilde donde la regla de acentuación la pide (regla 188).</td><td><span class="estado e-hecho">Arreglado hoy</span></td></tr>
+      <tr><td>La lista de redirecciones (las notas repetidas que mandan a la original) se llena alrededor del 26/10: tiene 1.419 de 1.900 y suma 50 por día.</td><td>Subir el tope o pasarlas a una regla de Cloudflare. Sin cambios visibles.</td><td><span class="estado e-urgente">Antes del 26/10</span></td></tr>
+      <tr><td>Un «murió» o «falleció» en un título escrito por la IA frena la nota (el semáforo revisa una nota vacía). Así no salió Confessore y otras 10 notas en 4 días.</td><td>Arreglo de una línea, pero toca el semáforo: lo confirma Hernán.</td><td><span class="estado e-decidir">Decide Hernán</span></td></tr>
+      <tr><td>El historial público de GitHub conserva completa la nota retirada el 15/10 para proteger a una víctima (y todas las retiradas).</td><td>Limpiar el historial (se puede, pero rompe las copias viejas) o aceptarlo. Ver «¿Público o privado?».</td><td><span class="estado e-decidir">Decide Hernán</span></td></tr>
+      <tr><td>Repetidas de Balcarce: Campo de Pato (3 veces), SUTEBA, LALCEC, educación vial, Tamangueyú.</td><td>Que la memoria guarde también lo de acá 72 horas y comparar por significado con la IA confirmando cada par.</td><td><span class="estado e-claude">Lo hace Claude</span></td></tr>
+      <tr><td>Fotos que no van: captura con «Activar Windows», flyer de una rifa, foto de stock acreditada mal, misma foto de Messi en 7 notas, un choque de GT con un F1 de 2016. Y 9 notas viejas con la imagen rota.</td><td>Sacarlas una por una; sumar el control de foto repetida y de «¿corresponde a la nota?».</td><td><span class="estado e-claude">Lo hace Claude</span></td></tr>
+      <tr><td>80 notas (7 %) muestran una fecha vieja porque el cruce les pegó notas de días antes (el Concejo Estudiantil del 14/10 figura del 30/04).</td><td>Que la fecha la ponga lo nuevo, no lo más viejo del grupo.</td><td><span class="estado e-claude">Lo hace Claude</span></td></tr>
+      <tr><td>El respaldo de Groq para la lectura con IA probablemente descarta todas sus fichas (le faltan dos campos en la instrucción).</td><td>Comprobarlo y completar la instrucción.</td><td><span class="estado e-claude">Lo hace Claude</span></td></tr>
+      <tr><td>La redacción exige un «guion» que las redes no usan: si falta, la nota se rechaza (5 rechazos).</td><td>Sacar ese campo.</td><td><span class="estado e-claude">Lo hace Claude</span></td></tr>
+      <tr><td>Las estadísticas de redes están rotas a medias: historias de Facebook siempre en 0; reels de Facebook e historias de Instagram nunca medidos.</td><td>Arreglarlo antes del 5/11, cuando cierra la prueba de «dónde rinde cada pieza».</td><td><span class="estado e-claude">Lo hace Claude</span></td></tr>
+      <tr><td>Nadie mira lo amarillo: 18 decisiones humanas en total, ninguna desde el 8/10, contra unas 33 notas por día esperando.</td><td>Lo de afuera deja de ir al celular; lo de acá sí, con tope de 5 por día y aviso en el mail de las 21:15.</td><td><span class="estado e-decidir">Deciden los dos</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="temas">
+  <h2>Tema por tema</h2>
+  <div class="temas">
+    <div class="tema">
+      <h3>Fuentes</h3>
+      <ul>
+        <li>El recorte del 15/10 no hizo daño: 188 de 203 notas de afuera habrían llegado igual.</li>
+        <li>Unas 10 fuentes están dormidas o vacías (Ahora Balcarce, Gabal Policiales y Agro, Argenpapa, El Diario de Tandil, ministerios).</li>
+        <li>RSS sigue siendo lo correcto. Sumar «Principales noticias» de Google Noticias como señal de popularidad, primero midiendo sin decidir.</li>
+      </ul>
+    </div>
+    <div class="tema">
+      <h3>Lo más contado del país</h3>
+      <ul>
+        <li><strong>Regla propuesta «muy contada»:</strong> 8 medios o más (los del mismo dueño cuentan uno), o 5 en sus primeras 3 horas, o 4 de noche. El hecho tiene que tener menos de 24 horas.</li>
+        <li>Sale aunque el cupo esté lleno, va a un bloque nuevo de tapa «Lo que se cuenta en todo el país» (hasta 3) y primera en su sección 6 horas. La nota grande sigue siendo de Balcarce.</li>
+        <li>Medido: el 85 % de las que juntan 5 medios en 3 horas terminan con 8 o más. Simulado el 15/10: suben 8 a 11 notas y no baja ninguna de Balcarce.</li>
+        <li>Ojo: lo nacional se lee poco (menos de 1 visita por nota). Lo de acá contado por 4 o 5 medios se lee casi el doble. Por eso se propone como prueba de dos semanas.</li>
+      </ul>
+    </div>
+    <div class="tema">
+      <h3>Balcarce, al revés</h3>
+      <ul>
+        <li><strong>Autobombo del medio</strong> (sus programas, entrevistas anunciadas, cifras del propio medio): no es nota. Va a un bloque «En los medios de Balcarce» con el título del medio y su enlace, sin reescribir y nunca a las redes. Así siguen estando, sin ocupar la portada.</li>
+        <li><strong>Sorteos del medio:</strong> no se publican. Las rifas de instituciones sí.</li>
+        <li><strong>Publicidad de comercios:</strong> a la agenda comercial futura.</li>
+        <li><strong>Clima y farmacias de otros medios:</strong> no son nota (ya tenemos los nuestros).</li>
+      </ul>
+    </div>
+    <div class="tema">
+      <h3>Armado y despliegue</h3>
+      <ul>
+        <li>Compilar una sola vez: ahorra unos 4.000 minutos por mes y cada nota sale 2 minutos y medio antes.</li>
+        <li>«Desplegar sólo si cambió algo» no ahorra nada: las 716 vueltas medidas cambiaron algo.</li>
+        <li>Hoy el sitio tiene 5.459 archivos (no 15.900). El tope de 3.700 notas se alcanza hacia el 11/12. Servir el sitio desde un Worker (ya pagado) sube el tope de 20.000 a 100.000 archivos y puede mostrar el archivo en R2.</li>
+        <li>Cortar 6 workflows de prueba que ya no se usan. «Redes» sin doble disparo y sólo de 7 a 23. «Vigilancia» cada 3 horas.</li>
+      </ul>
+    </div>
+    <div class="tema">
+      <h3>Fotos</h3>
+      <ul>
+        <li>Orden propuesto por derechos: foto propia → oficial → medio con permiso → otro medio → Wikimedia con control → ilustración automática → placa.</li>
+        <li>Segunda opinión gratis con otro modelo de visión, mirando también las esquinas ampliadas; preguntas explícitas (¿corresponde a la nota?, ¿es de archivo?, ¿hay chicos?); control de foto repetida.</li>
+        <li>Diez de las 29 placas son errores de código: la foto se manda entera a la IA y el respaldo la rechaza por grande.</li>
+        <li>Las ilustraciones de Gemini web hechas a mano rompen las reglas en 5 de 6 (texto, marcas, gente de fondo): cortarlas. Las automáticas de Cloudflare salen limpias.</li>
+        <li>Pasar las fotos a R2 (ya está hecho en un 80 %, nunca se prendió): hoy son 969 archivos y 67 MB dentro del sitio.</li>
+      </ul>
+    </div>
+    <div class="tema">
+      <h3>Inteligencia artificial</h3>
+      <ul>
+        <li>Nueve usos en marcha, casi todos con Gemini gratis. Sólo se mide cuánto gasta la redacción.</li>
+        <li><strong>Jev y Mercury</strong> (modelos «de decisión», que contestan opciones con su probabilidad) deciden casi igual que Gemini (93–94 % de acuerdo) por US$ 1 por mes. No clasifican mejor: suman un segundo proveedor y marcan lo dudoso. Probarlos en sombra 7 días, después de arreglar las repetidas.</li>
+        <li>Para las repetidas: comparar por significado con <code>bge-m3</code> en Cloudflare, gratis dentro de lo que ya pagamos.</li>
+        <li>No cambiar el modelo que redacta.</li>
+      </ul>
+    </div>
+    <div class="tema">
+      <h3>Instrucciones de la IA</h3>
+      <ul>
+        <li>17 instrucciones distintas. La de redacción manda unas 3.600 palabras fijas en cada pedido.</li>
+        <li>Contradicciones: la nota de pista manda atribuir al medio y el criterio lo prohíbe; la ilustración pide «foto de diario» y el control rechaza lo que parece foto; la voz de redes vosea y la web pide tercera persona.</li>
+        <li>Faltan tres controles: verbos de decisión («aprueba» cuando sólo pidió estudiar), un campo «no es noticia» y bajar la creatividad del modelo para que no rompa letras.</li>
+        <li>Medir antes de cambiar: hay dos versiones nuevas escritas y sin medir. Se comparan de noche con la herramienta que ya existe.</li>
+      </ul>
+    </div>
+    <div class="tema">
+      <h3>Redes y reels</h3>
+      <ul>
+        <li>Salen 34 a 40 publicaciones por día. Falla el 1,4 %, casi siempre un rechazo pasajero de Instagram que se arregla solo.</li>
+        <li>El repaso, la pieza principal, queda quieto unos 50 segundos. Mejora: mostrar la foto de cada nota mientras se la cuenta, arrancar con el titular más fuerte y elegir la tapa del reel.</li>
+        <li>Sumar enlaces a <code>/clima</code> y <code>/farmacias</code> en los de Facebook.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="modulos">
+  <h2>El sistema dividido en módulos</h2>
+  <div class="lectura">
+  <p>Hoy las carpetas se usan unas a otras en círculo (el armado del sitio depende de 42 archivos de 6 carpetas), y hay seis archivos gigantes que hacen muchas cosas a la vez. Por eso tocar una parte puede romper otra. La propuesta es esta: cada módulo recibe un archivo y entrega otro (su «contrato»), tiene su interruptor y, si falla, los demás siguen con lo último que estaba bien.</p>
+  </div>
+  <div class="diagrama" role="img" aria-label="Diagrama de los módulos propuestos y sus contratos">
+<pre class="mermaid">
+flowchart LR
+  subgraph NOTAS["La redacción automática"]
+    FU["Fuentes"] -->|"crudas"| CR["Cruce"]
+    CR -->|"historias"| SE["Criterio y selección"]
+    SE -->|"elegidas"| LI["Lectura con IA"]
+    LI -->|"fichas"| RE["Redacción con IA"]
+    RE -->|"borradores"| VE["Verificación"]
+  end
+  SV["Servicios: clima, farmacia,<br/>dólar, agenda, F1, fútbol"] --> ME
+  VE -->|"verificadas"| ME["Mesa de edición<br/>(arma el día)"]
+  FO["Fotos"] -->|"banco de fotos"| ME
+  PA["Panel del celular"] -->|"decisiones y correcciones"| ME
+  PI["Pistas"] --> ME
+  EF["Efemérides"] --> ME
+  AU["Auditoría IA"] --> ME
+  ME -->|"portada y archivo"| SI["Sitio"]
+  SI --> AR["Archivo permanente"]
+  ME --> FB["Facebook"]
+  ME --> PZ["Piezas: plan y guiones"]
+  PZ --> VO["Voces"]
+  VO --> AN["Animaciones y placas"]
+  AN --> PU["Publicador de Meta"]
+  FB --> PU
+  RL["Reloj"] -.-> NOTAS
+  VI["Vigilancia y avisos"] -.-> ME
+  ES["Estadísticas"] --> PA
+</pre>
+  </div>
+  <div class="lectura">
+  <h3>Las seis reglas de cada módulo</h3>
+  <ol>
+    <li>Una carpeta por módulo, con una ficha corta que dice qué hace y quién lo cuida.</li>
+    <li>Entra un contrato y sale un contrato. Un módulo nunca lee los archivos internos de otro.</li>
+    <li>Todo contrato dice su versión, quién lo hizo y a qué hora, así se sabe si está viejo.</li>
+    <li>Lo común (la hora de Balcarce, las claves, los avisos) vive en una carpeta <code>comun/</code>.</li>
+    <li>Cada módulo tiene su interruptor en una sola variable (<code>MODULOS_APAGADOS</code>). Sirve también de botón de emergencia.</li>
+    <li>Si un módulo falla, deja intacto lo anterior y avisa. Nunca escribe a medias.</li>
+  </ol>
+  <p class="nota">Reparto propuesto (lo confirman ustedes): Hernán decide lo editorial (fuentes, criterio, redacción, verificación, efemérides, panel, lo que dicen las piezas) y Andrés lo operativo y las cuentas (reloj, vigilancia, estadísticas, respaldo, Meta, comercial).</p>
+  </div>
+</section>
+
+<section id="plan">
+  <h2>El plan, por etapas</h2>
+  <div class="lectura">
+  <p>Cada etapa se puede hacer sola y no rompe la anterior. Las primeras no cambian nada que se vea; las que cambian el sitio se proponen antes.</p>
+  </div>
+  <div class="etapa"><div class="n">0</div><div>
+    <p class="cuando">Esta semana · sin cambios visibles · lo hace Claude</p>
+    <h3>Arreglar lo roto y cortar lo que sobra</h3>
+    <ul>
+      <li>Compilar el sitio una sola vez. «Redes» con un solo disparo y sólo de 7 a 23. «Vigilancia» cada 3 horas. Borrar los 6 workflows de prueba.</li>
+      <li>Redirecciones antes del 26/10. Groq, el «guion», las fechas viejas, las fotos que no van y las 9 rotas.</li>
+      <li>Repetidas de Balcarce: memoria de 72 horas para lo de acá y comparación por significado.</li>
+      <li>Arreglar la medición de redes. Contador de audios de voz.</li>
+    </ul>
+  </div></div>
+  <div class="etapa"><div class="n">1</div><div>
+    <p class="cuando">Después de que decidan · cambia lo que se publica</p>
+    <h3>El criterio nuevo</h3>
+    <ul>
+      <li>«Muy contada» con su bloque de tapa (dos semanas de prueba, midiendo).</li>
+      <li>El bloque «En los medios de Balcarce» para el autobombo. Sacar clima y farmacias de otros medios.</li>
+      <li>El cupo cuenta sólo lo que se puede estrenar. Lo amarillo de afuera deja de ir al celular.</li>
+      <li>El arreglo del semáforo de «murió»/«falleció», si Hernán lo aprueba.</li>
+      <li>Medir y elegir la instrucción nueva de la redacción.</li>
+    </ul>
+  </div></div>
+  <div class="etapa"><div class="n">2</div><div>
+    <p class="cuando">Dos o tres semanas · sin cambios visibles</p>
+    <h3>Ordenar en módulos</h3>
+    <ul>
+      <li>Limpieza en 9 pasos, cada uno con su prueba: restos sin riesgo, panel de la PC, ensayos viejos, carpeta <code>comun/</code>, redes, partir los archivos gigantes (con una prueba que exige el mismo resultado), contratos e interruptores, pruebas por módulo, fichas.</li>
+    </ul>
+  </div></div>
+  <div class="etapa"><div class="n">3</div><div>
+    <p class="cuando">Antes del 2/11 · necesita el permiso del token de Cloudflare</p>
+    <h3>El sitio sin techo</h3>
+    <ul>
+      <li>Activar el archivo permanente (las notas no desaparecen nunca). Fotos a R2 con miniaturas. Sitio servido desde un Worker: tope de 100.000 archivos.</li>
+    </ul>
+  </div></div>
+  <div class="etapa"><div class="n">4</div><div>
+    <p class="cuando">Noviembre</p>
+    <h3>Mejor calidad en redes y fotos</h3>
+    <ul>
+      <li>Repaso con la foto de cada nota. Segunda opinión en las fotos. Jev o Mercury en sombra 7 días. Threads, Bluesky y Telegram (oficiales y gratis).</li>
+    </ul>
+  </div></div>
+  <div class="etapa"><div class="n">5</div><div>
+    <p class="cuando">Diciembre en adelante</p>
+    <h3>El robot fuera de GitHub y el equipo de agentes</h3>
+    <ul>
+      <li>El motor pasa a Cloudflare (base de datos y tareas programadas). Recién ahí el repositorio puede ser privado sin pagar.</li>
+      <li>Los agentes de a uno, empezando por los de menor riesgo («Mesa» y «Tablero», que sólo leen e informan).</li>
+    </ul>
+  </div></div>
+  <div class="etapa"><div class="n">6</div><div>
+    <p class="cuando">Cuando lo editorial esté firme</p>
+    <h3>Lo comercial</h3>
+    <ul>
+      <li>La vidriera de emprendimientos, separada de las noticias.</li>
+    </ul>
+  </div></div>
+</section>
+
+<section id="decidir">
+  <h2>Lo que tienen que decidir ustedes</h2>
+  <div class="lectura">
+  <ol>
+    <li><strong>¿Arreglo el semáforo de «murió»/«falleció»?</strong> Hoy frena notas que no tienen nada sensible. Lo rojo (menores, víctimas, abuso, suicidio) no se toca.</li>
+    <li><strong>¿Probamos «muy contada» con su bloque de tapa?</strong> ¿Con qué número de medios: 8, como se propone?</li>
+    <li><strong>¿El bloque «En los medios de Balcarce»</strong> para el autobombo, o directamente no publicarlo?</li>
+    <li><strong>¿Lo amarillo de afuera deja de ir al celular?</strong></li>
+    <li><strong>¿Limpiamos el historial de GitHub</strong> para borrar las notas retiradas?</li>
+    <li><strong>¿Hernán editorial y Andrés operativo,</strong> o los dos todo?</li>
+    <li><strong>¿Cortamos las ilustraciones hechas a mano con Gemini web?</strong> Rompen las reglas en 5 de 6.</li>
+    <li><strong>¿Seguimos con Instagram</strong> igual (7 seguidores) o ponemos el esfuerzo en Facebook y en redes nuevas?</li>
+    <li><strong>¿Cargamos la clave paga de las voces</strong> con un tope de gasto? Costaría US$ 3 a 4 por mes.</li>
+    <li><strong>El permiso del token de Cloudflare</strong> para activar el archivo permanente (antes del 2/11).</li>
+  </ol>
+  </div>
+</section>
+
+<section id="publico">
+  <h2>¿Repositorio público o privado?</h2>
+  <div class="lectura">
+  <p><strong>Por ahora, público.</strong> Privado costaría hoy unos US$ 70 a 100 por mes en minutos de GitHub; después de los recortes de la etapa 0, unos US$ 33 a 58. Sólo es gratis cuando el robot sale de GitHub (etapa 5).</p>
+  <p><strong>El riesgo real no es el código, es el historial.</strong> GitHub guarda todas las versiones de todo lo que se publicó alguna vez, también lo retirado. La nota que sacamos el 15/10 para proteger a una víctima sigue completa en cuatro versiones viejas. Además, la lista de retiradas muestra título, medio y motivo, y las pistas guardan su texto sin cifrar.</p>
+  <p>Pasar a privado no borra lo que ya se descargó. Lo que sí se puede hacer ya: cifrar las pistas y el motivo de las retiradas, y decidir si se limpia el historial.</p>
+  </div>
+</section>
+
+<section id="agentes">
+  <h2>El equipo de agentes (a futuro)</h2>
+  <div class="lectura">
+  <p><strong>La regla de oro:</strong> el agente propone, la persona decide. Ninguno publica algo que hoy no sale solo ni le escribe a alguien de afuera sin aprobación, y ante terceros siempre se presenta como «el asistente automático de Radar Balcarce». Cada uno tendría su tarjeta en una pestaña «Equipo» del panel y su párrafo en el mail de las 8:15 y las 21:15. No hace falta una PC siempre prendida: viven en Cloudflare, que ya pagamos.</p>
+  </div>
+  <div class="agentes">
+    <div class="agente"><p class="rol">Jefe de redacción</p><h3>Mesa</h3><p>Cada mañana: qué pasa, qué espera y qué conviene hacer, en un minuto de lectura.</p></div>
+    <div class="agente"><p class="rol">Cronista local</p><h3>Pista</h3><p>Busca lo de Balcarce que ningún medio cuenta y confirma lo que cuenta uno solo.</p></div>
+    <div class="agente"><p class="rol">Fuentes y contactos</p><h3>Agenda</h3><p>Que la información llegue sola: instituciones, clubes, escuelas, prensa de organismos, comercios.</p></div>
+    <div class="agente"><p class="rol">Mensajes y atención</p><h3>Ventanilla</h3><p>Que nadie que escribe por WhatsApp, Facebook o Instagram se quede sin respuesta, y que lo valioso llegue a la redacción.</p></div>
+    <div class="agente"><p class="rol">Video y diseño</p><h3>Placa</h3><p>Que los reels, historias y placas lleguen a más redes y se vean mejor.</p></div>
+    <div class="agente"><p class="rol">Comercial</p><h3>Vidriera</h3><p>El espacio para que la gente muestre su emprendimiento, sin mezclarlo con las noticias.</p></div>
+    <div class="agente"><p class="rol">Números</p><h3>Tablero</h3><p>Qué funciona y qué no, con números, sin que tengan que mirar tablas.</p></div>
+    <div class="agente"><p class="rol">Mantenimiento</p><h3>Taller</h3><p>Que el sistema no se rompa y mejore de a poco: propone un cambio con su caso real, se mide y una persona lo aprueba.</p></div>
+  </div>
+  <div class="lectura" style="margin-top:16px">
+  <p class="nota"><strong>Cómo «se automejora» sin peligro:</strong> una vez por semana junta los errores, propone un cambio con el caso real, lo mide, una persona lo aprueba y, si empeora, se vuelve atrás. La lista roja y las reglas legales nunca se tocan solas. Costo estimado: US$ 10 a 20 por mes.</p>
+  </div>
+</section>
+
+<section id="redes">
+  <h2>Qué se puede automatizar en cada red, hoy</h2>
+  <div class="tabla">
+  <table>
+    <thead><tr><th>Red</th><th>Publicar</th><th>Contestar mensajes</th><th>Veredicto</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Facebook</strong></td><td>Oficial (ya lo hacemos)</td><td>Oficial, dentro de las 24 h de que la persona escribió</td><td><span class="estado e-hecho">Oficial</span></td></tr>
+      <tr><td><strong>Instagram</strong></td><td>Oficial (ya lo hacemos)</td><td>Oficial, misma ventana de 24 h; hay que ofrecer hablar con una persona</td><td><span class="estado e-hecho">Oficial</span></td></tr>
+      <tr><td><strong>WhatsApp</strong></td><td>Canales y grupos: no hay forma; a mano</td><td>Oficial (Cloud API): contestar dentro de las 24 h es gratis; las campañas se cobran. Necesita un número propio para eso</td><td><span class="estado e-decidir">Oficial para contestar</span></td></tr>
+      <tr><td><strong>TikTok</strong></td><td>Oficial, pero hasta que TikTok aprueba la app todo queda privado</td><td>No encontrada</td><td><span class="estado e-decidir">Oficial con trámite</span></td></tr>
+      <tr><td><strong>YouTube Shorts</strong></td><td>Oficial; los videos quedan privados hasta pasar la revisión de Google</td><td>—</td><td><span class="estado e-decidir">Oficial con trámite</span></td></tr>
+      <tr><td><strong>Threads</strong></td><td>Oficial, misma cuenta de Meta</td><td>Oficial</td><td><span class="estado e-hecho">Fácil</span></td></tr>
+      <tr><td><strong>Bluesky</strong></td><td>Oficial, gratis</td><td>Oficial</td><td><span class="estado e-hecho">Fácil</span></td></tr>
+      <tr><td><strong>Telegram</strong></td><td>Oficial, gratis</td><td>Oficial; sirve también como canal interno con los agentes</td><td><span class="estado e-hecho">Fácil</span></td></tr>
+      <tr><td><strong>X</strong></td><td>Oficial pero paga: unos US$ 0,20 por posteo con enlace</td><td>Paga</td><td><span class="estado e-urgente">Caro</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="lectura">
+  <p class="nota">Sobre TikTok: lo que leíste es casi así. Hay forma oficial de publicar, pero pide una revisión de la app. Lo que no es oficial es dejar un agente manejando el navegador: va contra las reglas y puede costar la cuenta. Mientras tanto, conviene subirlo a mano con el texto ya armado.</p>
+  </div>
+</section>
+
+<section id="costos">
+  <h2>Costos por mes</h2>
+  <div class="tabla">
+  <table>
+    <thead><tr><th>Concepto</th><th>Hoy</th><th>Con lo recomendado</th></tr></thead>
+    <tbody>
+      <tr><td>Cloudflare Workers Paid (reloj, vigilante, imágenes, archivo, R2)</td><td>US$ 5</td><td>US$ 5</td></tr>
+      <tr><td>Voces con clave paga de Google, con tope</td><td>US$ 0 (todavía no se cargó)</td><td>US$ 3 a 4</td></tr>
+      <tr><td>Jev o Mercury y comparación por significado</td><td>—</td><td>US$ 0 a 1</td></tr>
+      <tr><td>GitHub (repositorio público)</td><td>US$ 0</td><td>US$ 0</td></tr>
+      <tr><td>Equipo de agentes (etapa 5)</td><td>—</td><td>US$ 10 a 20</td></tr>
+      <tr><td>Dominio radarbalcarce.com</td><td>anual (vence 21/09/2027)</td><td>igual</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="lectura"><p>No conviene pagar Cloudflare Pro ni GitHub Pro. Faltan dos cosas baratas: rotar los respaldos de R2, que nunca se borran, y tener una copia fuera de Cloudflare y GitHub.</p></div>
+</section>
+
+<section id="glosario">
+  <h2>Glosario</h2>
+  <dl class="glosario">
+    <dt>RSS</dt><dd>La lista de notas nuevas que cada medio publica para que otros programas la lean. Es de donde sale casi todo lo que leemos.</dd>
+    <dt>Cruce</dt><dd>Juntar la misma noticia contada por varios medios. Cuantos más medios la cuentan, más importante suele ser.</dd>
+    <dt>Semáforo</dt><dd>Verde sale sola; amarillo espera a una persona; rojo nunca identifica a un menor o una víctima; «nunca» no se publica.</dd>
+    <dt>Cupo</dt><dd>Cuántas notas de cada sección pueden estar en la portada a la vez.</dd>
+    <dt>Autobombo</dt><dd>Cuando un medio publica algo sobre sí mismo (sus programas, sus récords, sus sorteos).</dd>
+    <dt>Verificación</dt><dd>El control que exige que todo lo que escribió la IA esté en la fuente.</dd>
+    <dt>Prompt o instrucción</dt><dd>El texto con las reglas que se le manda a la IA en cada pedido.</dd>
+    <dt>Embeddings o comparar por significado</dt><dd>Convertir cada nota en una huella numérica: dos notas que cuentan lo mismo con otras palabras quedan cerca.</dd>
+    <dt>Modelo de decisión</dt><dd>Una IA que no escribe: elige entre opciones fijas y dice qué tan segura está. Jev y Mercury son de este tipo.</dd>
+    <dt>Módulo</dt><dd>Una parte del sistema con una sola tarea, que recibe un archivo y entrega otro, y se puede arreglar sin tocar lo demás.</dd>
+    <dt>Contrato</dt><dd>El archivo que un módulo le pasa al siguiente, con un formato fijo.</dd>
+    <dt>Interruptor</dt><dd>Una variable que prende o apaga una parte sin tocar el código.</dd>
+    <dt>Workflow o corrida</dt><dd>Cada tarea automática de GitHub y cada vez que se ejecuta.</dd>
+    <dt>Worker</dt><dd>Un programita que corre en Cloudflare todo el tiempo, sin PC prendida.</dd>
+    <dt>R2</dt><dd>El depósito de archivos de Cloudflare, donde guardamos el archivo permanente y los respaldos.</dd>
+    <dt>Repositorio</dt><dd>La carpeta del proyecto en GitHub, con todo su historial.</dd>
+    <dt>API oficial</dt><dd>La puerta que una red social ofrece para que un programa publique o conteste. Usarla no arriesga la cuenta; manejar el navegador con un robot, sí.</dd>
+    <dt>Engagement</dt><dd>Cuánto interactúa la gente con lo que publicamos: reacciones, comentarios, compartidos, visitas.</dd>
+    <dt>Modo sombra</dt><dd>Probar algo nuevo midiendo qué habría hecho, sin que decida todavía.</dd>
+  </dl>
+</section>
+</main>
