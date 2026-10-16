@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T18:31:29.493Z",
+  "generado": "2026-10-16T18:35:13.745Z",
   "notas": [
     {
       "id": "repaso20261016tarde",
@@ -353,8 +353,8 @@
         "La Nueva",
         "Infobrisas (Radio Brisas)",
         "Ámbito",
-        "C5N",
-        "La Gaceta (Tucumán)"
+        "La Gaceta (Tucumán)",
+        "C5N"
       ],
       "enlace": "https://www.ambito.com/el-gobierno-logro-octubre-un-superavit-primario-14-billones-y-acumula-12-del-pbi-2026-n6334632",
       "teniaImagenLaFuente": true,
@@ -1132,9 +1132,9 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "La Nueva",
-        "C5N",
         "Minuto Uno",
-        "Radio Mitre"
+        "Radio Mitre",
+        "C5N"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/16/el-choque-de-verstappen-al-argentino-perez-companc-en-el-gt-world-challenge-el-gesto-desde-el-auto-y-la-sancion-que-podria-sufrir-el-neerlandes/",
       "teniaImagenLaFuente": true,
@@ -1918,10 +1918,10 @@
       "seccion": "Argentina",
       "medios": [
         "Ámbito",
-        "C5N",
         "Minuto Uno",
         "La Capital (Rosario)",
-        "Infobae"
+        "Infobae",
+        "C5N"
       ],
       "enlace": "https://www.infobae.com/sociedad/2026/10/16/la-anmat-prohibio-un-dispositivo-de-depilacion-definitiva-por-irregularidades-sanitarias/",
       "teniaImagenLaFuente": true,
@@ -2003,6 +2003,94 @@
       "foto": {
         "archivo": "fotos-notas/yfn1ih.jpg",
         "credito": "Foto: Infobae"
+      }
+    },
+    {
+      "id": "cg6k1i",
+      "titulo": "Netflix estrena Lo dejamos acá con Ricardo Darín y Diego Peretti",
+      "copete": "La comedia negra argentina dirigida por Hernán Goldfrid desembarca este viernes en la plataforma de streaming tras su paso por el Festival de San Sebastián.",
+      "cuerpo": "Netflix estrena este viernes Lo dejamos acá, una comedia negra argentina protagonizada por Ricardo Darín y Diego Peretti. La película cuenta con la dirección de Hernán Goldfrid y un guion escrito por Emanuel Díez.\n\nLa trama gira en torno a un psicoanalista interpretado por Darín que cuestiona los métodos tradicionales y cruza límites éticos al involucrarse en la vida de sus pacientes. El conflicto principal se desata con la llegada de un escritor encarnado por Peretti, quien acude al consultorio en medio de un bloqueo creativo.\n\nEl largometraje tuvo su presentación mundial en la septuagésima cuarta edición del Festival Internacional de Cine de San Sebastián. La producción estuvo a cargo de Kenya Films, compañía integrada por Ricardo Darín, Chino Darín y Federico Posternak.",
+      "guion": "Netflix estrena Lo dejamos acá con Ricardo Darín y Diego Peretti",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "El Día",
+        "La Capital (Rosario)",
+        "La Gaceta (Tucumán)",
+        "Los Andes (Mendoza)",
+        "A24",
+        "Clarín"
+      ],
+      "enlace": "https://www.eldia.com/espectaculos/lo-dejamos-aca-el-duelo-entre-darin-y-peretti-que-promete-incomodar-y-hacer-reir-espectaculos_1792130770",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T06:06:10.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T17:01:11.630Z",
+      "relevancia": 64,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Estrena este viernes en la plataforma de streaming.",
+        "Reúne nuevamente a Ricardo Darín y Diego Peretti.",
+        "La dirección corre por cuenta de Hernán Goldfrid.",
+        "Cuenta con producción de Kenya Films."
+      ],
+      "textoRedes": "Netflix estrena este viernes Lo dejamos acá, la nueva comedia negra argentina protagonizada por Ricardo Darín y Diego Peretti bajo la dirección de Hernán Goldfrid.",
+      "etiquetas": [
+        "Netflix",
+        "Ricardo Darín",
+        "Diego Peretti",
+        "Cine argentino",
+        "Estrenos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/espectaculos/lo-dejamos-aca-el-duelo-entre-darin-y-peretti-que-promete-incomodar-y-hacer-reir-espectaculos_1792130770",
+          "fecha": "2026-10-16T06:06:10.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la dirección de Hernán Goldfrid y el paso previo por el Festival de San Sebastián."
+        },
+        {
+          "medio": "La Capital (Rosario)",
+          "enlace": "https://www.lacapital.com.ar/zoom/netflix-ya-estreno-lo-dejamos-aca-la-pelicula-darin-y-peretti-n10287061.html",
+          "fecha": "2026-10-16T16:54:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los antecedentes del guionista y la productora Kenya Films."
+        },
+        {
+          "medio": "Los Andes (Mendoza)",
+          "enlace": "https://www.losandes.com.ar/espectaculos/hoy-netflix-la-nueva-pelicula-ricardo-darin-y-diego-peretti-una-comedia-negra-argentina-n6010583",
+          "fecha": "2026-10-16T15:44:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/trends/netflix-ricardo-darin-y-diego-peretti-arrasan-el-estreno-la-pelicula-mas-esperada-del-ano-n1607031",
+          "fecha": "2026-10-16T11:34:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha exacta de estreno en la plataforma de streaming."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/espectaculos/ricardo-darin-diego-peretti-protagonizan-pelicula-dejamos-aca-beso-giro-inesperado-cameo-sorpresa_0_SGjoHophhV.html",
+          "fecha": "2026-10-16T15:06:37.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre la trama y declaraciones de los actores sobre sus experiencias con la terapia."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "netflix-estrena-lo-dejamos-aca-con-ricardo-darin-y-diego-peretti",
+      "foto": {
+        "archivo": "fotos-notas/cg6k1i.jpg",
+        "credito": "Foto: Los Andes (Mendoza)"
       }
     },
     {
@@ -2192,11 +2280,11 @@
         "A24",
         "El Marplatense",
         "Ámbito",
-        "C5N",
         "Minuto Uno",
         "Los Andes (Mendoza)",
         "Clarín",
         "La Nueva",
+        "C5N",
         "Radio Mitre"
       ],
       "enlace": "https://www.clarin.com/politica/milei-cerro-visita-washington-acto-antisemitismo-reunion-alto-funcionario-trump_0_KkhV5wypC4.html",
@@ -2688,12 +2776,12 @@
         "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
-        "C5N",
         "Minuto Uno",
         "La Capital (Rosario)",
         "Los Andes (Mendoza)",
         "El Cronista",
         "Crónica",
+        "C5N",
         "Clarín",
         "El Día"
       ],
@@ -3077,8 +3165,8 @@
         "Radio Mitre",
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
-        "C5N",
-        "Minuto Uno"
+        "Minuto Uno",
+        "C5N"
       ],
       "enlace": "https://tn.com.ar/deportes/futbol/2026/10/15/leonel-flores-el-jugador-de-boca-y-la-seleccion-que-visito-una-olla-popular-en-monte-chingolo-y-revoluciono-el-barrio/",
       "teniaImagenLaFuente": true,
@@ -4656,8 +4744,8 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1teqr2e",
-      "titulo": "El Colegio Modelo Lomas emitió un comunicado tras las…",
+      "id": "79pgwu",
+      "titulo": "Violencia digital: alumnos de otro colegio crearon…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
@@ -4716,10 +4804,22 @@
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
+      "id": "yrtztb",
+      "titulo": "Caso Fernando Báez Sosa: la Corte Suprema desestimó una…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "7jqth2",
       "titulo": null,
       "seccion": "Deportes",
       "motivo": "necesita ojo humano: \"nene\""
+    },
+    {
+      "id": "1teqr2e",
+      "titulo": "El Colegio Modelo Lomas emitió un comunicado tras las…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "ql9bcc",
