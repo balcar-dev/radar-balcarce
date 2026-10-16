@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T12:02:22.964Z",
+  "generado": "2026-10-16T12:07:27.728Z",
   "notas": [
     {
       "id": "aa7nni",
@@ -797,7 +797,11 @@
         "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "belgrano-empata-con-independiente-del-valle-en-su-debut-copero"
+      "slug": "belgrano-empata-con-independiente-del-valle-en-su-debut-copero",
+      "foto": {
+        "archivo": "fotos-notas/3gzh4e.jpg",
+        "credito": "Foto: Olé"
+      }
     },
     {
       "id": "n6v2wu",
@@ -3397,69 +3401,6 @@
         "archivo": "fotos-notas/wfa595.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
-    },
-    {
-      "id": "repaso20261014noche",
-      "propia": "repaso",
-      "titulo": "El repaso de la noche en Radar Balcarce, miércoles 14",
-      "copete": "Radar Balcarce publicó a las 21:06 de este miércoles 14 de octubre el repaso de la noche en Instagram y Facebook, un audio con 3 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 3 notas que se contaron en el repaso de la noche del miércoles 14, en el orden en que salieron en el audio.\n\nFranco Colapinto pide frenar los ataques de sus fanáticos en la Fórmula 1. El piloto argentino reclamó detener las agresiones contra otros integrantes de la categoría para no afectar su futuro deportivo. Además, anunció que se alejará temporalmente de las redes sociales.\n\nEl Concejo Deliberativo Estudiantil cierra su quinta edición con 25 iniciativas. Estudiantes de escuelas secundarias locales completaron nueve encuentros y dos sesiones durante el año. La iniciativa legislativa promueve la participación democrática.\n\nIncidentes y represión policial en el ingreso de River en Junín. Se registraron corridas y uso de gas pimienta en los accesos al estadio Eva Perón en la previa del partido entre Sarmiento y River por el Torneo Clausura.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
-      "guion": null,
-      "seccion": "Automovilismo",
-      "local": false,
-      "relevancia": 60,
-      "medios": [],
-      "enlace": null,
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-15T00:06:31.067Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T00:06:31.067Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-15T00:06:31.067Z",
-      "temas": [],
-      "etiquetas": [
-        "Franco Colapinto",
-        "Concejo Deliberativo Estudiantil",
-        "Junín"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
-      "notasDelRepaso": [
-        "gy4i31",
-        "wm8hav",
-        "zfpkeo"
-      ],
-      "enlacesEnTexto": [
-        {
-          "texto": "Franco Colapinto pide frenar los ataques de sus fanáticos en la Fórmula 1",
-          "href": "/nota/franco-colapinto-pide-frenar-los-ataques-de-sus-fanaticos-en-la-gy4i31"
-        },
-        {
-          "texto": "El Concejo Deliberativo Estudiantil cierra su quinta edición con 25 iniciativas",
-          "href": "/nota/el-concejo-deliberativo-estudiantil-cierra-su-quinta-edicion-con-25-wm8hav"
-        },
-        {
-          "texto": "Incidentes y represión policial en el ingreso de River en Junín",
-          "href": "/nota/incidentes-y-represion-policial-en-el-ingreso-de-river-en-junin-zfpkeo"
-        }
-      ],
-      "destacados": [
-        {
-          "texto": "Mirá y escuchá el repaso en Instagram",
-          "href": "https://www.instagram.com/reel/DefoYueEQTf/",
-          "externo": true
-        },
-        {
-          "texto": "Mirá y escuchá el repaso en Facebook",
-          "href": "https://www.facebook.com/reel/953436964045065/",
-          "externo": true
-        }
-      ],
-      "slug": "el-repaso-de-la-noche-en-radar-balcarce-miercoles-14",
-      "foto": {
-        "archivo": "fotos-notas/gy4i31.jpg",
-        "credito": "Foto: La Nueva"
-      }
     }
   ],
   "secciones": [
@@ -3841,12 +3782,6 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "1h2xfr3",
-      "titulo": "Nueva victoria de Lasa en Powerlifting",
-      "seccion": "Balcarce",
-      "motivo": "de un medio de acá sin nombrar Balcarce ni la zona: espera la lectura con IA"
-    },
-    {
       "id": "yj5cn4",
       "titulo": null,
       "seccion": "Fútbol",
@@ -3949,5 +3884,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 2
 }
