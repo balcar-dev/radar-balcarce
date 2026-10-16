@@ -1,28 +1,37 @@
 // Ilustraciones hechas con IA para las notas que quedaron sin foto (16/10/2026, Hernán: "todas las notas de las últimas 24 horas que no tengan
-// foto, generarles una con Cloudflare; revisar que no sea nada raro; y que no gaste ni un dólar de más"). Regla 182.
+// foto, generarles una con Cloudflare; revisar que no sea nada raro; y que no gaste ni un dólar de más"). Reglas 182 y 185.
 //
-// Va en DOS pasos, y el segundo sólo con lo que una persona ya miró (workflow manual "Ilustrar notas sin foto", .github/workflows/ilustrar-notas.yml):
+// 17/10 (regla 185, Hernán: "que TODAS las notas tengan, no te limites: la imagen no tiene por qué dibujar chicos"): como la ilustración NUNCA
+// lleva personas (sólo objetos), se ilustra casi todo, también escuelas, deportes infantiles, Policiales y Política (con tono sobrio). Se saltan
+// sólo las muertes, los velorios y los sepelios, el semáforo rojo, las notas propias que traen su imagen y lo que ya tiene foto o ilustración
+// (la de Gemini web, de más calidad, nunca se pisa). Lo demás lo cuidan el prompt (problemaDelPrompt) y el control con visión (mirarImagen).
 //
-//   1) REVISAR (aplicar = no, lo de siempre):
+// Tres modos (workflow "Ilustrar notas sin foto", .github/workflows/ilustrar-notas.yml):
+//
+//   1) REVISAR (a mano, aplicar = no):
 //        node web/scripts/ilustrar-notas.mjs revisar --salida=salida-ilustraciones --cuentas=cuentas
 //      Elige de web/data/portada.json las notas publicadas en las últimas HORAS (24) que no tienen foto real, les pasa los FILTROS de abajo y, a
-//      las que pasan, les pide a Gemini (clave de redacción, gratis) un prompt corto en inglés con el pedido de Hernán (un bodegón sin personas)
-//      y al Worker de Cloudflare (infra/imagenes-cloudflare/, SDXL 1024 x 576, dentro de las neuronas gratis) la imagen. Otra vez Gemini mira la
-//      imagen terminada buscando personas, texto, logos o algo feo. Deja todo en la carpeta de salida (las imágenes, candidatas.json con el
-//      prompt de cada una y el motivo de las que se saltaron, e index.html para mirarlas) y NO toca el repositorio.
-//   2) APLICAR (aplicar = sí, con el número de la corrida de revisión):
+//      las que pasan, les pide a Gemini (clave de redacción, gratis; la de clasificación de respaldo) un prompt corto en inglés con el pedido de
+//      Hernán (un bodegón sin personas, con el TONO de la nota) y al Worker de Cloudflare (infra/imagenes-cloudflare/, SDXL 1024 x 576, dentro
+//      de las neuronas gratis) la imagen. Otra vez Gemini (clave de clasificación; la de redacción de respaldo) mira la imagen terminada buscando
+//      personas, rostros, texto, logos, algo sensible o raro. Deja todo en la carpeta de salida (las imágenes, candidatas.json con el prompt de
+//      cada una y el motivo de las que se saltaron, e index.html para mirarlas) y NO toca el repositorio.
+//   2) APLICAR (a mano, aplicar = sí, con el número de la corrida de revisión):
 //        node web/scripts/ilustrar-notas.mjs aplicar --desde=revision
 //      Toma las imágenes de esa revisión (las de IDS, o si IDS está vacío las que pasaron el control), las vuelve a pasar por los filtros con los
-//      datos de ahora (si mientras tanto apareció una foto real, gana la foto), las guarda en web/public/fotos-notas/<id>-ia.jpg (1.200 px,
-//      JPEG) y las anota en web/data/fotos-ia.json, que sólo escribe este paso. NO genera nada: no gasta ni una neurona.
+//      datos de ahora (si mientras tanto apareció una foto real o una ilustración de Gemini web, gana ésa), las guarda en
+//      web/public/fotos-notas/<id>-ia.jpg (1.200 px, JPEG) y las anota en web/data/fotos-ia.json. NO genera nada: no gasta ni una neurona.
+//   3) AUTOMÁTICO (AUTOMATICO=true; lo dispara el reloj de Cloudflare cada 2 horas de 7 a 23): revisar con el cupo repartido en el día
+//      (cupoAutomatico) y, en el job siguiente del workflow, `aplicar --automatico`, que aplica SÓLO las que pasaron el control (IDS no cuenta)
+//      y deja aplicadas.json para el adjunto. `automatico()` hace los dos pasos juntos (pruebas y uso local).
 //
 // generar-datos.mjs suma web/data/fotos-ia.json con la prioridad MÁS BAJA (conFotosDelBanco, web/scripts/fotos-notas.mjs): una foto real del
-// banco o una que sumó una persona siempre gana, y una nota que después se vuelve sensible pierde la ilustración. El epígrafe dice siempre
+// banco o una que sumó una persona siempre gana, y una nota que después toca una muerte pierde la ilustración. El epígrafe dice siempre
 // "Ilustración generada con IA" (la web, la tarjeta, el RSS y el pie de Instagram lo toman de ahí).
 //
-// Topes, para no gastar: 12 llamadas al Worker por corrida y 20 por día (cuentan las de las revisiones anteriores de hoy y lo ya aplicado hoy),
-// un solo reintento por imagen. Las únicas claves que se leen son GEMINI_API_KEY_REDACCION (gratis) y VIGILANTE_TOKEN (la contraseña del
-// Worker). Ninguna se imprime.
+// Topes, para no gastar: 12 llamadas al Worker por corrida y 20 por día (cuentan las de las revisiones anteriores de hoy y lo ya aplicado hoy
+// con el Worker), un solo reintento por imagen. Las únicas claves que se leen son GEMINI_API_KEY_REDACCION y GEMINI_API_KEY_CLASIFICACION
+// (las dos gratis) y VIGILANTE_TOKEN (la contraseña del Worker). Ninguna se imprime.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -30,10 +39,10 @@ import { pathToFileURL } from 'node:url';
 import { semaforoDelTexto } from '../../ingesta/ingesta.mjs';
 import { REGLAS_SEMAFORO } from '../../ingesta/fuentes.mjs';
 import { nombresDePersona } from '../../ingesta/foto-ia.mjs';
-import { diaAR } from '../../ingesta/zona.mjs';
+import { diaAR, horaAR } from '../../ingesta/zona.mjs';
 import { leerJson } from '../../ingesta/json.mjs';
 import { fotoParaGuardar, nombreDeFotoNueva, PESO_MINIMO_DE_UNA_FOTO } from './achicar-foto.mjs';
-import { CREDITO_ILUSTRACION, esIlustracionDeNota } from './fotos-notas.mjs';
+import { CREDITO_ILUSTRACION, esIlustracionDeNota, elegiblePorSeccion, tocaUnaMuerte, esPropiaConImagen } from './fotos-notas.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
 
@@ -94,94 +103,81 @@ export const PROMPT_DE_HERNAN = `Generá una imagen fotoperiodística y conceptu
 
 const plano = (t) => String(t ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\s+/g, ' ').trim();
 
-/** Secciones que nunca llevan una ilustración: Policiales (podría pasar por la escena) y Política (es sobre personas y cargos). */
-export const SECCIONES_QUE_NO = ['Policiales', 'Política'];
-/** Secciones donde la nota suele tener un protagonista deportista: si se nombra a alguien (o puede ser un nombre), se salta. */
-export const SECCIONES_DEPORTIVAS = ['Deportes', 'Fútbol', 'Automovilismo'];
-
-// Lo que se salta además del semáforo (semaforoDelTexto ya frena menores, víctimas, abusos, suicidio, denuncias, detenidos y muertes, con las
-// listas de ingesta/fuentes.mjs y ingesta/menores.mjs). Esto es más ancho a propósito: una imagen inventada al lado de un hecho así confunde,
-// y saltar de más sólo cuesta una ilustración (la nota queda con su placa, como hasta ahora).
-const SENSIBLE = [
-  ['un hecho policial o judicial', /\b(detenid\w*|detuv\w*|aprehen\w*|arrest\w*|allanamient\w*|imputad\w*|procesad\w*|condenad\w*|prision\w*|carcel\w*|presos?|penal\w*|fiscal\w*|juzgad\w*|tribunal\w*|juez|jueza|jueces|juicio\w*|querell\w*|denunci\w*|robo|robos|robaron|hurto\w*|estafa\w*|delito\w*|policia\w*|policial\w*|comisaria\w*|patrull\w*|comando de prevencion|operativo\w*|intercept\w*|decomis\w*|incaut\w*|secuestr\w*|narco\w*|droga\w*|justicia|judicial\w*|fallo|fallos|cautelar\w*|amparo\w*)\b/],
-  ['una muerte o un velorio', /\b(muert\w*|muri\w*|muere|mueren|fallec\w*|deceso\w*|sepeli\w*|velatorio\w*|velorio\w*|luto|duelo|condolencia\w*|cementerio\w*|necropolis|cocheria\w*|funebre\w*|sin vida|cadaver\w*|restos)\b/],
-  ['un accidente o una emergencia', /\b(accident\w*|choque\w*|choco|chocaron|vuelco\w*|volco|siniestro\w*|incendi\w*|herid\w*|lesionad\w*|internad\w*|hospitalizad\w*|atropell\w*|derrumb\w*|explosi\w*|tragedia\w*|emergencia)\b/],
-  ['una víctima, un abuso o violencia', /\b(victim\w*|abus\w*|acoso\w*|violen\w*|violaci\w*|agresi\w*|agredi\w*|maltrat\w*|femicid\w*|homicid\w*|asesin\w*|suicid\w*|desaparec\w*|paradero)\b/],
-  ['chicos (escuela, deporte infantil o juvenil, edades)', /\b(menor|menores|nin[oa]s?|nene\w*|nena\w*|chic[oa]s|chiquit\w*|pibes?|pibas?|adolescen\w*|bebe\w*|beba\w*|infan\w*|juvenil\w*|alumn[oa]\w*|estudiant\w*|escolar\w*|escuel\w*|colegio\w*|jardin de infantes|jardin maternal|jardin n|jardin \d+|primaria\w*|secundaria\w*|egresad\w*|estudiantina\w*|sub[ -]?\d{1,2}|categoria \d{4}|mini ?voley|minibasquet|baby futbol)\b/],
-];
-
-// Un cargo de la política: si además la nota nombra a alguien, es una nota política con nombre propio.
-const CARGO_POLITICO = /\b(intendent\w*|concejal\w*|diputad\w*|senador\w*|gobernador\w*|vicegobernador\w*|president\w*|vicepresident\w*|ministr[oa]s?|candidat\w*|funcionari\w*|legislador\w*|secretari[oa]s? de|jefe de gabinete|dirigente\w*|militante\w*|referente\w*|opositor\w*|oficialis\w*|peronis\w*|kirchner\w*|libertari\w*|radical\w*|partido)\b/;
-
-// Una nota que habla de deporte (para las de otras secciones que nombran a alguien).
-const TEMA_DEPORTIVO = /\b(deport\w*|box\w*|pelea\w*|titulo|campeon\w*|torneo\w*|partido\w*|goles?|golea\w*|atleta\w*|jugador\w*|futbol\w*|basquet|voley|tenis|rugby|hockey|padel|carrera\w*|piloto\w*|maraton\w*|podio\w*|medalla\w*|seleccion\w*|club\w*|automovilismo|autodromo|nadador\w*|ciclista\w*|corredor\w*)\b/;
-
-// En una nota de deportes, las palabras con mayúscula que NO son el nombre de una persona (clubes genéricos, torneos, lugares de acá).
-const SIN_PERSONA_EN_DEPORTES = new Set(('balcarce balcarceno balcarcena balcarcenos balcarcenas mar plata tandil necochea miramar mdq argentina argentino argentinos buenos aires provincia provincial nacional municipal municipalidad '
-  + 'club clubes centro escuela liga copa torneo campeonato fecha final semifinal gran premio formula turismo carretera tc rally autodromo circuito juan manuel fangio estadio cancha polideportivo '
-  + 'tenis mesa voley basquet futbol rugby hockey atletismo natacion ciclismo trail running maraton padel golf patin karate judo taekwondo boxeo pato ajedrez bochas '
-  + 'desarrollo apertura clausura regional zona region sudeste bonaerense primera division b c reserva femenino masculino mayores veteranos senior master '
-  + 'el la los las un una unos unas se en con por para tras desde nueva nuevo nuevas nuevos otra otro gran buena buen exitosa historica comienza comienzan arranca arrancan abre abren sigue siguen '
-  + 'atletas jugadores jugadoras equipo equipos deportistas pilotos competencia competencias carrera carreras jornada jornadas partido partidos encuentro encuentros').split(' '));
-
-/** ¿Puede ser el nombre de una persona? Una palabra con mayúscula que no es una sigla ni una palabra común de deportes. */
-function posiblesNombresEnDeportes(titulo) {
-  const tokens = String(titulo ?? '').split(/\s+/).map((t) => t.replace(/^[«"'“”‘’(\[¿¡]+|[»"'“”‘’),.:;!?\]]+$/g, '')).filter(Boolean);
-  return tokens.filter((t) => /^\p{Lu}/u.test(t) && !/^\p{Lu}{2,}$/u.test(t) && !/^\d/.test(t) && !SIN_PERSONA_EN_DEPORTES.has(plano(t)));
-}
-
-/** Las figuras conocidas que nombra un texto: nombresDePersona devuelve una palabra sola sólo cuando es una de ellas. */
-export function figurasConocidas(texto) {
-  const tokens = String(texto ?? '').split(/\s+/).map((t) => t.replace(/^[«"'“”‘’(\[¿¡]+|[»"'“”‘’),.:;!?\]]+$/g, '')).filter((t) => /^\p{Lu}/u.test(t));
-  return [...new Set(tokens.filter((t) => nombresDePersona(t).length > 0))];
-}
+// Regla 185 (17/10/2026, Hernán: "que TODAS las notas tengan, no te limites: la imagen no tiene por qué dibujar chicos"). Como la ilustración
+// NUNCA lleva personas ni rostros (lo piden el prompt, el negativo y el control con visión), no puede identificar a un menor ni a una víctima:
+// ya no se saltan las escuelas, los chicos, el deporte infantil o juvenil, lo policial o judicial, los "operativos", las figuras públicas, los
+// deportistas nombrados ni Policiales y Política (van con tono sobrio). Se siguen saltando: las muertes, los velorios y los sepelios
+// (tocaUnaMuerte, web/scripts/fotos-notas.mjs, y la lista de "nunca"), el semáforo rojo (abuso sexual, suicidio, femicidio, trata: la lista
+// de ingesta/fuentes.mjs, que no se toca), las notas propias que traen su imagen y lo que ya tiene foto o ilustración.
 
 const textoDe = (nota) => [nota?.titulo, nota?.copete, nota?.cuerpo].filter(Boolean).join('. ');
 const tieneArchivo = (e) => !!(e && e.archivo);
+
+/** ¿Esta entrada de fotos-ia.json se hizo a mano con Gemini web (docs/flujos/IMAGENES-CON-GEMINI-WEB.md)? Tiene más calidad: nunca se pisa. */
+export const esDeGeminiWeb = (e) => !!e && (e.modelo === 'gemini-web' || /gemini web/i.test(String(e.prompt ?? '')));
 
 /**
  * Por qué una nota NO lleva ilustración (el motivo, en castellano), o null si puede llevarla. Sólo mira la nota y los bancos; no usa la red.
  *   banco:          web/data/banco-fotos.json (las fotos reales)
  *   manuales:       web/data/fotos-manuales.json (las que sumó una persona)
- *   ilustraciones:  web/data/fotos-ia.json (lo ya ilustrado)
+ *   ilustraciones:  web/data/fotos-ia.json (lo ya ilustrado, con Cloudflare o con Gemini web)
  */
 export function motivoParaSaltar(nota, { banco = {}, manuales = {}, ilustraciones = {} } = {}) {
   if (!nota?.id || !nota?.titulo) return 'la nota no tiene id o título';
-  if (nota.propia) return `nota propia (${nota.propia}): lleva su propia imagen o ninguna`;
+  if (esPropiaConImagen(nota)) return `nota propia (${nota.propia}): lleva su propia imagen o ninguna`;
   if (nota.foto?.archivo && !esIlustracionDeNota(nota.foto)) return 'ya tiene foto';
-  if (tieneArchivo(banco[nota.id])) return 'ya tiene foto en el banco';
+  // Una foto del banco que Policiales no puede mostrar (no es de una fuente oficial) no cuenta: esa nota sí puede llevar la ilustración.
+  if (tieneArchivo(banco[nota.id]) && elegiblePorSeccion(nota)) return 'ya tiene foto en el banco';
   if (tieneArchivo(manuales[nota.id])) return 'ya tiene una foto que sumó una persona';
-  if (tieneArchivo(ilustraciones[nota.id])) return 'ya tiene una ilustración';
-  if (nota.seccion === 'Policiales') return 'Policiales: nunca una ilustración (podría pasar por la escena)';
-  if (nota.seccion === 'Política') return 'Política: no se ilustra (habla de personas y cargos)';
-  if (nota.semaforo && nota.semaforo !== 'verde') return `semáforo ${nota.semaforo}`;
-  // `publicadaPor: 'ia'` es la lectura con IA, que nunca destraba (regla 49): eso sigue siendo verde. Una persona, no.
-  if ((nota.publicadaPor && nota.publicadaPor !== 'ia') || (nota.como && nota.como !== 'automatica')) return 'la publicó una persona (esperó: no era verde)';
+  const il = ilustraciones[nota.id];
+  if (tieneArchivo(il)) return esDeGeminiWeb(il) ? 'ya tiene una ilustración de Gemini web (más calidad): no se pisa' : 'ya tiene una ilustración';
+  if (nota.semaforo === 'rojo') return 'semáforo rojo';
   const texto = textoDe(nota);
   const normal = plano(texto);
   const sepelio = (REGLAS_SEMAFORO.nunca ?? []).find((p) => normal.includes(plano(p)));
   if (sepelio) return `nunca se publica: "${sepelio}"`;
-  const sem = semaforoDelTexto(texto, { conMuerte: true });
-  if (sem) return `semáforo ${sem.color}: ${sem.motivo}`;
-  for (const [que, re] of SENSIBLE) {
-    const m = normal.match(re);
-    if (m) return `toca ${que}: "${m[0]}"`;
-  }
-  const cabeza = [nota.titulo, nota.copete].filter(Boolean).join('. ');
-  const nombres = nombresDePersona(cabeza);
-  // Las figuras conocidas de la política y el deporte (Milei, Caputo, Kicillof, Messi, Colapinto…: la lista de ingesta/foto-ia.mjs), aunque
-  // vengan con nombre y apellido: siempre se saltan.
-  const figura = figurasConocidas(cabeza)[0];
-  if (figura) return `nombra a una figura pública: "${figura}"`;
-  if (nombres.length && CARGO_POLITICO.test(plano(`${cabeza} ${String(nota.cuerpo ?? '').slice(0, 600)}`))) return `nota política con nombre propio: "${nombres[0]}"`;
-  // Un deportista nombrado en una nota de otra sección ("Kevin Gómez busca el título argentino supermediano", en Balcarce).
-  if (nombres.length && TEMA_DEPORTIVO.test(plano(cabeza))) return `deportes con un protagonista nombrado: "${nombres[0]}"`;
-  if (SECCIONES_DEPORTIVAS.includes(nota.seccion)) {
-    if (nombres.length) return `deportes con un protagonista nombrado: "${nombres[0]}"`;
-    const posibles = posiblesNombresEnDeportes(nota.titulo);
-    if (posibles.length) return `deportes: "${posibles[0]}" puede ser el nombre de un deportista (en la duda, se salta)`;
-  }
+  const muerte = tocaUnaMuerte(texto);
+  if (muerte) return `toca una muerte o un velorio: "${muerte}"`;
+  const sem = semaforoDelTexto(texto, { conMuerte: false });
+  if (sem?.color === 'rojo') return `semáforo rojo: ${sem.motivo}`;
   return null;
+}
+
+// ------------------------------------------------------------------ el tono
+
+/**
+ * El tono de la imagen según la nota (Hernán, 16/10: "que sea algo lindo si la nota implica algo agradable, no algo gris y oscuro"; el mismo
+ * criterio del flujo de Gemini web). `es` va en el pedido a Gemini; `en`, sumado al prompt del Worker.
+ */
+export const TONOS = {
+  alegre: {
+    es: 'luminosa, cálida y agradable: luz de día soleada, colores vivos y limpios, ambiente festivo; nada gris, oscuro ni sombrío',
+    en: 'bright warm sunny daylight, vivid clean cheerful colors',
+  },
+  sobrio: {
+    es: 'sobria y neutra, nunca dramática: luz natural pareja y colores apagados; un objeto simbólico y cotidiano del tema, NUNCA la escena del hecho (nada de autos chocados, patrulleros, cinta policial, fuego, ambulancias ni juguetes)',
+    en: 'soft even natural light, muted sober colors, calm neutral mood',
+  },
+  neutro: {
+    es: 'luz natural neutra, colores naturales, aspecto cotidiano',
+    en: 'natural neutral daylight, true-to-life colors',
+  },
+};
+
+// Lo grave (en el título o la bajada): tono sobrio aunque la sección sea otra.
+const GRAVE = /\b(policia\w*|policial\w*|detenid\w*|detuv\w*|allanamient\w*|imputad\w*|condenad\w*|prision\w*|carcel\w*|juicio\w*|fiscal\w*|judicial\w*|justicia|tribunal\w*|denunci\w*|robo\w*|robaron|hurto\w*|estafa\w*|delito\w*|narco\w*|droga\w*|secuestr\w*|accident\w*|choque\w*|choco|chocaron|vuelco\w*|siniestro\w*|incendi\w*|herid\w*|lesionad\w*|atropell\w*|derrumb\w*|explosi\w*|tragedia\w*|emergencia\w*|violen\w*|agresi\w*|agredi\w*|maltrat\w*|victim\w*|desaparec\w*|paradero|crisis)\b/;
+// Lo alegre: eventos, festejos, cultura, escuela, deporte.
+const ALEGRE = /\b(fiesta\w*|festival\w*|festej\w*|celebr\w*|aniversario\w*|cumpleanos|feria\w*|muestra\w*|exposici\w*|concierto\w*|show\w*|recital\w*|espectaculo\w*|teatro|cine|musica\w*|danza\w*|baile\w*|carnaval\w*|torneo\w*|campeon\w*|triunf\w*|victoria\w*|podio\w*|medalla\w*|escuel\w*|estudiantina\w*|alumn\w*|egresad\w*|jardin\w*|infancia\w*|chicos|ninos|ninas|inaugur\w*|premi\w*|concurso\w*|maraton\w*|caravana\w*|turismo|vacaciones|primavera|encuentro\w*|taller\w*|cultura\w*|arte|artist\w*|colecta\w*|solidari\w*|deport\w*)\b/;
+const SECCIONES_SOBRIAS = ['Policiales', 'Política'];
+const SECCIONES_ALEGRES = ['Deportes', 'Fútbol', 'Automovilismo', 'Cultura y agenda'];
+
+/** 'alegre', 'sobrio' o 'neutro'. Policiales, Política y lo grave van sobrios; los eventos, la cultura, la escuela y el deporte, alegres. */
+export function tonoDeLaNota(nota) {
+  if (SECCIONES_SOBRIAS.includes(nota?.seccion)) return 'sobrio';
+  const cabeza = plano([nota?.titulo, nota?.copete].filter(Boolean).join('. '));
+  if (GRAVE.test(cabeza)) return 'sobrio';
+  if (SECCIONES_ALEGRES.includes(nota?.seccion) || ALEGRE.test(cabeza)) return 'alegre';
+  return 'neutro';
 }
 
 const idValido = (id) => /^[a-z0-9]{3,20}$/.test(String(id ?? ''));
@@ -229,9 +225,9 @@ export function elegirCandidatas({ portada = [], archivo = [], banco = {}, manua
 
 // ------------------------------------------------------------------ topes
 
-/** Cuántas ilustraciones se aplicaron en ese día (de web/data/fotos-ia.json). */
+/** Cuántas ilustraciones del Worker se aplicaron en ese día (de web/data/fotos-ia.json). Las de Gemini web no gastan neuronas: no cuentan. */
 export function aplicadasHoy(ilustraciones = {}, dia = diaAR()) {
-  return Object.values(ilustraciones ?? {}).filter((e) => e?.cuando && diaAR(new Date(e.cuando)) === dia).length;
+  return Object.values(ilustraciones ?? {}).filter((e) => e?.cuando && !esDeGeminiWeb(e) && diaAR(new Date(e.cuando)) === dia).length;
 }
 
 /** Cuántas llamadas al Worker hicieron las revisiones anteriores de ese día (sus cuenta.json, que el workflow baja de las corridas de hoy). */
@@ -242,6 +238,27 @@ export function generadasHoy(cuentas = [], dia = diaAR()) {
 /** Cuántas llamadas al Worker se pueden hacer en esta corrida: 12 como mucho, y lo que quede de las 20 del día. */
 export function cupoDeLaCorrida(usadasHoy = 0) {
   return Math.max(0, Math.min(TOPE_POR_CORRIDA, TOPE_POR_DIA - (Number(usadasHoy) || 0)));
+}
+
+/**
+ * Las horas de Balcarce en que el reloj de Cloudflare dispara el modo automático (a los :20; infra/reloj-cloudflare/worker.mjs las tiene en UTC
+ * y una prueba controla que digan lo mismo). Cada 2 horas, de 7 a 23.
+ */
+export const HORAS_AUTOMATICAS = [7, 9, 11, 13, 15, 17, 19, 21, 23];
+/** Lo mínimo que puede usar una corrida automática (si queda cupo en el día): alcanza para lo que se juntó en dos horas. */
+export const MINIMO_POR_CORRIDA_AUTOMATICA = 4;
+
+/**
+ * El cupo de una corrida automática: el de siempre (12 como mucho y lo que quede de las 20 del día), pero repartido entre las corridas que
+ * faltan hoy, para que las de la mañana no se gasten todo y las notas de la tarde y la noche también tengan su ilustración. Como mucho el
+ * doble de la parte que le toca, y nunca menos de MINIMO_POR_CORRIDA_AUTOMATICA (si queda).
+ */
+export function cupoAutomatico(usadasHoy = 0, hora = horaAR()) {
+  const usadas = Number(usadasHoy) || 0;
+  const tope = cupoDeLaCorrida(usadas);
+  const faltan = Math.max(1, HORAS_AUTOMATICAS.filter((h) => h >= Number(hora)).length);
+  const parte = Math.ceil((2 * (TOPE_POR_DIA - usadas)) / faltan);
+  return Math.min(tope, Math.max(MINIMO_POR_CORRIDA_AUTOMATICA, parte));
 }
 
 /** Los cuenta.json de una carpeta (y sus subcarpetas: una por corrida bajada). */
@@ -261,12 +278,18 @@ export function leerCuentas(carpeta) {
 
 // ------------------------------------------------------------------ el prompt
 
-/** Lo que se le pide a Gemini: el pedido de Hernán, cómo tiene que salir el prompt y la nota (título, bajada y el cuerpo). */
-export function armarInstruccion(nota) {
-  const cuerpo = String(nota?.cuerpo ?? '').slice(0, 3000);
-  return `${PROMPT_DE_HERNAN}
+/** Hasta cuánto cuerpo va a Gemini: la nota va COMPLETA (como en el flujo de Gemini web); el tope sólo frena un texto roto. */
+export const CUERPO_MAXIMO = 20_000;
 
-Tu salida NO es la imagen: es el PROMPT para un generador de imágenes (Stable Diffusion XL), escrito en INGLÉS, de 40 a 70 palabras, en una sola línea, que describa esa foto cumpliendo los requisitos de arriba. Empezá por «Candid photojournalistic close-up still life of». Describí sólo objetos, la superficie de trabajo, el fondo desenfocado y la luz. NUNCA escribas nombres de personas, de lugares, de instituciones, de clubes, de marcas ni de medios. Nada de chicos ni de cosas de chicos (juguetes, útiles escolares), nada de armas, sangre, ataúdes, coronas de flores, esposas ni nada que sugiera un delito, un accidente o una muerte. Si hay papeles, que estén en blanco. Incluí «no people, no text, no logos». Respondé SOLO con el prompt.
+/** Lo que se le pide a Gemini: el pedido de Hernán, el formato, el TONO de la nota, cómo tiene que salir el prompt y la nota COMPLETA. */
+export function armarInstruccion(nota) {
+  const cuerpo = String(nota?.cuerpo ?? '').slice(0, CUERPO_MAXIMO);
+  const tono = TONOS[tonoDeLaNota(nota)];
+  return `${PROMPT_DE_HERNAN}
+7. Formato horizontal 16:9, sin ningún texto legible.
+8. TONO: ${tono.es}.
+
+Tu salida NO es la imagen: es el PROMPT para un generador de imágenes (Stable Diffusion XL), escrito en INGLÉS, de 40 a 70 palabras, en una sola línea, que describa esa foto cumpliendo los requisitos de arriba, con la luz y los colores del TONO. Empezá por «Candid photojournalistic close-up still life of». Describí sólo objetos, la superficie de trabajo, el fondo desenfocado y la luz. NUNCA escribas nombres de personas, de lugares, de instituciones, de clubes, de marcas ni de medios. Nada de personas ni de chicos, ni manos ni siluetas (los objetos de una escuela, de un taller o de un deporte sí, sin nadie). Nada de armas, sangre, ataúdes, coronas de flores, esposas ni nada que sugiera un delito, un accidente o una muerte: si la nota es de un hecho policial, judicial o de un accidente, un objeto simbólico y cotidiano del tema, nunca la escena. Si hay papeles, que estén en blanco. Incluí «no people, no text, no logos». Respondé SOLO con el prompt.
 
 Nota:
 ${nota?.titulo ?? ''}
@@ -276,25 +299,32 @@ ${nota?.copete ?? ''}
 ${cuerpo}`;
 }
 
-/** El prompt que va al Worker: el de Gemini en una línea, sin comillas, recortado para que siempre entre el agregado, y el agregado. */
-export function promptFinal(deGemini) {
+/**
+ * El prompt que va al Worker: el de Gemini en una línea, sin comillas, recortado para que siempre entren el tono (si se pasa: 'alegre',
+ * 'sobrio' o 'neutro') y el agregado.
+ */
+export function promptFinal(deGemini, tono = null) {
   const base = String(deGemini ?? '').replace(/[\r\n]+/g, ' ').replace(/["“”«»`*]/g, '').replace(/^\s*prompt\s*:\s*/i, '').replace(/\s+/g, ' ').trim().replace(/[.,;\s]+$/, '');
-  const lugar = PROMPT_MAXIMO - AGREGADO.length - 2;
+  const cola = TONOS[tono] ? `${TONOS[tono].en}, ${AGREGADO}` : AGREGADO;
+  const lugar = PROMPT_MAXIMO - cola.length - 2;
   const corto = base.length > lugar ? base.slice(0, lugar).replace(/\s+\S*$/, '').replace(/[.,;\s]+$/, '') : base;
-  return corto ? `${corto}, ${AGREGADO}` : '';
+  return corto ? `${corto}, ${cola}` : '';
 }
 
-// Lo que no puede describir el prompt (sacadas antes las negaciones: "no people" está bien).
-const PROHIBIDO_EN_PROMPT = /\b(child|children|kids?|boys?|girls?|bab(?:y|ies)|toddlers?|teens?|teenagers?|students?|pupils?|schoolchildren|man|men|woman|women|persons?|people|humans?|crowd|faces?|portraits?|silhouettes?|hands?|players?|athletes?|blood\w*|weapons?|guns?|pistols?|rifles?|knife|knives|bullets?|corpses?|coffins?|caskets?|funeral\w*|graves?|tombstones?|wreaths?|handcuffs?|crime scene|police tape|syringes?|drugs?|toys?|dolls?|teddy|strollers?|cribs?|flags?|logos?|emblems?|coat of arms)\b/i;
+// Lo que no puede describir el prompt (sacadas antes las negaciones: "no people" está bien): personas, armas, muerte, logos y la escena de un
+// hecho (un auto chocado o un patrullero al lado de una nota real se puede tomar por la foto del hecho).
+const PROHIBIDO_EN_PROMPT = /\b(child|children|kids?|boys?|girls?|bab(?:y|ies)|toddlers?|teens?|teenagers?|students?|pupils?|schoolchildren|man|men|woman|women|persons?|people|humans?|crowd|faces?|portraits?|silhouettes?|hands?|players?|athletes?|blood\w*|weapons?|guns?|pistols?|rifles?|knife|knives|bullets?|corpses?|coffins?|caskets?|funeral\w*|graves?|tombstones?|wreaths?|handcuffs?|crime scene|police tape|police cars?|patrol cars?|crash\w*|wreck\w*|syringes?|drugs?|flags?|logos?|emblems?|coat of arms)\b/i;
+// Lo que además no va en una nota de tono sobrio (Policiales, Política, lo grave): juguetes, fuego, ambulancias, sirenas.
+const PROHIBIDO_SI_ES_SOBRIA = /\b(toys?|dolls?|teddy|strollers?|cribs?|fire|flames?|burning|smoke|ambulances?|sirens?|injur\w*|bandages?)\b/i;
 
-/** Por qué el prompt de Gemini no sirve (nombra a alguien de la nota, o describe personas, chicos o algo feo), o null si sirve. */
+/** Por qué el prompt de Gemini no sirve (nombra a alguien de la nota, o describe personas, la escena de un hecho o algo feo), o null si sirve. */
 export function problemaDelPrompt(prompt, nota) {
   const p = String(prompt ?? '');
   if (p.length < 40) return 'Gemini devolvió un prompt demasiado corto';
   const sinNegaciones = p.split(/[,.;]/).map((f) => f.replace(/\b(?:no|without|free of|devoid of|nobody|absent)\b.*$/i, '')).join(' , ');
-  const m = sinNegaciones.match(PROHIBIDO_EN_PROMPT);
+  const m = sinNegaciones.match(PROHIBIDO_EN_PROMPT) ?? (tonoDeLaNota(nota) === 'sobrio' ? sinNegaciones.match(PROHIBIDO_SI_ES_SOBRIA) : null);
   if (m) return `el prompt describe "${m[0]}"`;
-  const nombres = nombresDePersona([nota?.titulo, nota?.copete, String(nota?.cuerpo ?? '').slice(0, 3000)].filter(Boolean).join('. '));
+  const nombres = nombresDePersona([nota?.titulo, nota?.copete, String(nota?.cuerpo ?? '').slice(0, CUERPO_MAXIMO)].filter(Boolean).join('. '));
   const pp = plano(p);
   for (const nombre of nombres) {
     for (const parte of nombre.split(/\s+/).filter((x) => x.length >= 4)) {
@@ -309,23 +339,30 @@ export function problemaDelPrompt(prompt, nota) {
 const MODELOS_DE_TEXTO = ['gemini-flash-lite-latest', 'gemini-flash-lite-latest', 'gemini-flash-latest', 'gemini-flash-latest'];
 const dormir = (ms) => new Promise((ok) => { setTimeout(ok, ms); });
 
-/** Un pedido a Gemini con la clave de redacción (gratis). Hasta 4 intentos (503 es común), probando también el modelo flash. Nunca muestra la clave. */
-async function pedirAGemini(partes, { clave, fetchFn = fetch, esperar = dormir, json = false }) {
+/**
+ * Un pedido a Gemini con las claves gratis (`claves`, en orden; o una sola, `clave`). Con cada clave, hasta 4 intentos (503 es común),
+ * probando también el modelo flash; si una clave no sirve (rechazada o sin cupo), se prueba la siguiente. Nunca muestra una clave.
+ */
+async function pedirAGemini(partes, { clave, claves, fetchFn = fetch, esperar = dormir, json = false }) {
+  const lista = [...new Set((Array.isArray(claves) ? claves : [clave]).map((k) => String(k ?? '').trim()).filter(Boolean))];
+  if (!lista.length) throw new Error('Gemini sin clave');
   let ultimo = 'sin respuesta';
-  for (const [i, modelo] of MODELOS_DE_TEXTO.entries()) {
-    try {
-      const r = await fetchFn(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`, {
-        method: 'POST', headers: { 'x-goog-api-key': clave, 'content-type': 'application/json' },
-        body: JSON.stringify({ contents: [{ parts: partes }], ...(json ? { generationConfig: { responseMimeType: 'application/json', temperature: 0 } } : {}) }),
-        signal: AbortSignal.timeout(60_000),
-      });
-      ultimo = `HTTP ${r.status}`;
-      const j = await r.json().catch(() => null);
-      const t = (j?.candidates?.[0]?.content?.parts ?? []).map((p) => p?.text ?? '').join('').trim();
-      if (r.status === 200 && t) return t;
-      if ([400, 401, 402, 403].includes(r.status)) break; // una clave rechazada no mejora insistiendo
-    } catch { ultimo = 'sin red'; }
-    if (i < MODELOS_DE_TEXTO.length - 1) await esperar(4000 * (i + 1));
+  for (const k of lista) {
+    for (const [i, modelo] of MODELOS_DE_TEXTO.entries()) {
+      try {
+        const r = await fetchFn(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`, {
+          method: 'POST', headers: { 'x-goog-api-key': k, 'content-type': 'application/json' },
+          body: JSON.stringify({ contents: [{ parts: partes }], ...(json ? { generationConfig: { responseMimeType: 'application/json', temperature: 0 } } : {}) }),
+          signal: AbortSignal.timeout(60_000),
+        });
+        ultimo = `HTTP ${r.status}`;
+        const j = await r.json().catch(() => null);
+        const t = (j?.candidates?.[0]?.content?.parts ?? []).map((p) => p?.text ?? '').join('').trim();
+        if (r.status === 200 && t) return t;
+        if ([400, 401, 402, 403].includes(r.status)) break; // una clave rechazada no mejora insistiendo: la siguiente
+      } catch { ultimo = 'sin red'; }
+      if (i < MODELOS_DE_TEXTO.length - 1) await esperar(4000 * (i + 1));
+    }
   }
   throw new Error(`Gemini ${ultimo}`);
 }
@@ -342,7 +379,7 @@ Mirala ENTERA y contestá sólo un JSON con estas claves booleanas:
   "rostros": hay algún rostro, aunque sea chico, dibujado o en un cuadro,
   "texto": hay letras, palabras o números, aunque estén deformes o no se entiendan,
   "logos": hay un logo, una marca, una bandera, un escudo o un emblema,
-  "sensible": hay sangre, armas, un ataúd, flores de velorio, heridas, drogas, cosas de chicos (juguetes, útiles) o algo que sugiera un delito, un accidente o una muerte,
+  "sensible": hay sangre, armas, un ataúd, flores de velorio, heridas, drogas o algo que sugiera un delito, un accidente o una muerte, o parece la escena real de un hecho (un choque, un incendio, un operativo),
   "raro": algo deforme, absurdo, de mal gusto o que no parece una foto de diario,
 y "razon": una frase corta en castellano que diga qué se ve.`;
 const CLAVES_DEL_CONTROL = ['personas', 'rostros', 'texto', 'logos', 'sensible', 'raro'];
@@ -355,7 +392,7 @@ export function interpretarControl(obj) {
   return malas.length ? { ok: false, motivo: `el control vio: ${malas.join(', ')}`, razon } : { ok: true, motivo: null, razon };
 }
 
-/** Gemini (clave de redacción) mira la imagen. Nunca lanza: si no la pudo mirar, no pasa (una persona decide con IDS). */
+/** Gemini (clave de clasificación; la de redacción de respaldo) mira la imagen. Nunca lanza: si no la pudo mirar, no pasa (ni en el modo automático). */
 export async function mirarImagen(bytes, opciones) {
   try {
     const t = await pedirAGemini([{ text: PREGUNTA_DE_CONTROL }, { inlineData: { mimeType: 'image/jpeg', data: Buffer.from(bytes).toString('base64') } }], { ...opciones, json: true });
@@ -405,12 +442,15 @@ ${filas || '<p>No hay candidatas.</p>'}
 }
 
 /**
- * El paso de revisión. Genera hasta el cupo y deja todo en `salida` (y la cuenta del día en `cuenta`). No toca web/.
- * Devuelve el resultado (lo mismo que candidatas.json).
+ * El paso de revisión. Genera hasta el cupo y deja todo en `salida` (y la cuenta del día en `cuenta`, que se reescribe después de CADA llamada
+ * al Worker: si la corrida se corta, lo gastado igual cuenta). No toca web/. Devuelve el resultado (lo mismo que candidatas.json).
+ *   clave:              GEMINI_API_KEY_REDACCION (escribe el prompt; respaldo del control)
+ *   claveClasificacion: GEMINI_API_KEY_CLASIFICACION (mira la imagen; respaldo del prompt)
+ *   automatico:         el cupo se reparte entre las corridas que faltan hoy (cupoAutomatico)
  */
 export async function revisar({
-  horas = HORAS_POR_DEFECTO, ids = [], ahora = new Date(), rutas = RUTAS, salida, cuenta, cuentas = [], clave, token,
-  fetchFn = fetch, achicar, esperar = dormir, registro = console.log,
+  horas = HORAS_POR_DEFECTO, ids = [], ahora = new Date(), rutas = RUTAS, salida, cuenta, cuentas = [], clave, claveClasificacion, token,
+  automatico = false, fetchFn = fetch, achicar, esperar = dormir, registro = console.log,
 } = {}) {
   const portada = leerJson(rutas.portada, { notas: [] }).notas ?? [];
   const archivo = ids.length ? (leerJson(rutas.archivo, { notas: [] }).notas ?? []) : [];
@@ -419,24 +459,33 @@ export async function revisar({
   const ilustraciones = leerJson(rutas.ilustraciones, {});
   const dia = diaAR(ahora);
   const usadas = Math.max(aplicadasHoy(ilustraciones, dia), generadasHoy(cuentas, dia));
-  const cupo = cupoDeLaCorrida(usadas);
+  const cupo = automatico ? cupoAutomatico(usadas, horaAR(ahora)) : cupoDeLaCorrida(usadas);
   const { candidatas, saltadas } = elegirCandidatas({ portada, archivo, banco, manuales, ilustraciones, horas, ids, ahora });
   const porImagen = neuronasEstimadas();
-  registro(`Notas a ilustrar: ${candidatas.length} (se saltaron ${saltadas.length}). Llamadas al Worker usadas hoy: ${usadas} de ${TOPE_POR_DIA}; en esta corrida, hasta ${cupo}. Neuronas estimadas por imagen: ~${porImagen}.`);
+  const clavesDelPrompt = [clave, claveClasificacion];
+  const clavesDelControl = [claveClasificacion, clave];
+  registro(`${automatico ? 'Modo automático. ' : ''}Notas a ilustrar: ${candidatas.length} (se saltaron ${saltadas.length}). Llamadas al Worker usadas hoy: ${usadas} de ${TOPE_POR_DIA}; en esta corrida, hasta ${cupo}. Neuronas estimadas por imagen: ~${porImagen}.`);
   fs.mkdirSync(salida, { recursive: true });
   const hechas = [];
   let llamadas = 0;
   let sinPermiso = false;
+  const anotarCuenta = () => {
+    if (!cuenta) return;
+    fs.mkdirSync(cuenta, { recursive: true });
+    fs.writeFileSync(path.join(cuenta, 'cuenta.json'), `${JSON.stringify({ dia, llamadas, neuronas: llamadas * porImagen, cuando: ahora.toISOString(), automatico })}\n`, 'utf8');
+  };
+  anotarCuenta();
   for (const nota of candidatas) {
     if (sinPermiso) { saltadas.push({ id: nota.id, titulo: nota.titulo, seccion: nota.seccion, motivo: 'el Worker rechazó la contraseña (VIGILANTE_TOKEN): no se siguió' }); continue; }
-    if (llamadas >= cupo) { saltadas.push({ id: nota.id, titulo: nota.titulo, seccion: nota.seccion, motivo: `sin cupo (tope de ${TOPE_POR_CORRIDA} por corrida y ${TOPE_POR_DIA} por día)` }); continue; }
-    const item = { id: nota.id, titulo: nota.titulo, seccion: nota.seccion, fecha: nota.fecha ?? null, prompt: null, archivo: null, control: null };
+    if (llamadas >= cupo) { saltadas.push({ id: nota.id, titulo: nota.titulo, seccion: nota.seccion, motivo: `sin cupo (tope de ${TOPE_POR_CORRIDA} por corrida y ${TOPE_POR_DIA} por día${automatico ? ', repartido en el día' : ''})` }); continue; }
+    const tono = tonoDeLaNota(nota);
+    const item = { id: nota.id, titulo: nota.titulo, seccion: nota.seccion, fecha: nota.fecha ?? null, tono, prompt: null, archivo: null, control: null };
     let deGemini;
-    try { deGemini = await pedirPrompt(nota, { clave, fetchFn, esperar }); } catch (e) {
+    try { deGemini = await pedirPrompt(nota, { claves: clavesDelPrompt, fetchFn, esperar }); } catch (e) {
       saltadas.push({ id: nota.id, titulo: nota.titulo, seccion: nota.seccion, motivo: `no se pudo escribir el prompt (${String(e?.message ?? e).slice(0, 80)})` });
       continue;
     }
-    const prompt = promptFinal(deGemini);
+    const prompt = promptFinal(deGemini, tono);
     const problema = problemaDelPrompt(prompt, nota);
     if (problema) { saltadas.push({ id: nota.id, titulo: nota.titulo, seccion: nota.seccion, motivo: problema, prompt }); continue; }
     item.prompt = prompt;
@@ -444,6 +493,7 @@ export async function revisar({
     for (let intento = 0; intento <= REINTENTOS_POR_IMAGEN && llamadas < cupo; intento++) {
       llamadas += 1;
       r = await llamarAlWorker(prompt, { token, fetchFn });
+      anotarCuenta();
       registro(`  [${nota.id}] llamada ${llamadas}/${cupo}: ${r.bytes ? `${r.bytes.length} bytes` : r.error} (~${porImagen} neuronas)`);
       if (r.bytes || !r.reintentable) break;
       if (intento < REINTENTOS_POR_IMAGEN) await esperar(5000);
@@ -455,22 +505,19 @@ export async function revisar({
     if (guardar.bytes.length < PESO_MINIMO_DE_UNA_FOTO) { item.error = 'la imagen salió vacía (casi negra o lisa)'; hechas.push(item); continue; }
     item.archivo = `${nota.id}.jpg`;
     fs.writeFileSync(path.join(salida, item.archivo), guardar.bytes);
-    item.control = await mirarImagen(guardar.bytes, { clave, fetchFn, esperar });
+    item.control = await mirarImagen(guardar.bytes, { claves: clavesDelControl, fetchFn, esperar });
     hechas.push(item);
   }
   const listas = hechas.filter((c) => c.archivo && c.control?.ok).map((c) => c.id);
   const resultado = {
-    generado: ahora.toISOString(), dia, horas, ids, cupo, usadasAntes: usadas, llamadas,
+    generado: ahora.toISOString(), dia, horas, ids, automatico, cupo, usadasAntes: usadas, llamadas,
     neuronasPorImagen: porImagen, neuronasEstimadas: llamadas * porImagen, modelo: MODELO, tamano: `${ANCHO}x${ALTO}`, pasos: PASOS, negativo: NEGATIVO,
     resumen: `${hechas.filter((c) => c.archivo).length} imágenes (${listas.length} pasaron el control), ${saltadas.length} notas saltadas, ${llamadas} llamadas al Worker (~${llamadas * porImagen} neuronas de ${NEURONAS_GRATIS_POR_DIA} gratis por día).`,
     paraAplicar: listas, candidatas: hechas, saltadas,
   };
   fs.writeFileSync(path.join(salida, 'candidatas.json'), `${JSON.stringify(resultado, null, 1)}\n`, 'utf8');
   fs.writeFileSync(path.join(salida, 'index.html'), paginaDeRevision(resultado), 'utf8');
-  if (cuenta) {
-    fs.mkdirSync(cuenta, { recursive: true });
-    fs.writeFileSync(path.join(cuenta, 'cuenta.json'), `${JSON.stringify({ dia, llamadas, neuronas: llamadas * porImagen, cuando: ahora.toISOString() })}\n`, 'utf8');
-  }
+  anotarCuenta();
   registro(resultado.resumen);
   return resultado;
 }
@@ -478,46 +525,52 @@ export async function revisar({
 // ------------------------------------------------------------------ aplicar
 
 /** La entrada de web/data/fotos-ia.json. El crédito es siempre la etiqueta. */
-export function entradaDeIlustracion({ archivo, nota, prompt, ahora = new Date() }) {
+export function entradaDeIlustracion({ archivo, nota, prompt, ahora = new Date(), automatico = false }) {
   return {
     archivo, credito: CREDITO_ILUSTRACION, medio: CREDITO_ILUSTRACION, origen: 'ia', cuando: ahora.toISOString(),
-    titulo: nota?.titulo ?? null, modelo: MODELO, prompt: prompt ?? null,
+    titulo: nota?.titulo ?? null, modelo: MODELO, prompt: prompt ?? null, ...(automatico ? { automatica: true } : {}),
   };
 }
 
 /**
  * El paso de aplicar: guarda las imágenes de una revisión ya hecha (carpeta `desde`) y las anota en fotos-ia.json. No genera nada.
  * Con `ids`, sólo ésas (aunque el control haya dudado: lo decidió una persona que las miró); sin `ids`, las que pasaron el control.
+ * Con `automatico`, `ids` no cuenta: SÓLO las que pasaron el control. Con `informe` (una carpeta), deja ahí aplicadas.json (el adjunto).
+ * Se puede correr otra vez sobre el repositorio recién bajado (el workflow lo hace si el push choca): vuelve a filtrar con los datos de ahora.
  */
-export function aplicar({ desde, ids = [], ahora = new Date(), rutas = RUTAS, registro = console.log } = {}) {
+export function aplicar({ desde, ids = [], automatico = false, informe = null, ahora = new Date(), rutas = RUTAS, registro = console.log } = {}) {
   const revision = leerJson(path.join(desde, 'candidatas.json'), null);
   if (!revision?.candidatas) throw new Error(`No encontré candidatas.json en ${desde}: ¿el número de corrida es el de una revisión?`);
+  const pedidas = automatico ? [] : ids;
   const portada = leerJson(rutas.portada, { notas: [] }).notas ?? [];
   const archivo = leerJson(rutas.archivo, { notas: [] }).notas ?? [];
   const porId = new Map([...archivo, ...portada].map((n) => [n?.id, n]));
   const banco = leerJson(rutas.banco, {});
   const manuales = leerJson(rutas.manuales, {});
   const libro = leerJson(rutas.ilustraciones, {});
-  const elegidas = revision.candidatas.filter((c) => c.archivo && (ids.length ? ids.includes(c.id) : c.control?.ok === true));
-  for (const id of ids) if (!revision.candidatas.some((c) => c.id === id && c.archivo)) registro(`  ${id}: no tiene imagen en esa revisión`);
+  const elegidas = revision.candidatas.filter((c) => c.archivo && (pedidas.length ? pedidas.includes(c.id) : c.control?.ok === true));
+  for (const id of pedidas) if (!revision.candidatas.some((c) => c.id === id && c.archivo)) registro(`  ${id}: no tiene imagen en esa revisión`);
   let quedan = Math.max(0, TOPE_POR_DIA - aplicadasHoy(libro, diaAR(ahora)));
   const nuevo = { ...libro };
   const aplicadas = [];
+  const noAplicadas = revision.candidatas.filter((c) => !elegidas.includes(c))
+    .map((c) => ({ id: c.id, titulo: c.titulo ?? null, motivo: c.archivo ? (c.control?.motivo ?? 'no pasó el control') : (c.error ?? 'sin imagen') }));
+  const no = (c, motivo) => { noAplicadas.push({ id: c.id, titulo: c.titulo ?? null, motivo }); registro(`  ${c.id}: no se aplica (${motivo})`); };
   fs.mkdirSync(rutas.carpeta, { recursive: true });
   for (const c of elegidas) {
     const nota = porId.get(c.id);
-    if (!nota) { registro(`  ${c.id}: la nota ya no está publicada, no se aplica`); continue; }
+    if (!nota) { no(c, 'la nota ya no está publicada'); continue; }
     const motivo = motivoParaSaltar(nota, { banco, manuales, ilustraciones: nuevo });
-    if (motivo) { registro(`  ${c.id}: no se aplica (${motivo})`); continue; }
-    if (quedan <= 0) { registro(`  ${c.id}: no se aplica (tope de ${TOPE_POR_DIA} por día)`); continue; }
+    if (motivo) { no(c, motivo); continue; }
+    if (quedan <= 0) { no(c, `tope de ${TOPE_POR_DIA} por día`); continue; }
     const origen = path.join(desde, path.basename(c.archivo));
-    if (!fs.existsSync(origen)) { registro(`  ${c.id}: falta la imagen en la revisión`); continue; }
+    if (!fs.existsSync(origen)) { no(c, 'falta la imagen en la revisión'); continue; }
     const bytes = fs.readFileSync(origen);
-    if (bytes.length < PESO_MINIMO_DE_UNA_FOTO || bytes[0] !== 0xff || bytes[1] !== 0xd8) { registro(`  ${c.id}: la imagen no es un JPEG que sirva`); continue; }
+    if (bytes.length < PESO_MINIMO_DE_UNA_FOTO || bytes[0] !== 0xff || bytes[1] !== 0xd8) { no(c, 'la imagen no es un JPEG que sirva'); continue; }
     const ocupados = [...fs.readdirSync(rutas.carpeta).filter((f) => f.startsWith(`${c.id}-ia`)), libro[c.id]?.archivo ?? ''];
     const nombre = `${nombreDeFotoNueva(`${c.id}-ia`, ocupados)}.jpg`;
     fs.writeFileSync(path.join(rutas.carpeta, nombre), bytes);
-    nuevo[c.id] = entradaDeIlustracion({ archivo: `fotos-notas/${nombre}`, nota, prompt: c.prompt, ahora });
+    nuevo[c.id] = entradaDeIlustracion({ archivo: `fotos-notas/${nombre}`, nota, prompt: c.prompt, ahora, automatico });
     aplicadas.push(c.id);
     quedan -= 1;
     registro(`  ${c.id}: guardada como fotos-notas/${nombre}${c.control?.ok ? '' : ` (pedida a mano; el control había dicho: ${c.control?.motivo ?? 'nada'})`}`);
@@ -526,21 +579,52 @@ export function aplicar({ desde, ids = [], ahora = new Date(), rutas = RUTAS, re
     fs.mkdirSync(path.dirname(rutas.ilustraciones), { recursive: true });
     fs.writeFileSync(rutas.ilustraciones, `${JSON.stringify(nuevo, null, 1)}\n`, 'utf8');
   }
+  const detalle = aplicadas.map((id) => ({ id, titulo: nuevo[id].titulo, archivo: nuevo[id].archivo, prompt: nuevo[id].prompt, control: revision.candidatas.find((c) => c.id === id)?.control?.razon ?? null }));
+  if (informe) {
+    fs.mkdirSync(informe, { recursive: true });
+    fs.writeFileSync(path.join(informe, 'aplicadas.json'), `${JSON.stringify({ cuando: ahora.toISOString(), automatico, aplicadas: detalle, noAplicadas }, null, 1)}\n`, 'utf8');
+    for (const d of detalle) fs.copyFileSync(path.join(rutas.carpeta, path.basename(d.archivo)), path.join(informe, path.basename(d.archivo)));
+  }
   registro(`Aplicadas: ${aplicadas.length}.`);
-  return { aplicadas, libro: nuevo };
+  return { aplicadas, noAplicadas, detalle, libro: nuevo };
+}
+
+/**
+ * El modo automático en un solo proceso (pruebas y uso local): revisa con el cupo repartido y aplica SÓLO lo que pasó el control.
+ * En GitHub son dos jobs del mismo workflow (el segundo, en la fila de "Actualizar la web"), con los mismos dos pasos.
+ */
+export async function automatico({ salida, informe = null, ...opciones } = {}) {
+  const revision = await revisar({ ...opciones, ids: [], salida, automatico: true });
+  const aplicado = aplicar({ desde: salida, automatico: true, informe, ahora: opciones.ahora, rutas: opciones.rutas, registro: opciones.registro });
+  return { revision, ...aplicado };
 }
 
 // ------------------------------------------------------------------ desde la terminal
+
+const sinMarcas = (t) => String(t ?? '').replace(/[|<>]/g, ' ');
 
 function resumenParaGitHub(resultado) {
   const archivo = process.env.GITHUB_STEP_SUMMARY;
   if (!archivo) return;
   const corrida = process.env.GITHUB_RUN_ID ?? '(el número de esta corrida)';
   const lineas = [
-    '## Ilustraciones para revisar', '', resultado.resumen, '',
+    resultado.automatico ? '## Ilustraciones (modo automático)' : '## Ilustraciones para revisar', '', resultado.resumen, '',
     'Bajá el adjunto **ilustraciones** y abrí `index.html` para mirarlas.', '',
-    ...resultado.candidatas.map((c) => `- \`${c.id}\` ${c.archivo ? (c.control?.ok ? '✔' : `✖ ${c.control?.motivo ?? ''}`) : `sin imagen (${c.error ?? ''})`} — ${String(c.titulo ?? '').replace(/[|<>]/g, ' ')}`),
-    '', `Para publicarlas: correr otra vez **Ilustrar notas sin foto** con *aplicar* marcado, *corrida* = \`${corrida}\` e *ids* = las que estén bien (vacío = las que pasaron el control: \`${resultado.paraAplicar.join(', ') || 'ninguna'}\`).`,
+    ...resultado.candidatas.map((c) => `- \`${c.id}\` ${c.archivo ? (c.control?.ok ? '✔' : `✖ ${c.control?.motivo ?? ''}`) : `sin imagen (${c.error ?? ''})`} — ${sinMarcas(c.titulo)}`),
+    '', resultado.automatico
+      ? 'Las que pasaron el control se aplican solas en el job **Guardar** (adjunto **aplicadas**).'
+      : `Para publicarlas: correr otra vez **Ilustrar notas sin foto** con *aplicar* marcado, *corrida* = \`${corrida}\` e *ids* = las que estén bien (vacío = las que pasaron el control: \`${resultado.paraAplicar.join(', ') || 'ninguna'}\`).`,
+  ];
+  try { fs.appendFileSync(archivo, `${lineas.join('\n')}\n`, 'utf8'); } catch { /* el resumen no frena nada */ }
+}
+
+function resumenDeAplicadas({ aplicadas, detalle, noAplicadas }, esAutomatico) {
+  const archivo = process.env.GITHUB_STEP_SUMMARY;
+  if (!archivo) return;
+  const lineas = [
+    `## Ilustraciones aplicadas${esAutomatico ? ' (modo automático)' : ''}: ${aplicadas.length}`, '',
+    ...detalle.map((d) => `- \`${d.id}\` ${sinMarcas(d.titulo)} → \`${d.archivo}\``),
+    ...(noAplicadas.length ? ['', '### No se aplicaron', '', ...noAplicadas.map((n) => `- \`${n.id}\` ${sinMarcas(n.titulo)}: ${sinMarcas(n.motivo)}`)] : []),
   ];
   try { fs.appendFileSync(archivo, `${lineas.join('\n')}\n`, 'utf8'); } catch { /* el resumen no frena nada */ }
 }
@@ -548,20 +632,33 @@ function resumenParaGitHub(resultado) {
 async function principal() {
   const [accion] = process.argv.slice(2);
   const opcion = (n) => (process.argv.find((a) => a.startsWith(`--${n}=`)) ?? '').slice(n.length + 3);
-  const ids = idsPedidos(process.env.IDS);
-  if (accion === 'revisar') {
+  const esAutomatico = /^(true|si|sí|1)$/i.test(String(process.env.AUTOMATICO ?? '').trim()) || process.argv.includes('--automatico');
+  const ids = esAutomatico ? [] : idsPedidos(process.env.IDS);
+  const claves = () => {
     const clave = (process.env.GEMINI_API_KEY_REDACCION ?? '').trim();
+    const claveClasificacion = (process.env.GEMINI_API_KEY_CLASIFICACION ?? '').trim();
     const token = (process.env.VIGILANTE_TOKEN ?? '').trim();
-    if (!clave || !token) { console.error('Faltan GEMINI_API_KEY_REDACCION o VIGILANTE_TOKEN.'); process.exit(1); }
-    const resultado = await revisar({
-      horas: horasPedidas(process.env.HORAS), ids, salida: opcion('salida') || 'salida-ilustraciones', cuenta: opcion('cuenta') || 'cuenta-ilustraciones',
-      cuentas: leerCuentas(opcion('cuentas') || 'cuentas'), clave, token,
-    });
+    if ((!clave && !claveClasificacion) || !token) { console.error('Faltan GEMINI_API_KEY_REDACCION (o GEMINI_API_KEY_CLASIFICACION) o VIGILANTE_TOKEN.'); process.exit(1); }
+    return { clave, claveClasificacion, token };
+  };
+  const comunes = () => ({
+    horas: horasPedidas(process.env.HORAS), salida: opcion('salida') || 'salida-ilustraciones', cuenta: opcion('cuenta') || 'cuenta-ilustraciones',
+    cuentas: leerCuentas(opcion('cuentas') || 'cuentas'), ...claves(),
+  });
+  if (accion === 'revisar') {
+    const resultado = await revisar({ ...comunes(), ids, automatico: esAutomatico });
     resumenParaGitHub(resultado);
+    // Para el workflow: si ninguna pasó el control, el job "Guardar" del modo automático ni arranca.
+    if (process.env.GITHUB_OUTPUT) { try { fs.appendFileSync(process.env.GITHUB_OUTPUT, `para_aplicar=${resultado.paraAplicar.length}\n`); } catch { /* no frena */ } }
   } else if (accion === 'aplicar') {
-    aplicar({ desde: opcion('desde') || 'revision', ids });
+    const r = aplicar({ desde: opcion('desde') || 'revision', ids, automatico: esAutomatico, informe: opcion('informe') || null });
+    resumenDeAplicadas(r, esAutomatico);
+  } else if (accion === 'automatico') {
+    const r = await automatico({ ...comunes(), informe: opcion('informe') || 'aplicadas' });
+    resumenParaGitHub(r.revision);
+    resumenDeAplicadas(r, true);
   } else {
-    console.log('Uso: node web/scripts/ilustrar-notas.mjs revisar|aplicar (ver el comentario de arriba).');
+    console.log('Uso: node web/scripts/ilustrar-notas.mjs revisar|aplicar|automatico (ver el comentario de arriba).');
     process.exit(1);
   }
 }

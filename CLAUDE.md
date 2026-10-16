@@ -40,7 +40,7 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 185.)
+próxima regla es la 186.)
 
 - **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Una prueba lo
   vigila (sigue los imports en cadena).
@@ -162,7 +162,7 @@ próxima regla es la 185.)
 | "Un día como hoy" y los feriados (el mes armado se aprueba, se saca o se frena en la pestaña Fechas → Mes armado: `redes/efemeride.mjs`, regla 97) | `ingesta/efemerides.mjs` (candidatas y puntaje), `ingesta/generar-efemerides.mjs` (la corrida mensual), `ingesta/efemerides-curadas.json` (fechas patrias y de Balcarce), pestaña Fechas del panel (`web/public/panel/fechas.js`); `docs/13-EFEMERIDES.md` |
 | La nota del diario de "Un día como hoy" (sale cuando sale el video; texto propio, ilustración fija con IA) | `notasDeEfemerides` (`web/lib/notas-propias.js`), `web/public/fotos-notas/efemeride-fondo.jpg`; regla 165 |
 | La imagen de la nota del clima (ilustración fija con IA según el estado del tiempo y la fecha; regla 181) | `web/lib/fondos-clima.js`, `web/public/fotos-notas/clima-<estado>-<n>.jpg`, workflow manual `generar-fondos-clima.yml` (genera candidatas nuevas) |
-| Ilustrar con IA las notas sin foto (a mano: revisar y después aplicar; regla 182) | Workflow «Ilustrar notas sin foto» (`ilustrar-notas.yml`), `web/scripts/ilustrar-notas.mjs` (filtros, prompt, topes), `web/data/fotos-ia.json` (lo escribe sólo ese workflow; prioridad más baja en `conFotosDelBanco`) |
+| Ilustrar con IA las notas sin foto (automático cada 2 h de 7 a 23 por el reloj de Cloudflare, o a mano: revisar y después aplicar; reglas 182 y 185; Gemini web a mano reemplaza con más calidad) | Workflow «Ilustrar notas sin foto» (`ilustrar-notas.yml`), `web/scripts/ilustrar-notas.mjs` (filtros `motivoParaSaltar`, tono, prompt, topes y `cupoAutomatico`), `web/data/fotos-ia.json` (lo escriben ese workflow y el flujo de Gemini web, `docs/flujos/IMAGENES-CON-GEMINI-WEB.md`; prioridad más baja en `conFotosDelBanco`) |
 | La firma de las notas | `quienEscribio`, `firmaCorta` (`web/components/metadatos.js`) |
 | Las fotos | `web/scripts/fotos-notas.mjs`, `ingesta/fotos.mjs`, `web/scripts/achicar-foto.mjs` |
 | Una sección nueva, su nombre o su color | `SECCIONES` (`web/lib/datos.js`), `--s-*` (`web/app/globals.css`), `REGLAS_SECCION`, `SECCIONES_DE_LA_FICHA` (`ingesta/lectura-ia.mjs`), `SECCIONES` de `web/public/panel/github.js` |

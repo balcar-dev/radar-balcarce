@@ -13,7 +13,11 @@ export const RAMA = 'main';
  *  - :05, :35 y :45 → el reloj de Redes (acción "reloj")
  *  - :15 de las 11 UTC (8:15 en Balcarce) y de las 0 UTC (21:15) → el informe diario por mail (redes/informe-diario.mjs): el de la mañana y el de la noche.
  *    Sólo si se pasa la hora UTC (el segundo parámetro): sin ella, el minuto 15 no despierta nada, como siempre.
+ *  - :20 de las horas UTC pares de 10 a 2 (7, 9, 11… 23 en Balcarce) → "Ilustrar notas sin foto" en modo automático (regla 185): el relleno de
+ *    ilustraciones de las notas que quedaron sin foto. También sólo con la hora UTC.
  */
+export const HORAS_ILUSTRAR_UTC = [10, 12, 14, 16, 18, 20, 22, 0, 2];
+
 export function trabajosDelMinuto(minuto, horaUtc = null) {
   const m = Number(minuto);
   const lista = [];
@@ -33,6 +37,10 @@ export function trabajosDelMinuto(minuto, horaUtc = null) {
     if (h === 0) lista.push({ archivo: 'informe-diario.yml', inputs: { momento: 'noche' } });
   }
   if (m === 5 || m === 35 || m === 45) lista.push({ archivo: 'redes.yml', inputs: { accion: 'reloj' } });
+  // 17/10/2026 (regla 185): a los :20, lejos de los :00/:30 de "Actualizar la web" y de sus respaldos de los :07/:37.
+  if (m === 20 && horaUtc !== null && horaUtc !== undefined && HORAS_ILUSTRAR_UTC.includes(Number(horaUtc))) {
+    lista.push({ archivo: 'ilustrar-notas.yml', inputs: { automatico: 'true' } });
+  }
   return lista;
 }
 

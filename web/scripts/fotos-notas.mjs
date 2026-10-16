@@ -189,9 +189,10 @@ export function fotoDeLaWeb(banco, id) {
 
 // ------------------------------------------------- las ilustraciones con IA
 //
-// Regla 182 (16/10/2026): a las notas que quedaron sin foto, una persona les puede sumar una ilustración hecha con IA (un bodegón sin gente,
-// web/scripts/ilustrar-notas.mjs, workflow manual "Ilustrar notas sin foto"). Se anotan en web/data/fotos-ia.json y tienen la prioridad MÁS
-// BAJA: una foto real del banco o una que sumó una persona siempre gana. El epígrafe dice siempre que es de IA.
+// Reglas 182 y 185 (16 y 17/10/2026): las notas que quedaron sin foto pueden llevar una ilustración hecha con IA (un bodegón sin gente:
+// web/scripts/ilustrar-notas.mjs, workflow "Ilustrar notas sin foto", automático cada 2 horas o a mano; o Gemini web, a mano). Se anotan en
+// web/data/fotos-ia.json y tienen la prioridad MÁS BAJA: una foto real del banco o una que sumó una persona siempre gana. El epígrafe dice
+// siempre que es de IA.
 
 /** El epígrafe de una ilustración: siempre empieza así (la web, la tarjeta, el RSS y el pie de Instagram lo muestran tal cual). */
 export const CREDITO_ILUSTRACION = 'Ilustración generada con IA';
@@ -199,17 +200,35 @@ export const CREDITO_ILUSTRACION = 'Ilustración generada con IA';
 /** ¿Esta foto (`{ archivo, credito }` de una nota, o una entrada de fotos-ia.json) es una ilustración de una nota? Se reconoce por el archivo: <id>-ia.jpg. */
 export const esIlustracionDeNota = (foto) => /(^|\/)[a-z0-9]+-ia(?:-\d+)?\.jpg$/.test(String(foto?.archivo ?? ''));
 
-/** Las secciones que nunca llevan ilustración, aunque esté en el libro. */
-export const SECCIONES_SIN_ILUSTRACION = ['Policiales', 'Política'];
+const plano = (t) => String(t ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\s+/g, ' ').trim();
+
+// Una muerte, un velorio o un sepelio: lo único (con el semáforo rojo) que nunca lleva ilustración (regla 185). Sin "duelo" suelto (es un
+// partido) ni "restos" suelto ("restos de poda").
+const MUERTE_O_VELORIO = /\b(muert[eo]s?|muerta|muertas|murio|murieron|muere|mueren|fallec\w*|deceso\w*|sepeli\w*|inhumaci\w*|velatorio\w*|velorio\w*|luto|dias de duelo|duelo (?:nacional|provincial|municipal)|condolencia\w*|cementerio\w*|necropolis|cocheria\w*|funebre\w*|necrologic\w*|obituario\w*|qepd|sin vida|cadaver\w*|restos (?:mortales|oseos)|homicid\w*|femicid\w*|feminicid\w*|asesin\w*|suicid\w*|se quito la vida)\b/;
 
 /**
- * ¿La nota, como está AHORA, puede mostrar su ilustración? La red de seguridad de generar-datos: si una corrección o una fuente nueva la volvió
- * sensible, la ilustración deja de mostrarse. `semaforo` es semaforoDelTexto (ingesta/ingesta.mjs), que lo pasa quien llama.
+ * Las notas propias traen su imagen (o ninguna, a propósito): el clima y las efemérides (ilustración fija), los repasos (collage), el dólar,
+ * la F1 y el fútbol (foto libre). Nunca llevan una ilustración de una nota. Las de una pista, que no traen imagen, sí pueden; cualquier tipo
+ * nuevo de nota propia, no, hasta que se sume acá.
+ */
+export const PROPIAS_SIN_IMAGEN = ['pista'];
+export const esPropiaConImagen = (nota) => !!nota?.propia && !PROPIAS_SIN_IMAGEN.includes(nota.propia);
+
+/** La palabra de muerte, velorio o sepelio que tiene el texto, o null. */
+export function tocaUnaMuerte(texto) {
+  return plano(texto).match(MUERTE_O_VELORIO)?.[0] ?? null;
+}
+
+/**
+ * ¿La nota, como está AHORA, puede mostrar su ilustración? La red de seguridad de generar-datos: si una corrección o una fuente nueva la hizo
+ * tocar una muerte o el semáforo rojo, la ilustración deja de mostrarse. Desde la regla 185 (17/10/2026) la ilustración, que nunca lleva
+ * personas, va también en Policiales, Política, escuelas y chicos. `semaforo` es semaforoDelTexto (ingesta/ingesta.mjs), que lo pasa quien llama.
  */
 export function ilustracionPermitida(nota, { semaforo = () => null } = {}) {
-  if (!nota || nota.propia || SECCIONES_SIN_ILUSTRACION.includes(nota.seccion)) return false;
-  if (nota.semaforo && nota.semaforo !== 'verde') return false;
-  return !semaforo([nota.titulo, nota.copete, nota.cuerpo].filter(Boolean).join('. '), { conMuerte: true });
+  if (!nota || esPropiaConImagen(nota) || nota.semaforo === 'rojo') return false;
+  const texto = [nota.titulo, nota.copete, nota.cuerpo].filter(Boolean).join('. ');
+  if (tocaUnaMuerte(texto)) return false;
+  return semaforo(texto, { conMuerte: false })?.color !== 'rojo';
 }
 
 /** La foto de la web de una ilustración: el archivo y el epígrafe, que siempre dice que es de IA. */
@@ -226,7 +245,7 @@ function ilustracionDeLaWeb(ilustraciones, id) {
  * es sólo de la nube es elegir fotos nuevas (elegirFotosNuevas). Modifica las
  * notas y las devuelve.
  *
- * `ilustraciones` (web/data/fotos-ia.json) va al final: sólo si el banco no tiene foto, la nota no es de Policiales ni de Política y
+ * `ilustraciones` (web/data/fotos-ia.json) va al final: sólo si el banco no tiene una foto que la nota pueda mostrar, la nota no es propia e
  * `ilustracionPermitida` dice que sí. Una nota que tenía la ilustración y ya no puede (o el libro ya no la tiene) la pierde.
  */
 export function conFotosDelBanco(notas = [], banco = {}, { ilustraciones = {}, ilustracionPermitida: permitida = () => true } = {}) {
@@ -235,9 +254,10 @@ export function conFotosDelBanco(notas = [], banco = {}, { ilustraciones = {}, i
     // Policiales sin fuente oficial no lleva foto real, ni aunque esté en el banco o la haya sumado una persona desde el panel
     // (8/10/2026: "Choque frontal en la Ruta 226" salía con una foto de El Eco de Tandil). Regla firme: CRITERIO-EDITORIAL.md, "Las fotos".
     if (foto && elegiblePorSeccion(n)) { n.foto = foto; continue; }
-    if (foto) { delete n.foto; continue; }
+    // Esa foto real no va; la ilustración (sin personas, regla 185) sí puede.
+    if (foto) delete n.foto;
     const il = ilustracionDeLaWeb(ilustraciones, n.id);
-    if (il && !SECCIONES_SIN_ILUSTRACION.includes(n.seccion) && !n.propia && permitida(n)) n.foto = il;
+    if (il && !esPropiaConImagen(n) && permitida(n)) n.foto = il;
     else if (esIlustracionDeNota(n.foto)) delete n.foto;
   }
   return notas;

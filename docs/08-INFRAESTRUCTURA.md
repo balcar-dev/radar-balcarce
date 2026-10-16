@@ -164,7 +164,11 @@ Balcarce).**
   mismos que en Balcarce): a los **:00 y :30**, "Actualizar la web" y
   "Vigilancia"; a los **:05, :35 y :45**, "Redes" con la acción `reloj`; y desde
   el 15/10, a las **8:15 y 21:15 de Balcarce** (11:15 y 0:15 UTC, una sola
-  expresión `15 0,11 * * *`), "Informe diario" con `momento` = `manana` o `noche`.
+  expresión `15 0,11 * * *`), "Informe diario" con `momento` = `manana` o `noche`;
+  y desde el 17/10, a los **:20 cada 2 horas de 7:20 a 23:20 de Balcarce** (expresión
+  `20 0,2,10,12,14,16,18,20,22 * * *`), "Ilustrar notas sin foto" con `automatico` =
+  `true` (regla 185; `docs/flujos/IMAGENES-CON-GEMINI-WEB.md`). Son **cuatro
+  expresiones: no sumar más**.
   Lo dicen `worker.mjs` (`trabajosDelMinuto(minuto, horaUtc)`) y `wrangler.toml`.
   Después de tocarlo hay que correr «Reloj de Cloudflare»; mientras no se corra,
   el informe sale igual por el `schedule` de respaldo (con media hora de atraso).

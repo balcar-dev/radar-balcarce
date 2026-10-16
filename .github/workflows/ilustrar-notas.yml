@@ -1,18 +1,21 @@
-# Ilustraciones hechas con IA para las notas que quedaron sin foto (16/10/2026, Hernán; regla 182). SÓLO a mano y en dos pasos:
+# Ilustraciones hechas con IA para las notas que quedaron sin foto (16/10/2026, Hernán; reglas 182 y 185). Tres modos:
 #
-#   1) REVISAR (aplicar sin marcar, lo de siempre): elige las notas de las últimas `horas` sin foto real, salta las que no pueden llevar una
-#      (Policiales, Política, lo que no es verde, las notas propias, chicos, víctimas, muertes, sepelios, abusos, denuncias, detenidos, política
-#      con nombre propio, deportistas nombrados), le pide a Gemini (clave de redacción, gratis) el prompt y al Worker de Cloudflare la imagen
-#      (SDXL 1024 x 576, dentro de las neuronas gratis), la hace mirar otra vez por Gemini y deja todo en el adjunto "ilustraciones"
-#      (index.html para mirarlas). No escribe nada en el repositorio.
-#   2) APLICAR (aplicar marcado, `corrida` = el número de la corrida de revisión): guarda las de `ids` (o, vacío, las que pasaron el control)
-#      en web/public/fotos-notas/<id>-ia.jpg y web/data/fotos-ia.json, y sube. No genera nada.
+#   · AUTOMÁTICO (`automatico` = true; lo dispara el reloj de Cloudflare, infra/reloj-cloudflare/, a los :20 cada 2 horas de 7 a 23 de
+#     Balcarce): revisa con el cupo repartido en el día y, en el job «Guardar», aplica y sube SÓLO las que pasaron el control con visión
+#     (sin personas, rostros, texto, logos, nada sensible ni raro). Deja el resumen en el registro y el adjunto «aplicadas». Es el RELLENO:
+#     las ilustraciones de Gemini web (a mano, 10:00 y 18:00; docs/flujos/IMAGENES-CON-GEMINI-WEB.md) las reemplazan y nunca se pisan.
+#   · REVISAR (a mano, nada marcado): elige las notas de las últimas `horas` sin foto real, salta sólo las que no pueden llevar una (muertes,
+#     velorios, sepelios, semáforo rojo, notas propias que traen su imagen, lo que ya tiene foto o ilustración), le pide a Gemini (claves
+#     gratis de redacción y clasificación) el prompt con el TONO de la nota y al Worker de Cloudflare la imagen (SDXL 1024 x 576, dentro de las
+#     neuronas gratis), la hace mirar otra vez por Gemini y deja todo en el adjunto "ilustraciones" (index.html para mirarlas). No escribe nada.
+#   · APLICAR (a mano, aplicar marcado, `corrida` = el número de la corrida de revisión): guarda las de `ids` (o, vacío, las que pasaron el
+#     control) en web/public/fotos-notas/<id>-ia.jpg y web/data/fotos-ia.json, y sube. No genera nada.
 #
 # Topes (web/scripts/ilustrar-notas.mjs, no se cambian desde acá): 12 llamadas al Worker por corrida y 20 por día, un solo reintento por imagen.
-# Las llamadas de las revisiones anteriores de hoy se cuentan con su adjunto "cuenta-ilustraciones".
-# Secretos: GEMINI_API_KEY_REDACCION (gratis) y VIGILANTE_TOKEN (la contraseña del Worker). Ninguna otra clave.
+# Las llamadas de las corridas anteriores de hoy se cuentan con su adjunto "cuenta-ilustraciones".
+# Secretos: GEMINI_API_KEY_REDACCION y GEMINI_API_KEY_CLASIFICACION (gratis) y VIGILANTE_TOKEN (la contraseña del Worker). Ninguna otra clave.
 name: Ilustrar notas sin foto
-run-name: "Ilustrar notas · ${{ inputs.aplicar && 'aplicar' || 'revisar' }}"
+run-name: "Ilustrar notas · ${{ inputs.aplicar && 'aplicar' || (inputs.automatico && 'automático' || 'revisar') }}"
 
 on:
   workflow_dispatch:
@@ -23,6 +26,11 @@ on:
         default: '24'
       aplicar:
         description: 'Aplicar: guardar y publicar las imágenes de una revisión ya hecha (sin marcar = sólo revisar)'
+        type: boolean
+        required: false
+        default: false
+      automatico:
+        description: 'Automático: generar, controlar y publicar solas las que pasan el control (lo usa el reloj de Cloudflare)'
         type: boolean
         required: false
         default: false
@@ -46,10 +54,14 @@ concurrency:
 
 jobs:
   ilustrar:
+    if: ${{ !inputs.aplicar }}
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:
       TZ: America/Argentina/Buenos_Aires
+    # Cuántas pasaron el control: si ninguna, "Guardar" ni arranca (no hace fila con "Actualizar la web" para nada).
+    outputs:
+      para_aplicar: ${{ steps.revisar.outputs.para_aplicar }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -63,9 +75,8 @@ jobs:
       - name: Instalar
         run: npm ci --no-audit --no-fund
 
-      # Lo que gastaron las revisiones anteriores (el script suma sólo las de hoy). Si no se puede bajar, cuenta lo ya aplicado hoy.
+      # Lo que gastaron las corridas anteriores (el script suma sólo las de hoy). Si no se puede bajar, cuenta lo ya aplicado hoy.
       - name: Lo ya generado hoy
-        if: ${{ !inputs.aplicar }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -77,16 +88,18 @@ jobs:
           ls -R cuentas | head -40
 
       - name: Revisar (no toca el repositorio)
-        if: ${{ !inputs.aplicar }}
+        id: revisar
         run: node web/scripts/ilustrar-notas.mjs revisar --salida=salida-ilustraciones --cuenta=cuenta-ilustraciones --cuentas=cuentas
         env:
           HORAS: ${{ inputs.horas }}
           IDS: ${{ inputs.ids }}
+          AUTOMATICO: ${{ inputs.automatico }}
           GEMINI_API_KEY_REDACCION: ${{ secrets.GEMINI_API_KEY_REDACCION }}
+          GEMINI_API_KEY_CLASIFICACION: ${{ secrets.GEMINI_API_KEY_CLASIFICACION }}
           VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
 
       - uses: actions/upload-artifact@v4
-        if: ${{ always() && !inputs.aplicar }}
+        if: ${{ always() }}
         with:
           name: ilustraciones
           path: salida-ilustraciones
@@ -94,12 +107,37 @@ jobs:
           if-no-files-found: ignore
 
       - uses: actions/upload-artifact@v4
-        if: ${{ always() && !inputs.aplicar }}
+        if: ${{ always() }}
         with:
           name: cuenta-ilustraciones
           path: cuenta-ilustraciones
           retention-days: 3
           if-no-files-found: ignore
+
+  # Guardar: corto (no genera nada) y EN LA FILA DE "Actualizar la web" (su mismo grupo de concurrency, actualizar.yml): nunca sube mientras
+  # la web se está armando. Si el push choca, vuelve a bajar main y repite el aplicar sobre lo de ahora: nunca pisa lo que subió otro
+  # (una ilustración de Gemini web subida mientras tanto gana: el aplicar la ve y no la toca).
+  guardar:
+    needs: ilustrar
+    if: ${{ !cancelled() && (inputs.aplicar || (inputs.automatico && needs.ilustrar.result == 'success' && needs.ilustrar.outputs.para_aplicar != '0')) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    concurrency:
+      group: actualizar-web
+      cancel-in-progress: false
+    env:
+      TZ: America/Argentina/Buenos_Aires
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Instalar
+        run: npm ci --no-audit --no-fund
 
       - name: Falta la corrida de revisión
         if: ${{ inputs.aplicar && inputs.corrida == '' }}
@@ -107,7 +145,7 @@ jobs:
           echo "Para aplicar hay que poner en 'corrida' el número de la corrida de revisión."
           exit 1
 
-      - name: Bajar la revisión
+      - name: Bajar la revisión (aplicar a mano)
         if: ${{ inputs.aplicar }}
         uses: actions/download-artifact@v4
         with:
@@ -116,34 +154,46 @@ jobs:
           run-id: ${{ inputs.corrida }}
           github-token: ${{ github.token }}
 
-      - name: Aplicar (no genera nada)
-        if: ${{ inputs.aplicar }}
-        run: node web/scripts/ilustrar-notas.mjs aplicar --desde=revision
+      - name: Bajar lo que generó esta corrida (automático)
+        if: ${{ !inputs.aplicar }}
+        uses: actions/download-artifact@v4
+        with:
+          name: ilustraciones
+          path: revision
+
+      - name: Aplicar y guardar (no genera nada)
         env:
           IDS: ${{ inputs.ids }}
-
-      - name: Guardar
-        if: ${{ inputs.aplicar }}
+          AUTOMATICO: ${{ !inputs.aplicar && inputs.automatico }}
         run: |
           git config user.name "Radar Balcarce"
           git config user.email "272334999+balcar-dev@users.noreply.github.com"
-          for f in web/data/fotos-ia.json web/public/fotos-notas; do [ -e "$f" ] && git add -- "$f"; done
-          if git diff --cached --quiet; then
-            echo "Nada nuevo que guardar."
-            exit 0
-          fi
-          git commit -m "Ilustraciones con IA para notas sin foto · $(date '+%d/%m %H:%M')"
-          # El mismo ciclo que "Actualizar la web": traer lo de las otras corridas y reintentar. fotos-ia.json lo escribe sólo este workflow.
+          # Tres intentos. En cada uno: main recién bajado, el aplicar otra vez (vuelve a filtrar con los datos de ahora y respeta el tope del
+          # día), commit y push. fotos-ia.json lo escriben sólo esta corrida y el flujo de Gemini web: nunca se resuelve un choque a ciegas.
           for intento in 1 2 3; do
-            if ! git pull --rebase; then
-              chocan=$(git diff --name-only --diff-filter=U)
-              echo "$chocan" | grep -qvE "^web/data/" && { echo "Conflicto fuera de web/data: $chocan"; git rebase --abort; exit 1; }
-              echo "$chocan" | xargs -r git checkout --theirs --
-              echo "$chocan" | xargs -r git add --
-              GIT_EDITOR=true git rebase --continue || { git rebase --abort; exit 1; }
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            git clean -fdq -- web/public/fotos-notas
+            node web/scripts/ilustrar-notas.mjs aplicar --desde=revision --informe=aplicadas
+            for f in web/data/fotos-ia.json web/public/fotos-notas; do [ -e "$f" ] && git add -- "$f"; done
+            if git diff --cached --quiet; then
+              echo "Nada nuevo que guardar."
+              exit 0
             fi
-            git push && break
+            git commit -q -m "Ilustraciones con IA para notas sin foto$([ "$AUTOMATICO" = "true" ] && echo ' (automático)') · $(date '+%d/%m %H:%M')"
+            if git push -q origin HEAD:main; then
+              echo "Guardadas (intento $intento)."
+              exit 0
+            fi
             sleep 5
           done
-          git fetch -q origin main
-          [ "$(git rev-list --count origin/main..HEAD)" = 0 ] || { echo "No se pudieron guardar las ilustraciones después de tres intentos"; exit 1; }
+          echo "No se pudieron guardar las ilustraciones después de tres intentos"
+          exit 1
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: aplicadas
+          path: aplicadas
+          retention-days: 7
+          if-no-files-found: ignore

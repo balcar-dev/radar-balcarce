@@ -5,4 +5,6 @@ compatibility_date = "2026-10-01"
 
 [triggers]
 # "15 0,11 * * *": el informe diario por mail, a las 8:15 y a las 21:15 de Balcarce (11:15 y 0:15 UTC). Es UNA sola expresión para no gastar triggers de la cuenta.
-crons = ["0,30 * * * *", "5,35,45 * * * *", "15 0,11 * * *"]
+# "20 0,2,10,12,14,16,18,20,22 * * *": "Ilustrar notas sin foto" en modo automático, cada 2 horas de 7:20 a 23:20 de Balcarce (regla 185). Cuatro
+# expresiones en total: no sumar más (los triggers de la cuenta son pocos).
+crons = ["0,30 * * * *", "5,35,45 * * * *", "15 0,11 * * *", "20 0,2,10,12,14,16,18,20,22 * * *"]
