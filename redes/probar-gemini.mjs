@@ -72,16 +72,21 @@ for (const [nombre, variable] of CLAVES) {
       decir(`[${nombre}] voz (gemini-3.8-flash-tts, voz de la locutora): HTTP ${voz.estado}, audio ${bytes} bytes${voz.estado === 200 ? '' : ' · ' + limpiar(voz.texto, clave)}`);
     }
 
-    // Una imagen: primer modelo que diga image/imagen y acepte generateContent.
-    const candidato = modelos.find((m) => /image/i.test(m.name) && (m.supportedGenerationMethods ?? []).includes('generateContent'));
-    if (!candidato) { decir(`[${nombre}] imagen: ningún modelo de imagen visible con generateContent`); continue; }
-    const idModelo = String(candidato.name).replace(/^models\//, '');
-    const img = await pedir(`${BASE}/models/${idModelo}:generateContent`, clave, {
-      contents: [{ parts: [{ text: 'Ilustración minimalista y genérica de un tractor en un campo al atardecer, estilo plano, sin texto, sin personas.' }] }],
-      generationConfig: { responseModalities: ['IMAGE'] },
-    }, { espera: 120_000 });
-    const dato = img.estado === 200 ? buscarImagen(img.json) : null;
-    decir(`[${nombre}] imagen (${idModelo}): HTTP ${img.estado}, ${dato ? `imagen de ${Buffer.from(dato, 'base64').length} bytes` : 'sin imagen'}${img.estado === 200 ? '' : ' · ' + limpiar(img.texto, clave)}`);
+    // Una imagen: se prueban los modelos de imagen de los más nuevos a los más viejos (hasta que uno ande: cuesta centavos).
+    const PREFERIDOS = ['gemini-3.1-flash-image', 'gemini-3-pro-image', 'gemini-3.1-flash-lite-image', 'gemini-2.5-flash-image'];
+    const conImagen = modelos.filter((m) => /image/i.test(m.name) && (m.supportedGenerationMethods ?? []).includes('generateContent'))
+      .map((m) => String(m.name).replace(/^models\//, ''));
+    const orden = [...PREFERIDOS.filter((p) => conImagen.includes(p)), ...conImagen.filter((n) => !PREFERIDOS.includes(n))].slice(0, 4);
+    if (!orden.length) { decir(`[${nombre}] imagen: ningún modelo de imagen visible con generateContent`); continue; }
+    for (const idModelo of orden) {
+      const img = await pedir(`${BASE}/models/${idModelo}:generateContent`, clave, {
+        contents: [{ parts: [{ text: 'Ilustración minimalista y genérica de un tractor en un campo al atardecer, estilo plano, sin texto, sin personas.' }] }],
+        generationConfig: { responseModalities: ['IMAGE'] },
+      }, { espera: 120_000 });
+      const dato = img.estado === 200 ? buscarImagen(img.json) : null;
+      decir(`[${nombre}] imagen (${idModelo}): HTTP ${img.estado}, ${dato ? `imagen de ${Buffer.from(dato, 'base64').length} bytes` : 'sin imagen'}${img.estado === 200 ? '' : ' · ' + limpiar(img.texto, clave).slice(0, 120)}`);
+      if (dato) break;
+    }
   } catch (e) {
     decir(`[${nombre}] falló la prueba: ${limpiar(e?.message, clave)}`);
   }
