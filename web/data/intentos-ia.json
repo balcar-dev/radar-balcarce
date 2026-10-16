@@ -116,20 +116,10 @@
   "ultimo": "2026-10-14T23:31:47.562Z",
   "motivo": "con cuerpo"
  },
- "14mxql1": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T15:31:56.968Z",
-  "motivo": "con cuerpo"
- },
  "14oacl3": {
   "intentos": 1,
   "ultimo": "2026-10-10T02:31:34.700Z",
   "motivo": "con cuerpo"
- },
- "14r77qb": {
-  "intentos": 2,
-  "ultimo": "2026-10-09T15:31:56.968Z",
-  "motivo": "cuerpo: 6 problemas (fecha, numero, repite, promesa): el cuerpo menciona \"martes\" y la fuente no; sin esas oraciones quedan 31 palabras"
  },
  "14w3bld": {
   "intentos": 1,
@@ -446,11 +436,6 @@
   "ultimo": "2026-10-10T19:01:34.505Z",
   "motivo": "con cuerpo"
  },
- "1cnk2r1": {
-  "intentos": 3,
-  "ultimo": "2026-10-09T15:31:56.968Z",
-  "motivo": "título o bajada: 6 problemas (numero): el titulo dice 70 y la fuente no lo dice"
- },
  "1cr7omj": {
   "intentos": 1,
   "ultimo": "2026-10-15T19:02:13.648Z",
@@ -479,11 +464,6 @@
   "motivo": "verificación baja: espera a una persona",
   "baja": true,
   "fuentes": 1
- },
- "1d75c0g": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T15:31:56.968Z",
-  "motivo": "con cuerpo"
  },
  "1d8z7kh": {
   "intentos": 1,
@@ -586,9 +566,9 @@
   "motivo": "con cuerpo"
  },
  "1frovgl": {
-  "intentos": 1,
-  "ultimo": "2026-10-16T15:07:43.024Z",
-  "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
+  "intentos": 2,
+  "ultimo": "2026-10-16T15:32:24.328Z",
+  "motivo": "semáforo: necesita ojo humano: \"muerte\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "1ft6wlo": {
   "intentos": 1,
@@ -1186,11 +1166,6 @@
   "ultimo": "2026-10-16T14:01:17.477Z",
   "motivo": "con cuerpo"
  },
- "1x5dlcz": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T15:31:56.968Z",
-  "motivo": "con cuerpo"
- },
  "1xbibcl": {
   "intentos": 3,
   "ultimo": "2026-10-13T20:32:07.922Z",
@@ -1234,11 +1209,6 @@
  "1y371r4": {
   "intentos": 1,
   "ultimo": "2026-10-14T19:02:04.111Z",
-  "motivo": "con cuerpo"
- },
- "1y9462t": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T15:31:56.968Z",
   "motivo": "con cuerpo"
  },
  "1yc1lhn": {
@@ -1396,6 +1366,11 @@
   "ultimo": "2026-10-14T09:32:00.382Z",
   "motivo": "con cuerpo"
  },
+ "5bzm11": {
+  "intentos": 1,
+  "ultimo": "2026-10-16T15:32:24.328Z",
+  "motivo": "con cuerpo"
+ },
  "5f1qhn": {
   "intentos": 4,
   "ultimo": "2026-10-14T23:24:50.947Z",
@@ -1504,9 +1479,9 @@
   "motivo": "con cuerpo"
  },
  "8dpdqi": {
-  "intentos": 2,
-  "ultimo": "2026-10-16T15:01:37.272Z",
-  "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)"
+  "intentos": 3,
+  "ultimo": "2026-10-16T15:32:24.328Z",
+  "motivo": "semáforo: necesita ojo humano: \"denunció\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "8dy7jt": {
   "intentos": 1,
@@ -1727,6 +1702,11 @@
   "ultimo": "2026-10-16T11:31:26.224Z",
   "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
+ "e353o5": {
+  "intentos": 1,
+  "ultimo": "2026-10-16T15:32:24.328Z",
+  "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras"
+ },
  "e8pivp": {
   "intentos": 1,
   "ultimo": "2026-10-11T00:02:01.385Z",
@@ -1853,8 +1833,8 @@
   "motivo": "con cuerpo"
  },
  "gymja6": {
-  "intentos": 2,
-  "ultimo": "2026-10-16T15:07:43.024Z",
+  "intentos": 3,
+  "ultimo": "2026-10-16T15:32:24.328Z",
   "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "gzwkmn": {
@@ -1871,6 +1851,11 @@
   "intentos": 1,
   "ultimo": "2026-10-14T16:32:27.799Z",
   "motivo": "título o bajada: 1 problema (antecedente): el copete usa \"tailandia\", que sale de una nota anterior, como si fuera de hoy"
+ },
+ "ha42x9": {
+  "intentos": 1,
+  "ultimo": "2026-10-16T15:32:24.328Z",
+  "motivo": "con cuerpo"
  },
  "hp2pil": {
   "intentos": 1,
@@ -1947,11 +1932,6 @@
   "ultimo": "2026-10-15T21:06:02.981Z",
   "motivo": "con cuerpo"
  },
- "juyiki": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T15:31:56.968Z",
-  "motivo": "con cuerpo"
- },
  "jzwgk2": {
   "intentos": 2,
   "ultimo": "2026-10-11T11:31:51.308Z",
@@ -1960,11 +1940,6 @@
  "k1kiay": {
   "intentos": 1,
   "ultimo": "2026-10-10T14:01:56.001Z",
-  "motivo": "con cuerpo"
- },
- "k8fay1": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T15:31:56.968Z",
   "motivo": "con cuerpo"
  },
  "kh0dy": {
@@ -2281,6 +2256,11 @@
   "ultimo": "2026-10-12T16:02:23.969Z",
   "motivo": "con cuerpo"
  },
+ "sddf3a": {
+  "intentos": 1,
+  "ultimo": "2026-10-16T15:32:24.328Z",
+  "motivo": "semáforo: necesita ojo humano: \"muerte\", en lo que escribió la IA (título, bajada o texto para redes)"
+ },
  "sklj66": {
   "intentos": 3,
   "ultimo": "2026-10-13T13:32:54.600Z",
@@ -2390,11 +2370,6 @@
   "intentos": 1,
   "ultimo": "2026-10-13T17:33:56.444Z",
   "motivo": "con cuerpo"
- },
- "vmuzu3": {
-  "intentos": 3,
-  "ultimo": "2026-10-09T15:31:56.968Z",
-  "motivo": "sin material"
  },
  "vn13xu": {
   "intentos": 1,

@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-16T15:09:45.036Z",
+ "generado": "2026-10-16T15:35:08.139Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -27,7 +27,7 @@
     {
      "medio": "Perfil",
      "enlace": "https://www.perfil.com/noticias/politica/santilli-lanzo-una-advertencia-a-los-gobernadores-por-kicillof-y-agito-el-fantasma-de-la-vuelta-del-kirchnerismo.phtml",
-     "fecha": "2026-10-16T14:11:22.000Z"
+     "fecha": "2026-10-16T14:50:00.000Z"
     },
     {
      "medio": "Radio Mitre",
@@ -42,7 +42,7 @@
     {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-16-11-48-0-para-santilli-los-gobernadores-deberian-estar-preocupados-por-un-eventual-regreso-del-kirchnerismo",
-     "fecha": "2026-10-16T14:53:47.000Z"
+     "fecha": "2026-10-16T15:15:48.000Z"
     },
     {
      "medio": "El Economista",
@@ -58,6 +58,53 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
+  },
+  {
+   "id": "e353o5",
+   "titulo": "El juez Lijo volvió a procesar a Diego Spagnuolo por una segunda ruta de coimas en la Agencia de Discapacidad",
+   "copete": "Aceptó el pedido del fiscal Franco Picardi sobre la participación del ex titular de la Agencia de Discapacidad en otro tramo de la investigación por corrupción en ese organismo.",
+   "seccion": "Política",
+   "fecha": "2026-10-16T13:20:19.000Z",
+   "fuentes": [
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/politica/juez-lijo-volvio-procesar-diego-spagnuolo-segunda-ruta-coimas-agencia-discapacidad_0_DZfaTCN3Ki.html",
+     "fecha": "2026-10-16T13:20:19.000Z"
+    },
+    {
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/politica/ampliaron-procesamiento-spagnuolo-causa-coimas-andis-2026101612117",
+     "fecha": "2026-10-16T15:01:00.000Z"
+    },
+    {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/judiciales/el-juez-lijo-firmo-un-nuevo-procesamiento-contra-diego-spagnuolo-por-una-segunda-ruta-de-la-coimas-en-andis.phtml",
+     "fecha": "2026-10-16T14:51:57.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/andis-nuevo-procesamiento-diego-spagnuolo-y-otros-acusados-hechos-corrupcion-n6334559",
+     "fecha": "2026-10-16T14:19:00.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/politica/causa-andis-nuevo-procesamiento-diego-spagnuolo-hechos-corrupcion-n251776",
+     "fecha": "2026-10-16T14:05:00.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/politica/causa-andis-la-justicia-dispuso-un-nuevo-procesamiento-diego-spagnuolo-n6334543",
+     "fecha": "2026-10-16T13:40:00.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/judiciales/2026/10/16/caso-andis-el-juez-lijo-amplio-el-procesamiento-de-spagnuolo-y-otros-acusados-por-diferencias-de-precios-millonarias/",
+     "fecha": "2026-10-16T14:32:05.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
+   "maximo": 4
   },
   {
    "id": "dpwrvn",
@@ -77,16 +124,6 @@
      "fecha": "2026-10-16T12:08:54.000Z"
     },
     {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/16/murio-fernando-confessore-a-las-58-anos-historico-meteorologo-de-tn-y-el-trece/",
-     "fecha": "2026-10-16T14:34:13.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/sociedad/murio-fernando-confessore-reacciones-y-mensajes-de-despedida-al-meteorologo-que-trabajaba-en-el-nid16102026/",
-     "fecha": "2026-10-16T15:03:21.000Z"
-    },
-    {
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/espectaculos/la-desconocida-historia-de-amor-de-fernando-confessore-y-paula-franco-40-anos-juntos-tres-hijas-y-nid16102026/",
      "fecha": "2026-10-16T14:22:23.000Z"
@@ -95,11 +132,6 @@
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/sociedad/murio-fernando-confessore-el-meteorologo-que-trabajaba-en-el-canal-tn-nid16102026/",
      "fecha": "2026-10-16T14:00:51.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/espectaculos/de-que-murio-fernando-confessore-nid16102026/",
-     "fecha": "2026-10-16T12:49:50.000Z"
     },
     {
      "medio": "0223 (Mar del Plata)",
@@ -222,11 +254,6 @@
      "fecha": "2026-10-16T10:11:00.000Z"
     },
     {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-16-7-24-0-murio-a-los-58-anos-fernando-confessore-uno-de-los-historicos-meteorologos-de-tn",
-     "fecha": "2026-10-16T14:53:47.000Z"
-    },
-    {
      "medio": "0221",
      "enlace": "https://www.0221.com.ar/nacional/murio-el-meteorologo-tn-fernando-confessore-los-58-anos-sufrir-un-infarto-n135905",
      "fecha": "2026-10-16T11:36:00.000Z"
@@ -327,6 +354,16 @@
      "fecha": "2026-10-16T10:03:27.000Z"
     },
     {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/teleshow/2026/10/16/murio-fernando-confessore-a-las-58-anos-historico-meteorologo-de-tn-y-el-trece/",
+     "fecha": "2026-10-16T10:27:08.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/espectaculos/de-que-murio-fernando-confessore-nid16102026/",
+     "fecha": "2026-10-16T10:24:09.000Z"
+    },
+    {
      "medio": "Diario Popular",
      "enlace": "https://www.diariopopular.com.ar/general/murio-fernando-confessore-el-historico-meteorologo-tn-los-58-anos-n924838",
      "fecha": "2026-10-16T10:23:00.000Z"
@@ -350,6 +387,11 @@
      "medio": "A24",
      "enlace": "https://www.a24.com/primiciasya/el-dolor-mario-massaccesi-al-comunicar-la-noticia-la-muerte-fernando-confessore-nos-dejo-shock-n1607022",
      "fecha": "2026-10-16T10:43:43.000Z"
+    },
+    {
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-16-7-24-0-murio-a-los-58-anos-fernando-confessore-uno-de-los-historicos-meteorologos-de-tn",
+     "fecha": "2026-10-16T10:56:29.000Z"
     },
     {
      "medio": "A24",

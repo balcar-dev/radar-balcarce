@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T15:09:45.036Z",
- "portada": 39,
- "archivo": 1160,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-16T15:35:08.139Z",
+ "portada": 47,
+ "archivo": 1161,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-16T15:09:45.065Z",
+  "generado": "2026-10-16T15:35:08.186Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -44,7 +44,7 @@
     "voz": "locutor",
     "ventana": 60,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-16T15:06:11.930Z"
    },
    {
     "nombre": "noticia2",
@@ -157,11 +157,11 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 51,
     "notas": [
      {
-      "id": "ahqycd",
-      "titulo": "SUTEBA Balcarce adhiere al paro nacional en defensa de la educación pública",
+      "id": "5bzm11",
+      "titulo": "La licitación por un predio sobre la ruta 226 queda desierta",
       "seccion": "Balcarce"
      },
      {
@@ -170,14 +170,14 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "1ixp88o",
-      "titulo": "El abogado de Virginia Aparicio visita una radio local para hablar del caso",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "107aa47",
       "titulo": "Atletas de AACYC completan exigente competencia de trail",
       "seccion": "Deportes"
+     },
+     {
+      "id": "1eb747m",
+      "titulo": "La Estudiantina 2026 arranca el lunes con propuestas deportivas y culturales",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -197,8 +197,14 @@
    ],
    "cola": [
     {
-     "id": "ahqycd",
-     "titulo": "SUTEBA Balcarce adhiere al paro nacional en defensa de la educación pública",
+     "id": "aa7nni",
+     "titulo": "Reprograman la Caravana de la Alegría para noviembre",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "5bzm11",
+     "titulo": "La licitación por un predio sobre la ruta 226 queda desierta",
      "seccion": "Balcarce",
      "marcada": false
     }
