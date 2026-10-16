@@ -17,10 +17,14 @@ test('a las 8:15 y a las 21:15 de Balcarce (11:15 y 0:15 UTC) pide el informe di
   assert.deepEqual(trabajosDelMinuto(15, 11), [{ archivo: 'informe-diario.yml', inputs: { momento: 'manana' } }]);
   assert.deepEqual(trabajosDelMinuto(15, 0), [{ archivo: 'informe-diario.yml', inputs: { momento: 'noche' } }]);
   for (let h = 1; h < 24; h++) if (h !== 11) assert.deepEqual(trabajosDelMinuto(15, h), [], `a las ${h} UTC no hay informe`);
-  for (const m of [0, 1, 5, 14, 16, 30, 35, 45]) assert.deepEqual(trabajosDelMinuto(m, 11).filter((t) => t.archivo === 'informe-diario.yml'), [], `el minuto ${m} no es el del informe`);
+  // 16/10: el segundo intento va a los :30 de las 11 y de las 0 UTC (los :15 no despertaron nada), y el Worker del vigilante no manda dos mails por la misma clave.
+  assert.deepEqual(trabajosDelMinuto(30, 11).map((t) => t.archivo), ['actualizar.yml', 'vigilancia.yml', 'informe-diario.yml']);
+  assert.deepEqual(trabajosDelMinuto(30, 0).at(-1), { archivo: 'informe-diario.yml', inputs: { momento: 'noche' } });
+  for (let h = 1; h < 24; h++) if (h !== 11) assert.deepEqual(trabajosDelMinuto(30, h).map((t) => t.archivo), ['actualizar.yml', 'vigilancia.yml'], `a las ${h}:30 UTC no hay informe`);
+  for (const m of [0, 1, 5, 14, 16, 35, 45]) assert.deepEqual(trabajosDelMinuto(m, 11).filter((t) => t.archivo === 'informe-diario.yml'), [], `el minuto ${m} no es el del informe`);
   // lo de siempre, a cualquier hora, sigue igual
   for (const h of [0, 11, 13]) {
-    for (const m of [0, 30]) assert.deepEqual(trabajosDelMinuto(m, h).map((t) => t.archivo), ['actualizar.yml', 'vigilancia.yml']);
+    for (const m of [0, 30]) assert.deepEqual(trabajosDelMinuto(m, h).map((t) => t.archivo).filter((x) => x !== 'informe-diario.yml'), ['actualizar.yml', 'vigilancia.yml']);
     for (const m of [5, 35, 45]) assert.deepEqual(trabajosDelMinuto(m, h), [{ archivo: 'redes.yml', inputs: { accion: 'reloj' } }]);
   }
 });

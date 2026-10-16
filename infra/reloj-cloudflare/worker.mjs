@@ -25,6 +25,13 @@ export function trabajosDelMinuto(minuto, horaUtc = null) {
   if (m === 0 || m === 30) {
     lista.push({ archivo: 'actualizar.yml' }, { archivo: 'vigilancia.yml' });
   }
+  // Segundo intento a los :30 (16/10/2026): el cron propio de los :15 no despertó el informe ni a las 21:15 ni a las 8:15, y los :30 sí andan.
+  // Si el de los :15 también llegó, el Worker del vigilante ve la misma clave (`informe-<momento>-<día>`) y NO manda un segundo mail.
+  if (m === 30 && horaUtc !== null && horaUtc !== undefined) {
+    const h = Number(horaUtc);
+    if (h === 11) lista.push({ archivo: 'informe-diario.yml', inputs: { momento: 'manana' } });
+    if (h === 0) lista.push({ archivo: 'informe-diario.yml', inputs: { momento: 'noche' } });
+  }
   if (m === 5 || m === 35 || m === 45) lista.push({ archivo: 'redes.yml', inputs: { accion: 'reloj' } });
   return lista;
 }
