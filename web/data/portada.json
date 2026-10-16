@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T02:30:07.673Z",
+  "generado": "2026-10-16T02:32:58.305Z",
   "notas": [
     {
       "id": "1ixp88o",
@@ -313,6 +313,108 @@
       "foto": {
         "archivo": "fotos-notas/n6v2wu.jpg",
         "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "1jpdkrm",
+      "titulo": "La inflación de septiembre varía según cada provincia",
+      "copete": "El costo de vida alcanzó el 1,9% a nivel nacional en septiembre, aunque el incremento de precios mostró diferencias en las jurisdicciones con índices propios.",
+      "cuerpo": "La inflación alcanzó el 1,9% a nivel nacional en septiembre, pero el incremento de precios no fue uniforme en los diez distritos con mediciones propias, según un informe de la consultora Politikon Chaco.\n\nRío Negro lideró el índice con el 2,5%, seguida por Neuquén y Tucumán con el 2,1%, mientras que Jujuy igualó el promedio del país con el 1,9%. En el otro extremo, Córdoba registró la menor suba mensual con el 1,4%.\n\nEn cuanto al acumulado entre enero y septiembre, el indicador nacional llegó al 23,6%, por encima del 22% registrado en el mismo período de 2025, de acuerdo con los datos difundidos.",
+      "guion": "La inflación de septiembre varía según cada provincia.",
+      "seccion": "Economía",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Noticias Argentinas (NA)",
+        "La Nueva",
+        "Los Andes (Mendoza)"
+      ],
+      "enlace": "https://tn.com.ar/economia/2026/10/15/inflacion-en-las-provincias-donde-subieron-mas-los-precios-en-septiembre-y-cuales-quedaron-por-debajo-del-promedio-nacional/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T19:58:37.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T02:32:42.919Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La inflación nacional de septiembre se ubicó en el 1,9%.",
+        "Río Negro registró la mayor suba mensual con el 2,5%.",
+        "Córdoba presentó el menor incremento con el 1,4%."
+      ],
+      "seSabe": [
+        "La inflación nacional de septiembre fue del 1,9% según los datos relevados.",
+        "Río Negro registró la mayor suba mensual con el 2,5%.",
+        "Córdoba presentó el menor aumento mensual con el 1,4%."
+      ],
+      "textoRedes": "La inflación de septiembre llegó al 1,9% a nivel nacional, aunque las diez jurisdicciones con índices propios registraron variaciones heterogéneas entre el 2,5% de Río Negro y el 1,4% de Córdoba.",
+      "etiquetas": [
+        "inflacion",
+        "septiembre",
+        "precios",
+        "provincias"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/15/inflacion-en-las-provincias-donde-subieron-mas-los-precios-en-septiembre-y-cuales-quedaron-por-debajo-del-promedio-nacional/",
+          "fecha": "2026-10-15T19:58:37.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo la misma información de la fuente tres sin aportar datos nuevos."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/cuales-fueron-las-provincias-con-mayor-y-menor-inflacion-que-el-promedio-nacional-de-septiembre_a6ad1373d88153cda2d007520",
+          "fecha": "2026-10-15T21:45:56.220Z",
+          "oficial": false,
+          "aporte": "Aportó los datos generales del índice nacional y la comparación de la velocidad de crecimiento con el mes previo."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-15-21-41-0-inflacion-en-las-provincias-donde-subieron-mas-los-precios-y-cuales-quedaron-por-debajo-del-promedio",
+          "fecha": "2026-10-16T02:02:07.000Z",
+          "oficial": false,
+          "aporte": "Aportó el listado completo de los diez distritos con IPC propio, el acumulado anual y la comparación interanual."
+        },
+        {
+          "medio": "Los Andes (Mendoza)",
+          "enlace": "https://www.losandes.com.ar/economia/que-provincias-tuvieron-mas-inflacion-que-el-promedio-nacional-septiembre-los-rubros-alza-n6010542",
+          "fecha": "2026-10-16T01:09:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó el detalle de las variaciones mensuales, la aceleración frente a agosto y los rubros con mayores aumentos por provincia."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1iw56bi",
+          "titulo": "El Indec ubica la canasta básica por debajo de la inflación en septiembre",
+          "fecha": "2026-09-24T03:00:00.000Z",
+          "ruta": "/nota/el-indec-ubica-la-canasta-basica-por-debajo-de-la-inflacion-en-1iw56bi"
+        },
+        {
+          "id": "gw45ft",
+          "titulo": "El Gobierno celebra una inflación de 1,9 por ciento en septiembre",
+          "fecha": "2026-10-13T20:24:38.245Z",
+          "ruta": "/nota/el-gobierno-celebra-una-inflacion-de-1-9-por-ciento-en-septiembre-gw45ft"
+        },
+        {
+          "id": "e5v4vp",
+          "titulo": "La inflación porteña llega al 1,8 por ciento en septiembre",
+          "fecha": "2026-10-08T14:00:00.000Z",
+          "ruta": "/nota/la-inflacion-portena-llega-al-1-8-por-ciento-en-septiembre-e5v4vp"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-inflacion-de-septiembre-varia-segun-cada-provincia",
+      "foto": {
+        "archivo": "fotos-notas/1jpdkrm.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -3649,7 +3751,7 @@
     "ahora": {
       "temp": 7,
       "sensacion": 5,
-      "humedad": 96,
+      "humedad": 95,
       "viento": 12,
       "rumbo": "SE",
       "cielo": "Despejado",
