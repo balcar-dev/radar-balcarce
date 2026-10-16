@@ -5763,6 +5763,38 @@
     "shares": 0,
     "saved": 0
    }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122112057489495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "mly1kv",
+   "dia": "2026-10-15",
+   "cuando": "2026-10-15T16:46:43.079Z",
+   "medida": "2026-10-16T17:00:27.308Z",
+   "metricas": {
+    "post_media_view": 0,
+    "post_total_media_view_unique": 0,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18103290728570885",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "mly1kv",
+   "dia": "2026-10-15",
+   "cuando": "2026-10-15T16:46:52.090Z",
+   "medida": "2026-10-16T17:00:27.308Z",
+   "metricas": {
+    "reach": 1,
+    "views": 2,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
   }
  ]
 }
