@@ -47,6 +47,21 @@ Respuesta completa en `docs/auditoria-opus/RESPUESTAS-OTRAS-IAS.md` (Grok y Meta
 - **Un documento "si mañana falta uno de nosotros"** (dominio, cuentas, pagos, recuperación) y la prueba anual de reconstruir todo si desapareciera GitHub.
 - **Dónde NO coincide con Opus:** ChatGPT no migraría a Workers + D1 todavía (50 visitas por día). Lo que sí recomienda es sacar de git los datos que hacen de base de datos y pasar la multimedia a R2. Se discute en la revisión de punta a punta; mientras tanto el rumbo acordado sigue siendo menos GitHub y más Cloudflare. Sobre las 500 compilaciones gratis de Pages: no aplican, el sitio se sube por Direct Upload sin que Cloudflare compile.
 
+## Para cuando vuelvan Hernán y Andrés (16/10 a la noche)
+
+**Para revisar juntos (páginas HTML que se marcan con Sí / No / Duda y 'Copiar mis decisiones'):**
+- `docs/flujo/INFORME-DE-HOY.html` (cómo llegó la información hoy, fuentes y secciones) → después `docs/etapa-1-fuentes/REVISION-FUENTES.html` (lista corta de 47) y `docs/secciones/MAPA-DE-SECCIONES.html` + `PROTOTIPO-MENU.html` (17 secciones).
+- `docs/flujo/FLUJO-NUEVO.html` y `FLUJO-NUEVO-SIMULACION.html` (todo lo de Balcarce, nacional con 3 medios, tope 150), `docs/criterio/PESOS-Y-PUNTAJES.html`, `docs/flujo/GUIA-DEL-FLUJO.html` (el flujo paso a paso con los prompts).
+- `docs/panel/PROTOTIPO-PANEL.html` y `PLAN-NUEVO-PANEL.md` (8 preguntas; la etapa 0 son arreglos de textos y un error).
+
+**Tareas que sólo pueden hacer ustedes (con link):**
+- Cloudflare: agregar al token `CLOUDFLARE_API_TOKEN` los permisos «Zone → Workers Routes: Edit» y «Zone → Zone: Read» (https://dash.cloudflare.com/profile/api-tokens) para poder activar el archivo permanente en R2; y revisar en https://dash.cloudflare.com/99f5fbcb09c321124d5d0395cd283425/radarbalcarce.com/security/settings que no esté activo el bloqueo de bots de IA.
+- Voces pagas: cargar la clave de Google con crédito como secreto `GEMINI_API_KEY_REDES` en https://github.com/radarbalcarce/radar-balcarce/settings/secrets/actions (hoy las tres claves están en el plan gratis, con 10 audios por día). Las imágenes ya no la necesitan.
+- Buscadores: Bing Webmaster Tools (https://www.bing.com/webmasters, importar desde Search Console) y mirar Search Console una vez por semana (https://search.google.com/search-console?resource_id=sc-domain%3Aradarbalcarce.com).
+- Redes nuevas (todas gratis salvo X): crear el canal de Telegram (@BotFather), la cuenta de Bluesky y el canal de YouTube; TikTok y WhatsApp canal a mano o con Buffer. Plan en `docs/redes/PLAN-REELS-OTRAS-REDES.md` y `AUTOMATIZAR-REDES-ALTERNATIVAS.md`.
+
+**En curso o activado el 16/10:** el mail de agradecimiento a Prensa Cicaré sale cuando salga el reel de las 15:00 con la nota de Azul; la tarea programada `ilustrar-notas-sin-foto` (10:00 y 18:00, requiere la PC y la app abiertas); el reloj dispara el informe diario a los :15 y a los :30; la carga inicial del archivo en R2 (`Archivo permanente (producción)`, sin ruta).
+
 ## Lo que quedó armado en la ventana autónoma del 15/10 (para mirar juntos)
 
 - **Armado y sin conectar a producción**: `motor/` (esquema de la base D1 y su importador, con prueba de espejo contra `web/data`), `redes/reparar-estadisticas.mjs` (simula por defecto; 6 días a reparar; necesita el token de analíticas de Cloudflare para `--aplicar`), `docs/etapa-10-operacion/DISENO-MOTOR.md` y `docs/salud-tecnica/ARCHIVO-PERMANENTE.md` (diseños, con sus preguntas).
