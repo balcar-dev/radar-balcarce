@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-16T02:05:22.727Z",
+ "consultado": "2026-10-16T02:30:05.071Z",
  "equipos": [
   "9739",
   "3",
@@ -1045,8 +1045,8 @@
     "id": "401912523",
     "competencia": "libertadores",
     "inicio": "2026-10-16T00:30:00.000Z",
-    "estado": "en-juego",
-    "minuto": "76'",
+    "estado": "final",
+    "minuto": "90'+5'",
     "local": {
      "id": "8",
      "nombre": "Estudiantes de La Plata",
@@ -1578,6 +1578,7 @@
   "futbolresultadosliga20261009": "2026-10-09T19:27:23.047Z",
   "futbolpartidossudamericana20261013": "2026-10-12T12:32:43.144Z",
   "futbolresultadossudamericana20261013": "2026-10-14T02:32:21.734Z",
-  "futbolpartidoslibertadores20261015": "2026-10-14T12:33:19.010Z"
+  "futbolpartidoslibertadores20261015": "2026-10-14T12:33:19.010Z",
+  "futbolresultadoslibertadores20261015": "2026-10-16T02:30:07.006Z"
  }
 }

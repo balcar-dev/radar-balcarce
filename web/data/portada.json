@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T02:05:24.909Z",
+  "generado": "2026-10-16T02:30:07.673Z",
   "notas": [
     {
       "id": "1ixp88o",
@@ -172,7 +172,7 @@
       "fecha": "2026-10-15T23:28:33.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T02:01:31.530Z",
-      "relevancia": 69,
+      "relevancia": 59,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3652,7 +3652,7 @@
       "humedad": 96,
       "viento": 12,
       "rumbo": "SE",
-      "cielo": "Mayormente despejado",
+      "cielo": "Despejado",
       "esDeDia": false
     },
     "dias": [
@@ -3661,7 +3661,7 @@
         "dia": "jue",
         "max": 14,
         "min": 7,
-        "lluvia": 22,
+        "lluvia": 16,
         "codigo": 51,
         "viento": 20,
         "milimetros": 0,
@@ -4015,6 +4015,12 @@
       "titulo": null,
       "seccion": "Fútbol",
       "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "cbns53",
+      "titulo": null,
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente 2 (visto al reescribir)"
     },
     {
       "id": "2dhhlx",
