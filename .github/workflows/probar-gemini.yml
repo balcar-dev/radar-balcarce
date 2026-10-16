@@ -1,0 +1,26 @@
+# Prueba a mano las claves de Gemini (15/10/2026): qué modelos ve cada una, si responde, si la voz paga anda y si se puede generar una imagen.
+# Gasta centavos (un texto mínimo por clave, UNA voz de 3 segundos con la clave de redes y UNA imagen). No escribe nada en el repositorio.
+# Las claves están en los secretos de GitHub; el script jamás las imprime (redes/probar-gemini.mjs).
+name: Probar las claves de Gemini
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      GEMINI_API_KEY_REDACCION: ${{ secrets.GEMINI_API_KEY_REDACCION }}
+      GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
+      GEMINI_API_KEY_CLASIFICACION: ${{ secrets.GEMINI_API_KEY_CLASIFICACION }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Probar
+        run: node redes/probar-gemini.mjs
