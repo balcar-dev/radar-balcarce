@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-16T18:35:13.745Z",
+ "generado": "2026-10-16T19:03:34.138Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -84,6 +84,11 @@
      "fecha": "2026-10-16T16:43:13.000Z"
     },
     {
+     "medio": "LU9 Mar del Plata",
+     "enlace": "https://www.lu9mardelplata.com.ar/diego-santilli-advirtio-que-los-gobernadores-deben-preocuparse-por-un-posible-regreso-del-kirchnerismo",
+     "fecha": "2026-10-16T18:52:15.000Z"
+    },
+    {
      "medio": "Agencia DIB",
      "enlace": "https://dib.com.ar/politica/santilli-los-que-deberian-estar-preocupados-el-regreso-del-kirchnerismo-son-los-gobernadores-n56559",
      "fecha": "2026-10-16T17:53:00.000Z"
@@ -91,7 +96,7 @@
     {
      "medio": "TN (Todo Noticias)",
      "enlace": "https://tn.com.ar/politica/2026/10/16/el-fuerte-mensaje-de-santilli-en-la-previa-al-2027-los-gobernadores-deberian-estar-preocupados-si-gana-kicillof/",
-     "fecha": "2026-10-16T17:39:57.000Z"
+     "fecha": "2026-10-16T18:38:12.000Z"
     },
     {
      "medio": "A24",
@@ -111,7 +116,7 @@
     {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-16-11-48-0-para-santilli-los-gobernadores-deberian-estar-preocupados-por-un-eventual-regreso-del-kirchnerismo",
-     "fecha": "2026-10-16T17:36:40.000Z"
+     "fecha": "2026-10-16T18:41:55.000Z"
     },
     {
      "medio": "El Eco de Tandil",
@@ -141,6 +146,88 @@
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
+   "maximo": 5
+  },
+  {
+   "id": "yqsuir",
+   "titulo": "Causa Andis: procesaron a 24 personas y la diferencia de precios bajo investigación supera los $7.800 millones",
+   "copete": "El juez federal Ariel Lijo amplió el procesamiento contra Diego Spagnuolo , el primer director de la Agencia Nacional de Discapacidad (Andis) del gobierno de Javier Milei , y otros involucrados en la causa que investiga presuntos desmanejos en el organismo. Lijo dispuso ampliar…",
+   "seccion": "Política",
+   "fecha": "2026-10-16T12:30:00.000Z",
+   "fuentes": [
+    {
+     "medio": "La Gaceta (Tucumán)",
+     "enlace": "https://www.lagaceta.com.ar/nota/1158339/politica/causa-andis-procesaron-24-personas-diferencia-precios-bajo-investigacion-supera-7800-millones.html",
+     "fecha": "2026-10-16T12:30:00.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/politica/caso-andis-amplian-el-procesamiento-de-spagnuolo-y-otros-acusados-por-el-esquema-de-sobreprecios-en-nid16102026/",
+     "fecha": "2026-10-16T16:22:23.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/politica/juez-lijo-volvio-procesar-diego-spagnuolo-segunda-ruta-coimas-agencia-discapacidad_0_DZfaTCN3Ki.html",
+     "fecha": "2026-10-16T13:20:19.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/16/la-justicia-proceso-a-diego-spagnuolo-en-una-segunda-causa-por-presunta-corrupcion-en-la-andis/",
+     "fecha": "2026-10-16T16:19:03.000Z"
+    },
+    {
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/politica/ampliaron-procesamiento-spagnuolo-causa-coimas-andis-2026101612117",
+     "fecha": "2026-10-16T15:01:00.000Z"
+    },
+    {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/judiciales/el-juez-lijo-firmo-un-nuevo-procesamiento-contra-diego-spagnuolo-por-una-segunda-ruta-de-la-coimas-en-andis.phtml",
+     "fecha": "2026-10-16T14:51:57.000Z"
+    },
+    {
+     "medio": "Página/12",
+     "enlace": "https://www.pagina12.com.ar/2026/10/16/causa-andis-la-justicia-amplio-el-procesamiento-de-diego-spagnuolo/",
+     "fecha": "2026-10-16T15:52:02.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/caso-andis-procesamiento-diego-spagnuolo-sobreprecios/",
+     "fecha": "2026-10-16T17:26:55.000Z"
+    },
+    {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/politica/caso-andis-amplian-el-procesamiento-spagnuolo-presuntos-sobreprecios-n924860",
+     "fecha": "2026-10-16T18:48:00.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/andis-nuevo-procesamiento-diego-spagnuolo-y-otros-acusados-hechos-corrupcion-n6334559",
+     "fecha": "2026-10-16T14:19:00.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/politica/causa-andis-nuevo-procesamiento-diego-spagnuolo-hechos-corrupcion-n251776",
+     "fecha": "2026-10-16T14:05:00.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/politica/causa-andis-la-justicia-dispuso-un-nuevo-procesamiento-diego-spagnuolo-n6334543",
+     "fecha": "2026-10-16T13:40:00.000Z"
+    },
+    {
+     "medio": "elDiarioAR",
+     "enlace": "https://www.eldiarioar.com/politica/causa-andis-lijo-amplio-procesamiento-spagnuolo-nuevas-maniobras-corrupcion_1_13592926.html",
+     "fecha": "2026-10-16T18:55:08.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/judiciales/2026/10/16/caso-andis-el-juez-lijo-amplio-el-procesamiento-de-spagnuolo-y-otros-acusados-por-diferencias-de-precios-millonarias/",
+     "fecha": "2026-10-16T14:32:05.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 91 caracteres, el máximo es 90",
    "maximo": 5
   },
   {
@@ -245,7 +332,7 @@
     {
      "medio": "El Destape",
      "enlace": "https://www.eldestapeweb.com/espectaculos/murio-confessore-asi-fueron-ultimos-minutos-vida-20261016124846",
-     "fecha": "2026-10-16T15:48:46.543Z"
+     "fecha": "2026-10-16T15:48:00.000Z"
     },
     {
      "medio": "El Destape",
@@ -348,6 +435,16 @@
      "fecha": "2026-10-16T10:15:00.000Z"
     },
     {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/sociedad/de-que-murio-el-meteorologo-fernando-confessore-sus-58-anos-n251763",
+     "fecha": "2026-10-16T11:07:00.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/sociedad/luto-la-television-murio-el-reconocido-meteorologo-fernando-confessore-n251761",
+     "fecha": "2026-10-16T10:26:00.000Z"
+    },
+    {
      "medio": "Minuto Uno",
      "enlace": "https://www.minutouno.com/espectaculos/la-familia-que-construyo-fernando-confessore-paula-franco-sus-tres-hijas-y-una-vida-juntos-n6334614",
      "fecha": "2026-10-16T15:39:00.000Z"
@@ -413,11 +510,6 @@
      "fecha": "2026-10-16T10:23:00.000Z"
     },
     {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/sociedad/luto-la-television-murio-el-reconocido-meteorologo-fernando-confessore-n251761",
-     "fecha": "2026-10-16T10:26:07.000Z"
-    },
-    {
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/espectaculos/murio-fernando-confessore-historicos-meteorologos-canal-noticias-tn_0_XGpw7d7UBM.html",
      "fecha": "2026-10-16T10:09:50.000Z"
@@ -436,11 +528,6 @@
      "medio": "A24",
      "enlace": "https://www.a24.com/primiciasya/se-supo-que-murio-fernando-confessore-y-como-vivio-la-situacion-su-mujer-n1607029",
      "fecha": "2026-10-16T11:08:00.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/sociedad/de-que-murio-el-meteorologo-fernando-confessore-sus-58-anos-n251763",
-     "fecha": "2026-10-16T11:07:00.000Z"
     },
     {
      "medio": "Infobae",
@@ -510,11 +597,6 @@
      "fecha": "2026-10-16T10:42:22.000Z"
     },
     {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/actualidad/mario-massaccesi-despidio-a-fernando-confessore-en-vivo-lo-vamos-a-recordar-siempre.phtml",
-     "fecha": "2026-10-16T13:58:32.000Z"
-    },
-    {
      "medio": "Minuto Uno",
      "enlace": "https://www.minutouno.com/espectaculos/asi-anuncio-mario-mario-massaccesi-la-muerte-fernando-confessore-siempre-estaba-aqui-trabajando-n6334485",
      "fecha": "2026-10-16T12:54:00.000Z"
@@ -538,6 +620,11 @@
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/espectaculos/momento-mario-massaccesi-anuncio-vivo-muerte-fernando-confessore_0_dkSopl7g5d.html",
      "fecha": "2026-10-16T12:27:17.000Z"
+    },
+    {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/actualidad/mario-massaccesi-despidio-a-fernando-confessore-en-vivo-lo-vamos-a-recordar-siempre.phtml",
+     "fecha": "2026-10-16T13:58:32.000Z"
     }
    ],
    "intentos": 5,
@@ -595,23 +682,6 @@
    "intentos": 5,
    "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 5
-  },
-  {
-   "id": "1w1rdtj",
-   "titulo": "El INTA tomó distancia de la presentación de Virginia Aparicio en el Concejo Deliberante",
-   "copete": "El director del Centro Regional Buenos Aires Sur, Horacio Berger, envió una nota al presidente del Concejo Deliberante, Agustín Cassini, en la que adjuntó una resolución de 2023 que dispuso la desvinculación de la investigadora del proyecto SPRINT. Además, aclaró que las…",
-   "seccion": "Agro",
-   "fecha": "2026-10-16T17:34:11.188Z",
-   "fuentes": [
-    {
-     "medio": "Diario La Vanguardia",
-     "enlace": "https://www.diariolavanguardia.com/noticias/45081-el-inta-tomo-distancia-de-la-presentacion-de-virginia-aparicio-en-el-concejo-deliberante/",
-     "fecha": null
-    }
-   ],
-   "intentos": 1,
-   "motivo": "con cuerpo",
-   "maximo": 3
   }
  ]
 }

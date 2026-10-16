@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T18:35:13.745Z",
+  "generado": "2026-10-16T19:03:34.138Z",
   "notas": [
     {
       "id": "repaso20261016tarde",
@@ -126,7 +126,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "una-vecina-dona-un-rinon-a-su-hija-y-transitan-la-recuperacion"
+      "slug": "una-vecina-dona-un-rinon-a-su-hija-y-transitan-la-recuperacion",
+      "foto": {
+        "archivo": "fotos-notas/1edq6ii-ia.jpg",
+        "credito": "Ilustración generada con IA"
+      }
     },
     {
       "id": "1qtfiwu",
@@ -186,7 +190,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "la-subsecretaria-de-deporte-mantiene-las-clases-de-yoga-con-vacantes"
+      "slug": "la-subsecretaria-de-deporte-mantiene-las-clases-de-yoga-con-vacantes",
+      "foto": {
+        "archivo": "fotos-notas/1qtfiwu.jpg",
+        "credito": "Foto: Infórmese Primero (FM 104.9)"
+      }
     },
     {
       "id": "1xyp583",
@@ -242,7 +250,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "el-museo-historico-municipal-expone-el-proyecto-cruz-del-centenario"
+      "slug": "el-museo-historico-municipal-expone-el-proyecto-cruz-del-centenario",
+      "foto": {
+        "archivo": "fotos-notas/1xyp583.jpg",
+        "credito": "Foto: Infórmese Primero (FM 104.9)"
+      }
     },
     {
       "id": "1o0mwr9",
@@ -338,6 +350,99 @@
       }
     },
     {
+      "id": "q9ik7h",
+      "titulo": "Luciano Nakis apunta a Gabriel Milito como técnico de Independiente",
+      "copete": "El candidato de la Lista Roja y su asesor Sergio Agüero confirmaron que buscarán contratar al actual entrenador de Chivas de Guadalajara si ganan las elecciones del domingo 13 de diciembre.",
+      "cuerpo": "El candidato a presidente de Independiente Luciano Nakis y su asesor Sergio Agüero revelaron que buscarán contratar a Gabriel Milito como director técnico si la Lista Roja gana las elecciones previstas para el domingo 13 de diciembre.\n\nMilito dirige actualmente a Chivas de Guadalajara en México y tiene vínculo vigente, por lo que el espacio político evaluará ejecutar una cláusula de salida en diciembre si el entrenador acepta la propuesta. El proyecto deportivo también contempla la incorporación de Enzo Trossero como asesor deportivo, Hermes Desio como coordinador de juveniles y Damián Albil como director deportivo.\n\nEn la contienda electoral por la conducción del club de Avellaneda también participan Enrique Sacco y Gastón Gaudio.",
+      "guion": "Luciano Nakis apunta a Gabriel Milito como técnico de Independiente",
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "El Destape",
+        "TyC Sports",
+        "Olé",
+        "Minuto Uno"
+      ],
+      "enlace": "https://www.lanacion.com.ar/deportes/futbol/independiente/kun-aguero-anuncio-quien-sera-el-dt-de-independiente-si-gana-las-elecciones-con-nakis-nid16102026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T15:21:35.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T19:00:56.615Z",
+      "relevancia": 81,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Nakis y Agüero quieren a Gabriel Milito como DT.",
+        "Las elecciones en Independiente serán el 13 de diciembre.",
+        "Milito tiene contrato vigente con Chivas de Guadalajara.",
+        "El proyecto incluye a Trossero, Desio y Albil."
+      ],
+      "seSabe": [
+        "Las elecciones en Independiente se realizarán el domingo 13 de diciembre, según informó el candidato Luciano Nakis.",
+        "El espacio político de la Lista Roja planea incorporar a Enzo Trossero, Hermes Desio y Damián Albil para el área deportiva, de acuerdo con la información difundida.",
+        "Gabriel Milito tiene contrato vigente con Chivas de Guadalajara hasta mediados de 2027, según detallaron las fuentes."
+      ],
+      "noConfirmado": [
+        "Todavía no se confirmó si Gabriel Milito aceptará desvincularse de Chivas de Guadalajara en diciembre.",
+        "No se informaron las identidades de los tres patrocinadores que habrían garantizado su apoyo económico al espacio político."
+      ],
+      "textoRedes": "Luciano Nakis y Sergio Agüero anunciaron que buscarán contratar a Gabriel Milito como director técnico de Independiente si ganan las elecciones del 13 de diciembre.",
+      "etiquetas": [
+        "Independiente",
+        "Luciano Nakis",
+        "Sergio Agüero",
+        "Gabriel Milito",
+        "Elecciones",
+        "Fútbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/independiente/kun-aguero-anuncio-quien-sera-el-dt-de-independiente-si-gana-las-elecciones-con-nakis-nid16102026/",
+          "fecha": "2026-10-16T15:21:35.000Z",
+          "oficial": false,
+          "aporte": "Brindó contexto sobre los candidatos a la presidencia de Independiente y los vínculos dirigenciales."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/kun-aguero-prometio-inversores-independiente-hablo-politica-revelo-dt-quiere-20261016141453",
+          "fecha": "2026-10-16T17:14:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los dichos de Sergio Agüero sobre la intención de contratar a Milito y la planificación futbolística."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/independiente/nakis-revelo-quien-sera-el-dt-de-independiente-si-gana-las-elecciones-tecnico-entrenador-id766762.html",
+          "fecha": "2026-10-16T18:30:36.000Z",
+          "oficial": false,
+          "aporte": "Complementó la cobertura general de la campaña electoral en los medios deportivos."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/independiente/independiente-elecciones-luciano-nakis_0_le52xxh3fP.html",
+          "fecha": "2026-10-16T15:38:47.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha exacta de las elecciones y los cruces con los demás candidatos."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/la-propuesta-luciano-nakis-independiente-el-dt-que-quiere-si-gana-las-elecciones-n6334689",
+          "fecha": "2026-10-16T18:00:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó las declaraciones de Luciano Nakis sobre la posible ejecución de la cláusula de salida en diciembre."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "luciano-nakis-apunta-a-gabriel-milito-como-tecnico-de-independiente"
+    },
+    {
       "id": "x3s2ug",
       "titulo": "El Ministerio de Economía informa un superávit primario de un billón y medio en septiembre",
       "copete": "El Gobierno registró un superávit financiero positivo el mes pasado y acumula un 1,2% del producto bruto interno en lo que va del año, según datos oficiales.",
@@ -347,14 +452,13 @@
       "medios": [
         "Infobae",
         "Perfil",
-        "El Cronista",
         "Crónica",
         "Noticias Argentinas (NA)",
         "La Nueva",
         "Infobrisas (Radio Brisas)",
         "Ámbito",
-        "La Gaceta (Tucumán)",
-        "C5N"
+        "C5N",
+        "La Gaceta (Tucumán)"
       ],
       "enlace": "https://www.ambito.com/el-gobierno-logro-octubre-un-superavit-primario-14-billones-y-acumula-12-del-pbi-2026-n6334632",
       "teniaImagenLaFuente": true,
@@ -412,6 +516,96 @@
       "foto": {
         "archivo": "fotos-notas/x3s2ug.jpg",
         "credito": "Foto: Ámbito"
+      }
+    },
+    {
+      "id": "mhaxsk",
+      "titulo": "Las plataformas de streaming renuevan sus catálogos para el fin de semana",
+      "copete": "Las principales aplicaciones de entretenimiento actualizan sus opciones con producciones nacionales, thrillers y series documentales para disfrutar durante las jornadas de descanso.",
+      "cuerpo": "Las aplicaciones de entretenimiento actualizan sus opciones con propuestas de suspenso, documentales y producciones nacionales para el fin de semana del 17 y 18 de octubre. HBO Max incorpora las dos temporadas remasterizadas del thriller argentino Epitafios, protagonizado por Julio Chávez y Cecilia Roth, junto a una docuserie sobre Elvis Presley dirigida por Baz Luhrmann.\n\nPor su parte, Netflix suma títulos como la comedia dramática sueca La tormenta y el thriller estadounidense Animales, dirigido por Ben Affleck. Además, la plataforma estrena la producción nacional Lo dejamos acá, encabezada por Ricardo Darín y Diego Peretti bajo la dirección de Hernán Goldfrid.",
+      "guion": "Las plataformas de streaming renuevan sus catálogos para el fin de semana",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "La Nación",
+        "El Destape",
+        "Perfil",
+        "TyC Sports"
+      ],
+      "enlace": "https://www.tycsports.com/gaming/que-ver-en-netflix-tres-peliculas-nuevas-para-disfrutar-el-fin-de-semana-id766702.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T15:14:20.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T19:00:56.615Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Nuevos títulos en plataformas de streaming",
+        "Regreso de la serie argentina Epitafios",
+        "Estreno de la película Lo dejamos acá"
+      ],
+      "seSabe": [
+        "Las plataformas actualizan sus catálogos para el fin de semana del 17 y 18 de octubre",
+        "Epitafios regresa a HBO Max con sus dos temporadas remasterizadas",
+        "Netflix incorpora la producción nacional Lo dejamos acá"
+      ],
+      "textoRedes": "Las plataformas de streaming renuevan sus catálogos con estrenos de series y películas para disfrutar durante el fin de semana.",
+      "etiquetas": [
+        "streaming",
+        "series",
+        "películas",
+        "estrenos",
+        "fin de semana"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/gaming/que-ver-en-netflix-tres-peliculas-nuevas-para-disfrutar-el-fin-de-semana-id766702.html",
+          "fecha": "2026-10-16T15:14:20.000Z",
+          "oficial": false,
+          "aporte": "Especificó las incorporaciones de películas como Lo dejamos acá, La tormenta y Animales."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/espectaculos/que-ver-en-netflix-las-mejores-peliculas-y-series-para-disfrutar-este-fin-de-semana-nublado-y-fresco-nid16102026/",
+          "fecha": "2026-10-16T18:35:04.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el contenido destacado de Netflix para el fin de semana."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/cultura/ver-netflix-recomendaciones-peliculas-series-fin-semana-17-18-octubre-2026-2026101615858",
+          "fecha": "2026-10-16T18:08:58.320Z",
+          "oficial": false,
+          "aporte": "Aportó una guía de opciones adicionales en catálogos de streaming."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/cultura/van-netflix-tres-peliculas-argentinas-ver-este-fin-semana-plataforma-20261016132930",
+          "fecha": "2026-10-16T16:29:30.775Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/cultura/las-mejores-series-y-peliculas-para-ver-este-fin-de-semana-de-octubree-a42.phtml",
+          "fecha": "2026-10-16T16:30:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los estrenos de HBO Max, incluyendo Epitafios y la docuserie de Elvis Presley."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "las-plataformas-de-streaming-renuevan-sus-catalogos-para-el-fin-de",
+      "foto": {
+        "archivo": "fotos-notas/mhaxsk.jpg",
+        "credito": "Foto: El Destape"
       }
     },
     {
@@ -617,101 +811,6 @@
       }
     },
     {
-      "id": "1k4p85d",
-      "titulo": "El personal de casas particulares cobra con aumento en octubre",
-      "copete": "La hora de tareas generales arranca en $4.064,08 con retiro y $4.337,53 sin retiro. La actualización salarial llega al 1,7% respecto a septiembre.",
-      "cuerpo": "El personal de casas particulares percibe un salario mínimo por hora de $4.064,08 para tareas generales con retiro y de $4.337,53 para quienes cumplen funciones sin retiro durante octubre de 2026.\n\nLa suba del 1,7% frente a septiembre fue fijada por la Comisión Nacional de Trabajo en Casas Particulares a través de la Resolución 6/2026, cuyos montos ya fueron integrados por la Agencia de Recaudación y Control Aduanero.\n\nEl esquema salarial también contempla la incorporación progresiva de una suma extraordinaria otorgada en agosto, sumando un 50% adicional en octubre al salario básico.",
-      "guion": "El personal de casas particulares cobra con aumento en octubre",
-      "seccion": "Economía",
-      "medios": [
-        "El Destape",
-        "iProUP"
-      ],
-      "enlace": "https://www.eldestapeweb.com/economia/empleadas-domesticas-cuanto-vale-hora-octubre-2026-20261016104717",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-16T13:47:17.007Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T15:38:51.233Z",
-      "relevancia": 39,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La hora de tareas generales con retiro vale $4.064,08.",
-        "El valor sin retiro asciende a $4.337,53 por hora.",
-        "El incremento salarial respecto a septiembre es del 1,7%.",
-        "La actualización fue dispuesta por la Resolución 6/2026."
-      ],
-      "seSabe": [
-        "El valor mínimo por hora para tareas generales con retiro es de $4.064,08 en octubre de 2026, según la Comisión Nacional de Trabajo en Casas Particulares.",
-        "La tarifa por hora para el personal sin retiro llega a $4.337,53.",
-        "El incremento salarial alcanza el 1,7% en relación con septiembre mediante la Resolución 6/2026.",
-        "La Agencia de Recaudación y Control Aduanero incorporó los nuevos valores para liquidaciones.",
-        "El acuerdo incluye la integración gradual de un monto extraordinario otorgado en agosto."
-      ],
-      "noConfirmado": [
-        "No se detallaron los montos específicos para las demás categorías profesionales ni para el personal mensualizado en el texto recibido.",
-        "No se especificaron las cifras correspondientes a los adicionales por antigüedad o zona desfavorable."
-      ],
-      "textoRedes": "Las empleadas domésticas cobran desde $4.064,08 la hora para tareas generales con retiro y $4.337,53 sin retiro en octubre de 2026. La actualización salarial alcanza el 1,7% según la normativa oficial.",
-      "etiquetas": [
-        "empleadas domesticas",
-        "casas particulares",
-        "salarios",
-        "aumento",
-        "octubre 2026"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/economia/empleadas-domesticas-cuanto-vale-hora-octubre-2026-20261016104717",
-          "fecha": "2026-10-16T13:47:17.007Z",
-          "oficial": false,
-          "aporte": "Detalló la escala salarial, los porcentajes de aumento, la resolución oficial y la incorporación de sumas extraordinarias."
-        },
-        {
-          "medio": "iProUP",
-          "enlace": "https://www.iproup.com/economia-digital/72403-precio-de-criptomonedas-en-argentina-cuanto-valen-hoy-16-de-octubre-de-2026",
-          "fecha": "2026-10-16T14:18:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "iProUP",
-          "enlace": "https://www.iproup.com/economia-digital/72402-precio-de-criptomonedas-en-argentina-cuanto-valen-hoy-16-de-octubre-de-2026",
-          "fecha": "2026-10-16T14:18:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "iProUP",
-          "enlace": "https://www.iproup.com/economia-digital/72401-precio-de-criptomonedas-en-argentina-cuanto-valen-hoy-16-de-octubre-de-2026",
-          "fecha": "2026-10-16T14:18:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "iProUP",
-          "enlace": "https://www.iproup.com/economia-digital/72400-precio-de-criptomonedas-en-argentina-cuanto-valen-hoy-16-de-octubre-de-2026",
-          "fecha": "2026-10-16T14:18:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-personal-de-casas-particulares-cobra-con-aumento-en-octubre",
-      "foto": {
-        "archivo": "fotos-notas/1k4p85d.jpg",
-        "credito": "Foto: El Destape"
-      }
-    },
-    {
       "id": "a6hpqz",
       "titulo": "El peronismo local debate su estrategia de cara a las elecciones",
       "copete": "A un año de los comicios, el PJ tradicional, La Cámpora, el kicillofismo y el Frente Renovador discuten la construcción de una alternativa en Balcarce. Las diferencias internas y el desafío de lograr una síntesis.",
@@ -906,6 +1005,119 @@
       }
     },
     {
+      "id": "1hiu8tm",
+      "titulo": "La Corte Suprema define qué juzgado investiga la causa de la mansión de Pilar",
+      "copete": "El fiscal general Mario Villar interpuso un recurso de queja ante el máximo tribunal para trasladar el expediente a la Ciudad de Buenos Aires. La investigación vincula al tesorero de la AFA, Pablo Toviggino, por presunto lavado de dinero.",
+      "cuerpo": "El fiscal general ante la Cámara Federal de Casación Penal, Mario Villar, presentó un recurso de queja ante la Corte Suprema de Justicia para que el tribunal determine qué juzgado debe intervenir en la causa por la compra de una propiedad en Pilar. El expediente investiga un presunto lavado de activos y maniobras de fraude vinculadas con la conducción de la Asociación del Fútbol Argentino (AFA), y apunta a establecer si el tesorero de la entidad, Pablo Toviggino, es el verdadero dueño del inmueble.\n\nLa disputa judicial gira en torno a la competencia territorial. Mientras la defensa de los imputados Luciano Pantano y su madre Ana Lucía Conte consiguió que el caso quedara a cargo del juzgado federal de Campana, a cargo de Adrián González Charvay, la fiscalía sostiene que los hechos comenzaron en la Ciudad de Buenos Aires, donde tiene sede la AFA. En el marco del expediente, la justicia relevó una propiedad de 105 mil metros cuadrados con helipuerto y un galpón con 54 vehículos de alta gama.\n\nEn su presentación, Villar advirtió sobre un posible forum shopping ante la acumulación de expedientes contra directivos de la AFA en un mismo tribunal. Desde el inicio de las actuaciones en diciembre pasado, catorce magistrados intervinieron en la definición de la competencia.",
+      "guion": "La Corte Suprema define qué juzgado investiga la causa de la mansión de Pilar",
+      "seccion": "Política",
+      "medios": [
+        "La Nación",
+        "Clarín",
+        "TN (Todo Noticias)",
+        "A24",
+        "La Nueva",
+        "Infobae"
+      ],
+      "enlace": "https://www.clarin.com/politica/corrupcion-afa-llego-corte-suprema-causa-mansion-pilar-definira-investiga-caso_0_u9SDL14b95.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T13:04:18.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T19:00:56.615Z",
+      "relevancia": 78,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El fiscal Mario Villar acudió a la Corte Suprema por el expediente de la mansión de Pilar.",
+        "La investigación apunta a un presunto lavado de dinero vinculado a directivos de la AFA.",
+        "El fiscal cuestiona que la causa tramite en el juzgado federal de Campana.",
+        "El expediente indaga sobre la titularidad de una propiedad con 54 vehículos de lujo."
+      ],
+      "seSabe": [
+        "El fiscal Mario Villar presentó un recurso de queja ante la Corte Suprema.",
+        "El expediente investiga la compra de una propiedad en Pilar vinculada a Luciano Pantano y Ana Lucía Conte.",
+        "La fiscalía sostiene que la causa debe tramitar en la Ciudad de Buenos Aires y cuestiona la intervención del juzgado de Campana.",
+        "En la propiedad se hallaron 54 vehículos de alta gama y colección."
+      ],
+      "noConfirmado": [
+        "Todavía no se definió qué tribunal quedará a cargo de la investigación de manera definitiva.",
+        "No se confirmó judicialmente si el tesorero de la AFA, Pablo Toviggino, es el verdadero propietario del inmueble."
+      ],
+      "textoRedes": "La Corte Suprema definirá qué juzgado continuará con la investigación por la mansión de Pilar vinculada a la AFA, tras un recurso presentado por la fiscalía.",
+      "etiquetas": [
+        "Corte Suprema",
+        "AFA",
+        "Pilar",
+        "Justicia",
+        "Lavado de dinero"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/corrupcion-afa-llego-corte-suprema-causa-mansion-pilar-definira-investiga-caso_0_u9SDL14b95.html",
+          "fecha": "2026-10-16T13:04:18.000Z",
+          "oficial": false,
+          "aporte": "Informó la cantidad de magistrados que intervinieron en el expediente desde su inicio en diciembre."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/el-fiscal-de-casacion-pidio-que-la-corte-suprema-se-expida-sobre-quien-debe-investigar-la-causa-de-nid16102026/",
+          "fecha": "2026-10-16T17:05:31.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/16/la-causa-por-la-mansion-de-pilar-llego-a-la-corte-suprema-el-fiscal-pidio-revisar-que-juez-debe-investigar-a-la-cupula-de-la-afa/",
+          "fecha": "2026-10-16T17:17:42.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/causa-la-mansion-pilar-piden-que-la-corte-suprema-intervenga-la-disputa-el-juzgado-que-debe-investigarla-n1607246",
+          "fecha": "2026-10-16T18:48:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el recurso de queja presentado por el fiscal Mario Villar y sus cuestionamientos al juez de Campana."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-16-15-38-0-causa-mansion-de-pilar-el-fiscal-pidio-revisar-que-juez-debe-investigar-a-la-cupula-de-la-afa",
+          "fecha": "2026-10-16T18:41:18.000Z",
+          "oficial": false,
+          "aporte": "Precisó los argumentos sobre la garantía del juez natural y la competencia territorial vinculada a la sede de la AFA."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/judiciales/2026/10/16/afa-y-la-mansion-de-pilar-en-un-ultimo-intento-para-que-la-causa-vuelva-a-caba-la-fiscalia-hizo-un-planteo-ante-la-corte/",
+          "fecha": "2026-10-16T14:12:05.000Z",
+          "oficial": false,
+          "aporte": "Detalló el monto de la tasación de los vehículos hallados y los antecedentes de idas y vueltas entre los fueros."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "41whtr",
+          "titulo": "La Suprema Corte reclama la creación de nuevos juzgados",
+          "fecha": "2026-10-07T20:43:24.000Z",
+          "ruta": "/nota/la-suprema-corte-reclama-la-creacion-de-nuevos-juzgados-41whtr"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-corte-suprema-define-que-juzgado-investiga-la-causa-de-la-mansion",
+      "foto": {
+        "archivo": "fotos-notas/1hiu8tm.jpg",
+        "credito": "Foto: Clarín"
+      }
+    },
+    {
       "id": "1vqqg6",
       "titulo": "La Dirección de Juventud relanza el programa Arte Urbano",
       "copete": "Estudiantes y profesores intervienen el quirófano móvil de Zoonosis con técnicas de pintura. El dispositivo continúa con las castraciones gratuitas.",
@@ -915,14 +1127,15 @@
       "medios": [
         "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce"
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/16/la-direccion-de-juventud-retomo-el-programa-arte-urbano-con-una-intervencion-en-el-quirofano-movil-de-zoonosis/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-16T12:55:08.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T13:17:26.305Z",
-      "relevancia": 94,
+      "relevancia": 100,
       "local": true,
       "oficial": true,
       "deUnMedioDeAca": true,
@@ -1126,15 +1339,15 @@
         "0223 (Mar del Plata)",
         "Infobae",
         "TN (Todo Noticias)",
-        "A24",
         "TyC Sports",
         "Crónica",
         "Canal 26",
         "Noticias Argentinas (NA)",
         "La Nueva",
+        "C5N",
         "Minuto Uno",
         "Radio Mitre",
-        "C5N"
+        "A24"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/16/el-choque-de-verstappen-al-argentino-perez-companc-en-el-gt-world-challenge-el-gesto-desde-el-auto-y-la-sancion-que-podria-sufrir-el-neerlandes/",
       "teniaImagenLaFuente": true,
@@ -1720,6 +1933,77 @@
       "slug": "el-clima-de-hoy-en-balcarce-minima-de-6-y-maxima-de-11"
     },
     {
+      "id": "ha42x9",
+      "titulo": "El boleto de colectivo en el AMBA aumenta en noviembre",
+      "copete": "El pasaje mínimo proyectado sube a $956,38 en la Ciudad de Buenos Aires y a $1263,69 en las líneas provinciales. Las administraciones de Axel Kicillof y Jorge Macri todavía deben oficializar las nuevas tarifas.",
+      "cuerpo": "El transporte automotor en el Área Metropolitana de Buenos Aires proyecta una actualización tarifaria del orden del 4% a partir del domingo 1 de noviembre. El esquema toma como referencia la inflación de septiembre junto con una suma de dos puntos porcentuales, según indicaron los medios consultados.\n\nEn las líneas provinciales con numeración superior a 200, el boleto inicial alcanzará los $1263,69 para trayectos menores a tres kilómetros y trepará hasta los $2228,52 para recorridos mayores a 27 kilómetros. En las 28 líneas que operan dentro del territorio porteño, el tramo mínimo se ubicará en $956,38. El cálculo contempla además variables por el precio de los combustibles en el distrito bonaerense.\n\nLa medida también alcanza al subte porteño, que elevará su viaje a $1888, y a los peajes de las autopistas de la Ciudad, con incrementos del 3,9% en las horas de mayor circulación. Los gobiernos provinciales y porteños aguardan la publicación oficial en los boletines correspondientes.",
+      "guion": "El boleto de colectivo en el AMBA aumenta en noviembre",
+      "seccion": "Economía",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Radio Mitre",
+        "El Eco de Tandil"
+      ],
+      "enlace": "https://tn.com.ar/economia/2026/10/16/cuanto-aumentara-el-boleto-de-los-colectivos-que-circulan-en-caba-y-pba-desde-noviembre/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T10:23:37.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T19:00:56.615Z",
+      "relevancia": 43,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El pasaje mínimo sube a $956,38 en CABA y a $1263,69 en colectivos provinciales.",
+        "El cálculo se basa en la inflación de septiembre más dos puntos porcentuales.",
+        "El subte porteño y los peajes de la Ciudad también ajustan sus tarifas en noviembre.",
+        "Los gobiernos de Axel Kicillof y Jorge Macri deben oficializar las medidas."
+      ],
+      "noConfirmado": [
+        "Los gobiernos de Axel Kicillof y Jorge Macri todavía deben oficializar las nuevas tarifas en sus boletines oficiales."
+      ],
+      "textoRedes": "Las tarifas de los colectivos en el AMBA proyectan un incremento desde el 1 de noviembre. El boleto mínimo se ubicaría en $956,38 en CABA y en $1263,69 en las líneas provinciales, a la espera de la oficialización de los gobiernos.",
+      "etiquetas": [
+        "transporte",
+        "colectivos",
+        "AMBA",
+        "aumento",
+        "tarifas",
+        "subte"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/16/cuanto-aumentara-el-boleto-de-los-colectivos-que-circulan-en-caba-y-pba-desde-noviembre/",
+          "fecha": "2026-10-16T10:23:37.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/sociedad/nuevo-aumento-en-los-colectivos-del-amba-cuanto-costara-el-boleto-desde-noviembre/",
+          "fecha": "2026-10-16T11:54:57.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/la-ciudad/a-partir-de-noviembre-aumentara-nuevamente-el-boleto-del-transporte-publico-en-tandil",
+          "fecha": "2026-10-16T15:57:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-boleto-de-colectivo-en-el-amba-aumenta-en-noviembre"
+    },
+    {
       "id": "h5197i",
       "titulo": "Javier Milei regresa de Estados Unidos y prepara gira en Neuquén y España",
       "copete": "El presidente argentino concluyó su agenda en Washington y continuará sus actividades con visitas a Neuquén y Madrid durante la próxima semana.",
@@ -1732,6 +2016,7 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
+        "La Capital (Rosario)",
         "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-finaliza-su-viaje-en-estados-unidos-y-se-prepara-para-su-visita-a-espana_a6ad1525c88153cda2d050c06",
@@ -1910,102 +2195,6 @@
       }
     },
     {
-      "id": "yfn1ih",
-      "titulo": "La ANMAT prohíbe un equipo de depilación láser y frena a una firma",
-      "copete": "La ANMAT prohibió un cabezal de depilación láser y restringió la actividad de una distribuidora de insumos médicos por irregularidades sanitarias.",
-      "cuerpo": "La medida rige sobre el dispositivo Cabezal 810nm 2cm Speed de Soprano ICE original, de la marca Alma Lasers, con el número de serie ICE122001380 y fecha de fabricación de febrero de 2016. La decisión oficial se originó tras una denuncia de Sirex Médica S.A., única importadora autorizada de la firma, al constatar que el número de serie no figuraba en sus registros y que el fabricante original lo había enviado a Estados Unidos.\n\nEl organismo sanitario advirtió que no pudo determinar el estado actual del equipo ni las condiciones de su manipulación, por lo cual su uso podría generar daños a pacientes y operadores. En paralelo, la administración dispuso que la firma Body Aling SRL suspenda la distribución interjurisdiccional de productos médicos hasta obtener las habilitaciones correspondientes.",
-      "guion": "La ANMAT prohíbe un equipo de depilación láser y frena a una firma.",
-      "seccion": "Argentina",
-      "medios": [
-        "Ámbito",
-        "Minuto Uno",
-        "La Capital (Rosario)",
-        "Infobae",
-        "C5N"
-      ],
-      "enlace": "https://www.infobae.com/sociedad/2026/10/16/la-anmat-prohibio-un-dispositivo-de-depilacion-definitiva-por-irregularidades-sanitarias/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-16T06:41:36.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T17:01:11.630Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Prohibición de un cabezal de depilación láser en todo el país.",
-        "La medida surge por una denuncia sobre un equipo sin registro local.",
-        "Restringen la actividad de una distribuidora de insumos médicos."
-      ],
-      "seSabe": [
-        "La ANMAT prohibió un cabezal de depilación láser de la marca Alma Lasers.",
-        "La medida afecta al equipo con número de serie ICE122001380 fabricado en febrero de 2016.",
-        "Sirex Médica S.A. realizó la denuncia inicial tras verificar que el serial no figuraba en sus registros.",
-        "El fabricante original vendió el dispositivo con destino a Estados Unidos.",
-        "La empresa Body Aling SRL fue inhabilitada para distribuir insumos fuera de la provincia de Buenos Aires."
-      ],
-      "noConfirmado": [
-        "No se pudo localizar el cabezal denunciado ni establecer su procedencia exacta en el país."
-      ],
-      "textoRedes": "La ANMAT prohibió un cabezal de depilación láser por irregularidades sanitarias y restringió la distribución de una firma de insumos médicos.",
-      "etiquetas": [
-        "ANMAT",
-        "depilacion",
-        "salud",
-        "prohibicion",
-        "insumos medicos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/sociedad/2026/10/16/la-anmat-prohibio-un-dispositivo-de-depilacion-definitiva-por-irregularidades-sanitarias/",
-          "fecha": "2026-10-16T06:41:36.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre el cabezal de depilación prohibido, la denuncia de Sirex Médica y la sanción a Body Aling SRL."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/informacion-general/anmat-prohibio-un-equipo-laser-depilacion-definitiva-y-freno-la-distribucion-una-firma-productos-medicos-n6334426",
-          "fecha": "2026-10-16T09:52:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó los detalles de la prohibición del dispositivo láser y las medidas dispuestas por la ANMAT."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/sociedad/la-anmat-prohibio-un-dispositivo-depilacion-laser-n251781",
-          "fecha": "2026-10-16T16:16:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/sociedad/la-anmat-prohibio-un-dispositivo-depilacion-definitiva-irregularidades-sanitarias-n6334508",
-          "fecha": "2026-10-16T13:48:19.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Capital (Rosario)",
-          "enlace": "https://www.lacapital.com.ar/informacion-general/anmat-prohibio-el-uso-y-la-venta-un-equipo-depilacion-laser-n10287058.html",
-          "fecha": "2026-10-16T16:58:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó el número de disposición oficial que regula la prohibición del equipo de depilación."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-anmat-prohibe-un-equipo-de-depilacion-laser-y-frena-a-una-firma",
-      "foto": {
-        "archivo": "fotos-notas/yfn1ih.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
       "id": "cg6k1i",
       "titulo": "Netflix estrena Lo dejamos acá con Ricardo Darín y Diego Peretti",
       "copete": "La comedia negra argentina dirigida por Hernán Goldfrid desembarca este viernes en la plataforma de streaming tras su paso por el Festival de San Sebastián.",
@@ -2170,6 +2359,7 @@
       "guion": "Lautaro Martinez cuestiona las dudas sobre el compromiso del seleccionado",
       "seccion": "Fútbol",
       "medios": [
+        "La Nación",
         "Infobae",
         "TN (Todo Noticias)",
         "A24",
@@ -2280,11 +2470,11 @@
         "A24",
         "El Marplatense",
         "Ámbito",
+        "C5N",
         "Minuto Uno",
         "Los Andes (Mendoza)",
         "Clarín",
         "La Nueva",
-        "C5N",
         "Radio Mitre"
       ],
       "enlace": "https://www.clarin.com/politica/milei-cerro-visita-washington-acto-antisemitismo-reunion-alto-funcionario-trump_0_KkhV5wypC4.html",
@@ -2776,12 +2966,12 @@
         "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
+        "C5N",
         "Minuto Uno",
         "La Capital (Rosario)",
         "Los Andes (Mendoza)",
         "El Cronista",
         "Crónica",
-        "C5N",
         "Clarín",
         "El Día"
       ],
@@ -2893,7 +3083,7 @@
       "fecha": "2026-10-15T18:59:35.000Z",
       "sinFecha": false,
       "visto": "2026-10-15T20:27:17.316Z",
-      "relevancia": 32,
+      "relevancia": 24,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3165,8 +3355,8 @@
         "Radio Mitre",
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
-        "Minuto Uno",
-        "C5N"
+        "C5N",
+        "Minuto Uno"
       ],
       "enlace": "https://tn.com.ar/deportes/futbol/2026/10/15/leonel-flores-el-jugador-de-boca-y-la-seleccion-que-visito-una-olla-popular-en-monte-chingolo-y-revoluciono-el-barrio/",
       "teniaImagenLaFuente": true,
@@ -4353,11 +4543,11 @@
     "Cultura y agenda",
     "Balcarce",
     "Política",
+    "Fútbol",
     "Economía",
     "Tecnología",
     "Argentina",
     "Deportes",
-    "Fútbol",
     "Automovilismo",
     "Agro"
   ],
@@ -4366,7 +4556,7 @@
     "ahora": {
       "temp": 10,
       "sensacion": 7,
-      "humedad": 65,
+      "humedad": 66,
       "viento": 16,
       "rumbo": "S",
       "cielo": "Nublado",
@@ -4378,7 +4568,7 @@
         "dia": "vie",
         "max": 11,
         "min": 6,
-        "lluvia": 12,
+        "lluvia": 6,
         "codigo": 51,
         "viento": 19,
         "milimetros": 0,
@@ -4389,7 +4579,7 @@
         "dia": "sáb",
         "max": 11,
         "min": 6,
-        "lluvia": 4,
+        "lluvia": 8,
         "codigo": 51,
         "viento": 20,
         "milimetros": 0,
@@ -4400,7 +4590,7 @@
         "dia": "dom",
         "max": 12,
         "min": 6,
-        "lluvia": 4,
+        "lluvia": 6,
         "codigo": 51,
         "viento": 16,
         "milimetros": 0,
@@ -4732,20 +4922,14 @@
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
-      "id": "e353o5",
-      "titulo": "El juez Lijo volvió a procesar a Diego Spagnuolo por una…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
       "id": "yj5cn4",
       "titulo": null,
       "seccion": "Fútbol",
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "79pgwu",
-      "titulo": "Violencia digital: alumnos de otro colegio crearon…",
+      "id": "1teqr2e",
+      "titulo": "El Colegio Modelo Lomas emitió un comunicado tras las…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
@@ -4772,6 +4956,12 @@
       "titulo": "Proyecto de ordenanza al legislativo: el Hospital Fossati…",
       "seccion": "Balcarce",
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
+      "id": "sddf3a",
+      "titulo": "Guillermo Lobo y Lorena Maciel se emocionaron al aire al…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
     },
     {
       "id": "loa4fx",
@@ -4804,22 +4994,10 @@
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
-      "id": "yrtztb",
-      "titulo": "Caso Fernando Báez Sosa: la Corte Suprema desestimó una…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "7jqth2",
       "titulo": null,
       "seccion": "Deportes",
       "motivo": "necesita ojo humano: \"nene\""
-    },
-    {
-      "id": "1teqr2e",
-      "titulo": "El Colegio Modelo Lomas emitió un comunicado tras las…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "ql9bcc",
@@ -4832,12 +5010,6 @@
       "titulo": "La Justicia archivó la denuncia por usura contra Marcos…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1hkr9k8",
-      "titulo": "Gabriel Solano denunció penalmente a Javier Milei y Luis…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "n6pah5",
@@ -4858,16 +5030,16 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1qzxlyd",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
       "id": "15yqk6f",
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "1hkr9k8",
+      "titulo": "Gabriel Solano denunció penalmente a Javier Milei y Luis…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "1qjwxca",

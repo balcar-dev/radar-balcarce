@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T18:35:13.745Z",
- "portada": 55,
- "archivo": 1177,
+ "generado": "2026-10-16T19:03:34.138Z",
+ "portada": 57,
+ "archivo": 1181,
  "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-16T18:35:13.788Z",
+  "generado": "2026-10-16T19:03:34.170Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 51,
     "notas": [
      {
       "id": "1qtfiwu",
@@ -175,9 +175,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "32f6mu",
-      "titulo": "Lando Norris califica a Franco Colapinto como un buen amigo",
-      "seccion": "Automovilismo"
+      "id": "1mfnr70",
+      "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
+      "seccion": "Deportes"
      }
     ]
    }
@@ -203,6 +203,11 @@
      "id": "aa7nni",
      "titulo": "Reprograman la Caravana de la Alegría para noviembre",
      "cuando": "2026-10-16T17:07:59.683Z"
+    },
+    {
+     "id": "1mfnr70",
+     "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
+     "cuando": "2026-10-16T18:38:18.880Z"
     }
    ],
    "cola": [
@@ -219,8 +224,8 @@
      "marcada": false
     }
    ],
-   "cupo": 1,
-   "proximoDesde": "2026-10-16T18:37:59.683Z",
+   "cupo": 0,
+   "proximoDesde": "2026-10-16T20:08:18.880Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

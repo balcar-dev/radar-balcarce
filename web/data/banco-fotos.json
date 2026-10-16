@@ -16060,22 +16060,28 @@
   "cuando": "2026-10-16T17:37:20.214Z"
  },
  "1qtfiwu": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1qtfiwu.jpg",
+  "medio": "Infórmese Primero (FM 104.9)",
+  "credito": "Foto: Infórmese Primero (FM 104.9)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "La Subsecretaría de Deporte mantiene las clases de yoga con vacantes",
-  "razon": "sin fotos para comparar",
-  "cuando": "2026-10-16T17:37:20.214Z",
-  "intentos": 1,
-  "fuentes": 1
+  "enlace": "http://www.informeseprimero.com.ar/2026/10/continuan-las-clases-de-yoga-en-la-sala.html",
+  "imagenOriginal": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-eKrxVtejWEb8XB8QTlBZK4Jn6Gyb1Cw4Yv7s3Z0nOijcps-hRK5KBkYDjWzn6pODEqaKlbJUzDL5JJdF_PezK90A2uqCtdu3SnRZRWm3febKG5yOVu83QXyU7VfLUcNsWMErmwbWl7ekvZSngCW86PC1er0-WI2NXAJSPlCrFtqAURIR4wDk9nEEl40/w640-h428/sala%20tommassi.jpg",
+  "razon": "Es la única foto disponible, tiene buena nitidez y no presenta marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-16T19:02:07.287Z"
  },
  "1xyp583": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1xyp583.jpg",
+  "medio": "Infórmese Primero (FM 104.9)",
+  "credito": "Foto: Infórmese Primero (FM 104.9)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El Museo Histórico Municipal expone el Proyecto Cruz del Centenario",
-  "razon": "sin fotos para comparar",
-  "cuando": "2026-10-16T17:37:20.214Z",
-  "intentos": 1,
-  "fuentes": 1
+  "enlace": "http://www.informeseprimero.com.ar/2026/10/el-proyecto-cruz-del-centenario-fue.html",
+  "imagenOriginal": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGQ_1NsWqetVTqCZFJnAbZTFoGsZRbyC81buDdA2ObbSiwO_Ov05YAYCp3QydKuh-S94tDW4TYBcnzQvIBt_QJyqho8j50UUyRVRfFy21aKVFZxHvzALXtCC4QxxpDGoROEvaW0dN8NSHjaYoQMfVmQJiVKOZ2KsDIxhimDD4qN3oonsj9cOoZapQkG6g/w640-h462/Cruz%20del%20Centenario1.jpg",
+  "razon": "Es la única imagen completa que ilustra el hecho (la presentación del proyecto) con buena nitidez, sin marcas de agua ni menores de edad.",
+  "cuando": "2026-10-16T19:02:07.287Z"
  },
  "1d0f1sq": {
   "medio": "Diario La Vanguardia",
@@ -16109,5 +16115,38 @@
   "cuando": "2026-10-16T18:01:43.928Z",
   "intentos": 1,
   "fuentes": 1
+ },
+ "q9ik7h": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Luciano Nakis apunta a Gabriel Milito como técnico de Independiente",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-16T19:02:07.287Z",
+  "intentos": 1,
+  "fuentes": 5
+ },
+ "mhaxsk": {
+  "archivo": "fotos-notas/mhaxsk.jpg",
+  "medio": "El Destape",
+  "credito": "Foto: El Destape",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Las plataformas de streaming renuevan sus catálogos para el fin de semana",
+  "enlace": "https://www.eldestapeweb.com/cultura/van-netflix-tres-peliculas-argentinas-ver-este-fin-semana-plataforma-20261016132930",
+  "imagenOriginal": "https://cdn.eldestapeweb.com/eldestape/102026/1792165805878.jpg?&cw=1600&ch=900",
+  "razon": "Es la única imagen limpia de catálogo que representa perfectamente el contenido de streaming sin marcas de agua ni menores.",
+  "cuando": "2026-10-16T19:02:07.287Z"
+ },
+ "1hiu8tm": {
+  "archivo": "fotos-notas/1hiu8tm.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Corte Suprema define qué juzgado investiga la causa de la mansión de Pilar",
+  "enlace": "https://www.clarin.com/politica/corrupcion-afa-llego-corte-suprema-causa-mansion-pilar-definira-investiga-caso_0_u9SDL14b95.html",
+  "imagenOriginal": "https://www.clarin.com/img/2025/12/23/AdyHJRY69_2000x1500__1.jpg",
+  "razon": "Muestra una vista aérea completa de la propiedad sin marcas de agua ni menores.",
+  "cuando": "2026-10-16T19:02:07.287Z"
  }
 }
