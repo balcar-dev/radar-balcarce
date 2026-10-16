@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-16T00:37:56.610Z",
+ "consultado": "2026-10-16T01:01:52.260Z",
  "equipos": [
   "9739",
   "3",
@@ -678,17 +678,17 @@
     "id": "401841622",
     "competencia": "liga",
     "inicio": "2026-10-15T23:00:00.000Z",
-    "estado": "en-juego",
-    "minuto": "75'",
+    "estado": "final",
+    "minuto": "90'+9'",
     "local": {
      "id": "10",
      "nombre": "Huracán",
-     "goles": 0
+     "goles": 1
     },
     "visitante": {
      "id": "9",
      "nombre": "Gimnasia La Plata",
-     "goles": 1
+     "goles": 2
     },
     "penales": null,
     "goles": [
@@ -696,6 +696,18 @@
       "equipo": "visitante",
       "jugador": "Ignacio Fernández",
       "minuto": "18'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Jordy Caicedo",
+      "minuto": "83'",
+      "tipo": "de penal"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Germán Conti",
+      "minuto": "90'+7'",
       "tipo": "gol"
      }
     ],
@@ -1034,7 +1046,7 @@
     "competencia": "libertadores",
     "inicio": "2026-10-16T00:30:00.000Z",
     "estado": "en-juego",
-    "minuto": "8'",
+    "minuto": "31'",
     "local": {
      "id": "8",
      "nombre": "Estudiantes de La Plata",
@@ -1557,7 +1569,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-15T23:25:49.329Z",
+ "tablaCuando": "2026-10-16T01:01:52.260Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",
