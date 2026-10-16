@@ -62,6 +62,13 @@ Respuesta completa en `docs/auditoria-opus/RESPUESTAS-OTRAS-IAS.md` (Grok y Meta
 
 **En curso o activado el 16/10:** el mail de agradecimiento a Prensa Cicaré sale cuando salga el reel de las 15:00 con la nota de Azul; la tarea programada `ilustrar-notas-sin-foto` (10:00 y 18:00, requiere la PC y la app abiertas); el reloj dispara el informe diario a los :15 y a los :30; la carga inicial del archivo en R2 (`Archivo permanente (producción)`, sin ruta).
 
+**Cierre del 16/10 (commit 63418e00) — lo que quedó hecho, lo que quedó apagado y lo que falta:**
+- Hecho: la web se arma UNA vez por media hora (se sacó el `schedule` de respaldo de GitHub; sólo la dispara el Worker); comentarios y docs al día con el reloj de Cloudflare; Instagram sin links y reels de podcast con un solo link al repaso; archivo en R2 andando (`/_archivo/estado` ok=true).
+- Subido pero APAGADO (no prender sin que ustedes lo pidan): `SECCIONES_NUEVAS=Si` (Educación y Salud + menú «Más secciones»; mirar primero `docs/secciones/vista-previa/index.html`, regla 187), `FOTOS_MENORES_OFICIALES=Si` (fotos con chicos de la Municipalidad, el Concejo y la Facultad; la revisa Hernán primero, regla 186) y el prototipo de audio en la página.
+- Por comprobar (Claude): la primera corrida automática de ilustraciones (20:20 UTC del 16/10, luego cada 2 h) y que mañana no haya corridas `schedule` de «Actualizar la web» (`gh run list --workflow=actualizar.yml`). Descartado: compilar el sitio una sola vez en lugar de dos (ahorra poco, riesgoso para el paso de R2).
+- Mañana (17/10): rehacer el panel de cero; decidir las páginas HTML de arriba. Antes del ~2/11: activar la ruta del archivo en R2 (tras los permisos del token) y decidir qué pasa con las fotos de las notas que salen del sitio.
+- Ordenar (menor): `docs/etapa-10-operacion/runs-14d.ndjson` (volcado de un análisis, sin subir; borrar o subir).
+
 ## Lo que quedó armado en la ventana autónoma del 15/10 (para mirar juntos)
 
 - **Armado y sin conectar a producción**: `motor/` (esquema de la base D1 y su importador, con prueba de espejo contra `web/data`), `redes/reparar-estadisticas.mjs` (simula por defecto; 6 días a reparar; necesita el token de analíticas de Cloudflare para `--aplicar`), `docs/etapa-10-operacion/DISENO-MOTOR.md` y `docs/salud-tecnica/ARCHIVO-PERMANENTE.md` (diseños, con sus preguntas).
