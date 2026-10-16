@@ -1,6 +1,6 @@
 # 04 · La redacción: cómo se escribe, se verifica y se firma una nota
 
-*Actualizado el 29/09/2026. Si el código cambia, manda el código.*
+*Actualizado el 16/10/2026. Si el código cambia, manda el código.*
 
 Qué pasa desde que una historia está en verde (`docs/03-SELECCION.md`) hasta que
 tiene título, bajada y cuerpo propios, verificados contra sus fuentes, o queda
@@ -10,10 +10,10 @@ el código las hace cumplir.
 
 ## En una frase
 
-A cada nota verde que nadie revisó se le baja el texto completo de la fuente, se
-le manda a Gemini con la instrucción de `CRITERIO-EDITORIAL.md` § 12 y todas sus
-fuentes numeradas, lo que devuelve se arregla sin inventar y se compara dato por
-dato contra lo que recibió; si pasa y tiene un cuerpo de 70 palabras o más, se
+A cada nota verde que nadie revisó se le bajan los textos completos de sus
+fuentes (hasta cuatro llegan a la IA, desde el 15/10), se le manda a Gemini con la
+instrucción de `CRITERIO-EDITORIAL.md` § 12 y todas sus fuentes numeradas, lo que
+devuelve se arregla sin inventar y se compara dato por dato contra lo que recibió; si pasa y tiene un cuerpo de 70 palabras o más, se
 publica con la firma "Redacción con IA"; si no, se reintenta hasta tres veces y
 mientras tanto la nota no sale.
 
@@ -24,8 +24,9 @@ mientras tanto la nota no sale.
 La reescritura automática la hace `reescribirAutomaticas()`
 (`reels/reescritura.mjs`), y la llama un solo lugar: `web/scripts/generar-datos.mjs`,
 en cada corrida de "Actualizar la web" (en la nube). Una persona puede además
-pedir que la IA escriba una nota: desde el panel del celular (paso 15) o con el
-botón "Reescribir" del panel de la PC.
+pedir que la IA escriba una nota desde el panel del celular (paso 15); el botón
+"Reescribir" del panel de la PC sigue en el código, pero ese panel ya no se usa.
+Las notas que nacen de una pista o de un mail de prensa van por otro camino (paso 16).
 
 ### 1. Qué notas se escriben
 
@@ -80,6 +81,7 @@ queda como estaba escrita.
 | Lo mismo, si la lectura con IA comparte la clave de redacción | 330 | `REESCRITURA.porDiaSinClaveDeLectura` (lo elige `topeDeReescrituras`) |
 | De esas, las últimas reservadas para lo de Balcarce | 80 | `REESCRITURA.reservaParaLocales` |
 | Intentos por nota, en corridas distintas | 3 | `REESCRITURA.intentosMaximos` (`MAXIMO_DE_INTENTOS`) |
+| Uno más si la cuentan 5 medios o más; dos más desde 8 (1/10) | 4 o 5 | `fuentesParaUnIntentoExtra`, `fuentesParaDosIntentosExtra` (lo suma `intentosMaximosPara`) |
 | Días que se recuerdan los intentos | 7 | `REESCRITURA.diasDeIntentos` |
 
 Los pedidos del día se cuentan con los intentos guardados en
@@ -97,18 +99,37 @@ tenga más fuentes que entonces.
 
 ### 4. Lo que se junta antes de pedir
 
-1. **El texto completo** de la nota original (`textoCompletoDe`): el de la
-   principal (de su `enlaceFeed` si es Blogger) o, si no se pudo, el primero que se
-   pueda bajar de hasta tres de las otras fuentes, con la aclaración de cuál es
-   ("Texto completo de la Fuente 2"). Hasta 4.000 caracteres. Cómo se saca de la
-   página: `docs/02-INGESTA.md`, paso 14.
+1. **Los textos completos de las fuentes** (la "entrada ampliada", desde el 15/10,
+   regla 174; `textosDeLasFuentes` y `conEntradaAmpliada` en `reels/reescritura.mjs`,
+   `armarFuentesParaLaIA` en `ingesta/fuentes-para-la-ia.mjs`). Hasta el 15/10 la IA
+   recibía el texto de una sola fuente y 280 caracteres de las demás. Ahora:
+   - se intenta bajar el texto de **hasta 6 fuentes** (la principal siempre, de su
+     `enlaceFeed` si es Blogger; las oficiales antes que las demás:
+     `REESCRITURA.fuentesQueSeBajan`);
+   - a la IA le llegan **hasta 4 textos completos** (`textosCompletosMaximo`), cada
+     uno con su número, su medio y su fecha, con tope de **4.000 caracteres cada uno
+     y 12.000 entre todos** (`caracteresDelTextoCompleto`, `caracteresDeTextosEnTotal`);
+     un texto que no suma nada nuevo no se manda;
+   - las fuentes van **numeradas por lo que aportan**: la Fuente 1 es la oficial con
+     texto o, si no, la más completa (la dirección y el identificador de la nota no
+     cambian, y "Fuentes consultadas" sigue en el orden de la ingesta);
+   - dos fuentes que comparten la mitad o más de sus tramos de cinco palabras
+     (`copiaEntreFuentes`: un cable, una gacetilla) son **copia**: van como "mismo
+     texto que la Fuente N", con sólo lo que agregan, y cuentan como una sola voz
+     para el nivel de verificación (paso 10);
+   - más de 12 fuentes, las demás sólo se nombran (`fuentesEnLaEntradaMaximo`);
+   - el texto llega limpio (`limpiarTextoBajado`): sin letras rotas, pies de nota ni
+     párrafos de otra nota de la página.
+
+   Cómo se saca el texto de la página: `docs/02-INGESTA.md`, paso 14.
+   `textoCompletoDe` (un solo texto) queda sólo para el panel de la PC.
 2. **Los antecedentes** (`antecedentesDe`): hasta 3 notas que el sitio publicó en
    los últimos 30 días, anteriores a ésta, que comparten un tema de los que se
    siguen (`TEMAS`) o dos palabras que dicen algo del titular. Salen de
    `web/data/archivo.json`: **no se busca nada en internet**, a propósito
    (`CRITERIO-EDITORIAL.md` § 5).
-3. **El semáforo sobre la fuente** (`semaforoDeLaReescritura`): el texto completo y
-   los resúmenes pasan por la lista roja y la de menores y víctimas
+3. **El semáforo sobre la fuente** (`semaforoDeLaReescritura`): cada texto completo
+   que se manda y los resúmenes de todas las fuentes pasan por la lista roja y la de menores y víctimas
    (`AMARILLO_MENORES`). Si el nombre de un chico está en el tercer párrafo, la nota
    se frena **antes** de gastar un pedido.
 4. **¿Hay material?** Sin texto completo de ninguna fuente y con menos de 60
@@ -137,22 +158,28 @@ serio** si la nota es de Policiales o tiene una palabra de `PALABRAS_SERIAS`
   concretos, cada uno con el número de su fuente ("F1: …"), y escribe el resto
   sólo con ésos. Es su borrador: el código no lo usa ni lo publica.
 
-**Lo que va después de la instrucción** (`entradaDe`), por ejemplo:
+**Lo que va después de la instrucción** (`entradaDe`, que con la entrada ampliada
+usa `entradaAmpliadaDe`), por ejemplo:
 
 ```
-Fecha de hoy: lunes 28/09/2026
+Fecha de hoy: jueves 15/10/2026
 Sección: Automovilismo
-Titular original (de Diario La Vanguardia / Radio Gabal (FM 104.1)): …
-FUENTES (2, numeradas):
-Fuente 1 (Diario La Vanguardia · publicada el domingo 27/09/2026): resumen…
-Fuente 2 (Radio Gabal (FM 104.1) · publicada el domingo 27/09/2026): resumen…
-Texto completo de la Fuente 1 (de acá sale la mayor parte de lo que podés contar en el cuerpo):
+Titular original (de Diario La Vanguardia / Radio Gabal (FM 104.1) / Agencia DIB): …
+FUENTES (3, numeradas; la 3 repite el texto de otra y no es una confirmación independiente):
+Fuente 1 (Diario La Vanguardia · publicada el miércoles 14/10/2026 · su texto completo va abajo): resumen…
+Fuente 2 (Radio Gabal (FM 104.1) · publicada el miércoles 14/10/2026 · su texto completo va abajo): resumen…
+Fuente 3 (Agencia DIB · publicada el miércoles 14/10/2026): mismo texto que la Fuente 2; es una copia, no una confirmación independiente.
+Texto completo de la Fuente 1 (Diario La Vanguardia, publicada el miércoles 14/10/2026; la que más datos trae):
+…
+Texto completo de la Fuente 2 (Radio Gabal (FM 104.1), publicada el miércoles 14/10/2026):
 …
 ANTECEDENTES: notas que Radar Balcarce publicó ANTES sobre el tema. Es información ANTERIOR, no de hoy: …
 [21/09/2026] Título de la nota anterior. Su bajada.
 ```
 
-Con una sola fuente, la línea dice "una sola: no hay confirmación independiente".
+Con una sola fuente, la línea dice "una sola: no hay confirmación independiente" y
+el único texto completo va con "de acá sale la mayor parte de lo que podés contar en
+el cuerpo".
 Las fuentes oficiales van marcadas "fuente oficial". Las fechas llevan **el día de
 la semana**, para que la IA sepa si "el sábado" de la fuente ya pasó.
 
@@ -175,7 +202,10 @@ se espera 4 segundos y se reintenta, hasta 3 veces. **Las claves, en orden:**
 Groq no sirve para redactar (acepta 8.000 tokens por minuto y un pedido ocupa unos
 9.000). Qué es cada clave y sus cupos: `docs/08-INFRAESTRUCTURA.md`. El registro
 dice cuántos pedidos fueron a cada una: "claves de Gemini usadas: N con la de
-redacción, M con la de redes, K con la de clasificación (respaldo)".
+redacción, M con la de redes, K con la de clasificación (respaldo)". Desde el
+15/10 cada llamada anota además sus tokens y sus errores, por día, en
+`web/data/uso-ia.json` (`anotarUsoIA`, `redes/uso-ia.mjs`, regla 170); nunca frena
+la corrida.
 
 **Lo que tiene que devolver**, un JSON con `datos` (el borrador), `titulo`,
 `copete` (la bajada), `cuerpo`, `guion`, `claves`, `seSabe`, `noConfirmado`,
@@ -215,6 +245,7 @@ lo nuevo y en lo ya escrito, lo que se puede arreglar sin agregar ningún dato:
 | "Este" + un día de la semana que no es hoy | "participan este viernes" (leído el lunes) → "participan el viernes"; "este fin de semana", salvo sábado o domingo, → "el fin de semana". No se calcula la fecha: sería inventarla |
 | "Cabe destacar que…", "Es importante señalar que…" al comienzo de una oración | Se saca la muletilla y queda la oración |
 | Una o dos palabras sin la tilde que siempre llevan (también, según, reunión…) | Se les pone (con tres o más, se rechaza: paso 8) |
+| Un escape completo que quedó escrito sin decodificar ("antif\u00futbol") | Se decodifica ("antifútbol"). Uno cortado no se puede arreglar: lo rechaza el verificador (regla 166) |
 
 Y **al publicar**, `tituloAutomatico()` (`web/lib/titulos.js`) aplica al título y
 al guion automáticos, también a los ya publicados: la etiqueta conocida adelante, el
@@ -224,8 +255,11 @@ palabras o más). Lo que escribió una persona no se toca.
 ### 8. La verificación: cada control
 
 `verificar()` (`ingesta/verificar.mjs`) compara lo que escribió la IA **contra todo
-lo que recibió**: el titular original, el resumen de cada fuente y el texto completo
-(juntos, `fuenteParaVerificar`), y aparte los antecedentes. No usa otra IA: son
+lo que recibió**: el titular original, el resumen de cada fuente que no es copia,
+todos los textos completos que se mandaron y lo que agrega cada copia (juntos,
+`fuenteParaVerificar`; también en las notas de pistas), y aparte los antecedentes.
+También conoce las fechas que recibió la IA (la de hoy y la de publicación de cada
+fuente), para no marcar como inventado "el jueves 15 de octubre". No usa otra IA: son
 comparaciones mecánicas, gratis y siempre iguales. Es estricto a propósito. Hay
 controles que **valen siempre** (también al revisar lo ya escrito, paso 2) y otros
 **sólo en lo nuevo**. "Real" es un caso de `web/data/intentos-ia.json` o del código;
@@ -237,7 +271,7 @@ controles que **valen siempre** (también al revisar lo ya escrito, paso 2) y ot
 |---|---|---|
 | `numero` | Una cifra (o un número en palabras) que las fuentes no traen. Los de menos de 100, exactos; los grandes admiten un 6 % de redondeo. "Un millón y medio" se lee como 1.500.000 | Real: "el título dice 70 y la fuente no lo dice" |
 | `nombre` | Un nombre propio o una sigla que las fuentes no nombran (sin contar Balcarce, Argentina, Buenos Aires, Radar, los días y los meses; un plural o femenino del mismo nombre no cuenta) | Real: "el copete nombra a 'municipalidad' y la fuente no" |
-| `fecha` | Un día de la semana o un mes que las fuentes no dicen | Real: "el cuerpo menciona 'septiembre' y la fuente no" |
+| `fecha` | Un día de la semana o un mes que las fuentes no dicen. El mes de una fecha que la IA recibió vale ("en octubre"); el día de la semana y los números de esa fecha valen **sólo escritos como fecha** ("el jueves 15", "15 de octubre", "15/10"), no sueltos (A1, 15/10: "comenzarán 14 cuadras" en una fuente publicada un 14 tiene un 14 inventado) | Real: "el cuerpo menciona 'septiembre' y la fuente no" |
 | `cita` | Algo entre comillas que no está textual en las fuentes | Prueba: "El boxeador dijo: 'Es el día más feliz de mi vida'" |
 | `antecedente` | Un dato que sólo está en una nota anterior usado como si fuera de hoy. En el cuerpo, las claves y lo que se sabe, vale si la oración lo marca como anterior ("en agosto", "como se había informado"); en el título, la bajada, el guion y el texto para redes, nunca | Real: "el cuerpo usa 'viernes', que sale de una nota anterior, como si fuera de hoy" |
 
@@ -253,7 +287,7 @@ controles que **valen siempre** (también al revisar lo ya escrito, paso 2) y ot
 | `repite` | El primer párrafo del cuerpo dice casi lo mismo que la bajada (70 % de palabras en común) o arranca con sus mismas palabras | Real: "el cuerpo repite el copete en vez de desarrollarlo" |
 | `copia` | Más de 12 palabras COMUNES seguidas copiadas del original (`COPIA_MAXIMA`); no cuentan los números, fechas, horas, nombres propios ni fórmulas oficiales (regla 167); la instrucción pide diez como mucho, para tener margen | Real: "copia 13 palabras seguidas del original" |
 | `tilde` | "mas" o "ms" en vez de "más" | Real: "con ms de ciento sesenta atletas" |
-| `forma` (letras rotas) | Una palabra con letras que no son del castellano o con dos tildes («polêcutemica», «miéércoles», «recibiõ»), entidades o codificación rota, signos sueltos o caracteres de control; un nombre extranjero con mayúscula pasa si está en la fuente o va con otro nombre (regla 167) | Real: «Rosario Central genera polêcutemica en los festejos» |
+| `forma` (letras rotas) | Una palabra con letras que no son del castellano o con dos tildes («polêcutemica», «miéércoles», «recibiõ»), entidades o codificación rota, un escape sin decodificar («barra-u…», regla 166), signos sueltos o caracteres de control; un nombre extranjero con mayúscula pasa si está en la fuente o va con otro nombre (regla 167) | Real: «Rosario Central genera polêcutemica en los festejos» |
 | `forma` (en vivo) | "En vivo", "en directo", "minuto a minuto" o "live" en el título, la bajada, el guion o el texto para redes ("música en vivo" sí; `diceEnVivo`) | Real: "Dólar hoy y dólar blue en vivo" |
 | `relleno` | Una frase de la lista `RELLENO` (`ingesta/criterio.mjs`, `CRITERIO-EDITORIAL.md` § 4), aunque la fuente la diga; y "como se había informado" sin antecedentes | Real: "el copete tiene una frase de relleno sin dato: 'en el marco de'" |
 | `localia` | "De nuestra ciudad", "nuestros vecinos", "balcarcense", "productores locales"… cuando las fuentes no dicen Balcarce | Prueba: "Es una buena noticia para los automovilistas locales" en una nota de YPF |
@@ -310,7 +344,7 @@ titular y el resumen de la fuente), pero **no se publica**: sin cuerpo, no sale.
 
 | Nivel | Cuándo |
 |---|---|
-| **ALTA** | Hay una fuente oficial, o dos o más medios distintos |
+| **ALTA** | Hay una fuente oficial, o dos o más medios independientes (desde el 15/10, un grupo de copias del mismo texto cuenta como un solo medio, y si en el grupo hay una oficial, cuenta sólo la oficial: `mediosQueNoCuentan`, `contarFuentes`) |
 | **MEDIA** | Un solo medio |
 | **BAJA** | Un solo medio y el titular original, el título o la bajada se apoyan en una denuncia o una acusación (denuncia, acusó, habría, presunto, "según trascendió"…); o, con un solo medio, algo de "qué falta confirmar" toca el hecho central. Una opinión citada ("aseguró que") no baja el nivel, y con varias fuentes u oficial nunca es BAJA |
 
@@ -350,8 +384,9 @@ ni las redes. Lo que publicó una persona se respeta. Lo mira `notaPublicada`
  "fuentes":[{"medio":"Diario La Vanguardia","enlace":"https://www.diariolavanguardia.com/noticias/44916-…","fecha":null}]}
 ```
 
-La portada lleva además el número (`esperandoCuerpo`) y el vigilante lo dice en el
-resumen de las 21.
+La portada lleva además el número (`esperandoCuerpo`) y lo cuentan los informes
+diarios por mail de las 8:15 y las 21:15 (`redes/informe-diario.mjs`, regla 176),
+que desde el 15/10 reemplazan al resumen de las 21 del vigilante.
 
 **Cómo se escribe el cuerpo que falta:**
 
@@ -406,7 +441,9 @@ cuerpo no se escribió a mano (`cuerpoAMano`); "revisada" si la publicó una per
 | Escrita por la IA y aprobada o corregida por una persona (también un texto de la IA a pedido, guardado con `deIA: true`) | "Redacción con IA, revisada por la redacción · Fuentes (N)" |
 | Con el cuerpo escrito a mano en `correcciones.json`, o publicada por una persona sin guion | "Revisada por la redacción · Fuentes (N)" (autor para Google: Radar Balcarce) |
 | Sin guion y sin persona | "Texto de *medio* · Fuentes (N)" |
-| Propia (el dólar, un repaso) | Lo que dice la nota ("Nota de Radar Balcarce…") |
+| Propia (el dólar, un repaso, el clima, "Un día como hoy") | Lo que dice la nota ("Nota de Radar Balcarce…") |
+| Propia que nace de una pista o de un mail de prensa, aprobada por una persona (paso 16) | "Nota de Radar Balcarce, escrita con IA a partir de lo que publicaron *medios* y revisada por la redacción" (`firmaDePista`, `web/lib/notas-de-pistas.js`) |
+| Propia de una pista que salió sola (paso 16) | "Nota de Radar Balcarce, escrita con IA a partir de lo que publicaron *medios* y controlada contra esas fuentes" |
 
 Al abrir el desplegable se ve la explicación larga. Nunca se dice "sin revisión
 humana". Criterio: `CRITERIO-EDITORIAL.md` § 10.
@@ -435,7 +472,35 @@ con un pedido opcional. El celular dispara el workflow "Panel del celular"
    nombres).
 
 Tarda un minuto. Nada se publica solo: la persona decide en el celular. Cómo se usa,
-en `docs/09-PANEL.md` y `docs/11-OPERACION.md`.
+en `docs/09-PANEL.md` y `docs/11-OPERACION.md`. Desde el 15/10 también recibe la
+entrada ampliada (paso 4).
+
+### 16. Notas propias: de una pista o de un mail de prensa
+
+No vienen de la ingesta: se guardan en **`web/data/notas-de-pistas.json`** (lo
+escribe el celular, o Claude a pedido; cada entrada con `motivo`, `cuando` y `por`,
+sin eso se ignora) y las lee `notasDePistas` (`web/lib/notas-de-pistas.js`). Entran
+con relevancia alta (95, `RELEVANCIA_DE_PISTA`), duran 180 días como las demás y
+tienen que tener cuerpo de 70 palabras o más.
+
+- **De una pista** ("Hacer la nota", en la pestaña Pistas del celular):
+  `panel/nota-de-pista.mjs` busca en internet las notas de los medios que hablan de
+  lo mismo, con su texto (`ingesta/busqueda.mjs`, Tavily), y las escribe por el mismo
+  camino que "Escribir con IA" (`reescribirUna`), con un pedido fijo: contar sólo lo
+  que confirman las fuentes y no repetir el rumor. Una pista que toca menores o
+  víctimas no se escribe. El borrador viaja cifrado y lo publica una persona.
+- **Una pista que sale sola** (`panel/pistas-solas.mjs`, desde el 4/10): si ya la
+  cubren 3 medios o más y el verificador no tiene nada para decir, se publica sola,
+  con la firma de la IA; con cualquier aviso, espera a una persona. Como mucho 2
+  por corrida y 3 intentos por pista, uno cada 20 horas (cada intento gasta
+  búsquedas).
+- **Desde un mail de prensa** (16/10, `docs/flujos/NOTA-DESDE-MAIL.md`): cuando
+  Hernán o Andrés lo piden, Claude lee la gacetilla en el Gmail del medio, escribe
+  la nota atribuida a la oficina de prensa, elige la foto (sin marca y sin chicos),
+  se la muestra a Hernán y sólo con su OK la guarda en `notas-de-pistas.json` (y la
+  foto en `web/data/fotos-manuales.json`). Una nota así, como toda nota que publica
+  una persona, sale en los repasos de las redes sin pedirlo aparte
+  (`docs/07-REDES.md`).
 
 ---
 
@@ -443,7 +508,8 @@ en `docs/09-PANEL.md` y `docs/11-OPERACION.md`.
 
 | Archivo | Qué hace | Quién lo llama |
 |---|---|---|
-| `reels/reescritura.mjs` | `reescribirAutomaticas` (todo el flujo), `reescribir` (el pedido, las claves, `pedido`), `entradaDe`, `esTemaSerio`, `ordenarParaReescribir`, `textoCompletoDe`, `antecedentesDe`, `completarReescritura`, `nivelDeVerificacion`, `semaforoDeLaReescritura`, `revalidarExtras`, `previasDeLaPortada`, `topeDeReescrituras` | `generar-datos.mjs` (nube), `panel/reescribir-una.mjs`, `panel/servidor.mjs` |
+| `reels/reescritura.mjs` | `reescribirAutomaticas` (todo el flujo), `reescribir` (el pedido, las claves, `pedido`), `entradaDe`, `esTemaSerio`, `ordenarParaReescribir`, `textosDeLasFuentes`, `conEntradaAmpliada`, `textoCompletoDe` (sólo el panel de la PC), `antecedentesDe`, `completarReescritura`, `nivelDeVerificacion`, `semaforoDeLaReescritura`, `revalidarExtras`, `previasDeLaPortada`, `topeDeReescrituras` | `generar-datos.mjs` (nube), `panel/reescribir-una.mjs`, `panel/servidor.mjs` |
+| `ingesta/fuentes-para-la-ia.mjs` | La entrada ampliada (regla 174): `armarFuentesParaLaIA` (qué textos van y en qué orden), `limpiarTextoBajado`, las copias (`parecidoEntreTextos`, `mediosQueNoCuentan`) | `reels/reescritura.mjs` |
 | `ingesta/prompt-editorial.mjs` | Lee la sección 12 de `CRITERIO-EDITORIAL.md` entre las marcas; lanza si falta algo | `reels/reescritura.mjs` |
 | `CRITERIO-EDITORIAL.md` | **El criterio único**: las reglas (§ 4 a § 10), los números (§ 11) y la instrucción exacta de la IA (§ 12) | La IA, las personas, las pruebas |
 | `ingesta/criterio.mjs` | Los números del criterio (`TITULO`, `BAJADA`, `CUERPO`, `GUION`, `PARTES`, `COPIA_MAXIMA`, `ESTILO`, `RELLENO`, `REESCRITURA`) | Verificador, reescritura, web |
@@ -457,6 +523,8 @@ en `docs/09-PANEL.md` y `docs/11-OPERACION.md`.
 | `web/components/metadatos.js` | `quienEscribio`, `firmaCorta`, `explicacionDeFirma`, `autorDeNota` | La página de la nota |
 | `web/components/verificacion.js`, `web/lib/fuentes-de-la-nota.js` | El pie de la nota: firma y "Fuentes (N)" | La página de la nota |
 | `web/data/esperando-cuerpo.json`, `correcciones.json`, `intentos-ia.json` | Las notas que esperan cuerpo; los cuerpos (y títulos, bajadas, secciones) escritos a mano o desde el celular; los intentos de cada nota | `generar-datos.mjs`; una persona o el celular |
+| `panel/nota-de-pista.mjs`, `panel/pistas-solas.mjs`, `web/lib/notas-de-pistas.js`, `web/data/notas-de-pistas.json` | Las notas propias que nacen de una pista o de un mail de prensa (paso 16) | "Panel del celular", "Pistas" (`pistas.yml`), `generar-datos.mjs` |
+| `web/data/uso-ia.json` | Tokens y errores de la IA por día (lo anota la redacción) | `redes/uso-ia.mjs` |
 
 ## Dónde se toca cada cosa
 
@@ -481,7 +549,7 @@ en `docs/09-PANEL.md` y `docs/11-OPERACION.md`.
 | Qué pasa | Cómo se nota | Qué hacer |
 |---|---|---|
 | Gemini sin cupo o saturado | "reescritura: … N fallaron (HTTP 429…)" en el registro; crece `esperando-cuerpo.json`; el vigilante avisa si menos del 35 % de lo de las últimas 24 horas tiene cuerpo | Esperar al día siguiente, o escribir los cuerpos desde el celular o a mano (paso 12) |
-| Google desactiva una clave | Pedidos con 401, 402 o 403 en el registro (no gastan intentos); el vigilante avisa por WhatsApp | Cargar otra clave en GitHub Secrets (`docs/08-INFRAESTRUCTURA.md`) |
+| Google desactiva una clave | Pedidos con 401, 402 o 403 en el registro (no gastan intentos); el vigilante avisa por mail (WhatsApp sólo si el mail no sale, regla 173) | Cargar otra clave en GitHub Secrets (`docs/08-INFRAESTRUCTURA.md`) |
 | Se cayó `CRITERIO-EDITORIAL.md` o se borró una marca | "Actualizar la web" falla a la vista ("Criterio editorial (…): falta la marca …") y `npm test` también | Restaurar la marca |
 | La IA cambia el formato del JSON | "Bad Unicode escape…" o "Unexpected token" en `intentos-ia.json` | `repararEscapes` cubre las barras mal formadas; lo demás, mirar `limpiarJson` |
 | La IA escribe un verbo de delito sin tilde ("robo" por "robó") | El control no lo ve: esos verbos sólo se reconocen con la tilde, a propósito, para no rechazar cada "un robo" | Riesgo aceptado; si una nota así sale, se corrige |

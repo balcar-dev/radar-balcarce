@@ -1,6 +1,6 @@
 # 02 · La ingesta: de dónde salen las noticias y cómo se leen
 
-*Actualizado el 29/09/2026. Si el código cambia, manda el código.*
+*Actualizado el 16/10/2026. Si el código cambia, manda el código.*
 
 El primer tramo del recorrido: desde que se sale a buscar a los medios hasta que
 cada hecho queda armado como una "historia" con sus fuentes. Qué se decide
@@ -30,11 +30,14 @@ historia con todas sus fuentes numeradas.
 ### 1. Quién la dispara
 
 - **En la nube (lo normal):** "Actualizar la web" (`.github/workflows/actualizar.yml`,
-  cada media hora, lo dispara cron-job.org) corre `web/scripts/generar-datos.mjs`.
+  cada media hora; lo dispara el reloj de Cloudflare, el Worker `radar-balcarce-reloj`
+  de `infra/reloj-cloudflare/`, a los :00 y :30, y el `schedule` del propio workflow
+  a los :07 y :37 es el respaldo) corre `web/scripts/generar-datos.mjs`.
   Ese script ve que no está en la PC (no existe `panel/datos/ultima.json`) y llama
   a `ingestar()` de `ingesta/ingesta.mjs`, con `idsConocidos`: los identificadores
   de lo que ya está en `web/data/portada.json` y `web/data/archivo.json`, para que
-  una nota publicada no cambie de dirección (paso 12).
+  una nota publicada no cambie de dirección (paso 12), e `idsUnidos`: las que ya se
+  unieron a otra (`web/data/fusionadas.json`, regla 175).
 - **En la PC:** el panel de la PC (`panel/servidor.mjs`) corre la misma
   `ingestar()` cada 10 minutos, con las fuentes como estén en el panel (pesos
   cambiados o pausadas). Ver `docs/09-PANEL.md`.
@@ -52,8 +55,12 @@ Las fuentes viven en dos archivos y se juntan en `TODAS_LAS_FUENTES`
 | `FUENTES_NACIONALES` | `ingesta/fuentes.mjs` | Región, provincia, nacionales y temáticas "de siempre" |
 | `FUENTES_CRUCE` | `ingesta/fuentes-cruce.mjs` | Las del cruce de medios, una por línea |
 
-Al 29/09 son 218 configuradas, 214 activas, de 91 medios; la cuenta al día y la
-lista entera están en **`FUENTES.md`**, que no se edita a mano: lo escribe
+Al 16/10 son 265 configuradas y **103 activas, de 71 medios**: 15 feeds de 11 medios
+de Balcarce, 11 de la región (casi todos de Mar del Plata y Tandil), 11 de la provincia y 66 de 38
+medios nacionales. El 15/10 se apagó todo lo que quedó fuera de la lista elegida
+(todas las de Balcarce, las mejores del país y las mejores de Tandil y Mar del Plata;
+`docs/DECISIONES.md`): queda configurado con `activa: false` y la nota "fuera de la
+lista elegida". La cuenta al día y la lista entera están en **`FUENTES.md`**, que no se edita a mano: lo escribe
 `node ingesta/listar-fuentes.mjs`, y `pruebas/fuentes-registro.test.mjs` falla si
 alguien toca una fuente y no lo vuelve a correr.
 
@@ -67,11 +74,14 @@ Cada fuente es una ficha con estos datos:
 | `tipo` | `rss`, `atom`, `sitemap` o `scrape` | Cómo se lee (paso 4) |
 | `alcance` | `local`, `region`, `provincia` o `pais` | Qué es de Balcarce, qué entra al filtro y al cruce |
 | `ciudad` | De dónde es el medio (las de Balcarce y las nacionales no la llevan) | La recibe la lectura con IA (`docs/03-SELECCION.md`, paso 8) |
-| `peso` | Cuánto suma a la relevancia: 24 a 30 los de Balcarce, 8 casi todos los nacionales | Ordenar, nunca decidir si sale (`docs/03-SELECCION.md`, paso 3) |
-| `oficial` | `true` si es un organismo público: la Municipalidad y el Gobierno de la Provincia. El INTA va **sin** la marca, a propósito: con ella saldría solo sin que lo cuente otro medio | Verde en el semáforo y verificación ALTA. La historia es oficial si **cualquiera** de sus fuentes lo es (paso 13) |
+| `peso` | Cuánto suma a la relevancia: 24 a 30 los de Balcarce; de los nacionales, 8 la mayoría (44 de 66) y 7 a 16 el resto | Ordenar, nunca decidir si sale (`docs/03-SELECCION.md`, paso 3) |
+| `oficial` | `true` si es un organismo público. Activos hoy: la Municipalidad, el Concejo Deliberante y la Facultad de Ciencias Agrarias de Balcarce (el Gobierno de la Provincia sigue en la lista, apagado). El INTA va **sin** la marca, a propósito: con ella saldría solo sin que lo cuente otro medio | Verde en el semáforo y verificación ALTA. La historia es oficial si **cualquiera** de sus fuentes lo es (paso 13). Un organismo de Balcarce no pide medios ni espera a la IA (regla 180, `docs/03-SELECCION.md`) |
+| `grupo` | El dueño o el sistema que comparten varios medios (`Grupo Clarín`, `eleco.com.ar`) | Al contar medios, los del mismo grupo cuentan **una** vez (`contarMedios`, `ingesta/ingesta.mjs`, desde el 15/10) |
+| `activa`, `nota` | `activa: false` apaga la fuente; `nota` dice por qué y desde cuándo | Sólo se leen las activas |
 | `seccion` | La sección fija, si el feed ya viene separado por tema | Clasificar (`docs/03-SELECCION.md`, paso 2) |
-| `temas`, `nota` | Descripción para personas | Nada automático |
+| `temas` | Descripción para personas | Nada automático (salvo `automovilismo`, que exime del filtro de "autos") |
 | `patronEnlace`, `base`, `prefijoTitulo` | Sólo en las que se raspan | Reconocer los enlaces a notas en el HTML |
+| `agente`, `sinCompresion`, `maxNotas` | Arreglos para un sitio puntual: otro nombre de navegador, pedir sin compresión, cortar un feed enorme | Ver "Fuentes apagadas por bloqueo", al final |
 
 `fichaDeFuente()` (`ingesta/fuentes.mjs`) deduce de esos campos el **tipo** de
 fuente (oficial, de Balcarce, de la región, provincial, nacional por sección o
@@ -85,6 +95,9 @@ máximo y el User-Agent `RadarBalcarce/0.1 (agregador local de noticias de
 Balcarce)`. Lee como UTF-8 y, si queda lleno de caracteres rotos, vuelve a leer
 como latin1 (varios sitios no dicen cómo están escritos).
 
+Si falló por algo del momento (la conexión se cortó, un error 5xx o "demasiados
+pedidos", 429), se vuelve a probar **una** vez a los dos segundos
+(`traerConReintento`); un 403, un 404 o el tiempo vencido no se reintentan.
 Una fuente que falla no frena a las demás: queda con `estado: 'error'`, y en
 GitHub `generar-datos.mjs` escribe un aviso amarillo arriba de la corrida
 ("Fuente caída", o "Fuente vacía" si no trajo ninguna nota).
@@ -135,7 +148,10 @@ hoy en cada corrida. Por eso:
 2. **Lo raspado de más de 72 horas no se trae** (`HORAS_DE_UNA_NOTA_NUEVA`): la
    portada de un medio mostraba notas de 2025 como de hoy. Una nota a la que no se
    le pudo sacar la fecha **sí entra**, con la hora de ahora y la marca "sin fecha
-   en la fuente". Es un colador grueso: los cortes de verdad (12 horas para
+   en la fuente". Desde el 16/10 (regla 180) pasa lo mismo con **los feeds de los
+   medios de Balcarce**: lo de más de 72 horas que nunca salió no entra al cruce
+   (`esViejaSinSalir`: el Concejo traía notas de marzo y arrastraban a las nuevas a
+   "llegar tarde"); lo ya publicado y lo sin fecha entran igual. Es un colador grueso: los cortes de verdad (12 horas para
    estrenar, 36 en la portada) los hace la web (`docs/03-SELECCION.md`, paso 10).
 3. **La primera vez que se vio cada nota** (`web/data/vistas.json`). En cada
    corrida, antes de decidir nada, `generar-datos.mjs` anota por identificador la
@@ -144,10 +160,16 @@ hoy en cada corrida. Por eso:
    su fecha; una con fecha nunca puede ser más nueva que ella (`fechaReal`,
    `docs/03-SELECCION.md`, paso 10).
 
-### 6. El filtro de entrada: lo que no se trae (sólo medios de afuera)
+### 6. El filtro de entrada: lo que no se trae
 
-`motivoDeDescarte()` mira cada nota de un medio de afuera y dice por qué no entra,
-o nada. **Los medios de Balcarce nunca pasan por acá: de ellos entra todo.**
+`motivoDeDescarte()` mira cada nota y dice por qué no entra, o nada.
+
+0. **La quiniela y la lotería** (`TITULO_LOTERIA`), de **cualquier** medio, también
+   de los de Balcarce, salvo que la nota nombre algo de Balcarce. Motivo: "lotería o
+   quiniela: sólo si gana alguien de Balcarce". (Desde el 15/10 de verdad: antes la
+   función se llamaba sólo para los de afuera, regla 175.)
+
+**De los medios de Balcarce, lo demás entra todo.** De los de afuera, además:
 
 1. **El título, por el horóscopo** (`TITULO_HOROSCOPO`: "horóscopo", "números de
    la suerte", "predicciones para cada signo"…), que algunos medios publican en
@@ -175,7 +197,11 @@ que corresponda:
    (`PALABRAS_LOCALES`: balcarce, balcarceño, Napaleofú, Ramos Otero, Laguna La
    Brava, INTA Balcarce, autódromo Juan Manuel Fangio…). Nombrarla en el texto no
    alcanza: una nota de Necochea que nombraba a Balcarce en una lista de
-   localidades no es de Balcarce.
+   localidades no es de Balcarce. Las localidades del partido que también son
+   otros lugares o cosas (San Agustín, Los Pinos, Bosch, Juan Vincenty:
+   `PALABRAS_LOCALES_DEBILES`) cuentan sólo con respaldo: en el título y con algo
+   firme de acá o de la zona en el título o la bajada (`nombraLocalidadDudosa`,
+   regla 179, desde el 15/10).
 2. **`figura`**: el título o los primeros 400 caracteres nombran a una figura
    argentina (`FIGURAS`: Messi, Scaloni, la Selección, Colapinto, Canapino, Los
    Pumas…). Se guarda el nombre encontrado.
@@ -190,7 +216,9 @@ Qué hace cada marca: `docs/03-SELECCION.md`, pasos 3, 5 y 6.
 
 Una nota puede llegar por dos feeds del mismo medio (la portada y la sección, o el
 RSS y el índice). Antes del cruce queda una sola: la clave es el medio más el
-título sin tildes, signos ni espacios.
+título sin tildes, signos ni espacios, **o el enlace** (sin `?utm_…`, «www.», «#»
+ni barra final: `enlaceNormalizado`), así la misma nota con el título cambiado
+entre un feed y otro tampoco entra dos veces (regla 175, 15/10).
 
 ### 9. La memoria del cruce
 
@@ -205,8 +233,8 @@ está en su feed), se guarda lo de afuera de las últimas **36 horas**
   resumen, enlace (y `enlaceFeed`), fecha, cuándo se vio, medio, fuente, alcance,
   si es oficial, sección fija, peso, imagen y categorías. **Sólo lo de afuera**: lo
   de Balcarce entra siempre.
-- **Al leerla** (`leerMemoria`) se descarta lo de más de 36 horas y lo que ya vino
-  en esta corrida (mismo enlace). Lo que queda vuelve como nota (`deLaMemoria`, sin
+- **Al leerla** (`leerMemoria`) se descarta lo de más de 36 horas (por la fecha de
+  la nota) y lo que ya vino en esta corrida (mismo enlace, también normalizado). Lo que queda vuelve como nota (`deLaMemoria`, sin
   texto completo) y recibe otra vez sus marcas (paso 7).
 - **Al guardarla** (`guardarMemoria`) se suma lo de afuera de esta corrida, sin
   repetir enlaces y sin lo vencido.
@@ -230,7 +258,26 @@ corrida y las de la memoria) y devuelve grupos. Sin IA: tarda segundos.
    notas (`CRUCE.palabraComun`, nunca menos de 3) no sirve para buscar parecidas,
    aunque cuenta en el cálculo.
 6. **Dos notas del mismo medio nunca se juntan entre sí**: un medio cuenta una vez.
-7. **Los grupos se encadenan**: si A se parece a B y B a C, A, B y C son un grupo.
+7. **Los grupos se encadenan**: si A se parece a B y B a C, A, B y C quedan juntas.
+8. **El cruce coherente revisa cada grupo** (regla 184, desde el 16/10; interruptor
+   `CRUCE_COHERENTE`, prendido salvo que la variable de entorno diga "no"). Encadenar
+   juntaba cosas distintas: el 16/10 una sola "historia" de fútbol tenía 228 notas
+   (River, Boca, los puntajes, el Tribunal de Disciplina…) y el dólar de dos días
+   era uno solo. Ahora `agruparConDetalle` mira cada grupo encadenado y **lo deja
+   igual** si tiene hasta 25 notas (`CRUCE.coherente.maxNotas`), entra en 30 horas
+   entre la primera y la última (`horasDeUnHecho`), ninguna nota queda lejos del
+   resto (`restoMinimo`, 0,2) y no hay dos notas que no puedan ir juntas. Si no, lo
+   **rearma** de a dos pedazos, el par más parecido primero, y junta sólo si el
+   parecido **promedio** alcanza (`promedioMinimo`, 0,22; no basta un eslabón), si
+   entra en 30 horas (48 una noticia en desarrollo contada casi igual:
+   `horasEnDesarrollo` y `promedioEnDesarrollo`, 0,45) y si ningún par es de los
+   que no van juntos, mirando sólo los títulos (`porQueSeparar`): un anuncio y su
+   resultado, un hecho y el contrario (las reglas de
+   `ingesta/repetidas-publicadas.mjs`), fechas, días o resultados distintos ("1 a
+   1" y "2 a 0"), o tipos de hecho distintos (la previa, el resultado, los
+   puntajes, la tabla, la sanción). **Partir sólo separa**: nunca junta lo que el
+   cruce de siempre no juntaba. Con la lectura de las 12 del 16/10, la historia más
+   grande pasó de 228 notas a 51. Medición: `docs/flujo/CRUCE-COHERENTE.md`.
 
 ### 11. Qué grupos quedan
 
@@ -243,8 +290,12 @@ corrida y las de la memoria) y devuelve grupos. Sin IA: tarda segundos.
 | Lo cuentan **sólo medios de la región** (Mar del Plata, Tandil, Necochea…), sin Balcarce en el título ni la zona | **No se trae**: lo que es sólo de Necochea no le sirve a Balcarce |
 
 El registro dice: "cruce: N notas (M de la memoria) · H historias · X de afuera
-con un solo medio y Y de otra ciudad de la zona no entran". Un grupo hecho sólo de
-notas de la memoria sigue siendo una historia más.
+con un solo medio y Y de otra ciudad de la zona no entran" y, si el cruce coherente
+partió algo, "cruce coherente (regla 184): R grupos encadenados revisados, P
+partidos en hechos distintos". Un grupo hecho sólo de notas de la memoria sigue
+siendo una historia más. Todo esto (pasos 10 a 12) lo hace `armarHistorias`
+(`ingesta/ingesta.mjs`), que también usa `docs/flujo/medir-cruce-coherente.mjs`
+para medir con una lectura guardada.
 
 ### 12. La nota principal de cada historia
 
@@ -260,11 +311,21 @@ la dirección en la web), el título de partida, la fecha y el enlace principal.
 2. **Entre quiénes se elige:** si es de acá, entre las notas de los medios de
    Balcarce; si no, entre las de afuera.
 3. **Cuál:** la que ya está publicada (su identificador está en `idsConocidos`),
-   así la dirección no cambia cuando otro medio se suma. Si ninguna, **la que
-   salió primero**.
+   así la dirección no cambia cuando otro medio se suma. Desde el 15/10 se busca
+   entre **todas** las notas del grupo, no sólo entre las candidatas del punto 2
+   (`laYaPublicada`, regla 175): la VTV salió como historia de afuera y, cuando se
+   sumaron los medios de Balcarce y pasó a ser de acá, nacía otra nota con los
+   mismos 28 medios. Entre dos publicadas manda la que no se unió a otra
+   (`idsUnidos`). Si ninguna está publicada, **la que salió primero**.
 4. **Lo que toma de las demás:** el título entero si el suyo venía cortado; la
    fecha, si no tenía; la imagen; el resumen largo, si no tenía texto completo; la
    marca `nombraBalcarce` y la figura.
+5. **`nombraAca`** (regla 180, 16/10): si la historia es de acá y una nota de un
+   medio de Balcarce nombra algo de acá (Balcarce, los balcarceños, una localidad
+   del partido, la zona) en el título o en los primeros 600 caracteres, la historia
+   lo lleva marcado. Con eso no se cae por cantidad de medios ni por el cupo de
+   afuera aunque la IA diga que es "de la región" (`esDeUnMedioDeAca`,
+   `docs/03-SELECCION.md`, pasos 6 y 7).
 
 Después se guarda la memoria (paso 9).
 
@@ -287,6 +348,7 @@ paso 1). Del resto, cada historia queda con estos campos:
 | `origenes` | **Cada fuente, en orden, la principal primero**: medio, enlace, fecha, si es oficial y su resumen. Es lo que la IA recibe numerado ("Fuente 1, Fuente 2…"), lo que el lector ve en "Fuentes (N)" y con lo que se calcula el nivel de verificación (`docs/04-REDACCION.md`) |
 | `local` | `true` si la principal es de un medio de Balcarce o dice Balcarce en el título (`esDeBalcarce`) |
 | `figura`, `deLaZona`, `nombraBalcarce`, `alcance` | Las marcas del paso 7 y el alcance de la principal |
+| `nombraAca` | Sólo si la principal es de un medio de Balcarce y la historia nombra algo de acá (paso 12, punto 5; regla 180) |
 | `oficial` | `true` si la principal **o cualquiera** de las otras es de una fuente oficial. Lo usan el semáforo, los medios que pide lo de afuera y el archivo (`tieneRespaldo`) |
 
 Además de las noticias, `ingestar()` trae el **clima** (Open-Meteo y, si falla,
@@ -299,9 +361,16 @@ Los feeds traen un resumen de unos 200 caracteres: con eso la IA no tiene de dó
 escribir un cuerpo y rellena. Por eso, **en el momento de escribir** (no en la
 ingesta), se baja la página de la nota original (`ingesta/articulo.mjs`):
 
-1. **De qué fuente:** `textoCompletoDe()` (`reels/reescritura.mjs`) prueba la
-   principal (su `enlaceFeed` si es Blogger) y, si no se pudo, hasta tres de las
-   otras. Ver `docs/04-REDACCION.md`, paso 4.
+1. **De qué fuentes:** desde el 15/10 (regla 174, "la entrada ampliada")
+   `textosDeLasFuentes()` (`reels/reescritura.mjs`) intenta bajar el texto de hasta
+   6 fuentes (`REESCRITURA.fuentesQueSeBajan`: la principal siempre, con su
+   `enlaceFeed` si es Blogger, y las oficiales antes), y `armarFuentesParaLaIA()`
+   (`ingesta/fuentes-para-la-ia.mjs`) elige hasta 4 textos completos
+   (`textosCompletosMaximo`), la más completa primero, con 12.000 caracteres entre
+   todos (`caracteresDeTextosEnTotal`); dos textos que comparten la mitad o más
+   (`copiaEntreFuentes`) son copia y cuentan como una voz. Antes iba el texto de
+   una sola fuente (`textoCompletoDe`, que sigue para una sola). Ver
+   `docs/04-REDACCION.md`, paso 4.
 2. **Bajar** (`traerTexto`): 8 segundos como máximo, User-Agent
    `RadarBalcarce/1.0 (+https://radarbalcarce.com)`. Si falla, la nota se escribe
    sólo con los resúmenes.
@@ -319,8 +388,12 @@ ingesta), se baja la página de la nota original (`ingesta/articulo.mjs`):
      necrológicas** (`NECROLOGICA`: casa de duelo, sala velatoria, servicios de
      sepelio). Un medio de acá pega debajo de cada nota su bloque de fallecidos, y
      la IA llegó a escribir sobre sepelios en una nota escolar.
-4. **El largo:** hasta 4.000 caracteres (`REESCRITURA.caracteresDelTextoCompleto`,
+4. **El largo:** hasta 4.000 caracteres por fuente (`REESCRITURA.caracteresDelTextoCompleto`,
    `ingesta/criterio.mjs`); con menos de 300 no hay texto completo.
+5. **La limpieza** (regla 174): letras rotas arregladas si se puede (una página en
+   latin1 se lee como tal, `decodificarPagina`; `repararCodificacion`) y, si no, el
+   párrafo afuera; pies de nota y párrafos de otra nota de la página, afuera
+   (`limpiarTextoBajado`, `ingesta/fuentes-para-la-ia.mjs`).
 
 ---
 
@@ -331,11 +404,15 @@ ingesta), se baja la página de la nota original (`ingesta/articulo.mjs`):
 | `ingesta/fuentes.mjs` | Las fuentes de siempre, las palabras de Balcarce y de la zona, el filtro de entrada, las figuras, `fichaDeFuente` (y las reglas de sección y semáforo, ver 03) | Todo el motor | — |
 | `ingesta/fuentes-cruce.mjs` | Las fuentes del cruce, una por línea | `ingesta.mjs`, `lectura-ia.mjs`, `listar-fuentes.mjs` | — |
 | `ingesta/listar-fuentes.mjs` | Escribe `FUENTES.md` desde el código | Una persona | `FUENTES.md` |
-| `ingesta/ingesta.mjs` | `ingestar()`: baja, lee, filtra, marca, cruza, elige la principal y arma cada historia (también clasifica y da el semáforo, ver 03) | `generar-datos.mjs` (nube), `panel/servidor.mjs` (PC), a mano | La memoria; a mano, `ingesta/salida/` |
-| `ingesta/cruce.mjs` | Agrupa por hecho (TF-IDF, coseno, 0,42) y maneja la memoria de 36 horas | `ingesta.mjs` | `.cache/cruce-memoria.json` |
+| `ingesta/ingesta.mjs` | `ingestar()`: baja, lee, filtra, marca, cruza; `armarHistorias()` elige la principal y arma cada historia (también clasifica y da el semáforo, ver 03) | `generar-datos.mjs` (nube), `panel/servidor.mjs` (PC), a mano | La memoria; a mano, `ingesta/salida/` |
+| `ingesta/cruce.mjs` | Agrupa por hecho (TF-IDF, coseno, 0,42), el cruce coherente (`CRUCE_COHERENTE`, regla 184) y la memoria de 36 horas | `ingesta.mjs` | `.cache/cruce-memoria.json` |
+| `ingesta/repetidas-publicadas.mjs` | `enlaceNormalizado` (el mismo enlace sin `?utm_…`) y las marcas de "un anuncio y su resultado" y "un hecho y el contrario" que usa el cruce coherente (lo demás, en 03) | `ingesta.mjs`, `cruce.mjs`, `generar-datos.mjs` | — |
 | `ingesta/articulo.mjs` | Baja la página original y saca el texto de la nota; `decodificar` | `reels/reescritura.mjs`, `ingesta.mjs` | — |
+| `ingesta/fuentes-para-la-ia.mjs` | La entrada ampliada (regla 174): qué textos completos van a la IA, en qué orden, cuáles son copia, y la limpieza del texto bajado | `reels/reescritura.mjs` | — |
+| `ingesta/auditar-fuentes.mjs` | La auditoría de las fuentes: cuánto aporta cada medio según lo ya publicado (sin red): sin aporte, dormida, redundante, imprescindible | `node ingesta/auditar-fuentes.mjs` (a mano) | Nada (lo muestra en pantalla) |
+| `ingesta/medir-fuentes.mjs` | Mide cada fuente con el archivo y, además, prueba cada feed en vivo (con `--sin-red`, sólo el archivo); sólo lee | A mano (rediseño, etapa 1) | `docs/etapa-1-fuentes/fuentes-medidas.csv` |
 | `web/scripts/generar-datos.mjs` | Dispara la ingesta en la nube y anota la primera vista | `actualizar.yml` | `web/data/vistas.json` (y todo lo de 03 a 06) |
-| `.github/workflows/actualizar.yml` | Corre todo cada media hora y guarda `.cache/` en la caché de Actions (la memoria del cruce y las notas para el panel del celular) | cron-job.org | Los commits "Datos de la portada" |
+| `.github/workflows/actualizar.yml` | Corre todo cada media hora y guarda `.cache/` en la caché de Actions (la memoria del cruce y las notas para el panel del celular) | El reloj de Cloudflare (`radar-balcarce-reloj`); su `schedule` de respaldo | Los commits "Datos de la portada" |
 
 ## Dónde se toca cada cosa
 
@@ -352,6 +429,9 @@ ingesta), se baja la página de la nota original (`ingesta/articulo.mjs`):
 | Qué figuras cuentan | `FIGURAS` (`ingesta/fuentes.mjs`): con nombre y apellido si el apellido solo es ambiguo |
 | Cuánto se parecen dos notas para ser el mismo hecho, o cuántas horas se recuerdan | `CRUCE` (`ingesta/cruce.mjs`: `umbral`, `horasDeMemoria`, `palabraComun`) |
 | Qué palabras no cuentan en el cruce | `VACIAS` (`ingesta/cruce.mjs`) |
+| Cuándo el cruce parte un grupo, o apagar el cruce coherente | `CRUCE.coherente` y `porQueSeparar` (`ingesta/cruce.mjs`); la variable `CRUCE_COHERENTE=no` vuelve al cruce de antes |
+| Que dos medios del mismo dueño cuenten como uno | Campo `grupo` de sus fichas (`contarMedios`, `ingesta/ingesta.mjs`) |
+| Qué localidades del partido cuentan sólo con respaldo | `PALABRAS_LOCALES_DEBILES` (`ingesta/fuentes.mjs`) |
 | Un título de un índice que llega en palabras sueltas | `tituloDelSitemap` (`ingesta/ingesta.mjs`) |
 | Un nombre propio que queda en minúscula al pasar un título de MAYÚSCULAS | `NOMBRES_PROPIOS` (`ingesta/fuentes.mjs`) |
 | Qué partes de la página original no se leen como nota | `RUIDO` y `NECROLOGICA` (`ingesta/articulo.mjs`) |
@@ -366,9 +446,9 @@ ingesta), se baja la página de la nota original (`ingesta/articulo.mjs`):
 | Un feed sin fechas | La nota figura "sin fecha en la fuente"; en la web cuenta desde que se vio (`vistas.json`) | Nada. Ojo: en el puntaje, una entrada sin fecha recibe el premio de frescura en cada corrida (sólo las raspadas quedan `fechaEstimada`) |
 | Una página raspada no contesta al abrirla | La nota entra sin fecha real y queda con la hora de la primera vista | Se corrige sola si la página contesta en otra corrida antes de publicarse |
 | Se pierde la caché de Actions | El cruce arranca sin memoria: por unas horas, más notas "de un solo medio" no entran | Nada: se rearma sola |
-| Dos hechos distintos se juntan (o uno igual no se junta) | Una historia con fuentes que no corresponden, o la misma noticia dos veces | El umbral es `CRUCE.umbral`; la lectura con IA junta después las repetidas que el cruce no vio (`docs/03-SELECCION.md`, paso 8) |
+| Dos hechos distintos se juntan (o uno igual no se junta) | Una historia con fuentes que no corresponden, o la misma noticia dos veces | El umbral es `CRUCE.umbral` y lo que parte grupos, `CRUCE.coherente`; la lectura con IA y las repetidas contra lo publicado juntan después lo que el cruce no vio (`docs/03-SELECCION.md`, paso 8) |
 | Un medio aparece con dos nombres | Una nota de un solo medio cuenta como de dos | Unificar `medio`; `pruebas/cruce-coherente.test.mjs` lo controla |
-| Se cae la plataforma que comparten varios medios de la región | Varios "Fuente caída" juntos (0223, LU9, QZ Noticias, Ecos Diarios, La Noticia 1 y otros leen de `…apiv3.eleco.com.ar`) | Nada: vuelven solos |
+| Se cae la plataforma que comparten varios medios de la región | Varios "Fuente caída" juntos (los del grupo `eleco.com.ar`, que comparten la plataforma `…apiv3.eleco.com.ar`; activos al 16/10, LU9, QZ Noticias, El Marplatense y El Eco de Tandil) | Nada: vuelven solos |
 | La página original tiene la nota sin `<p>` | No hay texto completo: la IA escribe con los resúmenes (o no escribe, si son cortos) | Mirar `extraerTexto` con esa página (`pruebas/articulo.test.mjs`) |
 | Una figura de la lista es ambigua | Entra como "figura" algo que no lo es ("etcheverry" solo tomó una inmobiliaria) | Usar nombre y apellido en `FIGURAS` |
 
@@ -396,4 +476,6 @@ pide sin compresión (`sinCompresion`) y TNT Sports con otro nombre (`agente`); 
 los feeds enormes (OpenAI trae más de mil notas) se cortan en las primeras
 (`maxNotas`). Se sumaron Acción 5 (deportes de Balcarce) y unas treinta fuentes
 por sección (fútbol, economía, agro, cultura, tecnología e IA con los blogs de
-Google, DeepMind, OpenAI, Microsoft, Nvidia, NASA y ESA).
+Google, DeepMind, OpenAI, Microsoft, Nvidia, NASA y ESA). Muchas de ésas (OpenAI,
+SoloTC, TNT Sports, entre otras) quedaron apagadas el 15/10 por estar fuera de la
+lista elegida (paso 2).

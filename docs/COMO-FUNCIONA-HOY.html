@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cómo funciona hoy</title>
+<meta name="description" content="Radar Balcarce de punta a punta, al 16/10/2026: fuentes, cómo se arma una nota, redes, avisos, costos, y qué procesos sobran.">
+<style>
+:root{--bg:#10141b;--tx:#e7eaf0;--mut:#9ba4b6;--card:#18202b;--card2:#1e2734;--line:#2c3646;--acc:#7fb2ff;--accb:#16294a;--ok:#6fd39a;--okb:#16321f;--wa:#f0c35a;--wab:#3a2e0e;--ko:#ff8a80;--kob:#3d1a1a;--pu:#c6a7ff;--pub:#2a1f45}
+:root[data-theme="light"]{--bg:#f7f6f2;--tx:#1d2330;--mut:#5a6275;--card:#ffffff;--card2:#f1f0ea;--line:#dcd8cd;--acc:#1d4f91;--accb:#e1ecfb;--ok:#1f7a4a;--okb:#e3f4ea;--wa:#8a5d00;--wab:#fff1cc;--ko:#a32020;--kob:#fde3e1;--pu:#5b3aa6;--pub:#ede6fb}
+:root[data-theme="dark"]{--bg:#10141b;--tx:#e7eaf0;--mut:#9ba4b6;--card:#18202b;--card2:#1e2734;--line:#2c3646;--acc:#7fb2ff;--accb:#16294a;--ok:#6fd39a;--okb:#16321f;--wa:#f0c35a;--wab:#3a2e0e;--ko:#ff8a80;--kob:#3d1a1a;--pu:#c6a7ff;--pub:#2a1f45}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-wrap:anywhere}
+.wrap{max-width:960px;margin:0 auto;padding:18px 16px 70px}
+h1{font-size:1.65rem;line-height:1.2;margin:.2em 0 .2em}
+h2{font-size:1.28rem;line-height:1.3;margin:2.2em 0 .5em;padding-top:.6em;border-top:2px solid var(--line)}
+h3{font-size:1.06rem;margin:1.5em 0 .3em}
+p,li{max-width:72ch}
+ul,ol{padding-left:1.25em}
+li{margin:.3em 0}
+a{color:var(--acc)}
+.mut{color:var(--mut)}
+.chico{font-size:.88rem}
+.caja{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:12px 0}
+.caja.azul{border-left:5px solid var(--acc)}
+.caja.verde{border-left:5px solid var(--ok)}
+.caja.amarilla{border-left:5px solid var(--wa)}
+.caja.roja{border-left:5px solid var(--ko)}
+.mirar{background:var(--card2);border:1px dashed var(--line);border-radius:8px;padding:8px 12px;margin:10px 0;font-size:.9rem}
+.mirar b{color:var(--acc)}
+.cifras{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:12px 0}
+.cifra{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.cifra b{display:block;font-size:1.45rem;line-height:1.2}
+.cifra span{font-size:.85rem;color:var(--mut)}
+.tabla{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:.9rem;min-width:520px}
+th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--card2);font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;color:var(--mut)}
+tr:last-child td{border-bottom:0}
+code{background:var(--card2);padding:1px 5px;border-radius:4px;font-size:.86em;word-break:break-word}
+.tag{display:inline-block;border-radius:999px;padding:1px 9px;font-weight:700;font-size:.78rem;white-space:nowrap}
+.t-ok{background:var(--okb);color:var(--ok)}.t-wa{background:var(--wab);color:var(--wa)}.t-ko{background:var(--kob);color:var(--ko)}.t-az{background:var(--accb);color:var(--acc)}.t-pu{background:var(--pub);color:var(--pu)}
+.nav{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 4px}
+.nav a{border:1px solid var(--line);border-radius:999px;padding:3px 11px;text-decoration:none;color:var(--acc);background:var(--card);font-size:.85rem}
+details{margin:.8em 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:2px 12px}
+summary{cursor:pointer;font-weight:700;padding:8px 0}
+.diagrama{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px;margin:12px 0}
+.diagrama svg{display:block;width:100%;height:auto;max-width:640px;margin:0 auto}
+.nota-demo{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin:12px 0}
+.nota-demo .sec{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--acc)}
+.nota-demo h4{font-size:1.2rem;margin:.2em 0;line-height:1.25}
+.nota-demo .baj{color:var(--mut);margin:.3em 0 .6em}
+.nota-demo .foto{background:repeating-linear-gradient(45deg,var(--card2),var(--card2) 10px,var(--line) 10px,var(--line) 11px);border-radius:8px;height:120px;display:flex;align-items:flex-end;padding:6px 8px;font-size:.78rem;color:var(--mut)}
+.nota-demo .meta{font-size:.82rem;color:var(--mut);margin:.5em 0}
+.nota-demo .fu{border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:.85rem;margin-top:8px}
+.pie{margin-top:3em;font-size:.85rem;color:var(--mut);border-top:1px solid var(--line);padding-top:1em}
+@media (max-width:520px){h1{font-size:1.4rem}h2{font-size:1.15rem}.cifra b{font-size:1.25rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<p class="mut chico">Radar Balcarce · documento para Hernán y Andrés · al 16/10/2026</p>
+<h1>Cómo funciona hoy Radar Balcarce</h1>
+<p class="mut">De punta a punta y sin tecnicismos: quién trabaja y cuándo, de dónde salen las noticias, cómo se arma una nota, qué sale en las redes, qué cuesta, qué pasa si algo falla y qué procesos sobran. Cada parte termina con un <b>«Dónde mirar»</b>. Si algo de acá no coincide con el sistema, manda el sistema.</p>
+
+<nav class="nav" aria-label="Partes">
+<a href="#resumen">Resumen</a><a href="#diagrama">Diagrama</a><a href="#reloj">Quién y cuándo</a><a href="#fuentes">Fuentes</a><a href="#proceso">El proceso</a><a href="#nota">La nota</a><a href="#fotos">Fotos</a><a href="#redes">Redes</a><a href="#avisos">Mails y avisos</a><a href="#panel">Panel</a><a href="#archivo">Archivo y respaldos</a><a href="#costos">Costos</a><a href="#fallas">Si algo falla</a><a href="#sobra">Lo que sobra</a><a href="#pruebas">Pruebas</a><a href="#docs">Documentos corregidos</a>
+</nav>
+
+<h2 id="resumen">Lo importante, en diez renglones</h2>
+<ol>
+<li><b>Todo anda solo, con la PC apagada.</b> Un reloj en Cloudflare despierta al robot cada media hora; el robot trabaja en GitHub y sube el sitio a Cloudflare.</li>
+<li><b>Se leen 103 feeds de 71 medios</b>: 15 feeds de 11 medios de Balcarce, 11 de la región, 11 de la provincia y 66 de 38 medios nacionales (había 254; el 15/10 se dejó «Balcarce + los 50 mejores del país + los 10 de Tandil y Mar del Plata»).</li>
+<li><b>Se juntan las notas que cuentan el mismo hecho</b> (desde el 16/10 sin encadenar noticias distintas) y de afuera queda sólo lo que cuentan varios medios: lo de Balcarce entra siempre.</li>
+<li><b>Una IA (Gemini, gratis) escribe</b> título, bajada y cuerpo con el texto completo de hasta 4 fuentes, y un <b>verificador automático</b> descarta todo dato que no esté en las fuentes. Sin cuerpo de 70 palabras, la nota no sale.</li>
+<li><b>El semáforo</b> frena lo delicado: lo rojo (menores, víctimas) no sale nunca solo; Política y Policiales esperan a una persona en las redes; las listas de sepelios no salen nunca.</li>
+<li><b>Salen unas 25 a 45 notas por día</b> (la mitad de Balcarce los días buenos). En el archivo hay 1.177 notas desde el 3/9.</li>
+<li><b>Las redes</b> publican por día hasta 5 posteos con foto en Facebook (espejados en Instagram), 3 repasos en video con voz, el clima, la farmacia y la efeméride. En Instagram, desde el 16/10, sin enlaces: se manda a la bio.</li>
+<li><b>Los avisos llegan por mail</b>: un vigilante en Cloudflare mira todo cada media hora, y a las 8:15 y a las 21:15 llega el informe del día. WhatsApp quedó de respaldo.</li>
+<li><b>Hoy se paga sólo Cloudflare (US$ 5 por mes) y el dominio.</b> GitHub es gratis porque el repositorio es público; si fuera privado, los minutos que usa el robot costarían unos US$ 140 por mes, y desde el 16/10 unos US$ 240, porque «Actualizar la web» empezó a correr dos veces por cada media hora (ver <a href="#costos">Costos</a>).</li>
+<li><b>Sobran cosas</b>: workflows de prueba de un solo día, el panel de la PC, <code>comercial/</code>, módulos «en sombra» que todavía no se conectaron, una compilación doble en cada vuelta y 238 pruebas que se pueden borrar sin perder nada de lo que no se negocia. El detalle, con qué hacer con cada uno, está en <a href="#sobra">Lo que sobra</a>.</li>
+</ol>
+
+<h2 id="diagrama">El diagrama</h2>
+<p>Las flechas llenas son lo que pasa cada media hora; las punteadas, lo que pasa a otras horas o cuando una persona lo pide.</p>
+<div class="diagrama">
+<svg viewBox="0 0 360 760" role="img" aria-label="Diagrama del recorrido: reloj de Cloudflare, robot en GitHub, sitio en Cloudflare, redes, vigilante, panel y archivo">
+<defs>
+<marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--mut)"/></marker>
+</defs>
+<style>
+.bx{fill:var(--card2);stroke:var(--line);stroke-width:1.2}
+.bxa{fill:var(--accb);stroke:var(--acc);stroke-width:1.2}
+.bxo{fill:var(--okb);stroke:var(--ok);stroke-width:1.2}
+.bxp{fill:var(--pub);stroke:var(--pu);stroke-width:1.2}
+.bxw{fill:var(--wab);stroke:var(--wa);stroke-width:1.2}
+.t{fill:var(--tx);font:600 12px system-ui,sans-serif}
+.s{fill:var(--mut);font:10.5px system-ui,sans-serif}
+.ln{stroke:var(--mut);stroke-width:1.4;fill:none}
+.lp{stroke:var(--mut);stroke-width:1.2;fill:none;stroke-dasharray:4 3}
+</style>
+<!-- Reloj -->
+<rect class="bxa" x="70" y="8" width="220" height="48" rx="8"/>
+<text class="t" x="180" y="28" text-anchor="middle">Reloj (Worker de Cloudflare)</text>
+<text class="s" x="180" y="44" text-anchor="middle">:00 y :30 · :05 :35 :45 · 8:15 y 21:15</text>
+<path class="ln" d="M180 56V78" marker-end="url(#fl)"/>
+<!-- Robot -->
+<rect class="bx" x="20" y="80" width="320" height="300" rx="10"/>
+<text class="t" x="180" y="100" text-anchor="middle">«Actualizar la web» (GitHub Actions, ~4 min)</text>
+<rect class="bxw" x="40" y="110" width="280" height="30" rx="6"/><text class="t" x="180" y="130" text-anchor="middle">0 · Pruebas del núcleo legal (3 s)</text>
+<rect class="bxo" x="40" y="146" width="280" height="30" rx="6"/><text class="t" x="180" y="166" text-anchor="middle">1 · Leer 103 feeds de 71 medios</text>
+<rect class="bxo" x="40" y="182" width="280" height="30" rx="6"/><text class="t" x="180" y="202" text-anchor="middle">2 · Juntar el mismo hecho (cruce)</text>
+<rect class="bxo" x="40" y="218" width="280" height="30" rx="6"/><text class="t" x="180" y="238" text-anchor="middle">3 · Sección, puntaje y semáforo</text>
+<rect class="bxp" x="40" y="254" width="280" height="30" rx="6"/><text class="t" x="180" y="274" text-anchor="middle">4 · Lectura y redacción con IA (Gemini)</text>
+<rect class="bxo" x="40" y="290" width="280" height="30" rx="6"/><text class="t" x="180" y="310" text-anchor="middle">5 · Verificar contra las fuentes · foto</text>
+<rect class="bxo" x="40" y="326" width="280" height="30" rx="6"/><text class="t" x="180" y="346" text-anchor="middle">6 · Armar los datos y compilar el sitio</text>
+<text class="s" x="180" y="372" text-anchor="middle">guarda los datos en GitHub (commit)</text>
+<path class="ln" d="M180 380V402" marker-end="url(#fl)"/>
+<!-- Pages -->
+<rect class="bx" x="70" y="404" width="220" height="46" rx="8"/>
+<text class="t" x="180" y="423" text-anchor="middle">«Cloudflare Pages» lo sube</text>
+<text class="s" x="180" y="439" text-anchor="middle">(hoy compila otra vez: se puede ahorrar)</text>
+<path class="ln" d="M180 450V472" marker-end="url(#fl)"/>
+<rect class="bxa" x="70" y="474" width="220" height="40" rx="8"/>
+<text class="t" x="180" y="499" text-anchor="middle">radarbalcarce.com</text>
+<!-- Redes -->
+<path class="ln" d="M180 514V536" marker-end="url(#fl)"/>
+<rect class="bx" x="20" y="538" width="155" height="58" rx="8"/>
+<text class="t" x="97" y="558" text-anchor="middle">«Redes»</text>
+<text class="s" x="97" y="573" text-anchor="middle">posteos, repasos con voz,</text>
+<text class="s" x="97" y="586" text-anchor="middle">clima, farmacia</text>
+<path class="ln" d="M175 567H192" marker-end="url(#fl)"/>
+<rect class="bxa" x="194" y="538" width="146" height="58" rx="8"/>
+<text class="t" x="267" y="562" text-anchor="middle">Facebook</text>
+<text class="t" x="267" y="580" text-anchor="middle">e Instagram</text>
+<!-- Vigilante, panel, archivo -->
+<rect class="bxw" x="20" y="612" width="155" height="56" rx="8"/>
+<text class="t" x="97" y="632" text-anchor="middle">Vigilante (Cloudflare)</text>
+<text class="s" x="97" y="647" text-anchor="middle">:12 y :42 · mira todo</text>
+<text class="s" x="97" y="660" text-anchor="middle">y avisa por mail</text>
+<rect class="bxp" x="194" y="612" width="146" height="56" rx="8"/>
+<text class="t" x="267" y="632" text-anchor="middle">Panel del celular</text>
+<text class="s" x="267" y="647" text-anchor="middle">aprueba, corrige,</text>
+<text class="s" x="267" y="660" text-anchor="middle">pide notas a la IA</text>
+<path class="lp" d="M340 640H352V230H322" marker-end="url(#fl)"/>
+<rect class="bx" x="20" y="684" width="155" height="56" rx="8"/>
+<text class="t" x="97" y="704" text-anchor="middle">Informe por mail</text>
+<text class="s" x="97" y="719" text-anchor="middle">8:15 (ayer) y 21:15 (hoy)</text>
+<text class="s" x="97" y="732" text-anchor="middle">a radarbalcarce@gmail.com</text>
+<rect class="bx" x="194" y="684" width="146" height="56" rx="8"/>
+<text class="t" x="267" y="704" text-anchor="middle">Respaldo y archivo</text>
+<text class="s" x="267" y="719" text-anchor="middle">R2: respaldo los domingos;</text>
+<text class="s" x="267" y="732" text-anchor="middle">archivo de notas, sin activar</text>
+<path class="lp" d="M20 640H8V500H70" marker-end="url(#fl)"/>
+</svg>
+</div>
+<p class="chico mut">Lo violeta usa IA; lo amarillo es control (pruebas y vigilante); lo azul es lo que ve el público o lo que dispara todo.</p>
+
+<h2 id="reloj">1 · Quién se ejecuta y cuándo</h2>
+<p>Desde el 15/10 el que marca la hora es un <b>Worker de Cloudflare</b> (un programa chiquito que vive en Cloudflare) llamado <code>radar-balcarce-reloj</code>. No hace el trabajo: sólo le pide a GitHub que arranque cada tarea. El reloj viejo, cron-job.org, está <b>pausado</b> (no borrado) por si hiciera falta volver.</p>
+<div class="tabla"><table>
+<thead><tr><th>Cuándo (hora de Balcarce)</th><th>Qué se despierta</th><th>Qué hace</th><th>Dónde corre</th></tr></thead>
+<tbody>
+<tr><td>Cada media hora (:00 y :30)</td><td>«Actualizar la web»</td><td>Lee las fuentes, decide, escribe, verifica, arma el sitio (unos 4 minutos)</td><td>GitHub</td></tr>
+<tr><td>Al terminar cada «Actualizar»</td><td>«Cloudflare Pages» y «Redes»</td><td>Sube el sitio; mira si toca un posteo en Facebook</td><td>GitHub</td></tr>
+<tr><td>Cada media hora (:00 y :30)</td><td>«Vigilancia»</td><td>Mira la web, las corridas, las redes y las claves; guarda el estado</td><td>GitHub</td></tr>
+<tr><td>:05, :35 y :45</td><td>«Redes» (el reloj de redes)</td><td>Pregunta «¿toca alguna pieza?»; si toca, arma el video con voz y lo publica</td><td>GitHub</td></tr>
+<tr><td>:12 y :42</td><td>Vigilante de Cloudflare</td><td>Vigila desde afuera de GitHub y manda los avisos por mail</td><td>Cloudflare</td></tr>
+<tr><td>8:15 y 21:15 (2.º intento a las :30)</td><td>«Informe diario»</td><td>El mail de la mañana (cómo cerró ayer) y el de la noche (cómo viene hoy)</td><td>GitHub → mail por Cloudflare</td></tr>
+<tr><td>Cada 2 horas, de 7:20 a 23:20</td><td>«Ilustrar notas sin foto»</td><td>Hace una ilustración con IA para las notas que quedaron sin foto (regla 185)</td><td>GitHub + Cloudflare</td></tr>
+<tr><td>A los :41 de cada hora</td><td>«Auditoría IA»</td><td>Relee lo publicado buscando errores; corrige sola sólo la ortografía chica</td><td>GitHub (su propio horario)</td></tr>
+<tr><td>Cada 3 horas</td><td>«Pistas»</td><td>Vuelve a mirar las pistas abiertas del panel</td><td>GitHub (su propio horario)</td></tr>
+<tr><td>Domingos 3:17</td><td>«Respaldo»</td><td>Copia todo (historial, datos y fotos) a Cloudflare R2</td><td>GitHub → R2</td></tr>
+<tr><td>Lunes</td><td>«Auditoría», «Pruebas», «Pruebas con otra hora», «Armado con datos vacíos»</td><td>Controles semanales</td><td>GitHub</td></tr>
+<tr><td>Cuando alguien toca el celular</td><td>«Panel del celular»</td><td>Escribe con IA la nota pedida, publica lo aprobado, suma una foto a mano</td><td>GitHub</td></tr>
+</tbody></table></div>
+<p class="chico mut">Además, varios workflows tienen un horario propio de GitHub como respaldo por si el reloj de Cloudflare fallara (por ejemplo «Actualizar» a los :07 y :37, «Vigilancia» cada 3 horas). Ojo: desde el 15/10 GitHub cumple el de «Actualizar» casi siempre, así que hoy la web se arma unas 92 veces por día en vez de 48 (ver <a href="#costos">Costos</a>).</p>
+<div class="mirar"><b>Dónde mirar:</b> Cloudflare → Workers → <code>radar-balcarce-reloj</code> (si algo deja de salir, primero acá) · GitHub → Actions · el horario está en <code>infra/reloj-cloudflare/worker.mjs</code> (<code>trabajosDelMinuto</code>) · <code>docs/08-INFRAESTRUCTURA.md</code>.</div>
+
+<h2 id="fuentes">2 · Las fuentes</h2>
+<div class="cifras">
+<div class="cifra"><b>103</b><span>feeds que se leen</span></div>
+<div class="cifra"><b>71</b><span>medios distintos</span></div>
+<div class="cifra"><b>11</b><span>medios de Balcarce (15 feeds)</span></div>
+<div class="cifra"><b>265</b><span>configurados (162 apagados, con su motivo)</span></div>
+</div>
+<div class="tabla"><table>
+<thead><tr><th>Grupo</th><th>Feeds</th><th>Medios</th><th>Ejemplos</th></tr></thead>
+<tbody>
+<tr><td>De Balcarce</td><td>15</td><td>11</td><td>Municipalidad, Concejo Deliberante, Facultad de Agrarias, Infórmese Primero, News Balcarce, Puntonueve, Radio Gabal, La Vanguardia, El Diario Balcarce, Acción 5, Ahora Balcarce</td></tr>
+<tr><td>De la región</td><td>11</td><td>11</td><td>Tandil y Mar del Plata, sobre todo (los 10 mejores)</td></tr>
+<tr><td>De la provincia</td><td>11</td><td>11</td><td>Medios provinciales (la fuente del Gobierno bonaerense está apagada)</td></tr>
+<tr><td>Nacionales</td><td>66</td><td>38</td><td>Los 50 mejores del país, cada uno con su feed por sección</td></tr>
+</tbody></table></div>
+<p><b>Cómo se leen.</b> Casi todas por RSS o Atom (la lista de notas que publica cada medio). Las que no tienen, por su índice de noticias o leyendo la página misma (por ejemplo La Vanguardia y El Diario Balcarce). Cuando una nota pasa el primer filtro, el sistema baja <b>el texto completo</b> de la nota original para que la IA escriba con todo el material.</p>
+<p><b>Qué no entra.</b> De los medios de afuera no se traen las secciones de otro país, de policiales ni de consejos. Lo raspado de más de 72 horas no entra. Un medio cuenta una sola vez aunque llegue por varios feeds, y los medios del mismo dueño cuentan como uno.</p>
+<p><b>Lo que está en revisión (sin aplicar).</b> 35 fuentes nuevas de Balcarce investigadas (San Agustín, Los Pinos, Napaleofú, clubes, bomberos…), 9 candidatas de ciencia, IA y salud, y una «lista corta» de 47 para decidir en <code>docs/etapa-1-fuentes/REVISION-FUENTES.html</code>. Desde GitHub fallan algunos medios que bloquean a sus servidores; desde Cloudflare andan 97 de 103.</p>
+<div class="mirar"><b>Dónde mirar:</b> <code>FUENTES.md</code> (la lista completa, generada por el sistema: no se edita a mano) · para sumar o apagar una: <code>ingesta/fuentes.mjs</code> y <code>ingesta/fuentes-cruce.mjs</code>, después <code>node ingesta/listar-fuentes.mjs</code> · <code>docs/02-INGESTA.md</code> · <code>docs/etapa-1-fuentes/LISTA-ELEGIDA.md</code>.</div>
+
+<h2 id="proceso">3 · Cómo se junta, se decide y se escribe una nota</h2>
+<ol>
+<li><b>Leer.</b> Se bajan los 103 feeds con sus fechas. Un filtro de entrada saca lo de otro país, policiales y consejos de medios de afuera.</li>
+<li><b>Juntar el mismo hecho (el cruce).</b> Se comparan las palabras de los títulos y textos y se agrupan las notas que cuentan lo mismo, con memoria de 36 horas. Desde el 16/10 el cruce es «coherente»: ya no encadena noticias distintas (la historia más grande pasó de 228 notas a 51; regla 184). El resultado es una «historia» con todos los medios que la contaron.</li>
+<li><b>¿Es de acá?</b> Es de Balcarce lo que toca la zona; si no, lo de un medio de Balcarce o lo que dice Balcarce en el título. <b>Lo de un organismo o medio de acá entra siempre</b>, sin pedir cantidad de medios (regla 180).</li>
+<li><b>Lo de afuera se mide en medios.</b> Fútbol y Deportes necesitan 4 medios; Economía, Tecnología, Agro y Automovilismo, 2; el resto, 3; con una figura argentina, 2. Con uno solo, nunca. Del extranjero, sólo si hay un argentino.</li>
+<li><b>Sección, puntaje y semáforo.</b> Cada historia va a una de las <b>11 secciones</b> (Balcarce, Política, Policiales, Fútbol, Deportes, Automovilismo, Agro, Economía, Cultura y agenda, Tecnología, Argentina) y recibe un puntaje de importancia (lo local pesa más). El <b>semáforo</b>: verde sale sola; amarillo espera a una persona; rojo (menores, víctimas) no sale sola nunca; las listas de sepelios, jamás.</li>
+<li><b>Lectura con IA.</b> Una IA lee la historia y arma una ficha: puede sacarla, cambiarle la sección o juntarla con otra repetida. <b>Nunca destraba</b> algo que el semáforo frenó.</li>
+<li><b>Redacción con IA.</b> Gemini (gratis) escribe título, bajada y cuerpo con el texto completo de hasta 4 fuentes (la más completa primero; las copias de un mismo comunicado cuentan como una sola voz) y con las reglas de <code>CRITERIO-EDITORIAL.md</code> § 12, que lee tal cual. Hasta 40 notas por vuelta.</li>
+<li><b>Verificación.</b> Un programa (no una IA) compara cada número, nombre y dato con las fuentes: lo que no está, se descarta. Vuelve a pasar el semáforo y le pone un nivel (alta, media, baja). <b>Verificación baja no sale sola.</b></li>
+<li><b>Sin cuerpo no se publica.</b> Si el cuerpo no llega a 70 palabras que pasen el verificador, la nota espera y se reintenta hasta tres veces (más si la cuentan muchos medios).</li>
+<li><b>Lo que decidió una persona</b> en el panel del celular manda: lo aprobado sale, lo corregido se respeta, lo retirado se va.</li>
+<li><b>Foto</b> (ver <a href="#fotos">Fotos</a>), <b>fecha</b> (una sola, la del hecho, que nunca rejuvenece) y <b>dirección fija</b> (si la misma noticia vuelve con otra dirección, se une a la que ya estaba). Lo que nunca salió no se estrena si el hecho tiene más de 12 horas.</li>
+<li><b>Se arma el sitio.</b> Portada con lo de las últimas 36 horas; las secciones guardan todo (10 por página); cada nota tiene página mientras esté entre las últimas 3.700.</li>
+</ol>
+<div class="caja amarilla"><b>Decidido o propuesto el 16/10, todavía sin conectar:</b> el «flujo nuevo» (todo lo de Balcarce sale, lo nacional con 3 medios independientes, tope de 150 notas por día), las 17 secciones (corre «en sombra»: calcula pero no cambia nada) y el puntaje nuevo. Se conectan cuando ustedes revisen las páginas de <code>docs/flujo/</code> y <code>docs/secciones/</code>, y después del archivo en R2.</div>
+<div class="mirar"><b>Dónde mirar:</b> <code>npm run auditar</code> (qué decidió el filtro hoy) · <code>docs/03-SELECCION.md</code> y <code>docs/04-REDACCION.md</code> · los números, en <code>ingesta/criterio.mjs</code> y la tabla de <code>CRITERIO-EDITORIAL.md</code> · la guía paso a paso con las instrucciones de la IA: <code>docs/flujo/GUIA-DEL-FLUJO.html</code>.</div>
+
+<h2 id="nota">4 · Cómo se ve una nota por dentro</h2>
+<p>El lector ve <b>la nota, no el análisis</b>: sección, título, bajada, foto con su crédito, cuerpo, la firma y un desplegable cerrado con las fuentes.</p>
+<div class="nota-demo" aria-label="Ejemplo de nota">
+<div class="sec">Fútbol</div>
+<h4>Título: unos 70 caracteres (nunca más de 90), sin inventar</h4>
+<p class="baj">Bajada: dos o tres frases, unas 50 palabras, con lo que el título no dice.</p>
+<div class="foto">Foto: Nombre del medio u organismo (siempre sin su marca de agua) · o «Ilustración generada con IA»</div>
+<p class="meta">16 de octubre de 2026 · <b>Redacción con IA, verificada contra las fuentes</b></p>
+<p>Cuerpo: de 70 a 180 palabras en hasta 3 párrafos (nunca más de lo que dan las fuentes), atribuyendo cada dato («según informó…»). Lo que no se pudo confirmar se dice así.</p>
+<div class="fu">▸ Fuentes (4) <span class="mut">— cerrado: adentro, cada medio con su enlace, su fecha y qué aportó</span></div>
+</div>
+<div class="tabla"><table>
+<thead><tr><th>Parte</th><th>De dónde sale</th></tr></thead>
+<tbody>
+<tr><td>Título y bajada</td><td>Los escribe la IA; si sale mal, se arreglan sin inventar (<code>arreglarEscritura</code>, <code>tituloAutomatico</code>). Lo que escribió una persona no se toca.</td></tr>
+<tr><td>Cuerpo</td><td>La IA, verificado dato por dato; o una persona (panel o <code>web/data/correcciones.json</code>).</td></tr>
+<tr><td>Fuentes (N)</td><td>Todos los medios que contaron el hecho, con su enlace.</td></tr>
+<tr><td>Firma</td><td>Cada nota dice quién la escribió: «Redacción con IA, verificada contra las fuentes», «… revisada por la redacción», «Revisada por la redacción» o «Texto de [medio]». Las propias (dólar, podcasts, efemérides) dicen «Nota de Radar Balcarce…».</td></tr>
+<tr><td>Foto</td><td>Del banco propio, sin marca de otro medio, con el crédito en el epígrafe; si no hay, una ilustración con IA (sin personas) o la placa de la sección.</td></tr>
+<tr><td>Fecha y dirección</td><td>Una sola fecha (envejece, nunca rejuvenece) y una sola dirección, fija desde que sale: <code>/nota/titulo-en-guiones-ID</code>.</td></tr>
+<tr><td>Para buscadores</td><td>Datos estructurados (autor «Radar Balcarce», con la IA declarada aparte), sitemap, feed RSS por sección y <code>llms.txt</code> para asistentes de IA.</td></tr>
+</tbody></table></div>
+<div class="mirar"><b>Dónde mirar:</b> cualquier nota en radarbalcarce.com · la firma: <code>web/components/metadatos.js</code> (<code>quienEscribio</code>, <code>firmaCorta</code>) · el cuerpo mínimo: <code>web/lib/cuerpo.js</code> · <code>docs/06-WEB.md</code>.</div>
+
+<h2 id="fotos">5 · Las fotos y las ilustraciones</h2>
+<p>Se prueban, en orden, hasta encontrar una que sirva:</p>
+<ol>
+<li><b>La foto de la fuente</b>, sólo si no tiene marca de agua ni el nombre de otro medio encima (una IA la mira). Lo que estaba en la escena, como el micrófono de una radio, sí puede verse. Se guarda en el <b>banco propio</b> (<code>web/data/banco-fotos.json</code>) achicada, con el crédito.</li>
+<li><b>Wikimedia</b> u otras fotos libres, con su licencia.</li>
+<li><b>Una foto puesta a mano</b> desde la pestaña Fotos del panel.</li>
+<li><b>Una ilustración hecha con IA</b>, sin personas, con el epígrafe «Ilustración generada con IA»: la de mejor calidad la pide Claude a Gemini web desde la PC (10:00 y 18:00, gratis); el relleno automático lo hace Cloudflare cada 2 horas (regla 185), sin pisar las de Gemini web. El clima y las efemérides tienen ilustraciones fijas.</li>
+<li><b>La placa de la sección</b>, cuando no hay nada que sirva.</li>
+</ol>
+<p class="caja roja"><b>Lo que no se negocia:</b> nunca la foto real de un menor o de una víctima; en Policiales, sólo de fuente oficial; nunca una marca de agua ni el nombre de otro medio pegado sobre una imagen.</p>
+<p>Al 16/10, de las 1.177 notas del archivo, unas 245 no tienen foto (sobre todo las viejas) y 15 ya llevan ilustración con IA.</p>
+<div class="mirar"><b>Dónde mirar:</b> pestaña <b>Fotos</b> del panel · <code>npm run auditar-fotos</code> (no gasta cupo) · <code>docs/05-FOTOS.md</code> · <code>docs/flujos/IMAGENES-CON-GEMINI-WEB.md</code>.</div>
+
+<h2 id="redes">6 · Las redes</h2>
+<p>Hay un interruptor: la variable de GitHub <code>REDES_ACTIVAS</code> («Si»). Apagado, todo simula y no se publica nada.</p>
+<div class="tabla"><table>
+<thead><tr><th>Hora</th><th>Qué sale</th><th>Formato</th></tr></thead>
+<tbody>
+<tr><td>07:00</td><td>El clima de la mañana</td><td>historia con voz</td></tr>
+<tr><td>08:00 a 22:00</td><td>Posteos de notas: hasta 5 por día, 90 minutos entre uno y otro, notas con foto, cuerpo y buena relevancia</td><td>Facebook con foto (desde el 5/10; si la foto falla 3 veces, con enlace) + la misma nota como foto en Instagram (el «espejo»)</td></tr>
+<tr><td>09:00</td><td>Un día como hoy (si el día tiene efeméride aprobada)</td><td>reel + historia con voz</td></tr>
+<tr><td>10:00</td><td>El repaso de la mañana</td><td>reel + historia con voz</td></tr>
+<tr><td>12:00 (lun. a vie.)</td><td>Participá / Qué hacer el fin de semana (jueves)</td><td>reel + historia</td></tr>
+<tr><td>15:00</td><td>El repaso de la tarde</td><td>reel + historia con voz</td></tr>
+<tr><td>17:00 (sábados)</td><td>Teléfonos útiles</td><td>reel + historia</td></tr>
+<tr><td>19:00</td><td>Farmacia de turno (dura hasta las 8:30 del día siguiente)</td><td>historia con voz</td></tr>
+<tr><td>20:00</td><td>El clima de la noche</td><td>historia con voz</td></tr>
+<tr><td>21:00</td><td>El repaso del día</td><td>reel + historia con voz</td></tr>
+</tbody></table></div>
+<ul>
+<li><b>Todo lo que va a Instagram es video con voz</b>, salvo el espejo de los posteos de Facebook.</li>
+<li><b>Textos, desde el 16/10:</b> en Instagram, <b>sin enlaces</b> (se manda a la bio); en los reels de los repasos, sólo los titulares, y en Facebook <b>un solo enlace</b>, a la nota del propio repaso.</li>
+<li><b>Dos voces propias</b> de Gemini (una locutora y un locutor) que vencen el 29/09/2027. <b>Cupo: 10 audios por día</b>; si se acaba, la pieza no sale (nunca con otra voz).</li>
+<li><b>Política y Policiales</b> esperan a una persona en todas las piezas de redes. Una nota que una persona publica desde el panel va a las redes si se marca «También a Facebook e Instagram»; las notas armadas desde una pista o un mail de prensa y aprobadas para redes entran al próximo repaso (vale 12 horas). La decisión del 16/10 pide que toda nota publicada por una persona entre sola: en el código, todavía depende de esa marca.</li>
+<li>Se publican unas 33 a 40 piezas por día; el 15/10 se decidió no recortar todavía.</li>
+<li>Los videos, audios, subtítulos y placas se guardan para siempre en R2 (depósito <code>radar-piezas</code>, variable <code>R2_PIEZAS</code>, ya cargada).</li>
+</ul>
+<div class="mirar"><b>Dónde mirar:</b> pestaña <b>Redes</b> del panel (qué salió y qué no, con botón para reintentar) · <code>docs/07-REDES.md</code> y <code>CRITERIO-REDES.md</code> · horarios en <code>redes/piezas.mjs</code> y <code>panel/horarios.mjs</code>.</div>
+
+<h2 id="avisos">7 · Los informes por mail y los avisos</h2>
+<ul>
+<li><b>Informe de la mañana (8:15):</b> cómo cerró ayer. <b>Informe de la noche (21:15):</b> cómo viene hoy. Qué se publicó, qué espera a una persona, qué salió en redes, visitas y salud del sistema, con «lo que requiere atención» arriba. Llegan a <code>radarbalcarce@gmail.com</code>. El 16/10 se agregó un segundo intento a las :30 porque el disparo de los :15 no andaba; si llegan los dos, no se manda dos veces.</li>
+<li><b>Avisos cuando algo falla:</b> el <b>vigilante de Cloudflare</b> (<code>radar-balcarce-vigilante</code>, a los :12 y :42) y la «Vigilancia» de GitHub miran la web, las corridas, las redes, las claves de IA, las voces y los vencimientos. Los avisos van <b>primero por mail</b> (regla 173); el WhatsApp (CallMeBot, sin cupo desde principios de octubre) quedó de respaldo.</li>
+<li>Si el informe de la noche no llega, a las 22 el Worker manda un resumen de respaldo.</li>
+</ul>
+<div class="mirar"><b>Dónde mirar:</b> el mail de <code>radarbalcarce@gmail.com</code> · <code>redes/informe-diario.mjs</code> · <code>redes/vigilar.mjs</code> · <code>infra/vigilante-cloudflare/</code> · <code>docs/11-OPERACION.md</code>.</div>
+
+<h2 id="panel">8 · El panel del celular</h2>
+<p>Es una página (<code>radarbalcarce.com/panel/</code>) que se instala como app. No tiene servidor: escribe en GitHub con la llave de cada uno, y lo sensible viaja <b>cifrado</b> porque el repositorio es público.</p>
+<div class="tabla"><table>
+<thead><tr><th>Pestaña</th><th>Para qué</th></tr></thead>
+<tbody>
+<tr><td>Hoy</td><td>Lo que hay que mirar ahora</td></tr>
+<tr><td>Esperan</td><td>Lo que no sale solo (con por qué espera): publicar, mandar a redes, descartar</td></tr>
+<tr><td>Sin cuerpo</td><td>Lo que sale solo pero todavía no tiene cuerpo; se puede escribir uno</td></tr>
+<tr><td>Publicadas</td><td>Corregir, cambiar de sección, reescribir con IA o retirar</td></tr>
+<tr><td>Borradores</td><td>Lo que la IA escribió a pedido, para revisar</td></tr>
+<tr><td>Pistas</td><td>Pegar un dato o un enlace; la IA busca si ya lo cubrieron y se sigue en qué quedó</td></tr>
+<tr><td>Fotos</td><td>Notas sin foto: por qué, dónde buscarla y sumarla a mano</td></tr>
+<tr><td>Revisión</td><td>Lo que la auditoría con IA marcó en lo ya publicado</td></tr>
+<tr><td>Fechas</td><td>Aprobar o sacar las efemérides del mes armado</td></tr>
+<tr><td>Redes</td><td>Qué salió hoy y qué no, red por red</td></tr>
+<tr><td>Números</td><td>Visitas, de dónde llegan y cómo crecen las redes</td></tr>
+<tr><td>Contactos</td><td>Instituciones y contactos propios, a quién se le escribió (cifrado)</td></tr>
+</tbody></table></div>
+<p>Pedirle algo a la IA dispara el workflow «Panel del celular». <b>Dato para mirar:</b> ese workflow no corre desde el 8/10 (antes, unas 5 veces por día), así que nadie le pidió una nota a la IA desde entonces; conviene probarlo en cada celular: el panel todavía dice que la llave se crea «con la cuenta de Radar (balcardev@gmail.com)», y una llave creada antes de la mudanza del 15/10 puede no tener acceso al repositorio nuevo, <code>radarbalcarce/radar-balcarce</code>. Si dice «La llave no anda», crear otra. El <b>panel de la PC</b> (puerto 4321) <b>no se usa desde el 8/10</b>. Hay un plan y un prototipo de panel nuevo en <code>docs/panel/</code>, para decidir.</p>
+<div class="mirar"><b>Dónde mirar:</b> <code>docs/09-PANEL.md</code> · <code>web/public/panel/</code> · si dice «La llave no anda», crear otra (<code>docs/11-OPERACION.md</code>).</div>
+
+<h2 id="archivo">9 · El archivo permanente en R2 y los respaldos</h2>
+<p><b>El problema:</b> Cloudflare Pages permite 20.000 archivos por sitio. Por eso una nota tiene página sólo mientras esté entre las <b>últimas 3.700</b>. Al ritmo de hoy el tope se alcanza <b>hacia el 10/12/2026</b>; desde ahí los enlaces viejos (los de Facebook, Google, WhatsApp) darían error.</p>
+<p><b>La solución, decidida el 16/10 («se hace sí o sí»):</b> guardar cada nota en <b>Cloudflare R2</b> (un depósito de archivos) y poner un Worker delante que la sirva cuando el sitio ya no la tenga. <b>Está construido y probado, pero NO activado</b>: falta que una persona le agregue al token de Cloudflare el permiso «Workers Routes: Edit» y decidir qué pasa con las fotos de las notas que salen del sitio. Desde el 16/10 a la tarde (variable <code>R2_ARCHIVO</code>) cada despliegue ya guarda en el depósito <code>radar-archivo</code> las notas que están por salir del sitio, y la carga inicial ya corrió; lo que falta es <b>la ruta</b> que hace que <code>radarbalcarce.com/nota/…</code> pase por el Worker. Mientras no tenga ruta, el público no ve ningún cambio.</p>
+<p><b>Respaldos:</b></p>
+<ul>
+<li>Cada domingo, «Respaldo» copia todo el historial, los datos y las fotos a <b>R2</b> (en partes de 200 MB, con su huella para comprobarlas) y deja además una copia de 90 días en GitHub.</li>
+<li>«Probar la restauración del respaldo» comprueba que se puede volver a armar (salió bien el 15/10).</li>
+<li><b>Falta una segunda copia fuera de GitHub y de Cloudflare</b> (GitLab no está configurado). Si se pierden esas dos cuentas, hoy se pierde todo.</li>
+</ul>
+<div class="mirar"><b>Dónde mirar:</b> <code>docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md</code> · <code>infra/archivo-cloudflare/</code> · <code>.github/workflows/respaldo.yml</code> · <code>docs/propuestas/PASOS-PARA-USTEDES.md</code>.</div>
+
+<h2 id="costos">10 · Lo que cuesta por mes</h2>
+<div class="tabla"><table>
+<thead><tr><th>Servicio</th><th>Para qué</th><th>Cuánto hoy</th><th>Cuándo empezaría a cobrar</th></tr></thead>
+<tbody>
+<tr><td>Cloudflare Workers Paid</td><td>Reloj, vigilante, mails, imágenes, archivo, R2</td><td><b>US$ 5 por mes</b> (contratado)</td><td>—</td></tr>
+<tr><td>Cloudflare R2</td><td>Respaldos semanales, archivo de notas, piezas de redes</td><td>US$ 0 (dentro de los 10 GB gratis)</td><td>El respaldo suma unos 250 MB por semana y no se borra: hacia mediados de 2027 pasaría los 10 GB; desde ahí, unos centavos de dólar por GB por mes</td></tr>
+<tr><td>Cloudflare Pages, DNS, Web Analytics, Email Routing</td><td>El sitio, el dominio, las visitas, los mails</td><td>US$ 0</td><td>Pages permite 20.000 archivos: por eso el tope de 3.700 notas</td></tr>
+<tr><td>Workers AI</td><td>Ilustraciones automáticas y del clima</td><td>US$ 0 (dentro de las 10.000 «neuronas» gratis por día)</td><td>Si se generan muchas más imágenes por día</td></tr>
+<tr><td>GitHub (repositorio y Actions)</td><td>El robot</td><td>US$ 0, porque el repositorio es <b>público</b></td><td>Si se pasa a privado (ver abajo)</td></tr>
+<tr><td>Gemini (3 claves) y Groq</td><td>Redactar, leer, fotos, voces</td><td>US$ 0 (plan gratis desde el 29/09)</td><td>Si se carga una clave con crédito (por ejemplo, para más de 10 audios por día): antes, poner un tope de gasto</td></tr>
+<tr><td>Tavily</td><td>Búsquedas de las Pistas</td><td>US$ 0 (cupo gratis)</td><td>—</td></tr>
+<tr><td>Meta (Facebook e Instagram), Open-Meteo, DolarApi, ESPN, Jolpica, Wikimedia</td><td>Redes y datos del sitio</td><td>US$ 0</td><td>—</td></tr>
+<tr><td>CallMeBot (WhatsApp)</td><td>Respaldo de los avisos</td><td>US$ 0 (sin cupo)</td><td>—</td></tr>
+<tr><td>Dominio <code>radarbalcarce.com</code> (DonWeb)</td><td>La dirección</td><td>Un pago por año (el precio no está anotado en el repositorio)</td><td>Vence el 21/09/2027</td></tr>
+</tbody></table></div>
+<div class="caja azul"><b>Total por mes hoy: US$ 5 más la parte proporcional del dominio.</b> El tope que se pusieron es de unos US$ 25 por mes.</div>
+<h3>Los minutos de GitHub (medidos con <code>gh</code> el 16/10)</h3>
+<div class="tabla"><table>
+<thead><tr><th>Período</th><th>Corridas por día</th><th>Minutos por mes</th><th>Si el repositorio fuera privado</th></tr></thead>
+<tbody>
+<tr><td>1 al 14/10</td><td>301</td><td>~13.700 reales (~19.000 como cobra GitHub, redondeando cada corrida al minuto)</td><td>~US$ 136</td></tr>
+<tr><td>9 al 15/10</td><td>302</td><td>~14.600 reales (~19.800 redondeados)</td><td>~US$ 142</td></tr>
+<tr><td><b>Desde el 16/10</b></td><td>~400</td><td><b>~23.500 reales (~32.000 redondeados)</b></td><td><b>~US$ 240</b></td></tr>
+</tbody></table></div>
+<p class="chico mut">Cuenta: (minutos redondeados − 2.000 incluidos en GitHub Free) × US$ 0,008. No se pudo ver si la cuenta <code>radarbalcarce</code> es Free o Pro (Pro incluye 3.000).</p>
+<div class="caja amarilla"><b>Hallazgo del 16/10:</b> «Actualizar la web» tiene, además del reloj de Cloudflare, un horario propio de respaldo (:07 y :37) que desde la mudanza GitHub empezó a cumplir de verdad: hoy corre unas <b>92 veces por día en vez de 48</b>, y cada vuelta de más arrastra otra compilación y otra corrida de «Redes». No rompe nada (hoy es gratis), pero duplica el trabajo. Sacando ese horario de respaldo (o haciendo que salga solo si ya corrió hace menos de 20 minutos) se vuelve a ~15.000 minutos; uniendo además las dos compilaciones, a ~13.000. Es lo primero que conviene arreglar si algún día se pasa a privado.</div>
+<div class="mirar"><b>Dónde mirar:</b> Cloudflare → Billing · GitHub → Settings → Billing (de la cuenta <code>radarbalcarce</code>) · <code>docs/08-INFRAESTRUCTURA.md</code> («Lo que cuesta») · <code>docs/etapa-10-operacion/ANALISIS.md</code> (la medición completa del 15/10).</div>
+
+<h2 id="fallas">11 · Qué pasa si algo falla</h2>
+<div class="tabla"><table>
+<thead><tr><th>Qué falla</th><th>Cómo se entera</th><th>Qué hacer</th></tr></thead>
+<tbody>
+<tr><td>El reloj de Cloudflare deja de despertar</td><td>Mail «no hay corridas nuevas»; la web se actualiza con retraso (queda el horario de respaldo de GitHub)</td><td>Cloudflare → Workers → <code>radar-balcarce-reloj</code>; volver a subirlo con «Reloj de Cloudflare»; de urgencia, reactivar cron-job.org</td></tr>
+<tr><td>Falla una prueba del núcleo legal</td><td>Mail inmediato; esa vuelta no publica</td><td>Leer qué prueba falló (suele ser un JSON escrito a mano sin <code>motivo</code>, <code>cuando</code> o <code>por</code>)</td></tr>
+<tr><td>La web no compila o Cloudflare no sube</td><td>Mail «falla» y, a los 100 minutos, «web vieja»</td><td>Leer el paso rojo en GitHub → Actions</td></tr>
+<tr><td>La web no responde</td><td>Mail «web caída»</td><td>Mirar Cloudflare</td></tr>
+<tr><td>Google o Groq rechazan una clave</td><td>Mail «clave-…»</td><td>Una persona crea otra y la pega en GitHub → Secrets (nunca en un chat)</td></tr>
+<tr><td>Se acaba el cupo de redacción o de voz</td><td>Crece «Esperando cuerpo»; falta una pieza</td><td>Esperar al día siguiente o escribir el cuerpo desde el panel</td></tr>
+<tr><td>Vence el dominio, una voz o una llave</td><td>Aviso 30 días antes (dominio y voces)</td><td>Dominio: DonWeb antes del 21/09/2027 · voces: «Crear voces» antes del 29/09/2027</td></tr>
+<tr><td>Se cae todo Cloudflare</td><td>Nadie vigila al vigilante (pendiente: un chequeo externo gratis)</td><td>—</td></tr>
+<tr><td>Hay que frenar todo ya</td><td>—</td><td>Redes: <code>REDES_ACTIVAS</code> en «No». Web: desactivar «Actualizar la web» en GitHub → Actions (no hay botón único todavía)</td></tr>
+</tbody></table></div>
+<div class="mirar"><b>Dónde mirar:</b> <code>docs/11-OPERACION.md</code> («qué mirar cuando algo deja de salir») · <code>docs/08-INFRAESTRUCTURA.md</code> («Qué puede fallar»).</div>
+
+<h2 id="sobra">12 · Lo que existe y no se usa (o no vale la pena)</h2>
+<p>Se revisó todo el repositorio el 16/10: los 36 workflows con sus corridas reales (<code>gh run list</code>), quién importa cada uno de los 249 programas, las carpetas, los secretos y los datos. <b>No se borró nada.</b> Las marcas: <span class="tag t-ko">borrar</span> (no sirve y sacarlo no rompe nada de producción) · <span class="tag t-az">archivar</span> (pasarlo a <code>docs/historico/</code> o dejarlo sólo a mano) · <span class="tag t-pu">decidir ustedes</span> · <span class="tag t-ok">mantener</span>. «Riesgo» dice qué se rompería al sacarlo.</p>
+
+<h3>Lo más importante</h3>
+<ol>
+<li><b>«Actualizar la web» corre el doble de veces de lo necesario</b> (92 por día en vez de 48) por su horario de respaldo. No es algo que sobre para borrar, pero es el desperdicio más grande: ver <a href="#costos">Costos</a>. Lo mismo, en chico, el horario de respaldo de «Vigilancia».</li>
+<li><b>El sitio se compila dos veces en cada vuelta</b> («Actualizar» y «Cloudflare Pages», unos 2 minutos cada una). Unirlas ahorra unos 4.000 minutos por mes.</li>
+<li><b>El panel de la PC</b> entero (11 programas, 81 pruebas, 3 archivos de datos vacíos desde el 23-29/09).</li>
+<li><b>Workflows de prueba de un solo día</b> que ya cumplieron (sondeos, pruebas de imágenes, WhatsApp).</li>
+<li><b>Módulos «en sombra» o apagados</b> que esperan una decisión de ustedes: no se borran hasta que decidan.</li>
+</ol>
+
+<h3>Workflows</h3>
+<div class="tabla"><table>
+<thead><tr><th>Workflow</th><th>Evidencia</th><th>Qué hacer</th><th>Riesgo</th></tr></thead>
+<tbody>
+<tr><td>Horario de respaldo de «Actualizar la web» (:07 y :37)</td><td>Desde el 15/10 GitHub lo cumple: 32 vueltas extra el 16/10</td><td><span class="tag t-pu">decidir</span> sacarlo o que salga solo si ya corrió hace menos de 20 min</td><td>Bajo: si el reloj de Cloudflare cae, la web queda sin respaldo automático (el vigilante avisa)</td></tr>
+<tr><td>«Cloudflare Pages» (la segunda compilación)</td><td>Compila otra vez lo que «Actualizar» ya compiló (129 s + 155 s)</td><td><span class="tag t-pu">decidir</span> unir la subida dentro de «Actualizar»</td><td>Medio: es lo que publica la web; hay que probarlo en una corrida a mano</td></tr>
+<tr><td><code>prueba-whatsapp.yml</code></td><td>4 corridas, la última el 25/09; WhatsApp sin cupo; lo reemplaza «Probar el aviso por mail»</td><td><span class="tag t-ko">borrar</span></td><td>Ninguno</td></tr>
+<tr><td><code>probar-flux.yml</code> + <code>redes/probar-flux.mjs</code></td><td>1 corrida (16/10); se eligió otro modelo (SDXL)</td><td><span class="tag t-ko">borrar</span></td><td>Ninguno</td></tr>
+<tr><td><code>sondeo-fuentes-cloudflare.yml</code> + <code>infra/sondeo-fuentes/</code> + secreto <code>SONDEO_TOKEN</code></td><td>2 corridas (15/10); su propio LEEME dice «descartable»; ya dio su resultado (97 de 103 feeds andan)</td><td><span class="tag t-ko">borrar</span> (y el Worker en Cloudflare)</td><td>Se cae <code>sondeo-fuentes.test.mjs</code>: va junto</td></tr>
+<tr><td>Fantasma «Sondeo de fuentes (temporal)»</td><td>El archivo ya no existe; quedan 3 corridas del 8/10 en la lista de Actions</td><td><span class="tag t-ko">borrar</span> esas corridas</td><td>Ninguno</td></tr>
+<tr><td><code>fotos-a-r2.yml</code></td><td><b>Nunca corrió</b>; faltan <code>R2_FOTOS</code> y <code>FOTOS_BASE</code></td><td><span class="tag t-pu">decidir</span>: correrlo (gana lugar antes del tope de 3.700) o borrarlo</td><td>Ninguno si se borra</td></tr>
+<tr><td><code>pruebas-otra-hora.yml</code></td><td>3 corridas, falló 2 (la última, el 12/10) y nadie lo mira</td><td><span class="tag t-pu">decidir</span>: arreglarlo o borrarlo</td><td>Bajo</td></tr>
+<tr><td><code>archivo-staging.yml</code></td><td>2 corridas (16/10); el ensayo ya anduvo</td><td><span class="tag t-az">archivar</span> cuando producción esté firme</td><td>Bajo</td></tr>
+<tr><td><code>generar-fondos-clima.yml</code>, <code>probar-imagen-nota.yml</code>, <code>reparar-estadisticas.yml</code></td><td>1 a 3 corridas, todas del 16/10: tareas de un día</td><td><span class="tag t-az">archivar</span> (o borrar cuando se cierre lo de imágenes)</td><td>Ninguno (<code>probar-imagen-nota</code> lo nombra una prueba)</td></tr>
+<tr><td><code>auditar-redes.yml</code>, <code>auditar-voz.yml</code></td><td>Última corrida 26/09; «Auditoría» de los lunes ya hace lo de redes</td><td><span class="tag t-az">archivar</span></td><td>Bajo</td></tr>
+<tr><td><code>piezas.yml</code>, <code>ver-facebook.yml</code></td><td>Última corrida 1/10 y 5/10: herramientas de rescate</td><td><span class="tag t-pu">decidir</span> (sirven en una emergencia)</td><td>Bajo; algunas pruebas los nombran</td></tr>
+<tr><td>Horario de <code>fijar-piezas.yml</code> (<code>30 8 10 10 *</code>)</td><td>Fijado al 10/10: se volvería a disparar cada 10 de octubre</td><td><span class="tag t-ko">borrar</span> sólo esa línea (el workflow queda a mano)</td><td>Hay que cambiar la prueba <code>piezas-fijas</code> que la controla</td></tr>
+<tr><td><code>probar-gemini.yml</code>, <code>probar-mail.yml</code>, <code>probar-restauracion.yml</code>, <code>crear-voces.yml</code>, <code>reintentar.yml</code></td><td>Poco uso, pero sirven (diagnóstico, voces que vencen en 2027, botón del celular, simulacro de respaldo)</td><td><span class="tag t-ok">mantener</span></td><td>—</td></tr>
+<tr><td>Todos los demás (actualizar, cloudflare-deploy, redes, vigilancia, vigilante y reloj de Cloudflare, informe, ilustrar, auditoría IA, auditoría, pistas, panel, pruebas, armado vacío, respaldo, archivo de producción, imágenes)</td><td>Corren y sirven. <b>Ojo:</b> «Panel del celular» no corre desde el 8/10</td><td><span class="tag t-ok">mantener</span></td><td>—</td></tr>
+</tbody></table></div>
+<p class="chico mut">Pares que parecían duplicados y no lo son: «Auditoría» (semanal, mira el filtro y las redes) y «Auditoría IA» (cada hora, relee lo publicado); «Vigilancia» de GitHub y el vigilante de Cloudflare (se complementan; sólo sobra el horario de respaldo de la primera); «Redes» (el motor) y «Piezas»/«Fijar piezas» (herramientas a mano).</p>
+
+<h3>Programas y carpetas</h3>
+<div class="tabla"><table>
+<thead><tr><th>Qué</th><th>Evidencia</th><th>Qué hacer</th><th>Riesgo</th></tr></thead>
+<tbody>
+<tr><td><b>Panel de la PC</b>: <code>panel/servidor.mjs</code>, <code>acceso</code>, <code>agenda</code>, <code>avisos</code>, <code>buzon</code>, <code>notas</code>, <code>respaldo</code>, <code>seguridad</code>, <code>sincronizar</code>, <code>clave</code>, <code>panel.html</code>, <code>ARRANCAR.bat</code>, <code>npm run panel</code></td><td>En desuso desde el 8/10 (nunca se usó); sin cambios desde el 4/10; sus datos (<code>avisos.json</code>, <code>eventos-panel.json</code>, <code>decisiones.json</code>) vacíos desde el 23-29/09</td><td><span class="tag t-pu">decidir</span> retirarlo de una vez (recomendado)</td><td>Bajo: se borran 6 archivos de pruebas y se recortan otros; la web lee esos 3 archivos vacíos (dejarlos fijos); los avisos publicitarios se quedarían sin dónde cargarse (hoy no hay ninguno). <code>panel/horarios.mjs</code>, <code>celular*.mjs</code>, <code>cifrado.mjs</code> y pistas <b>se quedan</b>: son de producción</td></tr>
+<tr><td><code>comercial/</code></td><td>Último cambio 27/09; nada lo usa; 44 pruebas</td><td><span class="tag t-pu">decidir</span>: archivar si la guía o el mapa comercial no van a corto plazo (<code>COMERCIAL.md</code> queda como plan)</td><td>Bajo</td></tr>
+<tr><td><code>pruebas-modelos/</code></td><td>11 MB, 121 archivos (15/10); nada de producción lo usa</td><td><span class="tag t-ok">mantener</span> los programas (sirven para «elegir los modelos») y <span class="tag t-ko">borrar</span> los resultados pesados (unos 6 MB de <code>.json</code>; el repositorio es público)</td><td>Ninguno</td></tr>
+<tr><td><code>criterio-unico/</code></td><td>Borrador del criterio y prompts (11/10); nadie lo usa</td><td><span class="tag t-az">archivar</span> en <code>docs/historico/</code> si en la etapa de redacción no se adopta</td><td>Ninguno</td></tr>
+<tr><td><code>motor/</code></td><td>Esquema de la base D1 y su importador (15/10); <b>no se usa</b>, está sin conectar</td><td><span class="tag t-ok">mantener</span> hasta decidir el motor nuevo</td><td>—</td></tr>
+<tr><td><code>respaldos/</code> (en la PC)</td><td>Copias del panel de la PC del 24 al 28/09; no se versiona; nada lo lee</td><td><span class="tag t-ko">borrar</span> en la PC (tiene datos del buzón)</td><td>Ninguno</td></tr>
+<tr><td><code>ingesta/foto-stock.mjs</code> e <code>ingesta/foto-ia.mjs</code> (salvo una función)</td><td>Apagados; los superó la decisión del 16/10 (ilustraciones por Gemini web y Cloudflare, sin API paga)</td><td><span class="tag t-pu">decidir</span> (si se confirma: borrar con sus 72 pruebas y sus propuestas)</td><td>Bajo</td></tr>
+<tr><td><code>web/scripts/recuperar-archivo.mjs</code>, <code>ingesta/probar.mjs</code>, <code>reels/catalogo-plantillas.mjs</code>, <code>ingesta/combinar-auditorias.mjs</code>, <code>ingesta/exportar-efemerides.mjs</code></td><td>Herramientas de una sola vez (septiembre y 1/10); nadie las corre</td><td><span class="tag t-ko">borrar</span></td><td>Se sacan 3 archivos de pruebas y una prueba de <code>archivo.test</code></td></tr>
+<tr><td><code>reels/cronograma-html.mjs</code>, <code>reels/hoja-cronograma.mjs</code></td><td>Ningún workflow ni módulo los usa</td><td><span class="tag t-az">archivar</span></td><td>2 pruebas chicas</td></tr>
+<tr><td><code>docs/propuestas/material/videos/</code></td><td>7 videos de ejemplo del 8/10 (3,9 MB); las escenas ya salen</td><td><span class="tag t-ko">borrar</span> (quedan en el historial)</td><td>Ninguno</td></tr>
+<tr><td><code>docs/etapa-10-operacion/runs-14d.ndjson</code></td><td>Datos crudos sin subir (872 KB); el resultado ya está en <code>tabla-minutos-14d.md</code></td><td><span class="tag t-ko">no subirlo</span></td><td>Ninguno</td></tr>
+<tr><td>En sombra o sin conectar: <code>ingesta/seleccion-nueva.mjs</code>, <code>ingesta/secciones-nuevas.mjs</code>, <code>redes/destinos.mjs</code>, <code>web/scripts/podcast-feed.mjs</code>, <code>infra/mcp-cloudflare/</code>, <code>reels/presentacion.mjs</code></td><td>Esperan decisiones (flujo nuevo, 17 secciones, otras redes, podcast, servidor MCP, video de la 1.0)</td><td><span class="tag t-pu">decidir</span>; no borrar todavía</td><td>—</td></tr>
+<tr><td><code>web/data/estadisticas-piezas.json</code></td><td>Se reescribe en cada vigilancia (132 KB) y nadie lo muestra</td><td><span class="tag t-pu">decidir</span>: mostrarlo en Números o dejar de medirlo</td><td>Una prueba</td></tr>
+<tr><td>Dos paquetes de más en <code>web/node_modules</code></td><td><code>npm ls</code> los marca «extraneous» (sólo en la PC)</td><td><span class="tag t-ko">borrar</span> (<code>npm prune</code>)</td><td>Ninguno</td></tr>
+<tr><td>Una prueba que depende de un programa dentro de <code>docs/</code> (<code>revision-fuentes.test.mjs</code>)</td><td>Si se mueve o borra <code>docs/etapa-1-fuentes/</code>, falla</td><td><span class="tag t-pu">decidir</span> al cerrar la etapa 1</td><td>Medio (frena el push)</td></tr>
+</tbody></table></div>
+<p class="chico mut">Las dependencias declaradas (resvg, ffmpeg, Next, React, Pagefind) se usan todas. Los documentos sueltos de la raíz (<code>SEO.md</code>, <code>FORMATOS.md</code>, <code>MEDIA-KIT.md</code>, <code>INVESTIGACION.md</code>, <code>PUBLICIDAD.md</code>, <code>POLITICA-PRIVACIDAD.md</code>) siguen vigentes; podrían pasar a <code>docs/</code>, pero algunas pruebas los leen por su ruta. <code>PUBLICIDAD.md</code> y <code>POLITICA-PRIVACIDAD.md</code> nombran el panel de la PC y habría que corregirlos si se retira.</p>
+
+<h3>Secretos y variables de GitHub</h3>
+<ul>
+<li><b>Los 15 secretos que existen se usan todos.</b> El único que sobraría es <code>SONDEO_TOKEN</code>, cuando se borre el sondeo.</li>
+<li><b>Variables cargadas:</b> <code>REDES_ACTIVAS</code> (Si), <code>R2_RESPALDOS</code>, <code>R2_PIEZAS</code> y <code>R2_ARCHIVO</code> (esta última, desde el 16/10 a la tarde).</li>
+<li><b>Citadas y que no existen</b> (no rompen nada; lo que dependen de ellas se saltea): <code>GITLAB_TOKEN</code> y <code>GITLAB_REPO</code> (la segunda copia del respaldo), <code>R2_FOTOS</code> y <code>FOTOS_BASE</code> (fotos en R2), <code>TOPE_DE_NOTAS</code>, <code>CLOUDFLARE_PROJECT</code> y <code>CLOUDFLARE_ZONE_ID</code> (tienen un valor por defecto).</li>
+<li>Servicios para dar de baja (los hace una persona): cron-job.org (pausado; borrarlo cuando el reloj lleve unos días estable), Vercel (apagado desde el 25/09) y Tailscale (sólo servía para el panel de la PC).</li>
+</ul>
+<div class="mirar"><b>Dónde mirar:</b> GitHub → Actions (la lista de la izquierda) · <code>PENDIENTES.md</code> («Segunda tanda de limpieza») · el borrado se hace de a un grupo, con <code>npm test</code> y una corrida de «Actualizar la web» después de cada uno.</div>
+
+<h2 id="pruebas">13 · Las pruebas</h2>
+<p>Las pruebas son programas que controlan, sin internet, que el sistema siga haciendo lo que se decidió (por ejemplo: que nunca salga sola una nota con un menor). El 15/10 pidieron «muchas menos». <b>Pasó lo contrario: hoy son 204 archivos y 2.662 pruebas</b> (el 15/10 a la mañana eran 170 y unas 2.000), porque cada cosa nueva del 15 y 16/10 trajo las suyas.</p>
+<div class="cifras">
+<div class="cifra"><b>2.662</b><span>pruebas hoy (204 archivos)</span></div>
+<div class="cifra"><b>370</b><span>corren en cada vuelta: el «núcleo legal» (21 archivos, unos 3 segundos)</span></div>
+<div class="cifra"><b>238</b><span>se pueden borrar sin perder nada de lo que no se negocia</span></div>
+<div class="cifra"><b>785</b><span>se pueden pasar a una vez por semana (no frenan nada)</span></div>
+</div>
+<p><b>Lo bueno:</b> desde el 15/10 ya no corren las 2.000 en cada media hora (el 11/10 una prueba de diseño de los videos dejó la web 7 horas sin actualizarse). En cada vuelta sólo corre el núcleo legal, que corta la publicación y avisa por mail; la suite entera corre cuando se cambia el código y los lunes.</p>
+<div class="tabla"><table>
+<thead><tr><th>Qué se puede sacar</th><th>Pruebas</th><th>Por qué</th><th>Qué hacer</th></tr></thead>
+<tbody>
+<tr><td>Las del panel de la PC (acceso, panel, panel-seguridad, respaldo del panel, buzón, 13 de agenda-panel, 3 de horarios)</td><td>81</td><td>Prueban un panel que no se usa desde el 8/10</td><td><span class="tag t-ko">borrar</span> junto con el panel</td></tr>
+<tr><td>comercial, propuestas</td><td>43</td><td>Nadie corre <code>comercial/</code></td><td><span class="tag t-ko">borrar</span> con la carpeta</td></tr>
+<tr><td>foto-ia, foto-stock</td><td>72</td><td>Caminos de fotos descartados el 16/10 (sin API paga de imágenes; ilustraciones por Gemini web y Cloudflare)</td><td><span class="tag t-ko">borrar</span> (una prueba pasa a ilustrar-notas)</td></tr>
+<tr><td>exportar-efemerides, combinar-auditorias, presentacion</td><td>19</td><td>Herramientas de una sola vez</td><td><span class="tag t-ko">borrar</span></td></tr>
+<tr><td>Las del resumen de las 21 por WhatsApp</td><td>10</td><td>Lo reemplazó el informe por mail</td><td><span class="tag t-ko">borrar</span></td></tr>
+<tr><td>Repetidas entre archivos y dos de fechas ya pasadas (Vercel, «Participá el 10/10»)</td><td>~13</td><td>El mismo caso en dos lugares</td><td><span class="tag t-ko">borrar</span> o juntar</td></tr>
+<tr><td>Las de diseño y detalle (escenas, tipografías, colores, textos de piezas) y las de módulos en sombra</td><td>785</td><td>No protegen nada legal ni una publicación</td><td><span class="tag t-wa">semanal</span>: si fallan, avisan, nunca frenan</td></tr>
+</tbody></table></div>
+<p>Lo que no se negocia sigue cubierto después del recorte: menores y víctimas (semáforo, exenciones), sepelios, marcas de agua (fotos, placas), verificación contra la fuente, firma, «sin cuerpo no se publica», Política y Policiales, cero dependencias en <code>ingesta/</code>, <code>panel/</code> y <code>redes/</code>, tokens fuera del código, y archivos de personas con motivo, cuándo y quién. Hay que <b>reescribir</b> (no borrar) una prueba vieja de redes que todavía dice que Instagram lleva el enlace.</p>
+<div class="mirar"><b>Dónde mirar:</b> <code>pruebas/nucleo-legal.txt</code> (lo que corre en cada vuelta) · <code>docs/etapa-10-operacion/pruebas-clasificadas.csv</code> y <code>pruebas-nucleo.txt</code> (la clasificación del 15/10; no tiene los 34 archivos nuevos) · <code>docs/10-REGLAS-Y-PRUEBAS.md</code>. <b>Decisión de ustedes:</b> aprobar el recorte; recién ahí se borra, de a un grupo.</div>
+
+<h2 id="docs">14 · Lo que se corrigió en los documentos</h2>
+<p>Se compararon <code>docs/00</code> a <code>docs/13</code> con el código, los workflows, los secretos y las corridas del 16/10, y se corrigieron los datos viejos o equivocados. <b>No se cambió ninguna regla ni decisión</b>, ni <code>CRITERIO-EDITORIAL.md</code>, <code>CRITERIO-REDES.md</code>, <code>CLAUDE.md</code>, <code>docs/05-FOTOS.md</code>, <code>docs/10-REGLAS-Y-PRUEBAS.md</code> ni <code>docs/DECISIONES.md</code> (otros los estaban editando). Todos quedaron «Actualizado el 16/10/2026».</p>
+<div class="tabla"><table>
+<thead><tr><th>Documento</th><th>Qué se corrigió</th></tr></thead>
+<tbody>
+<tr><td><code>00-INDICE</code></td><td>«Más de 200 feeds» → unos 100 de unos 70 medios; avisos por WhatsApp → por mail, con los informes de 8:15 y 21:15; «todo corre en GitHub» → GitHub y Cloudflare; «archivo de 180 días» → tope de 3.700 notas y archivo en R2; cruce coherente, regla 180 y entrada ampliada en el recorrido; <b>se sumaron una línea por cada documento nuevo del 15 y 16/10</b> (flujo, flujos, secciones, panel, SEO, fotos, redes, etapas, auditoría de Opus, criterio, analíticas, salud técnica) con su estado: vigente, para decidir o foto del día; marcados como viejos <code>CRONOGRAMA-REDES</code>, <code>CLAVES-DE-IA</code> y <code>propuestas/material</code>; la historia corta suma el 16/10</td></tr>
+<tr><td><code>01-ARBOL</code></td><td>Estaba al 29/09 y le faltaban unos 150 archivos: ahora lista todo lo versionado (<code>infra/</code> con sus 6 Workers, <code>motor/</code>, <code>pruebas-modelos/</code>, <code>criterio-unico/</code>, 36 workflows en vez de 21, unos 200 archivos de pruebas en vez de «más de 1.400 pruebas», 10 notas por página en vez de 15, <code>robots.txt/route.js</code>); el archivo de piezas y el de notas en R2, prendidos</td></tr>
+<tr><td><code>02-INGESTA</code></td><td>Lo dispara el Worker y no cron-job.org; «218 configuradas, 214 activas de 91 medios» → 265 configuradas, 103 activas de 71 medios; fuentes oficiales activas (Municipalidad, Concejo, Facultad; la Provincia está apagada); campo <code>grupo</code>; reintento único; lo viejo de Balcarce no entra al cruce (regla 180); quiniela y lotería de cualquier medio; localidades dudosas (179); cruce coherente (184) con sus números; entrada ampliada (174); lista de medios de la plataforma eleco</td></tr>
+<tr><td><code>03-SELECCION</code></td><td>Las 17 secciones, sólo en sombra; semáforo con la efeméride ajena en rojo, el menor por su edad, las exenciones (172), lo que se suelta (96); regla 180 en medios y cupos; repetidas contra lo publicado (171, 175); la página de una nota: 180 días con tope de 3.700 (~80 días); notas de pista en los repasos</td></tr>
+<tr><td><code>04-REDACCION</code></td><td>De «una sola fuente, 4.000 caracteres» a hasta 4 textos completos (12.000) con copias marcadas; registro de uso de la IA; intentos extra con 5 y 8 medios; verificador con la fecha (A1) y el escape roto; ALTA pide medios independientes; avisos por mail; firma de las notas de pista y de mail; paso nuevo: notas desde una pista o un mail</td></tr>
+<tr><td><code>06-WEB</code></td><td>Disparo del Worker; <code>generar-datos.mjs</code> de 768 a unas 1.300 líneas; fotos de 105 a unas 900; compilación de 3 a 5 pasos; núcleo legal en vez de <code>npm test</code>; la lista real del <code>git add</code>; secciones de a 10; «Seguí leyendo» 4 de la sección; buscador en todo el archivo; títulos enteros para buscadores (D5) y lo de la regla 177; recorte de fotos desde arriba; archivo en R2 «a medio prender» (variable cargada el 16/10, sin ruta)</td></tr>
+<tr><td><code>07-REDES</code></td><td>Lo despierta el Worker a :05, :35 y :45 de todas las horas; Facebook con foto desde el 5/10; textos del 16/10 (sin enlaces en Instagram, un enlace en el repaso de Facebook); ventanas de los repasos (13 y 19 h); voz <code>gemini-3.8-flash-tts</code> y memoria de voces; un día normal gasta 7 audios; notas de pista en el repaso; archivo de piezas en R2 <b>prendido</b> (decía apagado); avisos por mail</td></tr>
+<tr><td><code>08-INFRAESTRUCTURA</code></td><td>«Se paga sólo el dominio» → también Workers Paid (US$ 5); 21 → 36 workflows (11 filas nuevas y varias corregidas); el reloj con el segundo intento del informe y las ilustraciones; sección nueva de los Workers y los depósitos R2; vigilancia por mail; lista real de secretos y variables y los que faltan; costos con los minutos medidos el 16/10 (el doble disparo de «Actualizar»)</td></tr>
+<tr><td><code>09-PANEL</code></td><td>Panel de la PC «en desuso» (decía «de respaldo»); la llave apunta a <code>radarbalcarce/radar-balcarce</code>; las pestañas reales (barra de abajo y «Más»); Esperan 48 horas; Publicadas 24 horas; retiradas visibles 24 horas; qué archivos escribe; acciones de <code>celular.mjs</code>; la Revisión corrige sola la ortografía chica; avisos por mail</td></tr>
+<tr><td><code>11-OPERACION</code></td><td>Sin la clave paga de Gemini (ya no existe); avisos por mail; <code>REDES_ACTIVAS</code> en «Si» desde el 29/09 (decía «No»); núcleo legal; tareas «si algo dejó de salir» y «los avisos no llegan» reescritas; lo que hace una persona (permiso de rutas de Cloudflare, Workers Paid)</td></tr>
+<tr><td><code>12-GLOSARIO</code></td><td>Corregidas 16 palabras (Actualizar la web, claves de IA, cron-job.org, ficha, interruptor, oficial, panel, nota propia, reloj, repetidas, respaldo, vigilante, workflow «son trece» → 36…) y 12 nuevas (archivo permanente, cruce coherente, de un medio de acá, entrada ampliada, grupo de medios, ilustración con IA, informe diario, localidad dudosa, modo sombra, motor nuevo, núcleo legal, pista, Worker)</td></tr>
+<tr><td><code>13-EFEMERIDES</code></td><td>«Todavía no sale nada solo» → sale desde el 1/10; candidatas del 2/10 al 4/11 y piezas armadas hasta el 31/10 (noviembre, no); la pestaña Fechas con sus tres partes; sección «lo que sale cada día»; «se arman solas los días 20» figura como <b>sin conectar</b> (hoy es a mano)</td></tr>
+</tbody></table></div>
+<h3>Cosas que se vieron y no se tocaron (son código o decisiones de ustedes)</h3>
+<ul>
+<li><b>La llave del panel del celular</b>: el panel todavía dice «balcardev@gmail.com» y «Panel del celular» no corre desde el 8/10. Probarlo.</li>
+<li><b>Notas publicadas a mano en los repasos</b>: la decisión del 16/10 dice que salen solas; el código todavía pide la marca «También a Facebook e Instagram».</li>
+<li><b>Efemérides</b>: <code>13-EFEMERIDES</code> dice «una persona aprueba cada pieza»; la decisión del 8/10 y el código dicen que salen salvo que Hernán diga que no.</li>
+<li><b>Comentarios viejos en el código</b>: <code>actualizar.yml</code>, <code>redes.yml</code> y <code>vigilancia.yml</code> todavía dicen que los dispara cron-job.org; «Probar las claves de Gemini» habla de «voz paga».</li>
+<li><b><code>CLAUDE.md</code></b> quedó viejo en algunos datos (más de 200 feeds, WhatsApp, Workers Paid como gasto, el núcleo legal): no se tocó porque así se pidió.</li>
+<li>La «lista corta de 47» de la regla 179 es la página de revisión: el sistema hoy lee 103 feeds de 71 medios.</li>
+</ul>
+
+<p class="pie">Armado el 16/10/2026 leyendo el código, los workflows, las corridas reales de GitHub (<code>gh</code>) y la documentación del repositorio. No se cambió código ni se borró nada. La versión anterior de esta explicación, más corta, está en <code>docs/00-INDICE.md</code>.</p>
+</div>
+</body>
+</html>

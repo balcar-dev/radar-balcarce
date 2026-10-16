@@ -1,6 +1,6 @@
 # 07 · Las redes: Facebook e Instagram de punta a punta
 
-*Actualizado el 29/09/2026. Si algo de acá no coincide con el código, manda el
+*Actualizado el 16/10/2026. Si algo de acá no coincide con el código, manda el
 código.* Cómo suenan y qué dicen las piezas: [`CRITERIO-REDES.md`](../CRITERIO-REDES.md).
 Colores, letras y medidas: [`MEDIA-KIT.md`](../MEDIA-KIT.md) y
 [`FORMATOS.md`](../FORMATOS.md). Los workflows, las claves de IA y lo que
@@ -10,13 +10,13 @@ pieza, podcast, el libro, simular): [`12-GLOSARIO.md`](12-GLOSARIO.md).
 
 ## En una frase
 
-Cada media hora GitHub mira la portada ya publicada, sube a Facebook como mucho
-una nota con su enlace (y la misma nota como foto en Instagram: el espejo) y,
-si a esa hora toca una pieza de video (clima, farmacia, uno de los tres
-podcasts, los teléfonos útiles, la agenda o un aviso de clima), la arma con una
-placa propia y una de las dos voces de Gemini, la sube a Instagram y a la
-página de Facebook, y anota todo en un libro (`web/data/redes.json`) para no
-repetir nada.
+Tres veces por hora GitHub mira la portada ya publicada, sube a Facebook como
+mucho una nota, con foto y el enlace en el texto (y la misma nota como foto en
+Instagram: el espejo) y, si a esa hora toca una pieza de video (clima, farmacia,
+uno de los tres podcasts, "Un día como hoy", participá, el feriado, los
+teléfonos útiles, la agenda o un aviso de clima), la arma con una placa propia y
+una de las dos voces de Gemini, la sube a Instagram y a la página de Facebook, y
+anota todo en un libro (`web/data/redes.json`) para no repetir nada.
 
 ## El recorrido, paso a paso
 
@@ -26,13 +26,14 @@ Corre en GitHub con la PC apagada y la hora de Balcarce
 
 ### 1. Quién la despierta
 
-- **cron-job.org** pide `redes.yml` con la acción `reloj` (cuerpo
+- **El Worker de Cloudflare `radar-balcarce-reloj`** (`infra/reloj-cloudflare/`,
+  desde el 15/10) pide `redes.yml` con la acción `reloj` (cuerpo
   `{"ref":"main","inputs":{"accion":"reloj"}}` a
-  `actions/workflows/redes.yml/dispatches`). Según el historial de corridas
-  llega a los minutos :05, :35 y :45, de 0 a 22 (puede haber un trabajo de más:
-  `PENDIENTES.md`).
+  `actions/workflows/redes.yml/dispatches`) a los minutos **:05, :35 y :45 de
+  todas las horas** (`trabajosDelMinuto`). Hasta el 15/10 lo hacía cron-job.org,
+  que quedó pausado, no borrado.
 - **El final de "Actualizar la web"** (`workflow_run`), bien o mal. Es el
-  respaldo si cron-job.org se cae.
+  respaldo si el reloj se cae.
 
 El reloj propio de GitHub no se usa: el 21/09 dejó cinco horas entre dos
 corridas. "Redes" y "Piezas" comparten un candado (`concurrency: redes`), así
@@ -78,6 +79,7 @@ de `CRITERIO-EDITORIAL.md`):
 | Tope | 5 por día, 1 por corrida, 90 minutos entre uno y otro |
 | Edad | Entre 15 minutos y 8 horas desde que salió en la web (`publicadaCuando`, o la fecha de la nota) o desde que una persona la marcó para las redes |
 | Qué nota | Una que pueda ir por lo que es (`vaAFacebookPorLoQueEs`, abajo), con cuerpo (`esperaCuerpo`, `web/lib/cuerpo.js`), que no sea nota propia (la del dólar, las de los podcasts: `esNotaPropia`) |
+| Foto | Una nota sin foto espera hasta 3 horas a que aparezca (8/10, `FACEBOOK.horasEsperandoFoto`); pasado ese tiempo sale con la placa. Lo marcado por una persona no espera |
 | Tema | No repite un tema publicado en las últimas 24 horas (`temaParecido`: el 24/09 salieron tres del autódromo en cuatro horas) |
 | Repetición | Una nota sale una sola vez (el libro) |
 
@@ -106,20 +108,34 @@ de ahora.
 
 **3c. El texto del posteo** (`mensajeDeNota`): el `textoRedes` que la IA
 escribió con la nota (pasa por el verificador, `04-REDACCION`) o, si no hay, el
-titular y la bajada cortada en 220 caracteres; después, una línea con el
-enlace (la frase cambia de nota en nota y es siempre la misma para la misma
-nota: `FRASES_DEL_ENLACE`) y hasta tres hashtags (`hashtagsDe`: `#Balcarce`
-primero si es de acá). **Nunca nombra la fuente** ni dice "Resumen hecho con
-IA": las dos cosas están en la nota de la web.
+titular y la bajada cortada en 220 caracteres; después, el cierre y hasta tres
+hashtags (`hashtagsDe`: `#Balcarce` primero si es de acá). El cierre depende
+de la red (16/10, `lineaFinal`):
 
-La imagen la toma Facebook de la página de la nota: la tarjeta apaisada de
-1200 × 630 (`web/app/nota/[id]/opengraph-image.js`, dibujada por
-`web/lib/tarjeta.js`), con la foto del banco a la izquierda si hay
-(`FOTO_EN_ENLACE`, sin el crédito adentro: está en el epígrafe de la página) o
-la banda de color.
+- **En Facebook**, una línea con el enlace a la nota (la frase cambia de nota en
+  nota y es siempre la misma para la misma nota: `FRASES_DEL_ENLACE`). Desde el
+  15/10 el enlace lleva de dónde sale (`utm_source=facebook`, `utm_medium=social`,
+  `utm_campaign=posteo`: `enlaceConOrigen`, regla 169).
+- **En Instagram, nunca un enlace** (no se puede tocar en el celular): "La nota
+  completa, en radarbalcarce.com (link en la bio)".
 
-**3d. Publicar y anotar.** `publicarEnFacebook` (`redes/meta.mjs`) publica con
-el token de la página. Apenas Meta contesta se anota en el libro
+**Nunca nombra la fuente** ni dice "Resumen hecho con IA": las dos cosas están
+en la nota de la web. Si la nota tiene foto, al final va el crédito
+(`conCreditoDeFoto`).
+
+**La imagen** (desde el 5/10, Hernán: "5 posteos por día con foto"): el posteo
+de Facebook sale **como foto**, con la misma tarjeta vertical de 1080 × 1350 del
+espejo de Instagram (`/nota/ID/instagram.png`, `imagenDeNota`) y el enlace en el
+texto (`publicarFotoEnFacebook`). Si la foto falla, se reintenta en la vuelta
+siguiente y, tras 3 intentos (`libro.facebookFoto`), sale como posteo con
+enlace, con la tarjeta apaisada de 1200 × 630 que Facebook toma de la página
+(`web/app/nota/[id]/opengraph-image/route.js`, dibujada por `web/lib/tarjeta.js`).
+La variable `FACEBOOK_COMO_FOTO=no` vuelve al posteo con enlace. Antes de dar por
+perdido un error de Meta, se mira si igual se publicó (`posteoYaPublicado`: el
+5/10 hubo cuatro copias).
+
+**3d. Publicar y anotar.** `publicarFotoEnFacebook` o `publicarEnFacebook`
+(`redes/meta.mjs`) publica con el token de la página. Apenas Meta contesta se anota en el libro
 (`libro.facebook[id de la nota]`: cuándo, número del posteo, titular, enlace y
 temas) y se guarda. Si Meta dice que el token murió (código 190), se corta todo.
 
@@ -146,23 +162,33 @@ para la siguiente. Si no toca nada, la corrida termina en segundos.
 | Pieza (nombre en el libro) | Tipo | Hora | Vale hasta | Qué días |
 |---|---|---|---|---|
 | Aviso de clima (`aviso-helada`, `aviso-granizo`, `aviso-viento`) | historia | 7:00 | 22:00 | Sólo si hay un aviso grave, hoy o mañana |
-| Clima de la mañana (`clima-manana`) | historia | 7:00 | 11:00 | Todos |
-| El feriado (`feriado`) | historia | 8:00 | 12:00 | Sólo los feriados, con datos verificados (`redes/feriado.mjs`) |
-| Un día como hoy (`efemeride`) | historia con dos placas | 9:00 | 12:00 | **Todos los días que tienen su entrada preparada** en `web/data/efemerides-piezas.json` (`redes/efemeride.mjs`); sin entrada no sale nada. Fijo: no se mueve ni se saca por el techo de historias |
-| Podcast de la mañana (`noticia1`) | reel + historia | 10:00 | 15:00 | Todos, con 2 notas o más |
-| Teléfonos útiles (`utiles`) | historia | 17:00 | 18:00 | Los sábados, fijo |
-| Podcast de la tarde (`noticia2`) | reel + historia | 15:00 | 20:00 | Todos, con 2 notas o más |
-| Agenda del fin de semana (`agenda`) | historia | 12:00 | 13:00 | Jueves, si hay eventos en los próximos 4 días |
-| Farmacia de turno (`farmacia`) | historia | 19:00 | 24:00 | Todos |
-| Clima de la noche (`clima-noche`) | historia | 20:00 | 24:00 | Todos |
+| Clima de la mañana (`clima-manana`) | historia (en Facebook, además reel) | 7:00 | 11:00 | Todos |
+| El feriado (`feriado`) | reel + historia | 8:00 | 12:00 | Sólo los feriados, con datos verificados (`redes/feriado.mjs`) |
+| Un día como hoy (`efemeride`) | reel + historia, con dos placas | 9:00 | 12:00 | **Todos los días que tienen su entrada preparada** en `web/data/efemerides-piezas.json` (`redes/efemeride.mjs`); sin entrada no sale nada. Fijo: no se mueve ni se saca por el techo de historias |
+| Podcast de la mañana (`noticia1`) | reel + historia | 10:00 | 13:00 | Todos, con 2 notas o más |
+| Participá (`participa-noticias`, `participa-evento`, `participa-reclamos`, `participa-nota`) | reel + historia | 12:00 | 13:00 | Lunes, martes, miércoles y viernes, una cada día (armadas de antemano: "Piezas fijas", más abajo) |
+| Agenda del fin de semana (`agenda`) | reel + historia | 12:00 | 13:00 | Jueves, si hay eventos en los próximos 4 días |
+| Podcast de la tarde (`noticia2`) | reel + historia | 15:00 | 19:00 | Todos, con 2 notas o más |
+| Teléfonos útiles (`utiles`) | reel + historia | 17:00 | 18:00 | Los sábados, fijo |
+| Farmacia de turno (`farmacia`) | historia (en Facebook, además reel) | 19:00 | 24:00 | Todos |
+| Clima de la noche (`clima-noche`) | historia (en Facebook, además reel) | 20:00 | 24:00 | Todos |
 | Podcast de la noche (`podcast`) | reel + historia | 21:00 | 24:00 | Todos, con 2 notas o más |
 
 - Las horas de las historias fijas son las **de fábrica** de `HISTORIAS_FIJAS`
   (`panel/horarios.mjs`): la pestaña Calendario del panel de la PC no llega a
   GitHub (`PENDIENTES.md`, D7). Las de los podcasts, `PODCASTS` y `HORAS_REELS`
   (`redes/piezas.mjs`). Las ventanas, `VENTANAS` (2 horas si una pieza no tiene
-  la suya, `VENTANA_MINUTOS`). Ninguna cruza la medianoche: si la ventana se
-  cierra sin que salga, esa pieza se pierde por hoy.
+  la suya, `VENTANA_MINUTOS`). Desde el 29/09 cada pieza sale dentro de su parte
+  del día (mañana hasta las 12:59, tarde hasta las 18:59, noche desde las 19),
+  para que el saludo sea el de su hora: por eso los podcasts de la mañana y de la
+  tarde valen hasta las 13 y las 19. Ninguna cruza la medianoche: si la ventana
+  se cierra sin que salga, esa pieza se pierde por hoy.
+- **Dónde sale cada pieza** (8/10, regla 147): lo que tiene voz además de los
+  podcasts ("Un día como hoy", el feriado, la agenda, los útiles y participá)
+  sale como **reel en las dos redes y, con el mismo video, como historia**
+  (`SALE_COMO_REEL`); el clima y la farmacia son historia y **en Facebook salen
+  además como reel** (`reelEnFacebook`, `libro.reelsEnFacebook`); los avisos de
+  clima, sólo historia.
 - **Los útiles salen los sábados a las 17:00**, fijos (1/10/2026; antes rotaban de lunes a viernes:
   `diaRotativoDeUtiles`, `ingesta/utiles.mjs`, aplicada por `toca` de
   `panel/horarios.mjs`, la única que decide qué día sale cada pieza).
@@ -188,10 +214,11 @@ dólar. En la PC, si existe `panel/datos/ultima.json`, usa eso filtrado con
 `esPublicable` y los horarios guardados en el panel.
 
 **5b. El plan del día** (`planDelDia`) arma cada pieza con su guion (lo que
-dice la voz), su placa, su color de acento y su hora. Dos techos: 3 reels y
-**8 historias por día** (las 6 del contrato más 2); si sobra, se deja de armar
-primero la de útiles y después la agenda (`historiasQueSobran`). Las del
-contrato y los avisos de clima nunca se sacan.
+dice la voz), su placa, su color de acento y su hora. Techo de **8 historias
+por día** (las 6 del contrato más 2); si sobra, se deja de armar en este orden:
+útiles, agenda, las de participá y el feriado (`historiasQueSobran`,
+`EXTRAS_DE_HISTORIAS`). Las del contrato, "Un día como hoy" y los avisos de
+clima nunca se sacan.
 
 **5c. Cada video** lo arma `armarReel` (`reels/reel.mjs`):
 
@@ -204,6 +231,10 @@ contrato y los avisos de clima nunca se sacan.
    siempre más el de la mañana, la tarde o la noche), con la voz de esa pieza,
    la locutora o el locutor, según el reparto de `CRITERIO-REDES.md` § 6
    (`vozDePieza`, `redes/prompt-redes.mjs`; una pieza sin voz no se arma).
+   **La memoria de voces** (8/10): el mismo texto con la misma voz y el mismo
+   estilo se pide una sola vez; si la pieza se vuelve a armar (falló ffmpeg,
+   Meta contestó con error) se reusa el audio guardado en la caché de Actions
+   (`VOZ_CACHE`, `leerDeLaMemoriaDeVoz`, 3 días) y no se gasta cupo.
    Hasta 4 intentos, 2 segundos entre pedidos y 2 minutos como máximo por
    pedido. Un audio que dura de más para su texto (`vozDeMas`: leyó algo que no
    estaba) cuenta como falla. Si Google contesta que se acabó el cupo del día
@@ -250,8 +281,17 @@ Lo armado queda en `reels/salida/` (no va al repositorio) con un manifiesto,
    voz y podría elegir otras notas). Se anota en `libro.historiasDeReels`.
 5. **El libro se guarda después de cada publicación**: si algo se corta a la
    mitad, lo que salió no vuelve a salir.
-6. **El texto.** Las historias no llevan. Los reels llevan `pieDePieza`: el
-   título del podcast, sus notas con su enlace y "Más en radarbalcarce.com".
+6. **El texto.** Las historias no llevan. Los reels llevan `pieDePieza`, que
+   termina siempre con "Voz generada con inteligencia artificial."
+   (`AVISO_DE_VOZ`). En los podcasts, desde el 16/10, **sólo los titulares** de
+   sus notas, sin un enlace por nota (Hernán: "Instagram no los toma en el
+   celular y es mucho"):
+   - **en Instagram, ningún enlace**: "Todas las notas, en radarbalcarce.com
+     (link en la bio)";
+   - **en Facebook, UN solo enlace**, el de la nota del propio repaso en la web
+     ("Las notas, acá: …/nota/repaso<día><turno>", `enlaceDelRepaso`, con el
+     origen `utm_campaign=repaso`).
+
    Nunca la fuente.
 7. **La dirección pública del podcast** (`permalink`) se le pide a Meta
    enseguida y se guarda en el libro: la usa la nota del podcast en la web.
@@ -262,6 +302,13 @@ Si Meta dice que el token murió, se corta todo en el acto.
 
 - Los `.mp4` y el manifiesto quedan **3 días** como artefacto de la corrida
   (Actions → la corrida → Artifacts), para mirarlos o subirlos a mano.
+- **El archivo de piezas en R2** (15/10, regla 178, `redes/archivar-piezas.mjs`,
+  guía en `docs/redes/ARCHIVO-DE-PIEZAS.md`): al final de "Redes", "Piezas" y
+  "Fijar piezas", copia los videos, audios, subtítulos y placas a un depósito
+  propio (`piezas/AAAA/MM/DD/<tipo>/`, con un `indice.json` por día). **Prendido**
+  desde el 15/10: la variable `R2_PIEZAS` vale `radar-piezas` (sin ella diría "sin
+  archivo de piezas" y seguiría). Nunca frena la publicación y no sube lo que espera a una persona ni lo
+  retirado.
 - **Completar las direcciones de los podcasts** (`--enlaces`,
   `completarEnlaces`): a Facebook le lleva un rato procesar un video y a veces
   no da la dirección enseguida. En cada vuelta se pregunta por los podcasts de
@@ -282,21 +329,32 @@ vuelta siguiente puede repetir lo publicado".
   cada posteo aunque la IA cambie el titular, guarda en el archivo las notas
   que salieron en redes y arma **la nota propia de cada podcast**
   (`web/lib/notas-propias.js`, `06-WEB`).
-- **"Vigilancia"** (cada media hora) cuenta el contrato del día, avisa por
-  WhatsApp lo que salió y lo que falta, y a las 23:30 lo compara con lo que
-  Meta tiene publicado ("Estadísticas y auditorías", más abajo).
+- **"Vigilancia"** (cada media hora, la dispara el mismo Worker del reloj a los
+  :00 y :30) cuenta el contrato del día, avisa lo que falta y a las 23:30 lo
+  compara con lo que Meta tiene publicado ("Estadísticas y auditorías", más
+  abajo). **Desde el 15/10 los avisos salen por mail** (`avisar`,
+  `redes/avisar-por-mail.mjs`, por el Worker `radar-balcarce-vigilante`) y
+  **WhatsApp es sólo el respaldo** si el mail no sale (regla 173; el cupo de
+  CallMeBot estaba muerto desde el 1/10).
+- **Los informes diarios por mail** de las 8:15 y las 21:15
+  (`redes/informe-diario.mjs`, regla 176) cuentan lo que salió en las redes
+  ese día; reemplazan al resumen de las 21 del vigilante.
 
 ## El cupo de voz
 
 La clave de redes es gratis y Google le da **10 audios por día** del modelo de
-voz (la clave y sus límites: `08-INFRAESTRUCTURA`). Un día normal gasta 6: el
-clima de la mañana, los tres repasos, la farmacia y el clima de la noche. A
-veces se suman los útiles (un día hábil por semana), la agenda (los jueves con
-eventos) y un aviso de clima. La historia de cada reel no gasta: es el mismo
-video.
+voz (la clave y sus límites: `08-INFRAESTRUCTURA`; el modelo es
+`gemini-3.8-flash-tts`, con dos voces propias que vencen el 29/09/2027). Un día
+normal gasta 7: el clima de la mañana, "Un día como hoy", los tres repasos, la
+farmacia y el clima de la noche. A veces se suman los útiles (los sábados), la
+agenda (los jueves con eventos), el feriado y un aviso de clima; las de
+participá no gastan mientras valga su versión armada de antemano ("Piezas
+fijas", más abajo). La historia de cada reel no gasta: es el mismo video, y
+rearmar una pieza que falló tampoco, por la memoria de voces (paso 5c).
 
-Gastan de más: una pieza que Instagram rechazó y el reloj vuelve a armar, un
-audio que duró de más (`vozDeMas`) y lo que se corre a mano con la misma clave:
+Gastan de más: una pieza que Instagram rechazó y el reloj vuelve a armar con
+otro texto (con el mismo texto, la memoria de voces reusa el audio), un audio
+que duró de más (`vozDeMas`) y lo que se corre a mano con la misma clave:
 Piezas (un audio por pieza), Auditar voz (6 audios, 9 con `explorar`) y Crear
 voces (`crear` y `recrear`). Si el cupo se acaba, la pieza de ese día no sale:
 nunca con otra voz.
@@ -311,13 +369,13 @@ desde el 25/09 (`CONTRATO_DESDE`).
 
 | Por red, por día | Facebook | Instagram |
 |---|---|---|
-| Reels (los tres podcasts) | 3 | 3 |
+| Reels (los tres podcasts; los de las otras piezas con voz, como "Un día como hoy", el contrato los sigue como extras: regla 147) | 3 | 3 |
 | Historias de los podcasts | 3 | 3 |
 | Historias de clima (mañana y noche) | 2 | 2 |
 | Historia de la farmacia | 1 | 1 |
 | **Historias en total** | **6** | **6** |
 | Posteos de notas (tope; pueden ser menos) | hasta 5 posteos | hasta 5 espejos |
-| Aparte, no cuentan en las 6 | teléfonos útiles (1 por semana), agenda (jueves, si hay eventos) | igual |
+| Aparte, no cuentan en las 6 | "Un día como hoy" (todos los días con entrada preparada), teléfonos útiles (sábados), agenda (jueves, si hay eventos), participá (lun, mar, mié y vie), el feriado | igual |
 | Techo de historias del día | 8 | 8 |
 
 Cada pieza del contrato está en uno de tres estados:
@@ -365,8 +423,16 @@ ni reels de una sola nota: dichas de a una sonaban raras.
 **Qué notas entran** (`elegirParaPodcast`, `redes/elegir.mjs`; números en
 `PIEZAS`, `ingesta/criterio.mjs`):
 
+0. **Primero, lo que pidió una persona** (16/10): una nota propia de una pista
+   o de un mail de prensa (`docs/04-REDACCION.md`, paso 16) aprobada para las
+   redes (`aprobadaParaRedes`) y marcada `paraElRepaso` entra al **próximo**
+   repaso sin pasar por el puntaje, durante 12 horas desde que se aprobó
+   (`notaDePistaParaLosRepasos`, `web/lib/notas-de-pistas.js`). Deja al menos un
+   lugar para las demás. Caso: el Festival Cervantino de Azul.
 1. Sólo las que pueden ir en un repaso (`sePuedeEnUnRepaso`): ni roja, ni
-   Política ni Policiales, con cuerpo, que no sea nota propia. **De Balcarce
+   Política ni Policiales, con cuerpo, que no sea nota propia (salvo la de una
+   pista aprobada para las redes) y, si la publicó una persona, que la haya
+   marcado para las redes. **De Balcarce
    primero** (`esParaLasRedes`, la misma regla que Facebook); **de afuera**,
    desde el 29/09, sólo con relevancia 80 o más (también a la noche) y **dos
    como mucho por repaso**, las de más puntaje (`PIEZAS.relevanciaAfueraPodcast`
@@ -415,7 +481,7 @@ prueba controla que coincidan).
 | Qué | Archivo | Medida | Dónde se ve |
 |---|---|---|---|
 | Placas de historias y reels | `reels/placa.mjs` (`placaRepaso`, `placaClima`, `placaFarmacia`, `placaUtiles`, `placaAgenda`) | 1080 × 1920 | Instagram y la página de Facebook |
-| Tarjeta del espejo | `web/lib/tarjeta.js` (`tarjeta(nota, { instagram: true })`), servida en `/nota/ID/instagram.png` | 1080 × 1350 (4:5) | El feed de Instagram |
+| Tarjeta del espejo | `web/lib/tarjeta.js` (`tarjeta(nota, { instagram: true })`), servida en `/nota/ID/instagram.png` | 1080 × 1350 (4:5) | El feed de Instagram y, desde el 5/10, el posteo de Facebook |
 | Tarjeta para compartir | `web/lib/tarjeta.js` (`tarjeta(nota)`), servida por `opengraph-image` | 1200 × 630 | Facebook con enlace, WhatsApp, X |
 | Las cuentas de las tarjetas (colores, cuerpos del título, qué entra, zonas) | `web/lib/tarjeta-diseno.js` | — | Se prueban sin levantar el sitio (`pruebas/placas.test.mjs`) |
 
@@ -473,7 +539,7 @@ código lo lee de ahí, sin copias:
 ## El libro: `web/data/redes.json`
 
 Es la memoria de las redes. Va al repositorio (lo commitean "Redes" y "Piezas")
-y lo leen casi todos. Tiene cinco partes:
+y lo leen casi todos. Las partes principales:
 
 | Parte | Clave de cada entrada | Qué guarda | Lo escribe |
 |---|---|---|---|
@@ -482,11 +548,14 @@ y lo leen casi todos. Tiene cinco partes:
 | `instagram` | `AAAA-MM-DD/nombre` (por ejemplo `2026-09-28/noticia1`) | cuándo, `mediaId`, tipo (`REELS` o `STORIES`), `notaId` y `notaIds` (las notas que contó), `permalink`, `intentosEnlace` | `publicarPiezas` |
 | `facebookVideos` | igual que `instagram` | lo mismo, para la página de Facebook | `publicarPiezas` |
 | `historiasDeReels` | `red/AAAA-MM-DD/nombre` | el reflejo de cada podcast como historia, por red | `publicarPiezas` |
+| `reelsEnFacebook` | `AAAA-MM-DD/nombre` | el clima y la farmacia subidos además como reel a Facebook (8/10) | `publicarPiezas` |
+| `facebookFoto` | el id de la nota | los intentos fallidos de publicar el posteo como foto (a los 3, sale como enlace) | `redes/publicar.mjs --facebook` |
+| `problemas` | `dia/pieza/red/parte` | lo que no salió, tres días, hasta que sale (1/10) | `publicarPiezas` |
 
 Lo leen `elegirParaFacebook` (no repetir nota ni tema, contar los del día), el
 reloj y `piezasQueTocan` (qué ya salió), el plan (qué notas ya se contaron),
 `redes/contrato.mjs`, `redes/vigilar.mjs` y `redes/avisos.mjs` (el contrato y
-el WhatsApp), `redes/auditar-redes.mjs` (contra Meta) y
+los avisos), `redes/auditar-redes.mjs` (contra Meta) y
 `web/scripts/generar-datos.mjs` (enlaces fijos, archivo, notas de los podcasts,
 estadística diaria). **No se edita a mano**: si una entrada se borra, esa pieza
 o ese posteo puede volver a salir.
@@ -495,13 +564,13 @@ o ese posteo puede volver a salir.
 
 | Qué | Cuándo | Archivo | Qué mira | Cómo se entera uno |
 |---|---|---|---|---|
-| **Lo que salió en redes** | cada corrida de Vigilancia | `redes/avisos.mjs` (`novedadesEnRedes`) | El libro desde la corrida anterior, agrupado (el mismo podcast en las dos redes es una línea) | WhatsApp "📣 Salió en redes" |
-| **El contrato del día** | cada corrida y a las 21 | `redes/contrato.mjs`, `redes/vigilar.mjs` (`problemasDelContrato`) | Faltas, duplicados en el libro, posteos sin espejo; con las redes apagadas, sólo lo dice una vez por día | WhatsApp de problemas (cada 6 h por problema); una línea por red en el resumen de las 21 |
-| **El cierre del día** | desde las 23:30 (si se atrasa, hasta las 3:00 cierra el día anterior), una vez | `redes/vigilar.mjs` (`fechaDelCierre`, `cierreDelDia`) con `redes/auditar-redes.mjs` (`informeDelDia`) | El día contra lo que Meta tiene de verdad: faltantes, duplicados (dos iguales a menos de 30 minutos), libro sin Meta y Meta sin libro (tolerancia de 20 minutos) | WhatsApp **sólo si hay discrepancias**; si todo cuadra, "✓ Cierre del día…" viaja en el próximo mensaje. Con las redes apagadas se saltea |
-| **Estadísticas** | 9 y 21 | `redes/estadisticas.mjs`, guarda `web/data/estadisticas.json` (sólo números, 120 mediciones) | Visitas de Cloudflare Web Analytics (aproximadas) y seguidores de Facebook e Instagram; vistas, alcance e interacciones sólo si `META_TOKEN` tiene `read_insights` e `instagram_manage_insights` (`PENDIENTES.md`) | WhatsApp de la mañana y resumen de las 21 |
+| **Lo que salió en redes** | cada corrida de Vigilancia | `redes/avisos.mjs` (`novedadesEnRedes`) | El libro desde la corrida anterior, agrupado (el mismo podcast en las dos redes es una línea) | Mail del vigilante (WhatsApp de respaldo) "📣 Salió en redes"; y los informes diarios de las 8:15 y 21:15 |
+| **El contrato del día** | cada corrida | `redes/contrato.mjs`, `redes/vigilar.mjs` (`problemasDelContrato`) | Faltas, duplicados en el libro, posteos sin espejo; con las redes apagadas, sólo lo dice una vez por día | Mail de problemas (cada 6 h por problema; WhatsApp de respaldo); el contrato de cada red va en los informes diarios por mail |
+| **El cierre del día** | desde las 23:30 (si se atrasa, hasta las 3:00 cierra el día anterior), una vez | `redes/vigilar.mjs` (`fechaDelCierre`, `cierreDelDia`) con `redes/auditar-redes.mjs` (`informeDelDia`) | El día contra lo que Meta tiene de verdad: faltantes, duplicados (dos iguales a menos de 30 minutos), libro sin Meta y Meta sin libro (tolerancia de 20 minutos) | Mail **sólo si hay discrepancias**; si todo cuadra, "✓ Cierre del día…" viaja en el próximo mensaje. Con las redes apagadas se saltea |
+| **Estadísticas** | 9 y 21 | `redes/estadisticas.mjs`, guarda `web/data/estadisticas.json` (sólo números, 120 mediciones) | Visitas de Cloudflare Web Analytics (aproximadas) y seguidores de Facebook e Instagram; vistas, alcance e interacciones sólo si `META_TOKEN` tiene `read_insights` e `instagram_manage_insights` (`PENDIENTES.md`) | Los informes diarios por mail (8:15 y 21:15; regla 176) |
 | **Auditar redes** | a mano | `redes/auditar-redes.mjs` (`auditar-redes.yml`) | Hoy, ayer, la semana (% de cumplimiento por red y pieza) y lo que devuelve Meta sin interpretar | El registro de la corrida |
 | **La semana del contrato** | lunes 9:00 | `redes/auditar-redes.mjs --semana`, dentro de `auditoria.yml` | Igual que la semana de arriba | El registro |
-| **Auditoría semanal** | lunes 9:00 | `redes/auditar.mjs` (`auditoria.yml`), guarda `web/data/auditoria.json` | Que la tarjeta de Instagram mida 1080 × 1350 y la de compartir 1200 × 630, los íconos, el SEO en vivo y que las medidas de `redes/formatos.mjs` no tengan más de 90 días | WhatsApp si hay problemas; el vigilante avisa si no corre hace más de 10 días |
+| **Auditoría semanal** | lunes 9:00 | `redes/auditar.mjs` (`auditoria.yml`), guarda `web/data/auditoria.json` | Que la tarjeta de Instagram mida 1080 × 1350 y la de compartir 1200 × 630, los íconos, el SEO en vivo y que las medidas de `redes/formatos.mjs` no tengan más de 90 días | Mail si hay problemas; el vigilante avisa si no corre hace más de 10 días |
 | **Ver Facebook** | a mano | `redes/ver-facebook.mjs` (`ver-facebook.yml`) | Qué hay publicado de verdad en la página: posteos, reels, historias, con fecha | El registro || **Auditar voz** | a mano | `reels/auditar-voz.mjs` (`auditar-voz.yml`) | Ver "La voz y los guiones" | El registro (PASA/FALLA) |
 
 Límite de lo que Meta deja ver: **las historias sólo se ven mientras están
@@ -537,7 +606,7 @@ anteriores cuenta las historias por el libro y lo dice.
 
 | Archivo | Qué hace | Quién lo llama | Qué lee | Qué escribe |
 |---|---|---|---|---|
-| `.github/workflows/redes.yml` | La corrida: Facebook, piezas, direcciones y libro | cron-job.org y el final de "Actualizar la web"; a mano (`reloj`, `verificar`, `facebook`) | `META_TOKEN`, `GEMINI_API_KEY_REDES`, `REDES_ACTIVAS` | commit de `web/data/redes.json`; artefacto con los videos (3 días) |
+| `.github/workflows/redes.yml` | La corrida: Facebook, piezas, direcciones y libro | El Worker `radar-balcarce-reloj` (:05, :35 y :45) y el final de "Actualizar la web"; a mano (`reloj`, `verificar`, `facebook`) | `META_TOKEN`, `GEMINI_API_KEY_REDES`, `REDES_ACTIVAS`, `R2_PIEZAS` | commit de `web/data/redes.json`; artefacto con los videos (3 días); el archivo de piezas en R2 (apagado) |
 | `.github/workflows/piezas.yml` | Armar (y si se pide, publicar) piezas a mano | una persona, Actions → Piezas | `solo` (vacío no arma nada), `todas`, `publicar`, `destino`; los mismos secretos | artefacto (7 días); el libro si publicó |
 | `redes/publicar.mjs` | El programa: `--verificar`, `--facebook`, `--piezas [--sin-horario] [--destino=…]`, `--enlaces` | los dos workflows | `portada.json`, `redes.json`, `reels/salida/piezas.json` | `redes.json` |
 | `redes/elegir.mjs` | Qué se publica: reglas de Facebook (`vaAFacebookPorLoQueEs`), texto del posteo, hashtags, qué notas cuenta cada podcast y su guion con presupuesto, el interruptor | `publicar.mjs`, `reels/plan.mjs`, contrato, avisos | `ingesta/criterio.mjs`, `web/lib/cuerpo.js` | — (funciones puras) |
@@ -561,7 +630,12 @@ anteriores cuenta las historias por el libro y lo dice.
 | `reels/auditar-voz.mjs`, `redes/auditoria-voz.mjs` | La auditoría de la voz real | "Auditar voz" | `GEMINI_API_KEY_REDES` | — |
 | `web/lib/tarjeta.js` | Las tarjetas de cada nota (compartir e Instagram) | las rutas de Next al compilar | la nota, `reels/marca/fuentes/`, la foto del banco | PNG estáticos del sitio |
 | `web/lib/tarjeta-diseno.js` | Medidas, colores, cuentas y `FOTO_EN_INSTAGRAM` | `tarjeta.js`, `publicar.mjs` | `banco-fotos.json` | — |
-| `redes/vigilar.mjs`, `redes/avisos.mjs` | El vigilante: contrato, cierre, WhatsApp (`08-INFRAESTRUCTURA`) | `vigilancia.yml` | libro, portada, auditoría, GitHub, Meta | `web/data/vigilancia.json`, `estadisticas.json` |
+| `redes/vigilar.mjs`, `redes/avisos.mjs` | El vigilante: contrato, cierre, avisos por mail con WhatsApp de respaldo (`redes/avisar-por-mail.mjs`, `08-INFRAESTRUCTURA`) | `vigilancia.yml` | libro, portada, auditoría, GitHub, Meta | `web/data/vigilancia.json`, `estadisticas.json` |
+
+| `redes/avisar-por-mail.mjs` | `avisar`: primero mail (Worker `radar-balcarce-vigilante`, `VIGILANTE_TOKEN`), WhatsApp sólo si el mail no sale (regla 173) | vigilante, auditorías, pistas, workflows | `VIGILANTE_TOKEN`, `WHATSAPP_*` | — |
+| `redes/informe-diario.mjs` | Los informes por mail de las 8:15 y las 21:15 (regla 176) | `informe-diario.yml` (lo dispara el reloj) | portada, libro, estadísticas, esperando cuerpo | — (manda el mail) |
+| `redes/archivar-piezas.mjs` | Copia las piezas a R2 (regla 178; `R2_PIEZAS` = `radar-piezas`, cargada el 15/10) | `redes.yml`, `piezas.yml`, `fijar-piezas.yml` | `reels/salida/`, el libro | el depósito de R2 |
+| `redes/destinos.mjs` | Esqueleto para mandar el mismo video a otras redes (Telegram, Bluesky, YouTube…): **sin ningún cliente real todavía** | — | — | — |
 
 El libro (`web/data/redes.json`) tiene su sección más arriba, y los archivos de
 las estadísticas y las auditorías están en su tabla.
@@ -579,6 +653,8 @@ las estadísticas y las auditorías están en su tabla.
 | El texto del posteo, la frase del enlace, los hashtags | `mensajeDeNota`, `FRASES_DEL_ENLACE`, `hashtagsDe`, `redes/elegir.mjs` |
 | Cuántas notas cuenta un podcast, su relevancia mínima, su presupuesto | `PIEZAS` y `PODCAST_VOZ`, `ingesta/criterio.mjs` (y la tabla del criterio) |
 | La hora de un podcast | `HORAS_REELS`, `redes/piezas.mjs` |
+| Que una nota de una pista o de un mail entre al próximo repaso | `aprobadaParaRedes` y `paraElRepaso` en su entrada de `web/data/notas-de-pistas.json` (12 horas) |
+| El texto de los reels y de los posteos (enlaces, "link en la bio") | `pieDePieza` y `enlaceDelRepaso` (`redes/piezas.mjs`); `mensajeDeNota` (`redes/elegir.mjs`) |
 | La hora de una historia fija (clima, farmacia, útiles, agenda) | Los valores de fábrica de `HISTORIAS_FIJAS`, `panel/horarios.mjs` (la pestaña Calendario del panel de la PC no cambia lo que publica GitHub) |
 | Hasta cuándo vale una pieza | `VENTANAS`, `redes/piezas.mjs` |
 | Los umbrales del aviso de clima | `UMBRALES`, `ingesta/alertas.mjs` |
@@ -597,25 +673,25 @@ las estadísticas y las auditorías están en su tabla.
 
 | Qué pasa | Cómo se nota | Qué hacer |
 |---|---|---|
-| **cron-job.org desactivó el trabajo de Redes** (lo hace solo si falla varias veces) | Aviso "El reloj de Redes no corre" (alta). Igual arranca al final de cada "Actualizar la web", así que se nota poco | Reactivarlo en console.cron-job.org (`11-OPERACION`) |
-| **Las redes están apagadas** (`REDES_ACTIVAS` no dice `Si`) | WhatsApp una vez por día: "Las redes están apagadas…"; el resumen de las 21: "Redes: apagadas" | Prenderlas si no fue a propósito |
+| **El reloj deja de disparar Redes** (el Worker `radar-balcarce-reloj`; hasta el 15/10, cron-job.org) | Aviso "El reloj de Redes no corre" (alta). Igual arranca al final de cada "Actualizar la web", así que se nota poco | Mirar Cloudflare → Workers → `radar-balcarce-reloj` (`11-OPERACION`) |
+| **Las redes están apagadas** (`REDES_ACTIVAS` no dice `Si`) | Aviso una vez por día: "Las redes están apagadas…"; y lo dicen los informes diarios por mail | Prenderlas si no fue a propósito |
 | **El token de Meta murió** (código 190) | Redes en rojo: "El token venció o lo revocaron" | Una persona genera otro y lo pega en `META_TOKEN` |
-| **Meta bloquea la API** ("API access blocked", pasó del 22 al 24/09 por "actividad inusual") | Fallan Redes y Piezas | Una persona confirma la cuenta en Meta; después, mirar que cron-job.org no haya apagado trabajos |
+| **Meta bloquea la API** ("API access blocked", pasó del 22 al 24/09 por "actividad inusual") | Fallan Redes y Piezas | Una persona confirma la cuenta en Meta; después, mirar que el reloj siga disparando |
 | **Falló Instagram al subir una pieza** | La pieza no sale en ninguna red; el reloj la vuelve a pedir mientras dure la ventana (gasta otro audio) | Nada, salvo que se repita: mirar el registro |
 | **Falló Facebook después de Instagram** | Registro "falló (intento 3 de 3)"; el contrato marca la falta en Facebook | Una historia fija (clima, farmacia): Piezas con esa pieza, `publicar` y destino `facebook`. Un podcast: Piezas no sirve (no vuelve a armar un podcast que ya está en el libro de Instagram): bajar el video del artefacto de esa corrida de Redes (3 días) y subirlo a mano |
-| **No salió la historia de un podcast** | WhatsApp: "no salió la historia de… (su reel sí salió y la historia no se reintenta)" | No hay forma automática. Si importa, bajar el `.mp4` del artefacto de esa corrida y subirlo a mano como historia; el libro no se entera y el contrato la sigue contando como falta |
-| **No salió una pieza fija** (clima, farmacia) | WhatsApp: "No salió la pieza… y ya se cerró su ventana" | Mirar el registro de Redes (la voz, el cupo, `META_TOKEN`); publicarla con Piezas si todavía sirve y queda cupo de voz |
-| **No salió un podcast** | WhatsApp de falta del reel | Si "ese día no había notas para contar", es normal |
+| **No salió la historia de un podcast** | Aviso por mail: "no salió la historia de… (su reel sí salió y la historia no se reintenta)" | No hay forma automática. Si importa, bajar el `.mp4` del artefacto de esa corrida y subirlo a mano como historia; el libro no se entera y el contrato la sigue contando como falta |
+| **No salió una pieza fija** (clima, farmacia) | Aviso por mail: "No salió la pieza… y ya se cerró su ventana" | Mirar el registro de Redes (la voz, el cupo, `META_TOKEN`); publicarla con Piezas si todavía sirve y queda cupo de voz |
+| **No salió un podcast** | Aviso por mail de falta del reel | Si "ese día no había notas para contar", es normal |
 | **Gemini (voz) no contesta** | La pieza no sale en esa vuelta ("la pieza no sale con otra voz") y se reintenta en la siguiente | Si se repite toda la ventana: el vigilante avisa si Google rechaza la clave de redes (`clave-…`) o si una voz ya no existe (`voz-…`); si no, mirar el modelo de voz |
 | **Se acabó el cupo de voz del día** | Registro de Redes: "Gemini: se acabó el cupo del día (429)"; faltan piezas | Nada: vuelve al día siguiente. No correr Piezas, Auditar voz ni Crear voces un día de redes sin necesidad |
-| **Una voz propia ya no existe o está por vencer** | WhatsApp `voz-locutora`/`voz-locutor` (alta) o `vence-voz-…` (30 días antes, con la fecha de Google) | Crearla de nuevo (`11-OPERACION`) |
-| **Un posteo sin su foto en Instagram** | WhatsApp: "N posteo(s) de Facebook de hoy no tienen su foto en el feed". Se reintenta solo 4 veces en 12 horas | Si no se arregla solo, mirar que exista la tarjeta `/nota/ID/instagram.png` |
-| **Un duplicado** | WhatsApp de prioridad alta (libro) o en el cierre de las 23:30 (Meta) | Borrar la copia a mano en la red (una persona) |
+| **Una voz propia ya no existe o está por vencer** | Aviso por mail `voz-locutora`/`voz-locutor` (alta) o `vence-voz-…` (30 días antes, con la fecha de Google) | Crearla de nuevo (`11-OPERACION`) |
+| **Un posteo sin su foto en Instagram** | Aviso por mail: "N posteo(s) de Facebook de hoy no tienen su foto en el feed". Se reintenta solo 4 veces en 12 horas | Si no se arregla solo, mirar que exista la tarjeta `/nota/ID/instagram.png` |
+| **Un duplicado** | Aviso por mail de prioridad alta (libro) o en el cierre de las 23:30 (Meta) | Borrar la copia a mano en la red (una persona) |
 | **El video pasa de 58 segundos** | Aviso amarillo en la corrida; la historia sube recortada con fundido | Nada: está previsto |
 | **El libro no se pudo guardar** | Redes en rojo: "No se pudo guardar el libro después de tres intentos" | Mirar enseguida: la vuelta siguiente puede repetir lo publicado |
 | **Se publica pero el público no lo ve** (pasó hasta el 26/09, con la app de Meta en modo desarrollo) | Nadie avisa | Correr "Ver Facebook" y mirar la página desde una cuenta que no sea administradora |
 | **La auditoría semanal no corre** | El vigilante avisa si `web/data/auditoria.json` tiene más de 10 días | Correr "Auditoría" a mano (Actions → Auditoría → Run workflow) |
-| **Las medidas de `formatos.mjs` quedaron viejas** (90 días) | La auditoría semanal avisa por WhatsApp | Volver a verificarlas (`FORMATOS.md`) |
+| **Las medidas de `formatos.mjs` quedaron viejas** (90 días) | La auditoría semanal avisa por mail | Volver a verificarlas (`FORMATOS.md`) |
 | **Faltan permisos de estadísticas en `META_TOKEN`** | El resumen dice qué le falta | Regenerar el token con `read_insights` e `instagram_manage_insights` (una persona) |
 
 ## Lo que no salió y el reintento (1/10/2026)

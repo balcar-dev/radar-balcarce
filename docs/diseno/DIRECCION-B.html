@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dirección B: visual y colorida</title>
+<meta name="description" content="Radar Balcarce: prototipo de la Dirección B del rediseño (más visual y colorida: historias de los repasos, tarjetas con foto grande, color por sección, carruseles), portada y nota, celular y escritorio, claro y oscuro. No es el sitio: es para decidir.">
+<style>
+@font-face{font-family:"Source Serif 4";font-weight:600 900;font-display:swap;src:url("https://radarbalcarce.com/fuentes/source-serif-4-latin.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-weight:400 700;font-display:swap;src:url("https://radarbalcarce.com/fuentes/inter-latin.woff2") format("woff2")}
+
+:root{
+  color-scheme:light;
+  --fondo:#ECEBE6;--panel:#FFFFFF;--txt:#1C1C1A;--txt-suave:#55544F;--borde:#D6D3C9;--acento:#1F5FA8;
+  --tinta:#14161A;--papel:#F4F2ED;--tarjeta:#FFFFFF;--crema:#ECE8DF;--linea:#E4DFD2;
+  --texto:#3B403C;--suave:#5F6366;--rojo:#C7381C;--verde:#16615B;--ambar:#E8A33C;--azul-marca:#1D4F63;
+  --t-clima:#1B2733;--t-clima-txt:#FFFFFF;--t-clima-suave:#C4D5E4;
+  --t-farm:#E5F2EA;--t-farm-borde:#13804A;--t-dolar:#FBF1DC;--t-dolar-borde:#B07A12;--t-agenda:#F9E7E3;--t-agenda-borde:#C7381C;
+  --sombra:0 1px 2px rgba(20,22,26,.06),0 4px 14px rgba(20,22,26,.06);--tinte:8%;--oscurecer:22%;
+  --s-balcarce:#B91C1C;--s-politica:#3730A3;--s-policiales:#831843;--s-futbol:#7C3AED;--s-deportes:#0F766E;--s-automovilismo:#B45309;
+  --s-agro:#5A6B0A;--s-economia:#8A6500;--s-cultura:#9D2C8F;--s-tecnologia:#0B6FB8;--s-pais:#4B5563;
+  --s-educacion:#1D4BE0;--s-salud:#004E5C;--s-ambiente:#006516;--s-ciencia:#0A7C99;--s-espectaculos:#C0258F;--s-turismo:#5E3729;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;--fondo:#0E0E0E;--panel:#1A1A1A;--txt:#ECEBE6;--txt-suave:#A9A7A0;--borde:#34332F;--acento:#86B5EE;
+  --tinta:#F1EFE9;--papel:#0F1113;--tarjeta:#1A1D21;--crema:#24282D;--linea:#2E3238;
+  --texto:#D3D0C8;--suave:#A3A6A2;--rojo:#F07A5F;--verde:#6FCBB7;
+  --t-clima:#1B2733;--t-farm:#13261C;--t-dolar:#2A2312;--t-agenda:#2C1714;--t-dolar-borde:#E0A83A;--t-farm-borde:#3FB37A;--t-agenda-borde:#F07A5F;
+  --sombra:none;--tinte:14%;--oscurecer:0%}}
+:root[data-theme="dark"]{
+  color-scheme:dark;--fondo:#0E0E0E;--panel:#1A1A1A;--txt:#ECEBE6;--txt-suave:#A9A7A0;--borde:#34332F;--acento:#86B5EE;
+  --tinta:#F1EFE9;--papel:#0F1113;--tarjeta:#1A1D21;--crema:#24282D;--linea:#2E3238;
+  --texto:#D3D0C8;--suave:#A3A6A2;--rojo:#F07A5F;--verde:#6FCBB7;
+  --t-clima:#1B2733;--t-farm:#13261C;--t-dolar:#2A2312;--t-agenda:#2C1714;--t-dolar-borde:#E0A83A;--t-farm-borde:#3FB37A;--t-agenda-borde:#F07A5F;
+  --sombra:none;--tinte:14%;--oscurecer:0%}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fondo);color:var(--txt);font:16px/1.5 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.envoltorio{max-width:1240px;margin:0 auto;padding:16px}
+.envoltorio h1{font-size:1.45rem;margin:0 0 4px;line-height:1.2}
+.envoltorio .sub{margin:4px 0;color:var(--txt-suave);font-size:.95rem;max-width:80ch}
+.controles{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px}
+.grupo-control{display:flex;border:1px solid var(--borde);border-radius:10px;overflow:hidden;background:var(--panel)}
+.grupo-control button{font:inherit;font-size:.92rem;min-height:44px;padding:6px 14px;border:0;border-right:1px solid var(--borde);background:transparent;color:var(--txt);cursor:pointer}
+.grupo-control button:last-child{border-right:0}
+.grupo-control button[aria-pressed="true"]{background:var(--acento);color:#fff;font-weight:700}
+:root[data-theme="dark"] .grupo-control button[aria-pressed="true"]{color:#0E0E0E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .grupo-control button[aria-pressed="true"]{color:#0E0E0E}}
+.escenario{display:flex;justify-content:center;padding:8px 0 28px}
+.marco{container-type:inline-size;container-name:sitio;width:100%;max-width:1200px;background:var(--papel);border:1px solid var(--borde);border-radius:14px;overflow:hidden;position:relative;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.marco.celular{max-width:375px;height:780px;border-radius:30px;border:9px solid #2A2A2A}
+.marco.celular .sitio{height:100%;overflow-y:auto;overscroll-behavior:contain}
+.explica{max-width:1240px;margin:0 auto;padding:0 16px 40px}
+.explica h2{font-size:1.15rem;margin:26px 0 8px}
+.explica p,.explica li{color:var(--txt-suave);font-size:.95rem;max-width:88ch}
+.explica li{margin:5px 0}
+.explica table{border-collapse:collapse;width:100%;font-size:.9rem;background:var(--panel);border:1px solid var(--borde)}
+.explica th,.explica td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--borde);vertical-align:top}
+.explica th{font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:var(--txt-suave)}
+.explica code{font-size:.86em;background:var(--panel);border:1px solid var(--borde);border-radius:4px;padding:0 4px}
+.tabla-scroll{overflow-x:auto}
+.solo .envoltorio,.solo .explica{display:none}
+.solo .escenario{padding:0}
+.solo .marco,.solo .marco.celular{max-width:none;height:100vh;border:0;border-radius:0;box-shadow:none}
+.solo .marco .sitio{height:100vh;overflow-y:auto}
+
+/* ================================================= EL SITIO (Dirección B) */
+.sitio{background:var(--papel);color:var(--texto);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;min-height:100%;position:relative}
+.sitio :where(a){color:inherit;text-decoration:none}
+.sitio :focus-visible{outline:3px solid var(--acento);outline-offset:2px;border-radius:6px}
+.sitio img{display:block;max-width:100%;height:auto;background:var(--crema)}
+.ancho{max-width:1180px;margin:0 auto;padding:0 16px}
+@container sitio (min-width:900px){.ancho{padding:0 32px}}
+.titular{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;color:var(--tinta);font-weight:700;letter-spacing:-.01em;line-height:1.2;margin:0;font-variant-numeric:lining-nums}
+.hora{font-size:12.5px;color:var(--suave)}
+.solo-lectores{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.chip{display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:11px;background:var(--c);color:#fff;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+
+/* La cabecera: marca con el radar (el mismo del perfil de las redes) */
+.cabecera{position:sticky;top:0;z-index:8;background:var(--tarjeta);border-bottom:1px solid var(--linea)}
+.cabecera .ancho{display:flex;align-items:center;gap:10px;min-height:60px}
+.logo{display:inline-flex;align-items:center;gap:9px;font-family:"Source Serif 4",Georgia,serif;font-weight:900;font-size:23px;letter-spacing:-.03em;color:var(--tinta);line-height:1;min-height:44px}
+.logo b{color:var(--rojo);font-weight:900}
+.logo svg{flex:none}
+.cabecera .crece{flex:1}
+.boton-icono{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;border:0;background:var(--crema);color:var(--tinta);cursor:pointer}
+.datos-cab{display:none;gap:8px;align-items:center;font-size:13px;color:var(--suave)}
+.datos-cab b{color:var(--tinta)}
+@container sitio (min-width:900px){.datos-cab{display:flex}.logo{font-size:28px}}
+
+/* Historias (los repasos, el clima, "un día como hoy" y la farmacia) */
+.historias{background:var(--tarjeta);border-bottom:1px solid var(--linea)}
+.historias .pista{display:flex;gap:14px;overflow-x:auto;scrollbar-width:none;padding:12px 16px 10px;scroll-snap-type:x proximity}
+.historias .pista::-webkit-scrollbar{display:none}
+@container sitio (min-width:900px){.historias .pista{justify-content:center;gap:26px;padding:16px 32px 12px}}
+.historia-boton{flex:none;width:74px;display:flex;flex-direction:column;align-items:center;gap:6px;border:0;background:none;padding:0;cursor:pointer;color:var(--tinta);font:600 11.5px/1.25 Inter,system-ui,sans-serif;text-align:center;scroll-snap-align:start}
+.aro{width:70px;height:70px;border-radius:50%;padding:3px;background:conic-gradient(from 200deg,#C7381C,#E8A33C,#1D4F63,#C7381C)}
+.historia-boton.vista .aro{background:var(--linea)}
+.aro span{display:block;width:100%;height:100%;border-radius:50%;border:3px solid var(--tarjeta);overflow:hidden;background:var(--crema)}
+.aro img{width:100%;height:100%;object-fit:cover}
+.aro .icono-farm{display:grid;place-items:center;height:100%;background:#13804A}
+
+/* Las secciones como pastillas de color */
+.chips-secciones{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:12px 16px 4px}
+.chips-secciones::-webkit-scrollbar{display:none}
+.chips-secciones a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:22px;background:var(--c);color:#fff;font-weight:700;font-size:14px}
+.chips-secciones a.servicio{background:var(--tarjeta);color:var(--verde);border:1px solid var(--linea)}
+@container sitio (min-width:900px){.chips-secciones{flex-wrap:wrap;justify-content:center;padding:16px 32px 0}}
+
+/* ----------------------------------------------------------- portada */
+.portada{padding-top:14px;padding-bottom:40px;display:flex;flex-direction:column;gap:26px}
+.apertura{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.apertura .grande{grid-column:1 / -1}
+.sobre-foto{position:relative;display:block;border-radius:18px;overflow:hidden;background:#000;box-shadow:var(--sombra)}
+.sobre-foto img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.sobre-foto .capa{position:absolute;inset:auto 0 0 0;padding:60px 16px 16px;background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.72) 45%,rgba(0,0,0,0) 100%)}
+.sobre-foto .titular{color:#fff;font-size:25px;line-height:1.14;font-weight:800;margin:8px 0 6px}
+.sobre-foto .hora{color:#E4E4E4}
+.sobre-foto.chica img{aspect-ratio:4/5}
+.sobre-foto.chica .capa{padding:40px 10px 10px}
+.sobre-foto.chica .titular{font-size:15px;line-height:1.2}
+.sobre-foto.chica .hora{display:none}
+.sobre-foto:hover .titular{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+@container sitio (min-width:720px){
+  .apertura{grid-template-columns:minmax(0,2fr) minmax(0,1fr);grid-template-rows:1fr 1fr}
+  .apertura .grande{grid-row:1 / span 2;grid-column:auto}
+  .sobre-foto.chica .capa{padding:60px 16px 16px}
+  .sobre-foto.chica .titular{font-size:19px}
+  .sobre-foto.chica .hora{display:inline}
+  .apertura .grande img{aspect-ratio:auto;height:100%;min-height:440px}
+  .apertura .grande .titular{font-size:38px;line-height:1.08}
+  .apertura .chica img{aspect-ratio:auto;height:100%;min-height:214px}
+}
+
+.servicios{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@container sitio (min-width:720px){.servicios{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}}
+.mosaico{display:flex;flex-direction:column;justify-content:space-between;gap:6px;min-height:118px;padding:14px;border-radius:16px;background:var(--c-fondo);color:var(--tinta);border-left:5px solid var(--c-borde, transparent)}
+.mosaico .rot{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--suave)}
+.mosaico .grande{font-size:30px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.mosaico .dato{font-size:15px;font-weight:700;line-height:1.25}
+.mosaico .meta{font-size:12.5px;color:var(--suave)}
+.mosaico.clima{--c-fondo:var(--t-clima);color:#fff;border-left:0}
+.mosaico.clima .rot,.mosaico.clima .meta{color:#C4D5E4}
+.mosaico.farm{--c-fondo:var(--t-farm);--c-borde:var(--t-farm-borde)}
+.mosaico.dolar{--c-fondo:var(--t-dolar);--c-borde:var(--t-dolar-borde)}
+.mosaico.agenda{--c-fondo:var(--t-agenda);--c-borde:var(--t-agenda-borde)}
+
+.cab-bloque{display:flex;align-items:center;gap:10px;margin:0 0 12px}
+.cab-bloque h2{font-family:"Source Serif 4",Georgia,serif;font-size:22px;font-weight:800;color:var(--tinta);margin:0;display:flex;align-items:center;gap:9px}
+.cab-bloque h2::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--c,var(--rojo))}
+.cab-bloque .crece{flex:1}
+.ver{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;font-size:13.5px;font-weight:700;color:var(--rojo)}
+.flechas{display:none;gap:6px}
+.flechas button{width:44px;height:44px;border-radius:50%;border:1px solid var(--linea);background:var(--tarjeta);color:var(--tinta);cursor:pointer;font-size:18px;line-height:1}
+@container sitio (min-width:900px){.flechas{display:flex}}
+
+.tarjeta{display:flex;flex-direction:column;background:var(--tarjeta);border-radius:14px;overflow:hidden;box-shadow:var(--sombra);border-top:4px solid var(--c)}
+.tarjeta img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.tarjeta .cuerpo{padding:10px 12px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tarjeta .titular{font-size:16px;line-height:1.25}
+.tarjeta .chip{align-self:flex-start}
+.tarjeta:hover .titular{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.grilla{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.grilla .tarjeta .titular{font-size:15px}
+@container sitio (min-width:720px){.grilla{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.grilla .tarjeta .titular{font-size:17px}}
+@container sitio (min-width:1000px){.grilla{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* Carrusel: se desliza con el dedo; en escritorio, con flechas. Se ve un pedazo de la siguiente. */
+.carrusel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -16px;padding:2px 16px 8px;scroll-padding:0 16px}
+.carrusel::-webkit-scrollbar{display:none}
+.carrusel > *{flex:0 0 74%;scroll-snap-align:start}
+@container sitio (min-width:720px){.carrusel > *{flex-basis:calc((100% - 36px) / 3.3)}}
+@container sitio (min-width:900px){.carrusel{margin:0 -32px;padding:2px 32px 8px;scroll-padding:0 32px}}
+@container sitio (min-width:1000px){.carrusel > *{flex-basis:calc((100% - 48px) / 4.3)}}
+
+.de-aca{background:color-mix(in srgb,var(--s-balcarce) var(--tinte),var(--papel));border-radius:22px;padding:16px 16px 10px;margin:0 -6px}
+.de-aca .carrusel{margin:0 -16px;padding:2px 16px 8px}
+.de-aca .titular{font-size:17px}
+.de-aca .ver{color:color-mix(in srgb,var(--rojo),#000 var(--oscurecer))}
+
+.lateral-b{display:flex;flex-direction:column;gap:14px}
+.buzon{border-radius:18px;padding:18px;background:var(--azul-marca);color:#fff}
+.buzon h3{font-family:"Source Serif 4",Georgia,serif;font-size:21px;margin:0 0 6px;color:#fff}
+.buzon p{margin:0 0 12px;font-size:14.5px;color:#E3EEF2}
+.boton{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 18px;border-radius:23px;font-weight:700;font-size:14.5px;border:0;cursor:pointer;font-family:inherit}
+.boton.claro{background:#fff;color:#14161A}
+.boton.wa{background:#0E7A3A;color:#fff}
+.boton.borde{background:var(--tarjeta);color:var(--tinta);border:1px solid var(--linea)}
+
+/* --------------------------------------------------------------- nota */
+.nota{padding-bottom:20px}
+.nota .portadilla{position:relative;margin:0 -16px}
+.nota .portadilla img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.nota .portadilla .chip{position:absolute;left:16px;top:14px;height:28px;font-size:12px;padding:0 12px;border-radius:14px}
+.nota figcaption{font-size:12.5px;color:var(--suave);padding:8px 0 0}
+.nota h1.titular{font-size:29px;line-height:1.12;font-weight:800;margin:14px 0 10px;letter-spacing:-.02em}
+.nota .bajada{font-size:18px;line-height:1.5;color:var(--texto);margin:0 0 14px}
+.firma{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;background:var(--tarjeta);box-shadow:var(--sombra);margin-bottom:18px;font-size:13px;color:var(--suave)}
+.firma b{display:block;color:var(--tinta);font-size:14px}
+.texto{font-size:18px;line-height:1.7;color:var(--texto);max-width:66ch}
+.texto p{margin:0 0 1.1em}
+.texto .aviso-proto{font-size:14px;color:var(--suave);border-left:3px solid var(--linea);padding-left:12px}
+details.fuentes{background:var(--tarjeta);border-radius:14px;padding:0 14px;margin:20px 0;box-shadow:var(--sombra)}
+details.fuentes summary{display:flex;align-items:center;gap:8px;min-height:50px;cursor:pointer;list-style:none;font-size:13.5px;color:var(--suave)}
+details.fuentes summary::-webkit-details-marker{display:none}
+details.fuentes summary::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-left:auto}
+details.fuentes[open] summary::after{transform:rotate(-135deg)}
+details.fuentes summary b{color:var(--tinta)}
+details.fuentes p{font-size:13.5px;color:var(--suave);margin:0 0 10px}
+details.fuentes ul{margin:0;padding:0 0 12px;list-style:none}
+details.fuentes li{padding:6px 0;font-size:14px;color:var(--rojo);font-weight:600}
+.barra-compartir{position:sticky;bottom:0;z-index:7;display:flex;gap:8px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--tarjeta) 92%,transparent);backdrop-filter:blur(8px);border-top:1px solid var(--linea)}
+.barra-compartir .boton{flex:1}
+.nota-columnas{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;padding-top:0}
+@container sitio (min-width:720px){
+  .nota .portadilla{margin:18px 0 0}
+  .nota .portadilla img{aspect-ratio:16/9;border-radius:18px}
+}
+@container sitio (min-width:1000px){
+  .nota-columnas{grid-template-columns:minmax(0,1fr) 320px;gap:48px}
+  .nota h1.titular{font-size:44px;line-height:1.06}
+  .nota .bajada{font-size:20px}
+  .nota-columnas aside{position:sticky;top:76px;align-self:start}
+  .nota-columnas aside .servicios{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .barra-compartir{position:static;background:none;border:0;padding:0;backdrop-filter:none;max-width:420px}
+}
+
+/* ------------------------------------------------- el visor de historias */
+.visor{position:absolute;inset:0;z-index:40;background:rgba(0,0,0,.92);display:flex;justify-content:center;align-items:center}
+.marco:not(.celular) .visor{position:fixed}
+.visor[hidden]{display:none}
+.visor a{text-decoration:none}
+.visor :focus-visible{outline:3px solid #86B5EE;outline-offset:2px}
+.visor .lamina{position:relative;width:100%;max-width:420px;height:100%;max-height:820px;background:#0B0C0E;color:#fff;display:flex;flex-direction:column;overflow:hidden}
+@container sitio (min-width:720px){.visor .lamina{border-radius:18px;height:92%}}
+.visor .barras{position:absolute;top:8px;left:10px;right:10px;display:flex;gap:4px;z-index:3}
+.visor .barras i{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.35);overflow:hidden}
+.visor .barras i b{display:block;height:100%;width:0;background:#fff}
+.visor .barras i.hecha b{width:100%}
+.visor .barras i.ahora b{animation:avance 7s linear forwards}
+@keyframes avance{to{width:100%}}
+.visor .tope{position:absolute;top:18px;left:12px;right:6px;display:flex;align-items:center;gap:8px;z-index:3;font-size:13px}
+.visor .tope b{font-weight:700}
+.visor .tope .crece{flex:1}
+.visor .cerrar{width:44px;height:44px;border:0;background:transparent;color:#fff;font-size:26px;cursor:pointer}
+.visor .imagen{position:relative;flex:0 0 52%;background:#222}
+.visor .imagen img{width:100%;height:100%;object-fit:cover}
+.visor .imagen::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,0) 30%,rgba(0,0,0,0) 70%,#0B0C0E)}
+.visor .imagen .farm{display:grid;place-items:center;height:100%;background:#13804A}
+.visor .texto-h{position:relative;flex:1;padding:4px 18px 18px;display:flex;flex-direction:column;gap:10px;overflow:auto}
+.visor .texto-h h2{font-family:"Source Serif 4",Georgia,serif;font-size:24px;line-height:1.15;margin:0;color:#fff}
+.visor .texto-h ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+.visor .texto-h li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;font-size:15px;line-height:1.3;align-items:start}
+.visor .texto-h li span{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--c);font-weight:700;font-size:13px}
+.visor .texto-h p{margin:0;color:#DADADA;font-size:15.5px}
+.visor .texto-h .boton{margin-top:auto;align-self:stretch}
+.visor .zona{position:absolute;top:70px;bottom:120px;width:35%;border:0;background:transparent;cursor:pointer;z-index:2}
+.visor .zona.izq{left:0}.visor .zona.der{right:0}
+.visor .lugar-farm{color:#fff;font-size:15px;line-height:1.45}
+
+.pie{margin-top:10px;background:var(--tarjeta);border-top:1px solid var(--linea);padding:24px 0 34px;font-size:13px;color:var(--suave)}
+.pie p{max-width:70ch;margin:10px 0 0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.visor .barras i.ahora b{width:100%}}
+</style>
+</head>
+<body>
+<div class="envoltorio">
+  <h1>Dirección B · Más visual y colorida</h1>
+  <p class="sub"><b>Historias arriba</b> (los tres repasos del día, el clima, "Un día como hoy" y la farmacia, como en Instagram), <b>tarjetas con foto grande</b> y el título encima, <b>el color de cada sección</b> en pastillas y bordes, servicios como mosaicos de color y <b>carruseles por sección</b>. Titulares, fotos y servicios son <b>los reales de radarbalcarce.com del 16/10/2026</b>. Tocá un círculo de arriba para ver una historia, o cualquier nota para verla por dentro.</p>
+  <div class="controles" role="toolbar" aria-label="Qué mirar">
+    <div class="grupo-control" data-grupo="pagina"><button type="button" data-v="portada" aria-pressed="true">Portada</button><button type="button" data-v="nota" aria-pressed="false">Nota</button></div>
+    <div class="grupo-control" data-grupo="vista"><button type="button" data-v="celular" aria-pressed="true">Celular (375 px)</button><button type="button" data-v="escritorio" aria-pressed="false">Escritorio</button></div>
+    <div class="grupo-control" data-grupo="tema"><button type="button" data-v="light" aria-pressed="false">Claro</button><button type="button" data-v="dark" aria-pressed="false">Oscuro</button></div>
+  </div>
+</div>
+
+<div class="escenario"><div class="marco celular" id="marco"><div class="sitio" id="sitio"></div><div class="visor" id="visor" hidden role="dialog" aria-modal="true" aria-label="Historia"></div></div></div>
+
+<section class="explica">
+  <h2>Qué cambia respecto de hoy</h2>
+  <ul>
+    <li><b>Historias arriba de todo</b>: los repasos de la mañana, la tarde y la noche (que ya existen como video en las redes) se ven como círculos, igual que en Instagram. Al tocarlos se abre la tapa del repaso con sus cuatro titulares y un botón para leer. Es lo más reconocible para quien llega desde Facebook.</li>
+    <li><b>Fotos grandes con el título encima</b> en la apertura (sobre un degradé oscuro, para que se lea). Sólo va encima <b>nuestro</b> título y la sección: el crédito de la foto queda en el epígrafe de la nota, nunca pegado sobre la imagen (regla de las fotos).</li>
+    <li><b>Color por sección en todos lados</b>: pastillas de sección arriba, borde de color en cada tarjeta, el fondo rosado suave del bloque "De Balcarce".</li>
+    <li><b>Servicios como mosaicos</b> de 2×2 en el celular (clima azul noche, farmacia verde, dólar ámbar, agenda roja), sin carrusel: nada de servicios queda escondido detrás de un gesto (decisión del 28/09).</li>
+    <li><b>Carruseles por sección</b>: cada sección muestra 4 notas en una fila que se desliza, con un pedazo de la siguiente a la vista para que se entienda que hay más, y "Ver todo".</li>
+    <li><b>La nota</b>: foto arriba de lado a lado, título, bajada, una tarjetita de quién la escribió, el texto en letra de pantalla a 18 px, "Fuentes (N)" cerrado y una <b>barra fija abajo para compartir por WhatsApp</b> en el celular.</li>
+  </ul>
+  <h2>Accesibilidad y rendimiento</h2>
+  <ul>
+    <li><b>Contraste AA</b>: las pastillas de sección son texto blanco sobre los colores de hoy (todos dan 4,5:1 o más, ya lo controla <code>pruebas/seo-paginas.test.mjs</code>). El título blanco sobre la foto va sobre un degradé que llega a 90% de negro: más de 7:1 donde está el texto. El botón de WhatsApp usa un verde más oscuro (<code>#0E7A3A</code>, 5,6:1).</li>
+    <li><b>Toques de 44 px</b>: pastillas, círculos de las historias (70 px), mosaicos, flechas y botones. El visor de historias se cierra con Escape o con la cruz, las flechas del teclado pasan de una a otra, y quien pidió "menos movimiento" en el teléfono no ve el avance automático.</li>
+    <li><b>Carruseles accesibles</b>: son listas que se deslizan con el dedo o el teclado, sin JavaScript (el JS sólo mueve las flechas de escritorio). Riesgo conocido: lo que queda fuera de pantalla se lee menos.</li>
+    <li><b>Peso</b>: es la dirección más pesada. Muestra unas 30 fotos en la portada contra 5 de hoy, y más grandes. Con <code>loading="lazy"</code> sólo se bajan las que se ven, pero <b>es imprescindible</b> generar tamaños chicos (círculos de 140 px, tarjetas de 400 px, apertura de 1200 px) en <code>web/scripts/achicar-foto.mjs</code> y usar <code>srcset</code>; si no, en el celular con datos va a tardar.</li>
+  </ul>
+  <h2>Cómo se aplicaría al código</h2>
+  <div class="tabla-scroll"><table>
+    <thead><tr><th>Archivo</th><th>Qué cambia</th></tr></thead>
+    <tbody>
+      <tr><td><code>web/app/globals.css</code></td><td>Tokens del modo oscuro, tarjetas, mosaicos, carruseles, cabecera con el radar. Los <code>--s-*</code> no cambian (se usan más).</td></tr>
+      <tr><td><code>web/app/page.js</code></td><td>Arma historias + apertura de tres + mosaicos + "Lo último" + "De Balcarce" + carruseles.</td></tr>
+      <tr><td><code>web/components/historias.js</code> (nuevo)</td><td>Los círculos y el visor (componente de cliente). Lee los repasos del día de <code>notas-propias.js</code> y sus collages (<code>collage-repaso*.jpg</code>, que ya se generan).</td></tr>
+      <tr><td><code>web/components/postales.js</code>, <code>piezas.js</code></td><td>Se reemplazan por <code>TarjetaFoto</code>, <code>Tarjeta</code> y <code>Carrusel</code> (nuevo <code>web/components/tarjetas.js</code>).</td></tr>
+      <tr><td><code>web/components/hoy-balcarce.js</code></td><td>Pasa de tres renglones a cuatro mosaicos (suma la agenda).</td></tr>
+      <tr><td><code>web/components/navegacion.js</code>, <code>web/app/layout.js</code></td><td>Cabecera fija con el radar; el menú en pastillas de color.</td></tr>
+      <tr><td><code>web/app/nota/[id]/page.js</code>, <code>compartir.js</code>, <code>imagen-destacada.js</code></td><td>Foto arriba de lado a lado, tarjeta de firma, barra fija de compartir.</td></tr>
+      <tr><td><code>web/scripts/achicar-foto.mjs</code>, <code>web/scripts/fotos-notas.mjs</code></td><td>Generar las fotos en tres tamaños (sin esto, no conviene publicarla).</td></tr>
+      <tr><td><code>pruebas/</code> (las mismas de A, más una nueva)</td><td>Ajustar las de presentación; una prueba nueva que controle que nunca se pinte un nombre de medio encima de una foto.</td></tr>
+    </tbody>
+  </table></div>
+  <ul>
+    <li><b>Esfuerzo</b>: grande. Unas 4 a 6 sesiones de trabajo de Claude, más los tamaños de las fotos, más revisión en varios teléfonos.</li>
+    <li><b>Riesgo</b>: mediano. Las direcciones y el SEO no cambian, pero: (1) la página pesa más; (2) las ilustraciones genéricas se repiten (la del clima nublado sale casi todos los días) y en grande se nota mucho más; (3) con 50 a 150 notas por día y 17 secciones, muchos carruseles hacen la portada larga y lo de los costados no se ve.</li>
+    <li><b>Cómo se prueba</b>: igual que A (<code>npm test</code>, <code>npm run build</code>, navegador de pruebas a 375 px y escritorio, claro y oscuro) más Lighthouse en un celular con red lenta, y una semana mirando en las estadísticas si se tocan las historias y los carruseles.</li>
+    <li><b>Cómo se vuelve atrás</b>: igual que A: una rama, un commit, <code>git revert</code> si no gusta, o la constante <code>DISENO</code> en <code>web/lib/sitio.js</code>. Las historias se pueden sumar o sacar solas, sin el resto.</li>
+  </ul>
+</section>
+
+<script>
+(function () {
+  'use strict';
+  var FOTOS = 'https://radarbalcarce.com/fotos-notas/';
+  var AHORA = Date.parse('2026-10-16T18:45:00Z');
+  /* Las secciones: nombre, ranura y variable de color (las 11 de hoy + las 6 nuevas del mapa de 17). */
+  var SECC = {
+    balcarce: 'Balcarce', politica: 'Política', policiales: 'Policiales', futbol: 'Fútbol', deportes: 'Deportes', automovilismo: 'Automovilismo',
+    agro: 'Agro', economia: 'Economía', cultura: 'Cultura y agenda', tecnologia: 'Tecnología', pais: 'Argentina',
+    educacion: 'Educación', salud: 'Salud', ambiente: 'Ambiente y clima', ciencia: 'Ciencia', espectaculos: 'Espectáculos', turismo: 'Turismo y gastronomía'
+  };
+  var ORDEN = ['balcarce', 'politica', 'policiales', 'futbol', 'deportes', 'automovilismo', 'agro', 'economia', 'cultura', 'tecnologia', 'pais'];
+  /* Notas reales de radarbalcarce.com (16/10/2026): id, sección, título, bajada, fecha (UTC), foto, ancho, alto, crédito, de acá, fuentes. */
+  var N = [
+    ['1vqqg6', 'balcarce', 'La Dirección de Juventud relanza el programa Arte Urbano', 'Estudiantes y profesores intervienen el quirófano móvil de Zoonosis con técnicas de pintura. El dispositivo continúa con las castraciones gratuitas.', '2026-10-16T12:55Z', '1vqqg6', 1024, 460, 'Foto: Puntonueve (FM 100.9)', 1, 3],
+    ['1o0mwr9', 'politica', 'Gabriel Petruccelli pide informes por las excavaciones en el Cerro El Triunfo', 'El concejal solicitó al Ejecutivo municipal detalles sobre los trabajos de cañería de agua. Busca prevenir daños en las raíces de los árboles del espacio verde.', '2026-10-16T16:24Z', '1o0mwr9', 640, 512, 'Foto: Infórmese Primero (FM 104.9)', 1, 2],
+    ['x3s2ug', 'economia', 'El Ministerio de Economía informa un superávit primario de un billón y medio en septiembre', 'El Gobierno registró un superávit financiero positivo el mes pasado y acumula un 1,2% del producto bruto interno en lo que va del año, según datos oficiales.', '2026-10-16T15:21Z', 'x3s2ug', 1200, 676, 'Foto: Ámbito', 0, 10],
+    ['oiojec', 'tecnologia', 'Tesla presenta el nuevo Roadster con versiones de alto rendimiento y capacidad de vuelo', 'La compañía de Elon Musk realizó la demostración del vehículo superdeportivo en Texas. Prevén iniciar la fabricación en 2028 tras varios años de retrasos.', '2026-10-16T14:35Z', 'oiojec', 1200, 630, 'Foto: Infobae', 0, 3],
+    ['10ephb3', 'pais', 'La Justicia investiga el patrimonio de Claudio Tapia y pide informes a Suiza', 'El juez federal Ariel Lijo ordenó un exhorto a la FIFA para rastrear fondos y levantó el secreto financiero de la exesposa del titular de la AFA.', '2026-10-16T14:12Z', '10ephb3', 1200, 800, 'Foto: La Nación', 0, 7],
+    ['1k4p85d', 'economia', 'El personal de casas particulares cobra con aumento en octubre', 'La hora de tareas generales arranca en $4.064,08 con retiro y $4.337,53 sin retiro. La actualización salarial llega al 1,7% respecto a septiembre.', '2026-10-16T13:47Z', '1k4p85d', 1200, 676, 'Foto: El Destape', 0, 2],
+    ['a6hpqz', 'politica', 'El peronismo local debate su estrategia de cara a las elecciones', 'A un año de los comicios, el PJ tradicional, La Cámpora, el kicillofismo y el Frente Renovador discuten la construcción de una alternativa en Balcarce.', '', 'a6hpqz', 1120, 630, 'Foto: Diario La Vanguardia', 1, 1],
+    ['1jdsdep', 'balcarce', 'La Dirección de Juventud firma un acuerdo para vender entradas online', 'El Teatro Municipal contará con una nueva plataforma de venta de localidades a partir de 2027. Permitirá operaciones digitales y presenciales.', '2026-10-16T13:07Z', '1jdsdep-ia', 1200, 670, 'Ilustración generada con IA', 1, 4],
+    ['npazul', 'cultura', 'El Festival Cervantino de Azul cumple 20 años con más de 50 actividades', 'Del 23 de octubre al 1 de noviembre, la ciudad bonaerense de Azul reúne teatro, música, muestras, conferencias y presentaciones editoriales.', '2026-10-16T12:51Z', 'npazulcervantino-2', 900, 506, 'Foto: Prensa Cicaré / Festival Cervantino de Azul', 0, 1],
+    ['k4nvoi', 'economia', 'El FMI pide focalizar subsidios energéticos y mantener recortes', 'El organismo internacional publicó su informe económico y recomendó asistir solo a los sectores más vulnerables.', '2026-10-16T12:50Z', 'k4nvoi', 600, 316, 'Foto: Crónica', 0, 5],
+    ['gizbaj', 'deportes', 'Max Verstappen choca al argentino Ezequiel Pérez Companc en Portugal', 'El piloto neerlandés embistió el auto del argentino durante las prácticas del GT World Challenge Europe en Portimao.', '2026-10-16T12:38Z', 'gizbaj', 1200, 900, 'Foto: Jen_ross83 / Wikimedia Commons (CC BY 2.0)', 0, 13],
+    ['1e6e9wy', 'economia', 'Docentes y estatales bonaerenses discuten una nueva oferta salarial', 'La Provincia retoma las negociaciones este viernes tras rechazar la primera propuesta del 1,5%.', '', '1e6e9wy', 1120, 630, 'Foto: Diario La Vanguardia', 1, 1],
+    ['efem', 'cultura', 'Un día como hoy, en 2004: Messi debuta en el Barcelona', 'Con 17 años, Lionel Messi juega su primer partido oficial con el club.', '2026-10-16T12:06Z', 'efemeride-2026-10-16', 1200, 800, 'Ilustración generada con IA · Radar Balcarce', 0, 1],
+    ['1h2xfr3', 'deportes', 'Jennifer Lasa gana en el campeonato argentino de powerlifting', 'La deportista local se impuso en el torneo organizado por la Agrupación de Powerlifting Argentina en Mar del Plata tras mejorar sus marcas personales.', '2026-10-16T12:01Z', '1h2xfr3', 964, 654, 'Foto: Radio Gabal (FM 104.1)', 1, 2],
+    ['1mfnr70', 'deportes', 'Campo de Pato mete a sus dos equipos en semifinales de rugby', 'Los planteles superiores de Pato Naranja y Pato Negro ganaron en la última fecha y avanzaron a la instancia decisiva.', '2026-10-16T12:00Z', '1mfnr70', 794, 342, 'Foto: El Diario Balcarce', 1, 1],
+    ['aa7nni', 'cultura', 'Reprograman la Caravana de la Alegría para noviembre', 'La Escuela Emilio Lamarca pasó la fecha del tradicional evento familiar por los pronósticos del tiempo. Se hará el domingo 15 de noviembre.', '2026-10-16T11:11Z', 'aa7nni-ia', 1200, 670, 'Ilustración generada con IA', 1, 4],
+    ['1xw2rw', 'pais', 'Mar del Plata registra lloviznas y vientos fuertes este viernes', 'El Servicio Meteorológico Nacional anticipa una jornada fresca y ventosa, con marcas térmicas entre los 10 y los 14 grados.', '2026-10-16T10:50Z', '1xw2rw', 1200, 800, 'Foto: Mi8 (Canal 8 Mar del Plata)', 0, 5],
+    ['clima', 'balcarce', 'El clima de hoy en Balcarce: mínima de 6° y máxima de 11°', 'El pronóstico de este viernes 16 de octubre para Balcarce marca una mínima de 6° y máxima de 11°, con llovizna leve.', '2026-10-16T10:31Z', 'clima-nublado-1', 1024, 576, 'Ilustración generada con IA (Cloudflare Workers AI)', 1, 1],
+    ['h5197i', 'politica', 'Javier Milei regresa de Estados Unidos y prepara gira en Neuquén y España', 'El presidente concluyó su agenda en Washington y continuará sus actividades con visitas a Neuquén y Madrid durante la próxima semana.', '2026-10-16T10:19Z', 'h5197i', 1200, 676, 'Foto: Diario Popular', 0, 6],
+    ['4p4uuv', 'economia', 'ARBA extiende el plazo para pagar tres impuestos provinciales', 'La Agencia de Recaudación postergó hasta el jueves 12 de noviembre el vencimiento de tres tributos provinciales.', '2026-10-16T09:51Z', '4p4uuv', 1140, 642, 'Foto: Perfil', 0, 5],
+    ['yfn1ih', 'pais', 'La ANMAT prohíbe un equipo de depilación láser y frena a una firma', 'La ANMAT prohibió un cabezal de depilación láser y restringió la actividad de una distribuidora de insumos médicos.', '2026-10-16T06:41Z', 'yfn1ih', 1200, 630, 'Foto: Infobae', 0, 5],
+    ['cg6k1i', 'cultura', 'Netflix estrena Lo dejamos acá con Ricardo Darín y Diego Peretti', 'La comedia negra argentina dirigida por Hernán Goldfrid desembarca este viernes en la plataforma tras su paso por San Sebastián.', '2026-10-16T06:06Z', 'cg6k1i', 1200, 676, 'Foto: Los Andes (Mendoza)', 0, 6],
+    ['7rb12z', 'futbol', 'Lautaro Martínez cuestiona las dudas sobre el compromiso del seleccionado', 'El delantero de la Selección repasó la final del Mundial frente a España y admitió que las especulaciones generan malestar.', '2026-10-15T23:28Z', '7rb12z', 1000, 600, 'Foto: La Brújula 24', 0, 11],
+    ['1lkffhb', 'politica', 'Javier Milei cierra su visita a Washington con un acto contra el antisemitismo', 'El presidente brindó un discurso en la embajada, mantuvo un encuentro con el secretario de Energía Chris Wright y emprendió su regreso.', '2026-10-15T23:08Z', '1lkffhb', 1200, 900, 'Foto: Clarín', 0, 11],
+    ['n6v2wu', 'balcarce', 'UDOCBA concreta paro docente con alto acatamiento y reclama mejoras', 'El gremio concretó el jueves una medida de fuerza con una adhesión estimada en el 90% en el distrito.', '2026-10-15T21:32Z', 'n6v2wu', 619, 668, 'Foto: El Diario Balcarce', 1, 1],
+    ['32f6mu', 'automovilismo', 'Lando Norris califica a Franco Colapinto como un buen amigo', 'El piloto británico bajó la tensión con su colega argentino tras el choque que protagonizaron en el Gran Premio de Azerbaiyán.', '2026-10-15T21:05Z', '32f6mu', 1200, 674, 'Foto: TyC Sports', 0, 4],
+    ['w9mlsu', 'tecnologia', 'WhatsApp detalla cómo revisar y cerrar sesiones abiertas en otros equipos', 'La aplicación cuenta con una herramienta para comprobar qué computadoras y tabletas tienen acceso a la cuenta.', '2026-10-15T20:22Z', 'w9mlsu', 1200, 676, 'Foto: La Capital (Rosario)', 0, 2],
+    ['1jpdkrm', 'economia', 'La inflación de septiembre varía según cada provincia', 'El costo de vida alcanzó el 1,9% a nivel nacional en septiembre, con diferencias en las jurisdicciones con índices propios.', '2026-10-15T19:58Z', '1jpdkrm', 1023, 574, 'Foto: TN (Todo Noticias)', 0, 5],
+    ['1caxs1v', 'agro', 'La siembra y cosecha agrícola registran demoras por lluvias y bajas temperaturas', 'Las precipitaciones y los registros térmicos reducidos retrasan las tareas de implantación y recolección en distintas zonas productivas.', '2026-10-15T18:59Z', '1caxs1v', 1023, 574, 'Foto: TN (Todo Noticias)', 0, 2],
+    ['94s29q', 'politica', 'Federico Sturzenegger cuestiona al gobierno bonaerense por la suba de la VTV', 'El ministro nacional criticó el incremento del 17,6% en la Verificación Técnica Vehicular bonaerense.', '2026-10-15T17:41Z', '94s29q', 1140, 642, 'Foto: Perfil', 0, 6],
+    ['1vrfi9w', 'balcarce', 'Proyecto 10 repasa su historia social', 'La organización comunitaria cumple más de dos décadas de labor en la ciudad.', '', '1vrfi9w', 1200, 590, 'Foto: Diario La Vanguardia', 1, 1],
+    ['1uvhput', 'futbol', 'Leonel Flores visita un club de barrio para donar comida', 'El delantero de Boca se acercó al Club Santa María Futsal en Monte Chingolo. Donó alimentos y compartió un encuentro con los vecinos.', '2026-10-15T16:55Z', '1uvhput', 1200, 900, 'Foto: Olé', 0, 10]
+  ].map(function (a) { return { id: a[0], s: a[1], t: a[2], b: a[3], f: a[4], img: a[5], w: a[6], h: a[7], cred: a[8], aca: !!a[9], nf: a[10] }; });
+  var POR_ID = {}; N.forEach(function (n) { POR_ID[n.id] = n; });
+  var CUERPO = {
+    '1vqqg6': ['La Dirección de Juventud puso en marcha otra etapa del programa "Arte Urbano" mediante una intervención visual en el quirófano móvil de Zoonosis. Las labores están a cargo de alumnos y docentes de la Escuela de Arte "Astor Piazzolla", quienes utilizan técnicas de pintura y combinación de colores para renovar el aspecto del dispositivo sanitario.',
+      'El inicio de las tareas debió suspenderse días atrás por cuestiones climáticas y se concretó durante la presente semana, de acuerdo con la información oficial. Se trata de la primera acción de una iniciativa que proyecta extenderse a otros sectores.',
+      'En paralelo a la intervención artística, el plantel de veterinarios de la Dirección de Inspección General sigue adelante con las castraciones gratuitas de perros y gatos. La atención se cumple de lunes a viernes en el quirófano móvil, situado frente a la Escuela de Arte.'],
+    fuentes: ['Municipalidad de Balcarce', 'Puntonueve (FM 100.9)', 'Infórmese Primero (FM 104.9)']
+  };
+  var AGENDA = [['oct', '24', 'Caminata Rosa', 'Sábado 24, de 15 a 17 · Plaza Libertad'], ['nov', '7', 'Paseo de Primavera en San Agustín', 'Sábado 7, de 14 a 17 · Ruta 55'], ['nov', '27', 'Cabalgata en Balcarce', 'Del 27 al 29 · Estancia San Pedro de la Vigilancia']];
+
+  var esc = function (t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); };
+  function hace(f) {
+    if (!f) return '';
+    var m = Math.round((AHORA - Date.parse(f)) / 60000);
+    if (m < 60) return 'hace ' + m + ' min';
+    if (m < 60 * 20) return 'hace ' + Math.round(m / 60) + ' h';
+    return 'ayer';
+  }
+  function horaCorta(f) { if (!f) return '·'; var d = new Date(Date.parse(f) - 3 * 3600000); return String(d.getUTCHours()).padStart(2, '0') + ':' + String(d.getUTCMinutes()).padStart(2, '0'); }
+  function foto(n, o) {
+    o = o || {};
+    return '<img src="' + FOTOS + n.img + '.jpg" width="' + n.w + '" height="' + n.h + '" alt="' + (o.alt ? esc(n.t) : '') + '"' +
+      (o.primera ? ' fetchpriority="high"' : ' loading="lazy"') + ' decoding="async">';
+  }
+  var ante = function (n) { return '<span class="antetitulo" style="--c:var(--s-' + n.s + ')">' + esc(SECC[n.s]) + '</span>'; };
+  var abrir = function (n, cuerpo, clase) { return '<a href="#nota-' + n.id + '" data-nota="' + n.id + '"' + (clase ? ' class="' + clase + '"' : '') + '>' + cuerpo + '</a>'; };
+
+  var ICONOS = {
+    lupa: '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>',
+    nube: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.2 9.6 4.2 4.2 0 0 0 7 18z"/></svg>',
+    cruz: '<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#13804A" d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></svg>',
+    dolar: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v18M16.5 7.5c-.8-1.2-2.4-2-4.5-2-2.6 0-4.3 1.3-4.3 3.1 0 4.3 9.1 2.4 9.1 6.8 0 1.9-1.9 3.2-4.6 3.2-2.3 0-4-.9-4.8-2.3"/></svg>',
+    wa: '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .7.5l1 2.3c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.2.6.4.1.1.1.7-.1 1.3z"/></svg>'
+  };
+
+  ante = function (n) { return '<span class="chip" style="--c:var(--s-' + n.s + ')">' + esc(SECC[n.s].replace(' y agenda', '')) + '</span>'; };
+  var MARCA = '<svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#1D4F63"/><circle cx="20" cy="20" r="13" fill="none" stroke="#E0593B" stroke-width="2.4"/><circle cx="20" cy="20" r="7" fill="none" stroke="#E0593B" stroke-width="2.4"/><circle cx="20" cy="20" r="2.8" fill="#E8A33C"/></svg>';
+  var HISTORIAS = [
+    { nombre: 'Repaso de la tarde', img: 'collage-repaso20261016tarde', w: 1200, h: 676, hora: 'hoy 15:09', titulo: 'El repaso de la tarde', items: [['cultura', 'El Festival Cervantino de Azul cumple 20 años con más de 50 actividades', 'npazul'], ['balcarce', 'La Dirección de Juventud firma un acuerdo para vender entradas online', '1jdsdep'], ['economia', 'El Ministerio de Economía informa un superávit primario de un billón y medio en septiembre', 'x3s2ug'], ['pais', 'La Justicia investiga el patrimonio de Claudio Tapia y pide informes a Suiza', '10ephb3']] },
+    { nombre: 'Repaso de la mañana', img: 'collage-repaso20261016manana', w: 1200, h: 676, hora: 'hoy 10:06', titulo: 'El repaso de la mañana', items: [['cultura', 'Reprograman la Caravana de la Alegría para noviembre', 'aa7nni'], ['deportes', 'Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses'], ['automovilismo', 'Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027'], ['deportes', 'Jennifer Lasa gana en el campeonato argentino de powerlifting', '1h2xfr3']] },
+    { nombre: 'Repaso de anoche', img: 'collage-repaso20261015noche', w: 1200, h: 676, hora: 'ayer 21:06', titulo: 'El repaso de la noche', items: [['balcarce', 'Suteba Balcarce adhiere al paro nacional con un acatamiento del 90 por ciento'], ['deportes', 'La Escuela Municipal de Básquet juega una nueva fecha'], ['futbol', 'Leonel Flores visita un club de barrio para donar comida', '1uvhput'], ['automovilismo', 'Flavio Briatore presenta al nuevo director técnico de Alpine']] },
+    { nombre: 'Clima de hoy', img: 'clima-nublado-1', w: 1024, h: 576, hora: 'hoy 7:31', titulo: 'Mínima de 6° y máxima de 11°', texto: 'Ahora 10°, nublado, sensación térmica de 7° y viento del sur a 16 km/h. Llovizna leve durante el día. Sábado 11° y 6°, domingo 12° y 6°, lunes 15° y 4°.', ir: 'clima' },
+    { nombre: 'Un día como hoy', img: 'efemeride-2026-10-16', w: 1200, h: 800, hora: 'hoy 9:06', titulo: 'En 2004, Messi debuta en el Barcelona', texto: 'Un 16 de octubre, con 17 años, Lionel Messi juega su primer partido oficial con el club catalán.', ir: 'efem' },
+    { nombre: 'Farmacia de turno', farm: true, hora: 'hoy', titulo: 'Farmacias de turno', texto: '<b>Santa Inés</b> · Calle 17 N° 537 · 42-4301<br><b>Del Patio</b> · Av. 39 N° 793 · 42-2200<br><span style="color:#BDBDBD;font-size:13.5px">Confirmá por teléfono antes de ir.</span>' }
+  ];
+  var vistas = {};
+
+  function cabecera() {
+    return '<header class="cabecera"><div class="ancho"><a class="logo" href="#portada" data-ir="portada">' + MARCA + '<span>Radar <b>Balcarce</b></span></a><span class="crece"></span>' +
+      '<span class="datos-cab"><span><b>10°</b> nublado</span>·<span>De turno: <b>Santa Inés y Del Patio</b></span>·<span>Blue <b>$1.555</b></span></span>' +
+      '<button type="button" class="boton-icono" aria-label="Buscar en el sitio">' + ICONOS.lupa + '</button></div></header>';
+  }
+  function historias() {
+    return '<nav class="historias" aria-label="Historias de hoy"><div class="pista">' + HISTORIAS.map(function (h, i) {
+      return '<button type="button" class="historia-boton' + (vistas[i] ? ' vista' : '') + '" data-historia="' + i + '"><span class="aro"><span>' +
+        (h.farm ? '<span class="icono-farm"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></svg></span>' : '<img src="' + FOTOS + h.img + '.jpg" width="' + h.w + '" height="' + h.h + '" alt="" decoding="async">') +
+        '</span></span>' + esc(h.nombre) + '</button>';
+    }).join('') + '</div></nav>';
+  }
+  function chipsSecciones() {
+    return '<nav class="chips-secciones" aria-label="Secciones">' + ORDEN.map(function (s) { return '<a href="#' + s + '" style="--c:var(--s-' + s + ')">' + esc(SECC[s].replace(' y agenda', '')) + '</a>'; }).join('') +
+      '<a href="#mas" style="--c:#14161A">Más secciones</a><a class="servicio" href="#agenda">Agenda</a><a class="servicio" href="#farmacias">Farmacias</a></nav>';
+  }
+  function mosaicos() {
+    return '<section class="servicios" aria-label="Hoy en Balcarce">' +
+      '<a class="mosaico clima" href="#clima"><span class="rot">El clima ahora</span><span class="grande">10°</span><span class="meta">Nublado · Sensación 7°</span></a>' +
+      '<a class="mosaico farm" href="#farmacias"><span class="rot">De turno hoy</span><span class="dato">Santa Inés y Del Patio</span><span class="meta">Calle 17 N° 537 · Av. 39 N° 793</span></a>' +
+      '<a class="mosaico dolar" href="#dolar"><span class="rot">Dólar blue</span><span class="grande">$1.555</span><span class="meta">Oficial $1.535 · 14:59</span></a>' +
+      '<a class="mosaico agenda" href="#agenda"><span class="rot">Agenda</span><span class="dato">Caminata Rosa</span><span class="meta">Sábado 24, 15 h · Plaza Libertad</span></a>' +
+      '</section>';
+  }
+  function tarjeta(n) {
+    return abrir(n, foto(n) + '<span class="cuerpo">' + ante(n) + '<h3 class="titular">' + esc(n.t) + '</h3><span class="hora">' + (hace(n.f) || 'hoy') + '</span></span>', 'tarjeta" style="--c:var(--s-' + n.s + ')');
+  }
+  function sobreFoto(n, clase, primera) {
+    return abrir(n, foto(n, { primera: primera }) + '<span class="capa">' + ante(n) + '<h2 class="titular">' + esc(n.t) + '</h2><span class="hora">' + (hace(n.f) || 'hoy') + ' · ' + n.nf + (n.nf === 1 ? ' fuente' : ' fuentes') + '</span></span>', 'sobre-foto ' + clase);
+  }
+  function carrusel(id, titulo, color, notas, ver) {
+    return '<div class="cab-bloque" style="--c:' + color + '"><h2 id="t-' + id + '">' + esc(titulo) + '</h2><span class="crece"></span><span class="flechas"><button type="button" data-mover="' + id + '" data-dir="-1" aria-label="Anteriores de ' + esc(titulo) + '">‹</button><button type="button" data-mover="' + id + '" data-dir="1" aria-label="Siguientes de ' + esc(titulo) + '">›</button></span><a class="ver" href="#' + ver + '">Ver todo</a></div>' +
+      '<div class="carrusel" id="c-' + id + '" role="list" aria-labelledby="t-' + id + '" tabindex="0">' + notas.map(function (n) { return '<div role="listitem">' + tarjeta(n) + '</div>'; }).join('') + '</div>';
+  }
+  function pie() {
+    return '<footer class="pie"><div class="ancho"><span class="logo" style="font-size:22px">' + MARCA + '<span>Radar <b>Balcarce</b></span></span>' +
+      '<p>Los resúmenes los escribe una inteligencia artificial y se verifican automáticamente contra la fuente; lo sensible lo revisa una persona antes de salir. Cada nota dice al pie quién la escribió.</p></div></footer>';
+  }
+
+  function portada() {
+    var usadas = {};
+    var hero = POR_ID['1vqqg6'], dos = [POR_ID['1o0mwr9'], POR_ID['a6hpqz']];
+    [hero].concat(dos).forEach(function (n) { usadas[n.id] = 1; });
+    var recientes = N.filter(function (n) { return n.f && !usadas[n.id] && !n.aca; }).sort(function (a, b) { return Date.parse(b.f) - Date.parse(a.f); }).slice(0, 8);
+    recientes.forEach(function (n) { usadas[n.id] = 1; });
+    var deAca = N.filter(function (n) { return n.aca && !usadas[n.id]; });
+    deAca.forEach(function (n) { usadas[n.id] = 1; });
+    var h = cabecera() + historias() + chipsSecciones() + '<main class="ancho portada" id="principal"><h1 class="solo-lectores">Radar Balcarce: noticias de Balcarce, clima y farmacia de turno</h1>';
+    h += '<section class="apertura" aria-label="Lo principal">' + sobreFoto(hero, 'grande', true) + sobreFoto(dos[0], 'chica') + sobreFoto(dos[1], 'chica') + '</section>';
+    h += mosaicos();
+    h += '<section aria-labelledby="t-ultimo"><div class="cab-bloque"><h2 id="t-ultimo">Lo último</h2><span class="crece"></span><a class="ver" href="#hoy">Todo lo de hoy</a></div><div class="grilla">' + recientes.map(tarjeta).join('') + '</div></section>';
+    h += '<section class="de-aca">' + carrusel('aca', 'De Balcarce', 'var(--s-balcarce)', deAca, 'balcarce') + '</section>';
+    ORDEN.filter(function (s) { return s !== 'balcarce'; }).forEach(function (s) {
+      var notas = N.filter(function (n) { return n.s === s && !usadas[n.id]; });
+      if (notas.length < 2) notas = N.filter(function (n) { return n.s === s && n.id !== hero.id; });
+      if (!notas.length) return;
+      h += '<section>' + carrusel(s, SECC[s], 'var(--s-' + s + ')', notas.slice(0, 6), s) + '</section>';
+    });
+    h += '<section class="buzon"><h3>¿Pasó algo en tu barrio?</h3><p>Mandanos el dato, la foto o la corrección por WhatsApp. Lo leemos todo.</p><a class="boton claro" href="#contacto">Escribirnos</a></section>';
+    h += '</main>' + pie();
+    return h;
+  }
+
+  function nota(id) {
+    var n = POR_ID[id] || POR_ID['1vqqg6'];
+    var cuerpo = CUERPO[n.id];
+    var fuentes = n.id === '1vqqg6' ? CUERPO.fuentes : [];
+    var seguir = N.filter(function (x) { return (x.s === n.s || x.aca === n.aca) && x.id !== n.id; }).slice(0, 6);
+    var h = cabecera() + '<main class="ancho nota" id="principal"><div class="nota-columnas"><article>';
+    h += '<figure style="margin:0"><div class="portadilla">' + foto(n, { primera: true, alt: true }) + ante(n) + '</div><figcaption>' + esc(n.cred) + '</figcaption></figure>';
+    h += '<h1 class="titular">' + esc(n.t) + '</h1><p class="bajada">' + esc(n.b) + '</p>';
+    h += '<div class="firma">' + MARCA + '<span><b>Redacción con IA, verificada contra las fuentes</b>' + (n.f ? 'Viernes 16 de octubre · ' + horaCorta(n.f) + ' · ' + hace(n.f) : 'Viernes 16 de octubre') + '</span></div>';
+    h += '<div class="texto">' + (cuerpo ? cuerpo.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('') : '<p>' + esc(n.b) + '</p><p class="aviso-proto">En el prototipo sólo está completo el texto de la nota de ejemplo ("Arte Urbano"). Las demás muestran la bajada.</p>') + '</div>';
+    h += '<details class="fuentes"><summary><span>Redacción con IA · <b>Fuentes (' + n.nf + ')</b></span></summary><p>La escribió una inteligencia artificial con lo que publicaron las fuentes, y se verificó automáticamente contra ellas: un dato que no estaba se descarta.</p><ul>' +
+      (fuentes.length ? fuentes : ['(en el sitio, la lista de medios con su enlace)']).map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul></details>';
+    h += '<div class="barra-compartir"><a class="boton wa" href="#compartir">' + ICONOS.wa + 'WhatsApp</a><button type="button" class="boton borde">Copiar enlace</button></div>';
+    h += '</article><aside>' + mosaicos() + '</aside></div>';
+    h += '<section style="margin-top:28px">' + carrusel('seguir', 'Seguí leyendo', 'var(--s-' + n.s + ')', seguir, n.s) + '</section>';
+    h += '</main>' + pie();
+    return h;
+  }
+
+  /* ------------------------------------------------ visor de historias */
+  var visor, actualH = -1, reloj = null, volverA = null;
+  var poco = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function mostrarHistoria(i) {
+    if (i < 0) i = 0;
+    if (i >= HISTORIAS.length) { cerrarHistoria(); return; }
+    actualH = i; vistas[i] = 1;
+    var h = HISTORIAS[i];
+    var html = '<div class="lamina"><div class="barras">' + HISTORIAS.map(function (x, j) { return '<i class="' + (j < i ? 'hecha' : j === i ? 'ahora' : '') + '"><b></b></i>'; }).join('') + '</div>' +
+      '<div class="tope">' + MARCA + '<span><b>Radar Balcarce</b> · ' + esc(h.hora) + '</span><span class="crece"></span><button type="button" class="cerrar" aria-label="Cerrar la historia">×</button></div>' +
+      '<div class="imagen">' + (h.farm ? '<div class="farm"><svg width="90" height="90" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></svg></div>' : '<img src="' + FOTOS + h.img + '.jpg" width="' + h.w + '" height="' + h.h + '" alt="">') + '</div>' +
+      '<button type="button" class="zona izq" aria-label="Historia anterior"></button><button type="button" class="zona der" aria-label="Historia siguiente"></button>' +
+      '<div class="texto-h"><h2>' + esc(h.titulo) + '</h2>' +
+      (h.items ? '<ol>' + h.items.map(function (it, k) { return '<li><span style="--c:var(--s-' + it[0] + ')">' + (k + 1) + '</span>' + esc(it[1]) + '</li>'; }).join('') + '</ol>' : '<p class="' + (h.farm ? 'lugar-farm' : '') + '">' + h.texto + '</p>') +
+      '<a class="boton claro" href="#" data-leer="' + i + '">' + (h.items ? 'Leer las notas' : h.farm ? 'Ver la semana de turnos' : 'Leer la nota') + '</a></div></div>';
+    visor.innerHTML = html; visor.hidden = false;
+    visor.querySelector('.cerrar').focus();
+    clearTimeout(reloj);
+    if (!poco) reloj = setTimeout(function () { mostrarHistoria(actualH + 1); }, 7000);
+  }
+  function cerrarHistoria() {
+    clearTimeout(reloj); visor.hidden = true; visor.innerHTML = ''; actualH = -1;
+    var pista = sitio.querySelector('.historias'); if (pista) { var nuevo = historias(); var t = document.createElement('div'); t.innerHTML = nuevo; pista.replaceWith(t.firstChild); }
+    var b = sitio.querySelector('[data-historia="' + volverA + '"]'); if (b) b.focus();
+  }
+
+  /* --------------------------------------------- controles y navegación */
+  var $ = function (s) { return document.querySelector(s); };
+  var marco = $('#marco'), sitio = $('#sitio'); visor = $('#visor');
+  var estado = { pagina: 'portada', id: '1vqqg6' };
+  function dibujar(arriba) {
+    sitio.innerHTML = estado.pagina === 'nota' ? nota(estado.id) : portada();
+    document.querySelectorAll('[data-grupo="pagina"] button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.v === estado.pagina)); });
+    if (arriba) { sitio.scrollTop = 0; if (!marco.classList.contains('celular') && !document.body.classList.contains('solo')) marco.scrollIntoView({ block: 'start' }); }
+  }
+  sitio.addEventListener('click', function (e) {
+    var a = e.target.closest('a,button'); if (!a) return;
+    if (a.dataset.historia) { volverA = a.dataset.historia; mostrarHistoria(Number(a.dataset.historia)); return; }
+    if (a.dataset.mover) { var c = document.getElementById('c-' + a.dataset.mover); c.scrollBy({ left: Number(a.dataset.dir) * c.clientWidth * 0.8, behavior: poco ? 'auto' : 'smooth' }); return; }
+    if (a.dataset.nota) { e.preventDefault(); estado.pagina = 'nota'; estado.id = a.dataset.nota; dibujar(true); return; }
+    if (a.dataset.ir === 'portada') { e.preventDefault(); estado.pagina = 'portada'; dibujar(true); return; }
+    if (a.tagName === 'A') e.preventDefault();
+  });
+  visor.addEventListener('click', function (e) {
+    var b = e.target.closest('button,a'); if (!b) return;
+    if (b.classList.contains('cerrar')) cerrarHistoria();
+    else if (b.classList.contains('izq')) mostrarHistoria(actualH - 1);
+    else if (b.classList.contains('der')) mostrarHistoria(actualH + 1);
+    else if (b.dataset.leer) {
+      e.preventDefault(); var h = HISTORIAS[Number(b.dataset.leer)];
+      var id = h.ir || (h.items && (h.items.filter(function (x) { return x[2]; })[0] || [])[2]);
+      cerrarHistoria(); if (id && POR_ID[id]) { estado.pagina = 'nota'; estado.id = id; dibujar(true); }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (visor.hidden) return;
+    if (e.key === 'Escape') cerrarHistoria();
+    if (e.key === 'ArrowRight') mostrarHistoria(actualH + 1);
+    if (e.key === 'ArrowLeft') mostrarHistoria(actualH - 1);
+    if (e.key === 'Tab') { var f = visor.querySelectorAll('button,a'); var p = f[0], u = f[f.length - 1]; if (e.shiftKey && document.activeElement === p) { e.preventDefault(); u.focus(); } else if (!e.shiftKey && document.activeElement === u) { e.preventDefault(); p.focus(); } }
+  });
+  document.querySelectorAll('.grupo-control button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var g = b.parentNode.dataset.grupo, v = b.dataset.v;
+      if (g === 'pagina') { estado.pagina = v; dibujar(true); }
+      if (g === 'vista') { marco.classList.toggle('celular', v === 'celular'); b.parentNode.querySelectorAll('button').forEach(function (o) { o.setAttribute('aria-pressed', String(o === b)); }); }
+      if (g === 'tema') { document.documentElement.setAttribute('data-theme', v); b.parentNode.querySelectorAll('button').forEach(function (o) { o.setAttribute('aria-pressed', String(o === b)); }); try { localStorage.setItem('radar-diseno-tema', v); } catch (x) {} }
+    });
+  });
+  var q = new URLSearchParams(location.search);
+  var tema = q.get('tema'); if (!tema) { try { tema = localStorage.getItem('radar-diseno-tema'); } catch (x) {} }
+  if (tema === 'light' || tema === 'dark') { document.documentElement.setAttribute('data-theme', tema); var bt = document.querySelector('[data-grupo="tema"] [data-v="' + tema + '"]'); if (bt) bt.setAttribute('aria-pressed', 'true'); }
+  if (q.get('solo') === '1') document.body.classList.add('solo');
+  if (q.get('vista') === 'escritorio' || q.get('solo') === '1') { marco.classList.remove('celular'); document.querySelectorAll('[data-grupo="vista"] button').forEach(function (o) { o.setAttribute('aria-pressed', String(o.dataset.v === 'escritorio')); }); }
+  if (q.get('pagina') === 'nota') estado.pagina = 'nota';
+  dibujar(false);
+  if (q.get('historia')) { volverA = q.get('historia'); mostrarHistoria(Number(q.get('historia'))); }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rediseño: dos direcciones</title>
+<meta name="description" content="Radar Balcarce: las dos direcciones de rediseño de la portada y la nota, lado a lado, con ventajas, riesgos, una recomendación y decisiones para marcar. Es una propuesta: no se aplicó nada.">
+<style>
+:root{color-scheme:light;--fondo:#F2F1EC;--panel:#FFFFFF;--txt:#1C1C1A;--suave:#55544F;--borde:#D6D3C9;--acento:#1F5FA8;--rojo:#C7381C;--si:#16615B;--no:#B91C1C;--duda:#8A6500;--marca-a:#14161A;--marca-b:#1D4F63}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--fondo:#0E0E0E;--panel:#1A1A1A;--txt:#ECEBE6;--suave:#A9A7A0;--borde:#34332F;--acento:#86B5EE;--rojo:#F07A5F;--si:#6FCBB7;--no:#F08A8A;--duda:#E0B84A;--marca-a:#ECEBE6;--marca-b:#7FB7CC}}
+:root[data-theme="dark"]{color-scheme:dark;--fondo:#0E0E0E;--panel:#1A1A1A;--txt:#ECEBE6;--suave:#A9A7A0;--borde:#34332F;--acento:#86B5EE;--rojo:#F07A5F;--si:#6FCBB7;--no:#F08A8A;--duda:#E0B84A;--marca-a:#ECEBE6;--marca-b:#7FB7CC}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fondo);color:var(--txt);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--acento)}
+.ancho{max-width:1180px;margin:0 auto;padding:0 16px}
+header.tope{padding:22px 0 8px}
+h1{font-size:1.6rem;line-height:1.2;margin:0 0 6px}
+h2{font-size:1.25rem;margin:34px 0 10px}
+h3{font-size:1.05rem;margin:0 0 6px}
+p{margin:6px 0}
+.sub{color:var(--suave);max-width:78ch}
+.aviso{display:inline-block;margin-top:8px;padding:6px 12px;border-radius:8px;background:var(--panel);border:1px solid var(--borde);font-size:.9rem}
+.controles{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 10px;position:sticky;top:0;z-index:5;background:var(--fondo);padding:8px 0}
+.grupo-control{display:flex;border:1px solid var(--borde);border-radius:10px;overflow:hidden;background:var(--panel)}
+.grupo-control button{font:inherit;font-size:.92rem;min-height:44px;padding:6px 14px;border:0;border-right:1px solid var(--borde);background:transparent;color:var(--txt);cursor:pointer}
+.grupo-control button:last-child{border-right:0}
+.grupo-control button[aria-pressed="true"]{background:var(--acento);color:#fff;font-weight:700}
+:root[data-theme="dark"] .grupo-control button[aria-pressed="true"]{color:#0E0E0E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .grupo-control button[aria-pressed="true"]{color:#0E0E0E}}
+button:focus-visible,a:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--acento);outline-offset:2px}
+
+.lado-a-lado{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,395px),1fr));gap:22px;justify-items:center}
+.columna{width:100%;display:flex;flex-direction:column;align-items:center;gap:8px}
+.columna h3{display:flex;align-items:center;gap:8px}
+.columna h3 i{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;color:#fff;font-style:normal;font-size:.9rem;background:var(--c)}
+.columna .lema{font-size:.92rem;color:var(--suave);text-align:center;max-width:46ch;margin:0}
+.telefono{width:393px;max-width:100%;height:760px;border:9px solid #2A2A2A;border-radius:30px;overflow:hidden;background:#fff}
+.telefono iframe{width:100%;height:100%;border:0;display:block}
+.vista-escritorio .lado-a-lado{grid-template-columns:1fr}
+.vista-escritorio .telefono{width:100%;height:720px;border-width:1px;border-color:var(--borde);border-radius:12px}
+.abrir{font-size:.9rem}
+
+.tarjetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
+.tarjeta{background:var(--panel);border:1px solid var(--borde);border-radius:14px;padding:16px 18px}
+.tarjeta ul{margin:6px 0 0;padding-left:20px}
+.tarjeta li{margin:4px 0}
+.etq{display:inline-block;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:2px 8px;border-radius:6px;color:#fff;background:var(--c)}
+.tabla-scroll{overflow-x:auto;border:1px solid var(--borde);border-radius:12px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:620px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--borde);vertical-align:top}
+th{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--suave)}
+tr:last-child td{border-bottom:0}
+td.gana{font-weight:700}
+.recomendacion{background:var(--panel);border:2px solid var(--acento);border-radius:16px;padding:18px 20px}
+.recomendacion h2{margin-top:0}
+.recomendacion ol{padding-left:22px}
+.recomendacion li{margin:6px 0}
+
+.decision{background:var(--panel);border:1px solid var(--borde);border-radius:14px;padding:14px 16px;margin:10px 0}
+.decision .preg{font-weight:700;margin:0 0 2px}
+.decision .det{font-size:.9rem;color:var(--suave);margin:0 0 10px}
+.opciones{display:flex;flex-wrap:wrap;gap:8px}
+.opciones label{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:22px;border:1px solid var(--borde);cursor:pointer;font-weight:600}
+.opciones input{position:absolute;opacity:0;width:1px;height:1px}
+.opciones input:focus-visible + span{outline:3px solid var(--acento);outline-offset:4px;border-radius:4px}
+.opciones label:has(input:checked){color:#fff;border-color:transparent}
+.opciones label.si:has(input:checked){background:#16615B}
+.opciones label.no:has(input:checked){background:#B91C1C}
+.opciones label.duda:has(input:checked){background:#8A6500}
+.decision textarea{width:100%;margin-top:10px;min-height:44px;padding:10px;border-radius:10px;border:1px solid var(--borde);background:transparent;color:var(--txt);font:inherit;font-size:.95rem;resize:vertical}
+.rec-chica{font-size:.82rem;font-weight:700;color:var(--suave)}
+.progreso{font-size:.95rem;color:var(--suave);margin:8px 0}
+.acciones{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 50px}
+.boton{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:24px;font:inherit;font-weight:700;cursor:pointer;border:1px solid var(--borde);background:var(--panel);color:var(--txt)}
+.boton.fuerte{background:var(--acento);border-color:var(--acento);color:#fff}
+:root[data-theme="dark"] .boton.fuerte{color:#0E0E0E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .boton.fuerte{color:#0E0E0E}}
+#copiado{font-weight:700;color:var(--si);align-self:center}
+#respaldo{width:100%;min-height:160px;display:none;margin-top:8px;font:13px/1.4 ui-monospace,Consolas,monospace;background:var(--panel);color:var(--txt);border:1px solid var(--borde);border-radius:10px;padding:10px}
+</style>
+</head>
+<body>
+<header class="tope ancho">
+  <h1>Rediseño de Radar Balcarce: dos direcciones</h1>
+  <p class="sub">Hernán pidió que el diario "tenga más diseño, un poco más visual". Acá están las dos formas posibles, con la portada y una nota, usando los titulares, las fotos, el clima, la farmacia y el dólar reales del sitio (16/10/2026). Se pueden tocar: las notas se abren, en la B los círculos de arriba muestran las historias.</p>
+  <span class="aviso"><b>Es una propuesta.</b> No se tocó el sitio ni el código: el diseño visible se consulta antes de aplicarlo.</span>
+</header>
+
+<main class="ancho">
+  <div class="controles" role="toolbar" aria-label="Qué comparar">
+    <div class="grupo-control" data-grupo="pagina"><button type="button" data-v="portada" aria-pressed="true">Portada</button><button type="button" data-v="nota" aria-pressed="false">Nota</button></div>
+    <div class="grupo-control" data-grupo="vista"><button type="button" data-v="celular" aria-pressed="true">Celular</button><button type="button" data-v="escritorio" aria-pressed="false">Escritorio</button></div>
+    <div class="grupo-control" data-grupo="tema"><button type="button" data-v="light" aria-pressed="true">Claro</button><button type="button" data-v="dark" aria-pressed="false">Oscuro</button></div>
+  </div>
+
+  <section class="lado-a-lado" aria-label="Las dos direcciones">
+    <div class="columna" style="--c:var(--marca-a)">
+      <h3><i style="background:#14161A">A</i> Portal editorial limpio</h3>
+      <p class="lema">Una nota grande, "Lo último", grilla por sección, mucho aire. El color, como acento.</p>
+      <div class="telefono"><iframe id="marco-a" title="Prototipo de la Dirección A" loading="lazy"></iframe></div>
+      <a class="abrir" href="DIRECCION-A.html">Abrir la A en grande, con su explicación →</a>
+    </div>
+    <div class="columna">
+      <h3><i style="background:#1D4F63">B</i> Más visual y colorida</h3>
+      <p class="lema">Historias de los repasos, fotos grandes con el título encima, color por sección y carruseles.</p>
+      <div class="telefono"><iframe id="marco-b" title="Prototipo de la Dirección B" loading="lazy"></iframe></div>
+      <a class="abrir" href="DIRECCION-B.html">Abrir la B en grande, con su explicación →</a>
+    </div>
+  </section>
+
+  <h2>Ventajas y riesgos</h2>
+  <div class="tarjetas">
+    <div class="tarjeta">
+      <span class="etq" style="--c:#14161A">A · Portal limpio</span>
+      <h3 style="margin-top:10px">A favor</h3>
+      <ul>
+        <li>Con 50 a 150 notas por día, <b>ordena</b>: se ve qué es lo importante y qué es lo último.</li>
+        <li><b>Liviana</b>: menos fotos y más chicas. Importa porque la mayoría entra desde Facebook, en el celular y muchas veces con datos.</li>
+        <li>Se parece a lo que ya hay: <b>menos trabajo y menos riesgo</b>, se vuelve atrás fácil.</li>
+        <li>Las ilustraciones genéricas (sin personas) se notan menos repetidas en miniatura.</li>
+      </ul>
+      <h3 style="margin-top:12px">En contra</h3>
+      <ul>
+        <li>Es "más diseño" pero <b>no tan "más visual"</b>: puede quedar corta para lo que pidió Hernán.</li>
+        <li>Se parece a muchos portales: menos personalidad propia.</li>
+      </ul>
+    </div>
+    <div class="tarjeta">
+      <span class="etq" style="--c:#1D4F63">B · Visual y colorida</span>
+      <h3 style="margin-top:10px">A favor</h3>
+      <ul>
+        <li>Es <b>lo que se ve en el teléfono</b> todo el día (Instagram, Facebook): el que llega de las redes se siente en casa.</li>
+        <li>Las <b>historias</b> aprovechan los repasos que ya se hacen tres veces por día.</li>
+        <li>El color por sección ayuda a ubicarse de un vistazo; tiene más identidad.</li>
+      </ul>
+      <h3 style="margin-top:12px">En contra</h3>
+      <ul>
+        <li><b>Pesa más</b>: unas 30 fotos en la portada contra 5 de hoy. Sin fotos en tres tamaños, en el celular va a tardar.</li>
+        <li>Las ilustraciones genéricas <b>se repiten</b> (la del clima nublado sale casi todos los días) y en grande se nota.</li>
+        <li>Los <b>carruseles esconden</b> notas: lo de la derecha se lee poco, y con 17 secciones la portada queda larguísima.</li>
+        <li>El doble de trabajo y más cosas que se pueden romper.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Lado a lado, punto por punto</h2>
+  <div class="tabla-scroll"><table>
+    <thead><tr><th>Qué se mira</th><th>A · Portal limpio</th><th>B · Visual y colorida</th></tr></thead>
+    <tbody>
+      <tr><td>Encontrar lo importante con muchas notas</td><td class="gana">Muy bien (una principal + "Lo último" con hora)</td><td>Bien (apertura de tres), pero los carruseles dispersan</td></tr>
+      <tr><td>Que se vea "más visual"</td><td>Algo más que hoy</td><td class="gana">Mucho más</td></tr>
+      <tr><td>Quien llega desde Facebook en el celular</td><td>Bien</td><td class="gana">Muy bien (historias, fotos grandes, barra de WhatsApp)</td></tr>
+      <tr><td>Velocidad en el celular</td><td class="gana">Rápida</td><td>Más lenta si no se achican las fotos</td></tr>
+      <tr><td>Accesibilidad (contraste AA, toques de 44 px)</td><td>Cumple</td><td>Cumple (cuidando el texto sobre las fotos)</td></tr>
+      <tr><td>Modo oscuro</td><td>Sí</td><td>Sí</td></tr>
+      <tr><td>Ilustraciones genéricas repetidas</td><td class="gana">Se notan poco</td><td>Se notan mucho</td></tr>
+      <tr><td>Trabajo para aplicarla</td><td class="gana">Mediano (2 o 3 sesiones)</td><td>Grande (4 a 6 sesiones + fotos en tres tamaños)</td></tr>
+      <tr><td>Riesgo</td><td class="gana">Bajo</td><td>Mediano</td></tr>
+      <tr><td>Volver atrás</td><td>Un <code>git revert</code> (o un interruptor)</td><td>Igual; las historias se pueden sacar solas</td></tr>
+    </tbody>
+  </table></div>
+
+  <section class="recomendacion" style="margin-top:30px">
+    <h2>La recomendación de Claude: A como base, con tres cosas de B</h2>
+    <p>Arrancar por la <b>Dirección A</b> (ordena, es liviana y se vuelve atrás fácil) y sumarle lo de la B que más rinde y menos cuesta:</p>
+    <ol>
+      <li><b>Las historias de los repasos arriba</b>: es lo más reconocible para quien llega de Facebook, y los repasos y sus collages ya existen.</li>
+      <li><b>Más foto en el celular</b>: en "Lo último", miniaturas más grandes; la principal, a todo el ancho.</li>
+      <li><b>Los servicios como mosaicos de color</b> (clima azul, farmacia verde, dólar, agenda): dan color sin esconder nada.</li>
+    </ol>
+    <p>Lo que <b>no</b> recomiendo por ahora: los carruseles por sección (esconden notas y alargan la portada) y el título encima de todas las fotos (con las ilustraciones repetidas, se nota). Y antes de cualquiera de las dos, <b>hacer las fotos en tres tamaños</b>: es la mejora de velocidad más grande que se puede hacer y no cambia nada visible.</p>
+  </section>
+
+  <h2 id="decisiones">Mis decisiones</h2>
+  <p class="sub">Marcá <b>Sí</b>, <b>No</b> o <b>Duda</b> en cada punto (podés escribir un comentario). Queda guardado en este teléfono o esta computadora. Al final tocá <b>Copiar mis decisiones</b> y pegalo en el chat.</p>
+  <p class="progreso" id="progreso" aria-live="polite"></p>
+  <div id="lista-decisiones"></div>
+  <div class="decision"><p class="preg">¿Algo más?</p><textarea id="otra" aria-label="Otro comentario" placeholder="Lo que quieras agregar, cambiar o preguntar"></textarea></div>
+  <div class="acciones">
+    <button type="button" class="boton fuerte" id="copiar">Copiar mis decisiones</button>
+    <button type="button" class="boton" id="borrar">Borrar todo</button>
+    <span id="copiado" role="status"></span>
+    <textarea id="respaldo" aria-label="Tus decisiones, para copiar a mano" readonly></textarea>
+  </div>
+</main>
+
+<script>
+(function () {
+  'use strict';
+  var estado = { pagina: 'portada', vista: 'celular', tema: 'light' };
+  var t = null; try { t = localStorage.getItem('radar-diseno-tema'); } catch (e) {}
+  estado.tema = (t === 'light' || t === 'dark') ? t : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  function pintar() {
+    document.documentElement.setAttribute('data-theme', estado.tema);
+    document.body.classList.toggle('vista-escritorio', estado.vista === 'escritorio');
+    var q = '?solo=1&pagina=' + estado.pagina + '&tema=' + estado.tema;
+    ['a', 'b'].forEach(function (x) { var f = document.getElementById('marco-' + x); var src = 'DIRECCION-' + x.toUpperCase() + '.html' + q; if (f.getAttribute('src') !== src) f.setAttribute('src', src); });
+    document.querySelectorAll('.grupo-control').forEach(function (g) { g.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', String(estado[g.dataset.grupo] === b.dataset.v)); }); });
+  }
+  document.querySelectorAll('.grupo-control button').forEach(function (b) {
+    b.addEventListener('click', function () { estado[b.parentNode.dataset.grupo] = b.dataset.v; if (b.parentNode.dataset.grupo === 'tema') { try { localStorage.setItem('radar-diseno-tema', b.dataset.v); } catch (e) {} } pintar(); });
+  });
+  pintar();
+
+  /* ------------------------------------------------------- decisiones */
+  var DECISIONES = [
+    ['base-a', 'Usar la Dirección A (portal limpio) como base', 'Una nota grande, "Lo último", grilla por sección.', 'Sí'],
+    ['base-b', 'Usar la Dirección B (visual y colorida) como base', 'Fotos grandes, color por sección, carruseles.', 'No'],
+    ['una-grande', 'Una sola nota grande arriba, en vez de las cinco "postales" de hoy', '', 'Sí'],
+    ['lo-ultimo', 'Una columna "Lo último" con la hora de cada nota', '', 'Sí'],
+    ['de-aca', 'Una fila "De Balcarce" propia, antes que las secciones', 'Las notas de acá de cualquier sección.', 'Sí'],
+    ['historias', 'Historias de los repasos arriba (los círculos, como en Instagram)', 'También el clima, "Un día como hoy" y la farmacia.', 'Sí'],
+    ['titulo-foto', 'Título encima de la foto en la apertura', 'Sólo nuestro título y la sección; el crédito sigue en el epígrafe.', 'Duda'],
+    ['carruseles', 'Carruseles por sección (filas que se deslizan)', '', 'No'],
+    ['mosaicos', 'Servicios como mosaicos de color (clima, farmacia, dólar, agenda)', 'En vez de los tres renglones de hoy.', 'Sí'],
+    ['servicios-orden', 'En el celular, los servicios después de la nota principal', 'Hoy van primero. La franja de arriba con el clima y la farmacia sigue en todas las páginas.', 'Duda'],
+    ['pastillas', 'Secciones en pastillas de color (B) en vez de antetítulo de color (A)', '', 'Duda'],
+    ['logo-radar', 'El radar azul del perfil de las redes al lado del nombre, en la cabecera', '', 'Duda'],
+    ['oscuro', 'Modo oscuro automático, según cómo tenga el teléfono cada uno', '', 'Sí'],
+    ['texto-serif', 'Texto de la nota en letra de diario (A) en vez de letra de pantalla (B)', '', 'Duda'],
+    ['barra-wa', 'Barra fija abajo para compartir por WhatsApp, en la nota y en el celular', '', 'Sí'],
+    ['rayita', 'Rayita que muestra cuánto falta para terminar la nota', '', 'Duda'],
+    ['fotos-tamanos', 'Antes del rediseño, hacer las fotos en tres tamaños (más velocidad)', 'No cambia nada visible.', 'Sí'],
+    ['interruptor', 'Probarlo primero detrás de un interruptor, para volver atrás en un minuto', '', 'Sí']
+  ];
+  var CLAVE = 'radar-diseno-decisiones';
+  var guardado = {}; try { guardado = JSON.parse(localStorage.getItem(CLAVE) || '{}') || {}; } catch (e) { guardado = {}; }
+  function guardar() { try { localStorage.setItem(CLAVE, JSON.stringify(guardado)); } catch (e) {} progreso(); }
+  var esc = function (t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); };
+  document.getElementById('lista-decisiones').innerHTML = DECISIONES.map(function (d, i) {
+    var g = guardado[d[0]] || {};
+    return '<fieldset class="decision" style="border:1px solid var(--borde)"><legend class="solo-lectores" style="position:absolute;left:-9999px">' + esc(d[1]) + '</legend>' +
+      '<p class="preg">' + (i + 1) + '. ' + esc(d[1]) + '</p>' + (d[2] ? '<p class="det">' + esc(d[2]) + '</p>' : '<p class="det"></p>') +
+      '<div class="opciones">' + ['Sí', 'No', 'Duda'].map(function (o) {
+        var cls = o === 'Sí' ? 'si' : o === 'No' ? 'no' : 'duda';
+        return '<label class="' + cls + '"><input type="radio" name="d-' + d[0] + '" value="' + o + '"' + (g.v === o ? ' checked' : '') + ' data-id="' + d[0] + '"><span>' + o + '</span></label>';
+      }).join('') + '<span class="rec-chica" style="align-self:center">Claude recomienda: ' + d[3] + '</span></div>' +
+      '<textarea data-com="' + d[0] + '" aria-label="Comentario sobre: ' + esc(d[1]) + '" placeholder="Comentario (opcional)">' + esc(g.c || '') + '</textarea></fieldset>';
+  }).join('');
+  document.getElementById('otra').value = guardado._otra || '';
+  document.addEventListener('change', function (e) { if (e.target.dataset.id) { var id = e.target.dataset.id; guardado[id] = guardado[id] || {}; guardado[id].v = e.target.value; guardar(); } });
+  document.addEventListener('input', function (e) {
+    if (e.target.dataset.com) { var id = e.target.dataset.com; guardado[id] = guardado[id] || {}; guardado[id].c = e.target.value; guardar(); }
+    if (e.target.id === 'otra') { guardado._otra = e.target.value; guardar(); }
+  });
+  function progreso() {
+    var n = DECISIONES.filter(function (d) { return guardado[d[0]] && guardado[d[0]].v; }).length;
+    document.getElementById('progreso').textContent = 'Marcaste ' + n + ' de ' + DECISIONES.length + '.';
+  }
+  progreso();
+  function texto() {
+    var l = ['Decisiones del rediseño de Radar Balcarce (docs/diseno/COMPARACION.html)', ''];
+    DECISIONES.forEach(function (d, i) {
+      var g = guardado[d[0]] || {};
+      l.push((i + 1) + '. ' + d[1] + ': ' + (g.v || 'sin marcar') + (g.c ? ' — ' + g.c.trim() : ''));
+    });
+    if ((guardado._otra || '').trim()) { l.push(''); l.push('Algo más: ' + guardado._otra.trim()); }
+    return l.join('\n');
+  }
+  document.getElementById('copiar').addEventListener('click', function () {
+    var t = texto(), aviso = document.getElementById('copiado'), resp = document.getElementById('respaldo');
+    function aMano() { resp.style.display = 'block'; resp.value = t; resp.focus(); resp.select(); aviso.textContent = 'Seleccionado: copialo con "Copiar" del teléfono.'; }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(t).then(function () { aviso.textContent = 'Copiado. Pegalo en el chat.'; resp.style.display = 'none'; }, aMano);
+    } else aMano();
+  });
+  document.getElementById('borrar').addEventListener('click', function () {
+    if (!confirm('¿Borrar todo lo que marcaste?')) return;
+    guardado = {}; guardar();
+    document.querySelectorAll('#lista-decisiones input').forEach(function (i) { i.checked = false; });
+    document.querySelectorAll('#lista-decisiones textarea, #otra').forEach(function (t) { t.value = ''; });
+    document.getElementById('copiado').textContent = '';
+  });
+})();
+</script>
+</body>
+</html>

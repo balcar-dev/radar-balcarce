@@ -1,6 +1,6 @@
 # 00 · Índice: Radar Balcarce de punta a punta
 
-*Actualizado el 15/10/2026. Es la puerta de entrada a la documentación: qué es el
+*Actualizado el 16/10/2026. Es la puerta de entrada a la documentación: qué es el
 proyecto, por dónde pasa una noticia y qué documento cuenta cada cosa. Si un
 documento y el código no coinciden, manda el código.*
 
@@ -8,14 +8,21 @@ documento y el código no coinciden, manda el código.*
 
 Un **medio digital automático** de Balcarce, provincia de Buenos Aires, en
 `radarbalcarce.com`, con Instagram `@radarbalcarce` y la página de Facebook
-"Radar Balcarce". Cada media hora lee más de 200 feeds de más de 100 medios (de
-Balcarce, la zona, la provincia y el país; la cuenta exacta, en `FUENTES.md`), junta la misma noticia contada por
+"Radar Balcarce". Cada media hora lee unos 100 feeds de unos 70 medios (de
+Balcarce, la zona, la provincia y el país; desde el 15/10 sólo Balcarce, los 50 mejores del país y los 10 de Tandil y
+Mar del Plata; la cuenta exacta, en `FUENTES.md`), junta la misma noticia contada por
 varios, decide qué sale sola y qué espera a una persona, la escribe con IA
 (Gemini), verifica lo escrito contra las fuentes, arma el sitio y lo sube a
 Cloudflare. Varias veces por día publica en Facebook e Instagram con dos voces de
-IA (una locutora y un locutor), y un vigilante avisa por WhatsApp si algo falla.
+IA (una locutora y un locutor). Un vigilante avisa por mail si algo falla (el
+WhatsApp quedó de respaldo) y dos informes por mail, a las 8:15 y a las 21:15, cuentan
+cómo va el día.
 
-**Todo eso corre en GitHub, con la PC apagada.** Lo que el sistema no puede
+**La explicación completa para leer en el celular, con un diagrama, los costos y lo que
+sobra: `docs/COMO-FUNCIONA-HOY.html`.**
+
+**Todo eso corre en GitHub y en Cloudflare, con la PC apagada** (el reloj, el
+vigilante y los mails viven en Cloudflare; el trabajo pesado, en GitHub Actions). Lo que el sistema no puede
 decidir solo lo deciden Hernán y Andrés desde el **panel del celular**
 (`radarbalcarce.com/panel/`); el panel de la PC quedó en desuso desde el 8/10
 (nunca se usó; se decide si se retira).
@@ -38,15 +45,15 @@ los pasos 1 a 8; las redes y la vigilancia corren aparte.
 | # | Paso | Qué pasa | Dónde se cuenta |
 |---|---|---|---|
 | 1 | Ingesta | Se bajan y se leen los feeds (RSS, Atom, índices, páginas), con sus fechas; el filtro de entrada deja afuera otro país, policiales y consejos de afuera | `docs/02-INGESTA.md` |
-| 2 | Cruce | Se juntan las notas que cuentan el mismo hecho (memoria de 36 h); de afuera queda lo que cuentan varios medios (de 2 a 4 según la sección: `ingesta/criterio.mjs`), dice Balcarce o toca la zona | `docs/02-INGESTA.md` (pasos 9 a 13) |
+| 2 | Cruce | Se juntan las notas que cuentan el mismo hecho (memoria de 36 h; desde el 16/10 sin encadenar noticias distintas, regla 184, `docs/flujo/CRUCE-COHERENTE.md`); lo de un organismo o medio de Balcarce entra siempre (regla 180); de afuera queda lo que cuentan varios medios (de 2 a 4 según la sección: `ingesta/criterio.mjs`), dice Balcarce o toca la zona | `docs/02-INGESTA.md` (pasos 9 a 13) |
 | 3 | Selección | Sección, puntaje, semáforo (rojo, amarillo, verde), "de acá", medios que pide lo de afuera, cupos | `docs/03-SELECCION.md` |
 | 4 | Lectura con IA | Una ficha por nota: saca, cambia la sección, junta repetidas; nunca destraba | `docs/03-SELECCION.md` (paso 8) |
-| 5 | Redacción | Gemini escribe título, bajada y cuerpo con el texto completo de la fuente y `CRITERIO-EDITORIAL.md` § 12 | `docs/04-REDACCION.md` |
+| 5 | Redacción | Gemini escribe título, bajada y cuerpo con el texto completo de hasta 4 fuentes (regla 174) y `CRITERIO-EDITORIAL.md` § 12 | `docs/04-REDACCION.md` |
 | 6 | Verificación | Cada dato contra las fuentes, el semáforo otra vez, el nivel de verificación; sin cuerpo no se publica | `docs/04-REDACCION.md` (pasos 7 a 11) |
 | 7 | Publicación | Lo que decidió una persona (panel del celular), fecha real, "llega tarde" (12 h), retiradas y correcciones, foto del banco | `docs/03-SELECCION.md` (pasos 10 a 13), `docs/05-FOTOS.md`, `docs/09-PANEL.md` |
-| 8 | Web | `web/data/*.json` → Next.js estático → Cloudflare Pages: portada de 36 h, archivo de 180 días, dirección fija | `docs/06-WEB.md` |
+| 8 | Web | `web/data/*.json` → Next.js estático → Cloudflare Pages: portada de 36 h, página mientras la nota esté entre las últimas 3.700 (unos 80 días al ritmo de hoy; el archivo permanente en R2 está listo y sin activar), dirección fija | `docs/06-WEB.md`, `docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md` |
 | 9 | Redes | Facebook (posteo y espejo en Instagram) y piezas de video con voz: clima, farmacia, tres podcasts | `docs/07-REDES.md`, `CRITERIO-REDES.md` |
-| 10 | Vigilancia | Mira la web, las corridas, las redes, las claves de IA y las voces; WhatsApp a las 21 y cuando algo falla | `docs/08-INFRAESTRUCTURA.md` |
+| 10 | Vigilancia | Mira la web, las corridas, las redes, las claves de IA y las voces (en GitHub y en el Worker `radar-balcarce-vigilante`); avisa por mail cuando algo falla (WhatsApp de respaldo) y manda los informes de las 8:15 y las 21:15 | `docs/08-INFRAESTRUCTURA.md`, `docs/11-OPERACION.md` |
 
 ## Cada cosa, un solo lugar
 
@@ -86,7 +93,7 @@ Un dato vive en **un** lugar; los demás documentos remiten a ése.
 | `docs/03-SELECCION.md` | Qué sale, dónde y cuándo: sección, puntaje, semáforo, "de acá", medios y cupos de lo de afuera, la lectura con IA, la fecha, "llega tarde", la decisión final, las ventanas, retirar y corregir |
 | `docs/04-REDACCION.md` | Cómo escribe la IA, cada control del verificador, los arreglos automáticos, el nivel de verificación, "sin cuerpo no se publica", escribir un cuerpo a mano, escribir a pedido y la firma |
 | `docs/05-FOTOS.md` | El banco de fotos: cómo se elige una foto sin marca de agua, Wikimedia, qué se guarda, dónde se muestra y dónde no |
-| `docs/06-WEB.md` | Cómo se arma el sitio: `generar-datos.mjs` paso a paso, los archivos de `web/data/`, la tapa, las páginas, el archivo de 180 días, la dirección fija, las repetidas, las notas propias, el SEO y el diseño |
+| `docs/06-WEB.md` | Cómo se arma el sitio: `generar-datos.mjs` paso a paso, los archivos de `web/data/`, la tapa, las páginas, cuánto dura la página de una nota (tope de 3.700), la dirección fija, las repetidas, las notas propias, el SEO y el diseño |
 | `docs/07-REDES.md` | Facebook e Instagram: el interruptor, los posteos y el espejo, el reloj, las piezas, los podcasts, el contrato del día, el libro, la conexión con Meta y las auditorías |
 | `docs/08-INFRAESTRUCTURA.md` | Qué corre dónde: los workflows, el reloj (Worker de Cloudflare), Cloudflare, GitHub, las claves de IA y sus topes, los secretos por nombre, la vigilancia, los vencimientos y lo que cuesta |
 | `docs/09-PANEL.md` | Los dos paneles: el del celular (el de todos los días) y el de la PC (en desuso): qué muestra cada uno, qué pasa cuando alguien decide y cómo llega a la web |
@@ -96,6 +103,59 @@ Un dato vive en **un** lugar; los demás documentos remiten a ése.
 | `docs/12-GLOSARIO.md` | Cada palabra propia del proyecto, con su definición y dónde vive |
 | `docs/DECISIONES.md` | **El registro de decisiones**: fecha, qué, por qué y quién (lo nuevo arriba), y las preguntas abiertas para Hernán y para los dos |
 | `docs/efemerides-octubre-para-revisar.md` | Las efemérides de octubre para aprobar; se archiva después del 31/10 |
+| `docs/COMO-FUNCIONA-HOY.html` | **Cómo funciona hoy, de punta a punta** (16/10): diagrama, quién corre y cuándo, fuentes, la nota por dentro, redes, mails, panel, archivo y respaldos, costos reales, qué pasa si algo falla, lo que existe y no se usa, y las pruebas que sobran. Para leer en el celular |
+| `docs/COMO-SE-ELIGE-UNA-NOTA.html` | Desde el feed hasta la nota (15/10): filtros, puntaje, semáforo, cruce y repetidas, explicados con ejemplos. *No incluye el cruce coherente ni la regla 180 del 16/10* |
+| `docs/ESTADO-DE-LAS-MEJORAS.md` (y `.html`) | Las 144 recomendaciones de las auditorías del 15/10 y en qué estado estaba cada una el 16/10 a la mañana (hecho, a medias, pendiente, decisión). Es una foto de ese momento |
+
+### Nuevos del 15 y 16/10: análisis, propuestas y flujos
+
+Casi todo esto es **para leer y decidir**: no cambia el sistema hasta que se decide. Las marcas: **vigente** (cuenta
+cómo funciona algo que ya anda), **para decidir** (propuesta o página con cajas Sí / No / Duda), **foto del día**
+(un análisis medido ese día: sirve como evidencia, pero algunos números o estados ya cambiaron).
+
+| Documento | Qué cuenta | Estado |
+|---|---|---|
+| `docs/flujo/GUIA-DEL-FLUJO.html` | Los trece pasos que hace el sistema con cada noticia, con un ejemplo real, los números y los prompts tal cual | vigente (16/10), para revisar juntos |
+| `docs/flujo/FLUJO-NUEVO.html` | El flujo nuevo pedido por Hernán: todo lo de Balcarce sale, lo nacional con 3 medios, tope de 150 por día | para decidir (sin conectar) |
+| `docs/flujo/FLUJO-NUEVO-SIMULACION.html` | La simulación del flujo nuevo con la corrida real del 16/10 | para decidir |
+| `docs/flujo/INFORME-DE-HOY.html` | Cómo llegó la información el 16/10, cómo anduvo cada fuente y cómo quedarían las secciones; diez preguntas (se rehace con `docs/flujo/generar-informe-del-dia.mjs`) | para decidir |
+| `docs/flujo/CRUCE-COHERENTE.md` | El cruce que ya no encadena noticias distintas (regla 184, interruptor `CRUCE_COHERENTE`) y cómo se midió | vigente |
+| `docs/flujos/NOTA-DESDE-MAIL.md` | Los pasos para armar una nota desde un mail de prensa | vigente (lo sigue Claude) |
+| `docs/flujos/IMAGENES-CON-GEMINI-WEB.md` | Cómo se ilustran con Gemini web las notas sin foto y cómo convive con el relleno automático de Cloudflare (regla 185) | vigente |
+| `docs/secciones/MAPA-DE-SECCIONES.md` (y `.html`) | De 11 a 17 secciones: el mapa propuesto, con el clasificador nuevo en sombra (`ingesta/secciones-nuevas.mjs`) | para decidir |
+| `docs/secciones/PROTOTIPO-MENU.html` | El menú y la portada con 17 secciones, dibujados | para decidir (cambio visible) |
+| `docs/panel/PLAN-NUEVO-PANEL.md` y `PROTOTIPO-PANEL.html` | Auditoría del panel del celular, diseño del nuevo y prototipo para tocar | para decidir |
+| `docs/seo/AUDITORIA-SEO-LLM.md` | SEO y asistentes de IA: estado real, problemas, plan, política de bots, `llms.txt`, servidor MCP | vigente (16/10) |
+| `docs/seo/AUDITORIA-FEEDS.md` | Si los feeds RSS de texto y de audio están bien armados | foto del 15/10 |
+| `docs/seo/SEARCH-CONSOLE-16-10.md` | Lo que dice Google: 1.085 páginas indexadas, 813 impresiones y 46 clics en 3 semanas | foto del 16/10 |
+| `docs/fotos/AUDITORIA-FOTOS.md` | Cuántas notas salen sin foto y por qué (88 % con foto en 14 días) | foto del 15/10 |
+| `docs/fotos/PROPUESTA-IMAGEN-IA.md` | Ilustraciones con la API de imágenes de Gemini (`ingesta/foto-ia.mjs`, apagado) | superada: se eligió Gemini web + Cloudflare (decisión del 16/10) |
+| `docs/fotos/PROPUESTA-STOCK.md` | Fotos de stock para que toda nota tenga foto (`ingesta/foto-stock.mjs`, apagado) | para decidir (sin conectar) |
+| `docs/redes/ARCHIVO-DE-PIEZAS.md` | Dónde se guardan para siempre los videos, audios y placas (R2, depósito `radar-piezas`; la variable `R2_PIEZAS` se cargó el 15/10, aunque el documento diga «apagado») | vigente |
+| `docs/redes/PLAN-REELS-OTRAS-REDES.md` | Publicar los reels en TikTok, YouTube, etc. (`redes/destinos.mjs`, simula) | para decidir |
+| `docs/redes/AUTOMATIZAR-REDES-ALTERNATIVAS.md` | Alternativas para automatizar TikTok, YouTube, X, Threads y el canal de WhatsApp | investigación (15/10) |
+| `docs/redes/FORMATOS-POR-RED.md` | Qué se puede publicar en cada red, con qué medidas y qué enlaces | investigación (16/10) |
+| `docs/etapa-1-fuentes/LISTA-ELEGIDA.md` | La lista de fuentes elegida el 15/10 (Balcarce + 50 del país + 10 de la zona), ya aplicada | vigente |
+| `docs/etapa-1-fuentes/ANALISIS.md` | Qué aportaba cada una de las 254 fuentes y tres listas posibles | foto del 15/10 (superada por la lista elegida) |
+| `docs/etapa-1-fuentes/BALCARCE-INVESTIGACION.md` | 35 fuentes posibles de Balcarce y su partido, con feed o sin feed | para decidir |
+| `docs/etapa-1-fuentes/CANDIDATAS-NUEVAS.md` y `DIAGNOSTICO-POLICIALES-CIENCIA-IA.md` | Fuentes candidatas de ciencia, IA, salud y Policiales, y por qué Policiales tiene pocas notas | para decidir |
+| `docs/etapa-1-fuentes/REVISION-FUENTES.html` | La página para decidir fuente por fuente (lista corta de 47) | para decidir |
+| `docs/etapa-2-5/ANALISIS.md` | Entrada, duplicadas, clasificación y puntaje: cómo andan y qué se puede elegir | foto del 15/10 (duplicadas ya cambiaron: reglas 171 y 175) |
+| `docs/etapa-6-9/ANALISIS.md` | Semáforo, redacción, fotos y redes: cómo andan y opciones | foto del 15/10 (la propuesta de recortar redes se descartó ese día) |
+| `docs/etapa-10-operacion/ANALISIS.md` | Sacar el robot de GitHub y llevarlo a Cloudflare: minutos medidos, fases, costos, pruebas | foto del 15/10 (desde ese día sólo corre el núcleo legal en cada vuelta y ya hay respaldo en R2) |
+| `docs/etapa-10-operacion/DISENO-MOTOR.md` | El diseño del motor nuevo en Cloudflare (D1, Workflows, R2) | para decidir (sólo diseño; el esquema está en `motor/`) |
+| `docs/salud-tecnica/ANALISIS.md` | Qué hace falta para que la página dure años | foto del 15/10 |
+| `docs/salud-tecnica/ARCHIVO-PERMANENTE.md` | El diseño del archivo permanente | superado por el de abajo |
+| `docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md` | El archivo permanente en R2: qué se construyó y cómo se activa (regla 183) | vigente (sin activar) |
+| `docs/analiticas/ANALISIS.md` | Qué se mide, qué estaba roto y cómo medir bien | foto del 15/10 (los ceros falsos ya se arreglaron) |
+| `docs/criterio/ANALISIS.md` | El criterio editorial auditado | foto del 15/10 |
+| `docs/criterio/CRITERIO-EDITORIAL-PROPUESTA.md` | Un texto nuevo del criterio | para decidir (**no rige**) |
+| `docs/criterio/PROPUESTA-EDICION-V2.md` y `PROMPT-V2-CANDIDATO.txt` | Notas que sean síntesis de todas sus fuentes; la fase 1 (entrada ampliada, regla 174) ya está hecha | a medias: el prompt candidato sin medir |
+| `docs/criterio/PESOS-Y-PUNTAJES.md` (y `.html`) | Todos los números que deciden qué sale y en qué orden, y una recalibración | para decidir |
+| `docs/criterio/BALCARCE-TODAS-LAS-NOTAS.md` | Dónde se perdían notas de Balcarce; lo aplicado es la regla 180 | vigente + propuestas |
+| `docs/auditoria-opus/ANALISIS.md` | La auditoría independiente del 15/10 (legal, operación, seguridad) | foto del 15/10 (estado de cada punto: `docs/ESTADO-DE-LAS-MEJORAS.md`) |
+| `docs/auditoria-opus/REVISION-CODIGO-15-10.md` | Revisión de código del 15/10, 19 hallazgos | foto del 15/10 (los urgentes se arreglaron ese día) |
+| `docs/auditoria-opus/TEXTO-PARA-OTRAS-IAS.md` y `RESPUESTAS-OTRAS-IAS.md` | La consulta a otras IAs y la respuesta de ChatGPT | foto del 15/10 |
 
 ### En `docs/propuestas/` (lo que sigue abierto)
 
@@ -104,11 +164,10 @@ Un dato vive en **un** lugar; los demás documentos remiten a ése.
 | `docs/propuestas/LEEME.md` | Qué queda en la carpeta y en qué estado está cada cosa |
 | `docs/propuestas/PASOS-PARA-USTEDES.md` | Lo que sólo una persona puede hacer (respaldo en GitLab y R2, fotos a R2). Lo nombra el workflow "Fotos a R2": no moverlo |
 | `docs/propuestas/PLANTILLAS-DE-PIEZAS.md` | Las reglas y variantes de las escenas animadas (aprobadas y conectadas, regla 157) |
-| `docs/propuestas/CRONOGRAMA-REDES.md` | Qué sale en las redes y a qué hora (generado con `node redes/cronograma-semana.mjs`) |
-| `docs/redes/ARCHIVO-DE-PIEZAS.md` | Dónde se guardan para siempre los videos, audios y placas de las redes (R2), cuánto pesan y cuestan, y cómo bajar una pieza |
-| `docs/propuestas/CLAVES-DE-IA.md` | Las claves y servicios de IA del 9/10 |
+| `docs/propuestas/CRONOGRAMA-REDES.md` | Qué sale en las redes y a qué hora (generado con `node redes/cronograma-semana.mjs`). **Viejo**: es la foto del 9/10; rehacerlo antes de usarlo |
+| `docs/propuestas/CLAVES-DE-IA.md` | Las claves y servicios de IA del 9/10. **Viejo**: lo vigente está en `docs/08-INFRAESTRUCTURA.md` y `reels/claves.mjs` |
 | `docs/propuestas/DISENOS-A-ARMAR.md` | Diseños de reels y web para elegir después del rediseño |
-| `docs/propuestas/material/` | Páginas y videos de ejemplo de la auditoría del 8/10 |
+| `docs/propuestas/material/` | Páginas y videos de ejemplo de la auditoría del 8/10. **Viejo** (maquetas de esa fecha) |
 
 ### En la raíz
 
@@ -123,8 +182,7 @@ Un dato vive en **un** lugar; los demás documentos remiten a ése.
 | `MEDIA-KIT.md` | La identidad visual: colores, tipografía, íconos, medidas, plantillas |
 | `FORMATOS.md` | Las medidas de imágenes y videos de cada red y su porqué (los números viven en `redes/formatos.mjs`) |
 | `PERFILES.md` | Las biografías, categorías y colores de las redes |
-| `SEO.md` | Posicionamiento: qué está hecho, cómo se audita, qué falta |
-| `docs/seo/AUDITORIA-SEO-LLM.md` | Auditoría de SEO y de asistentes de IA (16/10/2026): estado real con evidencia, problemas por gravedad, plan, trámites, política de bots de IA, `llms.txt`, servidor MCP y decisiones pendientes |
+| `SEO.md` | Posicionamiento: qué está hecho, cómo se audita, qué falta. Lo más nuevo (16/10) está en `docs/seo/AUDITORIA-SEO-LLM.md` |
 | `PUBLICIDAD.md` | Los tres avisos, sus reglas, AdSense y cómo se piensa vender |
 | `COMERCIAL.md` | La base de comercios de Balcarce (aparte del sitio), la vigencia, las propuestas y el plan del mapa comercial |
 | `INVESTIGACION.md` | Lo legal, con sus fuentes |
@@ -166,7 +224,8 @@ vigente está en `docs/`.
 | 28/09 | Portada de 36 horas; fecha única de cada nota; "de acá" con una sola definición; el banco de fotos; esta documentación |
 | 29/09 | Claves gratis nuevas y redes prendidas con las voces propias; el panel del celular; la vigilancia de claves y voces; las repetidas con otra dirección, unidas; fotos más livianas |
 | 8 y 9/10 | Auditorías; semáforo mejorado (regla 118); pantalla Hoy y Borradores en el panel del celular; escenas animadas en las piezas (regla 157) |
-| 12 a 15/10 | Decisiones del 12/10; el repositorio se muda a `radarbalcarce/radar-balcarce`, el reloj pasa al Worker de Cloudflare y empieza el rediseño desde cero (`docs/DECISIONES.md`) |
+| 12 a 15/10 | Decisiones del 12/10; el repositorio se muda a `radarbalcarce/radar-balcarce`, el reloj pasa al Worker de Cloudflare y empieza el rediseño desde cero (`docs/DECISIONES.md`); fuentes de 254 a unas 100; avisos por mail y vigilante en Cloudflare; respaldo en R2; en cada vuelta sólo corre el núcleo legal de las pruebas |
+| 16/10 | Cruce coherente (regla 184); todo lo de Balcarce entra (regla 180); informes por mail de las 8:15 y las 21:15; ilustraciones con IA para las notas sin foto (reglas 181, 182 y 185); archivo permanente en R2 listo sin activar (regla 183); redes sin enlaces en Instagram; propuestas del flujo nuevo y de 17 secciones para decidir |
 
 El detalle, en `docs/historico/HISTORIA.md` y en los mensajes de los commits.
 

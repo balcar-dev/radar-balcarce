@@ -1,7 +1,8 @@
 # 06 · La web: cómo se arma el sitio
 
-*Escrito el 28/09/2026, leyendo el código de ese día. Si este documento y el
-código no coinciden, manda el código.*
+*Escrito el 28/09/2026. Actualizado el 16/10/2026 (cifras, pasos nuevos del armado
+y del despliegue, SEO, fotos, ilustraciones y archivo permanente). Si este
+documento y el código no coinciden, manda el código.*
 
 Este documento cuenta el último tramo del camino de una nota: desde que el
 motor ya sabe qué notas hay y qué se decidió sobre cada una, hasta que el
@@ -10,13 +11,15 @@ lector la ve en `radarbalcarce.com`. Qué noticias entran y de dónde es
 `docs/03-SELECCION.md`; cómo escribe la IA el título, la bajada y el cuerpo,
 `docs/04-REDACCION.md`; el banco de fotos, `docs/05-FOTOS.md`; las redes,
 `docs/07-REDES.md`; los workflows, los secretos y Cloudflare por dentro,
-`docs/08-INFRAESTRUCTURA.md`; el panel de la PC, `docs/09-PANEL.md`.
+`docs/08-INFRAESTRUCTURA.md`; los paneles (el del celular, que es el que se usa,
+y el de la PC, en desuso), `docs/09-PANEL.md`.
 
 ---
 
 ## En una frase
 
-Cada media hora GitHub corre `web/scripts/generar-datos.mjs`, que junta las
+Cada media hora (lo dispara el Worker de Cloudflare `radar-balcarce-reloj`)
+GitHub corre `web/scripts/generar-datos.mjs`, que junta las
 noticias, lo que decidieron las personas y lo que escribió la IA, y deja todo
 escrito en archivos JSON dentro de `web/data/`; después Next.js convierte esos
 archivos en un sitio de **puras páginas HTML fijas** (no hay ningún servidor
@@ -31,10 +34,12 @@ publicar**, y lo poco que pasa **en el navegador** del lector.
 
 ### A. Armar los datos: `web/scripts/generar-datos.mjs`
 
-Es el programa central de la web (768 líneas). Se corre con
+Es el programa central de la web (unas 1.300 líneas al 16/10). Se corre con
 `cd web && npm run datos` (que es `node scripts/generar-datos.mjs`). Lo hace
 solo el workflow "Actualizar la web" (`.github/workflows/actualizar.yml`) cada
-30 minutos.
+30 minutos: lo dispara el Worker `radar-balcarce-reloj` a los :00 y :30 UTC
+(desde el 15/10; antes, cron-job.org, hoy pausado), y el `schedule` del propio
+workflow (a los :07 y :37) queda de respaldo.
 
 **0. ¿Dónde estoy corriendo?** Lo primero que mira es si existe
 `panel/datos/ultima.json`. Si no existe (el caso de GitHub, donde no hay panel)
@@ -49,7 +54,9 @@ las diferencias están marcadas con *(sólo en la nube)*.
   para que una nota no cambie de dirección cuando otro medio se suma a la
   misma historia. Trae también la agenda del municipio (`agendaCompleta`,
   `ingesta/agenda.mjs`). Las decisiones de las personas las lee de
-  `web/data/decisiones.json`, que sube el panel. Por cada fuente caída o
+  `web/data/celular-decisiones.json` (las escribe el panel del celular) y, por
+  compatibilidad, de `web/data/decisiones.json`, que subía el panel de la PC
+  (vacío desde el 28/09: ese panel ya no se usa). Por cada fuente caída o
   vacía deja un aviso amarillo arriba de la corrida (`::warning::`), porque
   una fuente que se vacía no da error: sólo trae menos.
 - *En la PC:* no busca nada. Lee lo que ya buscó el panel:
@@ -95,7 +102,9 @@ salir solo. No se le pide nada a Gemini de una nota que:
 
 Lo ya reescrito en corridas anteriores (`previasDeLaPortada`, de la portada y
 del archivo) se reusa sin gastar. Cuántas veces se pidió cada nota queda en
-`web/data/intentos-ia.json` (tope de tres, podado a 7 días). En la PC no se
+`web/data/intentos-ia.json` (tope de tres, uno o dos más si la cuentan 5 u 8
+medios; podado a 7 días). Desde el 15/10 la IA recibe hasta cuatro textos
+completos de las fuentes (regla 174). En la PC no se
 reescribe nada: es el único lugar que lo hace (el panel dejó de hacerlo el
 28/09). El detalle, en `docs/04-REDACCION.md`.
 
@@ -121,7 +130,9 @@ cada nota de la ingesta, en este orden:
    una persona no se toca.
 7. Le fija la dirección (`fijarSlug`, ver "La dirección fija" más abajo).
 8. Aplica la corrección a mano si la hay (`conCorreccion`, de
-   `web/data/correcciones.json`): título, bajada, sección o cuerpo.
+   `web/data/correcciones.json`): título, bajada, sección o cuerpo; y los
+   arreglos chicos de ortografía de la auditoría con IA
+   (`conCambiosDeLaAuditoria`, `web/data/correcciones-auditoria.json`, regla 98).
 9. Si el título o la bajada **finales** dicen algo de lo que nunca se
    publica (hoy, las listas de sepelios, `REGLAS_SEMAFORO.nunca`), **no sale**
    (`nuncaSePublica`), **aunque la haya aprobado una persona** (28/09).
@@ -141,10 +152,15 @@ guarda `teniaImagenLaFuente`.
 **6. Las fotos.** *(Sólo en la nube)* `elegirFotosNuevas`
 (`web/scripts/fotos-notas.mjs`) prueba una foto para hasta 10 notas nuevas por
 corrida (`TOPE_POR_CORRIDA = 10`), guarda lo probado en
-`web/data/banco-fotos.json` y los archivos en `web/public/fotos-notas/` (105 al
-28/09 a la noche). *(En los dos lados)* `conFotosDelBanco` le pone `n.foto`
-(archivo y crédito) a cada nota que ya tiene foto en el banco. Si elegir falla,
-quedan las del banco. Todo el detalle, en `docs/05-FOTOS.md`.
+`web/data/banco-fotos.json` y los archivos en `web/public/fotos-notas/` (unos
+900 archivos al 16/10; eran 105 el 28/09). *(En los dos lados)* `conFotosDelBanco`
+le pone `n.foto` (archivo y crédito) a cada nota, en este orden de prioridad: la
+foto sumada a mano (`web/data/fotos-manuales.json`), la del banco y, al final, la
+**ilustración hecha con IA** (`web/data/fotos-ia.json`, reglas 182 y 185: sin
+personas, con el epígrafe «Ilustración generada con IA»; la escribe sólo el
+workflow «Ilustrar notas sin foto», no "Actualizar la web"; nunca en notas que
+tocan una muerte ni en el semáforo rojo). Si elegir falla, quedan las del banco.
+Todo el detalle, en `docs/05-FOTOS.md`.
 
 **7. Mira lo ya archivado contra lo de hoy.** Recorre `archivo.json` y arma la
 lista de `retiradas` (lo que pierde la página):
@@ -168,7 +184,11 @@ llega igual a su página.
 hábil, de 11 a 18, y todavía no está la de hoy), pide la cotización a
 DolarApi (`traerDolar`, `web/lib/dolar.js`) y la guarda en
 `web/data/dolar-historia.json`. *(En los dos lados)* arma la nota del dólar de
-los días en que se movió (`notasDelDolar`), las de la Fórmula 1 (`notasDeF1`, `ingesta/f1.mjs`: los horarios en hora argentina desde el jueves del Gran Premio hasta 3 horas después de la largada, la clasificación del sábado (la parrilla: pole, primera fila, los diez primeros y Colapinto, desde que termina hasta 3 horas después de la largada; 3/10) y "así fue" con podio, Colapinto, vuelta rápida y campeonato hasta 4 días después; datos abiertos de Jolpica, guardados en `web/data/f1.json`; ids `f1horarios2026r16` y `f1resultado2026r16`; si la API falla queda lo último guardado; sin IA ni voz; no van a las redes) y la de cada podcast que figura en
+los días en que se movió (`notasDelDolar`), la del clima (`notasDelClima`, con
+su ilustración fija, regla 181), la de "Un día como hoy" cuando salió su video
+(`notasDeEfemerides`, regla 165), las de fútbol (`ingesta/futbol.mjs`, ESPN), las
+que nacen de una pista o de un mail de prensa (`notasDePistas`,
+`web/lib/notas-de-pistas.js`), las de la Fórmula 1 (`notasDeF1`, `ingesta/f1.mjs`: los horarios en hora argentina desde el jueves del Gran Premio hasta 3 horas después de la largada, la clasificación del sábado (la parrilla: pole, primera fila, los diez primeros y Colapinto, desde que termina hasta 3 horas después de la largada; 3/10) y "así fue" con podio, Colapinto, vuelta rápida y campeonato hasta 4 días después; datos abiertos de Jolpica, guardados en `web/data/f1.json`; ids `f1horarios2026r16` y `f1resultado2026r16`; si la API falla queda lo último guardado; sin IA ni voz; no van a las redes) y la de cada podcast que figura en
 el libro de redes (`notasDeRepasos`). Un repaso que ya no se puede armar (una
 de sus notas se retiró) también se retira. Las propias pasan por la misma
 regla de cuerpo. Detalle en "Las notas propias", más abajo.
@@ -203,14 +223,17 @@ y no se inventa); los teléfonos útiles
 
 **13. Lo que espera a una persona.** `pendientesDeLaIngesta`
 (`redes/avisos.mjs`) deja en `portada.json` lo mínimo de las notas amarillas
-sin decidir, para que el vigilante avise por WhatsApp. Como `portada.json` es
-público, nunca va una roja y el titular se tapa en Policiales o si habla de
-chicos o víctimas. También deja el número de notas esperando cuerpo.
+sin decidir, para que el vigilante y el informe diario avisen por mail. Como
+`portada.json` es público, nunca va una roja y el titular se tapa en Policiales
+o si habla de chicos o víctimas; lo completo va **cifrado** para el panel del
+celular en `web/data/celular-pendientes.json`. También deja el número de notas
+esperando cuerpo.
 
 **14. La estadística del día.** `cuentaDelDia` y `anotarDia`
 (`ingesta/estadistica-diaria.mjs`) reescriben el día de hoy en
-`web/data/notas-por-dia.json` (400 días, `DIAS_GUARDADOS`). El WhatsApp de las
-21 la manda.
+`web/data/notas-por-dia.json` (400 días, `DIAS_GUARDADOS`). La cuentan los
+informes diarios por mail de las 8:15 y las 21:15 (`redes/informe-diario.mjs`,
+regla 176), que desde el 15/10 reemplazan al WhatsApp de las 21.
 
 **15. Escribe, pero sólo si cambió algo que importa.** `esperando-cuerpo.json`
 se escribe si cambió la lista. `portada.json` se escribe sólo si
@@ -223,7 +246,8 @@ escriben sólo si cambiaron (o si faltan).
 
 ### B. Compilar: `npm run build`
 
-`web/package.json` define `build` como tres pasos seguidos:
+`web/package.json` define `build` como cinco pasos seguidos (los dos últimos,
+4 y 5, se sumaron el 8 y el 9/10):
 
 1. **`npm run dolar`** (`web/scripts/foto-dolar.mjs`): pide la cotización a
    DolarApi (y a Bluelytics si falla) y la guarda en `web/data/dolar.json`.
@@ -240,6 +264,16 @@ escriben sólo si cambiaron (o si faltan).
    genera **todas** las páginas como archivos en `web/out/`, leyendo
    `web/data/` a través de `web/lib/datos.js`. Las imágenes para compartir se
    dibujan acá también, una por nota (`web/lib/tarjeta.js`).
+4. **`npm run indexar`** (`web/scripts/indexar.mjs`, desde el 8/10): arma con
+   Pagefind el índice del buscador de **todo el archivo** en `web/out/pagefind/`
+   (sólo las notas que Google también puede ver). Si falla, el sitio sale igual
+   y el buscador dice que no está disponible.
+5. **`npm run contar`** (`web/scripts/contar-archivos.mjs`, desde el 9/10; los
+   umbrales de hoy, del 15/10):
+   cuenta los archivos de `web/out/` contra el tope de 20.000 de Cloudflare
+   Pages. Nunca frena: avisa en amarillo desde **16.500** (`AVISO_DESDE`) y en
+   rojo desde **18.000** (`ALERTA_DESDE`), y dice cuántas notas hay y con qué
+   tope.
 
 **`npm run build` no regenera los datos.** Compila con lo que ya hay en
 `web/data/`. Por eso `npm run dev` es `npm run datos && next dev`.
@@ -251,18 +285,27 @@ Dentro de `actualizar.yml`, en orden (el detalle de cada paso, en
 
 1. Baja la última versión de `main` (no la del momento en que se disparó).
 2. Instala lo de la raíz y lo de `web/`.
-3. **`npm test`**: si una prueba falla, la corrida se corta **antes** de
-   buscar noticias y la web queda como estaba (`docs/10-REGLAS-Y-PRUEBAS.md`).
+3. **El núcleo legal de las pruebas** (`npm run test:nucleo`, la lista en
+   `pruebas/nucleo-legal.txt`, unos 3 segundos, desde el 15/10): si una de esas
+   pruebas falla, la corrida se corta **antes** de buscar noticias, la web queda
+   como estaba y llega un mail. Las 2.000 pruebas enteras (`npm test`) ya no
+   corren en cada vuelta (`docs/10-REGLAS-Y-PRUEBAS.md`).
 4. Recupera la memoria del cruce de medios (`.cache/`, caché de Actions).
-5. `node scripts/generar-datos.mjs` con las claves de Gemini y de Groq.
+5. `node scripts/generar-datos.mjs` con las claves de Gemini y de Groq (y las
+   variables `TOPE_DE_NOTAS` y `R2_ARCHIVO` del archivo permanente: la primera,
+   sin cargar; la segunda, cargada desde el 16/10 a la tarde).
 6. `npm run build` con `SITIO=https://radarbalcarce.com`: compila **para
    comprobar** que el sitio compila. Si no compila, no se guarda nada.
 7. `node scripts/revisar-seo.mjs`: mira el HTML compilado y falla si se perdió
    algo que Google o WhatsApp necesitan.
-8. `git add` de exactamente estos archivos: `portada.json`, `archivo.json`,
-   `agenda.json`, `intentos-ia.json`, `dolar-historia.json`, `fichas.json`,
-   `notas-por-dia.json`, `banco-fotos.json`, `esperando-cuerpo.json`,
-   `vistas.json` y la carpeta `web/public/fotos-notas/`. Si hay cambios,
+8. `git add` de exactamente estos archivos de `web/data/`: `portada.json`,
+   `archivo.json`, `agenda.json`, `intentos-ia.json`, `dolar-historia.json`,
+   `clima-historia.json`, `f1.json`, `futbol.json`, `fichas.json`,
+   `notas-por-dia.json`, `uso-ia.json`, `banco-fotos.json`,
+   `esperando-cuerpo.json`, `vistas.json`, `retiradas.json`,
+   `celular-pendientes.json`, `celular-estado.json`, `fusionadas.json` y la
+   carpeta `historico/`, más `web/public/fotos-notas/` y `web/public/escudos/`.
+   Un archivo nuevo de `web/data/` que no esté en esa línea se pierde. Si hay cambios,
    commit "Datos de la portada · dd/mm HH:MM", `git pull --rebase` (si choca
    en `web/data/` o en las fotos gana lo de esta corrida) y `git push`, con
    tres intentos.
@@ -276,14 +319,25 @@ solo "Cloudflare Pages":
 2. **Vuelve a compilar** (`npm run build` con `SITIO`). Es esta segunda
    compilación la que se publica; por eso la foto del dólar publicada es la
    de este momento.
-3. Sube `web/out/` a Cloudflare con
+3. **Archiva en R2 las notas que están por salir del sitio** (paso «Archivar
+   las notas por salir (R2)», `web/scripts/archivar-a-r2.mjs`, regla 183).
+   Sólo corre si existe la variable `R2_ARCHIVO`, **cargada el 16/10 a las 18:06
+   UTC** (`radar-archivo`; ver "El archivo permanente", más abajo). Si falla, no frena: el sitio
+   se sube igual y llega un mail.
+4. Sube `web/out/` a Cloudflare con
    `npx wrangler@4.139.0 pages deploy out --branch=main` (proyecto
-   `radar-balcarce`, secretos `CLOUDFLARE_API_TOKEN` y
-   `CLOUDFLARE_ACCOUNT_ID`). Es "subida directa": Cloudflare no compila nada,
-   así no se gastan los 500 builds gratis por mes.
+   `radar-balcarce`, o el de la variable `CLOUDFLARE_PROJECT`; secretos
+   `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`). Es "subida directa":
+   Cloudflare no compila nada, así no se gastan los 500 builds gratis por mes.
+5. Le avisa a Bing de las notas nuevas (`redes/indexnow.mjs`, IndexNow, desde el
+   8/10): sólo las que Google también puede ver. Si falla, no importa.
+
+Dos despliegues no corren a la vez: si llega uno nuevo, el anterior se cancela.
 
 Desde que "Actualizar la web" arranca hasta que la página nueva está en línea
-pasan, según los comentarios de los workflows, entre 3 y 5 minutos.
+pasan unos 10 minutos: "Actualizar la web" tarda unos 8 y la compilación de
+"Cloudflare Pages", unos 2 y medio más (`docs/etapa-10-operacion/ANALISIS.md`;
+a fines de septiembre, con menos notas, eran 3 a 5 en total).
 
 ### E. En el navegador del lector
 
@@ -298,8 +352,10 @@ El HTML llega hecho. Lo único que se mueve en el navegador:
   y cada 5 minutos (`CADA_DOLAR`). Nunca dice "en vivo".
 - **"Hace X"** (`components/horas-vivas.js`): recalcula cada minuto el tiempo
   de cada `<time data-hace>`, para que "hace 20 min" no quede congelado.
-- **El buscador** (`components/buscador.js`): busca entre las notas
-  vigentes que ya vienen en la página. No consulta nada.
+- **El buscador** (`components/buscador.js`): desde el 8/10 busca en **todo
+  el archivo** con Pagefind: baja de a pedacitos el índice que se armó al
+  compilar (`/pagefind/`), sólo cuando alguien abre el buscador. No hay
+  servidor ni base de datos.
 - **La página 404** (`app/not-found.js`): si alguien llega a una dirección de
   nota que no existe, baja `/nota/indice.json`, busca el identificador del
   final y lo manda a la dirección buena (`destinoDesde404`, `lib/ruta.js`).
@@ -309,7 +365,10 @@ El HTML llega hecho. Lo único que se mueve en el navegador:
 ## Los archivos de `web/data/`
 
 "¿Lo sube Actualizar?" dice si está en el `git add` de "Actualizar la web".
-Los que no, los sube otro (el panel, otro workflow o una persona).
+Los que no, los sube otro (el panel del celular, otro workflow o una persona).
+La tabla tiene los principales; al 16/10 hay unos 45 archivos en `web/data/`
+(los del panel del celular, las pistas, las efemérides, las estadísticas y la
+auditoría están en `docs/09-PANEL.md`, `docs/07-REDES.md` y `docs/13-EFEMERIDES.md`).
 
 | Archivo | Qué guarda | Quién lo escribe | Quién lo lee | ¿Lo sube Actualizar? |
 |---|---|---|---|---|
@@ -321,28 +380,37 @@ Los que no, los sube otro (el panel, otro workflow o una persona).
 | `f1.json` | El calendario, la clasificación del sábado, el último resultado y el campeonato de Jolpica, y la fecha de cada nota de F1 | `generar-datos.mjs`, **sólo en la nube** | `ingesta/f1.mjs` | Sí |
 | `dolar-historia.json` | La cotización de las 11 de cada día hábil, 60 días (`DIAS_DE_HISTORIA`) | `generar-datos.mjs`, **sólo en la nube** | `lib/notas-propias.js`, `reels/plan.mjs` | Sí |
 | `fichas.json` | Lo que leyó la IA de cada nota y los grupos de repetidas | `generar-datos.mjs` con `ingesta/lectura-ia.mjs`, sólo en la nube | `generar-datos.mjs` | Sí |
-| `notas-por-dia.json` | Cuántas notas salieron cada día y en qué sección (400 días) | `generar-datos.mjs` | `redes/vigilar.mjs` (informe de las 21) | Sí |
+| `notas-por-dia.json` | Cuántas notas salieron cada día y en qué sección (400 días) | `generar-datos.mjs` | `redes/informe-diario.mjs` (informes de las 8:15 y las 21:15), `redes/vigilar.mjs` | Sí |
+| `clima-historia.json` | El clima de cada día, para la nota del clima | `generar-datos.mjs` | `lib/notas-propias.js` (`notasDelClima`) | Sí |
+| `uso-ia.json` | Llamadas, errores y tokens de la IA por día (regla 170; hoy lo anota la redacción) | `reels/reescritura.mjs` (`redes/uso-ia.mjs`) | El informe diario | Sí |
+| `celular-pendientes.json`, `celular-estado.json` | Lo que espera a una persona, cifrado para el celular; cuántas notas hay y qué sale hoy en redes | `generar-datos.mjs` (`panel/celular-datos.mjs`, `redes/previa.mjs`) | El panel del celular | Sí |
+| `fusionadas.json` | Las notas repetidas que volvieron con otra dirección y adónde redirige cada una | `generar-datos.mjs` (`web/lib/repetidas.js`) | `generar-redirects.mjs` | Sí |
+| `historico/AAAA-MM.json` | Lo que salió del archivo por edad o por el tope (8/10): no se pierde el dato, pero sí la página | `generar-datos.mjs` (`bajasDelArchivo`) | A mano | Sí |
+| `celular-decisiones.json` | Lo que decidió una persona desde el celular (publicar, descartar, texto) | El panel del celular | `generar-datos.mjs` | No: lo escribe el celular |
+| `notas-de-pistas.json` | Las notas propias de una pista o de un mail de prensa, aprobadas | El celular, "Pistas" o Claude a pedido | `lib/notas-de-pistas.js` | No |
+| `fotos-manuales.json` | Las fotos sumadas a mano a una nota (prioridad más alta) | "Panel del celular" (`accion=foto`) | `generar-datos.mjs` | No |
+| `fotos-ia.json` (+ `web/public/fotos-notas/<id>-ia.jpg`) | Las ilustraciones hechas con IA para notas sin foto (reglas 182 y 185; prioridad más baja) | Workflow «Ilustrar notas sin foto» (`web/scripts/ilustrar-notas.mjs`) | `generar-datos.mjs` (`conFotosDelBanco`) | No: lo sube ese workflow |
 | `banco-fotos.json` (+ `web/public/fotos-notas/`) | Qué nota ya se probó para foto, y la foto elegida con su crédito | `generar-datos.mjs` con `scripts/fotos-notas.mjs`, sólo en la nube | `generar-datos.mjs`, `redes/elegir.mjs`, `lib/tarjeta.js` | Sí |
 | `esperando-cuerpo.json` | Las notas que no salen por falta de cuerpo, con sus fuentes, para que una persona (o Claude) lo escriba en `correcciones.json` | `generar-datos.mjs` | Personas | Sí |
 | `vistas.json` | La primera vez que se vio cada nota (7 días) | `generar-datos.mjs` | `generar-datos.mjs` | Sí |
-| `decisiones.json` | Lo que decidió el panel (estado, texto, quién, cuándo) y los horarios de las historias | El panel (`exportarDecisiones`, `panel/servidor.mjs`) | `generar-datos.mjs` en la nube, `recuperar-archivo.mjs` | No: lo sube el panel (`panel/sincronizar.mjs`) |
+| `decisiones.json` | Lo que decidía el panel de la PC (estado, texto, quién, cuándo) y los horarios de las historias. **Vacío de decisiones desde el 28/09**: lo de las personas va ahora en `celular-decisiones.json` | El panel de la PC (`exportarDecisiones`, `panel/servidor.mjs`), en desuso | `generar-datos.mjs` en la nube, `recuperar-archivo.mjs` | No: lo subía el panel (`panel/sincronizar.mjs`) |
 | `avisos.json` | Los tres espacios publicitarios (apertura, clima, pie) | El panel, pestaña Avisos | `components/avisos.js` (se lee al compilar) | No: lo sube el panel |
 | `eventos-panel.json` | Los eventos publicados desde la pestaña Agenda (sólo lo público) | El panel (`exportarEventos`) | `generar-datos.mjs` → `lib/eventos.js` | No: lo sube el panel |
-| `retiradas.json` | Lo que se sacó a mano de la web, con motivo, cuándo y quién | Una persona, a mano | `generar-datos.mjs` (`idsRetiradosAMano`) | No: commit a mano |
-| `correcciones.json` | Título, bajada, sección o cuerpo corregidos a mano, con motivo, cuándo y quién | Una persona, a mano | `generar-datos.mjs` (`correccionesAMano`) | No: commit a mano |
+| `retiradas.json` | Lo que se sacó a mano de la web, con motivo, cuándo y quién | Una persona, a mano; los lunes "Actualizar la web" le saca las de más de 7 días (`podarRetiradas`) | `generar-datos.mjs` (`idsRetiradosAMano`) | Sí (por la poda de los lunes); lo nuevo, commit a mano |
+| `correcciones.json` | Título, bajada, sección o cuerpo corregidos, con motivo, cuándo y quién | El panel del celular, o una persona a mano | `generar-datos.mjs` (`correccionesAMano`) | No: lo escribe el celular o un commit a mano |
 | `redes.json` | El libro de lo publicado en Facebook e Instagram | Los workflows "Redes" y "Piezas" | `generar-datos.mjs` (direcciones, notas que fueron a redes, repasos, estadística) y todo `redes/` | No: lo suben Redes y Piezas (`docs/07-REDES.md`) |
 | `vigilancia.json` | La memoria del vigilante (qué avisó y cuándo) | Workflow "Vigilancia" | `redes/vigilar.mjs` | No: lo sube Vigilancia |
-| `estadisticas.json` | Visitas y seguidores | Workflow "Vigilancia" (`redes/estadisticas.mjs`) | `redes/vigilar.mjs` | No: lo sube Vigilancia |
+| `estadisticas.json` | Visitas y seguidores, y el detalle diario de Cloudflare (horas, notas, de dónde llegan, aparatos, países) | Workflow "Vigilancia" (`redes/estadisticas.mjs`, `redes/estadisticas-detalle.mjs`) | `redes/vigilar.mjs`, el informe diario, la pestaña Números del celular | No: lo sube Vigilancia |
 | `dolar.json` | La foto del dólar del momento de compilar | `scripts/foto-dolar.mjs`, en cada build | `fotoDelDolar` (`lib/datos.js`) | **Nunca** se versiona (`.gitignore`) |
-| `auditoria.json` | El resultado de la auditoría semanal de medidas y SEO | Workflow "Auditoría" (`redes/auditar.mjs`) | `redes/vigilar.mjs` | No: lo sube Auditoría. Al 28/09 **no está** en el repositorio |
+| `auditoria.json` | El resultado de la auditoría semanal de medidas y SEO | Workflow "Auditoría" (`redes/auditar.mjs`) | `redes/vigilar.mjs` | No: lo sube Auditoría |
 
 Además, fuera de `web/data/`: `web/public/_redirects` (lo escribe cada build,
 no se versiona) y `web/out/` (el sitio compilado, no se versiona).
 
-Tamaños al 28/09, para tener una idea: `decisiones.json` 2,5 MB (1.540
-decisiones, 1.390 de ellas escritas por la IA desde el panel),
-`archivo.json` 0,98 MB (515 notas), `fichas.json` 0,36 MB, `portada.json`
-0,14 MB (29 notas, 2 esperando cuerpo).
+Tamaños al 16/10, para tener una idea: `archivo.json` 2,9 MB (1.125 notas; el
+28/09 eran 515), `banco-fotos.json` 0,85 MB, `fichas.json` 0,64 MB,
+`redes.json` 0,19 MB, `correcciones.json` 0,16 MB. `decisiones.json` bajó de
+2,5 MB a casi nada cuando se dejó de usar el panel de la PC.
 
 ---
 
@@ -357,8 +425,8 @@ Todo sale de `web/lib/datos.js`. Los números:
 | Con qué notas compite la nota grande | las de las últimas 6 horas | `VENTANA_HORAS` | `web/lib/datos.js` (= `PORTADA.horasNotaGrande`) |
 | Hasta cuándo el archivo completa una sección | 36 horas (las mismas) | `HORAS_PARA_COMPLETAR = HORAS_EN_PORTADA` | `web/lib/datos.js` |
 | Notas por sección en la portada | 3 | `NOTAS_POR_SECCION` | `web/lib/datos.js` |
-| Notas por página de sección | 15 | `POR_PAGINA` | `web/lib/paginas.js` |
-| Notas en "Seguí leyendo" | 4 (2 de la misma sección) | `CUANTAS_SIGUEN`, `DE_LA_MISMA_SECCION` | `web/lib/seguir-leyendo.js` |
+| Notas por página de sección | 10 | `POR_PAGINA` | `web/lib/paginas.js` |
+| Notas en "Seguí leyendo" | 4 (de la misma sección si las hay, desde el 8/10) | `CUANTAS_SIGUEN` | `web/lib/seguir-leyendo.js` |
 
 Una prueba (`pruebas/criterio.test.mjs`) controla que las tres primeras digan
 lo mismo en la web y en `ingesta/criterio.mjs`.
@@ -372,10 +440,12 @@ lo mismo en la web y en `ingesta/criterio.mjs`.
    hora de la fuente no va a la tapa), toma las de las últimas 6 horas (si no
    hay ninguna, todas). Dentro de esas, prefiere las **de Balcarce** (`local`
    o `nombraBalcarce`); si no hay, todas. Gana la de más puntaje
-   (`relevancia`); a igual puntaje, la más nueva.
+   (`relevancia`); a igual puntaje, la más nueva. Desde el 1/10 se prefieren
+   las que tienen foto (Hernán: "siempre tengan fotos"); sin ninguna, va la
+   que toque con la placa de su sección.
 3. **Las cuatro de abajo**: la más nueva de cada sección, con hora, sin
-   repetir la sección de la grande ni entre ellas. Cinco notas, cinco
-   secciones.
+   repetir la sección de la grande ni entre ellas; primero las que tienen
+   foto y, si no alcanzan, las demás. Cinco notas, cinco secciones.
 4. **Los bloques por sección**, en el orden de `SECCIONES` (Balcarce,
    Política, Policiales, Fútbol, Deportes, Automovilismo, Agro, Economía,
    Cultura y agenda, Tecnología, Argentina): las 3 más nuevas que no estén ya
@@ -389,8 +459,11 @@ lo mismo en la web y en `ingesta/criterio.mjs`.
 
 ### La lista de cada sección y de cada tema
 
-`/seccion/[ranura]` (`web/app/seccion/[ranura]/page.js`): sólo se generan las
-secciones que hoy tienen notas, de a 15 por página (`/seccion/deportes-2`…).
+`/seccion/[ranura]` (`web/app/seccion/[ranura]/page.js`): se generan todas las
+secciones (desde el 29/09, una sin notas sale con un aviso y `noindex`, para
+que el enlace de una nota a su sección no dé 404), de a 10 por página (`/seccion/deportes-2`…), y
+cada una guarda todo lo que tiene página, no sólo lo de las últimas 36 horas.
+Cada sección tiene además su propio feed (`/seccion/ranura/feed.xml`).
 En la primera página la nota grande se elige con `ordenarPortada`; en las
 siguientes no hay grande. En Cultura y agenda, la primera página suma los 4
 próximos eventos. `/tema/[ranura]` hace lo mismo con las notas de un tema.
@@ -452,11 +525,14 @@ Todas se generan al compilar, como archivos.
 | Dirección | Archivo | Qué muestra / de dónde sale |
 |---|---|---|
 | `/` | `app/page.js` | La tapa (ver arriba) |
-| `/nota/titular-ID` | `app/nota/[id]/page.js` | Título, bajada, **foto si la hay** (con el crédito en el epígrafe, nunca adentro de la imagen; si no, desde el 29/09, la placa de la sección con su dibujo), cuerpo (con enlaces si es propia), botones de las notas propias, el desplegable cerrado "Fuentes (N)" con la firma (`components/verificacion.js`), compartir, "Seguí leyendo" y la invitación a escribir. Se genera una página por **cada nota de la portada y del archivo** (`todasLasNotas`) |
-| `/nota/titular-ID/opengraph-image` | `app/nota/[id]/opengraph-image.js` | La tarjeta apaisada para compartir (1200 × 630, con la foto del banco si hay) |
+| `/nota/titular-ID` | `app/nota/[id]/page.js` | Título, bajada, **foto si la hay** (con el crédito en el epígrafe, nunca adentro de la imagen; en 16:9, y desde el 16/10 una foto que no es ancha se recorta **desde arriba**, `object-position: center 25%`; lo mismo en la destacada, las postales y las miniaturas; una ilustración de IA dice «Ilustración generada con IA»; si no hay nada, desde el 29/09, la placa de la sección con su dibujo), cuerpo (con enlaces si es propia), botones de las notas propias, el desplegable cerrado "Fuentes (N)" con la firma (`components/verificacion.js`), compartir, "Seguí leyendo" y la invitación a escribir. Se genera una página por **cada nota de la portada y del archivo** (`todasLasNotas`) |
+| `/nota/titular-ID/opengraph-image` | `app/nota/[id]/opengraph-image/route.js` | La tarjeta apaisada para compartir (1200 × 630, con la foto del banco si hay) |
 | `/nota/titular-ID/instagram.png` | `app/nota/[id]/instagram.png/route.js` | La tarjeta vertical del espejo en Instagram (1080 × 1350). Lleva la foto del banco si la nota tiene una, y si no la placa sin foto (`FOTO_EN_INSTAGRAM = true` desde el 28/09, `web/lib/tarjeta-diseno.js`) |
 | `/nota/indice.json` | `app/nota/indice.json/route.js` | `{ id: "titular-id" }` de todas las notas con página, para el rescate de la 404 |
-| `/seccion/ranura` y `/seccion/ranura-N` | `app/seccion/[ranura]/page.js` (+ `opengraph-image.js`) | Las notas vigentes de la sección, de a 15 |
+| `/seccion/ranura` y `/seccion/ranura-N` | `app/seccion/[ranura]/page.js` (+ `opengraph-image.js`) | Todas las notas con página de la sección, las más nuevas primero, de a 10 |
+| `/seccion/ranura/feed.xml` | `app/seccion/[ranura]/feed.xml/route.js` | El RSS de una sección |
+| `/tablas`, `/tablas/liga-profesional`, `/tablas/formula-1` | `app/tablas/**/page.js` (`lib/tablas.js`) | Las tablas de posiciones que se actualizan solas (4/10), con los datos de `futbol.json` y `f1.json` |
+| `/compartir` | `app/compartir/page.js` | Mensajes y video para invitar a seguir a Radar Balcarce (5/10). No está en el menú ni en el sitemap y lleva `noindex` |
 | `/tema/ranura` | `app/tema/[ranura]/page.js` (+ `opengraph-image.js`) | Las notas de un tema que hoy tiene 2 o más. Existen y están en el sitemap, pero hoy nada las enlaza (`MOSTRAR_TEMAS = false`) |
 | `/agenda` | `app/agenda/page.js` | Los eventos que no terminaron, agrupados por día, y las fiestas del año ("fecha a confirmar" hasta que haya evento confirmado) |
 | `/agenda/nombre-clave` | `app/agenda/[id]/page.js` (+ `opengraph-image.js`, `evento.ics/route.js`) | La ficha del evento, el botón para agendarlo (`.ics`) y compartir. Detalle en `CRITERIO-EDITORIAL.md` § 8 |
@@ -466,11 +542,11 @@ Todas se generan al compilar, como archivos.
 | `/util` | `app/util/page.js` | Los teléfonos útiles por categoría |
 | `/quienes-somos`, `/contacto`, `/politica-de-privacidad` | sus `page.js` | Páginas fijas |
 | `/feed.xml` | `app/feed.xml/route.js` | RSS con todas las notas vigentes |
-| `/sitemap.xml` | `app/sitemap.js` | Páginas fijas, secciones (con sus páginas), temas, notas vigentes, notas archivadas **con cuerpo** y eventos que vienen |
+| `/sitemap.xml` | `app/sitemap.js` | Páginas fijas, secciones (con sus páginas), temas, notas vigentes, notas archivadas **con cuerpo** y eventos que vienen. Desde el 16/10 no lista ninguna nota con `noindex` (`noSeOfreceAGoogle`) y lleva la foto de cada nota de la portada (regla 177); unas 1.245 direcciones al 16/10 |
 | `/sitemap-news.xml` | `app/sitemap-news.xml/route.js` | Para Google Noticias: sólo notas con hora real de las últimas 48 horas |
 | `/robots.txt` | `app/robots.txt/route.js` y `lib/robots.js` | Permite todo menos `/panel/` en el dominio propio, con la política hacia las IA (`Content-Signal`, bots nombrados); fuera de él, pide no indexar |
 | `/agentes/ultimas.json`, `/agentes/indice.json`, `/agentes/servicios.json` | `app/agentes/*/route.js` y `lib/para-agentes.js` | Datos para programas y asistentes de IA (16/10): sólo lo que Google puede ver, sin el cuerpo, con fuentes, firma y cómo citar; `noindex`. Los lee el Worker MCP (`infra/mcp-cloudflare/`, sin activar) |
-| `/llms.txt` | `app/llms.txt/route.js` | Un resumen del sitio para sistemas de IA |
+| `/llms.txt` | `app/llms.txt/route.js` | Un resumen del sitio para sistemas de IA (mejorado el 16/10). No anuncia el servidor MCP mientras `MCP_URL` sea `null`; no hay `llms-full.txt` |
 | `/opengraph-image` | `app/opengraph-image.js` | La tarjeta del sitio |
 | 404 | `app/not-found.js` | "No encontramos esa página", con el rescate de direcciones de notas |
 
@@ -480,7 +556,8 @@ Todas se generan al compilar, como archivos.
 
 **Dos listas** (`web/lib/archivo.js`):
 - `portada.json` es lo que se **muestra** (36 horas).
-- `archivo.json` es lo que tiene **página** (180 días).
+- `archivo.json` es lo que tiene **página** (180 días en teoría; en la práctica
+  manda el tope de 3.700 notas).
 
 Así una nota que sale de la portada sigue teniendo su página y el enlace que
 ya está en Facebook, en un grupo de WhatsApp o en Google no da error.
@@ -501,8 +578,38 @@ ya está en Facebook, en un grupo de WhatsApp o en Google no da error.
   por despliegue de Cloudflare: medido el 15/10/2026, unos 400 de base y 4,2 por
   nota, o sea unos 15.900 al tope) se quedan primero las que salieron en redes y
   después las más nuevas. Al ritmo de hoy (46 notas por día) el tope manda antes
-  que los 180 días y cada nota vive unos 80. Qué hacer para que el enlace de una
-  nota que salió no dé 404: `docs/salud-tecnica/ARCHIVO-PERMANENTE.md`.
+  que los 180 días y cada nota vive unos 80; con 1.125 notas al 16/10, el tope
+  se alcanza hacia el 10/12/2026. Lo que sale por edad o por el tope no se
+  pierde del todo: el dato queda en `web/data/historico/AAAA-MM.json`
+  (`bajasDelArchivo`, 8/10), pero la página sí se pierde (hasta que se prenda el
+  archivo permanente, abajo).
+
+El conteo de archivos lo vigila `web/scripts/contar-archivos.mjs` en cada
+compilación (aviso desde 16.500, alerta desde 18.000; paso B5). Con la cuenta
+medida el 15/10 (unos 400 archivos de base más 4,2 por nota), las 1.125 notas del
+16/10 son unos 5.100 archivos (estimado, no contado) y unas 1.245 direcciones en
+el sitemap.
+
+### El archivo permanente en R2 (listo, sin activar)
+
+Para que el enlace de una nota que sale del sitio no dé 404 (regla 183;
+diseño en `docs/salud-tecnica/ARCHIVO-PERMANENTE.md`, cómo se activa en
+`docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md`). Hernán, 16/10: "se
+hace sí o sí". **Al 16/10 a la tarde está a medio prender**: la variable
+`R2_ARCHIVO` ya está cargada (desde las 18:06 UTC) y la carga inicial corrió, así
+que cada despliegue ya guarda las notas en R2; pero **no hay ruta** de
+`radarbalcarce.com` al Worker (el público no ve ningún cambio) y el tope sigue en
+3.700. Cómo funciona:
+
+- en cada despliegue, `web/scripts/archivar-a-r2.mjs` guarda en R2 la página de
+  cada nota que está por salir del sitio (sin el «Seguí leyendo», que se
+  congelaría mal) y borra de R2 lo retirado, con su foto;
+- un Worker delante de `/nota/*` (`infra/archivo-cloudflare/`) le pregunta
+  primero al sitio y, sólo si el sitio dice 404, sirve la copia de R2 con la
+  misma dirección;
+- la variable `TOPE_DE_NOTAS` permite **bajar** el tope de notas del sitio (de a
+  100 por vuelta, nunca menos de 500, y sólo con `R2_ARCHIVO` puesta:
+  `topeDeNotas`, `topeDeEstaVuelta` en `web/lib/archivo.js`).
 
 El puntaje no se guarda en el archivo (`sinPuntaje`): cambia en cada corrida
 y haría cambiar el archivo entero.
@@ -546,7 +653,16 @@ propias; al final las sin hora. Nunca queda vacío si hay algo.
 Notas que arma el sitio **sin IA**, con plantilla, a partir de datos que
 tenemos. Son notas normales (portada, sección, feed, sitemap, archivo),
 pasan por la regla de cuerpo y **no van** a Facebook como posteo ni a los
-podcasts.
+podcasts. Al 16/10 son la del dólar, la del clima (con una ilustración fija
+hecha con IA según el estado del tiempo, `web/lib/fondos-clima.js`, regla
+181), la de "Un día como hoy" cuando sale su video (regla 165,
+`docs/13-EFEMERIDES.md`), las de F1 y fútbol (paso A8) y la de cada podcast.
+
+Aparte están las notas propias **que escribe la IA** a partir de una pista o
+de un mail de prensa y aprueba una persona (`web/lib/notas-de-pistas.js`,
+`propia: 'pista'`; `docs/04-REDACCION.md`, paso 16): ésas sí pueden ir a un
+repaso de las redes si una persona las aprobó para eso (16/10,
+`notaDePistaParaLosRepasos`, `redes/elegir.mjs`).
 
 **La nota del dólar.** Sólo el día hábil en que el blue o el oficial se
 movieron **2 % o más** contra el día hábil anterior guardado
@@ -578,7 +694,8 @@ los últimos 4 días.
 
 ## SEO: lo que Google y WhatsApp necesitan
 
-El detalle y lo que falta está en `SEO.md`. Lo que arma el código:
+El detalle y lo que falta está en `SEO.md` y, desde el 16/10, en
+`docs/seo/AUDITORIA-SEO-LLM.md` (regla 177). Lo que arma el código:
 
 - **Dirección del sitio calculada** (`web/lib/sitio.js`): sale de la variable
   `SITIO`, que en GitHub vale `https://radarbalcarce.com`. Si el sitio no está
@@ -586,11 +703,32 @@ El detalle y lo que falta está en `SEO.md`. Lo que arma el código:
   piden **no indexar**.
 - **Canónico propio en cada página** (`metadatosDePagina`,
   `web/components/metadatos.js`); sólo la portada es `/`.
-- **Título y descripción** de cada nota recortados al largo que muestra
-  Google (52 y 155 letras, `recortarEn`).
-- **Datos estructurados** (`web/components/ficha.js`): `FichaDelSitio`,
-  `FichaDeNota` (con el autor coherente con la firma que ve el lector,
-  `autorDeNota`/`firmaCorta`), `FichaDeEvento` y las migas (`Migas`).
+- **Título y descripción** de cada nota (D5, 16/10): el `<title>`, `og:title`
+  y `twitter:title` llevan **el titular entero**, sin "…" puesto por nosotros
+  (`tituloDeNota`, `web/components/metadatos.js`; antes se cortaba y el 72 %
+  llegaba incompleto); " · Radar Balcarce" se suma detrás sólo si todo junto no
+  pasa de 70 caracteres. La descripción va entera hasta unos 160 caracteres y,
+  si es más larga, se corta donde termina una oración (`descripcionParaBuscador`,
+  `web/lib/texto.js`). Las páginas de sección siguen con `recortarEn`.
+- **Datos estructurados** (`web/components/ficha.js`, `web/lib/datos-estructurados.js`):
+  `FichaDelSitio` (con las políticas editoriales y el contacto, 16/10),
+  `FichaDeNota` (la foto con su tamaño real y el lugar; `author.name` es "Radar
+  Balcarce" y que la escribió la IA se dice en `author.description` y en
+  `publishingPrinciples`; la firma que ve el lector no cambia),
+  `FichaDeEvento` y las migas (`Migas`).
+- **Una nota sin cuerpo de verdad lleva `noindex, follow`** (`noSeOfreceAGoogle`,
+  `web/lib/cuerpo.js`): se abre con su enlace, pero no se ofrece a Google, ni
+  en los sitemaps, ni en el buscador, ni a IndexNow.
+- **`robots.txt`** (`web/lib/robots.js`, 16/10): todo permitido menos
+  `/panel/`, con `Content-Signal` y los bots de IA nombrados en dos grupos
+  (buscadores y asistentes, y entrenamiento); hoy el entrenamiento está
+  permitido (`ENTRENAMIENTO_IA`, lo decide Hernán).
+- **Para programas y asistentes de IA**: `llms.txt` y los tres JSON de
+  `/agentes/` (`web/lib/para-agentes.js`, con `X-Robots-Tag: noindex`). El
+  servidor MCP de sólo lectura (`infra/mcp-cloudflare/`) está escrito y
+  probado, **sin activar**.
+- **IndexNow**: después de cada despliegue se le avisa a Bing de las notas
+  nuevas (`redes/indexnow.mjs`).
 - **Tarjetas para compartir** generadas al compilar (`web/lib/tarjeta.js` y
   `web/lib/tarjeta-diseno.js`, con las letras de `web/fuentes/`).
 - **Sitemaps** (`sitemap.xml` y `sitemap-news.xml`) y feed.
@@ -668,8 +806,12 @@ Las pruebas que cuidan el diseño: `pruebas/tipografia.test.mjs`,
 
 | Archivo | Qué hace | Quién lo llama | Qué lee | Qué escribe |
 |---|---|---|---|---|
-| `web/scripts/generar-datos.mjs` | Arma todos los datos de la web | "Actualizar la web"; `npm run datos` | Ingesta (nube) o `panel/datos/` (PC), `web/data/*` | Los 10 archivos del `git add` (ver tabla de arriba) y las fotos |
-| `web/scripts/fotos-notas.mjs` | Decide a qué notas probarles foto (10 por corrida) | `generar-datos.mjs` (nube) | `banco-fotos.json`, `ingesta/fotos.mjs` | Devuelve el banco y los archivos |
+| `web/scripts/generar-datos.mjs` | Arma todos los datos de la web | "Actualizar la web"; `npm run datos` | Ingesta (nube) o `panel/datos/` (PC), `web/data/*` | Los archivos del `git add` (paso C8) y las fotos |
+| `web/scripts/fotos-notas.mjs` | Decide a qué notas probarles foto (10 por corrida) y qué foto lleva cada una (`conFotosDelBanco`: manual, banco o ilustración) | `generar-datos.mjs` (nube) | `banco-fotos.json`, `fotos-manuales.json`, `fotos-ia.json`, `ingesta/fotos.mjs` | Devuelve el banco y los archivos |
+| `web/scripts/ilustrar-notas.mjs` | Las ilustraciones con IA para notas sin foto (reglas 182 y 185): a mano o automático a los :20 cada 2 horas de 7 a 23 (lo dispara el Worker del reloj) | «Ilustrar notas sin foto» (`ilustrar-notas.yml`) | `portada.json`, Gemini, el Worker `infra/imagenes-cloudflare/` | `fotos-ia.json` y `web/public/fotos-notas/<id>-ia.jpg` |
+| `web/scripts/indexar.mjs` | El índice del buscador (Pagefind) | `npm run build` | `web/out/` | `web/out/pagefind/` |
+| `web/scripts/contar-archivos.mjs` | Cuenta los archivos del sitio contra los 20.000 de Cloudflare | `npm run build` | `web/out/` | Nada (avisa) |
+| `web/scripts/archivar-a-r2.mjs` | El archivo permanente en R2 (corre desde el 16/10, con `R2_ARCHIVO`; el Worker todavía sin ruta) | "Cloudflare Pages"; «Archivo permanente (producción)» | `web/out/`, `archivo.json`, `retiradas.json` | El depósito de R2 |
 | `web/scripts/foto-dolar.mjs` | Guarda la foto del dólar | `npm run build` | DolarApi / Bluelytics | `web/data/dolar.json` |
 | `web/scripts/generar-redirects.mjs` | Arma las redirecciones | `npm run build` | `portada.json`, `archivo.json` | `web/public/_redirects` |
 | `web/scripts/revisar-seo.mjs` | Revisa el HTML compilado | "Actualizar la web" | `.next/server/app` | Nada (falla o pasa) |
@@ -683,7 +825,10 @@ Las pruebas que cuidan el diseño: `pruebas/tipografia.test.mjs`,
 | `web/lib/titulos.js` | Arreglos mecánicos del título | `generar-datos`, `ingesta/verificar.mjs` | — | — |
 | `web/lib/texto.js` | Comparar textos, nombres, recortes, repetidas | Casi todo | — | — |
 | `web/lib/seguir-leyendo.js` | "Seguí leyendo" | Página de la nota | — | — |
-| `web/lib/notas-propias.js` | Nota del dólar y repasos | `generar-datos.mjs` | Historia del dólar, libro de redes | — |
+| `web/lib/notas-propias.js` | Notas del dólar, del clima, de "Un día como hoy" y repasos | `generar-datos.mjs` | Historia del dólar y del clima, piezas de efemérides, libro de redes | — |
+| `web/lib/notas-de-pistas.js` | Las notas propias de una pista o de un mail de prensa | `generar-datos.mjs` | `notas-de-pistas.json` | — |
+| `web/lib/fondos-clima.js` | Qué ilustración fija lleva la nota del clima | `notas-propias.js` | — | — |
+| `web/lib/robots.js`, `web/lib/datos-estructurados.js`, `web/lib/para-agentes.js` | `robots.txt`, los datos para Google y los JSON de `/agentes/` | Las rutas de esas páginas | — | — |
 | `web/lib/eventos.js` | Los eventos con página | `generar-datos`, `datos.js`, páginas de agenda | — | — |
 | `web/lib/dolar.js` | Pedir y leer el dólar, textos de "actualizado" | `/dolar`, portada, `foto-dolar`, `generar-datos` | DolarApi, Bluelytics | — |
 | `web/lib/pedir-clima.js`, `web/lib/clima.js` | El clima en el navegador y el dibujo de cada cielo | Componentes de clima | Open-Meteo | — |
@@ -703,8 +848,8 @@ Las pruebas que cuidan el diseño: `pruebas/tipografia.test.mjs`,
 | `web/app/**` | Las páginas (tabla de arriba) | `next build` | `web/lib/datos.js` | `web/out/` |
 | `web/next.config.mjs` | Exportar como archivos (`output: 'export'`) | `next build` | — | — |
 | `web/public/_headers` | Encabezados de Cloudflare | Cloudflare Pages | — | — |
-| `.github/workflows/actualizar.yml` | Probar, armar datos, compilar, revisar, guardar | cron-job.org cada 30 min (respaldo: `cron '7,37 * * * *'`) | Todo | Commit de datos |
-| `.github/workflows/cloudflare-deploy.yml` | Compilar y subir a Cloudflare | Al terminar bien "Actualizar la web"; a mano | `web/` | El sitio en línea |
+| `.github/workflows/actualizar.yml` | Núcleo legal de pruebas, armar datos, compilar, revisar, guardar | El Worker `radar-balcarce-reloj` a los :00 y :30 (respaldo: `cron '7,37 * * * *'`) | Todo | Commit de datos |
+| `.github/workflows/cloudflare-deploy.yml` | Compilar, archivar en R2 (dormido), subir a Cloudflare y avisar a Bing | Al terminar bien "Actualizar la web"; a mano | `web/` | El sitio en línea |
 
 ---
 
@@ -717,7 +862,7 @@ Las pruebas que cuidan el diseño: `pruebas/tipografia.test.mjs`,
 | Con cuántas horas compite la nota grande | `VENTANA_HORAS` (`web/lib/datos.js`) y `PORTADA.horasNotaGrande` |
 | Cuántas notas por sección en la portada | `NOTAS_POR_SECCION` (`web/lib/datos.js`) |
 | El orden, los nombres y el menú de las secciones | `SECCIONES` y `EN_NAVEGACION` (`web/lib/datos.js`); el color, `--s-*` en `web/app/globals.css` (`MEDIA-KIT.md`; Argentina conserva la variable vieja `--s-pais`). Las ranuras son `balcarce`, `politica`, `policiales`, `futbol`, `deportes`, `automovilismo`, `agro`, `economia`, `cultura`, `tecnologia` y `argentina` |
-| Cuánto dura el archivo o cuántas notas guarda | `DIAS_DE_ARCHIVO`, `MAXIMO_EN_ARCHIVO` (`web/lib/archivo.js`) |
+| Cuánto dura el archivo o cuántas notas guarda | `DIAS_DE_ARCHIVO`, `MAXIMO_EN_ARCHIVO` (`web/lib/archivo.js`) **y** `PORTADA.maximoDeNotas` (`ingesta/criterio.mjs`); bajarlo con el archivo permanente prendido, la variable `TOPE_DE_NOTAS` |
 | Sacar una nota de la web sin el panel | `web/data/retiradas.json` (motivo, cuándo, quién) |
 | Corregir título, bajada, sección o cuerpo sin el panel | `web/data/correcciones.json` (motivo, cuándo, quién; `CAMPOS_CORREGIBLES`) |
 | Escribir el cuerpo de una nota que lo espera | Tomar la nota de `web/data/esperando-cuerpo.json` y escribirla en `correcciones.json` |
@@ -739,31 +884,32 @@ Las pruebas que cuidan el diseño: `pruebas/tipografia.test.mjs`,
 
 | Qué pasa | Cómo se nota | Qué hacer |
 |---|---|---|
-| Una prueba falla en GitHub | "Actualizar la web" en rojo en el paso "Probar que nada se rompió"; la web queda como estaba; a los 100 minutos sin actualizarse (`LIMITES.minutosSinActualizar`, `redes/vigilar.mjs`) llega el WhatsApp "La web no se actualiza hace N horas" | Ver qué prueba falló (`docs/10-REGLAS-Y-PRUEBAS.md`) |
-| cron-job.org desactivó el trabajo | El mismo aviso de web vieja; el `schedule` de GitHub sigue como respaldo, más irregular | Reactivarlo (`docs/11-OPERACION.md`) |
+| Falla una prueba del núcleo legal | "Actualizar la web" en rojo en el paso "Núcleo legal de las pruebas" y llega un mail; la web queda como estaba; a los 100 minutos sin actualizarse (`LIMITES.minutosSinActualizar`, `redes/vigilar.mjs`) llega además el aviso "La web no se actualiza hace N horas" (por mail; WhatsApp sólo si el mail no sale) | Ver qué prueba falló (`docs/10-REGLAS-Y-PRUEBAS.md`) |
+| El reloj deja de disparar | El mismo aviso de web vieja; el `schedule` de GitHub sigue como respaldo, más irregular | Mirar Cloudflare → Workers → `radar-balcarce-reloj` (`docs/11-OPERACION.md`); cron-job.org quedó pausado, no borrado |
+| El sitio se acerca a los 20.000 archivos | Aviso amarillo de `contar-archivos.mjs` desde 16.500, rojo desde 18.000 | Revisar el tope de notas o prender el archivo permanente |
 | Una fuente se cae o se vacía | Aviso amarillo "Fuente caída" o "Fuente vacía" arriba de la corrida; nada se rompe | `docs/02-INGESTA.md` |
-| Gemini sin cupo | Crece `esperando-cuerpo.json` y la línea "Esperando cuerpo: N" del resumen de las 21; menos notas en la portada | Esperar el cupo, o escribir los cuerpos en `correcciones.json` |
+| Gemini sin cupo | Crece `esperando-cuerpo.json` y lo dicen los informes diarios por mail; menos notas en la portada | Esperar el cupo, o escribir los cuerpos en `correcciones.json` |
 | El sitio no compila | "Actualizar la web" falla en "Compilar el sitio" y no guarda nada; la web queda como estaba | Ver el error del paso |
 | Se perdió algo de SEO | Falla "Revisar que el SEO siga en pie" y no se guarda nada | `revisar-seo.mjs` dice qué falta |
 | Dos corridas chocan al subir | El `pull --rebase` resuelve solo lo de `web/data/` y las fotos; si el choque es en otro archivo, la corrida falla con "Conflicto fuera de web/data" | Resolver a mano |
 | Falla la subida a Cloudflare | "Cloudflare Pages" en rojo; los datos ya están en GitHub pero el sitio no cambió | Correrlo a mano desde Actions |
 | DolarApi no contesta | `/dolar` muestra la foto con su hora y "no se pudo actualizar"; la nota del dólar se reintenta hasta las 18 | Nada |
 | Una nota vieja reaparece como nueva | Sólo si su fecha no se pudo fijar; `vistas.json` y `fechaDeLaNota` lo evitan | Retirarla en `retiradas.json` |
-| Se corre `npm run datos` en la PC | Quedan `portada.json`, `archivo.json` y compañía modificados en la PC; el panel no los sube, pero traban un `git pull` | `git checkout` de esos archivos, o al hacer pull `git checkout --theirs` (`CLAUDE.md`) |
-| Un enlace compartido da 404 | No debería: la redirección fija o la 404 lo rescatan. Si pasa, la nota fue retirada (perdió la página a propósito) o se fue del archivo | Ver si está en `retiradas.json` |
+| Se corre `npm run datos` en la PC | Quedan `portada.json`, `archivo.json` y compañía modificados en la PC; no hay que subirlos, y traban un `git pull` | `git checkout` de esos archivos, o al hacer pull `git checkout --theirs` (`CLAUDE.md`) |
+| Un enlace compartido da 404 | No debería: la redirección fija o la 404 lo rescatan. Si pasa, la nota fue retirada (perdió la página a propósito) o se fue del archivo por edad o por el tope (hasta que se prenda el archivo permanente en R2) | Ver si está en `retiradas.json` o en `web/data/historico/` |
 
 ---
 
 ## Lo que sigue abierto
 
-- Comentarios que quedaron viejos: `HORAS_EN_PORTADA` (`web/lib/archivo.js`,
-  "el mismo criterio que el panel"), `web/next.config.mjs` ("las únicas
-  imágenes son las placas"), la descripción de `web/package.json`
-  ("datos generados desde el panel"), `web/app/sitemap.js` (el feed "trae las
-  últimas veinte") y `web/lib/tarjeta-diseno.js` (nombra una prueba que no
-  existe, `tarjeta-diseno.test.mjs`; la que lo prueba es `placas.test.mjs`);
+- Comentarios que quedaron viejos (al 16/10): la descripción de
+  `web/package.json` ("datos generados desde el panel"), `web/app/sitemap.js`
+  (el feed "trae las últimas veinte"), `web/lib/tarjeta-diseno.js` (nombra una
+  prueba que no existe, `tarjeta-diseno.test.mjs`; la que lo prueba es
+  `placas.test.mjs`), el encabezado de `.github/workflows/actualizar.yml` (dice
+  que lo dispara cron-job.org y que las decisiones vienen de `decisiones.json`)
   y el título de una prueba de `pruebas/archivo.test.mjs` ("corta las listas
-  en 72 horas", el código corta en 36). Están en `PENDIENTES.md`.
-- La Auditoría de los lunes corrió por primera vez el 28/09
-  (`web/data/auditoria.json`): falta confirmar que corra sola el lunes
-  siguiente (`PENDIENTES.md`).
+  en 72 horas", el código corta en 36). Los del 28/09 están en `PENDIENTES.md`;
+  el de `actualizar.yml` se vio el 16/10.
+- La Auditoría semanal ya corre sola (28/09, 8/10 y 12/10 en
+  `web/data/auditoria.json`).

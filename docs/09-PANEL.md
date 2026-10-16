@@ -1,7 +1,8 @@
 # 09 · Los paneles: el del celular y el de la PC
 
-*Actualizado el 29/09/2026. Si algo de acá no coincide con el código, manda el
-código.* Qué es cada nota y por qué el semáforo la pone de un color:
+*Actualizado el 16/10/2026 (revisado contra `web/public/panel/`, `panel/celular.mjs`
+y `panel.yml`; las secciones con fecha del final cuentan cada cambio en su día). Si
+algo de acá no coincide con el código, manda el código.* Qué es cada nota y por qué el semáforo la pone de un color:
 `docs/03-SELECCION.md`; cómo escribe la IA: `docs/04-REDACCION.md`; cómo usa la
 web lo que se decide: `docs/06-WEB.md`; las redes: `docs/07-REDES.md`; el paso a
 paso de todos los días (crear la llave, instalar, decidir, corregir):
@@ -9,14 +10,16 @@ paso de todos los días (crear la llave, instalar, decidir, corregir):
 
 ## En una frase
 
-Hay dos paneles. **El del celular** (`radarbalcarce.com/panel/`) es el de
-todos los días: una app sin servidor propio que habla directo con GitHub con la
+Hay dos paneles. **El del celular** (`radarbalcarce.com/panel/`) es el único
+que se usa: una app sin servidor propio que habla directo con GitHub con la
 llave de quien lo usa, para aprobar, editar, retirar (y volver a publicar),
-pedirle a la IA que escriba una nota y ver lo que sale hoy en las redes, con la
-PC apagada. **El de la PC** (`http://localhost:4321`,
-`ARRANCAR.bat`) queda de respaldo para lo que el celular no hace: la agenda
-cargada a mano, los avisos publicitarios, el buzón, las fuentes y el
-calendario.
+pedirle a la IA que escriba una nota, seguir pistas y hacer notas propias,
+sumar fotos, escribirles a los contactos, armar las efemérides, ver lo que sale
+hoy en las redes, lo que marcó la auditoría y los números, con la PC apagada.
+**El de la PC** (`http://localhost:4321`, `ARRANCAR.bat`) está **en desuso
+desde el 8/10/2026**: no se le agregan funciones y es lo único que todavía
+hace la agenda cargada a mano, los avisos publicitarios, el buzón, las fuentes
+y el calendario.
 
 ---
 
@@ -25,7 +28,10 @@ calendario.
 ### Qué es y cómo se instala
 
 - Son archivos de la web (`web/public/panel/`: `index.html`, `app.js`,
-  `github.js`, `cifrado.js`, `textos.js`, `sw.js`, `manifest.webmanifest`) que
+  `github.js`, `cifrado.js`, `textos.js`, una pantalla por archivo —`hoy.js`,
+  `borradores.js`, `fotos.js`, `contactos.js`, `pistas.js`, `revision.js`,
+  `fechas.js`, `numeros.js`, `redes-estado.js`, `recorrido.js`—, el modo de
+  prueba `prueba.js` y `prueba-sobre.js`, `sw.js` y `manifest.webmanifest`) que
   Cloudflare publica con el sitio. Los textos que explican cada cosa (por qué
   espera una nota, qué hace cada botón, las preguntas antes de confirmar) están
   todos en `textos.js`. No hay servidor propio: todo lo que lee y escribe pasa
@@ -40,8 +46,12 @@ calendario.
 ### La llave de GitHub
 
 Para entrar hace falta una **llave de GitHub**: un *fine-grained personal
-access token* de la cuenta `balcardev@gmail.com`, que una persona crea una sola
-vez y pega en el celular junto con su nombre (va en cada decisión, en `por`).
+access token* con acceso al repositorio **`radarbalcarce/radar-balcarce`**
+(desde la mudanza del 15/10/2026 el dueño es la cuenta `radarbalcarce@gmail.com`;
+antes era `balcar-dev/radar-balcarce`, de `balcardev@gmail.com`), que una
+persona crea una sola vez y pega en el celular junto con su nombre (va en cada
+decisión, en `por`). El panel le habla a ese repositorio (`REPO`,
+`web/public/panel/github.js`).
 **Sólo quien tiene la llave puede tocar algo**: la página es pública, pero sin
 llave no lee lo cifrado ni escribe nada.
 
@@ -52,7 +62,7 @@ Generate new token (el panel tiene el enlace directo):
 |---|---|
 | Token name | "Panel del celular" |
 | Expiration | Un año (anotar la fecha) |
-| Repository access | "Only select repositories" → **radar-balcarce** |
+| Resource owner / Repository access | La dueña del repositorio, `radarbalcarce`; "Only select repositories" → **radar-balcarce** |
 | Repository permissions | **Contents**: "Read and write" y **Actions**: "Read and write". Nada más |
 
 - Queda guardada **sólo en ese celular** (en el navegador) y nunca va por chat
@@ -131,23 +141,34 @@ Generate new token (el panel tiene el enlace directo):
 
 ### Las pestañas
 
-> **Desde el 8/10/2026 el panel arranca en "Hoy"** (`web/public/panel/hoy.js`): lo que espera tu toque, los borradores de la IA, las notas sin foto, cómo viene el día en las redes y las pistas con novedad, cada uno con un atajo. La barra de abajo es Hoy, Esperan, Publicadas, Redes y Más; Fotos se mudó a Más. En "Más" hay también **Borradores** (`borradores.js`): todo lo que se le pidió a la IA en los últimos 7 días, para leer y ya resuelto.
-
-> **Desde el 2/10/2026 la barra de abajo tiene cinco pestañas** (Esperan, Publicadas, Fotos, Redes y Más): la de Sin cuerpo
-> pasó adentro de Esperan, y Pistas, Revisión, Fechas y Números se abren desde Más. La tabla de abajo describe cada cosa; lo que cambió
-> está en "El panel reordenado", al final de este documento.
+**Cómo está hoy (16/10/2026).** La **barra de abajo** tiene cinco pestañas:
+**Hoy**, **Esperan**, **Publicadas**, **Redes** y **Más** (`app.js`). El panel
+arranca en **Hoy** (desde el 8/10, `hoy.js`): lo que espera tu toque, los
+borradores de la IA, las notas sin foto, cómo viene el día en las redes y las
+pistas con novedad, cada uno con un atajo. **Sin cuerpo ya no es una pestaña**:
+desde el 2/10 va adentro de Esperan. Desde **Más** se abren siete tarjetas
+(`MENU_MAS`): **Borradores**, **Fotos**, **Contactos**, **Pistas**,
+**Revisión**, **Fechas** y **Números**, cada una con su "← Más" para volver.
+Cómo se llegó a esto: "El panel reordenado" (2/10), al final.
 
 Cada pestaña tiene arriba un "¿Qué es esto?" que la explica, y "Más" explica
 todo el panel.
 
 | Pestaña | Qué muestra | Qué se puede hacer |
 |---|---|---|
-| **Esperan** | Lo que espera a una persona: lo amarillo de los últimos 3 días (hasta 40), nunca lo rojo, y sin el "relleno" que tampoco avisa el WhatsApp (lo de afuera poco contado, lo que pasó el cupo, la cotización del dólar). En la lista, el motivo en pocas palabras ("Acusa a alguien ("detenido")"). Al abrirla: **por qué espera y qué mirar** (`explicarMotivo`), lo que anotó la IA al leerla, el resumen de la fuente principal y **lo que contó cada medio**, con el enlace a la nota original. La IA no las escribe sola. Abajo, las aprobadas que salen en la próxima actualización y las **descartadas** | **Escribirla con IA** (con un pedido opcional; tarda un minuto y muestra el texto con lo que marcó el verificador, para corregirlo) → **Publicar**; **Escribirla a mano**; **Descartar** (pregunta antes). Una descartada se puede **Volver a traer** mientras siga en las noticias del día; una aprobada, **Deshacer** hasta la próxima actualización |
-| **Sin cuerpo** | Las notas que **salen solas** pero todavía no tienen un cuerpo que pase el verificador (`esperando-cuerpo.json`), con cuántas veces lo intentó la IA (hasta 3, `MAXIMO_DE_INTENTOS`): mientras le queden intentos, la IA la vuelve a probar sola en cada actualización | **Escribir con IA ahora** o **Escribir a mano** → "Publicar con este cuerpo" |
-| **Publicadas** | Cuántas hay **en la portada** (las de las últimas 36 horas) y cuántas **en el archivo** (con página, hasta 180 días); la lista de la portada y, con "Buscar también en el archivo", las del archivo; buscador por título o sección. Cada nota dice si salió en Facebook e Instagram o si está en la cola. Al final, **Retiradas**: lo que retiró una persona en los últimos 30 días | **Editar** (título, bajada, cuerpo y sección), **Reescribir con IA** (con pedido), **Mandar también a las redes** (o "Sacar de la cola de las redes"; pregunta antes), **Retirar de la web** (pregunta y pide el motivo) y **Deshacer**. En las retiradas: **Volver a publicar** o **Corregirla y volver a publicarla** |
+| **Hoy** | Un resumen del día con atajos: lo que espera, los borradores listos, las notas sin foto, las redes de hoy y las pistas con novedad | Tocar el atajo para ir a cada cosa |
+| **Esperan** | Lo que espera a una persona, **de las últimas 48 horas** (`HORAS_EN_ESPERAN`), nunca lo rojo, y sin el "relleno" que tampoco se avisa por mail (lo de afuera poco contado, lo que pasó el cupo, la cotización del dólar). En la lista, el motivo en pocas palabras ("Acusa a alguien ("detenido")"). Al abrirla: **por qué espera y qué mirar** (`explicarMotivo`), lo que anotó la IA al leerla, el resumen de la fuente principal y **lo que contó cada medio**, con el enlace a la nota original. La IA no las escribe sola. Abajo, las aprobadas que salen en la próxima actualización y las **descartadas** | **Escribirla con IA** (con un pedido opcional; tarda un minuto y muestra el texto con lo que marcó el verificador, para corregirlo) → **Publicar**; **Escribirla a mano**; **Descartar** (pregunta antes). Una descartada se puede **Volver a traer** mientras siga en las noticias del día; una aprobada, **Deshacer** hasta la próxima actualización |
+| **Sin cuerpo** (adentro de Esperan) | Las notas que **salen solas** pero todavía no tienen un cuerpo que pase el verificador (`esperando-cuerpo.json`), con cuántas veces lo intentó la IA (hasta 3, `MAXIMO_DE_INTENTOS`): mientras le queden intentos, la IA la vuelve a probar sola en cada actualización | **Escribir con IA ahora** o **Escribir a mano** → "Publicar con este cuerpo" |
+| **Publicadas** | Las de **las últimas 24 horas** (`HORAS_EN_PUBLICADAS`), lo más nuevo primero; "Ver también las anteriores" suma el resto de la portada (36 horas) y "Cargar el archivo", las que tienen página (hasta 180 días en teoría; el tope real es de 3.700 notas); buscador por título o sección. Cada nota dice si salió en Facebook e Instagram o si está en la cola. Al final, **Retiradas**: lo que retiró una persona en las **últimas 24 horas** (`HORAS_RETIRADAS`) | **Editar** (título, bajada, cuerpo y sección), **Reescribir con IA** (con pedido), **Mandar también a las redes** (o "Sacar de la cola de las redes"; pregunta antes), **Retirar de la web** (pregunta y pide el motivo) y **Deshacer**. En las retiradas: **Volver a publicar** o **Corregirla y volver a publicarla** |
 | **Redes** | El cronograma de hoy (cada pieza con su hora, su voz y si salió, está en su horario o ya no sale), **qué cuenta cada repaso** (lo que contó, o lo que contaría si saliera ahora), los posteos de Facebook de hoy, cuándo puede salir el próximo y la cola. Si las redes están apagadas (`REDES_ACTIVAS`), lo dice arriba | Mirar. Para mandar una nota: Publicadas → "Mandar también a las redes" |
-| **Números** (1/10) | Cuánta gente lee la web (visitas y vistas por día, comparado con el período anterior; 7, 14 o 30 días), **qué sección se lee más** (con las notas publicadas y las vistas por nota), las notas y los medios más leídos, lo de Balcarce contra lo de afuera, **a qué hora entra la gente**, **de dónde llegan** (Facebook, Google, directo o WhatsApp…), con qué aparato y desde qué país, cómo crecen Facebook e Instagram, cuántas notas salen por día y cómo anda el sistema (corridas de Actions con falla). Lo mide `redes/estadisticas.mjs` a las 9 y las 21 (el detalle, en `redes/estadisticas-detalle.mjs`, vuelve a pedir los últimos tres días cada vez) y se guarda en `web/data/estadisticas.json` (`dias`); la pestaña lo lee con `web/public/panel/numeros.js`. Sólo números agregados, nunca quién entró. Cloudflare los da aproximados (no cuenta robots ni bloqueadores) | Mirar; cambiar entre 7, 14 y 30 días |
-| **Más** | Quién entró y **cómo funciona todo**, pregunta por pregunta | **Actualizar la web ahora**, abrir la web, **Salir y borrar la llave de este celular** |
+| **Borradores** (en Más) | Todo lo que se le pidió a la IA en los últimos 7 días: lo que está para leer y lo ya resuelto (`borradores.js`) | Abrir el borrador y seguir desde la nota |
+| **Fotos** (en Más) | Las notas de la portada sin foto, por qué y dónde buscarle una (`fotos.js`; detalle en "El panel reordenado") | **Sumar una foto** (dirección y crédito) |
+| **Contactos** (en Más) | Instituciones y contactos propios (`contactos.js`; "Contactos en el celular", al final) | Escribirles (lo manda una persona) y anotar quién respondió |
+| **Pistas** (en Más) | Las pistas abiertas y en qué quedó cada una (`pistas.js`; al final) | Pegar una pista, volver a mirarla, hacer la nota, cerrarla |
+| **Revisión** (en Más) | Lo que marcó la auditoría con IA en lo ya publicado (`revision.js`; al final) | Mirar; lo delicado lo corrige una persona |
+| **Fechas** (en Más) | "Un día como hoy" y los feriados, con el mes armado (`fechas.js`; al final) | Aprobar, sacar o pedir cambios |
+| **Números** (en Más, desde el 1/10) | Cuánta gente lee la web (visitas y vistas por día, comparado con el período anterior; 7, 14 o 30 días), **qué sección se lee más** (con las notas publicadas y las vistas por nota), las notas y los medios más leídos, lo de Balcarce contra lo de afuera, **a qué hora entra la gente**, **de dónde llegan** (Facebook, Google, directo o WhatsApp…), con qué aparato y desde qué país, cómo crecen Facebook e Instagram, cuántas notas salen por día y cómo anda el sistema (corridas de Actions con falla). Lo mide `redes/estadisticas.mjs` a las 9 y las 21 (el detalle, en `redes/estadisticas-detalle.mjs`, vuelve a pedir los últimos tres días cada vez) y se guarda en `web/data/estadisticas.json` (`dias`); la pestaña lo lee con `web/public/panel/numeros.js`. Sólo números agregados, nunca quién entró. Cloudflare los da aproximados (no cuenta robots ni bloqueadores) | Mirar; cambiar entre 7, 14 y 30 días |
+| **Más** | Las siete tarjetas de arriba (con un aviso si hay algo: borradores para leer, notas sin foto, pistas con novedad, algo grave en Revisión), quién entró y **cómo funciona todo**, pregunta por pregunta | **Actualizar la web ahora**, abrir la web, **Salir y borrar la llave de este celular** |
 
 Al aprobar hacen falta título, bajada y cuerpo, con el texto de la IA o
 editado. Con menos de 70 palabras de cuerpo pregunta antes de guardar (con
@@ -171,8 +192,18 @@ confirme. Deshacer no pregunta.
 | `web/data/correcciones.json` | Título, bajada, cuerpo o sección, con `motivo`, `cuando` y `por` (el mismo archivo de las correcciones a mano). Un texto de la IA revisado lleva `deIA: true` y firma "Redacción con IA, revisada por la redacción"; uno escrito a mano, "Revisada por la redacción" | Editar, escribir un cuerpo, cambiar la sección al aprobar |
 | `web/data/retiradas.json` | Sólo **saca** una nota (nunca agrega) | Volver a publicar una nota que se retiró a mano ahí |
 | `web/data/celular-llaves.json` | Las llaves públicas de los celulares | La primera vez que entra cada celular |
+| `web/data/notas-de-pistas.json` | Las notas propias que nacen de una pista (con motivo, cuándo y quién, `aprobadaParaRedes` y `paraElRepaso`) | "Publicar como nota propia" |
+| `web/data/pistas.json` | El estado y el resultado de cada pista | Cerrar, reabrir, archivar, marcar vista una novedad |
+| `web/data/contactos-celular.json` | Los contactos propios y las anotaciones, cifrados | Sumar un contacto, "Ya le mandé el mensaje", "Respondió" |
+| `web/data/efemerides-elegidas.json` | Lo elegido en Fechas | Aprobar, sacar o pedir cambios en el mes armado |
+| `web/data/fotos-manuales.json` | Las fotos sumadas a mano (también lo escribe "Panel del celular" con `accion=foto`) | Sumar o sacar una foto |
 
-**Ningún workflow toca esos archivos**, así nunca se pisan.
+**Ningún workflow toca `celular-decisiones.json`, `correcciones.json` ni
+`celular-llaves.json`**, así nunca se pisan; `retiradas.json` sólo lo poda
+"Actualizar la web" los lunes (le saca las de más de 7 días). `pistas.json`
+y `notas-de-pistas.json` los escriben también los workflows "Panel del celular"
+y "Pistas": si chocan, el workflow los une entrada por entrada y, si una
+persona y el robot cambiaron lo mismo, gana la persona (`panel/unir-conflictos.mjs`).
 `problemaDeDecision` (`panel/celular-datos.mjs`) exige que aprobar traiga el
 texto entero (una decisión humana sin texto publicaría el de la fuente tal
 cual, que es copiar a otro medio) y que retirar traiga el motivo; lo que no
@@ -185,12 +216,15 @@ celular, desde el panel de la PC o en `retiradas.json`) pierde su página en la
 próxima actualización, y la corrida la guarda **tal como estaba publicada** en
 la papelera (`papeleraAlDia`, `panel/celular-datos.mjs`; en la caché de
 Actions, `.cache/papelera.json`, porque el repositorio es público y una nota se
-puede retirar justamente por lo que dice). El celular la ve, cifrada, al final
-de "Publicadas", **durante 30 días** (`DIAS_EN_LA_PAPELERA`).
+puede retirar justamente por lo que dice). La papelera guarda cada nota **30
+días** (`DIAS_EN_LA_PAPELERA`), pero desde el 2/10 el celular muestra al final
+de "Publicadas", cifradas, sólo las retiradas **de las últimas 24 horas**
+(`HORAS_RETIRADAS`, `app.js`): después ya no se ven ni se pueden volver a
+publicar desde el panel.
 
 - **Antes de la próxima actualización**, "Deshacer" la deja como estaba (si
   estaba aprobada desde el celular, sigue aprobada).
-- **Después**, "Volver a publicar" la aprueba de nuevo con el texto que tenía
+- **Después, durante las 24 horas que se ve**, "Volver a publicar" la aprueba de nuevo con el texto que tenía
   (o corregido, con "Corregirla y volver a publicarla"). En la próxima
   actualización vuelve a su página, **con la misma dirección**; si es de las
   últimas 36 horas, también a la portada. Si se había retirado en
@@ -212,6 +246,15 @@ día), antes que las demás. Mientras no salga, se saca de la cola con el mismo
 botón; una vez publicada, sólo se borra a mano en Facebook e Instagram. Los
 podcasts siguen sin Política ni Policiales.
 
+**La excepción, desde el 16/10/2026: las notas propias.** Una nota que una
+persona publica como nota propia (desde una pista, "Publicar como nota propia",
+o pedida por mail: `docs/flujos/NOTA-DESDE-MAIL.md`) se guarda con
+`aprobadaParaRedes: true` y `paraElRepaso: true` (`github.js`): durante **12
+horas** desde que se aprobó entra primera en el próximo repaso (podcast) de las
+redes, aunque no le alcance el puntaje (`notasDePistas`,
+`web/lib/notas-de-pistas.js`; `elegirParaPodcast`, `redes/elegir.mjs`), siempre
+que sea de lo que puede ir en un repaso (`sePuedeEnUnRepaso`).
+
 ### El modo de prueba
 
 `radarbalcarce.com/panel/?demo`: notas inventadas, no pide llave y no guarda
@@ -230,6 +273,9 @@ nada (`web/public/panel/prueba.js`). Sirve para mostrarlo o probar un cambio.
   actualización.
 - **No hace** lo del panel de la PC: agenda cargada a mano, avisos, buzón,
   fuentes, calendario.
+- **Las ilustraciones con IA** de las notas sin foto (reglas 182 y 185:
+  `web/data/fotos-ia.json`, workflow "Ilustrar notas sin foto" y Gemini web
+  desde la PC; `08-INFRAESTRUCTURA`) **no se manejan desde el panel**.
 - **El panel de la PC no ve lo decidido en el celular**: una nota aprobada en
   el celular puede seguir en "Para decidir" de la PC. Si se decide en los dos,
   manda la decisión más nueva.
@@ -471,11 +517,12 @@ ni fotos): sirve para mirar la web en la PC, pero deja modificados
 | `web/public/panel/cifrado.js` | Crea las llaves del celular y abre los sobres | `app.js` | La llave privada del navegador | — |
 | `web/public/panel/sw.js`, `manifest.webmanifest` | Lo que lo vuelve una app instalable | Chrome | — | — |
 | `web/public/panel/prueba.js`, `prueba-sobre.js` | El modo de prueba (`?demo`), con los mismos archivos que arma la web | `app.js` | — | — |
+| `web/public/panel/hoy.js`, `borradores.js`, `fotos.js`, `contactos.js`, `pistas.js`, `revision.js`, `fechas.js`, `numeros.js`, `redes-estado.js`, `recorrido.js` | Lo que arma cada pantalla: Hoy, Borradores, Fotos, Contactos, Pistas, Revisión, Fechas, Números, el estado red por red de la pestaña Redes y el recorrido de una nota | `app.js` | Lo que ya leyó `app.js` | — (lo guarda `app.js` por `github.js`) |
 | `panel/celular-datos.mjs` | Qué decide el celular (`problemaDeDecision`, `leerDecisionesCelular`, `unirDecisiones`), qué necesita (`paraDecidir`, `notasParaEscribir`) y la papelera (`papeleraAlDia`, `paraLaPapelera`) | `generar-datos.mjs`, `celular.mjs` | — | — (funciones puras) |
 | `panel/cifrado.mjs` | Cierra los sobres para cada celular (`cerrar`, `cerrarSiCambio`, `cerrarCadaUno`, `leerLlaves`) | `generar-datos.mjs`, `celular.mjs` | `celular-llaves.json` | — |
 | `redes/previa.mjs` | Lo que sale hoy en las redes, para la pestaña Redes (`previaDelDia`) | `generar-datos.mjs` | La portada, el libro, el archivo | — (lo escribe `generar-datos.mjs` en `celular-estado.json`) |
 | `redes/repasos.mjs` | Qué notas cuenta cada repaso (`repasosDelDia`): la misma regla para el plan de los videos y para la previa | `reels/plan.mjs`, `redes/previa.mjs` | — | — |
-| `panel/celular.mjs` | El programa de "Panel del celular": busca la nota, la escribe, cierra el borrador | `.github/workflows/panel.yml` | `.cache/celular-notas.json`, `web/data/` | `web/data/celular-borradores.json` |
+| `panel/celular.mjs` | El programa de "Panel del celular", con tres acciones: `escribir` (busca la nota, la escribe, cierra el borrador), `pista` (investiga una pista) y `nota-pista` (escribe la nota de una pista con `panel/nota-de-pista.mjs`). La cuarta acción del workflow, `foto`, la hace `web/scripts/foto-manual.mjs` | `.github/workflows/panel.yml` | `.cache/celular-notas.json`, `web/data/` | `web/data/celular-borradores.json`, `web/data/pistas.json` |
 | `panel/reescribir-una.mjs` | Escribe una nota con IA con el criterio y el verificador de siempre | `celular.mjs` | Las fuentes, `archivo.json` | — |
 | `ARRANCAR.bat` | Abre la ventana del panel de la PC y el navegador | Hernán, con doble clic | — | — |
 | `panel/servidor.mjs` | El panel de la PC: ciclo de 10 min, API del tablero, exportar y sincronizar | `ARRANCAR.bat`, `npm run panel` | `panel/datos/*`, `web/data/archivo.json`, `avisos.json`, `reels/salida/` | `panel/datos/*`, `web/data/decisiones.json`, `eventos-panel.json`, `avisos.json` |
@@ -493,7 +540,7 @@ ni fotos): sirve para mirar la web en la PC, pero deja modificados
 
 | Quiero… | Dónde |
 |---|---|
-| Crear, renovar o revocar la llave del celular | github.com (cuenta `balcardev@gmail.com`) → Settings → Developer settings → Fine-grained tokens (`docs/11-OPERACION.md`) |
+| Crear, renovar o revocar la llave del celular | github.com (con la cuenta con la que se creó; las nuevas, con acceso a `radarbalcarce/radar-balcarce`) → Settings → Developer settings → Fine-grained tokens (`docs/11-OPERACION.md`) |
 | Qué ve el celular en "Esperan" | `paraDecidir` (`panel/celular-datos.mjs`) |
 | Qué acepta la web de una decisión del celular | `problemaDeDecision` y `leerDecisionesCelular` (`panel/celular-datos.mjs`) |
 | Cómo escribe la IA a pedido | `panel/reescribir-una.mjs` (y el criterio, `CRITERIO-EDITORIAL.md`) |
@@ -564,11 +611,11 @@ Arma con anticipación "Un día como hoy" y los feriados: las 20 mejores candida
 
 Cada hora, el workflow "Auditoría IA" (`.github/workflows/auditoria-ia.yml`, `redes/auditar-notas.mjs`, `ingesta/auditoria-ia.mjs`) lee con Groq (`openai/gpt-oss-20b`, su propio cupo: 1.000 pedidos por día y 8.000 tokens por minuto) las notas **automáticas** de la portada de las últimas 12 horas que todavía no leyó (hasta 12 por corrida, de a 3 por pedido, con 25 segundos entre uno y otro por el tope de tokens). Busca ortografía y puntuación, texto roto (escapes, frases cortadas), sección equivocada, tema sensible (un menor o una víctima), afirmaciones sin sostén y títulos que no corresponden.
 
-**Etapa 1: sólo avisa, no corrige nada.** Los hallazgos van **cifrados** para el celular a `web/data/auditoria-ia.json` (un sobre por nota; el repositorio es público) y se ven en la pestaña **Revisión** del panel, lo grave primero; lo grave (sensible o una acusación sin sostén) llega además por WhatsApp. A la vista sólo queda qué nota se leyó (con la huella de su texto) y cuándo. Lo que escribió una persona no se lee. En una semana se mide cuántos hallazgos eran reales; recién entonces se decide si algo de lo mecánico (la ortografía) se corrige solo. A mano: Actions → Auditoría IA → Run workflow (con "simular" no guarda ni avisa). Prueba: `auditoria-ia.test.mjs`.
+**Al principio (etapa 1) sólo avisaba; desde el 2/10 corrige sola sólo la ortografía chica y segura** (regla 98, `cambioMecanico`, en `web/data/correcciones-auditoria.json`; ver "El panel reordenado"). Los hallazgos van **cifrados** para el celular a `web/data/auditoria-ia.json` (un sobre por nota; el repositorio es público) y se ven en la pestaña **Revisión** del panel, lo grave primero; lo grave (sensible o una acusación sin sostén) llega además por mail (WhatsApp, de respaldo). A la vista sólo queda qué nota se leyó (con la huella de su texto) y cuándo. Lo que escribió una persona no se lee. En una semana se mide cuántos hallazgos eran reales; recién entonces se decide si algo de lo mecánico (la ortografía) se corrige solo. A mano: Actions → Auditoría IA → Run workflow (con "simular" no guarda ni avisa). Prueba: `auditoria-ia.test.mjs`.
 
 ## La pestaña Pistas (1/10/2026)
 
-Se pega un dato o parte de una noticia que se vio en una red (un tuit, un mensaje) y la nube investiga si ya lo cubrieron los medios (`ingesta/pistas.mjs`, `web/public/panel/pistas.js`). Etapa 1: **el informe**, no una nota. El celular dispara "Panel del celular" con `accion=pista`; la nube (1) saca con Gemini la afirmación central y hasta tres búsquedas (sin la IA, los nombres propios y las frases entre comillas), (2) busca cada una en **Google Noticias** (sólo para contar qué medios la publicaron y cuándo: no es una fuente de texto), dejando los títulos que hablan de lo buscado, (3) mira qué tenemos nosotros en la portada, el archivo y la ingesta, y (4) compara los títulos: qué confirman y qué parece exagerado. El informe vuelve cifrado, por el mismo camino que los borradores. Lo delicado (la lista del semáforo rojo: menores, víctimas) **no se investiga**: el texto de la pista queda a la vista en GitHub. **Una nota que nazca de una pista entra con relevancia alta** (`PISTA.relevancia`, 95). Etapa 2, pendiente (PENDIENTES 0j): el borrador con las fuentes, para aprobar en "Esperan". Prueba: `pistas.test.mjs`.
+Se pega un dato o parte de una noticia que se vio en una red (un tuit, un mensaje) y la nube investiga si ya lo cubrieron los medios (`ingesta/pistas.mjs`, `web/public/panel/pistas.js`). Etapa 1: **el informe**, no una nota. El celular dispara "Panel del celular" con `accion=pista`; la nube (1) saca con Gemini la afirmación central y hasta tres búsquedas (sin la IA, los nombres propios y las frases entre comillas), (2) busca cada una en **Google Noticias** (sólo para contar qué medios la publicaron y cuándo: no es una fuente de texto), dejando los títulos que hablan de lo buscado, (3) mira qué tenemos nosotros en la portada, el archivo y la ingesta, y (4) compara los títulos: qué confirman y qué parece exagerado. El informe vuelve cifrado, por el mismo camino que los borradores. Lo delicado (la lista del semáforo rojo: menores, víctimas) **no se investiga**: el texto de la pista queda a la vista en GitHub. **Una nota que nazca de una pista entra con relevancia alta** (`PISTA.relevancia`, 95). La etapa 2 se hizo el 3/10, de otra manera: "Hacer la nota" escribe el borrador con las fuentes y se publica como nota propia (ver "Hacer la nota y el seguimiento de cada pista", al final). Prueba: `pistas.test.mjs`.
 
 ## El panel reordenado (2/10/2026)
 
@@ -624,7 +671,7 @@ Hernán: "que yo te tire datos o links, que quede abierta la investigación y ve
   nombres de los medios y el historial son públicos (el texto ya viajaba como dato del workflow); **el informe viaja cifrado** para los celulares.
 - **Se vuelve a mirar sola cada tres horas, 14 días** (workflow "Pistas", `panel/revisar-pistas.mjs`). Si la cobertura sube de nivel (de sin
   cobertura a un medio, a cubierta, a muy cubierta) o ya la publicamos nosotros, queda marcada **● Novedad** (en la lista, en Más y en la
-  barra de abajo) y avisa por WhatsApp (sólo "la pista X tiene novedades", sin el texto). Los matices con IA se piden sólo cuando sube de nivel.
+  barra de abajo) y avisa por mail (WhatsApp, de respaldo; sólo "la pista X tiene novedades", sin el texto). Los matices con IA se piden sólo cuando sube de nivel.
 - En cada pista: **Volver a mirar ahora** (dispara el workflow "Pistas" con su id), **Cerrar: ¿en qué quedó?**, **Reabrir 14 días** y **Hacer la nota**
   (ver abajo).
 - Pistas de menores o víctimas no se investigan (la lista del semáforo rojo). Prueba: `pistas-abiertas.test.mjs`.
@@ -653,7 +700,8 @@ PC (que estaba apagada). Ahora, en **Más → Contactos** (`web/public/panel/con
   editorial, los arreglos que no inventan y el verificador contra el texto de esas fuentes (`panel/reescribir-una.mjs`). Una pista que toca la lista
   roja (menores, víctimas) no se escribe. El borrador llega **cifrado** al celular con la lista de fuentes para abrirlas; se revisa, se edita y
   **"Publicar como nota propia"** la guarda en `web/data/notas-de-pistas.json` (con motivo, cuándo y quién) y **cierra la pista** como "Salió como nota
-  nuestra" con el enlace. Hace falta un cuerpo de 70 palabras o más.
+  nuestra" con el enlace. Hace falta un cuerpo de 70 palabras o más. Desde el 16/10 se guarda además con `aprobadaParaRedes` y `paraElRepaso`: sale
+  en el próximo repaso de las redes sin pedirlo aparte (arriba, "Las redes: aprobar no es publicar en redes").
 - **La nota** (`web/lib/notas-de-pistas.js`, que lee `generar-datos.mjs` como las demás notas propias, `propia: 'pista'`): relevancia 95, con sus fuentes
   en "Fuentes", y la firma "Nota de Radar Balcarce, escrita con IA a partir de lo que publicaron X e Y y revisada por la redacción" (CRITERIO-EDITORIAL § 10:
   lo escribió la IA y lo revisó una persona). Una entrada sin motivo, cuándo y quién, sin fuentes con enlace, con cuerpo corto o con una sección que no

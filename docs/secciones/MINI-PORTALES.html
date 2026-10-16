@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mini portales</title>
+<meta name="description" content="Radar Balcarce: propuesta para que cada sección funcione como un mini portal, con una columna de datos al costado. Prototipo de Balcarce, Economía y Fútbol con datos reales del 15/10/2026, tabla de módulos de las 14 secciones y decisiones Sí/No/Duda. No es el sitio: es para decidir.">
+<style>
+/* ------------------------------------------------ la página que envuelve */
+:root{--fondo:#ecebe6;--panel:#fff;--txt:#1c1c1a;--suave:#5b5a55;--borde:#d6d3c9;--acento:#1f5fa8;--acento-suave:#e6eef8;
+  --ok:#1e7a46;--ok-suave:#e2f2e8;--duda:#8a6400;--duda-suave:#fbf1d6;--no:#b3261e;--no-suave:#fbe5e3;--codigo:#efede6;color-scheme:light;
+  /* el sitio */
+  --tinta:#14161A;--papel:#FFFFFF;--crema:#F4F1EA;--linea:#E4DFD2;--texto:#3B403C;--gris:#6B6F6C;--rojo:#C7381C;--verde:#16615B;
+  --s-balcarce:#B91C1C;--s-politica:#3730A3;--s-policiales:#831843;--s-futbol:#7C3AED;--s-deportes:#0F766E;--s-automovilismo:#B45309;--s-agro:#5A6B0A;--s-economia:#8A6500;
+  --s-educacion:#1D4BE0;--s-salud:#004E5C;--s-pais:#4B5563;--s-ciencia:#0A7C99;--s-tecnologia:#0B6FB8;--s-cultura:#9D2C8F;
+  --serie-blue:#9A7000;--serie-oficial:#4F5BD5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--fondo:#0e0e0e;--panel:#1a1a1a;--txt:#ecebe6;--suave:#a9a7a0;--borde:#34332f;--acento:#86b5ee;--acento-suave:#1c2a3b;
+  --ok:#72d39e;--ok-suave:#16291e;--duda:#e9c25a;--duda-suave:#2c2513;--no:#f2928a;--no-suave:#351a18;--codigo:#262624;color-scheme:dark;
+  --tinta:#F1EFE9;--papel:#16181B;--crema:#202328;--linea:#30343A;--texto:#D3D0C8;--gris:#A3A6A2;--rojo:#F07A5F;--verde:#6FCBB7;
+  --serie-blue:#B88A1C;--serie-oficial:#8088E8}}
+:root[data-theme="dark"]{--fondo:#0e0e0e;--panel:#1a1a1a;--txt:#ecebe6;--suave:#a9a7a0;--borde:#34332f;--acento:#86b5ee;--acento-suave:#1c2a3b;
+  --ok:#72d39e;--ok-suave:#16291e;--duda:#e9c25a;--duda-suave:#2c2513;--no:#f2928a;--no-suave:#351a18;--codigo:#262624;color-scheme:dark;
+  --tinta:#F1EFE9;--papel:#16181B;--crema:#202328;--linea:#30343A;--texto:#D3D0C8;--gris:#A3A6A2;--rojo:#F07A5F;--verde:#6FCBB7;
+  --serie-blue:#B88A1C;--serie-oficial:#8088E8}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:60px}
+body{margin:0;background:var(--fondo);color:var(--txt);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--acento)}
+code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.84em;background:var(--codigo);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+.barra-sup{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:8px;padding:8px 16px;background:var(--panel);border-bottom:1px solid var(--borde)}
+.barra-sup .marca{font-weight:700;font-size:.95rem;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.barra-sup nav{display:none;gap:14px;font-size:.88rem}
+.barra-sup nav a{text-decoration:none;color:var(--suave)}
+.barra-sup nav a:hover{color:var(--acento)}
+@media (min-width:900px){.barra-sup nav{display:flex}}
+.boton{font:inherit;font-size:.9rem;border:1px solid var(--borde);background:var(--panel);color:var(--txt);border-radius:8px;padding:6px 12px;cursor:pointer;min-height:40px}
+.boton:hover{border-color:var(--acento)}
+.boton.prim{background:var(--acento);border-color:var(--acento);color:var(--panel);font-weight:600}
+.progreso{font-size:.8rem;color:var(--suave);white-space:nowrap}
+.envolver{max-width:1240px;margin:0 auto;padding:16px 16px 0}
+h1{font-size:1.75rem;line-height:1.2;margin:8px 0 6px}
+h2{font-size:1.35rem;line-height:1.25;margin:40px 0 10px;padding-top:12px;border-top:2px solid var(--borde)}
+h3{font-size:1rem;margin:20px 0 6px}
+p,li{max-width:80ch}
+.meta{color:var(--suave);font-size:.86rem}
+.bajada{color:var(--suave);font-size:1.04rem;margin:0 0 10px}
+.caja{background:var(--panel);border:1px solid var(--borde);border-radius:10px;padding:12px 16px}
+.caja ol{margin:6px 0;padding-left:22px}
+.caja li{margin:6px 0}
+.controles{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px;align-items:center}
+.controles .grupo-c{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.controles .rot{font-size:.8rem;color:var(--suave);margin-right:2px}
+.controles button{font:inherit;font-size:.9rem;min-height:44px;padding:6px 12px;border-radius:8px;border:1px solid var(--borde);background:var(--panel);color:var(--txt);cursor:pointer}
+.controles button[aria-pressed="true"]{border-color:var(--acento);color:var(--acento);font-weight:700;box-shadow:inset 0 0 0 1px var(--acento)}
+.escenario{display:flex;justify-content:center;padding:10px 0 20px}
+.marco{container-type:inline-size;container-name:sitio;width:100%;max-width:1200px;background:var(--papel);border:1px solid var(--borde);border-radius:14px;overflow:hidden;position:relative;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.marco.celular{max-width:375px;height:780px;border-radius:28px;border-width:8px;border-color:#2a2a2a}
+.marco.celular .sitio{height:100%;overflow-y:auto}
+@media (max-width:440px){.envolver{padding:12px 12px 0}.marco.celular{border-width:3px;border-radius:16px;height:720px}}
+.nota-prototipo{color:var(--suave);font-size:.9rem}
+.nota-prototipo li{margin:4px 0}
+
+/* ------------------------------------------------ el sitio (prototipo) */
+.sitio{color:var(--texto);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--papel);font-size:15px;line-height:1.45}
+.sitio a{color:inherit;text-decoration:none}
+.sitio a:hover{color:var(--rojo)}
+.sitio a:focus-visible,.sitio button:focus-visible{outline:3px solid var(--acento);outline-offset:2px}
+.chapa{background:#14161A;color:#F4F1EA;font-size:12px;display:flex;gap:12px;align-items:center;padding:6px 16px;white-space:nowrap;overflow:hidden}
+.chapa span{opacity:.85}
+.chapa b{font-weight:600}
+.tope{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px 10px}
+.logo{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-weight:900;font-size:25px;letter-spacing:-.5px;color:var(--tinta);line-height:1;white-space:nowrap}
+.logo b{color:var(--rojo)}
+.lupa{width:40px;height:40px;border-radius:50%;border:1px solid var(--linea);display:grid;place-items:center;color:var(--gris)}
+nav.menu{border-top:2px solid var(--tinta);border-bottom:1px solid var(--linea);display:flex;overflow-x:auto;scrollbar-width:none;padding:0 6px}
+nav.menu::-webkit-scrollbar{display:none}
+nav.menu a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding:0 10px;font-weight:600;font-size:14px;color:var(--tinta);white-space:nowrap}
+nav.menu a[aria-current="page"]{color:var(--rojo);box-shadow:inset 0 -3px 0 var(--rojo)}
+nav.menu .serv{color:var(--verde)}
+.cuerpo-sitio{padding:12px 16px 28px}
+.migas{font-size:12.5px;color:var(--gris);margin:2px 0 8px}
+.titulo-seccion{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 14px}
+.titulo-seccion .barra{width:6px;height:28px;border-radius:2px;background:var(--c)}
+.titulo-seccion h1{font-family:"Source Serif 4",Georgia,serif;font-weight:800;font-size:28px;color:var(--tinta);margin:0;line-height:1.1}
+.titulo-seccion .cuantas{font-size:12.5px;color:var(--gris)}
+.titulo-seccion .lema{flex-basis:100%;font-size:13.5px;color:var(--gris);margin-top:-2px}
+
+/* el armado: en el celular una sola columna (tira de datos, 5 notas, módulos, el resto) */
+.portal{display:flex;flex-direction:column;gap:18px}
+.col-notas,.col-datos{display:contents}
+.tira{order:1}
+.arriba{order:2}
+.lateral{order:3;display:flex;flex-direction:column;gap:14px}
+.abajo{order:4}
+@container sitio (min-width:900px){
+  .chapa{padding:6px 24px}
+  .tope{padding:18px 24px 12px}
+  .logo{font-size:34px}
+  nav.menu{padding:0 18px;gap:6px}
+  .cuerpo-sitio{padding:16px 24px 36px}
+  .titulo-seccion h1{font-size:34px}
+  .portal{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px;align-items:start}
+  .col-notas,.col-datos{display:flex;flex-direction:column;gap:18px}
+  .tira{order:0}
+}
+/* notas */
+.postal{display:block}
+.placa{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:var(--c);display:flex;align-items:flex-end;padding:10px}
+.placa::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.09) 0 12px,transparent 12px 24px)}
+.placa span{position:relative;color:#fff;font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:rgba(0,0,0,.28);padding:3px 7px;border-radius:4px}
+.postal h2,.postal h3{font-family:"Source Serif 4",Georgia,serif;color:var(--tinta);margin:8px 0 4px;line-height:1.2;border:0;padding:0}
+.postal.grande h2{font-size:23px;font-weight:800}
+.postal h3{font-size:16.5px;font-weight:700}
+.postal .copete{font-size:14px;color:var(--texto);margin:0 0 4px}
+.hora{font-size:12.5px;color:var(--gris)}
+.cuatro{display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px}
+@container sitio (min-width:560px){.cuatro{grid-template-columns:1fr 1fr}}
+.fila-nota{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--linea)}
+.fila-nota .mini{flex:none;width:84px;height:56px;border-radius:6px;background:var(--c);opacity:.9}
+.fila-nota h3{font-family:"Source Serif 4",Georgia,serif;font-size:16px;font-weight:700;color:var(--tinta);margin:0 0 3px;line-height:1.25}
+.ver-mas{display:inline-block;margin-top:10px;font-size:13px;font-weight:600;color:var(--rojo)!important}
+
+/* módulos (tarjetas de datos) */
+.modulo{border:1px solid var(--linea);border-radius:12px;padding:12px 14px;background:var(--papel);position:relative}
+.modulo.sin-fuente{border-style:dashed;background:var(--crema)}
+.cab-mod{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 8px;margin-bottom:8px;padding-right:0}
+.marcar .cab-mod{margin-top:4px}
+.etiqueta{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gris)}
+.accion{font-size:13px;font-weight:600;color:var(--rojo)!important;white-space:nowrap}
+.fuente{display:block;margin-top:8px;font-size:11.5px;color:var(--gris)}
+.pin{display:none;position:absolute;top:-9px;right:10px;font-size:10.5px;font-weight:700;border-radius:999px;padding:1px 8px;border:1px solid currentColor;background:var(--papel)}
+.marcar .pin{display:inline-block}
+.pin.ya{color:var(--ok)}
+.pin.nuevo{color:var(--acento)}
+.pin.mano{color:var(--duda)}
+.num{font-variant-numeric:tabular-nums}
+.grande-num{font-size:30px;font-weight:700;color:var(--tinta);line-height:1}
+.dos-datos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dato small{display:block;font-size:12px;color:var(--gris)}
+.dato b{display:block;font-size:20px;color:var(--tinta);font-variant-numeric:tabular-nums}
+.dato i{font-style:normal;font-size:12px;color:var(--gris)}
+.renglones{list-style:none;margin:0;padding:0}
+.renglones li{padding:7px 0;border-top:1px solid var(--linea);font-size:14px}
+.renglones li:first-child{border-top:0;padding-top:0}
+.renglones .sub{display:block;font-size:12.5px;color:var(--gris)}
+.dias{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px;text-align:center}
+.dias div{background:var(--crema);border-radius:8px;padding:6px 2px;font-size:12.5px}
+.dias b{display:block;color:var(--tinta);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips a{display:inline-flex;align-items:center;min-height:36px;padding:4px 10px;border:1px solid var(--linea);border-radius:999px;font-size:13px;font-weight:600;color:var(--tinta)}
+.cruz{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:5px;background:#16815B;color:#fff;font-weight:900;font-size:15px;margin-right:6px;vertical-align:-5px}
+.tira-dos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.extra{display:none}.tira .accion{display:none}
+@container sitio (min-width:560px){.extra{display:block}span.extra{display:inline}.dias.extra{display:grid}.tira .accion{display:inline}}
+.tira-dos .modulo{padding:10px 12px}
+@container sitio (min-width:900px){.tira-dos{grid-template-columns:1fr}}
+.partido{display:grid;grid-template-columns:52px 1fr;gap:2px 10px;padding:8px 0;border-top:1px solid var(--linea);font-size:13.5px}
+.partido:first-child{border-top:0;padding-top:0}
+.partido .cuando{font-size:12px;color:var(--gris);line-height:1.25}
+.partido .equipos b{font-weight:600;color:var(--tinta)}
+.partido .copa{grid-column:2;font-size:11.5px;color:var(--gris)}
+.res{display:grid;grid-template-columns:1fr auto 1fr;gap:6px;align-items:center;font-size:13.5px;padding:6px 0;border-top:1px solid var(--linea)}
+.res:first-of-type{border-top:0}
+.res .l{text-align:right}
+.res .g{font-weight:700;color:var(--tinta);font-variant-numeric:tabular-nums;background:var(--crema);border-radius:6px;padding:1px 8px}
+table.tabla{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+table.tabla th{font-size:11px;color:var(--gris);font-weight:600;text-align:right;padding:4px 3px;border-bottom:1px solid var(--linea)}
+table.tabla th:nth-child(2){text-align:left}
+table.tabla td{padding:5px 3px;text-align:right;border-bottom:1px solid var(--linea)}
+table.tabla td:nth-child(2){text-align:left;color:var(--tinta)}
+table.tabla td:first-child{color:var(--gris);width:22px}
+table.tabla tr.destaca td{background:var(--crema);font-weight:700}
+table.tabla tr.corte td{border-bottom:2px solid var(--gris)}
+.pestanas{display:flex;gap:4px;margin-bottom:8px}
+.pestanas button{flex:1;font:600 13px/1 Inter,system-ui,sans-serif;min-height:36px;border:1px solid var(--linea);background:var(--papel);color:var(--tinta);border-radius:8px;cursor:pointer}
+.pestanas button[aria-selected="true"]{background:var(--tinta);color:var(--papel);border-color:var(--tinta)}
+.aviso-mod{font-size:13px;color:var(--texto);margin:0}
+.seguir{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.seguir a{display:flex;align-items:center;justify-content:center;min-height:40px;border:1px solid var(--linea);border-radius:8px;font-size:13px;font-weight:600;color:var(--tinta)}
+/* el gráfico del dólar */
+.grafico{position:relative}
+.grafico svg{display:block;width:100%;height:auto;overflow:visible}
+.grafico .eje{stroke:var(--linea);stroke-width:1}
+.grafico .eje-txt{fill:var(--gris);font-size:10px;font-family:Inter,system-ui,sans-serif}
+.grafico .serie{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.grafico .rot-serie{font-size:11px;font-weight:600;fill:var(--texto);font-family:Inter,system-ui,sans-serif}
+.grafico .guia{stroke:var(--gris);stroke-width:1;stroke-dasharray:3 3;opacity:0}
+.grafico .punto-h{opacity:0;stroke:var(--papel);stroke-width:2}
+.grafico.activo .guia,.grafico.activo .punto-h{opacity:1}
+.tooltip{position:absolute;pointer-events:none;background:var(--tinta);color:var(--papel);font-size:12px;line-height:1.35;padding:6px 8px;border-radius:6px;white-space:nowrap;transform:translate(-50%,-100%);opacity:0;transition:opacity .1s}
+.grafico.activo .tooltip{opacity:1}
+.leyenda{display:flex;gap:12px;font-size:12px;color:var(--gris);margin:4px 0 6px}
+.leyenda span::before{content:"";display:inline-block;width:14px;height:2px;vertical-align:4px;margin-right:5px;background:var(--c)}
+details.ver-numeros summary{cursor:pointer;font-size:12.5px;color:var(--gris);margin-top:6px}
+details.ver-numeros table{width:100%;border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums;margin-top:6px}
+details.ver-numeros td,details.ver-numeros th{padding:3px 4px;border-bottom:1px solid var(--linea);text-align:right}
+details.ver-numeros td:first-child,details.ver-numeros th:first-child{text-align:left}
+
+/* ------------------------------------------------ la tabla de todas las secciones */
+.filtros{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.filtros button{font:inherit;font-size:.85rem;min-height:40px;padding:4px 12px;border-radius:999px;border:1px solid var(--borde);background:var(--panel);color:var(--txt);cursor:pointer}
+.filtros button[aria-pressed="true"]{background:var(--acento);color:var(--panel);border-color:var(--acento)}
+.tabla-envoltura{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.modulos{border-collapse:collapse;width:100%;font-size:.88rem;background:var(--panel);border:1px solid var(--borde);border-radius:10px}
+table.modulos th,table.modulos td{border-bottom:1px solid var(--borde);padding:7px 8px;text-align:left;vertical-align:top}
+table.modulos thead th{font-size:.76rem;color:var(--suave);font-weight:600;position:sticky;top:0;background:var(--panel)}
+table.modulos tr.sec th{background:var(--codigo);font-size:.95rem;padding:8px}
+table.modulos tr.sec th i{display:inline-block;width:10px;height:10px;border-radius:3px;background:var(--c);margin-right:8px;vertical-align:0}
+table.modulos tr.sec th small{font-weight:400;color:var(--suave)}
+.et{display:inline-block;font-size:.74rem;font-weight:700;border-radius:4px;padding:1px 6px;white-space:nowrap}
+.et.S{background:var(--ok-suave);color:var(--ok)}.et.M{background:var(--duda-suave);color:var(--duda)}.et.L{background:var(--no-suave);color:var(--no)}
+.et.alta{background:var(--ok);color:var(--panel)}.et.media{background:var(--acento-suave);color:var(--acento)}.et.baja{background:var(--codigo);color:var(--suave)}.et.duda{background:var(--duda-suave);color:var(--duda)}.et.no{background:var(--no-suave);color:var(--no)}
+.et.ya{border:1px solid var(--ok);color:var(--ok)}.et.nuevo{border:1px solid var(--acento);color:var(--acento)}.et.mano{border:1px solid var(--duda);color:var(--duda)}
+@media (max-width:760px){
+  table.modulos thead{display:none}
+  table.modulos,table.modulos tbody,table.modulos tr,table.modulos td,table.modulos th{display:block;width:100%}
+  table.modulos tr{border-bottom:1px solid var(--borde);padding:8px 10px}
+  table.modulos tr.sec{padding:0}
+  table.modulos td{border:0;padding:2px 0}
+  table.modulos td:first-child{font-weight:700;font-size:.95rem}
+  table.modulos td[data-r]::before{content:attr(data-r) ": ";color:var(--suave);font-size:.78rem}
+  table.modulos td.etiquetas{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+  table.modulos td.etiquetas::before{display:none}
+}
+
+/* ------------------------------------------------ decisiones */
+.decision{margin:14px 0;border:2px dashed var(--borde);border-radius:10px;padding:12px 14px;background:var(--panel)}
+.decision[data-d]{border-style:solid}
+.decision[data-d="Sí"]{border-color:var(--ok)}
+.decision[data-d="No"]{border-color:var(--no)}
+.decision[data-d="Duda"]{border-color:var(--duda)}
+.decision-tit{margin:0 0 4px;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--suave);font-weight:700}
+.propuesta{margin:0 0 6px}
+.contexto{margin:0 0 10px;font-size:.9rem;color:var(--suave)}
+.opciones{display:flex;gap:8px;flex-wrap:wrap}
+.op{font:inherit;font-weight:700;min-width:76px;min-height:44px;border-radius:8px;border:1.5px solid var(--borde);background:var(--panel);color:var(--txt);cursor:pointer}
+.op[aria-pressed="true"][data-v="Sí"]{background:var(--ok);border-color:var(--ok);color:var(--panel)}
+.op[aria-pressed="true"][data-v="No"]{background:var(--no);border-color:var(--no);color:var(--panel)}
+.op[aria-pressed="true"][data-v="Duda"]{background:var(--duda);border-color:var(--duda);color:var(--panel)}
+.coment{display:block;margin-top:10px;font-size:.85rem;color:var(--suave)}
+.coment textarea,.campo{display:block;width:100%;margin-top:4px;font:inherit;font-size:.95rem;color:var(--txt);background:var(--panel);border:1px solid var(--borde);border-radius:8px;padding:8px}
+.panel-dec{background:var(--panel);border:1px solid var(--borde);border-radius:12px;padding:14px 16px;margin-top:18px}
+.panel-dec .fila{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+#caja{width:100%;min-height:180px;font:13px/1.5 ui-monospace,Consolas,monospace}
+#aviso-almacen{background:var(--duda-suave);color:var(--duda);padding:8px 12px;border-radius:8px}
+#toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%) translateY(120%);background:var(--txt);color:var(--fondo);padding:10px 16px;border-radius:10px;font-size:.92rem;transition:transform .2s,visibility .2s;visibility:hidden;z-index:60;max-width:calc(100vw - 32px)}
+#toast.ver{transform:translateX(-50%) translateY(0);visibility:visible}
+footer.pie-doc{max-width:1240px;margin:0 auto;padding:20px 16px 60px;color:var(--suave);font-size:.85rem}
+@media print{.barra-sup,.controles,.opciones,.panel-dec .fila{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="barra-sup">
+  <span class="marca">Mini portales · Radar Balcarce</span>
+  <nav aria-label="Partes"><a href="#resumen">Resumen</a><a href="#prototipo">Prototipo</a><a href="#todas">Todas las secciones</a><a href="#reglas">Reglas</a><a href="#decisiones">Decisiones</a></nav>
+  <span class="progreso" id="progreso">0 de 0</span>
+  <button type="button" class="boton" id="tema" title="Cambiar entre claro y oscuro">Tema</button>
+</div>
+
+<div class="envolver">
+<p class="meta">Radar Balcarce · propuesta para decidir · 17/10/2026 · <b>no se cambió nada del sitio</b></p>
+<h1>Cada sección, un mini portal</h1>
+<p class="bajada">Hernán pidió el 17/10 "una mejora en cada categoría, que funcione como mini portal; empezar a embeberle más datos a los costados". Acá está cómo sería: qué datos van al costado de cada sección, de dónde salen, cuánto cuesta hacerlos y qué riesgo tienen. Tres secciones están dibujadas enteras con datos reales; las catorce, en una tabla.</p>
+<p class="meta">Los datos del prototipo son los que publicó "Actualizar la web" el <b>15/10 a las 15:32</b> (hora de Balcarce): <code>portada.json</code>, <code>futbol.json</code>, <code>f1.json</code>, <code>dolar.json</code>, <code>dolar-historia.json</code>, <code>agenda.json</code>, <code>feriados-piezas.json</code>, <code>estadisticas.json</code> y <code>archivo.json</code>. La inflación, el riesgo país y el plazo fijo salen de notas ya publicadas (se dice cuál). Los títulos son los publicados. Las fotos van como placas de color para que el archivo no dependa de nada.</p>
+
+<h2 id="resumen">En diez renglones</h2>
+<div class="caja">
+<ol>
+<li><b>Hoy la página de una sección es una sola columna de notas</b> (<code>web/app/seccion/[ranura]/page.js</code>): se sacó el clima y la farmacia "porque eran ruido". La propuesta es volver a tener costado, pero <b>con datos de la sección</b>, no los mismos de la portada.</li>
+<li><b>Lo más barato es lo que ya tenemos guardado</b>: la tabla y los partidos de fútbol, el campeonato y la próxima carrera de F1, el dólar y su historia, la farmacia, el clima, la agenda, los teléfonos y los feriados. Ya se bajan solos; sólo falta dibujarlos en la sección.</li>
+<li><b>Los tres de más valor y menos trabajo</b>: Fútbol con tabla, próximos partidos y resultados; Balcarce con farmacia, clima, agenda y teléfonos; Economía con el dólar y su gráfico de tres semanas. Los tres, esfuerzo chico.</li>
+<li><b>Después, datos abiertos nuevos y estables</b>: la inflación del INDEC, la nafta en Balcarce (Secretaría de Energía, ya probada desde GitHub), la lluvia para el Agro (Open-Meteo, que ya usamos) y la ciencia hecha en Balcarce (OpenAlex).</li>
+<li><b>Lo que hay que cargar a mano va al final y con dudas</b>: cortes de luz y agua, la Liga Balcarceña, "¿hay clases?", vacunación. Un dato viejo en esos módulos hace daño.</li>
+<li><b>"Lo más leído de la sección" hoy no sirve</b>: en 14 días hubo 527 visitas; en Economía la nota más leída tuvo 6 vistas. Se propone apagado hasta que haya tráfico, con un piso mínimo.</li>
+<li><b>Las páginas de sección se visitan poco</b> (Economía, 4 veces en 14 días; la portada, 241). El costado vale sobre todo para Google y para el que entra desde una nota. Por eso conviene empezar por pocos módulos y medir.</li>
+<li><b>En el celular</b>: una tira de datos arriba (dos cosas, chicas), las cinco primeras notas y después los demás módulos. En la computadora, una columna de 320 px a la derecha.</li>
+<li><b>Reglas</b>: cada dato dice de dónde sale y a qué hora; si falta, el módulo no se dibuja (nunca vacío ni inventado); nada de "en vivo"; nada que identifique a una víctima.</li>
+<li><b>Newsletter por mail: no por ahora</b> (pide un servicio de correo y guardar datos personales). Sí: seguir la sección por su feed, Facebook e Instagram, y mandar datos por WhatsApp.</li>
+</ol>
+</div>
+
+<h2 id="prototipo">El prototipo</h2>
+<p>Elijan una sección y cómo verla. Los recuadros llevan una marquita arriba a la derecha: <span class="et ya">Ya lo tenemos</span> (el dato ya se baja solo), <span class="et nuevo">Nuevo</span> (fuente nueva, gratis) o <span class="et mano">A mano</span> (no hay fuente automática). En el sitio de verdad esas marquitas no van.</p>
+<div class="controles">
+  <div class="grupo-c" role="group" aria-label="Sección"><span class="rot">Sección</span>
+    <button type="button" data-sec="balcarce" aria-pressed="true">Balcarce</button>
+    <button type="button" data-sec="economia" aria-pressed="false">Economía</button>
+    <button type="button" data-sec="futbol" aria-pressed="false">Fútbol</button>
+  </div>
+  <div class="grupo-c" role="group" aria-label="Pantalla"><span class="rot">Pantalla</span>
+    <button type="button" data-vista="celular" aria-pressed="true">Celular (375 px)</button>
+    <button type="button" data-vista="escritorio" aria-pressed="false">Computadora</button>
+  </div>
+  <div class="grupo-c"><button type="button" id="marcar" aria-pressed="true">Marcar qué es nuevo</button></div>
+</div>
+<div class="escenario"><div class="marco celular marcar" id="marco"><div class="sitio" id="sitio"></div></div></div>
+<ul class="nota-prototipo">
+<li><b>Qué mirar en el celular</b>: arriba de las notas, una tira con dos datos (lo que la gente viene a buscar). Los demás módulos aparecen después de las cinco primeras notas, no al final de todo.</li>
+<li><b>En la computadora</b>: la columna de datos va a la derecha, de 320 px; las notas ocupan el resto.</li>
+<li>Las horas ("hace 3 h") están calculadas contra las 15:32 del 15/10, cuando se generaron los datos.</li>
+<li>El gráfico del dólar se puede recorrer con el dedo o el mouse; debajo, "Ver los números" muestra la tabla.</li>
+</ul>
+
+<h2 id="todas">Todas las secciones: qué módulos y de dónde</h2>
+<p>Las 11 de hoy más Educación, Salud y Ciencia (las tres nuevas con material, según <code>MAPA-DE-SECCIONES.md</code>). <b>Esfuerzo</b>: S = horas, M = uno o dos días, L = más de una semana o mantenimiento seguido. <b>Riesgo</b>: qué puede salir mal. <b>Prioridad</b>: la que propongo.</p>
+<div class="filtros" role="group" aria-label="Filtrar la tabla">
+  <button type="button" data-f="todo" aria-pressed="true">Todo</button>
+  <button type="button" data-f="ya" aria-pressed="false">Ya lo tenemos</button>
+  <button type="button" data-f="alta" aria-pressed="false">Prioridad alta</button>
+  <button type="button" data-f="S" aria-pressed="false">Esfuerzo chico</button>
+  <button type="button" data-f="mano" aria-pressed="false">A mano</button>
+  <button type="button" data-f="no" aria-pressed="false">Lo que no</button>
+</div>
+<div class="tabla-envoltura"><table class="modulos" id="tabla-modulos">
+<thead><tr><th>Módulo</th><th>Fuente</th><th>Cada cuánto</th><th>Riesgo</th><th>Etiquetas</th></tr></thead>
+<tbody></tbody>
+</table></div>
+<p class="meta">Espectáculos, Turismo y gastronomía y Ambiente y clima (las otras tres del mapa nuevo) se arman con piezas de esta misma tabla: Ambiente con los avisos del clima y la lluvia; Turismo con la agenda y los fines de semana largos; Espectáculos no tiene un dato propio estable y gratis.</p>
+
+<h2 id="reglas">Reglas comunes para todas las columnas</h2>
+<div class="caja">
+<ol>
+<li><b>Pocos módulos</b>: en la computadora, tres o cuatro por sección; en el celular, una tira de dos datos arriba y el resto después de las cinco primeras notas.</li>
+<li><b>Cada dato dice de dónde sale y cuándo</b> ("Fuente: ESPN · 15/10 15:32"), como la nota del dólar. Nunca "en vivo".</li>
+<li><b>Si falta el dato, el módulo no aparece.</b> Nada de recuadros vacíos ni de "cargando". Si la fuente falla, queda lo último guardado con su hora, o nada.</li>
+<li><b>Los datos vienen en el HTML</b> (se arman al compilar, como la tabla de <code>/tablas</code>): Google los lee y la página no depende del navegador. Sólo el clima y el dólar se refrescan en el navegador, como hoy.</li>
+<li><b>Un solo dato, una sola fuente de verdad</b>: la farmacia de la sección Salud es la misma función que la de la portada (<code>diaDeTurno</code>), los feriados los mismos de las piezas.</li>
+<li><b>Lo cargado a mano lleva fecha y quién</b> ("confirmado el 17/10 por Andrés") y se vence solo: pasada la fecha, desaparece.</li>
+<li><b>El semáforo manda también acá</b>: nada que identifique a un menor o a una víctima; en Policiales no hay mapa del delito ni domicilios.</li>
+<li><b>Es dato, no consejo</b>: plazo fijo, dólar y riesgo país se muestran sin recomendar nada.</li>
+<li><b>Sin servicios nuevos que cobren ni librerías de afuera</b>: todas las fuentes de la tabla son gratis y sin clave, salvo las que dicen "a mano".</li>
+<li><b>Una prueba por módulo</b> (que no se dibuje sin datos, que diga la fuente) antes de subirlo, como pide CLAUDE.md.</li>
+</ol>
+</div>
+
+<h2 id="decisiones">Decisiones</h2>
+<p>Marquen <b>Sí</b>, <b>No</b> o <b>Duda</b> y, si quieren, un comentario. Queda guardado en este navegador; al final, <b>Copiar mis decisiones</b> y lo pegan en el chat.</p>
+<div id="lista-decisiones"></div>
+
+<div class="panel-dec">
+<p id="aviso-almacen" hidden>Este navegador no deja guardar: lo que marquen se pierde al cerrar la página. Copien las decisiones antes de salir.</p>
+<label class="coment">¿Quién decide? (va arriba del texto que se copia)<input class="campo" id="quien" type="text" placeholder="Hernán, Andrés o los dos" autocomplete="off"></label>
+<p id="cuenta" class="meta"></p>
+<div class="fila"><button type="button" class="boton prim" id="copiar">Copiar mis decisiones</button><button type="button" class="boton" id="descargar">Descargar</button><button type="button" class="boton" id="borrar">Borrar todo</button></div>
+<textarea id="caja" hidden readonly aria-label="Texto de las decisiones"></textarea>
+</div>
+
+<h2 id="limites">Qué no pude confirmar</h2>
+<ul>
+<li>Que la pizarra de granos de Rosario y los precios de Cañuelas se puedan leer desde GitHub: no están en la prueba del 8/10 (<code>IDEAS.md</code>). Por eso van en Duda.</li>
+<li>Que ArgentinaDatos siga gratis y estable para el riesgo país y las tasas: es un servicio comunitario, no oficial. El 13/10 dos notas publicadas dieron 602 y 697 puntos el mismo día.</li>
+<li>Si ESPN trae los promedios del descenso o el próximo partido de la Selección con el mismo pedido que ya se usa.</li>
+<li>Qué días y dónde avisan los cortes la Cooperativa Eléctrica y OSEBAL: no vi una página fija, sólo publicaciones en redes.</li>
+<li>Los números de la Jefatura de Inspección y del Consejo Escolar de Balcarce para Educación (no están en <code>NUMEROS</code>).</li>
+<li><code>estadisticas.json</code> guarda sólo las 10 notas más vistas de cada día: "lo más leído" de una sección chica puede quedar vacío aunque tenga lectores.</li>
+</ul>
+</div>
+<footer class="pie-doc">Archivos leídos: CLAUDE.md, docs/06-WEB.md, docs/secciones/MAPA-DE-SECCIONES.md y PROTOTIPO-MENU.html, IDEAS.md (fuentes probadas el 8/10), web/app/page.js, web/app/seccion/[ranura]/page.js, web/lib/tablas.js, ingesta/utiles.mjs, web/app/globals.css y los datos de web/data nombrados arriba. No se tocó código ni datos del sitio.</footer>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  'use strict';
+  var AHORA = Date.parse('2026-10-15T18:32:37Z'); // cuando se generó portada.json
+  var ZONA = 'America/Argentina/Buenos_Aires';
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var hace = function (iso) {
+    var m = Math.round((AHORA - Date.parse(iso)) / 60000);
+    if (m < 5) return 'recién'; if (m < 60) return 'hace ' + m + ' min';
+    var h = Math.floor(m / 60); if (h < 24) return 'hace ' + h + ' h';
+    return h < 48 ? 'ayer' : 'hace ' + Math.floor(h / 24) + ' días';
+  };
+  var DIAS = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+  var partes = function (iso) {
+    var f = new Intl.DateTimeFormat('es-AR', { timeZone: ZONA, weekday: 'short', day: 'numeric', month: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date(iso));
+    var o = {}; f.forEach(function (p) { o[p.type] = p.value; }); return o;
+  };
+  var diaHora = function (iso) { var p = partes(iso); var d = new Date(Date.parse(iso) - 3 * 3600000); return DIAS[d.getUTCDay()] + ' ' + p.day + '/' + p.month + ' · ' + p.hour + ':' + p.minute; };
+  var pesos = function (n) { return '$' + n.toLocaleString('es-AR', { minimumFractionDigits: Number.isInteger(n) ? 0 : 2, maximumFractionDigits: 2 }); };
+  var pin = function (t) { return t === 'ya' ? '<span class="pin ya">Ya lo tenemos</span>' : t === 'nuevo' ? '<span class="pin nuevo">Nuevo</span>' : '<span class="pin mano">A mano</span>'; };
+  var modulo = function (o) {
+    return '<section class="modulo' + (o.mano ? ' sin-fuente' : '') + '" aria-label="' + esc(o.titulo) + '">' + pin(o.pin) +
+      '<div class="cab-mod"><span class="etiqueta">' + o.titulo + '</span>' + (o.accion ? '<a class="accion" href="#">' + o.accion + ' →</a>' : '') + '</div>' +
+      o.html + (o.fuente ? '<span class="fuente">' + o.fuente + '</span>' : '') + '</section>';
+  };
+
+  /* ---------------------------------------------- datos reales (web/data, 15/10) */
+  var SECCIONES = {
+    balcarce: {
+      nombre: 'Balcarce', color: 'var(--s-balcarce)', cuantas: 197, lema: 'Lo que pasa en la ciudad: vecinos, instituciones, obras, servicios y trámites.',
+      notas: [
+        ['Proyecto 10 repasa su historia social', '2026-10-15T17:33:31Z', 'La institución recorrió sus años de trabajo en los barrios y lo que viene.'],
+        ['Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España', '2026-10-15T16:33:19Z'],
+        ['El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre', '2026-10-15T15:16:45Z'],
+        ['El Sindicato Municipal exige informes contables y operativos a OSEBAL', '2026-10-15T15:03:41Z'],
+        ['LALCEC organiza actividades y mamografías gratuitas por el mes rosa', '2026-10-15T13:34:00Z'],
+        ['Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses', '2026-10-15T13:09:17Z'],
+        ['El Ministerio de Transporte bonaerense actualiza las tarifas de la VTV', '2026-10-15T10:15:00Z'],
+        ['Walter Ianni López participa de encuentros diplomáticos en Beijing', '2026-10-15T00:31:41Z'],
+        ['Brooklyn Café vende 1200 cookies tras la suspensión de la Fiesta del Postre', '2026-10-14T20:56:51Z']
+      ]
+    },
+    economia: {
+      nombre: 'Economía', color: 'var(--s-economia)', cuantas: 167, lema: 'Precios, dólar, salarios y jubilaciones, empleo y empresas.',
+      notas: [
+        ['Caputo destaca el optimismo por la economía nacional ante el FMI', '2026-10-15T13:53:23Z', 'El ministro habló en Washington de la marcha de la economía y de la deuda.'],
+        ['El Ministerio de Economía organiza una ronda de negocios para el RIGI', '2026-10-15T10:52:54Z'],
+        ['La titular del FMI anticipa que la Argentina cancela antes de tiempo su deuda', '2026-10-15T10:39:01Z'],
+        ['La Justicia declara la quiebra de la textil Algodonera Avellaneda', '2026-10-14T18:37:01Z'],
+        ['Casi 59.000 empresas registran problemas para cumplir con sus deudas', '2026-10-14T16:42:18Z'],
+        ['La Confederación Federal PyME advierte por el cierre de empresas', '2026-10-14T15:04:01Z'],
+        ['Telecom acepta la oferta de Metrotel por US$ 450 millones', '2026-10-14T13:44:00Z'],
+        ['El FMI pide reformas fiscales en Argentina y recorta la previsión de crecimiento', '2026-10-14T11:51:00Z'],
+        ['El Banco Central actualiza el techo de la banda cambiaria para noviembre', '2026-10-14T10:14:54Z']
+      ]
+    },
+    futbol: {
+      nombre: 'Fútbol', color: 'var(--s-futbol)', cuantas: 129, lema: 'De la Liga Balcarceña a la Selección.',
+      notas: [
+        ['Lautaro Martínez sufre un desgarro muscular y frena su actividad por un mes y medio', '2026-10-15T10:00:00Z', 'El delantero de la Selección estará afuera de las canchas unas seis semanas.'],
+        ['Nicolás Otamendi recrimina a Santiago Beltrán en el empate de River', '2026-10-15T00:23:07Z'],
+        ['Incidentes y represión policial en el ingreso de River en Junín', '2026-10-14T21:45:31Z'],
+        ['La Selección Argentina negocia dos amistosos con rivales sudamericanos', '2026-10-14T14:04:45Z'],
+        ['Sebastián Villa sufre una lesión en el tobillo y enciende la alerta en Boca', '2026-10-14T11:45:00Z'],
+        ['El fiscal Pollicita pide investigar transferencias a Claudio Tapia', '2026-10-13T13:13:17Z'],
+        ['Nicolò Tresoldi anota tres goles en el triunfo del Brujas ante el Inter', '2026-10-12T19:03:39Z'],
+        ['Julián Álvarez acumula casi seis meses sin goles en el Atlético de Madrid', '2026-10-12T14:51:47Z'],
+        ['Boca empata con Instituto en Córdoba y pierde terreno en el torneo', '2026-10-12T14:31:34Z']
+      ]
+    }
+  };
+
+  var DOLAR = { oficial: [1480, 1530], blue: [1525, 1545], bolsa: [1531.4, 1536], contadoconliqui: [1615.5, 1616], tarjeta: [1924, 1989], mayorista: [1504, 1513] };
+  // dolar-historia.json: venta a las 11 de cada día hábil
+  var HIST = [['25/09', 1540, 1560], ['28/09', 1545, 1560], ['29/09', 1545, 1565], ['30/09', 1545, 1560], ['01/10', 1540, 1560], ['02/10', 1545, 1555], ['05/10', 1540, 1560], ['06/10', 1540, 1545], ['07/10', 1540, 1550], ['08/10', 1540, 1555], ['09/10', 1540, 1540], ['13/10', 1535, 1540], ['14/10', 1535, 1550], ['15/10', 1535, 1545]];
+
+  var TABLA = {
+    'Zona A': [[1, 'Instituto (Córdoba)', 12, 9, 26], [2, 'Defensa y Justicia', 12, 7, 24], [3, 'Boca Juniors', 12, 6, 21], [4, 'Vélez Sarsfield', 12, 4, 21], [5, 'Lanús', 12, 6, 20], [6, 'Gimnasia (Mendoza)', 12, 3, 20], [7, 'Independiente', 12, -1, 18], [8, "Newell's Old Boys", 12, 2, 17]],
+    'Zona B': [[1, 'Rosario Central', 12, 8, 22], [2, 'Belgrano (Córdoba)', 12, 7, 22], [3, 'Argentinos Juniors', 12, 5, 22], [4, 'Sarmiento (Junín)', 12, 3, 20], [5, 'Huracán', 12, 1, 19], [6, 'Gimnasia La Plata', 12, 0, 19], [7, 'Barracas Central', 12, 1, 18], [8, 'Independiente Rivadavia', 12, -4, 18], [14, 'Aldosivi', 12, -7, 8]]
+  };
+  var PROXIMOS = [
+    ['2026-10-15T23:00:00Z', 'Huracán', 'Gimnasia La Plata', 'Liga Profesional'],
+    ['2026-10-16T00:30:00Z', 'Estudiantes de La Plata', 'Flamengo', 'Libertadores · semifinal, ida'],
+    ['2026-10-16T22:00:00Z', 'Defensa y Justicia', 'Instituto (Córdoba)', 'Liga Profesional'],
+    ['2026-10-17T00:30:00Z', 'Boca Juniors', 'Talleres (Córdoba)', 'Liga Profesional'],
+    ['2026-10-18T17:45:00Z', 'Racing Club', 'Independiente', 'Liga Profesional'],
+    ['2026-10-18T21:00:00Z', 'Estudiantes de Río Cuarto', 'Aldosivi', 'Liga Profesional']
+  ];
+  var RESULTADOS = [
+    ['Sarmiento (Junín)', 1, 1, 'River Plate', '14/10'],
+    ['Boca Juniors', 0, 1, 'Vasco da Gama', '13/10 · Sudamericana, semi ida'],
+    ['Gimnasia (Mendoza)', 1, 0, "Newell's Old Boys", '12/10'],
+    ['Lanús', 2, 0, 'Vélez Sarsfield', '12/10'],
+    ['Talleres (Córdoba)', 0, 0, 'Independiente', '11/10'],
+    ['Racing Club', 0, 2, 'Belgrano (Córdoba)', '11/10']
+  ];
+
+  /* ---------------------------------------------- piezas de la sección */
+  function notasHTML(s) {
+    var n = s.notas;
+    var postal = function (x, grande) {
+      return '<a class="postal' + (grande ? ' grande' : '') + '" href="#"><div class="placa" style="--c:' + s.color + '"><span>' + s.nombre + '</span></div>' +
+        (grande ? '<h2>' : '<h3>') + esc(x[0]) + (grande ? '</h2>' : '</h3>') + (grande && x[2] ? '<p class="copete">' + esc(x[2]) + '</p>' : '') +
+        '<time class="hora" datetime="' + x[1] + '">' + hace(x[1]) + '</time></a>';
+    };
+    var arriba = postal(n[0], true) + '<div class="cuatro">' + n.slice(1, 5).map(function (x) { return postal(x); }).join('') + '</div>';
+    var abajo = n.slice(5).map(function (x) {
+      return '<a class="fila-nota" href="#"><span class="mini" style="--c:' + s.color + '"></span><span><h3>' + esc(x[0]) + '</h3><time class="hora" datetime="' + x[1] + '">' + hace(x[1]) + '</time></span></a>';
+    }).join('') + '<a class="ver-mas" href="#">Más notas de ' + s.nombre + ' →</a>';
+    return { arriba: arriba, abajo: abajo };
+  }
+
+  function masLeido(lista) {
+    return modulo({ titulo: 'Lo más leído (14 días)', pin: 'ya', html: '<ol class="renglones" style="padding-left:0;list-style:none">' + lista.map(function (t, i) { return '<li><b style="color:var(--gris);margin-right:6px">' + (i + 1) + '</b><a href="#">' + esc(t) + '</a></li>'; }).join('') + '</ol>',
+      fuente: 'Visitas medidas por Cloudflare (estadisticas.json). Con el tráfico de hoy, son entre 2 y 18 vistas por nota.' });
+  }
+  function seguir(nombre) {
+    return modulo({ titulo: 'Seguí ' + nombre, pin: 'ya', html: '<div class="seguir"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">Feed de la sección</a><a href="#">Mandanos un dato</a></div>', fuente: 'El feed por sección ya existe (/seccion/…/feed.xml). El dato llega por WhatsApp al 2266 51-1612.' });
+  }
+
+  function balcarce() {
+    var tira = '<div class="tira-dos">' +
+      modulo({ titulo: 'El clima', pin: 'ya', html: '<div class="grande-num num">14°</div><div style="font-size:13px;margin-top:4px">Nublado<span class="extra"> · sensación 10° · viento 19 km/h SE</span></div><div class="dias extra"><div>vie<b class="num">12°/6°</b></div><div>sáb<b class="num">11°/7°</b></div><div>dom<b class="num">12°/4°</b></div></div>', accion: 'Pronóstico', fuente: 'Open-Meteo · 15:32' }) +
+      modulo({ titulo: 'Farmacia de turno', pin: 'ya', html: '<div style="font-size:16px;font-weight:700;color:var(--tinta)"><span class="cruz" aria-hidden="true">+</span>Norte</div><div style="font-size:13.5px">Calle 15 esquina 8 · 42-4656</div><div class="extra" style="font-size:12.5px;color:var(--gris);margin-top:6px">Viernes: Santa Inés y Del Patio</div>', accion: 'La semana', fuente: 'Turnos que ya arma la web · cambia a las 8:30' }) +
+      '</div>';
+    var lateral =
+      modulo({ titulo: 'Agenda de Balcarce', pin: 'ya', accion: 'Toda la agenda', html: '<ul class="renglones"><li><b>Caminata Rosa</b><span class="sub">sáb 24/10 · 15:00 · Plaza Libertad</span></li><li><b>Paseo de Primavera en San Agustín</b><span class="sub">sáb 7/11 · 14:00 · San Agustín</span></li><li><b>Cabalgata en Balcarce</b><span class="sub">27 al 29/11 · Estancia San Pedro de la Vigilancia</span></li></ul>', fuente: 'Agenda de la Municipalidad (agenda.json) · cada media hora' }) +
+      modulo({ titulo: 'Trámites, horarios y avisos', pin: 'nuevo', html: '<ul class="renglones"><li><a href="#">El Cementerio Municipal cambia sus horarios desde el lunes 26 de octubre</a><span class="sub">Municipalidad · hace 3 h</span></li><li><a href="#">Las tarifas de la VTV se actualizan</a><span class="sub">Provincia · hace 8 h</span></li><li><a href="#">ARBal lanza planes de pago con quitas para regularizar tasas</a><span class="sub">ARBal · 5/10</span></li></ul>', fuente: 'Las notas ya publicadas con fuente oficial y palabras de trámite (horario, tasa, inscripción, tarifa)' }) +
+      modulo({ titulo: 'Cortes programados', pin: 'mano', mano: true, html: '<p class="aviso-mod">Hoy no hay de dónde sacarlo solo: la Cooperativa Eléctrica y OSEBAL avisan en sus redes. Se cargaría desde el celular, con la hora del aviso, y se borra solo cuando pasa el corte.</p>', fuente: 'Propuesta en duda: un corte viejo que sigue publicado hace daño' }) +
+      modulo({ titulo: 'Teléfonos útiles', pin: 'ya', accion: 'Toda la guía', html: '<div class="chips"><a href="#">Emergencias 911</a><a href="#">SAME 107</a><a href="#">Bomberos 100</a><a href="#">Cooperativa (guardia) 0800 222 2342</a><a href="#">Municipalidad 42-4044</a></div>', fuente: 'Guía propia (ingesta/utiles.mjs)' }) +
+      masLeido(['El Club de Leones entrega nuevos equipos al Hospital Municipal', 'La Liga Balcarceña suspende toda la fecha del fútbol local', 'El Concejo Deliberante distingue a la Fiscalía Descentralizada', 'Una planta cae sobre la red eléctrica y daña cables en calle 20']) +
+      seguir('a Balcarce');
+    return { tira: tira, lateral: lateral };
+  }
+
+  function graficoDolar() {
+    var W = 290, H = 132, L = 34, R = 74, T = 10, B = 22, min = 1530, max = 1570;
+    var x = function (i) { return L + i * (W - L - R) / (HIST.length - 1); };
+    var y = function (v) { return T + (max - v) * (H - T - B) / (max - min); };
+    var linea = function (k) { return HIST.map(function (d, i) { return (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(d[k]).toFixed(1); }).join(' '); };
+    var ejes = [1530, 1550, 1570].map(function (v) { return '<line class="eje" x1="' + L + '" x2="' + (W - R) + '" y1="' + y(v) + '" y2="' + y(v) + '"/><text class="eje-txt" x="' + (L - 4) + '" y="' + (y(v) + 3) + '" text-anchor="end">' + v.toLocaleString('es-AR') + '</text>'; }).join('');
+    var ult = HIST.length - 1;
+    var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Dólar blue y oficial, venta a las 11, del 25/09 al 15/10. Blue de 1.560 a 1.545 pesos; oficial de 1.540 a 1.535.">' + ejes +
+      '<text class="eje-txt" x="' + L + '" y="' + (H - 6) + '">25/09</text><text class="eje-txt" x="' + (W - R) + '" y="' + (H - 6) + '" text-anchor="end">15/10</text>' +
+      '<path class="serie" style="stroke:var(--serie-oficial)" d="' + linea(1) + '"/><path class="serie" style="stroke:var(--serie-blue)" d="' + linea(2) + '"/>' +
+      '<text class="rot-serie" x="' + (x(ult) + 6) + '" y="' + (y(HIST[ult][2]) + 1) + '">Blue $1.545</text>' +
+      '<text class="rot-serie" x="' + (x(ult) + 6) + '" y="' + (y(HIST[ult][1]) + 9) + '">Oficial $1.535</text>' +
+      '<line class="guia" y1="' + T + '" y2="' + (H - B) + '"/><circle class="punto-h p1" r="4" style="fill:var(--serie-oficial)"/><circle class="punto-h p2" r="4" style="fill:var(--serie-blue)"/>' +
+      '<rect class="zona" x="' + (L - 6) + '" y="0" width="' + (W - L - R + 12) + '" height="' + H + '" fill="transparent"/></svg>';
+    var tabla = '<details class="ver-numeros"><summary>Ver los números</summary><table><thead><tr><th>Día</th><th>Oficial</th><th>Blue</th></tr></thead><tbody>' +
+      HIST.map(function (d) { return '<tr><td>' + d[0] + '</td><td>' + pesos(d[1]) + '</td><td>' + pesos(d[2]) + '</td></tr>'; }).join('') + '</tbody></table></details>';
+    return '<div class="leyenda"><span style="--c:var(--serie-blue)">Blue</span><span style="--c:var(--serie-oficial)">Oficial</span></div><div class="grafico" data-w="' + W + '" data-l="' + L + '" data-r="' + R + '" data-t="' + T + '" data-b="' + B + '">' + svg + '<div class="tooltip"></div></div>' + tabla;
+  }
+  function activarGrafico(raiz) {
+    var g = $('.grafico', raiz); if (!g) return;
+    var svg = $('svg', g), tip = $('.tooltip', g), guia = $('.guia', g), p1 = $('.p1', g), p2 = $('.p2', g);
+    var W = 290, H = 132, L = 34, R = 74, T = 10, B = 22, min = 1530, max = 1570;
+    var x = function (i) { return L + i * (W - L - R) / (HIST.length - 1); };
+    var y = function (v) { return T + (max - v) * (H - T - B) / (max - min); };
+    function mover(ev) {
+      var r = svg.getBoundingClientRect(); var px = ((ev.touches ? ev.touches[0].clientX : ev.clientX) - r.left) * W / r.width;
+      var i = Math.max(0, Math.min(HIST.length - 1, Math.round((px - L) / ((W - L - R) / (HIST.length - 1)))));
+      var d = HIST[i]; var cx = x(i);
+      guia.setAttribute('x1', cx); guia.setAttribute('x2', cx);
+      p1.setAttribute('cx', cx); p1.setAttribute('cy', y(d[1])); p2.setAttribute('cx', cx); p2.setAttribute('cy', y(d[2]));
+      tip.innerHTML = '<b>' + d[0] + '</b> · blue ' + pesos(d[2]) + ' · oficial ' + pesos(d[1]);
+      var izq = cx * r.width / W; izq = Math.max(70, Math.min(r.width - 70, izq));
+      tip.style.left = izq + 'px'; tip.style.top = (y(d[2]) * r.height / H - 8) + 'px';
+      g.classList.add('activo');
+    }
+    svg.addEventListener('mousemove', mover); svg.addEventListener('touchstart', mover, { passive: true }); svg.addEventListener('touchmove', mover, { passive: true });
+    svg.addEventListener('mouseleave', function () { g.classList.remove('activo'); });
+    svg.addEventListener('touchend', function () { setTimeout(function () { g.classList.remove('activo'); }, 1500); });
+  }
+
+  function economia() {
+    var dato = function (n, v, sub) { return '<div class="dato"><small>' + n + '</small><b>' + pesos(v[1]) + '</b><i>compra ' + pesos(v[0]) + (sub ? ' · ' + sub : '') + '</i></div>'; };
+    var tira = modulo({ titulo: 'Dólar', pin: 'ya', accion: 'Todos', html: '<div class="dos-datos">' + dato('Oficial', DOLAR.oficial) + dato('Blue', DOLAR.blue) + '</div><div style="font-size:12.5px;color:var(--gris);margin-top:6px">Brecha del blue con el oficial: 1 %</div>', fuente: 'DolarApi · cotización de las 17:57 del 15/10; se actualiza al abrir' });
+    var lateral =
+      modulo({ titulo: 'El dólar en tres semanas', pin: 'ya', html: graficoDolar(), fuente: 'Venta a las 11 de cada día hábil (dolar-historia.json)' }) +
+      modulo({ titulo: 'Inflación', pin: 'nuevo', html: '<div style="display:flex;align-items:baseline;gap:10px"><span class="grande-num num">1,9 %</span><span style="font-size:13px">septiembre, en todo el país</span></div><div style="font-size:12.5px;color:var(--gris);margin-top:6px">El dato de octubre lo publica el INDEC a mediados de noviembre.</div>', fuente: 'INDEC, por la API de series de datos.gob.ar · mensual. En el prototipo: la nota publicada el 13/10' }) +
+      modulo({ titulo: 'Riesgo país y plazo fijo', pin: 'nuevo', html: '<ul class="renglones"><li><b class="num">602 puntos</b><span class="sub">riesgo país al 13/10 (otro informe del mismo día dio 697: hay que elegir una sola fuente)</span></li><li><b class="num">$42.719</b> de interés por $2.700.000 a 30 días<span class="sub">Banco Nación, octubre. Es un dato, no un consejo</span></li></ul>', fuente: 'ArgentinaDatos (riesgo país) y BCRA (tasas). En el prototipo: notas del 12 y 13/10' }) +
+      modulo({ titulo: 'La nafta en Balcarce', pin: 'nuevo', html: '<p class="aviso-mod">Precio de la súper, la premium y el gasoil en cada estación de Balcarce, con la fecha que informó cada una. La fuente ya se probó desde GitHub el 8/10: 146 filas de Balcarce.</p>', fuente: 'Secretaría de Energía (datos.gob.ar) · semanal. Sin números en el prototipo: no se bajó el archivo' }) +
+      modulo({ titulo: 'Los otros dólares', pin: 'ya', html: '<ul class="renglones"><li>MEP <b class="num" style="float:right">' + pesos(DOLAR.bolsa[1]) + '</b></li><li>Contado con liqui <b class="num" style="float:right">' + pesos(DOLAR.contadoconliqui[1]) + '</b></li><li>Tarjeta <b class="num" style="float:right">' + pesos(DOLAR.tarjeta[1]) + '</b></li><li>Mayorista <b class="num" style="float:right">' + pesos(DOLAR.mayorista[1]) + '</b></li></ul>', fuente: 'DolarApi · venta' }) +
+      masLeido(['Caputo descarta la recesión y asegura que la economía crece', 'La Justicia aclara que la suspensión del aumento de luz alcanza a las cooperativas', 'El INDEC informa un incremento en la desigualdad durante el segundo trimestre']) +
+      seguir('a Economía');
+    return { tira: tira, lateral: lateral };
+  }
+
+  function tablaHTML(zona) {
+    var filas = TABLA[zona].map(function (r) {
+      var cls = r[1] === 'Aldosivi' ? ' class="destaca"' : r[0] === 8 && zona === 'Zona B' ? ' class="corte"' : '';
+      return '<tr' + cls + '><td>' + r[0] + '</td><td>' + esc(r[1]) + '</td><td>' + r[2] + '</td><td>' + (r[3] > 0 ? '+' : '') + r[3] + '</td><td><b>' + r[4] + '</b></td></tr>';
+    }).join('');
+    return '<table class="tabla"><thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>Dif</th><th>Pts</th></tr></thead><tbody>' + filas + '</tbody></table>';
+  }
+  function futbol() {
+    var partido = function (p) { return '<div class="partido"><span class="cuando">' + diaHora(p[0]).replace(' · ', '<br>') + '</span><span class="equipos"><b>' + esc(p[1]) + '</b> vs <b>' + esc(p[2]) + '</b></span><span class="copa">' + p[3] + '</span></div>'; };
+    var tira = modulo({ titulo: 'Se juega', pin: 'ya', accion: 'Fixture', html: PROXIMOS.slice(0, 2).map(partido).join(''), fuente: 'ESPN (futbol.json) · hora de Balcarce' });
+    var lateral =
+      modulo({ titulo: 'Liga Profesional · Clausura', pin: 'ya', accion: 'Tabla completa', html: '<div class="pestanas" role="tablist"><button type="button" role="tab" aria-selected="true" data-zona="Zona A">Zona A</button><button type="button" role="tab" aria-selected="false" data-zona="Zona B">Zona B</button></div><div class="cont-tabla">' + tablaHTML('Zona A') + '</div><div style="font-size:12px;color:var(--gris);margin-top:6px">Aldosivi, el de Mar del Plata, va 14.º en la Zona B.</div>', fuente: 'ESPN (futbol.json) · actualizada el 15/10 15:32' }) +
+      modulo({ titulo: 'Próximos partidos', pin: 'ya', html: PROXIMOS.slice(2).map(partido).join(''), fuente: 'ESPN · Liga y copas con equipos argentinos' }) +
+      modulo({ titulo: 'Últimos resultados', pin: 'ya', html: RESULTADOS.map(function (r) { return '<div class="res"><span class="l">' + esc(r[0]) + '</span><span class="g">' + r[1] + '-' + r[2] + '</span><span>' + esc(r[3]) + '</span></div><div style="font-size:11px;color:var(--gris);text-align:center;margin:-2px 0 2px">' + r[4] + '</div>'; }).join(''), fuente: 'ESPN · con goleadores en la nota de cada fecha' }) +
+      modulo({ titulo: 'Liga Balcarceña', pin: 'mano', mano: true, html: '<ul class="renglones"><li><a href="#">La Liga Balcarceña suspende toda la fecha del fútbol local</a><span class="sub">la última nota de la Liga</span></li></ul><p class="aviso-mod" style="margin-top:8px">La fecha y la tabla no están en ninguna fuente automática: se cargarían en una planilla (la Liga o ustedes) y otra persona revisa.</p>', fuente: 'Propuesta: planilla pública con columna "revisado por"' }) +
+      masLeido(['Liga Profesional: los partidos de la fecha, con horarios', 'Liga Profesional: así terminó la fecha, con los resultados', 'Nicolás Tagliafico critica la Liga Profesional de fútbol']) +
+      seguir('al Fútbol');
+    return { tira: tira, lateral: lateral };
+  }
+
+  var ARMAR = { balcarce: balcarce, economia: economia, futbol: futbol };
+  var MENU = [['Portada'], ['Balcarce', 'balcarce'], ['Política'], ['Policiales'], ['Fútbol', 'futbol'], ['Deportes'], ['Automovilismo'], ['Agro'], ['Economía', 'economia'], ['Agenda', null, 1], ['Clima', null, 1], ['Farmacias', null, 1], ['Dólar', null, 1]];
+
+  function pintarSitio(clave) {
+    var s = SECCIONES[clave]; var n = notasHTML(s); var m = ARMAR[clave]();
+    $('#sitio').innerHTML =
+      '<div class="chapa"><b>Jueves 15 de octubre</b><span>14° Nublado</span><span>Farmacia: Norte</span></div>' +
+      '<div class="tope"><span class="logo">Radar <b>Balcarce</b></span><span class="lupa" aria-hidden="true">⌕</span></div>' +
+      '<nav class="menu" aria-label="Secciones">' + MENU.map(function (x) { return '<a href="#"' + (x[2] ? ' class="serv"' : '') + (x[1] === clave ? ' aria-current="page"' : '') + '>' + x[0] + '</a>'; }).join('') + '</nav>' +
+      '<div class="cuerpo-sitio"><div class="migas">Portada › ' + s.nombre + '</div>' +
+      '<div class="titulo-seccion" style="--c:' + s.color + '"><span class="barra"></span><h1>' + s.nombre + '</h1><span class="cuantas">' + s.cuantas + ' notas</span><span class="lema">' + s.lema + '</span></div>' +
+      '<div class="portal"><div class="col-notas"><div class="arriba">' + n.arriba + '</div><div class="abajo">' + n.abajo + '</div></div>' +
+      '<aside class="col-datos" aria-label="Datos de ' + s.nombre + '"><div class="tira">' + m.tira + '</div><div class="lateral">' + m.lateral + '</div></aside></div></div>';
+    activarGrafico($('#sitio'));
+    $$('.pestanas button', $('#sitio')).forEach(function (b) {
+      b.addEventListener('click', function () {
+        $$('.pestanas button', $('#sitio')).forEach(function (o) { o.setAttribute('aria-selected', String(o === b)); });
+        $('.cont-tabla', $('#sitio')).innerHTML = tablaHTML(b.getAttribute('data-zona'));
+      });
+    });
+    $('#sitio').scrollTop = 0;
+  }
+  $$('[data-sec]').forEach(function (b) {
+    b.addEventListener('click', function () { $$('[data-sec]').forEach(function (o) { o.setAttribute('aria-pressed', String(o === b)); }); pintarSitio(b.getAttribute('data-sec')); });
+  });
+  $$('[data-vista]').forEach(function (b) {
+    b.addEventListener('click', function () { $$('[data-vista]').forEach(function (o) { o.setAttribute('aria-pressed', String(o === b)); }); $('#marco').classList.toggle('celular', b.getAttribute('data-vista') === 'celular'); });
+  });
+  $('#marcar').addEventListener('click', function () { var on = !$('#marco').classList.contains('marcar'); $('#marco').classList.toggle('marcar', on); this.setAttribute('aria-pressed', String(on)); });
+  pintarSitio('balcarce');
+
+  /* ---------------------------------------------- la tabla de todas las secciones */
+  // [módulo, fuente, cada cuánto, esfuerzo, riesgo, prioridad, estado]
+  var CATALOGO = [
+    ['Balcarce', 'var(--s-balcarce)', '22 por semana con el mapa nuevo', [
+      ['Farmacia de turno (hoy y mañana)', 'Turnos que ya arma la web (portada.json, diaDeTurno)', 'cambia a las 8:30', 'S', 'Bajo', 'alta', 'ya'],
+      ['El clima ahora y tres días, con aviso', 'Open-Meteo (respaldo api.met.no)', 'cada media hora y en el navegador', 'S', 'Bajo', 'alta', 'ya'],
+      ['Agenda de la semana', 'API de eventos de la Municipalidad (agenda.json)', 'cada media hora', 'S', 'Bajo', 'alta', 'ya'],
+      ['Teléfonos útiles', 'Guía propia (NUMEROS, ingesta/utiles.mjs)', 'a mano, cuando cambian', 'S', 'Bajo: un número que cambia sin aviso', 'alta', 'ya'],
+      ['Trámites, horarios y avisos', 'Notas ya publicadas con fuente oficial (Municipalidad, Concejo, ARBal) y palabras de trámite', 'cada media hora', 'M', 'Medio: que se cuele algo que no es un aviso', 'media', 'nuevo'],
+      ['La nafta en Balcarce, estación por estación', 'Secretaría de Energía, datos.gob.ar (probado el 8/10: 146 filas)', 'semanal', 'M', 'Bajo-medio: cada estación informa cuando quiere; se muestra la fecha', 'media', 'nuevo'],
+      ['Cortes programados de luz y agua', 'No hay fuente automática (la Cooperativa y OSEBAL avisan en redes): carga desde el celular', 'cuando avisan', 'M', 'Alto: un corte viejo publicado hace daño', 'duda', 'mano'],
+      ['Recolección y barrido por barrio', 'A mano, del municipio', 'cuando cambia', 'M', 'Alto: queda desactualizado', 'baja', 'mano']
+    ]],
+    ['Política', 'var(--s-politica)', '40 por semana', [
+      ['Agenda del Concejo (próxima sesión)', 'Notas del Concejo (fuente oficial que ya se lee) y la fecha cargada a mano', 'semanal', 'M', 'Medio: sesiones que se pasan de día', 'media', 'mano'],
+      ['La plata que manda la Provincia', 'Datos abiertos de la Provincia (probado: 2010 a julio de 2026)', 'mensual', 'M', 'Bajo: aclarar si son pesos de hoy', 'media', 'nuevo'],
+      ['Así vota Balcarce (20 años)', 'Resultados electorales (probado: 2005-2023 y PASO)', 'fijo hasta 2027', 'M', 'Bajo: no proyectar nada', 'baja', 'nuevo'],
+      ['La semana en el Boletín Oficial municipal', 'SIBOM (legible el 8/10), resumen con IA verificado', 'semanal', 'L', 'Medio: la IA resume una norma; nombrar sólo funcionarios', 'baja', 'nuevo'],
+      ['Teléfonos del Municipio y del Concejo', 'NUMEROS', 'fijo', 'S', 'Bajo', 'media', 'ya']
+    ]],
+    ['Policiales', 'var(--s-policiales)', '8 por semana', [
+      ['Emergencias: 911, 107, 100, Comisaría de la Mujer y la línea 144', 'NUMEROS (falta sumar la 144, nacional)', 'fijo', 'S', 'Bajo', 'alta', 'ya'],
+      ['Cómo denunciar una estafa', 'Texto propio, revisado por una persona', 'fijo', 'S', 'Bajo', 'media', 'mano'],
+      ['Estadística criminal de Balcarce', 'SNIC: bloqueado desde GitHub (403 y 404)', '—', 'M', 'No se puede hoy', 'no', 'nuevo'],
+      ['Mapa del delito', '—', '—', 'L', 'Alto: puede identificar víctimas y domicilios', 'no', 'nuevo']
+    ]],
+    ['Fútbol', 'var(--s-futbol)', '36 por semana', [
+      ['Tabla de la Liga por zona, con Aldosivi marcado', 'ESPN (futbol.json, como /tablas/liga-profesional)', 'cada corrida en la nube', 'S', 'Medio: ESPN no es una API oficial; si falla queda lo último', 'alta', 'ya'],
+      ['Próximos partidos con hora de Balcarce', 'ESPN (futbol.json)', 'cada corrida', 'S', 'Medio', 'alta', 'ya'],
+      ['Últimos resultados', 'ESPN (futbol.json)', 'cada corrida', 'S', 'Medio', 'alta', 'ya'],
+      ['Copas con equipos argentinos', 'ESPN (Libertadores, Sudamericana, Copa Argentina)', 'cada corrida', 'S', 'Medio', 'media', 'ya'],
+      ['Así está el descenso', 'Cálculo propio con la tabla anual y las reglas de la AFA', 'semanal', 'M', 'Medio-alto: desempates', 'media', 'nuevo'],
+      ['Liga Balcarceña: fecha y tabla', 'Planilla pública que carga la Liga o ustedes, con "revisado por"', 'semanal', 'M', 'Medio: depende de una persona', 'alta', 'mano'],
+      ['La Selección: próximo partido', 'ESPN (otra liga del mismo servicio; sin probar)', 'cada corrida', 'S', 'Medio', 'media', 'nuevo']
+    ]],
+    ['Deportes', 'var(--s-deportes)', '37 por semana', [
+      ['Agenda deportiva de Balcarce', 'agenda.json (eventos con categoría deporte)', 'cada media hora', 'S', 'Bajo', 'media', 'ya'],
+      ['Este finde en Balcarce: qué se juega', 'Planilla cargada por clubes o por ustedes', 'semanal', 'M', 'Medio: "a confirmar" si no está confirmado', 'media', 'mano'],
+      ['Clubes de acá en las ligas de Mar del Plata (hockey, rugby)', 'Sitios de las ligas y El Marplatense (ya se lee)', 'semanal', 'M', 'Medio', 'baja', 'nuevo'],
+      ['Juegos Bonaerenses', 'Decidido el 12/10: no se cubren', '—', '—', '—', 'no', 'nuevo']
+    ]],
+    ['Automovilismo', 'var(--s-automovilismo)', '38 por semana', [
+      ['Campeonato de F1 (los cinco primeros y Colapinto)', 'Jolpica (f1.json)', 'cada corrida', 'S', 'Bajo', 'alta', 'ya'],
+      ['Próxima carrera con horario de Balcarce (Austin, 25/10, 17:00)', 'Jolpica (f1.json)', 'cada corrida', 'S', 'Bajo', 'alta', 'ya'],
+      ['Último resultado: podio y Colapinto', 'Jolpica (f1.json)', 'cada corrida', 'S', 'Bajo', 'media', 'ya'],
+      ['Lo que viene en el autódromo Fangio', 'agenda.json (categoría automovilismo)', 'cada media hora', 'S', 'Bajo', 'media', 'ya'],
+      ['TC con Santiago Mangoni', 'Página del campeonato de la ACTC (responde y lo nombra, 8/10)', 'después de cada fecha', 'M', 'Medio: si cambia la página; provisorio hasta el dictamen', 'media', 'nuevo']
+    ]],
+    ['Agro', 'var(--s-agro)', '19 por semana', [
+      ['Lluvia de la semana y de los próximos días en Balcarce', 'Open-Meteo (el mismo que ya usamos; agrega lluvia acumulada y temperatura del suelo)', 'diaria', 'S', 'Bajo: es modelo, no pluviómetro', 'alta', 'nuevo'],
+      ['Dólar mayorista', 'DolarApi (dolar.json)', 'cada compilación', 'S', 'Bajo', 'media', 'ya'],
+      ['Siembra y cosecha de Balcarce', 'Estimaciones agrícolas por partido (probado: 657 filas)', 'por campaña', 'M', 'Bajo: llegan con atraso', 'media', 'nuevo'],
+      ['Precios de granos (pizarra de Rosario)', 'Cámara Arbitral de la Bolsa de Comercio de Rosario: página pública, no probada desde GitHub', 'día hábil', 'M', 'Medio-alto: sin API; puede bloquear', 'duda', 'nuevo'],
+      ['Hacienda (Mercado Agroganadero de Cañuelas)', 'Página pública, no probada desde GitHub', 'día hábil', 'M', 'Medio-alto', 'duda', 'nuevo'],
+      ['Remates de la zona', 'Consignatarias, a mano', 'semanal', 'M', 'Medio', 'baja', 'mano']
+    ]],
+    ['Economía', 'var(--s-economia)', '42 por semana', [
+      ['Dólar oficial y blue (y los otros)', 'DolarApi, respaldo Bluelytics (dolar.json)', 'al abrir y cada 5 minutos', 'S', 'Bajo', 'alta', 'ya'],
+      ['El dólar en tres semanas (gráfico)', 'dolar-historia.json (ya se guarda)', 'día hábil', 'S', 'Bajo', 'alta', 'ya'],
+      ['Inflación del mes', 'INDEC por la API de series de datos.gob.ar (responde, 8/10)', 'mensual', 'S', 'Bajo-medio: si el INDEC cambia la base', 'alta', 'nuevo'],
+      ['La nafta en Balcarce', 'Secretaría de Energía (la misma de Balcarce)', 'semanal', 'M', 'Bajo-medio', 'alta', 'nuevo'],
+      ['Riesgo país', 'ArgentinaDatos (gratis, sin clave, no oficial)', 'diaria', 'S', 'Medio: el 13/10 dos fuentes dieron 602 y 697', 'media', 'nuevo'],
+      ['Plazo fijo: qué paga cada banco', 'BCRA, régimen de transparencia (responde)', 'semanal', 'M', 'Medio: es dato, no consejo', 'baja', 'nuevo'],
+      ['Cuándo cobro (jubilaciones, AUH)', 'Calendario de ANSES cargado a mano, con doble control', 'mensual', 'M', 'Alto: una fecha mal hace daño', 'duda', 'mano']
+    ]],
+    ['Cultura', 'var(--s-cultura)', '12 por semana', [
+      ['Agenda cultural', 'agenda.json (hoy la sección ya muestra 4 eventos)', 'cada media hora', 'S', 'Bajo', 'alta', 'ya'],
+      ['Un día como hoy', 'Efemérides que ya se arman cada mes', 'diaria', 'S', 'Bajo', 'media', 'ya'],
+      ['Fiestas del año', 'portada.json (las anuales, "fecha a confirmar")', 'cuando se confirman', 'S', 'Bajo', 'media', 'ya'],
+      ['Cartelera del Teatro Municipal', 'Agenda municipal o a mano', 'semanal', 'M', 'Medio', 'duda', 'mano'],
+      ['Convocatorias para artistas', 'cultura.gob.ar bloqueado desde GitHub (403)', '—', 'M', 'No se puede hoy', 'no', 'nuevo']
+    ]],
+    ['Tecnología e IA', 'var(--s-tecnologia)', '3 por semana', [
+      ['Lo último de inteligencia artificial', 'El tema /tema/inteligencia-artificial (ya existe)', 'cada media hora', 'S', 'Bajo', 'media', 'ya'],
+      ['La IA en diez palabras (glosario)', 'Texto propio, una vez', 'fijo', 'S', 'Bajo', 'media', 'mano'],
+      ['Estafas digitales: cómo darse cuenta', 'Texto propio y notas de la sección', 'fijo', 'S', 'Bajo', 'media', 'mano'],
+      ['Lanzamientos de celulares y apps', 'Sin fuente gratis y estable', '—', '—', '—', 'no', 'nuevo']
+    ]],
+    ['Ciencia', 'var(--s-ciencia)', 'nueva: 3 a 4 por semana (10 a 20 con "fuente sola")', [
+      ['Ciencia hecha en Balcarce (INTA y Facultad de Agrarias)', 'OpenAlex (gratis, responde: 201 trabajos en 2026) y el repositorio del INTA', 'semanal', 'M', 'Medio: lenguaje simple sin exagerar', 'alta', 'nuevo'],
+      ['El cielo de la semana: sol y luna', 'Open-Meteo (salida y puesta del sol) y cálculo propio de la luna', 'diaria', 'S', 'Bajo', 'media', 'nuevo'],
+      ['Becas y convocatorias', 'A mano', 'semanal', 'M', 'Medio', 'baja', 'mano']
+    ]],
+    ['Educación', 'var(--s-educacion)', 'nueva: 10 por semana', [
+      ['Próximos feriados (9 y 11/11 por la visita del papa, 23/11)', 'feriados-piezas.json (ya se arma cada mes)', 'mensual', 'S', 'Bajo', 'alta', 'ya'],
+      ['¿Hay clases? Calendario escolar', 'Calendario de la Dirección General de Escuelas cargado a mano, más feriados y suspensiones', 'anual y cuando hay aviso', 'M', 'Alto: decir "no hay clases" cuando hay', 'duda', 'mano'],
+      ['Fechas para anotarse (becas, inscripciones)', 'A mano, siempre con el enlace oficial', 'mensual', 'M', 'Medio', 'media', 'mano'],
+      ['Las escuelas de Balcarce en números', 'Provincia (probado: 177 establecimientos)', 'anual', 'M', 'Bajo: nunca grupos de menos de 10 alumnos', 'baja', 'nuevo']
+    ]],
+    ['Salud', 'var(--s-salud)', 'nueva: 11 por semana', [
+      ['Farmacia de turno', 'La misma de la portada (diaDeTurno)', 'cambia a las 8:30', 'S', 'Bajo', 'alta', 'ya'],
+      ['Teléfonos de salud: Hospital, SAME 107, Zoonosis', 'NUMEROS', 'fijo', 'S', 'Bajo', 'alta', 'ya'],
+      ['La campaña del mes (octubre rosa, vacunas)', 'A mano y notas de LALCEC y el Hospital', 'mensual', 'S', 'Bajo', 'media', 'mano'],
+      ['Vacunación: qué toca y dónde', 'A mano, con "confirmado el…"', 'mensual', 'M', 'Medio', 'media', 'mano'],
+      ['Retirados de la venta (ANMAT)', 'Disposiciones de ANMAT (responde)', 'semanal', 'M', 'Medio: marca y lote textuales', 'baja', 'nuevo'],
+      ['Parte epidemiológico (dengue, gripe)', 'Boletín nacional, por región sanitaria', 'semanal', 'L', 'Alto: alarmismo', 'no', 'nuevo']
+    ]],
+    ['Argentina', 'var(--s-pais)', '10 por semana', [
+      ['Próximos feriados', 'feriados-piezas.json', 'mensual', 'S', 'Bajo', 'alta', 'ya'],
+      ['El dólar en una línea', 'dolar.json', 'al abrir', 'S', 'Bajo', 'media', 'ya'],
+      ['Qué cambia desde hoy (Boletín Oficial)', 'Boletín Oficial nacional (responde)', 'diaria', 'L', 'Medio: no atribuir efectos que la norma no dice', 'baja', 'nuevo']
+    ]],
+    ['En todas las secciones', 'var(--gris)', '', [
+      ['Lo más leído de la sección', 'estadisticas.json (Cloudflare: las 10 notas más vistas de cada día)', 'diaria', 'S', 'Alto hoy: 527 visitas en 14 días; la más leída de Economía tuvo 6', 'baja', 'ya'],
+      ['Seguí leyendo: lo último de otras secciones', 'Ya existe en cada nota (seguir-leyendo.js)', 'cada compilación', 'S', 'Bajo', 'media', 'ya'],
+      ['Seguí la sección: feed, Facebook, Instagram y "mandanos un dato"', 'El feed por sección ya existe; WhatsApp 2266 51-1612', 'fijo', 'S', 'Bajo', 'media', 'ya'],
+      ['Temas de la sección', 'Los temas (hoy casi sin uso: 4 en 7 días; la tira está apagada)', 'cada compilación', 'S', 'Bajo', 'baja', 'ya'],
+      ['Newsletter por mail', 'Haría falta un servicio de correo y guardar los mails (datos personales)', 'diaria o semanal', 'L', 'Medio: costo y privacidad', 'no', 'nuevo']
+    ]]
+  ];
+  var NOMBRE_PRIO = { alta: 'Alta', media: 'Media', baja: 'Baja', duda: 'Duda', no: 'No' };
+  var NOMBRE_EST = { ya: 'Ya lo tenemos', nuevo: 'Nuevo', mano: 'A mano' };
+  var cuerpo = $('#tabla-modulos tbody');
+  cuerpo.innerHTML = CATALOGO.map(function (g) {
+    return '<tr class="sec"><th colspan="5" style="--c:' + g[1] + '"><i></i>' + g[0] + (g[2] ? ' <small>· ' + g[2] + '</small>' : '') + '</th></tr>' +
+      g[3].map(function (m) {
+        return '<tr data-esf="' + m[3] + '" data-prio="' + m[5] + '" data-est="' + m[6] + '"><td>' + esc(m[0]) + '</td><td data-r="Fuente">' + esc(m[1]) + '</td><td data-r="Cada cuánto">' + esc(m[2]) + '</td><td data-r="Riesgo">' + esc(m[4]) + '</td>' +
+          '<td class="etiquetas">' + (m[3] !== '—' ? '<span class="et ' + m[3] + '" title="Esfuerzo">Esfuerzo ' + m[3] + '</span> ' : '') + '<span class="et ' + m[5] + '" title="Prioridad">' + NOMBRE_PRIO[m[5]] + '</span> <span class="et ' + m[6] + '">' + NOMBRE_EST[m[6]] + '</span></td></tr>';
+      }).join('');
+  }).join('');
+  $$('.filtros button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      $$('.filtros button').forEach(function (o) { o.setAttribute('aria-pressed', String(o === b)); });
+      var f = b.getAttribute('data-f');
+      $$('#tabla-modulos tbody tr').forEach(function (tr) {
+        if (tr.classList.contains('sec')) return;
+        var ok = f === 'todo' || (f === 'ya' && tr.dataset.est === 'ya') || (f === 'alta' && tr.dataset.prio === 'alta') || (f === 'S' && tr.dataset.esf === 'S') || (f === 'mano' && tr.dataset.est === 'mano') || (f === 'no' && tr.dataset.prio === 'no');
+        tr.hidden = !ok;
+      });
+      $$('#tabla-modulos tbody tr.sec').forEach(function (sec) {
+        var t = sec.nextElementSibling, alguna = false;
+        while (t && !t.classList.contains('sec')) { if (!t.hidden) alguna = true; t = t.nextElementSibling; }
+        sec.hidden = !alguna;
+      });
+    });
+  });
+
+  /* ---------------------------------------------- decisiones */
+  var DECISIONES = [
+    ['d1', 'La idea general', 'Que cada sección tenga una columna de datos propia (mini portal) al costado de las notas, empezando por Balcarce, Economía y Fútbol.', 'Hoy la página de sección es una sola columna. Es un cambio visible del sitio: por eso se pregunta.'],
+    ['d2', 'Celular', 'En el celular: una tira con dos datos arriba de las notas y el resto de los módulos después de las cinco primeras notas.', 'La otra opción es todo al final, pero ahí no lo ve nadie.'],
+    ['d3', 'Balcarce · lo que ya tenemos', 'Mostrar en la sección Balcarce el clima, la farmacia de turno, la agenda y los teléfonos útiles.', 'Ya están en la portada. El 28/09 se sacaron de la sección "porque eran ruido": ahora irían en la columna, no encima de las notas.'],
+    ['d4', 'Balcarce · trámites y avisos', 'Sumar "Trámites, horarios y avisos" armado solo con las notas de fuente oficial que hablan de horarios, tasas, inscripciones y tarifas.', 'Esfuerzo M. Riesgo: que se cuele una nota que no es un aviso.'],
+    ['d5', 'Balcarce · cortes programados', 'Cargar los cortes de luz y agua a mano desde el celular, con la hora del aviso, y que se borren solos cuando pasa el corte.', 'No hay fuente automática. Si nadie lo carga, el módulo no aparece.'],
+    ['d6', 'Economía · el dólar', 'Mostrar en Economía el dólar oficial y blue, los otros dólares y el gráfico de tres semanas.', 'Todo ya se guarda (dolar.json y dolar-historia.json). Esfuerzo S.'],
+    ['d7', 'Economía · datos oficiales', 'Sumar la inflación del INDEC (API de datos.gob.ar) y, en una segunda tanda, riesgo país y plazo fijo, siempre como dato y no como consejo.', 'El riesgo país viene de un servicio no oficial y las fuentes no coinciden (602 y 697 el 13/10).'],
+    ['d8', 'Economía y Balcarce · la nafta', 'Sumar el precio de la nafta en cada estación de Balcarce (Secretaría de Energía), con la fecha que informó cada una.', 'Fuente probada el 8/10. Es el dato económico más "de acá" que encontramos.'],
+    ['d9', 'Fútbol · lo que ya tenemos', 'Mostrar en Fútbol la tabla por zona (con Aldosivi marcado), los próximos partidos y los últimos resultados.', 'Ya se bajan para /tablas y las notas de fútbol. /tablas/liga-profesional tuvo 8 visitas en 14 días, el doble que /seccion/economia.'],
+    ['d10', 'Fútbol · Liga Balcarceña', 'Cargar la fecha y la tabla de la Liga Balcarceña en una planilla (la Liga o ustedes) con otra persona que revisa.', 'Es lo más local de Fútbol y no está en ninguna fuente automática.'],
+    ['d11', 'Automovilismo', 'Mostrar el campeonato de F1 y la próxima carrera con hora de Balcarce (ya lo tenemos) y, después, el TC con Santiago Mangoni.', 'F1: esfuerzo S. TC: hay que leer la página de la ACTC y confirmar que Mangoni es de Balcarce.'],
+    ['d12', 'Agro', 'Sumar la lluvia de la semana y de los próximos días (Open-Meteo, que ya usamos) y el dólar mayorista. Granos y hacienda, en duda hasta probar que se pueden leer.', 'La pizarra de Rosario y Cañuelas no se probaron desde GitHub.'],
+    ['d13', 'Educación, Salud y Ciencia', 'Cuando abran estas secciones: feriados en Educación, farmacia y teléfonos en Salud, "Ciencia hecha en Balcarce" (OpenAlex) en Ciencia. "¿Hay clases?" sólo con una persona responsable.', 'Decir "no hay clases" cuando hay es de lo peor que puede pasar.'],
+    ['d14', 'Lo más leído', 'No mostrar "lo más leído de la sección" hasta que haya tráfico; cuando se muestre, sólo con un piso (por ejemplo, 3 notas con 20 vistas o más en 7 días).', 'Hoy son 527 visitas en 14 días: el ranking es casualidad.'],
+    ['d15', 'Newsletter', 'No hacer newsletter por mail por ahora; sí el bloque "Seguí la sección" (feed, Facebook, Instagram y mandanos un dato).', 'El mail pide un servicio nuevo y guardar datos personales. Las redes no se difunden hasta la 1.0 (12/10).'],
+    ['d16', 'El orden', 'Hacerlo en tres tandas: 1) lo que ya tenemos (esfuerzo S), 2) datos abiertos nuevos (inflación, nafta, lluvia, OpenAlex), 3) lo cargado a mano. Cada tanda con sus pruebas y mirando la web publicada.', 'La primera tanda son unos pocos días de trabajo y no agrega fuentes nuevas.']
+  ];
+  $('#lista-decisiones').innerHTML = DECISIONES.map(function (d) {
+    return '<div class="decision" data-k="' + d[0] + '" data-titulo="' + esc(d[1]) + '" data-propuesta="' + esc(d[2]) + '"><p class="decision-tit">' + esc(d[1]) + '</p><p class="propuesta"><b>Propuesta:</b> ' + esc(d[2]) + '</p><p class="contexto">' + esc(d[3]) + '</p>' +
+      '<div class="opciones" role="group" aria-label="Decisión"><button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button></div>' +
+      '<label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label></div>';
+  }).join('');
+
+  var CLAVE = 'radar-mini-portales-v1', CLAVE_TEMA = 'radar-mini-portales-tema', CLAVE_QUIEN = 'radar-mini-portales-quien';
+  var hayAlmacen = true;
+  function leer(k, def) { try { var v = localStorage.getItem(k); return v == null ? def : v; } catch (e) { hayAlmacen = false; return def; } }
+  function escribir(k, v) { try { localStorage.setItem(k, v); } catch (e) { hayAlmacen = false; } }
+  var decisiones = {};
+  try { decisiones = JSON.parse(leer(CLAVE, '{}')) || {}; } catch (e) { decisiones = {}; }
+  function guardar() { escribir(CLAVE, JSON.stringify(decisiones)); }
+  var cajas = $$('.decision');
+  function pintar(caja) {
+    var d = decisiones[caja.getAttribute('data-k')] || {};
+    if (d.d) caja.setAttribute('data-d', d.d); else caja.removeAttribute('data-d');
+    $$('.op', caja).forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-v') === d.d)); });
+    var ta = $('textarea', caja); if (ta && document.activeElement !== ta) ta.value = d.c || '';
+  }
+  function contar() {
+    var t = { 'Sí': 0, 'No': 0, 'Duda': 0 }, hechas = 0;
+    cajas.forEach(function (c) { var d = (decisiones[c.getAttribute('data-k')] || {}).d; if (d) { t[d] += 1; hechas += 1; } });
+    $('#progreso').textContent = hechas + ' de ' + cajas.length;
+    $('#cuenta').textContent = 'Decididas ' + hechas + ' de ' + cajas.length + ': Sí ' + t['Sí'] + ' · No ' + t['No'] + ' · Duda ' + t['Duda'] + '.';
+  }
+  function cambiar(caja, cambios) {
+    var k = caja.getAttribute('data-k');
+    var nuevo = Object.assign({}, decisiones[k] || {}, cambios);
+    if (!nuevo.d) delete nuevo.d; if (!nuevo.c) delete nuevo.c;
+    if (!nuevo.d && !nuevo.c) delete decisiones[k]; else decisiones[k] = nuevo;
+    guardar(); pintar(caja); contar();
+  }
+  cajas.forEach(function (caja) {
+    $$('.op', caja).forEach(function (b) {
+      b.addEventListener('click', function () { var v = b.getAttribute('data-v'); var act = (decisiones[caja.getAttribute('data-k')] || {}).d; cambiar(caja, { d: act === v ? '' : v }); });
+    });
+    var ta = $('textarea', caja), t = null;
+    ta.addEventListener('input', function () { clearTimeout(t); t = setTimeout(function () { cambiar(caja, { c: ta.value.trim() }); }, 300); });
+    ta.addEventListener('blur', function () { cambiar(caja, { c: ta.value.trim() }); });
+    pintar(caja);
+  });
+  contar();
+  if (!hayAlmacen) $('#aviso-almacen').hidden = false;
+  var quien = $('#quien'); quien.value = leer(CLAVE_QUIEN, ''); quien.addEventListener('input', function () { escribir(CLAVE_QUIEN, quien.value); });
+  function armarTexto() {
+    var t = { 'Sí': 0, 'No': 0, 'Duda': 0 }, sin = 0, lineas = [];
+    cajas.forEach(function (c) {
+      var d = decisiones[c.getAttribute('data-k')] || {};
+      if (d.d) t[d.d] += 1; else sin += 1;
+      if (!d.d && !d.c) return;
+      lineas.push(c.getAttribute('data-titulo')); lineas.push('  Propuesta: ' + c.getAttribute('data-propuesta')); lineas.push('  Decisión: ' + (d.d || 'sin decidir'));
+      if (d.c) lineas.push('  Comentario: ' + d.c); lineas.push('');
+    });
+    var cab = 'Decisiones sobre los mini portales de Radar Balcarce (' + new Date().toLocaleDateString('es-AR') + ')' + (quien.value.trim() ? ' — de: ' + quien.value.trim() : '');
+    return cab + '\nSí ' + t['Sí'] + ' · No ' + t['No'] + ' · Duda ' + t['Duda'] + ' · sin decidir ' + sin + '\n\n' + (lineas.length ? lineas.join('\n') : '(todavía no marcaron nada)\n');
+  }
+  function aviso(txt) { var el = $('#toast'); el.textContent = txt; el.classList.add('ver'); clearTimeout(aviso.t); aviso.t = setTimeout(function () { el.classList.remove('ver'); }, 3500); }
+  $('#copiar').addEventListener('click', function () {
+    var texto = armarTexto(), caja = $('#caja'); caja.value = texto; caja.hidden = false;
+    var respaldo = function () { try { caja.focus(); caja.select(); var ok = document.execCommand('copy'); aviso(ok ? 'Copiado. Péguenlo en el chat.' : 'No se pudo copiar solo: está seleccionado abajo.'); } catch (e) { aviso('No se pudo copiar solo: cópienlo desde la caja de abajo.'); } };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(texto).then(function () { aviso('Copiado. Péguenlo en el chat.'); }, respaldo); else respaldo();
+  });
+  $('#descargar').addEventListener('click', function () {
+    var blob = new Blob([armarTexto()], { type: 'text/plain;charset=utf-8' });
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'decisiones-mini-portales-' + new Date().toISOString().slice(0, 10) + '.txt';
+    document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  });
+  $('#borrar').addEventListener('click', function () {
+    if (!window.confirm('¿Borrar todas las decisiones y comentarios guardados en este navegador?')) return;
+    decisiones = {}; guardar(); cajas.forEach(pintar); contar(); $('#caja').hidden = true;
+  });
+
+  /* ---------------------------------------------- tema */
+  var raiz = document.documentElement;
+  function aplicarTema(t) { if (t === 'light' || t === 'dark') raiz.setAttribute('data-theme', t); else raiz.removeAttribute('data-theme'); $('#tema').textContent = t === 'light' ? 'Claro' : t === 'dark' ? 'Oscuro' : 'Tema: auto'; }
+  var tema = leer(CLAVE_TEMA, 'auto'); aplicarTema(tema);
+  $('#tema').addEventListener('click', function () { tema = tema === 'auto' ? 'light' : tema === 'light' ? 'dark' : 'auto'; escribir(CLAVE_TEMA, tema); aplicarTema(tema); });
+})();
+</script>
+</body>
+</html>

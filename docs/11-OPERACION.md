@@ -1,7 +1,7 @@
 # 11 · Operación: el manual de uso diario
 
-*Escrito el 28/09/2026 (puesto al día el 29/09) para Hernán y Andrés, verificado contra el código y los
-workflows de ese día. Es un manual de tareas: cada sección dice qué hacer, paso
+*Escrito el 28/09/2026 para Hernán y Andrés. Actualizado el 16/10/2026, verificado contra el código, los
+workflows y el reloj de Cloudflare de ese día. Es un manual de tareas: cada sección dice qué hacer, paso
 a paso, y qué va a pasar después. Por qué funciona así está en los otros
 documentos: las redes en [`07-REDES.md`](07-REDES.md), dónde corre cada cosa
 en [`08-INFRAESTRUCTURA.md`](08-INFRAESTRUCTURA.md), el panel en `09-PANEL`,
@@ -18,11 +18,12 @@ lo que falta, en [`PENDIENTES.md`](../PENDIENTES.md).*
 | Facebook | La página "Radar Balcarce" (se busca por el nombre; su ID para la API está en `docs/07-REDES.md`) | Cualquiera |
 | **El panel del celular** (el de todos los días) | https://radarbalcarce.com/panel/ (instalado como app desde Chrome) | Quien tenga una llave de GitHub cargada en su celular |
 | El modo de prueba del panel del celular | https://radarbalcarce.com/panel/?demo | Cualquiera (notas inventadas, no guarda nada) |
-| **El panel**, desde la PC | http://localhost:4321 | Hernán y Andrés, con su usuario y contraseña |
-| El panel, desde afuera | La dirección del túnel de Tailscale, en `panel/datos/DIRECCION-DEL-PANEL.txt`, en la PC (no va al repositorio, que es público) | Igual |
+| El panel de la PC (**en desuso desde el 8/10**) | http://localhost:4321 | Hernán y Andrés, con su usuario y contraseña |
+| El panel de la PC, desde afuera | La dirección del túnel de Tailscale, en `panel/datos/DIRECCION-DEL-PANEL.txt`, en la PC (no va al repositorio, que es público) | Igual |
 | El código y las corridas | https://github.com/radarbalcarce/radar-balcarce (pestaña **Actions**) | Público desde el 25/09 (sigue público: privado costaría minutos de Actions). Dueña: `radarbalcarce@gmail.com`; colaboradores: `balcardev`, Andrés (`agerace`) y Hernán (`hernanaccomo-pixel`). Hasta el 15/10/2026 fue `balcar-dev/radar-balcarce` |
 | Cloudflare (la web, el dominio, las estadísticas) | https://dash.cloudflare.com | `radarbalcarce@gmail.com` |
-| El reloj (Worker `radar-balcarce-reloj`) | https://dash.cloudflare.com → Workers y Pages | `radarbalcarce@gmail.com` |
+| El reloj (Worker `radar-balcarce-reloj`) y el vigilante que manda los mails (Worker `radar-balcarce-vigilante`) | https://dash.cloudflare.com → Workers y Pages | `radarbalcarce@gmail.com` |
+| Los avisos y los informes diarios | El mail de `radarbalcarce@gmail.com` (remitente `vigilante@radarbalcarce.com`) | Quien tenga acceso a ese mail |
 | cron-job.org (el reloj anterior, con sus 3 trabajos pausados) | https://console.cron-job.org/jobs | `radarbalcarce@gmail.com` |
 | Google Search Console | https://search.google.com/search-console | `radarbalcarce@gmail.com` |
 | Google AI Studio (las claves y el gasto de Gemini) | https://aistudio.google.com | `radarbalcarce@gmail.com` |
@@ -36,26 +37,29 @@ Console, y desde el 15/10/2026 también GitHub: es la dueña del repositorio); `
 
 La web, las redes y la vigilancia andan solas con la PC apagada; a una persona
 le queda decidir las notas que esperan, corregir o sacar lo que salió mal,
-mirar el WhatsApp de las 21 y, cuando algo deja de salir, revisar en orden
-el reloj de Cloudflare, GitHub Actions y el interruptor de las redes.
+leer los dos informes por mail (8:15 y 21:15) y, cuando algo deja de salir,
+revisar en orden el mail de avisos, el reloj de Cloudflare, GitHub Actions y el
+interruptor de las redes.
 
 ## Antes de empezar: dónde se hace cada cosa
 
 | Dónde | Qué se hace ahí | Se puede desde el celular |
 |---|---|---|
-| **El panel del celular** (radarbalcarce.com/panel/) | Decidir lo que espera, corregir, cambiar de sección, reescribir con IA, retirar y volver a publicar, mandar una nota a las redes, ver lo que sale hoy en las redes, actualizar la web | Sí: es para eso. Con la PC apagada |
+| **El panel del celular** (radarbalcarce.com/panel/) | Decidir lo que espera, corregir, cambiar de sección, reescribir con IA, retirar y volver a publicar, mandar una nota a las redes, ver lo que sale hoy en las redes, pistas y notas propias, fotos, contactos, efemérides, revisión y números, actualizar la web | Sí: es para eso. Con la PC apagada |
 | **GitHub** (github.com/radarbalcarce/radar-balcarce; se entra con la cuenta de GitHub de cada uno) | Ver si algo falló (pestaña **Actions**), correr un workflow a mano (**Run workflow**), corregir o retirar una nota editando un archivo, prender o apagar las redes (**Settings**) | Sí, desde el navegador |
-| **El panel de la PC** (http://localhost:4321 en la PC; afuera, la dirección de `panel/datos/DIRECCION-DEL-PANEL.txt`) | Cargar avisos, la agenda a mano, el buzón (lo que el celular no hace) | Sí, si la PC está prendida |
-| **Cloudflare, Workers** (dash.cloudflare.com, cuenta `radarbalcarce@gmail.com`) | Ver que el reloj `radar-balcarce-reloj` despierte a GitHub (sus ejecuciones, a los :00, :05, :30, :35 y :45). Los trabajos viejos de cron-job.org están pausados, por si hay que volver | Sí |
+| **El panel de la PC** (en desuso desde el 8/10; http://localhost:4321 en la PC; afuera, la dirección de `panel/datos/DIRECCION-DEL-PANEL.txt`) | Cargar avisos, la agenda a mano, el buzón (lo que el celular no hace) | Sí, si la PC está prendida |
+| **El mail** (`radarbalcarce@gmail.com`) | Leer los informes de las 8:15 y 21:15 y los avisos del vigilante (desde el 15/10 llegan por mail; el WhatsApp quedó de respaldo) | Sí |
+| **Cloudflare, Workers** (dash.cloudflare.com, cuenta `radarbalcarce@gmail.com`) | Ver que el reloj `radar-balcarce-reloj` despierte a GitHub (sus ejecuciones, a los :00, :05, :15 a las 8 y 21, :20 cada dos horas, :30, :35 y :45) y que el vigilante `radar-balcarce-vigilante` corra (a los :12 y :42). Los trabajos viejos de cron-job.org están pausados, por si hay que volver | Sí |
 | **Claude** (una sesión de Claude Code sobre la carpeta del proyecto) | Cualquier cambio de código, escribir cuerpos, repasos editoriales, mirar la web publicada | Según dónde esté abierta la sesión |
 | **Meta, Cloudflare, Google AI Studio, DonWeb** | Cuentas: claves, borrar publicaciones, pagos, dominio | Sí, pero lo hace siempre una persona |
 
 **Tres cuidados que valen para todo lo que sigue:**
 
 1. **Los archivos `.json` son delicados.** Una coma de más o de menos y el
-   archivo queda roto. Las pruebas de "Actualizar la web" lo detectan y, si
-   está roto, **la web deja de actualizarse** hasta arreglarlo (no se publica
-   nada mal, pero se congela). Por eso: copiar una entrada que ya existe y
+   archivo queda roto. El núcleo legal de las pruebas, que corre en cada vuelta
+   de "Actualizar la web", lo detecta en `correcciones.json` y
+   `retiradas.json`, avisa por mail y **la web deja de actualizarse** hasta
+   arreglarlo (no se publica nada mal, pero se congela). Por eso: copiar una entrada que ya existe y
    cambiarle los valores, y si hay dudas, pedírselo a Claude.
 2. **Cada cambio a mano dice por qué, cuándo y quién** (`motivo`, `cuando`,
    `por`). Sin motivo, el código lo ignora; sin los tres, las pruebas fallan.
@@ -69,33 +73,39 @@ el reloj de Cloudflare, GitHub Actions y el interruptor de las redes.
 | Cuándo | Qué | Tiempo |
 |---|---|---|
 | **Todos los días, a las 8:15 y a las 21:15** | Leer el **informe por mail** (asunto: «Informe de la mañana…» / «Informe de la noche…»). Si abajo de «Lo que requiere tu atención» dice «Nada», no hay nada que hacer. Si no llegó, ver "12 bis" | 2 minutos |
-| **Cuando llega un WhatsApp de notas esperando** (cada 3 horas como mucho) | Decidirlas en el panel del celular, pestaña **Esperan** (ver "0. El panel del celular") | Unos minutos |
-| **Cuando llega un WhatsApp de problema** | Seguir lo que dice; si no se entiende, "Si algo dejó de salir" | — |
-| **Los lunes** | Mirar que la **Auditoría** haya corrido (Actions → Auditoría). Corrió por primera vez el 28/09; si un lunes no corre, correrla a mano (Run workflow) | 1 minuto |
-| **Principios de cada mes** | Mirar el gasto de la clave paga de Gemini en Google AI Studio (presupuesto: USD 10 por mes desde octubre) | 2 minutos |
+| **Cuando llega un aviso de notas esperando** (por mail; cada 3 horas como mucho) | Decidirlas en el panel del celular, pestaña **Esperan** (ver "0. El panel del celular") | Unos minutos |
+| **Cuando llega un aviso de problema** (por mail; WhatsApp sólo si el mail falló) | Seguir lo que dice; si no se entiende, "Si algo dejó de salir" | — |
+| **Los lunes** | Mirar que la **Auditoría** haya corrido (Actions → Auditoría). Si un lunes no corre, correrla a mano (Run workflow) | 1 minuto |
 | **Cada 90 días** (la primera, hacia el 24/12/2026) | Volver a verificar las medidas de las redes (`FORMATOS.md`). La auditoría avisa | — |
-| **Antes del 21/09/2027** | Renovar el dominio en DonWeb (el vigilante avisa 30 días antes); el token de GitHub de cron-job.org sólo importa si se reactivan esos trabajos | — |
+| **Antes del 21/09/2027** | Renovar el dominio en DonWeb (el vigilante avisa 30 días antes); el token de GitHub de cron-job.org sólo importa si se reactivan esos trabajos (ya nadie avisa que vence) | — |
 
 ## 0. El panel del celular
 
 Es lo de todos los días. Cómo funciona por dentro: `09-PANEL`. Para entrar hace
 falta una **llave de GitHub** que se crea una sola vez: el mismo panel lo
 explica paso a paso la primera vez (el detalle, en `09-PANEL`, "La llave de
-GitHub"). Se instala desde Chrome: menú ⋮ → **Instalar app**. **Si se pierde
-un celular**: en GitHub (la cuenta con la que se creó esa llave) → Settings → Developer
-settings → Fine-grained tokens → esa llave → **Delete**.
+GitHub"; desde la mudanza del 15/10 la llave tiene que tener acceso a
+`radarbalcarce/radar-balcarce`). Se instala desde Chrome: menú ⋮ → **Instalar
+app**. **Si se pierde un celular**: en GitHub (la cuenta con la que se creó esa
+llave) → Settings → Developer settings → Fine-grained tokens → esa llave →
+**Delete**.
 
 **Todo lo que se hace ahí sale en la web en la próxima actualización** (a los
 :00 y :30, más unos minutos). Para no esperar: "Más" → **Actualizar la web
 ahora** (unos 8 minutos).
 
+La barra de abajo tiene **Hoy, Esperan, Publicadas, Redes y Más**; desde Más se
+abren Borradores, Fotos, Contactos, Pistas, Revisión, Fechas y Números
+(`09-PANEL`, "Las pestañas").
+
 | Pestaña | Para qué | Lo que conviene saber |
 |---|---|---|
-| **Esperan** | Las notas que el sistema no publica solo | Cada una dice **por qué espera y qué mirar** y qué contó cada medio (con el enlace a la nota original). La IA no las escribe sola: para publicar una, **"Escribirla con IA"** (tarda un minuto y te muestra el texto para corregir) o "Escribirla a mano". "Descartar" pregunta antes; lo descartado queda al final ("Descartadas") y se puede volver a traer |
-| **Sin cuerpo** | Notas que **salen solas** pero todavía no tienen cuerpo | La IA las vuelve a intentar sola hasta 3 veces; cada una dice cuántas van. Si una importa y no puede esperar, "Escribir con IA ahora" o "Escribir a mano" |
-| **Publicadas** | Lo que está en la web | El número de la pestaña son las de **la portada** (las últimas 36 horas); arriba dice también cuántas tienen página **en el archivo** (hasta 180 días; se buscan con "Buscar también en el archivo"). Desde cada nota: Editar, Reescribir con IA, Mandar también a las redes, Retirar de la web |
-| **Redes** | Lo que sale hoy en Facebook e Instagram | El cronograma (hora, voz, si salió), **qué noticias cuenta cada repaso** (lo que contaría si saliera ahora: puede cambiar hasta su hora) y la cola de Facebook |
-| **Más** | Actualizar la web, y cómo funciona todo | — |
+| **Hoy** | Arranca acá: el resumen del día con atajos | Lo que espera, los borradores listos, las notas sin foto, las redes y las pistas con novedad |
+| **Esperan** | Las notas que el sistema no publica solo (las de las últimas 48 horas) | Cada una dice **por qué espera y qué mirar** y qué contó cada medio (con el enlace a la nota original). La IA no las escribe sola: para publicar una, **"Escribirla con IA"** (tarda un minuto y te muestra el texto para corregir) o "Escribirla a mano". "Descartar" pregunta antes; lo descartado queda al final ("Descartadas") y se puede volver a traer |
+| **Sin cuerpo** (va adentro de Esperan) | Notas que **salen solas** pero todavía no tienen cuerpo | La IA las vuelve a intentar sola hasta 3 veces; cada una dice cuántas van. Si una importa y no puede esperar, "Escribir con IA ahora" o "Escribir a mano" |
+| **Publicadas** | Lo que está en la web | Muestra las de **las últimas 24 horas** (el número de la pestaña); "Ver también las anteriores" suma el resto de la portada (36 horas) y "Cargar el archivo", las que tienen página. Desde cada nota: Editar, Reescribir con IA, Mandar también a las redes, Retirar de la web |
+| **Redes** | Lo que sale hoy en Facebook e Instagram | El cronograma (hora, voz, si salió), red por red, con **Reintentar** si algo falló (sube de nuevo el video, sin gastar voz); **qué noticias cuenta cada repaso** (lo que contaría si saliera ahora: puede cambiar hasta su hora) y la cola de Facebook |
+| **Más** | Las siete tarjetas, actualizar la web, y cómo funciona todo | — |
 
 **"Mandar también a las redes"** (en una nota publicada): la pone en la cola de
 Facebook, con su foto en Instagram. Sale en la próxima vuelta de las redes que
@@ -106,8 +116,9 @@ Instagram. Sirve también para Política y Policiales, que solas no van nunca.
 
 **Si retirás una nota por error:** mientras no pasó la próxima actualización,
 en la misma nota aparece **Deshacer**. Después, la nota está al final de
-**Publicadas → Retiradas** durante 30 días: "Volver a publicar" la trae de
-nuevo, **con la misma dirección**, en la próxima actualización. Lo que ya había
+**Publicadas → Retiradas** durante **24 horas**: "Volver a publicar" la trae de
+nuevo, **con la misma dirección**, en la próxima actualización. Pasadas las 24
+horas ya no se ve ni se puede volver a publicar desde el panel. Lo que ya había
 salido en Facebook o Instagram no se toca solo, ni al retirar ni al volver.
 
 ## 1. Corregir una nota ya publicada
@@ -158,13 +169,15 @@ aplicados por `web/scripts/generar-datos.mjs` (ver `06-WEB`).
 ## 2. Sacar (retirar) una nota de la web
 
 Lo más fácil: panel del celular → **Publicadas** → la nota → **Retirar de la
-web** (pide el motivo; se puede volver a publicar durante 30 días). Lo que
-sigue es cómo hacerlo desde GitHub.
+web** (pide el motivo; desde el panel se puede volver a publicar durante 24
+horas). Lo que sigue es cómo hacerlo desde GitHub.
 
 Para una nota que no tendría que haber salido: la saca de la portada, de las
 secciones y del archivo, y **la página deja de existir**, aunque la ingesta la
 vuelva a traer. Vale aunque el panel esté prendido. También queda en la
-papelera del celular 30 días.
+papelera del celular (que la guarda 30 días y la muestra 24 horas). Si la nota
+ya estaba en el archivo permanente de R2, la retirada también la saca de ahí en
+el próximo despliegue.
 
 1. Identificador de la nota (como en 1.1).
 2. Editar `web/data/retiradas.json` en GitHub y agregar, dentro de `"notas"`:
@@ -189,13 +202,12 @@ papelera del celular 30 días.
 - Si entró en un **podcast**, el video ya publicado no cambia; la nota del
   repaso en la web se rearma sola sin ella (y si le quedan menos de dos, se
   retira).
-- **Con el panel** también se puede bloquear una nota (`09-PANEL`); la
-  diferencia es que `retiradas.json` no depende de la PC ni del panel.
+- **Con el panel del celular** se hace lo mismo con "Retirar de la web"
+  (`09-PANEL`); `retiradas.json` es el camino sin panel.
 
-**No editar `web/data/decisiones.json` a mano:** si el panel está prendido, lo
-reescribe entero cada vez que guarda su estado (al arrancar, con cada botón y
-después de cada ciclo de 10 minutos en que la IA escribió algo), con lo que
-tiene en memoria, y el cambio se pierde.
+**No editar `web/data/decisiones.json` a mano:** si el panel de la PC (en
+desuso) estuviera prendido, lo reescribe entero cada vez que guarda su estado,
+con lo que tiene en memoria, y el cambio se pierde.
 
 ## 3. Escribir el cuerpo de una nota que espera
 
@@ -203,8 +215,8 @@ Una nota automática **sin cuerpo de al menos 70 palabras no se publica** (ni en
 la web ni en las redes). La IA lo intenta hasta tres veces; si Gemini se quedó
 sin cupo o la nota no tenía material, queda esperando. La lista está en
 `web/data/esperando-cuerpo.json` (la rehace cada corrida de "Actualizar la
-web", sólo con las notas que todavía podrían estar en la portada), y el resumen
-de las 21 dice cuántas son ("Esperando cuerpo: N").
+web", sólo con las notas que todavía podrían estar en la portada), y en el
+panel del celular se ven en **Esperan** ("Falta el cuerpo").
 
 1. Abrir `web/data/esperando-cuerpo.json`. Cada nota trae su `id`, título,
    bajada, sección, fecha y las **fuentes con sus enlaces**.
@@ -227,18 +239,21 @@ de las 21 dice cuántas son ("Esperando cuerpo: N").
 4. En la próxima corrida la nota sale, y **a esa nota ya no se le pide nada a
    Gemini**.
 
-**Lo más simple es pedírselo a Claude** ("escribí los cuerpos de las notas que
-esperan"): el 27/09 escribió así 37, firmados "redacción de Claude, pedida por
-Hernán". Lo que publica una persona desde el panel sin cuerpo se respeta (el
-panel pide confirmarlo).
+**Lo más simple es el panel del celular** (Esperan → la nota → "Escribir con
+IA ahora" o "Escribir a mano") **o pedírselo a Claude** ("escribí los cuerpos de
+las notas que esperan"): el 27/09 escribió así 37, firmados "redacción de
+Claude, pedida por Hernán". Lo que publica una persona desde el panel sin cuerpo
+se respeta (el panel pide confirmarlo).
 
 ## 4. Decidir las notas que esperan a una persona
 
 Las amarillas del semáforo (acusan a alguien, hablan de una muerte, nombran a
 un chico) y todo lo de Política y Policiales que vaya a las redes esperan a
-una persona. Se deciden en el **panel**, con la PC prendida: `09-PANEL`. El
-WhatsApp avisa cuando hay nuevas, cada 3 horas como mucho. Con la PC apagada no
-se pueden decidir; nada se rompe, sólo esperan.
+una persona. Se deciden en el **panel del celular**, pestaña **Esperan**, con la
+PC prendida o apagada (`09-PANEL` y "0. El panel del celular", arriba). El
+vigilante avisa por mail cuando hay nuevas, cada 3 horas como mucho, y el
+informe de las 8:15 y las 21:15 dice cuántas esperan y por qué. Si nadie las
+decide, nada se rompe: sólo esperan.
 
 ## 5. Prender o apagar las redes
 
@@ -250,9 +265,10 @@ se pueden decidir; nada se rompe, sólo esperan.
 Qué pasa:
 
 - **Apagadas:** en la corrida siguiente, Facebook sólo simula (el registro dice
-  qué publicaría), no se arma ningún video (no se gasta la voz paga), el libro
-  no cambia, el vigilante lo dice una vez por día y el resumen de las 21 dice
-  "Redes: apagadas".
+  qué publicaría), no se arma ningún video (no se gasta el cupo de voz), el libro
+  no cambia, el vigilante lo dice una vez por día (`redes-apagadas`), los
+  informes por mail lo cuentan y la pestaña Redes del panel lo dice arriba.
+- **Hoy (16/10) están prendidas:** `REDES_ACTIVAS` dice `Si` desde el 29/09.
 - **Al prenderlas:** en la corrida siguiente vuelve todo. Las piezas cuya
   ventana todavía está abierta salen; las que ya se cerraron, no (ver las
   ventanas en `07-REDES`).
@@ -266,8 +282,11 @@ Para una historia fija que no salió (clima, farmacia) o para probar:
 1. Actions → **Piezas** → Run workflow.
 2. **solo:** el nombre de la pieza. Los nombres: `clima-manana`,
    `clima-noche`, `farmacia`, `utiles`, `noticia1` (podcast de la mañana),
-   `noticia2` (tarde), `podcast` (noche), y los avisos `aviso-helada`,
-   `aviso-granizo`, `aviso-viento`. Si queda vacío, la corrida no arma nada y
+   `noticia2` (tarde), `podcast` (noche), `agenda` (fin de semana), `feriado`,
+   las de "Participá" (`participa-noticias`, `participa-evento`,
+   `participa-reclamos`, `participa-nota`) y los avisos `aviso-helada`,
+   `aviso-granizo`, `aviso-viento` (la lista con su nombre largo:
+   `NOMBRES_DE_PIEZAS`, `redes/previa.mjs`). Si queda vacío, la corrida no arma nada y
    termina con "Sin piezas elegidas" (28/09: antes armaba todas las del día y
    gastaba una voz paga por cada una). Para armarlas todas a propósito, dejar
    `solo` vacío y marcar **todas**.
@@ -289,7 +308,10 @@ Limitaciones que conviene saber:
 - "Redes" y "Piezas" nunca corren a la vez: si una está corriendo, la otra
   espera.
 
-## 7. Reiniciar el panel
+## 7. Reiniciar el panel de la PC
+
+(En desuso desde el 8/10/2026: sólo hace falta si se lo vuelve a usar para
+avisos, agenda a mano o buzón.)
 
 **Cuándo:** después de cualquier cambio en `ingesta/`, `panel/` o `reels/`
 (Node lee el código una sola vez, al arrancar: si no se reinicia, sigue
@@ -310,15 +332,17 @@ panel a internet: `tailscale funnel --https=443 off`.
 
 ## 8. Si algo dejó de salir: el orden para mirar
 
-1. **¿Llegó un WhatsApp del vigilante?** Dice qué falló. Si no llegó ni el
-   resumen de las 21, el problema puede ser el vigilante mismo: seguir.
+1. **¿Llegó un mail de aviso?** (a `radarbalcarce@gmail.com`; mirar también
+   Spam). Dice qué falló. Los mandan los dos vigilantes: el de GitHub
+   ("Vigilancia") y el Worker `radar-balcarce-vigilante`, que mira desde afuera
+   y avisa aunque GitHub no corra. Si no llegó ni el informe de las 21:15, mirar
+   "12 bis".
 2. **El reloj de Cloudflare:** ¿despierta a GitHub? (tarea 10).
 3. **GitHub → Actions:** ¿hay una corrida en rojo? Abrirla y leer el paso rojo.
    Un aviso amarillo de "Vigilancia" no es una falla: es lo que encontró.
-4. **`REDES_ACTIVAS`** dice `Si` (tarea 5). Desde el 28/09 está en `No` a
-   propósito, hasta el visto bueno de Hernán al diseño nuevo (`CLAUDE.md`,
-   "Estado").
-5. **¿La PC está prendida?** Sólo importa para el panel.
+4. **`REDES_ACTIVAS`** dice `Si` (tarea 5). Hoy (16/10) dice `Si`.
+5. **¿La PC está prendida?** Sólo importa para el panel de la PC (en desuso) y
+   para las ilustraciones con Gemini web de las 10:00 y las 18:00.
 6. **Si se publica pero nadie lo ve en Facebook:** Actions → **Ver Facebook**
    (muestra lo que Meta tiene publicado) y mirar la página desde una cuenta que
    no sea administradora.
@@ -333,26 +357,32 @@ hace N horas".
 1. Actions → **Actualizar la web**: ¿la última corrida cuándo fue?
    - **No hay corridas recientes** → el reloj de Cloudflare (tarea 10). Mientras tanto,
      Run workflow a mano.
-   - **Está en rojo** → abrirla. Si el paso rojo es **"Probar que nada se
-     rompió"**, una prueba falló: la causa más común es un `.json` editado a
-     mano con un error (ver "Antes de empezar"). Si es "Compilar el sitio" o
+   - **Está en rojo** → abrirla. Si el paso rojo es **"Núcleo legal de las
+     pruebas"** (también llega un mail «Falló el núcleo legal…»), una prueba
+     falló: la causa más común es un `.json` editado a mano con un error (ver
+     "Antes de empezar"). Si es "Buscar noticias y armar los datos",
+     "Compilar el sitio" o
      "Revisar que el SEO siga en pie", es código: pedírselo a Claude. Si es
      "Guardar si cambió algo" con "después de tres intentos", suele arreglarse
      solo en la corrida siguiente.
    - **Está en verde** y dice "Sin novedades" → no había nada nuevo: está bien.
 2. Actions → **Cloudflare Pages**: ¿corrió después, y en verde? Si está en
    rojo, leer el paso "Subir a Cloudflare Pages" (suele ser el token de
-   Cloudflare: lo arregla una persona). Se puede correr a mano.
+   Cloudflare: lo arregla una persona). Se puede correr a mano. Si el que falla
+   es "Archivar las notas por salir (R2)", la web se sube igual: es el archivo
+   permanente, y llega un mail.
 3. Si las dos están en verde y la web sigue vieja: mirar Cloudflare
    (dash.cloudflare.com → Pages) y probar recargar sin caché.
 
 ## 10. El reloj dejó de despertar
 
 Desde el 15/10/2026 despierta a GitHub el **reloj de Cloudflare** (el Worker
-`radar-balcarce-reloj`, `infra/reloj-cloudflare/`), a los :00 y :30 (web y
-vigilancia) y a los :05, :35 y :45 (el reloj de Redes). Se nota con avisos "No
-hay corridas nuevas de…" o "El reloj de Redes no corre" (esos textos todavía
-nombran a cron-job.org: hoy quieren decir "el reloj dejó de despertar"), o
+`radar-balcarce-reloj`, `infra/reloj-cloudflare/`): a los :00 y :30 (web y
+vigilancia), a los :05, :35 y :45 (el reloj de Redes), a las 8:15 y 21:15 y otra
+vez a las 8:30 y 21:30 (el informe diario) y a los :20 cada dos horas de 7:20 a
+23:20 (las ilustraciones automáticas). Se nota con avisos "No hay corridas
+nuevas de «Actualizar la web»: el reloj de Cloudflare pudo haber fallado…" o "El
+reloj de Redes no corre", porque no llega el informe por mail a horario, o
 porque la web se actualiza tarde (queda el respaldo de GitHub, que es
 impuntual).
 
@@ -360,7 +390,7 @@ impuntual).
    Workers y Pages → `radar-balcarce-reloj` y mirar las ejecuciones: si salen
    fallidas, el mensaje dice qué archivo no aceptó GitHub y con qué código.
 2. Un 401 o 403 quiere decir que el **token de GitHub** del reloj
-   (`RELOJ_GITHUB_TOKEN`) venció o está mal: una persona crea otro (de grano
+   (`RELOJ_GITHUB_TOKEN`, creado sin vencimiento) se borró o está mal: una persona crea otro (de grano
    fino, sólo este repositorio, Actions de lectura y escritura), lo pega en
    GitHub → Settings → Secrets and variables → Actions y corre Actions →
    **Reloj de Cloudflare** → Run workflow, que lo vuelve a cargar en el Worker.
@@ -373,34 +403,53 @@ impuntual).
 
 ## 11. Gemini se quedó sin cupo
 
-**Cómo se nota:** el aviso "Sólo N de M notas… tienen cuerpo", el resumen de
-las 21 con muchas "Esperando cuerpo", o en el registro de "Actualizar la web"
-la línea "tope del día" o "claves de Gemini usadas: N con la gratis, M con la
-paga".
+**Cómo se nota:** el aviso "Sólo N de M notas… tienen cuerpo"
+(`pocos-cuerpos`), muchas notas con "Falta el cuerpo" en Esperan, el informe
+diario (sección de la IA), o en el registro de "Actualizar la web" la línea
+"tope del día" o "claves de Gemini usadas: N con la de redacción, M con la de
+redes, K con la de clasificación (respaldo)".
 
-**Qué pasa solo:**
+**Qué pasa solo:** (desde el 29/09 las cuatro claves de IA son gratis; el
+detalle, en `08-INFRAESTRUCTURA`, "Las claves de IA")
 
-- La redacción usa la clave gratis (tope propio de 450 notas por día). Si la
-  gratis dice "sin cupo", reintenta una vez con la paga. Lo que no se pudo
-  escribir queda esperando cuerpo y se reintenta en las corridas siguientes
-  (hasta tres intentos por nota). El cupo gratis se renueva al día siguiente.
+- La redacción usa la clave de redacción (tope propio de 450 notas por día). Si
+  dice "sin cupo" (429), prueba con la de redes y, si el servicio sigue
+  fallando, con la de clasificación. Lo que no se pudo escribir queda esperando
+  cuerpo y se reintenta en las corridas siguientes (hasta tres intentos por
+  nota). El cupo se renueva al día siguiente.
 - La lectura con IA, si Gemini falla, prueba con Groq.
-- Las voces: si Gemini no contesta, la pieza no sale en esa vuelta y se reintenta en la siguiente (nunca con otra voz).
-  Si el error es **402 ("prepayment credits are depleted")**, se acabó el crédito de la clave paga: cargarlo en
-  Google AI Studio (proyecto RadarBalcarce); reintentar no lo arregla. **Desde el 29/09 pasó eso y, después,
-  Google suspendió la clave**: mientras siga así, no sale ninguna pieza con voz (las redes están apagadas
-  de todos modos) y hay que resolverlo con Google antes de prender las redes.
+- Las voces: **10 audios por día**. Si Gemini no contesta o se acabó el cupo,
+  la pieza no sale (nunca con otra voz) y vuelve al día siguiente.
 
 **Qué hacer:**
 
 1. Nada urgente: no se publica nada mal, sólo sale menos.
-2. Si hay notas importantes esperando: escribir sus cuerpos a mano o con
-   Claude (tarea 3).
-3. Para saber si la clave gratis anda: el vigilante avisa por WhatsApp (`clave-<NOMBRE>`) si una clave deja de andar, y el registro de "Actualizar la web" dice cuántos pedidos fueron a cada una.
-4. **No subir los topes ni cambiar de clave sin hablarlo entre los dos**: la
-   única que cobra es la de redes.
+2. Si hay notas importantes esperando: escribir sus cuerpos desde el panel del
+   celular, a mano o con Claude (tarea 3).
+3. Para saber si una clave anda: el vigilante avisa por mail (`clave-<NOMBRE>`)
+   si una clave deja de andar, el registro de "Actualizar la web" dice cuántos
+   pedidos fueron a cada una y Actions → **Probar las claves de Gemini** las
+   prueba (gasta un audio del cupo de voz).
+4. **No subir los topes ni cambiar de clave sin hablarlo entre los dos.**
 
-## 12. El WhatsApp no llega
+## 12. Los avisos no llegan (mail y WhatsApp)
+
+Desde el 15/10/2026 (regla 173) todos los avisos salen **primero por mail** a
+`radarbalcarce@gmail.com`, a través del Worker `radar-balcarce-vigilante`; el
+WhatsApp (CallMeBot, sin cupo desde cerca del 1/10) sólo se prueba si el mail
+no salió.
+
+**Si no llegan los mails:**
+
+1. Mirar Spam.
+2. Actions → **Probar el aviso por mail** → Run workflow. Manda un mail de
+   prueba y dice si salió.
+3. Si falla, casi siempre es `VIGILANTE_TOKEN` (tiene que ser el mismo en GitHub
+   y en el Worker: volver a correr Actions → **Vigilante de Cloudflare**, que lo
+   carga) o el Worker vigilante (Cloudflare → Workers →
+   `radar-balcarce-vigilante`; su página `/estado` muestra la última revisión).
+
+**Si hace falta el WhatsApp de respaldo:**
 
 1. Actions → **Prueba de WhatsApp** → Run workflow. Manda un mensaje de prueba
    y muestra lo que contestó CallMeBot.
@@ -408,10 +457,10 @@ paga".
    `WHATSAPP_APIKEY`. Si el teléfono tiene pocos dígitos: `WHATSAPP_TELEFONO`
    va completo, con 549 adelante, sin + ni espacios. Los corrige una persona en
    GitHub Secrets.
-3. Si la prueba anda y el resumen no llega: mirar que "Vigilancia" esté
+3. Si las pruebas andan y los avisos no llegan: mirar que "Vigilancia" esté
    corriendo (Actions) y que el reloj de Cloudflare la esté despertando. El
-   registro de cada corrida de Vigilancia dice qué encontró y si mandó el
-   mensaje.
+   registro de cada corrida de Vigilancia dice qué encontró y por dónde mandó
+   el aviso.
 
 ## 12 bis. Los informes por mail (8:15 y 21:15)
 
@@ -425,8 +474,8 @@ El asunto trae el día, cuántas notas y cuántas visitas, y si hay algo para mi
 - **Dice cuando no sabe.** Si Cloudflare no dio una lectura confiable de las visitas, el informe escribe «sin lectura confiable» (no «0 visitas»); un día que no terminó dice «hasta las 21:00».
 - **Probarlo sin mandarlo:** `node redes/informe-diario.mjs --momento=noche` en la PC (o Actions → **Informe diario** → Run workflow con «enviar» apagado: se ve en el registro). `--html=informe.html` guarda la versión con formato para abrirla en el navegador; `--sin-red` no consulta GitHub.
 - **Mandarlo a mano:** Actions → **Informe diario** → Run workflow → elegir «manana» o «noche» (con «enviar» prendido). Si ya salió ese mismo informe hace menos de 6 horas, el Worker no lo repite.
-- **Si no llegó:** (1) mirar Spam; (2) Actions → Informe diario: ¿corrió? Si no, mirar el Worker `radar-balcarce-reloj` (¿se subió con el horario nuevo? correr «Reloj de Cloudflare»); el `schedule` de respaldo lo manda a las 8:45 / 21:45; (3) si corrió y quedó en rojo, el registro dice por qué (casi siempre `VIGILANTE_TOKEN`); (4) a las 22 el Worker del vigilante manda un resumen que dice «el informe completo de la noche no llegó».
-- **Después de subir los cambios** (primera vez): correr «Vigilante de Cloudflare» (para que acepte el formato y mande el resumen de las 22) y «Reloj de Cloudflare» (para el horario nuevo).
+- **Si no llegó:** (1) mirar Spam; (2) Actions → Informe diario: ¿corrió? El reloj lo pide a las 8:15 / 21:15 y, desde el 16/10, otra vez a las 8:30 / 21:30 (el disparo de los :15 falló el 15 a la noche y el 16 a la mañana); si llegan los dos, sale un solo mail. Si no corrió, mirar el Worker `radar-balcarce-reloj` (¿se subió con el horario nuevo? correr «Reloj de Cloudflare»); el `schedule` de respaldo de GitHub lo manda a las 8:45 / 21:45 (puede atrasarse); (3) si corrió y quedó en rojo, el registro dice por qué (casi siempre `VIGILANTE_TOKEN`); (4) a las 22 el Worker del vigilante manda un resumen que dice «el informe completo de la noche no llegó».
+- **Si se cambia el Worker vigilante o el reloj:** volver a correr «Vigilante de Cloudflare» o «Reloj de Cloudflare» (los dos ya se corrieron con lo de hoy: el reloj, por última vez, el 16/10 a las 15:45 de Balcarce).
 
 ## 13. Cargar un aviso publicitario
 
@@ -434,7 +483,8 @@ Son tres espacios en la web: después de la nota de apertura (`apertura`), al
 lado del clima y la farmacia (`clima`) y abajo de todo (`pie`). Reglas y
 precios: `PUBLICIDAD.md`.
 
-1. En el **panel** (PC prendida), pestaña **Avisos**.
+1. En el **panel de la PC** (PC prendida; está en desuso, pero los avisos
+   todavía se cargan sólo ahí o a mano, abajo), pestaña **Avisos**.
 2. Elegir el espacio y completar comercio, texto y, si hay, logo.
 3. Guardar. El panel lo sube solo a GitHub a los pocos segundos y aparece en
    la web con la próxima "Actualizar la web".
@@ -463,10 +513,10 @@ empezar: sabe las reglas, las cuentas y dónde está cada cosa.
   despliegue y mirar radarbalcarce.com antes de decir que está listo.
 
 **Lo que Claude hace:** cambia código y documentos; corre `npm test` antes de
-commitear; commitea sólo los archivos que tocó (`git commit -- archivos`: el
-panel sube solo lo que encuentre preparado, y así no se mezclan); corre
+commitear; commitea sólo los archivos que tocó (`git commit -- archivos`: los
+workflows commitean `web/data/` cada media hora, y así no se mezclan); corre
 workflows a mano; escribe cuerpos, correcciones y retiradas (firmados en `por`);
-reinicia el panel si tocó `ingesta/`, `panel/` o `reels/`. Un cambio de
+reinicia el panel de la PC, si se está usando, cuando tocó `ingesta/`, `panel/` o `reels/`. Un cambio de
 criterio editorial lo hace en `CRITERIO-EDITORIAL.md` (y sus números en
 `ingesta/criterio.mjs`); **la lista roja del semáforo no la toca sin
 preguntar**.
@@ -479,20 +529,21 @@ borrar publicaciones; aceptar términos; pagar.
 
 | Qué | Dónde | Cuándo |
 |---|---|---|
-| Cargar o cambiar una clave o un token (`META_TOKEN`, las de Gemini, `GROQ_API_KEY`, Cloudflare, WhatsApp) | GitHub → Settings → Secrets and variables → Actions; en la PC, el `.env` | Cuando se crea, vence o se filtra |
+| Cargar o cambiar una clave o un token (`META_TOKEN`, las de Gemini, `GROQ_API_KEY`, `TAVILY_API_KEY`, Cloudflare, `VIGILANTE_TOKEN`, `RELOJ_GITHUB_TOKEN`, WhatsApp) | GitHub → Settings → Secrets and variables → Actions; en la PC, el `.env` | Cuando se crea, vence o se filtra |
 | Regenerar `META_TOKEN` con los permisos de estadísticas (`read_insights`, `instagram_manage_insights`, además de todos los de ahora) | Meta Business → usuario del sistema `publicador-radar` | Hecho (1/10/2026) |
-| Renovar el token de GitHub del reloj (`RELOJ_GITHUB_TOKEN`) cuando venza y volver a cargarlo con «Reloj de Cloudflare» (el de cron-job.org, pausado, vence el 21/09/2027) | GitHub y Cloudflare | Cuando venza el que se haya elegido al crearlo |
+| Cambiar el token de GitHub del reloj (`RELOJ_GITHUB_TOKEN`, creado sin vencimiento) si se borra o se filtra, y volver a cargarlo con «Reloj de Cloudflare» (el de cron-job.org, pausado, vence el 21/09/2027) | GitHub y Cloudflare | Si deja de andar |
+| Darle al token de Cloudflare el permiso «Zone → Workers Routes: Edit» (lo necesita el archivo permanente para poner su ruta) | Cloudflare → API Tokens | Cuando se decida activar el archivo permanente |
 | Renovar el dominio | DonWeb | Antes del 21/09/2027 |
 | Borrar o editar un posteo, una historia o un reel (un duplicado, una nota retirada) | Las apps de Facebook e Instagram | Cuando haga falta |
 | Subir a mano un video que faltó (desde el artefacto de una corrida) | Las apps | Cuando haga falta |
 | Foto de perfil, portada, biografías, categorías | Las apps, con los textos de `PARA-CARGAR-A-MANO.md` | Una vez |
 | Comprobar con una cuenta que no sea administradora que el público ve los posteos y los reels | Facebook | Pendiente |
-| Poner un límite de gasto a la clave paga de Gemini | Google AI Studio (proyecto RadarBalcarce → Gasto) | Hecho el 28/09 (al empezar cada mes, volver a mirarlo) |
-| Resolver la clave paga de Gemini, suspendida por Google el 29/09 (sin ella no hay voces) | Google AI Studio (proyecto RadarBalcarce) y, si se crea otra clave, GitHub → Secrets (`GEMINI_API_KEY_REDES`) | Alta: antes de prender las redes |
+| Poner un límite de gasto en Google si algún día se vuelve a usar una clave paga de Gemini (hoy las tres son gratis, desde el 29/09) | Google AI Studio → Gasto | Sólo si se pasa a una clave paga |
+| Pagar el plan Workers Paid de Cloudflare (US$ 5 por mes) | Cloudflare → Billing | Todos los meses (ya contratado) |
 | Borrar el proyecto de Vercel y limpiar el DNS que quedó | Vercel y Cloudflare | Pendiente |
-| Activar o reactivar CallMeBot (si cambia el número del teléfono) | WhatsApp | Cuando haga falta |
-| Cambiar contraseñas del panel | En la PC: `node panel/clave.mjs` | Cuando haga falta |
-| Decidir las notas amarillas | El panel | Todos los días |
+| Activar o reactivar CallMeBot (si cambia el número del teléfono) | WhatsApp | Cuando haga falta (hoy es sólo el respaldo del mail) |
+| Cambiar contraseñas del panel de la PC (en desuso) | En la PC: `node panel/clave.mjs` | Cuando haga falta |
+| Decidir las notas amarillas | El panel del celular | Todos los días |
 | Aceptar términos, pagar, crear cuentas | Cada servicio | — |
 
 La lista completa y al día de lo pendiente: `PENDIENTES.md`.
@@ -504,8 +555,9 @@ La lista completa y al día de lo pendiente: `PENDIENTES.md`.
 | `web/data/correcciones.json` | Títulos, bajadas, secciones y cuerpos corregidos | Una persona o Claude | `generar-datos.mjs` (`correccionesAMano`) | **Sí** (tareas 1 y 3) |
 | `web/data/retiradas.json` | Notas sacadas de la web | Una persona o Claude | `generar-datos.mjs` (`idsRetiradosAMano`) | **Sí** (tarea 2) |
 | `web/data/esperando-cuerpo.json` | Las notas automáticas que no salen por falta de cuerpo | "Actualizar la web" | Personas y Claude | No: se lee |
-| `web/data/avisos.json` | Los tres avisos | El panel | La web | Mejor desde el panel (tarea 13) |
-| `web/data/decisiones.json` | Lo que decidió el panel | El panel | "Actualizar la web" | **No** (el panel lo pisa) |
+| `web/data/avisos.json` | Los tres avisos | El panel de la PC | La web | Mejor desde el panel de la PC (tarea 13) |
+| `web/data/decisiones.json` | Lo que decidió el panel de la PC (en desuso) | El panel de la PC | "Actualizar la web" | **No** (el panel de la PC lo pisa) |
+| `web/data/celular-decisiones.json` | Lo que decide el panel del celular | El panel del celular | "Actualizar la web" | **No**: se decide desde el celular |
 | `web/data/redes.json` | El libro de las redes | "Redes" y "Piezas" | Casi todo | **No** (si se borra una entrada, puede repetirse una publicación) |
 | `web/data/portada.json`, `archivo.json` y el resto de `web/data/` | Lo que arma "Actualizar la web" | Los workflows | La web, las redes, el vigilante | **No** |
 | `ARRANCAR.bat` | Levanta el panel | Doble clic | — | No |
@@ -518,35 +570,40 @@ La lista completa y al día de lo pendiente: `PENDIENTES.md`.
 | Corregir una nota | `web/data/correcciones.json` (tarea 1) |
 | Sacar una nota | `web/data/retiradas.json` (tarea 2) o el panel |
 | Que una nota que espera salga | Cuerpo en `correcciones.json` (tarea 3) |
-| Decidir una amarilla | El panel |
+| Decidir una amarilla | El panel del celular → Esperan |
 | Prender o apagar las redes | Variable `REDES_ACTIVAS` (tarea 5) |
 | Publicar una pieza ya | Actions → Piezas (tarea 6) |
-| Forzar una actualización de la web | Actions → Actualizar la web → Run workflow |
+| Reintentar una pieza que falló al subir | Panel del celular → Redes → **Reintentar** (o Actions → Reintentar pieza) |
+| Forzar una actualización de la web | Actions → Actualizar la web → Run workflow (o "Actualizar la web ahora" en el panel) |
 | Volver a subir la web sin rearmar los datos | Actions → Cloudflare Pages → Run workflow |
 | Comprobar el acceso a Meta | Actions → Redes → Run workflow → `verificar` |
-| Ver cómo llegaría el resumen de las 21 | Actions → Vigilancia → Run workflow → `probar-resumen` (manda un WhatsApp, no guarda nada) |
+| Mandar o probar el informe diario | Actions → Informe diario → Run workflow (`manana` o `noche`; con «enviar» apagado, sólo se ve en el registro) |
+| Probar que los avisos por mail llegan | Actions → Probar el aviso por mail |
+| Correr todas las pruebas | Actions → Pruebas → Run workflow (en la PC, `npm test`; el núcleo legal solo, `npm run test:nucleo`) |
+| Ver el viejo resumen de las 21 del vigilante | Actions → Vigilancia → Run workflow → `probar-resumen` (lo manda por mail, no guarda nada; el de todos los días lo reemplazó el informe de las 21:15) |
 | Ver el cierre del día contra Meta sin mandar nada | Actions → Vigilancia → `probar-cierre` |
 | Auditar lo publicado en redes | Actions → Auditar redes |
 | Ver las estadísticas ahora | Panel del celular → pestaña **Números** (las mide la vigilancia) |
-| Cargar un aviso | Panel → Avisos (tarea 13) |
+| Cargar un aviso | Panel de la PC → Avisos, o `web/data/avisos.json` (tarea 13) |
 | Cambiar una regla, un número o el diseño | Pedírselo a Claude (tarea 14); la tabla completa, en `CLAUDE.md` |
 
 ## Qué puede fallar al operar y cómo se nota
 
 | Qué pasa | Cómo se nota | Qué hacer |
 |---|---|---|
-| Un `.json` quedó mal escrito | "Actualizar la web" en rojo en "Probar que nada se rompió"; a los 100 minutos, "La web no se actualiza" | Abrir la corrida, ver qué prueba falló, arreglar el archivo (o pedírselo a Claude) |
+| Un `.json` quedó mal escrito | "Actualizar la web" en rojo en "Núcleo legal de las pruebas" y un mail «Falló el núcleo legal…»; a los 100 minutos, "La web no se actualiza" | Abrir la corrida, ver qué prueba falló, arreglar el archivo (o pedírselo a Claude) |
 | Una corrección sin `motivo` | No pasa nada: el código la ignora (y la prueba falla) | Agregar el motivo |
 | Se editó `decisiones.json` con el panel prendido | El cambio desaparece a los 10 minutos | Usar `retiradas.json` o `correcciones.json`, o el panel |
 | Se corrigió una nota que ya estaba en Facebook | La red sigue mostrando lo viejo | Editar o borrar el posteo a mano |
 | Se retiró una nota que estaba en Facebook | El enlace del posteo da "no encontrada" | Borrar el posteo a mano |
 | Se corrió Piezas con `solo` vacío | La corrida termina en rojo con "Sin piezas elegidas" y no arma nada (no gasta) | Escribir el nombre, o marcar `todas` si de verdad se quieren todas |
-| Una corrección o retirada sin `cuando` o sin `por` | El código sólo exige `motivo`, pero las pruebas piden los tres: "Actualizar la web" falla y la web se congela | Completar los tres campos |
-| Se cambió código de `ingesta/`, `panel/` o `reels/` y no se reinició el panel | El panel sigue haciendo lo de antes | Tarea 7 |
+| Una corrección o retirada sin `cuando` o sin `por` | El código sólo exige `motivo`, pero el núcleo legal de las pruebas pide los tres: "Actualizar la web" falla, llega un mail y la web se congela | Completar los tres campos |
+| Se cambió código de `ingesta/`, `panel/` o `reels/` y no se reinició el panel de la PC (si se usa) | El panel de la PC sigue haciendo lo de antes | Tarea 7 |
 
 ## Lo que sigue abierto
 
-En `PENDIENTES.md`: la pestaña Calendario del panel no cambia las horas de lo
-que publica GitHub (las reales son las de fábrica de `panel/horarios.mjs`), la
-Auditoría de los lunes tiene que confirmar que corre sola (la primera vez fue
-el 28/09) y, si hiciera falta volver a cron-job.org, ver que sus tres trabajos pausados tengan la dirección nueva.
+En `PENDIENTES.md`: la pestaña Calendario del panel de la PC no cambia las horas
+de lo que publica GitHub (las reales son las de fábrica de `panel/horarios.mjs`)
+y, si hiciera falta volver a cron-job.org, ver que sus tres trabajos pausados
+tengan la dirección nueva. La Auditoría de los lunes ya corre sola (28/09, 5/10
+—falló—, 12/10).

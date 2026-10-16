@@ -1,9 +1,10 @@
 # 13 · Un día como hoy y los feriados
 
-*Actualizado el 30/09/2026. Cómo se arma la base mensual de efemérides, qué se
+*Actualizado el 16/10/2026. Cómo se arma la base mensual de efemérides, qué se
 muestra en la pestaña "Fechas" del panel del celular y cómo se afina el criterio
-con lo que se elige. Todavía no sale nada solo: esto prepara lo que una persona
-aprueba.*
+con lo que se elige. Desde el 1/10 "Un día como hoy" sale todos los días a las
+9:00 con lo que se preparó y se revisó antes (sección "Lo que sale cada día",
+abajo); la base de candidatas sigue siendo una ayuda para que una persona elija.*
 
 ## Para qué
 
@@ -14,15 +15,16 @@ está claro qué efemérides funcionan mejor, la idea es empezar dándole a una
 persona **las 20 mejores candidatas de cada día**, dejar que elija, y mirar
 después qué patrón siguen las elecciones para ir puliendo el criterio.
 
-## Las dos partes
+## Las partes
 
 | Parte | Qué hace | Dónde |
 |---|---|---|
-| **Efemérides** | 31 días desde el lunes 5/10, con 20 candidatas cada uno | `web/data/efemerides-candidatas.json` |
-| **Feriados** | Los feriados de los próximos ocho meses, cada uno con su enfoque, sus datos y sus fuentes | `web/data/feriados-piezas.json` |
-| **Lo elegido** | Qué eligió cada persona, con cómo era cada elegida | `web/data/efemerides-elegidas.json` |
+| **Efemérides** (las candidatas) | Al 16/10, 34 días (del 2/10 al 4/11), con hasta 20 candidatas cada uno y su propuesta | `web/data/efemerides-candidatas.json` |
+| **Feriados** | Los feriados que vienen (13, al 16/10), cada uno con su enfoque, sus datos y sus fuentes | `web/data/feriados-piezas.json` |
+| **El mes armado** | Lo que sale cada día: la principal, las tres de "Y además" y el guion de la locutora. Al 16/10, del 2/10 al 31/10: **noviembre todavía no está armado** | `web/data/efemerides-piezas.json` |
+| **Lo elegido** | Qué eligió cada persona, con cómo era cada elegida, y lo que se decidió sobre cada día armado (`piezas`) | `web/data/efemerides-elegidas.json` |
 
-Los tres viajan en claro: son datos públicos de Wikipedia y de leyes, no hay nada
+Los cuatro viajan en claro: son datos públicos de Wikipedia y de leyes, no hay nada
 sensible. El repositorio es público y está bien.
 
 ## De dónde salen las candidatas
@@ -81,9 +83,15 @@ gente elige:
 
 ## Qué se ve en el panel
 
-Pestaña **Fechas**:
+Pestaña **Fechas**, con tres partes: **Mes armado**, **Candidatas** y **Feriados**.
 
-- **Efemérides:** los días agrupados por semana, cada uno con su estado ("Sin
+- **Mes armado:** cada día de `efemerides-piezas.json` tal como va a salir a las
+  9:00 (la principal, las que acompañan y lo que dice la locutora). Cada uno se
+  **aprueba**, se **saca** o se **piden cambios** (`redes/efemeride.mjs`, regla
+  97). La decisión vale sólo sobre lo que se aprobó: si después se rearma el día,
+  vuelve a esperar. Lo aprobado sale aunque diga `"sale": false`; lo sacado o con
+  cambios pedidos no sale; lo que nadie tocó sale como está.
+- **Candidatas** (antes "Efemérides"): los días agrupados por semana, cada uno con su estado ("Sin
   armar", "Falta la principal", "✓ Armado (+2)"). Al abrir un día, las 20
   candidatas con su estilo, año, "hace N años", puntaje, marcas (política, puede
   estar vivo…) y fuente. Cada una trae el enlace **"Ver la nota en Wikipedia"** y cuántos idiomas la
@@ -135,9 +143,30 @@ flojo (una compañía de aviación holandesa de principal). Para eso está la pe
   otras fuentes y entran (`--ya-murieron=`). Una persona que fue menor en el hecho pero hoy es adulta o murió
   (el debut de Maradona a los 15) no es un problema.
 - **Nada de fundaciones de empresas o ciudades de afuera**, ni política o economía de otros países.
-- **La pieza del día** (nota + reel/historia con voz, a las 9:00, en el hueco del feriado): una principal con
-  su placa y "Además, un día como hoy" con las otras tres (`reels/previa-efemerides.mjs`, vista previa sin voz
-  de la primera semana; datos en `web/data/efemerides-piezas.json`). Todavía no sale nada solo.
+- **La pieza del día** (nota + reel/historia con voz, a las 9:00): una principal con su placa y "Además, un
+  día como hoy" con las otras tres (`reels/previa-efemerides.mjs`, vista previa sin voz; datos en
+  `web/data/efemerides-piezas.json`). Sale desde el 1/10: ver "Lo que sale cada día".
+
+## Lo que sale cada día
+
+- **El video** (`redes/efemeride.mjs`, `HORA_EFEMERIDE`): todos los días a las **9:00**, con la locutora, si
+  el día tiene su entrada completa en `efemerides-piezas.json` y nadie la sacó; sin entrada, ese día no sale
+  nada (no es una falla). Ventana hasta las 12:00. Desde el 8/10 sale como **reel en Facebook e Instagram y,
+  con el mismo video, como historia** (regla 147). No se saca por el techo de historias del día
+  (`docs/07-REDES.md`). Gasta un audio del cupo de 10 por día.
+- **La nota en el diario** (14/10, regla 165): cuando sale el video, sale su nota propia
+  (`notasDeEfemerides`, `web/lib/notas-propias.js`; `propia: 'efemeride'`, sección Cultura y agenda), con
+  plantilla y sin IA, con lo mismo que dice el video y el enlace al video si Meta dio la dirección. Lleva
+  siempre la misma ilustración hecha con IA (`web/public/fotos-notas/efemeride-fondo.jpg`) con el año y la
+  fecha escritos en la hoja del centro (`web/scripts/foto-efemeride.mjs`, una imagen por día,
+  `efemeride-<día>.jpg`) y la leyenda «Ilustración generada con IA · Radar Balcarce». No va a Facebook como
+  nota (ya salió como video).
+- **Las efemérides de otros medios no se publican nunca** (14/10, regla 164): una nota de otro medio que
+  se llama «Efemérides…» o «Un día como hoy…», o cuya dirección dice «/efemerides-», queda en rojo
+  (`esEfemerideAjena`, `ingesta/ingesta.mjs`).
+- **Aviso si se acaba lo armado** (8/10, `avisosDeEfemerides`, `redes/vigilar.mjs`): desde el día 20, si el
+  mes que sigue no está armado, el vigilante avisa (prioridad media); con menos de 7 días armados, prioridad
+  alta.
 
 ## Reglas que no se negocian
 
@@ -147,7 +176,9 @@ flojo (una compañía de aviación holandesa de principal). Para eso está la pe
 - En un feriado la pieza habla sólo de la fecha, en tono formal y ameno.
 - Todo dato se confirma con una segunda fuente; lo que no la tiene está
   marcado ("falta una segunda fuente") y no sale.
-- Nada sale solo: una persona aprueba cada pieza.
+- Nada sale solo: una persona aprueba cada pieza. *(Cómo se aplica desde el 8/10, decisión de Hernán en
+  `docs/DECISIONES.md`: lo armado y revisado de antemano sale salvo que una persona lo saque o pida cambios en
+  "Mes armado".)*
 
 ## Compararlo con otra IA
 
@@ -162,7 +193,13 @@ eligió en el panel: ahí se ven las diferencias de criterio.
 
 `node ingesta/generar-efemerides.mjs --desde=AAAA-MM-DD --dias=31` tarda unos 10
 minutos la primera vez (mide cuántos idiomas conocen cada tema) y menos de 2 con la
-memoria que deja en la carpeta temporal. Se corre a mano una vez por mes.
+memoria que deja en la carpeta temporal. **Se corre a mano** una vez por mes: no
+está en ningún workflow. Lo decidido el 12/10 (`docs/DECISIONES.md`) es que el mes
+se arme **el día 20** y ellos lo miren; armarlo solo ese día **no está conectado**:
+hoy lo único automático es el aviso del vigilante desde el 20 (arriba). Las de
+noviembre quedaron para después de la renovación. Después de generar, el mes que
+sale de verdad (`efemerides-piezas.json`) lo arma una persona o Claude con los datos
+verificados.
 
 ## La propuesta por consenso de auditorías (1/10)
 
