@@ -910,8 +910,11 @@ export const CANDIDATOS = [
 // "de Balcarce" (con el bonus de puntaje y sin cupo ni piso de afuera)
 // porque el título original del medio decía "el Fangio acelera" como juego
 // de palabras. Van sólo las frases que de verdad son del piloto o del lugar.
+// Los plurales (regla 180, 16/10/2026) van escritos: `contiene` (ingesta.mjs) los encontraba por la cola de hasta tres letras, pero
+// `mencionaAca` (lectura-ia.mjs) busca la palabra entera, y "Atletismo: buena tarea de cuatro atletas balcarceños" (un medio de acá)
+// esperaba a la IA por "no nombrar nada de acá".
 export const PALABRAS_LOCALES = [
-  'balcarce', 'balcarceño', 'balcarceno', 'balcarceña',
+  'balcarce', 'balcarceño', 'balcarceno', 'balcarceña', 'balcarceños', 'balcarceñas',
   'napaleofú', 'napaleofu', 'ramos otero', 'laguna la brava',
   'sierras de balcarce', 'inta balcarce', 'partido de balcarce',
   'autódromo juan manuel fangio', 'museo fangio',

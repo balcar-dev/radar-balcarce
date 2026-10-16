@@ -552,6 +552,27 @@ export function esDeAca(nota = {}) {
   return !!(nota.local ?? esDeBalcarce(nota)) || !!nota.nombraBalcarce;
 }
 
+/**
+ * ¿La cuenta un organismo de Balcarce (la Municipalidad, el Concejo, la Facultad), o un medio de Balcarce que
+ * nombra algo de acá (Balcarce, los balcarceños, una localidad del partido, la 226) en el título o al comienzo?
+ * (regla 180, 16/10/2026: "la idea es que TODAS las notas de Balcarce salgan").
+ *
+ * Eso no se cae por CANTIDAD: no pide los medios de lo de afuera (exigirMedios) ni ocupa el cupo de afuera
+ * (aplicarCupos), aunque la lectura con IA diga que el hecho es "de la región" y le saque la marca de acá. Caso
+ * real: "La AZK completó la séptima fecha con buenos resultados de los locales" (El Diario Balcarce, 15/10;
+ * "de los balcarceños" en la bajada): la IA dijo región, pasó a pedir 2 medios de Automovilismo y quedó
+ * esperando como relleno, sin que nadie la viera.
+ *
+ * NO es esDeAca: no afloja ninguna palabra del semáforo (aflojaParaLoDeAca sigue con esDeAca), la IA la puede
+ * seguir sacando (publicidad, chimento, del extranjero, sin relación) y no le devuelve los +25 del puntaje. Lo de
+ * un medio de acá que NO nombra nada de acá (la copia de una noticia nacional) no entra acá: si la IA dice que no
+ * es de acá, pide los medios de su sección como cualquier nota de afuera (historiaDeAca, MOTIVO_ESPERA_LECTURA).
+ * `nombraAca` lo pone el cruce (ingestar) mirando el título y los primeros 600 caracteres de las notas de acá.
+ */
+export function esDeUnMedioDeAca(nota = {}) {
+  return nota.alcance === 'local' && (!!nota.oficial || !!nota.nombraAca);
+}
+
 /** ¿Nombra a alguien que en Balcarce se lee igual aunque la noticia sea de
  *  afuera? Messi, Colapinto, la Selección. Devuelve el nombre encontrado o
  *  null, para poder mostrar por qué entró. */
@@ -1330,8 +1351,9 @@ export function aplicarCupos(portada) {
   const usados = {};
   for (const n of portada) {
     if (n.semaforo !== 'verde') continue;
-    // Lo de acá no entra en la cuenta (esDeAca: Balcarce y la zona).
-    if (esDeAca(n)) continue;
+    // Lo de acá no entra en la cuenta (esDeAca: Balcarce y la zona), ni lo que cuenta un organismo o un medio de
+    // Balcarce nombrando algo de acá aunque la IA diga que el hecho es de la región (esDeUnMedioDeAca, regla 180).
+    if (esDeAca(n) || esDeUnMedioDeAca(n)) continue;
     usados[n.seccion] = (usados[n.seccion] ?? 0) + 1;
     const cupo = CUPO_DE_AFUERA[n.seccion] ?? CUPO_POR_DEFECTO;
     if (usados[n.seccion] > cupo) {
@@ -1374,7 +1396,7 @@ export function esperaSoloPorCantidad(nota = {}) {
  */
 export function exigirMedios(portada) {
   for (const n of portada) {
-    if (n.oficial || n.propia || esDeAca(n)) continue;
+    if (n.oficial || n.propia || esDeAca(n) || esDeUnMedioDeAca(n)) continue;
     const medios = cuantosMedios(n);
     const minimo = mediosMinimosDe(n.seccion, n);
     if (n.semaforo === 'verde' && medios < minimo) {
@@ -1395,6 +1417,22 @@ export function exigirMedios(portada) {
  *  hecho de más de 12 (PORTADA.horasParaEstrenar): esos cortes los hace la
  *  web (web/lib/archivo.js). Éste es sólo el colador grueso de la entrada. */
 export const HORAS_DE_UNA_NOTA_NUEVA = 72;
+
+/**
+ * ¿Es una nota de un feed de acá de más de HORAS_DE_UNA_NOTA_NUEVA (72) que nunca salió? (regla 180, 16/10/2026).
+ * Los feeds de acá que publican poco traen notas de semanas o meses (el Concejo, de marzo; Ahora Balcarce, del 3/10;
+ * la Facultad, de septiembre): no se pueden estrenar nunca (llegan tarde) y, al entrar al cruce, arrastran a las
+ * nuevas. Caso real: "La 22ª Fiesta Nacional del Postre se realizará el 30 y 31 de octubre" (Municipalidad,
+ * 14/10) quedó en la misma historia que "Balcarce presentó la 22ª Fiesta Nacional del Postre" (Ahora Balcarce,
+ * 3/10): la historia tomó la fecha más vieja y el comunicado nuevo "llegó tarde" sin salir nunca.
+ * Lo que ya salió (su identificador está publicado) sí entra: así la historia conserva su dirección. Una nota sin
+ * fecha en la fuente (`fechaEstimada`) también: su fecha es la de la primera vez que se vio.
+ */
+export function esViejaSinSalir(nota, idsConocidos = null, ahora = Date.now()) {
+  if (nota?.fechaEstimada || !(nota?.fecha instanceof Date) || Number.isNaN(nota.fecha.getTime())) return false;
+  if (ahora - nota.fecha.getTime() <= HORAS_DE_UNA_NOTA_NUEVA * 3600e3) return false;
+  return !idsConocidos?.has(idDe(nota.enlaceFeed ?? nota.enlace ?? ''));
+}
 
 /** La memoria del cruce, entre corridas. En GitHub la guarda la caché de
  *  Actions (actualizar.yml); en la PC, este mismo archivo. No va al repo. */
@@ -1465,6 +1503,9 @@ export async function ingestar({
       // HORAS_DE_UNA_NOTA_NUEVA (72) no es nuevo: no se trae (27/09, El Diario
       // Balcarce tenía en su portada notas de 2025).
       notas = notas.filter((n) => n.fechaEstimada || Date.now() - n.fecha.getTime() <= HORAS_DE_UNA_NOTA_NUEVA * 3600e3);
+    } else if (f.alcance === 'local') {
+      // Lo mismo con los feeds de acá (regla 180): lo viejo que nunca salió no entra al cruce (esViejaSinSalir).
+      notas = notas.filter((n) => !esViejaSinSalir(n, idsConocidos));
     }
     // De las fuentes de afuera, lo que por la sección del propio medio no es
     // para Radar (otro país, policiales, consejos) no se trae (V2.2). Lo demás
@@ -1562,6 +1603,9 @@ export async function ingestar({
     // medios de su sección. Si la cuentan sólo medios de acá, sigue siendo de
     // acá (la lectura con IA decide si de verdad lo es).
     const hayDeAfuera = ns.some((n) => n.alcance !== 'local');
+    // Lo que una nota de un medio de acá nombra de acá (Balcarce, una localidad del partido, la zona), en el
+    // título o al comienzo: con eso la historia no se cae por cantidad (esDeUnMedioDeAca, regla 180).
+    const localesNombranAca = locales.some((n) => mencionaBalcarce(n) || tocaLaZona(n));
     const nombraAca = ns.some((n) => n.nombraBalcarce) || locales.some(mencionaBalcarce);
     const historiaDeAca = locales.length > 0 && (!hayDeAfuera || nombraAca);
     const base = historiaDeAca ? locales : ns.filter((n) => n.alcance !== 'local');
@@ -1578,7 +1622,7 @@ export async function ingestar({
     }
     if (!principal.nombraBalcarce && ns.some((n) => n.nombraBalcarce)) principal.nombraBalcarce = true;
     if (!principal.figura) principal.figura = ns.find((n) => n.figura)?.figura;
-    grupos.push({ principal, medios, tambien });
+    grupos.push({ principal, medios, tambien, nombraAca: historiaDeAca && localesNombranAca });
   }
   if (memoria) guardarMemoria(memoria, memoriaAntes, todas.filter((n) => n.alcance !== 'local'));
   log(`
@@ -1646,6 +1690,8 @@ export async function ingestar({
       ...(g.principal.deLaZona ? { deLaZona: true } : {}),
       alcance: g.principal.alcance,
       nombraBalcarce: !!g.principal.nombraBalcarce,
+      // Un medio de acá de la historia nombra algo de acá (regla 180, esDeUnMedioDeAca).
+      ...(g.nombraAca && g.principal.alcance === 'local' ? { nombraAca: true } : {}),
       ...(oficial ? { oficial: true } : {}),
     };
   }).sort((a, b) => b.relevancia - a.relevancia);

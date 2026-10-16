@@ -364,7 +364,10 @@ export function aplicarFichas(notas, fichas = {}, { esperarSinFicha = false, yaP
     // porque ningún medio de afuera contó lo mismo y la IA todavía no la había
     // leído): espera a la IA. Sólo si la lectura anda (esperarSinFicha) y si la
     // nota nunca salió: lo ya publicado no se toca.
-    if (!f && esperarSinFicha && original.semaforo === 'verde' && original.alcance === 'local'
+    // Un organismo de Balcarce (la Municipalidad, el Concejo, la Facultad: `oficial`) no espera (regla 180): lo que
+    // comunica es de acá aunque no diga "Balcarce" ("El hospital incorporó una nueva mesa de cirugía", "Sábado a
+    // puro básquet"). La IA la sigue leyendo después y la puede sacar como a cualquier otra.
+    if (!f && esperarSinFicha && original.semaforo === 'verde' && original.alcance === 'local' && !original.oficial
       && !yaPublicadas.has(original.id) && !mencionaAca(original)) {
       salida.push({ ...original, semaforo: 'amarillo', motivo: MOTIVO_ESPERA_LECTURA });
       cambios.aEsperar.push({ id: original.id, titulo: original.titulo, porque: MOTIVO_ESPERA_LECTURA });

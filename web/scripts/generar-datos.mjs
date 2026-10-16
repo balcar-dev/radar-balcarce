@@ -74,7 +74,7 @@ import {
   esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson, sePodaPorFaltaDeCuerpo,
 } from '../lib/archivo.js';
 import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
-import { esperaSoloPorCantidad, semaforoDelTexto, esEfemerideAjena } from '../../ingesta/ingesta.mjs';
+import { esperaSoloPorCantidad, semaforoDelTexto, esEfemerideAjena, esDeUnMedioDeAca } from '../../ingesta/ingesta.mjs';
 import { conFotosDelBanco, podarFotos } from './fotos-notas.mjs';
 import { actualizarAgenda, aplicarSuspendidos, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
@@ -547,6 +547,9 @@ function notaPublicada(n) {
     // Lo de la zona sale con un solo medio (esDeAca) y también conserva la
     // página: sin esta marca, el archivo lo descartaba al dejar la portada.
     ...(n.deLaZona ? { deLaZona: true } : {}),
+    // Lo que cuenta un organismo o un medio de Balcarce nombrando algo de acá sale con un solo medio aunque la IA diga
+    // que el hecho es de la región, y también conserva la página (regla 180, esDeUnMedioDeAca y tieneRespaldo).
+    ...(esDeUnMedioDeAca(n) ? { deUnMedioDeAca: true } : {}),
     publicadaPor: d?.por ?? null,
     publicadaCuando: d?.cuando ?? null,
     // Una persona la marcó desde el celular para que también vaya a Facebook e
@@ -853,6 +856,13 @@ if (propias.length) console.log(`  notas propias: ${propias.map((n) => n.id).joi
     if (foto) { n.foto = foto; conFecha += 1; }
   }
   if (conFecha) console.log(`  efemérides con el año en la hoja: ${conFecha}`);
+}
+
+// La nota del clima lleva una de las ilustraciones fijas de web/public/fotos-notas/clima-<estado>-<n>.jpg (web/lib/fondos-clima.js, 16/10/2026). Si el
+// archivo no está (todavía no se subió, o se borró), la nota sale sin foto en vez de con una imagen rota.
+for (const n of propias) {
+  if (n.propia !== 'clima' || !n.foto?.archivo) continue;
+  if (!fs.existsSync(path.join(FOTOS_NOTAS, path.basename(n.foto.archivo)))) { console.log(`  clima: falta ${n.foto.archivo}, la nota ${n.id} sale sin foto`); delete n.foto; }
 }
 
 // Una nota propia que una persona armó (la de una pista) y a la que se le subió una foto desde el celular: la foto está en el banco con el id de la nota.

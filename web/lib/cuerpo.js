@@ -42,9 +42,13 @@ const plano = (s) => sinTildes(s)
  * esa noche el archivo aplica la misma regla: lo que no la cumple pierde la
  * página, salvo que haya salido en las redes (web/lib/archivo.js), y tampoco
  * se usa para completar la tapa ni en "Seguí leyendo".
+ * Desde el 16/10 (regla 180) también lo que contó un organismo o un medio de Balcarce nombrando algo de acá
+ * (`deUnMedioDeAca`, lo pone generar-datos), aunque la IA le haya sacado la marca `local`: si salió con un solo
+ * medio, no puede perder la página por tener un solo medio.
  */
 export function tieneRespaldo(nota) {
-  return !!(nota?.local || nota?.deLaZona || nota?.propia || nota?.oficial || new Set(nota?.medios ?? []).size >= 2);
+  return !!(nota?.local || nota?.deLaZona || nota?.propia || nota?.oficial || nota?.deUnMedioDeAca
+    || new Set(nota?.medios ?? []).size >= 2);
 }
 
 export function tieneCuerpo(nota) {
