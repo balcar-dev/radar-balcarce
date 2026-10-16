@@ -1,0 +1,99 @@
+# Genera las ilustraciones fijas del clima (16/10/2026, Hernán: "nuestra nota del clima está saliendo sin imagen").
+# SÓLO a mano. Llama al Worker de imágenes con Workers AI de Cloudflare (infra/imagenes-cloudflare/, SDXL en 16:9, dentro de las neuronas gratis)
+# y deja las candidatas como adjunto de la corrida: nueve estados del tiempo por cuatro candidatas. Una persona las mira, elige las mejores y las guarda
+# achicadas en web/public/fotos-notas/clima-<estado>-<n>.jpg (web/lib/fondos-clima.js dice cuál va con cada estado). No escribe nada en el repositorio.
+# Usa el secreto VIGILANTE_TOKEN, que ya está en GitHub (el Worker lo tiene como su contraseña).
+name: Generar fondos del clima
+
+on:
+  workflow_dispatch:
+    inputs:
+      candidatas:
+        description: 'Cuántas candidatas por estado del tiempo'
+        required: false
+        default: '4'
+
+permissions:
+  contents: read
+
+jobs:
+  generar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
+      CANDIDATAS: ${{ inputs.candidatas }}
+    steps:
+      - name: Generar las candidatas
+        run: |
+          mkdir -p salida
+          BASE='Photorealistic documentary photograph of the flat pampas of Buenos Aires province, Argentina, wide open flat farmland to the horizon, natural light, sharp detail, empty landscape with no people, no text, no logos, no signs, no buildings, no animals, no recognizable places.'
+          cat > escenas.txt <<'EOF'
+          despejado|clear deep blue sky with no clouds, green wheat field and a straight dirt road, bright morning sun, long soft shadows
+          despejado|cloudless blue sky over flat green pasture with a lone eucalyptus tree in the distance, crisp midday light
+          despejado|clear sky at golden hour over a flat field of young green crops, warm low sun, a few wild flowers in the foreground
+          despejado|bright sunny day, clear blue sky above a flat meadow with a barbed wire fence along a dirt road
+          parcialmente-nublado|blue sky with scattered white cumulus clouds over a flat green wheat field, sunlight and cloud shadows moving on the ground
+          parcialmente-nublado|partly cloudy sky with big white clouds over flat pasture and a dirt road to the horizon
+          parcialmente-nublado|mix of sun and clouds above a flat field of crops, soft light breaking through, a row of poplar trees far away
+          parcialmente-nublado|wide sky with broken clouds and blue patches over flat green farmland, wire fence in the foreground
+          nublado|overcast uniform grey sky over a flat green field, soft diffuse light, calm and quiet, dirt road to the horizon
+          nublado|thick grey clouds covering the whole sky above flat pasture and a lone tree, muted colors
+          nublado|heavy low cloud ceiling over a flat plowed field, dull flat light, no shadows
+          nublado|grey cloudy day over flat farmland with a wire fence, cool soft tones
+          lluvia|steady rain falling over a flat green field, dark grey clouds, wet dirt road with puddles reflecting the sky
+          lluvia|rainy day over the flat pampas, rain streaks visible, muddy road and soaked pasture, low grey sky
+          lluvia|gentle rain over a flat field of wheat, water drops, grey sky, wet fence posts in the foreground
+          lluvia|heavy rain shower over flat farmland, dark clouds, curtain of rain in the distance, puddles on a dirt road
+          tormenta|dramatic dark storm clouds and lightning on the horizon over a flat field, ominous sky, dark green crops
+          tormenta|huge towering thunderstorm cloud over flat farmland at dusk, lightning bolt in the distance, dark dramatic light
+          tormenta|black menacing sky with a shelf cloud approaching over flat pasture, flash of lightning, wind bending the grass
+          tormenta|violent storm sky over the flat pampas, lightning striking far away, dark purple and grey clouds, dirt road in the foreground
+          niebla|dense morning fog over a flat field, a line of eucalyptus trees fading into the mist, soft white light
+          niebla|thick fog over flat pasture with a barbed wire fence disappearing into the white mist, very low visibility
+          niebla|misty dawn over a dirt road in flat farmland, fog hugging the ground, silhouettes of distant trees
+          niebla|foggy morning on the pampas, dew on the grass, pale diffuse sunrise glowing through the fog
+          viento|strong wind bending tall grass and wheat in waves across a flat field, streaky clouds racing across the sky, motion in the vegetation
+          viento|windy day, tall pampas grass swaying hard in the foreground, flat horizon, fast moving clouds
+          viento|an old traditional windmill water pump spinning against a stormy windy sky over flat farmland, grass flattened by the wind
+          viento|wind sweeping across a flat green field, trees leaning, dust lifting from a dirt road, restless sky
+          frio|heavy white frost covering the grass of a flat field at sunrise, frozen blades of grass in close foreground, cold pale blue and pink light
+          frio|frosty winter morning on the pampas, white frozen pasture, wire fence covered in ice crystals, pale sunrise
+          frio|frozen field at dawn with frost on every plant, cold clear sky, long shadows, breath of mist near the ground
+          frio|cold crisp winter day over flat farmland, frost on the ground and the fence posts, low weak sun
+          calor|scorching hot summer day, intense white sun high in a pale sky over dry golden fields, heat haze shimmering above a dirt road
+          calor|blazing sun over flat dry farmland, cracked earth, golden wheat ready to harvest, heat distortion on the horizon
+          calor|very hot afternoon over flat sunflower field in full bloom, strong sunlight, deep blue sky, harsh light
+          calor|dry heat over the pampas, yellow dry grass, an almost white sun, cloudless faded sky, dusty road
+          EOF
+          generar() {
+            estado="$1"; n="$2"; escena="$3"
+            prompt="$escena. $BASE"
+            cuerpo=$(jq -cn --arg p "$prompt" '{prompt:$p, modelo:"sdxl", ancho:1024, alto:576, steps:20, negativo:"text, letters, words, watermark, logo, signature, people, human, face, animals, cartoon, painting, illustration, oversaturated"}')
+            for intento in 1 2 3; do
+              code=$(curl -s -o "salida/clima-$estado-$n.jpg" -w '%{http_code}' -X POST 'https://radar-balcarce-imagenes.radarbalcarce.workers.dev/generar' \
+                -H "x-token: $VIGILANTE_TOKEN" -H 'content-type: application/json' --max-time 120 -d "$cuerpo")
+              if [ "$code" = "200" ]; then echo "[$estado-$n] ok, $(wc -c < "salida/clima-$estado-$n.jpg") bytes"; return 0; fi
+              echo "[$estado-$n] HTTP $code (intento $intento)"; sleep 5
+            done
+            rm -f "salida/clima-$estado-$n.jpg"
+          }
+          declare -A contador
+          while IFS='|' read -r estado escena; do
+            estado=$(echo "$estado" | xargs)
+            [ -z "$estado" ] && continue
+            contador[$estado]=$(( ${contador[$estado]:-0} + 1 ))
+            n=${contador[$estado]}
+            if [ "$n" -le "${CANDIDATAS:-4}" ]; then
+              printf '%s|%s|%s\n' "$estado" "$n" "$escena. $BASE" >> salida/prompts.txt
+              generar "$estado" "$n" "$escena"
+            fi
+          done < escenas.txt
+          ls -l salida | head -60
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fondos-clima
+          path: salida
+          retention-days: 7
+          if-no-files-found: error
