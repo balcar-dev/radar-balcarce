@@ -15372,16 +15372,16 @@
   "cuando": "2026-10-15T21:36:41.069Z"
  },
  "1j6q0tv": {
-  "archivo": "fotos-notas/1j6q0tv.jpg",
   "medio": "Radio Mitre",
-  "credito": "Foto: Radio Mitre",
   "licencia": null,
   "origen": "medio",
   "titulo": "El gas lacrimógeno llega al anexo del Congreso en la marcha universitaria",
   "enlace": "https://radiomitre.cienradios.com/sociedad/caos-en-el-congreso-el-gas-lacrimogeno-llego-al-anexo-y-afecto-a-los-legisladores-durante-la-marcha-universitaria/",
   "imagenOriginal": "https://radiomitre.cienradios.com/resizer/v2/6YXWY43D6NCAPJJ5YSNCGHM72M.jpg?smart=true&auth=c703729ad99d2ad4471faf7ee5859753707fd0f5946a618cdfbb6bf72a107d6c&width=1200&height=630",
   "razon": "Es la única foto general limpia, sin marcas superpuestas ni menores reconocibles, que ilustra adecuadamente la zona del Congreso y la protesta.",
-  "cuando": "2026-10-15T22:29:11.200Z"
+  "cuando": "2026-10-15T22:29:11.200Z",
+  "intentado": true,
+  "borrada": true
  },
  "4gc6sa": {
   "archivo": "fotos-notas/4gc6sa.jpg",
@@ -15565,5 +15565,17 @@
   "cuando": "2026-10-16T06:31:45.828Z",
   "intentado": true,
   "borrada": true
+ },
+ "7jnpk": {
+  "archivo": "fotos-notas/7jnpk.jpg",
+  "medio": "Infocampo",
+  "credito": "Foto: Infocampo",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Rioja registra lluvias ligeras y temperaturas moderadas",
+  "enlace": "https://www.infocampo.com.ar/clima-en-la-rioja-lluvia-ligera-el-pronostico-para-hoy-16-de-octubre/",
+  "imagenOriginal": "https://www.infocampo.com.ar/wp-content/uploads/2025/10/tormenta-nubes-frio-clima.jpg",
+  "razon": "Es la única imagen válida que ilustra el clima y el campo, mientras que la opción B es un error de sistema.",
+  "cuando": "2026-10-16T09:36:29.116Z"
  }
 }
