@@ -5731,6 +5731,38 @@
     "shares": 0,
     "saved": 0
    }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122112030039495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "pel8ok",
+   "dia": "2026-10-15",
+   "cuando": "2026-10-15T15:06:37.559Z",
+   "medida": "2026-10-16T15:30:27.222Z",
+   "metricas": {
+    "post_media_view": 8,
+    "post_total_media_view_unique": 4,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18122981276293356",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "pel8ok",
+   "dia": "2026-10-15",
+   "cuando": "2026-10-15T15:06:49.216Z",
+   "medida": "2026-10-16T15:30:27.222Z",
+   "metricas": {
+    "reach": 2,
+    "views": 5,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
   }
  ]
 }
