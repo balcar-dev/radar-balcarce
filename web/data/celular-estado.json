@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T14:38:07.439Z",
+ "generado": "2026-10-16T15:03:42.030Z",
  "portada": 48,
- "archivo": 1158,
- "esperandoCuerpo": 5,
+ "archivo": 1159,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-16T14:38:07.474Z",
+  "generado": "2026-10-16T15:03:42.063Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-16T12:06:25.086Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "Tu nota",
     "voz": "locutor",
     "ventana": 60,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -165,11 +165,6 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "107aa47",
-      "titulo": "Atletas de AACYC completan exigente competencia de trail",
-      "seccion": "Deportes"
-     },
-     {
       "id": "n6v2wu",
       "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
       "seccion": "Balcarce"
@@ -178,6 +173,11 @@
       "id": "1ixp88o",
       "titulo": "El abogado de Virginia Aparicio visita una radio local para hablar del caso",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "107aa47",
+      "titulo": "Atletas de AACYC completan exigente competencia de trail",
+      "seccion": "Deportes"
      }
     ]
    }

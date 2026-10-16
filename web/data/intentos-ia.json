@@ -466,6 +466,13 @@
   "ultimo": "2026-10-14T20:32:18.269Z",
   "motivo": "con cuerpo"
  },
+ "1cvyxf0": {
+  "intentos": 1,
+  "ultimo": "2026-10-16T15:01:37.272Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
+ },
  "1d4xgqi": {
   "intentos": 2,
   "ultimo": "2026-10-10T19:31:42.103Z",
@@ -1289,11 +1296,6 @@
   "ultimo": "2026-10-12T02:31:43.364Z",
   "motivo": "con cuerpo"
  },
- "2qmh95": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T15:01:55.121Z",
-  "motivo": "con cuerpo"
- },
  "2twi1b": {
   "intentos": 1,
   "ultimo": "2026-10-12T00:01:45.108Z",
@@ -1497,9 +1499,9 @@
   "motivo": "con cuerpo"
  },
  "8dpdqi": {
-  "intentos": 1,
-  "ultimo": "2026-10-16T14:37:01.781Z",
-  "motivo": "título o bajada: 1 problema (largo): el titulo tiene 92 caracteres, el máximo es 90"
+  "intentos": 2,
+  "ultimo": "2026-10-16T15:01:37.272Z",
+  "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "8dy7jt": {
   "intentos": 1,
@@ -1840,9 +1842,19 @@
   "ultimo": "2026-10-14T21:02:21.286Z",
   "motivo": "con cuerpo"
  },
+ "gymja6": {
+  "intentos": 1,
+  "ultimo": "2026-10-16T15:01:37.272Z",
+  "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)"
+ },
  "gzwkmn": {
   "intentos": 1,
   "ultimo": "2026-10-13T21:31:54.790Z",
+  "motivo": "con cuerpo"
+ },
+ "h5197i": {
+  "intentos": 1,
+  "ultimo": "2026-10-16T15:01:37.272Z",
   "motivo": "con cuerpo"
  },
  "h6csd8": {
