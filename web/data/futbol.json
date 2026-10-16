@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-15T23:54:26.471Z",
+ "consultado": "2026-10-16T00:33:00.430Z",
  "equipos": [
   "9739",
   "3",
@@ -69,42 +69,6 @@
  "equiposCuando": "2026-10-04T02:29:40.686Z",
  "partidos": {
   "liga": [
-   {
-    "id": "401841595",
-    "competencia": "liga",
-    "inicio": "2026-10-06T00:15:00.000Z",
-    "estado": "final",
-    "minuto": "90'+5'",
-    "local": {
-     "id": "235",
-     "nombre": "Banfield",
-     "goles": 1
-    },
-    "visitante": {
-     "id": "17",
-     "nombre": "Rosario Central",
-     "goles": 1
-    },
-    "penales": null,
-    "goles": [
-     {
-      "equipo": "local",
-      "jugador": "Tomás Adoryan",
-      "minuto": "41'",
-      "tipo": "gol"
-     },
-     {
-      "equipo": "visitante",
-      "jugador": "Giovanni Cantizano",
-      "minuto": "80'",
-      "tipo": "gol"
-     }
-    ],
-    "estadio": "Florencio Solá",
-    "fase": null,
-    "partidoDeLaSerie": null,
-    "torneo": "torneo-clausura"
-   },
    {
     "id": "401841612",
     "competencia": "liga",
@@ -714,8 +678,8 @@
     "id": "401841622",
     "competencia": "liga",
     "inicio": "2026-10-15T23:00:00.000Z",
-    "estado": "entretiempo",
-    "minuto": "45'+3'",
+    "estado": "en-juego",
+    "minuto": "70'",
     "local": {
      "id": "10",
      "nombre": "Huracán",
@@ -1069,8 +1033,8 @@
     "id": "401912523",
     "competencia": "libertadores",
     "inicio": "2026-10-16T00:30:00.000Z",
-    "estado": "programado",
-    "minuto": "0'",
+    "estado": "en-juego",
+    "minuto": "2'",
     "local": {
      "id": "8",
      "nombre": "Estudiantes de La Plata",

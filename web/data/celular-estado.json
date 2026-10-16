@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T00:01:47.479Z",
- "portada": 52,
- "archivo": 1132,
+ "generado": "2026-10-16T00:33:02.780Z",
+ "portada": 40,
+ "archivo": 1134,
  "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-16T00:01:47.513Z",
+  "generado": "2026-10-16T00:33:02.808Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -84,7 +84,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-16T00:06:00.294Z"
    }
   ],
   "repasos": [
@@ -156,8 +156,8 @@
     "hora": "21:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 48,
+    "salio": "2026-10-16T00:06:00.294Z",
+    "segundos": null,
     "notas": [
      {
       "id": "1ylxz2o",
@@ -211,12 +211,6 @@
     }
    ],
    "cola": [
-    {
-     "id": "1ylxz2o",
-     "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
     {
      "id": "n6v2wu",
      "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
