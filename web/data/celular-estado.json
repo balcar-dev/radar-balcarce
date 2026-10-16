@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T13:02:38.337Z",
- "portada": 40,
- "archivo": 1147,
+ "generado": "2026-10-16T13:20:35.345Z",
+ "portada": 47,
+ "archivo": 1153,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-16T13:02:38.364Z",
+  "generado": "2026-10-16T13:20:35.384Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -34,7 +34,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-16T13:06:19.378Z"
    },
    {
     "nombre": "participa-nota",
@@ -94,8 +94,8 @@
     "hora": "10:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 51,
+    "salio": "2026-10-16T13:06:19.378Z",
+    "segundos": null,
     "notas": [
      {
       "id": "aa7nni",
@@ -126,13 +126,39 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 54,
     "notas": [
+     {
+      "id": "1vqqg6",
+      "titulo": "La Dirección de Juventud relanza el programa Arte Urbano",
+      "seccion": "Balcarce"
+     },
      {
       "id": "vn4avv",
       "titulo": "Tres deportistas locales compiten en el Torneo Nacional de Pádel",
       "seccion": "Deportes"
      },
+     {
+      "id": "7rb12z",
+      "titulo": "Lautaro Martínez cuestiona las dudas sobre el compromiso del seleccionado",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "107aa47",
+      "titulo": "Atletas de AACYC completan exigente competencia de trail",
+      "seccion": "Deportes"
+     }
+    ]
+   },
+   {
+    "nombre": "podcast",
+    "titulo": "El repaso del día",
+    "hora": "21:00",
+    "voz": "locutor",
+    "momento": "antes",
+    "salio": null,
+    "segundos": 50,
+    "notas": [
      {
       "id": "n6v2wu",
       "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
@@ -144,29 +170,13 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "1vrfi9w",
-      "titulo": "Proyecto 10 repasa su historia social",
-      "seccion": "Balcarce"
-     }
-    ]
-   },
-   {
-    "nombre": "podcast",
-    "titulo": "El repaso del día",
-    "hora": "21:00",
-    "voz": "locutor",
-    "momento": "antes",
-    "salio": null,
-    "segundos": 36,
-    "notas": [
-     {
-      "id": "1o2y75j",
-      "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
+      "id": "130eay0",
+      "titulo": "La recolección de residuos electrónicos pasa para el lunes",
       "seccion": "Balcarce"
      },
      {
-      "id": "1ao5ic",
-      "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
+      "id": "1vrfi9w",
+      "titulo": "Proyecto 10 repasa su historia social",
       "seccion": "Balcarce"
      }
     ]
@@ -185,6 +195,18 @@
      "id": "aa7nni",
      "titulo": "Reprograman la Caravana de la Alegría para noviembre",
      "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "1vqqg6",
+     "titulo": "La Dirección de Juventud relanza el programa Arte Urbano",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "1jdsdep",
+     "titulo": "La Dirección de Juventud firma un acuerdo para vender entradas online",
+     "seccion": "Balcarce",
      "marcada": false
     },
     {
