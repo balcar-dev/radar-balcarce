@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-16T18:05:17.841Z",
+ "generado": "2026-10-16T18:31:29.493Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -25,14 +25,14 @@
      "fecha": "2026-10-16T15:37:00.000Z"
     },
     {
-     "medio": "Punto Noticias",
-     "enlace": "https://puntonoticias.com/colegio-de-medicos-advirtio-que-la-crisis-del-pami-amenaza-con-desbordar-los-hospitales-publicos/",
-     "fecha": "2026-10-16T16:38:25.000Z"
-    },
-    {
      "medio": "La Verdad",
      "enlace": "https://laverdadonline.com/el-colegio-de-medicos-advirtio-que-la-crisis-del-pami-amenaza-con-desbordar-los-hospitales-publicos/",
      "fecha": "2026-10-16T14:19:04.000Z"
+    },
+    {
+     "medio": "Punto Noticias",
+     "enlace": "https://puntonoticias.com/colegio-de-medicos-advirtio-que-la-crisis-del-pami-amenaza-con-desbordar-los-hospitales-publicos/",
+     "fecha": "2026-10-16T16:38:25.000Z"
     }
    ],
    "intentos": 4,
@@ -84,9 +84,9 @@
      "fecha": "2026-10-16T16:43:13.000Z"
     },
     {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/politica/energumenos-violentos-marchan-universidades-dura-critica-santilli-graves-incidentes-frente-congreso_0_XHvL28muN2.html",
-     "fecha": "2026-10-16T12:24:48.000Z"
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/politica/santilli-los-que-deberian-estar-preocupados-el-regreso-del-kirchnerismo-son-los-gobernadores-n56559",
+     "fecha": "2026-10-16T17:53:00.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
@@ -94,19 +94,14 @@
      "fecha": "2026-10-16T17:39:57.000Z"
     },
     {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/politica/santilli-lanzo-una-advertencia-a-los-gobernadores-por-kicillof-y-agito-el-fantasma-de-la-vuelta-del-kirchnerismo.phtml",
-     "fecha": "2026-10-16T15:30:00.000Z"
-    },
-    {
      "medio": "A24",
      "enlace": "https://www.a24.com/politica/santilli-los-que-tendrian-que-estar-preocupados-son-los-gobernadores-si-gana-kicillof-n1607140",
      "fecha": "2026-10-16T16:41:00.000Z"
     },
     {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/diego-santilli-los-que-deberian-estar-preocupados-son-los-gobernadores-si-el-kirchnerismo-vuelve-y-gana-kicillof/",
-     "fecha": "2026-10-16T13:52:11.000Z"
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
+     "fecha": "2026-10-16T18:08:00.000Z"
     },
     {
      "medio": "Noticias Argentinas (NA)",
@@ -137,6 +132,11 @@
      "medio": "La Gaceta (Tucumán)",
      "enlace": "https://www.lagaceta.com.ar/nota/1158330/politica/diego-santilli-que-deberian-estar-preocupados-son-gobernadores-si-kirchnerismo-vuelve-gana-kicillof.html",
      "fecha": "2026-10-16T11:30:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/videos/diego-santilli-los-que-deberian-estar-preocupados-son-los-gobernadores-si-el-kirchnerismo-vuelve-y-gana-kicillof/",
+     "fecha": "2026-10-16T13:52:11.000Z"
     }
    ],
    "intentos": 1,
@@ -245,7 +245,7 @@
     {
      "medio": "El Destape",
      "enlace": "https://www.eldestapeweb.com/espectaculos/murio-fernando-confessore-asi-fue-desesperado-llamado-esposa-911-2026101613169",
-     "fecha": "2026-10-16T16:16:09.234Z"
+     "fecha": "2026-10-16T16:16:00.000Z"
     },
     {
      "medio": "El Destape",
@@ -271,11 +271,6 @@
      "medio": "A24",
      "enlace": "https://www.a24.com/primiciasya/conmocion-murio-fernando-confessore-el-reconocido-meteorologo-tn-los-58-anos-n1607020",
      "fecha": "2026-10-16T10:14:00.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/fernando-confessore-se-supo-que-dice-el-parte-policial-la-muerte-del-meteorologo-tn-n1607120",
-     "fecha": "2026-10-16T14:03:00.000Z"
     },
     {
      "medio": "Crónica",
@@ -326,6 +321,11 @@
      "medio": "La Tecla",
      "enlace": "https://www.latecla.info/170427-murio-a-los-58-anos-el-meteorologo-fernando-confessore-que-le-paso",
      "fecha": "2026-10-16T10:12:00.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/murio-fernando-confessore-periodista-de-tn-a-los-58-anos/",
+     "fecha": "2026-10-16T11:25:23.000Z"
     },
     {
      "medio": "QZ Noticias (Mar del Plata)",
@@ -448,11 +448,6 @@
      "fecha": "2026-10-16T11:08:00.000Z"
     },
     {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/murio-fernando-confessore-periodista-de-tn-a-los-58-anos/",
-     "fecha": "2026-10-16T11:25:23.000Z"
-    },
-    {
      "medio": "Infobae",
      "enlace": "https://www.infobae.com/teleshow/2026/10/16/la-historia-de-amor-de-fernando-confessore-y-paula-tres-hijas-una-vida-juntos-y-un-apoyo-clave-para-su-carrera/",
      "fecha": "2026-10-16T11:53:27.000Z"
@@ -476,6 +471,11 @@
      "medio": "A24",
      "enlace": "https://www.a24.com/primiciasya/la-ultima-aparicion-al-aire-fernando-confessore-y-la-frase-que-causa-conmocion-su-muerte-n1607089",
      "fecha": "2026-10-16T13:40:00.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/primiciasya/fernando-confessore-se-supo-que-dice-el-parte-policial-la-muerte-del-meteorologo-tn-n1607120",
+     "fecha": "2026-10-16T14:03:00.000Z"
     }
    ],
    "intentos": 5,
@@ -567,11 +567,6 @@
      "fecha": "2026-10-16T17:28:15.161Z"
     },
     {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/el-desgarrador-mensaje-la-hija-fernando-confessore-la-muerte-su-papa-n1607133",
-     "fecha": "2026-10-16T14:27:00.000Z"
-    },
-    {
      "medio": "Canal 26",
      "enlace": "https://www.canal26.com/espectaculos/2026/10/16/el-doloroso-mensaje-de-la-hija-de-fernando-confessore-tras-su-muerte-te-voy-a-amar-toda-la-eternidad/",
      "fecha": "2026-10-16T14:05:00.000Z"
@@ -580,6 +575,11 @@
      "medio": "Minuto Uno",
      "enlace": "https://www.minutouno.com/espectaculos/el-mensaje-una-las-hijas-fernando-confessore-te-voy-amar-y-extranar-toda-la-eternidad-n6334540",
      "fecha": "2026-10-16T13:56:00.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/primiciasya/el-desgarrador-mensaje-la-hija-fernando-confessore-la-muerte-su-papa-n1607133",
+     "fecha": "2026-10-16T14:27:00.000Z"
     },
     {
      "medio": "Infobae",
