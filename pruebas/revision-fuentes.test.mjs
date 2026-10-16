@@ -224,7 +224,12 @@ test('BALCARCE-INVESTIGACION.md: la tabla y una ficha por fuente, y está al dí
   assert.match(md, /Mar del Sud/);
   const enDisco = path.join(RAIZ, 'docs', 'etapa-1-fuentes', 'BALCARCE-INVESTIGACION.md');
   if (fs.existsSync(enDisco)) {
-    assert.equal(fs.readFileSync(enDisco, 'utf8').replace(/\r\n/g, '\n'), md, 'BALCARCE-INVESTIGACION.md está desactualizado: correr node docs/etapa-1-fuentes/generar-revision.mjs');
+    // El informe lleva datos del día (notas publicadas en 30 días, lo que trajo cada feed): comparar todo el texto con lo que sale hoy rompía esta
+    // prueba cada vez que cambiaban los datos (la de «Pruebas» en GitHub falló así el 16/10). Se controla la ESTRUCTURA: cada fuente de Balcarce
+    // tiene su ficha y la tabla, igual que el informe recién armado.
+    const guardado = fs.readFileSync(enDisco, 'utf8').replace(/\r\n/g, '\n');
+    for (const f of BALCARCE_FONDO) assert.ok(guardado.includes(f.nombre), `BALCARCE-INVESTIGACION.md no nombra ${f.nombre}: correr node docs/etapa-1-fuentes/generar-revision.mjs`);
+    assert.equal((guardado.match(/^### \d+\. /gm) ?? []).length, BALCARCE_FONDO.length, 'BALCARCE-INVESTIGACION.md tiene otra cantidad de fichas: correr node docs/etapa-1-fuentes/generar-revision.mjs');
   }
 });
 

@@ -143,6 +143,9 @@ export function guardarEnLaMemoriaDeVoz(clave, resultado, carpeta = process.env.
     fs.copyFileSync(resultado.archivo, path.join(carpeta, `${clave}.mp3`));
     fs.writeFileSync(path.join(carpeta, `${clave}.json`), JSON.stringify({ duracion: resultado.duracion, palabras: resultado.palabras, anclasUsadas: resultado.anclasUsadas ?? null, guardado: new Date(ahora).toISOString() }));
     for (const f of fs.readdirSync(carpeta)) {
+      // Lo que se acaba de guardar nunca se borra en la misma pasada (16/10/2026: con la hora corrida de «Pruebas con otra hora» los archivos
+      // recién escritos parecían viejos y la memoria se vaciaba sola).
+      if (f.startsWith(`${clave}.`)) continue;
       const ruta = path.join(carpeta, f);
       if (ahora - fs.statSync(ruta).mtimeMs > dias * 864e5) fs.rmSync(ruta, { force: true });
     }
