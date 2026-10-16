@@ -1,0 +1,8 @@
+# Worker de imágenes con Workers AI (ver worker.mjs). Se sube con el workflow «Imágenes con Workers AI» (.github/workflows/imagenes-cloudflare.yml).
+name = "radar-balcarce-imagenes"
+main = "worker.mjs"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+[ai]
+binding = "AI"

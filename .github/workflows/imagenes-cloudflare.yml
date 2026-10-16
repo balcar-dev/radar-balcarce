@@ -1,0 +1,49 @@
+# Sube (o actualiza) el Worker de imágenes con Workers AI de Cloudflare (infra/imagenes-cloudflare/, 16/10/2026) y genera 3 imágenes de prueba.
+# SÓLO a mano. Usa los secretos que ya están en GitHub (CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID y VIGILANTE_TOKEN, que el Worker usa como su
+# contraseña): nadie tiene que pegar nada. No escribe nada en el repositorio; las imágenes de prueba quedan como adjunto de la corrida.
+name: Imágenes con Workers AI
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  subir:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Subir el Worker
+        working-directory: infra/imagenes-cloudflare
+        run: npx --yes wrangler@4.139.0 deploy
+      - name: Cargar su contraseña
+        working-directory: infra/imagenes-cloudflare
+        run: printf '%s' "$VIGILANTE_TOKEN" | npx --yes wrangler@4.139.0 secret put TOKEN
+      - name: Generar tres imágenes de prueba
+        run: |
+          mkdir -p salida
+          sleep 8
+          generar() {
+            code=$(curl -s -o "salida/$1.jpg" -w '%{http_code}' -X POST 'https://radar-balcarce-imagenes.radarbalcarce.workers.dev/generar' \
+              -H "x-token: $VIGILANTE_TOKEN" -H 'content-type: application/json' --max-time 120 -d "{\"prompt\":\"$2\",\"steps\":6}")
+            echo "[$1] HTTP $code, $(wc -c < "salida/$1.jpg") bytes"
+          }
+          generar tractor 'Fotografía realista de un tractor sembrando en un campo de la pampa bonaerense al atardecer, luz cálida, sin personas, sin texto, sin logos, estilo fotoperiodístico'
+          generar festival 'Fotografía realista de un escenario al aire libre en una plaza de ciudad bonaerense preparado para un festival cultural, banderines y luces, sin personas visibles, sin texto, sin logos, estilo fotoperiodístico'
+          generar clima 'Fotografía realista de nubes de tormenta sobre un campo llano de la provincia de Buenos Aires, sin personas, sin texto, estilo fotoperiodístico'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: imagenes-workers-ai
+          path: salida
+          retention-days: 3
+          if-no-files-found: ignore
