@@ -161,8 +161,23 @@ const CONTRARIOS = [
   [/\b(sube|suben|subio|aumenta|aumentan|aumento|crece|crecen|crecio)\b/, /\b(baja|bajan|bajo|cae|caen|cayo|retrocede|retroceden|disminuye)\b/],
 ];
 
+/** Las mismas expresiones, para quien tiene que comparar muchos títulos y prefiere mirarlas una vez por título (el cruce). */
+export const MARCAS_DE_HECHO = { ANUNCIO, RESULTADO, CONTRARIOS };
+
 /** true si uno dice A y no B, y el otro B y no A. */
 const opuestos = (x, y, A, B) => (A.test(x) && !B.test(x) && B.test(y) && !A.test(y)) || (B.test(x) && !A.test(x) && A.test(y) && !B.test(y));
+
+/**
+ * Un anuncio y su resultado, o un hecho y el contrario, mirando sólo los dos títulos (sin tildes, en minúscula, como
+ * `tituloPlano`): el motivo, o null. Lo usan esta regla y el cruce coherente (ingesta/cruce.mjs, regla 184).
+ */
+export function hechosOpuestos(tituloA, tituloB) {
+  const x = sinTildes(tituloA);
+  const y = sinTildes(tituloB);
+  if (opuestos(x, y, ANUNCIO, RESULTADO)) return 'un anuncio y su resultado';
+  for (const [A, B] of CONTRARIOS) if (opuestos(x, y, A, B)) return 'un hecho y el contrario';
+  return null;
+}
 
 /** Lo que se compara de una nota (se calcula una vez). */
 export function huella(nota) {
@@ -207,8 +222,8 @@ export function porQueNo(x, y) {
  * la misma nota de 0221 y son la misma noticia.
  */
 export function porQueNoAunqueCitenLoMismo(x, y) {
-  if (opuestos(x.tituloPlano, y.tituloPlano, ANUNCIO, RESULTADO)) return 'un anuncio y su resultado';
-  for (const [A, B] of CONTRARIOS) if (opuestos(x.tituloPlano, y.tituloPlano, A, B)) return 'un hecho y el contrario';
+  const opuesto = hechosOpuestos(x.tituloPlano, y.tituloPlano);
+  if (opuesto) return opuesto;
   const propiosDeX = [...x.nombres].filter((n) => !y.todo.has(n));
   const propiosDeY = [...y.nombres].filter((n) => !x.todo.has(n));
   if (propiosDeX.length && propiosDeY.length) return 'cada una nombra a alguien que la otra no nombra';

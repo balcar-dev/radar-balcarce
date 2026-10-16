@@ -13,7 +13,7 @@ import {
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
 import { menorPorEdad } from './menores.mjs';
 import { sinFenomenoClimatico, sinExencionesDelAmarillo, sinSorteosDeportivos, tituloConArgentino } from './exenciones.mjs';
-import { agruparPorHecho, leerMemoria, guardarMemoria, desdeLaMemoria } from './cruce.mjs';
+import { agruparConDetalle, leerMemoria, guardarMemoria, desdeLaMemoria } from './cruce.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
 import { decodificar, decodificarPagina } from './articulo.mjs';
 import { enlaceNormalizado } from './repetidas-publicadas.mjs';
@@ -1568,10 +1568,27 @@ export async function ingestar({
   const deAntes = memoriaAntes.filter((m) => !enEstaCorrida.has(m.enlace) && !enEstaCorrida.has(enlaceNormalizado(m.enlace))).map(desdeLaMemoria);
   deAntes.forEach(marcarDeAfuera);
   const conjunto = [...todas, ...deAntes];
+  const { grupos, deUnSoloMedio, deOtraCiudad, revisados, partidos } = armarHistorias(conjunto, { idsConocidos, idsUnidos });
+  if (memoria) guardarMemoria(memoria, memoriaAntes, todas.filter((n) => n.alcance !== 'local'));
+  log(`
+  cruce: ${conjunto.length} notas (${deAntes.length} de la memoria) · ${grupos.length} historias · ${deUnSoloMedio} de afuera con un solo medio y ${deOtraCiudad} de otra ciudad de la zona no entran`);
+  if (revisados) log(`  cruce coherente (regla 184): ${revisados} grupos encadenados revisados, ${partidos} partidos en hechos distintos`);
+  return seguirConLasHistorias({ grupos, estadoFuentes, todas, t0, escribirArchivos });
+}
+
+/**
+ * Del conjunto del cruce (las notas de esta corrida más las de la memoria) a las historias: agrupa por hecho
+ * (ingesta/cruce.mjs; con `coherente`, el cruce coherente de la regla 184), deja afuera lo de un solo medio de afuera y
+ * lo que es sólo de otra ciudad de la zona, y elige la nota principal de cada historia (la ya publicada si hay una,
+ * regla 175). Exportada para medir el cruce con una lectura guardada (docs/flujo/medir-cruce-coherente.mjs).
+ * Cambia las notas principales (título cortado, fecha estimada, foto, cuerpo): a quien mide le conviene pasar copias.
+ */
+export function armarHistorias(conjunto, { idsConocidos = null, idsUnidos = null, coherente, parametros } = {}) {
   const grupos = [];
   let deUnSoloMedio = 0;
   let deOtraCiudad = 0;
-  for (const indices of agruparPorHecho(conjunto)) {
+  const cruce = agruparConDetalle(conjunto, { ...(coherente === undefined ? {} : { coherente }), ...(parametros ? { parametros } : {}) });
+  for (const indices of cruce.grupos) {
     const ns = indices.map((i) => conjunto[i]);
     const locales = ns.filter((n) => n.alcance === 'local');
     const medios = [...new Set(ns.map((n) => n.medio))];
@@ -1624,10 +1641,11 @@ export async function ingestar({
     if (!principal.figura) principal.figura = ns.find((n) => n.figura)?.figura;
     grupos.push({ principal, medios, tambien, nombraAca: historiaDeAca && localesNombranAca });
   }
-  if (memoria) guardarMemoria(memoria, memoriaAntes, todas.filter((n) => n.alcance !== 'local'));
-  log(`
-  cruce: ${conjunto.length} notas (${deAntes.length} de la memoria) · ${grupos.length} historias · ${deUnSoloMedio} de afuera con un solo medio y ${deOtraCiudad} de otra ciudad de la zona no entran`);
+  return { grupos, deUnSoloMedio, deOtraCiudad, revisados: cruce.revisados, partidos: cruce.partidos };
+}
 
+/** Lo que sigue al cruce en `ingestar` (paso 3 en adelante). */
+async function seguirConLasHistorias({ grupos, estadoFuentes, todas, t0, escribirArchivos }) {
   // 3. Clasificar, semáforo y relevancia
   //
   // Policiales, sólo de Balcarce (Hernán, 27/09): lo que el sistema clasifica
