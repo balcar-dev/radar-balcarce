@@ -1,0 +1,985 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guía del flujo</title>
+<meta name="description" content="Radar Balcarce: el recorrido completo de una nota, paso por paso, con ejemplos reales del 16/10/2026, los números, las reglas y el prompt tal cual, lo que está flojo y una caja para decidir. Incluye la propuesta de secciones.">
+<style>
+:root{--fondo:#f6f5f1;--papel:#fff;--texto:#1c1c1a;--suave:#5b5a55;--linea:#dcd9cf;--acento:#1f5fa8;--acento-suave:#e6eef8;--verde:#1e7a46;--verde-suave:#e2f2e8;--amarillo:#8a6400;--amarillo-suave:#fbf1d6;--rojo:#b3261e;--rojo-suave:#fbe5e3;--codigo:#efede6;--barra-l:#2f8a57;--barra-a:#5b86c4;--sombra:0 1px 2px rgba(0,0,0,.06);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--fondo:#131313;--papel:#1c1c1c;--texto:#ecebe6;--suave:#a9a7a0;--linea:#34332f;--acento:#86b5ee;--acento-suave:#1c2a3b;--verde:#72d39e;--verde-suave:#16291e;--amarillo:#e9c25a;--amarillo-suave:#2c2513;--rojo:#f2928a;--rojo-suave:#351a18;--codigo:#262624;--barra-l:#4cb57a;--barra-a:#6f9be0;--sombra:none;color-scheme:dark}}
+:root[data-theme="dark"]{--fondo:#131313;--papel:#1c1c1c;--texto:#ecebe6;--suave:#a9a7a0;--linea:#34332f;--acento:#86b5ee;--acento-suave:#1c2a3b;--verde:#72d39e;--verde-suave:#16291e;--amarillo:#e9c25a;--amarillo-suave:#2c2513;--rojo:#f2928a;--rojo-suave:#351a18;--codigo:#262624;--barra-l:#4cb57a;--barra-a:#6f9be0;--sombra:none;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:64px}
+body{margin:0;background:var(--fondo);color:var(--texto);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+a{color:var(--acento)}
+code{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;font-size:.82em;background:var(--codigo);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+h1{font-size:1.85rem;line-height:1.2;margin:6px 0 8px}
+h2{font-size:1.4rem;line-height:1.25;margin:44px 0 10px;padding-top:12px;border-top:2px solid var(--linea)}
+h3{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--suave);margin:22px 0 6px}
+h4{margin:4px 0 8px;font-size:1rem}
+p,li{max-width:74ch}
+.chico,small{font-size:.86rem;color:var(--suave)}
+.bajada{color:var(--suave);font-size:1.04rem;margin:0 0 12px}
+.marco{display:grid;grid-template-columns:1fr;max-width:1180px;margin:0 auto}
+main{min-width:0;padding:16px 16px 90px;max-width:860px}
+/* barra de arriba (celular) */
+.barra-sup{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:8px;padding:8px 16px;background:var(--papel);border-bottom:1px solid var(--linea)}
+.barra-sup .marca{font-weight:700;font-size:.95rem;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.boton{font:inherit;font-size:.9rem;border:1px solid var(--linea);background:var(--papel);color:var(--texto);border-radius:8px;padding:6px 10px;cursor:pointer;min-height:36px}
+.boton:hover{border-color:var(--acento)}
+.boton.prim{background:var(--acento);border-color:var(--acento);color:var(--papel);font-weight:600}
+.progreso{font-size:.8rem;color:var(--suave);white-space:nowrap}
+/* índice */
+.indice{display:none;position:fixed;inset:53px 0 0 0;z-index:19;background:var(--papel);overflow:auto;padding:12px 16px 40px;border-top:1px solid var(--linea)}
+.indice.abierto{display:block}
+.indice ol{list-style:none;margin:0;padding:0}
+.indice li a{display:flex;align-items:center;gap:8px;padding:7px 6px;border-radius:6px;text-decoration:none;color:var(--texto);font-size:.93rem;line-height:1.3}
+.indice li a:hover,.indice li a.activo{background:var(--acento-suave)}
+.punto{flex:none;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--linea)}
+.punto[data-d="Sí"]{background:var(--verde);border-color:var(--verde)}
+.punto[data-d="No"]{background:var(--rojo);border-color:var(--rojo)}
+.punto[data-d="Duda"]{background:var(--amarillo);border-color:var(--amarillo)}
+.indice .sin-punto{width:10px;flex:none}
+.indice .herr{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 0}
+@media (min-width:1000px){
+ .barra-sup .boton-indice{display:none}
+ .marco{grid-template-columns:270px minmax(0,1fr);gap:28px}
+ .indice{display:block;align-self:start;inset:auto;position:sticky;top:53px;height:calc(100vh - 53px);border-top:0;border-right:1px solid var(--linea);background:transparent;padding:16px 10px 40px 16px}
+ main{padding-top:24px}
+}
+/* portada */
+.meta{color:var(--suave);font-size:.85rem}
+.recorrido{list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:12px 0}
+.recorrido li a{display:inline-flex;align-items:center;gap:6px;padding:4px 10px 4px 4px;border:1px solid var(--linea);border-radius:999px;background:var(--papel);text-decoration:none;color:var(--texto);font-size:.84rem}
+.recorrido li a span{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--acento-suave);color:var(--acento);font-weight:700;font-size:.78rem}
+.caja,.ejemplo,.recomendacion{background:var(--papel);border:1px solid var(--linea);border-radius:10px;padding:12px 16px;box-shadow:var(--sombra)}
+.ejemplo{border-left:4px solid var(--acento)}
+.ejemplo p{margin:6px 0}
+.resumen li{margin:6px 0}
+.recomendacion{border-left:4px solid var(--verde)}
+.dos{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:760px){.dos{grid-template-columns:1fr 1fr}}
+/* pasos */
+.paso{background:var(--papel);border:1px solid var(--linea);border-radius:12px;margin:12px 0;box-shadow:var(--sombra)}
+.paso>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:12px 14px}
+.paso>summary::-webkit-details-marker{display:none}
+.paso>summary::after{content:"";flex:none;width:9px;height:9px;border-right:2px solid var(--suave);border-bottom:2px solid var(--suave);transform:rotate(45deg);margin:0 4px 4px 0;transition:transform .15s}
+.paso[open]>summary::after{transform:rotate(225deg);margin:4px 4px 0 0}
+.nro{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--acento);color:var(--papel);font-weight:700}
+.st{flex:1;min-width:0;display:flex;flex-direction:column}
+.st .t{font-weight:700;line-height:1.25}
+.st .c{font-size:.86rem;color:var(--suave);line-height:1.35}
+.estado{flex:none;font-size:.75rem;font-weight:700;border-radius:999px;padding:2px 9px}
+.paso[data-d="Sí"] .estado{background:var(--verde-suave);color:var(--verde)}
+.paso[data-d="No"] .estado{background:var(--rojo-suave);color:var(--rojo)}
+.paso[data-d="Duda"] .estado{background:var(--amarillo-suave);color:var(--amarillo)}
+.paso[data-d="Sí"] .estado::before{content:"Sí"}
+.paso[data-d="No"] .estado::before{content:"No"}
+.paso[data-d="Duda"] .estado::before{content:"Duda"}
+.cuerpo-paso{padding:0 16px 16px;border-top:1px solid var(--linea)}
+/* tablas */
+.tabla-envoltura{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{border-bottom:1px solid var(--linea);padding:7px 8px;text-align:left;vertical-align:top}
+thead th{font-size:.78rem;color:var(--suave);font-weight:600}
+td.v{white-space:normal;font-variant-numeric:tabular-nums}
+table.nums td:first-child{width:32%}
+table.nums td.v{width:20%;font-weight:600}
+@media (max-width:640px){
+ table.nums thead,table.candidatas thead{display:none}
+ table.nums tr,table.candidatas tr{display:block;border-bottom:1px solid var(--linea);padding:6px 0}
+ table.nums td,table.candidatas td,table.candidatas th{display:block;border:0;padding:2px 0;width:auto!important}
+ table.nums td.v{color:var(--acento)}
+ table.candidatas th{font-size:1rem}
+ table.candidatas td::before{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--suave)}
+ table.candidatas td:nth-of-type(1)::before{content:"Notas por mes"}
+ table.candidatas td:nth-of-type(2)::before{content:"A favor"}
+ table.candidatas td:nth-of-type(3)::before{content:"En contra"}
+ table.candidatas td:nth-of-type(4)::before{content:"Lo que propongo"}
+ table.impacto th,table.impacto td{display:block;border:0;padding:2px 0}
+ table.impacto tr{display:block;border-bottom:1px solid var(--linea);padding:8px 0}
+ table.secciones th:nth-child(5),table.secciones td:nth-child(5),table.secciones th:nth-child(3),table.secciones td:nth-child(3){display:none}
+}
+.barra-celda{min-width:160px}
+.barra{display:flex;height:12px;background:var(--codigo);border-radius:3px;overflow:hidden;margin:3px 0 2px}
+.b-l{background:var(--barra-l)}.b-a{background:var(--barra-a)}
+.leyenda{font-size:.82rem;color:var(--suave)}
+.cuadro{display:inline-block;width:11px;height:11px;border-radius:2px;vertical-align:-1px;margin:0 3px 0 10px}
+.barritas{list-style:none;padding:0;margin:4px 0}
+.barritas li{display:grid;grid-template-columns:minmax(0,1fr) 70px 30px;gap:2px 8px;align-items:center;margin:6px 0;font-size:.9rem}
+.barritas .bb{height:10px;background:var(--codigo);border-radius:3px;overflow:hidden}
+.barritas .bb span{display:block;height:100%;background:var(--barra-a)}
+.barritas .bn{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.barritas small{grid-column:1/-1;margin-top:-2px}
+.veredicto{display:inline-block;font-weight:700;font-size:.86rem;border-radius:6px;padding:2px 8px}
+.veredicto.si{background:var(--verde-suave);color:var(--verde)}
+.veredicto.no{background:var(--rojo-suave);color:var(--rojo)}
+.veredicto.despues{background:var(--amarillo-suave);color:var(--amarillo)}
+ul.archivos{margin:4px 0;padding-left:18px}ul.archivos li{margin:3px 0}
+/* literal */
+.literal{border:1px solid var(--linea);border-radius:8px;margin:8px 0;background:var(--fondo)}
+.literal>summary{cursor:pointer;padding:8px 12px;display:flex;flex-direction:column;gap:1px}
+.literal>summary span{font-weight:600;font-size:.93rem}
+.literal[open]>summary{border-bottom:1px solid var(--linea)}
+.texto-ia{margin:0;padding:12px;white-space:pre-wrap;overflow-wrap:anywhere;font:13.5px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace;max-height:70vh;overflow-y:auto}
+.lit-md{padding:4px 14px 10px;font-size:.93rem}
+.lit-md p,.lit-md li{max-width:none}
+.lit-tit{font-weight:700;margin:12px 0 4px}
+.lit-tabla{font-size:.85rem}
+/* flojo y decisión */
+ul.flojo{padding-left:0;list-style:none;margin:6px 0}
+ul.flojo li{margin:8px 0;padding-left:0}
+.peso{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.03em;border-radius:4px;padding:1px 6px;margin-right:4px;vertical-align:1px}
+.peso-alto{background:var(--rojo-suave);color:var(--rojo)}
+.peso-medio{background:var(--amarillo-suave);color:var(--amarillo)}
+.peso-bajo{background:var(--codigo);color:var(--suave)}
+.decision{margin:18px 0 4px;border:2px dashed var(--linea);border-radius:10px;padding:12px 14px;background:var(--fondo)}
+.decision[data-d]{border-style:solid}
+.decision[data-d="Sí"]{border-color:var(--verde)}
+.decision[data-d="No"]{border-color:var(--rojo)}
+.decision[data-d="Duda"]{border-color:var(--amarillo)}
+.decision-tit{margin:0 0 4px;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--suave);font-weight:700}
+.propuesta{margin:0 0 10px}
+.opciones{display:flex;gap:8px;flex-wrap:wrap}
+.op{font:inherit;font-weight:700;min-width:76px;min-height:44px;border-radius:8px;border:1.5px solid var(--linea);background:var(--papel);color:var(--texto);cursor:pointer}
+.op[aria-pressed="true"][data-v="Sí"]{background:var(--verde);border-color:var(--verde);color:var(--papel)}
+.op[aria-pressed="true"][data-v="No"]{background:var(--rojo);border-color:var(--rojo);color:var(--papel)}
+.op[aria-pressed="true"][data-v="Duda"]{background:var(--amarillo);border-color:var(--amarillo);color:var(--papel)}
+.coment{display:block;margin-top:10px;font-size:.85rem;color:var(--suave)}
+.coment textarea,.campo{display:block;width:100%;margin-top:4px;font:inherit;font-size:.95rem;color:var(--texto);background:var(--papel);border:1px solid var(--linea);border-radius:8px;padding:8px}
+.especial{margin-top:10px}
+.panel-dec{background:var(--papel);border:1px solid var(--linea);border-radius:12px;padding:14px 16px}
+.panel-dec .fila{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+#caja{width:100%;min-height:180px;font:13px/1.5 ui-monospace,Consolas,monospace}
+#aviso-almacen{background:var(--amarillo-suave);color:var(--amarillo);padding:8px 12px;border-radius:8px}
+#toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%) translateY(120%);background:var(--texto);color:var(--fondo);padding:10px 16px;border-radius:10px;font-size:.92rem;transition:transform .2s,visibility .2s;visibility:hidden;z-index:40;max-width:calc(100vw - 32px)}
+#toast.ver{transform:translateX(-50%) translateY(0);visibility:visible}
+.limites li{margin:6px 0}
+@media print{.barra-sup,.indice,.opciones,.panel-dec .fila{display:none}.marco{display:block}}
+</style>
+</head>
+<body>
+<div class="barra-sup">
+ <button type="button" class="boton boton-indice" id="boton-indice" aria-expanded="false" aria-controls="indice">Índice</button>
+ <span class="marca">Guía del flujo · Radar Balcarce</span>
+ <span class="progreso" id="progreso">0 de 20</span>
+ <button type="button" class="boton" id="tema" title="Cambiar entre claro y oscuro">Tema</button>
+</div>
+<div class="marco">
+<nav class="indice" id="indice" aria-label="Índice">
+ <ol><li><a href="#como"><span class="sin-punto"></span><span>Cómo usar esta guía</span></a></li><li><a href="#resumen"><span class="sin-punto"></span><span>En una página</span></a></li><li><a href="#p1"><span class="punto" data-k="p1"></span><span>1. Leer las fuentes</span></a></li><li><a href="#p2"><span class="punto" data-k="p2"></span><span>2. Cuáles fuentes y con qué peso</span></a></li><li><a href="#p3"><span class="punto" data-k="p3"></span><span>3. Juntar la misma noticia (el cruce)</span></a></li><li><a href="#p4"><span class="punto" data-k="p4"></span><span>4. Decidir si es de Balcarce o de afuera</span></a></li><li><a href="#p5"><span class="punto" data-k="p5"></span><span>5. Puntaje y relevancia</span></a></li><li><a href="#p6"><span class="punto" data-k="p6"></span><span>6. El semáforo</span></a></li><li><a href="#p7"><span class="punto" data-k="p7"></span><span>7. Lectura con IA (la ficha)</span></a></li><li><a href="#p8"><span class="punto" data-k="p8"></span><span>8. Escribir la nota (el prompt)</span></a></li><li><a href="#p9"><span class="punto" data-k="p9"></span><span>9. Verificar contra las fuentes</span></a></li><li><a href="#p10"><span class="punto" data-k="p10"></span><span>10. Duplicados</span></a></li><li><a href="#p11"><span class="punto" data-k="p11"></span><span>11. Fotos</span></a></li><li><a href="#p12"><span class="punto" data-k="p12"></span><span>12. Secciones y portada</span></a></li><li><a href="#p13"><span class="punto" data-k="p13"></span><span>13. Qué va a las redes</span></a></li><li><a href="#secciones"><span class="sin-punto"></span><span>Secciones: ¿agregamos o dividimos?</span></a></li><li><a href="#decisiones"><span class="sin-punto"></span><span>Mis decisiones</span></a></li><li><a href="#limites"><span class="sin-punto"></span><span>Qué no pude confirmar</span></a></li></ol>
+ <div class="herr"><button type="button" class="boton" id="abrir-todo">Abrir todo</button><button type="button" class="boton" id="cerrar-todo">Cerrar todo</button></div>
+</nav>
+<main>
+<p class="meta">Radar Balcarce · documento interno para revisar juntos · 16/10/2026</p>
+<h1>Guía del flujo: de la fuente a la nota</h1>
+<p class="bajada">Los trece pasos que hace el sistema con cada noticia, uno por uno: qué pasa, un ejemplo real de hoy, los números que mandan, la regla o el prompt tal cual, lo que está flojo y una caja para que decidan. Al final, la propuesta de secciones.</p>
+<p class="meta">Escrita leyendo el código del repositorio (el de ingesta, reels y web es el mismo que está en GitHub hoy) y los datos que publicó "Actualizar la web" a las 09:37 del 16/10 (hora de Balcarce). No se cambió nada del sistema ni se le pidió nada a ninguna IA. Si algo de acá no coincide con el código, manda el código.</p>
+
+<h2 id="como">Cómo usar esta guía</h2>
+<ol>
+<li>Abran cada paso (o "Abrir todo" en el índice). Cada uno se lee en dos o tres minutos; los textos largos (las reglas y el prompt) están plegados.</li>
+<li>Al final de cada paso hay una <b>propuesta concreta</b>. Marquen <b>Sí</b>, <b>No</b> o <b>Duda</b> y, si quieren, un comentario.</li>
+<li>Lo que marcan queda guardado <b>en este navegador</b>. Si cada uno usa su celular, cada uno marca lo suyo. Cuando terminen, en <a href="#decisiones">Mis decisiones</a> tocan <b>Copiar mis decisiones</b> y lo pegan en el chat (o lo descargan).</li>
+</ol>
+<p>El recorrido, en orden:</p>
+<ol class="recorrido"><li><a href="#p1"><span>1</span>Leer las fuentes</a></li><li><a href="#p2"><span>2</span>Cuáles fuentes y con qué peso</a></li><li><a href="#p3"><span>3</span>Juntar la misma noticia</a></li><li><a href="#p4"><span>4</span>Decidir si es de Balcarce o de afuera</a></li><li><a href="#p5"><span>5</span>Puntaje y relevancia</a></li><li><a href="#p6"><span>6</span>El semáforo</a></li><li><a href="#p7"><span>7</span>Lectura con IA</a></li><li><a href="#p8"><span>8</span>Escribir la nota</a></li><li><a href="#p9"><span>9</span>Verificar contra las fuentes</a></li><li><a href="#p10"><span>10</span>Duplicados</a></li><li><a href="#p11"><span>11</span>Fotos</a></li><li><a href="#p12"><span>12</span>Secciones y portada</a></li><li><a href="#p13"><span>13</span>Qué va a las redes</a></li></ol>
+
+<h2 id="resumen">En una página</h2>
+<div class="caja resumen">
+<p><b>El flujo anda.</b> En 30 días salieron 1.039 notas con cuerpo (unas 35 por día), el 79 % con foto, y el 82 % de las notas que se le pidieron a la IA en la última semana terminaron con cuerpo.</p>
+<p><b>Lo más flojo</b>, de más a menos importante:</p>
+<ol>
+<li><b>El cruce encadena noticias distintas</b> y arma "mega-historias" (paso 3). Sigue abierto desde el 15/10.</li>
+<li><b>La IA dice "no importa" y la nota sale igual</b> si la cuentan 3 medios (paso 7): "La madre de Gaspi recuerda al influencer", hoy.</li>
+<li><b>La sección la decide una IA con una lista sin Educación ni Salud</b>: Balcarce y Argentina quedan como cajones de sastre (paso 7 y Secciones).</li>
+<li><b>El cuerpo no crece con las fuentes</b>: 112 palabras con una fuente, 118 con cinco o más (paso 8). El arreglo de la entrada empezó el 15/10: hay que medirlo.</li>
+<li><b>El verificador no lee gramática</b>: "una acatamiento" está publicada (paso 9).</li>
+<li><b>Medios del mismo dueño</b> todavía cuentan como independientes en el nivel que ve el lector (paso 2).</li>
+<li><b>Policiales y Tecnología casi vacías</b>: 12 y 13 notas en 30 días (pasos 6 y 12).</li>
+</ol>
+<p><b>Secciones:</b> primero ordenar el reparto; después sumar <b>Educación</b> (piloto), <b>Salud</b> cuando llegue a 10 notas por semana, y pasar Tecnología a <b>Ciencia y tecnología</b>. No partir Balcarce: Policiales y Deportes ya son casi todo de acá. <a href="#secciones">Ver los números</a>.</p>
+</div>
+
+<h2>Los trece pasos</h2>
+
+<details class="paso" id="p1" data-k="p1">
+<summary><span class="nro">1</span><span class="st"><span class="t">Leer las fuentes</span><span class="c">Cada media hora se leen todos los feeds y se tira lo que nunca serviría.</span></span><span class="estado" aria-hidden="true"></span></summary>
+<div class="cuerpo-paso">
+<h3>Qué pasa</h3><p>Cada media hora (a los :00 y :30, hora UTC) el reloj de Cloudflare despierta a GitHub, que lee <b>todos los feeds activos a la vez</b>, con 15 segundos de espera por cada uno. De los medios de Balcarce entra todo. De los de afuera se tira lo que el propio medio puso en una sección de <b>otro país, de policiales o de consejos</b> (se mira la dirección de la nota), más el horóscopo y la quiniela; si un medio llega por dos feeds, queda una sola copia.</p>
+<h3>Un ejemplo real de hoy</h3><div class="ejemplo"><p>Hoy hay <b>103 feeds activos de 71 medios</b> (<code>FUENTES.md</code>: 15 feeds de 11 medios de Balcarce, 11 de la zona, 11 provinciales y 66 nacionales; 265 configurados). En la corrida de prueba del 15/10 a las 19:21 se leyeron <b>7.122 notas en una sola vuelta</b> (dato de <code>docs/COMO-SE-ELIGE-UNA-NOTA.html</code>; hoy no se volvió a correr). Hasta las 9:37 de hoy salieron 9 notas (<code>notas-por-dia.json</code>).</p>
+<p>Un caso de hoy: <b>"WhatsApp detalla cómo revisar y cerrar sesiones abiertas en otros equipos"</b> (Infobae y La Capital de Rosario) entró y está publicada en Tecnología. Es un consejo de uso, pero el filtro de consejos sólo mira la dirección de la nota (<code>/autos/</code>, <code>/recetas/</code>…) y ésta no lo delata.</p></div>
+<h3>Los números que mandan</h3><div class="tabla-envoltura"><table class="nums"><thead><tr><th>Nombre en el código</th><th>Valor</th><th>Qué quiere decir</th></tr></thead><tbody><tr><td><code>HORAS_DE_UNA_NOTA_NUEVA</code></td><td class="v">72 horas</td><td>Lo que se lee raspando la página de un medio sin feed (El Diario Balcarce, La Vanguardia) no entra si tiene más de 72 horas.</td></tr><tr><td><code>traer (timeout)</code></td><td class="v">15 segundos</td><td>Lo que se espera a cada feed. Una fuente caída no frena a las demás (aviso "Fuente caída").</td></tr><tr><td><code>SECCIONES_QUE_NO_ENTRAN</code></td><td class="v">de otro país · policial de afuera · consejo genérico</td><td>Los tramos de la dirección que hacen que una nota de afuera no entre (ver abajo).</td></tr><tr><td><code>Feeds activos</code></td><td class="v">103 de 71 medios</td><td>Lo que dice <code>FUENTES.md</code> hoy. <code>CLAUDE.md</code> todavía dice "más de 200 feeds de más de 100 medios".</td></tr></tbody></table></div>
+<h3>Lo que dice la regla</h3><details class="literal"><summary><span>Lo que no se trae (CRITERIO-EDITORIAL.md § 2)</span><small>texto literal</small></summary><div class="lit-md"><p><b>Lo que no se trae.</b> De los medios de afuera no entra lo que el medio pone en una sección de <b>otro país</b> (<code>/mexico/</code>, <code>/el-mundo/</code>…), de <b>policiales o seguridad</b>, ni <b>consejos genéricos</b> (autos, horóscopo, recetas). Se mira la sección de la dirección de la nota, no palabras del texto. De una sección de otro país entra sólo lo que tiene conexión argentina en el título (una figura argentina, &quot;Argentina&quot;, Malvinas) o es automovilismo (<code>SECCIONES_QUE_NO_ENTRAN</code>). De los medios de Balcarce entra todo. Los medios de España y de chimentos están apagados.</p></div></details><details class="literal"><summary><span>Los tramos de dirección que no entran (SECCIONES_QUE_NO_ENTRAN)</span><small>ingesta/fuentes.mjs, tal cual</small></summary><div class="lit-md"><p><b>de otro país</b> (con excepción: figura argentina, conexión argentina en el título o automovilismo): <code>mexico</code> · <code>espana</code> · <code>peru</code> · <code>colombia</code> · <code>america</code> · <code>estados-unidos</code> · <code>venezuela</code> · <code>chile</code> · <code>uruguay</code> · <code>el-mundo</code> · <code>mundo</code> · <code>internacional</code> · <code>internacionales</code> · <code>futbol-internacional</code></p><p><b>policial de afuera</b>: <code>policiales</code> · <code>seguridad</code></p><p><b>consejo genérico</b>: <code>autos</code> · <code>horoscopo</code> · <code>astrologia</code> · <code>recetas</code></p><p><b>Quiniela y lotería</b> (por el título, salvo que nombre algo de Balcarce): <code>quiniela|loteria|\bloto\b|quini ?6|\bbrinco\b|telekino|tombola|resultados? del sorteo|numeros? ganadores|pozo (millonario|acumulado|de \$)|ganador(es)? del pozo|sorteo (de la |del )?(loto|quini|brinco|telebingo)|telebingo</code></p><p><b>Horóscopo</b> (por el título): <code>horoscopo|numeros? de la suerte|prediccion(es)? para (tu|cada) signo|los astros anticipan|que le espera a cada signo</code></p></div></details>
+<h3>Qué me parece flojo</h3><ul class="flojo"><li><span class="peso peso-medio">Medio</span> Los <b>consejos genéricos</b> se cuelan cuando la dirección no los delata: en 30 días, 4 de las 13 notas de Tecnología fueron "cómo usar WhatsApp" (liberar espacio, sesiones abiertas, velocidad 2x, cuenta en revisión).</li><li><span class="peso peso-medio">Medio</span> Los dos medios de Balcarce sin feed se leen <b>raspando la página</b>. Si cambian el diseño, se pierde mucho: La Vanguardia está en 135 de las 406 notas locales de los últimos 30 días y El Diario Balcarce en 79. Hay aviso "Fuente vacía", pero no hay respaldo.</li><li><span class="peso peso-bajo">Menor</span> Documentación desactualizada: <code>CLAUDE.md</code> habla de "más de 200 feeds de más de 100 medios"; desde el 15/10 son 103 de 71.</li></ul>
+<div class="decision" data-k="p1" data-titulo="Paso 1 · Leer las fuentes" data-propuesta="Sumar al filtro de entrada, por el título y sólo para lo de afuera, los consejos de uso de aplicaciones y celulares (como ya se hace con el horóscopo).">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Sumar al filtro de entrada, por el título y sólo para lo de afuera, los consejos de uso de aplicaciones y celulares (como ya se hace con el horóscopo).</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+</div>
+</details>
+
+<details class="paso" id="p2" data-k="p2">
+<summary><span class="nro">2</span><span class="st"><span class="t">Cuáles fuentes y con qué peso</span><span class="c">La ficha de cada medio: ciudad, si es oficial y cuánto pesa para ordenar.</span></span><span class="estado" aria-hidden="true"></span></summary>
+<div class="cuerpo-paso">
+<h3>Qué pasa</h3><p>Cada fuente tiene una ficha: <b>de qué ciudad es</b>, si es <b>oficial</b> (un organismo público), si su feed ya viene por tema y un <b>peso</b>. El peso sólo sirve para <b>ordenar</b> (24 a 30 los de Balcarce, 8 la mayoría de los nacionales); no decide si una nota sale. Lo de afuera se mide en cuántos medios distintos lo cuentan, y los medios del mismo dueño (Grupo Clarín; eleco.com.ar) cuentan como uno.</p>
+<h3>Un ejemplo real de hoy</h3><div class="ejemplo"><p>En los últimos 30 días hay <b>406 notas de acá con cuerpo</b>. La Vanguardia aparece en 135, Radio Gabal en 116, Infórmese Primero en 92, El Diario Balcarce en 79, la Municipalidad en 46, Puntonueve en 41 y News Balcarce en 35. <b>285 de esas 406 (el 70 %) las contó un solo medio.</b></p>
+<p>Hoy: "El abogado de Virginia Aparicio visita una radio local para hablar del caso" salió sólo con Radio Gabal: verificación MEDIA, "la informó un solo medio". En cambio "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses" tiene a la Municipalidad: ALTA.</p></div>
+<h3>Los números que mandan</h3><div class="tabla-envoltura"><table class="nums"><thead><tr><th>Nombre en el código</th><th>Valor</th><th>Qué quiere decir</th></tr></thead><tbody><tr><td><code>peso (medios de Balcarce)</code></td><td class="v">30 · 28 · 26 · 24</td><td>30: Puntonueve, Infórmese Primero, News Balcarce. 28: La Vanguardia, El Diario Balcarce, Ahora Balcarce, Acción 5 y tres feeds de Radio Gabal. 26: Gabal Agro y Deportes. 24: Municipalidad, Concejo y Facultad de Agrarias (las oficiales).</td></tr><tr><td><code>peso (afuera)</code></td><td class="v">8 a 16</td><td>De los 66 feeds nacionales activos, 44 pesan 8. Los de la zona, 11 a 16; los provinciales, 10 a 12. Sin peso: 10.</td></tr><tr><td><code>MEDIOS_DE_AFUERA</code></td><td class="v">Fútbol 4 · Deportes 4 · Economía 2 · Tecnología 2 · Agro 2 · Automovilismo 2</td><td>Cuántos medios distintos tienen que contar una nota de afuera para que salga sola.</td></tr><tr><td><code>MEDIOS_POR_DEFECTO</code></td><td class="v">3</td><td>Lo mismo, para el resto de las secciones.</td></tr><tr><td><code>MEDIOS_CON_FIGURA</code></td><td class="v">2</td><td>Si nombra a una figura argentina (Messi, Colapinto, Los Pumas…).</td></tr><tr><td><code>grupo</code></td><td class="v">Grupo Clarín · eleco.com.ar</td><td>Clarín, TN, Olé y Radio Mitre cuentan uno; LU9, QZ Noticias, El Marplatense y El Eco de Tandil, otro.</td></tr></tbody></table></div>
+<h3>Lo que dice la regla</h3><details class="literal"><summary><span>Las fuentes (CRITERIO-EDITORIAL.md § 2)</span><small>texto literal</small></summary><div class="lit-md"><p class="lit-tit">Las fuentes</p>
+<p>Todas las fuentes, con su ciudad, su peso y cómo se usan, están en <b><code>FUENTES.md</code></b>, que se escribe solo desde el código (<code>ingesta/fuentes.mjs</code> y <code>ingesta/fuentes-cruce.mjs</code>; la Municipalidad es <b>fuente oficial</b>). Los medios de Balcarce pesan más que los de afuera. <b>Cada medio tiene un solo nombre</b> para todos sus feeds: TN, con Campo, Tecno y Clima, es un medio, no cuatro. Cada fuente tiene su ficha: qué es (oficial, de Balcarce, de la región, provincial o nacional) y <b>de qué ciudad es</b> (Ecos Diarios es de Necochea, no de Balcarce); la IA recibe esa ciudad con cada nota.</p></div></details>
+<h3>Qué me parece flojo</h3><ul class="flojo"><li><span class="peso peso-medio">Medio</span> Las <b>oficiales pesan menos que las radios</b> (24 contra 30): para ordenar, un comunicado de la Municipalidad arranca debajo de una nota de radio. La oficial gana en verificación, pero no en el puntaje.</li><li><span class="peso peso-medio">Medio</span> <b>Dependencia</b>: 7 de cada 10 notas locales tienen un solo medio. Si se corta La Vanguardia o Radio Gabal, se va un tercio de lo de acá, y casi todo lo local sale con verificación MEDIA.</li><li><span class="peso peso-alto">Importante</span> "Mismo dueño" está aplicado a medias: cuenta en el semáforo y en el puntaje (<code>contarMedios</code>), pero <b>no en el nivel de verificación que se publica</b> (<code>contarFuentes</code>, <code>reels/reescritura.mjs</code>, que separa por nombre). Una nota de Clarín, TN y Radio Mitre puede decir "Lo contaron tres medios independientes".</li><li><span class="peso peso-bajo">Menor</span> La lista de medios se eligió el 15/10 (etapa 1, <code>docs/etapa-1-fuentes/REVISION-FUENTES.html</code>). Esta guía no la vuelve a revisar.</li></ul>
+<div class="decision" data-k="p2" data-titulo="Paso 2 · Cuáles fuentes y con qué peso" data-propuesta="Que los medios del mismo dueño cuenten como uno también en el nivel de verificación que se publica (Clarín + TN = un medio).">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Que los medios del mismo dueño cuenten como uno también en el nivel de verificación que se publica (Clarín + TN = un medio).</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+</div>
+</details>
+
+<details class="paso" id="p3" data-k="p3">
+<summary><span class="nro">3</span><span class="st"><span class="t">Juntar la misma noticia (el cruce)</span><span class="c">Sin IA: las notas que se parecen mucho se vuelven una sola historia.</span></span><span class="estado" aria-hidden="true"></span></summary>
+<div class="cuerpo-paso">
+<h3>Qué pasa</h3><p>Sin IA, cada nota se compara con todas las demás por sus <b>palabras</b>: el título (cuenta doble) y los primeros 400 caracteres del resumen, sin tildes ni palabras vacías. Las palabras raras pesan más ("VTV" dice mucho, "gobierno" casi nada). Si dos notas se parecen <b>0,42 o más</b> (de 0 a 1), son el mismo hecho. Hay 36 horas de memoria de lo de afuera, y <b>los grupos se encadenan</b>: si A se parece a B y B a C, quedan las tres juntas.</p>
+<h3>Un ejemplo real de hoy</h3><div class="ejemplo"><p>Hoy <b>"Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027"</b> juntó 19 medios en una sola nota, y "Javier Milei cierra su visita a Washington con un acto contra el antisemitismo", 11. Bien: es una noticia, una nota.</p>
+<p>Pero de las 19 fuentes de Câmara, <b>15 quedaron sin "aporte"</b> anotado (lo que dio cada medio), y siguen publicadas con página <b>dos parejas repetidas</b>: "Milei ratifica a Caputo y asegura contar con millonarios fondos" (Economía) y "Javier Milei ratifica a Luis Caputo y descarta rumores sobre su salida" (Política), del 12/10; y "Cauan Barros choca con su auto…" y "Cauan Barros sufre un accidente…" (Fútbol, 10/10). Las dos parejas comparten enlaces de fuente.</p></div>
+<h3>Los números que mandan</h3><div class="tabla-envoltura"><table class="nums"><thead><tr><th>Nombre en el código</th><th>Valor</th><th>Qué quiere decir</th></tr></thead><tbody><tr><td><code>CRUCE.umbral</code></td><td class="v">0,42</td><td>Desde cuánto parecido (0 a 1) dos notas son el mismo hecho. Se midió el 27/09 con 2.664 notas de 90 medios.</td></tr><tr><td><code>CRUCE.horasDeMemoria</code></td><td class="v">36 horas</td><td>Cuánto se recuerda lo de afuera para cruzarlo con lo que llega después. Lo de Balcarce no se guarda.</td></tr><tr><td><code>CRUCE.palabraComun</code></td><td class="v">5 %</td><td>Una palabra que aparece en más del 5 % de las notas no sirve para buscar parecidas.</td></tr><tr><td><code>palabrasDe</code></td><td class="v">título × 2 + 400 caracteres</td><td>Lo que se compara de cada nota.</td></tr></tbody></table></div>
+<h3>Lo que dice la regla</h3><details class="literal"><summary><span>Una noticia, una nota (CRITERIO-EDITORIAL.md § 2)</span><small>texto literal</small></summary><div class="lit-md"><p><b>Una noticia, una nota.</b> Si varios medios cuentan el mismo hecho, es <b>una</b> nota con todos los medios como fuentes (el cruce de medios, <code>ingesta/cruce.mjs</code>, y la IA que junta repetidas, <code>agruparRepetidas</code>). No se juntan notas distintas del mismo tema (dos prácticas del TC son dos notas). Queda, en este orden, la que ya está publicada, la que puede salir sola, la que cuentan más medios y la de más puntaje. Si la misma noticia igual vuelve a entrar con otra dirección (porque el medio cambió el enlace), se une sola: queda una y la otra dirección redirige a ésa (<code>web/lib/repetidas.js</code>).</p></div></details>
+<h3>Qué me parece flojo</h3><ul class="flojo"><li><span class="peso peso-alto">Importante</span> <b>Encadena noticias distintas</b>: el 15/10 la muerte de Locomotora Castro quedó dentro de un grupo titulado como MasterChef, y 103 de 441 historias tenían más de 24 horas entre su primera y su última nota (medido en <code>docs/COMO-SE-ELIGE-UNA-NOTA.html</code>). Ese punto <b>sigue abierto</b>: la regla 175 cerró otros.</li><li><span class="peso peso-medio">Medio</span> El 0,42 se midió el 27/09 con otra mezcla de medios. El 15/10 la lista bajó de 236 a 103 feeds, y lo que es una palabra "rara" depende de qué medios se leen. Conviene volver a medirlo.</li><li><span class="peso peso-medio">Medio</span> La memoria guarda sólo lo de afuera: dos radios de acá que cuentan lo mismo con horas de diferencia pueden no cruzarse.</li><li><span class="peso peso-bajo">Menor</span> Las parejas viejas (antes de la regla 175) ya no están en la ingesta y nadie las vuelve a mirar: quedan dos páginas para la misma noticia.</li></ul>
+<div class="decision" data-k="p3" data-titulo="Paso 3 · Juntar la misma noticia" data-propuesta="Medir el cruce con la lista nueva de medios y probar un tope de horas por grupo (por ejemplo, 24 entre la primera y la última nota) antes de tocar el umbral.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Medir el cruce con la lista nueva de medios y probar un tope de horas por grupo (por ejemplo, 24 entre la primera y la última nota) antes de tocar el umbral.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+</div>
+</details>
+
+<details class="paso" id="p4" data-k="p4">
+<summary><span class="nro">4</span><span class="st"><span class="t">Decidir si es de Balcarce o de afuera</span><span class="c">Lo de acá sale con un solo medio; lo de afuera necesita varios.</span></span><span class="estado" aria-hidden="true"></span></summary>
+<div class="cuerpo-paso">
+<h3>Qué pasa</h3><p>Es "de acá" lo que <b>toca la zona</b> (la 226, la 55, la papa, Napaleofú), lo de un <b>medio de Balcarce</b> o lo que dice Balcarce <b>en el título</b>. Pero un medio de acá que copia una noticia nacional no la vuelve local, y lo de un medio de acá que no nombra nada de acá <b>espera a la IA</b>. Lo de acá no pide medios ni ocupa cupo; lo de afuera sí.</p>
+<h3>Un ejemplo real de hoy</h3><div class="ejemplo"><p>"Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses": medio de acá y la IA dice "ámbito Balcarce, impacto directo". Es de acá, sin dudas.</p>
+<p>"<b>Docentes y estatales bonaerenses discuten una nueva oferta salarial</b>" (sólo La Vanguardia) salió hoy como de acá, en Economía. Es una paritaria provincial; la bajada habla de "los trabajadores locales". Salió <b>sin ficha de la IA</b> (no está en <code>fichas.json</code>); no pude confirmar por qué no esperó a la lectura.</p></div>
+<h3>Los números que mandan</h3><div class="tabla-envoltura"><table class="nums"><thead><tr><th>Nombre en el código</th><th>Valor</th><th>Qué quiere decir</th></tr></thead><tbody><tr><td><code>PALABRAS_LOCALES</code></td><td class="v"><code>balcarce</code> · <code>balcarceño</code> · <code>balcarceno</code> · <code>balcarceña</code> · <code>napaleofú</code> · <code>napaleofu</code> · <code>ramos otero</code> · <code>laguna la brava</code> · <code>sierras de balcarce</code> · <code>inta balcarce</code> · <code>partido de balcarce</code> · <code>autódromo juan manuel fangio</code> · <code>museo fangio</code></td><td>Si el título dice una de éstas, es de Balcarce.</td></tr><tr><td><code>PALABRAS_LOCALES_DEBILES</code></td><td class="v"><code>san agustín</code> · <code>los pinos</code> · <code>bosch</code> · <code>juan vincenty</code></td><td>Sólo con respaldo (regla 179): hay San Agustín en Córdoba y Los Pinos en México.</td></tr><tr><td><code>PALABRAS_ZONA</code></td><td class="v"><code>ruta 226</code> · <code>ruta nacional 226</code> · <code>ruta 55</code> · <code>ruta provincial 55</code> · <code>productores de papa</code> · <code>papa semilla</code> · <code>cultivo de papa</code> · <code>producción de papa</code> · <code>produccion de papa</code> · <code>cosecha de papa</code> · <code>siembra de papa</code></td><td>Tocan la zona sin nombrar a Balcarce: sale aunque la cuente un solo medio.</td></tr><tr><td><code>aplicarFichas (−25)</code></td><td class="v">−25 puntos</td><td>Si la IA dice que una nota "de Balcarce" no lo es, deja de ser local y pierde 25 puntos.</td></tr></tbody></table></div>
+<h3>Lo que dice la regla</h3><details class="literal"><summary><span>De acá y de afuera (CRITERIO-EDITORIAL.md § 2)</span><small>texto literal</small></summary><div class="lit-md"><p class="lit-tit">De acá y de afuera</p>
+<p><b>&quot;De acá&quot; tiene una sola definición</b> (<code>esDeAca</code>): lo que toca la zona (la ruta 226, la 55, Napaleofú, Los Pinos, la papa; decir &quot;sudeste bonaerense&quot; no alcanza desde el 29/09); si no, lo de un medio de Balcarce o lo que dice Balcarce <b>en el título</b>, siempre que la IA no haya dicho que no es de Balcarce. Nombrarla al pasar en el texto no alcanza. Lo de acá no pide medios ni ocupa cupo, y <b>lo que toca la zona sale solo aunque lo cuente un solo medio</b>.</p>
+<p><b>Lo copiado de afuera por un medio de acá es de afuera.</b> Un medio de Balcarce que cuenta lo mismo que los nacionales sin nombrar nada de acá está copiando una noticia de afuera (Malvinas, un incendio en Misiones): se rige por lo de afuera (<code>historiaDeAca</code>). Lo que cuentan <b>sólo</b> medios de otras ciudades de la zona (Mar del Plata, Tandil, Necochea) no se trae, salvo que diga Balcarce en el título o toque la zona.</p></div></details>
+<h3>Qué me parece flojo</h3><ul class="flojo"><li><span class="peso peso-medio">Medio</span> Son <b>cuatro piezas que se combinan</b> (<code>esDeAca</code>, <code>historiaDeAca</code>, <code>mencionaAca</code> y las "dos llaves" de la IA). Es difícil de prever: el 15/10 la VTV pasó de "afuera" a "acá" entre dos corridas y nació otra nota (ya se arregló esa consecuencia, no la fragilidad).</li><li><span class="peso peso-medio">Medio</span> Una noticia provincial contada por un medio de acá puede salir como local con un solo medio (la paritaria de hoy). No es grave, pero salta la regla de "lo de afuera se mide en medios".</li><li><span class="peso peso-bajo">Menor</span> Lo que cuentan sólo medios de otras ciudades de la zona no se trae, pero en 30 días salieron en Cultura y agenda "Mar del Plata registra un cincuenta por ciento de reservas" y "Punta Mogotes prorroga las concesiones…". No confirmé qué medios las contaron.</li></ul>
+<div class="decision" data-k="p4" data-titulo="Paso 4 · De Balcarce o de afuera" data-propuesta="Pedir un listado semanal de las notas marcadas &quot;de acá&quot; que no nombran Balcarce ni la zona en título y bajada, para revisarlas a mano antes de cambiar reglas.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Pedir un listado semanal de las notas marcadas &quot;de acá&quot; que no nombran Balcarce ni la zona en título y bajada, para revisarlas a mano antes de cambiar reglas.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+</div>
+</details>
+
+<details class="paso" id="p5" data-k="p5">
+<summary><span class="nro">5</span><span class="st"><span class="t">Puntaje y relevancia</span><span class="c">Un número de 0 a 100 que sólo ordena: qué va primero y qué entra en el cupo.</span></span><span class="estado" aria-hidden="true"></span></summary>
+<div class="cuerpo-paso">
+<h3>Qué pasa</h3><p>Cada nota recibe un número de <b>0 a 100</b> que <b>sólo ordena</b>: qué va primero en la portada, cuáles de afuera entran en el cupo de su sección y qué va a Facebook. Suma el peso de la fuente, si es de Balcarce, si es reciente, cuántos medios la cuentan, si trae foto o texto completo, si nombra a Balcarce o a una figura, y si es Automovilismo.</p>
+<h3>Un ejemplo real de hoy</h3><div class="ejemplo"><p>En la portada de las 9:37: "<b>Reprograman la Caravana de la Alegría para noviembre</b>" tiene <b>100</b>; "Productores ganaderos trasladan vacas ante la crecida de los ríos", <b>42</b>; "La siembra y cosecha agrícola registran demoras por lluvias", <b>32</b>; "El Gobierno nacional convoca a empresas para optimizar ramales de trenes en Salta", <b>26</b>.</p>
+<p>Las notas de acá van de 63 a 100; las de afuera, de 26 a 97.</p></div>
+<h3>Los números que mandan</h3><div class="tabla-envoltura"><table class="nums"><thead><tr><th>Nombre en el código</th><th>Valor</th><th>Qué quiere decir</th></tr></thead><tbody><tr><td><code>relevancia: peso</code></td><td class="v">+ el peso de la fuente</td><td>24 a 30 las de Balcarce, 8 casi todas las nacionales.</td></tr><tr><td><code>relevancia: de Balcarce</code></td><td class="v">+25</td><td>Medio de acá o Balcarce en el título.</td></tr><tr><td><code>relevancia: frescura</code></td><td class="v">+25 · +15 · +8</td><td>Menos de 3 horas · menos de 12 · menos de 24. Sin fecha real, cuenta como 24 horas.</td></tr><tr><td><code>relevancia: medios</code></td><td class="v">+10 por medio, hasta +40</td><td>Cada medio más que cuenta lo mismo.</td></tr><tr><td><code>relevancia: imagen / texto</code></td><td class="v">+6 / +4</td><td>Si la fuente trae foto / el texto entero.</td></tr><tr><td><code>relevancia: nombra Balcarce</code></td><td class="v">+22</td><td>Un medio de afuera que dice Balcarce en el título.</td></tr><tr><td><code>relevancia: figura</code></td><td class="v">+16</td><td>Nombra a una figura argentina.</td></tr><tr><td><code>relevancia: Automovilismo</code></td><td class="v">+8</td><td>"Balcarce es tierra de fierros".</td></tr><tr><td><code>relevancia: tope</code></td><td class="v">100</td><td>Todo lo que pasa de 100 queda en 100.</td></tr><tr><td><code>CUPO_DE_AFUERA</code></td><td class="v">Fútbol 10 · Argentina 12 · Deportes 10 · Economía 12 · Tecnología 8 · Política 8 · Policiales 0 · Automovilismo 6 · Cultura y agenda 8</td><td>Cuántas de afuera salen solas a la vez por sección, de más a menos puntaje.</td></tr><tr><td><code>CUPO_POR_DEFECTO</code></td><td class="v">15</td><td>El cupo de las demás secciones (Agro).</td></tr></tbody></table></div>
+<h3>Lo que dice la regla</h3><details class="literal"><summary><span>Lo de afuera se mide en medios (CRITERIO-EDITORIAL.md § 2)</span><small>texto literal</small></summary><div class="lit-md"><p><b>Lo de afuera se mide en medios, no en puntaje.</b> Una nota que no es de Balcarce sale sola sólo si la cuentan los medios distintos que pide su sección: 3 por defecto; Fútbol y Deportes, 4; Economía, Tecnología, Agro y Automovilismo, 2; lo que nombra a una figura argentina, 2. <b>Nunca con uno solo</b>; una fuente oficial alcanza sola. Si no llega, espera a una persona con el motivo &quot;de afuera y poco contada (N medios; Sección pide M)&quot;. Además, cada sección tiene un <b>cupo</b> de lo de afuera (cuántas pueden salir solas a la vez). Los números, en la sección 11. Se mira en la ingesta y otra vez después de la lectura con IA: si al juntar repetidas una nota llega a los medios que pide, sale.</p></div></details>
+<h3>Qué me parece flojo</h3><ul class="flojo"><li><span class="peso peso-medio">Medio</span> <b>Se llena enseguida</b>: una nota local de dos medios con foto llega a 100 (la Caravana de la Alegría), igual que una muy importante. Entre las de acá el orden casi no distingue lo grande de lo chico.</li><li><span class="peso peso-medio">Medio</span> <b>No mira lo que lee la gente</b>: <code>web/data/estadisticas.json</code> tiene las visitas de cada nota y no se usan para nada del orden.</li><li><span class="peso peso-bajo">Menor</span> El +8 de Automovilismo es fijo, aunque la nota no sea de acá: en 30 días hubo 19 notas de Colapinto.</li><li><span class="peso peso-bajo">Menor</span> Lo de Agro de afuera queda último (26 a 42 hoy), aunque el campo es identidad del pueblo.</li></ul>
+<div class="decision" data-k="p5" data-titulo="Paso 5 · Puntaje" data-propuesta="Probar en paralelo, sin publicar, un puntaje que no se llene en 100 tan rápido y que use las visitas de notas parecidas; compararlo una semana con el de hoy.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Probar en paralelo, sin publicar, un puntaje que no se llene en 100 tan rápido y que use las visitas de notas parecidas; compararlo una semana con el de hoy.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+</div>
+</details>
+
+<details class="paso" id="p6" data-k="p6">
+<summary><span class="nro">6</span><span class="st"><span class="t">El semáforo</span><span class="c">Rojo nunca, amarillo espera a una persona, verde sale sola.</span></span><span class="estado" aria-hidden="true"></span></summary>
+<div class="cuerpo-paso">
+<h3>Qué pasa</h3><p><b>Rojo</b>: no sale nunca (menores, víctimas, abuso, suicidio, listas de sepelios, efemérides de otro medio). <b>Amarillo</b>: espera a una persona en el celular (acusaciones, muertes donde puede ser alguien de acá, chicos, promoción, dólar, internacional, pocos medios, cupo, verificación baja). <b>Verde</b>: sale sola. Mira el título y los primeros 600 caracteres; lo de chicos y víctimas, también el texto entero y lo que escribe la IA.</p>
+<h3>Un ejemplo real de hoy</h3><div class="ejemplo"><p>A las 9:37 había <b>18 notas esperando a una persona</b>: 7 por "niño" o "adolescente" (tres de ellas en Agro), 9 por "denuncia", "denunció" o "acusado" (casi todas en Política y Economía), una por "detenido" (Policiales) y una por "falleció". Los títulos viajan cifrados al celular: no los pude ver.</p></div>
+<h3>Los números que mandan</h3><div class="tabla-envoltura"><table class="nums"><thead><tr><th>Nombre en el código</th><th>Valor</th><th>Qué quiere decir</th></tr></thead><tbody><tr><td><code>REGLAS_SEMAFORO.rojo</code></td><td class="v">49 frases</td><td>No se publica nunca. <b>No se toca sin preguntar.</b></td></tr><tr><td><code>REGLAS_SEMAFORO.nunca</code></td><td class="v">18 frases</td><td>Avisos fúnebres y sepelios, sólo en el título: ni aprobados.</td></tr><tr><td><code>REGLAS_SEMAFORO.amarillo</code></td><td class="v">45 frases</td><td>Espera a una persona.</td></tr><tr><td><code>REGLAS_SEMAFORO.amarilloMuerte</code></td><td class="v">33 frases</td><td>Muertes y heridos: sólo en Policiales, Balcarce, lo de acá o la zona, o con un solo medio.</td></tr><tr><td><code>AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA</code></td><td class="v"><code>denuncia</code> · <code>denunció</code> · <code>denuncio</code></td><td>En lo de acá no frenan (en Política, sólo con oficial o dos medios).</td></tr><tr><td><code>AMARILLO_QUE_SE_SUELTA_SI_LA_CONFIRMAN</code></td><td class="v"><code>detenido</code> · <code>acusado</code> · <code>imputado</code></td><td>En lo de acá, no frenan si la confirman una oficial o dos medios.</td></tr><tr><td><code>semaforo (texto que mira)</code></td><td class="v">título + 600 caracteres</td><td>El resto del amarillo no mira el texto entero: frenaba 16 de cada 23 notas (25/09).</td></tr></tbody></table></div>
+<h3>Lo que dice la regla</h3><details class="literal"><summary><span>El semáforo (CRITERIO-EDITORIAL.md § 3)</span><small>texto literal</small></summary><div class="lit-md"><p class="lit-tit">3. El semáforo</p>
+<p>Cada noticia pasa por un semáforo antes de publicarse. Las listas de palabras están en <code>REGLAS_SEMAFORO</code> (<code>ingesta/fuentes.mjs</code>) y cada una tiene su prueba. <b>No se tocan sin que lo decidan Hernán y Andrés.</b></p>
+<div class="tabla-envoltura"><table class="lit-tabla"><thead><tr><th>Color</th><th>Qué pasa</th><th>Cuándo</th></tr></thead><tbody><tr><td><b>Rojo</b></td><td>No se publica nunca, ni por error</td><td>Identifica o puede identificar a un menor o a una víctima de violencia de género o de un delito sexual (menor de edad, abuso sexual, violación, femicidio, grooming, suicidio…). También las listas de sepelios (<code>REGLAS_SEMAFORO.nunca</code>)</td></tr><tr><td><b>Amarillo</b></td><td>Espera a una persona (en el panel del celular)</td><td>Acusa a alguien (denuncia, detenido, imputado), habla de una muerte o de un herido (en Policiales, en Balcarce, en lo de acá o de la zona y en lo que cuenta un solo medio), involucra a un chico, parece promoción, es de afuera y la cuentan menos medios de los que pide su sección, pasó el cupo de su sección, es la cotización del dólar, o tiene <b>verificación baja</b> (sección 5)</td></tr><tr><td><b>Verde</b></td><td>Sale sola</td><td>Todo lo demás</td></tr></tbody></table></div>
+<p><b>Qué mira.</b> En el <b>título y el comienzo del resumen</b>, las listas enteras. En el <b>texto entero</b> (el artículo de la fuente, lo de los otros medios y lo que escribe la IA), sólo el rojo y lo de chicos y víctimas: mirando todo, &quot;denuncia&quot; o &quot;falleció&quot; perdidas en el octavo párrafo frenaban casi todo. Lo que escribe la IA <b>vuelve a pasar</b> por el semáforo: si da rojo o amarillo, esa escritura no se usa. Se prefiere pasarse de cuidadoso: &quot;violación de la ley&quot; da rojo y &quot;el menor de los males&quot; da amarillo.</p>
+<p><b>Política y Policiales.</b> En la web salen solas si el semáforo da verde. En las redes <b>siempre</b> esperan a una persona, que las marca desde el panel del celular: en una red la nota viaja sin contexto y a un vecino lo nombra un titular. Tampoco va sola a las redes una nota que salió en la web porque la aprobó una persona.</p></div></details><details class="literal"><summary><span>Las listas del semáforo (REGLAS_SEMAFORO)</span><small>ingesta/fuentes.mjs, tal cual</small></summary><div class="lit-md"><p><b>rojo</b> (no se toca sin preguntar): <code>menor de edad</code> · <code>abuso sexual</code> · <code>suicid</code> · <code>se quitó la vida</code> · <code>violación</code> · <code>violacion</code> · <code>víctima de violencia</code> · <code>victima de violencia</code> · <code>violencia de género</code> · <code>violencia de genero</code> · <code>femicidio</code> · <code>niño identificado</code> · <code>niña identificada</code> · <code>abuso infantil</code> · <code>grooming</code> · <code>abusó sexualmente</code> · <code>abusaron sexualmente</code> · <code>abusada sexualmente</code> · <code>abusado sexualmente</code> · <code>agresión sexual</code> · <code>agresiones sexuales</code> · <code>abuso de menores</code> · <code>abuso de un menor</code> · <code>abuso de una menor</code> · <code>corrupción de menores</code> · <code>pornografía infantil</code> · <code>explotación sexual</code> · <code>víctimas de trata</code> · <code>red de trata</code> · <code>delito de trata</code> · <code>violada</code> · <code>violador</code> · <code>la violaron</code> · <code>estupro</code> · <code>suicidarse</code> · <code>suicidaron</code> · <code>suicidada</code> · <code>feminicidio</code> · <code>feminicidios</code> · <code>abusos sexuales</code> · <code>abuso sexual infantil</code> · <code>violaron a una</code> · <code>violaron a un</code> · <code>violó a una</code> · <code>violó a un</code> · <code>fue violada</code> · <code>fue violado</code> · <code>fueron violadas</code> · <code>trata de personas con fines</code></p><p><b>nunca</b>: <code>sepelio</code> · <code>sepelios</code> · <code>inhumación</code> · <code>inhumacion</code> · <code>inhumaciones</code> · <code>necrológica</code> · <code>necrológicas</code> · <code>obituario</code> · <code>obituarios</code> · <code>q.e.p.d</code> · <code>qepd</code> · <code>participan su fallecimiento</code> · <code>participa su fallecimiento</code> · <code>participan el fallecimiento</code> · <code>servicio fúnebre</code> · <code>servicios fúnebres</code> · <code>cochería</code> · <code>cocheria</code></p><p><b>amarillo</b>: <code>denuncia</code> · <code>denunció</code> · <code>denuncio</code> · <code>detenido</code> · <code>acusado</code> · <code>imputado</code> · <code>homicidio</code> · <code>asesinato</code> · <code>asesinado</code> · <code>asesinaron</code> · <code>cadáver</code> · <code>cadaver</code> · <code>víctima</code> · <code>victima</code> · <code>apuñalado</code> · <code>apuñalaron</code> · <code>baleado</code> · <code>balearon</code> · <code>adolescente</code> · <code>adolescentes</code> · <code>niño</code> · <code>niña</code> · <code>nene</code> · <code>nena</code> · <code>menores de edad</code> · <code>un menor de</code> · <code>una menor de</code> · <code>el menor de</code> · <code>la menor de</code> · <code>un bebé</code> · <code>el bebé</code> · <code>del bebé</code> · <code>una beba</code> · <code>la beba</code> · <code>bebés</code> · <code>recién nacido</code> · <code>recién nacida</code> · <code>alumna de</code> · <code>alumno de</code> · <code>abusado</code> · <code>abusada</code> · <code>abusador</code> · <code>la abusó</code> · <code>lo abusó</code> · <code>abusaba de</code></p><p><b>amarilloMuerte</b>: <code>muerte</code> · <code>falleció</code> · <code>fallecio</code> · <code>murió</code> · <code>murio</code> · <code>muere</code> · <code>fallece</code> · <code>deceso</code> · <code>velatorio</code> · <code>murieron</code> · <code>mueren</code> · <code>fallecieron</code> · <code>fallecen</code> · <code>muertos</code> · <code>muertas</code> · <code>hallaron muerto</code> · <code>hallaron muerta</code> · <code>hallado muerto</code> · <code>hallada muerta</code> · <code>encontraron muerto</code> · <code>encontraron muerta</code> · <code>encontrado muerto</code> · <code>encontrada muerta</code> · <code>sin vida</code> · <code>víctima fatal</code> · <code>victima fatal</code> · <code>herido</code> · <code>herida</code> · <code>heridos</code> · <code>heridas</code> · <code>lesionado</code> · <code>lesionada</code> · <code>lesionados</code></p><p><b>promocional</b>: <code>sorteo</code> · <code>sortea</code> · <code>sortearemos</code> · <code>ganá tu entrada</code> · <code>gana tu entrada</code> · <code>participá del</code> · <code>participa del</code> · <code>regala las entradas</code> · <code>promoción exclusiva</code> · <code>promocion exclusiva</code> · <code>suscribite</code> · <code>seguinos en</code> · <code>auspicia</code> · <code>publicidad</code> · <code>rol periodístico</code> · <code>rol periodistico</code> · <code>vías de contacto</code> · <code>vias de contacto</code> · <code>sede legal</code></p><p><b>cotizacion</b>: <code>dólar hoy</code> · <code>a cuánto cotiza</code> · <code>a cuanto cotiza</code> · <code>dólar blue</code> · <code>cotización del dólar</code> · <code>dólar oficial</code> · <code>dólar mep</code> · <code>dólar minorista</code> · <code>dólar mayorista</code> · <code>dólar tarjeta</code> · <code>dólar cripto</code> · <code>dólar ccl</code> · <code>contado con liquidación</code> · <code>precio del dólar</code> · <code>cotiza el dólar</code> · <code>cotizó el dólar</code> · <code>blue hoy</code></p><p><b>internacional</b>: <code>trump</code> · <code>xi jinping</code> · <code>putin</code> · <code>zelenski</code> · <code>zelensky</code> · <code>netanyahu</code> · <code>casa blanca</code> · <code>kremlin</code> · <code>hamas</code> · <code>franja de gaza</code> · <code>ucrania</code> · <code>otan</code> · <code>brics</code> · <code>g20</code> · <code>g7</code> · <code>unión europea</code> · <code>union europea</code> · <code>parlamento europeo</code> · <code>macron</code> · <code>starmer</code> · <code>sheinbaum</code> · <code>lula</code> · <code>maduro</code> · <code>petro</code> · <code>boric</code> · <code>erdogan</code> · <code>kim jong</code> · <code>newsom</code> · <code>california</code></p></div></details>
+<h3>Qué me parece flojo</h3><ul class="flojo"><li><span class="peso peso-medio">Medio</span> Tres notas de Agro esperan por "<b>niño</b>". Puede ser el fenómeno del clima: hay una excepción para "El Niño" (<code>ingesta/exenciones.mjs</code>), pero sólo si va con mayúscula y con contexto de clima. No pude ver los títulos para confirmarlo.</li><li><span class="peso peso-medio">Medio</span> <b>Policiales queda casi vacía</b>: 12 notas con cuerpo en 30 días. Cada "detenido" espera. Es la pregunta abierta 2 de <code>docs/DECISIONES.md</code> (soltar lo que cuentan dos medios).</li><li><span class="peso peso-bajo">Menor</span> Una "denuncia" en Política o Economía espera siempre (9 hoy): mucha carga para el celular, aunque es la regla de Campillay bien aplicada.</li><li><span class="peso peso-bajo">Menor</span> La lista roja está bien que no se toque: acá no se propone cambiarla.</li></ul>
+<div class="decision" data-k="p6" data-titulo="Paso 6 · El semáforo" data-propuesta="Revisar con los títulos reales (en el celular) las amarillas por &quot;niño&quot; y &quot;adolescente&quot; de Agro, Economía y Deportes, para ajustar las excepciones del amarillo. La roja no se toca.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Revisar con los títulos reales (en el celular) las amarillas por &quot;niño&quot; y &quot;adolescente&quot; de Agro, Economía y Deportes, para ajustar las excepciones del amarillo. La roja no se toca.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+</div>
+</details>
+
+<details class="paso" id="p7" data-k="p7">
+<summary><span class="nro">7</span><span class="st"><span class="t">Lectura con IA (la ficha)</span><span class="c">Una IA lee cada nota y dice de dónde es, de qué sección y si le importa a un vecino.</span></span><span class="estado" aria-hidden="true"></span></summary>
+<div class="cuerpo-paso">
+<h3>Qué pasa</h3><p>Una IA (Gemini; si falla, Groq) lee <b>de a 12 notas</b>: el título, 500 caracteres del resumen, el medio y su ciudad, con el <b>perfil de Balcarce</b> al lado. Devuelve una ficha: ámbito, sección, impacto en Balcarce, razón, importancia, si es publicidad o chimento y por qué interesa. Con eso <b>saca notas, cambia la sección</b> y decide si algo es de acá. <b>Nunca destraba</b> lo amarillo o lo rojo.</p>
+<h3>Un ejemplo real de hoy</h3><div class="ejemplo"><p>"<b>La madre de Gaspi recuerda al influencer a cuatro meses del accidente</b>": la ficha dice impacto <b>nulo</b>, razón <b>ninguna</b>, importancia <b>baja</b>, "sin vínculo con Balcarce"… y la nota <b>salió igual</b> en Argentina, porque la cuentan 7 medios: la regla deja pasar lo nacional contado por 3 o más.</p>
+<p>"<b>El Gobierno nacional convoca a empresas para optimizar ramales de trenes en Salta</b>": la IA la puso en <b>Agro</b> ("logística vinculada a la producción minera") y la sección de la IA manda.</p></div>
+<h3>Los números que mandan</h3><div class="tabla-envoltura"><table class="nums"><thead><tr><th>Nombre en el código</th><th>Valor</th><th>Qué quiere decir</th></tr></thead><tbody><tr><td><code>LECTURA.notasPorPedido</code></td><td class="v">12</td><td>Notas por pedido (con 20, uno de cada tres pasaba el minuto de espera).</td></tr><tr><td><code>LECTURA.pedidosPorCorrida</code></td><td class="v">5</td><td>Pedidos por corrida.</td></tr><tr><td><code>LECTURA.pedidosPorDia / ConClavePropia</code></td><td class="v">60 / 200</td><td>Pedidos por día, sin y con la clave de clasificación.</td></tr><tr><td><code>LECTURA.resumenMaximo</code></td><td class="v">500 caracteres</td><td>Lo que lee de cada resumen.</td></tr><tr><td><code>LECTURA.diasDeFichas</code></td><td class="v">3 días</td><td>Cuánto se guarda una ficha.</td></tr><tr><td><code>SECCIONES_DE_LA_FICHA</code></td><td class="v"><code>Balcarce</code> · <code>Política</code> · <code>Policiales</code> · <code>Fútbol</code> · <code>Deportes</code> · <code>Automovilismo</code> · <code>Economía</code> · <code>Agro</code> · <code>Tecnología</code> · <code>Cultura y agenda</code> · <code>Argentina</code></td><td>Las únicas secciones que puede elegir.</td></tr><tr><td><code>RAZONES</code></td><td class="v"><code>local</code> · <code>servicio</code> · <code>actividad</code> · <code>provincia</code> · <code>nacional</code> · <code>popular</code> · <code>ninguna</code></td><td>Por qué le importaría a un vecino.</td></tr><tr><td><code>nacionalQueImporta</code></td><td class="v">3 medios o más</td><td>Con esto, una nota "sin relación con Balcarce" no se saca (también con importancia alta o razón nacional, popular o de servicio).</td></tr><tr><td><code>temperature</code></td><td class="v">0</td><td>La IA de lectura contesta siempre igual ante lo mismo.</td></tr></tbody></table></div>
+<h3>Lo que dice la regla (el prompt, tal cual)</h3><details class="literal"><summary><span>La instrucción de la lectura con IA</span><small>ingesta/lectura-ia.mjs, constante INSTRUCCION, tal cual · 3.261 caracteres</small></summary><pre class="texto-ia">Sos el editor de selección de Radar Balcarce, un medio digital de Balcarce, provincia de Buenos Aires.
+Con el perfil de Balcarce que sigue, decidí para cada nota qué valor tiene para una persona que vive en Balcarce.
+
+Reglas:
+- Juzgá por lo que cuenta la nota, no por palabras sueltas: que aparezca &quot;Fangio&quot;, &quot;taller&quot; o &quot;Balcarce&quot; no define nada. Definí de qué trata el hecho.
+- El ámbito es el del HECHO, no el del medio que lo publica. Cada nota dice de qué ciudad es el medio.
+- Lo que hace o dice el gobierno argentino en el exterior (el Presidente en un viaje, Malvinas en la ONU) es &quot;nacional&quot;, no &quot;internacional&quot;.
+- Si una medida provincial o nacional cambia algo concreto en Balcarce (una tarifa, un subsidio, un trámite, un precio acá), el impacto es &quot;directo&quot; aunque el ámbito sea provincia o nacional.
+- Que la nota mencione Balcarce (por ejemplo, en una lista de localidades) no la hace de Balcarce.
+- Si no es de Balcarce, decí en una frase concreta por qué le interesaría a un vecino de Balcarce. Si no hay una razón concreta, el impacto es &quot;nulo&quot; y la razón &quot;ninguna&quot;. No inventes vínculos con Balcarce.
+- &quot;impacto_balcarce&quot;: &quot;directo&quot; si pasa en Balcarce o cambia algo concreto acá; &quot;indirecto&quot; si toca la zona o una actividad de la ciudad (campo, papa, automovilismo); &quot;nulo&quot; si no.
+- &quot;razon&quot;: local (pasó acá), servicio (cambia algo práctico para los vecinos: tarifas, trámites, salud, clima, rutas), actividad (automovilismo, campo, papa), provincia (medida provincial con efecto acá), nacional (noticia nacional importante), popular (tema del que habla todo el país) o ninguna.
+- &quot;seccion&quot;, qué va en cada una:
+  · Balcarce: lo que pasa en la ciudad y no tiene una sección más precisa (vecinos, instituciones, obras, escuelas, salud local), y también lo práctico para el vecino: cortes de luz o agua, trámites, horarios de atención, tarifas y subsidios de servicios públicos, vencimientos, alertas.
+  · Política: el Concejo, el intendente, el gobierno provincial y nacional, leyes, elecciones.
+  · Policiales: delitos, accidentes, incendios, bomberos, policía.
+  · Fútbol: el fútbol, de la liga de Balcarce a la Selección y los clubes argentinos.
+  · Deportes: todos los demás deportes (básquet, hockey, rugby, tenis, boxeo, UFC, ajedrez, atletismo…), salvo el automovilismo.
+  · Automovilismo: autos de carrera (TC, Turismo Nacional, Fórmula 1, MotoGP, karting, rally), el autódromo Juan Manuel Fangio y Fangio. Nunca Deportes.
+  · Economía: precios, inflación, dólar, empleo, empresas, combustibles.
+  · Agro: campo, papa, ganadería, INTA, clima para el productor.
+  · Tecnología: tecnología, ciencia, inteligencia artificial.
+  · Cultura y agenda: espectáculos, música, teatro, cine, libros, muestras, actividades.
+  · Argentina: lo nacional que no entra en ninguna de las anteriores (sociedad, clima, salud, educación, grandes hechos).
+- &quot;es_publicidad&quot;: true si promociona un comercio, producto o servicio sin ser noticia.
+- &quot;es_chimento&quot;: true si es farándula o la vida privada de famosos (romances, casamientos, separaciones, peleas, internaciones, fiestas o viajes de gente de la tele, la música o las redes). La muerte de una figura, un premio, un estreno o una obra no son chimento.
+- Devolvé una ficha por nota, con el mismo &quot;id&quot;.</pre></details><details class="literal"><summary><span>El perfil de Balcarce que va al lado</span><small>ingesta/perfil-balcarce.md, tal cual · 2.186 caracteres</small></summary><pre class="texto-ia"># Perfil de Balcarce para la lectura con IA
+
+Este texto va tal cual, arriba de cada pedido de la lectura rápida
+(`ingesta/lectura-ia.mjs`). Sirve para que la IA sepa qué es Balcarce y qué le
+importa a un vecino. Se completa con el tiempo: **sólo datos seguros**, nunca de
+memoria. Si algo cambia (por ejemplo, el intendente), se corrige acá.
+
+## Qué es
+
+Balcarce es una ciudad y un partido del sudeste de la provincia de Buenos
+Aires, Argentina. Es la ciudad de Juan Manuel Fangio.
+
+## Localidades del partido de Balcarce
+
+Balcarce (la ciudad), Napaleofú, Ramos Otero, San Agustín, Los Pinos y Villa
+Laguna La Brava.
+
+## Lo que queda cerca, pero NO es Balcarce
+
+Mar del Plata (General Pueyrredon), Tandil, Necochea, Lobería, Ayacucho,
+Miramar (General Alvarado), Mar Chiquita. Una nota que pasa en una de estas
+ciudades es de la región, no de Balcarce, aunque participen vecinos de
+Balcarce.
+
+## Rutas
+
+La ruta nacional 226 (Mar del Plata–Balcarce–Tandil) y la ruta provincial 55
+cruzan el partido.
+
+## Lo que mueve a la ciudad
+
+- El campo, y sobre todo la **papa**: es una de las principales zonas paperas
+  del país; hay industria de la papa (McCain tiene planta en Balcarce).
+- El **INTA Balcarce** (estación experimental agropecuaria) y la **Facultad de
+  Ciencias Agrarias** de la Universidad Nacional de Mar del Plata.
+- El **automovilismo**: el autódromo Juan Manuel Fangio, que se reinauguró en
+  septiembre de 2026 con el TC Pick Up, y el Museo Fangio. Una nota nacional de
+  TC, de Fórmula 1 con un piloto argentino o de Fangio le interesa a Balcarce.
+- El turismo serrano: el Cerro El Triunfo y la Laguna La Brava.
+
+## Instituciones
+
+La Municipalidad de Balcarce y el Concejo Deliberante. El intendente es
+Esteban Reino.
+
+## Qué no es de Balcarce
+
+- Lo que pasa en otro país, salvo que tenga una conexión argentina directa.
+- Lo que pasa en otra ciudad, aunque una nota nombre a Balcarce en una lista.
+- Lo que pasa en otra ciudad o pueblo del sudeste bonaerense (por ejemplo, una
+  fiesta en Copetonas, del partido de Tres Arroyos): estar en la misma región no
+  alcanza para que le importe a un vecino de Balcarce.
+- Lo nacional que no cambia nada concreto para un vecino.
+</pre></details><details class="literal"><summary><span>Una IA lee cada nota antes de decidir (CRITERIO-EDITORIAL.md § 2)</span><small>texto literal</small></summary><div class="lit-md"><p><b>Una IA lee cada nota antes de decidir</b> (<code>ingesta/lectura-ia.mjs</code>). Con el perfil de Balcarce (<code>ingesta/perfil-balcarce.md</code>) y la ciudad del medio arma una ficha: de dónde es el hecho, de qué sección es, si le importa a un vecino y por qué. Con esa ficha no entran la <b>publicidad</b>, los <b>chimentos</b>, lo del <b>extranjero</b> sin un argentino destacado, lo de un medio de afuera <b>sin relación con Balcarce</b> ni un <b>policial que no es de acá</b>. La sección es la que dice la IA. <b>La IA nunca destraba:</b> lo que el semáforo pone en rojo o amarillo sigue igual.</p></div></details>
+<h3>Qué me parece flojo</h3><ul class="flojo"><li><span class="peso peso-alto">Importante</span> <b>"Tres medios" perdona todo</b>: si la IA dice que no le importa a nadie de acá, alcanza con que la cuenten 3 medios para salir (Gaspi hoy; el 1/10, "Pedro Sánchez adelanta las elecciones generales en España", con 26 medios: no confirmé si tenía ficha).</li><li><span class="peso peso-alto">Importante</span> La lista de secciones de la IA <b>no tiene Educación ni Salud</b>: lo nacional de esos temas va a "Argentina (sociedad, clima, salud, educación…)" y lo local a "Balcarce (…escuelas, salud local…)". Por eso esas dos secciones son cajones de sastre (ver "Secciones").</li><li><span class="peso peso-medio">Medio</span> El chimento dice "internaciones de gente de la tele", pero "Mónica Guido permanece internada en un hospital porteño" salió en Cultura y agenda (13/10, 10 medios).</li><li><span class="peso peso-bajo">Menor</span> Decide la sección con 500 caracteres; y si una corrida no tiene cupo de lectura, la nota sigue sin ficha.</li></ul>
+<div class="decision" data-k="p7" data-titulo="Paso 7 · Lectura con IA" data-propuesta="Que la regla de &quot;tres medios&quot; no rescate lo que la IA marcó con impacto nulo, razón ninguna e importancia baja.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Que la regla de &quot;tres medios&quot; no rescate lo que la IA marcó con impacto nulo, razón ninguna e importancia baja.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+</div>
+</details>
+
+<details class="paso" id="p8" data-k="p8">
+<summary><span class="nro">8</span><span class="st"><span class="t">Escribir la nota (el prompt)</span><span class="c">La IA de redacción escribe título, bajada y cuerpo sólo con lo que recibe.</span></span><span class="estado" aria-hidden="true"></span></summary>
+<div class="cuerpo-paso">
+<h3>Qué pasa</h3><p>Para cada nota verde (primero lo de Balcarce y lo más nuevo), la IA de redacción (<code>gemini-flash-lite-latest</code>, temperatura 0,6) recibe las <b>reglas fijas del § 12</b> con uno de dos tonos, la fecha de hoy, el titular, las fuentes numeradas con su medio y su fecha, <b>hasta 4 textos completos</b> (12.000 caracteres entre todos, las copias marcadas) y hasta 3 notas propias anteriores del tema. Devuelve título, bajada, cuerpo, guion y las partes internas, en un JSON.</p>
+<h3>Un ejemplo real de hoy</h3><div class="ejemplo"><p>"<b>Productores ganaderos trasladan vacas ante la crecida de los ríos</b>" (TN, A24 y El Día): tres párrafos con las 200.000 cabezas afectadas, las 700.000 indirectas, los 500 a 600 mm de lluvia en el sur de Brasil y los Bajos Submeridionales. La IA sugirió MEDIA; el sistema calculó ALTA ("Lo contaron tres medios independientes").</p>
+<p>Ayer (15/10) hubo <b>67 pedidos</b> a la IA de redacción con 448.385 tokens de entrada (unos 6.700 por pedido); hoy, hasta las 9:37, 35 pedidos (unos 7.000 por pedido) (<code>uso-ia.json</code>). Gratis: las claves no cobran.</p></div>
+<h3>Los números que mandan</h3><div class="tabla-envoltura"><table class="nums"><thead><tr><th>Nombre en el código</th><th>Valor</th><th>Qué quiere decir</th></tr></thead><tbody><tr><td><code>TITULO.objetivo / maximo</code></td><td class="v">70 / 90 caracteres</td><td>Largo al que apunta y largo máximo.</td></tr><tr><td><code>BAJADA</code></td><td class="v">2 a 3 frases, ~50 palabras, máx. 360 caracteres</td><td>La bajada (el campo "copete").</td></tr><tr><td><code>CUERPO</code></td><td class="v">70 a 180 palabras, 3 párrafos, máx. 1.800 caracteres</td><td>Con menos de 70 palabras no se publica.</td></tr><tr><td><code>GUION</code></td><td class="v">máx. 200 caracteres, ~10 s</td><td>El guion de voz es el título dicho tal cual.</td></tr><tr><td><code>REESCRITURA.porCorrida / porDia</code></td><td class="v">40 / 450</td><td>Notas que se le piden a la IA por corrida y por día; las últimas 80, reservadas para lo de Balcarce.</td></tr><tr><td><code>REESCRITURA.textosCompletosMaximo</code></td><td class="v">4</td><td>Textos completos de fuentes distintas (desde el 15/10; antes, uno). Hasta 4.000 caracteres cada uno y 12.000 entre todos.</td></tr><tr><td><code>REESCRITURA.fuentesQueSeBajan</code></td><td class="v">6</td><td>Fuentes cuyo texto se intenta bajar para elegir las más completas.</td></tr><tr><td><code>REESCRITURA.fuentesEnLaEntradaMaximo</code></td><td class="v">12</td><td>Fuentes numeradas; las demás van sólo nombradas.</td></tr><tr><td><code>REESCRITURA.diasDeAntecedentes / antecedentesMaximo</code></td><td class="v">30 días / 3</td><td>Notas propias anteriores que recibe como contexto.</td></tr><tr><td><code>PALABRAS_SERIAS</code></td><td class="v">22 palabras</td><td>Si el título o el resumen tocan una, va el tono serio (Policiales siempre).</td></tr></tbody></table></div>
+<h3>Lo que dice la regla (el prompt, tal cual)</h3><details class="literal"><summary><span>Las reglas fijas: lo que lee la IA, tal cual (§ 12)</span><small>CRITERIO-EDITORIAL.md, entre PROMPT:REGLAS · 20.171 caracteres</small></summary><pre class="texto-ia">Sos el editor digital de Radar Balcarce, un medio digital de Balcarce (provincia de Buenos Aires, Argentina). Tu trabajo es que quien lee entienda qué pasó, dónde, cuándo, a quién afecta, qué significa para los balcarceños, qué se sabe y qué falta confirmar. Escribís claro, directo y neutral: sin sensacionalismo y sin opinión.
+
+Te llega una noticia que publicó otro medio (a veces más de uno contó lo mismo). Antes de escribir, la investigás con lo que recibís — no tenés nada más que eso, y nada de afuera cuenta:
+
+A. Identificás el hecho central: qué pasó, dónde, cuándo y a quién afecta.
+B. Contrastás las fuentes que recibís, numeradas (Fuente 1, Fuente 2…): son los medios que contaron esta misma noticia, y a veces un organismo público marcado como fuente oficial. Separás lo que confirman varias fuentes, lo que dice una sola, lo que se contradice entre ellas, lo que es una declaración de parte (lo que afirma alguien interesado: un denunciante, un funcionario sobre su propia gestión, un club sobre su equipo) y lo que no se puede verificar.
+C. Priorizás lo local: si la noticia es de afuera, contás qué tiene que ver con Balcarce sólo si las fuentes lo dicen.
+D. Cada dato importante va atribuido a quien lo dio, y se prefiere la fuente primaria (el organismo, el club, la Policía, la persona que habló) antes que el medio que lo reprodujo. Si hay una fuente oficial, su versión va primero.
+E. Cuidás las fechas: no mezclás lo que pasó antes con lo de ahora, ni presentás como actual algo que la fuente cuenta como histórico.
+F. Los ANTECEDENTES, si vienen, son notas que Radar Balcarce publicó antes sobre el mismo tema, cada una con su fecha. Sirven sólo de contexto: lo que saques de ahí va en el cuerpo, en las claves o en lo que se sabe, dicho como anterior y con su fecha o su momento (&quot;en agosto&quot;, &quot;a principios de mes&quot;, &quot;como se había informado&quot;). Nunca en el título, la bajada, el guion ni el texto para redes, y nunca como si fuera de hoy. Si un antecedente y la fuente de hoy no coinciden, manda la fuente de hoy.
+G. Nunca presentás como propio de Radar Balcarce lo que informó otro medio: nada de &quot;pudo saber este medio&quot; ni &quot;confirmó Radar Balcarce&quot;.
+H. Si recibiste una sola fuente, no inventás una &quot;ampliación&quot;: la nota cuenta lo que esa fuente dice, y los datos importantes van atribuidos a ella (regla 16).
+
+Después la escribís, con estas reglas fijas:
+
+1. NUNCA copiás el texto original: nunca más de diez palabras seguidas iguales a las de una fuente, en ninguna parte (tampoco en el título, la bajada ni adentro de una cita). Se reescribe con palabras propias, cruzando lo que cuenta cada fuente si hay más de una: cambiás el orden de la frase y el verbo, y partís en dos lo que la fuente dice en una oración larga. Una cita textual va entre comillas, atribuida, y tiene diez palabras como mucho: si lo que dijo alguien es más largo, lo contás con tus palabras (&quot;explicó que…&quot;).
+2. El título apunta a unos 70 caracteres y NUNCA pasa de 90, y se entiende solo en la pantalla del celular. Es UNA frase completa que dice qué pasó: empieza por el hecho, con sujeto y verbo en PRESENTE aunque el hecho ya haya pasado (&quot;El Concejo aprueba…&quot;, &quot;Ferroviarios gana…&quot;, &quot;El intendente repasa…&quot;). Nunca en pasado en el título: ni &quot;aprobó&quot;, ni &quot;ganó&quot;, ni &quot;repasó&quot;, ni &quot;se realizó&quot;, ni &quot;fue elegido&quot; (el pasado va en el cuerpo). Nunca empieza con una etiqueta y dos puntos (&quot;Rugby:&quot;, &quot;Exclusivo:&quot;, &quot;Balcarce:&quot;) ni con un sustantivo y un lugar sin verbo (&quot;Cruce en Balcarce por…&quot;, &quot;Preocupación por…&quot;). Nunca termina cortado: ni en coma, ni en &quot;y&quot;, &quot;de&quot;, &quot;que&quot;, ni en puntos suspensivos; si no entra en el largo, elegís el dato central y el resto va a la bajada. Sin signos de admiración, sin pregunta y sin adjetivos de gancho (&quot;impresionante&quot;, &quot;tremendo&quot;, &quot;increíble&quot;). Con el nombre y el número cuando los hay: &quot;Pato Naranja gana 24 a 10&quot;, no &quot;Gran triunfo del rugby local&quot;. Así sí: &quot;Pato Naranja gana el clásico y queda puntero&quot;, &quot;Productores y el municipio discuten la tasa vial&quot;, &quot;Tecnopapa reúne a toda la cadena productiva de la papa&quot;. Así no: &quot;Rugby: Pato Naranja ganó el clásico&quot; (etiqueta y pasado), &quot;Cruce en Balcarce por la tasa vial&quot; (no dice quién ni qué), &quot;Tecnopapa, el evento que reunirá a toda la cadena productiva del país,&quot; (sin verbo principal y cortado). El título NUNCA termina en &quot;en Balcarce&quot;: el medio es de Balcarce y se sobreentiende (27/09, Hernán; el sistema igual lo saca si aparece). Si el hecho ocurre en otra ciudad, el título nombra esa ciudad y nunca a Balcarce, aunque participen vecinos de Balcarce: eso se cuenta en el cuerpo. Nunca se agrega Balcarce a una nota nacional o de otro lugar para que parezca local. Nunca &quot;Video:&quot;, &quot;Ojo:&quot; ni frases de gancho (&quot;lo que tenés que saber&quot;). Nunca &quot;en vivo&quot;, &quot;EN VIVO&quot;, &quot;minuto a minuto&quot;, &quot;en directo&quot; ni nada parecido, ni en el título ni en la bajada, aunque el titular original lo diga: Radar Balcarce no hace coberturas en vivo, cuenta lo que pasó.
+3. La bajada (el campo &quot;copete&quot;) son dos o tres frases cortas, unas 50 palabras como mucho: qué pasó, cómo se relaciona con Balcarce (sólo si la fuente lo dice: ver la regla 15) y el dato más importante. Completa el título, no lo repite: suma el dato que el título no tenía (cuándo, cuánto, quién decidió). Todo dato que pongas en la bajada lo desarrollás en el cuerpo: la bajada nunca promete algo que la nota no cuenta. Nada de &quot;cabe destacar que&quot; ni antecedentes largos: la profundidad va en el cuerpo (punto 4).
+4. El cuerpo es OBLIGATORIO: sin cuerpo la nota no se publica. Es la nota desarrollada, lo que se lee al abrirla, y se escribe SÓLO con información de las fuentes: desarrollás lo que dan TODAS las fuentes que recibiste (los resúmenes de cada medio y el texto completo, que es donde está la mayor parte de los datos), más los antecedentes como contexto, siempre con su fecha. Va de 70 a 180 palabras, según lo que den las fuentes: NUNCA más largo que los datos que tenés. Cada oración tiene que aportar un dato nuevo (quién, qué, cuándo, dónde, cuánto o qué dijo alguien); si una oración no aporta un dato, no la escribís. Si las fuentes dan poco, la nota es corta: 70 palabras bien escritas valen más que 180 con relleno. En uno a tres párrafos cortos separados por un salto de línea en blanco. Nunca lo devolvés vacío y nunca es la bajada dicha de nuevo con otras palabras. Se arma de lo más importante a lo menos:
+   · Primer párrafo: el hecho central con el dato que la bajada NO dio (quién, cuándo, dónde, cuánto). Nunca arranca con las mismas palabras de la bajada ni la dice de nuevo. Se tiene que entender aunque nadie haya leído la bajada: nunca empieza con palabras que remiten a ella (&quot;Este monto&quot;, &quot;Esta medida&quot;, &quot;Dicho anuncio&quot;, &quot;La iniciativa&quot;): nombrás de qué se trata. Y nunca escribís &quot;el mencionado&quot;, &quot;la citada&quot; o &quot;dicha agrupación&quot; para algo que no nombraste antes en el cuerpo: lo nombrás.
+   · Segundo párrafo: el contexto que sí importa (antecedentes, cómo se llegó a esto, qué había antes).
+   · Tercer párrafo (sólo si la fuente da para eso): qué sigue o qué significa para la gente de Balcarce.
+   El cuerpo explica TODO lo que prometen el título y la bajada: si el título nombra a tres sancionados, el cuerpo dice quiénes son los tres y por qué; si la bajada da un dato, el cuerpo lo desarrolla. Y tiene el dato central con su número: &quot;aumenta la tasa&quot; no alcanza, va cuánto, desde cuándo y a quién; si la fuente no lo da, decís que no se informó.
+   Las citas textuales sólo si están en la fuente, entre comillas y atribuidas (&quot;dijo&quot;, &quot;explicó&quot;). Nada de conclusiones ni valoraciones al final (&quot;sin dudas&quot;, &quot;una gran noticia&quot;, &quot;de esta manera…&quot;).
+   El análisis de los pasos A a H se usa PARA ESCRIBIR el cuerpo, no para contarlo aparte: lo que confirman varias fuentes va dicho como hecho; lo que dice una sola, atribuido a esa fuente (&quot;según informó el municipio&quot;, &quot;de acuerdo con un medio local&quot;); lo que las fuentes cuentan distinto, con las dos versiones atribuidas; y lo que no se pudo confirmar, dicho como no confirmado (&quot;todavía no se informó…&quot;, &quot;no trascendió…&quot;). El lector no ve tu análisis: ve una nota mejor escrita gracias a él.
+{{TONO}}
+6. Los números van como los da la fuente. Podés redondear (&quot;unos 3.500&quot; por 3.480) o comparar (&quot;el triple que el año pasado&quot;, si la fuente da los dos datos) antes que dar un porcentaje con decimales, pero nunca pasás a otra cifra: si la fuente dice 1,7 millones, no es &quot;un millón y medio&quot;.
+7. El guion para la voz ES EL TÍTULO, dicho tal cual, y nada más. Nada de contexto, nada de cierre, nada de &quot;la nota completa en...&quot;. Sólo cambiás algo si el título no se puede leer en voz alta: las siglas se escriben como se pronuncian y los números van en palabras (catorce, no 14). La pieza tiene que durar unos diez segundos: si el título es largo, acortalo al hecho central en vez de agregarle nada.
+8. La fuente NO se nombra nunca en el guion de voz, en el título ni en el texto para redes: eso va aparte, en la atribución de la nota. En el cuerpo sí podés referirte a ella en general (&quot;según informó el municipio&quot;), nunca citar el nombre del medio que la publicó.
+9. Nunca inventás un dato, una cifra, un nombre, un día o una cita que no esté en lo que recibiste — en ninguna parte de lo que devolvés. Si un dato no se puede verificar con las fuentes recibidas, no lo afirmás: va en lo que falta confirmar. Si dos fuentes se contradicen en un dato (una hora, un número), no elegís una al azar ni inventás uno propio para &quot;resolver&quot; la diferencia: mostrás las dos versiones atribuidas (&quot;un medio habla de… y otro de…&quot;), o usás la de la fuente oficial si la hay, y la diferencia va en lo que falta confirmar. Si la fuente dice que algo no está confirmado (&quot;podría&quot;, &quot;se analiza&quot;, &quot;no hay confirmación oficial&quot;, &quot;según trascendió&quot;), la nota lo dice igual, en el cuerpo y, si es el hecho central, también en la bajada: nunca lo presentás más seguro de lo que es. Tampoco lo agrandás con adjetivos que la fuente no usa (&quot;un fuerte impacto&quot;, &quot;una profunda crisis&quot;). Los términos técnicos y los nombres de los organismos van como los da la fuente: la &quot;cuenta corriente&quot; no es &quot;la balanza de pagos&quot;.
+10. Si la nota original ACUSA a alguien de algo (un delito, una falta, una irregularidad) y todavía no hay una condena o una confirmación oficial: SIEMPRE atribuís la acusación a quien la hizo (&quot;según la denuncia de...&quot;, &quot;de acuerdo con la Policía...&quot;, &quot;según fuentes judiciales...&quot;) y usás el modo condicional (&quot;habría&quot;, no &quot;hizo&quot;). Nunca lo escribís como un hecho afirmado por vos, ni en el copete ni en el cuerpo. Esto no es sólo estilo: es lo que en Argentina protege a un medio de una demanda por calumnias o injurias (doctrina Campillay).
+11. Presentás a cada persona con su cargo la primera vez que aparece (&quot;el intendente Fulano Pérez&quot;, &quot;la concejal Mengana Gómez&quot;) y después por el apellido. No usás &quot;ayer&quot;, &quot;hoy&quot; ni &quot;mañana&quot; si la fuente no dice el día: ponés el día de la semana que la fuente trae, o nada. Tampoco &quot;este lunes&quot;, &quot;este sábado&quot; ni &quot;este fin de semana&quot;: la nota se lee días después y &quot;este viernes&quot; parece el que viene. Va &quot;el sábado&quot; o, si la fuente da el número, &quot;el sábado 26&quot;.
+12. Escribís en castellano correcto, con las tildes y la eñe donde van (últimos, sábado, Napaleofú, señal, también, además, después, según, más, día, país, política, economía, millón, y todas las que terminan en &quot;-ción&quot;, &quot;-sión&quot; o &quot;-ión&quot;: información, inversión, reunión). Un medio que escribe sin tildes se lee como un mensaje apurado, no como un medio: un texto sin tildes se rechaza.
+13. NUNCA identificás a un menor de edad (sea víctima, acusado o testigo) ni a una víctima de un delito sexual o de violencia de género. Eso quiere decir: ni su nombre, ni su apodo, ni sus iniciales, ni su escuela, ni su domicilio o su cuadra, ni un parentesco que la deje identificada (&quot;la hija del dueño de tal comercio&quot;), ni su foto ni su descripción física. Aunque la fuente lo publique, vos no lo repetís: hablás de la persona de forma general, sin nada que permita saber quién es. No es estilo: lo exigen las leyes 26.061 y 26.485.
+14. Antes de escribir, fijate CUÁNDO pasó el hecho central, con lo que dice la fuente (una fecha, &quot;el sábado pasado&quot;, la fecha de publicación como pista si no hay otra). La fecha de hoy y la de cada fuente te llegan con el día de la semana: comparalas. Si el hecho YA PASÓ, el CUERPO lo cuenta como algo cumplido, en pasado (&quot;aprobó&quot;, &quot;ganó&quot;, &quot;se largó&quot;, &quot;participaron&quot;), nunca con un verbo de inicio o de futuro (&quot;se realizará&quot;, &quot;largarán&quot;, &quot;participan este viernes&quot;) aunque la fuente lo haya anunciado así: si la fuente del jueves dice &quot;el sábado se largará la carrera&quot; y hoy es lunes, la carrera &quot;se largó el sábado&quot;. Si todavía no pasó, va en futuro o con el día (&quot;Ferroviarios juega el domingo&quot;). El TÍTULO va siempre en presente (regla 2): &quot;Ferroviarios gana&quot;, aunque haya ganado ayer. Ese presente NO pasa al cuerpo: en el cuerpo, lo que ya pasó va en pasado (&quot;el Polideportivo albergó una jornada&quot;, &quot;participaron&quot;, &quot;recibió el certificado&quot;) y lo que va a pasar, en futuro o con el día (&quot;estará el sábado 10 de octubre a las 17&quot;, &quot;el corte será el miércoles 30&quot;); el presente, sólo para lo que sigue pasando (&quot;la muestra sigue abierta&quot;). Así no: &quot;El Complejo alberga una jornada&quot; en el cuerpo, para una jornada que ya se hizo; &quot;Ríos participa de la fiesta&quot;, para una fiesta de dentro de dos semanas. Si el hecho todavía no pasó, el título lo deja claro con el día: &quot;La Cooperativa corta la luz el miércoles&quot;. Si la fuente dice &quot;esta madrugada&quot; o &quot;el pasado fin de semana&quot;, no lo copiás tal cual: escribís la fecha o el día de la semana que la fuente da (regla 11).
+15. NUNCA afirmás que algo afecta a Balcarce, a los balcarceños o a &quot;la región&quot; si las fuentes no lo dicen — y tampoco afirmás lo contrario (que no los afecta). Si la fuente no dice nada de Balcarce, la nota no dice nada de Balcarce: ni &quot;para los vecinos&quot;, ni &quot;de nuestra ciudad&quot; (vos escribís en tercera persona: nunca &quot;nuestra ciudad&quot; ni &quot;nuestro pueblo&quot;), ni &quot;los automovilistas locales&quot; si la fuente habla en general. Esto vale más todavía cuando el hecho es de otro lugar: no le busqués una conexión con Balcarce que la fuente no hizo.
+16. Con una sola fuente, una cifra, un récord o una evaluación van SIEMPRE atribuidos: a la fuente primaria si la hay (&quot;según la organización&quot;, &quot;según el club&quot;, &quot;informó la Municipalidad&quot;) o, si no hay una fuente primaria identificable, &quot;según un medio local&quot; o &quot;de acuerdo con la fuente consultada&quot; (en singular, y sólo si hace falta nombrarla en general). NUNCA &quot;fuentes consultadas&quot; en plural: eso esconde que hay una sola, no varias.
+17. Si la fuente trae un nombre propio, un resultado, una dirección, un comercio, una cifra o una obra de Balcarce, ESO va primero, antes que cualquier frase de contexto general: un dato local vale más que una oración que podría estar en cualquier nota de cualquier lugar.
+18. Cuando la nota cuenta posturas enfrentadas (dos personas o partes que no piensan igual sobre lo mismo), cada postura va con SU argumento concreto, atribuido a quien lo dijo, en sus propias palabras o resumido fielmente. Nunca la resolvés vos con un cierre (&quot;de todas formas, ambos coinciden en…&quot;): eso ya no es reportar, es opinar. Y nunca ubicás una declaración en un período o un momento distinto del que mencionó quien la hizo (si alguien habló de &quot;la gestión de Fulano&quot;, no lo cambiés a otro nombre o a otra época).
+19. Nunca usás estas frases de relleno, aunque la fuente las diga: &quot;fuentes consultadas&quot;, &quot;pudo saber&quot;, &quot;hito histórico&quot;, &quot;consolidando&quot;, &quot;consolidándose&quot;, &quot;un legado&quot;, &quot;motivo de orgullo&quot;, &quot;gran presencia&quot;, &quot;en el marco de&quot;, &quot;las fuentes no registran&quot;, &quot;postal poco habitual&quot;, &quot;cabe destacar&quot;, &quot;cabe señalar&quot;, &quot;cabe mencionar&quot;, &quot;cabe remarcar&quot;, &quot;es importante destacar&quot;, &quot;es importante señalar&quot;, &quot;vale destacar&quot;, &quot;vale la pena destacar&quot;, &quot;por este medio&quot;, &quot;en ocasiones previas&quot;, &quot;sin dudas&quot;, &quot;sin lugar a dudas&quot;, &quot;una gran noticia&quot;, &quot;no pasó desapercibido&quot;, &quot;dijo presente&quot;. Tampoco &quot;como se había informado&quot; si no recibiste antecedentes. Una oración con una de esas frases se saca entera; en el título o la bajada, se descarta todo lo que escribiste.
+20. La nota se tiene que entender sin haber leído nada antes, y se tiene que leer fácil. Con lo que den las fuentes, el cuerpo dice: qué pasó, con quién, cuándo y dónde (en la primera oración); a quién le importa en Balcarce y por qué, sólo si la fuente lo dice (regla 15); de dónde viene, con un antecedente si lo da la fuente o los antecedentes, con su fecha; y qué sigue, si se sabe. Una sigla se explica la primera vez, salvo las que todos conocen (AFA, ANSES). Oraciones cortas, un dato por oración: si una oración tiene más de dos comas, la partís en dos. Sujeto, verbo y predicado, en ese orden, y en voz activa (&quot;El Concejo aprobó la ordenanza&quot;, no &quot;Fue aprobada por parte del Concejo la ordenanza&quot;). Palabras de todos los días: &quot;empezó&quot; y no &quot;dio inicio&quot;, &quot;hubo&quot; y no &quot;se registró la presencia de&quot;. Sin cierres que resuman o valoren. Tiene que sonar a un periodista del pueblo que cuenta bien lo que pasó, no a un texto armado por una máquina.
+21. Si la nota anuncia algo que va a pasar o que cambia algo práctico (un corte, un cambio de horario, un trámite, un evento, un partido), el cuerpo tiene TODOS los datos prácticos que da la fuente: el día con su fecha, la hora de inicio y la de fin, el lugar, a quién afecta (las calles, los barrios, los usuarios), qué hay que hacer o llevar y cuánto cuesta. Si la fuente dice que hay una lista (de calles, de requisitos) y no te llegó, decís dónde se consulta si la fuente lo dice, sin inventarla. Nunca cambiás un dato concreto por una frase vaga: si la fuente da las fechas y los estadios, no escribís &quot;se confirmaron las fechas y las sedes&quot; sin decir cuáles.
+
+Además del título, la bajada, el cuerpo y el guion, devolvés:
+
+- claves: de 3 a 5 puntos cortos, de una línea cada uno, con lo esencial de la nota.
+- seSabe: los datos confirmados por las fuentes, uno por punto, atribuidos cuando corresponde (&quot;según la Municipalidad…&quot;).
+- noConfirmado: lo que no se pudo verificar con las fuentes recibidas y lo que las fuentes cuentan distinto, uno por punto. Si no hay nada, una lista vacía. Que hubo una sola fuente no hace falta que lo pongas: el sistema lo agrega solo.
+- aportes: por cada fuente que usaste, {&quot;fuente&quot;: su número, &quot;aporte&quot;: qué información aportó, en una frase}. Sin nombrar al medio: el nombre ya se muestra al lado.
+- textoRedes: el texto para el posteo de Facebook, hasta 280 caracteres: qué pasó y, sólo si la fuente lo dice, por qué le importa a Balcarce. Sin nombrar al medio de origen, sin hashtags, sin enlaces y sin emojis (el enlace a la nota y los hashtags se agregan aparte).
+- etiquetas: de 3 a 8 palabras o frases cortas que digan de qué trata la nota, sin &quot;#&quot;.
+- nivel: cómo evaluás la verificación, ALTA (hay una fuente oficial o varias fuentes independientes), MEDIA (una sola fuente confiable, sin confirmación independiente) o BAJA (información preliminar, declaraciones de parte sin verificar o evidencia insuficiente). Es sólo una sugerencia: el nivel que se publica lo calcula el sistema.
+
+Todo eso sigue las mismas reglas que el cuerpo: nada que no esté en lo que recibiste, nada copiado, ningún menor ni víctima identificable, y las acusaciones siempre atribuidas y en condicional.
+
+Antes que nada, en el campo &quot;datos&quot; anotás de 3 a 10 datos concretos que vas a usar (quién, qué, cuándo, dónde, cuánto, qué dijo alguien), uno por punto y cada uno con el número de la fuente de donde sale (&quot;F1: …&quot;). Si la fuente los da, entre esos datos van SIEMPRE: la fecha y la hora de lo que va a pasar, el lugar, las cifras centrales y los nombres de quienes hablan o deciden. Ese campo es tu borrador: no se publica. Después escribís todo lo demás usando SÓLO esos datos y con palabras tuyas.
+
+Devolvés SOLO un JSON con esta forma exacta, sin texto alrededor:
+{&quot;datos&quot;: [&quot;F1: ...&quot;], &quot;titulo&quot;: &quot;...&quot;, &quot;copete&quot;: &quot;...&quot;, &quot;cuerpo&quot;: &quot;...&quot;, &quot;guion&quot;: &quot;...&quot;, &quot;claves&quot;: [&quot;...&quot;], &quot;seSabe&quot;: [&quot;...&quot;], &quot;noConfirmado&quot;: [&quot;...&quot;], &quot;aportes&quot;: [{&quot;fuente&quot;: 1, &quot;aporte&quot;: &quot;...&quot;}], &quot;textoRedes&quot;: &quot;...&quot;, &quot;etiquetas&quot;: [&quot;...&quot;], &quot;nivel&quot;: &quot;MEDIA&quot;}</pre></details><details class="literal"><summary><span>El tono de todos los días (va donde dice {{TONO}})</span><small>CRITERIO-EDITORIAL.md, PROMPT:TONO_AMENO · 443 caracteres</small></summary><pre class="texto-ia">5. Tono: español rioplatense neutro y cercano. Tercera persona, sin voseo ni modismos: no es un amigo contando algo, es un medio informando. La cercanía está en elegir los datos que le importan a un vecino de Balcarce, no en los adjetivos: no es escribir &quot;liviano&quot; o &quot;con calidez&quot;, es contar el dato justo. Ni solemne ni canchero. Sin adjetivos de opinión en nota informativa, sin exclamaciones, sin &quot;impresionante&quot;, &quot;tremendo&quot; ni &quot;increíble&quot;.</pre></details><details class="literal"><summary><span>El tono serio (Policiales y las palabras serias)</span><small>CRITERIO-EDITORIAL.md, PROMPT:TONO_SERIO · 284 caracteres</small></summary><pre class="texto-ia">5. Tono: por el tema (inseguridad o una problemática local), acá el registro es sobrio e institucional. Preciso y mesurado, sin ninguna calidez ni color: sólo los hechos, con el cuidado que exige algo que afecta a la gente. Nada de liviandad ni de humor. Tercera persona, sin opinión.</pre></details><details class="literal"><summary><span>Las palabras que piden el tono serio</span><small>CRITERIO-EDITORIAL.md, PALABRAS_SERIAS</small></summary><div class="lit-md"><p><code>inseguridad</code> · <code>robo</code> · <code>robaron</code> · <code>hurto</code> · <code>hurtaron</code> · <code>delincuencia</code> · <code>choque</code> · <code>accidente</code> · <code>incendio</code> · <code>corte de luz</code> · <code>corte de agua</code> · <code>sin luz</code> · <code>sin agua</code> · <code>conflicto</code> · <code>protesta</code> · <code>reclamo</code> · <code>crisis</code> · <code>violencia</code> · <code>inundación</code> · <code>inundacion</code> · <code>temporal</code> · <code>emergencia</code></p></div></details><details class="literal"><summary><span>Cómo llega la noticia a la IA (la forma, después de las reglas)</span><small>reels/reescritura.mjs, entradaAmpliadaDe: los textos fijos son literales; lo que va entre &lt; &gt; cambia en cada nota · 1.157 caracteres</small></summary><pre class="texto-ia">Fecha de hoy: &lt;día de la semana y fecha&gt;
+Sección: &lt;la sección que decidió el sistema&gt;
+Titular original (de &lt;medio 1&gt; / &lt;medio 2&gt; / …): &lt;el titular de la nota principal&gt;
+FUENTES (&lt;cuántas&gt;, numeradas[; las N repiten el texto de otra y no son confirmaciones independientes]):
+Fuente 1 (&lt;medio&gt; · [fuente oficial ·] publicada el &lt;día y fecha&gt; · su texto completo va abajo): &lt;resumen del feed&gt;
+Fuente 2 (&lt;medio&gt; · publicada el &lt;día y fecha&gt;): &lt;resumen del feed&gt;
+Fuente 3 (&lt;medio&gt; · …): mismo texto que la Fuente 1; es una copia, no una confirmación independiente.
+También la contaron, sin más datos: &lt;los medios después del 12&gt;.
+Texto completo de la Fuente 1 (&lt;medio&gt;, publicada el &lt;fecha&gt;; la que más datos trae):
+&lt;hasta 4 textos completos, 12.000 caracteres entre todos&gt;
+Lo que agrega la Fuente 3 (&lt;medio&gt;; el resto es el mismo texto que la Fuente 1):
+&lt;sólo los párrafos propios de la copia&gt;
+ANTECEDENTES: notas que Radar Balcarce publicó ANTES sobre el tema. Es información ANTERIOR, no de hoy: si usás algo de acá, va con su fecha o su momento, sólo en el cuerpo, las claves o lo que se sabe.
+[&lt;fecha&gt;] &lt;título&gt;. &lt;bajada&gt;   (hasta 3, de los últimos 30 días)</pre></details><details class="literal"><summary><span>La &quot;nota aparte&quot; (no se le manda a la IA: la muestra el panel)</span><small>CRITERIO-EDITORIAL.md, PROMPT:NOTA_PANEL · 2.665 caracteres</small></summary><pre class="texto-ia">Nota aparte, esto no se lo manda a la IA: cuando la noticia es de Policiales, o
+toca inseguridad, robos, choques, accidentes, incendios, cortes de luz o agua,
+conflictos, protestas, reclamos o alguna emergencia, el punto 5 cambia por el
+registro serio de arriba en vez del cercano.
+
+Además, antes de publicar lo que escribió la IA, el texto completo de la
+fuente y lo que ella escribió pasan por el semáforo (las listas roja y
+amarilla de ingesta/fuentes.mjs). Si algo da rojo o amarillo, lo escrito por
+la IA no se usa y la nota espera a una persona (o no sale, si es rojo).
+
+Las partes nuevas (claves, qué se sabe, qué falta confirmar, qué aportó cada
+fuente, el texto para redes y las etiquetas) pasan por el mismo verificador
+que el cuerpo. Si una no cuadra con la fuente, se descarta esa parte sola y la
+nota sale igual.
+
+Antes de verificar, el sistema corrige solo lo que no inventa nada: una
+etiqueta conocida adelante del título (&quot;Rugby:&quot;), una coma o un conector al
+final, &quot;este sábado&quot; cuando ya no es sábado (queda &quot;el sábado&quot;), &quot;cabe
+destacar que&quot; al comienzo de una oración y una o dos palabras sin tilde. Y
+rechaza, para que la IA lo vuelva a escribir, el título en pasado, con
+signos, con una etiqueta que no conoce o cortado, el texto sin tildes y el
+cuerpo que no explica lo que nombra el título (sección 6).
+
+El nivel de verificación que se publica NO es el que sugiere la IA: lo calcula
+el sistema. ALTA si entre las fuentes hay una oficial o dos o más medios
+distintos; MEDIA con un solo medio; BAJA si, con un solo medio, la nota se
+apoya en una denuncia o en una declaración de parte, o si lo que falta
+confirmar toca el hecho central. Si da BAJA, la nota no sale sola: espera a
+una persona, como una amarilla.
+
+El cuerpo es obligatorio: una nota automática sin cuerpo de al menos 70
+palabras no se publica en ningún lado. Si el cuerpo trae un dato que no
+cuadra con la fuente, se sacan sólo las oraciones con ese dato; si lo que
+queda no alcanza, se le pide de nuevo con la corrección. Cada nota se le pide
+a la IA como mucho tres veces, en corridas distintas. Sin el texto completo
+de ninguna fuente y con un resumen corto, no se le pide nada.
+
+El lector ve sólo el título, la bajada, el cuerpo y un desplegable con las
+fuentes (el nombre de cada medio y su enlace). Las claves, qué se sabe, qué
+falta confirmar, lo que aportó cada fuente y el nivel de verificación son de
+uso interno: se guardan y se ven en el panel, no en la web.
+
+No se busca nada en internet: las otras fuentes son los medios que contaron lo
+mismo y hasta tres notas que el sitio ya publicó sobre el tema en los últimos
+30 días (los antecedentes), marcadas con su fecha.</pre></details>
+<h3>Qué me parece flojo</h3><ul class="flojo"><li><span class="peso peso-alto">Importante</span> <b>El cuerpo no crece con las fuentes</b>: en 30 días, 112 palabras de promedio con una fuente y 118 con cinco o más (<code>archivo.json</code>). La entrada de hasta 4 textos empezó el 15/10: todavía no se puede ver si cambió; hay que medirlo en una semana.</li><li><span class="peso peso-medio">Medio</span> Es <b>muy largo para un modelo chico</b>: 21 reglas, 8 pasos previos y la lista de relleno, unos 20.000 caracteres. Hay un candidato más corto y pensado para varias fuentes sin medir (<code>docs/criterio/PROMPT-V2-CANDIDATO.txt</code>).</li><li><span class="peso peso-medio">Medio</span> Dice cosas distintas en dos lugares: la regla 1 pide "nunca más de <b>diez</b> palabras seguidas" y el verificador corta en <b>12</b> (<code>COPIA_MAXIMA</code>); la regla 4 habla de "el texto completo, que es donde está la mayor parte de los datos", en singular, cuando ahora llegan hasta 4.</li><li><span class="peso peso-bajo">Menor</span> Temperatura 0,6 para un texto que tiene que ser fiel: no hay una medición de si bajarla ayuda (la lectura usa 0).</li><li><span class="peso peso-bajo">Menor</span> Los "aportes" de cada fuente los escribe la IA y nadie los controla: en Câmara, 15 de 19 fuentes quedaron sin aporte.</li></ul>
+<div class="decision" data-k="p8" data-titulo="Paso 8 · El prompt" data-propuesta="Autorizar la medición del prompt candidato (hasta 25 pedidos de la clave de redacción, como dice PROPUESTA-EDICION-V2 § 7) antes de cambiar una palabra del § 12.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Autorizar la medición del prompt candidato (hasta 25 pedidos de la clave de redacción, como dice PROPUESTA-EDICION-V2 § 7) antes de cambiar una palabra del § 12.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+</div>
+</details>
+
+<details class="paso" id="p9" data-k="p9">
+<summary><span class="nro">9</span><span class="st"><span class="t">Verificar contra las fuentes</span><span class="c">Sin otra IA: números, nombres, días y citas tienen que estar en lo que se recibió.</span></span><span class="estado" aria-hidden="true"></span></summary>
+<div class="cuerpo-paso">
+<h3>Qué pasa</h3><p>Sin otra IA, se comparan los <b>números, nombres, días, meses y citas</b> de lo escrito con todo lo que la IA recibió, y se rechaza la copia de más de 12 palabras, el relleno, "en vivo", el título en pasado, el texto sin tildes y la localía inventada. Si falla el cuerpo se sacan sólo esas oraciones; si quedan menos de 70 palabras, se pide otra vez (hasta 3 corridas). Al final el código calcula el nivel: ALTA, MEDIA o BAJA (BAJA espera a una persona).</p>
+<h3>Un ejemplo real de hoy</h3><div class="ejemplo"><p>Últimos 7 días (<code>intentos-ia.json</code>): <b>506 notas pedidas, 750 intentos, 416 salieron con cuerpo (82 %)</b>. Lo que más se rechazó: un número del título, la bajada o el guion que la fuente no trae (unas 10), copia de más de 12 palabras (unas 9), lo que escribió la IA tocó "muerte", "niño" o "falleció" y el semáforo frenó (unas 9), el cuerpo repite la bajada (4), cuerpo corto (4). 11 quedaron con verificación BAJA y 13 "sin material".</p>
+<p>Pasó igual: "<b>Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento</b>" (14/10, publicada) — el verificador no mira gramática.</p></div>
+<h3>Los números que mandan</h3><div class="tabla-envoltura"><table class="nums"><thead><tr><th>Nombre en el código</th><th>Valor</th><th>Qué quiere decir</th></tr></thead><tbody><tr><td><code>COPIA_MAXIMA</code></td><td class="v">12 palabras</td><td>Más de esto seguido, igual al original, es copiar.</td></tr><tr><td><code>ESTILO.palabrasSinTilde</code></td><td class="v">3</td><td>Con tres palabras comunes sin tilde, el texto se rechaza; con menos, se les pone la tilde.</td></tr><tr><td><code>REESCRITURA.intentosMaximos</code></td><td class="v">3 (+1 con 5 medios, +2 con 8)</td><td>Intentos por nota, en corridas distintas.</td></tr><tr><td><code>REESCRITURA.palabrasMinimasDeMaterial</code></td><td class="v">60</td><td>Sin texto completo y con menos palabras de resumen, no se pide ("sin material").</td></tr><tr><td><code>CUERPO.minimoParaPublicar</code></td><td class="v">70 palabras</td><td>Lo que tiene que quedar después de sacar oraciones.</td></tr><tr><td><code>REESCRITURA.copiaEntreFuentes</code></td><td class="v">50 %</td><td>Dos textos con la mitad de sus tramos de 5 palabras en común son copia: cuentan como una voz.</td></tr><tr><td><code>RELLENO</code></td><td class="v">26 frases</td><td><code>fuentes consultadas</code> · <code>pudo saber</code> · <code>hito histórico</code> · <code>consolidando</code> · <code>consolidándose</code> · <code>un legado</code> · <code>motivo de orgullo</code> · <code>gran presencia</code> · <code>en el marco de</code> · <code>las fuentes no registran</code> · <code>postal poco habitual</code> · <code>cabe destacar</code> · <code>cabe señalar</code> · <code>cabe mencionar</code> · <code>cabe remarcar</code> · <code>es importante destacar</code> · <code>es importante señalar</code> · <code>vale destacar</code> · <code>vale la pena destacar</code> · <code>por este medio</code> · <code>en ocasiones previas</code> · <code>sin dudas</code> · <code>sin lugar a dudas</code> · <code>una gran noticia</code> · <code>no pasó desapercibido</code> · <code>dijo presente</code></td></tr></tbody></table></div>
+<h3>Lo que dice la regla</h3><details class="literal"><summary><span>Qué rechaza el verificador (CRITERIO-EDITORIAL.md § 6)</span><small>texto literal</small></summary><div class="lit-md"><p><b>Qué rechaza:</b></p>
+<ul class="lit-lista"><li>un <b>número</b>, un <b>nombre propio</b>, un <b>día o un mes</b> o una <b>cita entre comillas</b> que las fuentes no traen (los números grandes pueden estar redondeados);</li><li>un dato que sólo está en un antecedente usado <b>como si fuera de hoy</b>;</li><li>un <b>delito afirmado</b> sin atribuir a nadie;</li><li>una <b>negación</b> que la fuente no tiene, o una que desapareció;</li><li><b>copiar</b> más de 12 palabras seguidas del original (no cuentan los números, las fechas, los nombres propios ni las fórmulas oficiales como &quot;se llevará a cabo&quot; o &quot;declaró de interés legislativo&quot;; sí cuentan las palabras comunes);</li><li><b>letras rotas</b> (&quot;polêcutemica&quot;, &quot;miéércoles&quot;, &quot;recibiõ&quot;): el texto vuelve a la IA (regla 167);</li><li>el cuerpo que <b>repite la bajada</b>;</li><li>&quot;mas&quot; o &quot;ms&quot; en vez de <b>&quot;más&quot;</b> (cambia el sentido);</li><li><b>&quot;en vivo&quot;</b> en lo que se ve primero;</li><li>lo que pasa del <b>largo máximo</b> de cada parte (sección 11);</li><li>en el texto para redes, además: <b>nombrar al medio</b>, hashtags o enlaces;</li><li><b>frases de relleno sin dato</b> (28/09): la lista de la sección 4 (&quot;fuentes consultadas&quot;, &quot;consolidando&quot;, &quot;en el marco de&quot;, &quot;cabe destacar&quot;, &quot;sin dudas&quot;…), y &quot;como se había informado&quot; cuando no llegó ningún antecedente. Se sacan aunque la fuente misma las diga: no es un error de exactitud, es que no aportan nada;</li><li><b>decir que algo es de Balcarce sin que la fuente lo diga</b> (28/09): &quot;de nuestra ciudad&quot;, &quot;de nuestro pueblo&quot;, &quot;nuestros vecinos&quot;, &quot;balcarcense&quot;, &quot;automovilistas locales&quot; y frases parecidas, cuando la fuente no nombra a Balcarce en ningún lado;</li><li><b>un título mal armado</b> (28/09, del repaso editorial de lo publicado): con signos de admiración o de pregunta (&quot;¡Ferroviarios a la final!&quot;), con una etiqueta y dos puntos adelante que no se puede sacar sola (&quot;Necochea: detienen…&quot;), cortado en una coma o un conector (&quot;…del país,&quot;, &quot;…la obra y&quot;), que arranca con una etiqueta y un lugar sin verbo (&quot;Cruce en Balcarce por…&quot;, &quot;Preocupación por…&quot;) o con un adjetivo de gancho (&quot;impresionante&quot;, &quot;increíble&quot;);</li><li><b>frases de gancho</b> en el título, la bajada, el guion o el texto para redes: &quot;lo que tenés que saber&quot;, &quot;enterate&quot;, &quot;te contamos&quot;, &quot;no te lo pierdas&quot;, &quot;imperdible&quot;.</li></ul>
+<p><b>Y en lo que escribe nueva</b> (no al revalidar lo ya publicado: son reglas que miran la forma de las palabras, y una nota que ya está en la portada no se baja por una de ellas):</p>
+<ul class="lit-lista"><li><b>el título en pasado</b> (&quot;aprobó&quot;, &quot;ganó&quot;, &quot;se realizó&quot;, &quot;fue elegido&quot;, &quot;aprobaron&quot;): va en presente. Se mira el verbo que manda, no el de una subordinada: &quot;Detienen al hombre que robó una moto&quot; pasa. Lo que va entre comillas no cuenta;</li><li><b>el texto sin tildes</b>: tres palabras o más de las que siempre llevan tilde escritas sin ella (&quot;informacion&quot;, &quot;tambien&quot;, &quot;segun&quot;, &quot;reunion&quot;, &quot;politica&quot;, &quot;despues&quot;…; <code>ESTILO.palabrasSinTilde</code>, sección 11);</li><li><b>el cuerpo que no explica el título</b>: un número del título que el cuerpo no dice, o dos nombres propios del título o más que el cuerpo no nombra.</li></ul></div></details><details class="literal"><summary><span>Qué pasa cuando algo no pasa (§ 6)</span><small>texto literal</small></summary><div class="lit-md"><p><b>Qué pasa cuando algo no pasa:</b></p>
+<ol class="lit-lista"><li><b>Si falla el título, la bajada o el guion</b>, esa escritura no se usa.</li><li><b>Si falla el cuerpo, se sacan sólo las oraciones</b> con el dato que no cuadra. Si lo que queda pasa y tiene 70 palabras o más, se usa.</li><li><b>Si no alcanza, se le pide de nuevo una vez</b>, diciéndole qué falló (&quot;usá únicamente lo que dicen las fuentes&quot;, &quot;el título está en pasado&quot;, &quot;el cuerpo es obligatorio, de 70 a 180 palabras&quot;).</li><li><b>Las partes para la redacción</b> (claves, qué se sabe…) se controlan <b>cada una por su lado</b>: la que falla se descarta sola y la nota sale igual. Las etiquetas se sacan de a una.</li><li><b>Tres intentos por nota como mucho</b>, en corridas distintas: no se gasta cupo de más en una nota que no da. Una falla del servicio (sin cupo, saturado, sin red, una clave rechazada) no cuenta como intento.</li><li><b>Sin material no se escribe.</b> Sin el texto completo de ninguna fuente y con menos de 60 palabras de resumen entre todas, no se le pide nada a la IA.</li><li><b>Lo ya publicado se revalida</b> en cada corrida contra las reglas de hoy: si una regla nueva ya no lo dejaría pasar, se saca y se vuelve a escribir. Nunca se paga dos veces por lo mismo: lo que ya tiene cuerpo se reusa. Alcanza a una nota mientras su fuente siga en la ingesta (unos tres días): lo que ya salió de la ingesta queda como está, así que una regla nueva conviene revisarla también a mano contra lo ya publicado.</li></ol></div></details><details class="literal"><summary><span>El nivel de verificación (§ 5)</span><small>texto literal</small></summary><div class="lit-md"><p><b>El nivel de verificación lo calcula el sistema, no la IA</b> (<code>nivelDeVerificacion</code> en <code>reels/reescritura.mjs</code>):</p>
+<div class="tabla-envoltura"><table class="lit-tabla"><thead><tr><th>Nivel</th><th>Cuándo</th></tr></thead><tbody><tr><td><b>ALTA</b></td><td>Entre las fuentes hay una oficial, o dos o más medios distintos (dos secciones del mismo medio cuentan como uno)</td></tr><tr><td><b>MEDIA</b></td><td>Un solo medio, sin confirmación independiente</td></tr><tr><td><b>BAJA</b></td><td>Un solo medio y la nota se apoya en una denuncia o una acusación (denuncia, acusó, habría, presunto, &quot;según trascendió&quot;…), o lo que falta confirmar toca el hecho central. Una opinión citada (&quot;aseguró que&quot;) no baja el nivel, y con varias fuentes u oficial nunca es BAJA (28/09, Hernán)</td></tr></tbody></table></div>
+<p><b>Con verificación BAJA la nota no sale sola</b>: espera a una persona, como una amarilla, y no se le vuelve a pedir a la IA salvo que aparezcan más fuentes.</p></div></details>
+<h3>Qué me parece flojo</h3><ul class="flojo"><li><span class="peso peso-alto">Importante</span> <b>No lee el sentido ni la gramática</b>: "una acatamiento" (14/10) y "La caída en la vacunación encendé la alerta por la rabia" (28/09) están publicadas.</li><li><span class="peso peso-medio">Medio</span> Acepta un número si está en <b>cualquier</b> fuente del grupo: con grupos encadenados (paso 3), puede ser de otro hecho.</li><li><span class="peso peso-medio">Medio</span> "Fuentes (N)" y el nivel <b>se congelan</b> al escribir: no se actualizan cuando se suman medios después.</li><li><span class="peso peso-medio">Medio</span> El nivel cuenta como independientes a medios del mismo dueño (paso 2).</li></ul>
+<div class="decision" data-k="p9" data-titulo="Paso 9 · Verificar" data-propuesta="Sumar un control barato de concordancia en título y bajada (&quot;una&quot; con masculino, verbos mal conjugados) y, sólo para lo que va a redes, una segunda lectura con IA de título y bajada.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Sumar un control barato de concordancia en título y bajada (&quot;una&quot; con masculino, verbos mal conjugados) y, sólo para lo que va a redes, una segunda lectura con IA de título y bajada.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+</div>
+</details>
+
+<details class="paso" id="p10" data-k="p10">
+<summary><span class="nro">10</span><span class="st"><span class="t">Duplicados</span><span class="c">Ocho barreras para que una noticia sea una sola nota.</span></span><span class="estado" aria-hidden="true"></span></summary>
+<div class="cuerpo-paso">
+<h3>Qué pasa</h3><p>Hay <b>ocho barreras</b>, de la más simple a la más fina: el mismo medio por dos feeds (D0), el cruce (D1), la dirección que no cambia al sumar medios (D1b), medios del mismo dueño (D2), repetidas con IA (D3), contra lo publicado en 72 horas (D4), parejas sospechosas con IA (D5), la misma noticia con otra dirección (D6) y titulares gemelos en las listas (D7). Desde el 15/10 a la noche, dos notas que citan el <b>mismo enlace de fuente</b> se unen, y una unión queda firme.</p>
+<h3>Un ejemplo real de hoy</h3><div class="ejemplo"><p><code>fusionadas.json</code> tiene hoy <b>107 uniones</b>: la nota que se fue redirige a la que quedó. Siguen con página dos parejas viejas (Milei-Caputo del 12/10 y Cauan Barros del 10/10, paso 3): no están en <code>fusionadas.json</code>.</p></div>
+<h3>Los números que mandan</h3><div class="tabla-envoltura"><table class="nums"><thead><tr><th>Nombre en el código</th><th>Valor</th><th>Qué quiere decir</th></tr></thead><tbody><tr><td><code>D3 · LECTURA.pedidosRepetidasPorDia</code></td><td class="v">60</td><td>Vueltas de repetidas con IA por día (sólo si cambió la lista).</td></tr><tr><td><code>D4 · contra lo publicado</code></td><td class="v">72 horas</td><td>Raíces de palabras de títulos y bajadas ya escritos, con reglas para no juntar cosas distintas.</td></tr><tr><td><code>D5 · parejas sospechosas</code></td><td class="v">0,3 a 0,8 · 24 por corrida · 40 pedidos por día</td><td>Títulos parecidos que se le preguntan a la IA.</td></tr><tr><td><code>D6 · otra dirección</code></td><td class="v">80 % de palabras · 96 horas</td><td>Queda una (la que fue a redes, la de foto, la de cuerpo, la primera); la otra redirige.</td></tr><tr><td><code>D7 · titulares gemelos</code></td><td class="v">36 horas</td><td>Una sale de las listas; las dos páginas siguen.</td></tr><tr><td><code>mismaFuente</code></td><td class="v">el mismo enlace</td><td>Señal sin IA desde el 15/10 (regla 175): mismo enlace sin UTM ni barra final, hasta 36 horas.</td></tr></tbody></table></div>
+<h3>Lo que dice la regla</h3><details class="literal"><summary><span>Lo que se le pregunta a la IA para juntar repetidas (D3)</span><small>ingesta/lectura-ia.mjs, INSTRUCCION_REPETIDAS, tal cual · 493 caracteres</small></summary><pre class="texto-ia">Estas son las notas que un medio de Balcarce tiene para publicar ahora.
+Agrupá SOLAMENTE las que cuentan exactamente el mismo hecho: la misma noticia contada por distintos medios o con otro título.
+NO agrupes notas distintas sobre el mismo tema (por ejemplo, dos prácticas distintas del TC, o una nota de la reapertura del autódromo y otra de su estacionamiento): esas son notas distintas.
+Devolvé sólo los grupos de dos o más notas, con sus &quot;id&quot;. Si no hay repetidas, devolvé una lista vacía.</pre></details><details class="literal"><summary><span>Lo que se le pregunta a la IA por las parejas sospechosas (D5)</span><small>ingesta/lectura-ia.mjs, INSTRUCCION_PAREJAS, tal cual · 633 caracteres</small></summary><pre class="texto-ia">Cada par son dos notas de un medio de Balcarce, publicadas con poco tiempo de diferencia.
+Para cada par decidí si cuentan EXACTAMENTE el mismo hecho: el mismo suceso o la misma noticia, aunque estén escritas con otras palabras o con distinto detalle.
+NO es el mismo hecho si son dos noticias distintas sobre el mismo tema (la pole y la carrera, una práctica y otra, dos partidos), si es un anuncio y su resultado, o si cambia la persona, el lugar, la fecha o la cifra principal.
+Ante la duda, mismo = false.
+Devolvé un objeto JSON {&quot;pares&quot;:[{&quot;clave&quot;:&quot;…&quot;,&quot;mismo&quot;:true|false}]} con una entrada por cada par, con la clave que se te dio.</pre></details>
+<h3>Qué me parece flojo</h3><ul class="flojo"><li><span class="peso peso-medio">Medio</span> Lo más grave se arregló el 15/10 a la noche, pero <b>no está medido todavía</b>: la meta es 0 parejas por semana con la misma fuente.</li><li><span class="peso peso-medio">Medio</span> Lo publicado antes de la regla 175 que ya salió de la ingesta no se vuelve a juntar: quedan parejas viejas con dos páginas.</li><li><span class="peso peso-bajo">Menor</span> Los topes de IA (60 vueltas de repetidas por día) se acaban a la noche (el 15/10 a las 19:04 ya iban 48).</li><li><span class="peso peso-bajo">Menor</span> La pregunta de las parejas empieza con "Cada par son dos notas de un medio de Balcarce", aunque las notas sean de afuera. Puede confundir a la IA; no lo medí.</li></ul>
+<div class="decision" data-k="p10" data-titulo="Paso 10 · Duplicados" data-propuesta="Retirar a mano (con motivo, en retiradas.json o desde el celular) la copia de las dos parejas viejas, y sumar &quot;parejas con la misma fuente en 7 días&quot; a la pestaña Números con meta 0.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Retirar a mano (con motivo, en retiradas.json o desde el celular) la copia de las dos parejas viejas, y sumar &quot;parejas con la misma fuente en 7 días&quot; a la pestaña Números con meta 0.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+</div>
+</details>
+
+<details class="paso" id="p11" data-k="p11">
+<summary><span class="nro">11</span><span class="st"><span class="t">Fotos</span><span class="c">La foto del medio sin marca, guardada en el banco propio; si no, la placa.</span></span><span class="estado" aria-hidden="true"></span></summary>
+<div class="cuerpo-paso">
+<h3>Qué pasa</h3><p>Después de publicar, a <b>hasta 10 notas por corrida</b> se les busca la foto principal de cada medio que las contó, y una IA con visión elige una <b>sin marca de agua</b>. Se guarda en el banco propio con su crédito. Si ninguna sirve, una foto libre de Wikimedia (si es una persona pública) o la placa. Policiales, sólo con foto oficial; nunca un menor ni una víctima.</p>
+<h3>Un ejemplo real de hoy</h3><div class="ejemplo"><p><b>818 de las 1.039 notas</b> con cuerpo de los últimos 30 días tienen foto (79 %). Policiales: 0 de 12 (por regla). Deportes: 59 de 98. Créditos más usados: La Vanguardia 68, Radio Gabal 66, Infobae 60, TN 50, Clarín 42, La Nación 33, El Diario Balcarce 31.</p></div>
+<h3>Los números que mandan</h3><div class="tabla-envoltura"><table class="nums"><thead><tr><th>Nombre en el código</th><th>Valor</th><th>Qué quiere decir</th></tr></thead><tbody><tr><td><code>TOPE_POR_CORRIDA</code></td><td class="v">10</td><td>Notas a las que se les busca foto por corrida (docs/05-FOTOS.md).</td></tr><tr><td><code>FACEBOOK.horasEsperandoFoto</code></td><td class="v">3 horas</td><td>Lo que espera una nota sin foto antes de ir a Facebook con la tarjeta.</td></tr></tbody></table></div>
+<h3>Lo que dice la regla</h3><details class="literal"><summary><span>Las fotos (CRITERIO-EDITORIAL.md § 2)</span><small>texto literal</small></summary><div class="lit-md"><p class="lit-tit">Las fotos</p>
+<p>Una nota puede llevar una foto propia de Balcarce, una oficial (Municipio, Provincia, INTA) o, cuando ninguna de esas está, <b>la de otro medio o de un organismo oficial</b> (decisión de Hernán del 27/09, con el riesgo legal explicado: una fotografía es una obra protegida y citar la fuente no la cubre, <code>INVESTIGACION.md</code> § 7). Nunca una foto inventada por IA que parezca real. Condiciones que no se negocian:</p>
+<ul class="lit-lista"><li><b>Nunca la marca de agua ni el nombre de otro medio pegado encima de la imagen</b> (el logo en una esquina, el zócalo de un canal): el crédito va en la cita, debajo. Los medios chicos de la zona suelen pegar su logo en una esquina: con la mínima duda, esa foto no se usa. Lo que estaba en la escena real sí puede verse, también el micrófono con el nombre de una radio (decisión del 29/09).</li><li><b>Toda foto usada así se guarda en el banco propio</b> (<code>web/data/banco-fotos.json</code>), con su crédito y de qué nota salió.</li><li><b>Nunca la foto de un menor o de una víctima</b>, ni en Policiales, salvo una foto oficial de Bomberos o la Policía.</li></ul>
+<p>La foto va en la página de la nota, en el espejo de Instagram de cada posteo de Facebook (con el crédito en el texto) y en la tarjeta para compartir el enlace. Los videos llevan placa. <b>La placa no es una regla: es lo que sale cuando no hay foto que sirva.</b> Cómo se elige cada foto, en <code>docs/05-FOTOS.md</code>.</p></div></details>
+<h3>Qué me parece flojo</h3><ul class="flojo"><li><span class="peso peso-medio">Medio</span> Los créditos más usados son <b>medios chicos de acá</b>, justo los que el criterio dice que "suelen pegar su logo en una esquina". Vale revisar una muestra a mano (<code>npm run auditar-fotos -- --html</code>).</li><li><span class="peso peso-bajo">Menor</span> El riesgo legal se aceptó el 27/09 (una foto es obra protegida; el crédito no la cubre). Sigue siendo una decisión, no un error.</li><li><span class="peso peso-bajo">Menor</span> Hoy (16/10) se subió un Worker de imágenes con IA. La regla dice "nunca una foto inventada por IA que parezca real": si se usa, que sea una ilustración evidente, como la de efemérides. No confirmé para qué se va a usar.</li></ul>
+<div class="decision" data-k="p11" data-titulo="Paso 11 · Fotos" data-propuesta="Revisar a mano 30 fotos de medios locales (La Vanguardia, Radio Gabal, El Diario Balcarce) buscando logos o zócalos en las esquinas.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Revisar a mano 30 fotos de medios locales (La Vanguardia, Radio Gabal, El Diario Balcarce) buscando logos o zócalos en las esquinas.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+</div>
+</details>
+
+<details class="paso" id="p12" data-k="p12">
+<summary><span class="nro">12</span><span class="st"><span class="t">Secciones y portada</span><span class="c">Once secciones, una nota grande, cuatro abajo y tres por sección.</span></span><span class="estado" aria-hidden="true"></span></summary>
+<div class="cuerpo-paso">
+<h3>Qué pasa</h3><p>Hay <b>once secciones</b>. La portada tiene una nota grande (con foto; compite lo de las últimas 6 horas), cuatro abajo de secciones distintas y <b>bloques de tres por sección</b> con lo de las últimas 36 horas; si faltan, se completa con lo de esas mismas horas del archivo, y una sección sin notas no se dibuja. Cada sección guarda todo (10 por página) mientras la nota tenga página: 180 días o 3.700 notas.</p>
+<h3>Un ejemplo real de hoy</h3><div class="ejemplo"><p>Portada de las 9:37: <b>39 notas</b>. Balcarce 11, Deportes 5, Economía 4, Cultura y agenda 4, Fútbol 4, Agro 3, Automovilismo 3, Política 2, Argentina 2, Tecnología 1. <b>Policiales, 0: ese bloque no se dibuja.</b></p></div>
+<h3>Los números que mandan</h3><div class="tabla-envoltura"><table class="nums"><thead><tr><th>Nombre en el código</th><th>Valor</th><th>Qué quiere decir</th></tr></thead><tbody><tr><td><code>PORTADA.horas</code></td><td class="v">36 horas</td><td>Lo que una nota está en la portada y en las listas.</td></tr><tr><td><code>PORTADA.horasParaEstrenar</code></td><td class="v">12 horas</td><td>Una nota que nunca salió y es más vieja no se estrena.</td></tr><tr><td><code>PORTADA.horasNotaGrande</code></td><td class="v">6 horas</td><td>Lo que compite por el lugar grande.</td></tr><tr><td><code>NOTAS_POR_SECCION</code></td><td class="v">3</td><td>Notas por bloque de sección en la portada.</td></tr><tr><td><code>PORTADA.diasDeArchivo / maximoDeNotas</code></td><td class="v">180 días / 3.700</td><td>Lo que dura la página de una nota. El tope de notas se alcanza hacia el 10/12 (DECISIONES.md).</td></tr></tbody></table></div>
+<h3>Lo que dice la regla</h3><details class="literal"><summary><span>Las secciones (CRITERIO-EDITORIAL.md § 2)</span><small>texto literal</small></summary><div class="lit-md"><p class="lit-tit">Las secciones</p>
+<div class="tabla-envoltura"><table class="lit-tabla"><thead><tr><th>Sección</th><th>¿Sale sola?</th></tr></thead><tbody><tr><td>Balcarce</td><td>Sí</td></tr><tr><td>Fútbol</td><td>Sí (de la liga de Balcarce a la Selección)</td></tr><tr><td>Deportes</td><td>Sí (todos los demás deportes)</td></tr><tr><td>Automovilismo</td><td>Sí</td></tr><tr><td>Agro</td><td>Sí</td></tr><tr><td>Cultura y agenda</td><td>Sí</td></tr><tr><td>Tecnología</td><td>Sí (se confirma con el título: si no nombra nada de tecnología, se clasifica por lo que dice)</td></tr><tr><td>Economía</td><td>Sí</td></tr><tr><td>Política</td><td>Sí en la web; <b>en las redes, nunca sin una persona</b></td></tr><tr><td>Policiales</td><td>Sí en la web; <b>en las redes, nunca sin una persona</b></td></tr><tr><td>Argentina</td><td>Sí: lo nacional que no es de otra sección, contado por tres medios o más</td></tr></tbody></table></div>
+<p>No hay sección Servicios, Región ni Provincia: los cortes, trámites y obras de acá van a Balcarce; la farmacia, el clima y el dólar son servicios del sitio, no notas. <b>Policiales es sólo de Balcarce y la zona</b> (el partido, Napaleofú, Los Pinos, Ramos Otero y las rutas 226 y 55 dentro del partido): un policial de otro lugar no se trae; lo de la zona sí, con el mismo semáforo. &quot;Sale sola&quot; quiere decir que no espera a nadie si el semáforo da verde (sección 3) y si tiene cuerpo (sección 4).</p></div></details><details class="literal"><summary><span>Portada y &quot;Seguí leyendo&quot; (§ 7, puntos 11 y 12)</span><small>texto literal</small></summary><div class="lit-md"><ol class="lit-lista"><li><b>Cada sección de la portada muestra tres notas</b> de las últimas 36 horas, sin repetir las de la tapa ni una misma historia en dos secciones; si no hay tres, van las que haya, y una sección sin ninguna no se dibuja.</li><li><b>&quot;Seguí leyendo&quot; siempre está y nunca repite</b>: cuatro notas, dos de la misma sección y dos de otras, todas distintas de la que se lee.</li></ol></div></details><details class="literal"><summary><span>Las palabras que mandan a cada sección (REGLAS_SECCION)</span><small>ingesta/fuentes.mjs, tal cual</small></summary><div class="lit-md"><p><b>Automovilismo</b>: <code>turismo carretera</code> · <code>tc</code> · <code>tc pista</code> · <code>automovilismo</code> · <code>autódromo</code> · <code>autodromo</code> · <code>fangio</code> · <code>karting</code> · <code>rally</code> · <code>tc2000</code> · <code>top race</code> · <code>procar</code> · <code>fórmula</code> · <code>formula 1</code> · <code>pick up</code> · <code>motociclismo</code> · <code>motocross</code> · <code>f1</code> · <code>gran premio</code> · <code>motogp</code> · <code>piloto</code> · <code>parrilla</code> · <code>pole</code> · <code>escudería</code> · <code>escuderia</code> · <code>fórmula e</code> · <code>formula e</code> · <code>clasificación de f1</code> · <code>box</code> · <code>neumáticos</code></p><p><b>Policiales</b>: <code>policía</code> · <code>policia</code> · <code>detenido</code> · <code>detenidos</code> · <code>robo</code> · <code>hurto</code> · <code>allanamiento</code> · <code>fiscalía</code> · <code>fiscalia</code> · <code>homicidio</code> · <code>causa judicial</code> · <code>juzgado</code> · <code>aprehendido</code> · <code>siniestro vial</code> · <code>choque</code> · <code>accidente</code> · <code>incendio</code> · <code>asalto</code> · <code>ladrón</code> · <code>ladron</code> · <code>robaron</code> · <code>estafa</code> · <code>alcoholemia</code> · <code>persecución</code></p><p><b>Fútbol</b>: <code>fútbol</code> · <code>futbol</code> · <code>goleó</code> · <code>goleo</code> · <code>gol</code> · <code>goles</code> · <code>liga profesional</code> · <code>primera división</code> · <code>primera division</code> · <code>copa argentina</code> · <code>copa libertadores</code> · <code>libertadores</code> · <code>sudamericana</code> · <code>selección argentina</code> · <code>seleccion argentina</code> · <code>scaloni</code> · <code>messi</code> · <code>la scaloneta</code> · <code>boca juniors</code> · <code>river plate</code> · <code>racing club</code> · <code>san lorenzo</code> · <code>estudiantes de la plata</code> · <code>rosario central</code> · <code>newell</code> · <code>vélez</code> · <code>velez</code> · <code>huracán</code> · <code>huracan</code> · <code>liga balcarceña</code> · <code>liga balcarcena</code> · <code>ferroviarios</code> · <code>primera nacional</code> · <code>torneo federal</code> · <code>ascenso</code> · <code>penal</code> · <code>arquero</code> · <code>delantero</code> · <code>director técnico</code> · <code>mundial de clubes</code> · <code>eliminatorias</code> · <code>superclásico</code> · <code>superclasico</code></p><p><b>Deportes</b>: <code>básquet</code> · <code>basquet</code> · <code>vóley</code> · <code>voley</code> · <code>maxivoley</code> · <code>torneo</code> · <code>campeonato</code> · <code>liga</code> · <code>partido</code> · <code>playoffs</code> · <code>hockey</code> · <code>atletismo</code> · <code>maratón</code> · <code>maraton</code> · <code>árbitro</code> · <code>arbitro</code> · <code>deportivo</code> · <code>descenso</code> · <code>selección</code> · <code>seleccion</code> · <code>copa</code> · <code>rugby</code> · <code>tenis</code> · <code>ciclismo</code> · <code>mountain bike</code> · <code>running</code> · <code>triatlón</code> · <code>triatlon</code> · <code>natación</code> · <code>natacion</code> · <code>handball</code> · <code>hándbol</code> · <code>pádel</code> · <code>padel</code> · <code>ajedrez</code> · <code>patín</code> · <code>patin</code> · <code>las leonas</code> · <code>los pumas</code></p><p><b>Cultura y agenda</b>: <code>teatro</code> · <code>muestra</code> · <code>espectáculo</code> · <code>espectaculo</code> · <code>concierto</code> · <code>festival</code> · <code>exposición</code> · <code>exposicion</code> · <code>taller</code> · <code>museo</code> · <code>peña</code> · <code>feria</code> · <code>obra de teatro</code> · <code>orquesta</code> · <code>cine</code></p><p><b>Agro</b>: <code>agro</code> · <code>cosecha</code> · <code>siembra</code> · <code>trigo</code> · <code>soja</code> · <code>ganader</code> · <code>agropecuar</code> · <code>exposicion rural</code> · <code>exposición rural</code> · <code>expo rural</code> · <code>expoagro</code> · <code>inta</code> · <code>rural</code> · <code>productores</code> · <code>lluvias acumuladas</code> · <code>tambo</code> · <code>maquinaria agrícola</code></p><p><b>Política</b>: <code>concejo deliberante</code> · <code>intendente</code> · <code>ordenanza</code> · <code>presupuesto municipal</code> · <code>legislatura</code> · <code>diputados</code> · <code>senadores</code> · <code>elecciones</code> · <code>gobernador</code> · <code>ministerio</code> · <code>kicillof</code> · <code>milei</code> · <code>gobierno provincial</code> · <code>paso</code> · <code>bloque</code> · <code>oposición</code> · <code>oposicion</code></p><p><b>Balcarce</b>: <code>corte de luz</code> · <code>corte de energía</code> · <code>corte de energia</code> · <code>corte de agua</code> · <code>farmacia de turno</code> · <code>cronograma</code> · <code>licitación</code> · <code>licitacion</code> · <code>obra pública</code> · <code>obra publica</code> · <code>asfalto</code> · <code>bacheo</code> · <code>recolección</code> · <code>recoleccion</code> · <code>tránsito</code> · <code>transito</code> · <code>vacunación</code> · <code>vacunacion</code> · <code>desagüe</code> · <code>desague</code> · <code>pluvial</code></p><p><b>Economía</b>: <code>dólar</code> · <code>dolar</code> · <code>inflación</code> · <code>inflacion</code> · <code>plazo fijo</code> · <code>tasa de interés</code> · <code>tasas de interés</code> · <code>riesgo país</code> · <code>bcra</code> · <code>banco central</code> · <code>salarios</code> · <code>paritarias</code> · <code>jubilaciones</code> · <code>aguinaldo</code> · <code>canasta básica</code> · <code>canasta basica</code> · <code>pymes</code> · <code>desempleo</code> · <code>exportaciones</code> · <code>importaciones</code> · <code>aranceles</code> · <code>monotributo</code> · <code>arca</code> · <code>afip</code> · <code>mercados</code> · <code>bonos</code> · <code>cedears</code> · <code>billetera virtual</code> · <code>crédito hipotecario</code> · <code>credito hipotecario</code> · <code>costo de vida</code> · <code>precios</code> · <code>comercio local</code> · <code>comerciantes</code> · <code>empresas en mora</code> · <code>ventas minoristas</code> · <code>ahorro</code> · <code>inversiones</code> · <code>finanzas</code></p><p><b>Tecnología</b>: <code>inteligencia artificial</code> · <code>algoritmo</code> · <code>satelital</code> · <code>agricultura de precisión</code> · <code>agricultura precision</code> · <code>biotecnología</code> · <code>biotecnologia</code> · <code>digitalización</code> · <code>digitalizacion</code> · <code>ciberseguridad</code> · <code>automatización</code> · <code>automatizacion</code> · <code>ia</code> · <code>chatgpt</code> · <code>openai</code> · <code>gemini</code> · <code>claude</code> · <code>copilot</code> · <code>chatbot</code> · <code>machine learning</code> · <code>modelo de lenguaje</code> · <code>robot</code> · <code>robots</code> · <code>robótica</code> · <code>robotica</code> · <code>ciberataque</code> · <code>ciberdelito</code> · <code>hackeo</code> · <code>software</code> · <code>startup</code> · <code>semiconductores</code> · <code>smartphone</code> · <code>nvidia</code> · <code>inteligencia artificial generativa</code> · <code>spacex</code> · <code>starship</code> · <code>humanoide</code> · <code>telescopio espacial</code> · <code>exoplaneta</code> · <code>astronomía</code> · <code>astronomia</code> · <code>cohete espacial</code></p></div></details>
+<h3>Qué me parece flojo</h3><ul class="flojo"><li><span class="peso peso-alto">Importante</span> <b>Balcarce y Argentina son cajones de sastre</b>, y Policiales y Tecnología casi no llegan a tres notas (12 y 13 en 30 días). Está desarrollado en la sección "Secciones: ¿agregamos o dividimos?".</li><li><span class="peso peso-medio">Medio</span> Notas en la sección equivocada: fútbol en Deportes ("Inter y Brujas juegan el martes por la Champions League", "La Champions League disputa nueve partidos el martes"), Concejo e intendente en Balcarce, trenes de Salta en Agro.</li><li><span class="peso peso-medio">Medio</span> <b>Pronósticos del tiempo publicados como notas</b> en Balcarce (4 en 30 días, por ejemplo "El martes llega con una máxima de 22 grados y posibles lluvias"), aunque el criterio dice que el clima es un servicio del sitio, no una nota.</li><li><span class="peso peso-bajo">Menor</span> Las palabras de Automovilismo "ganan siempre" y algunas son de doble sentido ("piloto", "fórmula", "parrilla", "box"). En 30 días no encontré un error por eso, pero es un riesgo ("plan piloto", "fórmula de actualización").</li></ul>
+<div class="decision" data-k="p12" data-titulo="Paso 12 · Secciones y portada" data-propuesta="Que el pronóstico del tiempo de un medio no salga como nota (ya está /clima), igual que la cotización del dólar.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Que el pronóstico del tiempo de un medio no salga como nota (ya está /clima), igual que la cotización del dólar.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+</div>
+</details>
+
+<details class="paso" id="p13" data-k="p13">
+<summary><span class="nro">13</span><span class="st"><span class="t">Qué va a las redes</span><span class="c">Sólo lo publicado: cinco posteos por día, tres podcasts con voz.</span></span><span class="estado" aria-hidden="true"></span></summary>
+<div class="cuerpo-paso">
+<h3>Qué pasa</h3><p>Sólo sale lo que ya está en la web. <b>Facebook</b>: hasta 5 por día, relevancia 75 o más (si no alcanza, se completa con lo de más puntaje), de 8 a 22, con 90 minutos entre posteos, sin repetir un tema en 24 horas y con foto (espera hasta 3 horas). <b>Instagram</b>: video con voz (tres podcasts por día de cuatro notas) y el espejo de cada posteo. <b>Política y Policiales esperan a una persona.</b> Cupo de voz: 10 audios por día.</p>
+<h3>Un ejemplo real de hoy</h3><div class="ejemplo"><p>Últimos 14 días: <b>62 posteos en Facebook</b> (4,4 por día), 54 de Balcarce. Por sección: Balcarce 24, Deportes 16, Agro 5, Cultura y agenda 4, Economía 3, Automovilismo 3, Fútbol 2, Argentina 1 (y 4 de notas que hoy ya no tienen página). Hoy a las 9:09 salió "El Banco Central publica el informe con los datos de morosidad", de afuera, para completar los cinco.</p></div>
+<h3>Los números que mandan</h3><div class="tabla-envoltura"><table class="nums"><thead><tr><th>Nombre en el código</th><th>Valor</th><th>Qué quiere decir</th></tr></thead><tbody><tr><td><code>FACEBOOK.porDia</code></td><td class="v">5</td><td>Posteos de notas por día.</td></tr><tr><td><code>FACEBOOK.relevanciaMinima</code></td><td class="v">75</td><td>Relevancia mínima.</td></tr><tr><td><code>FACEBOOK.relevanciaMinimaDeRelleno</code></td><td class="v">0</td><td>Para completar los cinco con lo de afuera: 0 quiere decir sin piso (12/10, Hernán).</td></tr><tr><td><code>FACEBOOK.desdeHora / hastaHora</code></td><td class="v">8 a 22</td><td>Horario.</td></tr><tr><td><code>FACEBOOK.minutosEntrePosteos</code></td><td class="v">90</td><td>Minutos entre un posteo y otro.</td></tr><tr><td><code>PIEZAS.relevanciaPodcast / relevanciaAfueraPodcast</code></td><td class="v">62 / 80</td><td>Mínimos para los podcasts; de afuera, 2 como mucho por repaso.</td></tr><tr><td><code>SECCIONES_QUE_ESPERAN_PERSONA</code></td><td class="v"><code>Policiales</code> · <code>Política</code></td><td>No salen solas a ninguna red.</td></tr><tr><td><code>CONTRATO_DIARIO</code></td><td class="v">5 posteos · 3 reels · 6 historias</td><td>Lo que tiene que salir cada día.</td></tr></tbody></table></div>
+<h3>Lo que dice la regla</h3><details class="literal"><summary><span>Las redes (CRITERIO-EDITORIAL.md § 9)</span><small>texto literal</small></summary><div class="lit-md"><p class="lit-tit">9. Las redes</p>
+<p>Cómo suenan y qué dicen las piezas está en <code>CRITERIO-REDES.md</code>, que manda sobre lo que se repita acá. Los horarios y cómo se publica, en <code>docs/07-REDES.md</code>.</p>
+<ul class="lit-lista"><li><b>Sólo sale lo que ya está publicado en la web.</b> Lo que el semáforo frenó no llega a las redes.</li><li><b>A Facebook e Instagram, por ahora, sólo lo de Balcarce:</b> las notas de un medio de Balcarce o de uno de afuera que dice Balcarce en su título. Del automovilismo de afuera, sólo lo que nombra a una figura argentina.</li><li><b>Los podcasts, lo de Balcarce primero:</b> desde el 29/09 también pueden contar notas de afuera, si están entre las de más puntaje (80 o más, también a la noche) y <b>dos como mucho por repaso</b>, para que siga siendo un repaso de Balcarce.</li><li><b>Nada sensible sale solo:</b> Política, Policiales y lo que salió en la web porque lo aprobó una persona van a las redes sólo si una persona las marca desde el panel del celular (&quot;También a Facebook e Instagram&quot;); lo rojo, nunca. Tampoco va una nota sin cuerpo ni una nota propia.</li><li><b>Facebook:</b> hasta 5 notas por día, con relevancia 75 o más, de 8 a 22:00 en punto, con 90 minutos entre una y otra, y sin repetir un tema publicado en las últimas 24 horas. <b>Con foto primero:</b> una nota sin foto espera hasta 3 horas a que aparezca (salvo que una persona la haya marcado); pasado ese tiempo sale con la tarjeta de siempre. El posteo lleva el texto para redes (o el título y la bajada), <b>el enlace a nuestra nota</b> y hasta tres hashtags. <b>Nunca nombra la fuente ni dice &quot;Resumen hecho con IA&quot;.</b></li><li><b>Instagram</b> recibe video con voz (historias y reels) y el espejo de cada posteo de Facebook, con la foto de la nota del banco propio (sin marca de agua, con el crédito en el texto) o, si no hay, la placa.</li><li><b>Podcasts en vez de noticias sueltas:</b> tres por día, de cuatro notas, con notas de Balcarce de relevancia 62 o más (el de la noche, sin mínimo: repasa el día) y hasta dos de afuera con 80 o más, de temas distintos y sin repetir las de otro repaso.</li></ul></div></details>
+<h3>Qué me parece flojo</h3><ul class="flojo"><li><span class="peso peso-medio">Medio</span> "Completar los cinco sin piso" (<code>relevanciaMinimaDeRelleno</code> = 0) hace salir lo de afuera para llenar el número, aunque sea flojo para un vecino (la morosidad del Banco Central, hoy).</li><li><span class="peso peso-bajo">Menor</span> Deportes de acá es uno de cada cuatro posteos: bien para lo local, pero la página queda muy deportiva.</li><li><span class="peso peso-bajo">Menor</span> Si se suma Salud, hay que decidir antes si espera a una persona en redes (pregunta 7 de <code>docs/DECISIONES.md</code>).</li><li><span class="peso peso-bajo">Menor</span> Las historias de los reels fallaron al subir el 14 y el 15/10 ("Request processing failed", <code>redes.json</code>). No es del flujo de notas, pero se ve.</li></ul>
+<div class="decision" data-k="p13" data-titulo="Paso 13 · Redes" data-propuesta="Poner un piso para completar los cinco posteos de Facebook (por ejemplo, 60) en vez de 0: mejor cuatro buenos que cinco con uno flojo.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Poner un piso para completar los cinco posteos de Facebook (por ejemplo, 60) en vez de 0: mejor cuatro buenos que cinco con uno flojo.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+</div>
+</details>
+
+
+<section id="secciones" class="especial">
+<h2>Secciones: ¿agregamos o dividimos?</h2>
+<p class="bajada">Con lo publicado de verdad: <b>1.039 notas con cuerpo</b> que salieron entre el 16/09 y el 16/10 y hoy tienen página (<code>archivo.json</code> y <code>portada.json</code>, sin las notas propias). La última columna es lo que salió cada día según <code>notas-por-dia.json</code> (691 notas en 20 días, del 27/09 al 16/10, incluidas las que después se retiraron).</p>
+
+<h3>Cómo están hoy las once</h3>
+<div class="tabla-envoltura"><table class="secciones"><thead><tr><th>Sección</th><th>Notas en 30 días</th><th>Por semana</th><th>De acá / de afuera</th><th>Salieron del 27/09 al 16/10</th></tr></thead><tbody><tr><th scope="row">Balcarce</th><td class="v">141</td><td class="v">32,9</td><td class="barra-celda"><span class="barra"><span class="b-l" style="width:84.4%"></span><span class="b-a" style="width:0.0%"></span></span><small>141 de acá · 0 de afuera</small></td><td class="v">100</td></tr><tr><th scope="row">Política</th><td class="v">141</td><td class="v">32,9</td><td class="barra-celda"><span class="barra"><span class="b-l" style="width:25.7%"></span><span class="b-a" style="width:58.7%"></span></span><small>43 de acá · 98 de afuera</small></td><td class="v">85</td></tr><tr><th scope="row">Policiales</th><td class="v">12</td><td class="v">2,8</td><td class="barra-celda"><span class="barra"><span class="b-l" style="width:6.6%"></span><span class="b-a" style="width:0.6%"></span></span><small>11 de acá · 1 de afuera</small></td><td class="v">17</td></tr><tr><th scope="row">Fútbol</th><td class="v">124</td><td class="v">28,9</td><td class="barra-celda"><span class="barra"><span class="b-l" style="width:5.4%"></span><span class="b-a" style="width:68.9%"></span></span><small>9 de acá · 115 de afuera</small></td><td class="v">71</td></tr><tr><th scope="row">Deportes</th><td class="v">98</td><td class="v">22,9</td><td class="barra-celda"><span class="barra"><span class="b-l" style="width:42.5%"></span><span class="b-a" style="width:16.2%"></span></span><small>71 de acá · 27 de afuera</small></td><td class="v">69</td></tr><tr><th scope="row">Automovilismo</th><td class="v">114</td><td class="v">26,6</td><td class="barra-celda"><span class="barra"><span class="b-l" style="width:38.9%"></span><span class="b-a" style="width:29.3%"></span></span><small>65 de acá · 49 de afuera</small></td><td class="v">70</td></tr><tr><th scope="row">Agro</th><td class="v">78</td><td class="v">18,2</td><td class="barra-celda"><span class="barra"><span class="b-l" style="width:10.8%"></span><span class="b-a" style="width:35.9%"></span></span><small>18 de acá · 60 de afuera</small></td><td class="v">53</td></tr><tr><th scope="row">Economía</th><td class="v">167</td><td class="v">39,0</td><td class="barra-celda"><span class="barra"><span class="b-l" style="width:3.0%"></span><span class="b-a" style="width:97.0%"></span></span><small>5 de acá · 162 de afuera</small></td><td class="v">103</td></tr><tr><th scope="row">Cultura y agenda</th><td class="v">71</td><td class="v">16,6</td><td class="barra-celda"><span class="barra"><span class="b-l" style="width:24.6%"></span><span class="b-a" style="width:18.0%"></span></span><small>41 de acá · 30 de afuera</small></td><td class="v">56</td></tr><tr><th scope="row">Tecnología</th><td class="v">13</td><td class="v">3,0</td><td class="barra-celda"><span class="barra"><span class="b-l" style="width:0.6%"></span><span class="b-a" style="width:7.2%"></span></span><small>1 de acá · 12 de afuera</small></td><td class="v">12</td></tr><tr><th scope="row">Argentina</th><td class="v">80</td><td class="v">18,7</td><td class="barra-celda"><span class="barra"><span class="b-l" style="width:0.6%"></span><span class="b-a" style="width:47.3%"></span></span><small>1 de acá · 79 de afuera</small></td><td class="v">55</td></tr></tbody></table></div>
+<p class="leyenda"><span class="cuadro b-l"></span> de acá (medio de Balcarce, Balcarce en el título o la zona) <span class="cuadro b-a"></span> de afuera</p>
+<p class="chico">El 8/10 se fijó una regla para sumar secciones: <b>de a una, cada dos semanas, sólo si llena 10 notas por semana</b> (auditoría del 8/10 en <code>docs/historico/propuestas-2026-10/</code>). El 6/10 se habló de llegar a 15 sin elegir cuáles. Los números de abajo dicen que hoy hay lugar para una o dos, no para cuatro.</p>
+
+<h3>Qué hay adentro de los cajones</h3>
+<p class="chico">Contado por palabras del título y la bajada y revisado a mano por muestras. Son aproximados: pueden moverse unas 5 notas para cada lado.</p>
+<div class="dos">
+<div class="caja">
+<h4>Balcarce (141 notas)</h4>
+<ul class="barritas"><li><span class="bt">Escuelas y educación</span><span class="bb"><span style="width:100.0%"></span></span><span class="bn">25</span><small>paros docentes, el Jardín 905, escuelas técnicas, diplomaturas</small></li><li><span class="bt">Servicios y trámites</span><span class="bb"><span style="width:92.0%"></span></span><span class="bn">23</span><small>cortes de luz, OSeBal, ARBal, DNI, Zona Fría, VTV</small></li><li><span class="bt">Salud</span><span class="bb"><span style="width:80.0%"></span></span><span class="bn">20</span><small>hospital, LALCEC, zoonosis, sarampión</small></li><li><span class="bt">Concejo, intendencia y gremios</span><span class="bb"><span style="width:68.0%"></span></span><span class="bn">17</span><small>que según la regla de la IA van a Política</small></li><li><span class="bt">Instituciones y solidaridad</span><span class="bb"><span style="width:40.0%"></span></span><span class="bn">10</span><small>Bomberos, Leones, Rotary, Hogar Pinto</small></li><li><span class="bt">Policial y tránsito</span><span class="bb"><span style="width:28.0%"></span></span><span class="bn">7</span><small>Comando Rural, estafa de TelePASE, robo en el Jardín</small></li><li><span class="bt">Comercio y empleo</span><span class="bb"><span style="width:28.0%"></span></span><span class="bn">7</span></li><li><span class="bt">Pronósticos del tiempo</span><span class="bb"><span style="width:20.0%"></span></span><span class="bn">5</span><small>el clima es un servicio, no una nota</small></li><li><span class="bt">Deporte de acá</span><span class="bb"><span style="width:20.0%"></span></span><span class="bn">5</span><small>Kevin Gómez, la Liga Balcarceña suspende la fecha</small></li></ul><p class="chico">Lo que no es ni educación ni salud ni servicios ni Concejo es poco: Balcarce es, en la práctica, cuatro secciones juntas.</p>
+</div>
+<div class="caja">
+<h4>Argentina (80 notas)</h4>
+<ul class="barritas"><li><span class="bt">Política nacional, Malvinas, el Papa</span><span class="bb"><span style="width:60.0%"></span></span><span class="bn">15</span></li><li><span class="bt">Salud</span><span class="bb"><span style="width:52.0%"></span></span><span class="bn">13</span><small>salud mental, hepatitis C, influenza, clínicas</small></li><li><span class="bt">Transporte y trámites</span><span class="bb"><span style="width:24.0%"></span></span><span class="bn">6</span><small>Línea F del subte, patentes, VTV</small></li><li><span class="bt">Educación</span><span class="bb"><span style="width:20.0%"></span></span><span class="bn">5</span><small>universidades, oficios, paros</small></li><li><span class="bt">Clima</span><span class="bb"><span style="width:20.0%"></span></span><span class="bn">5</span><small>alertas del Servicio Meteorológico</small></li><li><span class="bt">Varios</span><span class="bb"><span style="width:100.0%"></span></span><span class="bn">25</span><small>Messi y Colapinto, influencers, curiosidades, Pedro Sánchez en España</small></li></ul><p class="chico">"Lo nacional que no es de otra sección" termina siendo de todo un poco, con cosas que no deberían estar (España, la madre de un influencer).</p>
+</div>
+<div class="caja">
+<h4>Cultura y agenda (71 notas)</h4>
+<ul class="barritas"><li><span class="bt">De acá</span><span class="bb"><span style="width:100.0%"></span></span><span class="bn">41</span><small>Teatro Municipal, Casa del Bicentenario, Fiesta del Postre, talleres</small></li><li><span class="bt">De afuera</span><span class="bb"><span style="width:73.2%"></span></span><span class="bn">30</span><small>sobre todo TV y espectáculos (Netflix, Disney+, MasterChef, Pergolini) y turismo de Mar del Plata y las sierras</small></li></ul><p class="chico">La "agenda" de verdad ya es otra cosa: <code>/agenda</code>, una página por evento con fecha confirmada.</p>
+</div>
+<div class="caja">
+<h4>Deportes (98) · Policiales (12) · Tecnología (13)</h4>
+<ul class="barritas"><li><span class="bt">Deportes de acá</span><span class="bb"><span style="width:100.0%"></span></span><span class="bn">71</span><small>atletismo, hockey de Campo de Pato, básquet, pádel</small></li><li><span class="bt">Deportes de afuera</span><span class="bb"><span style="width:38.0%"></span></span><span class="bn">27</span><small>con fútbol que debería estar en Fútbol (Champions)</small></li><li><span class="bt">Policiales de acá</span><span class="bb"><span style="width:15.5%"></span></span><span class="bn">11</span><small>la sección ya es sólo de acá</small></li><li><span class="bt">Tecnología</span><span class="bb"><span style="width:18.3%"></span></span><span class="bn">13</span><small>4 son consejos de WhatsApp; 1 de acá (un científico formado en Balcarce en la NASA)</small></li></ul>
+</div>
+</div>
+
+<h3>Las candidatas, una por una</h3>
+<div class="tabla-envoltura"><table class="candidatas">
+<thead><tr><th>Candidata</th><th>Notas por mes (estimado)</th><th>A favor</th><th>En contra</th><th>Lo que propongo</th></tr></thead>
+<tbody>
+<tr><th scope="row">Educación</th><td class="v">~45 (unas 10 por semana): 25 de Balcarce, 8 de Política, 5 de Argentina, el resto de Cultura y Economía</td><td>Es el tema local que más se repite (paros, jardines, técnicas, universidad). Hay fuentes oficiales. Vacía a Balcarce. Busca bien en Google ("escuelas Balcarce").</td><td>Llega justo al piso de 10 por semana. Muchas notas tienen chicos: más amarillas, y nunca una foto de alumnos identificables.</td><td><span class="veredicto si">Sí, como piloto de dos semanas</span></td></tr>
+<tr><th scope="row">Salud</th><td class="v">~35 (unas 8 por semana): 20 de Balcarce, 13 de Argentina, algunas de Política</td><td>Servicio puro (hospital, vacunas, LALCEC, PAMI). El costado de la página puede tener la farmacia de turno.</td><td>No llega a 10 por semana. Tema sensible (muertes, enfermedades, chicos). Hay que decidir si espera a una persona en redes.</td><td><span class="veredicto despues">Más adelante: cuando pase 10 por semana dos semanas seguidas</span></td></tr>
+<tr><th scope="row">Ciencia (o "Ciencia y tecnología")</th><td class="v">~10 de ciencia sola; con Tecnología, ~25 (unas 6 por semana)</td><td>Es identidad (INTA Balcarce, Facultad de Agrarias). La IA ya tiene "Tecnología: tecnología, ciencia, inteligencia artificial".</td><td>Sola no llega. Renombrar Tecnología cambia la dirección de la sección (hace falta redirigir). Lo del INTA compite con Agro.</td><td><span class="veredicto si">Renombrar Tecnología a "Ciencia y tecnología" cuando entren las fuentes de ciencia</span></td></tr>
+<tr><th scope="row">Cultura separada de agenda</th><td class="v">Cultura de acá ~41; espectáculos de afuera ~30</td><td>El nombre sería más claro.</td><td>La agenda ya es /agenda. Separar no suma notas; lo que sobra es farándula de afuera.</td><td><span class="veredicto no">No separar. Sí: menos espectáculos de afuera (cupo 8 → 4, o pedir 4 medios)</span></td></tr>
+<tr><th scope="row">Policiales de Balcarce</th><td class="v">12 (11 de acá) + ~7 que caen en Balcarce</td><td>—</td><td>Policiales ya es sólo de acá. Lo que falta son notas (el semáforo frena casi todo), no otra sección.</td><td><span class="veredicto no">No. Mandar a Policiales lo policial que cae en Balcarce</span></td></tr>
+<tr><th scope="row">Deportes de Balcarce</th><td class="v">Deportes ya es 71 de acá contra 27 de afuera</td><td>—</td><td>Ya pasó: Deportes es, de hecho, la sección del deporte de acá; el fútbol de afuera vive en Fútbol.</td><td><span class="veredicto no">No partir. Mover a Deportes y Fútbol lo deportivo que cae en Balcarce</span></td></tr>
+<tr><th scope="row">Instituciones (clubes, Bomberos, Rotary)</th><td class="v">~10 a 15</td><td>Muy local.</td><td>No llega a 4 por semana.</td><td><span class="veredicto no">No: queda en Balcarce</span></td></tr>
+<tr><th scope="row">Servicios (cortes, trámites, tasas)</th><td class="v">~23 (unas 5 por semana)</td><td>Útil.</td><td>Existió hasta el 27/09 y se sacó por decisión de Hernán ("los cortes, trámites y obras de acá van a Balcarce").</td><td><span class="veredicto no">No volver</span></td></tr>
+<tr><th scope="row">Turismo</th><td class="v">~6 a 10 de verdad (de 53 coincidencias de "turismo", 22 eran Turismo Carretera)</td><td>Fiesta del Postre, sierras, autódromo.</td><td>Poco volumen; lo regional de Mar del Plata no se quiere.</td><td><span class="veredicto no">No</span></td></tr>
+<tr><th scope="row">Clima</th><td class="v">~5 pronósticos de acá + alertas nacionales</td><td>—</td><td>Es un servicio (/clima, historias). Una sección invitaría a publicar pronósticos de otros medios.</td><td><span class="veredicto no">No (y que el pronóstico de un medio no salga como nota)</span></td></tr>
+<tr><th scope="row">Internacional</th><td class="v">—</td><td>—</td><td>El criterio dice que lo de otro país sin un argentino no entra (§ 2). Una sección empuja a traerlo.</td><td><span class="veredicto no">No</span></td></tr>
+<tr><th scope="row">Sociedad (en lugar de Argentina)</th><td class="v">Lo mismo que Argentina (~80)</td><td>Es el nombre que usan los diarios nacionales.</td><td>Mezclaría lo nacional con lo local y cambia una dirección que ya está en Google.</td><td><span class="veredicto no">No por ahora</span></td></tr>
+</tbody></table></div>
+
+<h3>Mi recomendación</h3>
+<div class="recomendacion">
+<ol>
+<li><b>Primero, ordenar el reparto (dos semanas, sin tocar el menú).</b> Que la lectura con IA mande el Concejo y el intendente a Política, el deporte de acá a Deportes, la Liga Balcarceña a Fútbol, lo policial a Policiales; que el fútbol de afuera no quede en Deportes; que el pronóstico del tiempo no salga como nota; y menos espectáculos de afuera. Esto solo saca de Balcarce unas 25 notas por mes.</li>
+<li><b>Después, Educación como sección número 12</b>, piloto de dos semanas: se queda si llena 10 por semana. Va en el menú al lado de Balcarce.</li>
+<li><b>Salud, la 13, cuando pase 10 por semana</b> dos semanas seguidas, y con la pregunta de las redes respondida.</li>
+<li><b>Tecnología pasa a "Ciencia y tecnología"</b> cuando entren las fuentes de ciencia de la etapa 1 (INTA, Agrarias, universidades).</li>
+<li><b>No</b>: Internacional, Clima, Turismo, Sociedad, volver a Servicios ni partir Balcarce en Policiales y Deportes (esas dos ya son casi todo de acá).</li>
+</ol>
+<p>Con eso quedan <b>12 secciones ahora y 13 con Salud</b>. Con lo de hoy, Balcarce bajaría de unas 141 a unas 90 por mes, Educación tendría unas 45 y Argentina unas 70.</p>
+</div>
+
+<h3>Qué cambia si se suma una sección</h3>
+<div class="tabla-envoltura"><table class="impacto"><tbody>
+<tr><th scope="row">Menú</th><td>En el celular el menú es <b>una fila que se desliza</b> (<code>web/components/navegacion.js</code>), con un degradé que avisa que hay más. Con 12 o 13 entra igual, pero las últimas quedan más escondidas: Educación conviene cerca de Balcarce. Con 15 sí haría falta un "Más". Sólo se muestran las secciones que tienen notas.</td></tr>
+<tr><th scope="row">Google</th><td>La dirección de una nota no lleva la sección (<code>/nota/titulo-id</code>): no cambia nada para lo publicado. Aparece <code>/seccion/educacion</code>, que arranca vacía: las notas viejas siguen en su sección salvo que se las pase a mano o con una migración. <b>Renombrar</b> una sección (Tecnología) obliga a redirigir la dirección vieja (<code>SECCIONES_VIEJAS</code> en <code>web/scripts/generar-redirects.mjs</code>).</td></tr>
+<tr><th scope="row">Redes</th><td>Cada sección tiene color de placa (<code>COLOR_SECCION</code> en <code>reels/placa.mjs</code>, que tiene que coincidir con <code>CRITERIO-REDES.md</code> § 8: lo controla una prueba). Si Salud espera a una persona, va en <code>SECCIONES_QUE_ESPERAN_PERSONA</code>.</td></tr>
+<tr><th scope="row">Colores</th><td>Un color nuevo tiene que tener contraste de 4,5 a 1 con el blanco. La auditoría del 8/10 dejó dos reservados, <code>#C0258F</code> y <code>#0A7C99</code> (no medí su contraste).</td></tr>
+<tr><th scope="row">Archivos que hay que tocar</th><td><ul class="archivos">
+<li><code>web/lib/datos.js</code>: <code>SECCIONES</code>, <code>EN_NAVEGACION</code>, <code>frasesDeSeccion</code> (y <code>nombreCorto</code> si el nombre es largo).</li>
+<li><code>web/app/globals.css</code>: la variable <code>--s-…</code>; y la misma en <code>web/public/panel/index.html</code>.</li>
+<li><code>ingesta/fuentes.mjs</code>: <code>REGLAS_SECCION</code> (las palabras); si alguna es ambigua, <code>PALABRAS_DEBILES</code> en <code>ingesta/ingesta.mjs</code>.</li>
+<li><code>ingesta/lectura-ia.mjs</code>: <code>SECCIONES_DE_LA_FICHA</code> <b>y el texto de la instrucción</b> que dice qué va en cada sección (si no, la IA nunca la elige).</li>
+<li><code>ingesta/criterio.mjs</code> (<code>MEDIOS_DE_AFUERA</code>, <code>CUPO_DE_AFUERA</code>, <code>SECCIONES_QUE_ESPERAN_PERSONA</code>) <b>y</b> la tabla del § 11 y la tabla de secciones del § 2 de <code>CRITERIO-EDITORIAL.md</code>.</li>
+<li><code>ingesta/auditoria-ia.mjs</code>: <code>SECCIONES_VALIDAS</code>.</li>
+<li><code>web/public/panel/github.js</code> (<code>SECCIONES</code>), <code>web/public/panel/app.js</code> y <code>web/public/panel/numeros.js</code> (sección → color).</li>
+<li><code>web/lib/notas-de-pistas.js</code> (<code>SECCIONES</code>).</li>
+<li><code>reels/placa.mjs</code> (<code>COLOR_SECCION</code>) + <code>CRITERIO-REDES.md</code> § 8; <code>web/lib/tarjeta-diseno.js</code> (<code>COLOR</code>).</li>
+<li><code>ingesta/foto-ia.mjs</code> y <code>ingesta/foto-stock.mjs</code> (secciones aptas y búsqueda de fotos), si la sección tiene que tener foto libre.</li>
+<li><code>web/scripts/generar-redirects.mjs</code> (sección → dirección; <code>SECCIONES_VIEJAS</code> si se renombra).</li>
+<li><code>infra/mcp-cloudflare/worker.mjs</code> (lista de secciones).</li>
+<li><code>CLAUDE.md</code> ("Las secciones son once") y la documentación de <code>docs/</code>.</li>
+<li>Pruebas con listas fijas: <code>pruebas/titulos-colores.test.mjs</code>, <code>colores-placas.test.mjs</code>, <code>nota-de-pista.test.mjs</code> (espera 11), <code>redirects.test.mjs</code>, <code>secciones-flacas.test.mjs</code>, <code>criterio.test.mjs</code>, <code>lectura-ia.test.mjs</code>.</li>
+</ul></td></tr>
+</tbody></table></div>
+
+<h3>Decisiones sobre las secciones</h3>
+<div class="decision" data-k="s1" data-titulo="Secciones · Ordenar el reparto" data-propuesta="Antes de sumar secciones, dos semanas ordenando el reparto: Concejo e intendente a Política, deporte de acá a Deportes, Liga a Fútbol, lo policial a Policiales, fútbol de afuera fuera de Deportes y sin pronósticos como notas.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Antes de sumar secciones, dos semanas ordenando el reparto: Concejo e intendente a Política, deporte de acá a Deportes, Liga a Fútbol, lo policial a Policiales, fútbol de afuera fuera de Deportes y sin pronósticos como notas.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="s2" data-titulo="Secciones · Educación" data-propuesta="Sumar Educación como sección 12, piloto de dos semanas; se queda si llena 10 notas por semana.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Sumar Educación como sección 12, piloto de dos semanas; se queda si llena 10 notas por semana.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="s3" data-titulo="Secciones · Salud" data-propuesta="Salud entra como sección 13 recién cuando pase 10 notas por semana dos semanas seguidas, y con la regla de redes decidida.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Salud entra como sección 13 recién cuando pase 10 notas por semana dos semanas seguidas, y con la regla de redes decidida.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="s4" data-titulo="Secciones · Ciencia y tecnología" data-propuesta="Renombrar Tecnología a &quot;Ciencia y tecnología&quot; (con su redirección) cuando entren las fuentes de ciencia.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> Renombrar Tecnología a &quot;Ciencia y tecnología&quot; (con su redirección) cuando entren las fuentes de ciencia.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="s5" data-titulo="Secciones · Cultura y agenda" data-propuesta="No separar Cultura de agenda; bajar los espectáculos de afuera (cupo 8 → 4 o pedir 4 medios).">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> No separar Cultura de agenda; bajar los espectáculos de afuera (cupo 8 → 4 o pedir 4 medios).</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="s6" data-titulo="Secciones · No partir Balcarce" data-propuesta="No crear Policiales de Balcarce ni Deportes de Balcarce: esas secciones ya son casi todo de acá.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> No crear Policiales de Balcarce ni Deportes de Balcarce: esas secciones ya son casi todo de acá.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="s7" data-titulo="Secciones · Las que no" data-propuesta="No sumar Internacional, Clima, Turismo ni Sociedad, y no volver a Servicios.">
+  <p class="decision-tit">Decisión de ustedes</p>
+  <p class="propuesta"><b>Propuesta:</b> No sumar Internacional, Clima, Turismo ni Sociedad, y no volver a Servicios.</p>
+  <div class="opciones" role="group" aria-label="Decisión">
+    <button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button>
+  </div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+</section>
+
+<h2 id="decisiones">Mis decisiones</h2>
+<div class="panel-dec">
+<p id="aviso-almacen" hidden>Este navegador no deja guardar: lo que marquen se pierde al cerrar la página. Copien las decisiones antes de salir.</p>
+<label class="coment">¿Quién decide? (va arriba del texto que se copia)<input class="campo" id="quien" type="text" placeholder="Hernán, Andrés o los dos" autocomplete="off"></label>
+<p id="cuenta" class="chico"></p>
+<div class="fila"><button type="button" class="boton prim" id="copiar">Copiar mis decisiones</button><button type="button" class="boton" id="descargar">Descargar</button><button type="button" class="boton" id="borrar">Borrar todo</button></div>
+<textarea id="caja" hidden readonly aria-label="Texto de las decisiones"></textarea>
+</div>
+
+<h2 id="limites">Qué no pude confirmar</h2>
+<ul class="limites">
+<li>Los conteos por tema (Educación, Salud, servicios…) salen de palabras del título y la bajada, revisados a mano por muestras: son aproximados.</li>
+<li>Los títulos de lo que espera a una persona viajan cifrados al celular: no vi a qué notas se refieren las amarillas por "niño" de Agro.</li>
+<li>Por qué "Docentes y estatales bonaerenses discuten una nueva oferta salarial" salió sin ficha de la IA, y si "Pedro Sánchez adelanta las elecciones en España" tenía ficha.</li>
+<li>Las cifras de la corrida de prueba (7.122 notas leídas, 103 de 441 historias encadenadas) son del 15/10 (<code>docs/COMO-SE-ELIGE-UNA-NOTA.html</code>); hoy no se corrió la ingesta.</li>
+<li>Los números de las barreras D4 a D7 salen de esa misma guía del 15/10, contrastados con el código en lo principal.</li>
+<li>El contraste de los dos colores reservados para secciones nuevas.</li>
+<li>Para qué se va a usar el Worker de imágenes con IA que se subió hoy.</li>
+</ul>
+<p class="meta">Archivos leídos: CLAUDE.md, CRITERIO-EDITORIAL.md, docs/COMO-SE-ELIGE-UNA-NOTA.html, docs/criterio/PROPUESTA-EDICION-V2.md, ingesta/ (criterio, cruce, fuentes, ingesta, lectura-ia, perfil-balcarce, exenciones), reels/reescritura.mjs, web/scripts/generar-datos.mjs, web/lib/datos.js, web/components/navegacion.js, FUENTES.md, docs/DECISIONES.md, IDEAS.md y la auditoría del 8/10. Datos: portada, archivo, fichas, notas-por-dia, intentos-ia, fusionadas, esperando-cuerpo, uso-ia y redes de web/data, versión de GitHub de las 09:37 del 16/10.</p>
+</main>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+(function () {
+  var CLAVE = 'radar-guia-flujo-v1';
+  var CLAVE_TEMA = 'radar-guia-flujo-tema';
+  var CLAVE_QUIEN = 'radar-guia-flujo-quien';
+  var hayAlmacen = true;
+  function leer(k, def) { try { var v = localStorage.getItem(k); return v == null ? def : v; } catch (e) { hayAlmacen = false; return def; } }
+  function escribir(k, v) { try { localStorage.setItem(k, v); } catch (e) { hayAlmacen = false; } }
+  var decisiones = {};
+  try { decisiones = JSON.parse(leer(CLAVE, '{}')) || {}; } catch (e) { decisiones = {}; }
+  function guardar() { escribir(CLAVE, JSON.stringify(decisiones)); }
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var cajas = $$('.decision');
+
+  function pintar(caja) {
+    var k = caja.getAttribute('data-k');
+    var d = decisiones[k] || {};
+    if (d.d) caja.setAttribute('data-d', d.d); else caja.removeAttribute('data-d');
+    $$('.op', caja).forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-v') === d.d)); });
+    var ta = $('textarea', caja);
+    if (ta && document.activeElement !== ta) ta.value = d.c || '';
+    var paso = document.getElementById(k);
+    if (paso && paso.classList.contains('paso')) { if (d.d) paso.setAttribute('data-d', d.d); else paso.removeAttribute('data-d'); }
+    $$('.punto[data-k="' + k + '"]').forEach(function (p) { if (d.d) p.setAttribute('data-d', d.d); else p.removeAttribute('data-d'); });
+  }
+  function contar() {
+    var t = { 'Sí': 0, 'No': 0, 'Duda': 0 }; var hechas = 0;
+    cajas.forEach(function (c) { var d = (decisiones[c.getAttribute('data-k')] || {}).d; if (d) { t[d] += 1; hechas += 1; } });
+    $('#progreso').textContent = hechas + ' de ' + cajas.length;
+    $('#cuenta').textContent = 'Decididas ' + hechas + ' de ' + cajas.length + ': Sí ' + t['Sí'] + ' · No ' + t['No'] + ' · Duda ' + t['Duda'] + '.';
+  }
+  function cambiar(caja, cambios) {
+    var k = caja.getAttribute('data-k');
+    var nuevo = Object.assign({}, decisiones[k] || {}, cambios);
+    if (!nuevo.d) delete nuevo.d;
+    if (!nuevo.c) delete nuevo.c;
+    if (!nuevo.d && !nuevo.c) delete decisiones[k]; else decisiones[k] = nuevo;
+    guardar(); pintar(caja); contar();
+  }
+  cajas.forEach(function (caja) {
+    $$('.op', caja).forEach(function (b) {
+      b.addEventListener('click', function () {
+        var v = b.getAttribute('data-v');
+        var actual = (decisiones[caja.getAttribute('data-k')] || {}).d;
+        cambiar(caja, { d: actual === v ? '' : v });
+      });
+    });
+    var ta = $('textarea', caja);
+    var t = null;
+    ta.addEventListener('input', function () { clearTimeout(t); t = setTimeout(function () { cambiar(caja, { c: ta.value.trim() }); }, 300); });
+    ta.addEventListener('blur', function () { cambiar(caja, { c: ta.value.trim() }); });
+    pintar(caja);
+  });
+  contar();
+  if (!hayAlmacen) $('#aviso-almacen').hidden = false;
+
+  var quien = $('#quien');
+  quien.value = leer(CLAVE_QUIEN, '');
+  quien.addEventListener('input', function () { escribir(CLAVE_QUIEN, quien.value); });
+
+  function armarTexto() {
+    var hoy = new Date();
+    var t = { 'Sí': 0, 'No': 0, 'Duda': 0 }; var sin = 0; var lineas = [];
+    cajas.forEach(function (c) {
+      var d = decisiones[c.getAttribute('data-k')] || {};
+      if (d.d) t[d.d] += 1; else sin += 1;
+      if (!d.d && !d.c) return;
+      lineas.push(c.getAttribute('data-titulo'));
+      lineas.push('  Propuesta: ' + c.getAttribute('data-propuesta'));
+      lineas.push('  Decisión: ' + (d.d || 'sin decidir'));
+      if (d.c) lineas.push('  Comentario: ' + d.c);
+      lineas.push('');
+    });
+    var cab = 'Decisiones sobre la guía del flujo de Radar Balcarce (' + hoy.toLocaleDateString('es-AR') + ')' + (quien.value.trim() ? ' — de: ' + quien.value.trim() : '');
+    return cab + '\nSí ' + t['Sí'] + ' · No ' + t['No'] + ' · Duda ' + t['Duda'] + ' · sin decidir ' + sin + '\n\n' + (lineas.length ? lineas.join('\n') : '(todavía no marcaron nada)\n');
+  }
+  function aviso(txt) { var el = $('#toast'); el.textContent = txt; el.classList.add('ver'); clearTimeout(aviso.t); aviso.t = setTimeout(function () { el.classList.remove('ver'); }, 3500); }
+  $('#copiar').addEventListener('click', function () {
+    var texto = armarTexto(); var caja = $('#caja');
+    caja.value = texto; caja.hidden = false;
+    var respaldo = function () { try { caja.focus(); caja.select(); var ok = document.execCommand('copy'); aviso(ok ? 'Copiado. Péguenlo en el chat.' : 'No se pudo copiar solo: está seleccionado abajo.'); } catch (e) { aviso('No se pudo copiar solo: cópienlo desde la caja de abajo.'); } };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(texto).then(function () { aviso('Copiado. Péguenlo en el chat.'); }, respaldo); else respaldo();
+  });
+  $('#descargar').addEventListener('click', function () {
+    var blob = new Blob([armarTexto()], { type: 'text/plain;charset=utf-8' });
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+    a.download = 'decisiones-flujo-' + new Date().toISOString().slice(0, 10) + '.txt';
+    document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  });
+  $('#borrar').addEventListener('click', function () {
+    if (!window.confirm('¿Borrar todas las decisiones y comentarios guardados en este navegador?')) return;
+    decisiones = {}; guardar(); cajas.forEach(pintar); contar(); $('#caja').hidden = true;
+  });
+
+  // Índice: abrir y cerrar en el celular; abrir el paso al que se salta.
+  var indice = $('#indice'); var botonIndice = $('#boton-indice');
+  botonIndice.addEventListener('click', function () { var ab = indice.classList.toggle('abierto'); botonIndice.setAttribute('aria-expanded', String(ab)); });
+  function abrirDestino() {
+    var h = location.hash; if (!h) return;
+    var el = document.getElementById(h.slice(1)); if (!el) return;
+    var d = el.closest('details'); if (d && !d.open) d.open = true;
+    if (el.tagName === 'DETAILS') el.open = true;
+  }
+  $$('.indice a, .recorrido a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var el = document.getElementById(a.getAttribute('href').slice(1));
+      if (el && el.tagName === 'DETAILS') el.open = true;
+      indice.classList.remove('abierto'); botonIndice.setAttribute('aria-expanded', 'false');
+    });
+  });
+  window.addEventListener('hashchange', abrirDestino);
+  abrirDestino();
+  $('#abrir-todo').addEventListener('click', function () { $$('details.paso').forEach(function (d) { d.open = true; }); });
+  $('#cerrar-todo').addEventListener('click', function () { $$('details.paso').forEach(function (d) { d.open = false; }); });
+
+  // Marca en el índice la parte que se está leyendo.
+  var enlaces = $$('.indice a');
+  var destinos = enlaces.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+  function marcarActivo() {
+    var y = window.scrollY + 90; var act = 0;
+    destinos.forEach(function (el, i) { if (el && el.getBoundingClientRect().top + window.scrollY <= y) act = i; });
+    enlaces.forEach(function (a, i) { a.classList.toggle('activo', i === act); });
+  }
+  window.addEventListener('scroll', function () { if (!marcarActivo.p) { marcarActivo.p = true; requestAnimationFrame(function () { marcarActivo.p = false; marcarActivo(); }); } }, { passive: true });
+  marcarActivo();
+
+  // Tema: automático, claro u oscuro.
+  var raiz = document.documentElement;
+  function aplicarTema(t) { if (t === 'light' || t === 'dark') raiz.setAttribute('data-theme', t); else raiz.removeAttribute('data-theme'); $('#tema').textContent = t === 'light' ? 'Claro' : t === 'dark' ? 'Oscuro' : 'Tema: auto'; }
+  var tema = leer(CLAVE_TEMA, 'auto'); aplicarTema(tema);
+  $('#tema').addEventListener('click', function () { tema = tema === 'auto' ? 'light' : tema === 'light' ? 'dark' : 'auto'; escribir(CLAVE_TEMA, tema); aplicarTema(tema); });
+})();
+</script>
+</body>
+</html>

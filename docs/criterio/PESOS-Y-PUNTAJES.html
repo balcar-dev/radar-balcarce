@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Pesos y puntajes · Radar Balcarce</title>
+<style>
+:root{--fondo:#f6f7f9;--tarjeta:#fff;--texto:#1b2430;--suave:#5c6878;--borde:#d9dee6;--acento:#1f5fbf;--cabecera:#eef1f6;
+--si:#1c7a3d;--si-f:#e3f4e8;--no:#b3261e;--no-f:#fbe7e5;--duda:#9a6700;--duda-f:#fff3cd;
+--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--grilla:#e6e8ec}
+@media (prefers-color-scheme:dark){:root:not([data-tema="claro"]){--fondo:#12161c;--tarjeta:#1a2029;--texto:#e6ebf2;--suave:#9aa6b6;--borde:#2c3644;--acento:#7fb0ff;--cabecera:#202835;
+--si:#5fd48a;--si-f:#17331f;--no:#ff8f86;--no-f:#3a1a18;--duda:#f1c04d;--duda-f:#3a2f10;--s1:#3987e5;--s2:#d95926;--s3:#199e70;--grilla:#283240}}
+:root[data-tema="oscuro"]{--fondo:#12161c;--tarjeta:#1a2029;--texto:#e6ebf2;--suave:#9aa6b6;--borde:#2c3644;--acento:#7fb0ff;--cabecera:#202835;
+--si:#5fd48a;--si-f:#17331f;--no:#ff8f86;--no-f:#3a1a18;--duda:#f1c04d;--duda-f:#3a2f10;--s1:#3987e5;--s2:#d95926;--s3:#199e70;--grilla:#283240}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fondo);color:var(--texto);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.pagina{max-width:1100px;margin:0 auto;padding:16px}
+h1{font-size:1.6rem;margin:.2em 0}
+h2{font-size:1.2rem;margin:1.6em 0 .5em}
+h3{font-size:1.05rem;margin:.1em 0 .4em}
+.sub,.chico{color:var(--suave)}
+.chico{font-size:.84rem}
+.caja{background:var(--tarjeta);border:1px solid var(--borde);border-radius:12px;padding:12px 16px;margin:12px 0}
+.caja ol,.caja ul{padding-left:1.2em;margin:.3em 0}
+.caja li{margin:.4em 0}
+.tarjetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0}
+.tarjeta{background:var(--tarjeta);border:1px solid var(--borde);border-radius:10px;padding:10px 12px}
+.t-num{font-size:1.7rem;font-weight:700;line-height:1.1}
+.t-nom{font-size:.88rem;color:var(--suave)}
+.graficos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:12px}
+.figura{margin:0;background:var(--tarjeta);border:1px solid var(--borde);border-radius:12px;padding:12px}
+.figura figcaption{font-weight:600;margin-bottom:4px}
+.graf{width:100%;height:auto;display:block}
+.graf .grilla{stroke:var(--grilla);stroke-width:1}
+.graf .base{stroke:var(--suave);stroke-width:1}
+.graf .eje{fill:var(--suave);font-size:14px}
+.graf .val{fill:var(--texto);font-size:13px}
+.graf .marca:hover path{opacity:.8}
+.leyenda{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.84rem;color:var(--suave);margin:2px 0 4px}
+.leyenda i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.filtros{display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px;margin:10px 0}
+.filtros label{display:flex;flex-direction:column;font-size:.8rem;color:var(--suave);gap:2px}
+input[type=search],select,textarea{font:inherit;color:var(--texto);background:var(--tarjeta);border:1px solid var(--borde);border-radius:8px;padding:8px;min-height:40px;width:100%}
+.tabla-caja{border:1px solid var(--borde);border-radius:12px;background:var(--tarjeta);overflow:hidden}
+table{border-collapse:collapse;width:100%}
+th{text-align:left;background:var(--cabecera);font-size:.8rem;padding:8px;border-bottom:1px solid var(--borde)}
+td{vertical-align:top;padding:10px 8px;border-bottom:1px solid var(--borde);font-size:.9rem}
+td.num{font-variant-numeric:tabular-nums}
+code{font:12px ui-monospace,Consolas,monospace;background:var(--cabecera);padding:1px 4px;border-radius:4px;overflow-wrap:anywhere}
+.estado{display:inline-block;font-size:.75rem;font-weight:600;border-radius:99px;padding:2px 8px;border:1px solid var(--borde);white-space:nowrap}
+.e-cambia{background:var(--duda-f);color:var(--duda);border-color:var(--duda)}
+.e-queda{color:var(--suave)}
+.e-no-se-usa{background:var(--no-f);color:var(--no);border-color:var(--no)}
+.e-revisar{color:var(--acento);border-color:var(--acento)}
+.cuenta{font-size:.85rem;color:var(--suave);margin:6px 0}
+.prop{background:var(--tarjeta);border:1px solid var(--borde);border-radius:12px;padding:12px 16px;margin:12px 0}
+.prop.si{border-color:var(--si);box-shadow:inset 5px 0 0 var(--si)}
+.prop.no{border-color:var(--no);box-shadow:inset 5px 0 0 var(--no)}
+.prop.duda{border-color:var(--duda);box-shadow:inset 5px 0 0 var(--duda)}
+.pid{display:inline-block;background:var(--cabecera);border-radius:6px;padding:0 6px;font-size:.85rem;margin-right:4px}
+.prop dl{margin:.4em 0;display:grid;grid-template-columns:170px 1fr;gap:4px 12px;font-size:.92rem}
+.prop dt{color:var(--suave)}
+.prop dd{margin:0}
+.decide{display:flex;gap:8px;margin:10px 0 6px}
+.opc{font:inherit;font-weight:600;flex:1;min-height:44px;border-radius:10px;border:1px solid var(--borde);background:var(--fondo);color:var(--texto);cursor:pointer}
+.opc[aria-pressed="true"][data-v="si"]{background:var(--si-f);color:var(--si);border-color:var(--si)}
+.opc[aria-pressed="true"][data-v="no"]{background:var(--no-f);color:var(--no);border-color:var(--no)}
+.opc[aria-pressed="true"][data-v="duda"]{background:var(--duda-f);color:var(--duda);border-color:var(--duda)}
+.coment{display:flex;flex-direction:column;font-size:.8rem;color:var(--suave);gap:2px}
+.barra-decision{position:sticky;bottom:0;background:var(--fondo);border-top:1px solid var(--borde);padding:10px 0;display:flex;flex-wrap:wrap;gap:8px;align-items:center;z-index:5}
+.btn{font:inherit;border:1px solid var(--borde);background:var(--tarjeta);color:var(--texto);border-radius:8px;padding:8px 14px;min-height:44px;cursor:pointer}
+.btn-fuerte{background:var(--acento);color:#fff;border-color:var(--acento)}
+#copiado{font-size:.9rem;color:var(--si)}
+#caja-texto{width:100%;min-height:120px;font:13px/1.4 ui-monospace,Consolas,monospace;display:none}
+details{background:var(--tarjeta);border:1px solid var(--borde);border-radius:12px;padding:10px 14px;margin:12px 0}
+summary{cursor:pointer;font-weight:600}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:760px){
+  .filtros{grid-template-columns:1fr}
+  .dos{grid-template-columns:1fr}
+  .prop dl{grid-template-columns:1fr}
+  .prop dt{margin-top:6px}
+  table,tbody,tr,td{display:block;width:100%}
+  thead{display:none}
+  tr{border-bottom:2px solid var(--borde);padding:6px 0}
+  td{border:0;padding:4px 10px}
+  td::before{content:attr(data-l);display:block;font-size:.72rem;color:var(--suave);text-transform:uppercase;letter-spacing:.03em}
+}
+</style>
+</head>
+<body>
+<main class="pagina">
+<h1>Pesos y puntajes</h1>
+<p class="sub">Auditoría de todos los números que deciden qué sale, en qué orden y qué va a las redes. Medido el 16/10/2026 con lo publicado del 1 al 15/10 y con la ingesta real de esa mañana. <b>No se cambió nada en producción</b>: cada propuesta espera la decisión de Hernán.</p>
+
+<div class="tarjetas">
+<div class="tarjeta"><div class="t-num">990</div><div class="t-nom">notas de medios publicadas del 1 al 15/10 (339 de acá, 651 de afuera)</div></div>
+<div class="tarjeta"><div class="t-num">76 %</div><div class="t-nom">de los lugares del cupo de afuera ocupados por notas que nunca iban a salir</div></div>
+<div class="tarjeta"><div class="t-num">28 %</div><div class="t-nom">de las notas de acá arrancan 21 puntos abajo porque la fuente no puso la hora</div></div>
+<div class="tarjeta"><div class="t-num">0</div><div class="t-nom">notas que frenó el mínimo de 75 de Facebook desde el 12/10</div></div>
+</div>
+
+<section class="caja">
+<h2 style="margin-top:.2em">En dos minutos</h2>
+<ol>
+<li><b>El puntaje no decide si una nota sale; decide el orden.</b> Si sale lo deciden el semáforo, los medios que la cuentan y el cupo de cada sección. El puntaje ordena el cupo, elige la nota grande de la tapa, Facebook, los repasos y el aviso de "muy importante".</li>
+<li><b>Lo más raro: el cupo se gasta en notas fantasma.</b> El cupo de lo de afuera ("10 de Fútbol a la vez") se reparte entre todo lo que trae la ingesta, también notas de hace dos días que la web después descarta por viejas. Esta mañana, 63 de 83 lugares eran de ésas, y 4 notas frescas esperaban "por cupo".</li>
+<li><b>Una nota de acá sin hora vale como vieja.</b> La frescura le da 0 a lo que la fuente no fecha, mientras la web le pone la fecha de cuando la vio. Son el 28 % de lo de acá.</li>
+<li><b>Hay pesos que no hacen nada o que cuentan dos veces:</b> el 75 de Facebook (anulado por el relleno del 12/10), la foto (+6, que la tapa y Facebook ya prefieren por su cuenta), Balcarce desde afuera (+25 y +22 por lo mismo), y el peso de los medios de afuera, que depende de cuál publicó primero.</li>
+<li><b>Los lectores dicen:</b> lo de acá se lee unas 3,5 veces más que lo de afuera; de afuera, la cantidad de medios sirve hasta 4 y después no suma; Economía y Agro de afuera son lo más publicado y lo menos leído; Fútbol y Automovilismo de afuera, lo más leído.</li>
+<li><b>La recalibración propuesta</b> (15 puntos abajo, para decir Sí, No o Duda) arregla el cupo, la frescura y los dobles premios, aplana los medios, y baja lo de afuera de unas 43 a unas 31 notas por día conservando el 89 % de sus visitas. Lo de acá no se toca (otro trabajo en curso hace que salgan todas).</li>
+</ol>
+</section>
+
+<h2>Cómo se arma hoy el puntaje de una nota</h2>
+<div class="caja">
+<p>Se suman puntos y se corta en 100 (<code>relevancia()</code> en <code>ingesta/ingesta.mjs</code>):</p>
+<ul>
+<li><b>El medio:</b> 24 a 30 si es de Balcarce, 7 a 16 si es de afuera (el del medio que publicó primero).</li>
+<li><b>Es de Balcarce:</b> +25. <b>Un medio de afuera la nombra:</b> +22 más.</li>
+<li><b>Frescura:</b> +25 (menos de 3 h), +15 (3 a 12 h), +8 (12 a 24 h); sin hora en la fuente, 0.</li>
+<li><b>Medios:</b> +10 por cada medio más que cuenta lo mismo, hasta +40.</li>
+<li><b>Foto</b> +6, <b>texto completo</b> +4, <b>figura argentina</b> +16, <b>Automovilismo</b> +8.</li>
+</ul>
+<p class="chico">Una de acá fresca, con foto y de un solo medio: 28 + 25 + 25 + 6 + 4 = 88. Una nacional de hace dos días contada por 5 medios: 8 + 0 + 40 + 6 = 54; si es de Fútbol con Messi, 70, más que una de acá de hace 14 horas. Reconstruimos así las 577 historias de la ingesta de esta mañana: 509 dan exacto (88 %).</p>
+</div>
+
+<h2>Lo que muestran los datos</h2>
+<div class="graficos">
+<figure class="figura"><figcaption>Puntaje con que salió cada nota (1 al 15/10, 990 notas)</figcaption><div class="leyenda"><span><i style="background:var(--s1)"></i>De acá (339)</span><span><i style="background:var(--s2)"></i>De afuera (651)</span></div><svg viewBox="0 0 480 220" role="img" aria-label="Puntaje con que salió cada nota (1 al 15/10, 990 notas)" class="graf"><line x1="34" x2="474" y1="190" y2="190" class="grilla"/><text x="28" y="194" class="eje" text-anchor="end">0</text><line x1="34" x2="474" y1="104" y2="104" class="grilla"/><text x="28" y="108" class="eje" text-anchor="end">110</text><line x1="34" x2="474" y1="18" y2="18" class="grilla"/><text x="28" y="22" class="eje" text-anchor="end">220</text><g class="marca"><path d="M39.37777777777778,190 V189.21818181818182 Q39.37777777777778,188.43636363636364 40.15959595959596,188.43636363636364 H56.66262626262626 Q57.44444444444444,188.43636363636364 57.44444444444444,189.21818181818182 V190 Z" style="fill:var(--s1)"/><rect x="36.37777777777778" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De acá (339) · 20: 2</title></rect></g><text x="48.41111111111111" y="184.43636363636364" class="val" text-anchor="middle">2</text><g class="marca"><path d="M59.44444444444444,190 V189.60909090909092 Q59.44444444444444,189.21818181818182 59.83535353535353,189.21818181818182 H77.12020202020202 Q77.5111111111111,189.21818181818182 77.5111111111111,189.60909090909092 V190 Z" style="fill:var(--s2)"/><rect x="56.44444444444444" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De afuera (651) · 20: 1</title></rect></g><text x="68.47777777777777" y="185.21818181818182" class="val" text-anchor="middle">1</text><text x="58.44444444444444" y="206" class="eje" text-anchor="middle">20</text><g class="marca"><path d="M88.26666666666667,190 V189.21818181818182 Q88.26666666666667,188.43636363636364 89.04848484848485,188.43636363636364 H105.55151515151515 Q106.33333333333333,188.43636363636364 106.33333333333333,189.21818181818182 V190 Z" style="fill:var(--s1)"/><rect x="85.26666666666667" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De acá (339) · 30: 2</title></rect></g><text x="97.3" y="184.43636363636364" class="val" text-anchor="middle">2</text><g class="marca"><path d="M108.33333333333333,190 V181.4909090909091 Q108.33333333333333,177.4909090909091 112.33333333333333,177.4909090909091 H122.39999999999999 Q126.39999999999999,177.4909090909091 126.39999999999999,181.4909090909091 V190 Z" style="fill:var(--s2)"/><rect x="105.33333333333333" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De afuera (651) · 30: 16</title></rect></g><text x="117.36666666666666" y="173.4909090909091" class="val" text-anchor="middle">16</text><text x="107.33333333333333" y="206" class="eje" text-anchor="middle">30</text><g class="marca"><path d="M137.15555555555554,190 V188.43636363636364 Q137.15555555555554,186.87272727272727 138.7191919191919,186.87272727272727 H153.65858585858584 Q155.2222222222222,186.87272727272727 155.2222222222222,188.43636363636364 V190 Z" style="fill:var(--s1)"/><rect x="134.15555555555554" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De acá (339) · 40: 4</title></rect></g><text x="146.18888888888887" y="182.87272727272727" class="val" text-anchor="middle">4</text><g class="marca"><path d="M157.2222222222222,190 V161.16363636363636 Q157.2222222222222,157.16363636363636 161.2222222222222,157.16363636363636 H171.28888888888886 Q175.28888888888886,157.16363636363636 175.28888888888886,161.16363636363636 V190 Z" style="fill:var(--s2)"/><rect x="154.2222222222222" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De afuera (651) · 40: 42</title></rect></g><text x="166.25555555555553" y="153.16363636363636" class="val" text-anchor="middle">42</text><text x="156.22222222222223" y="206" class="eje" text-anchor="middle">40</text><g class="marca"><path d="M186.04444444444442,190 V156.47272727272727 Q186.04444444444442,152.47272727272727 190.04444444444442,152.47272727272727 H200.1111111111111 Q204.1111111111111,152.47272727272727 204.1111111111111,156.47272727272727 V190 Z" style="fill:var(--s1)"/><rect x="183.04444444444442" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De acá (339) · 50: 48</title></rect></g><text x="195.07777777777775" y="148.47272727272727" class="val" text-anchor="middle">48</text><g class="marca"><path d="M206.1111111111111,190 V130.6727272727273 Q206.1111111111111,126.67272727272727 210.1111111111111,126.67272727272727 H220.17777777777775 Q224.17777777777775,126.67272727272727 224.17777777777775,130.6727272727273 V190 Z" style="fill:var(--s2)"/><rect x="203.1111111111111" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De afuera (651) · 50: 81</title></rect></g><text x="215.14444444444442" y="122.67272727272727" class="val" text-anchor="middle">81</text><text x="205.1111111111111" y="206" class="eje" text-anchor="middle">50</text><g class="marca"><path d="M234.9333333333333,190 V156.47272727272727 Q234.9333333333333,152.47272727272727 238.9333333333333,152.47272727272727 H248.99999999999997 Q252.99999999999997,152.47272727272727 252.99999999999997,156.47272727272727 V190 Z" style="fill:var(--s1)"/><rect x="231.9333333333333" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De acá (339) · 60: 48</title></rect></g><text x="243.96666666666664" y="148.47272727272727" class="val" text-anchor="middle">48</text><g class="marca"><path d="M254.99999999999997,190 V35.29090909090908 Q254.99999999999997,31.290909090909082 259,31.290909090909082 H269.06666666666666 Q273.06666666666666,31.290909090909082 273.06666666666666,35.29090909090908 V190 Z" style="fill:var(--s2)"/><rect x="251.99999999999997" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De afuera (651) · 60: 203</title></rect></g><text x="264.0333333333333" y="27.290909090909082" class="val" text-anchor="middle">203</text><text x="254" y="206" class="eje" text-anchor="middle">60</text><g class="marca"><path d="M283.82222222222225,190 V172.10909090909092 Q283.82222222222225,168.10909090909092 287.82222222222225,168.10909090909092 H297.8888888888889 Q301.8888888888889,168.10909090909092 301.8888888888889,172.10909090909092 V190 Z" style="fill:var(--s1)"/><rect x="280.82222222222225" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De acá (339) · 70: 28</title></rect></g><text x="292.8555555555556" y="164.10909090909092" class="val" text-anchor="middle">28</text><g class="marca"><path d="M303.8888888888889,190 V45.45454545454544 Q303.8888888888889,41.45454545454544 307.8888888888889,41.45454545454544 H317.9555555555556 Q321.9555555555556,41.45454545454544 321.9555555555556,45.45454545454544 V190 Z" style="fill:var(--s2)"/><rect x="300.8888888888889" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De afuera (651) · 70: 190</title></rect></g><text x="312.9222222222223" y="37.45454545454544" class="val" text-anchor="middle">190</text><text x="302.8888888888889" y="206" class="eje" text-anchor="middle">70</text><g class="marca"><path d="M332.7111111111111,190 V80.63636363636364 Q332.7111111111111,76.63636363636364 336.7111111111111,76.63636363636364 H346.77777777777777 Q350.77777777777777,76.63636363636364 350.77777777777777,80.63636363636364 V190 Z" style="fill:var(--s1)"/><rect x="329.7111111111111" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De acá (339) · 80: 145</title></rect></g><text x="341.74444444444447" y="72.63636363636364" class="val" text-anchor="middle">145</text><g class="marca"><path d="M352.77777777777777,190 V124.41818181818182 Q352.77777777777777,120.41818181818182 356.77777777777777,120.41818181818182 H366.84444444444443 Q370.84444444444443,120.41818181818182 370.84444444444443,124.41818181818182 V190 Z" style="fill:var(--s2)"/><rect x="349.77777777777777" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De afuera (651) · 80: 89</title></rect></g><text x="361.81111111111113" y="116.41818181818182" class="val" text-anchor="middle">89</text><text x="351.77777777777777" y="206" class="eje" text-anchor="middle">80</text><g class="marca"><path d="M381.59999999999997,190 V158.03636363636363 Q381.59999999999997,154.03636363636363 385.59999999999997,154.03636363636363 H395.66666666666663 Q399.66666666666663,154.03636363636363 399.66666666666663,158.03636363636363 V190 Z" style="fill:var(--s1)"/><rect x="378.59999999999997" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De acá (339) · 90: 46</title></rect></g><text x="390.6333333333333" y="150.03636363636363" class="val" text-anchor="middle">46</text><g class="marca"><path d="M401.66666666666663,190 V173.6727272727273 Q401.66666666666663,169.6727272727273 405.66666666666663,169.6727272727273 H415.7333333333333 Q419.7333333333333,169.6727272727273 419.7333333333333,173.6727272727273 V190 Z" style="fill:var(--s2)"/><rect x="398.66666666666663" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De afuera (651) · 90: 26</title></rect></g><text x="410.7" y="165.6727272727273" class="val" text-anchor="middle">26</text><text x="400.66666666666663" y="206" class="eje" text-anchor="middle">90</text><g class="marca"><path d="M430.4888888888889,190 V181.4909090909091 Q430.4888888888889,177.4909090909091 434.4888888888889,177.4909090909091 H444.55555555555554 Q448.55555555555554,177.4909090909091 448.55555555555554,181.4909090909091 V190 Z" style="fill:var(--s1)"/><rect x="427.4888888888889" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De acá (339) · 100: 16</title></rect></g><text x="439.52222222222224" y="173.4909090909091" class="val" text-anchor="middle">16</text><g class="marca"><path d="M450.55555555555554,190 V188.8272727272727 Q450.55555555555554,187.65454545454546 451.72828282828283,187.65454545454546 H467.4494949494949 Q468.6222222222222,187.65454545454546 468.6222222222222,188.8272727272727 V190 Z" style="fill:var(--s2)"/><rect x="447.55555555555554" y="18" width="24.066666666666666" height="172" fill="transparent"><title>De afuera (651) · 100: 3</title></rect></g><text x="459.5888888888889" y="183.65454545454546" class="val" text-anchor="middle">3</text><text x="449.55555555555554" y="206" class="eje" text-anchor="middle">100</text><line x1="34" x2="474" y1="190" y2="190" class="base"/></svg><p class="chico">Lo de acá se amontona entre 80 y 89 (145 notas): el número casi no distingue una nota de otra. Las de acá que quedan en los 50 y 60 son, sobre todo, las que la fuente publicó sin hora.</p></figure>
+<figure class="figura"><figcaption>Notas de acá: puntaje típico (mediana), hoy y con la propuesta</figcaption><div class="leyenda"><span><i style="background:var(--s2)"></i>Hoy</span><span><i style="background:var(--s1)"></i>Propuesta</span></div><svg viewBox="0 0 480 220" role="img" aria-label="Notas de acá: puntaje típico (mediana), hoy y con la propuesta" class="graf"><line x1="34" x2="474" y1="190" y2="190" class="grilla"/><text x="28" y="194" class="eje" text-anchor="end">0</text><line x1="34" x2="474" y1="104" y2="104" class="grilla"/><text x="28" y="108" class="eje" text-anchor="end">50</text><line x1="34" x2="474" y1="18" y2="18" class="grilla"/><text x="28" y="22" class="eje" text-anchor="end">100</text><g class="marca"><path d="M109,190 V49.52000000000001 Q109,45.52000000000001 113,45.52000000000001 H139 Q143,45.52000000000001 143,49.52000000000001 V190 Z" style="fill:var(--s2)"/><rect x="106" y="18" width="40" height="172" fill="transparent"><title>Hoy · Con hora en la fuente: 84</title></rect></g><text x="126" y="41.52000000000001" class="val" text-anchor="middle">84</text><g class="marca"><path d="M145,190 V65 Q145,61 149,61 H175 Q179,61 179,65 V190 Z" style="fill:var(--s1)"/><rect x="142" y="18" width="40" height="172" fill="transparent"><title>Propuesta · Con hora en la fuente: 75</title></rect></g><text x="162" y="57" class="val" text-anchor="middle">75</text><text x="144" y="206" class="eje" text-anchor="middle">Con hora en la fuente</text><g class="marca"><path d="M329,190 V85.64 Q329,81.64 333,81.64 H359 Q363,81.64 363,85.64 V190 Z" style="fill:var(--s2)"/><rect x="326" y="18" width="40" height="172" fill="transparent"><title>Hoy · Sin hora en la fuente: 63</title></rect></g><text x="346" y="77.64" class="val" text-anchor="middle">63</text><g class="marca"><path d="M365,190 V65 Q365,61 369,61 H395 Q399,61 399,65 V190 Z" style="fill:var(--s1)"/><rect x="362" y="18" width="40" height="172" fill="transparent"><title>Propuesta · Sin hora en la fuente: 75</title></rect></g><text x="382" y="57" class="val" text-anchor="middle">75</text><text x="364" y="206" class="eje" text-anchor="middle">Sin hora en la fuente</text><line x1="34" x2="474" y1="190" y2="190" class="base"/></svg><p class="chico">Hoy, una nota de acá cuya fuente no pone la hora (La Vanguardia, El Diario, parte de las radios: 94 de 339, el 28 %) arranca 21 puntos abajo, como si fuera vieja. Con la propuesta, las dos quedan iguales.</p></figure>
+<figure class="figura"><figcaption>Visitas por nota de afuera, según cuántos medios la contaban (sin las que fueron a Facebook)</figcaption><svg viewBox="0 0 480 220" role="img" aria-label="Visitas por nota de afuera, según cuántos medios la contaban (sin las que fueron a Facebook)" class="graf"><line x1="34" x2="474" y1="190" y2="190" class="grilla"/><text x="28" y="194" class="eje" text-anchor="end">0,00</text><line x1="34" x2="474" y1="104" y2="104" class="grilla"/><text x="28" y="108" class="eje" text-anchor="end">0,30</text><line x1="34" x2="474" y1="18" y2="18" class="grilla"/><text x="28" y="22" class="eje" text-anchor="end">0,60</text><g class="marca"><path d="M90.33333333333333,190 V165.33333333333331 Q90.33333333333333,161.33333333333331 94.33333333333333,161.33333333333331 H120.33333333333333 Q124.33333333333333,161.33333333333331 124.33333333333333,165.33333333333331 V190 Z" style="fill:var(--s2)"/><rect x="87.33333333333333" y="18" width="40" height="172" fill="transparent"><title>Visitas por nota · 2 o 3 medios: 0,10</title></rect></g><text x="107.33333333333333" y="157.33333333333331" class="val" text-anchor="middle">0,10</text><text x="107.33333333333333" y="206" class="eje" text-anchor="middle">2 o 3 medios</text><g class="marca"><path d="M237,190 V67.86666666666666 Q237,63.86666666666666 241,63.86666666666666 H267 Q271,63.86666666666666 271,67.86666666666666 V190 Z" style="fill:var(--s2)"/><rect x="234" y="18" width="40" height="172" fill="transparent"><title>Visitas por nota · 4 a 7: 0,44</title></rect></g><text x="254" y="59.86666666666666" class="val" text-anchor="middle">0,44</text><text x="254" y="206" class="eje" text-anchor="middle">4 a 7</text><g class="marca"><path d="M383.66666666666663,190 V39.19999999999999 Q383.66666666666663,35.19999999999999 387.66666666666663,35.19999999999999 H413.66666666666663 Q417.66666666666663,35.19999999999999 417.66666666666663,39.19999999999999 V190 Z" style="fill:var(--s2)"/><rect x="380.66666666666663" y="18" width="40" height="172" fill="transparent"><title>Visitas por nota · 8 o más: 0,54</title></rect></g><text x="400.66666666666663" y="31.19999999999999" class="val" text-anchor="middle">0,54</text><text x="400.66666666666663" y="206" class="eje" text-anchor="middle">8 o más</text><line x1="34" x2="474" y1="190" y2="190" class="base"/></svg><p class="chico">Pasar de 2-3 medios a 4 cuadruplica las visitas; de 4 a 8 o más casi no cambia. Hoy cada medio suma 10 puntos hasta 40: premia igual el medio número 6 que el 2. (138, 199 y 146 notas.)</p></figure>
+<figure class="figura"><figcaption>Los lugares del cupo de lo de afuera esta mañana (16/10, 9:42): quién los ocupa</figcaption><div class="leyenda"><span><i style="background:var(--s1)"></i>Ya publicada (bien)</span><span><i style="background:var(--s2)"></i>Nunca va a salir: más de 12 h y nunca publicada</span><span><i style="background:var(--s3)"></i>Fresca, todavía puede salir</span></div><svg viewBox="0 0 440 284" role="img" aria-label="Los lugares del cupo de lo de afuera esta mañana (16/10, 9:42): quién los ocupa" class="graf"><line x1="256" x2="256" y1="6" y2="276" class="grilla"/><line x1="400" x2="400" y1="6" y2="276" class="grilla"/><text x="104" y="26" class="eje" text-anchor="end">Argentina</text><rect x="112" y="12" width="178" height="18" rx="3" style="fill:var(--s2)"><title>Argentina · Nunca va a salir: más de 12 h y nunca publicada: 10</title></rect><rect x="292" y="12" width="34" height="18" rx="3" style="fill:var(--s3)"><title>Argentina · Fresca, todavía puede salir: 2</title></rect><text x="334" y="26" class="val">12</text><text x="104" y="56" class="eje" text-anchor="end">Automovilismo</text><rect x="112" y="42" width="34" height="18" rx="3" style="fill:var(--s1)"><title>Automovilismo · Ya publicada (bien): 2</title></rect><rect x="148" y="42" width="70" height="18" rx="3" style="fill:var(--s2)"><title>Automovilismo · Nunca va a salir: más de 12 h y nunca publicada: 4</title></rect><text x="226" y="56" class="val">6</text><text x="104" y="86" class="eje" text-anchor="end">Fútbol</text><rect x="112" y="72" width="16" height="18" rx="3" style="fill:var(--s1)"><title>Fútbol · Ya publicada (bien): 1</title></rect><rect x="130" y="72" width="124" height="18" rx="3" style="fill:var(--s2)"><title>Fútbol · Nunca va a salir: más de 12 h y nunca publicada: 7</title></rect><rect x="256" y="72" width="34" height="18" rx="3" style="fill:var(--s3)"><title>Fútbol · Fresca, todavía puede salir: 2</title></rect><text x="298" y="86" class="val">10</text><text x="104" y="116" class="eje" text-anchor="end">Economía</text><rect x="112" y="102" width="106" height="18" rx="3" style="fill:var(--s1)"><title>Economía · Ya publicada (bien): 6</title></rect><rect x="220" y="102" width="88" height="18" rx="3" style="fill:var(--s2)"><title>Economía · Nunca va a salir: más de 12 h y nunca publicada: 5</title></rect><rect x="310" y="102" width="16" height="18" rx="3" style="fill:var(--s3)"><title>Economía · Fresca, todavía puede salir: 1</title></rect><text x="334" y="116" class="val">12</text><text x="104" y="146" class="eje" text-anchor="end">Política</text><rect x="112" y="132" width="142" height="18" rx="3" style="fill:var(--s2)"><title>Política · Nunca va a salir: más de 12 h y nunca publicada: 8</title></rect><text x="262" y="146" class="val">8</text><text x="104" y="176" class="eje" text-anchor="end">Deportes</text><rect x="112" y="162" width="106" height="18" rx="3" style="fill:var(--s2)"><title>Deportes · Nunca va a salir: más de 12 h y nunca publicada: 6</title></rect><text x="226" y="176" class="val">6</text><text x="104" y="206" class="eje" text-anchor="end">Cultura</text><rect x="112" y="192" width="142" height="18" rx="3" style="fill:var(--s2)"><title>Cultura · Nunca va a salir: más de 12 h y nunca publicada: 8</title></rect><text x="262" y="206" class="val">8</text><text x="104" y="236" class="eje" text-anchor="end">Tecnología</text><rect x="112" y="222" width="70" height="18" rx="3" style="fill:var(--s2)"><title>Tecnología · Nunca va a salir: más de 12 h y nunca publicada: 4</title></rect><rect x="184" y="222" width="34" height="18" rx="3" style="fill:var(--s3)"><title>Tecnología · Fresca, todavía puede salir: 2</title></rect><text x="226" y="236" class="val">6</text><text x="104" y="266" class="eje" text-anchor="end">Agro</text><rect x="112" y="252" width="34" height="18" rx="3" style="fill:var(--s1)"><title>Agro · Ya publicada (bien): 2</title></rect><rect x="148" y="252" width="196" height="18" rx="3" style="fill:var(--s2)"><title>Agro · Nunca va a salir: más de 12 h y nunca publicada: 11</title></rect><rect x="346" y="252" width="34" height="18" rx="3" style="fill:var(--s3)"><title>Agro · Fresca, todavía puede salir: 2</title></rect><text x="388" y="266" class="val">15</text><line x1="112" x2="112" y1="6" y2="276" class="base"/></svg><p class="chico">63 de los 83 lugares (76 %) los ocupaban notas que la web igual descarta por viejas. Mientras tanto, 4 notas frescas esperaban "por cupo".</p></figure>
+<figure class="figura"><figcaption>De afuera: notas publicadas por día, por sección</figcaption><svg viewBox="0 0 440 238" role="img" aria-label="De afuera: notas publicadas por día, por sección" class="graf"><line x1="256" x2="256" y1="6" y2="230" class="grilla"/><line x1="400" x2="400" y1="6" y2="230" class="grilla"/><text x="104" y="25" class="eje" text-anchor="end">Economía</text><g class="marca"><rect x="112" y="13" width="282.24" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="12" width="288" height="14" fill="transparent"><title>Notas por día · Economía: 9,8</title></rect></g><text x="399.24" y="24" class="val">9,8</text><text x="104" y="53" class="eje" text-anchor="end">Fútbol</text><g class="marca"><rect x="112" y="41" width="230.39999999999998" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="40" width="288" height="14" fill="transparent"><title>Notas por día · Fútbol: 8</title></rect></g><text x="347.4" y="52" class="val">8</text><text x="104" y="81" class="eje" text-anchor="end">Política</text><g class="marca"><rect x="112" y="69" width="190.07999999999998" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="68" width="288" height="14" fill="transparent"><title>Notas por día · Política: 6,6</title></rect></g><text x="307.08" y="80" class="val">6,6</text><text x="104" y="109" class="eje" text-anchor="end">Argentina</text><g class="marca"><rect x="112" y="97" width="164.16000000000003" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="96" width="288" height="14" fill="transparent"><title>Notas por día · Argentina: 5,7</title></rect></g><text x="281.16" y="108" class="val">5,7</text><text x="104" y="137" class="eje" text-anchor="end">Automovilismo</text><g class="marca"><rect x="112" y="125" width="141.12" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="124" width="288" height="14" fill="transparent"><title>Notas por día · Automovilismo: 4,9</title></rect></g><text x="258.12" y="136" class="val">4,9</text><text x="104" y="165" class="eje" text-anchor="end">Agro</text><g class="marca"><rect x="112" y="153" width="123.84" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="152" width="288" height="14" fill="transparent"><title>Notas por día · Agro: 4,3</title></rect></g><text x="240.84" y="164" class="val">4,3</text><text x="104" y="193" class="eje" text-anchor="end">Cultura</text><g class="marca"><rect x="112" y="181" width="69.12" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="180" width="288" height="14" fill="transparent"><title>Notas por día · Cultura: 2,4</title></rect></g><text x="186.12" y="192" class="val">2,4</text><text x="104" y="221" class="eje" text-anchor="end">Deportes</text><g class="marca"><rect x="112" y="209" width="72" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="208" width="288" height="14" fill="transparent"><title>Notas por día · Deportes: 2,5</title></rect></g><text x="189" y="220" class="val">2,5</text><line x1="112" x2="112" y1="6" y2="230" class="base"/></svg></figure>
+<figure class="figura"><figcaption>De afuera: visitas por nota, por sección (sin Facebook)</figcaption><svg viewBox="0 0 440 238" role="img" aria-label="De afuera: visitas por nota, por sección (sin Facebook)" class="graf"><line x1="256" x2="256" y1="6" y2="230" class="grilla"/><line x1="400" x2="400" y1="6" y2="230" class="grilla"/><text x="104" y="25" class="eje" text-anchor="end">Economía</text><g class="marca"><rect x="112" y="13" width="61.19999999999999" height="12" rx="3" style="fill:var(--s3)"/><rect x="112" y="12" width="288" height="14" fill="transparent"><title>Visitas por nota · Economía: 0,17</title></rect></g><text x="178.2" y="24" class="val">0,17</text><text x="104" y="53" class="eje" text-anchor="end">Fútbol</text><g class="marca"><rect x="112" y="41" width="241.20000000000005" height="12" rx="3" style="fill:var(--s3)"/><rect x="112" y="40" width="288" height="14" fill="transparent"><title>Visitas por nota · Fútbol: 0,67</title></rect></g><text x="358.20000000000005" y="52" class="val">0,67</text><text x="104" y="81" class="eje" text-anchor="end">Política</text><g class="marca"><rect x="112" y="69" width="126" height="12" rx="3" style="fill:var(--s3)"/><rect x="112" y="68" width="288" height="14" fill="transparent"><title>Visitas por nota · Política: 0,35</title></rect></g><text x="243" y="80" class="val">0,35</text><text x="104" y="109" class="eje" text-anchor="end">Argentina</text><g class="marca"><rect x="112" y="97" width="75.6" height="12" rx="3" style="fill:var(--s3)"/><rect x="112" y="96" width="288" height="14" fill="transparent"><title>Visitas por nota · Argentina: 0,21</title></rect></g><text x="192.6" y="108" class="val">0,21</text><text x="104" y="137" class="eje" text-anchor="end">Automovilismo</text><g class="marca"><rect x="112" y="125" width="266.4" height="12" rx="3" style="fill:var(--s3)"/><rect x="112" y="124" width="288" height="14" fill="transparent"><title>Visitas por nota · Automovilismo: 0,74</title></rect></g><text x="383.4" y="136" class="val">0,74</text><text x="104" y="165" class="eje" text-anchor="end">Agro</text><g class="marca"><rect x="112" y="153" width="10.799999999999997" height="12" rx="3" style="fill:var(--s3)"/><rect x="112" y="152" width="288" height="14" fill="transparent"><title>Visitas por nota · Agro: 0,03</title></rect></g><text x="127.8" y="164" class="val">0,03</text><text x="104" y="193" class="eje" text-anchor="end">Cultura</text><g class="marca"><rect x="112" y="181" width="79.19999999999999" height="12" rx="3" style="fill:var(--s3)"/><rect x="112" y="180" width="288" height="14" fill="transparent"><title>Visitas por nota · Cultura: 0,22</title></rect></g><text x="196.2" y="192" class="val">0,22</text><text x="104" y="221" class="eje" text-anchor="end">Deportes</text><g class="marca"><rect x="112" y="209" width="93.60000000000002" height="12" rx="3" style="fill:var(--s3)"/><rect x="112" y="208" width="288" height="14" fill="transparent"><title>Visitas por nota · Deportes: 0,26</title></rect></g><text x="210.60000000000002" y="220" class="val">0,26</text><line x1="112" x2="112" y1="6" y2="230" class="base"/></svg><p class="chico">Economía es lo que más se publica de afuera (casi 10 por día) y de lo que menos se lee. Agro de afuera: 36 notas, 1 visita en total. Fútbol y Automovilismo de afuera sí se leen.</p></figure>
+</div>
+<details><summary>Los mismos números en tabla, y cuánto acierta el puntaje</summary>
+<div class="dos">
+<div><p><b>Visitas por nota según el puntaje con que salió</b> (sin las que fueron a Facebook, publicadas del 1 al 12/10; el 9/10 la medición vino vacía)</p>
+<table><thead><tr><th>Puntaje</th><th>De acá</th><th>De afuera</th></tr></thead><tbody>
+<tr><td><45</td><td>0,67 (3)</td><td>0,17 (23)</td></tr><tr><td>45-59</td><td>0,82 (40)</td><td>0,32 (71)</td></tr><tr><td>60-74</td><td>1,12 (43)</td><td>0,24 (218)</td></tr><tr><td>75-89</td><td>1,02 (81)</td><td>0,54 (147)</td></tr><tr><td>90+</td><td>2 (28)</td><td>0,92 (24)</td></tr>
+</tbody></table></div>
+<div><p><b>¿Cuánto acierta el puntaje qué se lee?</b> (correlación de 0 a 1; 0 = nada)</p>
+<table><thead><tr><th></th><th>Hoy</th><th>Propuesta</th></tr></thead><tbody>
+<tr><td>Todas las notas</td><td>0,25</td><td>0,38</td></tr>
+<tr><td>Sólo de acá</td><td>0,28</td><td>0,27</td></tr>
+<tr><td>Sólo de afuera</td><td>0,1</td><td>0,13</td></tr>
+<tr><td>Una de afuera le gana a una de acá del mismo día</td><td>32 %</td><td>4 %</td></tr>
+</tbody></table>
+<p class="chico">Dicho en simple: ningún puntaje armado con estos datos adivina cuál nota de acá se va a leer más (lo que más se lee depende de qué fue a Facebook). Lo que sí logra la propuesta es que lo de acá quede siempre arriba de lo de afuera y que el número no se trabe en 100.</p></div>
+</div>
+</details>
+
+<h2>Todos los números, uno por uno</h2>
+<p class="sub">56 números. "Quién y cuándo" sale del historial del código y de sus comentarios. Los que dicen "Hernán" son decisiones suyas anotadas en el código; el resto se puso al armar el motor, sin medición.</p>
+<div class="filtros">
+<label>Buscar<input type="search" id="buscar" placeholder="Facebook, cupo, frescura…"></label>
+<label>Grupo<select id="grupo"><option value="">Todos</option><option>Puntaje</option><option>Medios mínimos</option><option>Cupos</option><option>Ventanas</option><option>Redes</option><option>Avisos</option><option>Redacción</option></select></label>
+<label>Estado<select id="estado"><option value="">Todos</option><option value="cambia">Cambia</option><option value="queda">Queda</option><option value="no-se-usa">No se usa</option><option value="revisar">Revisar</option></select></label>
+</div>
+<p class="cuenta" id="cuenta"></p>
+<div class="tabla-caja"><table>
+<thead><tr><th style="width:9%">Grupo</th><th style="width:22%">Qué es</th><th style="width:12%">Hoy</th><th style="width:12%">Propuesto</th><th>Por qué</th><th style="width:10%">Quién y cuándo</th><th style="width:9%">Estado</th></tr></thead>
+<tbody id="filas">
+<tr data-g="Puntaje" data-e="cambia" data-t="puntaje peso de cada medio de balcarce: los puntos con que arranca una nota suya `peso` en ingesta/fuentes.mjs 24 a 30 (las radios 30, gabal 26-28, municipio y concejo 24) 25 para todos las visitas no siguen esas diferencias: notas de medios con 24 → 1,17 visitas; 26 → 1,12; 28 → 1,08; 30 → 1,39. y los oficiales, que traen los servicios (cortes, trámites), pesan menos que nadie. primer armado, 18/09 (sin medición); oficiales nuevos, 15/10">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Peso de cada medio de Balcarce: los puntos con que arranca una nota suya</b><div class="chico"><code>peso</code> en ingesta/fuentes.mjs</div></td>
+<td data-l="Hoy" class="num">24 a 30 (las radios 30, Gabal 26-28, Municipio y Concejo 24)</td>
+<td data-l="Propuesto" class="num">25 para todos</td>
+<td data-l="Por qué">Las visitas no siguen esas diferencias: notas de medios con 24 → 1,17 visitas; 26 → 1,12; 28 → 1,08; 30 → 1,39. Y los oficiales, que traen los servicios (cortes, trámites), pesan menos que nadie.</td>
+<td data-l="Quién y cuándo" class="chico">Primer armado, 18/09 (sin medición); oficiales nuevos, 15/10</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P5" class="chico">P5</a></td></tr>
+<tr data-g="Puntaje" data-e="cambia" data-t="puntaje peso de cada medio de afuera `peso` en fuentes.mjs y fuentes-cruce.mjs 7 a 16 (casi todos 8; región 11-16; algunos nacionales 12-16) 8 para todos cuenta sólo el peso del medio que publicó primero: la misma historia vale 8 o 13 según quién llegó antes. esta mañana, 94 de 479 historias de afuera tenían 10 a 14 por ese azar. el comentario del código dice que el peso &quot;suma cuando la noticia viene de acá&quot;, y no es así: suma siempre. 18/09, 25/09 (región), 27/09 (cruce), 15/10 (candidatas)">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Peso de cada medio de afuera</b><div class="chico"><code>peso</code> en fuentes.mjs y fuentes-cruce.mjs</div></td>
+<td data-l="Hoy" class="num">7 a 16 (casi todos 8; región 11-16; algunos nacionales 12-16)</td>
+<td data-l="Propuesto" class="num">8 para todos</td>
+<td data-l="Por qué">Cuenta sólo el peso del medio que publicó PRIMERO: la misma historia vale 8 o 13 según quién llegó antes. Esta mañana, 94 de 479 historias de afuera tenían 10 a 14 por ese azar. El comentario del código dice que el peso &quot;suma cuando la noticia viene de acá&quot;, y no es así: suma siempre.</td>
+<td data-l="Quién y cuándo" class="chico">18/09, 25/09 (región), 27/09 (cruce), 15/10 (candidatas)</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P5" class="chico">P5</a></td></tr>
+<tr data-g="Puntaje" data-e="queda" data-t="puntaje es de balcarce (medio de acá, o balcarce en el título) relevancia(), ingesta/ingesta.mjs +25 +25 es la diferencia que sí se ve en los lectores: de acá 1,20 visitas por nota sin facebook; de afuera 0,34. 18/09">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Es de Balcarce (medio de acá, o Balcarce en el título)</b><div class="chico">relevancia(), ingesta/ingesta.mjs</div></td>
+<td data-l="Hoy" class="num">+25</td>
+<td data-l="Propuesto" class="num">+25</td>
+<td data-l="Por qué">Es la diferencia que sí se ve en los lectores: de acá 1,20 visitas por nota sin Facebook; de afuera 0,34.</td>
+<td data-l="Quién y cuándo" class="chico">18/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Puntaje" data-e="cambia" data-t="puntaje un medio de afuera nombra a balcarce relevancia() +22 (además del +25) 0 (ya suma el +25) doble premio por lo mismo: una nota de afuera con balcarce en el título suma 47. y si la ia dice que no es de acá, le saca 25 pero le deja los 22. 18/09">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Un medio de afuera nombra a Balcarce</b><div class="chico">relevancia()</div></td>
+<td data-l="Hoy" class="num">+22 (además del +25)</td>
+<td data-l="Propuesto" class="num">0 (ya suma el +25)</td>
+<td data-l="Por qué">Doble premio por lo mismo: una nota de afuera con Balcarce en el título suma 47. Y si la IA dice que no es de acá, le saca 25 pero le deja los 22.</td>
+<td data-l="Quién y cuándo" class="chico">18/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P6" class="chico">P6</a></td></tr>
+<tr data-g="Puntaje" data-e="cambia" data-t="puntaje toca la zona (ruta 226, la 55, napaleofú, la papa) sin ser de un medio de acá relevancia() (hoy no existe) 0 +15 se publica como &quot;de acá&quot; pero en el puntaje vale como una nacional. la zona tuvo 1,13 visitas por nota contra 0,43 de afuera (análisis de la etapa 2-5; son pocas notas, 11 en 14 días). —">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Toca la zona (ruta 226, la 55, Napaleofú, la papa) sin ser de un medio de acá</b><div class="chico">relevancia() (hoy no existe)</div></td>
+<td data-l="Hoy" class="num">0</td>
+<td data-l="Propuesto" class="num">+15</td>
+<td data-l="Por qué">Se publica como &quot;de acá&quot; pero en el puntaje vale como una nacional. La zona tuvo 1,13 visitas por nota contra 0,43 de afuera (análisis de la etapa 2-5; son pocas notas, 11 en 14 días).</td>
+<td data-l="Quién y cuándo" class="chico">—</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P6" class="chico">P6</a></td></tr>
+<tr data-g="Puntaje" data-e="queda" data-t="puntaje frescura: menos de 3 horas relevancia() +25 +25 queda. 18/09">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Frescura: menos de 3 horas</b><div class="chico">relevancia()</div></td>
+<td data-l="Hoy" class="num">+25</td>
+<td data-l="Propuesto" class="num">+25</td>
+<td data-l="Por qué">Queda.</td>
+<td data-l="Quién y cuándo" class="chico">18/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Puntaje" data-e="cambia" data-t="puntaje frescura: de 3 a 12 horas relevancia() +15 +18 hasta 6 h; +12 de 6 a 12 h que baje de a poco y no de golpe a las 3 horas. 18/09">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Frescura: de 3 a 12 horas</b><div class="chico">relevancia()</div></td>
+<td data-l="Hoy" class="num">+15</td>
+<td data-l="Propuesto" class="num">+18 hasta 6 h; +12 de 6 a 12 h</td>
+<td data-l="Por qué">Que baje de a poco y no de golpe a las 3 horas.</td>
+<td data-l="Quién y cuándo" class="chico">18/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P4" class="chico">P4</a></td></tr>
+<tr data-g="Puntaje" data-e="cambia" data-t="puntaje frescura: de 12 a 24 horas relevancia() +8 0 una nota que nunca salió no se estrena con más de 12 h: este +8 sólo sirve para que lo viejo le gane lugares del cupo a lo nuevo. 18/09">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Frescura: de 12 a 24 horas</b><div class="chico">relevancia()</div></td>
+<td data-l="Hoy" class="num">+8</td>
+<td data-l="Propuesto" class="num">0</td>
+<td data-l="Por qué">Una nota que nunca salió no se estrena con más de 12 h: este +8 sólo sirve para que lo viejo le gane lugares del cupo a lo nuevo.</td>
+<td data-l="Quién y cuándo" class="chico">18/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P4" class="chico">P4</a></td></tr>
+<tr data-g="Puntaje" data-e="cambia" data-t="puntaje frescura de una nota cuya fuente no puso la hora relevancia() (fechaestimada → 24 h) 0 siempre contar desde la primera vez que la vio el robot (lo mismo que ya hace la web con la fecha) 94 de 339 notas de acá (28 %). mediana: 63 contra 84 de las que tienen hora. la más leída del período (los acompañantes terapéuticos, 17 visitas) salió con 63. hay dos definiciones de &quot;cuándo salió&quot; que no coinciden. 18/09">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Frescura de una nota cuya fuente no puso la hora</b><div class="chico">relevancia() (fechaEstimada → 24 h)</div></td>
+<td data-l="Hoy" class="num">0 siempre</td>
+<td data-l="Propuesto" class="num">Contar desde la primera vez que la vio el robot (lo mismo que ya hace la web con la fecha)</td>
+<td data-l="Por qué">94 de 339 notas de acá (28 %). Mediana: 63 contra 84 de las que tienen hora. La más leída del período (los acompañantes terapéuticos, 17 visitas) salió con 63. Hay dos definiciones de &quot;cuándo salió&quot; que no coinciden.</td>
+<td data-l="Quién y cuándo" class="chico">18/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P2" class="chico">P2</a></td></tr>
+<tr data-g="Puntaje" data-e="cambia" data-t="puntaje cada medio más que cuenta lo mismo relevancia() +10 por medio, hasta +40 2 medios +5 · 3 +10 · 4 a 7 +20 · 8 o más +25 de afuera, 2-3 medios: 0,10 visitas por nota; 4-7: 0,44; 8 o más: 0,54. sirve hasta unos 4 y después no suma. con +40, una nota de hace dos días contada por 5 medios le gana a una de hace una hora. cruce de medios, 27/09">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Cada medio más que cuenta lo mismo</b><div class="chico">relevancia()</div></td>
+<td data-l="Hoy" class="num">+10 por medio, hasta +40</td>
+<td data-l="Propuesto" class="num">2 medios +5 · 3 +10 · 4 a 7 +20 · 8 o más +25</td>
+<td data-l="Por qué">De afuera, 2-3 medios: 0,10 visitas por nota; 4-7: 0,44; 8 o más: 0,54. Sirve hasta unos 4 y después no suma. Con +40, una nota de hace dos días contada por 5 medios le gana a una de hace una hora.</td>
+<td data-l="Quién y cuándo" class="chico">Cruce de medios, 27/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P3" class="chico">P3</a></td></tr>
+<tr data-g="Puntaje" data-e="cambia" data-t="puntaje trae foto relevancia() +6 0 de acá: con foto 1,14 visitas por nota, sin foto 1,14. la tapa y facebook ya prefieren la que tiene foto por su cuenta: se cuenta dos veces. 18/09">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Trae foto</b><div class="chico">relevancia()</div></td>
+<td data-l="Hoy" class="num">+6</td>
+<td data-l="Propuesto" class="num">0</td>
+<td data-l="Por qué">De acá: con foto 1,14 visitas por nota, sin foto 1,14. La tapa y Facebook ya prefieren la que tiene foto por su cuenta: se cuenta dos veces.</td>
+<td data-l="Quién y cuándo" class="chico">18/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P7" class="chico">P7</a></td></tr>
+<tr data-g="Puntaje" data-e="cambia" data-t="puntaje trae el texto completo relevancia() +4 0 mide si al robot le llegó el texto, no si a alguien le interesa. desde el 15/10 la ia baja el texto de hasta 4 fuentes igual. 18/09">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Trae el texto completo</b><div class="chico">relevancia()</div></td>
+<td data-l="Hoy" class="num">+4</td>
+<td data-l="Propuesto" class="num">0</td>
+<td data-l="Por qué">Mide si al robot le llegó el texto, no si a alguien le interesa. Desde el 15/10 la IA baja el texto de hasta 4 fuentes igual.</td>
+<td data-l="Quién y cuándo" class="chico">18/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P7" class="chico">P7</a></td></tr>
+<tr data-g="Puntaje" data-e="cambia" data-t="puntaje nombra a una figura argentina (messi, colapinto, la selección…) relevancia(); figuras en fuentes.mjs +16 +10 de afuera con figura: 0,44 visitas por nota; sin figura: 0,35. poca diferencia. la despedida de messi de la selección salió con 99-100 y tuvo 0 visitas. 38 de las 118 notas de afuera con 80 o más llegaron ahí por la figura. 20/09">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Nombra a una figura argentina (Messi, Colapinto, la Selección…)</b><div class="chico">relevancia(); FIGURAS en fuentes.mjs</div></td>
+<td data-l="Hoy" class="num">+16</td>
+<td data-l="Propuesto" class="num">+10</td>
+<td data-l="Por qué">De afuera con figura: 0,44 visitas por nota; sin figura: 0,35. Poca diferencia. La despedida de Messi de la Selección salió con 99-100 y tuvo 0 visitas. 38 de las 118 notas de afuera con 80 o más llegaron ahí por la figura.</td>
+<td data-l="Quién y cuándo" class="chico">20/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P8" class="chico">P8</a></td></tr>
+<tr data-g="Puntaje" data-e="queda" data-t="puntaje es de automovilismo relevancia() +8 +8 automovilismo de afuera es lo más leído de afuera (0,74 visitas por nota). 18/09 (&quot;tierra de fierros&quot;)">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Es de Automovilismo</b><div class="chico">relevancia()</div></td>
+<td data-l="Hoy" class="num">+8</td>
+<td data-l="Propuesto" class="num">+8</td>
+<td data-l="Por qué">Automovilismo de afuera es lo más leído de afuera (0,74 visitas por nota).</td>
+<td data-l="Quién y cuándo" class="chico">18/09 (&quot;tierra de fierros&quot;)</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Puntaje" data-e="cambia" data-t="puntaje tope del puntaje relevancia() 100 sin tope (con la escala nueva el máximo real es 108) 58 notas de acá (17 %) tocaron 100 y ahí empatan. el aviso de &quot;muy importante&quot; depende de llegar a ese 100. 18/09">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Tope del puntaje</b><div class="chico">relevancia()</div></td>
+<td data-l="Hoy" class="num">100</td>
+<td data-l="Propuesto" class="num">Sin tope (con la escala nueva el máximo real es 108)</td>
+<td data-l="Por qué">58 notas de acá (17 %) tocaron 100 y ahí empatan. El aviso de &quot;muy importante&quot; depende de llegar a ese 100.</td>
+<td data-l="Quién y cuándo" class="chico">18/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P9" class="chico">P9</a></td></tr>
+<tr data-g="Puntaje" data-e="cambia" data-t="puntaje la ia dice que una nota &quot;de acá&quot; no es de acá aplicarfichas(), ingesta/lectura-ia.mjs −25 recalcular el puntaje entero como de afuera hoy queda con el peso de medio local (28) y el +22: sigue arriba de cualquier nacional. 27/09">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>La IA dice que una nota &quot;de acá&quot; no es de acá</b><div class="chico">aplicarFichas(), ingesta/lectura-ia.mjs</div></td>
+<td data-l="Hoy" class="num">−25</td>
+<td data-l="Propuesto" class="num">Recalcular el puntaje entero como de afuera</td>
+<td data-l="Por qué">Hoy queda con el peso de medio local (28) y el +22: sigue arriba de cualquier nacional.</td>
+<td data-l="Quién y cuándo" class="chico">27/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P15" class="chico">P15</a></td></tr>
+<tr data-g="Puntaje" data-e="queda" data-t="puntaje notas propias: dólar 55, clima 58, efeméride 56, repaso 60 web/lib/notas-propias.js 55 a 60 igual sólo ordenan; con la escala nueva siguen debajo de una nota de acá fresca (75), como hoy. 28/09 a 3/10">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Notas propias: dólar 55, clima 58, efeméride 56, repaso 60</b><div class="chico">web/lib/notas-propias.js</div></td>
+<td data-l="Hoy" class="num">55 a 60</td>
+<td data-l="Propuesto" class="num">Igual</td>
+<td data-l="Por qué">Sólo ordenan; con la escala nueva siguen debajo de una nota de acá fresca (75), como hoy.</td>
+<td data-l="Quién y cuándo" class="chico">28/09 a 3/10</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Puntaje" data-e="queda" data-t="puntaje nota hecha desde una pista web/lib/notas-de-pistas.js 95 igual pedido de hernán: &quot;tienen que estar bien valoradas&quot;. con la escala nueva sigue arriba. 3/10">
+<td data-l="Grupo">Puntaje</td>
+<td data-l="Qué es"><b>Nota hecha desde una pista</b><div class="chico">web/lib/notas-de-pistas.js</div></td>
+<td data-l="Hoy" class="num">95</td>
+<td data-l="Propuesto" class="num">Igual</td>
+<td data-l="Por qué">Pedido de Hernán: &quot;tienen que estar bien valoradas&quot;. Con la escala nueva sigue arriba.</td>
+<td data-l="Quién y cuándo" class="chico">3/10</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Medios mínimos" data-e="queda" data-t="medios mínimos lo de afuera de fútbol sale solo si lo cuentan medios_de_afuera, ingesta/criterio.mjs 4 medios 4 fútbol de afuera se lee (0,67 visitas por nota). 27/09, hernán">
+<td data-l="Grupo">Medios mínimos</td>
+<td data-l="Qué es"><b>Lo de afuera de Fútbol sale solo si lo cuentan</b><div class="chico">MEDIOS_DE_AFUERA, ingesta/criterio.mjs</div></td>
+<td data-l="Hoy" class="num">4 medios</td>
+<td data-l="Propuesto" class="num">4</td>
+<td data-l="Por qué">Fútbol de afuera se lee (0,67 visitas por nota).</td>
+<td data-l="Quién y cuándo" class="chico">27/09, Hernán</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Medios mínimos" data-e="queda" data-t="medios mínimos deportes medios_de_afuera 4 4 queda. 27/09">
+<td data-l="Grupo">Medios mínimos</td>
+<td data-l="Qué es"><b>Deportes</b><div class="chico">MEDIOS_DE_AFUERA</div></td>
+<td data-l="Hoy" class="num">4</td>
+<td data-l="Propuesto" class="num">4</td>
+<td data-l="Por qué">Queda.</td>
+<td data-l="Quién y cuándo" class="chico">27/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Medios mínimos" data-e="cambia" data-t="medios mínimos economía medios_de_afuera 2 3 economía de afuera: 9,8 notas por día y 0,17 visitas por nota. con 2 medios entra casi cualquier dato del día. 27/09">
+<td data-l="Grupo">Medios mínimos</td>
+<td data-l="Qué es"><b>Economía</b><div class="chico">MEDIOS_DE_AFUERA</div></td>
+<td data-l="Hoy" class="num">2</td>
+<td data-l="Propuesto" class="num">3</td>
+<td data-l="Por qué">Economía de afuera: 9,8 notas por día y 0,17 visitas por nota. Con 2 medios entra casi cualquier dato del día.</td>
+<td data-l="Quién y cuándo" class="chico">27/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P12" class="chico">P12</a></td></tr>
+<tr data-g="Medios mínimos" data-e="queda" data-t="medios mínimos tecnología medios_de_afuera 2 2 son pocas (1 por día). 27/09">
+<td data-l="Grupo">Medios mínimos</td>
+<td data-l="Qué es"><b>Tecnología</b><div class="chico">MEDIOS_DE_AFUERA</div></td>
+<td data-l="Hoy" class="num">2</td>
+<td data-l="Propuesto" class="num">2</td>
+<td data-l="Por qué">Son pocas (1 por día).</td>
+<td data-l="Quién y cuándo" class="chico">27/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Medios mínimos" data-e="cambia" data-t="medios mínimos agro medios_de_afuera 2 3 agro de afuera: 36 notas en 14 días, 1 visita en total. entraba el pronóstico de la rioja. 27/09">
+<td data-l="Grupo">Medios mínimos</td>
+<td data-l="Qué es"><b>Agro</b><div class="chico">MEDIOS_DE_AFUERA</div></td>
+<td data-l="Hoy" class="num">2</td>
+<td data-l="Propuesto" class="num">3</td>
+<td data-l="Por qué">Agro de afuera: 36 notas en 14 días, 1 visita en total. Entraba el pronóstico de La Rioja.</td>
+<td data-l="Quién y cuándo" class="chico">27/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P12" class="chico">P12</a></td></tr>
+<tr data-g="Medios mínimos" data-e="queda" data-t="medios mínimos automovilismo medios_de_afuera 2 2 se lee; tiene cupo propio. 27/09">
+<td data-l="Grupo">Medios mínimos</td>
+<td data-l="Qué es"><b>Automovilismo</b><div class="chico">MEDIOS_DE_AFUERA</div></td>
+<td data-l="Hoy" class="num">2</td>
+<td data-l="Propuesto" class="num">2</td>
+<td data-l="Por qué">Se lee; tiene cupo propio.</td>
+<td data-l="Quién y cuándo" class="chico">27/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Medios mínimos" data-e="queda" data-t="medios mínimos el resto de las secciones medios_por_defecto 3 3 queda. 27/09">
+<td data-l="Grupo">Medios mínimos</td>
+<td data-l="Qué es"><b>El resto de las secciones</b><div class="chico">MEDIOS_POR_DEFECTO</div></td>
+<td data-l="Hoy" class="num">3</td>
+<td data-l="Propuesto" class="num">3</td>
+<td data-l="Por qué">Queda.</td>
+<td data-l="Quién y cuándo" class="chico">27/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Medios mínimos" data-e="revisar" data-t="medios mínimos con una figura argentina medios_con_figura 2 2 (revisar) &quot;la escena romántica de messi con antonela&quot; pasa con 3 medios por la figura. no se cambia ahora: el cupo ya la frena. 27/09">
+<td data-l="Grupo">Medios mínimos</td>
+<td data-l="Qué es"><b>Con una figura argentina</b><div class="chico">MEDIOS_CON_FIGURA</div></td>
+<td data-l="Hoy" class="num">2</td>
+<td data-l="Propuesto" class="num">2 (revisar)</td>
+<td data-l="Por qué">&quot;La escena romántica de Messi con Antonela&quot; pasa con 3 medios por la figura. No se cambia ahora: el cupo ya la frena.</td>
+<td data-l="Quién y cuándo" class="chico">27/09</td>
+<td data-l="Estado"><span class="estado e-revisar">Revisar</span></td></tr>
+<tr data-g="Medios mínimos" data-e="cambia" data-t="medios mínimos la ia dice &quot;no tiene relación con balcarce&quot; pero entra igual si la cuentan nacionalqueimporta, ingesta/lectura-ia.mjs 3 medios (contados sin juntar grupos) 8 medios (un grupo cuenta una vez) de las 152 notas de afuera publicadas con ficha de la ia (13 al 15/10), en 67 (44 %) la ia dijo &quot;impacto nulo&quot;; 60 entraron igual por tener 3 medios o más. es la puerta de los chimentos y curiosidades (masterchef, la china suárez, el videojuego de formosa). 27/09">
+<td data-l="Grupo">Medios mínimos</td>
+<td data-l="Qué es"><b>La IA dice &quot;no tiene relación con Balcarce&quot; pero entra igual si la cuentan</b><div class="chico">nacionalQueImporta, ingesta/lectura-ia.mjs</div></td>
+<td data-l="Hoy" class="num">3 medios (contados sin juntar grupos)</td>
+<td data-l="Propuesto" class="num">8 medios (un grupo cuenta una vez)</td>
+<td data-l="Por qué">De las 152 notas de afuera publicadas con ficha de la IA (13 al 15/10), en 67 (44 %) la IA dijo &quot;impacto nulo&quot;; 60 entraron igual por tener 3 medios o más. Es la puerta de los chimentos y curiosidades (MasterChef, la China Suárez, el videojuego de Formosa).</td>
+<td data-l="Quién y cuándo" class="chico">27/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P13" class="chico">P13</a></td></tr>
+<tr data-g="Medios mínimos" data-e="cambia" data-t="medios mínimos un grupo (clarín, tn, olé, mitre) cuenta como un medio contarmedios, ingesta/ingesta.mjs sí en el puntaje y el semáforo; no en la lectura con ia ni en el aviso importante en todos lados la misma nota tiene &quot;3 medios&quot; para una regla y &quot;2&quot; para otra. 15/10">
+<td data-l="Grupo">Medios mínimos</td>
+<td data-l="Qué es"><b>Un grupo (Clarín, TN, Olé, Mitre) cuenta como un medio</b><div class="chico">contarMedios, ingesta/ingesta.mjs</div></td>
+<td data-l="Hoy" class="num">Sí en el puntaje y el semáforo; no en la lectura con IA ni en el aviso importante</td>
+<td data-l="Propuesto" class="num">En todos lados</td>
+<td data-l="Por qué">La misma nota tiene &quot;3 medios&quot; para una regla y &quot;2&quot; para otra.</td>
+<td data-l="Quién y cuándo" class="chico">15/10</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P14" class="chico">P14</a></td></tr>
+<tr data-g="Cupos" data-e="queda" data-t="cupos cupo de afuera: fútbol (cuántas a la vez) cupo_de_afuera 10 10 se lee. hoy salen 8 por día. 27/09">
+<td data-l="Grupo">Cupos</td>
+<td data-l="Qué es"><b>Cupo de afuera: Fútbol (cuántas a la vez)</b><div class="chico">CUPO_DE_AFUERA</div></td>
+<td data-l="Hoy" class="num">10</td>
+<td data-l="Propuesto" class="num">10</td>
+<td data-l="Por qué">Se lee. Hoy salen 8 por día.</td>
+<td data-l="Quién y cuándo" class="chico">27/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Cupos" data-e="cambia" data-t="cupos argentina cupo_de_afuera 12 6 5,7 por día y 0,21 visitas por nota; es donde entran los chimentos y lo viral. 27/09">
+<td data-l="Grupo">Cupos</td>
+<td data-l="Qué es"><b>Argentina</b><div class="chico">CUPO_DE_AFUERA</div></td>
+<td data-l="Hoy" class="num">12</td>
+<td data-l="Propuesto" class="num">6</td>
+<td data-l="Por qué">5,7 por día y 0,21 visitas por nota; es donde entran los chimentos y lo viral.</td>
+<td data-l="Quién y cuándo" class="chico">27/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P11" class="chico">P11</a></td></tr>
+<tr data-g="Cupos" data-e="queda" data-t="cupos deportes cupo_de_afuera 10 10 nunca se llena (1,8 por día). 26/09">
+<td data-l="Grupo">Cupos</td>
+<td data-l="Qué es"><b>Deportes</b><div class="chico">CUPO_DE_AFUERA</div></td>
+<td data-l="Hoy" class="num">10</td>
+<td data-l="Propuesto" class="num">10</td>
+<td data-l="Por qué">Nunca se llena (1,8 por día).</td>
+<td data-l="Quién y cuándo" class="chico">26/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Cupos" data-e="cambia" data-t="cupos economía cupo_de_afuera 12 6 9,8 por día (un día, 20) y 0,17 visitas por nota. &quot;12 a la vez&quot; no es &quot;12 por día&quot;: ver cómo se cuenta. 26/09">
+<td data-l="Grupo">Cupos</td>
+<td data-l="Qué es"><b>Economía</b><div class="chico">CUPO_DE_AFUERA</div></td>
+<td data-l="Hoy" class="num">12</td>
+<td data-l="Propuesto" class="num">6</td>
+<td data-l="Por qué">9,8 por día (un día, 20) y 0,17 visitas por nota. &quot;12 a la vez&quot; no es &quot;12 por día&quot;: ver cómo se cuenta.</td>
+<td data-l="Quién y cuándo" class="chico">26/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P11" class="chico">P11</a></td></tr>
+<tr data-g="Cupos" data-e="queda" data-t="cupos tecnología cupo_de_afuera 8 8 nunca se llena. 25/09">
+<td data-l="Grupo">Cupos</td>
+<td data-l="Qué es"><b>Tecnología</b><div class="chico">CUPO_DE_AFUERA</div></td>
+<td data-l="Hoy" class="num">8</td>
+<td data-l="Propuesto" class="num">8</td>
+<td data-l="Por qué">Nunca se llena.</td>
+<td data-l="Quién y cuándo" class="chico">25/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Cupos" data-e="cambia" data-t="cupos política cupo_de_afuera 8 6 6,6 por día, 0,35 visitas por nota. en redes nunca sale sola. 25/09">
+<td data-l="Grupo">Cupos</td>
+<td data-l="Qué es"><b>Política</b><div class="chico">CUPO_DE_AFUERA</div></td>
+<td data-l="Hoy" class="num">8</td>
+<td data-l="Propuesto" class="num">6</td>
+<td data-l="Por qué">6,6 por día, 0,35 visitas por nota. En redes nunca sale sola.</td>
+<td data-l="Quién y cuándo" class="chico">25/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P11" class="chico">P11</a></td></tr>
+<tr data-g="Cupos" data-e="queda" data-t="cupos policiales cupo_de_afuera 0 0 policiales es sólo de acá. regla legal y editorial. 26/09">
+<td data-l="Grupo">Cupos</td>
+<td data-l="Qué es"><b>Policiales</b><div class="chico">CUPO_DE_AFUERA</div></td>
+<td data-l="Hoy" class="num">0</td>
+<td data-l="Propuesto" class="num">0</td>
+<td data-l="Por qué">Policiales es sólo de acá. Regla legal y editorial.</td>
+<td data-l="Quién y cuándo" class="chico">26/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Cupos" data-e="queda" data-t="cupos automovilismo cupo_de_afuera 6 6 se lee (0,74). 25/09">
+<td data-l="Grupo">Cupos</td>
+<td data-l="Qué es"><b>Automovilismo</b><div class="chico">CUPO_DE_AFUERA</div></td>
+<td data-l="Hoy" class="num">6</td>
+<td data-l="Propuesto" class="num">6</td>
+<td data-l="Por qué">Se lee (0,74).</td>
+<td data-l="Quién y cuándo" class="chico">25/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Cupos" data-e="queda" data-t="cupos cultura y agenda cupo_de_afuera 8 8 2,2 por día: no se llena. 26/09">
+<td data-l="Grupo">Cupos</td>
+<td data-l="Qué es"><b>Cultura y agenda</b><div class="chico">CUPO_DE_AFUERA</div></td>
+<td data-l="Hoy" class="num">8</td>
+<td data-l="Propuesto" class="num">8</td>
+<td data-l="Por qué">2,2 por día: no se llena.</td>
+<td data-l="Quién y cuándo" class="chico">26/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Cupos" data-e="cambia" data-t="cupos el resto (en la práctica, agro de afuera) cupo_por_defecto 15 agro: 4 agro no tiene cupo propio y toma el de 15. agro de afuera casi no se lee. 20/09">
+<td data-l="Grupo">Cupos</td>
+<td data-l="Qué es"><b>El resto (en la práctica, Agro de afuera)</b><div class="chico">CUPO_POR_DEFECTO</div></td>
+<td data-l="Hoy" class="num">15</td>
+<td data-l="Propuesto" class="num">Agro: 4</td>
+<td data-l="Por qué">Agro no tiene cupo propio y toma el de 15. Agro de afuera casi no se lee.</td>
+<td data-l="Quién y cuándo" class="chico">20/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P11" class="chico">P11</a></td></tr>
+<tr data-g="Cupos" data-e="cambia" data-t="cupos qué notas cuentan para el cupo aplicarcupos(), ingesta.mjs y generar-datos.mjs todas las de la ingesta, también las de hasta 2 o 3 días que nunca van a salir sólo las ya publicadas y las de menos de 12 h esta mañana, 63 de 83 lugares (76 %) estaban ocupados por notas que la web descarta por viejas; 4 frescas esperaban &quot;por cupo&quot;. 25/09 (cupo) + 28/09 (12 h): nunca se juntaron">
+<td data-l="Grupo">Cupos</td>
+<td data-l="Qué es"><b>Qué notas cuentan para el cupo</b><div class="chico">aplicarCupos(), ingesta.mjs y generar-datos.mjs</div></td>
+<td data-l="Hoy" class="num">Todas las de la ingesta, también las de hasta 2 o 3 días que nunca van a salir</td>
+<td data-l="Propuesto" class="num">Sólo las ya publicadas y las de menos de 12 h</td>
+<td data-l="Por qué">Esta mañana, 63 de 83 lugares (76 %) estaban ocupados por notas que la web descarta por viejas; 4 frescas esperaban &quot;por cupo&quot;.</td>
+<td data-l="Quién y cuándo" class="chico">25/09 (cupo) + 28/09 (12 h): nunca se juntaron</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P1" class="chico">P1</a></td></tr>
+<tr data-g="Cupos" data-e="queda" data-t="cupos lo de acá no tiene cupo aplicarcupos() sin cupo sin cupo queda (y otro trabajo en curso hace que todas las de balcarce salgan). 25/09">
+<td data-l="Grupo">Cupos</td>
+<td data-l="Qué es"><b>Lo de acá no tiene cupo</b><div class="chico">aplicarCupos()</div></td>
+<td data-l="Hoy" class="num">Sin cupo</td>
+<td data-l="Propuesto" class="num">Sin cupo</td>
+<td data-l="Por qué">Queda (y otro trabajo en curso hace que todas las de Balcarce salgan).</td>
+<td data-l="Quién y cuándo" class="chico">25/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Ventanas" data-e="queda" data-t="ventanas horas que una nota está en la portada portada.horas 36 36 queda. 28/09, hernán">
+<td data-l="Grupo">Ventanas</td>
+<td data-l="Qué es"><b>Horas que una nota está en la portada</b><div class="chico">PORTADA.horas</div></td>
+<td data-l="Hoy" class="num">36</td>
+<td data-l="Propuesto" class="num">36</td>
+<td data-l="Por qué">Queda.</td>
+<td data-l="Quién y cuándo" class="chico">28/09, Hernán</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Ventanas" data-e="queda" data-t="ventanas horas que puede tener un hecho para salir por primera vez portada.horasparaestrenar 12 12 queda; la propuesta p1 hace que el cupo la respete. 28/09, hernán">
+<td data-l="Grupo">Ventanas</td>
+<td data-l="Qué es"><b>Horas que puede tener un hecho para salir por primera vez</b><div class="chico">PORTADA.horasParaEstrenar</div></td>
+<td data-l="Hoy" class="num">12</td>
+<td data-l="Propuesto" class="num">12</td>
+<td data-l="Por qué">Queda; la propuesta P1 hace que el cupo la respete.</td>
+<td data-l="Quién y cuándo" class="chico">28/09, Hernán</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Ventanas" data-e="queda" data-t="ventanas horas que una nota compite por el lugar grande portada.horasnotagrande / ventana_horas 6 6 queda. 25/09">
+<td data-l="Grupo">Ventanas</td>
+<td data-l="Qué es"><b>Horas que una nota compite por el lugar grande</b><div class="chico">PORTADA.horasNotaGrande / VENTANA_HORAS</div></td>
+<td data-l="Hoy" class="num">6</td>
+<td data-l="Propuesto" class="num">6</td>
+<td data-l="Por qué">Queda.</td>
+<td data-l="Quién y cuándo" class="chico">25/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Ventanas" data-e="queda" data-t="ventanas días de página y tope de notas portada.diasdearchivo / maximodenotas 180 días / 3.700 igual lo manda el tope de archivos de cloudflare. 15/10">
+<td data-l="Grupo">Ventanas</td>
+<td data-l="Qué es"><b>Días de página y tope de notas</b><div class="chico">PORTADA.diasDeArchivo / maximoDeNotas</div></td>
+<td data-l="Hoy" class="num">180 días / 3.700</td>
+<td data-l="Propuesto" class="num">Igual</td>
+<td data-l="Por qué">Lo manda el tope de archivos de Cloudflare.</td>
+<td data-l="Quién y cuándo" class="chico">15/10</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Ventanas" data-e="queda" data-t="ventanas horas de lo raspado (el diario, la vanguardia) horas_de_una_nota_nueva 72 72 colador grueso; queda. 27/09">
+<td data-l="Grupo">Ventanas</td>
+<td data-l="Qué es"><b>Horas de lo raspado (El Diario, La Vanguardia)</b><div class="chico">HORAS_DE_UNA_NOTA_NUEVA</div></td>
+<td data-l="Hoy" class="num">72</td>
+<td data-l="Propuesto" class="num">72</td>
+<td data-l="Por qué">Colador grueso; queda.</td>
+<td data-l="Quién y cuándo" class="chico">27/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Ventanas" data-e="queda" data-t="ventanas memoria del cruce (para juntar medios de horas distintas) cruce.horasdememoria, ingesta/cruce.mjs 36 h 36 h hace falta para contar medios. pero por esto el cupo veía notas viejas (p1). 27/09">
+<td data-l="Grupo">Ventanas</td>
+<td data-l="Qué es"><b>Memoria del cruce (para juntar medios de horas distintas)</b><div class="chico">CRUCE.horasDeMemoria, ingesta/cruce.mjs</div></td>
+<td data-l="Hoy" class="num">36 h</td>
+<td data-l="Propuesto" class="num">36 h</td>
+<td data-l="Por qué">Hace falta para contar medios. Pero por esto el cupo veía notas viejas (P1).</td>
+<td data-l="Quién y cuándo" class="chico">27/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Ventanas" data-e="queda" data-t="ventanas parecido para juntar notas del mismo hecho cruce.umbral 0,42 0,42 es de la etapa de duplicadas, no de pesos. 27/09">
+<td data-l="Grupo">Ventanas</td>
+<td data-l="Qué es"><b>Parecido para juntar notas del mismo hecho</b><div class="chico">CRUCE.umbral</div></td>
+<td data-l="Hoy" class="num">0,42</td>
+<td data-l="Propuesto" class="num">0,42</td>
+<td data-l="Por qué">Es de la etapa de duplicadas, no de pesos.</td>
+<td data-l="Quién y cuándo" class="chico">27/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Redes" data-e="no-se-usa" data-t="redes facebook: puntaje mínimo de una nota de acá facebook.relevanciaminima 75 0 (lo de acá va siempre primero) no hace nada desde el 12/10: el relleno con piso 0 deja pasar cualquier nota, y el orden ya pone lo de acá primero. desde ese día salieron notas de acá con 63. 21/09">
+<td data-l="Grupo">Redes</td>
+<td data-l="Qué es"><b>Facebook: puntaje mínimo de una nota de acá</b><div class="chico">FACEBOOK.relevanciaMinima</div></td>
+<td data-l="Hoy" class="num">75</td>
+<td data-l="Propuesto" class="num">0 (lo de acá va siempre primero)</td>
+<td data-l="Por qué">No hace nada desde el 12/10: el relleno con piso 0 deja pasar cualquier nota, y el orden ya pone lo de acá primero. Desde ese día salieron notas de acá con 63.</td>
+<td data-l="Quién y cuándo" class="chico">21/09</td>
+<td data-l="Estado"><span class="estado e-no-se-usa">No se usa</span> <a href="#P10" class="chico">P10</a></td></tr>
+<tr data-g="Redes" data-e="cambia" data-t="redes facebook: puntaje mínimo de lo de afuera para completar las 5 facebook.relevanciaminimaderelleno 0 55 (escala nueva; el cuarto de arriba de lo de afuera) desde el 12/10 salieron 3 de afuera: 4, 0 y 0 visitas en la web. 12/10, hernán">
+<td data-l="Grupo">Redes</td>
+<td data-l="Qué es"><b>Facebook: puntaje mínimo de lo de afuera para completar las 5</b><div class="chico">FACEBOOK.relevanciaMinimaDeRelleno</div></td>
+<td data-l="Hoy" class="num">0</td>
+<td data-l="Propuesto" class="num">55 (escala nueva; el cuarto de arriba de lo de afuera)</td>
+<td data-l="Por qué">Desde el 12/10 salieron 3 de afuera: 4, 0 y 0 visitas en la web.</td>
+<td data-l="Quién y cuándo" class="chico">12/10, Hernán</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P10" class="chico">P10</a></td></tr>
+<tr data-g="Redes" data-e="queda" data-t="redes facebook: 5 por día, de 8 a 22, 90 minutos entre posteos, hasta 8 h de vida, 3 h esperando foto, 24 h sin repetir tema facebook.* esos igual no son pesos; quedan. 21/09 a 8/10">
+<td data-l="Grupo">Redes</td>
+<td data-l="Qué es"><b>Facebook: 5 por día, de 8 a 22, 90 minutos entre posteos, hasta 8 h de vida, 3 h esperando foto, 24 h sin repetir tema</b><div class="chico">FACEBOOK.*</div></td>
+<td data-l="Hoy" class="num">Esos</td>
+<td data-l="Propuesto" class="num">Igual</td>
+<td data-l="Por qué">No son pesos; quedan.</td>
+<td data-l="Quién y cuándo" class="chico">21/09 a 8/10</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Redes" data-e="cambia" data-t="redes repasos: puntaje mínimo de una nota de acá piezas.relevanciapodcast 62 (a la noche, 0) 70 (deja pasar la misma proporción: 83 %) con la escala de hoy, 43 notas de acá sin hora quedaban debajo de 62; con la propuesta, 2. 25/09">
+<td data-l="Grupo">Redes</td>
+<td data-l="Qué es"><b>Repasos: puntaje mínimo de una nota de acá</b><div class="chico">PIEZAS.relevanciaPodcast</div></td>
+<td data-l="Hoy" class="num">62 (a la noche, 0)</td>
+<td data-l="Propuesto" class="num">70 (deja pasar la misma proporción: 83 %)</td>
+<td data-l="Por qué">Con la escala de hoy, 43 notas de acá sin hora quedaban debajo de 62; con la propuesta, 2.</td>
+<td data-l="Quién y cuándo" class="chico">25/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P9" class="chico">P9</a></td></tr>
+<tr data-g="Redes" data-e="cambia" data-t="redes repasos: puntaje mínimo de una nota de afuera piezas.relevanciaafuerapodcast 80 56 (la misma proporción: 18 %) hay que mover el número porque cambia la escala; el efecto queda igual. 29/09, hernán">
+<td data-l="Grupo">Redes</td>
+<td data-l="Qué es"><b>Repasos: puntaje mínimo de una nota de afuera</b><div class="chico">PIEZAS.relevanciaAfueraPodcast</div></td>
+<td data-l="Hoy" class="num">80</td>
+<td data-l="Propuesto" class="num">56 (la misma proporción: 18 %)</td>
+<td data-l="Por qué">Hay que mover el número porque cambia la escala; el efecto queda igual.</td>
+<td data-l="Quién y cuándo" class="chico">29/09, Hernán</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P9" class="chico">P9</a></td></tr>
+<tr data-g="Redes" data-e="queda" data-t="redes repasos: 4 notas, mínimo 2, hasta 2 de afuera piezas.* esos igual quedan. 29/09">
+<td data-l="Grupo">Redes</td>
+<td data-l="Qué es"><b>Repasos: 4 notas, mínimo 2, hasta 2 de afuera</b><div class="chico">PIEZAS.*</div></td>
+<td data-l="Hoy" class="num">Esos</td>
+<td data-l="Propuesto" class="num">Igual</td>
+<td data-l="Por qué">Quedan.</td>
+<td data-l="Quién y cuándo" class="chico">29/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Avisos" data-e="cambia" data-t="avisos aviso de nota de balcarce &quot;muy importante&quot; importante, redes/avisos.mjs puntaje 100 y 3 medios (2 por día como mucho) puntaje 95 o más y 3 medios hoy depende del tope de 100. con la escala nueva, 95 quiere decir &quot;de acá, fresca y contada por 4 medios o más&quot;: unas 26 en 15 días. 25/09">
+<td data-l="Grupo">Avisos</td>
+<td data-l="Qué es"><b>Aviso de nota de Balcarce &quot;muy importante&quot;</b><div class="chico">IMPORTANTE, redes/avisos.mjs</div></td>
+<td data-l="Hoy" class="num">Puntaje 100 y 3 medios (2 por día como mucho)</td>
+<td data-l="Propuesto" class="num">Puntaje 95 o más y 3 medios</td>
+<td data-l="Por qué">Hoy depende del tope de 100. Con la escala nueva, 95 quiere decir &quot;de acá, fresca y contada por 4 medios o más&quot;: unas 26 en 15 días.</td>
+<td data-l="Quién y cuándo" class="chico">25/09</td>
+<td data-l="Estado"><span class="estado e-cambia">Cambia</span> <a href="#P9" class="chico">P9</a></td></tr>
+<tr data-g="Redacción" data-e="queda" data-t="redacción notas que se le piden a la ia por corrida / por día / reservadas para lo de acá reescritura.porcorrida / pordia / reservaparalocales 40 / 450 / 80 igual son cupos de trabajo, no de importancia. no se midieron acá. 27/09">
+<td data-l="Grupo">Redacción</td>
+<td data-l="Qué es"><b>Notas que se le piden a la IA por corrida / por día / reservadas para lo de acá</b><div class="chico">REESCRITURA.porCorrida / porDia / reservaParaLocales</div></td>
+<td data-l="Hoy" class="num">40 / 450 / 80</td>
+<td data-l="Propuesto" class="num">Igual</td>
+<td data-l="Por qué">Son cupos de trabajo, no de importancia. No se midieron acá.</td>
+<td data-l="Quién y cuándo" class="chico">27/09</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+<tr data-g="Redacción" data-e="queda" data-t="redacción intentos extra si la cuentan muchos medios reescritura.fuentesparaunintentoextra / dos 5 / 8 medios igual quedan. 1/10, hernán">
+<td data-l="Grupo">Redacción</td>
+<td data-l="Qué es"><b>Intentos extra si la cuentan muchos medios</b><div class="chico">REESCRITURA.fuentesParaUnIntentoExtra / Dos</div></td>
+<td data-l="Hoy" class="num">5 / 8 medios</td>
+<td data-l="Propuesto" class="num">Igual</td>
+<td data-l="Por qué">Quedan.</td>
+<td data-l="Quién y cuándo" class="chico">1/10, Hernán</td>
+<td data-l="Estado"><span class="estado e-queda">Queda</span></td></tr>
+</tbody></table></div>
+
+<h2>Qué pasaría con la propuesta</h2>
+<div class="graficos"><figure class="figura"><figcaption>De afuera por día: hoy y con la propuesta (estimado sobre el 1 al 15/10)</figcaption><div class="leyenda"><span><i style="background:var(--s2)"></i>Hoy</span><span><i style="background:var(--s1)"></i>Propuesta</span></div><svg viewBox="0 0 440 350" role="img" aria-label="De afuera por día: hoy y con la propuesta (estimado sobre el 1 al 15/10)" class="graf"><line x1="256" x2="256" y1="6" y2="342" class="grilla"/><line x1="400" x2="400" y1="6" y2="342" class="grilla"/><text x="104" y="32" class="eje" text-anchor="end">Economía</text><g class="marca"><rect x="112" y="13" width="282.24" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="12" width="288" height="14" fill="transparent"><title>Hoy · Economía: 9,8</title></rect></g><text x="399.24" y="24" class="val">9,8</text><g class="marca"><rect x="112" y="27" width="141.12" height="12" rx="3" style="fill:var(--s1)"/><rect x="112" y="26" width="288" height="14" fill="transparent"><title>Propuesta · Economía: 4,9</title></rect></g><text x="258.12" y="38" class="val">4,9</text><text x="104" y="74" class="eje" text-anchor="end">Fútbol</text><g class="marca"><rect x="112" y="55" width="230.39999999999998" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="54" width="288" height="14" fill="transparent"><title>Hoy · Fútbol: 8</title></rect></g><text x="347.4" y="66" class="val">8</text><g class="marca"><rect x="112" y="69" width="181.44" height="12" rx="3" style="fill:var(--s1)"/><rect x="112" y="68" width="288" height="14" fill="transparent"><title>Propuesta · Fútbol: 6,3</title></rect></g><text x="298.44" y="80" class="val">6,3</text><text x="104" y="116" class="eje" text-anchor="end">Política</text><g class="marca"><rect x="112" y="97" width="190.07999999999998" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="96" width="288" height="14" fill="transparent"><title>Hoy · Política: 6,6</title></rect></g><text x="307.08" y="108" class="val">6,6</text><g class="marca"><rect x="112" y="111" width="135.36" height="12" rx="3" style="fill:var(--s1)"/><rect x="112" y="110" width="288" height="14" fill="transparent"><title>Propuesta · Política: 4,7</title></rect></g><text x="252.36" y="122" class="val">4,7</text><text x="104" y="158" class="eje" text-anchor="end">Argentina</text><g class="marca"><rect x="112" y="139" width="164.16000000000003" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="138" width="288" height="14" fill="transparent"><title>Hoy · Argentina: 5,7</title></rect></g><text x="281.16" y="150" class="val">5,7</text><g class="marca"><rect x="112" y="153" width="129.6" height="12" rx="3" style="fill:var(--s1)"/><rect x="112" y="152" width="288" height="14" fill="transparent"><title>Propuesta · Argentina: 4,5</title></rect></g><text x="246.6" y="164" class="val">4,5</text><text x="104" y="200" class="eje" text-anchor="end">Automovilismo</text><g class="marca"><rect x="112" y="181" width="141.12" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="180" width="288" height="14" fill="transparent"><title>Hoy · Automovilismo: 4,9</title></rect></g><text x="258.12" y="192" class="val">4,9</text><g class="marca"><rect x="112" y="195" width="115.19999999999999" height="12" rx="3" style="fill:var(--s1)"/><rect x="112" y="194" width="288" height="14" fill="transparent"><title>Propuesta · Automovilismo: 4</title></rect></g><text x="232.2" y="206" class="val">4</text><text x="104" y="242" class="eje" text-anchor="end">Agro</text><g class="marca"><rect x="112" y="223" width="100.80000000000001" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="222" width="288" height="14" fill="transparent"><title>Hoy · Agro: 3,5</title></rect></g><text x="217.8" y="234" class="val">3,5</text><g class="marca"><rect x="112" y="237" width="43.19999999999999" height="12" rx="3" style="fill:var(--s1)"/><rect x="112" y="236" width="288" height="14" fill="transparent"><title>Propuesta · Agro: 1,5</title></rect></g><text x="160.2" y="248" class="val">1,5</text><text x="104" y="284" class="eje" text-anchor="end">Cultura</text><g class="marca"><rect x="112" y="265" width="63.360000000000014" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="264" width="288" height="14" fill="transparent"><title>Hoy · Cultura: 2,2</title></rect></g><text x="180.36" y="276" class="val">2,2</text><g class="marca"><rect x="112" y="279" width="63.360000000000014" height="12" rx="3" style="fill:var(--s1)"/><rect x="112" y="278" width="288" height="14" fill="transparent"><title>Propuesta · Cultura: 2,2</title></rect></g><text x="180.36" y="290" class="val">2,2</text><text x="104" y="326" class="eje" text-anchor="end">Deportes</text><g class="marca"><rect x="112" y="307" width="51.84" height="12" rx="3" style="fill:var(--s2)"/><rect x="112" y="306" width="288" height="14" fill="transparent"><title>Hoy · Deportes: 1,8</title></rect></g><text x="168.84" y="318" class="val">1,8</text><g class="marca"><rect x="112" y="321" width="46.079999999999984" height="12" rx="3" style="fill:var(--s1)"/><rect x="112" y="320" width="288" height="14" fill="transparent"><title>Propuesta · Deportes: 1,6</title></rect></g><text x="163.07999999999998" y="332" class="val">1,6</text><line x1="112" x2="112" y1="6" y2="342" class="base"/></svg><p class="chico">Total de afuera: 43,4 por día hoy → unas 31 con la propuesta. Se quedan 167 de las 187 visitas que tuvo lo de afuera (89 %). Lo de acá no cambia: 22,6 por día.</p></figure>
+<div class="caja" style="margin:0">
+<h3>Esta mañana (16/10, 9:42), con todo junto</h3>
+<p><b>Habrían salido</b> (estaban frenadas por el cupo):</p>
+<ul><li>Economía · 4 medios · 3 h · hoy 57 → 46 · El Banco Central difunde el dato de morosidad de agosto</li><li>Política · 3 medios · 2 h · hoy 57 → 43 · Milei finalizó su viaje en Estados Unidos y se prepara para su visita a España</li><li>Fútbol · 2 medios · 9 h · hoy 59 → 35 · La emoción de Lautaro Martínez al ver el llanto de un excombatiente de Malvinas en su</li></ul>
+<p><b>No habrían salido</b> (Agro de afuera con 2 medios):</p>
+<ul><li>Agro · 2 medios · 9 h · hoy 41 → 25 · Clima en La Rioja: Lluvia ligera el pronóstico para hoy, 16 de octubre</li><li>Agro · 2 medios · 43 h · hoy 28 → 13 · Clima en el campo: dónde se esperan lluvias de más de 100 mm y qué zonas recibirán me</li><li>Agro · 2 medios · 24 h · hoy 26 → 13 · La desesperación de los productores ganaderos por las inundaciones en el Litoral: “En</li></ul>
+<p class="chico">Formato: sección · medios · horas · puntaje hoy → propuesta · título.</p>
+</div></div>
+<div class="caja">
+<h3>Con "todas las notas de Balcarce salen"</h3>
+<p>Otro trabajo en curso hace que todo lo de acá salga (salvo lo que frena la ley). Esta propuesta no lo pisa: no toca cuántas de acá salen, sólo el orden entre ellas y cuánto de afuera las acompaña. Con las dos cosas juntas, lo de acá pasa de ser un tercio de lo publicado (22,6 de acá contra 43,4 de afuera por día) a más del 40 %, y en la tapa, Facebook y los repasos lo de acá queda siempre arriba de lo de afuera.</p>
+</div>
+
+<h2>Las propuestas: Sí, No o Duda</h2>
+<p class="sub">Tocá una opción en cada una. Lo que marques queda guardado en este teléfono o esta computadora. Al final, "Copiar mis decisiones" y pegalo en el chat.</p>
+<section id="decisiones">
+<article class="prop" id="P1" data-id="P1">
+<h3><span class="pid">P1</span> El cupo de lo de afuera cuenta sólo lo que puede salir</h3>
+<p>Hoy el cupo (&quot;10 de Fútbol a la vez&quot;) se reparte entre TODAS las notas que trae la ingesta, también las de hace dos días que nunca salieron y que la web después descarta por viejas (más de 12 h). Propuesta: para el cupo cuentan las ya publicadas y las de menos de 12 horas.</p>
+<dl><dt>Lo que muestran los datos</dt><dd>63 de 83 lugares ocupados por notas que nunca iban a salir (16/10, 9:42). En Política y Cultura, los 8 lugares, todos.</dd><dt>Qué cambiaría</dt><dd>Esta mañana habrían salido 4 notas frescas que esperaban: Milei termina su viaje (3 medios), el Banco Central y la morosidad (4), Lautaro y el excombatiente (2, figura), las horas trabajadas (2). Es una regla, no un número: lo hace el programa.</dd><dt>Riesgo</dt><dd>Bajo. Puede salir algo más de afuera por día; P11 lo compensa.</dd></dl>
+<div class="decide" role="group" aria-label="Decisión P1">
+<button type="button" class="opc" data-v="si">Sí</button><button type="button" class="opc" data-v="no">No</button><button type="button" class="opc" data-v="duda">Duda</button>
+</div>
+<label class="coment">Comentario<textarea rows="2" placeholder="Opcional"></textarea></label>
+</article>
+<article class="prop" id="P2" data-id="P2">
+<h3><span class="pid">P2</span> La frescura de una nota sin hora se cuenta desde que el robot la vio</h3>
+<p>Cuando la fuente no pone la hora, hoy la nota vale como si tuviera 24 horas: 0 de frescura, siempre. Propuesta: contar desde la primera vez que se vio, que es la fecha que ya muestra la web.</p>
+<dl><dt>Lo que muestran los datos</dt><dd>94 notas de acá de 339 (28 %) no tenían hora. Mediana 63 contra 84. La más leída del período salió con 63.</dd><dt>Qué cambiaría</dt><dd>Esas notas suben unos 20 puntos al salir; en los repasos, las de acá sin hora que quedaban abajo del mínimo pasan de 43 a 2.</dd><dt>Riesgo</dt><dd>Bajo. Una nota vieja recién descubierta puede parecer fresca; la regla de 12 h para estrenar sigue cuidando eso.</dd></dl>
+<div class="decide" role="group" aria-label="Decisión P2">
+<button type="button" class="opc" data-v="si">Sí</button><button type="button" class="opc" data-v="no">No</button><button type="button" class="opc" data-v="duda">Duda</button>
+</div>
+<label class="coment">Comentario<textarea rows="2" placeholder="Opcional"></textarea></label>
+</article>
+<article class="prop" id="P3" data-id="P3">
+<h3><span class="pid">P3</span> Los medios suman hasta 4 y después casi nada</h3>
+<p>Hoy: +10 por cada medio más, hasta +40. Propuesta: 2 medios +5; 3 medios +10; de 4 a 7 +20; 8 o más +25.</p>
+<dl><dt>Lo que muestran los datos</dt><dd>Visitas por nota de afuera: 2-3 medios 0,10; 4-7 0,44; 8 o más 0,54.</dd><dt>Qué cambiaría</dt><dd>Una nota fresca le gana a una vieja muy contada (hoy pasa al revés). Las 6 de Fútbol de hace dos días que ocupaban el cupo bajan.</dd><dt>Riesgo</dt><dd>Bajo.</dd></dl>
+<div class="decide" role="group" aria-label="Decisión P3">
+<button type="button" class="opc" data-v="si">Sí</button><button type="button" class="opc" data-v="no">No</button><button type="button" class="opc" data-v="duda">Duda</button>
+</div>
+<label class="coment">Comentario<textarea rows="2" placeholder="Opcional"></textarea></label>
+</article>
+<article class="prop" id="P4" data-id="P4">
+<h3><span class="pid">P4</span> La frescura baja de a poco y se termina a las 12 horas</h3>
+<p>Hoy: +25 (menos de 3 h), +15 (3 a 12 h), +8 (12 a 24 h). Propuesta: +25, +18 hasta 6 h, +12 hasta 12 h, 0 después.</p>
+<dl><dt>Lo que muestran los datos</dt><dd>Nada de más de 12 horas se estrena; el +8 sólo ayudaba a lo viejo a quedarse con lugares.</dd><dt>Qué cambiaría</dt><dd>Junto con P1 y P3, el cupo queda para lo de las últimas horas.</dd><dt>Riesgo</dt><dd>Bajo.</dd></dl>
+<div class="decide" role="group" aria-label="Decisión P4">
+<button type="button" class="opc" data-v="si">Sí</button><button type="button" class="opc" data-v="no">No</button><button type="button" class="opc" data-v="duda">Duda</button>
+</div>
+<label class="coment">Comentario<textarea rows="2" placeholder="Opcional"></textarea></label>
+</article>
+<article class="prop" id="P5" data-id="P5">
+<h3><span class="pid">P5</span> Un solo peso para los medios de acá (25) y uno para los de afuera (8)</h3>
+<p>Hoy los de acá van de 24 a 30 y los de afuera de 7 a 16, y de afuera cuenta sólo el medio que publicó primero.</p>
+<dl><dt>Lo que muestran los datos</dt><dd>Las visitas no siguen el peso (24 → 1,17; 30 → 1,39; 26 → 1,12; 28 → 1,08). El Municipio y el Concejo, que traen los servicios, pesaban menos que nadie. 94 historias de afuera de 479 tenían más puntos por quién llegó primero.</dd><dt>Qué cambiaría</dt><dd>Menos azar. Para cambiar la importancia de un medio queda la lista de fuentes (prenderlo o apagarlo), no un número escondido.</dd><dt>Riesgo</dt><dd>Bajo. Se pierde la posibilidad de &quot;premiar&quot; a un medio; nunca se usó con datos.</dd></dl>
+<div class="decide" role="group" aria-label="Decisión P5">
+<button type="button" class="opc" data-v="si">Sí</button><button type="button" class="opc" data-v="no">No</button><button type="button" class="opc" data-v="duda">Duda</button>
+</div>
+<label class="coment">Comentario<textarea rows="2" placeholder="Opcional"></textarea></label>
+</article>
+<article class="prop" id="P6" data-id="P6">
+<h3><span class="pid">P6</span> Sin doble premio por Balcarce, y la zona suma</h3>
+<p>Hoy una nota de afuera con Balcarce en el título suma +25 y +22. Y lo que toca la zona (ruta 226, la 55, la papa) no suma nada aunque se publique como de acá. Propuesta: +25 una sola vez; la zona +15.</p>
+<dl><dt>Lo que muestran los datos</dt><dd>La zona: 1,13 visitas por nota contra 0,43 de afuera (etapa 2-5; muestra chica).</dd><dt>Qué cambiaría</dt><dd>Lo de la zona deja de competir como una nacional.</dd><dt>Riesgo</dt><dd>Bajo.</dd></dl>
+<div class="decide" role="group" aria-label="Decisión P6">
+<button type="button" class="opc" data-v="si">Sí</button><button type="button" class="opc" data-v="no">No</button><button type="button" class="opc" data-v="duda">Duda</button>
+</div>
+<label class="coment">Comentario<textarea rows="2" placeholder="Opcional"></textarea></label>
+</article>
+<article class="prop" id="P7" data-id="P7">
+<h3><span class="pid">P7</span> La foto y el texto completo dejan de sumar puntos</h3>
+<p>Hoy: foto +6, texto completo +4. Propuesta: 0. La preferencia por la foto queda donde ya está, en la tapa y en Facebook.</p>
+<dl><dt>Lo que muestran los datos</dt><dd>De acá: con foto 1,14 visitas por nota; sin foto, 1,14. El texto completo mide lo que le llegó al robot, no al lector.</dd><dt>Qué cambiaría</dt><dd>Ninguno visible: la tapa y Facebook ya eligen con foto primero.</dd><dt>Riesgo</dt><dd>Bajo. Hay más empates en el puntaje: se desempata por hora y por foto, como ya hace la tapa.</dd></dl>
+<div class="decide" role="group" aria-label="Decisión P7">
+<button type="button" class="opc" data-v="si">Sí</button><button type="button" class="opc" data-v="no">No</button><button type="button" class="opc" data-v="duda">Duda</button>
+</div>
+<label class="coment">Comentario<textarea rows="2" placeholder="Opcional"></textarea></label>
+</article>
+<article class="prop" id="P8" data-id="P8">
+<h3><span class="pid">P8</span> La figura argentina suma +10 y no +16</h3>
+<p>Messi, Colapinto, la Selección.</p>
+<dl><dt>Lo que muestran los datos</dt><dd>De afuera con figura 0,44 visitas por nota contra 0,35 sin figura. La despedida de Messi salió con 99-100 y 0 visitas.</dd><dt>Qué cambiaría</dt><dd>Las de figura siguen saliendo (pide 2 medios), pero no tapan lo demás.</dd><dt>Riesgo</dt><dd>Bajo.</dd></dl>
+<div class="decide" role="group" aria-label="Decisión P8">
+<button type="button" class="opc" data-v="si">Sí</button><button type="button" class="opc" data-v="no">No</button><button type="button" class="opc" data-v="duda">Duda</button>
+</div>
+<label class="coment">Comentario<textarea rows="2" placeholder="Opcional"></textarea></label>
+</article>
+<article class="prop" id="P9" data-id="P9">
+<h3><span class="pid">P9</span> Sin tope de 100, y los números de las redes se mueven a la escala nueva</h3>
+<p>Con P2 a P8 la escala cambia. Para que las redes hagan lo mismo que hoy: repasos de acá 62 → 70; repasos de afuera 80 → 56; aviso &quot;muy importante&quot; 100 → 95 (con 3 medios). Sin tope (el máximo real es 108).</p>
+<dl><dt>Lo que muestran los datos</dt><dd>Hoy 58 notas de acá (17 %) tocaron 100 y empatan. Los nuevos números dejan pasar la misma proporción que hoy (83 % y 18 %).</dd><dt>Qué cambiaría</dt><dd>Mismo volumen en los repasos. Aviso importante: unas 26 en 15 días (el tope de 2 por día sigue).</dd><dt>Riesgo</dt><dd>Medio: hay que cambiar varios números a la vez, en criterio.mjs y en la tabla de CRITERIO-EDITORIAL.md (la prueba lo controla).</dd></dl>
+<div class="decide" role="group" aria-label="Decisión P9">
+<button type="button" class="opc" data-v="si">Sí</button><button type="button" class="opc" data-v="no">No</button><button type="button" class="opc" data-v="duda">Duda</button>
+</div>
+<label class="coment">Comentario<textarea rows="2" placeholder="Opcional"></textarea></label>
+</article>
+<article class="prop" id="P10" data-id="P10">
+<h3><span class="pid">P10</span> Facebook: sacar el 75 que no hace nada y ponerle piso a lo de afuera</h3>
+<p>Desde el 12/10 el relleno con piso 0 deja pasar cualquier nota, así que el 75 no filtra nada. Propuesta: lo de acá sin piso (va siempre primero, como hoy); lo de afuera, para completar las 5, con 55 o más en la escala nueva.</p>
+<dl><dt>Lo que muestran los datos</dt><dd>Desde el 12/10 salieron notas de acá con 63, y 3 de afuera (con 63, 83 y 59), que tuvieron 4, 0 y 0 visitas.</dd><dt>Qué cambiaría</dt><dd>Siguen saliendo 5 por día; lo de afuera, sólo lo mejor contado.</dd><dt>Riesgo</dt><dd>Bajo. Algún día puede salir 4 en vez de 5 si no hay nada bueno de afuera. Si se prefiere 5 siempre, decir No.</dd></dl>
+<div class="decide" role="group" aria-label="Decisión P10">
+<button type="button" class="opc" data-v="si">Sí</button><button type="button" class="opc" data-v="no">No</button><button type="button" class="opc" data-v="duda">Duda</button>
+</div>
+<label class="coment">Comentario<textarea rows="2" placeholder="Opcional"></textarea></label>
+</article>
+<article class="prop" id="P11" data-id="P11">
+<h3><span class="pid">P11</span> Cupos de afuera: Economía 6, Argentina 6, Política 6, Agro 4</h3>
+<p>Hoy: Economía 12, Argentina 12, Política 8, Agro 15 (el de por defecto). Fútbol, Automovilismo, Deportes, Tecnología y Cultura quedan.</p>
+<dl><dt>Lo que muestran los datos</dt><dd>Visitas por nota de afuera: Economía 0,17 (9,8 por día), Argentina 0,21, Política 0,35, Agro 0,03; contra Fútbol 0,67 y Automovilismo 0,74.</dd><dt>Qué cambiaría</dt><dd>Lo de afuera baja de 43,4 a unas 31 por día y se conserva el 89 % de sus visitas. Lo de acá pasa de ser un tercio de lo publicado a más del 40 %.</dd><dt>Riesgo</dt><dd>Medio: la estimación toma el cupo como tope por día; el cupo real es &quot;a la vez&quot;. Conviene mirar una semana después.</dd></dl>
+<div class="decide" role="group" aria-label="Decisión P11">
+<button type="button" class="opc" data-v="si">Sí</button><button type="button" class="opc" data-v="no">No</button><button type="button" class="opc" data-v="duda">Duda</button>
+</div>
+<label class="coment">Comentario<textarea rows="2" placeholder="Opcional"></textarea></label>
+</article>
+<article class="prop" id="P12" data-id="P12">
+<h3><span class="pid">P12</span> Economía y Agro de afuera piden 3 medios</h3>
+<p>Hoy piden 2.</p>
+<dl><dt>Lo que muestran los datos</dt><dd>Lo de afuera contado por 2 o 3 medios: 0,10 visitas por nota. Agro de afuera: 1 visita en 36 notas.</dd><dt>Qué cambiaría</dt><dd>Fuera el pronóstico de La Rioja, el remate de terneros de otra provincia, los datos sueltos del día.</dd><dt>Riesgo</dt><dd>Bajo.</dd></dl>
+<div class="decide" role="group" aria-label="Decisión P12">
+<button type="button" class="opc" data-v="si">Sí</button><button type="button" class="opc" data-v="no">No</button><button type="button" class="opc" data-v="duda">Duda</button>
+</div>
+<label class="coment">Comentario<textarea rows="2" placeholder="Opcional"></textarea></label>
+</article>
+<article class="prop" id="P13" data-id="P13">
+<h3><span class="pid">P13</span> Lo que la IA dice que no tiene relación con Balcarce entra sólo si lo cuentan 8 medios (no 3)</h3>
+<p>Hoy alcanza con 3 medios para que una nota con &quot;impacto nulo&quot; entre igual.</p>
+<dl><dt>Lo que muestran los datos</dt><dd>67 de 152 notas de afuera publicadas con ficha (44 %) tenían &quot;impacto nulo&quot;; 60 entraron por los 3 medios.</dd><dt>Qué cambiaría</dt><dd>Con 8 se quedan 27 y salen unas 40 en tres días (~13 por día), sobre todo chimentos, curiosidades y anuncios de gobierno sin efecto acá. Lo que la IA marca como importante o de servicio sigue entrando.</dd><dt>Riesgo</dt><dd>Medio: algo nacional grande contado por 4 a 7 medios puede quedar afuera si la IA se equivoca con el &quot;nulo&quot;.</dd></dl>
+<div class="decide" role="group" aria-label="Decisión P13">
+<button type="button" class="opc" data-v="si">Sí</button><button type="button" class="opc" data-v="no">No</button><button type="button" class="opc" data-v="duda">Duda</button>
+</div>
+<label class="coment">Comentario<textarea rows="2" placeholder="Opcional"></textarea></label>
+</article>
+<article class="prop" id="P14" data-id="P14">
+<h3><span class="pid">P14</span> Contar los medios igual en todas las reglas</h3>
+<p>Un grupo (Clarín, TN, Olé, Radio Mitre) cuenta una vez en el puntaje y el semáforo, pero no en la lectura con IA ni en el aviso importante.</p>
+<dl><dt>Lo que muestran los datos</dt><dd>La misma nota tiene &quot;3 medios&quot; para una regla y &quot;2&quot; para otra.</dd><dt>Qué cambiaría</dt><dd>Ninguno grande; evita sorpresas.</dd><dt>Riesgo</dt><dd>Bajo.</dd></dl>
+<div class="decide" role="group" aria-label="Decisión P14">
+<button type="button" class="opc" data-v="si">Sí</button><button type="button" class="opc" data-v="no">No</button><button type="button" class="opc" data-v="duda">Duda</button>
+</div>
+<label class="coment">Comentario<textarea rows="2" placeholder="Opcional"></textarea></label>
+</article>
+<article class="prop" id="P15" data-id="P15">
+<h3><span class="pid">P15</span> Cuando la IA dice que no es de acá, el puntaje se recalcula como de afuera</h3>
+<p>Hoy le resta 25 y le deja el peso de medio local y el +22.</p>
+<dl><dt>Lo que muestran los datos</dt><dd>Sigue arriba de cualquier nacional aunque la IA haya dicho que no es de acá.</dd><dt>Qué cambiaría</dt><dd>Ordena bien esos casos (pocos por día).</dd><dt>Riesgo</dt><dd>Bajo.</dd></dl>
+<div class="decide" role="group" aria-label="Decisión P15">
+<button type="button" class="opc" data-v="si">Sí</button><button type="button" class="opc" data-v="no">No</button><button type="button" class="opc" data-v="duda">Duda</button>
+</div>
+<label class="coment">Comentario<textarea rows="2" placeholder="Opcional"></textarea></label>
+</article>
+<div class="barra-decision">
+<button type="button" class="btn btn-fuerte" id="copiar">Copiar mis decisiones</button>
+<button type="button" class="btn" id="borrar">Borrar todo</button>
+<span id="progreso" class="chico"></span><span id="copiado" role="status"></span>
+<textarea id="caja-texto" readonly aria-label="Texto para copiar"></textarea>
+</div>
+</section>
+
+<h2>Cómo se midió y qué tan firme es</h2>
+<div class="caja">
+<ul>
+<li><b>Lo publicado:</b> las 724 versiones de <code>web/data/portada.json</code> del 1 al 15/10 en el historial; de cada nota, el puntaje con que apareció por primera vez.</li>
+<li><b>Lo que esperaba o se descartaba:</b> la ingesta real corrida el 16/10 a las 9:42 sin escribir nada (577 historias, con su puntaje, semáforo y motivo).</li>
+<li><b>Las visitas:</b> <code>web/data/estadisticas.json</code>, notas publicadas del 1 al 12/10: 729 notas, 732 visitas, sólo 182 notas con alguna. Son pocas: sirven para diferencias grandes (acá contra afuera, Economía contra Fútbol), no para afinar un punto. Facebook trae la mayoría de las visitas, por eso casi todo se midió sin lo que fue a Facebook.</li>
+<li><b>La simulación por día</b> toma el cupo como tope diario; el cupo real es "a la vez", así que el número de notas por día es una estimación gruesa. Los pesos nuevos se probaron sobre los mismos datos con que se eligieron: hay que mirar una semana después de aplicarlos.</li>
+<li><b>No se tocó</b> <code>ingesta/</code>, <code>web/</code>, <code>redes/</code> ni ningún número en producción. Para aplicar una propuesta hay que cambiar el número en <code>ingesta/criterio.mjs</code> <b>y</b> en la tabla de <code>CRITERIO-EDITORIAL.md</code> (la prueba lo controla), y correr <code>npm test</code>.</li>
+</ul>
+</div>
+<p class="chico">Resumen en texto: <code>docs/criterio/PESOS-Y-PUNTAJES.md</code>.</p>
+</main>
+<script>
+(function(){
+  var CLAVE='radar-pesos-y-puntajes-v1';
+  var buscar=document.getElementById('buscar'),grupo=document.getElementById('grupo'),estado=document.getElementById('estado');
+  var filas=[].slice.call(document.querySelectorAll('#filas tr'));
+  function filtrar(){var q=buscar.value.trim().toLowerCase(),g=grupo.value,e=estado.value,n=0;
+    filas.forEach(function(tr){var ok=(!q||tr.dataset.t.indexOf(q)>=0)&&(!g||tr.dataset.g===g)&&(!e||tr.dataset.e===e);tr.style.display=ok?'':'none';if(ok)n++;});
+    document.getElementById('cuenta').textContent=n+' de '+filas.length+' números';}
+  [buscar,grupo,estado].forEach(function(el){el.addEventListener('input',filtrar);});
+  filtrar();
+  var dec={};
+  try{dec=JSON.parse(localStorage.getItem(CLAVE)||'{}')||{};}catch(e){dec={};}
+  function guardar(){try{localStorage.setItem(CLAVE,JSON.stringify(dec));}catch(e){}}
+  var props=[].slice.call(document.querySelectorAll('.prop'));
+  function pintar(){var n=0;props.forEach(function(p){var d=dec[p.dataset.id]||{};p.classList.remove('si','no','duda');if(d.v){p.classList.add(d.v);n++;}
+    [].forEach.call(p.querySelectorAll('.opc'),function(b){b.setAttribute('aria-pressed',String(b.dataset.v===d.v));});
+    var t=p.querySelector('textarea');if(document.activeElement!==t)t.value=d.c||'';});
+    document.getElementById('progreso').textContent=n+' de '+props.length+' decididas';}
+  props.forEach(function(p){var id=p.dataset.id;
+    [].forEach.call(p.querySelectorAll('.opc'),function(b){b.addEventListener('click',function(){var d=dec[id]||{};d.v=(d.v===b.dataset.v)?'':b.dataset.v;dec[id]=d;guardar();pintar();});});
+    p.querySelector('textarea').addEventListener('input',function(ev){var d=dec[id]||{};d.c=ev.target.value;dec[id]=d;guardar();pintar();});});
+  pintar();
+  var NOMBRE={si:'SÍ',no:'NO',duda:'DUDA'};
+  function texto(){var l=['Decisiones sobre pesos y puntajes (docs/criterio/PESOS-Y-PUNTAJES.html, 16/10/2026)'];
+    props.forEach(function(p){var d=dec[p.dataset.id]||{};var tit=p.querySelector('h3').textContent.replace(/^\s*P\d+\s*/,'');
+      l.push(p.dataset.id+' · '+tit+': '+(d.v?NOMBRE[d.v]:'sin decidir')+(d.c?' — '+d.c.replace(/\s+/g,' ').trim():''));});
+    return l.join('\n');}
+  var caja=document.getElementById('caja-texto'),aviso=document.getElementById('copiado');
+  function respaldo(t){caja.style.display='block';caja.value=t;caja.focus();caja.select();try{document.execCommand('copy');aviso.textContent='Copiado. Pegalo en el chat.';}catch(e){aviso.textContent='Seleccioná el texto de abajo y copialo.';}}
+  document.getElementById('copiar').addEventListener('click',function(){var t=texto();
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){aviso.textContent='Copiado. Pegalo en el chat.';},function(){respaldo(t);});}else respaldo(t);});
+  document.getElementById('borrar').addEventListener('click',function(){if(!confirm('¿Borrar todas las decisiones marcadas?'))return;dec={};guardar();pintar();aviso.textContent='';});
+})();
+</script>
+</body>
+</html>
