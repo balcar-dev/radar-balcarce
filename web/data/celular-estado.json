@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T22:02:06.394Z",
- "portada": 63,
- "archivo": 1191,
- "esperandoCuerpo": 7,
+ "generado": "2026-10-16T22:31:45.796Z",
+ "portada": 64,
+ "archivo": 1192,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-16T22:02:06.432Z",
+  "generado": "2026-10-16T22:31:45.842Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -64,7 +64,7 @@
     "voz": "locutor",
     "ventana": 300,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-16T22:05:41.323Z"
    },
    {
     "nombre": "clima-noche",

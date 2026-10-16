@@ -376,6 +376,11 @@
   "ultimo": "2026-10-15T13:02:25.824Z",
   "motivo": "con cuerpo"
  },
+ "1blsn1i": {
+  "intentos": 1,
+  "ultimo": "2026-10-16T22:31:27.116Z",
+  "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 64 palabras"
+ },
  "1bn5nak": {
   "intentos": 2,
   "ultimo": "2026-10-13T13:32:54.600Z",
@@ -576,11 +581,6 @@
   "intentos": 1,
   "ultimo": "2026-10-15T15:34:16.260Z",
   "motivo": "con cuerpo"
- },
- "1fb9s8v": {
-  "intentos": 4,
-  "ultimo": "2026-10-09T22:01:50.067Z",
-  "motivo": "cuerpo: 1 problema (promesa): el título dice 2 y el cuerpo no lo explica; sin esas oraciones quedan 93 palabras"
  },
  "1fi9fiz": {
   "intentos": 1,
@@ -1373,6 +1373,11 @@
   "ultimo": "2026-10-12T00:01:45.108Z",
   "motivo": "título o bajada: 2 problemas (numero): el guion dice 40 y la fuente no lo dice"
  },
+ "30azdn": {
+  "intentos": 1,
+  "ultimo": "2026-10-16T22:31:27.116Z",
+  "motivo": "con cuerpo"
+ },
  "32f6mu": {
   "intentos": 1,
   "ultimo": "2026-10-16T03:01:37.520Z",
@@ -1877,9 +1882,9 @@
   "motivo": "con cuerpo"
  },
  "f9bo89": {
-  "intentos": 1,
-  "ultimo": "2026-10-16T22:01:22.209Z",
-  "motivo": "semáforo: necesita ojo humano: \"chicos de entre 8 y 13 anos\", en lo que escribió la IA"
+  "intentos": 2,
+  "ultimo": "2026-10-16T22:31:27.116Z",
+  "motivo": "semáforo: necesita ojo humano: \"chicas de entre 8 y 13 anos\", en lo que escribió la IA"
  },
  "fa17ki": {
   "intentos": 3,
@@ -2190,13 +2195,6 @@
   "intentos": 1,
   "ultimo": "2026-10-11T13:31:56.051Z",
   "motivo": "con cuerpo"
- },
- "nwcpi7": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T22:01:50.067Z",
-  "motivo": "verificación baja: espera a una persona",
-  "baja": true,
-  "fuentes": 1
  },
  "ny562k": {
   "intentos": 1,
