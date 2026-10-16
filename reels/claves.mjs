@@ -61,3 +61,8 @@ export const claveClasificacion = (o) => leerVariable('GEMINI_API_KEY_CLASIFICAC
  *  cuando Gemini se queda sin cupo o falla. Sin ella, la lectura sigue sólo
  *  con Gemini, como hasta ahora. */
 export const claveGroq = (o) => leerVariable('GROQ_API_KEY', o);
+
+/** Las ilustraciones con IA (15/10/2026, ingesta/foto-ia.mjs, apagado): su PROPIA clave, de un proyecto de Google con facturación y tope
+ *  de gasto, porque la generación de imágenes no está en el plan gratis. Sin ella no se genera nada; nunca cae a otra de las claves
+ *  (las gratis no generan imágenes y se les gastaría el cupo). */
+export const claveImagenes = (o) => leerVariable('GEMINI_API_KEY_IMAGENES', o);

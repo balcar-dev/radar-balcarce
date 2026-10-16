@@ -473,6 +473,8 @@ test('el módulo no está conectado a producción: nada lo importa fuera de las 
     if (!fs.existsSync(dir)) continue;
     for (const a of archivosDe(dir)) {
       if (a.endsWith('foto-stock.mjs')) continue;
+      // ingesta/foto-ia.mjs (la ilustración con IA, también sin conectar) puede nombrar a este módulo: lo vigila pruebas/foto-ia.test.mjs.
+      if (a.endsWith('foto-ia.mjs')) continue;
       const texto = fs.readFileSync(a, 'utf8');
       if (/foto-stock/.test(texto) || /FOTO_STOCK_ACTIVA/.test(texto)) quienes.push(path.relative(RAIZ, a).replaceAll('\\', '/'));
     }

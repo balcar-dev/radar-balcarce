@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#14161A">
+<title>Panel nuevo (prototipo)</title>
+<!--
+  PROTOTIPO del panel nuevo del celular (16/10/2026). Autocontenido: sin librerías, sin red, sin guardar nada.
+  Datos de ejemplo INVENTADOS. Plan y auditoría: docs/panel/PLAN-NUEVO-PANEL.md. No es el panel real (web/public/panel/).
+-->
+<style>
+  :root {
+    --tinta: #14161A; --papel: #FFFFFF; --fondo: #F4F1EA; --linea: #E4DFD2; --suave: #5F635F; --texto: #1E2226;
+    --rojo: #C7381C; --rojo-oscuro: #9C2B15; --rojo-fondo: #FBE9E4;
+    --verde: #16615B; --verde-fondo: #E2F1EE; --ambar: #8A5A00; --ambar-fondo: #FFF2D6;
+    --s-balcarce: #B91C1C; --s-politica: #3730A3; --s-policiales: #831843; --s-deportes: #0F766E; --s-futbol: #7C3AED;
+    --s-automovilismo: #B45309; --s-agro: #5A6B0A; --s-cultura: #9D2C8F; --s-economia: #8A6500; --s-tecnologia: #0B6FB8; --s-pais: #4B5563;
+    --radio: 16px; --sombra: 0 1px 2px rgba(20,22,26,.06), 0 4px 14px rgba(20,22,26,.06);
+    --f-titulo: Georgia, "Source Serif 4", "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --papel: #1C1F24; --fondo: #121417; --linea: #2E333A; --suave: #A7ADB3; --texto: #ECEDEE;
+      --rojo: #E4583B; --rojo-fondo: #35201B; --verde: #5CC2B2; --verde-fondo: #15302C; --ambar: #F2C46B; --ambar-fondo: #2D2516;
+      --sombra: 0 1px 2px rgba(0,0,0,.45);
+    }
+  }
+  :root[data-theme="dark"] {
+    --papel: #1C1F24; --fondo: #121417; --linea: #2E333A; --suave: #A7ADB3; --texto: #ECEDEE;
+    --rojo: #E4583B; --rojo-fondo: #35201B; --verde: #5CC2B2; --verde-fondo: #15302C; --ambar: #F2C46B; --ambar-fondo: #2D2516;
+    --sombra: 0 1px 2px rgba(0,0,0,.45);
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html, body { margin: 0; background: var(--fondo); color: var(--texto); }
+  body { font: 17px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding-bottom: calc(84px + env(safe-area-inset-bottom)); -webkit-tap-highlight-color: transparent; overflow-x: hidden; }
+  button, input, textarea, select { font: inherit; color: inherit; }
+  a { color: var(--rojo); }
+
+  /* Arriba: el logo y si los datos están al día (se ven los guardados al instante y se actualizan solos). */
+  .barra { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 10px; min-height: 56px; padding: 8px 16px;
+    padding-top: calc(8px + env(safe-area-inset-top)); background: var(--tinta); color: #fff; border-bottom: 3px solid var(--rojo); }
+  .logo { font-family: var(--f-titulo); font-weight: 800; font-size: 20px; }
+  .logo span { color: #FF6A4D; }
+  .espacio { flex: 1; }
+  .aldia { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; padding: 5px 10px; border-radius: 999px; background: rgba(255,255,255,.1); }
+  .aldia i { width: 8px; height: 8px; border-radius: 50%; background: #5CC2B2; display: inline-block; }
+  button.aldia { border: 0; color: #fff; min-height: 36px; cursor: pointer; font-weight: 600; }
+  .aldia.amarillo i { background: #F2C46B; } .aldia.rojo i { background: #FF6A4D; }
+  .aldia.rojo { background: rgba(228,88,59,.35); }
+  .aldia.cargando i { background: #F2C46B; animation: titila 1s infinite; }
+  @keyframes titila { 50% { opacity: .3; } }
+  .volver { background: transparent; border: 0; color: #fff; font-weight: 700; font-size: 17px; min-height: 44px; padding: 0 10px 0 0; cursor: pointer; }
+  .prototipo { background: var(--ambar-fondo); color: var(--ambar); font-size: 13px; text-align: center; padding: 6px 12px; }
+
+  main { max-width: 640px; margin: 0 auto; padding: 14px 16px 24px; }
+  h1 { font-family: var(--f-titulo); font-size: 27px; line-height: 1.15; margin: 4px 0 4px; letter-spacing: -.01em; }
+  .sub { color: var(--suave); font-size: 15px; margin: 0 0 14px; }
+
+  /* Los tres bloques de Hoy. */
+  .bloque { margin: 0 0 22px; }
+  .bloque-cabeza { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin: 0 2px 8px; }
+  .bloque-cabeza h2 { margin: 0; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--suave); }
+  .bloque-cabeza .cuenta { font-size: 14px; color: var(--suave); font-variant-numeric: tabular-nums; }
+  .tarjeta { background: var(--papel); border: 1px solid var(--linea); border-radius: var(--radio); box-shadow: var(--sombra); padding: 16px; }
+
+  /* 1. Tu decisión: una nota por vez. */
+  .decision { border-left: 6px solid var(--franja, var(--linea)); }
+  .linea-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: var(--suave); }
+  .chip { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #fff; border-radius: 6px; padding: 3px 8px; }
+  .decision h3 { font-family: var(--f-titulo); font-size: 22px; line-height: 1.22; margin: 10px 0 10px; }
+  .porque { margin: 0 0 6px; padding: 10px 12px; border-radius: 12px; background: var(--ambar-fondo); color: var(--texto); font-size: 16px; }
+  .porque b { color: var(--ambar); }
+  .porque.revision { background: var(--rojo-fondo); }
+  .porque.revision b { color: var(--rojo); }
+  .ver-mas { background: none; border: 0; padding: 8px 0; min-height: 44px; color: var(--rojo); font-weight: 650; cursor: pointer; }
+  .escribiendo { display: flex; align-items: center; gap: 10px; padding: 12px; border-radius: 12px; background: var(--verde-fondo); color: var(--verde); font-weight: 600; font-size: 15.5px; margin-top: 6px; }
+  .rueda { width: 20px; height: 20px; border: 3px solid currentColor; border-top-color: transparent; border-radius: 50%; animation: gira .9s linear infinite; flex: none; }
+  @keyframes gira { to { transform: rotate(360deg); } }
+
+  .acciones { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+  .boton { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 56px; padding: 0 14px; border-radius: 14px;
+    border: 1.5px solid var(--linea); background: var(--papel); color: var(--texto); font-size: 17px; font-weight: 700; cursor: pointer; text-decoration: none; text-align: center; line-height: 1.15; }
+  .boton:active { transform: scale(.98); }
+  .boton.principal { grid-column: 1 / -1; background: var(--rojo); border-color: var(--rojo); color: #fff; box-shadow: 0 2px 0 var(--rojo-oscuro); }
+  .boton.verde { background: var(--verde); border-color: var(--verde); color: #fff; }
+  .boton.suave { background: var(--rojo-fondo); border-color: transparent; color: var(--rojo); }
+  .boton.ancho { width: 100%; }
+  .boton.chico { min-height: 46px; font-size: 15.5px; }
+  .vacio { text-align: center; padding: 22px 12px; }
+  .vacio .gran { font-size: 40px; line-height: 1; margin-bottom: 8px; color: var(--verde); }
+  .hechas { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 14.5px; color: var(--suave); margin: 8px 4px 0; }
+  .hechas button { background: none; border: 0; color: var(--rojo); font-weight: 650; min-height: 40px; cursor: pointer; }
+
+  /* 2. ¿Anda todo?: el semáforo. */
+  .semaforo { display: grid; grid-template-columns: 52px 1fr; gap: 12px 14px; align-items: center; }
+  .luz { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; font-size: 26px; font-weight: 800; color: #fff; }
+  .luz.verde { background: #1E8A6E; } .luz.amarillo { background: #D79A10; } .luz.rojo { background: #C7381C; }
+  .semaforo .que { font-weight: 750; font-size: 18.5px; line-height: 1.25; }
+  .semaforo .detalle { font-size: 15px; color: var(--suave); margin-top: 2px; }
+  .semaforo .boton { grid-column: 1 / -1; }
+  .cambiar-estado { font-size: 13px; color: var(--suave); margin: 8px 2px 0; }
+  .cambiar-estado button { background: none; border: 0; color: var(--suave); text-decoration: underline; padding: 4px; min-height: 32px; cursor: pointer; }
+
+  /* 3. Números del día. */
+  .cifras { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .cifra { background: var(--papel); border: 1px solid var(--linea); border-radius: 14px; padding: 12px 14px; box-shadow: var(--sombra); }
+  .cifra .n { font-size: 30px; font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .cifra .t { font-size: 13.5px; color: var(--suave); }
+  .cifra .d { font-size: 13px; font-weight: 700; color: var(--verde); }
+  .frase { margin: 10px 2px 0; font-size: 16px; }
+  .enlace { display: inline-flex; align-items: center; min-height: 44px; background: none; border: 0; color: var(--rojo); font-weight: 650; padding: 0; cursor: pointer; }
+
+  /* Listas (Notas, Más). */
+  .buscador { width: 100%; min-height: 52px; padding: 0 14px; border-radius: 14px; border: 1.5px solid var(--linea); background: var(--papel); font-size: 17px; }
+  .filtros { display: flex; gap: 8px; overflow-x: auto; margin: 10px -16px 12px; padding: 0 16px; scrollbar-width: none; }
+  .filtros button { flex: none; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1.5px solid var(--linea); background: var(--papel); font-size: 15px; font-weight: 600; cursor: pointer; }
+  .filtros button[aria-pressed="true"] { background: var(--tinta); border-color: var(--tinta); color: #fff; }
+  :root[data-theme="dark"] .filtros button[aria-pressed="true"] { background: var(--texto); color: var(--fondo); }
+  .lista { list-style: none; margin: 0; padding: 0; background: var(--papel); border: 1px solid var(--linea); border-radius: var(--radio); box-shadow: var(--sombra); overflow: hidden; }
+  .lista li + li { border-top: 1px solid var(--linea); }
+  .fila { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px; width: 100%; min-height: 64px; padding: 12px 14px; background: none; border: 0; text-align: left; cursor: pointer; }
+  .fila .tt { font-weight: 650; font-size: 16.5px; line-height: 1.3; }
+  .fila .mm { font-size: 13.5px; color: var(--suave); margin-top: 3px; }
+  .fila .fl { color: var(--suave); font-size: 22px; }
+  .icono-fila { display: grid; grid-template-columns: 40px 1fr auto; }
+  .icono-fila .ic { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: var(--fondo); font-size: 20px; }
+  .globo { display: inline-block; min-width: 22px; padding: 1px 7px; border-radius: 999px; background: var(--rojo); color: #fff; font-size: 12.5px; font-weight: 800; text-align: center; margin-left: 6px; vertical-align: 2px; }
+  .globo.gris { background: var(--suave); }
+  .atajos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 18px; }
+  .atajos .boton { min-height: 76px; flex-direction: column; gap: 4px; font-size: 16px; }
+  .atajos .boton span { font-size: 24px; }
+  .titulo-grupo { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--suave); margin: 20px 4px 8px; }
+
+  /* Una nota abierta. */
+  .texto-nota { background: var(--papel); border: 1px solid var(--linea); border-radius: var(--radio); padding: 16px; }
+  .texto-nota .tit { font-family: var(--f-titulo); font-weight: 800; font-size: 21px; line-height: 1.25; margin: 0 0 8px; }
+  .texto-nota .baj { font-weight: 650; margin: 0 0 10px; }
+  .texto-nota .cue { white-space: pre-line; margin: 0; }
+  .caja { background: var(--papel); border: 1px solid var(--linea); border-radius: 14px; padding: 12px 14px; margin: 10px 0; font-size: 15.5px; }
+  .caja .medio { font-weight: 700; }
+  .ok-verif { color: var(--verde); font-weight: 650; font-size: 15px; margin: 10px 2px; }
+  details.plegado { margin: 10px 0; }
+  details.plegado summary { min-height: 44px; display: flex; align-items: center; font-weight: 650; color: var(--rojo); cursor: pointer; }
+  .barra-abajo { position: fixed; left: 0; right: 0; bottom: 0; z-index: 9; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: var(--papel); border-top: 1px solid var(--linea); box-shadow: 0 -4px 16px rgba(0,0,0,.08); }
+  .barra-abajo .boton { min-height: 56px; }
+  .barra-abajo .boton.principal { grid-column: auto; }
+  .barra-abajo.una .boton { grid-column: 1 / -1; }
+  label { display: block; font-weight: 650; font-size: 14.5px; margin: 14px 0 6px; }
+  input[type=text], textarea, select { width: 100%; padding: 12px 14px; border: 1.5px solid var(--linea); border-radius: 12px; background: var(--papel); font-size: 17px; }
+  textarea { min-height: 120px; line-height: 1.5; resize: vertical; }
+  textarea.largo { min-height: 260px; }
+  .ayuda { font-size: 13.5px; color: var(--suave); margin: 4px 2px; }
+
+  /* La barra de abajo: tres lugares. */
+  .pestanas { position: fixed; left: 0; right: 0; bottom: 0; z-index: 8; display: grid; grid-template-columns: repeat(3, 1fr);
+    background: var(--papel); border-top: 1px solid var(--linea); padding-bottom: env(safe-area-inset-bottom); box-shadow: 0 -4px 16px rgba(0,0,0,.06); }
+  .pestanas button { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 64px; border: 0; background: none; color: var(--suave); font-size: 13px; font-weight: 700; cursor: pointer; }
+  .pestanas svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+  .pestanas button[aria-current="page"] { color: var(--rojo); box-shadow: inset 0 3px 0 var(--rojo); }
+  .pestanas .globo { position: absolute; top: 6px; left: calc(50% + 6px); margin: 0; }
+
+  /* Hojas que suben desde abajo (¿qué hago?, motivo de retiro) y el aviso con Deshacer. */
+  .fondo-hoja { position: fixed; inset: 0; z-index: 20; background: rgba(0,0,0,.45); display: flex; align-items: flex-end; }
+  .hoja { width: 100%; max-height: 88vh; overflow: auto; background: var(--papel); border-radius: 20px 20px 0 0; padding: 10px 16px calc(16px + env(safe-area-inset-bottom)); animation: sube .18s ease-out; }
+  @keyframes sube { from { transform: translateY(30px); opacity: .5; } }
+  .hoja .asa { width: 44px; height: 5px; border-radius: 3px; background: var(--linea); margin: 0 auto 12px; }
+  .hoja h2 { font-family: var(--f-titulo); font-size: 22px; margin: 0 0 6px; }
+  .hoja ol { padding-left: 22px; margin: 8px 0 14px; }
+  .hoja ol li { margin: 8px 0; }
+  .hoja .boton { width: 100%; margin-top: 10px; }
+  .opciones { display: grid; gap: 8px; margin: 10px 0; }
+  .opciones .boton { margin: 0; justify-content: flex-start; }
+  .aviso { position: fixed; left: 12px; right: 12px; bottom: calc(76px + env(safe-area-inset-bottom)); z-index: 30; display: flex; align-items: center; gap: 10px;
+    background: var(--tinta); color: #fff; border-radius: 14px; padding: 10px 10px 10px 16px; box-shadow: 0 8px 26px rgba(0,0,0,.3); font-size: 15.5px; }
+  :root[data-theme="dark"] .aviso { background: #2C3138; }
+  .aviso .tx { flex: 1; }
+  .aviso button { flex: none; min-height: 44px; padding: 0 14px; border-radius: 10px; border: 0; background: #fff; color: var(--tinta); font-weight: 800; cursor: pointer; }
+  .tema { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; padding: 4px; background: var(--linea); border-radius: 14px; }
+  .tema button { min-height: 44px; border: 0; border-radius: 10px; background: transparent; font-weight: 650; color: var(--suave); cursor: pointer; }
+  .tema button[aria-pressed="true"] { background: var(--papel); color: var(--texto); box-shadow: var(--sombra); }
+</style>
+</head>
+<body>
+<header class="barra" id="barra"></header>
+<div class="prototipo">Prototipo: datos inventados. Nada de lo que toques se guarda.</div>
+<main id="app"></main>
+<nav class="pestanas" id="pestanas" aria-label="Lugares del panel"></nav>
+<div id="capa"></div>
+<noscript><p style="padding:16px">El prototipo necesita JavaScript.</p></noscript>
+<script>
+'use strict';
+// ------------------------------------------------------------------ datos inventados (ningún nombre real de personas, ni menores, ni víctimas)
+const CUERPO = 'El Concejo Deliberante tratará el martes un pedido de informes sobre la licitación del nuevo alumbrado LED, según el orden del día publicado por el cuerpo.\n\nEl bloque opositor pide conocer cuántas empresas se presentaron y por qué se eligió a la ganadora. Desde el oficialismo respondieron que el proceso "fue público y está en la página del Municipio".\n\nLa obra prevé cambiar 1.200 luminarias en los barrios del sur de la ciudad durante el primer semestre de 2027.';
+const COLA_INICIAL = [
+  { id: 'a1', tipo: 'delicada', seccion: 'Política', hace: 'hace 25 min', medios: 2, oficial: 1,
+    titulo: 'La oposición pide informes por la licitación del alumbrado LED',
+    porque: 'Acusa a alguien ("irregularidades").', mirar: 'Antes de publicar vas a leer el texto: fijate que la acusación diga quién la hace.',
+    fuentes: [['Un medio de Balcarce', 'El bloque opositor presentó un pedido de informes y habló de "posibles irregularidades" en la licitación.'], ['Concejo Deliberante (oficial)', 'Orden del día de la sesión del martes: pedido de informes sobre la licitación de alumbrado.']],
+    texto: { titulo: 'El Concejo tratará un pedido de informes sobre la licitación del alumbrado LED', bajada: 'Lo presentó la oposición, que pide saber cuántas empresas se presentaron. El oficialismo dice que el proceso fue público.', cuerpo: CUERPO } },
+  { id: 'a2', tipo: 'espera', seccion: 'Economía', hace: 'hace 1 h', medios: 2, oficial: 0,
+    titulo: 'Las naftas vuelven a subir desde este viernes',
+    porque: 'Es de afuera y la contaron 2 medios (pide 3).', mirar: 'Si te parece importante para Balcarce, publicala.',
+    fuentes: [['Un medio nacional', 'Las petroleras anunciaron un aumento promedio del 3 % desde el viernes.'], ['Otro medio nacional', 'Nueva suba de combustibles: cuánto cuesta llenar el tanque.']] },
+  { id: 'a3', tipo: 'espera', seccion: 'Cultura y agenda', hace: 'hace 2 h', medios: 1, oficial: 0,
+    titulo: 'Sortean entradas para la Fiesta del Postre entre quienes compartan una publicación',
+    porque: 'Parece una promoción ("sorteo"), no una noticia.', mirar: 'Lo normal es descartarla.',
+    fuentes: [['Una radio de Balcarce', 'Participá del sorteo de dos entradas: compartí la publicación y etiquetá a un amigo.']] },
+  { id: 'a4', tipo: 'sin-cuerpo', seccion: 'Balcarce', hace: 'hace 3 h', medios: 3, oficial: 1,
+    titulo: 'Cortan el agua el jueves en el barrio Norte por obras en la red',
+    porque: 'La IA no pudo escribirla: lo intentó 3 veces y el verificador la rechazó (copiaba demasiado de la fuente).', mirar: 'Sale si alguien la escribe. Es útil para los vecinos.',
+    fuentes: [['Obras Sanitarias (oficial)', 'El jueves de 8 a 14 se interrumpe el servicio entre las calles 21 y 27 por el cambio de una válvula.']] },
+  { id: 'a5', tipo: 'revision', seccion: 'Deportes', hace: 'publicada hace 5 h', medios: 2, oficial: 0,
+    titulo: 'El básquet local cierra la fase regular con una victoria',
+    porque: 'La revisión de la IA marcó algo en esta nota ya publicada.', mirar: 'El título dice "este sábado", pero el partido fue el sábado pasado.',
+    fuentes: [['Un medio de Balcarce', 'Con un gran último cuarto, el equipo ganó 78 a 70 y terminó tercero.']] },
+];
+const PUBLICADAS = [
+  { id: 'p1', seccion: 'Balcarce', titulo: 'La Municipalidad abre la inscripción a la Expo Balcarce', hora: '21:40', redes: 'En Facebook' },
+  { id: 'p2', seccion: 'Fútbol', titulo: 'Ferroviarios gana el clásico y queda puntero', hora: '20:15', redes: '' },
+  { id: 'p3', seccion: 'Política', titulo: 'El Concejo aprueba el presupuesto 2027', hora: '19:02', redes: '', corregida: true },
+  { id: 'p4', seccion: 'Balcarce', titulo: 'La Cooperativa anuncia un corte de luz para el miércoles', hora: '17:30', redes: 'En la cola de las redes' },
+  { id: 'p5', seccion: 'Balcarce', titulo: 'Anuncian heladas para el fin de semana', hora: '15:48', redes: 'En Facebook' },
+  { id: 'p6', seccion: 'Automovilismo', titulo: 'El Autódromo confirma la fecha del Turismo Carretera', hora: '13:20', redes: '' },
+  { id: 'p7', seccion: 'Agro', titulo: 'Productores piden mejorar los caminos rurales', hora: '11:05', redes: '' },
+  { id: 'p8', seccion: 'Cultura y agenda', titulo: 'Abre la inscripción a los talleres culturales de octubre', hora: '09:30', redes: '' },
+  { id: 'p9', seccion: 'Argentina', titulo: 'Rige el nuevo calendario de vacunación para adultos', hora: 'ayer', redes: '', retirada: true, motivo: 'Estaba repetida' },
+];
+const SISTEMA = {
+  verde: { luz: '✓', que: 'Todo anda', detalle: 'La web se actualizó hace 12 min. Las redes salieron a horario: 4 de 6, la próxima a las 20:30.' },
+  amarillo: { luz: '!', que: 'El video de las 15:00 no salió', detalle: 'La web anda bien. Falló la subida a Instagram; el video quedó guardado.',
+    pasos: ['Tocá "Reintentar el video": lo sube de nuevo, no gasta voz y tarda unos 3 minutos.', 'Si vuelve a fallar, no hagas nada más: mañana sale normal. Copiá el aviso y mandáselo a Claude para que lo mire.'],
+    botones: [['Reintentar el video (no gasta voz)', 'reintentar'], ['Copiar el aviso para Claude', 'copiar']] },
+  rojo: { luz: '✕', que: 'La web no se actualiza hace 2 horas', detalle: 'Las notas nuevas no están saliendo. Lo que ya está publicado se sigue viendo.',
+    pasos: ['Tocá "Actualizar la web ahora". En unos 8 minutos este cartel debería volver a verde.', 'Si sigue en rojo, el reloj que dispara todo puede estar parado: copiá el aviso y mandáselo a Claude.', 'No hace falta prender la PC.'],
+    botones: [['Actualizar la web ahora', 'actualizar'], ['Copiar el aviso para Claude', 'copiar']] },
+};
+const SECCION_COLOR = { Balcarce: 'balcarce', Política: 'politica', Policiales: 'policiales', Fútbol: 'futbol', Deportes: 'deportes', Automovilismo: 'automovilismo', Agro: 'agro', Economía: 'economia', 'Cultura y agenda': 'cultura', Tecnología: 'tecnologia', Argentina: 'pais' };
+const SECCIONES = Object.keys(SECCION_COLOR);
+
+// ------------------------------------------------------------------ estado
+const E = { cola: COLA_INICIAL.map((n) => ({ ...n, estado: 'nueva' })), hechas: [], sistema: 'verde', filtro: 'hoy', q: '', publicadas: PUBLICADAS.map((n) => ({ ...n })), tema: 'auto', cargando: true };
+const app = document.getElementById('app');
+const esc = (t) => String(t ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const chip = (s) => `<span class="chip" style="background:var(--s-${SECCION_COLOR[s] ?? 'pais'})">${esc(s)}</span>`;
+const buscarEnCola = (id) => E.cola.find((n) => n.id === id);
+const buscarPublicada = (id) => E.publicadas.find((n) => n.id === id);
+const pendientes = () => E.cola.filter((n) => n.estado !== 'hecha');
+
+// ------------------------------------------------------------------ la barra de arriba y la de abajo
+const ICONOS = {
+  hoy: '<svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7"/><path d="M6 10v9h12v-9"/></svg>',
+  notas: '<svg viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M9 9h6M9 13h6"/></svg>',
+  mas: '<svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></svg>',
+};
+function barra(titulo = null) {
+  const b = document.getElementById('barra');
+  // La píldora de arriba dice, en cualquier pantalla, si anda todo (el color del semáforo); tocándola se va al bloque 2 de Hoy.
+  const pild = { verde: 'Todo anda', amarillo: 'Hay algo para mirar', rojo: 'Algo falla' }[E.sistema];
+  const estado = E.cargando ? '<span class="aldia cargando" aria-live="polite"><i></i>Actualizando…</span>' : `<button type="button" class="aldia ${E.sistema}" data-accion="ir-semaforo" aria-live="polite"><i></i>${pild}</button>`;
+  b.innerHTML = titulo
+    ? `<button class="volver" type="button" data-ir="atras">← Volver</button><span class="espacio"></span>${estado}`
+    : `<span class="logo">Radar <span>Balcarce</span></span><span class="espacio"></span>${estado}`;
+}
+function pestanas(actual) {
+  const n = pendientes().length;
+  const nav = document.getElementById('pestanas');
+  nav.hidden = !actual;
+  if (!actual) return;
+  const item = (id, t, globo = '') => `<button type="button" data-ir="${id}" ${actual === id ? 'aria-current="page"' : ''}>${ICONOS[id]}${globo}${t}</button>`;
+  nav.innerHTML = item('hoy', 'Hoy', n ? `<span class="globo">${n}</span>` : '') + item('notas', 'Notas') + item('mas', 'Más', '<span class="globo">2</span>');
+}
+
+// ------------------------------------------------------------------ HOY
+function bloqueDecision() {
+  const lista = pendientes();
+  // Primero lo que ya escribió la IA y espera que lo leas; después lo nuevo; al final lo que la IA está escribiendo.
+  const orden = { lista: 0, nueva: 1, escribiendo: 2 };
+  lista.sort((a, b) => orden[a.estado] - orden[b.estado]);
+  const n = lista[0];
+  const hechasTxt = E.hechas.length ? `<div class="hechas"><span>Ya decidiste ${E.hechas.length} hoy.</span><button type="button" data-ir="hechas">Ver o deshacer</button></div>` : '';
+  if (!n) {
+    return `<section class="bloque" aria-labelledby="b1"><div class="bloque-cabeza"><h2 id="b1">1 · Tu decisión</h2></div>
+      <div class="tarjeta vacio"><div class="gran">✓</div><strong>No hay nada esperando tu decisión.</strong><p class="sub" style="margin:6px 0 0">Si llega algo, aparece acá.</p></div>${hechasTxt}</section>`;
+  }
+  let cuerpo;
+  if (n.estado === 'escribiendo') {
+    cuerpo = `<div class="escribiendo"><span class="rueda"></span>La IA la está escribiendo (1 minuto). Seguí con la próxima: te aviso.</div>`;
+  } else if (n.estado === 'lista') {
+    cuerpo = `<p class="porque"><b>Ya la escribió la IA.</b> Es un tema delicado: leela antes de que salga.</p>
+      <div class="acciones"><button class="boton principal" type="button" data-ir="leer/${n.id}">Leer y publicar</button></div>`;
+  } else {
+    const botones = {
+      delicada: [['Descartar', 'descartar', 'suave'], ['Editar', 'editar', ''], ['Publicar', 'publicar', 'principal']],
+      espera: [['Descartar', 'descartar', 'suave'], ['Editar', 'editar', ''], ['Publicar', 'publicar', 'principal']],
+      'sin-cuerpo': [['Dejarla', 'descartar', 'suave'], ['Escribirla yo', 'editar', ''], ['Que la IA la intente de nuevo', 'publicar', 'principal']],
+      revision: [['Está bien así', 'descartar', ''], ['Corregir', 'editar', 'principal']],
+    }[n.tipo];
+    const revision = n.tipo === 'revision';
+    cuerpo = `<p class="porque${revision ? ' revision' : ''}"><b>${revision ? 'Revisá:' : 'Espera porque:'}</b> ${esc(revision ? n.mirar : n.porque)}</p>
+      ${revision ? '' : `<p class="sub" style="margin:6px 2px 0">${esc(n.mirar)}</p>`}
+      <button class="ver-mas" type="button" data-ir="nota/${n.id}">Ver qué contó cada medio ›</button>
+      <div class="acciones">${botones.map(([t, a, c]) => `<button type="button" class="boton ${c}" data-accion="${a}" data-id="${n.id}">${esc(t)}</button>`).join('')}</div>`;
+  }
+  return `<section class="bloque" aria-labelledby="b1">
+    <div class="bloque-cabeza"><h2 id="b1">1 · Tu decisión</h2><span class="cuenta">${lista.length === 1 ? 'la única' : `1 de ${lista.length}`}</span></div>
+    <article class="tarjeta decision" style="--franja:var(--s-${SECCION_COLOR[n.seccion]})">
+      <div class="linea-meta">${chip(n.seccion)}<span>${esc(n.hace)}</span><span>· ${n.medios} ${n.medios === 1 ? 'medio' : 'medios'}${n.oficial ? ', 1 oficial' : ''}</span></div>
+      <h3>${esc(n.titulo)}</h3>${cuerpo}
+    </article>${hechasTxt}</section>`;
+}
+function bloqueSistema() {
+  const s = SISTEMA[E.sistema];
+  return `<section class="bloque" aria-labelledby="b2">
+    <div class="bloque-cabeza"><h2 id="b2">2 · ¿Anda todo?</h2></div>
+    <div class="tarjeta semaforo" role="status">
+      <div class="luz ${E.sistema}" aria-hidden="true">${s.luz}</div>
+      <div><div class="que">${esc(s.que)}</div><div class="detalle">${esc(s.detalle)}</div></div>
+      ${s.pasos ? '<button type="button" class="boton principal" data-accion="que-hago">¿Qué hago?</button>' : ''}
+    </div>
+    <p class="cambiar-estado">Prototipo: ver cómo se ve <button type="button" data-accion="sistema" data-valor="verde">verde</button>·<button type="button" data-accion="sistema" data-valor="amarillo">amarillo</button>·<button type="button" data-accion="sistema" data-valor="rojo">rojo</button></p>
+  </section>`;
+}
+function bloqueNumeros() {
+  return `<section class="bloque" aria-labelledby="b3">
+    <div class="bloque-cabeza"><h2 id="b3">3 · Hoy en números</h2><span class="cuenta">hasta las 21:00</span></div>
+    <div class="cifras">
+      <div class="cifra"><div class="n">1.284</div><div class="t">personas entraron</div><div class="d">▲ 12 % que el jueves pasado</div></div>
+      <div class="cifra"><div class="n">2.910</div><div class="t">notas leídas</div></div>
+      <div class="cifra"><div class="n">23</div><div class="t">notas publicadas</div></div>
+      <div class="cifra"><div class="n">4</div><div class="t">posteos en redes</div></div>
+    </div>
+    <p class="frase">Lo más leído fue <strong>“La Cooperativa anuncia un corte de luz para el miércoles”</strong>. La mayoría llegó desde Facebook.</p>
+    <button type="button" class="enlace" data-ir="mas/numeros">Ver todos los números ›</button>
+  </section>`;
+}
+function vistaHoy() {
+  barra(); pestanas('hoy');
+  app.innerHTML = `<h1 style="margin-bottom:12px">Hoy, jueves 15</h1>${bloqueDecision()}${bloqueSistema()}${bloqueNumeros()}`;
+}
+
+// ------------------------------------------------------------------ una nota que espera (el detalle) y "leer y publicar"
+function vistaNota(id) {
+  const n = buscarEnCola(id);
+  if (!n) return ir('hoy');
+  barra('nota'); pestanas(null);
+  app.innerHTML = `<div class="linea-meta">${chip(n.seccion)}<span>${esc(n.hace)}</span></div>
+    <h1 style="margin-top:8px">${esc(n.titulo)}</h1>
+    <p class="porque"><b>Espera porque:</b> ${esc(n.porque)}</p><p class="sub">${esc(n.mirar)}</p>
+    <h2 class="titulo-grupo">Lo que contó cada medio (${n.fuentes.length})</h2>
+    ${n.fuentes.map(([m, r]) => `<div class="caja"><div class="medio">${esc(m)}</div><div>${esc(r)}</div><div class="ayuda">Leer la nota original ↗ (en el panel real abre la página del medio)</div></div>`).join('')}
+    <details class="plegado"><summary>Su recorrido</summary><p class="ayuda">Entró a las 21:58 desde 2 medios · el semáforo la frenó por la palabra "irregularidades" · nadie la tocó todavía.</p></details>
+    <div style="height:90px"></div>
+    <div class="barra-abajo"><button type="button" class="boton suave" data-accion="descartar" data-id="${n.id}">Descartar</button><button type="button" class="boton principal" data-accion="publicar" data-id="${n.id}">Publicar</button></div>`;
+  window.scrollTo(0, 0);
+}
+function vistaLeer(id) {
+  const n = buscarEnCola(id);
+  if (!n?.texto) return ir('hoy');
+  barra('leer'); pestanas(null);
+  app.innerHTML = `<h1>Leela antes de publicar</h1>
+    <p class="sub">La escribió la IA. Es un tema delicado: ${esc(n.mirar.replace(/^Antes de publicar vas a leer el texto: /, ''))}</p>
+    <p class="ok-verif">✓ El verificador no encontró nada que no esté en las fuentes.</p>
+    <div class="texto-nota"><p class="tit">${esc(n.texto.titulo)}</p><p class="baj">${esc(n.texto.bajada)}</p><p class="cue">${esc(n.texto.cuerpo)}</p></div>
+    <div style="height:90px"></div>
+    <div class="barra-abajo"><button type="button" class="boton" data-ir="editar/${n.id}">Corregir</button><button type="button" class="boton principal" data-accion="publicar-texto" data-id="${n.id}">Publicar así</button></div>`;
+  window.scrollTo(0, 0);
+}
+function vistaEditar(id) {
+  const n = buscarEnCola(id) ?? buscarPublicada(id);
+  if (!n) return ir('hoy');
+  barra('editar'); pestanas(null);
+  const t = n.texto ?? { titulo: n.titulo, bajada: 'Bajada de ejemplo: lo más importante en una o dos oraciones.', cuerpo: CUERPO };
+  app.innerHTML = `<h1>${buscarPublicada(id) ? 'Corregir la nota' : 'Editar antes de publicar'}</h1>
+    <p class="sub">${buscarPublicada(id) ? 'Se ve en la web en la próxima actualización. La dirección no cambia.' : 'Se publica recién cuando tocás "Publicar".'}</p>
+    <label for="t1">Título</label><input id="t1" type="text" value="${esc(t.titulo)}">
+    <label for="t2">Bajada</label><textarea id="t2">${esc(t.bajada)}</textarea>
+    <label for="t3">Cuerpo</label><textarea id="t3" class="largo">${esc(t.cuerpo)}</textarea>
+    <p class="ayuda" id="palabras"></p>
+    <label for="t4">Sección</label><select id="t4">${SECCIONES.map((s) => `<option ${s === n.seccion ? 'selected' : ''}>${esc(s)}</option>`).join('')}</select>
+    <div style="height:90px"></div>
+    <div class="barra-abajo una"><button type="button" class="boton principal" data-accion="guardar" data-id="${id}">${buscarPublicada(id) ? 'Guardar cambios' : 'Publicar'}</button></div>`;
+  const contar = () => { const p = document.getElementById('t3').value.trim().split(/\s+/).filter(Boolean).length; document.getElementById('palabras').textContent = `${p} palabras${p < 70 ? ' · con menos de 70 sale igual, porque la publicás vos' : ''}`; };
+  document.getElementById('t3').addEventListener('input', contar); contar();
+  window.scrollTo(0, 0);
+}
+function vistaHechas() {
+  barra('hechas'); pestanas(null);
+  app.innerHTML = `<h1>Lo que decidiste hoy</h1><p class="sub">Se puede deshacer hasta la próxima actualización de la web.</p>
+    ${E.hechas.length ? `<ul class="lista">${E.hechas.map((h) => `<li><div class="fila"><div><div class="tt">${esc(h.titulo)}</div><div class="mm">${esc(h.que)}</div></div><button class="boton chico" type="button" data-accion="deshacer" data-id="${h.id}">Deshacer</button></div></li>`).join('')}</ul>` : '<p class="vacio">Todavía nada.</p>'}`;
+}
+
+// ------------------------------------------------------------------ NOTAS (publicadas: corregir o retirar)
+function vistaNotas() {
+  barra(); pestanas('notas');
+  const q = E.q.toLowerCase();
+  const filtradas = E.publicadas.filter((n) => (E.filtro === 'retiradas' ? n.retirada : E.filtro === 'corregidas' ? n.corregida : !n.retirada) && (!q || `${n.titulo} ${n.seccion}`.toLowerCase().includes(q)));
+  const f = (id, t) => `<button type="button" data-accion="filtro" data-valor="${id}" aria-pressed="${E.filtro === id}">${t}</button>`;
+  app.innerHTML = `<h1>Notas publicadas</h1><p class="sub">Tocá una para corregirla o retirarla.</p>
+    <input class="buscador" id="buscar" type="search" placeholder="Buscar por título o sección" value="${esc(E.q)}" aria-label="Buscar una nota">
+    <div class="filtros">${f('hoy', 'Últimas 24 h')}${f('corregidas', 'Corregidas')}${f('retiradas', 'Retiradas')}</div>
+    ${filtradas.length ? `<ul class="lista">${filtradas.map((n) => `<li><button type="button" class="fila" data-ir="pub/${n.id}"><div><div class="tt">${esc(n.titulo)}</div><div class="mm">${chip(n.seccion)} ${esc(n.hora)}${n.redes ? ` · ${esc(n.redes)}` : ''}${n.corregida ? ' · corregida' : ''}${n.retirada ? ` · retirada: ${esc(n.motivo)}` : ''}</div></div><span class="fl">›</span></button></li>`).join('')}</ul>` : '<p class="vacio">Nada con eso. En el panel real, "Buscar también más atrás" trae el archivo.</p>'}`;
+  const b = document.getElementById('buscar');
+  b.addEventListener('input', () => { E.q = b.value; clearTimeout(vistaNotas.t); vistaNotas.t = setTimeout(() => { vistaNotas(); const c = document.getElementById('buscar'); c.focus(); c.setSelectionRange(c.value.length, c.value.length); }, 200); });
+}
+function vistaPublicada(id) {
+  const n = buscarPublicada(id);
+  if (!n) return ir('notas');
+  barra('pub'); pestanas(null);
+  app.innerHTML = `<div class="linea-meta">${chip(n.seccion)}<span>${esc(n.hora)}</span>${n.redes ? `<span>· ${esc(n.redes)}</span>` : ''}</div>
+    <div class="texto-nota" style="margin-top:10px"><p class="tit">${esc(n.titulo)}</p><p class="baj">Bajada de ejemplo: lo más importante en una o dos oraciones.</p><p class="cue">${esc(CUERPO)}</p></div>
+    <details class="plegado"><summary>Más opciones</summary>
+      <div class="opciones">
+        <button type="button" class="boton chico" data-accion="aviso" data-texto="La IA la está reescribiendo: te aviso cuando esté.">✨ Reescribir con IA</button>
+        <button type="button" class="boton chico" data-accion="aviso" data-texto="En la cola de las redes: sale en el próximo posteo que se pueda.">📣 Mandar también a las redes</button>
+        <button type="button" class="boton chico" data-accion="aviso" data-texto="En el panel real abre la nota en radarbalcarce.com.">↗ Ver en la web</button>
+      </div></details>
+    <div style="height:90px"></div>
+    ${n.retirada
+    ? `<div class="barra-abajo una"><button type="button" class="boton principal" data-accion="republicar" data-id="${n.id}">Volver a publicar</button></div>`
+    : `<div class="barra-abajo"><button type="button" class="boton suave" data-accion="retirar" data-id="${n.id}">Retirar</button><button type="button" class="boton principal" data-ir="editar/${n.id}">Corregir</button></div>`}`;
+  window.scrollTo(0, 0);
+}
+
+// ------------------------------------------------------------------ MÁS
+const MAS = [
+  ['Para mirar', [
+    ['fotos', '📷', 'Fotos que faltan', 'Notas sin foto y dónde buscarle una', '2'],
+    ['revision', '✓', 'Revisión de la IA', 'Lo que marcó en las notas publicadas', '1'],
+    ['redes', '📣', 'Redes de hoy', 'Qué salió, qué falta y qué cuenta cada repaso', ''],
+    ['numeros', '▮', 'Todos los números', 'Visitas, de dónde llegan, qué se lee', ''],
+  ]],
+  ['Para planificar', [
+    ['pistas', '🔎', 'Pistas abiertas', 'Lo que mandaste a investigar y en qué quedó', '●'],
+    ['fechas', '▦', 'Un día como hoy y feriados', 'El mes armado: aprobar, cambiar o sacar', ''],
+    ['contactos', '👥', 'Contactos', 'A quién pedirle fechas y quién respondió', ''],
+  ]],
+];
+const QUE_ES = {
+  fotos: 'Igual que la pestaña Fotos de hoy, pero sin la explicación larga arriba: cada nota sin foto, el porqué en una línea y un solo formulario (pegar la dirección de la imagen, el crédito, tildar que no tiene marca ni menores).',
+  revision: 'Lo que hoy es Revisión. Lo grave (un tema sensible) ya no se busca acá: aparece directamente en "Tu decisión", en Hoy.',
+  redes: 'Lo que hoy es la pestaña Redes, más corta: una fila por pieza con ✓, ⏳ o ✕; el detalle red por red y el botón "Reintentar" aparecen sólo al tocar una pieza que falló.',
+  numeros: 'Lo que hoy es Números, sin bajar el archivo entero (3 MB): los números ya vienen calculados.',
+  pistas: 'Lo que hoy es Pistas: la lista, el informe de cada una y "Hacer la nota".',
+  fechas: 'Lo que hoy es Fechas (mes armado, candidatas, feriados). Queda igual: se usa una vez por mes.',
+  contactos: 'Lo que hoy es Contactos. Queda igual.',
+  ayuda: 'Las preguntas de "Cómo funciona" de hoy, en una sola página. Sin "¿Qué es esto?" en cada pantalla: cada pantalla dice en una línea para qué sirve.',
+};
+function vistaMas() {
+  barra(); pestanas('mas');
+  const fila = ([id, ic, t, d, g]) => `<li><button type="button" class="fila icono-fila" data-ir="mas/${id}"><span class="ic" aria-hidden="true">${ic}</span><div style="padding-left:12px"><div class="tt">${esc(t)}${g ? `<span class="globo${g === '2' ? ' gris' : ''}">${esc(g)}</span>` : ''}</div><div class="mm">${esc(d)}</div></div><span class="fl">›</span></button></li>`;
+  app.innerHTML = `<h1>Más</h1>
+    <div class="atajos">
+      <button type="button" class="boton" data-ir="mas/pista"><span aria-hidden="true">🔎</span>Mandar una pista</button>
+      <button type="button" class="boton" data-ir="mas/foto"><span aria-hidden="true">📷</span>Sumar una foto</button>
+    </div>
+    ${MAS.map(([g, items]) => `<h2 class="titulo-grupo">${esc(g)}</h2><ul class="lista">${items.map(fila).join('')}</ul>`).join('')}
+    <h2 class="titulo-grupo">Este celular</h2>
+    <div class="tarjeta"><div style="font-weight:650;margin-bottom:8px">Colores de la pantalla</div>
+      <div class="tema" role="group" aria-label="Colores">${[['auto', 'Automático'], ['light', 'Claro'], ['dark', 'Oscuro']].map(([v, t]) => `<button type="button" data-accion="tema" data-valor="${v}" aria-pressed="${E.tema === v}">${t}</button>`).join('')}</div>
+      <button type="button" class="boton ancho" style="margin-top:12px" data-accion="aviso" data-texto="Pedido: en unos 8 minutos está en la web.">Actualizar la web ahora</button>
+      <button type="button" class="boton ancho" style="margin-top:10px" data-ir="mas/ayuda">Ayuda: cómo funciona</button>
+      <button type="button" class="boton suave ancho" style="margin-top:10px" data-accion="aviso" data-texto="En el panel real pregunta antes y borra la llave de este celular.">Salir de este celular</button>
+      <p class="ayuda" style="margin-top:10px">Entraste como Hernán. Cada decisión queda anotada con tu nombre.</p>
+    </div>`;
+}
+function vistaMasItem(id) {
+  barra('mas'); pestanas(null);
+  if (id === 'pista') {
+    app.innerHTML = `<h1>Mandar una pista</h1><p class="sub">Pegá un dato, un tuit o un enlace. La nube mira si lo cubrieron los medios y te avisa.</p>
+      <label for="pista">La pista</label><textarea id="pista" placeholder="Ej.: dicen que el lunes no hay clases por un paro"></textarea>
+      <p class="ayuda">Queda a la vista en GitHub: no pongas nombres de chicos ni de víctimas.</p>
+      <p class="ayuda">Más rápido: desde WhatsApp o X, "Compartir" → "Panel Radar" la trae acá sola.</p>
+      <div style="height:90px"></div><div class="barra-abajo una"><button type="button" class="boton principal" data-accion="mandar-pista">Mandar a investigar</button></div>`;
+    return;
+  }
+  if (id === 'foto') {
+    app.innerHTML = `<h1>Sumar una foto</h1><p class="sub">Elegí la nota. Las que no pueden llevar foto por una regla firme no aparecen.</p>
+      <ul class="lista"><li><button type="button" class="fila" data-accion="aviso" data-texto="En el panel real se abre el formulario de la foto de esa nota."><div><div class="tt">Productores piden mejorar los caminos rurales</div><div class="mm">${chip('Agro')} sus fuentes no tenían una foto sin marca</div></div><span class="fl">›</span></button></li>
+      <li><button type="button" class="fila" data-accion="aviso" data-texto="En el panel real se abre el formulario de la foto de esa nota."><div><div class="tt">El Autódromo confirma la fecha del Turismo Carretera</div><div class="mm">${chip('Automovilismo')} todavía no se le buscó</div></div><span class="fl">›</span></button></li></ul>`;
+    return;
+  }
+  const item = MAS.flatMap(([, x]) => x).find((x) => x[0] === id);
+  const titulo = id === 'ayuda' ? 'Ayuda: cómo funciona' : item?.[2] ?? 'Más';
+  app.innerHTML = `<h1>${esc(titulo)}</h1><div class="tarjeta"><p style="margin:0">${esc(QUE_ES[id] ?? '')}</p></div><p class="ayuda">En el prototipo esta pantalla no está armada: es la de hoy, ordenada como dice el plan.</p>`;
+}
+
+// ------------------------------------------------------------------ hojas y avisos
+function hoja(html) {
+  const capa = document.getElementById('capa');
+  capa.innerHTML = `<div class="fondo-hoja" data-accion="cerrar-hoja"><div class="hoja" role="dialog" aria-modal="true"><div class="asa"></div>${html}</div></div>`;
+}
+function cerrarHoja() { document.getElementById('capa').innerHTML = ''; }
+let reloj = null;
+function aviso(texto, deshacer = null) {
+  document.querySelector('.aviso')?.remove();
+  const a = document.createElement('div');
+  a.className = 'aviso'; a.setAttribute('role', 'status');
+  a.innerHTML = `<span class="tx">${esc(texto)}</span>${deshacer ? `<button type="button" data-accion="deshacer" data-id="${deshacer}">Deshacer</button>` : ''}`;
+  document.body.append(a);
+  clearTimeout(reloj); reloj = setTimeout(() => a.remove(), deshacer ? 7000 : 4000);
+}
+function hacer(id, que) {
+  const n = buscarEnCola(id);
+  if (!n) return;
+  n.estado = 'hecha';
+  E.hechas.unshift({ id, titulo: n.titulo, que });
+  aviso(`${que}.`, id);
+}
+
+// ------------------------------------------------------------------ navegación (el botón "atrás" del celular también vuelve)
+// Una pila propia (anda aunque el archivo se abra desde un visor que no deja cambiar la dirección) y, si se puede, una entrada en el historial por pantalla.
+const pila = ['hoy'];
+let empujados = 0;
+const actual = () => pila[pila.length - 1];
+function ir(destino) {
+  if (['hoy', 'notas', 'mas'].includes(destino)) pila.splice(0, pila.length, destino);
+  else if (actual() !== destino) {
+    pila.push(destino);
+    try { history.pushState({ destino }, ''); empujados += 1; } catch { /* sin historial: el botón Volver usa la pila */ }
+  }
+  mostrar();
+}
+function atras() { if (pila.length > 1) pila.pop(); else pila.splice(0, pila.length, 'hoy'); mostrar(); }
+window.addEventListener('popstate', () => { if (empujados > 0) empujados -= 1; atras(); });
+function mostrar() {
+  cerrarHoja();
+  const [lugar, id] = actual().split('/');
+  if (lugar === 'nota') return vistaNota(id);
+  if (lugar === 'leer') return vistaLeer(id);
+  if (lugar === 'editar') return vistaEditar(id);
+  if (lugar === 'hechas') return vistaHechas();
+  if (lugar === 'notas') return vistaNotas();
+  if (lugar === 'pub') return vistaPublicada(id);
+  if (lugar === 'mas') return id ? vistaMasItem(id) : vistaMas();
+  vistaHoy();
+}
+
+document.addEventListener('click', (ev) => {
+  const el = ev.target.closest('[data-ir],[data-accion]');
+  if (!el) return;
+  if (el.dataset.accion === 'cerrar-hoja' && ev.target !== el) return;
+  const { id, valor } = el.dataset;
+  if (el.dataset.ir === 'atras') { if (empujados > 0) history.back(); else atras(); return; }
+  if (el.dataset.ir) { ir(el.dataset.ir); if (['hoy', 'notas', 'mas'].includes(el.dataset.ir)) window.scrollTo(0, 0); return; }
+  const accion = el.dataset.accion;
+  const n = id ? buscarEnCola(id) : null;
+  if (accion === 'cerrar-hoja') cerrarHoja();
+  else if (accion === 'publicar') {
+    // La IA la escribe en segundo plano. Si no es delicada y el verificador no marca nada, sale sola; si es delicada, vuelve como "Leer y publicar".
+    n.estado = 'escribiendo';
+    aviso('La IA la está escribiendo. Seguí con la próxima: te aviso.');
+    ir('hoy'); vistaHoy();
+    setTimeout(() => {
+      if (n.estado !== 'escribiendo') return;
+      if (n.tipo === 'delicada') { n.estado = 'lista'; aviso('Lista para leer: es un tema delicado.'); }
+      else { n.estado = 'hecha'; E.hechas.unshift({ id: n.id, titulo: n.titulo, que: 'Publicada: sale en la web a las 23:00' }); aviso('Publicada: sale en la web a las 23:00.', n.id); }
+      if (actual() === 'hoy') vistaHoy();
+    }, 2500);
+  } else if (accion === 'publicar-texto') { hacer(id, 'Publicada: sale en la web a las 23:00'); ir('hoy'); }
+  else if (accion === 'descartar') {
+    hacer(id, n?.tipo === 'revision' ? 'Anotado: está bien así' : n?.tipo === 'sin-cuerpo' ? 'La dejamos: no sale' : 'Descartada');
+    ir('hoy'); vistaHoy();
+  } else if (accion === 'editar') ir(`editar/${id}`);
+  else if (accion === 'guardar') {
+    const p = buscarPublicada(id);
+    if (p) { p.corregida = true; p.titulo = document.getElementById('t1').value; aviso('Guardado: se ve en la web en la próxima actualización.'); if (empujados > 0) history.back(); else atras(); }
+    else { hacer(id, 'Publicada: sale en la web a las 23:00'); ir('hoy'); }
+  } else if (accion === 'deshacer') {
+    const x = buscarEnCola(id);
+    if (x) { x.estado = 'nueva'; E.hechas = E.hechas.filter((h) => h.id !== id); }
+    const p = buscarPublicada(id);
+    if (p) { p.retirada = false; delete p.motivo; }
+    document.querySelector('.aviso')?.remove();
+    aviso('Deshecho.');
+    mostrar();
+  } else if (accion === 'que-hago') {
+    const s = SISTEMA[E.sistema];
+    hoja(`<h2>Qué hacer</h2><p class="sub" style="margin:0">${esc(s.que)}.</p><ol>${s.pasos.map((p) => `<li>${esc(p)}</li>`).join('')}</ol>
+      ${s.botones.map(([t, a], i) => `<button type="button" class="boton ${i === 0 ? 'principal' : ''}" data-accion="${a}">${esc(t)}</button>`).join('')}
+      <button type="button" class="boton" data-accion="cerrar-hoja">Cerrar</button>`);
+  } else if (accion === 'reintentar') { cerrarHoja(); aviso('Reintentando: en unos 3 minutos se ve acá si salió.'); }
+  else if (accion === 'actualizar') { cerrarHoja(); aviso('Pedido: en unos 8 minutos está en la web.'); }
+  else if (accion === 'copiar') { cerrarHoja(); aviso('Copiado: pegalo en el chat con Claude.'); }
+  else if (accion === 'sistema') { E.sistema = valor; vistaHoy(); }
+  else if (accion === 'ir-semaforo') { ir('hoy'); setTimeout(() => document.getElementById('b2')?.scrollIntoView({ block: 'center', behavior: 'smooth' }), 50); }
+  else if (accion === 'filtro') { E.filtro = valor; vistaNotas(); }
+  else if (accion === 'retirar') {
+    hoja(`<h2>¿Por qué la retirás?</h2><p class="sub" style="margin:0">Sale de la web en la próxima actualización. Se puede deshacer.</p>
+      <div class="opciones">${['Es falsa o está mal', 'Está repetida', 'La pidió sacar una persona', 'Ya no vale (se suspendió, cambió)'].map((m) => `<button type="button" class="boton" data-accion="retirar-ok" data-id="${id}" data-valor="${esc(m)}">${esc(m)}</button>`).join('')}</div>
+      <label for="otro">Otro motivo</label><input id="otro" type="text" placeholder="Escribilo acá">
+      <button type="button" class="boton principal" data-accion="retirar-ok" data-id="${id}" data-valor="">Retirar con este motivo</button>
+      <button type="button" class="boton" data-accion="cerrar-hoja">Cancelar</button>`);
+  } else if (accion === 'retirar-ok') {
+    const motivo = valor || document.getElementById('otro')?.value.trim();
+    if (!motivo) { document.getElementById('otro').focus(); return; }
+    const p = buscarPublicada(id);
+    p.retirada = true; p.motivo = motivo;
+    cerrarHoja(); ir('notas'); aviso('Retirada: sale de la web a las 23:00.', id);
+  } else if (accion === 'republicar') { const p = buscarPublicada(id); p.retirada = false; aviso('Vuelve a la web a las 23:00.'); ir('notas'); }
+  else if (accion === 'mandar-pista') {
+    const t = document.getElementById('pista').value.trim();
+    if (t.length < 15) { aviso('Pegá al menos una frase.'); return; }
+    aviso('Mandada: la nube la investiga y te aviso en "Pistas abiertas".'); ir('mas');
+  } else if (accion === 'tema') {
+    E.tema = valor;
+    if (valor === 'auto') document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme', valor);
+    vistaMas();
+  } else if (accion === 'aviso') aviso(el.dataset.texto);
+});
+
+// Al abrir: se muestra al instante lo guardado y se actualiza solo (acá, simulado).
+mostrar();
+setTimeout(() => { E.cargando = false; barra(['hoy', 'notas', 'mas'].includes(actual()) ? null : 'x'); }, 1200);
+</script>
+</body>
+</html>
