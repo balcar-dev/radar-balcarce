@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-16T01:01:54.386Z",
+ "generado": "2026-10-16T02:05:24.909Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -112,38 +112,6 @@
    "intentos": 4,
    "motivo": "título o bajada: 2 problemas (forma, numero): el copete trae un escape sin decodificar (barra-u…): texto mal escrito, se vuelve a pedir",
    "maximo": 4
-  },
-  {
-   "id": "m2d0x8",
-   "titulo": "U2 confirmó dos shows en River con Beck como invitado especial",
-   "copete": "",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-15T16:13:39.000Z",
-   "fuentes": [
-    {
-     "medio": "El Marplatense",
-     "enlace": "https://www.elmarplatense.com/u2-confirmo-dos-shows-en-river-con-beck-como-invitado-especial",
-     "fecha": "2026-10-15T18:55:38.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/musica/recitales/2026/10/15/beck-sera-el-encargado-de-abrir-los-shows-de-u2-en-river-cuando-seran-los-shows-y-que-canciones-podria-tocar/",
-     "fecha": "2026-10-15T19:38:08.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/espectaculos/personajes/u2-vuelve-a-la-argentina-cuando-y-donde-tocara-y-que-musico-tendran-de-invitado-nid15102026/",
-     "fecha": "2026-10-15T16:13:39.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/15/u2-vuelve-a-la-argentina-y-promete-el-show-mas-grande-del-mundo/",
-     "fecha": "2026-10-15T16:57:09.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "título o bajada: 1 problema (relleno): el copete tiene una frase de relleno sin dato: \"en el marco de\"",
-   "maximo": 3
   }
  ]
 }
