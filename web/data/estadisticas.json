@@ -3108,8 +3108,6 @@
       }
     },
     "2026-10-15": {
-      "notas": {},
-      "paginas": {},
       "horas": [
         0,
         0,
@@ -3119,27 +3117,72 @@
         0,
         0,
         0,
+        13,
+        0,
+        29,
+        0,
+        7,
+        6,
+        0,
+        10,
+        1,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        2,
+        2,
+        18,
+        41,
         0
       ],
-      "dispositivos": {},
-      "visitas": 0,
-      "vistas": 0,
-      "referentes": {}
+      "visitas": 74,
+      "vistas": 129,
+      "notas": {
+        "8q3d25": 14,
+        "vt870i": 8,
+        "11lwkfl": 6,
+        "pel8ok": 5,
+        "mly1kv": 5,
+        "1ylxz2o": 5,
+        "1v9h1ps": 4,
+        "wzunxc": 4,
+        "1uvhput": 4,
+        "9s0dkq": 4,
+        "lf9d6b": 4,
+        "1hfz3co": 3,
+        "9y985f": 2,
+        "u0hcbv": 2,
+        "br4g49": 2,
+        "1s8weuc": 2,
+        "1e22az3": 2,
+        "1j6q0tv": 1
+      },
+      "paginas": {
+        "/": 19,
+        "/seccion/cultura": 9,
+        "/seccion/policiales": 6,
+        "/seccion/economia": 5,
+        "/seccion/argentina": 4,
+        "/seccion/agro": 4,
+        "/clima": 2,
+        "/agenda": 2,
+        "/seccion/balcarce": 1
+      },
+      "referentes": {
+        "facebook.com": 64,
+        "directo": 7,
+        "google.com": 3
+      },
+      "dispositivos": {
+        "mobile": 76,
+        "desktop": 53
+      },
+      "paises": {
+        "US": 61,
+        "AR": 52,
+        "IE": 11,
+        "SE": 4,
+        "TW": 1
+      }
     }
   }
 }
