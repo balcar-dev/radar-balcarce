@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T17:30:33.491Z",
- "portada": 50,
- "archivo": 1173,
+ "generado": "2026-10-16T17:38:26.125Z",
+ "portada": 48,
+ "archivo": 1176,
  "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-16T17:30:33.536Z",
+  "generado": "2026-10-16T17:38:26.168Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 46,
     "notas": [
      {
       "id": "npazulcervantino",
@@ -134,19 +134,19 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "1jdsdep",
-      "titulo": "La Dirección de Juventud firma un acuerdo para vender entradas online",
+      "id": "1qtfiwu",
+      "titulo": "La Subsecretaría de Deporte mantiene las clases de yoga con vacantes",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "x3s2ug",
+      "titulo": "El Ministerio de Economía informa un superávit primario de un billón y medio en septiembre",
+      "seccion": "Economía"
      },
      {
       "id": "7rb12z",
       "titulo": "Lautaro Martínez cuestiona las dudas sobre el compromiso del seleccionado",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "32f6mu",
-      "titulo": "Lando Norris califica a Franco Colapinto como un buen amigo",
-      "seccion": "Automovilismo"
      }
     ]
    },
@@ -157,26 +157,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 50,
     "notas": [
      {
-      "id": "1o0mwr9",
-      "titulo": "Gabriel Petruccelli pide informes por las excavaciones en el Cerro El Triunfo",
-      "seccion": "Balcarce"
+      "id": "1xyp583",
+      "titulo": "El Museo Histórico Municipal expone el Proyecto Cruz del Centenario",
+      "seccion": "Cultura y agenda"
      },
      {
-      "id": "1mfnr70",
-      "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
+      "id": "gizbaj",
+      "titulo": "Max Verstappen choca al argentino Ezequiel Pérez Companc en Portugal",
       "seccion": "Deportes"
+     },
+     {
+      "id": "32f6mu",
+      "titulo": "Lando Norris califica a Franco Colapinto como un buen amigo",
+      "seccion": "Automovilismo"
      },
      {
       "id": "n6v2wu",
       "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1vrfi9w",
-      "titulo": "Proyecto 10 repasa su historia social",
       "seccion": "Balcarce"
      }
     ]
@@ -207,9 +207,15 @@
    ],
    "cola": [
     {
-     "id": "1o0mwr9",
-     "titulo": "Gabriel Petruccelli pide informes por las excavaciones en el Cerro El Triunfo",
+     "id": "1qtfiwu",
+     "titulo": "La Subsecretaría de Deporte mantiene las clases de yoga con vacantes",
      "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "1xyp583",
+     "titulo": "El Museo Histórico Municipal expone el Proyecto Cruz del Centenario",
+     "seccion": "Cultura y agenda",
      "marcada": false
     }
    ],
