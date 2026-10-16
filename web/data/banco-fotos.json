@@ -14546,16 +14546,16 @@
   "cuando": "2026-10-14T21:32:34.868Z"
  },
  "1bnktm": {
-  "archivo": "fotos-notas/1bnktm.jpg",
   "medio": "TN (Todo Noticias)",
-  "credito": "Foto: TN (Todo Noticias)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Un desprendimiento de rocas corta la Ruta 7 en Mendoza",
   "enlace": "https://tn.com.ar/videos/sociedad/2026/10/14/mendoza-cortaron-la-ruta-7-por-un-derrumbe-de-rocas-que-aplasto-una-camioneta-y-dejo-camiones-varados-video-2/",
   "imagenOriginal": "https://tn.com.ar/resizer/v2/https%3A%2F%2Fthumbs.vodgc.net%2F1-14-3e9d6860750a1792000039627_720P.jpg?auth=86bf5e9c7b2917225adfaa94ddf73040ee1956ad4f0c730956e357e9fb1ef5c7&width=1023",
   "razon": "Muestra claramente la fila de camiones varados en la ruta sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-14T22:02:09.775Z"
+  "cuando": "2026-10-14T22:02:09.775Z",
+  "intentado": true,
+  "borrada": true
  },
  "gkl1ue": {
   "archivo": "fotos-notas/gkl1ue.jpg",
@@ -16075,27 +16075,36 @@
   "fuentes": 1
  },
  "1d0f1sq": {
-  "archivo": "fotos-notas/1d0f1sq.jpg",
   "medio": "Diario La Vanguardia",
-  "credito": "Foto: Diario La Vanguardia",
   "licencia": null,
   "origen": "medio",
   "titulo": "El municipio lanza otra licitación por el Frigorífico Municipal",
   "enlace": "https://www.diariolavanguardia.com/noticias/45101-el-segundo-llamado-a-licitacion-del-frigorifico-municipal-volvio-a-quedar-desierto/",
   "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66068.png",
   "razon": "Es la única foto disponible y cumple con los requisitos de calidad y contenido.",
-  "cuando": "2026-10-16T17:37:20.214Z"
+  "cuando": "2026-10-16T17:37:20.214Z",
+  "intentado": true,
+  "borrada": true
  },
  "1nl7h8u": {
-  "archivo": "fotos-notas/1nl7h8u.jpg",
   "medio": "Puntonueve (FM 100.9)",
-  "credito": "Foto: Puntonueve (FM 100.9)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Arte Urbano renueva la estética del quirófano móvil de Zoonosis",
   "enlace": "https://puntonueve.com.ar/el-programa-arte-urbano-comenzo-una-intervencion-artistica-en-el-quirofano-movil-de-zoonosis/",
   "imagenOriginal": "https://puntonueve.com.ar/wp-content/uploads/2026/10/movil-zoonosis.jpeg",
   "razon": "Es la única imagen que muestra el vehículo completo, permitiendo apreciar la totalidad del mural de arte urbano sin marcas de agua ni logos superpuestos por el medio.",
-  "cuando": "2026-10-16T17:37:20.214Z"
+  "cuando": "2026-10-16T17:37:20.214Z",
+  "intentado": true,
+  "borrada": true
+ },
+ "1edq6ii": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Una vecina dona un riñón a su hija y transitan la recuperación",
+  "razon": "La única foto disponible muestra a una joven que parece ser menor de edad, lo cual impide su publicación según las normas del medio.",
+  "cuando": "2026-10-16T18:01:43.928Z",
+  "intentos": 1,
+  "fuentes": 1
  }
 }

@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T17:38:26.125Z",
- "portada": 48,
- "archivo": 1176,
- "esperandoCuerpo": 8,
+ "generado": "2026-10-16T18:01:49.662Z",
+ "portada": 53,
+ "archivo": 1177,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-16T17:38:26.168Z",
+  "generado": "2026-10-16T18:01:49.696Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -53,7 +53,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -124,9 +124,9 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 46,
+    "segundos": 54,
     "notas": [
      {
       "id": "npazulcervantino",
@@ -134,8 +134,8 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "1qtfiwu",
-      "titulo": "La Subsecretaría de Deporte mantiene las clases de yoga con vacantes",
+      "id": "1jdsdep",
+      "titulo": "La Dirección de Juventud firma un acuerdo para vender entradas online",
       "seccion": "Balcarce"
      },
      {
@@ -157,17 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 51,
     "notas": [
+     {
+      "id": "1qtfiwu",
+      "titulo": "La Subsecretaría de Deporte mantiene las clases de yoga con vacantes",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1xyp583",
       "titulo": "El Museo Histórico Municipal expone el Proyecto Cruz del Centenario",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "gizbaj",
-      "titulo": "Max Verstappen choca al argentino Ezequiel Pérez Companc en Portugal",
-      "seccion": "Deportes"
      },
      {
       "id": "32f6mu",
@@ -175,9 +175,9 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "n6v2wu",
-      "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
-      "seccion": "Balcarce"
+      "id": "1mfnr70",
+      "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
+      "seccion": "Deportes"
      }
     ]
    }
