@@ -1,44 +1,7 @@
 {
- "generado": "2026-10-16T13:20:35.345Z",
+ "generado": "2026-10-16T13:32:12.624Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1mru4qv",
-   "titulo": "El FMI elogió las reformas de Milei y anticipó una recuperación de la economía argentina en 2027",
-   "copete": "El Fondo Monetario Internacional (FMI) elogió las medidas económicas implementadas por el gobierno de Javier Milei y proyectó un repunte de la actividad económica en la Argentina impulsado por la baja de la inflación, el flujo de inversiones y las reformas estructurales en…",
-   "seccion": "Economía",
-   "fecha": "2026-10-16T08:37:00.000Z",
-   "fuentes": [
-    {
-     "medio": "La Gaceta (Tucumán)",
-     "enlace": "https://www.lagaceta.com.ar/nota/1158292/economia/fmi-elogio-reformas-milei-anticipo-recuperacion-economia-argentina-2027.html",
-     "fecha": "2026-10-16T08:37:00.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/economia/el-fmi-elogio-las-reformas-milei-y-proyecto-una-recuperacion-la-economia-argentina-2027-n1607018",
-     "fecha": "2026-10-16T10:24:00.000Z"
-    },
-    {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/politica/el-fmi-destaco-la-gestion-de-javier-milei-y-preve-un-repunte-de-la-economia-en-2027/",
-     "fecha": "2026-10-16T10:59:00.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/politica/el-fmi-destaco-los-progresos-de-la-argentina-y-anticipo-que-espera-para-la-economia-en-2027/",
-     "fecha": "2026-10-16T11:45:44.000Z"
-    },
-    {
-     "medio": "La Brújula 24",
-     "enlace": "https://www.labrujula24.com/notas/2026/10/16/el-fmi-elogio-reformas-de-milei-anticipa-recuperacion-de-la-economia-argentina-n525781/",
-     "fecha": "2026-10-16T12:29:31.000Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
-   "maximo": 4
-  },
   {
    "id": "dpwrvn",
    "titulo": "Murió Fernando Confessore, el reconocido meteorólogo, a los 58 años",
@@ -58,13 +21,13 @@
     },
     {
      "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/espectaculos/de-que-murio-fernando-confessore-nid16102026/",
-     "fecha": "2026-10-16T12:49:50.000Z"
+     "enlace": "https://www.lanacion.com.ar/sociedad/murio-fernando-confessore-el-meteorologo-que-trabajaba-en-el-canal-tn-nid16102026/",
+     "fecha": "2026-10-16T13:24:14.000Z"
     },
     {
      "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/sociedad/murio-fernando-confessore-el-meteorologo-que-trabajaba-en-el-canal-tn-nid16102026/",
-     "fecha": "2026-10-16T11:29:46.000Z"
+     "enlace": "https://www.lanacion.com.ar/espectaculos/de-que-murio-fernando-confessore-nid16102026/",
+     "fecha": "2026-10-16T12:49:50.000Z"
     },
     {
      "medio": "La Nación",
@@ -118,8 +81,8 @@
     },
     {
      "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/se-supo-que-murio-fernando-confessore-y-como-vivio-la-situacion-su-mujer-n1607029",
-     "fecha": "2026-10-16T11:08:00.000Z"
+     "enlace": "https://www.a24.com/primiciasya/tras-la-muerte-fernando-confessore-la-historia-amor-su-esposa-paula-que-emociona-mucho-mas-que-mi-companera-n1607049",
+     "fecha": "2026-10-16T12:37:00.000Z"
     },
     {
      "medio": "A24",
@@ -184,7 +147,7 @@
     {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-16-7-24-0-murio-a-los-58-anos-fernando-confessore-uno-de-los-historicos-meteorologos-de-tn",
-     "fecha": "2026-10-16T13:02:20.000Z"
+     "fecha": "2026-10-16T13:24:01.000Z"
     },
     {
      "medio": "0221",
@@ -292,6 +255,16 @@
      "fecha": "2026-10-16T10:09:50.000Z"
     },
     {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/primiciasya/se-supo-que-murio-fernando-confessore-y-como-vivio-la-situacion-su-mujer-n1607029",
+     "fecha": "2026-10-16T11:08:00.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/teleshow/2026/10/16/la-historia-de-amor-de-fernando-confessore-y-paula-tres-hijas-una-vida-juntos-y-un-apoyo-clave-para-su-carrera/",
+     "fecha": "2026-10-16T11:53:27.000Z"
+    },
+    {
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/espectaculos/momento-mario-massaccesi-anuncio-vivo-muerte-fernando-confessore_0_dkSopl7g5d.html",
      "fecha": "2026-10-16T12:27:17.000Z"
@@ -300,23 +273,6 @@
    "intentos": 5,
    "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 5
-  },
-  {
-   "id": "1eb747m",
-   "titulo": "La Estudiantina 2026 comenzará el lunes con la participación de estudiantes",
-   "copete": "La 19ª edición se pondrá en marcha el 19 de octubre, a las 8:30, en el estadio del Club Racing. Durante dos semanas, alumnos de los últimos años de las escuelas secundarias del distrito participarán de actividades deportivas, culturales y académicas.",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-16T13:01:11.428Z",
-   "fuentes": [
-    {
-     "medio": "Diario La Vanguardia",
-     "enlace": "https://www.diariolavanguardia.com/noticias/45078-la-estudiantina-2026-comenzara-el-lunes-con-la-participacion-de-estudiantes-de-balcarce/",
-     "fecha": null
-    }
-   ],
-   "intentos": 2,
-   "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
-   "maximo": 3
   }
  ]
 }

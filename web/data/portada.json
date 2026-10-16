@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T13:20:35.345Z",
+  "generado": "2026-10-16T13:32:12.624Z",
   "notas": [
     {
       "id": "a6hpqz",
@@ -141,14 +141,15 @@
       "guion": "La Dirección de Juventud firma un acuerdo para vender entradas online",
       "seccion": "Balcarce",
       "medios": [
-        "Municipalidad de Balcarce"
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/16/la-direccion-de-juventud-firmo-un-convenio-con-art-ticket-para-modernizar-la-venta-de-entradas-del-teatro-municipal/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-16T13:07:25.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T13:17:26.305Z",
-      "relevancia": 84,
+      "relevancia": 94,
       "local": true,
       "oficial": true,
       "deUnMedioDeAca": true,
@@ -256,6 +257,66 @@
         "archivo": "fotos-notas/collage-repaso20261016manana.jpg",
         "credito": "Fotos: Motorsport y Radio Gabal (FM 104.1)"
       }
+    },
+    {
+      "id": "1eb747m",
+      "titulo": "La Estudiantina 2026 arranca el lunes con propuestas deportivas y culturales",
+      "copete": "El lunes 19 de octubre comienza la décimo novena edición de la Estudiantina en el estadio del Club Racing. Participarán alumnos secundarios y de Educación Especial de todo el distrito durante dos semanas.",
+      "cuerpo": "La apertura de la décimo novena edición de la Estudiantina 2026 se realizará el lunes 19 de octubre, a las 8:30, en las instalaciones del Club Racing Juan Carlos Gentile. La organización está a cargo de la Jefatura de Inspección Distrital Balcarce junto a la Subsecretaría de Deporte y Recreación.\n\nDel lunes 19 al viernes 23 de octubre se disputarán las disciplinas de fútbol, handball, básquet, vóley, atletismo, tejo y prellball. Luego, entre el 26 y el 29 del mismo mes, tendrán lugar las competencias artísticas, la Maratón del Saber, Matemática Recreativa y Argumentación.\n\nEl cierre oficial está programado para el jueves 29 de octubre, a las 14:30, en la Escuela de Educación Secundaria Técnica Nº 1 Lucas Kraglievich. En caso de condiciones climáticas desfavorables, el acto inaugural se trasladará a la Escuela de Educación Secundaria Nº 1 Antonio González Balcarce.",
+      "guion": "La Estudiantina 2026 arranca el lunes con propuestas deportivas y culturales",
+      "seccion": "Balcarce",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/45078-la-estudiantina-2026-comenzara-el-lunes-con-la-participacion-de-estudiantes-de-balcarce/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T13:01:11.428Z",
+      "sinFecha": true,
+      "visto": "2026-10-16T13:31:10.080Z",
+      "relevancia": 63,
+      "local": true,
+      "deUnMedioDeAca": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Comienza el lunes 19 de octubre en el Club Racing.",
+        "Reúne a estudiantes secundarios y de Educación Especial.",
+        "Incluye disciplinas deportivas, artísticas y académicas.",
+        "Finaliza el jueves 29 de octubre en la Escuela Técnica Nº 1."
+      ],
+      "seSabe": [
+        "El evento comienza el lunes 19 de octubre a las 8:30 según la información oficial.",
+        "Participan escuelas de gestión estatal, privada y Educación Especial.",
+        "Las actividades deportivas se desarrollan en la primera semana y las académicas en la segunda."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El lunes 19 de octubre a las 8:30 comienza la décimo novena edición de la Estudiantina en el estadio del Club Racing. Estudiantes secundarios y de Educación Especial participarán durante dos semanas de actividades deportivas, culturales y académicas.",
+      "etiquetas": [
+        "Estudiantina 2026",
+        "estudiantes",
+        "deportes",
+        "educación",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45078-la-estudiantina-2026-comenzara-el-lunes-con-la-participacion-de-estudiantes-de-balcarce/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Cronograma completo, sedes y organización de la Estudiantina 2026."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "la-estudiantina-2026-arranca-el-lunes-con-propuestas-deportivas-y"
     },
     {
       "id": "1vqqg6",
@@ -366,6 +427,8 @@
       "temas": [],
       "etiquetas": [],
       "como": "publicada",
+      "aprobadaParaRedes": true,
+      "paraElRepaso": true,
       "firma": "Nota de Radar Balcarce, escrita con IA a partir de lo que publicaron Prensa Cicaré · Festival Cervantino y revisada por la redacción",
       "slug": "el-festival-cervantino-de-azul-cumple-20-anos-con-mas-de-50",
       "foto": {
@@ -1120,11 +1183,12 @@
       "seccion": "Fútbol",
       "medios": [
         "Infobae",
+        "TN (Todo Noticias)",
         "Olé",
         "Radio Mitre",
         "La Nueva",
-        "Bolavip Argentina",
-        "La Brújula 24"
+        "La Brújula 24",
+        "Bolavip Argentina"
       ],
       "enlace": "https://www.ole.com.ar/seleccion/lautaromartinez-seleccionargentina-mundial2026-afa-lionelmessi_0_c6ZfyJlAij.html",
       "teniaImagenLaFuente": true,
@@ -1223,13 +1287,13 @@
         "Clarín",
         "TN (Todo Noticias)",
         "A24",
-        "Radio Mitre",
         "El Marplatense",
         "Ámbito",
         "C5N",
         "Minuto Uno",
         "Los Andes (Mendoza)",
-        "La Nueva"
+        "La Nueva",
+        "Radio Mitre"
       ],
       "enlace": "https://www.clarin.com/politica/milei-cerro-visita-washington-acto-antisemitismo-reunion-alto-funcionario-trump_0_KkhV5wypC4.html",
       "teniaImagenLaFuente": true,
@@ -3932,9 +3996,9 @@
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 9,
-      "sensacion": 5,
-      "humedad": 68,
+      "temp": 10,
+      "sensacion": 6,
+      "humedad": 66,
       "viento": 18,
       "rumbo": "S",
       "cielo": "Nublado",
@@ -4296,6 +4360,12 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
+      "id": "1mru4qv",
+      "titulo": null,
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente 2 (visto al reescribir)"
+    },
+    {
       "id": "yj5cn4",
       "titulo": null,
       "seccion": "Fútbol",
@@ -4344,6 +4414,12 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
+      "id": "12ov0mj",
+      "titulo": null,
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
       "id": "n6pah5",
       "titulo": null,
       "seccion": "Agro",
@@ -4366,12 +4442,6 @@
       "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
-      "id": "1cvrhrl",
-      "titulo": "RDC: Nicolás Maduro y Cilia Flores se declararon 'no…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "17gc53m",
@@ -4404,5 +4474,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 1
 }

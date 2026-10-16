@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T13:20:35.345Z",
- "portada": 47,
- "archivo": 1153,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-16T13:32:12.624Z",
+ "portada": 48,
+ "archivo": 1154,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-16T13:20:35.384Z",
+  "generado": "2026-10-16T13:32:12.660Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,11 +126,16 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 48,
     "notas": [
      {
-      "id": "1vqqg6",
-      "titulo": "La Dirección de Juventud relanza el programa Arte Urbano",
+      "id": "npazulcervantino",
+      "titulo": "El Festival Cervantino de Azul cumple 20 años con más de 50 actividades",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "1jdsdep",
+      "titulo": "La Dirección de Juventud firma un acuerdo para vender entradas online",
       "seccion": "Balcarce"
      },
      {
@@ -142,11 +147,6 @@
       "id": "7rb12z",
       "titulo": "Lautaro Martínez cuestiona las dudas sobre el compromiso del seleccionado",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "107aa47",
-      "titulo": "Atletas de AACYC completan exigente competencia de trail",
-      "seccion": "Deportes"
      }
     ]
    },
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 51,
     "notas": [
+     {
+      "id": "107aa47",
+      "titulo": "Atletas de AACYC completan exigente competencia de trail",
+      "seccion": "Deportes"
+     },
      {
       "id": "n6v2wu",
       "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
@@ -172,11 +177,6 @@
      {
       "id": "130eay0",
       "titulo": "La recolección de residuos electrónicos pasa para el lunes",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1vrfi9w",
-      "titulo": "Proyecto 10 repasa su historia social",
       "seccion": "Balcarce"
      }
     ]
@@ -198,14 +198,14 @@
      "marcada": false
     },
     {
-     "id": "1vqqg6",
-     "titulo": "La Dirección de Juventud relanza el programa Arte Urbano",
+     "id": "1jdsdep",
+     "titulo": "La Dirección de Juventud firma un acuerdo para vender entradas online",
      "seccion": "Balcarce",
      "marcada": false
     },
     {
-     "id": "1jdsdep",
-     "titulo": "La Dirección de Juventud firma un acuerdo para vender entradas online",
+     "id": "1vqqg6",
+     "titulo": "La Dirección de Juventud relanza el programa Arte Urbano",
      "seccion": "Balcarce",
      "marcada": false
     },
