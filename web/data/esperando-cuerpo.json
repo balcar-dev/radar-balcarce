@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-16T15:47:53.598Z",
+ "generado": "2026-10-16T16:05:16.497Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -7,12 +7,22 @@
    "titulo": "El Colegio de Médicos bonaerense advirtió que la crisis del PAMI amenaza al sistema sanitario",
    "copete": "La entidad denunció el desfinanciamiento del organismo y alertó sobre las consecuencias de la interrupción de prestaciones para jubilados y pensionados. Reclamó una mesa de diálogo urgente, actualización de aranceles y cancelación de las deudas con prestadores y profesionales…",
    "seccion": "Balcarce",
-   "fecha": "2026-10-16T14:19:04.000Z",
+   "fecha": "2026-10-16T13:21:00.000Z",
    "fuentes": [
     {
      "medio": "Puntonueve (FM 100.9)",
      "enlace": "https://puntonueve.com.ar/el-colegio-de-medicos-bonaerense-advirtio-que-la-crisis-del-pami-amenaza-al-sistema-sanitario/",
      "fecha": "2026-10-16T14:26:33.000Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/la-ciudad/crisis-del-pami-los-medicos-advierten-que-pueden-colapsar-los-hospitales-publicos-la-ciudad_1792156440",
+     "fecha": "2026-10-16T13:21:00.000Z"
+    },
+    {
+     "medio": "0221",
+     "enlace": "https://www.0221.com.ar/provincia/el-colegio-medicos-advirtio-que-la-crisis-del-pami-amenaza-desbordar-los-hospitales-publicos-n135924",
+     "fecha": "2026-10-16T15:37:00.000Z"
     },
     {
      "medio": "La Verdad",
@@ -82,23 +92,6 @@
    "maximo": 5
   },
   {
-   "id": "wf129z",
-   "titulo": "“Las imputaciones que le hacen son endebles”: el abogado de Virginia Aparicio cuestionó el sumario del INTA en GABAL",
-   "copete": "El abogado Mario Bolla aseguró que la investigadora podría enfrentar la exoneración y anticipó que recurrirá a la Justicia Federal. También cuestionó la falta de explicaciones sobre la suspensión del proyecto SPRINT y reclamó que se conozcan los resultados",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-16T15:02:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/las-imputaciones-que-le-hacen-son-endebles-el-abogado-de-virginia-aparicio-cuestiono-el-sumario-del-inta-en-gabal",
-     "fecha": "2026-10-16T15:02:00.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "sin material",
-   "maximo": 3
-  },
-  {
    "id": "5bzm11",
    "titulo": "Sin oferentes, finalizó el acto administrativo de la Licitación Pública nº 3/26",
    "copete": "Esta mañana se llevó a cabo en la Oficina de Compras y Suministros de la Municipalidad de Balcarce el acto administrativo correspondiente a la Licitación Pública Nº 3/26, destinada a otorgar la concesión de uso de un inmueble municipal ubicado sobre la ruta nacional 226, a la…",
@@ -114,6 +107,43 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 3
+  },
+  {
+   "id": "1mru4qv",
+   "titulo": "El FMI elogió las reformas de Milei y anticipó una recuperación de la economía argentina en 2027",
+   "copete": "El Fondo Monetario Internacional (FMI) elogió las medidas económicas implementadas por el gobierno de Javier Milei y proyectó un repunte de la actividad económica en la Argentina impulsado por la baja de la inflación, el flujo de inversiones y las reformas estructurales en…",
+   "seccion": "Economía",
+   "fecha": "2026-10-16T08:37:00.000Z",
+   "fuentes": [
+    {
+     "medio": "La Gaceta (Tucumán)",
+     "enlace": "https://www.lagaceta.com.ar/nota/1158292/economia/fmi-elogio-reformas-milei-anticipo-recuperacion-economia-argentina-2027.html",
+     "fecha": "2026-10-16T08:37:00.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/economia/el-fmi-elogio-las-reformas-milei-y-proyecto-una-recuperacion-la-economia-argentina-2027-n1607018",
+     "fecha": "2026-10-16T10:24:00.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/el-fmi-destaco-la-gestion-de-javier-milei-y-preve-un-repunte-de-la-economia-en-2027/",
+     "fecha": "2026-10-16T10:59:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/politica/el-fmi-destaco-los-progresos-de-la-argentina-y-anticipo-que-espera-para-la-economia-en-2027/",
+     "fecha": "2026-10-16T11:45:44.000Z"
+    },
+    {
+     "medio": "La Brújula 24",
+     "enlace": "https://www.labrujula24.com/notas/2026/10/16/el-fmi-elogio-reformas-de-milei-anticipa-recuperacion-de-la-economia-argentina-n525781/",
+     "fecha": "2026-10-16T12:29:31.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
+   "maximo": 4
   },
   {
    "id": "dpwrvn",
@@ -154,33 +184,13 @@
     },
     {
      "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/show/television/2026/10/16/la-despedida-de-mario-massaccesi-tras-la-muerte-de-fernando-confessore-lo-vamos-a-extranar-mucho/",
-     "fecha": "2026-10-16T14:05:52.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
      "enlace": "https://tn.com.ar/show/famosos/2026/10/16/murio-fernando-confessore-a-los-58-anos/",
      "fecha": "2026-10-16T12:15:57.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/videos/show/television/2026/10/16/la-despedida-de-mario-massaccesi-tras-la-muerte-de-fernando-confessore-lo-vamos-a-extranar-mucho/",
-     "fecha": "2026-10-16T10:42:22.000Z"
     },
     {
      "medio": "El Destape",
      "enlace": "https://www.eldestapeweb.com/espectaculos/murio-historico-meteorologo-tn-fernando-confessore-2026101681957",
      "fecha": "2026-10-16T11:19:00.000Z"
-    },
-    {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/actualidad/mario-massaccesi-despidio-a-fernando-confessore-en-vivo-lo-vamos-a-recordar-siempre.phtml",
-     "fecha": "2026-10-16T13:58:32.000Z"
-    },
-    {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/protagonistas/a-los-58-anos-murio-el-periodista-fernando-confessore.phtml",
-     "fecha": "2026-10-16T09:55:00.000Z"
     },
     {
      "medio": "Página/12",
@@ -194,8 +204,18 @@
     },
     {
      "medio": "A24",
+     "enlace": "https://www.a24.com/primiciasya/fernando-confessore-se-supo-que-dice-el-parte-policial-la-muerte-del-meteorologo-tn-n1607120",
+     "fecha": "2026-10-16T14:03:00.000Z"
+    },
+    {
+     "medio": "A24",
      "enlace": "https://www.a24.com/primiciasya/la-ultima-aparicion-al-aire-fernando-confessore-y-la-frase-que-causa-conmocion-su-muerte-n1607089",
      "fecha": "2026-10-16T13:40:00.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/informacion-general/fernando-confessore-velez-despedida-ultimo-adios_0_Ulq7WU9NDJ.html",
+     "fecha": "2026-10-16T14:39:36.000Z"
     },
     {
      "medio": "Crónica",
@@ -211,21 +231,6 @@
      "medio": "Radio Mitre",
      "enlace": "https://radiomitre.cienradios.com/videos/de-que-murio-fernando-confessore-el-reconocido-meteorologo-de-la-television-a-los-58-anos/",
      "fecha": "2026-10-16T10:54:22.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/asi-fue-la-ultima-aparicion-de-fernando-confessore-en-la-television-antes-de-su-repentina-muerte/",
-     "fecha": "2026-10-16T10:27:29.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/la-desgarradora-despedida-de-mario-massaccesi-a-fernando-confessore-tras-su-repentina-muerte-lo-vamos-a-recordar-siempre/",
-     "fecha": "2026-10-16T10:20:51.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/que-se-sabe-de-la-muerte-de-fernando-confessore-el-querido-meteorologo-de-58-anos/",
-     "fecha": "2026-10-16T10:17:15.000Z"
     },
     {
      "medio": "Canal 26",
@@ -309,8 +314,8 @@
     },
     {
      "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/espectaculos/asi-anuncio-mario-mario-massaccesi-la-muerte-fernando-confessore-siempre-estaba-aqui-trabajando-n6334485",
-     "fecha": "2026-10-16T12:54:00.000Z"
+     "enlace": "https://www.minutouno.com/espectaculos/la-familia-que-construyo-fernando-confessore-paula-franco-sus-tres-hijas-y-una-vida-juntos-n6334614",
+     "fecha": "2026-10-16T15:39:00.000Z"
     },
     {
      "medio": "Minuto Uno",
@@ -326,11 +331,6 @@
      "medio": "Minuto Uno",
      "enlace": "https://www.minutouno.com/sociedad/murio-fernando-confessore-reconocido-meteorologo-divulgador-cientifico-y-periodista-n6334433",
      "fecha": "2026-10-16T10:15:00.000Z"
-    },
-    {
-     "medio": "La Gaceta (Tucumán)",
-     "enlace": "https://www.lagaceta.com.ar/nota/1158323/sociedad/conmocion-mario-massaccesi-al-anunciar-vivo-muerte-fernando-confessore-no-podemos-creer.html",
-     "fecha": "2026-10-16T11:09:00.000Z"
     },
     {
      "medio": "La Gaceta (Tucumán)",
@@ -363,29 +363,24 @@
      "fecha": "2026-10-16T10:24:09.000Z"
     },
     {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/protagonistas/a-los-58-anos-murio-el-periodista-fernando-confessore.phtml",
+     "fecha": "2026-10-16T09:55:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/videos/que-se-sabe-de-la-muerte-de-fernando-confessore-el-querido-meteorologo-de-58-anos/",
+     "fecha": "2026-10-16T10:17:15.000Z"
+    },
+    {
      "medio": "Diario Popular",
      "enlace": "https://www.diariopopular.com.ar/general/murio-fernando-confessore-el-historico-meteorologo-tn-los-58-anos-n924838",
      "fecha": "2026-10-16T10:23:00.000Z"
     },
     {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/16/asi-anuncio-mario-massaccesi-la-noticia-de-la-muerte-de-fernando-confessore-estamos-en-shock/",
-     "fecha": "2026-10-16T10:55:45.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/espectaculos/asi-anuncio-mario-massaccesi-la-muerte-de-fernando-confessore-la-ultima-noticia-la-que-no-nid16102026/",
-     "fecha": "2026-10-16T10:39:21.000Z"
-    },
-    {
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/espectaculos/murio-fernando-confessore-historicos-meteorologos-canal-noticias-tn_0_XGpw7d7UBM.html",
      "fecha": "2026-10-16T10:09:50.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/el-dolor-mario-massaccesi-al-comunicar-la-noticia-la-muerte-fernando-confessore-nos-dejo-shock-n1607022",
-     "fecha": "2026-10-16T10:43:43.000Z"
     },
     {
      "medio": "La Nueva",
@@ -403,9 +398,9 @@
      "fecha": "2026-10-16T11:53:27.000Z"
     },
     {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/espectaculos/momento-mario-massaccesi-anuncio-vivo-muerte-fernando-confessore_0_dkSopl7g5d.html",
-     "fecha": "2026-10-16T12:27:17.000Z"
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/teleshow/2026/10/16/mensajes-de-despedida-tras-la-muerte-de-fernando-confessore-en-vivo-ultimas-noticias-minuto-a-minuto/",
+     "fecha": "2026-10-16T13:28:46.000Z"
     },
     {
      "medio": "A24",
@@ -428,36 +423,93 @@
    "maximo": 5
   },
   {
-   "id": "1frovgl",
-   "titulo": "Así anunciaron la muerte de Fernando Confessore sus compañeros de \"Arriba argentinos\" de eltrece",
-   "copete": "",
+   "id": "gymja6",
+   "titulo": "La desgarradora despedida de Julieta, la hija de Fernando Confessore tras su muerte: “Te voy a amar y extrañar toda la eternidad”",
+   "copete": "Juliet a, una de las hijas de Fernando Confessore , despidió al meteorólogo de TN con una foto de su infancia y un mensaje cargado de dolor. Meses atrás, su papá había compartido con orgullo la graduación de la joven como ingeniera química. El emotivo mensaje de Julieta para…",
    "seccion": "Argentina",
-   "fecha": "2026-10-16T13:05:00.000Z",
+   "fecha": "2026-10-16T13:19:56.000Z",
    "fuentes": [
     {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/espectaculos/asi-anunciaron-la-muerte-fernando-confessore-sus-companeros-arriba-argentinos-eltrece-n6334477",
-     "fecha": "2026-10-16T13:05:00.000Z"
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/sociedad/la-desgarradora-despedida-de-julieta-la-hija-de-fernando-confessore-tras-su-muerte-te-voy-a-amar-y-extranar-toda-la-eternidad/",
+     "fecha": "2026-10-16T13:19:56.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/show/famosos/2026/10/16/asi-despiden-los-famosos-a-fernando-confessore-meteorologo-de-tn/",
-     "fecha": "2026-10-16T15:04:56.000Z"
+     "enlace": "https://tn.com.ar/show/famosos/2026/10/16/el-mensaje-que-compartio-la-hija-de-fernando-confessore-para-despedir-a-su-papa-te-voy-a-amar-y-extranar-toda-la-eternidad/",
+     "fecha": "2026-10-16T13:35:18.000Z"
     },
     {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/espectaculos/asi-anunciaron-vivo-tn-muerte-fernando-confessore-no-te-equivocaste-20261016111816",
-     "fecha": "2026-10-16T14:18:00.000Z"
+     "medio": "A24",
+     "enlace": "https://www.a24.com/primiciasya/el-desgarrador-mensaje-la-hija-fernando-confessore-la-muerte-su-papa-n1607133",
+     "fecha": "2026-10-16T14:27:00.000Z"
+    },
+    {
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/espectaculos/2026/10/16/el-doloroso-mensaje-de-la-hija-de-fernando-confessore-tras-su-muerte-te-voy-a-amar-toda-la-eternidad/",
+     "fecha": "2026-10-16T14:05:00.000Z"
     },
     {
      "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/espectaculos/asi-despiden-sus-companeros-tn-y-eltrece-fernando-confessore-n6334567",
-     "fecha": "2026-10-16T14:22:00.000Z"
+     "enlace": "https://www.minutouno.com/espectaculos/el-mensaje-una-las-hijas-fernando-confessore-te-voy-amar-y-extranar-toda-la-eternidad-n6334540",
+     "fecha": "2026-10-16T13:56:00.000Z"
     }
    ],
-   "intentos": 3,
+   "intentos": 4,
+   "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)",
+   "maximo": 4
+  },
+  {
+   "id": "bo9vhl",
+   "titulo": "“Fue un mentor”: la emotiva despedida de Matías Bertolotti a Fernando Confessore tras su muerte",
+   "copete": "La muerte de Fernando Confessore a los 58 años provocó una fuerte conmoción entre sus compañeros de televisión. Matías Bertolotti lo despidió a través de sus redes sociales, donde compartió una foto de ambos en el estudio de televisión donde trabajaban y le dedicó un sentido…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-16T10:58:42.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/videos/fue-un-mentor-la-emotiva-despedida-de-matias-bertolotti-a-fernando-confessore-tras-su-muerte/",
+     "fecha": "2026-10-16T10:58:42.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/deportes/2026/10/16/velez-despidio-a-fernando-confessore-con-un-emotivo-mensaje-su-partida-genera-una-profunda-tristeza/",
+     "fecha": "2026-10-16T15:35:46.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/show/famosos/2026/10/16/matias-bertolotti-destaco-el-aporte-de-fernando-confessore-fue-un-gran-mentor-inicio-la-carrera-de-meteorologia-en-la-tv/",
+     "fecha": "2026-10-16T11:44:03.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/sociedad/el-doloroso-pedido-de-matias-bertolotti-a-fernando-confessore-tras-su-muerte/",
+     "fecha": "2026-10-16T11:10:34.000Z"
+    },
+    {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/espectaculos/la-despedida-matias-bertolotti-fernando-confessore-fue-un-gran-mentor-n924843",
+     "fecha": "2026-10-16T12:07:00.000Z"
+    },
+    {
+     "medio": "Infobrisas (Radio Brisas)",
+     "enlace": "https://www.infobrisas.com/noticias/2026/10/16/111653-marcela-pagano-despidio-a-fernando-confessore-con-un-emotivo-mensaje",
+     "fecha": "2026-10-16T13:09:47.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/teleshow/2026/10/16/la-emotiva-despedida-de-matias-bertolotti-a-fernando-confessore-se-fue-el-mentor-de-todos-nosotros/",
+     "fecha": "2026-10-16T12:53:24.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/espectaculos/matias-bertolotti-despidio-fernando-confessore-emotivo-mensaje-pedido-especial_0_WAwN1JNxOX.html",
+     "fecha": "2026-10-16T12:19:39.000Z"
+    }
+   ],
+   "intentos": 4,
    "motivo": "título o bajada: 2 problemas (numero): el guion dice 50 y la fuente no lo dice",
-   "maximo": 3
+   "maximo": 5
   }
  ]
 }
