@@ -286,7 +286,8 @@ export function imagenDeNota(nota, sitio) {
 export function conCreditoDeFoto(texto, nota) {
   const credito = String(nota?.foto?.credito ?? '').replace(/\s+/g, ' ').trim();
   if (!nota?.foto?.archivo || !credito) return texto;
-  const linea = /^foto/i.test(credito) ? credito : `Foto: ${credito}`;
+  // "Ilustración generada con IA…" (el clima y las efemérides) ya dice qué es: no se llama "Foto".
+  const linea = /^(foto|ilustraci)/i.test(credito) ? credito : `Foto: ${credito}`;
   return [texto, linea].join('\n\n');
 }
 
@@ -395,8 +396,12 @@ export function esParaLasRedes(nota) {
  *  además, tiene que estar entre lo de más puntaje (elegirParaPodcast). */
 export function sePuedeEnUnRepaso(nota) {
   return nota.semaforo !== 'rojo' && !SECCIONES_QUE_ESPERAN_PERSONA.includes(nota.seccion) && !esperaCuerpo(nota)
-    && !esNotaPropia(nota) && (!loAproboUnaPersona(nota) || aprobadaParaLasRedes(nota));
+    && (!esNotaPropia(nota) || notaDePistaParaLosRepasos(nota)) && (!loAproboUnaPersona(nota) || aprobadaParaLasRedes(nota));
 }
+
+/** Una nota propia que nació de una pista (la armó la redacción desde un mail o un enlace) y que una persona aprobó para las redes SÍ puede ir a
+ *  un repaso: las demás notas propias (dólar, clima, efeméride, podcasts) siguen afuera. */
+export const notaDePistaParaLosRepasos = (n) => n?.propia === 'pista' && aprobadaParaLasRedes(n);
 
 /** ¿Se puede armar una pieza sola con esta nota, sin mirar el puntaje? Lo mismo
  *  que sePuedeEnUnRepaso, y de Balcarce (esParaLasRedes). */
@@ -463,23 +468,28 @@ export function primeraOracion(texto = '', maximo = 150) {
  *  notas: las de más puntaje. */
 export function elegirParaPodcast(notas, { cuantas = PIEZAS.notasPorPodcast, excluir = [] } = {}, reglasPedidas = REGLAS_PIEZAS) {
   const reglas = { ...REGLAS_PIEZAS, ...reglasPedidas };
+  // Lo que una persona pidió para el próximo repaso (`paraElRepaso`, notas de pistas aprobadas para las redes) entra primero, sin pasar por el puntaje.
+  const pedidas = sinRepetidos(notas.filter((n) => n.paraElRepaso === true && sePuedeEnUnRepaso(n)).sort(porRelevancia), excluir).slice(0, Math.max(0, cuantas - 1));
   const alcanza = (n) => (n.relevancia ?? 0) >= (esParaLasRedes(n) ? reglas.relevanciaParaPodcast : reglas.relevanciaAfuera);
   let deAfuera = 0;
   const candidatas = sinRepetidos(
     [...notas]
       .filter(sePuedeEnUnRepaso)
+      .filter((n) => !pedidas.includes(n))
       .filter(alcanza)
       .sort(porRelevancia),
     excluir,
   ).filter((n) => esParaLasRedes(n) || (deAfuera += 1) <= reglas.afueraPorPodcast);
   const secciones = new Set();
+  for (const n of pedidas) secciones.add(n.seccion);
+  const lugares = cuantas - pedidas.length;
   const variadas = candidatas.filter((n) => {
     if (secciones.has(n.seccion)) return false;
     secciones.add(n.seccion);
     return true;
-  }).slice(0, cuantas);
+  }).slice(0, lugares);
   const resto = candidatas.filter((n) => !variadas.includes(n));
-  return [...variadas, ...resto].slice(0, cuantas).sort(porRelevancia);
+  return [...pedidas, ...[...variadas, ...resto].slice(0, lugares).sort(porRelevancia)];
 }
 
 /**

@@ -76,6 +76,10 @@ export function notasDePistas(json, { ahora = new Date() } = {}) {
       temas: [],
       etiquetas: Array.isArray(e.etiquetas) ? e.etiquetas.slice(0, 6) : [],
       como: 'publicada',
+      // Una persona puede pedir que la nota entre a los repasos (podcasts) de las redes: `aprobadaParaRedes` (la decisión ya es de ella) y, para
+      // que entre al PRÓXIMO repaso aunque no le alcance el puntaje, `paraElRepaso` (vale 12 horas desde que se aprobó; 16/10/2026, la nota de Azul).
+      ...(e.aprobadaParaRedes === true ? { aprobadaParaRedes: true } : {}),
+      ...(e.paraElRepaso === true && ahora - Date.parse(fecha) < 12 * 3600e3 ? { paraElRepaso: true } : {}),
       firma: firmaDePista(fuentes.map((f) => f.medio), { automatica: e.automatica === true }),
     });
   }
