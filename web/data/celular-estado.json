@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T15:35:08.139Z",
- "portada": 47,
- "archivo": 1161,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-16T15:47:53.598Z",
+ "portada": 51,
+ "archivo": 1167,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-16T15:35:08.186Z",
+  "generado": "2026-10-16T15:47:53.631Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,13 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "5bzm11",
-      "titulo": "La licitación por un predio sobre la ruta 226 queda desierta",
-      "seccion": "Balcarce"
-     },
      {
       "id": "n6v2wu",
       "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
@@ -175,8 +170,13 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1eb747m",
-      "titulo": "La Estudiantina 2026 arranca el lunes con propuestas deportivas y culturales",
+      "id": "1vrfi9w",
+      "titulo": "Proyecto 10 repasa su historia social",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1o2y75j",
+      "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
       "seccion": "Balcarce"
      }
     ]
@@ -193,6 +193,11 @@
      "id": "1vqqg6",
      "titulo": "La Dirección de Juventud relanza el programa Arte Urbano",
      "cuando": "2026-10-16T13:45:37.336Z"
+    },
+    {
+     "id": "ahqycd",
+     "titulo": "SUTEBA Balcarce adhiere al paro nacional en defensa de la educación pública",
+     "cuando": "2026-10-16T15:35:31.538Z"
     }
    ],
    "cola": [
@@ -201,16 +206,10 @@
      "titulo": "Reprograman la Caravana de la Alegría para noviembre",
      "seccion": "Cultura y agenda",
      "marcada": false
-    },
-    {
-     "id": "5bzm11",
-     "titulo": "La licitación por un predio sobre la ruta 226 queda desierta",
-     "seccion": "Balcarce",
-     "marcada": false
     }
    ],
-   "cupo": 3,
-   "proximoDesde": "2026-10-16T15:15:37.336Z",
+   "cupo": 2,
+   "proximoDesde": "2026-10-16T17:05:31.538Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

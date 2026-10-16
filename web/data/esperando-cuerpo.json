@@ -1,7 +1,29 @@
 {
- "generado": "2026-10-16T15:35:08.139Z",
+ "generado": "2026-10-16T15:47:53.598Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "8dpdqi",
+   "titulo": "El Colegio de Médicos bonaerense advirtió que la crisis del PAMI amenaza al sistema sanitario",
+   "copete": "La entidad denunció el desfinanciamiento del organismo y alertó sobre las consecuencias de la interrupción de prestaciones para jubilados y pensionados. Reclamó una mesa de diálogo urgente, actualización de aranceles y cancelación de las deudas con prestadores y profesionales…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-16T14:19:04.000Z",
+   "fuentes": [
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/el-colegio-de-medicos-bonaerense-advirtio-que-la-crisis-del-pami-amenaza-al-sistema-sanitario/",
+     "fecha": "2026-10-16T14:26:33.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/el-colegio-de-medicos-advirtio-que-la-crisis-del-pami-amenaza-con-desbordar-los-hospitales-publicos/",
+     "fecha": "2026-10-16T14:19:04.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "semáforo: necesita ojo humano: \"denunció\", en lo que escribió la IA (título, bajada o texto para redes)",
+   "maximo": 3
+  },
   {
    "id": "1x4gtj1",
    "titulo": "Diego Santilli: “Los que deberían estar preocupados son los gobernadores si el kirchnerismo vuelve y gana Kicillof”",
@@ -42,7 +64,7 @@
     {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-16-11-48-0-para-santilli-los-gobernadores-deberian-estar-preocupados-por-un-eventual-regreso-del-kirchnerismo",
-     "fecha": "2026-10-16T15:15:48.000Z"
+     "fecha": "2026-10-16T15:27:55.000Z"
     },
     {
      "medio": "El Economista",
@@ -60,51 +82,38 @@
    "maximo": 5
   },
   {
-   "id": "e353o5",
-   "titulo": "El juez Lijo volvió a procesar a Diego Spagnuolo por una segunda ruta de coimas en la Agencia de Discapacidad",
-   "copete": "Aceptó el pedido del fiscal Franco Picardi sobre la participación del ex titular de la Agencia de Discapacidad en otro tramo de la investigación por corrupción en ese organismo.",
-   "seccion": "Política",
-   "fecha": "2026-10-16T13:20:19.000Z",
+   "id": "wf129z",
+   "titulo": "“Las imputaciones que le hacen son endebles”: el abogado de Virginia Aparicio cuestionó el sumario del INTA en GABAL",
+   "copete": "El abogado Mario Bolla aseguró que la investigadora podría enfrentar la exoneración y anticipó que recurrirá a la Justicia Federal. También cuestionó la falta de explicaciones sobre la suspensión del proyecto SPRINT y reclamó que se conozcan los resultados",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-16T15:02:00.000Z",
    "fuentes": [
     {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/politica/juez-lijo-volvio-procesar-diego-spagnuolo-segunda-ruta-coimas-agencia-discapacidad_0_DZfaTCN3Ki.html",
-     "fecha": "2026-10-16T13:20:19.000Z"
-    },
-    {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/politica/ampliaron-procesamiento-spagnuolo-causa-coimas-andis-2026101612117",
-     "fecha": "2026-10-16T15:01:00.000Z"
-    },
-    {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/judiciales/el-juez-lijo-firmo-un-nuevo-procesamiento-contra-diego-spagnuolo-por-una-segunda-ruta-de-la-coimas-en-andis.phtml",
-     "fecha": "2026-10-16T14:51:57.000Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/politica/andis-nuevo-procesamiento-diego-spagnuolo-y-otros-acusados-hechos-corrupcion-n6334559",
-     "fecha": "2026-10-16T14:19:00.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/politica/causa-andis-nuevo-procesamiento-diego-spagnuolo-hechos-corrupcion-n251776",
-     "fecha": "2026-10-16T14:05:00.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/politica/causa-andis-la-justicia-dispuso-un-nuevo-procesamiento-diego-spagnuolo-n6334543",
-     "fecha": "2026-10-16T13:40:00.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/judiciales/2026/10/16/caso-andis-el-juez-lijo-amplio-el-procesamiento-de-spagnuolo-y-otros-acusados-por-diferencias-de-precios-millonarias/",
-     "fecha": "2026-10-16T14:32:05.000Z"
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/las-imputaciones-que-le-hacen-son-endebles-el-abogado-de-virginia-aparicio-cuestiono-el-sumario-del-inta-en-gabal",
+     "fecha": "2026-10-16T15:02:00.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
-   "maximo": 4
+   "motivo": "sin material",
+   "maximo": 3
+  },
+  {
+   "id": "5bzm11",
+   "titulo": "Sin oferentes, finalizó el acto administrativo de la Licitación Pública nº 3/26",
+   "copete": "Esta mañana se llevó a cabo en la Oficina de Compras y Suministros de la Municipalidad de Balcarce el acto administrativo correspondiente a la Licitación Pública Nº 3/26, destinada a otorgar la concesión de uso de un inmueble municipal ubicado sobre la ruta nacional 226, a la…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-16T15:21:30.000Z",
+   "fuentes": [
+    {
+     "medio": "Municipalidad de Balcarce",
+     "enlace": "https://balcarce.gob.ar/2026/10/16/sin-oferentes-finalizo-el-acto-administrativo-de-la-licitacion-publica-no-3-26/",
+     "fecha": "2026-10-16T15:21:30.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
+   "maximo": 3
   },
   {
    "id": "dpwrvn",
@@ -187,11 +196,6 @@
      "medio": "A24",
      "enlace": "https://www.a24.com/primiciasya/la-ultima-aparicion-al-aire-fernando-confessore-y-la-frase-que-causa-conmocion-su-muerte-n1607089",
      "fecha": "2026-10-16T13:40:00.000Z"
-    },
-    {
-     "medio": "Olé",
-     "enlace": "https://www.ole.com.ar/informacion-general/fernando-confessore-velez-despedida-ultimo-adios_0_Ulq7WU9NDJ.html",
-     "fecha": "2026-10-16T14:39:36.000Z"
     },
     {
      "medio": "Crónica",
@@ -324,11 +328,6 @@
      "fecha": "2026-10-16T10:15:00.000Z"
     },
     {
-     "medio": "La Capital (Rosario)",
-     "enlace": "https://www.lacapital.com.ar/informacion-general/tristeza-la-television-murio-un-reconocido-periodista-tn-los-58-anos-n10286980.html",
-     "fecha": "2026-10-16T10:45:00.000Z"
-    },
-    {
      "medio": "La Gaceta (Tucumán)",
      "enlace": "https://www.lagaceta.com.ar/nota/1158323/sociedad/conmocion-mario-massaccesi-al-anunciar-vivo-muerte-fernando-confessore-no-podemos-creer.html",
      "fecha": "2026-10-16T11:09:00.000Z"
@@ -429,51 +428,36 @@
    "maximo": 5
   },
   {
-   "id": "bo9vhl",
-   "titulo": "“Fue un mentor”: la emotiva despedida de Matías Bertolotti a Fernando Confessore tras su muerte",
-   "copete": "La muerte de Fernando Confessore a los 58 años provocó una fuerte conmoción entre sus compañeros de televisión. Matías Bertolotti lo despidió a través de sus redes sociales, donde compartió una foto de ambos en el estudio de televisión donde trabajaban y le dedicó un sentido…",
+   "id": "1frovgl",
+   "titulo": "Así anunciaron la muerte de Fernando Confessore sus compañeros de \"Arriba argentinos\" de eltrece",
+   "copete": "",
    "seccion": "Argentina",
-   "fecha": "2026-10-16T10:58:42.000Z",
+   "fecha": "2026-10-16T13:05:00.000Z",
    "fuentes": [
     {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/fue-un-mentor-la-emotiva-despedida-de-matias-bertolotti-a-fernando-confessore-tras-su-muerte/",
-     "fecha": "2026-10-16T10:58:42.000Z"
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/espectaculos/asi-anunciaron-la-muerte-fernando-confessore-sus-companeros-arriba-argentinos-eltrece-n6334477",
+     "fecha": "2026-10-16T13:05:00.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/show/famosos/2026/10/16/matias-bertolotti-destaco-el-aporte-de-fernando-confessore-fue-un-gran-mentor-inicio-la-carrera-de-meteorologia-en-la-tv/",
-     "fecha": "2026-10-16T11:44:03.000Z"
+     "enlace": "https://tn.com.ar/show/famosos/2026/10/16/asi-despiden-los-famosos-a-fernando-confessore-meteorologo-de-tn/",
+     "fecha": "2026-10-16T15:04:56.000Z"
     },
     {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/sociedad/el-doloroso-pedido-de-matias-bertolotti-a-fernando-confessore-tras-su-muerte/",
-     "fecha": "2026-10-16T11:10:34.000Z"
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/espectaculos/asi-anunciaron-vivo-tn-muerte-fernando-confessore-no-te-equivocaste-20261016111816",
+     "fecha": "2026-10-16T14:18:00.000Z"
     },
     {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/espectaculos/la-despedida-matias-bertolotti-fernando-confessore-fue-un-gran-mentor-n924843",
-     "fecha": "2026-10-16T12:07:00.000Z"
-    },
-    {
-     "medio": "Infobrisas (Radio Brisas)",
-     "enlace": "https://www.infobrisas.com/noticias/2026/10/16/111653-marcela-pagano-despidio-a-fernando-confessore-con-un-emotivo-mensaje",
-     "fecha": "2026-10-16T13:09:47.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/16/la-emotiva-despedida-de-matias-bertolotti-a-fernando-confessore-se-fue-el-mentor-de-todos-nosotros/",
-     "fecha": "2026-10-16T12:53:24.000Z"
-    },
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/espectaculos/matias-bertolotti-despidio-fernando-confessore-emotivo-mensaje-pedido-especial_0_WAwN1JNxOX.html",
-     "fecha": "2026-10-16T12:19:39.000Z"
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/espectaculos/asi-despiden-sus-companeros-tn-y-eltrece-fernando-confessore-n6334567",
+     "fecha": "2026-10-16T14:22:00.000Z"
     }
    ],
-   "intentos": 4,
+   "intentos": 3,
    "motivo": "título o bajada: 2 problemas (numero): el guion dice 50 y la fuente no lo dice",
-   "maximo": 4
+   "maximo": 3
   }
  ]
 }
