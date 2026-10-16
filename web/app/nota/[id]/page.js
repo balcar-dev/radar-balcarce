@@ -123,7 +123,7 @@ export default async function PaginaNota({ params }) {
               height={675}
               decoding="async"
               fetchPriority="high"
-              style={{ width: '100%', height: 'auto', aspectRatio: '16 / 9', maxHeight: 480, objectFit: 'cover', borderRadius: 10, display: 'block' }}
+              style={{ width: '100%', height: 'auto', aspectRatio: '16 / 9', maxHeight: 480, objectFit: 'cover', objectPosition: 'center 25%', borderRadius: 10, display: 'block' }}
             />
             <figcaption style={{ fontSize: 13, color: 'var(--suave)', fontStyle: 'italic', marginTop: 6 }}>{n.foto.credito}</figcaption>
           </figure>
