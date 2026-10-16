@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T03:34:18.746Z",
- "portada": 48,
- "archivo": 1142,
+ "generado": "2026-10-16T04:01:56.911Z",
+ "portada": 49,
+ "archivo": 1144,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-16T03:34:18.780Z",
+  "generado": "2026-10-16T04:01:56.945Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -108,9 +108,9 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "16q0gf8",
-      "titulo": "Lalcec Balcarce ofrece mamografías y prepara la jornada comunitaria de octubre rosa",
-      "seccion": "Balcarce"
+      "id": "ddz0um",
+      "titulo": "Ignacio Fernández se emociona hasta las lágrimas al recordar a Diego Maradona",
+      "seccion": "Fútbol"
      },
      {
       "id": "2g6pf5",
@@ -126,8 +126,13 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "16q0gf8",
+      "titulo": "Lalcec Balcarce ofrece mamografías y prepara la jornada comunitaria de octubre rosa",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1ixp88o",
       "titulo": "Mario Bolla visita Radio Gabal para hablar sobre la situación de Virginia Aparicio",
@@ -142,11 +147,6 @@
       "id": "1o2y75j",
       "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1ao5ic",
-      "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 25,
+    "segundos": 30,
     "notas": [
+     {
+      "id": "1ao5ic",
+      "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
+      "seccion": "Balcarce"
+     },
      {
       "id": "wfa595",
       "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
@@ -175,12 +180,6 @@
   "facebook": {
    "hoy": [],
    "cola": [
-    {
-     "id": "1ixp88o",
-     "titulo": "Mario Bolla visita Radio Gabal para hablar sobre la situación de Virginia Aparicio",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
     {
      "id": "n6v2wu",
      "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
