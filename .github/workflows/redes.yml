@@ -12,14 +12,13 @@
 # Cuando no toca ninguna pieza, la corrida termina en segundos y no instala
 # nada. Los horarios y las reglas están en docs/07-REDES.md.
 #
-# EL DISPARADOR ES EXTERNO (cron-job.org), no el planificador propio de GitHub.
+# EL DISPARADOR ES EXTERNO (el Worker de Cloudflare `radar-balcarce-reloj`; hasta el 15/10, cron-job.org), no el planificador propio de GitHub.
 # El 21/09 el planificador de GitHub llegó a dejar cinco horas entre dos
 # corridas que debían distar treinta minutos, y una tarde entera sin ejecutar
 # ninguna: la farmacia de esa noche se perdió y hubo que publicarla a mano.
-# cron-job.org llama a este workflow cada 30 minutos (7 a 23, hora de Balcarce)
-# con la acción "reloj", desde una cuenta de radarbalcarce@gmail.com con un
-# token de GitHub limitado a este repositorio (permiso Actions: lectura y
-# escritura). Cada pieza tiene su propia ventana (ver redes/piezas.mjs): si el
+# El reloj llama a este workflow cada 30 minutos (7 a 23, hora de Balcarce)
+# con la acción "reloj", con un token de GitHub limitado a este repositorio
+# (RELOJ_GITHUB_TOKEN, permiso Actions: lectura y escritura). Cada pieza tiene su propia ventana (ver redes/piezas.mjs): si el
 # disparador se atrasa, igual alcanza; lo que no sale dentro de su ventana se
 # pierde. Un segundo disparador de respaldo sigue siendo la corrida de
 # "Actualizar la web".
@@ -33,7 +32,7 @@
 # SECRETOS: META_TOKEN (publicar) y GEMINI_API_KEY_REDES (la voz).
 #
 # A mano (pestaña Actions → "Redes" → Run workflow):
-#   reloj      lo mismo que hace cron-job.org cada 30 minutos (es la acción que
+#   reloj      lo mismo que hace el reloj de Cloudflare cada 30 minutos (es la acción que
 #              manda ese disparador)
 #   verificar  comprueba que el token, la página y el Instagram andan
 #   facebook   sólo la elección de Facebook

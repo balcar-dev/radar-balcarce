@@ -1,7 +1,7 @@
 # Busca noticias y actualiza la web, sin depender de que haya una PC prendida.
 #
-# Corre en los servidores de GitHub cada media hora (lo dispara cron-job.org; el
-# `schedule` de abajo es el respaldo). Lo que hace es lo mismo que hace el panel
+# Corre en los servidores de GitHub cada media hora (lo dispara el Worker de Cloudflare
+# `radar-balcarce-reloj`; no tiene otro horario de respaldo). Lo que hace es lo mismo que hace el panel
 # en casa: leer las fuentes activas (las de ingesta/fuentes.mjs y las del cruce
 # de medios, ingesta/fuentes-cruce.mjs; la lista entera, en FUENTES.md), cruzar
 # los medios, clasificar, poner puntaje, y escribir web/data/portada.json.

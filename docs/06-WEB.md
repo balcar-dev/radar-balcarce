@@ -38,8 +38,8 @@ Es el programa central de la web (unas 1.300 líneas al 16/10). Se corre con
 `cd web && npm run datos` (que es `node scripts/generar-datos.mjs`). Lo hace
 solo el workflow "Actualizar la web" (`.github/workflows/actualizar.yml`) cada
 30 minutos: lo dispara el Worker `radar-balcarce-reloj` a los :00 y :30 UTC
-(desde el 15/10; antes, cron-job.org, hoy pausado), y el `schedule` del propio
-workflow (a los :07 y :37) queda de respaldo.
+(desde el 15/10; antes, cron-job.org, hoy pausado). Desde el 17/10 el workflow no tiene
+`schedule` propio: el que tenía (a los :07 y :37) armaba la web dos veces por vuelta.
 
 **0. ¿Dónde estoy corriendo?** Lo primero que mira es si existe
 `panel/datos/ultima.json`. Si no existe (el caso de GitHub, donde no hay panel)
@@ -885,7 +885,7 @@ Las pruebas que cuidan el diseño: `pruebas/tipografia.test.mjs`,
 | Qué pasa | Cómo se nota | Qué hacer |
 |---|---|---|
 | Falla una prueba del núcleo legal | "Actualizar la web" en rojo en el paso "Núcleo legal de las pruebas" y llega un mail; la web queda como estaba; a los 100 minutos sin actualizarse (`LIMITES.minutosSinActualizar`, `redes/vigilar.mjs`) llega además el aviso "La web no se actualiza hace N horas" (por mail; WhatsApp sólo si el mail no sale) | Ver qué prueba falló (`docs/10-REGLAS-Y-PRUEBAS.md`) |
-| El reloj deja de disparar | El mismo aviso de web vieja; el `schedule` de GitHub sigue como respaldo, más irregular | Mirar Cloudflare → Workers → `radar-balcarce-reloj` (`docs/11-OPERACION.md`); cron-job.org quedó pausado, no borrado |
+| El reloj deja de disparar | El mismo aviso de web vieja; ya no hay `schedule` de respaldo en GitHub (se sacó el 17/10 porque duplicaba las vueltas); el vigilante de Cloudflare avisa por mail | Mirar Cloudflare → Workers → `radar-balcarce-reloj` (`docs/11-OPERACION.md`); cron-job.org quedó pausado, no borrado |
 | El sitio se acerca a los 20.000 archivos | Aviso amarillo de `contar-archivos.mjs` desde 16.500, rojo desde 18.000 | Revisar el tope de notas o prender el archivo permanente |
 | Una fuente se cae o se vacía | Aviso amarillo "Fuente caída" o "Fuente vacía" arriba de la corrida; nada se rompe | `docs/02-INGESTA.md` |
 | Gemini sin cupo | Crece `esperando-cuerpo.json` y lo dicen los informes diarios por mail; menos notas en la portada | Esperar el cupo, o escribir los cuerpos en `correcciones.json` |

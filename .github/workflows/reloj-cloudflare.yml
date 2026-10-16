@@ -1,7 +1,7 @@
 name: Reloj de Cloudflare
 
 # Sube (o actualiza) el reloj propio que reemplaza a cron-job.org (infra/reloj-cloudflare/, 9/10/2026).
-# SÓLO a mano: mientras no se corra, no cambia nada y sigue mandando cron-job.org.
+# SÓLO a mano. Desde el 15/10/2026 este reloj es el que manda; cron-job.org quedó pausado, sin borrar.
 # Antes hay que cargar en GitHub (Settings > Secrets and variables > Actions) el secreto RELOJ_GITHUB_TOKEN: un token de grano fino de la
 # cuenta del repositorio, sólo para este repositorio, con "Actions: lectura y escritura". Lo pega una persona (nunca en un chat).
 on:
