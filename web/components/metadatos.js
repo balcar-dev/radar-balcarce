@@ -55,6 +55,28 @@ export function metadatosDePagina({ titulo, descripcion, camino }) {
   };
 }
 
+// ------------------------------------------------------ título de una nota
+
+/** Hasta cuántos caracteres puede tener el <title> para que se le sume la marca al final. */
+export const LARGO_MAXIMO_CON_MARCA = 70;
+
+/**
+ * El titular de la nota tal cual, con los espacios limpios. Es el que va en og:title y twitter:title, y la base del <title>.
+ * Nunca se corta ni se le agrega "…" (D5, 16/10/2026): Google corta sola lo que no entra en pantalla, y un corte nuestro
+ * dejaba el 72 % de los títulos con aspecto de incompletos y sin las palabras clave del final.
+ */
+export function titularDeNota(titulo) {
+  return String(titulo ?? '').replace(/\s+/g, ' ').trim();
+}
+
+/** El <title> de la nota: el titular entero, y " · Radar Balcarce" detrás sólo si todo junto no pasa de ${LARGO_MAXIMO_CON_MARCA} caracteres. */
+export function tituloDeNota(titulo) {
+  const t = titularDeNota(titulo);
+  if (!t) return NOMBRE;
+  const conMarca = `${t} · ${NOMBRE}`;
+  return conMarca.length <= LARGO_MAXIMO_CON_MARCA ? conMarca : t;
+}
+
 // ------------------------------------------------------ quién escribió
 
 /**
@@ -82,7 +104,13 @@ export function quienEscribio(nota = {}) {
   };
 }
 
-/** El `author` del NewsArticle, igual a la firma de la nota. */
+/**
+ * El `author` del NewsArticle, igual a la firma de la nota.
+ *
+ * `name` es sólo el nombre, como pide la guía de Google (D5, 16/10/2026): antes llevaba "(nota escrita con IA y verificada…)" adentro.
+ * La aclaración de cómo se escribió sigue en el marcado, en `description` (acá) y en `publishingPrinciples` de la nota
+ * (principiosDeNota, lib/datos-estructurados.js); la firma que ve el lector no cambió.
+ */
 export function autorDeNota(nota = {}, base = '') {
   const { reescrita, revisada, propia } = quienEscribio(nota);
   // El cuerpo lo escribió la redacción (web/data/correcciones.json): el
@@ -98,9 +126,9 @@ export function autorDeNota(nota = {}, base = '') {
       : { '@type': 'Organization', name: NOMBRE, url: paginaDelAutor };
   }
   const como = revisada
-    ? 'nota escrita con IA y revisada por una persona'
-    : 'nota escrita con IA y verificada automáticamente contra las fuentes';
-  return { '@type': 'Organization', name: `${NOMBRE} (${como})`, url: paginaDelAutor };
+    ? 'Nota escrita con IA y revisada por una persona'
+    : 'Nota escrita con IA y verificada automáticamente contra las fuentes';
+  return { '@type': 'Organization', name: NOMBRE, url: paginaDelAutor, description: como };
 }
 
 /**

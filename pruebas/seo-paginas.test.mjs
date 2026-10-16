@@ -8,11 +8,13 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import { recortarEn } from '../web/lib/texto.js';
+import { recortarEn, descripcionParaBuscador, DESCRIPCION_HOLGURA } from '../web/lib/texto.js';
 import { textoDeRobots } from '../web/lib/robots.js';
 import {
   metadatosDePagina, autorDeNota, quienEscribio, firmaCorta, explicacionDeFirma, OG_COMUN,
+  tituloDeNota, titularDeNota, LARGO_MAXIMO_CON_MARCA,
 } from '../web/components/metadatos.js';
+import { principiosDeNota } from '../web/lib/datos-estructurados.js';
 
 const RAIZ = path.join(import.meta.dirname, '..', 'web');
 const leer = (r) => fs.readFileSync(path.join(RAIZ, r), 'utf8');
@@ -96,10 +98,14 @@ test('la descripción de una sección nombra las últimas notas: no es igual par
   assert.ok(!s.includes('Todo lo que publicamos en ${nombreCorto(s.nombre)}, en Radar Balcarce.'));
 });
 
-test('los títulos y descripciones de las notas se recortan al largo que muestra Google', () => {
+// D5 (16/10/2026): antes esta prueba exigía recortarEn(titulo, 60) y recortarEn(copete, 155). Ya no: el 72 % de los títulos llegaba a
+// Google con "…" puesto por nosotros. Ahora el titular va entero y la descripción se corta, si hace falta, en un final de oración
+// (ver "D5" más abajo para las pruebas con titulares reales).
+test('el título y la descripción de las notas ya no se recortan a mano a 60 caracteres', () => {
   const n = leer('app/nota/[id]/page.js');
-  assert.match(n, /title: \{ absolute: recortarEn\(n\.titulo, (5\d|60)\) \}/);
-  assert.match(n, /recortarEn\(n\.copete[^)]*, 155\)/);
+  assert.match(n, /title: \{ absolute: tituloDeNota\(n\.titulo\) \}/);
+  assert.match(n, /descripcionParaBuscador\(n\.copete/);
+  assert.ok(!/recortarEn/.test(n), 'la página de la nota volvió a recortar con recortarEn');
 });
 
 test('las analíticas de Vercel ya no están: en Cloudflare pedían un archivo que no existe', () => {
@@ -187,13 +193,17 @@ test('no volvemos a prometer una revisión humana que no hay', () => {
 });
 
 test('el autor de los datos estructurados dice lo mismo que la firma de la nota', () => {
+  // D5 (16/10/2026): antes el nombre era "Radar Balcarce (nota escrita con IA y …)". La guía de Google pide sólo el nombre; la
+  // aclaración sobre la IA sigue en el marcado, en author.description (y en publishingPrinciples de la nota), y la firma visible no cambió.
   const auto = autorDeNota({ guion: 'x', como: 'automatica', medios: ['La Vanguardia'] }, 'https://radarbalcarce.com');
-  assert.match(auto.name, /IA/);
-  assert.match(auto.name, /verificada automáticamente contra las fuentes/);
-  assert.ok(!/revis/i.test(auto.name), `una nota automática dice que fue revisada: ${auto.name}`);
+  assert.equal(auto.name, 'Radar Balcarce');
+  assert.match(auto.description, /IA/);
+  assert.match(auto.description, /verificada automáticamente contra las fuentes/);
+  assert.ok(!/revis/i.test(auto.description), `una nota automática dice que fue revisada: ${auto.description}`);
 
   const revisada = autorDeNota({ guion: 'x', como: 'publicada' }, 'https://radarbalcarce.com');
-  assert.match(revisada.name, /revisada por una persona/);
+  assert.equal(revisada.name, 'Radar Balcarce');
+  assert.match(revisada.description, /revisada por una persona/);
 
   // El resumen es el de la fuente: el autor es ese medio.
   assert.equal(autorDeNota({ guion: null, como: 'automatica', medios: ['El Diario Balcarce'] }).name, 'El Diario Balcarce');
@@ -386,8 +396,10 @@ test('fechaDeModificacion: nunca anterior a la de publicación (12 notas lo esta
 });
 
 // ------- 29/09: más arreglos de la auditoría del sitio en vivo
-test('el título de la nota no lleva la marca pegada ni pasa de 60 caracteres', () => {
-  assert.match(leer('app/nota/[id]/page.js'), /title: \{ absolute: recortarEn\(n\.titulo, 60\) \}/);
+// 29/09 fijaba "sin marca y recortado a 60"; D5 (16/10/2026) lo cambia: titular entero, y la marca sólo si todo entra en 70 caracteres.
+test('el título de la nota es el titular entero, con la marca sólo si no pasa de 70 caracteres', () => {
+  assert.match(leer('app/nota/[id]/page.js'), /title: \{ absolute: tituloDeNota\(n\.titulo\) \}/);
+  assert.equal(LARGO_MAXIMO_CON_MARCA, 70);
 });
 
 test('una sección sin notas hoy se genera igual, con noindex, y no da 404 ("Ver todo →" de la nota)', () => {
@@ -458,4 +470,115 @@ test('el sitemap no dice "cambió ahora" en cada armado ni ofrece las páginas d
   assert.ok(!fijas.includes('new Date()'), 'las páginas fijas usan la fecha de los datos o ninguna');
   assert.ok(!s.includes('/tema/'), 'los temas son páginas finas: fuera del sitemap');
   for (const r of ['quienes-somos', 'contacto', 'politica-de-privacidad']) assert.ok(s.includes('/' + r + '`, changeFrequency'), `${r} no lleva fecha`);
+});
+
+// ------------------------------------------------ D5 (16/10/2026): título entero y autor sólo con el nombre
+//
+// Invisible para el lector: sólo cambia lo que ve Google. Se prueba con los titulares y bajadas reales de web/data/archivo.json.
+
+const NOTAS_REALES = JSON.parse(fs.readFileSync(path.join(RAIZ, 'data', 'archivo.json'), 'utf8')).notas.filter((n) => n.titulo);
+const TITULARES = [...new Set(NOTAS_REALES.map((n) => n.titulo))];
+
+test('D5: el archivo real tiene titulares largos para probar (si no, la prueba no prueba nada)', () => {
+  assert.ok(TITULARES.filter((t) => t.length > 60).length >= 50, 'no hay titulares de más de 60 caracteres');
+  assert.ok(TITULARES.filter((t) => t.length > 90).length >= 1, 'no hay titulares de más de 90 caracteres');
+});
+
+test('D5: el <title> lleva el titular entero: nunca termina en "…" puesto por nosotros ni se inventa texto', () => {
+  for (const t of TITULARES) {
+    const limpio = titularDeNota(t);
+    const titulo = tituloDeNota(t);
+    // O es el titular solo, o el titular y la marca; en los dos casos el titular está completo y al principio.
+    assert.ok(titulo === limpio || titulo === `${limpio} · Radar Balcarce`, `título inventado: "${titulo}" para "${t}"`);
+    // Si el titular cabe entero (siempre), el título no termina en puntos suspensivos salvo que el propio titular ya terminara así.
+    if (!limpio.endsWith('…')) assert.ok(!titulo.endsWith('…'), `termina cortado: ${titulo}`);
+    // La marca sólo se suma si no pasa de 70.
+    if (titulo !== limpio) assert.ok(titulo.length <= LARGO_MAXIMO_CON_MARCA, `con la marca pasa de 70: ${titulo}`);
+    else assert.ok(`${limpio} · Radar Balcarce`.length > LARGO_MAXIMO_CON_MARCA, `faltó la marca en un titular corto: ${limpio}`);
+  }
+});
+
+test('D5: ejemplos concretos del título (largo sin marca, corto con marca, espacios limpios)', () => {
+  const largo = 'F1: Max Verstappen largará desde la pole en el Gran Premio de Singapur; así quedó la parrilla';
+  assert.equal(tituloDeNota(largo), largo, 'un titular largo va entero y sin marca');
+  assert.ok(largo.length > 60 && !tituloDeNota(largo).includes('…'));
+  assert.equal(tituloDeNota('Se juega la fecha del clásico'), 'Se juega la fecha del clásico · Radar Balcarce');
+  assert.equal(tituloDeNota('  Un   titular\n con  espacios '), 'Un titular con espacios · Radar Balcarce');
+  assert.equal(tituloDeNota(''), 'Radar Balcarce');
+  // Justo en el límite: 70 con la marca entra, 71 no.
+  const marca = ' · Radar Balcarce'.length;
+  assert.ok(tituloDeNota('a'.repeat(LARGO_MAXIMO_CON_MARCA - marca)).endsWith('· Radar Balcarce'));
+  assert.ok(!tituloDeNota('a'.repeat(LARGO_MAXIMO_CON_MARCA - marca + 1)).includes('Radar Balcarce'));
+});
+
+test('D5: la descripción no se corta si es corta, y si se corta es el principio exacto del texto, sin "…" de más', () => {
+  const corto = 'Una bajada corta que entra de sobra.';
+  assert.equal(descripcionParaBuscador(corto), corto);
+  // Hasta la holgura (160) va entera, aunque pase de 155.
+  const justo = 'palabra '.repeat(19).trim() + ' final'; // 157
+  assert.ok(justo.length > 155 && justo.length <= DESCRIPCION_HOLGURA);
+  assert.equal(descripcionParaBuscador(justo), justo);
+
+  let conPuntos = 0;
+  let conFinDeOracion = 0;
+  for (const n of NOTAS_REALES) {
+    const original = String(n.copete || '').replace(/\s+/g, ' ').trim();
+    if (!original) continue;
+    const d = descripcionParaBuscador(original);
+    if (original.length <= DESCRIPCION_HOLGURA) { assert.equal(d, original, 'se tocó una bajada que entraba'); continue; }
+    assert.ok(d.length <= DESCRIPCION_HOLGURA, `pasa de ${DESCRIPCION_HOLGURA}: ${d}`);
+    if (d.endsWith('…')) {
+      conPuntos += 1;
+      // Cortada en una palabra entera: lo que sigue en el original es un espacio.
+      const base = d.slice(0, -1);
+      assert.ok(original.startsWith(base), `inventó texto: ${d}`);
+      assert.ok(!/[\p{L}\p{N}]/u.test(original.charAt(base.length)), `cortó una palabra por la mitad: ${d}`);
+      assert.ok(!/[\s,.;:–—-]…$/.test(d), `deja un signo colgando: ${d}`);
+    } else {
+      conFinDeOracion += 1;
+      assert.ok(original.startsWith(d), `inventó texto: ${d}`);
+      assert.match(d, /[.!?]["”»')\]]*$/, `no termina en una oración: ${d}`);
+      assert.ok(d.length >= 70, `demasiado corta: ${d}`);
+    }
+  }
+  assert.ok(conPuntos + conFinDeOracion > 100, 'no hubo bajadas largas para probar');
+  assert.ok(conFinDeOracion > 0, 'ninguna bajada real se cortó en un final de oración');
+});
+
+test('D5: la descripción no corta en una abreviatura ni en un decimal', () => {
+  const t = 'El intendente se reunió con el Dr. Pérez y la Lic. Gómez para ver el avance de la obra en el barrio, que según el informe llegó al 5.2 por ciento del total previsto para el año';
+  const d = descripcionParaBuscador(t);
+  assert.ok(t.startsWith(d.replace(/…$/, '')));
+  assert.ok(!/(Dr|Lic)\.$/.test(d), `cortó en una abreviatura: ${d}`);
+  assert.ok(!/5\.$/.test(d), `cortó en un decimal: ${d}`);
+});
+
+test('D5: og:title y twitter:title llevan el titular entero y la página usa las mismas funciones', () => {
+  const n = leer('app/nota/[id]/page.js');
+  assert.match(n, /const titular = titularDeNota\(n\.titulo\)/);
+  assert.match(n, /openGraph: \{[\s\S]*?title: titular,/);
+  assert.match(n, /twitter: \{ card: 'summary_large_image', title: titular,/);
+  assert.ok(!/title: n\.titulo,/.test(n), 'og:title o twitter:title volvió a usar n.titulo sin limpiar');
+});
+
+test('D5: el autor es sólo "Radar Balcarce", y la transparencia sobre la IA sigue en otro lugar del marcado', () => {
+  const base = 'https://radarbalcarce.com';
+  for (const nota of [
+    { guion: 'x', como: 'automatica', medios: ['La Vanguardia'] },
+    { guion: 'x', como: 'publicada', medios: ['La Vanguardia'] },
+  ]) {
+    const a = autorDeNota(nota, base);
+    assert.equal(a.name, 'Radar Balcarce');
+    assert.ok(!/[()]/.test(a.name));
+    assert.equal(a.url, `${base}/quienes-somos`, 'el autor conserva la página de Quiénes somos');
+    assert.match(a.description, /escrita con IA/);
+    // La política de firmas de la nota apunta a "Cómo trabajamos".
+    assert.deepEqual(principiosDeNota(quienEscribio(nota), base), { publishingPrinciples: `${base}/quienes-somos#como-trabajamos` });
+  }
+  // Una nota que no escribió la IA no lleva esa aclaración.
+  assert.deepEqual(principiosDeNota(quienEscribio({ guion: null, como: 'automatica', medios: ['X'] }), base), {});
+  assert.equal(autorDeNota({ propia: true }, base).description, undefined);
+  assert.match(leer('components/ficha.js'), /\.\.\.principiosDeNota\(quienEscribio\(nota\), base\)/);
+  // La firma visible no se tocó: sigue diciendo que la escribió la IA.
+  assert.equal(firmaCorta({ guion: 'x', como: 'automatica', medios: ['X'] }), 'Redacción con IA, verificada contra las fuentes');
 });

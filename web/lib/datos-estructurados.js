@@ -37,6 +37,15 @@ export function politicasDelMedio(base) {
   };
 }
 
+/**
+ * La política de firmas de la nota: cuando la escribió la IA, el NewsArticle apunta a la sección de "Quiénes somos" que explica cómo
+ * trabajamos (IA, fuentes, verificación). Es el lugar del marcado para la transparencia sobre la IA ahora que `author.name` es sólo
+ * el nombre (D5). Sin la IA de por medio no hace falta.
+ */
+export function principiosDeNota({ reescrita }, base) {
+  return reescrita ? { publishingPrinciples: `${base}${ANCLAS_DE_POLITICAS.comoTrabajamos}` } : {};
+}
+
 /** Cómo se puede contactar al medio: el correo y el WhatsApp que ya están en el pie del sitio. */
 export function puntosDeContacto({ email, whatsapp }) {
   return [{

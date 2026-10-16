@@ -37,6 +37,40 @@ export function recortarEn(texto = '', maximo = 60) {
   return `${corte.slice(0, ultimo > maximo * 0.6 ? ultimo : maximo - 1).replace(/[\s,.;:–—-]+$/, '')}…`;
 }
 
+/** Lo que Google muestra de una descripción (unos 155 caracteres) y hasta dónde se deja pasar sin cortar. */
+export const DESCRIPCION_IDEAL = 155;
+export const DESCRIPCION_HOLGURA = 160;
+
+// Abreviaturas que terminan en punto sin terminar la oración ("el Dr. Pérez", "Av. Mitre").
+const ABREVIATURAS = new Set(['dr', 'dra', 'sr', 'sra', 'srta', 'lic', 'ing', 'av', 'gral', 'cnel', 'pte', 'prof', 'arq', 'etc', 'vs', 'sta', 'sto', 'nro', 'núm']);
+
+/**
+ * La descripción que le damos a Google (meta description, og:description, twitter:description).
+ *
+ * Google corta sola lo que no entra; lo que no hay que hacer es ayudarla a cortar mal (16/10/2026, D5 de la auditoría SEO):
+ *   · hasta ~160 caracteres va entera, sin "…" de más;
+ *   · si es más larga, se corta donde termina una oración (la última que entre y pase de 70 caracteres), sin "…";
+ *   · si no hay un final de oración que sirva, se corta en una palabra entera con "…" (recortarEn).
+ * Nunca se agrega ni se cambia una palabra: es siempre el principio del texto original.
+ */
+export function descripcionParaBuscador(texto = '') {
+  const t = String(texto ?? '').replace(/\s+/g, ' ').trim();
+  if (t.length <= DESCRIPCION_HOLGURA) return t;
+  const ventana = t.slice(0, DESCRIPCION_HOLGURA + 1);
+  const fin = /[.!?]+["”»')\]]*(?=\s|$)/g;
+  let corte = -1;
+  let m;
+  while ((m = fin.exec(ventana))) {
+    const hasta = m.index + m[0].length;
+    if (hasta > DESCRIPCION_HOLGURA) break;
+    const palabra = ventana.slice(0, m.index).split(/\s/).pop().toLowerCase();
+    const abreviatura = m[0] === '.' && (ABREVIATURAS.has(palabra) || /^[a-zñ]$/.test(palabra));
+    if (!abreviatura) corte = hasta;
+  }
+  if (corte >= 70) return t.slice(0, corte);
+  return recortarEn(t, DESCRIPCION_IDEAL);
+}
+
 /**
  * El titular reducido a lo que dice: minúsculas, sin tildes ni signos. Dos
  * notas con el mismo titular así son la misma nota contada dos veces (el

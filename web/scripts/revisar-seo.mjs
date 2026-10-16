@@ -92,6 +92,28 @@ if (!primera) {
   }
 }
 
+// El título de CADA nota (D5, 16/10/2026): el titular entero, nunca cortado con "…" por nosotros, y el autor del marcado sólo con el
+// nombre. Se compara el <title> con og:title (que es el titular tal cual): tienen que ser iguales, o el <title> con la marca detrás.
+{
+  const carpeta = path.join(SALIDA, 'nota');
+  const paginas = fs.existsSync(carpeta) ? fs.readdirSync(carpeta).filter((f) => f.endsWith('.html')) : [];
+  const malos = [];
+  for (const f of paginas) {
+    const html = fs.readFileSync(path.join(carpeta, f), 'utf8');
+    const titulo = html.match(/<title>([^<]*)<\/title>/)?.[1];
+    const og = html.match(/property="og:title" content="([^"]*)"/)?.[1];
+    if (!titulo || !og) { malos.push(`${f}: sin <title> o sin og:title`); continue; }
+    if (titulo !== og && titulo !== `${og} · Radar Balcarce`) malos.push(`${f}: el <title> no es el titular entero (<title> "${titulo}", og:title "${og}")`);
+    if (titulo.endsWith('…') && !og.endsWith('…')) malos.push(`${f}: el <title> termina cortado con "…"`);
+    const ld = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => { try { return JSON.parse(m[1]); } catch { return null; } });
+    const articulo = ld.find((x) => x?.['@type'] === 'NewsArticle');
+    const autor = articulo?.author?.name;
+    // Sólo el nombre del sitio: los nombres de medios de terceros pueden llevar paréntesis ("Puntonueve (FM 100.9)").
+    if (autor && /^Radar Balcarce\s*\(/.test(autor)) malos.push(`${f}: el autor del marcado lleva aclaraciones: "${autor}"`);
+  }
+  if (malos.length) fallas.push(`${malos.length} de ${paginas.length} notas con el título o el autor del marcado mal; por ejemplo ${malos.slice(0, 3).join(' | ')}`);
+}
+
 // --- El sitemap y el robots -------------------------------------------
 const sitemap = leer('sitemap.xml.body');
 if (!sitemap) fallas.push('el sitemap: no se generó');

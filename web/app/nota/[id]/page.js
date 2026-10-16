@@ -7,12 +7,12 @@ import {
 import Compartir from '@/components/compartir';
 import CuerpoDeFutbol from '@/components/futbol';
 import FuentesDeLaNota from '@/components/verificacion';
-import { OG_COMUN, TARJETA_DEL_SITIO } from '@/components/metadatos';
+import { OG_COMUN, TARJETA_DEL_SITIO, tituloDeNota, titularDeNota } from '@/components/metadatos';
 import { FichaDeNota, Migas } from '@/components/ficha';
 import { notFound } from 'next/navigation';
 import { parteDeNota } from '@/lib/ruta';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
-import { recortarEn } from '@/lib/texto';
+import { descripcionParaBuscador } from '@/lib/texto';
 import { noSeOfreceAGoogle } from '@/lib/cuerpo';
 import { urlDeFoto } from '@/lib/fotos';
 import { fechaDeModificacion } from '@/lib/tiempo';
@@ -45,14 +45,14 @@ export async function generateMetadata({ params }) {
   const imagen = tieneTarjetaPropia(n)
     ? { url: `${camino}/opengraph-image`, width: 1200, height: 630, type: 'image/png', alt: n.titulo }
     : TARJETA_DEL_SITIO;
-  // El título que ve Google se acorta; el titular entero queda en la página.
-  const descripcion = recortarEn(n.copete || `${n.seccion} en Balcarce: ${n.titulo}`, 155);
+  // Ni el título ni la descripción llevan un "…" puesto por nosotros (D5, 16/10/2026): Google corta sola lo que no entra.
+  const descripcion = descripcionParaBuscador(n.copete || `${n.seccion} en Balcarce: ${n.titulo}`);
+  const titular = titularDeNota(n.titulo);
 
   return {
-    // Sin la marca al final (29/09): con " · Radar Balcarce" el título pasaba de 60 caracteres
-    // y 130 de 239 notas salían cortadas a mitad de frase. El nombre del sitio lo pone Google
-    // (WebSite y og:site_name).
-    title: { absolute: recortarEn(n.titulo, 60) },
+    // El titular ENTERO (antes se cortaba a 60 caracteres con "…" y el 72 % de las notas llegaba a Google incompleto).
+    // La marca " · Radar Balcarce" se suma al final sólo si todo junto no pasa de 70 caracteres (tituloDeNota).
+    title: { absolute: tituloDeNota(n.titulo) },
     description: descripcion,
     alternates: { canonical: camino },
     // Sin cuerpo de verdad, la página existe pero no se ofrece a Google (S-1, 8/10/2026).
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       ...OG_COMUN,
       type: 'article',
-      title: n.titulo,
+      title: titular,
       description: descripcion,
       url: camino,
       publishedTime: n.fecha,
@@ -68,7 +68,7 @@ export async function generateMetadata({ params }) {
       section: n.seccion,
       images: [imagen],
     },
-    twitter: { card: 'summary_large_image', title: n.titulo, description: descripcion, images: [imagen.url] },
+    twitter: { card: 'summary_large_image', title: titular, description: descripcion, images: [imagen.url] },
   };
 }
 

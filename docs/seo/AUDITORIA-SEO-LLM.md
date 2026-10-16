@@ -109,12 +109,12 @@ de más de unos 300 KB (C1).
 Qué no se inventó: fecha de fundación, domicilio, CUIT. Google pide que el marcado diga lo que la
 página dice; esos datos no están en ningún lado del sitio.
 
-**Un punto que queda como decisión (D5)**: el `author.name` de las notas escritas con IA es
+**Decidido y hecho el 16/10/2026 (D5, ver sección 9)**: el `author.name` de las notas escritas con IA es
 "Radar Balcarce (nota escrita con IA y verificada automáticamente contra las fuentes)". Es una
 regla de transparencia propia (la firma del lector y el marcado dicen lo mismo, hay una prueba).
 La guía de Google para `Article` pide que `author.name` sea **sólo el nombre**. Hoy no hay daño
 visible (el autor "Organización" no se muestra en resultados), pero es un incumplimiento literal.
-No se tocó porque es una decisión editorial.
+Ahora `author.name` es sólo "Radar Balcarce" y la aclaración pasó a `author.description` y `publishingPrinciples`.
 
 ### 2.4 Velocidad (lo medido)
 
@@ -258,14 +258,14 @@ Lo que falta es ver los resultados: alta en Bing Webmaster Tools (trámite 2).
   ChatGPT. Desde febrero de 2026 su panel tiene un reporte de **citas de IA** ("AI Performance",
   *fuente secundaria*): es la única métrica pública de cuántas veces una IA los citó. *Arreglo*:
   trámite 2 (importar desde Search Console, 5 minutos).
-- **B3. 72% de los títulos de nota llevan "…" en la etiqueta `<title>`.** Se cortan a 60
+- **B3. (Resuelto el 16/10, D5) 72% de los títulos de nota llevaban "…" en la etiqueta `<title>`.** Se cortan a 60
   caracteres para que Google no los corte a mitad de palabra (decisión del 29/09, cuando la marca
   "· Radar Balcarce" se sumaba al final). Hoy no hay marca y el corte explícito deja un título que
   parece incompleto: Google lo reescribe con más frecuencia y se pierden las palabras clave del
   final. *Recomendación*: usar el titular entero (Google corta solo en pantalla, y para eso no
   hace falta ayudarlo). Es invisible para el lector (sólo se ve en la pestaña del navegador);
   queda para confirmar porque cambia una decisión previa y una prueba (D5).
-- **B4. `author.name` con aclaración entre paréntesis.** Ver 2.3. Decisión editorial (D5).
+- **B4. (Resuelto el 16/10, D5) `author.name` con aclaración entre paréntesis.** Ver 2.3. Decisión editorial (D5).
 - **B5. (Resuelto hoy) La imagen declarada de cada nota era siempre la tarjeta con el titular
   pegado**, y Discover pide fotos de 1200 px o más y evita las que tienen texto. Ahora se declara
   la foto (62% miden 1200 px o más) con su crédito y, detrás, la tarjeta.
@@ -475,10 +475,16 @@ Ninguno cuesta plata. Todos con la cuenta `radarbalcarce@gmail.com`.
   ahí. Para sacarlo: borrar `images: [foto]` en `web/app/sitemap.js`.
 - **D4. ¿Activamos el MCP?** Recomendación: **sí, en 2 o 3 semanas**, después de ver los números
   de Search Console y con la regla de límite puesta. Nada de lo que hoy hay en la web cambia.
-- **D5. Título de las notas y firma del autor en el marcado.** (a) Que la etiqueta `<title>`
+- **D5. (HECHA el 16/10/2026) Título de las notas y firma del autor en el marcado.** (a) Que la etiqueta `<title>`
   lleve el titular entero y no cortado con "…"; (b) que `author.name` sea sólo "Radar Balcarce" y
   la aclaración "escrita con IA y verificada" pase a una propiedad aparte (la firma del lector no
   cambia). Los dos son invisibles; cambian una decisión y una prueba previas.
+  *Hecho (Hernán y Andrés: "lo que digas que es mejor"):* (a) `<title>`, `og:title` y `twitter:title` llevan el
+  titular entero; " · Radar Balcarce" se suma detrás sólo si todo junto no pasa de 70 caracteres; la meta description
+  va entera hasta ~160 caracteres y, si es más larga, se corta en un final de oración (o en una palabra entera con "…").
+  (b) `author.name` = "Radar Balcarce" con `author.url` a "Quiénes somos"; la aclaración de la IA pasó a
+  `author.description` y a `publishingPrinciples` de la nota (apunta a "Cómo trabajamos"). La firma visible no cambió.
+  Ver regla 177 (6) de `docs/10-REGLAS-Y-PRUEBAS.md`.
 - **D6. Páginas visibles que conviene sumar** (se proponen, no se hicieron): "Quién escribe y
   cómo corregimos" (política de IA, fuentes, registro público de correcciones, y responsables:
   ¿con apellido?); un enlace discreto en el pie; reactivar temas y entidades; el botón de fuentes

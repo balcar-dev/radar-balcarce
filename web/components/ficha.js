@@ -1,12 +1,12 @@
 import { sitio, enlace, NOMBRE } from '@/lib/sitio';
-import { autorDeNota } from '@/components/metadatos';
+import { autorDeNota, quienEscribio } from '@/components/metadatos';
 import { REDES_SOCIALES, WHATSAPP } from '@/lib/datos';
 import { fichaDeEvento } from '@/lib/eventos';
 import { enlaceParaElLector } from '@/lib/fuentes-de-la-nota';
 import { fechaDeModificacion } from '@/lib/tiempo';
 import { urlDeFoto } from '@/lib/fotos';
 import { dimensionesDeFoto } from '@/lib/dimensiones-foto';
-import { politicasDelMedio, puntosDeContacto, camposExtraDeNota } from '@/lib/datos-estructurados';
+import { politicasDelMedio, puntosDeContacto, camposExtraDeNota, principiosDeNota } from '@/lib/datos-estructurados';
 
 // Los datos estructurados: lo mismo que ya está en la página, pero escrito
 // para que lo lea una máquina.
@@ -113,7 +113,9 @@ export function FichaDeNota({ nota, conTarjeta = true }) {
     // Quién la escribió: lo mismo que dice la firma al pie de la nota (IA o
     // fuente, revisada por una persona o publicada sola). Ver
     // components/metadatos.js.
+    // `name` es sólo el nombre (guía de Google); cómo se escribió va en author.description y en publishingPrinciples (D5).
     author: autorDeNota(nota, base),
+    ...principiosDeNota(quienEscribio(nota), base),
     // De dónde salió. Es la mitad de lo que ofrecemos: el trabajo original
     // es del medio que la informó.
     citation: (nota.medios ?? []).map((m) => ({ '@type': 'CreativeWork', name: m })),
