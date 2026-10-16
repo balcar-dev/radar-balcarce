@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T10:01:45.275Z",
- "portada": 40,
+ "generado": "2026-10-16T10:05:46.856Z",
+ "portada": 38,
  "archivo": 1139,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-16T10:01:45.311Z",
+  "generado": "2026-10-16T10:05:46.890Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 44,
+    "segundos": 52,
     "notas": [
      {
       "id": "u0hcbv",
@@ -113,8 +113,8 @@
       "seccion": "Deportes"
      },
      {
-      "id": "16q0gf8",
-      "titulo": "Lalcec Balcarce ofrece mamografías y prepara la jornada comunitaria de octubre rosa",
+      "id": "1ixp88o",
+      "titulo": "El abogado de Virginia Aparicio visita una radio local para hablar del caso",
       "seccion": "Balcarce"
      }
     ]
@@ -126,13 +126,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "1ixp88o",
-      "titulo": "El abogado de Virginia Aparicio visita una radio local para hablar del caso",
-      "seccion": "Balcarce"
-     },
      {
       "id": "n6v2wu",
       "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
@@ -147,6 +142,11 @@
       "id": "1o2y75j",
       "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "1ao5ic",
+      "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -157,19 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 24,
-    "notas": [
-     {
-      "id": "1ao5ic",
-      "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "wfa595",
-      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
