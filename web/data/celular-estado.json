@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T17:09:08.611Z",
- "portada": 51,
- "archivo": 1170,
- "esperandoCuerpo": 7,
+ "generado": "2026-10-16T17:30:33.491Z",
+ "portada": 50,
+ "archivo": 1173,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-16T17:09:08.650Z",
+  "generado": "2026-10-16T17:30:33.536Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 52,
     "notas": [
      {
       "id": "npazulcervantino",
@@ -139,14 +139,14 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "10ephb3",
-      "titulo": "La Justicia investiga el patrimonio de Claudio Tapia y pide informes a Suiza",
-      "seccion": "Argentina"
-     },
-     {
       "id": "7rb12z",
       "titulo": "Lautaro Martínez cuestiona las dudas sobre el compromiso del seleccionado",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "32f6mu",
+      "titulo": "Lando Norris califica a Franco Colapinto como un buen amigo",
+      "seccion": "Automovilismo"
      }
     ]
    },
@@ -157,22 +157,22 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 46,
+    "segundos": 55,
     "notas": [
      {
-      "id": "32f6mu",
-      "titulo": "Lando Norris califica a Franco Colapinto como un buen amigo",
-      "seccion": "Automovilismo"
+      "id": "1o0mwr9",
+      "titulo": "Gabriel Petruccelli pide informes por las excavaciones en el Cerro El Triunfo",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1mfnr70",
+      "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
+      "seccion": "Deportes"
      },
      {
       "id": "n6v2wu",
       "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "107aa47",
-      "titulo": "Atletas de AACYC completan exigente competencia de trail",
-      "seccion": "Deportes"
      },
      {
       "id": "1vrfi9w",
@@ -198,18 +198,23 @@
      "id": "ahqycd",
      "titulo": "SUTEBA Balcarce adhiere al paro nacional en defensa de la educación pública",
      "cuando": "2026-10-16T15:35:31.538Z"
+    },
+    {
+     "id": "aa7nni",
+     "titulo": "Reprograman la Caravana de la Alegría para noviembre",
+     "cuando": "2026-10-16T17:07:59.683Z"
     }
    ],
    "cola": [
     {
-     "id": "aa7nni",
-     "titulo": "Reprograman la Caravana de la Alegría para noviembre",
-     "seccion": "Cultura y agenda",
+     "id": "1o0mwr9",
+     "titulo": "Gabriel Petruccelli pide informes por las excavaciones en el Cerro El Triunfo",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],
-   "cupo": 2,
-   "proximoDesde": "2026-10-16T17:05:31.538Z",
+   "cupo": 1,
+   "proximoDesde": "2026-10-16T18:37:59.683Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

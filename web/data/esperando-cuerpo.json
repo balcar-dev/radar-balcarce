@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-16T17:09:08.611Z",
+ "generado": "2026-10-16T17:30:33.491Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -50,6 +50,16 @@
      "medio": "Municipalidad de Balcarce",
      "enlace": "https://balcarce.gob.ar/2026/10/16/sin-oferentes-finalizo-el-acto-administrativo-de-la-licitacion-publica-no-3-26/",
      "fecha": "2026-10-16T15:21:30.000Z"
+    },
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/sin-oferentes-la-municipalidad.html",
+     "fecha": "2026-10-16T16:49:02.306Z"
+    },
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45101-el-segundo-llamado-a-licitacion-del-frigorifico-municipal-volvio-a-quedar-desierto/",
+     "fecha": null
     }
    ],
    "intentos": 1,
@@ -198,11 +208,6 @@
      "fecha": "2026-10-16T14:22:23.000Z"
     },
     {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/sociedad/murio-fernando-confessore-el-meteorologo-que-trabajaba-en-el-canal-tn-nid16102026/",
-     "fecha": "2026-10-16T14:00:51.000Z"
-    },
-    {
      "medio": "0223 (Mar del Plata)",
      "enlace": "https://www.0223.com.ar/nota/2026-10-16-8-15-19-conmocion-murio-fernando-confessore-referente-historico-de-la-meteorologia-a-los-58-anos",
      "fecha": "2026-10-16T11:15:00.000Z"
@@ -214,13 +219,13 @@
     },
     {
      "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/videos/show/television/2026/10/16/video-asi-fue-la-despedida-de-fernando-confessore-en-el-programa-donde-cada-tarde-daba-el-pronostico-video-2/",
-     "fecha": "2026-10-16T16:55:54.000Z"
+     "enlace": "https://tn.com.ar/show/television/2026/10/16/video-asi-fue-la-despedida-de-fernando-confessore-en-el-programa-donde-cada-tarde-daba-el-pronostico/",
+     "fecha": "2026-10-16T17:19:15.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/show/television/2026/10/16/video-asi-fue-la-despedida-de-fernando-confessore-en-el-programa-donde-cada-tarde-daba-el-pronostico/",
-     "fecha": "2026-10-16T16:55:51.000Z"
+     "enlace": "https://tn.com.ar/videos/show/television/2026/10/16/video-asi-fue-la-despedida-de-fernando-confessore-en-el-programa-donde-cada-tarde-daba-el-pronostico-video-2/",
+     "fecha": "2026-10-16T16:55:54.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
@@ -386,6 +391,11 @@
      "medio": "elDiarioAR",
      "enlace": "https://www.eldiarioar.com/medios/murio-fernando-confessore-58-anos-historico-meteorologo-tn-trece_1_13591768.html",
      "fecha": "2026-10-16T13:16:02.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/sociedad/murio-fernando-confessore-el-meteorologo-que-trabajaba-en-el-canal-tn-nid16102026/",
+     "fecha": "2026-10-16T10:03:07.000Z"
     },
     {
      "medio": "La Brújula 24",
@@ -570,6 +580,28 @@
    "intentos": 5,
    "motivo": "semáforo: necesita ojo humano: \"muere\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 5
+  },
+  {
+   "id": "1l6e3kp",
+   "titulo": "Las cuentas públicas alcanzaron un superávit de $977.173 millones en septiembre",
+   "copete": "",
+   "seccion": "Economía",
+   "fecha": "2026-10-16T15:59:23.186Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/las-cuentas-publicas-alcanzaron-un-superavit-de--977-173-millones-en-septiembre_a6ad24923c55c21457e960a2f",
+     "fecha": "2026-10-16T15:59:23.186Z"
+    },
+    {
+     "medio": "Infobrisas (Radio Brisas)",
+     "enlace": "https://www.infobrisas.com/noticias/2026/10/16/111695-caputo-confirmo-que-las-cuentas-publicas-registraron-superavit-en-septiembre",
+     "fecha": "2026-10-16T16:51:23.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (numero): el copete dice 977.000 y la fuente no lo dice",
+   "maximo": 3
   }
  ]
 }
