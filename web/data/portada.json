@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T11:35:13.155Z",
+  "generado": "2026-10-16T12:02:22.964Z",
   "notas": [
     {
       "id": "aa7nni",
@@ -123,6 +123,107 @@
         }
       ],
       "slug": "el-clima-de-hoy-en-balcarce-minima-de-6-y-maxima-de-11"
+    },
+    {
+      "id": "1kd7az5",
+      "titulo": "El Banco Central publica el informe con los datos de morosidad",
+      "copete": "La entidad financiera da a conocer los niveles de incumplimiento del sector privado correspondientes a agosto. La mora en hogares se ubica en el 12,8 por ciento y afecta a unos seis millones de personas.",
+      "cuerpo": "La morosidad en los préstamos a los hogares se ubica en el 12,8 por ciento, lo que representa una baja frente al récord del 12,9 por ciento registrado en julio. El indicador de irregularidad en las empresas se posiciona en el 3,6 por ciento y el promedio general para los bancos se sostiene en el 7,7 por ciento.\n\nEn paralelo, el sector de fintechs y billeteras virtuales registra una mora del 33,9 por ciento, mientras que los plásticos de las grandes cadenas comerciales superan el 50 por ciento de rojo. Se estima que la falta de pago afecta a unos seis millones de personas en todo el país, impactando en el consumo. En la Cámara de Diputados, los bloques debatieron el martes proyectos sobre el endeudamiento y la mora familiar.",
+      "guion": "El Banco Central publica el informe con los datos de morosidad",
+      "seccion": "Economía",
+      "medios": [
+        "Noticias Argentinas (NA)",
+        "La Nueva",
+        "La Verdad",
+        "Minuto Uno"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/el-banco-central-difunde-el-dato-de-morosidad-de-agosto_a6ad145f288153cda2d02fd2d",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-16T09:14:36.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T12:01:34.474Z",
+      "relevancia": 67,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Banco Central difunde los datos de morosidad de agosto.",
+        "La morosidad en los hogares se ubica en el 12,8 por ciento.",
+        "El incumplimiento en las empresas llega al 3,6 por ciento.",
+        "La mora afecta a unos seis millones de personas en el país."
+      ],
+      "noConfirmado": [
+        "Todavía no se detallan los montos globales del endeudamiento privado."
+      ],
+      "textoRedes": "El Banco Central da a conocer los niveles de incumplimiento del sector privado de agosto. La mora en hogares se ubica en el 12,8 por ciento y afecta a unos seis millones de personas en todo el país.",
+      "etiquetas": [
+        "Banco Central",
+        "morosidad",
+        "créditos",
+        "Diputados"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/el-banco-central-difunde-el-dato-de-morosidad-de-agosto_a6ad145f288153cda2d02fd2d",
+          "fecha": "2026-10-16T09:14:36.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo la información sobre la publicación del informe del Banco Central."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-16-8-29-0-el-banco-central-difunde-el-dato-de-morosidad-de-agosto",
+          "fecha": "2026-10-16T11:55:07.000Z",
+          "oficial": false,
+          "aporte": "Republicó el texto sin aportar información nueva."
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/el-banco-central-difunde-el-dato-de-morosidad-de-agosto/",
+          "fecha": "2026-10-16T11:23:36.000Z",
+          "oficial": false,
+          "aporte": "Aportó la comparación con el mes anterior y la evolución interanual del ratio de irregularidad."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/el-banco-central-da-conocer-este-lunes-la-morosidad-agosto-2026-n6334440",
+          "fecha": "2026-10-16T11:15:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos de morosidad por sector, la cifra de afectados y el debate en la Cámara de Diputados."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "132b801",
+          "titulo": "El Banco Central actualiza el techo de la banda cambiaria para noviembre",
+          "fecha": "2026-10-14T10:14:54.000Z",
+          "ruta": "/nota/el-banco-central-actualiza-el-techo-de-la-banda-cambiaria-para-132b801"
+        },
+        {
+          "id": "1dd0fj4",
+          "titulo": "El Banco Central compra dólares y las acciones suben",
+          "fecha": "2026-10-13T21:02:16.000Z",
+          "ruta": "/nota/el-banco-central-compra-dolares-y-las-acciones-suben-1dd0fj4"
+        },
+        {
+          "id": "1jx823a",
+          "titulo": "El Banco Central compra US$291 millones en el mercado cambiario",
+          "fecha": "2026-10-09T22:59:16.000Z",
+          "ruta": "/nota/el-banco-central-compra-us-291-millones-en-el-mercado-cambiario-1jx823a"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-banco-central-publica-el-informe-con-los-datos-de-morosidad",
+      "foto": {
+        "archivo": "fotos-notas/1kd7az5.jpg",
+        "credito": "Foto: La Nueva"
+      }
     },
     {
       "id": "al99go",
@@ -369,17 +470,18 @@
       "guion": "Lautaro Martinez cuestiona las dudas sobre el compromiso del seleccionado",
       "seccion": "Fútbol",
       "medios": [
+        "Infobae",
         "Olé",
         "Radio Mitre",
-        "La Brújula 24",
-        "Bolavip Argentina"
+        "Bolavip Argentina",
+        "La Brújula 24"
       ],
       "enlace": "https://www.ole.com.ar/seleccion/lautaromartinez-seleccionargentina-mundial2026-afa-lionelmessi_0_c6ZfyJlAij.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-15T23:28:33.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T02:01:31.530Z",
-      "relevancia": 62,
+      "relevancia": 72,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -931,83 +1033,6 @@
       }
     },
     {
-      "id": "kzftcz",
-      "titulo": "La Messi Cup define fechas y cruces para su segunda edición",
-      "copete": "El torneo Sub 16 creado por Lionel Messi se jugará en Miami del 25 de octubre al 1 de noviembre. Contará con la participación de River, Boca y Newell's entre los 16 equipos invitados.",
-      "cuerpo": "La segunda edición de la Messi Cup se llevará a cabo en Miami, Estados Unidos, entre el domingo 25 de octubre y el domingo 1 de noviembre. El certamen juvenil Sub 16, impulsado por el delantero y la productora 525 Rosario, reunirá a 16 clubes invitados divididos en cuatro zonas.\n\nEl torneo contará con la presencia de River, Boca y Newell's, además de Inter Miami y otros doce equipos internacionales. La competencia se disputará en el IMCF Stadium y en los predios de entrenamiento Florida Blue, con transmisión en el plan premium de Disney+.\n\nLa ceremonia inaugural está programada para el domingo 25 de octubre a las 19.15, hora de la Argentina, e incluirá un espectáculo artístico junto al desfile de las delegaciones.",
-      "guion": "La Messi Cup define fechas y cruces para su segunda edición",
-      "seccion": "Fútbol",
-      "medios": [
-        "La Nación",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.lanacion.com.ar/deportes/futbol/messi-cup-2026-cuando-se-juega-y-todos-los-equipos-que-participan-nid15102026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T20:15:07.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T21:05:59.806Z",
-      "relevancia": 60,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El torneo Sub 16 se juega en Miami del 25 de octubre al 1 de noviembre.",
-        "Participan 16 equipos invitados, con la presencia de River, Boca y Newell's.",
-        "La apertura será el domingo 25 de octubre a las 19.15 de la Argentina."
-      ],
-      "seSabe": [
-        "La competencia se realiza en Miami, Estados Unidos.",
-        "Participan 16 equipos divididos en cuatro grupos.",
-        "Los partidos se podrán ver a través de Disney+."
-      ],
-      "textoRedes": "La Messi Cup confirmó su segunda edición en Miami con la presencia de River, Boca y Newell's. El torneo Sub 16 se jugará entre el 25 de octubre y el 1 de noviembre.",
-      "etiquetas": [
-        "Messi Cup",
-        "Fútbol",
-        "Lionel Messi",
-        "Miami",
-        "River",
-        "Boca",
-        "Newell's"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/futbol/messi-cup-2026-cuando-se-juega-y-todos-los-equipos-que-participan-nid15102026/",
-          "fecha": "2026-10-15T20:15:07.000Z",
-          "oficial": false,
-          "aporte": "Detalló el formato, las fechas, los grupos, los estadios y los horarios de los partidos del torneo."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/messi-cup-2026-cuando-se-juega-donde-verla-en-vivo-y-que-equipos-argentinos-participan/",
-          "fecha": "2026-10-15T20:31:47.000Z",
-          "oficial": false,
-          "aporte": "Informó la realización de la segunda edición del torneo juvenil en Miami."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "o99ioz",
-          "titulo": "Lionel Messi juega su partido despedida en el Monumental",
-          "fecha": "2026-10-03T13:24:05.000Z",
-          "ruta": "/nota/lionel-messi-juega-su-partido-despedida-en-el-monumental-o99ioz"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-messi-cup-define-fechas-y-cruces-para-su-segunda-edicion",
-      "foto": {
-        "archivo": "fotos-notas/kzftcz.jpg",
-        "credito": "Foto: Ludovic Péron / Wikimedia Commons (CC BY-SA 3.0)"
-      }
-    },
-    {
       "id": "1jpdkrm",
       "titulo": "La inflación de septiembre varía según cada provincia",
       "copete": "El costo de vida alcanzó el 1,9% a nivel nacional en septiembre, aunque el incremento de precios mostró diferencias en las jurisdicciones con índices propios.",
@@ -1127,10 +1152,10 @@
         "El Eco de Tandil",
         "C5N",
         "Minuto Uno",
+        "La Capital (Rosario)",
+        "Los Andes (Mendoza)",
         "El Cronista",
         "Clarín",
-        "Los Andes (Mendoza)",
-        "La Capital (Rosario)",
         "El Día"
       ],
       "enlace": "https://www.cronista.com/economia-politica/la-industria-opero-al-585-de-su-capacidad-instalada-en-agosto-y-sumo-una-nueva-caida-interanual/",
@@ -1586,9 +1611,9 @@
       "guion": "Nadie dice nada estrena su serie Somos así en Disney+",
       "seccion": "Cultura y agenda",
       "medios": [
+        "A24",
         "TyC Sports",
         "Infobae",
-        "A24",
         "La Nación",
         "Perfil"
       ],
@@ -2424,7 +2449,6 @@
       "medios": [
         "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
       ],
       "enlace": "https://puntonueve.com.ar/el-centro-de-entrenamiento-la-cuna-del-quintuple-incorporo-nuevas-mesas-de-tenis-de-mesa-importadas-de-china/",
@@ -2432,7 +2456,7 @@
       "fecha": "2026-10-15T11:57:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-15T13:31:35.699Z",
-      "relevancia": 100,
+      "relevancia": 85,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2765,6 +2789,7 @@
         "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
         "El Día",
+        "0221",
         "La Tecla",
         "La Verdad",
         "QZ Noticias (Mar del Plata)",
@@ -2776,7 +2801,6 @@
         "Ámbito",
         "Minuto Uno",
         "Agencia DIB",
-        "0221",
         "Infoeme",
         "Ecos Diarios (Necochea)",
         "Clarín",
@@ -3044,10 +3068,10 @@
         "Ámbito",
         "C5N",
         "Minuto Uno",
+        "La Capital (Rosario)",
         "Los Andes (Mendoza)",
         "Clarín",
         "La Gaceta (Tucumán)",
-        "La Capital (Rosario)",
         "El Gráfico"
       ],
       "enlace": "https://es.motorsport.com/f1/news/oficial-rafael-camara-ficha-haas-debut-formula1-2027/10865294/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
@@ -3436,83 +3460,16 @@
         "archivo": "fotos-notas/gy4i31.jpg",
         "credito": "Foto: La Nueva"
       }
-    },
-    {
-      "id": "1e22az3",
-      "titulo": "Cristian Méndez regresa a Balcarce tras una exitosa gira por España",
-      "copete": "El payador local completó su recorrido por las Islas Canarias junto a Emanuel Gabotto. Participó en festivales y universidades, y ya confirmó una próxima gira en Puerto Rico.",
-      "cuerpo": "El payador Cristian Fabián Méndez completó una extensa gira artística por las Islas Canarias junto al músico dolorense Emanuel Gabotto. Ambos artistas viajaron convocados por el referente local Yeray Rodríguez para participar en actividades culturales, un festival en El Hierro y presentaciones en la Universidad de Las Palmas de Gran Canaria.\n\nDurante su recorrido por España, el balcarceño utilizó doce aviones y dos embarcaciones para cumplir con las actuaciones previstas. En Fuerteventura y en la localidad de Tazarte mantuvo encuentros con compatriotas radicados en el archipiélago, incluido un vecino originario de Los Pinos.\n\nSu próxima agenda internacional comenzará el 3 de diciembre con un viaje rumbo a Puerto Rico.",
-      "guion": "Cristian Méndez regresa a Balcarce tras una exitosa gira por Espana",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/10/cristian-mendez-regreso-de-una-exitosa.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T00:01:52.395Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T01:46:02.690Z",
-      "relevancia": 65,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El payador Cristian Méndez regresó de una gira por las Islas Canarias.",
-        "Realizó el viaje junto al músico Emanuel Gabotto por convocatoria de Yeray Rodríguez.",
-        "Su próxima presentación internacional será en Puerto Rico a partir del 3 de diciembre."
-      ],
-      "seSabe": [
-        "Cristian Méndez volvió de una gira artística por las Islas Canarias, según informó el medio local.",
-        "El viaje lo realizó junto al payador Emanuel Gabotto.",
-        "Participó en actividades culturales, presentaciones municipales y en la Universidad de Las Palmas, de acuerdo con la fuente.",
-        "Su próxima gira internacional será en Puerto Rico entre el 3 y el 14 de diciembre, según adelantó el artista."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El payador Cristian Méndez regresó a Balcarce tras una extensa gira por las Islas Canarias y ya confirmó su próximo viaje a Puerto Rico para diciembre.",
-      "etiquetas": [
-        "Cristian Méndez",
-        "Cultura",
-        "Islas Canarias",
-        "Payador",
-        "Puerto Rico"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/cristian-mendez-regreso-de-una-exitosa.html",
-          "fecha": "2026-10-15T00:01:52.395Z",
-          "oficial": false,
-          "aporte": "Detalló el desarrollo de la gira por las Islas Canarias, los lugares visitados y el próximo viaje a Puerto Rico."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "i18bwp",
-          "titulo": "Gira internacional para el payador Cristian Méndez",
-          "fecha": "2026-09-23T11:52:28.000Z",
-          "ruta": "/nota/gira-internacional-para-el-payador-cristian-mendez-i18bwp"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "cristian-mendez-regresa-a-balcarce-tras-una-exitosa-gira-por-espana"
     }
   ],
   "secciones": [
     "Cultura y agenda",
     "Balcarce",
+    "Economía",
     "Fútbol",
     "Política",
     "Automovilismo",
     "Tecnología",
-    "Economía",
     "Agro",
     "Deportes",
     "Argentina"
@@ -3520,9 +3477,9 @@
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 8,
+      "temp": 9,
       "sensacion": 4,
-      "humedad": 74,
+      "humedad": 72,
       "viento": 19,
       "rumbo": "S",
       "cielo": "Nublado",
@@ -3534,7 +3491,7 @@
         "dia": "vie",
         "max": 11,
         "min": 6,
-        "lluvia": 16,
+        "lluvia": 12,
         "codigo": 51,
         "viento": 19,
         "milimetros": 0,
@@ -3545,7 +3502,7 @@
         "dia": "sáb",
         "max": 10,
         "min": 7,
-        "lluvia": 8,
+        "lluvia": 4,
         "codigo": 51,
         "viento": 20,
         "milimetros": 1,
@@ -3556,7 +3513,7 @@
         "dia": "dom",
         "max": 12,
         "min": 5,
-        "lluvia": 12,
+        "lluvia": 4,
         "codigo": 51,
         "viento": 16,
         "milimetros": 0,
@@ -3878,6 +3835,18 @@
   },
   "pendientes": [
     {
+      "id": "sm31hz",
+      "titulo": null,
+      "seccion": "Deportes",
+      "motivo": "necesita ojo humano: \"adolescente\""
+    },
+    {
+      "id": "1h2xfr3",
+      "titulo": "Nueva victoria de Lasa en Powerlifting",
+      "seccion": "Balcarce",
+      "motivo": "de un medio de acá sin nombrar Balcarce ni la zona: espera la lectura con IA"
+    },
+    {
       "id": "yj5cn4",
       "titulo": null,
       "seccion": "Fútbol",
@@ -3890,10 +3859,22 @@
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
+      "id": "1mru4qv",
+      "titulo": null,
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente 4 (visto al reescribir)"
+    },
+    {
       "id": "405jgy",
       "titulo": "Balcarce despide al “Chiqui”, un referente de la danza y…",
       "seccion": "Cultura y agenda",
       "motivo": "necesita ojo humano: \"falleció\" (en otro medio que cuenta lo mismo)"
+    },
+    {
+      "id": "1hkr9k8",
+      "titulo": "Gabriel Solano denunció penalmente a Javier Milei y Luis…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "120b8gy",
@@ -3932,16 +3913,16 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "17gc53m",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
       "id": "1333xd6",
       "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
+      "id": "17gc53m",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "8ox6a7",
