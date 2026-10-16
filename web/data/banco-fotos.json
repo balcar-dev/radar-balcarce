@@ -16121,8 +16121,8 @@
   "origen": "ninguna",
   "titulo": "Luciano Nakis apunta a Gabriel Milito como técnico de Independiente",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-16T20:02:30.772Z",
-  "intentos": 2,
+  "cuando": "2026-10-16T21:31:37.230Z",
+  "intentos": 3,
   "fuentes": 5
  },
  "mhaxsk": {
@@ -16253,5 +16253,26 @@
   "cuando": "2026-10-16T20:32:12.000Z",
   "intentos": 1,
   "fuentes": 4
+ },
+ "6m84c7": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "La Escuela Emilio Lamarca pasa la Caravana de la Alegría a noviembre",
+  "razon": "Todas las imágenes muestran menores de edad claramente reconocibles (rostros visibles), por lo que ninguna cumple con los requisitos de publicación.",
+  "cuando": "2026-10-16T21:31:37.230Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "191geto": {
+  "archivo": "fotos-notas/191geto.jpg",
+  "medio": "Crónica",
+  "credito": "Foto: Crónica",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El río Iguazú supera su marca habitual por veinticinco metros y genera evacuaciones",
+  "enlace": "https://www.cronica.com.ar/sociedad/rio-iguazu-crecida-el-nino-puerto-iguazu/",
+  "imagenOriginal": "https://www.cronica.com.ar/files/image/1721/1721975/6ad2780e0beeb_600_315!.jpg?s=f324030b5b2bcb14e9adfaabb58ed5ea&d=1792119600",
+  "razon": "La foto C muestra una vista cenital de las cataratas con el río crecido, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-16T21:31:37.230Z"
  }
 }
