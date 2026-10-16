@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T04:01:56.911Z",
+  "generado": "2026-10-16T04:31:51.430Z",
   "notas": [
     {
       "id": "al99go",
@@ -107,7 +107,7 @@
       "fecha": "2026-10-16T01:20:02.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T04:01:32.104Z",
-      "relevancia": 83,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1100,8 +1100,8 @@
         "C5N",
         "Minuto Uno",
         "La Capital (Rosario)",
-        "Los Andes (Mendoza)",
-        "El Cronista"
+        "El Cronista",
+        "Los Andes (Mendoza)"
       ],
       "enlace": "https://www.cronista.com/economia-politica/la-industria-opero-al-585-de-su-capacidad-instalada-en-agosto-y-sumo-una-nueva-caida-interanual/",
       "teniaImagenLaFuente": true,
@@ -3604,10 +3604,10 @@
         "Ámbito",
         "C5N",
         "Minuto Uno",
-        "Los Andes (Mendoza)",
         "La Nueva",
         "Clarín",
         "La Gaceta (Tucumán)",
+        "Los Andes (Mendoza)",
         "La Nación"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/italia/lautaro-martinez-lesionado-jugaria-fecha-fifa-noviembre-seleccion_0_c2p0yRIuvY.html",
@@ -3934,9 +3934,9 @@
         "iProUP",
         "Ámbito",
         "La Capital (Rosario)",
-        "Los Andes (Mendoza)",
         "InfoRegión",
         "iProfesional",
+        "Los Andes (Mendoza)",
         "El Cronista"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/crece-la-morosidad-empresarial-casi-59000-companias-tienen-problemas-para-pagar-sus-deudas/",
@@ -4149,10 +4149,10 @@
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 7,
-      "sensacion": 4,
+      "temp": 6,
+      "sensacion": 3,
       "humedad": 93,
-      "viento": 12,
+      "viento": 13,
       "rumbo": "S",
       "cielo": "Despejado",
       "esDeDia": false
@@ -4585,13 +4585,13 @@
       "motivo": "necesita ojo humano: \"asesinado\""
     },
     {
-      "id": "n6pah5",
+      "id": "17gc53m",
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "17gc53m",
+      "id": "n6pah5",
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
