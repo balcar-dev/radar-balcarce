@@ -1,7 +1,6 @@
 {
   "avisos": {
-    "falla-Pruebas con otra hora": "2026-10-16T02:00:48.174Z",
-    "falta-instagram-historia:noticia1": "2026-10-16T02:00:48.174Z"
+    "falla-Pruebas con otra hora": "2026-10-16T02:00:48.174Z"
   },
   "importantes": {
     "avisadas": {
@@ -14,26 +13,28 @@
   },
   "pendientes": {
     "avisados": [
+      "w75cgw",
       "loa4fx",
       "yj5cn4",
-      "405jgy",
-      "1dnzynw",
+      "cbns53",
       "2dhhlx",
-      "146nb3q",
+      "405jgy",
+      "du6hp3",
       "1hkr9k8",
+      "5oghzg",
       "120b8gy",
-      "1npu6pr",
+      "58vt4t",
       "1okotnb",
-      "1cqos2o",
-      "17gc53m",
       "1333xd6",
       "1mmg03q",
       "zwv5sw",
       "n6pah5",
+      "17gc53m",
+      "1y68acy",
       "j9v9ko",
       "jrrxzw"
     ],
-    "ultimo": "2026-10-15T23:31:02.467Z"
+    "ultimo": "2026-10-16T03:00:48.304Z"
   },
   "redes": {
     "hasta": "2026-10-16T00:07:40.462Z"
@@ -47,12 +48,6 @@
       "clave": "falla-Pruebas con otra hora",
       "nivel": "media",
       "texto": "\"Pruebas con otra hora\" falló en su última corrida, en el paso \"Probar con cinco horas y fechas distintas\" (1 seguidas; 2 de las últimas 3).",
-      "desde": "2026-10-16T00:00:47.599Z"
-    },
-    {
-      "clave": "falta-instagram-historia:noticia1",
-      "nivel": "alta",
-      "texto": "Instagram: no salió la historia de podcast mañana (su reel sí salió y la historia no se reintenta). Mirá el registro de \"Redes\": las historias de Meta aceptan hasta 60 segundos.",
       "desde": "2026-10-16T00:00:47.599Z"
     }
   ]
