@@ -414,7 +414,7 @@ Cada ficha dice: qué se probó (HTTP, cantidad de notas, fecha de la última, s
 - **Texto / foto:** — / —.
 - **Cada cuánto publica:** Menos de una por mes.
 - **Qué aporta:** Actos y obras de las localidades.
-- **Recomendación de lectura:** Nada que sumar. Una duda para los dueños: en PALABRAS_LOCALES (lo que hace que una nota de afuera sea "de acá") hoy están Napaleofú, Ramos Otero y Laguna La Brava, pero no San Agustín, Los Pinos ni Bosch (a propósito: son frases comunes) ni Mar del Sud (que no es del partido). Una nota de afuera que sólo diga "Los Pinos" no cuenta como de Balcarce.
+- **Recomendación de lectura:** Nada que sumar. Desde el 16/10 (regla 179) las siete localidades cuentan como de acá: Napaleofú, Ramos Otero y Laguna La Brava solas (PALABRAS_LOCALES); San Agustín, Los Pinos y Bosch, que también son otros lugares, con respaldo (PALABRAS_LOCALES_DEBILES): cuando las nombra un medio de Balcarce, o cuando un medio de afuera las pone en el título y además nombra a Balcarce o la zona, y nunca pegadas a otro lugar ("San Agustín, Córdoba", "Los Pinos de Mar del Plata", "Residencia Los Pinos"). Mar del Sud no (no es del partido).
 - **Peso:** hoy 24; sugerido 24. El del feed municipal.
 - **Redes (no se pueden leer):** Posibles páginas de Facebook de cada localidad (no se pueden leer).
 - **Ojo:** Mar del Sud es de General Alvarado, no de Balcarce (Wikipedia, 15/10). No se encontraron sociedades de fomento con sitio propio.
@@ -612,6 +612,24 @@ Cada ficha dice: qué se probó (HTTP, cantidad de notas, fecha de la última, s
 - **Qué aporta:** Nada de acá.
 - **Recomendación de lectura:** No sumar.
 - **Peso:** hoy —; sugerido —. —
+
+## ¿Son de la zona? (comprobado el 15 y 16/10)
+
+| Fuente | ¿Es de la zona? | Redacción | Propuesta |
+|---|---|---|---|
+| Infórmese Primero (FM 104.9) | De Balcarce, con mucho de afuera | El pie dice "2007-2026, Balcarce" y los "hechos de nuestra ciudad"; no publica dirección. | Dejar. Si se quiere menos ruido, leer sólo las etiquetas La Ciudad, Zonales y Deportes (ver Balcarce a fondo). |
+| Diario La Vanguardia | De Balcarce, con mucho de afuera | Calle 16 N° 662, 1° piso, Balcarce; tel. (02266) 42-4151 ("Multimedios Balcarce", con Radio Líder). | Dejar como de Balcarce. Lo nacional que copia ya no cuenta como de acá (historiaDeAca). |
+| Radio Gabal (FM 104.1) | De Balcarce, con mucho de afuera | Calle 8 N° 546, Balcarce. | Dejar: ya se leen sólo sus secciones locales (Comunidad, Policiales, Política, Deportes, Agro), no El País ni El Mundo. |
+| El Diario Balcarce | Sí, es de Balcarce | Calle 17 N° 792, Balcarce (Imagen Balcarce SRL). Se presenta como el único diario de Balcarce en papel y digital. | Dejar. |
+| Municipalidad de Balcarce | Sí, es de Balcarce | Calle 16 N° 602, Balcarce; tel. (02266) 43-0240. Organismo oficial. | Dejar. |
+| Puntonueve (FM 100.9) | Sí, es de Balcarce | Av. Adolfo Gonzales Chaves 486, 1° piso, Balcarce; tel. 02266-43-1625 (oficina y planta transmisora). | Dejar. |
+| News Balcarce (FM 91.7) | Sí, es de Balcarce | No publica dirección ni teléfono; firma "Radio News", FM 91.7. | Dejar (de Balcarce por lo que publica; no hay dato formal). |
+| Acción 5 (Balcarce) | Sí, es de Balcarce | No publica contacto; el sitio da el clima de Balcarce y cubre la Liga Balcarceña, Ferro, Atlético Unidos y el autódromo. | Dejar sólo el feed: el sitio está vulnerado (spam de apuestas en la portada y en la descripción para redes). |
+| Ahora Balcarce | No es un medio de la zona | No se encontró redacción en Balcarce: no hay dirección, autor ni teléfono; el pie dice "© 2018". Es parte de la red "Ahora" (su sitio trae los feeds de Ahora Mar Chiquita, Ahora Buenos Aires, ahoranoticias.ar, Dolores y Mar del Plata). Las 10 notas del feed las subió el mismo usuario el 03/10 en hora y media; no publicó más. | Sacarla del bloque de Balcarce: no es un medio de la zona sino un portal de una red que copia al Municipio (que ya se lee). Opciones: apagarla, o pasarla a alcance "region" con peso 8 para que no cuente como medio de acá ni como un segundo medio en el cruce. |
+| Concejo Deliberante de Balcarce | Sí, es de Balcarce | Calle 20 N° 569, Balcarce; tel. 02266 42-4089. Organismo oficial. | Dejar. |
+| Facultad de Ciencias Agrarias (UNMdP) | No es un medio de la zona | Ruta 226 km 73,5, Balcarce (es de la Universidad Nacional de Mar del Plata). | Queda en Balcarce, pero no es un medio local: pasarla a alcance "region" (Agro), para que sus notas sean de acá sólo cuando nombren a Balcarce. Puede seguir como oficial. |
+| Argenpapa | No es un medio de la zona | Calle 19 N° 859, Balcarce; tel. (02266) 42-0703. | La redacción es de acá pero el contenido no: tratarla como agro nacional (alcance "pais", sección Agro) y bajarle el peso de 16 a 8. |
+| Radio Sudestada (apagada) | De Balcarce, con mucho de afuera | radiosudestada.com.ar, WhatsApp 2266; Cooperativa de Trabajo La Barrosa Ltda. | Dejarla apagada (decisión del 30/09). Si vuelve, como Radio Gabal: sólo lo que nombra a Balcarce. |
 
 ## Contra lo que hay en `ingesta/fuentes.mjs`
 

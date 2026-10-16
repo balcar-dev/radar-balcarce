@@ -21,6 +21,8 @@ import { FUENTES, FUENTES_NACIONALES } from '../../ingesta/fuentes.mjs';
 import { FUENTES_CRUCE } from '../../ingesta/fuentes-cruce.mjs';
 import { MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA } from '../../ingesta/criterio.mjs';
 import { BALCARCE_FONDO, COMO, FECHA_INVESTIGACION } from './balcarce-fondo.mjs';
+import { VERIFICACION_LOCAL, OTRAS_QUE_SE_DICEN_DE_BALCARCE, CRITERIO_CORTA, OBJETIVO, elegirCorta } from './afinar.mjs';
+import { auditarFuentes, leerPublicadas, visitasPorNota } from '../../ingesta/auditar-fuentes.mjs';
 
 const AQUI = path.dirname(fileURLToPath(import.meta.url));
 const RAIZ = path.join(AQUI, '..', '..');
@@ -202,6 +204,40 @@ function mismoMedio(nombreLista, medio) {
 
 function leerJSON(ruta, defecto) {
   try { return JSON.parse(fs.readFileSync(ruta, 'utf8')); } catch { return defecto; }
+}
+
+/** Un valor cualquiera de la planilla de candidatas, como texto corto. */
+function comoTexto(v) {
+  if (v == null) return '';
+  if (Array.isArray(v)) return v.map(comoTexto).filter(Boolean).join(' · ');
+  if (typeof v === 'object') return Object.entries(v).map(([k, x]) => `${k}: ${comoTexto(x)}`).join(' · ');
+  return String(v);
+}
+
+/** Las candidatas nuevas que investiga aparte otro pedido (Policiales, Ciencia e IA):
+ *  docs/etapa-1-fuentes/CANDIDATAS-NUEVAS.json. Si no está o no se entiende, ninguna (la página no falla). */
+export function leerCandidatas(dirDoc) {
+  const crudo = leerJSON(path.join(dirDoc, 'CANDIDATAS-NUEVAS.json'), null);
+  if (!crudo || typeof crudo !== 'object') return [];
+  const lista = Array.isArray(crudo) ? crudo : (crudo.candidatas ?? crudo.fuentes ?? crudo.medios ?? []);
+  if (!Array.isArray(lista)) return [];
+  const usadas = new Set();
+  return lista.filter((c) => c && typeof c === 'object').map((c, i) => {
+    const nombre = comoTexto(c.nombre ?? c.medio ?? c.id) || `Candidata ${i + 1}`;
+    let k = `cand-${clave(nombre)}`;
+    while (usadas.has(k)) k += '-b';
+    usadas.add(k);
+    return {
+      clave: k,
+      nombre,
+      url: comoTexto(c.url ?? c.feed ?? c.direccion ?? c.urlFeed),
+      tipo: comoTexto(c.tipo ?? c.como ?? c.lectura),
+      seccion: comoTexto(c.seccion ?? c.area ?? c.tema ?? c.categoria),
+      motivo: comoTexto(c.motivo ?? c.porQue ?? c.porque ?? c.aporte ?? c.descripcion),
+      estado: comoTexto(c.estado ?? c.prueba ?? c.probado ?? c.resultado),
+      sugerencia: comoTexto(c.sugerencia ?? c.recomendacion ?? c.accion ?? c.veredicto),
+    };
+  });
 }
 
 /** Notas publicadas (archivo + histórico, sin repetir ni propias) con la fecha en que se vieron. */
@@ -388,6 +424,23 @@ export function armarDatos({ raiz = RAIZ, ahora = new Date() } = {}) {
   // Pedido del 15/10: las de afuera que no sirven salen de la pantalla principal y van a "Descartadas".
   for (const m of medios) m.descartada = descarteDe(m);
 
+  // Fuentes v3 (16/10): la versión corta (afinar.mjs) y quién es cada medio "de Balcarce".
+  const publicadas_ = leerPublicadas(raiz);
+  const afinado = elegirCorta(medios, { notas: publicadas_ });
+  const saleDeLaCorta = new Map(afinado.salen.map((s) => [s.nombre, s]));
+  const quedaEnLaCorta = new Map(afinado.quedan.map((q) => [q.nombre, q]));
+  for (const m of medios) {
+    m.verificacion = VERIFICACION_LOCAL[m.nombre] ?? null;
+    if (m.grupo === 'balcarce') m.corta = { estado: 'balcarce' };
+    else if (m.descartada || !m.activo) m.corta = { estado: 'descartada' };
+    else if (saleDeLaCorta.has(m.nombre)) m.corta = { estado: 'sale', ...saleDeLaCorta.get(m.nombre) };
+    else m.corta = { estado: 'queda', porque: quedaEnLaCorta.get(m.nombre)?.porque ?? '' };
+  }
+  // La auditoría automática de la última semana (ingesta/auditar-fuentes.mjs), sin red.
+  const ultimaPublicada = publicadas_.map((n) => n.cuando).filter(Boolean).sort().at(-1);
+  const auditoria = auditarFuentes({ notas: publicadas_, vistas: visitasPorNota(raiz), dias: 7, ahora: ultimaPublicada ? new Date(ultimaPublicada) : ahora });
+  const candidatas = leerCandidatas(dirDoc);
+
   // "Balcarce a fondo": lo investigado se pega a las filas de Balcarce del registro; lo demás son filas nuevas.
   const filasFondo = []; // { orden, medio?, fondo }
   const usadas = new Set();
@@ -447,6 +500,13 @@ export function armarDatos({ raiz = RAIZ, ahora = new Date() } = {}) {
       porComo: Object.fromEntries(Object.keys(COMO).map((k) => [k, filasFondo.filter((x) => (x.fondo?.como ?? 'feed') === k).length])),
       sumar: filasFondo.filter((x) => x.fondo?.accion === 'sumar').length,
     },
+    corta: {
+      deAfuera: afinado.quedan.length,
+      balcarce: medios.filter((m) => m.grupo === 'balcarce').length,
+      salen: afinado.salen.length,
+      base: afinado.base,
+    },
+    candidatas: candidatas.length,
   };
 
   return {
@@ -459,6 +519,9 @@ export function armarDatos({ raiz = RAIZ, ahora = new Date() } = {}) {
     filasFondo,
     resumen,
     criterio: { MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA },
+    afinado,
+    auditoria,
+    candidatas,
   };
 }
 
@@ -615,6 +678,29 @@ function bloqueFondo(f) {
   </details>`;
 }
 
+const VEREDICTO = {
+  si: ['verif-si', 'Sí, es de Balcarce'],
+  mezcla: ['verif-mezcla', 'De Balcarce, con mucho de afuera'],
+  no: ['verif-no', 'No es un medio de la zona'],
+  duda: ['verif-duda', 'No se pudo confirmar'],
+};
+
+/** "¿Es de la zona?" (pedido B): quién es y dónde está su redacción. */
+function htmlVerificacion(v) {
+  if (!v) return '';
+  const [cls, txt] = VEREDICTO[v.veredicto] ?? VEREDICTO.duda;
+  return `<div class="verif ${cls}"><b>¿Es de la zona? ${esc(txt)}.</b> <span class="chico">Redacción: ${esc(v.redaccion)} Cubre: ${esc(v.cubre)}</span>${v.veredicto === 'si' ? '' : `<br><b>Propuesta:</b> ${esc(v.propuesta)}`}</div>`;
+}
+
+/** En qué versión está (pedido C): en la corta, sale de la corta (con su motivo) o de Balcarce (siempre). */
+function htmlCorta(m) {
+  const c = m.corta;
+  if (!c || c.estado === 'descartada') return '';
+  if (c.estado === 'balcarce') return '<div class="en-corta"><span class="etq etq-nueva">en las dos versiones</span> <span class="chico">lo de Balcarce entra siempre</span></div>';
+  if (c.estado === 'queda') return `<div class="en-corta"><span class="etq etq-nueva">queda en la corta</span> <span class="chico">${esc(c.porque)}</span></div>`;
+  return `<div class="motivo-corta"><span class="etq etq-apagada">sale de la corta</span> ${esc(c.motivo)}</div>`;
+}
+
 function htmlFila(m, { descartada = null } = {}) {
   const buscar = norm([m.nombre, m.dueno, m.ciudad, m.subgrupo, m.hermanos.join(' '), ...m.feeds.map((f) => `${f.id} ${f.url} ${f.seccion ?? ''}`)].join(' '));
   const tipos = [...new Set(m.feeds.filter((f) => f.activa || !m.activo).map((f) => f.tipoCorto))].join(' ');
@@ -626,11 +712,12 @@ function htmlFila(m, { descartada = null } = {}) {
     : `<ul class="feeds">${feedsHtml}</ul>`;
   const s = m.sugerencia;
   const grupoFila = descartada ? 'descartadas' : m.grupo;
-  return `<tr class="fila${descartada ? ' fila-descartada' : ''}${m.dudas.length ? ' dudosa' : ''}${m.activo ? '' : ' fila-apagada'}" id="m-${esc(m.clave)}" data-k="${esc(m.clave)}" data-nombre="${esc(m.nombre)}" data-grupo="${grupoFila}" data-sug="${s.accion}" data-dudosa="${m.dudas.length ? 1 : 0}" data-duda-tipos="${esc(dudaTipos)}" data-tipos="${esc(tipos)}" data-origen="${esc(origenes)}" data-pub="${m.pub30}" data-buscar="${esc(buscar)}">
+  return `<tr class="fila${descartada ? ' fila-descartada' : ''}${m.dudas.length ? ' dudosa' : ''}${m.activo ? '' : ' fila-apagada'}" id="m-${esc(m.clave)}" data-k="${esc(m.clave)}" data-nombre="${esc(m.nombre)}" data-grupo="${grupoFila}" data-corta="${esc(m.corta?.estado ?? '')}" data-sug="${s.accion}" data-dudosa="${m.dudas.length ? 1 : 0}" data-duda-tipos="${esc(dudaTipos)}" data-tipos="${esc(tipos)}" data-origen="${esc(origenes)}" data-pub="${m.pub30}" data-buscar="${esc(buscar)}">
   <td data-label="Medio" class="c-medio">
     <div class="nombre">${esc(m.nombre)}</div>
     <div class="etqs">${m.subgrupo ? `<span class="etq">${esc(m.subgrupo)}</span>` : ''}${m.ciudad ? `<span class="etq">${esc(m.ciudad)}</span>` : ''}${m.alcance ? `<span class="etq">${esc(m.alcance)}</span>` : ''}${m.nuevo ? '<span class="etq etq-nueva" title="Alta o reactivado el 15/10: todavía sin historial">nuevo / sin historial</span>' : ''}</div>
     ${descartada ? `<div class="motivo-desc"><span class="etq etq-apagada">${esc(descartada.etiqueta)}</span> ${esc(descartada.motivo)}</div>` : ''}
+    ${htmlCorta(m)}${htmlVerificacion(m.verificacion)}
     <div class="dueno" data-dueno><b>Dueño (grupo):</b> ${m.dueno ? esc(m.dueno) : '—'}${m.hermanos.length ? `<br><span class="chico">Hermanos activos: ${esc(m.hermanos.join(', '))}</span>` : ''}</div>
     ${m.dudas.length ? `<ul class="dudas">${m.dudas.map((d) => `<li class="duda duda-${d.tipo}">${esc(d.texto)}</li>`).join('')}</ul>` : ''}
   </td>
@@ -695,7 +782,8 @@ function htmlResumen(d) {
   const cond = Object.entries(c.MEDIOS_DE_AFUERA).map(([s, n]) => `${esc(s)} ${n}`).join(', ');
   return `<section class="resumen" aria-label="Resumen">
   <div class="tarjetas">
-    <div class="tarjeta tarjeta-total"><div class="t-num">${r.queQuedan.medios}</div><div class="t-nom">Medios activos que quedan</div><div class="chico">${r.queQuedan.feeds} direcciones (feeds). Hoy el registro lee ${r.mediosActivos} medios y ${r.feedsActivos} direcciones; ${r.descartadas.activasQueSeSacan} medios activos pasaron a Descartadas</div></div>
+    <div class="tarjeta tarjeta-total"><div class="t-num">${r.corta.deAfuera + r.corta.balcarce}</div><div class="t-nom">Versión corta (recomendada)</div><div class="chico">${r.corta.deAfuera} medios de afuera + ${r.corta.balcarce} de Balcarce; salen ${r.corta.salen} de la de 63</div></div>
+    <div class="tarjeta"><div class="t-num">${r.queQuedan.medios}</div><div class="t-nom">Versión de 63</div><div class="chico">${r.queQuedan.feeds} direcciones (feeds). Hoy el registro lee ${r.mediosActivos} medios y ${r.feedsActivos} direcciones; ${r.descartadas.activasQueSeSacan} medios activos pasaron a Descartadas</div></div>
     <div class="tarjeta tarjeta-balcarce"><div class="t-num">${r.balcarceFondo.filas}</div><div class="t-nom">Balcarce a fondo</div><div class="chico">${r.balcarceFondo.enUso} se leen hoy · ${r.balcarceFondo.nuevas} candidatas nuevas · ${r.balcarceFondo.porComo.feed} con feed · ${r.balcarceFondo.porComo.pagina} con página</div></div>
     ${tarjeta('pais', r.porGrupo.pais, `de ${r.porGrupoLista.pais} elegidos · ${r.feedsPorGrupo.pais} direcciones`)}
     ${tarjeta('zona', r.porGrupo.zona, `de ${r.porGrupoLista.zona} elegidos · ${r.feedsPorGrupo.zona} ${r.feedsPorGrupo.zona === 1 ? 'dirección' : 'direcciones'}`)}
@@ -770,6 +858,27 @@ function clienteDeLaPagina() {
     $('.coment', tr).addEventListener('input', (e) => guardarFila(tr, { c: e.target.value }));
   });
 
+  // ---- pestañas: versión corta, de 63, Balcarce a fondo, descartadas, para qué se usa cada cosa
+  const CLAVE_VISTA = 'radar-revision-fuentes-vista';
+  const VISTAS = $$('[data-vista-btn]').map((b) => b.dataset.vistaBtn);
+  let vista = 'corta';
+  try { const v = localStorage.getItem(CLAVE_VISTA); if (v && VISTAS.indexOf(v) >= 0) vista = v; } catch (e) { /* sin almacén */ }
+  const enVista = (el) => (' ' + el.dataset.solo + ' ').indexOf(' ' + vista + ' ') >= 0;
+  function aplicarVista() {
+    $$('[data-vista-btn]').forEach((b) => b.setAttribute('aria-selected', b.dataset.vistaBtn === vista ? 'true' : 'false'));
+    $$('[data-solo]').forEach((el) => { el.hidden = !enVista(el); });
+    const caja = $('#descartadas');
+    if (caja && vista === 'descartadas') caja.open = true;
+    document.body.dataset.vista = vista;
+    filtrar();
+  }
+  $$('[data-vista-btn]').forEach((b) => b.addEventListener('click', () => {
+    vista = b.dataset.vistaBtn;
+    try { localStorage.setItem(CLAVE_VISTA, vista); } catch (e) { /* sin almacén */ }
+    aplicarVista();
+    window.scrollTo(0, $('#pestanas').offsetTop);
+  }));
+
   // ---- buscador y filtros
   const quitarTildes = (s) => s.normalize('NFD').replace(/[\p{M}]/gu, '').toLowerCase();
   function filtrar() {
@@ -792,6 +901,8 @@ function clienteDeLaPagina() {
       if (tipo && (' ' + tr.dataset.tipos + ' ').indexOf(' ' + tipo + ' ') < 0) ok = false;
       if (org && (' ' + tr.dataset.origen + ' ').indexOf(' ' + org + ' ') < 0) ok = false;
       if (solo && tr.dataset.dudosa !== '1') ok = false;
+      if (vista === 'corta' && (tr.dataset.corta === 'sale' || tr.classList.contains('fila-fondo'))) ok = false;
+      if (vista === 'balcarce' && tr.dataset.grupo !== 'balcarce') ok = false;
       tr.hidden = !ok;
       if (ok && !tr.classList.contains('fila-descartada')) visibles += 1;
     });
@@ -801,10 +912,12 @@ function clienteDeLaPagina() {
     });
     const hayDesc = descartadas.some((tr) => !tr.hidden);
     const caja = $('#descartadas');
-    if (caja) caja.hidden = !hayDesc;
+    if (caja) caja.hidden = !hayDesc || !enVista(caja);
     const cuenta = $('#desc-visibles');
     if (cuenta) cuenta.textContent = descartadas.filter((tr) => !tr.hidden).length + ' de ' + descartadas.length;
-    $('#visibles').textContent = 'Mostrando ' + visibles + ' de ' + filas.length;
+    $('#visibles').textContent = vista === 'descartadas'
+      ? 'Mostrando ' + descartadas.filter((tr) => !tr.hidden).length + ' descartadas de ' + descartadas.length
+      : 'Mostrando ' + visibles + ' de ' + filas.length;
   }
   ['q', 'f-grupo', 'f-decision', 'f-sug', 'f-tipo', 'f-origen', 'f-dudosas'].forEach((id) => {
     $('#' + id).addEventListener('input', filtrar);
@@ -898,7 +1011,7 @@ function clienteDeLaPagina() {
   todas.forEach(pintarFila);
   $('#aviso-almacen').hidden = hayAlmacen;
   contar();
-  filtrar();
+  aplicarVista();
 }
 
 const CSS = String.raw`
@@ -1002,6 +1115,21 @@ details.descartadas{margin-top:22px;border:2px dashed var(--no);border-radius:10
 details.descartadas>summary{font-size:1.05rem;font-weight:700;color:var(--no);cursor:pointer}
 details.descartadas .tabla-caja{margin-top:10px}
 tr.fila-descartada{opacity:.95}
+.pestanas{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 4px;border-bottom:2px solid var(--borde);padding-bottom:6px}
+.pestana{font:inherit;font-weight:600;border:1px solid var(--borde);background:var(--tarjeta);color:var(--texto);border-radius:8px;padding:8px 12px;min-height:44px;cursor:pointer}
+.pestana[aria-selected=true]{background:var(--acento);border-color:var(--acento);color:#fff}
+.verif{font-size:.82rem;margin:6px 0;padding:6px 8px;border-left:4px solid var(--borde);border-radius:4px;background:var(--fondo)}
+.verif-si{border-left-color:var(--si)}.verif-mezcla{border-left-color:var(--franja)}.verif-no{border-left-color:var(--no);background:var(--no-f)}.verif-duda{border-left-color:var(--franja);background:var(--duda-f)}
+.verif-pill{display:inline-block;border-radius:99px;padding:1px 8px;font-size:.78rem;font-weight:600;border:0}
+.verif-pill.verif-si{background:var(--si-f);color:var(--si)}.verif-pill.verif-mezcla{background:var(--duda-f);color:var(--duda)}.verif-pill.verif-no{background:var(--no-f);color:var(--no)}.verif-pill.verif-duda{background:var(--duda-f);color:var(--duda)}
+.motivo-corta{font-size:.82rem;margin:6px 0;padding:6px 8px;border-left:4px solid var(--franja);background:var(--duda-f);border-radius:4px}
+.en-corta{margin:4px 0}
+.tabla-chica{overflow-x:auto}
+.fondo-intro .tabla-chica table{width:100%}
+.lista-salen li{margin:.35em 0;font-size:.9rem}
+.para-que dt{font-weight:700;margin-top:.7em}
+.para-que dd{margin:.2em 0 0 0}
+.tabla-candidatas{min-width:900px}
 [hidden]{display:none!important}
 @media (max-width:900px){
   .pagina{padding:12px}
@@ -1059,7 +1187,7 @@ function htmlDescartadas(d) {
 </tbody>`;
   }).join('\n');
   const r = d.resumen.descartadas;
-  return `<details class="descartadas" id="descartadas">
+  return `<details class="descartadas" id="descartadas" data-solo="63 descartadas">
   <summary>Descartadas (por si querés rescatar alguna) · <span id="desc-total">${lista.length}</span> <span class="chico">· mostrando <span id="desc-visibles">${lista.length} de ${lista.length}</span></span></summary>
   <p class="chico">Son fuentes de <b>afuera</b> que Claude sacó de la tabla de arriba: ${r.porTipo.apagada} ya estaban apagadas, ${r.porTipo.dueno} son de mismo dueño que otra que ya cuenta, ${r.porTipo['sin-aporte']} casi no aportan y ${r.porTipo.caida} están caídas. Cada una dice el motivo. No se borró ni se tocó <code>ingesta/fuentes.mjs</code>: si querés que alguna vuelva, marcá <b>Sí</b> (quiere decir &laquo;rescatarla&raquo;) y se copia aparte en <b>Copiar mis decisiones</b>. Estas filas no cuentan en el progreso.</p>
   <div class="tabla-caja">
@@ -1070,6 +1198,129 @@ function htmlDescartadas(d) {
   </table>
   </div>
 </details>`;
+}
+
+// ------------------------------------------------- Fuentes v3 (16/10): pestañas, corta, zona, para qué sirve
+
+export const PESTANAS = [
+  ['corta', 'Versión corta (recomendada)'],
+  ['63', 'Versión de 63 (por si querés volver)'],
+  ['balcarce', 'Balcarce a fondo'],
+  ['descartadas', 'Descartadas'],
+  ['para-que', 'Para qué se usa cada cosa'],
+];
+
+function htmlPestanas() {
+  return `<nav class="pestanas" id="pestanas" role="tablist" aria-label="Qué lista ver">
+  ${PESTANAS.map(([v, t], i) => `<button type="button" role="tab" class="pestana" data-vista-btn="${v}" aria-selected="${i === 0 ? 'true' : 'false'}">${esc(t)}</button>`).join('\n  ')}
+</nav>`;
+}
+
+const pct = (a, b) => (b ? `${Math.round((1000 * a) / b) / 10} %` : '—');
+
+/** La explicación de la versión corta: el criterio, lo que cuesta y lo que sale. */
+function htmlCortaIntro(d) {
+  const a = d.afinado;
+  const r = d.resumen.corta;
+  const c63 = a.cobertura.de63;
+  const cc = a.cobertura.corta;
+  const perdidaDueno = a.salen.filter((s) => s.paso === 'dueno').reduce((t, s) => t + (s.perdida ?? 0), 0);
+  const masCara = [...a.salen].sort((x, y) => (y.perdida ?? 0) - (x.perdida ?? 0))[0];
+  const filasSec = a.secciones.filter((s) => s.notas63.total > 0).map((s) => `<tr><td>${esc(s.seccion)}</td><td>${s.minimo}</td><td>${s.de63} → <b>${s.corta}</b></td><td>${s.notas63.llegan} → <b>${s.notasCorta.llegan}</b> <span class="chico">de ${s.notas63.total}</span></td></tr>`).join('');
+  const salen = a.salen.map((s) => `<li><b>${esc(s.nombre)}</b> <span class="etq">${s.paso === 'dueno' ? 'mismo dueño' : 'poco aporte'}</span> ${esc(s.motivo)}</li>`).join('');
+  return `<section class="fondo-intro corta-intro" data-solo="corta" aria-label="Versión corta">
+  <h2>Versión corta (recomendada) · ${r.deAfuera} medios de afuera + ${r.balcarce} de Balcarce = ${r.deAfuera + r.balcarce}</h2>
+  <p>La de 63 tiene ${r.base} medios de afuera y ${r.balcarce} de Balcarce. Hernán prefiere menos y más afinada: la meta era entre ${OBJETIVO.minimo} y ${OBJETIVO.maximo} de afuera. Salen <b>${r.salen}</b>. Todo lo de Balcarce queda. La tabla de abajo muestra sólo lo que queda; lo que sale está en la lista de esta caja y, con su motivo, en la pestaña <b>Versión de 63</b>.</p>
+  <p><b>Cómo se eligió</b> (se puede volver a medir: al regenerar la página se recalcula con las notas nuevas):</p>
+  <ol>${CRITERIO_CORTA.map((t) => `<li>${esc(t)}</li>`).join('')}</ol>
+  <p><b>Lo que cuesta, medido con las ${c63.total} notas de afuera publicadas desde el 3/9:</b> con la de 63, ${c63.llegan} llegaban al mínimo de medios de su sección; con la corta, <b>${cc.llegan}</b> (se pierden ${c63.llegan - cc.llegan}, el ${pct(c63.llegan - cc.llegan, c63.llegan)}). De esas, ${perdidaDueno} son por la regla de un medio por dueño${masCara ? `; la salida que más cuesta es ${esc(masCara.nombre)} (${masCara.perdida} notas): si Fútbol o Deportes quedan flacos, ésa es la primera para volver a sumar` : ''}. Lo de Balcarce no cambia: entra igual.</p>
+  <table><tr><th>Sección</th><th>Pide</th><th>Medios que la cubren (63 → corta)</th><th>Notas de afuera que llegan (63 → corta)</th></tr>${filasSec}</table>
+  <p class="chico">Policiales de afuera no se trae (sólo lo de Balcarce y la zona: por eso casi no tiene notas acá). Ciencia e IA no son secciones: caen en Tecnología y Argentina; los medios nuevos de Policiales, Ciencia e IA que se investigan aparte aparecen abajo, en <b>Candidatas nuevas</b>${d.candidatas.length ? '' : ', cuando estén listos'}.</p>
+  <details><summary>Lo que sale de la corta (${a.salen.length}), con el motivo</summary><ul class="lista-salen">${salen}</ul></details>
+</section>`;
+}
+
+/** (B) ¿Los medios "de Balcarce" son de la zona? */
+function htmlZona(d) {
+  const balcarce = d.medios.filter((m) => m.grupo === 'balcarce');
+  const fila = (nombre, v) => {
+    const [cls, txt] = VEREDICTO[v?.veredicto] ?? VEREDICTO.duda;
+    return `<tr><td><b>${esc(nombre)}</b></td><td><span class="verif-pill ${cls}">${esc(txt)}</span></td><td class="chico">${esc(v?.redaccion ?? 'Sin verificar')}</td><td class="chico">${esc(v?.cubre ?? '—')}</td><td class="chico">${esc(v?.propuesta ?? '—')}</td></tr>`;
+  };
+  const noSon = [...balcarce.filter((m) => m.verificacion?.veredicto === 'no').map((m) => m.nombre), ...OTRAS_QUE_SE_DICEN_DE_BALCARCE.filter((o) => o.veredicto === 'no').map((o) => o.nombre)];
+  return `<section class="fondo-intro zona-verif" id="son-de-la-zona" data-solo="balcarce corta" aria-label="¿Son de la zona?">
+  <h2>¿Los medios "de Balcarce" son de la zona? · comprobado el 15 y 16/10</h2>
+  <p>De cada fuente que el robot trata como de Balcarce se buscó en su sitio quién es y dónde está su redacción (dirección, teléfono 02266, "quiénes somos"). <b>No son de la zona, aunque nombren a Balcarce: ${esc(noSon.join(', '))}.</b> Abajo, la propuesta para cada una. Nada se cambió en <code>ingesta/fuentes.mjs</code>: lo deciden ustedes.</p>
+  <div class="tabla-chica"><table><tr><th>Fuente</th><th>¿Es de la zona?</th><th>Redacción</th><th>Qué cubre</th><th>Propuesta</th></tr>
+  ${balcarce.map((m) => fila(m.nombre, m.verificacion)).join('')}
+  ${OTRAS_QUE_SE_DICEN_DE_BALCARCE.map((o) => fila(o.nombre, o)).join('')}
+  </table></div>
+  <p class="chico"><b>Las localidades del partido</b> (regla 179, desde el 16/10): Balcarce, San Agustín, Bosch, Napaleofú, Los Pinos, Villa Laguna La Brava y Ramos Otero (y el paraje Juan Vincenty). Mar del Sud no: es de General Alvarado. Napaleofú, Ramos Otero y Laguna La Brava alcanzan solas; San Agustín, Los Pinos y Bosch, que también son otros lugares (San Agustín de Córdoba, el barrio Los Pinos de Mar del Plata, la Residencia Los Pinos de México, la marca Bosch), cuentan como de acá cuando lo dice un medio de Balcarce, o cuando un medio de afuera las pone en el título y además nombra a Balcarce o la zona.</p>
+</section>`;
+}
+
+/** (D) Para qué se usa cada cosa, en castellano y sin código, y cómo se revisa sola la lista. */
+function htmlParaQue(d) {
+  const a = d.auditoria;
+  const marcadas = a.filas.filter((f) => f.marcas.length);
+  const c = d.criterio;
+  const cond = Object.entries(c.MEDIOS_DE_AFUERA).map(([s, n]) => `${esc(s)} ${n}`).join(', ');
+  return `<section class="explica para-que" id="para-que" data-solo="para-que" aria-label="Para qué se usa cada cosa">
+  <h2>Para qué se usa cada cosa</h2>
+  <dl>
+    <dt>Una fuente</dt><dd>Un medio o un organismo (la Municipalidad, el Concejo) cuyas noticias el robot lee solo, cada media hora. Cada fuente se lee por una o más <b>direcciones</b> (por ejemplo, Radio Gabal tiene una por sección).</dd>
+    <dt>Fuente de Balcarce</dt><dd>Lo que publica es de acá: puede salir sola, sin que la confirme nadie más (salvo que el semáforo la frene: un menor, una víctima, un policial o la política esperan a una persona).</dd>
+    <dt>Fuente de cruce</dt><dd>Un medio de afuera que se lee sobre todo para <b>confirmar</b>: si varios medios distintos cuentan lo mismo, el hecho es real y es noticia; cuantos más lo cuentan, más importa. No siempre se usa para escribir: la nota se escribe con lo mejor de los que la contaron. Una noticia de afuera sale sola sólo si la cuentan ${esc(String(c.MEDIOS_POR_DEFECTO))} medios distintos (${esc(cond)}; con una figura argentina, ${esc(String(c.MEDIOS_CON_FIGURA))}). Con uno solo, ni pasa.</dd>
+    <dt>Feed</dt><dd>Una dirección que el propio medio publica <b>para que otros programas lean sus notas</b>: una lista ordenada con título, fecha, resumen y a veces el texto y la foto. Puede ser RSS, Atom o un "índice de noticias" (el que los medios arman para Google). Es lo que preferimos: el medio lo ofrece para eso, trae la fecha y casi nunca se rompe.</dd>
+    <dt>Leer la página (scraping o raspado)</dt><dd>Cuando un medio no tiene feed, el robot baja su portada como la vería una persona y busca los enlaces a las notas con un patrón. Hace falta con medios de acá que no tienen feed (La Vanguardia, El Diario Balcarce). <b>Riesgos:</b> si el medio cambia el diseño, se rompe sin avisar (deja de traer notas o trae cualquier cosa: el 20/09 salió publicado el "quiénes somos" de El Diario); la portada no dice la hora (las notas de La Vanguardia nunca parecen "recién salidas"); se puede colar texto ajeno (el sitio de Acción 5 tiene spam de apuestas escondido); pesa más para el sitio y algunos lo bloquean. Por eso, siempre que hay feed, va feed; la página, sólo para lo de Balcarce que no tiene otra.</dd>
+    <dt>Peso</dt><dd>Cuánto suma la fuente al puntaje de una nota. Los de Balcarce van de 24 a 30 y los de afuera de 8 a 16: así una nota de acá siempre le gana a una de afuera parecida.</dd>
+    <dt>Dueño (grupo)</dt><dd>Los medios del mismo dueño cuentan como <b>uno solo</b> en el cruce: Clarín, TN, Olé y Radio Mitre (Grupo Clarín); El Eco de Tandil, QZ, El Marplatense y LU9 (sistema eleco.com.ar). Si los cuatro de Clarín cuentan algo, es una sola voz: no "confirman" entre ellos.</dd>
+    <dt>Cuando una fuente se cae</dt><dd>El robot sigue con las demás: nada se frena y queda anotado el motivo. Si es de Balcarce, sus notas no entran mientras dure (por eso importa que haya varias fuentes de acá). Si es de afuera, lo que cuenta llega por otros medios, pero algunas noticias no llegan al mínimo. Hoy nadie avisa si un feed de Balcarce queda un día sin notas (está pendiente; la auditoría de abajo lo marca como "dormida").</dd>
+    <dt>Sí / No / Duda</dt><dd><b>Sí</b>: que se lea (que quede; en Descartadas, rescatarla; en las candidatas, sumarla). <b>No</b>: que no se lea. <b>Duda</b>: quiero hablarlo antes. El comentario es para explicar. Se guarda en este navegador; al terminar, <b>Copiar mis decisiones</b> y pegarlo en el chat. La misma fuente tiene la misma decisión en todas las pestañas.</dd>
+  </dl>
+  <h2>Cómo se revisa sola la lista</h2>
+  <ul>
+    <li><b>Ya existe:</b> <code>node ingesta/medir-fuentes.mjs</code> (sale a internet: prueba cada feed y, con lo publicado, cuenta cuántas notas aportó cada medio, en cuántas fue el único, cuántas veces fue imprescindible y cuántas visitas tuvo; deja la planilla <code>fuentes-medidas.csv</code>); el <b>sondeo desde Cloudflare</b> (prueba los feeds desde la nube: así se supo que Infobae nos bloquea); <code>npm run auditar</code> (qué decide el filtro con las noticias del día); y el vigilante, que avisa si la web deja de actualizarse.</li>
+    <li><b>Nuevo (16/10): <code>node ingesta/auditar-fuentes.mjs</code></b>. Sin internet y sin gastar nada: mira la última semana de lo publicado y, para cada medio, cuenta notas, únicas, veces imprescindible, notas de acá, visitas y días sin notas, y marca: <i>sin aporte</i> (de afuera, ninguna nota en la semana), <i>dormida</i> (de Balcarce, más de 3 días sin notas), <i>redundante</i> (todo lo suyo lo contó también otro del mismo dueño) y <i>nunca imprescindible</i>. Con <code>--dias=30</code> mira un mes; con <code>--json</code> lo deja para otro programa.</li>
+    <li><b>Lo que dio hoy</b> (${esc(a.desde.slice(0, 10).split('-').reverse().join('/'))} al ${esc(a.hasta.slice(0, 10).split('-').reverse().join('/'))}, ${a.notas} notas): ${marcadas.length ? marcadas.map((f) => `${esc(f.medio)} (${esc(f.marcas.join(', '))})`).join('; ') : 'nada para mirar'}.</li>
+    <li><b>Conviene agregar</b> (no está hecho; es simple): (1) que GitHub la corra sola cada lunes y el resumen vaya en el informe por mail; (2) que cada corrida guarde cuántas notas trajo cada feed y si respondió (hoy no queda registro, y por eso la salud del feed sólo se mide saliendo a internet); (3) el aviso de "feed de Balcarce 24 horas sin notas"; (4) una vez por semana, comparar con Google Noticias "Balcarce" para ver si hay medios de acá que no leemos; (5) rehacer esta página una vez por mes: la versión corta se recalcula sola con las notas nuevas.</li>
+  </ul>
+</section>`;
+}
+
+/** Fila de una candidata nueva de otro pedido (Policiales, Ciencia, IA), con sus botones. */
+function htmlFilaCandidata(c) {
+  const buscar = norm([c.nombre, c.url, c.seccion, c.motivo].join(' '));
+  return `<tr class="fila fila-candidata" id="m-${esc(c.clave)}" data-k="${esc(c.clave)}" data-nombre="${esc(c.nombre)}" data-grupo="candidatas" data-corta="candidata" data-sug="sumar" data-dudosa="0" data-duda-tipos="" data-tipos="feed" data-origen="" data-pub="0" data-buscar="${esc(buscar)}">
+  <td data-label="Medio" class="c-medio"><div class="nombre">${esc(c.nombre)}</div><div class="etqs"><span class="etq etq-nueva">candidata nueva</span>${c.seccion ? `<span class="etq">${esc(c.seccion)}</span>` : ''}</div></td>
+  <td data-label="Dirección" class="c-feeds">${/^https?:/.test(c.url) ? `<a class="url" href="${esc(c.url)}" target="_blank" rel="noopener noreferrer">${esc(hostCorto(c.url))}</a>` : esc(c.url || '—')}${c.tipo ? `<div class="chico">${esc(c.tipo)}</div>` : ''}</td>
+  <td data-label="Qué se probó" class="c-estado chico">${esc(c.estado || '—')}</td>
+  <td data-label="Por qué" class="c-porque">${esc(c.motivo || '—')}</td>
+  <td data-label="Sugerencia" class="c-sug">${esc(c.sugerencia || '—')}</td>
+  <td data-label="Tu decisión (Sí = sumarla)" class="c-decision">
+    <div class="botones" role="group" aria-label="Decisión sobre ${esc(c.nombre)}">
+      <button type="button" class="b b-si" data-d="Sí" aria-pressed="false">Sí</button>
+      <button type="button" class="b b-no" data-d="No" aria-pressed="false">No</button>
+      <button type="button" class="b b-duda" data-d="Duda" aria-pressed="false">Duda</button>
+    </div>
+    <input type="text" class="coment" placeholder="Comentario (opcional)" aria-label="Comentario sobre ${esc(c.nombre)}" maxlength="400">
+  </td>
+</tr>`;
+}
+
+/** Las candidatas nuevas (CANDIDATAS-NUEVAS.json), si ya están. */
+function htmlCandidatas(d) {
+  if (!d.candidatas.length) {
+    return `<section class="fondo-intro" id="candidatas" data-solo="corta 63" aria-label="Candidatas nuevas"><h2>Candidatas nuevas (Policiales, Ciencia e IA)</h2><p class="chico">Otro pedido está investigando medios nuevos de Policiales, Ciencia e IA. Cuando deje <code>docs/etapa-1-fuentes/CANDIDATAS-NUEVAS.json</code>, al regenerar esta página aparecen acá, cada una con Sí / No / Duda.</p></section>`;
+  }
+  return `<section class="fondo-intro" id="candidatas" data-solo="corta 63" aria-label="Candidatas nuevas">
+  <h2>Candidatas nuevas (Policiales, Ciencia e IA) · ${d.candidatas.length}</h2>
+  <p class="chico">Las investigó otro pedido (<code>CANDIDATAS-NUEVAS.json</code> y <code>.md</code>). No están en ninguna de las dos versiones: <b>Sí</b> quiere decir "sumarla".</p>
+  <div class="tabla-caja"><table class="tabla-candidatas">
+  <thead><tr><th>Medio</th><th>Dirección</th><th>Qué se probó</th><th>Por qué</th><th>Sugerencia</th><th>Tu decisión</th></tr></thead>
+  <tbody class="grupo" data-grupo="candidatas">${d.candidatas.map(htmlFilaCandidata).join('\n')}</tbody>
+  </table></div>
+</section>`;
 }
 
 /** La página entera, lista para escribir en un archivo. */
@@ -1105,11 +1356,17 @@ export function generarHTML(d) {
 <div class="pagina">
 <header>
   <h1>Revisión de fuentes</h1>
-  <p class="sub">Radar Balcarce · generado el ${esc(generado)} · notas publicadas del ${esc(ventana)} (${d.notasAnalizadas} notas). Marcá <b>Sí</b>, <b>No</b> o <b>Duda</b> en cada medio; se guarda solo en este navegador. Al final apretá <b>Copiar mis decisiones</b> y pegalas en el chat. Primero está <a href="#balcarce-a-fondo">Balcarce a fondo</a>; las fuentes de afuera que no sirven están plegadas al final, en <a href="#descartadas">Descartadas</a>.</p>
+  <p class="sub">Radar Balcarce · generado el ${esc(generado)} · notas publicadas del ${esc(ventana)} (${d.notasAnalizadas} notas). Marcá <b>Sí</b>, <b>No</b> o <b>Duda</b> en cada medio; se guarda solo en este navegador. Al final apretá <b>Copiar mis decisiones</b> y pegalas en el chat. Hay dos listas: la <b>versión corta</b> (${d.resumen.corta.deAfuera} medios de afuera + ${d.resumen.corta.balcarce} de Balcarce, la recomendada) y la <b>de 63</b> (por si querés volver). Si algo no se entiende, está en <b>Para qué se usa cada cosa</b>.</p>
 </header>
-${htmlResumen(d)}
-${htmlBalcarceIntro(d)}
-<details class="como"><summary>De dónde sale cada dato y cómo se arma la sugerencia</summary>
+${htmlPestanas()}
+${htmlParaQue(d)}
+${htmlCortaIntro(d)}
+<section class="fondo-intro" data-solo="63" aria-label="Versión de 63"><h2>Versión de 63 (por si querés volver)</h2><p>Es la lista elegida el 15/10 sin lo descartado: ${d.resumen.corta.base} medios de afuera y ${d.resumen.corta.balcarce} de Balcarce, más las candidatas de Balcarce a fondo. Cada medio dice si <b>queda en la corta</b> o <b>sale de la corta</b>, y por qué. Las decisiones que marques acá valen también en la corta.</p></section>
+<div data-solo="corta 63 balcarce descartadas">${htmlResumen(d)}</div>
+<div data-solo="balcarce">${htmlBalcarceIntro(d)}</div>
+${htmlZona(d)}
+${htmlCandidatas(d)}
+<details class="como" data-solo="corta 63 balcarce"><summary>De dónde sale cada dato y cómo se arma la sugerencia</summary>
   <ul>
     <li><b>Publicadas en 30 días</b>: notas ya publicadas (del ${esc(ventana)}) que nombran al medio entre sus fuentes. El motor no guarda lo que leyó y descartó, así que no hay un número de &laquo;notas leídas&raquo; en 30 días: como aproximación se muestra lo que trajo su feed en los últimos 7 días (medido el ${esc(d.medidoEl ?? '—')} desde la PC).</li>
     <li><b>Imprescindible</b>: veces que, sin ese medio, una nota de afuera no llegaba al mínimo de medios (3/9 al 15/10). <b>Visitas</b>: las de las notas donde figura.</li>
@@ -1121,7 +1378,7 @@ ${htmlBalcarceIntro(d)}
   </ul>
 </details>
 
-<section class="herramientas" aria-label="Buscador y filtros">
+<section class="herramientas" aria-label="Buscador y filtros" data-solo="corta 63 balcarce descartadas">
   <div class="filtros">
     <label>Buscar<input id="q" type="search" placeholder="Medio, dueño, dirección, sección…" autocomplete="off"></label>
     <label>Grupo<select id="f-grupo"><option value="">Todos</option>${opcionesGrupo}</select></label>
@@ -1143,7 +1400,7 @@ ${htmlBalcarceIntro(d)}
   <textarea id="caja" hidden readonly aria-label="Texto de las decisiones"></textarea>
 </section>
 
-<div class="tabla-caja">
+<div class="tabla-caja" id="tabla-principal" data-solo="corta 63 balcarce">
 <table>
 <colgroup><col style="width:14%"><col style="width:17%"><col style="width:6%"><col style="width:8%"><col style="width:8%"><col style="width:25%"><col style="width:11%"><col style="width:11%"></colgroup>
 <thead><tr>
@@ -1243,6 +1500,16 @@ export function generarMarkdownBalcarce(d) {
     for (const a of f.alertas ?? []) L.push(`- **Ojo:** ${a}`);
     L.push('');
   });
+  L.push('## ¿Son de la zona? (comprobado el 15 y 16/10)');
+  L.push('');
+  L.push('| Fuente | ¿Es de la zona? | Redacción | Propuesta |');
+  L.push('|---|---|---|---|');
+  for (const m of d.medios.filter((x) => x.grupo === 'balcarce')) {
+    const v = m.verificacion;
+    L.push(`| ${celda(m.nombre)} | ${v ? VEREDICTO[v.veredicto][1] : 'Sin verificar'} | ${celda(v?.redaccion)} | ${celda(v?.propuesta)} |`);
+  }
+  for (const o of OTRAS_QUE_SE_DICEN_DE_BALCARCE) L.push(`| ${celda(o.nombre)} | ${VEREDICTO[o.veredicto][1]} | ${celda(o.redaccion)} | ${celda(o.propuesta)} |`);
+  L.push('');
   L.push('## Contra lo que hay en `ingesta/fuentes.mjs`');
   L.push('');
   L.push('Hoy hay 11 de Balcarce (8 medios, Municipalidad, Concejo y Facultad), con 15 direcciones.');

@@ -376,7 +376,7 @@ export const BALCARCE_FONDO = [
     texto: '—', foto: '—',
     cadencia: 'Menos de una por mes.',
     contenido: 'Actos y obras de las localidades.',
-    comoLeerla: 'Nada que sumar. Una duda para los dueños: en PALABRAS_LOCALES (lo que hace que una nota de afuera sea "de acá") hoy están Napaleofú, Ramos Otero y Laguna La Brava, pero no San Agustín, Los Pinos ni Bosch (a propósito: son frases comunes) ni Mar del Sud (que no es del partido). Una nota de afuera que sólo diga "Los Pinos" no cuenta como de Balcarce.',
+    comoLeerla: 'Nada que sumar. Desde el 16/10 (regla 179) las siete localidades cuentan como de acá: Napaleofú, Ramos Otero y Laguna La Brava solas (PALABRAS_LOCALES); San Agustín, Los Pinos y Bosch, que también son otros lugares, con respaldo (PALABRAS_LOCALES_DEBILES): cuando las nombra un medio de Balcarce, o cuando un medio de afuera las pone en el título y además nombra a Balcarce o la zona, y nunca pegadas a otro lugar ("San Agustín, Córdoba", "Los Pinos de Mar del Plata", "Residencia Los Pinos"). Mar del Sud no (no es del partido).',
     selector: '—',
     peso: { hoy: 24, sugerido: 24, criterio: 'El del feed municipal.' },
     alertas: ['Mar del Sud es de General Alvarado, no de Balcarce (Wikipedia, 15/10). No se encontraron sociedades de fomento con sitio propio.'],

@@ -901,7 +901,9 @@ export const CANDIDATOS = [
 // OJO: acá sólo van nombres que no puedan aparecer por casualidad en una nota
 // nacional. "El Triunfo" y "Los Pinos" son lugares de Balcarce, pero también
 // frases comunes: colarlos hacía que Radar tomara por locales notas de fútbol
-// europeo. Si hace falta usarlos, tiene que ser junto a "Balcarce".
+// europeo. Si hace falta usarlos, tiene que ser junto a "Balcarce": eso hacen,
+// desde el 15/10, San Agustín, Los Pinos, Bosch y Juan Vincenty en
+// PALABRAS_LOCALES_DEBILES (abajo, regla 179).
 //
 // "fangio" SOLO no va (27/09): una nota de Necochea sobre el transporte
 // público y el gas, sin ninguna relación con el piloto, quedó marcada como
@@ -914,6 +916,83 @@ export const PALABRAS_LOCALES = [
   'sierras de balcarce', 'inta balcarce', 'partido de balcarce',
   'autódromo juan manuel fangio', 'museo fangio',
 ];
+
+// Las localidades del partido que también son nombres de otros lugares o de
+// otras cosas (regla 179, 15/10/2026: "San Agustín y Los Pinos tienen que
+// estar"). Hay San Agustín en Córdoba, Tucumán y Florida, y San Agustín de
+// Hipona; un barrio Los Pinos en Mar del Plata y la Residencia Los Pinos de
+// México; Bosch es una marca. Por eso no van en PALABRAS_LOCALES: son como las
+// PALABRAS_DEBILES de las secciones, que sólo deciden con respaldo. Cuentan
+// como de acá (nombraLocalidadDudosa) sólo si:
+//   · la nota es de un medio de Balcarce (nombra la localidad en el título o
+//     el comienzo), o
+//   · la de afuera la nombra en el TÍTULO y el título o la bajada nombran
+//     también algo firme de acá (PALABRAS_LOCALES) o de la zona (PALABRAS_ZONA);
+// y nunca pegadas a otro lugar ("San Agustín, Córdoba", "Los Pinos de Mar del
+// Plata", "Residencia Los Pinos", "San Agustín de Hipona").
+// Mar del Sud NO va: es de General Alvarado, no del partido de Balcarce.
+export const PALABRAS_LOCALES_DEBILES = [
+  'san agustín', 'los pinos', 'bosch', 'juan vincenty',
+];
+
+// Lo que, pegado a una localidad dudosa, dice que es otro lugar. Antes: la
+// palabra anterior ("residencia los pinos"). Después: las primeras palabras
+// que siguen ("los pinos, mar del plata", "san agustín (córdoba)", "san
+// agustín de hipona"). En cualquier lado del título o la bajada: lo que la ata
+// a otro país o a otra cosa (México y la residencia presidencial, la marca).
+const ANTES_DE_OTRO_LUGAR = ['residencia', 'hotel', 'colegio', 'instituto', 'iglesia', 'parroquia',
+  'basilica', 'convento', 'orden', 'robert', 'juan', 'hieronymus', 'marca', 'empresa', 'grupo', 'herramientas', 'electrodomesticos'];
+const OTROS_LUGARES = ['mar del plata', 'mdp', 'batan', 'tandil', 'necochea', 'miramar', 'la plata',
+  'cordoba', 'tucuman', 'mendoza', 'salta', 'jujuy', 'san juan', 'santa fe', 'rosario', 'entre rios',
+  'corrientes', 'misiones', 'chaco', 'neuquen', 'rio negro', 'chubut', 'la pampa', 'san luis',
+  'catamarca', 'la rioja', 'santiago del estero', 'formosa', 'santa cruz', 'tierra del fuego',
+  'caba', 'capital federal', 'hipona', 'mexico', 'cdmx', 'chile', 'peru', 'colombia', 'espana',
+  'uruguay', 'paraguay', 'bolivia', 'venezuela', 'ecuador', 'florida', 'texas', 'filipinas'];
+const CONTEXTO_EN_CONTRA = {
+  'los pinos': ['mexico', 'mexicano', 'mexicana', 'sheinbaum', 'lopez obrador', 'amlo', 'cdmx', 'residencia oficial'],
+  'san agustin': ['hipona', 'agustinos', 'agustiniano', 'agustiniana', 'florida'],
+  bosch: ['robert bosch', 'juan bosch', 'el bosco', 'hieronymus', 'electrodomesticos', 'herramientas bosch', 'republica dominicana'],
+};
+
+/** El texto sin tildes ni signos, en minúscula y con un espacio en cada punta. */
+const plano = (s) => ` ${String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()} `;
+
+/** La primera localidad dudosa que aparece en el texto y no está pegada a otro
+ *  lugar, o null (regla 179). Sólo dice que la nombra: si cuenta como de acá
+ *  lo decide nombraLocalidadDudosa, con el respaldo. */
+export function localidadDudosaEn(texto, contexto = texto) {
+  const t = plano(texto);
+  const todo = plano(contexto);
+  for (const loc of PALABRAS_LOCALES_DEBILES) {
+    const p = plano(loc).trim();
+    if ((CONTEXTO_EN_CONTRA[p] ?? []).some((c) => todo.includes(` ${c} `))) continue;
+    for (let i = t.indexOf(` ${p} `); i >= 0; i = t.indexOf(` ${p} `, i + 1)) {
+      const previas = t.slice(0, i).trim().split(' ');
+      const antes = ['de', 'del', 'la', 'el'].includes(previas.at(-1)) ? previas.at(-2) : previas.at(-1);
+      const despues = ` ${t.slice(i + p.length + 2).trim().split(' ').slice(0, 5).join(' ')} `.replace(/^ (de|del|en|provincia de) /, ' ');
+      if (ANTES_DE_OTRO_LUGAR.includes(antes)) continue;
+      if (OTROS_LUGARES.some((l) => despues.startsWith(` ${l} `))) continue;
+      return loc;
+    }
+  }
+  return null;
+}
+
+/** ¿La nota nombra una localidad dudosa del partido y el contexto lo respalda?
+ *  Devuelve la localidad o null (regla 179). Con `soloTitulo`, la localidad
+ *  tiene que estar en el título (lo de afuera); el respaldo se busca en el
+ *  título y la bajada (los primeros 600 caracteres del resumen o el cuerpo). */
+export function nombraLocalidadDudosa(nota = {}, { soloTitulo = false } = {}) {
+  const titulo = String(nota.titulo ?? '');
+  const bajada = String(nota.resumenFuente ?? nota.cuerpo ?? '').slice(0, 600);
+  const contexto = `${titulo} ${bajada}`;
+  const loc = localidadDudosaEn(titulo, contexto) ?? (soloTitulo ? null : localidadDudosaEn(bajada, contexto));
+  if (!loc) return null;
+  if (nota.alcance === 'local') return loc;
+  const t = plano(contexto);
+  const respaldo = [...PALABRAS_LOCALES, ...PALABRAS_ZONA].some((p) => t.includes(` ${plano(p).trim()} `));
+  return respaldo ? loc : null;
+}
 
 // Lo que afecta a Balcarce sin nombrarla: las rutas que la cruzan y la papa.
 // De las fuentes de afuera entra aunque no diga "Balcarce", pero sin los +22

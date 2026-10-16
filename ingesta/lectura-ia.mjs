@@ -17,15 +17,16 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { claveClasificacion, claveGroq, leerVariable, MODELO_DE_TEXTO } from '../reels/claves.mjs';
-import { fichaDeFuente, FUENTES, FUENTES_NACIONALES, CONEXION_ARGENTINA, PALABRAS_LOCALES, PALABRAS_ZONA } from './fuentes.mjs';
+import { fichaDeFuente, FUENTES, FUENTES_NACIONALES, CONEXION_ARGENTINA, PALABRAS_LOCALES, PALABRAS_ZONA, nombraLocalidadDudosa } from './fuentes.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
 import { diaAR } from './zona.mjs';
 import { sinTildes } from '../web/lib/texto.js';
 
-/** ¿El título nombra a Balcarce o a una localidad del partido? */
+/** ¿El título nombra a Balcarce o a una localidad del partido? San Agustín y
+ *  Los Pinos, con respaldo (regla 179): en un medio de acá alcanzan solas. */
 function nombraBalcarceEnElTitulo(n) {
   const titulo = sinTildes(n.titulo ?? '');
-  return PALABRAS_LOCALES.some((p) => titulo.includes(sinTildes(p)));
+  return PALABRAS_LOCALES.some((p) => titulo.includes(sinTildes(p))) || !!nombraLocalidadDudosa(n, { soloTitulo: true });
 }
 
 const AQUI = import.meta.dirname;
@@ -344,7 +345,8 @@ export const MOTIVO_ESPERA_LECTURA = 'de un medio de acá sin nombrar Balcarce n
 export function mencionaAca(nota) {
   if (nota?.nombraBalcarce || nota?.deLaZona) return true;
   const texto = ` ${sinTildes(`${nota?.titulo ?? ''} ${String(nota?.resumenFuente ?? nota?.cuerpo ?? '').slice(0, 600)}`).replace(/[^a-z0-9ñ]+/g, ' ')} `;
-  return [...PALABRAS_LOCALES, ...PALABRAS_ZONA].some((p) => texto.includes(` ${sinTildes(p).replace(/[^a-z0-9ñ]+/g, ' ').trim()} `));
+  return [...PALABRAS_LOCALES, ...PALABRAS_ZONA].some((p) => texto.includes(` ${sinTildes(p).replace(/[^a-z0-9ñ]+/g, ' ').trim()} `))
+    || !!nombraLocalidadDudosa(nota ?? {}); // San Agustín, Los Pinos: en un medio de acá, solas (regla 179)
 }
 
 /** Desde cuándo las fichas conocen la sección Fútbol (con margen: fue el 27/09 a la tarde). */

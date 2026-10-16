@@ -5,7 +5,7 @@
 esto.*
 
 Medio digital automático de Balcarce (Buenos Aires), en `radarbalcarce.com`. Cada media
-hora lee más de 200 feeds de más de 100 medios (la cuenta exacta, en `FUENTES.md`), junta la misma
+hora lee unos cien feeds de unos setenta medios (la cuenta exacta, en `FUENTES.md`), junta la misma
 noticia contada por varios, decide qué publicar, lo escribe con IA, lo verifica contra
 las fuentes, arma el sitio y lo sube, sin nadie despierto; varias veces por día publica
 en Facebook e Instagram con voz. Los usuarios son Hernán y Andrés (no programan):
@@ -18,7 +18,7 @@ escribir siempre en castellano rioplatense, claro y sin voseo forzado.
     redes/     Facebook e Instagram (API de Meta), contrato del día, vigilante, WhatsApp. SIN dependencias
     panel/     lo del panel del celular (cifrado, pedidos a la IA) y el panel de la PC (puerto 4321), que NO se usa y queda en desuso. SIN dependencias
     web/       el sitio (Next.js 15, JavaScript, HTML estático); web/public/panel/ es el panel del celular; web/scripts/generar-datos.mjs arma los datos
-    pruebas/   `npm test`: unas 2.000 pruebas, sin red
+    pruebas/   `npm test`: unas 2.500 pruebas, sin red (en la vuelta de 30 minutos sólo corre el núcleo legal, `npm run test:nucleo`)
     docs/      la documentación: 00-INDICE a 13-EFEMERIDES, DECISIONES.md, propuestas/ (lo abierto) e historico/
 
 Flujo: fuentes → ingesta → cruce → sección, puntaje y semáforo → lectura con IA →
@@ -32,6 +32,7 @@ vigilancia y el panel del celular andan con la PC apagada.**
     npm test              las pruebas (correr SIEMPRE antes de commitear)
     npm run auditar       qué está decidiendo el filtro sobre las noticias de hoy
     npm run auditar-fotos qué notas tienen foto y, de las que no, por qué (no gasta cupo; `-- --dias=7`, `-- --html` para ver las fotos)
+    node ingesta/auditar-fuentes.mjs   cuánto aportó cada fuente en la semana y cuál se durmió (sin red; `--dias=30`, `--json`)
     node ingesta/listar-fuentes.mjs    rehace FUENTES.md después de tocar una fuente
     cd web && npm run datos && npm run build     regenerar y compilar (en la PC trabaja en "modo PC")
     node reels/comparar-instruccion.mjs actual otra.txt   compara versiones de las reglas de la IA (gasta cupo)
@@ -39,7 +40,7 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 179.)
+próxima regla es la 180.)
 
 - **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Una prueba lo
   vigila (sigue los imports en cadena).

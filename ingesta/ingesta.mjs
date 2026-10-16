@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 import {
   NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, AMARILLO_SOLO_EN_EL_PRINCIPIO, REGLAS_SEMAFORO, MOTIVO_COTIZACION, AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA, AMARILLO_QUE_SE_SUELTA_SI_LA_CONFIRMAN,
   MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO, SECCIONES_QUE_NO_ENTRAN, CONEXION_ARGENTINA, TITULO_HOROSCOPO, TITULO_LOTERIA,
+  nombraLocalidadDudosa,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
 import { menorPorEdad } from './menores.mjs';
@@ -447,18 +448,23 @@ function parsearScrape(html, fuente) {
 // una lista de localidades que participaban y terminó en el podcast; una
 // nota de Infobae sobre el riesgo país, también. Si el hecho es de acá, el
 // medio de afuera lo pone en el título ("…en el autódromo de Balcarce").
+// Desde el 15/10 (regla 179) también cuenta una localidad del partido que es
+// nombre de otros lugares (San Agustín, Los Pinos, Bosch) si está en el título
+// y el título o la bajada nombran además algo firme de acá o de la zona:
+// "Choque en San Agustín" con "…en el partido de Balcarce" en la bajada.
 function esDeBalcarce(nota) {
   if (nota.alcance === 'local') return true;
   const titulo = normalizar(nota.titulo ?? '');
-  return PALABRAS_LOCALES.some((p) => contiene(titulo, p));
+  return PALABRAS_LOCALES.some((p) => contiene(titulo, p)) || !!nombraLocalidadDudosa(nota, { soloTitulo: true });
 }
 
 /** ¿La nota nombra algo de Balcarce en el título o al comienzo del texto?
  *  Sirve para saber si un medio de acá cuenta algo de acá o copia algo de
- *  afuera (el cruce, 27/09). */
+ *  afuera (el cruce, 27/09). Las localidades dudosas (San Agustín, Los Pinos),
+ *  con respaldo: en un medio de acá alcanzan solas (regla 179). */
 function mencionaBalcarce(nota) {
   const texto = normalizar(`${nota.titulo ?? ''} ${String(nota.cuerpo ?? '').slice(0, 600)}`);
-  return PALABRAS_LOCALES.some((p) => contiene(texto, p));
+  return PALABRAS_LOCALES.some((p) => contiene(texto, p)) || !!nombraLocalidadDudosa(nota);
 }
 
 /**
@@ -1836,7 +1842,7 @@ function armarPreview(d) {
 // y cuál es la ventana que abrimos sólo para poder probar. Las pruebas están
 // en la carpeta pruebas/ y corren con `npm test`, sin red.
 export const paraPruebas = {
-  idDe, normalizar, sentenciar, esDeBalcarce, figuraQueNombra, PALABRAS_DEBILES,
+  idDe, normalizar, sentenciar, esDeBalcarce, mencionaBalcarce, figuraQueNombra, PALABRAS_DEBILES,
   clasificar, semaforo, limpiarCopete, relevancia, meta, parsearScrape,
   cieloDeSimbolo, haceCuanto, sinEtiquetas, decodificar,
   clavesDe, anotar, buscarFarmacia, directorioDeLaVanguardia, mediosMinimosDe,
