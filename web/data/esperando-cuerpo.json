@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-16T19:08:51.599Z",
+ "generado": "2026-10-16T19:32:34.339Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -116,7 +116,12 @@
     {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-16-11-48-0-para-santilli-los-gobernadores-deberian-estar-preocupados-por-un-eventual-regreso-del-kirchnerismo",
-     "fecha": "2026-10-16T18:41:55.000Z"
+     "fecha": "2026-10-16T19:18:19.000Z"
+    },
+    {
+     "medio": "El Marplatense",
+     "enlace": "https://www.elmarplatense.com/santinlli-dijo-que-los-gobernadores-deberian-estar-preocupados-por-un-eventual-regreso-del-kirchnerismo",
+     "fecha": "2026-10-16T19:15:23.000Z"
     },
     {
      "medio": "El Eco de Tandil",
@@ -135,6 +140,11 @@
     },
     {
      "medio": "La Gaceta (Tucumán)",
+     "enlace": "https://www.lagaceta.com.ar/nota/1158369/politica/gobernadores-reclamaron-plan-infraestructura-santilli-advirtio-sobre-eventual-triunfo-kicillof.html",
+     "fecha": "2026-10-16T16:21:00.000Z"
+    },
+    {
+     "medio": "La Gaceta (Tucumán)",
      "enlace": "https://www.lagaceta.com.ar/nota/1158330/politica/diego-santilli-que-deberian-estar-preocupados-son-gobernadores-si-kirchnerismo-vuelve-gana-kicillof.html",
      "fecha": "2026-10-16T11:30:00.000Z"
     },
@@ -147,48 +157,6 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
-  },
-  {
-   "id": "1mru4qv",
-   "titulo": "El FMI elogió las reformas de Milei y anticipó una recuperación de la economía argentina en 2027",
-   "copete": "El Fondo Monetario Internacional (FMI) elogió las medidas económicas implementadas por el gobierno de Javier Milei y proyectó un repunte de la actividad económica en la Argentina impulsado por la baja de la inflación, el flujo de inversiones y las reformas estructurales en…",
-   "seccion": "Economía",
-   "fecha": "2026-10-16T08:37:00.000Z",
-   "fuentes": [
-    {
-     "medio": "La Gaceta (Tucumán)",
-     "enlace": "https://www.lagaceta.com.ar/nota/1158292/economia/fmi-elogio-reformas-milei-anticipo-recuperacion-economia-argentina-2027.html",
-     "fecha": "2026-10-16T08:37:00.000Z"
-    },
-    {
-     "medio": "El Cronista",
-     "enlace": "https://www.cronista.com/economia-politica/el-fmi-le-puso-fecha-a-la-recuperacion-de-la-demanda-interna-y-el-crecimiento-de-argentina/",
-     "fecha": "2026-10-16T12:22:16.797Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/economia/el-fmi-elogio-las-reformas-milei-y-proyecto-una-recuperacion-la-economia-argentina-2027-n1607018",
-     "fecha": "2026-10-16T10:24:00.000Z"
-    },
-    {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/politica/el-fmi-destaco-la-gestion-de-javier-milei-y-preve-un-repunte-de-la-economia-en-2027/",
-     "fecha": "2026-10-16T10:59:00.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/politica/el-fmi-destaco-los-progresos-de-la-argentina-y-anticipo-que-espera-para-la-economia-en-2027/",
-     "fecha": "2026-10-16T11:45:44.000Z"
-    },
-    {
-     "medio": "La Brújula 24",
-     "enlace": "https://www.labrujula24.com/notas/2026/10/16/el-fmi-elogio-reformas-de-milei-anticipa-recuperacion-de-la-economia-argentina-n525781/",
-     "fecha": "2026-10-16T12:29:31.000Z"
-    }
-   ],
-   "intentos": 4,
-   "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
-   "maximo": 4
   },
   {
    "id": "dpwrvn",
@@ -206,11 +174,6 @@
      "medio": "El Diario Balcarce",
      "enlace": "https://eldiariobalcarce.com.ar/murio-fernando-confessore-el-meteorologo-historico-de-tn-509",
      "fecha": "2026-10-16T12:08:54.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/espectaculos/la-desconocida-historia-de-amor-de-fernando-confessore-y-paula-franco-40-anos-juntos-tres-hijas-y-nid16102026/",
-     "fecha": "2026-10-16T17:39:26.000Z"
     },
     {
      "medio": "La Nación",
@@ -299,11 +262,6 @@
     },
     {
      "medio": "El Día",
-     "enlace": "https://www.eldia.com/espectaculos/fernando-confessore-revelo-sus-vivencias-de-30-anos-de-matrimonio-el-clima-mas-agradable-para-la-mejor-historia-de-amor-espectaculos_1792146000",
-     "fecha": "2026-10-16T10:45:00.000Z"
-    },
-    {
-     "medio": "El Día",
      "enlace": "https://www.eldia.com/espectaculos/murio-fernando-confessore-el-reconocido-meteorologo-de-tn-a-los-58-anos-espectaculos_1792145040",
      "fecha": "2026-10-16T10:11:00.000Z"
     },
@@ -358,19 +316,24 @@
      "fecha": "2026-10-16T10:26:00.000Z"
     },
     {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/espectaculos/que-dice-el-parte-policial-la-muerte-del-meteorologo-fernando-confessore-n6334473",
+     "fecha": "2026-10-16T12:33:00.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/sociedad/de-que-murio-fernando-confessore-n6334434",
+     "fecha": "2026-10-16T10:20:00.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/sociedad/murio-fernando-confessore-reconocido-meteorologo-divulgador-cientifico-y-periodista-n6334433",
+     "fecha": "2026-10-16T10:15:00.000Z"
+    },
+    {
      "medio": "La Gaceta (Tucumán)",
      "enlace": "https://www.lagaceta.com.ar/nota/1158311/sociedad/de-murio-fernando-confessore-historico-meteorologo-television-argentina.html",
      "fecha": "2026-10-16T10:30:00.000Z"
-    },
-    {
-     "medio": "Los Andes (Mendoza)",
-     "enlace": "https://www.losandes.com.ar/espectaculos/murio-los-58-anos-fernando-confessore-el-historico-meteorologo-tn-y-el-trece-n6010552",
-     "fecha": "2026-10-16T10:32:00.000Z"
-    },
-    {
-     "medio": "elDiarioAR",
-     "enlace": "https://www.eldiarioar.com/medios/murio-fernando-confessore-58-anos-historico-meteorologo-tn-trece_1_13591768.html",
-     "fecha": "2026-10-16T13:16:02.000Z"
     },
     {
      "medio": "La Nación",
@@ -403,16 +366,6 @@
      "fecha": "2026-10-16T10:23:00.000Z"
     },
     {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/sociedad/de-que-murio-fernando-confessore-n6334434",
-     "fecha": "2026-10-16T10:20:00.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/sociedad/murio-fernando-confessore-reconocido-meteorologo-divulgador-cientifico-y-periodista-n6334433",
-     "fecha": "2026-10-16T10:15:00.000Z"
-    },
-    {
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/espectaculos/murio-fernando-confessore-historicos-meteorologos-canal-noticias-tn_0_XGpw7d7UBM.html",
      "fecha": "2026-10-16T10:09:50.000Z"
@@ -428,6 +381,11 @@
      "fecha": "2026-10-16T10:56:29.000Z"
     },
     {
+     "medio": "Los Andes (Mendoza)",
+     "enlace": "https://www.losandes.com.ar/espectaculos/murio-los-58-anos-fernando-confessore-el-historico-meteorologo-tn-y-el-trece-n6010552",
+     "fecha": "2026-10-16T10:32:00.000Z"
+    },
+    {
      "medio": "0223 (Mar del Plata)",
      "enlace": "https://www.0223.com.ar/nota/2026-10-16-8-15-19-conmocion-murio-fernando-confessore-referente-historico-de-la-meteorologia-a-los-58-anos",
      "fecha": "2026-10-16T11:15:00.000Z"
@@ -439,18 +397,8 @@
     },
     {
      "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/16/la-historia-de-amor-de-fernando-confessore-y-paula-tres-hijas-una-vida-juntos-y-un-apoyo-clave-para-su-carrera/",
-     "fecha": "2026-10-16T11:53:27.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/espectaculos/que-dice-el-parte-policial-la-muerte-del-meteorologo-fernando-confessore-n6334473",
-     "fecha": "2026-10-16T12:33:00.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/tras-la-muerte-fernando-confessore-la-historia-amor-su-esposa-paula-que-emociona-mucho-mas-que-mi-companera-n1607049",
-     "fecha": "2026-10-16T12:37:00.000Z"
+     "enlace": "https://www.infobae.com/teleshow/2026/10/16/mensajes-de-despedida-tras-la-muerte-de-fernando-confessore-en-vivo-ultimas-noticias-minuto-a-minuto/",
+     "fecha": "2026-10-16T13:28:46.000Z"
     },
     {
      "medio": "Clarín",
@@ -458,9 +406,9 @@
      "fecha": "2026-10-16T13:15:56.000Z"
     },
     {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/fama/historia-amor-fernando-confessore-paula-franco-mujer-acompano-40-anos-clave-carrera_0_9dHgDg3s3F.html",
-     "fecha": "2026-10-16T13:48:32.000Z"
+     "medio": "elDiarioAR",
+     "enlace": "https://www.eldiarioar.com/medios/murio-fernando-confessore-58-anos-historico-meteorologo-tn-trece_1_13591768.html",
+     "fecha": "2026-10-16T13:16:02.000Z"
     },
     {
      "medio": "A24",
@@ -471,11 +419,6 @@
      "medio": "A24",
      "enlace": "https://www.a24.com/primiciasya/fernando-confessore-se-supo-que-dice-el-parte-policial-la-muerte-del-meteorologo-tn-n1607120",
      "fecha": "2026-10-16T14:03:00.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/espectaculos/la-familia-que-construyo-fernando-confessore-paula-franco-sus-tres-hijas-y-una-vida-juntos-n6334614",
-     "fecha": "2026-10-16T15:39:00.000Z"
     },
     {
      "medio": "Infobae",
@@ -515,6 +458,11 @@
      "fecha": "2026-10-16T10:42:22.000Z"
     },
     {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/espectaculos/asi-anuncio-mario-mario-massaccesi-la-muerte-fernando-confessore-siempre-estaba-aqui-trabajando-n6334485",
+     "fecha": "2026-10-16T12:54:00.000Z"
+    },
+    {
      "medio": "La Gaceta (Tucumán)",
      "enlace": "https://www.lagaceta.com.ar/nota/1158323/sociedad/conmocion-mario-massaccesi-al-anunciar-vivo-muerte-fernando-confessore-no-podemos-creer.html",
      "fecha": "2026-10-16T11:09:00.000Z"
@@ -533,11 +481,6 @@
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/espectaculos/momento-mario-massaccesi-anuncio-vivo-muerte-fernando-confessore_0_dkSopl7g5d.html",
      "fecha": "2026-10-16T12:27:17.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/espectaculos/asi-anuncio-mario-mario-massaccesi-la-muerte-fernando-confessore-siempre-estaba-aqui-trabajando-n6334485",
-     "fecha": "2026-10-16T12:54:00.000Z"
     },
     {
      "medio": "Perfil",
@@ -600,6 +543,48 @@
    "intentos": 5,
    "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 5
+  },
+  {
+   "id": "1mru4qv",
+   "titulo": "El FMI elogió las reformas de Milei y anticipó una recuperación de la economía argentina en 2027",
+   "copete": "El organismo destacó los avances en la reducción de los subsidios energéticos y el fortalecimiento de la sostenibilidad de la deuda.",
+   "seccion": "Economía",
+   "fecha": "2026-10-16T08:37:00.000Z",
+   "fuentes": [
+    {
+     "medio": "La Gaceta (Tucumán)",
+     "enlace": "https://www.lagaceta.com.ar/nota/1158292/economia/fmi-elogio-reformas-milei-anticipo-recuperacion-economia-argentina-2027.html",
+     "fecha": "2026-10-16T08:37:00.000Z"
+    },
+    {
+     "medio": "El Cronista",
+     "enlace": "https://www.cronista.com/economia-politica/el-fmi-le-puso-fecha-a-la-recuperacion-de-la-demanda-interna-y-el-crecimiento-de-argentina/",
+     "fecha": "2026-10-16T12:22:16.797Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/economia/el-fmi-elogio-las-reformas-milei-y-proyecto-una-recuperacion-la-economia-argentina-2027-n1607018",
+     "fecha": "2026-10-16T10:24:00.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/el-fmi-destaco-la-gestion-de-javier-milei-y-preve-un-repunte-de-la-economia-en-2027/",
+     "fecha": "2026-10-16T10:59:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/politica/el-fmi-destaco-los-progresos-de-la-argentina-y-anticipo-que-espera-para-la-economia-en-2027/",
+     "fecha": "2026-10-16T11:45:44.000Z"
+    },
+    {
+     "medio": "La Brújula 24",
+     "enlace": "https://www.labrujula24.com/notas/2026/10/16/el-fmi-elogio-reformas-de-milei-anticipa-recuperacion-de-la-economia-argentina-n525781/",
+     "fecha": "2026-10-16T12:29:31.000Z"
+    }
+   ],
+   "intentos": 4,
+   "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
+   "maximo": 4
   }
  ]
 }
