@@ -1,5 +1,28 @@
 {
- "generado": "2026-10-16T03:30:38.049Z",
+ "generado": "2026-10-16T09:32:16.560Z",
  "intentosMaximos": 3,
- "notas": []
+ "notas": [
+  {
+   "id": "7jnpk",
+   "titulo": "Clima en La Rioja: Lluvia ligera el pronóstico para hoy, 16 de octubre",
+   "copete": "El Servicio Meteorológico Nacional anticipa un clima variable para La Rioja, con lluvias ligeras y temperaturas moderadas. Este pronóstico del tiempo es crucial para los productores rurales que necesitan planificar sus actividades diarias. Clima hoy: Lluvias ligeras y frescas…",
+   "seccion": "Agro",
+   "fecha": "2026-10-16T04:00:16.000Z",
+   "fuentes": [
+    {
+     "medio": "Infocampo",
+     "enlace": "https://www.infocampo.com.ar/clima-en-la-rioja-lluvia-ligera-el-pronostico-para-hoy-16-de-octubre/",
+     "fecha": "2026-10-16T04:00:16.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/clima/alertas/2026/10/16/clima-en-la-rioja-hoy-viernes-16-de-octubre-lluvia-ligera-y-frio/",
+     "fecha": "2026-10-16T09:03:26.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (copia): copia 17 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 88 palabras",
+   "maximo": 3
+  }
+ ]
 }

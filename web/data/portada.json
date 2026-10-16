@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T09:05:52.842Z",
+  "generado": "2026-10-16T09:32:16.560Z",
   "notas": [
     {
       "id": "al99go",
@@ -19,7 +19,7 @@
       "fecha": "2026-10-16T02:00:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T03:01:31.781Z",
-      "relevancia": 75,
+      "relevancia": 65,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -637,103 +637,6 @@
       }
     },
     {
-      "id": "32f6mu",
-      "titulo": "Lando Norris califica a Franco Colapinto como un buen amigo",
-      "copete": "El piloto británico de Fórmula 1 bajó la tensión con su colega argentino en una transmisión en streaming, tras el choque que protagonizaron en el Gran Premio de Azerbaiyán.",
-      "cuerpo": "Lando Norris calificó a Franco Colapinto como un buen amigo durante una transmisión en streaming junto a Max Fewtrell, al recibir una figurita del piloto argentino. El gesto buscó bajar la tensión tras el incidente en la vuelta 36 del Gran Premio de Azerbaiyán, donde el representante de Alpine bloqueó los neumáticos y provocó un choque que involucró a su compañero Pierre Gasly y obligó al abandono de los tres corredores.\n\nTras aquella competencia, los comisarios aplicaron una penalización de diez segundos al argentino, traducida en una pérdida de cinco lugares en la grilla siguiente.",
-      "guion": "Lando Norris califica a Franco Colapinto como un buen amigo",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Infobae",
-        "TyC Sports",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.infobae.com/deportes/2026/10/15/el-guino-de-lando-norris-a-franco-colapinto-tras-el-incidente-en-el-gran-premio-de-azerbaiyan/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T21:05:10.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T03:01:31.781Z",
-      "relevancia": 70,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Lando Norris calificó a Franco Colapinto como un buen amigo en una transmisión.",
-        "El gesto bajó la tensión tras el choque múltiple en el Gran Premio de Azerbaiyán.",
-        "Colapinto había recibido una sanción deportiva por la maniobra en la vuelta 36.",
-        "El británico había pedido inicialmente una suspensión para el piloto de Alpine."
-      ],
-      "seSabe": [
-        "Lando Norris definió a Franco Colapinto como un buen amigo durante una transmisión en streaming.",
-        "El incidente ocurrió en la vuelta 36 del Gran Premio de Azerbaiyán.",
-        "El choque afectó a Pierre Gasly, a Colapinto y a Norris, quienes debieron abandonar.",
-        "Los comisarios sancionaron al piloto argentino con una pérdida de cinco posiciones en la grilla.",
-        "El británico había pedido una suspensión de al menos una fecha tras la competencia."
-      ],
-      "textoRedes": "Lando Norris calificó a Franco Colapinto como un buen amigo durante una transmisión en streaming y bajó la tensión tras el incidente que protagonizaron en el Gran Premio de Azerbaiyán de Fórmula 1.",
-      "etiquetas": [
-        "Lando Norris",
-        "Franco Colapinto",
-        "Formula 1",
-        "Azerbaiyan"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/deportes/2026/10/15/el-guino-de-lando-norris-a-franco-colapinto-tras-el-incidente-en-el-gran-premio-de-azerbaiyan/",
-          "fecha": "2026-10-15T21:05:10.000Z",
-          "oficial": false,
-          "aporte": "Detalló el streaming con Max Fewtrell, los pedidos iniciales de suspensión de Norris y el contexto de las críticas en redes sociales."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/automovilismo/formula-1-lando-norris-franco-colapinto-gesto-buen-amigo-id766576.html",
-          "fecha": "2026-10-15T23:07:18.000Z",
-          "oficial": false,
-          "aporte": "Informó la reacción del campeón mundial y la sanción aplicada por los comisarios deportivos."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/el-inesperado-gesto-de-lando-norris-con-franco-colapinto-tras-el-incidente-en-el-gran-premio-de-azerbaiyan/",
-          "fecha": "2026-10-16T02:29:44.000Z",
-          "oficial": false,
-          "aporte": "Confirmó las declaraciones amigables del piloto de McLaren sobre el conductor de Alpine."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1vuh3vs",
-          "titulo": "Lando Norris le pide disculpas a Franco Colapinto tras Bakú",
-          "fecha": "2026-09-28T10:03:48.000Z",
-          "ruta": "/nota/lando-norris-le-pide-disculpas-a-franco-colapinto-tras-baku-1vuh3vs"
-        },
-        {
-          "id": "g2u3l1",
-          "titulo": "Flavio Briatore critica a Franco Colapinto tras el Gran Premio de Azerbaiyán",
-          "fecha": "2026-09-26T22:12:00.000Z",
-          "ruta": "/nota/flavio-briatore-critica-a-franco-colapinto-tras-el-gran-premio-de-g2u3l1"
-        },
-        {
-          "id": "xtbw5",
-          "titulo": "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán",
-          "fecha": "2026-09-25T19:13:53.000Z",
-          "ruta": "/nota/franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan-xtbw5"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "lando-norris-califica-a-franco-colapinto-como-un-buen-amigo",
-      "foto": {
-        "archivo": "fotos-notas/32f6mu.jpg",
-        "credito": "Foto: TyC Sports"
-      }
-    },
-    {
       "id": "w9mlsu",
       "titulo": "WhatsApp detalla cómo revisar y cerrar sesiones abiertas en otros equipos",
       "copete": "La aplicación de mensajería cuenta con una herramienta para comprobar qué computadoras y tabletas tienen acceso a la cuenta y cerrar sesiones desconocidas.",
@@ -1217,6 +1120,113 @@
       "foto": {
         "archivo": "fotos-notas/1vrfi9w.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "1m3u28p",
+      "titulo": "La AFA suspende por tres meses a Juan Sebastián Verón",
+      "copete": "El Tribunal de Disciplina aplicó sanciones al presidente de Estudiantes, a otros dos dirigentes y al club por los incidentes tras la final ante Rosario Central.",
+      "cuerpo": "El organismo que encabeza Fernando Mitjans resolvió castigar con tres meses de inhabilitación a Juan Sebastián Verón, titular de Estudiantes de La Plata, debido a los disturbios ocurridos al término del encuentro decisivo de la Supercopa Internacional en Santiago del Estero, donde Rosario Central se impuso por tres a uno.\n\nLa medida del ente punitivo alcanzó también al vicepresidente segundo Pascual Caiella y al secretario deportivo Marcos Angeleri por su ingreso indebido al terreno y su conducta hacia el árbitro Darío Herrera. Asimismo, la institución platense recibió una pena económica equivalente a quinientas localidades generales.\n\nLa penalización inhabilita a los tres directivos para representar al club en funciones ante la entidad madre del fútbol argentino. El club analiza los pasos a seguir para una posible apelación ante los tribunales correspondientes.",
+      "guion": "La AFA suspende por tres meses a Juan Sebastián Verón",
+      "seccion": "Fútbol",
+      "medios": [
+        "Diario La Vanguardia",
+        "Clarín",
+        "La Nación",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "Perfil",
+        "TyC Sports",
+        "Olé",
+        "Diario Popular",
+        "0221",
+        "Doble Amarilla",
+        "El Gráfico",
+        "Minuto Uno",
+        "Los Andes (Mendoza)"
+      ],
+      "enlace": "https://www.ole.com.ar/estudiantes/juansebastianveron-tribunaldedisciplina-afa-rosariocentral-trofeodecampeones-estudiantesdelaplata_0_YJdAeoMLzJ.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T17:00:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T00:31:26.780Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Tres meses de suspensión para Juan Sebastián Verón.",
+        "Sanciones idénticas para Pascual Caiella y Marcos Angeleri.",
+        "Multa de quinientas entradas para el club Estudiantes."
+      ],
+      "seSabe": [
+        "El Tribunal de Disciplina de la AFA sancionó a Juan Sebastián Verón con tres meses de suspensión, según informó la Asociación.",
+        "Pascual Caiella y Marcos Angeleri recibieron la misma sanción por tres meses, de acuerdo con los boletines oficiales.",
+        "El club Estudiantes fue multado con un monto equivalente a 500 entradas generales, según detallaron las fuentes.",
+        "El árbitro Darío Herrera presentó un informe con insultos y reclamos ocurridos al finalizar el partido en Santiago del Estero, según publicaron los medios."
+      ],
+      "etiquetas": [
+        "Estudiantes de La Plata",
+        "Juan Sebastián Verón",
+        "AFA",
+        "Tribunal de Disciplina",
+        "Rosario Central"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/estudiantes/juansebastianveron-tribunaldedisciplina-afa-rosariocentral-trofeodecampeones-estudiantesdelaplata_0_YJdAeoMLzJ.html",
+          "fecha": "2026-10-15T23:52:09.000Z",
+          "oficial": false,
+          "aporte": "Explicó el alcance institucional de la suspensión y los artículos del código disciplinario aplicados."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/16/la-afa-suspendio-por-tres-meses-a-juan-sebastian-veron-por-los-incidentes-en-la-derrota-de-estudiantes-ante-rosario-central/",
+          "fecha": "2026-10-16T00:11:05.000Z",
+          "oficial": false,
+          "aporte": "Detalló las sanciones a los tres directivos y la multa económica al club por la Supercopa."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/15/el-tribunal-de-disciplina-de-afa-dio-a-conocer-la-sancion-a-juan-sebastian-veron-por-los-incidentes-en-la-supercopa-internacional/",
+          "fecha": "2026-10-16T00:17:43.000Z",
+          "oficial": false,
+          "aporte": "Aportó los antecedentes de sanciones previas y extractos del informe arbitral de Darío Herrera."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/liga-profesional-de-futbol/supercopa-internacional-liga-profesional-sancion-estudiantes-multa-suspension-veron-id766585.html",
+          "fecha": "2026-10-16T00:13:45.000Z",
+          "oficial": false,
+          "aporte": "Agregó detalles sobre la posibilidad de que el club evalúe apelar la medida ante organismos externos."
+        },
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/rosca/el-tribunal-de-disciplina-de-afa-suspendio-por-tres-meses-a-veron-tras-el-escandalo-en-la-supercopa-internacional-_a6ad166080735cd39a276e9a1",
+          "fecha": "2026-10-15T23:58:34.998Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Los Andes (Mendoza)",
+          "enlace": "https://www.losandes.com.ar/deportes/duro-golpe-estudiantes-suspendieron-juan-sebastian-veron-3-meses-el-escandalo-la-supercopa-n6010540",
+          "fecha": "2026-10-16T00:24:16.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-afa-suspende-por-tres-meses-a-juan-sebastian-veron",
+      "foto": {
+        "archivo": "fotos-notas/1m3u28p.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -2564,7 +2574,6 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "0221",
-        "La Brújula 24",
         "La Tecla",
         "La Verdad",
         "QZ Noticias (Mar del Plata)",
@@ -2583,7 +2592,8 @@
         "NDEN – Noticias de Necochea",
         "La Nueva",
         "La Noticia 1",
-        "A24"
+        "A24",
+        "La Brújula 24"
       ],
       "enlace": "https://www.0221.com.ar/provincia/la-provincia-oficializo-un-nuevo-aumento-la-vtv-y-ya-es-un-176-mas-cara-n135838",
       "teniaImagenLaFuente": true,
@@ -3450,11 +3460,11 @@
     "Fútbol",
     "Balcarce",
     "Política",
-    "Automovilismo",
     "Tecnología",
     "Economía",
     "Agro",
     "Cultura y agenda",
+    "Automovilismo",
     "Deportes",
     "Argentina"
   ],
@@ -3462,12 +3472,12 @@
   "clima": {
     "ahora": {
       "temp": 6,
-      "sensacion": 2,
+      "sensacion": 3,
       "humedad": 95,
       "viento": 13,
       "rumbo": "S",
       "cielo": "Mayormente despejado",
-      "esDeDia": false
+      "esDeDia": true
     },
     "dias": [
       {
@@ -3843,12 +3853,6 @@
       "motivo": "necesita ojo humano: \"falleció\""
     },
     {
-      "id": "du6hp3",
-      "titulo": "Marcha universitaria: tras la represión que dejó al menos…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
       "id": "1hkr9k8",
       "titulo": "Gabriel Solano denunció penalmente a Javier Milei y Luis…",
       "seccion": "Política",
@@ -3885,12 +3889,6 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "8ox6a7",
-      "titulo": "La Justicia de San Nicolás absolvió al líder sindical de…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
       "id": "17gc53m",
       "titulo": null,
       "seccion": "Agro",
@@ -3901,6 +3899,12 @@
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "8ox6a7",
+      "titulo": "La Justicia de San Nicolás absolvió al líder sindical de…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "1qjwxca",
@@ -3921,5 +3925,5 @@
       "motivo": "necesita ojo humano: \"murió\""
     }
   ],
-  "esperandoCuerpo": 0
+  "esperandoCuerpo": 1
 }

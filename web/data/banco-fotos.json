@@ -15420,13 +15420,16 @@
   "borrada": true
  },
  "1m3u28p": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1m3u28p.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "La AFA suspende por tres meses a Juan Sebastián Verón",
-  "razon": "Groq también falló: HTTP 413 (se probó una foto libre de \"Juan Sebastián Verón\" en Wikimedia Commons, sin resultado)",
-  "cuando": "2026-10-16T00:31:55.876Z",
-  "intentos": 1,
-  "fuentes": 6
+  "enlace": "https://www.infobae.com/deportes/2026/10/16/la-afa-suspendio-por-tres-meses-a-juan-sebastian-veron-por-los-incidentes-en-la-derrota-de-estudiantes-ante-rosario-central/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/5B4UFBUMLRC5TCWGRAYMODFGEU.JPG?auth=6bd1fbb19e326eda0755ef7a0de80bddee46d1e4ddd4cb9484cfe30ce8654e27&smart=true&width=1200&height=630&quality=85",
+  "razon": "Muestra claramente a Juan Sebastián Verón con buen encuadre y sin marcas de agua ni menores.",
+  "cuando": "2026-10-16T09:32:03.864Z"
  },
  "4uralw": {
   "intentado": true,
