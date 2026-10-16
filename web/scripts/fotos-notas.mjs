@@ -153,7 +153,7 @@ export async function elegirFotosNuevas(notas, {
  * es de ninguna nota del banco también se borra. Devuelve el banco nuevo y los
  * nombres a borrar; no toca el disco.
  */
-export function podarFotos({ banco = {}, enDisco = [], quedan = new Set(), retiradas = new Set() } = {}) {
+export function podarFotos({ banco = {}, enDisco = [], quedan = new Set(), retiradas = new Set(), ilustraciones = {} } = {}) {
   const bancoNuevo = { ...banco };
   const vivas = new Set();
   for (const [id, b] of Object.entries(banco)) {
@@ -165,6 +165,11 @@ export function podarFotos({ banco = {}, enDisco = [], quedan = new Set(), retir
     } else {
       vivas.add(nombre);
     }
+  }
+  // Las ilustraciones hechas con IA (regla 182, web/data/fotos-ia.json, que escribe sólo "Ilustrar notas sin foto") no están en el banco: quedan
+  // mientras su nota exista y no la haya retirado una persona. El libro no se toca acá: una entrada cuyo archivo se borró deja de usarse sola.
+  for (const [id, il] of Object.entries(ilustraciones ?? {})) {
+    if (il?.archivo && quedan.has(id) && !retiradas.has(id)) vivas.add(il.archivo.split('/').pop());
   }
   // Los collages de los repasos (collage-<id>.jpg, web/scripts/collage.mjs) no son de una nota del banco: quedan mientras
   // exista la nota del repaso.
@@ -182,19 +187,58 @@ export function fotoDeLaWeb(banco, id) {
   return { archivo: b.archivo, credito: b.credito };
 }
 
+// ------------------------------------------------- las ilustraciones con IA
+//
+// Regla 182 (16/10/2026): a las notas que quedaron sin foto, una persona les puede sumar una ilustración hecha con IA (un bodegón sin gente,
+// web/scripts/ilustrar-notas.mjs, workflow manual "Ilustrar notas sin foto"). Se anotan en web/data/fotos-ia.json y tienen la prioridad MÁS
+// BAJA: una foto real del banco o una que sumó una persona siempre gana. El epígrafe dice siempre que es de IA.
+
+/** El epígrafe de una ilustración: siempre empieza así (la web, la tarjeta, el RSS y el pie de Instagram lo muestran tal cual). */
+export const CREDITO_ILUSTRACION = 'Ilustración generada con IA';
+
+/** ¿Esta foto (`{ archivo, credito }` de una nota, o una entrada de fotos-ia.json) es una ilustración de una nota? Se reconoce por el archivo: <id>-ia.jpg. */
+export const esIlustracionDeNota = (foto) => /(^|\/)[a-z0-9]+-ia(?:-\d+)?\.jpg$/.test(String(foto?.archivo ?? ''));
+
+/** Las secciones que nunca llevan ilustración, aunque esté en el libro. */
+export const SECCIONES_SIN_ILUSTRACION = ['Policiales', 'Política'];
+
+/**
+ * ¿La nota, como está AHORA, puede mostrar su ilustración? La red de seguridad de generar-datos: si una corrección o una fuente nueva la volvió
+ * sensible, la ilustración deja de mostrarse. `semaforo` es semaforoDelTexto (ingesta/ingesta.mjs), que lo pasa quien llama.
+ */
+export function ilustracionPermitida(nota, { semaforo = () => null } = {}) {
+  if (!nota || nota.propia || SECCIONES_SIN_ILUSTRACION.includes(nota.seccion)) return false;
+  if (nota.semaforo && nota.semaforo !== 'verde') return false;
+  return !semaforo([nota.titulo, nota.copete, nota.cuerpo].filter(Boolean).join('. '), { conMuerte: true });
+}
+
+/** La foto de la web de una ilustración: el archivo y el epígrafe, que siempre dice que es de IA. */
+function ilustracionDeLaWeb(ilustraciones, id) {
+  const il = ilustraciones?.[id];
+  if (!il?.archivo || !esIlustracionDeNota(il)) return null;
+  const credito = /^Ilustración generada con IA/.test(String(il.credito ?? '')) ? il.credito : CREDITO_ILUSTRACION;
+  return { archivo: il.archivo, credito };
+}
+
 /**
  * Les pone a las notas la foto que YA tienen en el banco. Corre siempre, en
  * la nube y en la PC (28/09: en la PC portada.json quedaba sin fotos); lo que
  * es sólo de la nube es elegir fotos nuevas (elegirFotosNuevas). Modifica las
  * notas y las devuelve.
+ *
+ * `ilustraciones` (web/data/fotos-ia.json) va al final: sólo si el banco no tiene foto, la nota no es de Policiales ni de Política y
+ * `ilustracionPermitida` dice que sí. Una nota que tenía la ilustración y ya no puede (o el libro ya no la tiene) la pierde.
  */
-export function conFotosDelBanco(notas = [], banco = {}) {
+export function conFotosDelBanco(notas = [], banco = {}, { ilustraciones = {}, ilustracionPermitida: permitida = () => true } = {}) {
   for (const n of notas) {
     const foto = fotoDeLaWeb(banco, n.id);
     // Policiales sin fuente oficial no lleva foto real, ni aunque esté en el banco o la haya sumado una persona desde el panel
     // (8/10/2026: "Choque frontal en la Ruta 226" salía con una foto de El Eco de Tandil). Regla firme: CRITERIO-EDITORIAL.md, "Las fotos".
-    if (foto && elegiblePorSeccion(n)) n.foto = foto;
-    else if (foto) delete n.foto;
+    if (foto && elegiblePorSeccion(n)) { n.foto = foto; continue; }
+    if (foto) { delete n.foto; continue; }
+    const il = ilustracionDeLaWeb(ilustraciones, n.id);
+    if (il && !SECCIONES_SIN_ILUSTRACION.includes(n.seccion) && !n.propia && permitida(n)) n.foto = il;
+    else if (esIlustracionDeNota(n.foto)) delete n.foto;
   }
   return notas;
 }

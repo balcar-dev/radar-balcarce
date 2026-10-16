@@ -234,6 +234,14 @@ no cuesta nada ni llama a ninguna red al armar el sitio. Para sumar imágenes,
 correr a mano "Generar fondos del clima", mirar las candidatas y guardar las
 buenas achicadas (1.200 px, JPEG).
 
+**Desde el 16/10 (regla 182), una nota sin foto también puede llevar una
+ilustración, pero sólo si una persona la pide y la mira antes** (ver § 12 más
+abajo): un bodegón de objetos sin gente, con la misma leyenda «Ilustración
+generada con IA» en el epígrafe. Nunca en Policiales ni en Política, ni en una
+nota de chicos, víctimas, muertes, sepelios, delitos o detenidos, ni de un
+político o un deportista con nombre. Si después aparece una foto real, gana la
+foto.
+
 La nota destacada de una sección o de un tema lleva su foto, con el crédito
 debajo, o la placa (`ImagenDestacada`); hasta el 29/09 llevaba siempre la placa.
 
@@ -268,8 +276,11 @@ Ver `docs/07-REDES.md`.
   puede fallar").
 - **Policiales**, salvo que la fuente sea oficial (paso 2).
 - **Una foto inventada por IA que parezca real**: el sistema no genera fotos de
-  hechos. Las únicas imágenes de IA son las ilustraciones genéricas, etiquetadas,
-  del clima y de «Un día como hoy» (regla 181), nunca en una nota de un hecho.
+  hechos. Las imágenes de IA son las ilustraciones genéricas, etiquetadas, del
+  clima y de «Un día como hoy» (regla 181) y los bodegones sin gente que una
+  persona suma a mano a una nota sin foto (regla 182, § 12): objetos de la
+  actividad, nunca la escena del hecho, nunca personas, y siempre con la
+  leyenda «Ilustración generada con IA».
 
 ---
 
@@ -286,6 +297,8 @@ Ver `docs/07-REDES.md`.
 | `web/lib/tarjeta-diseno.js` | `FOTO_EN_INSTAGRAM` (prendido desde el 28/09) y `fotoDeLaNota` | Tarjeta de Instagram, `redes/publicar.mjs` | — | — |
 | `redes/elegir.mjs` | `conCreditoDeFoto`: el crédito en el texto del posteo, si la imagen lleva foto | `redes/publicar.mjs` | — | — |
 | `reels/claves.mjs` | `claveClasificacion` y `claveGroq` | `ingesta/fotos.mjs` | `.env`, variables | — |
+| `web/scripts/ilustrar-notas.mjs` | Las ilustraciones con IA para notas sin foto (regla 182): filtros (`motivoParaSaltar`), prompt con Gemini, imagen con el Worker de Cloudflare, control, topes; `revisar` y `aplicar` | `ilustrar-notas.yml` (a mano) | `portada.json`, `archivo.json`, el banco, las manuales, `fotos-ia.json` | En la revisión, sólo el adjunto; al aplicar, `web/data/fotos-ia.json` y `web/public/fotos-notas/<id>-ia.jpg` |
+| `web/data/fotos-ia.json` | Las ilustraciones aplicadas (lo escribe sólo «Ilustrar notas sin foto») | — | — | — |
 
 ## Dónde se toca cada cosa
 
@@ -300,6 +313,8 @@ Ver `docs/07-REDES.md`.
 | Sacar una foto que no debía salir | Borrar la entrada del banco y el archivo de `web/public/fotos-notas/`, **y** agregar la nota al banco con `"intentado": true` para que no se vuelva a elegir la misma |
 | Que el espejo de Instagram lleve (o no) la foto del banco | `FOTO_EN_INSTAGRAM` (`web/lib/tarjeta-diseno.js`; hoy `true`) |
 | Cómo se ve en la página | El bloque `{n.foto && …}` de `web/app/nota/[id]/page.js` |
+| Ilustrar con IA las notas sin foto | Workflow «Ilustrar notas sin foto» (§ 12); qué se salta, `motivoParaSaltar` y `SENSIBLE` (`web/scripts/ilustrar-notas.mjs`); los topes, `TOPE_POR_CORRIDA` y `TOPE_POR_DIA` |
+| Sacar una ilustración que no debía salir | Borrar su entrada de `web/data/fotos-ia.json` (y el archivo `<id>-ia.jpg`): la próxima corrida de «Actualizar la web» ya no la pone |
 
 ## Qué puede fallar y cómo se nota
 
@@ -364,3 +379,36 @@ La clave gratis de Groq (se sondeó a mano el 1/10 con un script de prueba que s
 Las notas armadas con datos (la F1; después el fútbol) no tienen la foto de ninguna fuente. `web/scripts/foto-libre.mjs` les busca en **Wikimedia Commons**
 una foto del lugar (el circuito) con licencia abierta (dominio público, CC0, CC BY, CC BY-SA), la achica y la guarda en el banco con el crédito y la licencia
 (regla 99). La foto de un circuito se busca una vez por nota; las tres notas de un Gran Premio (horarios, clasificación y resultado) llevan la misma.
+
+## 12. Ilustraciones con IA para las notas sin foto (16/10/2026, regla 182)
+
+Hernán: "todas las notas de las últimas 24 h que no tengan foto, generarles una con Cloudflare; revisar que no sea nada raro; y que no gaste ni
+un dólar de más". Es **a mano y en dos pasos**, con el workflow **«Ilustrar notas sin foto»** (GitHub → Actions; `web/scripts/ilustrar-notas.mjs`).
+
+**Paso 1, revisar** (dejar *aplicar* sin marcar; *horas* = 24; *ids* vacío o algunas notas). Toma de la portada las notas de esas horas que no
+tienen foto real y **salta** (con el motivo) Policiales, Política, lo que no es verde o publicó una persona, las notas propias, lo que frena el
+semáforo sobre el texto entero (menores, víctimas, abusos, suicidio, denuncias, detenidos, muertes) y los sepelios, y además, a propósito más
+ancho: lo policial o judicial, muertes y velorios (también el cementerio), accidentes, violencia, todo lo de chicos (escuela, alumnos, útiles,
+jardín, juvenil), las figuras conocidas, un nombre con un cargo político y los deportistas nombrados. A las demás, Gemini (sólo la clave de
+redacción, gratis) les escribe un prompt en inglés con el pedido de Hernán (un bodegón sin personas, superficie de trabajo gastada, sin logos ni
+textos, fondo desenfocado que sugiere el lugar, luz natural); si nombra a alguien o describe personas, manos, chicos, juguetes, armas o sangre,
+se descarta. El Worker de Cloudflare hace la imagen (SDXL 1024 × 576, 20 pasos, con prompt negativo y con «blank paper, no writing, no letters,
+no signs, no logos, no people» sumado), y Gemini la vuelve a mirar (personas, rostros, texto, logos, algo sensible o raro). Queda todo en el
+adjunto **«ilustraciones»**: las imágenes, `index.html` para mirarlas en el celular y `candidatas.json` (cada nota con su prompt, el resultado
+del control y las saltadas con su motivo). El resumen de la corrida dice cuáles pasaron el control y cómo aplicarlas. **No toca el sitio.**
+
+**Paso 2, aplicar** (marcar *aplicar*, *corrida* = el número de la corrida de revisión, que está en su dirección `…/actions/runs/NÚMERO`; *ids* =
+las que estén bien, o vacío para las que pasaron el control). No genera nada: baja el adjunto, vuelve a filtrar con los datos de ese momento (si
+mientras tanto apareció una foto real o la nota cambió, no se aplica), guarda cada imagen en `web/public/fotos-notas/<id>-ia.jpg` (1.200 px,
+JPEG) y la anota en `web/data/fotos-ia.json` (`archivo`, `credito` y `medio` «Ilustración generada con IA», `origen: "ia"`, `cuando`, el título
+y el prompt). La próxima corrida de «Actualizar la web» la muestra.
+
+**Cuánto gasta.** Gemini, nada (clave gratis). El Worker, unas 212 neuronas por imagen (estimadas: Cloudflare no publica la tarifa de SDXL; se usa
+la de flux-schnell). Topes en el código: **12 llamadas por corrida y 20 por día** (cuentan las revisiones de hoy, por su adjunto
+«cuenta-ilustraciones», y lo aplicado hoy), un solo reintento por imagen. Como mucho unas 4.240 neuronas por día, menos de la mitad de las
+10.000 gratis del plan.
+
+**En la web.** `generar-datos.mjs` suma `fotos-ia.json` con la **prioridad más baja**: una foto del banco o una que sumó una persona siempre gana, y
+las notas ilustradas siguen en la búsqueda de fotos reales. Una nota de Policiales, de Política, propia o que se volvió sensible no la muestra.
+La poda no borra los `*-ia.jpg` de notas vivas. El epígrafe de la página, el RSS y el pie de Instagram dicen «Ilustración generada con IA».
+Para sacar una: borrar su entrada de `fotos-ia.json` y el archivo.

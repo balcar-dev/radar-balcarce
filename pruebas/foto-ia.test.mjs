@@ -508,8 +508,15 @@ test('el módulo no está conectado a producción: nada lo importa fuera de las 
       if (/foto-ia/.test(texto) || /FOTO_IA_ACTIVA|GEMINI_API_KEY_IMAGENES/.test(texto)) quienes.push(path.relative(RAIZ, a).replaceAll('\\', '/'));
     }
   }
-  // reels/claves.mjs define la clave nueva y la nombra: es lo único permitido.
-  assert.deepEqual(quienes.filter((q) => q !== 'reels/claves.mjs'), [], 'cuando se conecte, esta prueba se cambia a propósito (docs/fotos/PROPUESTA-IMAGEN-IA.md)');
+  // reels/claves.mjs define la clave nueva y la nombra: es lo único permitido. Desde el 16/10/2026 (regla 182), web/scripts/ilustrar-notas.mjs
+  // (las ilustraciones con Cloudflare, otro camino) usa SÓLO el detector de nombres de persona de este módulo, para saltar las notas que nombran a
+  // alguien: ni la generación con Google, ni la clave de imágenes, ni el interruptor.
+  assert.deepEqual(quienes.filter((q) => q !== 'reels/claves.mjs' && q !== 'web/scripts/ilustrar-notas.mjs'), [], 'cuando se conecte, esta prueba se cambia a propósito (docs/fotos/PROPUESTA-IMAGEN-IA.md)');
+  const ilustrar = fs.readFileSync(path.join(RAIZ, 'web', 'scripts', 'ilustrar-notas.mjs'), 'utf8');
+  const importa = ilustrar.match(/import\s*\{([^}]*)\}\s*from\s*'[^']*foto-ia\.mjs'/);
+  assert.ok(importa, 'ilustrar-notas importa de foto-ia.mjs con un import con nombres');
+  assert.deepEqual(importa[1].split(',').map((s) => s.trim()).filter(Boolean), ['nombresDePersona']);
+  assert.ok(!/FOTO_IA_ACTIVA|GEMINI_API_KEY_IMAGENES|elegirIlustracionIA|generarImagen\(/.test(ilustrar));
 });
 
 test('el módulo no lleva claves escritas ni las muestra, y su única clave nueva es la de imágenes (sin respaldo en las otras)', () => {

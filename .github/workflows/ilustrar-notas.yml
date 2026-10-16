@@ -1,0 +1,149 @@
+# Ilustraciones hechas con IA para las notas que quedaron sin foto (16/10/2026, Hernán; regla 182). SÓLO a mano y en dos pasos:
+#
+#   1) REVISAR (aplicar sin marcar, lo de siempre): elige las notas de las últimas `horas` sin foto real, salta las que no pueden llevar una
+#      (Policiales, Política, lo que no es verde, las notas propias, chicos, víctimas, muertes, sepelios, abusos, denuncias, detenidos, política
+#      con nombre propio, deportistas nombrados), le pide a Gemini (clave de redacción, gratis) el prompt y al Worker de Cloudflare la imagen
+#      (SDXL 1024 x 576, dentro de las neuronas gratis), la hace mirar otra vez por Gemini y deja todo en el adjunto "ilustraciones"
+#      (index.html para mirarlas). No escribe nada en el repositorio.
+#   2) APLICAR (aplicar marcado, `corrida` = el número de la corrida de revisión): guarda las de `ids` (o, vacío, las que pasaron el control)
+#      en web/public/fotos-notas/<id>-ia.jpg y web/data/fotos-ia.json, y sube. No genera nada.
+#
+# Topes (web/scripts/ilustrar-notas.mjs, no se cambian desde acá): 12 llamadas al Worker por corrida y 20 por día, un solo reintento por imagen.
+# Las llamadas de las revisiones anteriores de hoy se cuentan con su adjunto "cuenta-ilustraciones".
+# Secretos: GEMINI_API_KEY_REDACCION (gratis) y VIGILANTE_TOKEN (la contraseña del Worker). Ninguna otra clave.
+name: Ilustrar notas sin foto
+run-name: "Ilustrar notas · ${{ inputs.aplicar && 'aplicar' || 'revisar' }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      horas:
+        description: 'De cuántas horas para atrás (1 a 72)'
+        required: false
+        default: '24'
+      aplicar:
+        description: 'Aplicar: guardar y publicar las imágenes de una revisión ya hecha (sin marcar = sólo revisar)'
+        type: boolean
+        required: false
+        default: false
+      ids:
+        description: 'Sólo estas notas, separadas por comas (vacío = todas las que correspondan; al aplicar, vacío = las que pasaron el control)'
+        required: false
+        default: ''
+      corrida:
+        description: 'Sólo para aplicar: el número de la corrida de revisión (está en su dirección: .../actions/runs/NÚMERO)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  actions: read
+
+# Una por vez: dos corridas juntas se pasarían de los topes del día.
+concurrency:
+  group: ilustrar-notas
+  cancel-in-progress: false
+
+jobs:
+  ilustrar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      TZ: America/Argentina/Buenos_Aires
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # ffmpeg-static, para pasar las imágenes a JPEG de 1.200 px (web/scripts/achicar-foto.mjs).
+      - name: Instalar
+        run: npm ci --no-audit --no-fund
+
+      # Lo que gastaron las revisiones anteriores (el script suma sólo las de hoy). Si no se puede bajar, cuenta lo ya aplicado hoy.
+      - name: Lo ya generado hoy
+        if: ${{ !inputs.aplicar }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p cuentas
+          for id in $(gh run list --repo "$GITHUB_REPOSITORY" --workflow ilustrar-notas.yml --limit 20 --json databaseId --jq '.[].databaseId'); do
+            [ "$id" = "$GITHUB_RUN_ID" ] && continue
+            gh run download "$id" --repo "$GITHUB_REPOSITORY" -n cuenta-ilustraciones -D "cuentas/$id" 2>/dev/null || true
+          done
+          ls -R cuentas | head -40
+
+      - name: Revisar (no toca el repositorio)
+        if: ${{ !inputs.aplicar }}
+        run: node web/scripts/ilustrar-notas.mjs revisar --salida=salida-ilustraciones --cuenta=cuenta-ilustraciones --cuentas=cuentas
+        env:
+          HORAS: ${{ inputs.horas }}
+          IDS: ${{ inputs.ids }}
+          GEMINI_API_KEY_REDACCION: ${{ secrets.GEMINI_API_KEY_REDACCION }}
+          VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() && !inputs.aplicar }}
+        with:
+          name: ilustraciones
+          path: salida-ilustraciones
+          retention-days: 7
+          if-no-files-found: ignore
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() && !inputs.aplicar }}
+        with:
+          name: cuenta-ilustraciones
+          path: cuenta-ilustraciones
+          retention-days: 3
+          if-no-files-found: ignore
+
+      - name: Falta la corrida de revisión
+        if: ${{ inputs.aplicar && inputs.corrida == '' }}
+        run: |
+          echo "Para aplicar hay que poner en 'corrida' el número de la corrida de revisión."
+          exit 1
+
+      - name: Bajar la revisión
+        if: ${{ inputs.aplicar }}
+        uses: actions/download-artifact@v4
+        with:
+          name: ilustraciones
+          path: revision
+          run-id: ${{ inputs.corrida }}
+          github-token: ${{ github.token }}
+
+      - name: Aplicar (no genera nada)
+        if: ${{ inputs.aplicar }}
+        run: node web/scripts/ilustrar-notas.mjs aplicar --desde=revision
+        env:
+          IDS: ${{ inputs.ids }}
+
+      - name: Guardar
+        if: ${{ inputs.aplicar }}
+        run: |
+          git config user.name "Radar Balcarce"
+          git config user.email "272334999+balcar-dev@users.noreply.github.com"
+          for f in web/data/fotos-ia.json web/public/fotos-notas; do [ -e "$f" ] && git add -- "$f"; done
+          if git diff --cached --quiet; then
+            echo "Nada nuevo que guardar."
+            exit 0
+          fi
+          git commit -m "Ilustraciones con IA para notas sin foto · $(date '+%d/%m %H:%M')"
+          # El mismo ciclo que "Actualizar la web": traer lo de las otras corridas y reintentar. fotos-ia.json lo escribe sólo este workflow.
+          for intento in 1 2 3; do
+            if ! git pull --rebase; then
+              chocan=$(git diff --name-only --diff-filter=U)
+              echo "$chocan" | grep -qvE "^web/data/" && { echo "Conflicto fuera de web/data: $chocan"; git rebase --abort; exit 1; }
+              echo "$chocan" | xargs -r git checkout --theirs --
+              echo "$chocan" | xargs -r git add --
+              GIT_EDITOR=true git rebase --continue || { git rebase --abort; exit 1; }
+            fi
+            git push && break
+            sleep 5
+          done
+          git fetch -q origin main
+          [ "$(git rev-list --count origin/main..HEAD)" = 0 ] || { echo "No se pudieron guardar las ilustraciones después de tres intentos"; exit 1; }

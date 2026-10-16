@@ -75,7 +75,7 @@ import {
 } from '../lib/archivo.js';
 import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
 import { esperaSoloPorCantidad, semaforoDelTexto, esEfemerideAjena, esDeUnMedioDeAca } from '../../ingesta/ingesta.mjs';
-import { conFotosDelBanco, podarFotos } from './fotos-notas.mjs';
+import { conFotosDelBanco, podarFotos, esIlustracionDeNota, ilustracionPermitida } from './fotos-notas.mjs';
 import { actualizarAgenda, aplicarSuspendidos, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
 import {
@@ -631,6 +631,16 @@ const EFEMERIDES_PIEZAS = path.join(AQUI, '..', 'data', 'efemerides-piezas.json'
 const fotosManuales = Object.fromEntries(Object.entries(leerJson(FOTOS_MANUALES, {}))
   .filter(([, f]) => f?.archivo && fs.existsSync(path.join(FOTOS_NOTAS, path.basename(f.archivo)))));
 let bancoDeFotos = { ...leerJson(BANCO_FOTOS, {}), ...fotosManuales };
+// Las ilustraciones hechas con IA para notas sin foto (regla 182, web/scripts/ilustrar-notas.mjs): las anota sólo el workflow manual "Ilustrar
+// notas sin foto", después de que una persona las miró; esta corrida nunca escribe ese archivo. Van con la prioridad MÁS BAJA (primero las
+// ilustraciones, encima el banco y encima las manuales): si después aparece una foto real, gana. Quedan afuera del banco a propósito, así
+// la búsqueda de fotos reales (elegirFotosNuevas) sigue probando esas notas y la poda no las toca. Sólo si el archivo está en disco.
+const FOTOS_IA = path.join(AQUI, '..', 'data', 'fotos-ia.json');
+const ilustracionesIA = Object.fromEntries(Object.entries(leerJson(FOTOS_IA, {}))
+  .filter(([, f]) => f?.archivo && esIlustracionDeNota(f) && fs.existsSync(path.join(FOTOS_NOTAS, path.basename(f.archivo)))));
+const conIlustraciones = { ilustraciones: ilustracionesIA, ilustracionPermitida: (n) => ilustracionPermitida(n, { semaforo: semaforoDelTexto }) };
+/** Una nota del archivo sin foto real (o con su ilustración) toma la ilustración que tenga, o la pierde si ya no puede llevarla. */
+const conLaIlustracion = (n) => (n && (!n.foto || esIlustracionDeNota(n.foto)) ? conFotosDelBanco([{ ...n }], {}, conIlustraciones)[0] : n);
 // La misma noticia contra lo YA publicado, sin IA (regla 171, ingesta/repetidas-publicadas.mjs): una nota que todavía
 // no salió y cuenta lo mismo que otra de las últimas 72 horas (el Jardín 905 al día siguiente, la Liga en otra sección)
 // se une a ésa como las parejas que confirma la IA: queda una y la otra redirige (más abajo, repetidasConOtraDireccion).
@@ -688,7 +698,7 @@ if (enLaNube) {
     console.log(`  fotos: no se pudieron elegir nuevas (${e.message}); quedan las del banco`);
   }
 }
-conFotosDelBanco(deLaIngesta, bancoDeFotos);
+conFotosDelBanco(deLaIngesta, bancoDeFotos, conIlustraciones);
 
 // ------------------------------------------------------------- el archivo
 //
@@ -994,7 +1004,8 @@ for (const id of fusion.keys()) retiradas.add(id);
 // Si la nueva trajo la foto y la que queda no tiene, la foto pasa a la que queda (en el banco, con su crédito).
 const pasaLaFoto = fotosParaLaQueQueda(fusion, {
   conFoto: conFotoEnElBanco,
-  yaTienen: new Set([...(archivoAnterior.notas ?? []), ...conPaginaHoy].filter((n) => n.foto).map((n) => n.id)),
+  // Una ilustración con IA no cuenta como foto: si la nueva trajo una foto real, pasa (regla 182).
+  yaTienen: new Set([...(archivoAnterior.notas ?? []), ...conPaginaHoy].filter((n) => n.foto && !esIlustracionDeNota(n.foto)).map((n) => n.id)),
 });
 if (pasaLaFoto.size) {
   bancoDeFotos = { ...bancoDeFotos, ...Object.fromEntries([...pasaLaFoto].map(([queda, deLaFoto]) => [queda, { ...bancoDeFotos[deLaFoto] }])) };
@@ -1005,7 +1016,7 @@ if (pasaLaFoto.size) {
   }
   console.log(`  repetidas: ${pasaLaFoto.size} foto(s) pasan a la nota que ya estaba publicada`);
 }
-const conLaFotoPasada = (n) => (pasaLaFoto.has(n?.id) && !n.foto ? conFotosDelBanco([{ ...n }], bancoDeFotos)[0] : n);
+const conLaFotoPasada = (n) => (pasaLaFoto.has(n?.id) && (!n.foto || esIlustracionDeNota(n.foto)) ? conFotosDelBanco([{ ...n }], bancoDeFotos)[0] : n);
 {
   const antes = leerJson(FUSIONADAS, null);
   const porId = new Map([...(archivoAnterior.notas ?? []), ...conPaginaHoy].map((n) => [n.id, n]));
@@ -1046,7 +1057,7 @@ const sinColaDe = (n) => sinCola(n?.seccion === 'Servicios' ? { ...n, seccion: n
   : n?.seccion === 'País' ? { ...n, seccion: 'Argentina' } : n);
 // Lo de más de unos días guarda sólo lo que ve el lector (aligerarViejas, 29/09).
 const archivo = aligerarViejas(actualizarArchivo({
-  archivo: conLasUnidas([...(archivoAnterior.notas ?? []), ...restaurar.filter((n) => !(archivoAnterior.notas ?? []).some((a) => a.id === n.id))]).map(conLaFotoPasada).map(sinServicios),
+  archivo: conLasUnidas([...(archivoAnterior.notas ?? []), ...restaurar.filter((n) => !(archivoAnterior.notas ?? []).some((a) => a.id === n.id))]).map(conLaFotoPasada).map(conLaIlustracion).map(sinServicios),
   // Las partes nuevas que hoy no están (una persona corrigió el texto, o la
   // reescritura se cayó) tampoco quedan de la vez anterior en el archivo: el
   // `undefined` pisa lo viejo al mezclar y no se escribe.
@@ -1084,7 +1095,7 @@ if (JSON.stringify(archivo) !== JSON.stringify(archivoAnterior.notas ?? [])) {
 if (enLaNube && fs.existsSync(FOTOS_NOTAS)) {
   const quedan = new Set([...archivo, ...vigentes, ...deLaIngesta].map((n) => n.id));
   const { banco, borrar } = podarFotos({
-    banco: bancoDeFotos, enDisco: fs.readdirSync(FOTOS_NOTAS), quedan, retiradas: RETIRADAS_A_MANO,
+    banco: bancoDeFotos, enDisco: fs.readdirSync(FOTOS_NOTAS), quedan, retiradas: RETIRADAS_A_MANO, ilustraciones: ilustracionesIA,
   });
   for (const f of borrar) fs.rmSync(path.join(FOTOS_NOTAS, f), { force: true });
   if (JSON.stringify(banco) !== JSON.stringify(bancoDeFotos)) {
