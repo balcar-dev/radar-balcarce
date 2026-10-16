@@ -29,6 +29,7 @@
 
 import { interpretarDolarApi, pesos, porcentaje, brecha } from './dolar.js';
 import { rutaDeNota } from './ruta.js';
+import { fondoDelClima } from './fondos-clima.js';
 import { SECCIONES_QUE_ESPERAN_PERSONA } from '../../redes/elegir.mjs';
 import { NOTA_DEL_DOLAR } from '../../ingesta/criterio.mjs';
 
@@ -422,6 +423,9 @@ export function notaDelClima(entrada, { enlaceReel = '' } = {}) {
     enlace: fuente.enlace,
     fuentesConsultadas: [fuente],
     teniaImagenLaFuente: false,
+    // Una ilustración genérica del clima, hecha con IA y declarada como tal (web/lib/fondos-clima.js, regla 181): una según el estado del tiempo y
+    // la fecha, la misma siempre para el mismo día.
+    foto: fondoDelClima(entrada),
     // Una sola fecha para todo el día: la del momento en que se guardó.
     fecha: entrada.consultado,
     sinFecha: false,

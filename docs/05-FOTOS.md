@@ -220,8 +220,19 @@ de la imagen.** Sin foto, desde el 29/09 va **la placa de la sección**, más
 baja que una foto y con el dibujo de su sección (`PlacaSeccion` con `chica` y
 `Pictograma`, `web/components/piezas.js`; Hernán: "si no tiene fotos hay que
 ponerle la placa de la sección"). Hasta ese día no iba nada. Las notas propias
-(el dólar, los repasos) no la llevan. **Nunca una imagen hecha con IA**: el
-criterio no la permite y una ilustración inventada de un hecho real confunde.
+(el dólar, los repasos) no la llevan. **Nunca una imagen hecha con IA en una
+nota de un hecho**: el criterio no la permite y una ilustración inventada de un
+hecho real confunde. **La excepción son dos notas genéricas propias, y sólo
+ellas** (regla 181): la del clima y la de «Un día como hoy». Llevan una
+ilustración hecha con IA (un paisaje de la pampa, o la hoja de almanaque), sin
+personas, texto, marcas ni lugares reconocibles, y **siempre con la leyenda
+«Ilustración generada con IA»** en el epígrafe. La del clima sale de un grupo de
+imágenes fijas (`web/public/fotos-notas/clima-<estado>-<n>.jpg`, generadas una
+vez con Workers AI de Cloudflare): `web/lib/fondos-clima.js` elige el estado del
+tiempo del día y, entre las dos o tres de ese estado, la que toca por la fecha;
+no cuesta nada ni llama a ninguna red al armar el sitio. Para sumar imágenes,
+correr a mano "Generar fondos del clima", mirar las candidatas y guardar las
+buenas achicadas (1.200 px, JPEG).
 
 La nota destacada de una sección o de un tema lleva su foto, con el crédito
 debajo, o la placa (`ImagenDestacada`); hasta el 29/09 llevaba siempre la placa.
@@ -256,7 +267,9 @@ Ver `docs/07-REDES.md`.
   rojo antes de publicarse, así que nunca llega a esta etapa (pero ver "Qué
   puede fallar").
 - **Policiales**, salvo que la fuente sea oficial (paso 2).
-- **Una foto inventada por IA que parezca real**: el sistema no genera fotos.
+- **Una foto inventada por IA que parezca real**: el sistema no genera fotos de
+  hechos. Las únicas imágenes de IA son las ilustraciones genéricas, etiquetadas,
+  del clima y de «Un día como hoy» (regla 181), nunca en una nota de un hecho.
 
 ---
 

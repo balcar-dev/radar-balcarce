@@ -170,7 +170,8 @@ export function podarFotos({ banco = {}, enDisco = [], quedan = new Set(), retir
   // exista la nota del repaso.
   const delRepaso = (f) => f.startsWith('collage-') && quedan.has(f.slice('collage-'.length).replace(/\.\w+$/, ''));
   // La ilustración fija de las notas de efemérides (14/10/2026) tampoco es de una nota del banco: nunca se poda.
-  const fija = (f) => /^efemeride-[\w-]+\.jpg$/.test(f); // la base (efemeride-fondo.jpg) y la de cada día (efemeride-2026-10-14.jpg, web/scripts/foto-efemeride.mjs)
+  // Lo mismo las ilustraciones del clima (16/10/2026, web/lib/fondos-clima.js): clima-<estado>-<n>.jpg.
+  const fija = (f) => /^(efemeride|clima)-[\w-]+\.jpg$/.test(f); // la base (efemeride-fondo.jpg) y la de cada día (efemeride-2026-10-14.jpg, web/scripts/foto-efemeride.mjs)
   return { banco: bancoNuevo, borrar: enDisco.filter((f) => !vivas.has(f) && !delRepaso(f) && !fija(f)) };
 }
 
