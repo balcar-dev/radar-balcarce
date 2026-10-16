@@ -325,6 +325,9 @@ export const FRASES_DEL_ENLACE = [
 
 const lineaDelEnlace = (nota, sitio, origen = null) => `${variante(FRASES_DEL_ENLACE, `nota|${nota.id ?? nota.titulo}`, 'enlace')} ${origen ? enlaceConOrigen(nota, sitio, { campana: 'posteo', contenido: nota.id, ...origen }) : enlaceDeNota(nota, sitio)}`;
 
+/** El cierre del posteo: el enlace a la nota completa. En INSTAGRAM nunca hay enlace (17/10/2026, Hernán: no se toca en el celular): se manda a la bio. */
+const lineaFinal = (nota, sitio, origen = null) => (origen?.fuente === 'instagram' ? `La nota completa, en ${String(sitio).replace(/^https?:\/\//, '').replace(/\/$/, '')} (link en la bio)` : lineaDelEnlace(nota, sitio, origen));
+
 /**
  * El texto del posteo: titular, copete y el enlace a la nota completa en
  * NUESTRO sitio. La fuente no se nombra en las redes: la atribución y el
@@ -344,7 +347,7 @@ const lineaDelEnlace = (nota, sitio, origen = null) => `${variante(FRASES_DEL_EN
 export function mensajeDeNota(nota, sitio, origen = null) {
   if (nota.textoRedes) {
     const partes = [String(nota.textoRedes).trim()];
-    if (sitio) partes.push(lineaDelEnlace(nota, sitio, origen));
+    if (sitio) partes.push(lineaFinal(nota, sitio, origen));
     const tags = hashtagsDe(nota);
     if (tags.length) partes.push(tags.join(' '));
     return partes.join('\n\n');
@@ -352,7 +355,7 @@ export function mensajeDeNota(nota, sitio, origen = null) {
   const partes = [nota.titulo];
   const copete = recortar(nota.copete);
   if (copete) partes.push(copete);
-  if (sitio) partes.push(lineaDelEnlace(nota, sitio, origen));
+  if (sitio) partes.push(lineaFinal(nota, sitio, origen));
   // Sin "Resumen hecho con IA" (desde el 26/09, a pedido de Hernán y Andrés):
   // quién escribió la nota se dice en la nota, en la web.
   return partes.join('\n\n');

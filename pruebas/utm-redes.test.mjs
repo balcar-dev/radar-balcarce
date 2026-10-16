@@ -43,8 +43,8 @@ test('el texto del posteo: sin origen sale limpio; con origen, cada red lleva el
   const fb = mensajeDeNota(nota, SITIO, { fuente: 'facebook' });
   const ig = mensajeDeNota(nota, SITIO, { fuente: 'instagram' });
   assert.match(fb, /\?utm_source=facebook&utm_medium=social&utm_campaign=posteo&utm_content=abc123/);
-  assert.match(ig, /\?utm_source=instagram&utm_medium=social&utm_campaign=posteo&utm_content=abc123/);
-  assert.equal(fb.replace('utm_source=facebook', 'utm_source=instagram'), ig, 'es el mismo texto: cambia sólo la red');
+  // Desde el 17/10/2026 Instagram NUNCA lleva enlace (no se toca en el celular): el posteo manda a la bio.
+  assert.ok(!/https?:|utm_/.test(ig) && /link en la bio/.test(ig), ig);
   const conTextoDeRedes = mensajeDeNota({ ...nota, textoRedes: 'Reabre el Fangio.' }, SITIO, { fuente: 'facebook' });
   assert.match(conTextoDeRedes, /utm_source=facebook/);
 });
@@ -52,8 +52,9 @@ test('el texto del posteo: sin origen sale limpio; con origen, cada red lleva el
 test('el pie de un podcast: los enlaces de las notas llevan la red y la campaña "repaso"', () => {
   const pieza = { tipo: 'reel', nombre: 'noticia1', titulo: 'El repaso de la mañana', items: [{ titulo: 'Una', enlace: 'https://radarbalcarce.com/nota/una-a' }] };
   assert.ok(!pieDePieza(pieza).includes('utm_'), 'sin red, igual que antes');
-  assert.match(pieDePieza(pieza, 'instagram'), /https:\/\/radarbalcarce\.com\/nota\/una-a\?utm_source=instagram&utm_medium=social&utm_campaign=repaso&utm_content=noticia1/);
-  assert.match(pieDePieza(pieza, 'facebook'), /utm_source=facebook/);
+  assert.ok(!/https?:|utm_/.test(pieDePieza(pieza, 'instagram')), 'Instagram sin enlaces');
+  assert.match(pieDePieza(pieza, 'facebook'), /nota\/repaso\d{8}manana\?utm_source=facebook&utm_medium=social&utm_campaign=repaso&utm_content=noticia1/);
+  assert.ok(!pieDePieza(pieza, 'facebook').includes('una-a'), 'no lleva el enlace de cada noticia');
   // los reels sin lista no llevan enlace a una nota: no hay nada que marcar
   assert.ok(!pieDePieza({ tipo: 'reel', nombre: 'otro', titulo: 'Un reel' }, 'facebook').includes('utm_'));
 });

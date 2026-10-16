@@ -154,13 +154,28 @@ export function pieDePieza(pieza, red = null) {
   return `${pieDeReel(pieza, red)}\n\n${AVISO_DE_VOZ}`;
 }
 
+const TURNO_DEL_REPASO = { noticia1: 'manana', noticia2: 'tarde', podcast: 'noche' };
+
+/** El enlace a la nota propia del repaso (web/lib/notas-propias.js: id `repaso<AAAAMMDD><manana|tarde|noche>`; /nota/<id> redirige a la dirección completa). */
+export function enlaceDelRepaso(pieza, red = null, ahora = new Date()) {
+  const turno = TURNO_DEL_REPASO[pieza.nombre];
+  if (!turno) return null;
+  const dia = String(pieza.dia ?? diaAR(ahora)).replace(/-/g, '');
+  const url = `https://${SITIO}/nota/repaso${dia}${turno}`;
+  return red ? ponerOrigen(url, { fuente: red, campana: 'repaso', contenido: pieza.nombre }) : url;
+}
+
 function pieDeReel(pieza, red = null) {
   // Un podcast lista las notas que cuenta, cada una con su enlace. La fuente
   // no se nombra: eso está en la nota de la web.
+  // Desde el 17/10/2026 (Hernán: "no hace falta poner los links de las noticias individuales: Instagram no los toma en el celular y es mucho"):
+  // la lista lleva sólo los titulares. En Instagram NUNCA hay enlaces (se dice dónde ir, con "link en la bio"); en Facebook hay UN solo enlace,
+  // el de la nota del propio repaso en nuestra web (`repaso<día><turno>`), no el de cada noticia.
   if (pieza.items?.length) {
-    const conRed = (e) => (red ? ponerOrigen(e, { fuente: red, campana: 'repaso', contenido: pieza.nombre }) : e);
-    const lista = pieza.items.map((i) => `• ${i.titulo}${i.enlace ? `\n  ${conRed(i.enlace)}` : ''}`).join('\n');
-    return `${pieza.titulo}\n\n${lista}\n\nMás en ${SITIO}`;
+    const lista = pieza.items.map((i) => `• ${i.titulo}`).join('\n');
+    if (red === 'instagram') return `${pieza.titulo}\n\n${lista}\n\nTodas las notas, en ${SITIO} (link en la bio)`;
+    const enlace = enlaceDelRepaso(pieza, red);
+    return `${pieza.titulo}\n\n${lista}\n\n${enlace ? `Las notas, acá: ${enlace}` : `Más en ${SITIO}`}`;
   }
   if (pieza.nombre === 'podcast') {
     return `El repaso del día en Balcarce.\n\nLas notas, con la fuente, en ${SITIO}`;

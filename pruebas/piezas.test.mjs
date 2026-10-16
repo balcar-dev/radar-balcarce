@@ -7,7 +7,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { crearCliente } from '../redes/meta.mjs';
-import { libroNuevo, anotar } from '../redes/elegir.mjs';
+import { libroNuevo, anotar, mensajeDeNota } from '../redes/elegir.mjs';
 import { claveDePieza, piezasQueTocan, tipoInstagram, pieDePieza } from '../redes/piezas.mjs';
 import { publicarPiezas } from '../redes/publicar-piezas.mjs';
 
@@ -582,7 +582,34 @@ test('lo que Facebook ya tiene no se vuelve a subir', async () => {
 
 // ------------------------------------- el pie de los podcasts y las notas usadas
 
-test('el pie de un podcast lista cada nota con su enlace y no nombra la fuente', () => {
+test('el pie de un podcast lista sólo los titulares: en Instagram sin ningún enlace, en Facebook con UN enlace, el de la nota del propio repaso (17/10/2026)', () => {
+  const pieza = {
+    tipo: 'reel', nombre: 'noticia2', dia: '2026-10-16', titulo: 'El repaso de la tarde',
+    items: [
+      { titulo: 'Una nota', enlace: 'https://radarbalcarce.com/nota/una-nota-a' },
+      { titulo: 'Otra nota', enlace: 'https://radarbalcarce.com/nota/otra-nota-b' },
+    ],
+  };
+  const ig = pieDePieza(pieza, 'instagram');
+  assert.match(ig, /^El repaso de la tarde\n\n• Una nota\n• Otra nota\n\nTodas las notas, en radarbalcarce\.com \(link en la bio\)\n\nVoz generada/);
+  assert.ok(!/https?:\/\//.test(ig), 'Instagram no lleva enlaces');
+  const fb = pieDePieza(pieza, 'facebook');
+  assert.match(fb, /^El repaso de la tarde\n\n• Una nota\n• Otra nota\n\nLas notas, acá: https:\/\/radarbalcarce\.com\/nota\/repaso20261016tarde\?utm_source=facebook/);
+  assert.equal((fb.match(/https?:\/\//g) ?? []).length, 1, 'un solo enlace en Facebook');
+  assert.ok(!/una-nota-a|otra-nota-b/.test(fb), 'no lleva el enlace de cada noticia');
+  assert.ok(!/fuente/i.test(fb) && !/fuente/i.test(ig));
+});
+
+test('el posteo de una nota en Instagram nunca lleva enlace (se manda a la bio); en Facebook sí', () => {
+  const nota = { id: 'abc123', titulo: 'Una nota de prueba', copete: 'Con su bajada.', ruta: '/nota/una-nota-de-prueba-abc123' };
+  const ig = mensajeDeNota(nota, 'radarbalcarce.com', { fuente: 'instagram' });
+  assert.ok(!/https?:\/\//.test(ig), ig);
+  assert.match(ig, /link en la bio/);
+  const fb = mensajeDeNota(nota, 'radarbalcarce.com', { fuente: 'facebook' });
+  assert.match(fb, /radarbalcarce\.com\/nota\//);
+});
+
+test('(viejo) el pie de un podcast sigue sin nombrar la fuente', () => {
   const pie = pieDePieza({
     tipo: 'reel', nombre: 'noticia1', titulo: 'El repaso de la mañana',
     items: [
@@ -590,7 +617,6 @@ test('el pie de un podcast lista cada nota con su enlace y no nombra la fuente',
       { titulo: 'Otra nota', enlace: 'https://radarbalcarce.com/nota/otra-nota-b' },
     ],
   });
-  assert.match(pie, /^El repaso de la mañana\n\n• Una nota\n  https:\/\/radarbalcarce\.com\/nota\/una-nota-a\n• Otra nota\n  https:\/\/radarbalcarce\.com\/nota\/otra-nota-b\n\nMás en radarbalcarce\.com\n\nVoz generada con inteligencia artificial\.$/);
   assert.ok(!/fuente/i.test(pie));
 });
 
