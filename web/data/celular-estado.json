@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T11:05:38.175Z",
- "portada": 37,
- "archivo": 1140,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-16T11:31:46.008Z",
+ "portada": 39,
+ "archivo": 1141,
+ "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-16T11:05:38.206Z",
+  "generado": "2026-10-16T11:31:46.044Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,8 +95,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 51,
     "notas": [
+     {
+      "id": "aa7nni",
+      "titulo": "Reprograman la Caravana de la Alegría para noviembre",
+      "seccion": "Cultura y agenda"
+     },
      {
       "id": "u0hcbv",
       "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
@@ -111,11 +116,6 @@
       "id": "2g6pf5",
       "titulo": "Atletas locales logran buenos puestos en Tamangueyú y Balcarce",
       "seccion": "Deportes"
-     },
-     {
-      "id": "1ixp88o",
-      "titulo": "El abogado de Virginia Aparicio visita una radio local para hablar del caso",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -126,8 +126,13 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "1ixp88o",
+      "titulo": "El abogado de Virginia Aparicio visita una radio local para hablar del caso",
+      "seccion": "Balcarce"
+     },
      {
       "id": "n6v2wu",
       "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
@@ -142,11 +147,6 @@
       "id": "1o2y75j",
       "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1ao5ic",
-      "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -157,13 +157,31 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 24,
+    "notas": [
+     {
+      "id": "1ao5ic",
+      "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "wfa595",
+      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
    "hoy": [],
-   "cola": [],
+   "cola": [
+    {
+     "id": "aa7nni",
+     "titulo": "Reprograman la Caravana de la Alegría para noviembre",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    }
+   ],
    "cupo": 5,
    "proximoDesde": "2026-10-15T20:05:37.440Z",
    "porDia": 5,
