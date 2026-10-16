@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T22:31:45.796Z",
- "portada": 64,
+ "generado": "2026-10-16T23:02:00.335Z",
+ "portada": 63,
  "archivo": 1192,
- "esperandoCuerpo": 6,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-16T22:31:45.842Z",
+  "generado": "2026-10-16T23:02:00.367Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -73,7 +73,7 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "30azdn",
+      "titulo": "La morosidad de las familias baja en agosto y llega al 12,81%",
+      "seccion": "Economía"
+     },
      {
       "id": "bgdvlg",
       "titulo": "Panichelli recuerda su grave lesión y la emoción de Scaloni",
@@ -173,11 +178,6 @@
       "id": "1xyp583",
       "titulo": "El Museo Histórico Municipal expone el Proyecto Cruz del Centenario",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "1mfnr70",
-      "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
-      "seccion": "Deportes"
      }
     ]
    }

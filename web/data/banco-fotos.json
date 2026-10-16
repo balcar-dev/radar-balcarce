@@ -15585,9 +15585,9 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Reprograman la Caravana de la Alegría para noviembre",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-16T22:01:35.827Z",
-  "intentos": 2,
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-16T23:01:43.093Z",
+  "intentos": 3,
   "fuentes": 3
  },
  "1kd7az5": {
@@ -16232,8 +16232,8 @@
   "origen": "ninguna",
   "titulo": "La Corte Suprema remata camiones y obradores de Austral Construcciones",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-16T22:01:35.827Z",
-  "intentos": 2,
+  "cuando": "2026-10-16T23:01:43.093Z",
+  "intentos": 3,
   "fuentes": 5
  },
  "fgcjjj": {
@@ -16291,13 +16291,16 @@
   "cuando": "2026-10-16T22:01:35.827Z"
  },
  "1ilkp5d": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1ilkp5d.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El riesgo país sube a 648 puntos básicos y el dólar mayorista llega a 1518 pesos",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-16T22:01:35.827Z",
-  "intentos": 1,
-  "fuentes": 2
+  "enlace": "https://www.lanacion.com.ar/economia/el-riesgo-pais-cierra-la-semana-con-otra-suba-y-supera-los-640-puntos-nid16102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/el-riesgo-pais-esta-a-siete-puntos-de-su-valor-34NRFIYV7FAGJN7VLDIE653SVM.jpg?auth=bf34d06ab9a07ee0d093cc686e9e89142d7e0d68f4b9f0f8af971e0ace51c0ae&width=1200&height=800&quality=70&smart=true",
+  "razon": "La foto de La Nación tiene mejor encuadre y nitidez, ilustra bien el ambiente de la bolsa de valores y no presenta marcas de agua ni menores de edad.",
+  "cuando": "2026-10-16T23:01:43.093Z"
  },
  "30azdn": {
   "intentado": true,
@@ -16305,6 +16308,15 @@
   "titulo": "La morosidad de las familias baja en agosto y llega al 12,81%",
   "razon": "Groq también falló: HTTP 413",
   "cuando": "2026-10-16T22:31:41.671Z",
+  "intentos": 1,
+  "fuentes": 3
+ },
+ "1blsn1i": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El transporte público proyecta nuevas subas tarifarias",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-16T23:01:43.093Z",
   "intentos": 1,
   "fuentes": 3
  }

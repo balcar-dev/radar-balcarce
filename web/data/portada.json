@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T22:31:45.796Z",
+  "generado": "2026-10-16T23:02:00.335Z",
   "notas": [
     {
       "id": "30azdn",
@@ -11,14 +11,16 @@
       "medios": [
         "Infobae",
         "Clarín",
-        "Ámbito"
+        "Diario Popular",
+        "Ámbito",
+        "C5N"
       ],
       "enlace": "https://www.clarin.com/economia/agosto-morosidad-familias-leve-baja-marco-128_0_ksSwdDjX91.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-16T21:04:58.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T22:31:13.685Z",
-      "relevancia": 69,
+      "relevancia": 89,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -167,6 +169,94 @@
       }
     },
     {
+      "id": "1ilkp5d",
+      "titulo": "El riesgo país sube a 648 puntos básicos y el dólar mayorista llega a 1518 pesos",
+      "copete": "El indicador del banco JP Morgan registró una suba de 26 unidades y quedó cerca de su máximo anual. En paralelo, el dólar oficial mayorista avanzó cinco pesos.",
+      "cuerpo": "El índice que elabora JP Morgan trepó 26 unidades y se ubicó en 648 puntos básicos, según informó la pantalla de Rava. Esta suba se debió a una caída de los bonos soberanos y a un panorama internacional desfavorable para los activos argentinos. El economista Gustavo Ber señaló que los activos locales dependen del humor externo y de la dinámica electoral de Brasil. Además, el dólar oficial mayorista subió cinco pesos y cerró en 1518 pesos. En tanto, finalizó la vigencia del S&P Merval y desde el lunes 19 de octubre la firma MSCI tomará el control de los índices de renta variable.",
+      "guion": "El riesgo país sube a 648 puntos básicos y el dólar mayorista llega a 1518 pesos",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "Perfil",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.lanacion.com.ar/economia/el-riesgo-pais-cierra-la-semana-con-otra-suba-y-supera-los-640-puntos-nid16102026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T19:23:05.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T22:01:12.288Z",
+      "relevancia": 60,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El riesgo país trepó a 648 puntos básicos tras sumar 26 unidades.",
+        "Los bonos soberanos registraron bajas de hasta 2,1%.",
+        "El dólar oficial mayorista subió cinco pesos hasta los 1518 pesos.",
+        "MSCI administrará los nuevos índices desde el lunes 19 de octubre."
+      ],
+      "seSabe": [
+        "El riesgo país alcanzó los 648 puntos básicos.",
+        "El dólar oficial mayorista cerró en 1518 pesos.",
+        "Los bonos Bonares y Globales operaron a la baja."
+      ],
+      "textoRedes": "El riesgo país subió a 648 puntos básicos tras una nueva rueda alcista impulsada por el contexto internacional. En paralelo, el dólar oficial mayorista avanzó cinco pesos y cerró en 1518 pesos, mientras se renovarán los índices bursátiles desde el lunes.",
+      "etiquetas": [
+        "riesgo pais",
+        "dolar",
+        "economia",
+        "mercados"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-riesgo-pais-cierra-la-semana-con-otra-suba-y-supera-los-640-puntos-nid16102026/",
+          "fecha": "2026-10-16T19:23:05.000Z",
+          "oficial": false,
+          "aporte": "Informó los datos sobre la suba del riesgo país, el comportamiento de los bonos, las cotizaciones cambiarias y el cambio en la administración de los índices bursátiles."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/el-riesgo-pais-de-la-argentina-cerro-la-semana-en-648-puntos-basicos_a6ad29497f8e83a89472f2be4",
+          "fecha": "2026-10-16T21:39:43.780Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al reporte."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1cr7omj",
+          "titulo": "El riesgo país supera los 623 puntos por la cautela global",
+          "fecha": "2026-10-15T16:29:27.000Z",
+          "ruta": "/nota/el-riesgo-pais-supera-los-623-puntos-por-la-cautela-global-1cr7omj"
+        },
+        {
+          "id": "tlvcwh",
+          "titulo": "El riesgo país supera los seiscientos puntos tras la suba en Estados Unidos",
+          "fecha": "2026-10-13T21:02:16.000Z",
+          "ruta": "/nota/el-riesgo-pais-supera-los-seiscientos-puntos-tras-la-suba-en-estados-tlvcwh"
+        },
+        {
+          "id": "2ienjd",
+          "titulo": "El riesgo país registra versiones encontradas y alcanza los 697 puntos",
+          "fecha": "2026-10-13T20:25:00.000Z",
+          "ruta": "/nota/el-riesgo-pais-registra-versiones-encontradas-y-alcanza-los-697-puntos-2ienjd"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-riesgo-pais-sube-a-648-puntos-basicos-y-el-dolar-mayorista-llega-a",
+      "foto": {
+        "archivo": "fotos-notas/1ilkp5d.jpg",
+        "credito": "Foto: La Nación"
+      }
+    },
+    {
       "id": "repaso20261016tarde",
       "propia": "repaso",
       "titulo": "El repaso de la tarde en Radar Balcarce: cultura, Dirección de Juventud y Economía",
@@ -243,8 +333,8 @@
       "guion": "La Corte Suprema remata camiones y obradores de Austral Construcciones",
       "seccion": "Argentina",
       "medios": [
-        "La Nación",
         "Clarín",
+        "La Nación",
         "TN (Todo Noticias)",
         "Crónica",
         "Diario Popular",
@@ -541,15 +631,17 @@
       "guion": "Gabriel Petruccelli pide informes por las excavaciones en el Cerro El Triunfo.",
       "seccion": "Política",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)"
+        "Radio Gabal (FM 104.1)",
+        "El Diario Balcarce"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/adelanto-petruccelli-presento-un-pedido-de-informes-por-posibles-danos-al-arbolado-del-cerro-el-triunfo",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-16T16:24:35.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T17:28:34.829Z",
-      "relevancia": 88,
+      "relevancia": 100,
       "local": true,
       "deUnMedioDeAca": true,
       "publicadaPor": null,
@@ -635,9 +727,9 @@
       "seccion": "Argentina",
       "medios": [
         "TN (Todo Noticias)",
-        "A24",
         "Crónica",
-        "El Marplatense"
+        "El Marplatense",
+        "A24"
       ],
       "enlace": "https://tn.com.ar/videos/sociedad/2026/10/16/alerta-en-el-litoral-por-el-nino-el-rio-iguazu-esta-25-metros-por-encima-de-su-nivel-habitual-y-el-agua-cubrio-zonas-turisticas/",
       "teniaImagenLaFuente": true,
@@ -745,7 +837,7 @@
       "fecha": "2026-10-16T15:46:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T19:31:09.393Z",
-      "relevancia": 83,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -936,6 +1028,7 @@
         "La Nueva",
         "La Brújula 24",
         "Infobrisas (Radio Brisas)",
+        "El Eco de Tandil",
         "Ámbito",
         "C5N",
         "La Gaceta (Tucumán)",
@@ -1007,17 +1100,17 @@
       "guion": "Las plataformas de streaming renuevan sus catálogos para el fin de semana",
       "seccion": "Cultura y agenda",
       "medios": [
+        "La Nación",
         "El Destape",
         "TyC Sports",
-        "Perfil",
-        "La Nación"
+        "Perfil"
       ],
       "enlace": "https://www.tycsports.com/gaming/que-ver-en-netflix-tres-peliculas-nuevas-para-disfrutar-el-fin-de-semana-id766702.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-16T15:14:20.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T19:00:56.615Z",
-      "relevancia": 59,
+      "relevancia": 63,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1488,13 +1581,13 @@
       "guion": "La Justicia investiga el patrimonio de Claudio Tapia y pide informes a Suiza",
       "seccion": "Argentina",
       "medios": [
-        "Clarín",
         "La Nación",
         "TN (Todo Noticias)",
         "Perfil",
         "Crónica",
         "Infobae",
-        "iProfesional"
+        "iProfesional",
+        "Clarín"
       ],
       "enlace": "https://www.lanacion.com.ar/politica/el-juez-lijo-ordeno-un-exhorto-a-suiza-por-transferencias-de-us190000-de-la-fifa-a-claudio-chiqui-nid16102026/",
       "teniaImagenLaFuente": true,
@@ -2115,11 +2208,11 @@
         "Crónica",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "La Nueva",
         "C5N",
         "Minuto Uno",
         "Clarín",
-        "Radio Mitre"
+        "Radio Mitre",
+        "La Nueva"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/16/el-choque-de-verstappen-al-argentino-perez-companc-en-el-gt-world-challenge-el-gesto-desde-el-auto-y-la-sancion-que-podria-sufrir-el-neerlandes/",
       "teniaImagenLaFuente": true,
@@ -2404,6 +2497,7 @@
         "TN (Todo Noticias)",
         "El Destape",
         "Página/12",
+        "A24",
         "Crónica",
         "Diario Popular",
         "El Marplatense",
@@ -2888,6 +2982,119 @@
         }
       ],
       "slug": "el-clima-de-hoy-en-balcarce-minima-de-6-y-maxima-de-11"
+    },
+    {
+      "id": "h5197i",
+      "titulo": "Javier Milei regresa de Estados Unidos y prepara gira en Neuquén y España",
+      "copete": "El presidente argentino concluyó su agenda en Washington y continuará sus actividades con visitas a Neuquén y Madrid durante la próxima semana.",
+      "cuerpo": "El presidente Javier Milei concluyó su estadía en Estados Unidos y retornó al país para retomar su agenda oficial con nuevos destinos en el ámbito nacional e internacional. Durante su paso por Washington, el mandatario recibió el galardón al campeón mundial de la libre empresa por parte de la Cámara de Comercio estadounidense y participó en un acto de la Alianza Internacional para la Memoria del Holocausto.\n\nEl cronograma continuará el lunes 19 de octubre en Neuquén, donde encabezará la apertura de la cumbre energética Argentina Oil & Gas Patagonia 2026 en el Aeropuerto Internacional Presidente Perón, con la recepción del gobernador Rolando Figueroa. Al día siguiente, el jefe de Estado viajará rumbo a Madrid para disertar el miércoles 21 junto al economista Jesús Huerta de Soto.\n\nEn paralelo, el vocero presidencial, Adrián Ravier, confirmó su participación en la comitiva que visitará territorio español. Por otra parte, la administración nacional evalúa una escala en Catamarca el 29 de octubre para supervisar proyectos del Régimen de Incentivo para Grandes Inversiones, un desplazamiento que todavía aguarda confirmación oficial.",
+      "guion": "Javier Milei regresa de Estados Unidos y prepara gira en Neuquén y España",
+      "seccion": "Política",
+      "medios": [
+        "A24",
+        "Crónica",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "El Eco de Tandil",
+        "La Capital (Rosario)",
+        "La Nueva"
+      ],
+      "enlace": "https://noticiasargentinas.com/politica/milei-finaliza-su-viaje-en-estados-unidos-y-se-prepara-para-su-visita-a-espana_a6ad1525c88153cda2d050c06",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T10:19:51.649Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T15:01:01.945Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Milei finalizó su visita en Estados Unidos y volvió al país.",
+        "El lunes 19 inaugurará la cumbre energética en Neuquén.",
+        "El martes 20 viajará a Madrid para participar de una conferencia.",
+        "Evalúan una visita a Catamarca el 29 de octubre para analizar proyectos."
+      ],
+      "seSabe": [
+        "El presidente Javier Milei concluyó su visita a Estados Unidos.",
+        "Recibió un premio de la Cámara de Comercio de Estados Unidos.",
+        "El lunes 19 de octubre inaugurará la cumbre Argentina Oil & Gas Patagonia 2026 en Neuquén.",
+        "El martes 20 de octubre viajará a Madrid para participar de una conferencia el miércoles 21.",
+        "El vocero presidencial, Adrián Ravier, integrará la comitiva que viajará a España."
+      ],
+      "noConfirmado": [
+        "La visita a Catamarca prevista para el 29 de octubre aún no cuenta con confirmación oficial."
+      ],
+      "textoRedes": "El presidente Javier Milei finalizó su visita a Estados Unidos y prepara una nueva gira que incluirá su participación en la cumbre energética de Neuquén el lunes y una conferencia en Madrid la próxima semana.",
+      "etiquetas": [
+        "Javier Milei",
+        "Estados Unidos",
+        "Neuquén",
+        "España",
+        "gira presidencial",
+        "energía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/milei-finaliza-su-viaje-en-estados-unidos-y-se-prepara-para-su-visita-a-espana_a6ad1525c88153cda2d050c06",
+          "fecha": "2026-10-16T10:19:51.649Z",
+          "oficial": false,
+          "aporte": "Repitió los datos sobre la agenda internacional y la comitiva oficial en Estados Unidos."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/politica/milei-regreso-estados-unidos-y-prepara-una-gira-espana-y-una-visita-vaca-muerta-n1607100",
+          "fecha": "2026-10-16T14:56:51.000Z",
+          "oficial": false,
+          "aporte": "Confirmó las fechas exactas del viaje a Neuquén y Madrid, además de los detalles sobre la cumbre energética y la conferencia con Jesús Huerta de Soto."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/politica/javier-milei-termino-su-viaje-estados-unidos-y-prepara-su-visita-espana-n924846",
+          "fecha": "2026-10-16T13:09:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el final de la visita a Estados Unidos, los premios recibidos, la agenda en Neuquén, el viaje a España y la posible visita a Catamarca."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-16-8-24-0-milei-finalizo-su-viaje-en-estados-unidos-y-se-prepara-para-su-visita-a-espana",
+          "fecha": "2026-10-16T14:53:47.000Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre las actividades junto a Eduardo Bolsonaro y los detalles brindados por el vocero presidencial, Adrián Ravier."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ay4wdh",
+          "titulo": "Javier Milei viaja a Estados Unidos para una nueva gira oficial",
+          "fecha": "2026-10-11T21:51:00.000Z",
+          "ruta": "/nota/javier-milei-viaja-a-estados-unidos-para-una-nueva-gira-oficial-ay4wdh"
+        },
+        {
+          "id": "1tib4ft",
+          "titulo": "Javier Milei viaja a Estados Unidos y coincide con Eduardo Bolsonaro",
+          "fecha": "2026-10-05T18:53:21.000Z",
+          "ruta": "/nota/javier-milei-viaja-a-estados-unidos-y-coincide-con-eduardo-bolsonaro-1tib4ft"
+        },
+        {
+          "id": "1uw5a9s",
+          "titulo": "El vicepresidente de Estados Unidos visita la Argentina en noviembre",
+          "fecha": "2026-10-01T14:24:51.000Z",
+          "ruta": "/nota/el-vicepresidente-de-estados-unidos-visita-la-argentina-en-noviembre-1uw5a9s"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "javier-milei-regresa-de-estados-unidos-y-prepara-gira-en-neuquen-y",
+      "foto": {
+        "archivo": "fotos-notas/h5197i.jpg",
+        "credito": "Foto: Diario Popular"
+      }
     },
     {
       "id": "4p4uuv",
@@ -3635,15 +3842,9 @@
       "medios": [
         "La Nación",
         "Infobae",
-        "Perfil",
-        "TN (Todo Noticias)",
         "El Cronista",
-        "El Destape",
         "A24",
         "Canal 26",
-        "Ámbito",
-        "C5N",
-        "Minuto Uno",
         "Clarín"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/16/anses-quienes-cobran-hoy-viernes-16-de-octubre-de-2026/",
@@ -5020,81 +5221,6 @@
       "slug": "un-dia-como-hoy-en-1984-nobel-de-medicina-para-milstein"
     },
     {
-      "id": "mly1kv",
-      "titulo": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
-      "copete": "El centro de entrenamiento local sumó dos unidades importadas de China. Las mesas cuentan con homologación internacional y mejoran la infraestructura para la práctica y la formación deportiva en la ciudad.",
-      "cuerpo": "El Centro de Entrenamiento de Tenis de Mesa La Cuna del Quíntuple sumó dos mesas profesionales importadas de China, según informó un medio local. El equipamiento corresponde a la marca Double Fish y cuenta con homologación de la Federación Internacional de Tenis de Mesa.\n\nLas mesas se instalaron en la sede ubicada en calle 13 entre 24 y 26, número 818, para acompañar el piso de goma colocado el año pasado.\n\nEl espacio funciona todos los días de 18 a 21.30 y ofrece clases para niños desde los seis años, adultos mayores y personas con discapacidad. Las prácticas están a cargo del entrenador internacional Nicolás Bianchini y el entrenador nacional Fabián Bianchini.",
-      "guion": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
-      "seccion": "Deportes",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://puntonueve.com.ar/el-centro-de-entrenamiento-la-cuna-del-quintuple-incorporo-nuevas-mesas-de-tenis-de-mesa-importadas-de-china/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T11:57:21.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T13:31:35.699Z",
-      "relevancia": 85,
-      "local": true,
-      "deUnMedioDeAca": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El centro sumó dos mesas profesionales importadas de China.",
-        "El equipamiento cuenta con homologación internacional.",
-        "La compra se concretó mediante gestiones de la federación nacional.",
-        "El espacio funciona todos los días con clases para todas las edades."
-      ],
-      "seSabe": [
-        "El Centro de Entrenamiento La Cuna del Quíntuple incorporó dos mesas profesionales de la marca Double Fish.",
-        "Las mesas fueron importadas desde China y cuentan con homologación de la Federación Internacional de Tenis de Mesa.",
-        "La compra se realizó a través de gestiones de la Federación Argentina de Tenis de Mesa.",
-        "El centro funciona en calle 13 número 818 y ofrece actividades todos los días de 18 a 21.30.",
-        "Las clases están a cargo de Nicolás Bianchini y Fabián Bianchini."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El centro de entrenamiento La Cuna del Quíntuple sumó dos mesas profesionales de tenis de mesa importadas de China para mejorar la infraestructura y la formación deportiva en Balcarce.",
-      "etiquetas": [
-        "tenis de mesa",
-        "La Cuna del Quíntuple",
-        "deportes",
-        "Balcarce",
-        "entrenamiento"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/el-centro-de-entrenamiento-la-cuna-del-quintuple-incorporo-nuevas-mesas-de-tenis-de-mesa-importadas-de-china/",
-          "fecha": "2026-10-15T11:57:21.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la incorporación de las mesas profesionales, las características del equipamiento, la ubicación del centro y los horarios de entrenamiento."
-        },
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/el-centro-de-entrenamiento-de-tenis-de-mesa-incorporo-mesas-de-nivel-internacional",
-          "fecha": "2026-10-15T13:04:56.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la llegada de las mesas internacionales y los horarios de entrenamiento."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-cuna-del-quintuple-incorpora-mesas-profesionales-de-tenis-de-mesa",
-      "foto": {
-        "archivo": "fotos-notas/mly1kv.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
-    },
-    {
       "id": "nplayowbhp",
       "propia": "pista",
       "pista": "pistalayowbhp",
@@ -5149,155 +5275,6 @@
         "archivo": "fotos-notas/nplayowbhp-ia.jpg",
         "credito": "Ilustración generada con IA"
       }
-    },
-    {
-      "id": "xzxyd1",
-      "titulo": "El Ministerio de Economía organiza una ronda de negocios para el RIGI",
-      "copete": "Más de 1800 proveedores participarán de la primera ronda de negocios del régimen de grandes inversiones. El encuentro se hará el 29 de octubre en la ciudad santafesina de Rosario.",
-      "cuerpo": "El Ministerio de Economía reunirá a representantes de 41 compañías y a más de 1800 proveedores argentinos en el primer encuentro del Régimen de Incentivo para Grandes Inversiones. La jornada se desarrollará el próximo 29 de octubre en la ciudad de Rosario, Santa Fe. La cartera que encabeza Luis Caputo busca conectar la demanda de bienes y servicios de proyectos mineros, industriales y de infraestructura con la oferta nacional. Según informó la Secretaría de Comercio, participarán operadoras mineras y grandes contratistas para facilitar contactos comerciales basados en necesidades concretas de contratación. Entre las firmas internacionales confirmadas figuran Vicuña, Rio Tinto, Barrick Mining Corporation, Newmont Corporation y Eramet Eramine.",
-      "guion": "El Ministerio de Economía organiza una ronda de negocios para el RIGI",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "Ámbito",
-        "Perfil",
-        "iProfesional",
-        "Clarín"
-      ],
-      "enlace": "https://www.perfil.com/noticias/economia/las-grandes-inversiones-buscan-proveedores-1800-emresas .phtml",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T10:52:54.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T12:02:02.470Z",
-      "relevancia": 63,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Participarán más de 1800 proveedores y 41 compañías.",
-        "El encuentro se hará el 29 de octubre en Rosario.",
-        "Organiza el Ministerio de Economía."
-      ],
-      "seSabe": [
-        "Más de 1.800 proveedores participarán de la ronda del RIGI.",
-        "El evento será el 29 de octubre en Rosario.",
-        "La organización corre por cuenta del Ministerio de Economía."
-      ],
-      "noConfirmado": [
-        "No se detallaron los montos exactos de los contratos que se concretarán durante la jornada."
-      ],
-      "textoRedes": "El Ministerio de Economía organiza la primera ronda de negocios del RIGI con más de 1800 proveedores y 41 compañías. El encuentro será el 29 de octubre en Rosario para conectar la demanda de grandes inversores con la oferta nacional.",
-      "etiquetas": [
-        "RIGI",
-        "Ministerio de Economia",
-        "Rosario",
-        "inversiones",
-        "proveedores"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/economia/las-grandes-inversiones-buscan-proveedores-1800-emresas .phtml",
-          "fecha": "2026-10-15T10:52:54.000Z",
-          "oficial": false,
-          "aporte": "Detalló la organización del encuentro, la fecha, la sede y las empresas participantes."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/15/una-ronda-de-negocios-reunira-a-las-41-empresas-que-desarrollan-proyectos-rigi-con-1800-proveedores-locales/",
-          "fecha": "2026-10-15T11:28:04.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la cifra de proveedores y la realización de la ronda de negocios."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1pq0gh4",
-          "titulo": "Karina Milei encabeza ronda de negocios en París por la pesca",
-          "fecha": "2026-10-02T16:57:20.000Z",
-          "ruta": "/nota/karina-milei-encabeza-ronda-de-negocios-en-paris-por-la-pesca-1pq0gh4"
-        },
-        {
-          "id": "3i24zc",
-          "titulo": "Empresas francesas anuncian millonarias inversiones en el país",
-          "fecha": "2026-10-01T13:36:09.000Z",
-          "ruta": "/nota/empresas-francesas-anuncian-millonarias-inversiones-en-el-pais-3i24zc"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-ministerio-de-economia-organiza-una-ronda-de-negocios-para-el-rigi",
-      "foto": {
-        "archivo": "fotos-notas/xzxyd1.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
-      "id": "clima20261015",
-      "propia": "clima",
-      "titulo": "El clima de hoy en Balcarce: mínima de 9° y máxima de 15°",
-      "copete": "El pronóstico de este jueves 15 de octubre para Balcarce marca una mínima de 9° y máxima de 15°, con llovizna leve.",
-      "cuerpo": "En Balcarce, a las 07:32 hay 11° y el cielo está nublado; la sensación térmica es de 8°; el viento sopla del SE a 17 km/h; la humedad es del 88%. Son los datos de Open-Meteo de ese momento.\n\nPara todo el jueves 15, el pronóstico marca una mínima de 9° y máxima de 15° y llovizna leve. La probabilidad de lluvia es del 12%. El viento llegaría a 20 km/h.\n\nPara los días que siguen, el pronóstico dice: el viernes 16, mínima de 5° y máxima de 12°, con 20% de probabilidad de lluvia; el sábado 17, mínima de 7° y máxima de 11°; el domingo 18, mínima de 4° y máxima de 12°.\n\nEl clima se actualiza a lo largo del día: los valores de ahora, hora por hora, están en la página del clima de Radar Balcarce. El clima de la mañana también salió como video en nuestra página de Facebook.",
-      "guion": null,
-      "seccion": "Balcarce",
-      "local": true,
-      "relevancia": 58,
-      "medios": [
-        "Open-Meteo"
-      ],
-      "enlace": "https://open-meteo.com",
-      "fuentesConsultadas": [
-        {
-          "medio": "Open-Meteo",
-          "enlace": "https://open-meteo.com"
-        }
-      ],
-      "teniaImagenLaFuente": false,
-      "foto": {
-        "archivo": "fotos-notas/clima-nublado-3.jpg",
-        "credito": "Ilustración generada con IA (Cloudflare Workers AI)"
-      },
-      "fecha": "2026-10-15T10:32:22.089Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T10:32:22.089Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-15T10:32:22.089Z",
-      "temas": [],
-      "etiquetas": [
-        "clima",
-        "pronóstico",
-        "Balcarce",
-        "tiempo"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce armada con los datos de Open-Meteo a las 07:32.",
-      "enlacesEnTexto": [
-        {
-          "texto": "página del clima de Radar Balcarce",
-          "href": "/clima"
-        },
-        {
-          "texto": "nuestra página de Facebook",
-          "href": "https://www.facebook.com/reel/2147960545757293/"
-        }
-      ],
-      "destacados": [
-        {
-          "texto": "Ver el clima de ahora",
-          "href": "/clima"
-        },
-        {
-          "texto": "Mirá el clima de hoy en video, en Facebook",
-          "href": "https://www.facebook.com/reel/2147960545757293/"
-        }
-      ],
-      "slug": "el-clima-de-hoy-en-balcarce-minima-de-9-y-maxima-de-15"
     }
   ],
   "secciones": [
@@ -5317,8 +5294,8 @@
     "ahora": {
       "temp": 8,
       "sensacion": 4,
-      "humedad": 73,
-      "viento": 16,
+      "humedad": 74,
+      "viento": 15,
       "rumbo": "S",
       "cielo": "Nublado",
       "esDeDia": false
@@ -5329,7 +5306,7 @@
         "dia": "vie",
         "max": 11,
         "min": 6,
-        "lluvia": 12,
+        "lluvia": 6,
         "codigo": 51,
         "viento": 20,
         "milimetros": 0,
@@ -5340,7 +5317,7 @@
         "dia": "sáb",
         "max": 11,
         "min": 7,
-        "lluvia": 4,
+        "lluvia": 8,
         "codigo": 51,
         "viento": 19,
         "milimetros": 0,
@@ -5351,7 +5328,7 @@
         "dia": "dom",
         "max": 11,
         "min": 5,
-        "lluvia": 4,
+        "lluvia": 6,
         "codigo": 51,
         "viento": 16,
         "milimetros": 0,
@@ -5686,7 +5663,7 @@
       "id": "1nvvgex",
       "titulo": null,
       "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"adolescente\""
+      "motivo": "necesita ojo humano: \"menores de edad\""
     },
     {
       "id": "js3gdu",
@@ -5699,6 +5676,12 @@
       "titulo": null,
       "seccion": "Cultura y agenda",
       "motivo": "necesita ojo humano: \"el bebé\", en el texto completo de la fuente 2 (visto al reescribir)"
+    },
+    {
+      "id": "10sxbsm",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"la menor de\", en el texto completo de la fuente 1 (visto al reescribir)"
     },
     {
       "id": "c9axi4",
@@ -5734,7 +5717,7 @@
       "id": "f9bo89",
       "titulo": "MasterChef Junior se estrena hoy por Telefe y HBO Max: a…",
       "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"chicas de entre 8 y 13 anos\", en lo que escribió la IA (visto al reescribir)"
+      "motivo": "necesita ojo humano: \"chicos de entre 8 y 13 anos\", en lo que escribió la IA (visto al reescribir)"
     },
     {
       "id": "405jgy",
@@ -5755,12 +5738,6 @@
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
-      "id": "1wj6t63",
-      "titulo": "El Gobierno repudió los incidentes en la marcha…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
       "id": "1uxeflr",
       "titulo": "“Preocupante retroceso”: la UIA cuestionó la absolución…",
       "seccion": "Economía",
@@ -5773,21 +5750,21 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
+      "id": "du6hp3",
+      "titulo": "Marcha Federal Universitaria: tras la represión que dejó…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
       "id": "1a8grqq",
       "titulo": "Juicio por la desaparición de Loan Peña: declara el abuelo…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
-      "id": "yrtztb",
-      "titulo": "Caso Fernando Báez Sosa: la Corte Suprema desestimó una…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "1rlt9cr",
       "titulo": null,
-      "seccion": "Economía",
+      "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
@@ -5845,5 +5822,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 6
+  "esperandoCuerpo": 5
 }
