@@ -15904,13 +15904,16 @@
   "cuando": "2026-10-16T15:44:44.307Z"
  },
  "ebpyd0": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/ebpyd0.jpg",
+  "medio": "0221",
+  "credito": "Foto: 0221",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El Gobierno bonaerense retoma las paritarias con estatales y docentes",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-16T15:44:44.307Z",
-  "intentos": 1,
-  "fuentes": 7
+  "enlace": "https://www.0221.com.ar/provincia/estatales-y-docentes-bonaerenses-vuelven-paritarias-bajas-expectativas-acuerdo-n135880",
+  "imagenOriginal": "https://media.0221.com.ar/p/294845e24db8bd9b796bfffe224bd7eb/adjuntos/357/imagenes/100/269/0100269108/1200x630/2206x1465:2226x1485/paritarias-8.jpeg",
+  "razon": "Muestra claramente la reunión de paritarias en una mesa larga, sin marcas de agua de medios ni menores reconocibles.",
+  "cuando": "2026-10-16T17:03:55.804Z"
  },
  "1jjmb72": {
   "medio": "Infocampo",
@@ -15971,5 +15974,41 @@
   "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/mayo/Friogorifico%20Municipal.png",
   "razon": "La foto A muestra una vista aérea panorámica limpia del matadero municipal, sin personas y sin marcas de agua agregadas por el medio.",
   "cuando": "2026-10-16T16:11:18.661Z"
+ },
+ "oiojec": {
+  "archivo": "fotos-notas/oiojec.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Tesla presenta el nuevo Roadster con versiones de alto rendimiento y capacidad de vuelo",
+  "enlace": "https://www.infobae.com/economia/2026/10/16/tesla-roadster-cuanto-cuesta-y-cuando-se-podra-comprar-el-auto-volador/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/5ZTGAAH4IVD3PGVFCUGPH5ZSKE.jpg?auth=f5a79a6a409e14a6c05ad42d6f691927208f649e04d2c510f0ff70f2777b37b8&smart=true&width=1200&height=630&quality=85",
+  "razon": "La foto A muestra con excelente nitidez y encuadre el nuevo vehículo flotando junto a toda la flota de Tesla, sin marcas ni menores.",
+  "cuando": "2026-10-16T17:03:55.804Z"
+ },
+ "yfn1ih": {
+  "archivo": "fotos-notas/yfn1ih.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La ANMAT prohíbe un equipo de depilación láser y frena a una firma",
+  "enlace": "https://www.infobae.com/sociedad/2026/10/16/la-anmat-prohibio-un-dispositivo-de-depilacion-definitiva-por-irregularidades-sanitarias/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/KVATXZPLZ5BSDBIGJYGCJ6SY4Y.png?auth=c510dc40000828195c82beb16179843baea2af9f5b30c4194b09bea1b406365a&smart=true&width=1200&height=630&quality=85",
+  "razon": "Es la única foto limpia sin marcas de agua ni personas reconocibles, ilustrando directamente un equipo de depilación láser.",
+  "cuando": "2026-10-16T17:03:55.804Z"
+ },
+ "cg6k1i": {
+  "archivo": "fotos-notas/cg6k1i.jpg",
+  "medio": "Los Andes (Mendoza)",
+  "credito": "Foto: Los Andes (Mendoza)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Netflix estrena Lo dejamos acá con Ricardo Darín y Diego Peretti",
+  "enlace": "https://www.losandes.com.ar/espectaculos/hoy-netflix-la-nueva-pelicula-ricardo-darin-y-diego-peretti-una-comedia-negra-argentina-n6010583",
+  "imagenOriginal": "https://media.losandes.com.ar/p/954daa216c7a7bba4a3bf3ea755e62d7/adjuntos/368/imagenes/100/757/0100757690/1200x675/smart/hoy-netflix-la-nueva-pelicula-ricardo-darin-y-diego-peretti-una-comedia-negra-argentina.jpg",
+  "razon": "Muestra claramente a los dos protagonistas en una escena hogareña con buena nitidez y composición, sin marcas de agua ni menores.",
+  "cuando": "2026-10-16T17:03:55.804Z"
  }
 }

@@ -1,6 +1,88 @@
 {
-  "generado": "2026-10-16T16:39:19.256Z",
+  "generado": "2026-10-16T17:04:51.453Z",
   "notas": [
+    {
+      "id": "oiojec",
+      "titulo": "Tesla presenta el nuevo Roadster con versiones de alto rendimiento y capacidad de vuelo",
+      "copete": "La compañía de Elon Musk realizó la demostración del vehículo superdeportivo en Texas. Prevén iniciar la fabricación en 2028 tras varios años de retrasos.",
+      "cuerpo": "Elon Musk presentó el nuevo Tesla Roadster en las instalaciones de SpaceX en McGregor, Texas, con una demostración que incluyó maniobras de vuelo y desplazamiento en superficies invertidas. La compañía anunció tres variantes del modelo: Performance, Thrust y Rocket, desarrolladas junto a ingenieros de SpaceX.\n\nEl proyecto acumula demoras desde su develación original en 2017, cuando la firma prometió su comercialización para 2020. En cuanto al valor definitivo, la empresa aclaró que aún no fue establecido y que los montos previos correspondían al anuncio inicial.\n\nPor otra parte, persisten interrogantes sobre la homologación y las condiciones legales para circular en vías públicas. Musk reconoció que el automóvil no está optimizado para la seguridad y que las funciones exhibidas en la prueba no garantizan su uso en la vía pública.",
+      "guion": "Tesla presenta el nuevo Roadster con versiones de alto rendimiento y capacidad de vuelo",
+      "seccion": "Tecnología",
+      "medios": [
+        "Infobae",
+        "QZ Noticias (Mar del Plata)",
+        "Los Andes (Mendoza)"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/10/16/tesla-roadster-cuanto-cuesta-y-cuando-se-podra-comprar-el-auto-volador/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T14:35:34.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T17:01:11.630Z",
+      "relevancia": 69,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Tesla presentó el nuevo Roadster en Texas.",
+        "La compañía anunció tres versiones del vehículo.",
+        "Prevén comenzar la producción en 2028.",
+        "Aún no informaron el precio definitivo."
+      ],
+      "seSabe": [
+        "Elon Musk presentó el Tesla Roadster en Texas.",
+        "Tesla prevé iniciar la producción del vehículo en 2028.",
+        "El proyecto fue anunciado originalmente en 2017 y sufrió retrasos.",
+        "La compañía presentó tres versiones: Performance, Thrust y Rocket.",
+        "Tesla no confirmó un precio definitivo para el modelo exhibido."
+      ],
+      "noConfirmado": [
+        "No hay confirmación sobre los precios finales de venta al público.",
+        "Persisten dudas sobre la homologación y la seguridad para el uso en vías públicas."
+      ],
+      "textoRedes": "Tesla presentó el nuevo Roadster en Texas con capacidad de vuelo y tres versiones de alto rendimiento. La compañía prevé iniciar la producción en 2028 tras varios retrasos.",
+      "etiquetas": [
+        "Tesla",
+        "Elon Musk",
+        "autos",
+        "tecnología",
+        "vehículos eléctricos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/16/tesla-roadster-cuanto-cuesta-y-cuando-se-podra-comprar-el-auto-volador/",
+          "fecha": "2026-10-16T14:35:34.000Z",
+          "oficial": false,
+          "aporte": "Detalló el desarrollo del evento en Texas, el uso de propulsores y los desafíos técnicos de los autos voladores."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/interes-general/el-auto-volador-de-tesla-como-es-el-roadster-que-la-empresa-preve-producir-en-2028",
+          "fecha": "2026-10-16T14:56:53.000Z",
+          "oficial": false,
+          "aporte": "Aclaró que no hay un precio definitivo confirmado y señaló las dudas sobre la seguridad y homologación."
+        },
+        {
+          "medio": "Los Andes (Mendoza)",
+          "enlace": "https://www.losandes.com.ar/tecno/asi-vuela-el-nuevo-roadster-tesla-el-auto-que-supera-los-370-kmh-y-quiere-ser-real-2028-n6010604",
+          "fecha": "2026-10-16T16:35:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre las tres versiones del vehículo, la colaboración con SpaceX y los antecedentes del proyecto desde 2017."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "tesla-presenta-el-nuevo-roadster-con-versiones-de-alto-rendimiento-y",
+      "foto": {
+        "archivo": "fotos-notas/oiojec.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
     {
       "id": "10ephb3",
       "titulo": "La Justicia investiga el patrimonio de Claudio Tapia y pide informes a Suiza",
@@ -136,7 +218,7 @@
       "fecha": "2026-10-16T13:47:17.007Z",
       "sinFecha": false,
       "visto": "2026-10-16T15:38:51.233Z",
-      "relevancia": 49,
+      "relevancia": 39,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -216,210 +298,6 @@
       }
     },
     {
-      "id": "1ledsc7",
-      "titulo": "El Senasa autoriza a fundaciones sanitarias a vender dispositivos de identificación animal",
-      "copete": "El organismo oficial habilitó a los entes de lucha contra la aftosa a comercializar caravanas y brindar servicios de colocación en los campos.",
-      "cuerpo": "El Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa) facultó a las fundaciones de lucha contra la fiebre aftosa y a los entes sanitarios locales para comercializar dispositivos de identificación electrónica animal. La medida fue establecida a través de la resolución 898/2026 publicada en el Boletín Oficial.\n\nLa normativa autoriza a estas entidades a adquirir caravanas directamente de los proveedores oficiales para venderlas a los productores de su jurisdicción. Además, los organismos quedaron habilitados para ofrecer servicios de colocación y lectura digital en los establecimientos ganaderos mediante la aplicación SIGBioTraza.\n\nPara cumplir con el procedimiento, las entidades deben informar al proveedor la cantidad de dispositivos y el número de Registro Nacional Sanitario de Productores Agropecuarios (Renspa) del comprador. La norma abarca al ganado bovino, bubalino y cérvido, y busca optimizar la implementación de la trazabilidad individual.",
-      "guion": "El Senasa autoriza a fundaciones sanitarias a vender dispositivos de identificación animal",
-      "seccion": "Agro",
-      "medios": [
-        "La Nación",
-        "Infocampo"
-      ],
-      "enlace": "https://www.lanacion.com.ar/economia/campo/el-senasa-habilito-a-las-fundaciones-de-lucha-contra-la-aftosa-a-vender-dispositivos-de-nid16102026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-16T13:34:50.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T14:36:48.808Z",
-      "relevancia": 43,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Senasa habilitó a fundaciones a vender caravanas electrónicas.",
-        "La medida se oficializó mediante la resolución 898/2026.",
-        "Los entes pueden ofrecer servicios de colocación en los campos.",
-        "Las operaciones se registran de forma digital en el sistema."
-      ],
-      "seSabe": [
-        "El Senasa emitió la resolución 898/2026 publicada en el Boletín Oficial.",
-        "Las fundaciones de lucha contra la aftosa pueden vender caravanas y colocarlas en los campos.",
-        "El sistema exige el uso de la aplicación SIGBioTraza y lectores RFID para registrar los datos."
-      ],
-      "noConfirmado": [
-        "Todavía no se detalló el impacto económico que tendrá la medida para los entes sanitarios en cada distrito."
-      ],
-      "textoRedes": "El Senasa autorizó a las fundaciones de lucha contra la aftosa a comercializar dispositivos de identificación animal y brindar servicios de colocación en los campos mediante un sistema digital.",
-      "etiquetas": [
-        "Senasa",
-        "trazabilidad",
-        "aftosa",
-        "resolucion"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/campo/el-senasa-habilito-a-las-fundaciones-de-lucha-contra-la-aftosa-a-vender-dispositivos-de-nid16102026/",
-          "fecha": "2026-10-16T13:34:50.000Z",
-          "oficial": false,
-          "aporte": "Precisó el número de la resolución oficial y los límites de la habilitación a las entidades."
-        },
-        {
-          "medio": "Infocampo",
-          "enlace": "https://www.infocampo.com.ar/trazabilidad-bovina-habilitan-a-entes-sanitarios-y-fundaciones-a-distribuir-y-comercializar-los-chips/",
-          "fecha": "2026-10-16T14:14:43.000Z",
-          "oficial": false,
-          "aporte": "Informó los detalles operativos del uso de la aplicación SIGBioTraza y el registro de caravanas."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-senasa-autoriza-a-fundaciones-sanitarias-a-vender-dispositivos-de",
-      "foto": {
-        "archivo": "fotos-notas/1ledsc7.jpg",
-        "credito": "Foto: La Nación"
-      }
-    },
-    {
-      "id": "e353o5",
-      "titulo": "Amplían procesamiento de Diego Spagnuolo por corrupción en Discapacidad",
-      "copete": "El juez federal Ariel Lijo dictó un nuevo procesamiento contra el exdirector de la Agencia Nacional de Discapacidad por una trama de sobreprecios e insumos médicos direccionados. La medida alcanza a diecinueve personas.",
-      "cuerpo": "La medida también alcanza a Daniel Garbellini y al empresario Miguel Ángel Calvete, señalados como jefes de una asociación ilícita que operaba en el organismo. La Justicia determinó una afectación económica de 7.833.872.357,24 pesos, cifra que combina diferencias de precios por medicamentos y por insumos de alto costo. En la misma resolución, el magistrado dispuso procesar sin prisión preventiva a otras diecinueve personas, entre funcionarios y empresarios, y amplió el embargo de bienes del exfuncionario hasta los 47 mil millones de pesos.\n\nPreviamente, a mediados de octubre, el Ejecutivo había designado a Diego Masaragian al frente de la entonces reconvertida Secretaría Nacional de Discapacidad tras la salida de su antecesor.",
-      "guion": "Amplían procesamiento de Diego Spagnuolo por corrupción en Discapacidad",
-      "seccion": "Política",
-      "medios": [
-        "La Nación",
-        "Clarín",
-        "TN (Todo Noticias)",
-        "El Destape",
-        "Perfil",
-        "Página/12",
-        "Ámbito",
-        "C5N",
-        "Minuto Uno",
-        "Infobae"
-      ],
-      "enlace": "https://www.clarin.com/politica/juez-lijo-volvio-procesar-diego-spagnuolo-segunda-ruta-coimas-agencia-discapacidad_0_DZfaTCN3Ki.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-16T13:20:19.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T16:31:13.009Z",
-      "relevancia": 78,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El juez Ariel Lijo amplió el procesamiento de Diego Spagnuolo.",
-        "Investigan sobreprecios y compras direccionadas en Discapacidad.",
-        "La afectación económica calculada supera los 7.833 millones de pesos.",
-        "La medida alcanza a diecinueve personas entre exfuncionarios y empresarios."
-      ],
-      "noConfirmado": [
-        "No se informaron detalles sobre la fecha en que se resolverá la situación procesal definitiva de los imputados."
-      ],
-      "textoRedes": "El juez federal Ariel Lijo amplió el procesamiento de Diego Spagnuolo y de otras diecinueve personas en la causa que investiga una trama de sobreprecios en la Agencia Nacional de Discapacidad por más de 7.800 millones de pesos.",
-      "etiquetas": [
-        "Diego Spagnuolo",
-        "Discapacidad",
-        "Justicia",
-        "Corrupción",
-        "Ariel Lijo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/politica/juez-lijo-volvio-procesar-diego-spagnuolo-segunda-ruta-coimas-agencia-discapacidad_0_DZfaTCN3Ki.html",
-          "fecha": "2026-10-16T13:20:19.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la participación del Ministerio Público Fiscal y los montos totales detectados."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/politica/caso-andis-amplian-el-procesamiento-de-spagnuolo-y-otros-acusados-por-el-esquema-de-sobreprecios-en-nid16102026/",
-          "fecha": "2026-10-16T16:22:23.000Z",
-          "oficial": false,
-          "aporte": "Aportó el desglose de las cifras económicas entre medicamentos e insumos y el funcionamiento del programa Incluir Salud."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/10/16/la-justicia-proceso-a-diego-spagnuolo-en-una-segunda-causa-por-presunta-corrupcion-en-la-andis/",
-          "fecha": "2026-10-16T16:19:03.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/politica/ampliaron-procesamiento-spagnuolo-causa-coimas-andis-2026101612117",
-          "fecha": "2026-10-16T15:01:00.000Z",
-          "oficial": false,
-          "aporte": "Precisó la ampliación del embargo sobre los bienes de Spagnuolo y los antecedentes de la investigación."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/judiciales/el-juez-lijo-firmo-un-nuevo-procesamiento-contra-diego-spagnuolo-por-una-segunda-ruta-de-la-coimas-en-andis.phtml",
-          "fecha": "2026-10-16T14:51:57.000Z",
-          "oficial": false,
-          "aporte": "Detalló los nombres de los empresarios procesados y los rubros de insumos analizados."
-        },
-        {
-          "medio": "Página/12",
-          "enlace": "https://www.pagina12.com.ar/2026/10/16/causa-andis-la-justicia-amplio-el-procesamiento-de-diego-spagnuolo/",
-          "fecha": "2026-10-16T15:52:02.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/andis-nuevo-procesamiento-diego-spagnuolo-y-otros-acusados-hechos-corrupcion-n6334559",
-          "fecha": "2026-10-16T14:19:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/politica/causa-andis-nuevo-procesamiento-diego-spagnuolo-hechos-corrupcion-n251776",
-          "fecha": "2026-10-16T14:05:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/causa-andis-la-justicia-dispuso-un-nuevo-procesamiento-diego-spagnuolo-n6334543",
-          "fecha": "2026-10-16T13:40:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/judiciales/2026/10/16/caso-andis-el-juez-lijo-amplio-el-procesamiento-de-spagnuolo-y-otros-acusados-por-diferencias-de-precios-millonarias/",
-          "fecha": "2026-10-16T14:32:05.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1c17x5e",
-          "titulo": "El Gobierno nombra a Diego Masaragian al frente de Discapacidad",
-          "fecha": "2026-10-13T15:47:39.000Z",
-          "ruta": "/nota/el-gobierno-nombra-a-diego-masaragian-al-frente-de-discapacidad-1c17x5e"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 10 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "amplian-procesamiento-de-diego-spagnuolo-por-corrupcion-en"
-    },
-    {
       "id": "a6hpqz",
       "titulo": "El peronismo local debate su estrategia de cara a las elecciones",
       "copete": "A un año de los comicios, el PJ tradicional, La Cámpora, el kicillofismo y el Frente Renovador discuten la construcción de una alternativa en Balcarce. Las diferencias internas y el desafío de lograr una síntesis.",
@@ -490,6 +368,7 @@
       "guion": "La Dirección de Juventud firma un acuerdo para vender entradas online",
       "seccion": "Balcarce",
       "medios": [
+        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
       ],
@@ -498,7 +377,7 @@
       "fecha": "2026-10-16T13:07:25.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T13:17:26.305Z",
-      "relevancia": 84,
+      "relevancia": 94,
       "local": true,
       "oficial": true,
       "deUnMedioDeAca": true,
@@ -1134,7 +1013,6 @@
       "medios": [
         "News Balcarce (FM 91.7)",
         "Puntonueve (FM 100.9)",
-        "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
       ],
       "enlace": "https://puntonueve.com.ar/reprogramaron-la-caravana-de-la-alegria-para-el-domingo-15-de-noviembre/",
@@ -1360,8 +1238,8 @@
         "Crónica",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "La Nueva",
-        "El Eco de Tandil"
+        "El Eco de Tandil",
+        "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-finaliza-su-viaje-en-estados-unidos-y-se-prepara-para-su-visita-a-espana_a6ad1525c88153cda2d050c06",
       "teniaImagenLaFuente": true,
@@ -1461,6 +1339,139 @@
       }
     },
     {
+      "id": "ebpyd0",
+      "titulo": "El Gobierno bonaerense retoma las paritarias con estatales y docentes",
+      "copete": "El Ejecutivo provincial encabeza este viernes de forma virtual las negociaciones salariales con gremios estatales y docentes. Los sindicatos llegan con bajas expectativas ante una posible oferta del 1,5% para octubre y noviembre.",
+      "cuerpo": "El gobierno de Axel Kicillof retomó este viernes las negociaciones paritarias con los gremios estatales y docentes bonaerenses mediante encuentros virtuales. Según informó la administración provincial, las reuniones comenzaron a las 10 con los trabajadores comprendidos en la Ley 10.430 y continuaron a las 11.30 con los sindicatos del Frente de Unidad Docente Bonaerense.\n\nEn la previa, circuló la versión de que la Provincia ofrecería un incremento del 1,5% para octubre y otro 1,5% para noviembre, aunque no hubo confirmación oficial de los porcentajes. Los dirigentes sindicales manifestaron bajas expectativas de alcanzar un acuerdo satisfactorio. La última discusión salarial se había desarrollado el 24 de septiembre y el último aumento había sido del 7% en dos tramos abonados entre julio y agosto.\n\nLas negociaciones se reabrieron tras el paro de veinticuatro horas concretado el jueves por los gremios docentes en coincidencia con la Marcha Federal Educativa.",
+      "guion": "El Gobierno bonaerense retoma las paritarias con estatales y docentes",
+      "seccion": "Política",
+      "medios": [
+        "0221",
+        "La Verdad",
+        "QZ Noticias (Mar del Plata)",
+        "El Marplatense",
+        "El Eco de Tandil",
+        "Agencia DIB"
+      ],
+      "enlace": "https://www.0221.com.ar/provincia/estatales-y-docentes-bonaerenses-vuelven-paritarias-bajas-expectativas-acuerdo-n135880",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T10:07:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T15:38:51.233Z",
+      "relevancia": 65,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El gobierno bonaerense y los gremios retomaron este viernes las paritarias de forma virtual.",
+        "Los sindicatos llegan con bajas expectativas ante una posible suba del 1,5% para octubre y noviembre.",
+        "La última reunión paritaria se había llevado a cabo el 24 de septiembre.",
+        "El sector docente concretó un paro este jueves en paralelo a la Marcha Federal Educativa."
+      ],
+      "seSabe": [
+        "El gobierno de Axel Kicillof convocó a los gremios estatales y docentes para este viernes 16 de octubre.",
+        "Las reuniones paritarias se realizan de manera virtual.",
+        "El Ejecutivo recibe a los estatales de la Ley 10.430 desde las 10 y al Frente de Unidad Docente Bonaerense desde las 11.30.",
+        "El último acuerdo salarial consistió en un 7% dividido en un 5% en julio y un 2% en agosto."
+      ],
+      "noConfirmado": [
+        "Todavía no hay confirmación oficial sobre la propuesta de dos aumentos del 1,5% para octubre y noviembre.",
+        "No se informó si las partes alcanzarán un acuerdo salarial durante los encuentros virtuales."
+      ],
+      "textoRedes": "El Gobierno bonaerense retoma este viernes las negociaciones paritarias de forma virtual con los gremios estatales y docentes en medio de bajas expectativas salariales.",
+      "etiquetas": [
+        "paritarias",
+        "estatales",
+        "docentes",
+        "provincia de Buenos Aires",
+        "Axel Kicillof",
+        "sindicatos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/provincia/estatales-y-docentes-bonaerenses-vuelven-paritarias-bajas-expectativas-acuerdo-n135880",
+          "fecha": "2026-10-16T10:07:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los horarios de las reuniones, los sectores convocados, el detalle del último acuerdo salarial y la modalidad virtual."
+        },
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/paritarias-estatales-y-docentes-vuelven-a-negociar-salarios",
+          "fecha": "2026-10-16T12:52:47.000Z",
+          "oficial": false,
+          "aporte": "Informó la versión sobre los porcentajes de aumento analizados para octubre y noviembre."
+        },
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/sociedad/estatales-y-docentes-bonaerenses-vuelven-paritarias-bajas-expectativas-n56550",
+          "fecha": "2026-10-16T11:45:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha de la última reunión previa realizada el 24 de septiembre y el porcentaje de la posible oferta."
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/estatales-y-docentes-bonaerenses-vuelven-a-paritarias-con-bajas-expectativas/",
+          "fecha": "2026-10-16T12:04:44.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/la-provincia/estatales-y-docentes-bonaerenses-retoman-las-paritarias-con-bajas-expectativas-de-aumento",
+          "fecha": "2026-10-16T13:37:45.000Z",
+          "oficial": false,
+          "aporte": "Señaló que un eventual incremento del 1,5% mensual se ubicaría por debajo del último índice de inflación del 1,9%."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/paritarias-estatales-y-docentes-bonaerenses-vuelven-a-negociar",
+          "fecha": "2026-10-16T13:00:04.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/provincia/gremios-estatales-y-docentes-bonaerenses-retomaran-paritarias-con-bajas-expectativas-de-acuerdo",
+          "fecha": "2026-10-16T14:55:24.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "12un4a6",
+          "titulo": "La Provincia convoca a paritarias docentes para el viernes",
+          "fecha": "2026-10-14T13:42:00.000Z",
+          "ruta": "/nota/la-provincia-convoca-a-paritarias-docentes-para-el-viernes-12un4a6"
+        },
+        {
+          "id": "1nk2shg",
+          "titulo": "Los docentes bonaerenses paran por veinticuatro horas el jueves",
+          "fecha": "2026-09-30T03:00:00.000Z",
+          "ruta": "/nota/los-docentes-bonaerenses-paran-por-veinticuatro-horas-el-jueves-1nk2shg"
+        },
+        {
+          "id": "jpevgo",
+          "titulo": "Docentes bonaerenses paran el jueves en reclamo de seguridad",
+          "fecha": "2026-09-22T03:00:00.000Z",
+          "ruta": "/nota/docentes-bonaerenses-paran-el-jueves-en-reclamo-de-seguridad-jpevgo"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-bonaerense-retoma-las-paritarias-con-estatales-y-docentes",
+      "foto": {
+        "archivo": "fotos-notas/ebpyd0.jpg",
+        "credito": "Foto: 0221"
+      }
+    },
+    {
       "id": "4p4uuv",
       "titulo": "ARBA extiende el plazo para pagar tres impuestos provinciales",
       "copete": "La Agencia de Recaudación postergó hasta el jueves 12 de noviembre el vencimiento de tres tributos provinciales. La medida permite conservar una bonificación del diez por ciento por buen cumplimiento.",
@@ -1479,7 +1490,7 @@
       "fecha": "2026-10-16T09:51:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T15:38:51.233Z",
-      "relevancia": 74,
+      "relevancia": 64,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1536,6 +1547,189 @@
       "foto": {
         "archivo": "fotos-notas/4p4uuv.jpg",
         "credito": "Foto: Perfil"
+      }
+    },
+    {
+      "id": "yfn1ih",
+      "titulo": "La ANMAT prohíbe un equipo de depilación láser y frena a una firma",
+      "copete": "La ANMAT prohibió un cabezal de depilación láser y restringió la actividad de una distribuidora de insumos médicos por irregularidades sanitarias.",
+      "cuerpo": "La medida rige sobre el dispositivo Cabezal 810nm 2cm Speed de Soprano ICE original, de la marca Alma Lasers, con el número de serie ICE122001380 y fecha de fabricación de febrero de 2016. La decisión oficial se originó tras una denuncia de Sirex Médica S.A., única importadora autorizada de la firma, al constatar que el número de serie no figuraba en sus registros y que el fabricante original lo había enviado a Estados Unidos.\n\nEl organismo sanitario advirtió que no pudo determinar el estado actual del equipo ni las condiciones de su manipulación, por lo cual su uso podría generar daños a pacientes y operadores. En paralelo, la administración dispuso que la firma Body Aling SRL suspenda la distribución interjurisdiccional de productos médicos hasta obtener las habilitaciones correspondientes.",
+      "guion": "La ANMAT prohíbe un equipo de depilación láser y frena a una firma.",
+      "seccion": "Argentina",
+      "medios": [
+        "Ámbito",
+        "C5N",
+        "Minuto Uno",
+        "La Capital (Rosario)",
+        "Infobae"
+      ],
+      "enlace": "https://www.infobae.com/sociedad/2026/10/16/la-anmat-prohibio-un-dispositivo-de-depilacion-definitiva-por-irregularidades-sanitarias/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T06:41:36.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T17:01:11.630Z",
+      "relevancia": 69,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Prohibición de un cabezal de depilación láser en todo el país.",
+        "La medida surge por una denuncia sobre un equipo sin registro local.",
+        "Restringen la actividad de una distribuidora de insumos médicos."
+      ],
+      "seSabe": [
+        "La ANMAT prohibió un cabezal de depilación láser de la marca Alma Lasers.",
+        "La medida afecta al equipo con número de serie ICE122001380 fabricado en febrero de 2016.",
+        "Sirex Médica S.A. realizó la denuncia inicial tras verificar que el serial no figuraba en sus registros.",
+        "El fabricante original vendió el dispositivo con destino a Estados Unidos.",
+        "La empresa Body Aling SRL fue inhabilitada para distribuir insumos fuera de la provincia de Buenos Aires."
+      ],
+      "noConfirmado": [
+        "No se pudo localizar el cabezal denunciado ni establecer su procedencia exacta en el país."
+      ],
+      "textoRedes": "La ANMAT prohibió un cabezal de depilación láser por irregularidades sanitarias y restringió la distribución de una firma de insumos médicos.",
+      "etiquetas": [
+        "ANMAT",
+        "depilacion",
+        "salud",
+        "prohibicion",
+        "insumos medicos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/sociedad/2026/10/16/la-anmat-prohibio-un-dispositivo-de-depilacion-definitiva-por-irregularidades-sanitarias/",
+          "fecha": "2026-10-16T06:41:36.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el cabezal de depilación prohibido, la denuncia de Sirex Médica y la sanción a Body Aling SRL."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/informacion-general/anmat-prohibio-un-equipo-laser-depilacion-definitiva-y-freno-la-distribucion-una-firma-productos-medicos-n6334426",
+          "fecha": "2026-10-16T09:52:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los detalles de la prohibición del dispositivo láser y las medidas dispuestas por la ANMAT."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/sociedad/la-anmat-prohibio-un-dispositivo-depilacion-laser-n251781",
+          "fecha": "2026-10-16T16:16:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/sociedad/la-anmat-prohibio-un-dispositivo-depilacion-definitiva-irregularidades-sanitarias-n6334508",
+          "fecha": "2026-10-16T13:48:19.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Capital (Rosario)",
+          "enlace": "https://www.lacapital.com.ar/informacion-general/anmat-prohibio-el-uso-y-la-venta-un-equipo-depilacion-laser-n10287058.html",
+          "fecha": "2026-10-16T16:58:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó el número de disposición oficial que regula la prohibición del equipo de depilación."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-anmat-prohibe-un-equipo-de-depilacion-laser-y-frena-a-una-firma",
+      "foto": {
+        "archivo": "fotos-notas/yfn1ih.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
+      "id": "cg6k1i",
+      "titulo": "Netflix estrena Lo dejamos acá con Ricardo Darín y Diego Peretti",
+      "copete": "La comedia negra argentina dirigida por Hernán Goldfrid desembarca este viernes en la plataforma de streaming tras su paso por el Festival de San Sebastián.",
+      "cuerpo": "Netflix estrena este viernes Lo dejamos acá, una comedia negra argentina protagonizada por Ricardo Darín y Diego Peretti. La película cuenta con la dirección de Hernán Goldfrid y un guion escrito por Emanuel Díez.\n\nLa trama gira en torno a un psicoanalista interpretado por Darín que cuestiona los métodos tradicionales y cruza límites éticos al involucrarse en la vida de sus pacientes. El conflicto principal se desata con la llegada de un escritor encarnado por Peretti, quien acude al consultorio en medio de un bloqueo creativo.\n\nEl largometraje tuvo su presentación mundial en la septuagésima cuarta edición del Festival Internacional de Cine de San Sebastián. La producción estuvo a cargo de Kenya Films, compañía integrada por Ricardo Darín, Chino Darín y Federico Posternak.",
+      "guion": "Netflix estrena Lo dejamos acá con Ricardo Darín y Diego Peretti",
+      "seccion": "Argentina",
+      "medios": [
+        "El Día",
+        "La Capital (Rosario)",
+        "Los Andes (Mendoza)",
+        "A24",
+        "Clarín"
+      ],
+      "enlace": "https://www.eldia.com/espectaculos/lo-dejamos-aca-el-duelo-entre-darin-y-peretti-que-promete-incomodar-y-hacer-reir-espectaculos_1792130770",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T06:06:10.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T17:01:11.630Z",
+      "relevancia": 71,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Estrena este viernes en la plataforma de streaming.",
+        "Reúne nuevamente a Ricardo Darín y Diego Peretti.",
+        "La dirección corre por cuenta de Hernán Goldfrid.",
+        "Cuenta con producción de Kenya Films."
+      ],
+      "textoRedes": "Netflix estrena este viernes Lo dejamos acá, la nueva comedia negra argentina protagonizada por Ricardo Darín y Diego Peretti bajo la dirección de Hernán Goldfrid.",
+      "etiquetas": [
+        "Netflix",
+        "Ricardo Darín",
+        "Diego Peretti",
+        "Cine argentino",
+        "Estrenos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/espectaculos/lo-dejamos-aca-el-duelo-entre-darin-y-peretti-que-promete-incomodar-y-hacer-reir-espectaculos_1792130770",
+          "fecha": "2026-10-16T06:06:10.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la dirección de Hernán Goldfrid y el paso previo por el Festival de San Sebastián."
+        },
+        {
+          "medio": "La Capital (Rosario)",
+          "enlace": "https://www.lacapital.com.ar/zoom/netflix-ya-estreno-lo-dejamos-aca-la-pelicula-darin-y-peretti-n10287061.html",
+          "fecha": "2026-10-16T16:54:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los antecedentes del guionista y la productora Kenya Films."
+        },
+        {
+          "medio": "Los Andes (Mendoza)",
+          "enlace": "https://www.losandes.com.ar/espectaculos/hoy-netflix-la-nueva-pelicula-ricardo-darin-y-diego-peretti-una-comedia-negra-argentina-n6010583",
+          "fecha": "2026-10-16T15:44:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/trends/netflix-ricardo-darin-y-diego-peretti-arrasan-el-estreno-la-pelicula-mas-esperada-del-ano-n1607031",
+          "fecha": "2026-10-16T11:34:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha exacta de estreno en la plataforma de streaming."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/espectaculos/ricardo-darin-diego-peretti-protagonizan-pelicula-dejamos-aca-beso-giro-inesperado-cameo-sorpresa_0_SGjoHophhV.html",
+          "fecha": "2026-10-16T15:06:37.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre la trama y declaraciones de los actores sobre sus experiencias con la terapia."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "netflix-estrena-lo-dejamos-aca-con-ricardo-darin-y-diego-peretti",
+      "foto": {
+        "archivo": "fotos-notas/cg6k1i.jpg",
+        "credito": "Foto: Los Andes (Mendoza)"
       }
     },
     {
@@ -2542,7 +2736,7 @@
       "fecha": "2026-10-15T16:55:32.000Z",
       "sinFecha": false,
       "visto": "2026-10-15T21:05:59.806Z",
-      "relevancia": 82,
+      "relevancia": 74,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3166,6 +3360,103 @@
       }
     },
     {
+      "id": "9s0dkq",
+      "titulo": "Flavio Briatore presenta al nuevo director técnico de Alpine",
+      "copete": "La escudería francesa realizó la bienvenida oficial de Mike Elliott como máximo responsable técnico. El ingeniero británico trabajará junto a Franco Colapinto y Pierre Gasly.",
+      "cuerpo": "El asesor ejecutivo de Alpine, Flavio Briatore, encabezó la presentación oficial de Mike Elliott como máximo responsable técnico de la escudería de Fórmula 1. El nombramiento busca potenciar el trabajo en pista de los pilotos Franco Colapinto y Pierre Gasly.\n\nElliott cuenta con una trayectoria de veintitrés años en la categoría, con pasos previos por Renault, McLaren y Mercedes, donde formó parte de los títulos obtenidos bajo la conducción de Lewis Hamilton. En su nuevo rol, el ingeniero británico supervisará las áreas técnicas y de ingeniería en la planta de Enstone.\n\nMeses atrás, el equipo había anunciado su incorporación para reforzar el rendimiento técnico de la estructura de cara a las próximas temporadas.",
+      "guion": "Flavio Briatore presenta al nuevo director técnico de Alpine",
+      "seccion": "Automovilismo",
+      "medios": [
+        "El Destape",
+        "TyC Sports",
+        "Radio Mitre",
+        "Olé",
+        "Crónica"
+      ],
+      "enlace": "https://www.ole.com.ar/autos/briatore-presento-ex-hombre-importante-mercedes-ayudara-colapinto-gasly_0_reE3q88o0Z.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T12:56:33.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T17:33:31.543Z",
+      "relevancia": 72,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Mike Elliott asume como máximo responsable técnico de Alpine.",
+        "El ingeniero británico llega tras su paso por Mercedes, McLaren y Renault.",
+        "Trabajará en la fábrica de Enstone para respaldar a Colapinto y Gasly."
+      ],
+      "seSabe": [
+        "Flavio Briatore presentó oficialmente a Mike Elliott en el equipo Alpine.",
+        "El ingeniero se desempeñará como máximo responsable técnico (CTO).",
+        "Elliott trabajará para respaldar a los pilotos Franco Colapinto y Pierre Gasly.",
+        "El especialista cuenta con veintitrés años de experiencia en la categoría."
+      ],
+      "textoRedes": "El asesor ejecutivo de Alpine, Flavio Briatore, realizó la presentación oficial de Mike Elliott como máximo responsable técnico de la escudería. El ingeniero británico trabajará junto a Franco Colapinto y Pierre Gasly.",
+      "etiquetas": [
+        "Formula 1",
+        "Alpine",
+        "Franco Colapinto",
+        "Mike Elliott"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/autos/briatore-presento-ex-hombre-importante-mercedes-ayudara-colapinto-gasly_0_reE3q88o0Z.html",
+          "fecha": "2026-10-15T12:56:33.000Z",
+          "oficial": false,
+          "aporte": "Detalló la presentación oficial de Mike Elliott como responsable técnico de Alpine y sus declaraciones."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/alpine-presento-incorporacion-potenciar-colapinto-f1-quien-reconocido-desarrollador-20261015143125",
+          "fecha": "2026-10-15T17:31:25.673Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir contenido en su resumen."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/alpine-mike-elliott-mercedes-franco-colapinto-formula-1-briatore-gasly-id766358.html",
+          "fecha": "2026-10-15T14:50:46.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir contenido en su resumen."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "g2u3l1",
+          "titulo": "Flavio Briatore critica a Franco Colapinto tras el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T22:12:00.000Z",
+          "ruta": "/nota/flavio-briatore-critica-a-franco-colapinto-tras-el-gran-premio-de-g2u3l1"
+        },
+        {
+          "id": "la3bje",
+          "titulo": "Flavio Briatore felicita a Franco Colapinto tras la clasificación en Bahréin",
+          "fecha": "2026-09-26T09:48:00.000Z",
+          "ruta": "/nota/flavio-briatore-felicita-a-franco-colapinto-tras-la-clasificacion-en-la3bje"
+        },
+        {
+          "id": "mk94me",
+          "titulo": "La fría reacción de Pierre Gasly ante las disculpas de Franco Colapinto por el choque en Bakú",
+          "fecha": "2026-09-22T13:54:00.000Z",
+          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-mk94me"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "flavio-briatore-presenta-al-nuevo-director-tecnico-de-alpine",
+      "foto": {
+        "archivo": "fotos-notas/9s0dkq.jpg",
+        "credito": "Foto: Olé"
+      }
+    },
+    {
       "id": "lf9d6b",
       "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
       "copete": "Las divisiones de la Escuela Municipal de Básquet disputan el sábado una nueva jornada por la Liga Marplatense de este deporte. El cronograma incluye encuentros de Mini, Pre Mini y playoffs.",
@@ -3649,6 +3940,279 @@
       "slug": "el-clima-de-hoy-en-balcarce-minima-de-9-y-maxima-de-15"
     },
     {
+      "id": "1b4z7qp",
+      "titulo": "El Ministerio de Transporte bonaerense actualiza la tarifa básica de la VTV",
+      "copete": "La Verificación Técnica Vehicular aumenta a 114.105,99 pesos en todo el territorio provincial tras finalizar el congelamiento de noventa días acordado con las empresas.",
+      "cuerpo": "El Ministerio de Transporte bonaerense estableció que la tarifa básica de la Verificación Técnica Vehicular se eleva a 114.105,99 pesos desde el jueves 15 de octubre. La medida quedó formalizada mediante la resolución oficial tras expirar el plazo de suspensión de noventa días acordado previamente entre la cartera y las firmas concesionarias del servicio.\n\nEl incremento representa un porcentaje cercano al 18 por ciento para los automóviles de hasta 2.500 kilos, cuyo valor anterior era de 97.057,65 pesos. El monto surgió de aplicar la fórmula del régimen tarifario basada en el convenio salarial del sector mecánico.",
+      "guion": "El Ministerio de Transporte bonaerense actualiza la tarifa básica de la VTV",
+      "seccion": "Argentina",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)",
+        "El Diario Balcarce",
+        "Diario La Vanguardia",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "0221",
+        "La Tecla",
+        "QZ Noticias (Mar del Plata)",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Infobrisas (Radio Brisas)",
+        "Punto Noticias",
+        "El Eco de Tandil",
+        "Ámbito",
+        "Minuto Uno",
+        "Agencia DIB",
+        "La Verdad",
+        "Infoeme",
+        "Ecos Diarios (Necochea)",
+        "Clarín",
+        "0223 (Mar del Plata)",
+        "NDEN – Noticias de Necochea",
+        "La Nueva",
+        "La Noticia 1",
+        "A24",
+        "La Brújula 24"
+      ],
+      "enlace": "https://www.0221.com.ar/provincia/la-provincia-oficializo-un-nuevo-aumento-la-vtv-y-ya-es-un-176-mas-cara-n135838",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T10:15:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T12:31:36.164Z",
+      "relevancia": 60,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La tarifa básica de la VTV sube a 114.105,99 pesos.",
+        "El incremento alcanza el 17,6 por ciento.",
+        "Rige desde este jueves tras finalizar una suspensión de noventa días.",
+        "La medida se oficializó mediante una resolución en el Boletín Oficial."
+      ],
+      "seSabe": [
+        "La tarifa básica de la VTV aumenta a 114.105,99 pesos desde este jueves 15 de octubre, según informó el Ministerio de Transporte bonaerense.",
+        "La suba representa un incremento del 17,6 por ciento para vehículos de hasta 2.500 kilos.",
+        "La actualización se aplica tras cumplirse el plazo de noventa días de postergación acordado entre la cartera y las empresas."
+      ],
+      "noConfirmado": [
+        "Los valores específicos para el resto de las categorías del servicio todavía no fueron difundidos."
+      ],
+      "textoRedes": "El Ministerio de Transporte bonaerense oficializó un aumento del 17,6 por ciento en la tarifa básica de la Verificación Técnica Vehicular, que desde este jueves pasa a costar 114.105,99 pesos para vehículos de hasta 2.500 kilos tras finalizar el periodo de congelamiento.",
+      "etiquetas": [
+        "VTV",
+        "Ministerio de Transporte",
+        "Provincia de Buenos Aires",
+        "tarifas",
+        "vehículos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/provincia/la-provincia-oficializo-un-nuevo-aumento-la-vtv-y-ya-es-un-176-mas-cara-n135838",
+          "fecha": "2026-10-15T11:15:00.000Z",
+          "oficial": false,
+          "aporte": "Informó el monto exacto de la nueva tarifa, la fecha de inicio y los detalles de la resolución ministerial."
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/aumenta-la-vtv-bonaerense-y-la-tarifa-basica-pasa-a-114106-831",
+          "fecha": "2026-10-15T12:01:28.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en el valor de la tarifa básica y la fecha de aplicación desde este jueves."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45084-ya-es-oficial-y-la-vtv-aumenta-un-17-6-cuanto-cuesta-desde-hoy/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/sociedad/aumenta-la-vtv-bonaerense-y-la-tarifa-basica-pasa-114106-n56517",
+          "fecha": "2026-10-15T11:52:41.000Z",
+          "oficial": false,
+          "aporte": "Precisó que el incremento impacta en vehículos de hasta 2.500 kilos."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/informacion-general/aumenta-la-vtv-la-provincia-buenos-aires-cuanto-quedo-la-tarifa-basica-n6333970",
+          "fecha": "2026-10-15T12:02:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó el contexto sobre la postergación de noventa días acordada con las concesionarias."
+        },
+        {
+          "medio": "La Tecla",
+          "enlace": "https://www.latecla.info/170400-la-vtv-aumenta-en-la-provincia-desde-este-jueves-cuesta-mas-de-114-mil",
+          "fecha": "2026-10-15T11:17:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/aumenta-la-vtv-bonaerense-y-la-tarifa-basica-pasa-a-114-106/",
+          "fecha": "2026-10-15T12:15:04.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la publicación de la medida en el Boletín Oficial."
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/aumento-un-1756-la-vtv-en-la-provincia-de-buenos-aires-cuanto-cuesta-desde-este-jueves/",
+          "fecha": "2026-10-15T14:11:33.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-10-15-12-17-0-impagable-vuelve-a-aumentar-la-vtv-y-la-tarifa-basica-supera-los-114-mil",
+          "fecha": "2026-10-15T15:17:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/15/aumento-la-vtv-en-la-provincia-de-buenos-aires-cuanto-hay-que-pagar-a-partir-de-hoy/",
+          "fecha": "2026-10-15T15:11:19.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/15/aumento-la-vtv-en-la-provincia-de-buenos-aires-cuanto-cuesta-hacer-el-tramite/",
+          "fecha": "2026-10-15T17:07:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/aumenta-un-17--la-vtv-en-provincia--cuanto-cuesta-hacer-la-revision-desde-octubre_a6ad0eaa788153cda2df5e931",
+          "fecha": "2026-10-15T17:24:24.052Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/la-ciudad/la-vtv-bonaerense-ya-cuesta-mas-cara-las-nuevas-tarifas-de-la-revision-del-auto-la-ciudad_1792068360",
+          "fecha": "2026-10-15T12:50:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-15-13-10-0-la-vtv-un-17-56-mas-cara-desde-hoy",
+          "fecha": "2026-10-15T17:48:31.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/la-provincia/aumenta-la-vtv-en-la-provincia-de-buenos-aires-la-tarifa-basica-supera-los-114000",
+          "fecha": "2026-10-15T12:50:48.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/aumento-la-vtv-en-la-provincia-de-buenos-aires",
+          "fecha": "2026-10-15T17:00:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Mi8 (Canal 8 Mar del Plata)",
+          "enlace": "https://mi8.com.ar/la-vtv-bonaerense-aumenta-casi-un-18-cuanto-cuesta-desde-hoy-para-autos-y-motos/",
+          "fecha": "2026-10-15T13:15:18.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/10/15/111542-autorizaron-nuevo-aumento-en-la-vtv",
+          "fecha": "2026-10-15T16:00:37.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/provincia/aumento-la-vtv-en-la-provincia-de-buenos-aires-cual-sera-el-valor-de-la-tarifa-basica",
+          "fecha": "2026-10-15T12:34:22.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/sociedad/tramite-la-vtv-provincia-buenos-aires-la-fecha-clave-del-calendario-que-ningun-conductor-debe-olvidar-n6333780",
+          "fecha": "2026-10-15T10:15:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infoeme",
+          "enlace": "https://www.infoeme.com/informacion-general/2026-10-15-9-38-12-aumenta-la-vtv-bonaerense-y-la-tarifa-basica-pasa-a-114-106",
+          "fecha": "2026-10-15T12:38:12.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/aumento-un-17-por-ciento-la-tarifa-de-la-verificacion-tecnica-vehicular-en-la-provincia-de-buenos-aires",
+          "fecha": "2026-10-15T13:19:42.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/sociedad/aumenta-vtv-provincia-meses-inicio-temporada-aplican-ajuste-17_0_uzpJ9im0a2.html",
+          "fecha": "2026-10-15T14:24:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/10/15/111542-autorizan-nuevo-aumento-en-la-vtv",
+          "fecha": "2026-10-15T16:00:37.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "NDEN – Noticias de Necochea",
+          "enlace": "https://nden.com.ar/nota/38409/aumento-la-vtv-en-la-provincia-cuanto-cuesta-desde-hoy-y-donde-hacerla-en-necochea",
+          "fecha": "2026-10-15T15:26:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Noticia 1",
+          "enlace": "https://www.lanoticia1.com/noticia/aumento-la-vtv-en-la-provincia-cuanto-cuesta-verificar-un-auto",
+          "fecha": "2026-10-15T16:33:01.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/economia/aumento-la-vtv-la-provincia-buenos-aires-cuanto-cuesta-hacer-la-verificacion-n1606739",
+          "fecha": "2026-10-15T16:38:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 7 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-ministerio-de-transporte-bonaerense-actualiza-la-tarifa-basica-de",
+      "foto": {
+        "archivo": "fotos-notas/1b4z7qp.jpg",
+        "credito": "Foto: Ámbito"
+      }
+    },
+    {
       "id": "1m9svv0",
       "titulo": "Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027",
       "copete": "El piloto brasileño de 21 años dejará la Fórmula 2 para sumarse a la máxima categoría con un contrato plurianual. Ocupará el lugar de Esteban Ocon en la escudería estadounidense.",
@@ -3853,25 +4417,25 @@
     }
   ],
   "secciones": [
+    "Tecnología",
     "Argentina",
     "Economía",
-    "Agro",
     "Política",
     "Balcarce",
     "Cultura y agenda",
     "Deportes",
     "Fútbol",
     "Automovilismo",
-    "Tecnología"
+    "Agro"
   ],
   "temas": [],
   "clima": {
     "ahora": {
       "temp": 11,
       "sensacion": 7,
-      "humedad": 68,
+      "humedad": 65,
       "viento": 17,
-      "rumbo": "SE",
+      "rumbo": "S",
       "cielo": "Nublado",
       "esDeDia": true
     },
@@ -4225,6 +4789,12 @@
   },
   "pendientes": [
     {
+      "id": "8dpdqi",
+      "titulo": "El Colegio de Médicos bonaerense advirtió que la crisis…",
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"denunció\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
+    },
+    {
       "id": "1o0mwr9",
       "titulo": "Adelanto: Petruccelli presentó un pedido de informes por…",
       "seccion": "Balcarce",
@@ -4243,6 +4813,12 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
+      "id": "e353o5",
+      "titulo": "El juez Lijo volvió a procesar a Diego Spagnuolo por una…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
       "id": "yj5cn4",
       "titulo": null,
       "seccion": "Fútbol",
@@ -4258,7 +4834,7 @@
       "id": "1oye0ii",
       "titulo": "La desgarradora despedida de Mario Massaccesi a Fernando…",
       "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
+      "motivo": "necesita ojo humano: \"muere\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
     },
     {
       "id": "loa4fx",
@@ -4321,14 +4897,14 @@
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
-      "id": "ql9bcc",
-      "titulo": "Pdió el jury del juez que absolvió a los \"Camioneros\"…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
+      "id": "191geto",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "ev2gjz",
-      "titulo": "El Gobierno denuncia que en un paro docente en Provincia…",
+      "id": "ql9bcc",
+      "titulo": "Pdió el jury del juez que absolvió a los \"Camioneros\"…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
@@ -4349,6 +4925,12 @@
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "ev2gjz",
+      "titulo": "El Gobierno denuncia que en el paro docente en Provincia…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "17gc53m",
@@ -4381,5 +4963,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 8
+  "esperandoCuerpo": 6
 }
