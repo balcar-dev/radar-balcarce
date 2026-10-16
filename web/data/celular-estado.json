@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T15:03:42.030Z",
- "portada": 48,
- "archivo": 1159,
+ "generado": "2026-10-16T15:09:45.036Z",
+ "portada": 39,
+ "archivo": 1160,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-16T15:03:42.063Z",
+  "generado": "2026-10-16T15:09:45.065Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 52,
     "notas": [
      {
       "id": "npazulcervantino",
@@ -139,14 +139,14 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "vn4avv",
-      "titulo": "Tres deportistas locales compiten en el Torneo Nacional de Pádel",
-      "seccion": "Deportes"
-     },
-     {
       "id": "7rb12z",
       "titulo": "Lautaro Martínez cuestiona las dudas sobre el compromiso del seleccionado",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "32f6mu",
+      "titulo": "Lando Norris califica a Franco Colapinto como un buen amigo",
+      "seccion": "Automovilismo"
      }
     ]
    },
@@ -160,9 +160,9 @@
     "segundos": 52,
     "notas": [
      {
-      "id": "32f6mu",
-      "titulo": "Lando Norris califica a Franco Colapinto como un buen amigo",
-      "seccion": "Automovilismo"
+      "id": "ahqycd",
+      "titulo": "SUTEBA Balcarce adhiere al paro nacional en defensa de la educación pública",
+      "seccion": "Balcarce"
      },
      {
       "id": "n6v2wu",
@@ -197,21 +197,9 @@
    ],
    "cola": [
     {
-     "id": "aa7nni",
-     "titulo": "Reprograman la Caravana de la Alegría para noviembre",
-     "seccion": "Cultura y agenda",
-     "marcada": false
-    },
-    {
-     "id": "1h2xfr3",
-     "titulo": "Jennifer Lasa gana en el campeonato argentino de powerlifting",
-     "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "vn4avv",
-     "titulo": "Tres deportistas locales compiten en el Torneo Nacional de Pádel",
-     "seccion": "Deportes",
+     "id": "ahqycd",
+     "titulo": "SUTEBA Balcarce adhiere al paro nacional en defensa de la educación pública",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],
