@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T03:06:12.031Z",
- "portada": 47,
- "archivo": 1141,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-16T03:30:38.049Z",
+ "portada": 48,
+ "archivo": 1142,
+ "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-16T03:06:12.064Z",
+  "generado": "2026-10-16T03:30:38.089Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 45,
+    "segundos": 44,
     "notas": [
      {
       "id": "u0hcbv",
@@ -108,8 +108,8 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "1ixp88o",
-      "titulo": "Mario Bolla visita Radio Gabal para hablar sobre la situación de Virginia Aparicio",
+      "id": "16q0gf8",
+      "titulo": "Lalcec Balcarce ofrece mamografías y prepara la jornada comunitaria de octubre rosa",
       "seccion": "Balcarce"
      },
      {
@@ -126,26 +126,26 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 38,
+    "segundos": 51,
     "notas": [
+     {
+      "id": "1ixp88o",
+      "titulo": "Mario Bolla visita Radio Gabal para hablar sobre la situación de Virginia Aparicio",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1vrfi9w",
       "titulo": "Proyecto 10 repasa su historia social",
       "seccion": "Balcarce"
      },
      {
+      "id": "1o2y75j",
+      "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
+      "seccion": "Balcarce"
+     },
+     {
       "id": "1ao5ic",
       "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "wfa595",
-      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "tctot0",
-      "titulo": "Valeria Ares comparte su experiencia a dieciseis años de su doble trasplante",
       "seccion": "Balcarce"
      }
     ]
@@ -157,16 +157,16 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 37,
+    "segundos": 25,
     "notas": [
      {
-      "id": "16q0gf8",
-      "titulo": "Lalcec Balcarce ofrece mamografías y prepara la jornada comunitaria de octubre rosa",
+      "id": "wfa595",
+      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
       "seccion": "Balcarce"
      },
      {
-      "id": "1o2y75j",
-      "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
+      "id": "tctot0",
+      "titulo": "Valeria Ares comparte su experiencia a dieciseis años de su doble trasplante",
       "seccion": "Balcarce"
      }
     ]
@@ -176,14 +176,14 @@
    "hoy": [],
    "cola": [
     {
-     "id": "1ylxz2o",
-     "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
+     "id": "1ixp88o",
+     "titulo": "Mario Bolla visita Radio Gabal para hablar sobre la situación de Virginia Aparicio",
      "seccion": "Balcarce",
      "marcada": false
     },
     {
-     "id": "1ixp88o",
-     "titulo": "Mario Bolla visita Radio Gabal para hablar sobre la situación de Virginia Aparicio",
+     "id": "n6v2wu",
+     "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
      "seccion": "Balcarce",
      "marcada": false
     }
