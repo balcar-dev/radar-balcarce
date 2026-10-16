@@ -2353,6 +2353,14 @@
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-16/efemeride": {
+      "cuando": "2026-10-16T12:06:25.086Z",
+      "mediaId": "18119810611743728",
+      "nombre": "efemeride",
+      "tipo": "REELS",
+      "notaId": null,
+      "notaIds": []
     }
   },
   "facebookVideos": {
@@ -3956,6 +3964,14 @@
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-16/efemeride": {
+      "cuando": "2026-10-16T12:08:14.031Z",
+      "mediaId": "1786208905983932",
+      "nombre": "efemeride",
+      "tipo": "REELS",
+      "notaId": null,
+      "notaIds": []
     }
   },
   "instagramFeed": {
@@ -5550,6 +5566,20 @@
       "nombre": "podcast",
       "red": "facebook",
       "notaId": null
+    },
+    "instagram/2026-10-16/efemeride": {
+      "cuando": "2026-10-16T12:07:38.754Z",
+      "mediaId": "18126631795864506",
+      "nombre": "efemeride",
+      "red": "instagram",
+      "notaId": null
+    },
+    "facebook/2026-10-16/efemeride": {
+      "cuando": "2026-10-16T12:08:43.469Z",
+      "mediaId": "1830596568291903",
+      "nombre": "efemeride",
+      "red": "facebook",
+      "notaId": null
     }
   },
   "problemas": {
@@ -5572,6 +5602,11 @@
     "fa17ki": {
       "intentos": 2,
       "ultimo": "2026-10-13T11:05:17.715Z",
+      "error": "Missing or invalid image file"
+    },
+    "1kd7az5": {
+      "intentos": 1,
+      "ultimo": "2026-10-16T12:05:11.199Z",
       "error": "Missing or invalid image file"
     }
   },
