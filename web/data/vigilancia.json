@@ -38,8 +38,22 @@
   "redes": {
     "hasta": "2026-10-15T23:06:09.628Z"
   },
-  "ultimaMedicion": "2026-10-15/9",
+  "ultimaMedicion": "2026-10-15/21",
   "ultimoResumen": "2026-10-01",
   "ultimoCierre": "2026-10-03",
-  "ultimoInforme": "2026-10-01"
+  "ultimoInforme": "2026-10-01",
+  "abiertos": [
+    {
+      "clave": "falla-Pruebas con otra hora",
+      "nivel": "media",
+      "texto": "\"Pruebas con otra hora\" falló en su última corrida, en el paso \"Probar con cinco horas y fechas distintas\" (1 seguidas; 2 de las últimas 3).",
+      "desde": "2026-10-16T00:00:47.599Z"
+    },
+    {
+      "clave": "falta-instagram-historia:noticia1",
+      "nivel": "alta",
+      "texto": "Instagram: no salió la historia de podcast mañana (su reel sí salió y la historia no se reintenta). Mirá el registro de \"Redes\": las historias de Meta aceptan hasta 60 segundos.",
+      "desde": "2026-10-16T00:00:47.599Z"
+    }
+  ]
 }
