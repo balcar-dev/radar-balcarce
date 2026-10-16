@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T02:32:58.305Z",
- "portada": 45,
- "archivo": 1137,
+ "generado": "2026-10-16T03:02:21.331Z",
+ "portada": 46,
+ "archivo": 1140,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-16T02:32:58.336Z",
+  "generado": "2026-10-16T03:02:21.363Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,8 +13,8 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-15T10:05:33.436Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "efemeride",
@@ -23,8 +23,8 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-15T12:06:37.040Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia1",
@@ -33,17 +33,17 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-15T13:09:21.887Z"
+    "momento": "antes",
+    "salio": null
    },
    {
-    "nombre": "agenda",
+    "nombre": "participa-nota",
     "tipo": "reel",
     "hora": "12:00",
-    "que": "La agenda del fin de semana",
-    "voz": "locutora",
+    "que": "Tu nota",
+    "voz": "locutor",
     "ventana": 60,
-    "momento": "cerrada",
+    "momento": "antes",
     "salio": null
    },
    {
@@ -53,8 +53,8 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-15T18:07:39.825Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "farmacia",
@@ -63,8 +63,8 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "en-hora",
-    "salio": "2026-10-15T22:02:25.531Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "clima-noche",
@@ -73,8 +73,8 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
-    "salio": "2026-10-15T23:05:40.639Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "podcast",
@@ -83,8 +83,8 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
-    "salio": "2026-10-16T00:06:00.294Z"
+    "momento": "antes",
+    "salio": null
    }
   ],
   "repasos": [
@@ -93,29 +93,29 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "cerrada",
-    "salio": "2026-10-15T13:09:21.887Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 45,
     "notas": [
      {
-      "id": "1v9h1ps",
-      "titulo": "La delegación local parte el lunes hacia la final provincial",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "vt870i",
-      "titulo": "Ángela Servín sube al podio en la Atlántica Ultra",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "wzunxc",
-      "titulo": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
+      "id": "u0hcbv",
+      "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
       "seccion": "Balcarce"
      },
      {
-      "id": "1s8weuc",
-      "titulo": "El Turismo Nacional evalúa incorporar a Balcarce para su calendario",
+      "id": "1m9svv0",
+      "titulo": "Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "1ixp88o",
+      "titulo": "Mario Bolla visita Radio Gabal para hablar sobre la situación de Virginia Aparicio",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "2g6pf5",
+      "titulo": "Atletas locales logran buenos puestos en Tamangueyú y Balcarce",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -124,29 +124,29 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "cerrada",
-    "salio": "2026-10-15T18:07:39.825Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 49,
     "notas": [
      {
-      "id": "mly1kv",
-      "titulo": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
-      "seccion": "Deportes"
+      "id": "1vrfi9w",
+      "titulo": "Proyecto 10 repasa su historia social",
+      "seccion": "Balcarce"
      },
      {
-      "id": "aa5npj",
-      "titulo": null,
-      "seccion": null
+      "id": "1o2y75j",
+      "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
+      "seccion": "Balcarce"
      },
      {
-      "id": "9y985f",
-      "titulo": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección",
-      "seccion": "Fútbol"
+      "id": "1ao5ic",
+      "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
+      "seccion": "Balcarce"
      },
      {
-      "id": "1e22az3",
-      "titulo": "Cristian Méndez regresa a Balcarce tras una exitosa gira por España",
-      "seccion": "Cultura y agenda"
+      "id": "wfa595",
+      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -155,61 +155,14 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "en-hora",
-    "salio": "2026-10-16T00:06:00.294Z",
+    "momento": "antes",
+    "salio": null,
     "segundos": null,
-    "notas": [
-     {
-      "id": "1ylxz2o",
-      "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "lf9d6b",
-      "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1uvhput",
-      "titulo": "Leonel Flores visita un club de barrio para donar comida",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "9s0dkq",
-      "titulo": "Flavio Briatore presenta al nuevo director técnico de Alpine",
-      "seccion": "Automovilismo"
-     }
-    ]
+    "notas": []
    }
   ],
   "facebook": {
-   "hoy": [
-    {
-     "id": "vt870i",
-     "titulo": "Ángela Servín sube al podio en la Atlántica Ultra",
-     "cuando": "2026-10-15T11:45:21.928Z"
-    },
-    {
-     "id": "8q3d25",
-     "titulo": "Ariel Ferreira y Adrián Cagni se destacan en Tamangueyú",
-     "cuando": "2026-10-15T13:35:24.924Z"
-    },
-    {
-     "id": "pel8ok",
-     "titulo": "LALCEC organiza actividades y mamografías gratuitas por el mes rosa",
-     "cuando": "2026-10-15T15:06:37.559Z"
-    },
-    {
-     "id": "mly1kv",
-     "titulo": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
-     "cuando": "2026-10-15T16:46:43.079Z"
-    },
-    {
-     "id": "11lwkfl",
-     "titulo": "Pato Naranja y Pato Negro clasifican a semifinales del Torneo Desarrollo",
-     "cuando": "2026-10-15T18:35:37.440Z"
-    }
-   ],
+   "hoy": [],
    "cola": [
     {
      "id": "1ylxz2o",
@@ -230,7 +183,7 @@
      "marcada": false
     }
    ],
-   "cupo": 0,
+   "cupo": 5,
    "proximoDesde": "2026-10-15T20:05:37.440Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
