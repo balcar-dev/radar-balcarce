@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T12:37:32.211Z",
+  "generado": "2026-10-16T12:41:11.261Z",
   "notas": [
     {
       "id": "1e6e9wy",
@@ -495,7 +495,7 @@
       "fecha": "2026-10-16T00:40:26.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T09:01:33.391Z",
-      "relevancia": 74,
+      "relevancia": 67,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -742,12 +742,12 @@
         "TN (Todo Noticias)",
         "A24",
         "Radio Mitre",
-        "La Nueva",
         "El Marplatense",
         "Ámbito",
         "C5N",
         "Minuto Uno",
-        "Los Andes (Mendoza)"
+        "Los Andes (Mendoza)",
+        "La Nueva"
       ],
       "enlace": "https://www.clarin.com/politica/milei-cerro-visita-washington-acto-antisemitismo-reunion-alto-funcionario-trump_0_KkhV5wypC4.html",
       "teniaImagenLaFuente": true,
@@ -1131,15 +1131,15 @@
         "Perfil",
         "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
-        "La Nueva",
-        "Los Andes (Mendoza)"
+        "Los Andes (Mendoza)",
+        "La Nueva"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/15/inflacion-en-las-provincias-donde-subieron-mas-los-precios-en-septiembre-y-cuales-quedaron-por-debajo-del-promedio-nacional/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-15T19:58:37.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T02:32:42.919Z",
-      "relevancia": 66,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2404,7 +2404,7 @@
       "fecha": "2026-10-15T12:39:13.230Z",
       "sinFecha": false,
       "visto": "2026-10-15T18:02:38.694Z",
-      "relevancia": 26,
+      "relevancia": 18,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3173,7 +3173,7 @@
     "ahora": {
       "temp": 9,
       "sensacion": 5,
-      "humedad": 70,
+      "humedad": 69,
       "viento": 18,
       "rumbo": "S",
       "cielo": "Nublado",
@@ -3185,7 +3185,7 @@
         "dia": "vie",
         "max": 11,
         "min": 6,
-        "lluvia": 16,
+        "lluvia": 12,
         "codigo": 51,
         "viento": 19,
         "milimetros": 0,
@@ -3194,20 +3194,20 @@
       {
         "fecha": "2026-10-17",
         "dia": "sáb",
-        "max": 11,
-        "min": 6,
-        "lluvia": 8,
+        "max": 10,
+        "min": 7,
+        "lluvia": 4,
         "codigo": 51,
         "viento": 20,
-        "milimetros": 0,
+        "milimetros": 1,
         "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-18",
         "dia": "dom",
         "max": 12,
-        "min": 6,
-        "lluvia": 12,
+        "min": 5,
+        "lluvia": 4,
         "codigo": 51,
         "viento": 16,
         "milimetros": 0,
@@ -3216,11 +3216,11 @@
       {
         "fecha": "2026-10-19",
         "dia": "lun",
-        "max": 15,
+        "max": 14,
         "min": 4,
         "lluvia": 0,
         "codigo": 3,
-        "viento": 15,
+        "viento": 13,
         "milimetros": 0,
         "cielo": "Nublado"
       }
@@ -3617,6 +3617,12 @@
       "titulo": "La Justicia de San Nicolás absolvió al líder sindical de…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
+      "id": "drng04",
+      "titulo": "Frank Suárez, experto en nutrición: “Si un huevo flota al…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"murió\""
     },
     {
       "id": "1f409fv",
