@@ -883,6 +883,21 @@ export const MEDIOS_OFICIALES = new Set([...FUENTES, ...FUENTES_NACIONALES]
   .filter((f) => f.oficial)
   .map((f) => f.medio ?? f.nombre));
 
+/**
+ * Los organismos de Balcarce cuya foto PROPIA de una actividad puede salir aunque tenga chicos reconocibles (regla 186, 17/10/2026,
+ * Hernán: "si hay menores en la foto y la fuente es de Balcarce y es un juego, olimpíadas o algo deportivo/escolar/cultural, y son
+ * fuentes que realmente no suben nada policial, como el municipio, estaría bueno dejarlo"). Lista CERRADA y a mano, no por heurística:
+ * sumar una fuente acá es una decisión editorial (preguntar antes). La foto tiene que venir de una página de ese organismo: coinciden el
+ * nombre del medio (`medio`, el de FUENTES) Y el dominio de la nota (`dominios`; vale un subdominio, como deportes.balcarce.gob.ar). Las
+ * áreas de la Municipalidad (Deportes, Cultura, Educación, Juventud, Turismo) publican en balcarce.gob.ar. El resto de las condiciones
+ * (sección, tema, nada policial ni de salud, sin marca, sin nombres de chicos) y el interruptor FOTOS_MENORES_OFICIALES: ingesta/fotos-menores.mjs.
+ */
+export const FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES = [
+  { id: 'municipio', medio: 'Municipalidad de Balcarce', dominios: ['balcarce.gob.ar'] },
+  { id: 'concejo-deliberante-balcarce', medio: 'Concejo Deliberante de Balcarce', dominios: ['concejodeliberantebalcarce.gob.ar'] },
+  { id: 'fca-unmdp', medio: 'Facultad de Ciencias Agrarias (UNMdP)', dominios: ['fca.mdp.edu.ar'] },
+];
+
 // Candidatos a probar para región, provincia, país, deportes y automovilismo.
 // El probador dice cuáles están vivos; los que sirvan pasan a FUENTES.
 export const CANDIDATOS = [

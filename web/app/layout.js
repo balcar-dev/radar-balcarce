@@ -1,6 +1,8 @@
 import './globals.css';
+import { createElement } from 'react';
 import {
-  obtenerDatos, datosSeccion, nombreCorto, EN_NAVEGACION, whatsapp, WHATSAPP, MAIL, REDES_SOCIALES,
+  obtenerDatos, obtenerArchivo, whatsapp, WHATSAPP, MAIL, REDES_SOCIALES,
+  navegacionDelSitio, seccionesNuevasActivas, seccionesDelSitio, nombreCorto,
 } from '@/lib/datos';
 import { PastillaClima } from '@/components/clima-vivo';
 import { comoNombre } from '@/lib/texto';
@@ -76,9 +78,20 @@ export default function RaizLayout({ children }) {
   const fecha = hoyEscrito.charAt(0).toUpperCase() + hoyEscrito.slice(1);
 
   // Sólo se ofrecen las secciones que hoy tienen al menos una nota: una
-  // pestaña que lleva a una página vacía es peor que no tenerla.
-  const conNotas = new Set((d.notas ?? []).map((n) => n.seccion));
-  const navegacion = EN_NAVEGACION.filter((s) => conNotas.has(s)).map(datosSeccion);
+  // pestaña que lleva a una página vacía es peor que no tenerla
+  // (navegacionDelSitio, lib/datos.js). Con el interruptor SECCIONES_NUEVAS
+  // prendido (regla 187), la barra lleva las ocho fuertes y el resto va en
+  // "Más secciones"; apagado, la barra de siempre, sin cambiar nada.
+  const nuevas = seccionesNuevasActivas();
+  const menu = navegacionDelSitio({ notas: d.notas ?? [], archivo: nuevas ? obtenerArchivo() : [], activas: nuevas });
+  // Con el menú nuevo, el pie lista todas las secciones: sin JavaScript el "Más secciones" no se abre.
+  const pieSecciones = nuevas ? [(
+    <nav className="pie-secciones" aria-label="Todas las secciones" key="pie-secciones">
+      {seccionesDelSitio(true).map((s, i) => (
+        <span key={s.ranura}>{i > 0 ? ' · ' : ''}<a href={`/seccion/${s.ranura}`}>{nombreCorto(s.nombre)}</a></span>
+      ))}
+    </nav>
+  )] : [];
 
   return (
     <html lang="es-AR">
@@ -147,7 +160,7 @@ export default function RaizLayout({ children }) {
             van al final y en verde: son servicios, no secciones de noticias. En
             el celular es una sola fila que se desliza (components/navegacion.js). */}
         <Navegacion
-          secciones={navegacion.map((s) => ({ href: `/seccion/${s.ranura}`, nombre: nombreCorto(s.nombre) }))}
+          secciones={menu.secciones}
           servicios={[
             { href: '/agenda', nombre: 'Agenda' },
             { href: '/clima', nombre: 'Clima' },
@@ -155,6 +168,7 @@ export default function RaizLayout({ children }) {
             { href: '/dolar', nombre: 'Dólar' },
             { href: '/util', nombre: 'Teléfonos' },
           ]}
+          {...(menu.mas ? { mas: menu.mas } : {})}
         />
 
         <main id="contenido" tabIndex={-1}>{children}</main>
@@ -165,30 +179,33 @@ export default function RaizLayout({ children }) {
             medio chico que promete cuidar a sus lectores no puede estar
             entregándoselos a una red publicitaria. */}
 
+        {/* El pie se arma con createElement para que la lista de secciones (sólo con el interruptor, regla 187) no deje ni un
+            hueco en lo que arma React cuando está apagado: el sitio apagado sale idéntico al de antes. */}
         <footer className="principal">
-          <div className="envoltura">
-            <div className="marca">Radar Balcarce</div>
+          {createElement('div', { className: 'envoltura' },
+            <div className="marca">Radar Balcarce</div>,
             <div>
               <a href={whatsapp('Hola, escribo por Radar Balcarce:')} target="_blank" rel="noopener noreferrer">
                 WhatsApp {WHATSAPP.visible}
               </a>
               {' · '}
               <a href={`mailto:${MAIL}`}>{MAIL}</a>
-            </div>
+            </div>,
             <div>
               <a href={REDES_SOCIALES.instagram} target="_blank" rel="noopener noreferrer me">Instagram</a>
               {' · '}
               <a href={REDES_SOCIALES.facebook} target="_blank" rel="noopener noreferrer me">Facebook</a>
-            </div>
+            </div>,
             <div>
               <a href="/agenda">Agenda</a> · <a href="/clima">Clima</a> · <a href="/farmacias">Farmacias</a> ·{' '}
               <a href="/dolar">Dólar</a> ·{' '}
               <a href="/util">Teléfonos útiles</a> ·{' '}
               <a href="/politica-de-privacidad">Política de privacidad</a>
-            </div>
+            </div>,
             <div>
               <a href="/quienes-somos">Quiénes somos</a> · <a href="/contacto">Contacto y correcciones</a>
-            </div>
+            </div>,
+            ...pieSecciones,
             <div className="aclaracion" data-armada={actualizado || undefined}>
               Los resúmenes los escribe una inteligencia artificial y se verifican
               automáticamente contra la fuente original, que queda enlazada; lo sensible lo
@@ -196,9 +213,9 @@ export default function RaizLayout({ children }) {
               de IA. Cada nota dice al pie quién la escribió.
               La responsabilidad editorial es de Radar Balcarce. Si publicamos algo sobre
               vos que considerás erróneo, escribinos y lo corregimos.
-            </div>
-            <Aviso slot="pie" />
-          </div>
+            </div>,
+            <Aviso slot="pie" />,
+          )}
         </footer>
       </body>
     </html>

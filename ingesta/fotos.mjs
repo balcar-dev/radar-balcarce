@@ -21,8 +21,18 @@
 // Si ninguna foto sirve, se prueba Wikimedia Commons (ver arriba), y el
 // crédito nombra al autor y la licencia (creditoDeFoto). Sin dependencias:
 // sólo fetch de Node.
+//
+// Los menores: una foto con un chico reconocible nunca se elige (28/09), con
+// UNA excepción desde el 17/10/2026 (regla 186, `menorEnActividadOficial`,
+// ingesta/fotos-menores.mjs): la foto propia de un organismo de Balcarce de
+// la lista cerrada, en una actividad deportiva, escolar o cultural que no
+// toque nada sensible, sin marca y sin nombres de chicos, y sólo con el
+// interruptor FOTOS_MENORES_OFICIALES prendido. Apagado, todo como siempre.
 
 import { claveClasificacion, claveGroq, MODELO_DE_TEXTO } from '../reels/claves.mjs';
+import {
+  excepcionActiva, esFuenteOficialParaMenores, menorEnActividadOficial, REGLA_FOTOS_MENORES,
+} from './fotos-menores.mjs';
 
 const MODELO_GEMINI = MODELO_DE_TEXTO;
 // El modelo con visión que documenta Groq hoy (confirmado el 28/09 en
@@ -124,7 +134,21 @@ export async function candidatasConDatos(nota, { fetchFn = fetch } = {}) {
 
 const LETRAS = 'ABCDEFGH';
 
-function instruccion(nota, candidatas) {
+/** El párrafo de la excepción de la regla 186 (ingesta/fotos-menores.mjs): sólo si esta nota la permite y hay fotos de un organismo de la
+ *  lista cerrada. Sin excepción, la instrucción es exactamente la de siempre. */
+function parrafoDeLaExcepcion(candidatas, excepcion) {
+  if (!excepcion?.permiteMenor) return '';
+  const letras = candidatas.map((c, i) => (excepcion.permiteMenor(c) ? `${LETRAS[i]} (${c.medio})` : null)).filter(Boolean);
+  if (!letras.length) return '';
+  return `
+
+Única excepción, sólo para esta nota (decisión de Radar Balcarce del 17/10/2026): es una actividad deportiva, escolar o cultural contada
+por un organismo oficial de Balcarce, y la foto de ${letras.length > 1 ? 'las letras' : 'la letra'} ${letras.join(', ')} es la suya. ESA foto
+sí puede ser la "elegida" aunque tenga chicos reconocibles. Igual poné "menor" en true si los tiene (queda registrado), y "tiene_marca"
+sigue igual que siempre: si tiene un logo o una marca sobreimpresa, no sirve. Para las fotos de las demás letras no hay excepción.`;
+}
+
+function instruccion(nota, candidatas, excepcion = null) {
   const lista = candidatas.map((c, i) => `${LETRAS[i]}) medio: ${c.medio}`).join('\n');
   return `Sos el editor de fotos de Radar Balcarce, un medio digital de Balcarce (Buenos Aires).
 Para la nota "${nota.titulo}" (sección ${nota.seccion}), tenés estas fotos, una por medio que cubrió el hecho.
@@ -164,7 +188,7 @@ para quien se ve claramente chico o adolescente, o para quien de verdad no podé
 Regla que no se negocia: "elegida" NUNCA puede ser la letra de una foto a la que vos mismo le pusiste "tiene_marca"
 o "menor" en true, aunque sea la que mejor encuadre o nitidez tenga. Si la mejor foto tiene alguna de las dos, elegí
 la mejor ENTRE LAS QUE NO TIENEN NINGUNA, aunque no sea la ideal: una foto que sirve y no es perfecta vale más que
-ninguna. Sólo dejá "elegida" en null si NINGUNA foto de la lista está libre de las dos.
+ninguna. Sólo dejá "elegida" en null si NINGUNA foto de la lista está libre de las dos.${parrafoDeLaExcepcion(candidatas, excepcion)}
 
 Devolvé sólo un objeto JSON con esta forma exacta:
 {"elegida": "A" (la letra, o null si ninguna sirve), "razon": "una frase corta explicando por qué",
@@ -189,7 +213,7 @@ export function letraDe(valor) {
  *  las candidatas reales, y arma el resultado final. Nunca confía a ciegas
  *  en la letra elegida: si la IA marcó esa foto con una marca de agua, o si
  *  la letra no corresponde a ninguna candidata con imagen, no se elige nada. */
-function interpretarRespuesta(respuesta, candidatas) {
+function interpretarRespuesta(respuesta, candidatas, excepcion = null) {
   const obj = {
     ...respuesta,
     elegida: letraDe(respuesta?.elegida),
@@ -197,8 +221,16 @@ function interpretarRespuesta(respuesta, candidatas) {
   };
   const fotos = obj.fotos;
   const porLetra = new Map(fotos.filter((f) => letraValida(f?.letra)).map((f) => [f.letra, f]));
-  // Una foto con un menor reconocible (28/09) queda afuera igual que una con marca.
-  const conMarca = new Set([...porLetra.entries()].filter(([, f]) => f.tiene_marca === true || f.menor === true).map(([l]) => l));
+  // La excepción de la regla 186 (ingesta/fotos-menores.mjs): una foto con chicos, evaluada EXPLÍCITAMENTE sin marca, de un organismo de la
+  // lista cerrada, en una nota que la permite y con el interruptor prendido. Cualquier otra foto con un menor sigue afuera.
+  const porExcepcion = (letra) => {
+    const f = porLetra.get(letra);
+    return !!excepcion?.permiteMenor && f?.tiene_marca === false && f?.menor === true
+      && excepcion.permiteMenor(candidatas[LETRAS.indexOf(letra)]);
+  };
+  // Una foto con un menor reconocible (28/09) queda afuera igual que una con marca (salvo la excepción de arriba).
+  const conMarca = new Set([...porLetra.entries()]
+    .filter(([l, f]) => f.tiene_marca === true || (f.menor === true && !porExcepcion(l))).map(([l]) => l));
 
   // Sólo vale una foto que la IA evaluó y marcó EXPLÍCITAMENTE sin marca y sin menor (I-4, 8/10/2026): si la respuesta no trae la
   // evaluación de esa foto (más probable con Groq), no es "sin marca y sin menor", es "sin evaluar", y no se elige.
@@ -206,6 +238,11 @@ function interpretarRespuesta(respuesta, candidatas) {
     const f = porLetra.get(letra);
     return f?.tiene_marca === false && f?.menor === false;
   };
+  const sirve = (letra) => evaluadaSinMarcaNiMenor(letra) || porExcepcion(letra);
+  // Lo que queda anotado de una foto que entró por la excepción (web/scripts/fotos-notas.mjs lo guarda en el banco para auditar).
+  const conExcepcion = (letra, elegida) => (porExcepcion(letra)
+    ? { ...elegida, excepcion: { regla: REGLA_FOTOS_MENORES, motivo: excepcion.motivo ?? null, fuente: elegida.medio ?? null } }
+    : elegida);
 
   const resultado = candidatas.map((c, i) => {
     const letra = LETRAS[i];
@@ -229,9 +266,11 @@ function interpretarRespuesta(respuesta, candidatas) {
     const i = LETRAS.indexOf(obj.elegida);
     const medio = candidatas[i]?.medio ?? 'esa fuente';
     const detalle = porLetra.get(obj.elegida)?.detalle;
-    const iSinMarca = candidatas.findIndex((c, j) => c.datos && !conMarca.has(LETRAS[j]) && evaluadaSinMarcaNiMenor(LETRAS[j]));
+    // Primero una sin chicos; si no hay, una que entra por la excepción de la regla 186.
+    const sinChicos = candidatas.findIndex((c, j) => c.datos && !conMarca.has(LETRAS[j]) && evaluadaSinMarcaNiMenor(LETRAS[j]));
+    const iSinMarca = sinChicos >= 0 ? sinChicos : candidatas.findIndex((c, j) => c.datos && !conMarca.has(LETRAS[j]) && sirve(LETRAS[j]));
     if (iSinMarca >= 0) {
-      elegida = { ...resultado[iSinMarca], letra: LETRAS[iSinMarca], datos: candidatas[iSinMarca].datos };
+      elegida = conExcepcion(LETRAS[iSinMarca], { ...resultado[iSinMarca], letra: LETRAS[iSinMarca], datos: candidatas[iSinMarca].datos });
       razon = `La IA había preferido la de ${medio}, pero no se puede usar (marca de agua, otro medio o un menor)${detalle ? ` (${detalle})` : ''}: se usa ${resultado[iSinMarca].medio} en su lugar, aunque no sea la ideal.`;
     } else {
       razon = `La mejor foto era la de ${medio}, pero no se puede usar (marca de agua, otro medio o un menor)${detalle ? ` (${detalle})` : ''}, y ninguna de las otras sirve: no se elige ninguna.`;
@@ -240,17 +279,20 @@ function interpretarRespuesta(respuesta, candidatas) {
     const i = LETRAS.indexOf(obj.elegida);
     // Con la imagen que ya se bajó para compararla: volver a bajarla fallaba (1/10, "la virgen de la tosquera", nueve
     // fuentes y tres intentos con "no se pudo volver a bajar la elegida").
-    if (candidatas[i]?.datos && evaluadaSinMarcaNiMenor(obj.elegida)) elegida = { ...resultado[i], letra: obj.elegida, datos: candidatas[i].datos };
+    if (candidatas[i]?.datos && sirve(obj.elegida)) elegida = conExcepcion(obj.elegida, { ...resultado[i], letra: obj.elegida, datos: candidatas[i].datos });
     else if (candidatas[i]?.datos) razon = `La IA eligió la de ${candidatas[i].medio ?? 'esa fuente'} pero no evaluó si tiene marca de agua o un menor: sin esa evaluación no se usa.`;
+  }
+  if (elegida?.excepcion) {
+    razon = `${razon ? `${razon} ` : ''}La foto de ${elegida.medio} tiene chicos reconocibles y entra por la excepción ${REGLA_FOTOS_MENORES} (regla 186: ${elegida.excepcion.motivo ?? 'actividad oficial'}).`.slice(0, 500);
   }
   return { elegida, razon, candidatas: resultado };
 }
 
 /** Un pedido a Gemini, con las fotos como `inlineData`. */
-async function pedirAGemini(nota, candidatas, { clave, fetchFn = fetch, modelo = MODELO_GEMINI } = {}) {
+async function pedirAGemini(nota, candidatas, { clave, fetchFn = fetch, modelo = MODELO_GEMINI, excepcion = null } = {}) {
   const conFoto = candidatas.filter((c) => c.datos);
   if (conFoto.length === 0) return null;
-  const parts = [{ text: instruccion(nota, conFoto) }];
+  const parts = [{ text: instruccion(nota, conFoto, excepcion) }];
   for (const c of conFoto) parts.push({ inlineData: { mimeType: c.datos.mime, data: c.datos.base64 } });
   const res = await fetchFn(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`, {
     method: 'POST',
@@ -263,7 +305,7 @@ async function pedirAGemini(nota, candidatas, { clave, fetchFn = fetch, modelo =
   const texto = j.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') ?? '';
   let obj;
   try { obj = JSON.parse(texto); } catch { throw new Error('la respuesta no es JSON'); }
-  return interpretarRespuesta(obj, conFoto);
+  return interpretarRespuesta(obj, conFoto, excepcion);
 }
 
 // Groq acepta como mucho 3 imágenes por pedido (documentado, 28/09). Gemini
@@ -275,10 +317,10 @@ const MAXIMO_FOTOS_GROQ = 3;
 /** El mismo pedido, pero con Groq (API de OpenAI: un solo mensaje con texto
  *  e imágenes como `image_url` en base64). Máximo 3 imágenes por pedido:
  *  documentado por Groq (28/09). */
-async function pedirAGroq(nota, candidatas, { clave, fetchFn = fetch, modelo = MODELO_GROQ_VISION } = {}) {
+async function pedirAGroq(nota, candidatas, { clave, fetchFn = fetch, modelo = MODELO_GROQ_VISION, excepcion = null } = {}) {
   const conFoto = candidatas.filter((c) => c.datos).slice(0, MAXIMO_FOTOS_GROQ);
   if (conFoto.length === 0) return null;
-  const content = [{ type: 'text', text: instruccion(nota, conFoto) }];
+  const content = [{ type: 'text', text: instruccion(nota, conFoto, excepcion) }];
   for (const c of conFoto) content.push({ type: 'image_url', image_url: { url: `data:${c.datos.mime};base64,${c.datos.base64}` } });
   const res = await fetchFn('https://api.groq.com/openai/v1/chat/completions', {
     method: 'POST',
@@ -291,7 +333,18 @@ async function pedirAGroq(nota, candidatas, { clave, fetchFn = fetch, modelo = M
   const texto = j.choices?.[0]?.message?.content ?? '';
   let obj;
   try { obj = JSON.parse(texto); } catch { throw new Error('la respuesta no es JSON'); }
-  return interpretarRespuesta(obj, conFoto);
+  return interpretarRespuesta(obj, conFoto, excepcion);
+}
+
+/**
+ * La excepción de la regla 186 para esta nota, o null: con el interruptor prendido y la nota que la permite (menorEnActividadOficial),
+ * una función que dice qué candidatas son de un organismo de la lista cerrada. Apagada (lo normal), null y todo como siempre.
+ */
+export function excepcionParaNota(nota, { activa = excepcionActiva() } = {}) {
+  if (!activa) return null;
+  const r = menorEnActividadOficial(nota);
+  if (!r.ok) return null;
+  return { permiteMenor: (c) => !!esFuenteOficialParaMenores(c), motivo: r.motivo };
 }
 
 /**
@@ -301,13 +354,14 @@ async function pedirAGroq(nota, candidatas, { clave, fetchFn = fetch, modelo = M
  * foto, como hoy.
  */
 export async function elegirFoto(nota, candidatas, {
-  clave = claveClasificacion(), claveRespaldo = claveGroq(), fetchFn = fetch,
+  clave = claveClasificacion(), claveRespaldo = claveGroq(), fetchFn = fetch, fotosMenoresOficiales = excepcionActiva(),
 } = {}) {
+  const excepcion = excepcionParaNota(nota, { activa: fotosMenoresOficiales });
   const conFoto = candidatas.filter((c) => c.datos);
   if (conFoto.length === 0) return { elegida: null, razon: 'sin fotos para comparar', candidatas, proveedor: null };
   if (clave) {
     try {
-      const r = await pedirAGemini(nota, candidatas, { clave, fetchFn });
+      const r = await pedirAGemini(nota, candidatas, { clave, fetchFn, excepcion });
       return { ...r, proveedor: 'gemini' };
     } catch (e) {
       if (!claveRespaldo) return { elegida: null, razon: `Gemini falló: ${e.message}`, candidatas, proveedor: null };
@@ -315,7 +369,7 @@ export async function elegirFoto(nota, candidatas, {
   }
   if (claveRespaldo) {
     try {
-      const r = await pedirAGroq(nota, candidatas, { clave: claveRespaldo, fetchFn });
+      const r = await pedirAGroq(nota, candidatas, { clave: claveRespaldo, fetchFn, excepcion });
       return { ...r, proveedor: 'groq' };
     } catch (e) {
       return { elegida: null, razon: `Groq también falló: ${e.message}`, candidatas, proveedor: null };
@@ -432,10 +486,10 @@ export async function buscarFotoWikimedia(nombre, { fetchFn = fetch, limite = 6 
  * Wikimedia Commons (28/09). Nunca lanza.
  */
 export async function elegirFotoParaNota(nota, {
-  clave = claveClasificacion(), claveRespaldo = claveGroq(), fetchFn = fetch,
+  clave = claveClasificacion(), claveRespaldo = claveGroq(), fetchFn = fetch, fotosMenoresOficiales = excepcionActiva(),
 } = {}) {
   const candidatas = await candidatasConDatos(nota, { fetchFn });
-  const r = await elegirFoto(nota, candidatas, { clave, claveRespaldo, fetchFn });
+  const r = await elegirFoto(nota, candidatas, { clave, claveRespaldo, fetchFn, fotosMenoresOficiales });
   if (r.elegida) return { ...r, origen: 'medio' };
 
   const persona = await personaPublicaDeNota(nota, { clave, fetchFn });

@@ -65,6 +65,9 @@
   --s-economia: #8A6500;
   --s-tecnologia: #0B6FB8;
   --s-pais: #4B5563;
+  /* Las dos de la etapa 2 del mapa (regla 187): sólo se usan con el interruptor SECCIONES_NUEVAS. */
+  --s-educacion: #1D4BE0;
+  --s-salud: #004E5C;
 }
 
 /* ------------------------------------------------------ sistema tipográfico
@@ -314,6 +317,92 @@ nav.principal .primero-servicio::before { content: ''; position: absolute; left:
   nav.principal .envoltura { height: 52px; flex-wrap: nowrap; padding-top: 0; padding-bottom: 0; gap: 4px 12px; padding-left: 24px; padding-right: 24px; }
   nav.principal a { min-height: 52px; }
 }
+
+/* El menú con "Más secciones" (regla 187; sólo con el interruptor SECCIONES_NUEVAS, docs/secciones/PROTOTIPO-MENU.html).
+   Todo cuelga de nav.principal.con-mas: con el interruptor apagado ninguna de estas reglas toca nada.
+   Celular: la fila se desliza (Portada, las ocho de la barra y los servicios) y el botón "Secciones" queda fijo a la
+   derecha; el panel tapa la pantalla. Computadora (900px o más): una barra con las ocho, "Más secciones ▾" y los
+   servicios a la derecha; el panel se despliega debajo, en cuatro columnas. */
+nav.principal.con-mas::after { display: none; }
+nav.principal.con-mas.abierto { z-index: 70; }
+nav.principal.con-mas .fila-mas { display: flex; align-items: stretch; }
+nav.principal.con-mas .desliza-marco { position: relative; flex: 1; min-width: 0; }
+nav.principal.con-mas .desliza-marco::after {
+  content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 44px; pointer-events: none;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--papel) 85%);
+  opacity: 0; transition: opacity 0.15s;
+}
+nav.principal.con-mas.hay-mas .desliza-marco::after { opacity: 1; }
+nav.principal.con-mas .desliza { max-width: none; margin: 0; }
+.boton-mas {
+  flex: none; display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 0 12px;
+  border: 0; border-left: 1px solid var(--linea); background: var(--papel); color: var(--tinta);
+  font-family: var(--f-texto); font-size: 14px; font-weight: 600; line-height: 1; cursor: pointer;
+}
+.boton-mas:hover { color: var(--rojo); }
+.boton-mas:focus-visible, nav.principal.con-mas a:focus-visible, .panel-mas .cerrar:focus-visible { outline: 3px solid var(--tinta); outline-offset: -3px; }
+.boton-mas .icono { display: inline-grid; gap: 3px; }
+.boton-mas .icono i { display: block; width: 16px; height: 2px; background: currentColor; border-radius: 1px; }
+.boton-mas .rotulo-grande, .boton-mas .flecha { display: none; }
+.boton-mas .flecha { width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); margin: -4px 0 0 2px; transition: transform 0.15s; }
+.boton-mas[aria-expanded="true"] .flecha { transform: rotate(225deg); margin-top: 3px; }
+.boton-mas.hay-actual { color: var(--rojo); }
+.boton-mas .donde { white-space: nowrap; }
+/* El panel: en el celular, la pantalla entera. */
+.panel-mas { position: fixed; inset: 0; z-index: 70; background: var(--papel); overflow-y: auto; overscroll-behavior: contain; padding: 0 20px 32px; }
+.panel-mas[hidden] { display: none; }
+.panel-cab {
+  position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between;
+  background: var(--papel); padding: 12px 0 10px; border-bottom: 2px solid var(--tinta); margin-bottom: 4px;
+}
+.panel-titulo { margin: 0; font-family: var(--f-titulo); font-size: 21px; font-weight: 800; color: var(--tinta); }
+.panel-mas .cerrar {
+  width: 44px; height: 44px; border: 1px solid var(--linea); border-radius: 50%; background: var(--papel);
+  color: var(--tinta); font-size: 24px; line-height: 1; cursor: pointer;
+}
+.panel-mas .grupo { margin: 14px 0 4px; }
+.panel-mas .grupo-nombre { margin: 0 0 2px; font-size: var(--t-etiqueta); font-weight: 600; letter-spacing: var(--ls-etiqueta); text-transform: uppercase; color: var(--suave); }
+.panel-mas ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+.panel-mas li a {
+  display: flex; align-items: center; gap: 9px; min-height: 44px; font-weight: 600; font-size: 15px;
+  color: var(--tinta); border-bottom: 1px solid var(--linea-suave);
+}
+.panel-mas li a::before { content: ''; flex: none; width: 10px; height: 10px; border-radius: 3px; background: var(--c, var(--s-pais)); }
+.panel-mas li a.activo { color: var(--rojo); box-shadow: inset 0 -3px 0 var(--rojo); }
+.panel-mas .nueva {
+  margin-left: auto; font-size: 10px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--suave); border: 1px solid var(--linea); border-radius: 999px; padding: 1px 6px;
+}
+.panel-mas .servicios li a { color: var(--verde); }
+.panel-mas .servicios li a::before { background: var(--verde); border-radius: 50%; }
+.panel-mas .servicios li a.activo { box-shadow: inset 0 -3px 0 var(--verde); }
+nav.principal.con-mas .velo { display: none; }
+@media (min-width: 900px) {
+  nav.principal.con-mas .fila-mas { flex-wrap: wrap; align-items: center; gap: 4px 16px; padding: 4px 50px; }
+  nav.principal.con-mas .desliza-marco, nav.principal.con-mas .desliza { display: contents; }
+  nav.principal.con-mas .desliza-marco::after { display: none; }
+  nav.principal.con-mas .crece { order: 2; }
+  nav.principal.con-mas .servicio { order: 3; }
+  .boton-mas { order: 1; min-height: 40px; padding: 0; border-left: 0; gap: 6px; }
+  .boton-mas .icono, .boton-mas .rotulo-celular { display: none; }
+  .boton-mas .rotulo-grande, .boton-mas .flecha { display: inline-block; }
+  .panel-mas {
+    position: absolute; inset: auto 0 auto 0; top: 100%; z-index: 2; overflow: visible; padding: 10px 50px 24px;
+    border-bottom: 1px solid var(--linea); box-shadow: 0 18px 36px rgba(20, 22, 26, 0.16);
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px 32px;
+  }
+  .panel-cab { display: none; }
+  .panel-mas ul { grid-template-columns: 1fr; }
+  .panel-mas li a { min-height: 40px; }
+  nav.principal.con-mas .velo { display: block; position: absolute; left: 0; right: 0; top: 100%; height: 100vh; z-index: 1; background: rgba(20, 22, 26, 0.18); }
+}
+@media (min-width: 1180px) {
+  nav.principal.con-mas .fila-mas { height: 52px; flex-wrap: nowrap; padding: 0 24px; gap: 4px 12px; }
+  .boton-mas { min-height: 52px; }
+  .panel-mas { padding-left: 24px; padding-right: 24px; }
+}
+@media (prefers-reduced-motion: reduce) { .boton-mas .flecha, nav.principal.con-mas .desliza-marco::after { transition: none; } }
+.pie-secciones { line-height: 1.9; }
 
 /* --------------------------------------------------------------- estructura */
 

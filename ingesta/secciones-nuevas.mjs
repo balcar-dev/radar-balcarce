@@ -1,8 +1,10 @@
 // El mapa nuevo de secciones, EN MODO SOMBRA (16/10/2026).
 //
-// Nada de producción usa este archivo: no lo importa la ingesta, ni la web, ni
-// las redes. Sirve para medir, con las notas reales, cómo quedaría el reparto
+// Sirve para medir, con las notas reales, cómo quedaría el reparto
 // si se aprueba el mapa de docs/secciones/MAPA-DE-SECCIONES.md (17 secciones).
+// Desde el 17/10 la ETAPA 2 (Educación y Salud) se puede prender con el
+// interruptor SECCIONES_NUEVAS (al final del archivo, regla 187); apagado, nada
+// de producción cambia: el resto del mapa sigue en sombra.
 // Lo corre `node ingesta/secciones-nuevas-sombra.mjs` y lo cuida
 // pruebas/secciones-nuevas.test.mjs.
 //
@@ -110,7 +112,9 @@ export const PALABRAS_NUEVAS = {
       'terapéuticos', 'terapeuticos', 'fisiatría', 'fisiatria', 'enfermería', 'enfermeria', 'celíacas', 'celiacas', 'celíacos', 'celiacos',
       'estudios clínicos', 'estudios clinicos', 'salud mental', 'antiofídico', 'antiofidico', 'donantes', 'diabetes', 'alzheimer', 'rabia humana'],
     debiles: ['virus', 'brote', 'brotes', 'tratamiento', 'síntomas', 'sintomas', 'rabia', 'nutrición', 'nutricion'],
-    contras: ['carne vacuna', 'vacunos', 'salud financiera', 'salud de la economía', 'salud de la economia', 'salud fiscal'],
+    contras: ['carne vacuna', 'vacunos', 'salud financiera', 'salud de la economía', 'salud de la economia', 'salud fiscal',
+      // 17/10 (etapa 2, con las notas reales): la salud de UNA persona famosa y lo político del hospital no son la sección.
+      'por su salud', 'papa león', 'papa leon', 'comisión de salud', 'comision de salud', 'tribunal de cuentas'],
   },
   Ciencia: {
     firmes: ['ciencia', 'científico', 'cientifico', 'científicos', 'cientificos', 'científica', 'cientifica', 'investigadores',
@@ -331,6 +335,56 @@ export function seccionNueva(nota = {}) {
     alternativa: empate ? validos[1].s : null,
     aviso,
   };
+}
+
+// ------------------------------------------------------------- etapa 2, detrás del interruptor
+//
+// Desde el 17/10/2026 (regla 187) el mapa deja de ser sólo sombra en DOS secciones: Educación y Salud, las
+// únicas que ya llegan a 10 notas por semana. Todo lo demás de este archivo sigue en sombra. Y aun estas dos
+// existen sólo con el interruptor prendido: la variable SECCIONES_NUEVAS ("si"). Apagado (lo normal), nadie
+// las ve: ni el sitio, ni la IA, ni el panel. Lo usan web/lib/datos.js (el sitio), ingesta/lectura-ia.mjs
+// (la ficha de la IA), web/scripts/generar-datos.mjs (el aviso al celular) y web/scripts/vista-previa-secciones.mjs.
+
+/** Las secciones del mapa que se suman en la etapa 2. */
+export const SECCIONES_ETAPA_2 = ['Educación', 'Salud'];
+
+/** Sus datos (ranura, color, grupo), sacados del mapa para no escribirlos dos veces. */
+export const DATOS_ETAPA_2 = SECCIONES_ETAPA_2.map((n) => SECCIONES_NUEVAS.find((s) => s.nombre === n));
+
+/**
+ * ¿Está prendido el interruptor? La variable SECCIONES_NUEVAS con "si", "sí", "1" o "true". Vacía, ausente o
+ * cualquier otra cosa: apagado. Se lee cuando se pregunta (no al cargar), así una prueba puede pasar su `env`.
+ */
+export function seccionesNuevasActivas(env = globalThis.process?.env ?? {}) {
+  return /^(si|sí|1|true)$/i.test(String(env?.SECCIONES_NUEVAS ?? '').trim());
+}
+
+/** La IA o una persona eligió una sección de la etapa 2 que no existe con el interruptor apagado. */
+export const esDeLaEtapa2 = (seccion) => SECCIONES_ETAPA_2.includes(seccion);
+
+/** ¿La sección de esta nota la decidió una persona? Lo que corrigió o publicó una persona no se toca. */
+function laDecidioUnaPersona(nota) {
+  const por = String(nota?.publicadaPor ?? '').trim();
+  return !!nota?.corregidaAMano || (!!por && !/^(ia|m[aá]quina)$/i.test(por) && !/autom[aá]tica/i.test(por));
+}
+
+/**
+ * La sección con que se MUESTRA una nota con la etapa 2 prendida, o null si se queda donde está.
+ * Usa `seccionNueva` tal cual (parte de la sección de hoy, las contras, la débil sólo desde el título) y
+ * acepta el cambio sólo si:
+ *   · lo que gana es Educación o Salud (si gana otra del mapa, todavía en sombra, la nota no se mueve);
+ *   · decidió algo firme: una firme en el título, o en la bajada dos firmes distintas o una firme con una débil
+ *     en el título. Una débil sola no alcanza, y en la bajada una débil no cuenta nunca;
+ *   · no empata con otra sección;
+ *   · no es una nota propia (dólar, clima, repasos…) ni la decidió una persona.
+ * No cambia la dirección: /nota/<slug>-<id> no lleva la sección (web/lib/ruta.js).
+ */
+export function seccionDeLaEtapa2(nota = {}) {
+  if (!nota?.seccion || nota.propia || laDecidioUnaPersona(nota)) return null;
+  const r = seccionNueva(nota);
+  if (!esDeLaEtapa2(r.seccion) || r.seccion === nota.seccion) return null;
+  if (r.puntos < 2 || r.alternativa) return null;
+  return { seccion: r.seccion, antes: nota.seccion, motivo: r.motivo };
 }
 
 /** El reparto: cuántas notas en cada sección nueva, y de dónde vinieron. */

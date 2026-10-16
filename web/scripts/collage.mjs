@@ -60,6 +60,9 @@ export function fotosDelRepaso(nota, banco = {}, carpeta, {
   for (const id of nota?.notasDelRepaso ?? []) {
     const b = banco[id];
     if (!b?.archivo || vistos.has(b.archivo)) continue;
+    // Una foto con chicos que entró por la excepción de la regla 186 (web/scripts/fotos-notas.mjs) es para su nota, no para el collage de
+    // un repaso que va a las redes: ahí no llega el freno del interruptor ni el control de la nota.
+    if (b.excepcion) continue;
     const ruta = path.join(carpeta, path.basename(b.archivo));
     if (!existe(ruta)) continue;
     // Un logo no entra en el collage (4/10): pesa muy poco.

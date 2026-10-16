@@ -75,7 +75,7 @@ import {
 } from '../lib/archivo.js';
 import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
 import { esperaSoloPorCantidad, semaforoDelTexto, esEfemerideAjena, esDeUnMedioDeAca } from '../../ingesta/ingesta.mjs';
-import { conFotosDelBanco, podarFotos, esIlustracionDeNota, ilustracionPermitida } from './fotos-notas.mjs';
+import { conFotosDelBanco, podarFotos, esIlustracionDeNota, ilustracionPermitida, fotoConMenorPermitida } from './fotos-notas.mjs';
 import { actualizarAgenda, aplicarSuspendidos, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
 import {
@@ -96,6 +96,7 @@ import { parejasConLoPublicado, conFuentesDeLasUnidas } from '../../ingesta/repe
 import { traerF1, notasDeF1, comoF1Json } from '../../ingesta/f1.mjs';
 import { traerFutbol, notasDeFutbol, comoFutbolJson } from '../../ingesta/futbol.mjs';
 import { notasDePistas } from '../lib/notas-de-pistas.js';
+import { seccionesNuevasActivas, SECCIONES_ETAPA_2 } from '../../ingesta/secciones-nuevas.mjs';
 
 const AQUI = import.meta.dirname;
 const DATOS_PANEL = path.join(AQUI, '..', '..', 'panel', 'datos');
@@ -519,6 +520,9 @@ function notaPublicada(n) {
     cuerpo: deLaDecision?.cuerpo ?? auto?.cuerpo ?? null,
     guion: humana ? (deLaDecision?.guion ?? null) : (tituloAutomatico(deLaDecision?.guion ?? auto?.guion ?? '') || null),
     seccion: n.seccion,
+    // Si la IA la pasó a Educación o Salud (interruptor SECCIONES_NUEVAS, regla 187), la sección de antes: con el
+    // interruptor apagado la web la vuelve a mostrar ahí (conSeccionDelSitio, lib/datos.js). Apagado no existe.
+    ...(n.seccionAntes ? { seccionAntes: n.seccionAntes } : {}),
     medios: n.medios,
     enlace: n.enlace,
     // La dirección de la imagen de la fuente no se publica tal cual: se
@@ -679,11 +683,14 @@ if (enLaNube) {
     const { elegirFotosNuevas } = await import('./fotos-notas.mjs');
     const { claveClasificacion, claveGroq } = await import('../../reels/claves.mjs');
     const bancoAntes = bancoDeFotos;
-    const { banco, archivos } = await elegirFotosNuevas(deLaIngesta, {
+    const { banco, archivos, porExcepcion } = await elegirFotosNuevas(deLaIngesta, {
       banco: bancoAntes, clave: claveClasificacion(), claveRespaldo: claveGroq(),
     });
     const nuevas = Object.keys(banco).length - Object.keys(bancoAntes).length;
     if (nuevas) console.log(`  fotos: ${nuevas} notas nuevas probadas (${Object.keys(archivos).length} con foto)`);
+    // El registro de las fotos con chicos que entraron por la excepción de la regla 186 (FOTOS_MENORES_OFICIALES): queda en el log de la
+    // corrida y, para siempre, en la entrada del banco (`excepcion`). npm run auditar-fotos las lista.
+    for (const x of porExcepcion ?? []) console.log(`  fotos: CON CHICOS por la excepción menorEnActividadOficial (regla 186): ${x.id} · ${x.fuente} · ${x.motivo} · "${x.titulo}"`);
     for (const [archivo, buffer] of Object.entries(archivos)) {
       const destino = path.join(FOTOS_NOTAS, path.basename(archivo));
       fs.mkdirSync(path.dirname(destino), { recursive: true });
@@ -1017,6 +1024,14 @@ if (pasaLaFoto.size) {
   console.log(`  repetidas: ${pasaLaFoto.size} foto(s) pasan a la nota que ya estaba publicada`);
 }
 const conLaFotoPasada = (n) => (pasaLaFoto.has(n?.id) && (!n.foto || esIlustracionDeNota(n.foto)) ? conFotosDelBanco([{ ...n }], bancoDeFotos)[0] : n);
+// Regla 186: una nota del archivo con una foto con chicos que entró por la excepción la pierde si se apagó FOTOS_MENORES_OFICIALES o si la
+// nota, como está hoy, ya no la permite (después le toca su ilustración, si tiene).
+const sinFotoConMenorBloqueada = (n) => {
+  const b = bancoDeFotos[n?.id];
+  if (!n?.foto?.archivo || !b?.excepcion || n.foto.archivo !== b.archivo || fotoConMenorPermitida(n)) return n;
+  const { foto, ...resto } = n;
+  return resto;
+};
 {
   const antes = leerJson(FUSIONADAS, null);
   const porId = new Map([...(archivoAnterior.notas ?? []), ...conPaginaHoy].map((n) => [n.id, n]));
@@ -1063,7 +1078,7 @@ const topeDeHoy = topeDeEstaVuelta(pedidoDelTope.tope, (archivoAnterior.notas ??
 if (topeDeHoy < MAXIMO_EN_ARCHIVO) console.log(`  tope de notas de esta vuelta: ${topeDeHoy} (se pidió ${pedidoDelTope.tope}; las que salen ya están en el archivo permanente)`);
 // Lo de más de unos días guarda sólo lo que ve el lector (aligerarViejas, 29/09).
 const archivo = aligerarViejas(actualizarArchivo({
-  archivo: conLasUnidas([...(archivoAnterior.notas ?? []), ...restaurar.filter((n) => !(archivoAnterior.notas ?? []).some((a) => a.id === n.id))]).map(conLaFotoPasada).map(conLaIlustracion).map(sinServicios),
+  archivo: conLasUnidas([...(archivoAnterior.notas ?? []), ...restaurar.filter((n) => !(archivoAnterior.notas ?? []).some((a) => a.id === n.id))]).map(conLaFotoPasada).map(sinFotoConMenorBloqueada).map(conLaIlustracion).map(sinServicios),
   // Las partes nuevas que hoy no están (una persona corrigió el texto, o la
   // reescritura se cayó) tampoco quedan de la vez anterior en el archivo: el
   // `undefined` pisa lo viejo al mezclar y no se escribe.
@@ -1278,6 +1293,9 @@ if (enLaNube) {
       // apagadas, el celular avisa que esto es lo que saldría, no lo que sale.
       activas: process.env.REDES_ACTIVAS === undefined ? null : estaActivo(process.env.REDES_ACTIVAS),
     },
+    // El interruptor SECCIONES_NUEVAS (regla 187): prendido, el panel ofrece también Educación y Salud al corregir una
+    // nota (seccionesDelPanel, web/public/panel/github.js). Apagado, el campo no existe y el archivo queda como siempre.
+    ...(seccionesNuevasActivas() ? { seccionesNuevas: [...SECCIONES_ETAPA_2] } : {}),
   };
   const antes = leerJson(CELULAR_ESTADO, null);
   const sinHora = (o) => JSON.stringify({ ...o, generado: null, redes: o?.redes ? { ...o.redes, generado: null } : null });

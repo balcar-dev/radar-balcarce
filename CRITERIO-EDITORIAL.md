@@ -145,7 +145,10 @@ por IA que parezca real. Condiciones que no se negocian:
 - **Toda foto usada así se guarda en el banco propio** (`web/data/banco-fotos.json`), con
   su crédito y de qué nota salió.
 - **Nunca la foto de un menor o de una víctima**, ni en Policiales, salvo una foto oficial
-  de Bomberos o la Policía.
+  de Bomberos o la Policía. Única excepción (regla 186, Hernán, 17/10/2026, apagada hasta
+  que se prenda `FOTOS_MENORES_OFICIALES`): la foto propia de la Municipalidad, el Concejo o
+  la Facultad con chicos en una actividad deportiva, escolar o cultural que no toque nada
+  sensible, sin marca y sin nombres de chicos (`docs/05-FOTOS.md`, § 13).
 
 La foto va en la página de la nota, en el espejo de Instagram de cada posteo de Facebook
 (con el crédito en el texto) y en la tarjeta para compartir el enlace. Los videos llevan

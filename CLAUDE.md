@@ -40,7 +40,7 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 186.)
+próxima regla es la 188: la 186 son las fotos con chicos de los organismos y la 187, las secciones nuevas.)
 
 - **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Una prueba lo
   vigila (sigue los imports en cadena).
@@ -58,8 +58,14 @@ próxima regla es la 186.)
 - **Las fotos**: la de otro medio o de un organismo, sólo sin su marca (lo que estaba en
   la escena, como el micrófono de una radio, sí: 29/09), con el crédito en el epígrafe y guardada en el banco propio
   (`web/data/banco-fotos.json`). Nunca foto real de un menor o una víctima, ni en
-  Policiales salvo fuente oficial (`docs/05-FOTOS.md`). La placa es lo que sale cuando no
-  hay foto que sirva.
+  Policiales salvo fuente oficial (`docs/05-FOTOS.md`). **Única excepción (regla 186, Hernán,
+  17/10):** la foto propia de la Municipalidad, el Concejo o la Facultad
+  (`FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES`, lista cerrada: no sumar sin preguntar) con chicos
+  en una actividad deportiva, escolar o cultural que no toque nada policial, judicial, de salud,
+  accidentes, violencia, muertes ni desaparecidos, sin marca y sin nombres de chicos
+  (`ingesta/fotos-menores.mjs`), y sólo con la variable de GitHub `FOTOS_MENORES_OFICIALES`
+  en "Si" (por defecto apagada; apagarla saca esas fotos de la web). La placa es lo que sale
+  cuando no hay foto que sirva.
 - **Todo lo que va a Instagram es video con voz**, salvo el espejo de cada posteo de Facebook.
 - **Tokens y claves nunca en un chat ni en el código.** Van a GitHub Secrets o al `.env`,
   y los pega una persona. El repositorio es **público**: por eso lo que espera a una
@@ -102,7 +108,14 @@ próxima regla es la 186.)
 - **Las palabras clave cortas engañan** ("gol" encontraba "golpe"): las ambiguas van en
   `PALABRAS_DEBILES` y sólo deciden desde el titular.
 - **Las secciones son once**: Balcarce, Política, Policiales, Fútbol, Deportes,
-  Automovilismo, Agro, Economía, Cultura y agenda, Tecnología y Argentina.
+  Automovilismo, Agro, Economía, Cultura y agenda, Tecnología y Argentina. **Trece con el
+  interruptor `SECCIONES_NUEVAS`** (variable de GitHub, apagada; regla 187): suma Educación y
+  Salud (etapa 2 de `docs/secciones/MAPA-DE-SECCIONES.md`) y el menú con "Más secciones".
+  Apagado, el sitio sale igual que antes (una prueba lo compara). Prendido, las notas se
+  muestran en la sección nueva al armar el sitio (`conSeccionDelSitio`, sin tocar los datos ni
+  la dirección), la IA puede elegirlas (nunca se lleva una de Política o Policiales) y el panel
+  las ofrece. Verla sin prenderla: `cd web && npm run vista-previa-secciones`
+  (→ `docs/secciones/vista-previa/`).
 - **Los títulos automáticos se arreglan sin inventar** (`arreglarEscritura`,
   `tituloAutomatico`); lo de una persona no se toca.
 - **Las redes tienen un interruptor**: la variable de GitHub `REDES_ACTIVAS` ("Si"); apagado,
@@ -165,7 +178,7 @@ próxima regla es la 186.)
 | Ilustrar con IA las notas sin foto (automático cada 2 h de 7 a 23 por el reloj de Cloudflare, o a mano: revisar y después aplicar; reglas 182 y 185; Gemini web a mano reemplaza con más calidad) | Workflow «Ilustrar notas sin foto» (`ilustrar-notas.yml`), `web/scripts/ilustrar-notas.mjs` (filtros `motivoParaSaltar`, tono, prompt, topes y `cupoAutomatico`), `web/data/fotos-ia.json` (lo escriben ese workflow y el flujo de Gemini web, `docs/flujos/IMAGENES-CON-GEMINI-WEB.md`; prioridad más baja en `conFotosDelBanco`) |
 | La firma de las notas | `quienEscribio`, `firmaCorta` (`web/components/metadatos.js`) |
 | Las fotos | `web/scripts/fotos-notas.mjs`, `ingesta/fotos.mjs`, `web/scripts/achicar-foto.mjs` |
-| Una sección nueva, su nombre o su color | `SECCIONES` (`web/lib/datos.js`), `--s-*` (`web/app/globals.css`), `REGLAS_SECCION`, `SECCIONES_DE_LA_FICHA` (`ingesta/lectura-ia.mjs`), `SECCIONES` de `web/public/panel/github.js` |
+| Una sección nueva, su nombre o su color | `SECCIONES` (`web/lib/datos.js`), `--s-*` (`web/app/globals.css`), `REGLAS_SECCION`, `SECCIONES_DE_LA_FICHA` (`ingesta/lectura-ia.mjs`), `SECCIONES` de `web/public/panel/github.js`; las del mapa de 17, por etapas detrás de `SECCIONES_NUEVAS`: `SECCIONES_ETAPA_2` y `seccionDeLaEtapa2` (`ingesta/secciones-nuevas.mjs`), `seccionesDelSitio` y `navegacionDelSitio` (`web/lib/datos.js`), `COLOR_SECCION` + `CRITERIO-REDES.md` § 8 (regla 187) |
 | La tapa, las secciones o "Seguí leyendo" | `armarTapa` (`web/lib/datos.js`), `web/lib/seguir-leyendo.js` |
 | La nota del dólar o la de cada podcast | `web/lib/notas-propias.js` |
 | Las notas de F1 (horarios, clasificación, resultado; Jolpica) y de fútbol (Liga, Copa Argentina, Libertadores y Sudamericana con equipos argentinos; ESPN) | `ingesta/f1.mjs`, `ingesta/futbol.mjs`, `web/data/f1.json`, `web/data/futbol.json`; la foto libre, `web/scripts/foto-libre.mjs` |

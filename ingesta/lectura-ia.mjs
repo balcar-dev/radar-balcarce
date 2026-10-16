@@ -21,6 +21,7 @@ import { fichaDeFuente, FUENTES, FUENTES_NACIONALES, CONEXION_ARGENTINA, PALABRA
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
 import { diaAR } from './zona.mjs';
 import { sinTildes } from '../web/lib/texto.js';
+import { seccionesNuevasActivas, SECCIONES_ETAPA_2, TEXTO_PARA_LA_FICHA, esDeLaEtapa2 } from './secciones-nuevas.mjs';
 
 /** ¿El título nombra a Balcarce o a una localidad del partido? San Agustín y
  *  Los Pinos, con respaldo (regla 179): en un medio de acá alcanzan solas. */
@@ -37,9 +38,17 @@ const MODELO = MODELO_DE_TEXTO;
 // TEXTO: la lectura no manda imágenes.
 const MODELO_GROQ = 'openai/gpt-oss-120b';
 
-/** Las secciones que puede elegir: las de la web, sin inventar ninguna. */
-export const SECCIONES_DE_LA_FICHA = ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo',
+/** Las once de siempre, en el orden en que se le nombran a la IA. */
+const LAS_ONCE = ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo',
   'Economía', 'Agro', 'Tecnología', 'Cultura y agenda', 'Argentina'];
+/**
+ * Las secciones que puede elegir: las de la web, sin inventar ninguna. Con el interruptor SECCIONES_NUEVAS
+ * prendido (regla 187) se suman Educación y Salud, después de Policiales; apagado, las once de siempre.
+ */
+export function seccionesDeLaFicha(activas = seccionesNuevasActivas()) {
+  return activas ? [...LAS_ONCE.slice(0, 3), ...SECCIONES_ETAPA_2, ...LAS_ONCE.slice(3)] : [...LAS_ONCE];
+}
+export const SECCIONES_DE_LA_FICHA = seccionesDeLaFicha();
 export const AMBITOS = ['balcarce', 'region', 'provincia', 'nacional', 'internacional'];
 export const IMPACTOS = ['directo', 'indirecto', 'nulo'];
 export const RAZONES = ['local', 'servicio', 'actividad', 'provincia', 'nacional', 'popular', 'ninguna'];
@@ -95,6 +104,21 @@ Reglas:
 - "es_chimento": true si es farándula o la vida privada de famosos (romances, casamientos, separaciones, peleas, internaciones, fiestas o viajes de gente de la tele, la música o las redes). La muerte de una figura, un premio, un estreno o una obra no son chimento.
 - Devolvé una ficha por nota, con el mismo "id".`;
 
+/**
+ * La instrucción que lee la IA. Apagado el interruptor SECCIONES_NUEVAS, es la de siempre, letra por letra
+ * (una prueba lo controla). Prendido (regla 187), suma las líneas de Educación y Salud del mapa nuevo
+ * (TEXTO_PARA_LA_FICHA de ingesta/secciones-nuevas.mjs) y se las saca a Balcarce ("escuelas, salud local") y a
+ * Argentina ("salud, educación").
+ */
+export function instruccion(activas = seccionesNuevasActivas()) {
+  if (!activas) return INSTRUCCION;
+  const lineas = SECCIONES_ETAPA_2.map((s) => `  · ${s}: ${TEXTO_PARA_LA_FICHA[s]}`).join('\n');
+  return INSTRUCCION
+    .replace('(vecinos, instituciones, obras, escuelas, salud local)', '(vecinos, instituciones, obras)')
+    .replace(/( {2}· Policiales: [^\n]*\n)/, `$1${lineas}\n`)
+    .replace('(sociedad, clima, salud, educación, grandes hechos)', '(sociedad, clima, grandes hechos)');
+}
+
 let perfilCacheado = null;
 /** El perfil de Balcarce, leído tal cual del archivo. */
 export function perfilDeBalcarce() {
@@ -126,19 +150,19 @@ export function entradaDeNota(nota) {
 }
 
 /** El pedido completo para un grupo de notas. */
-export function pedidoPara(notas) {
-  return `${INSTRUCCION}\n\n--- PERFIL DE BALCARCE ---\n${perfilDeBalcarce()}\n\n--- NOTAS ---\n${JSON.stringify(notas.map(entradaDeNota), null, 1)}`;
+export function pedidoPara(notas, { activas = seccionesNuevasActivas() } = {}) {
+  return `${instruccion(activas)}\n\n--- PERFIL DE BALCARCE ---\n${perfilDeBalcarce()}\n\n--- NOTAS ---\n${JSON.stringify(notas.map(entradaDeNota), null, 1)}`;
 }
 
 /** El esquema que Gemini tiene que respetar: listas cerradas, sin campos libres de más. */
-export const ESQUEMA = {
+export const esquema = (activas = seccionesNuevasActivas()) => ({
   type: 'ARRAY',
   items: {
     type: 'OBJECT',
     properties: {
       id: { type: 'STRING' },
       ambito: { type: 'STRING', enum: AMBITOS },
-      seccion: { type: 'STRING', enum: SECCIONES_DE_LA_FICHA },
+      seccion: { type: 'STRING', enum: seccionesDeLaFicha(activas) },
       impacto_balcarce: { type: 'STRING', enum: IMPACTOS },
       razon: { type: 'STRING', enum: RAZONES },
       importancia: { type: 'STRING', enum: IMPORTANCIAS },
@@ -151,13 +175,14 @@ export const ESQUEMA = {
     required: ['id', 'ambito', 'seccion', 'impacto_balcarce', 'razon', 'importancia',
       'es_publicidad', 'es_chimento', 'por_que_interesa'],
   },
-};
+});
+export const ESQUEMA = esquema();
 
 /** Una ficha válida, o null si algo no está en su lista. No se corrige nada:
  *  lo que no cierra se descarta y se vuelve a pedir en otra corrida. */
-export function fichaValida(f) {
+export function fichaValida(f, { activas = seccionesNuevasActivas() } = {}) {
   if (!f || typeof f !== 'object' || !f.id) return null;
-  if (!AMBITOS.includes(f.ambito) || !(SECCIONES_DE_LA_FICHA.includes(f.seccion) || ['Servicios', 'País'].includes(f.seccion)) || !IMPACTOS.includes(f.impacto_balcarce)
+  if (!AMBITOS.includes(f.ambito) || !(seccionesDeLaFicha(activas).includes(f.seccion) || ['Servicios', 'País'].includes(f.seccion)) || !IMPACTOS.includes(f.impacto_balcarce)
     || !RAZONES.includes(f.razon) || !IMPORTANCIAS.includes(f.importancia)) return null;
   return {
     ambito: f.ambito,
@@ -180,7 +205,7 @@ export async function leerGrupo(notas, { clave, fetchFn = fetch } = {}) {
     headers: { 'content-type': 'application/json', 'x-goog-api-key': clave },
     body: JSON.stringify({
       contents: [{ parts: [{ text: pedidoPara(notas) }] }],
-      generationConfig: { responseMimeType: 'application/json', responseSchema: ESQUEMA, temperature: 0 },
+      generationConfig: { responseMimeType: 'application/json', responseSchema: esquema(), temperature: 0 },
     }),
     signal: AbortSignal.timeout(60_000),
   });
@@ -352,10 +377,19 @@ export function mencionaAca(nota) {
 /** Desde cuándo las fichas conocen la sección Fútbol (con margen: fue el 27/09 a la tarde). */
 const FICHAS_CON_FUTBOL = '2026-09-28T00:00:00Z';
 
-export function aplicarFichas(notas, fichas = {}, { esperarSinFicha = false, yaPublicadas = new Set() } = {}) {
+export function aplicarFichas(notas, fichas = {}, {
+  esperarSinFicha = false, yaPublicadas = new Set(), nuevas = seccionesNuevasActivas(),
+} = {}) {
   const cambios = { sacadas: [], dejanDeSerLocales: [], otraSeccion: [], aEsperar: [] };
   // Las fichas viejas pueden decir "Servicios", que ya no existe (27/09).
-  const seccionDe = (f) => ({ Servicios: 'Balcarce', País: 'Argentina' }[f.seccion] ?? f.seccion);
+  // Educación y Salud (regla 187): sólo con el interruptor SECCIONES_NUEVAS prendido (una ficha guardada mientras
+  // estuvo prendido no cuenta si se apagó: la nota queda en su sección) y nunca se llevan una nota de Política o
+  // Policiales, que esperan a una persona en todas las piezas de redes.
+  const seccionDe = (f, n) => {
+    const s = { Servicios: 'Balcarce', País: 'Argentina' }[f.seccion] ?? f.seccion;
+    if (esDeLaEtapa2(s) && (!nuevas || ['Política', 'Policiales'].includes(n.seccion))) return n.seccion;
+    return s;
+  };
   const salida = [];
   for (const original of notas) {
     const f = fichas[original.id];
@@ -418,12 +452,14 @@ export function aplicarFichas(notas, fichas = {}, { esperarSinFicha = false, yaP
     // a Pampas", de rugby, salió en Fútbol por "goleó"). Las fichas duran tres
     // días (LECTURA.diasDeFichas): desde el 1/10 no queda ninguna vieja.
     const sinFutbol = !(Date.parse(f.cuando ?? '') >= Date.parse(FICHAS_CON_FUTBOL));
-    const deLaIA = sinFutbol && seccionDe(f) === 'Deportes' && n.seccion === 'Fútbol' ? 'Fútbol' : seccionDe(f);
+    const deLaIA = sinFutbol && seccionDe(f, n) === 'Deportes' && n.seccion === 'Fútbol' ? 'Fútbol' : seccionDe(f, n);
     const seccion = deLaIA === 'Balcarce' && !esLocal ? (['Servicios', 'País'].includes(n.seccion) ? 'Argentina' : n.seccion)
       : deLaIA === 'Argentina' && esLocal ? 'Balcarce'
         : deLaIA;
     if (seccion !== n.seccion) {
       cambios.otraSeccion.push({ ...caso, antes: n.seccion, ahora: seccion });
+      // La sección de antes queda guardada: si el interruptor se apaga, la web vuelve a mostrarla ahí (regla 187).
+      if (esDeLaEtapa2(seccion)) n.seccionAntes = n.seccion;
       n.seccion = seccion;
     }
     salida.push(n);

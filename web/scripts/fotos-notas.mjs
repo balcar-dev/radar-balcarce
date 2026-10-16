@@ -12,6 +12,7 @@
 // veces, con una hora entre una y otra (`sePuedeReintentar`, 29/09).
 
 import { elegirFotoParaNota, descargarImagen, creditoDeFoto } from '../../ingesta/fotos.mjs';
+import { excepcionActiva, menorEnActividadOficial, tieneFuenteOficialParaMenores } from '../../ingesta/fotos-menores.mjs';
 import { achicarFoto, fotoParaGuardar } from './achicar-foto.mjs';
 
 // Por corrida, no por día: la corrida se repite cada media hora, así que el
@@ -75,19 +76,39 @@ export function sePuedeReintentar(entrada, { ahora = new Date(), reintentos = RE
   return false;
 }
 
+// Lo que la IA dijo cuando descartó las fotos por un chico reconocible (mismo criterio que motivoDeLaNota, ingesta/auditar-fotos.mjs).
+const DESCARTE_POR_MENOR = /menor|adolescen|niñ|alumn/i;
+
+/**
+ * La excepción de la regla 186 (ingesta/fotos-menores.mjs), con el interruptor prendido: una nota que quedó sin foto porque la IA vio un
+ * chico, que tiene una fuente de la lista cerrada y que permite la excepción, se vuelve a probar UNA vez (`probadaConExcepcion`).
+ * Sin esto, prender el interruptor no cambiaba nada para las notas que ya estaban en el banco.
+ */
+export function reintentoPorExcepcion(entrada, nota, { activa = excepcionActiva() } = {}) {
+  if (!activa || !entrada || entrada.archivo || entrada.borrada || entrada.probadaConExcepcion) return false;
+  if (entrada.origen === 'error' || entrada.error || FALLA.test(String(entrada.razon ?? ''))) return false;
+  if (!DESCARTE_POR_MENOR.test(String(entrada.razon ?? ''))) return false;
+  return tieneFuenteOficialParaMenores(nota) && menorEnActividadOficial(nota).ok;
+}
+
 /**
  * Prueba una foto para las notas que todavía no están en el banco (y las que
  * quedaron sin foto por una falla, hasta tres veces), hasta `tope` por corrida.
  * Nunca lanza: una nota que falla queda "intentado", con cuántas veces se probó.
  *
  * Devuelve el banco entero actualizado (para escribir tal cual) y, aparte,
- * los archivos nuevos a guardar (sólo los que consiguieron foto).
+ * los archivos nuevos a guardar (sólo los que consiguieron foto) y `porExcepcion`: las fotos con chicos que entraron por la excepción
+ * de la regla 186 en esta corrida ([{ id, fuente, motivo, titulo }]), para el registro de la corrida (generar-datos las escribe en el log).
  */
 export async function elegirFotosNuevas(notas, {
   banco = {}, tope = TOPE_POR_CORRIDA, clave, claveRespaldo, fetchFn = fetch, ahora = new Date(), achicar = achicarFoto,
+  fotosMenoresOficiales = excepcionActiva(),
 } = {}) {
   const bancoNuevo = { ...banco };
   const archivos = {};
+  const porExcepcion = [];
+  // Con el interruptor prendido, cada nota que se prueba queda anotada como probada con la excepción (no se vuelve a probar por eso).
+  const marca = fotosMenoresOficiales ? { probadaConExcepcion: true } : {};
   // Las más nuevas primero (28/09, Hernán: "no hace falta completar las
   // notas anteriores, pero sí que todas las nuevas ahora tengan fotos"). Sin
   // esto, una nota recién publicada podía quedar detrás de un resto de notas
@@ -97,7 +118,8 @@ export async function elegirFotosNuevas(notas, {
   // HORAS_EN_PORTADA (lib/archivo.js). Las que se reintentan van después de
   // las que nunca se probaron.
   const candidatas = notas
-    .filter((n) => sePuedeReintentar(banco[n.id], { ahora, fuentes: cuantasFuentes(n) }) && elegiblePorSeccion(n))
+    .filter((n) => (sePuedeReintentar(banco[n.id], { ahora, fuentes: cuantasFuentes(n) })
+      || reintentoPorExcepcion(banco[n.id], n, { activa: fotosMenoresOficiales })) && elegiblePorSeccion(n))
     .sort((a, b) => (Number(!!banco[a.id]) - Number(!!banco[b.id])) || (new Date(b.fecha ?? 0) - new Date(a.fecha ?? 0)));
 
   let procesadas = 0;
@@ -106,10 +128,10 @@ export async function elegirFotosNuevas(notas, {
     procesadas += 1;
     const intentos = (banco[n.id]?.intentos ?? (banco[n.id] ? 1 : 0)) + 1;
     try {
-      const r = await elegirFotoParaNota(n, { clave, claveRespaldo, fetchFn });
+      const r = await elegirFotoParaNota(n, { clave, claveRespaldo, fetchFn, fotosMenoresOficiales });
       if (!r.elegida) {
         bancoNuevo[n.id] = {
-          intentado: true, origen: r.origen, titulo: n.titulo ?? null, razon: r.razon ?? null, cuando: ahora.toISOString(), intentos, fuentes: cuantasFuentes(n),
+          intentado: true, origen: r.origen, titulo: n.titulo ?? null, razon: r.razon ?? null, cuando: ahora.toISOString(), intentos, fuentes: cuantasFuentes(n), ...marca,
         };
         continue;
       }
@@ -118,7 +140,7 @@ export async function elegirFotosNuevas(notas, {
       const datos = r.elegida.datos ?? await descargarImagen(r.elegida.imagen, { fetchFn });
       const ext = EXTENSION[datos?.mime];
       if (!datos || !ext) {
-        bancoNuevo[n.id] = { intentado: true, origen: r.origen, cuando: ahora.toISOString(), error: 'no se pudo volver a bajar la elegida', intentos, fuentes: cuantasFuentes(n) };
+        bancoNuevo[n.id] = { intentado: true, origen: r.origen, cuando: ahora.toISOString(), error: 'no se pudo volver a bajar la elegida', intentos, fuentes: cuantasFuentes(n), ...marca };
         continue;
       }
       // Achicada a 1.200 px y JPEG (29/09): la original pesaba hasta 1,8 MB y crecía el
@@ -133,14 +155,19 @@ export async function elegirFotosNuevas(notas, {
         archivo, medio: r.elegida.medio, credito: creditoDeFoto(r.elegida),
         licencia: r.elegida.licencia ?? null, ...(r.elegida.autor ? { autor: r.elegida.autor } : {}), origen: r.origen,
         titulo: n.titulo ?? null, enlace: r.elegida.enlace ?? null, imagenOriginal: r.elegida.imagen ?? null,
-        razon: r.razon ?? null, cuando: ahora.toISOString(),
+        razon: r.razon ?? null, cuando: ahora.toISOString(), ...marca,
+        // La excepción de la regla 186 queda anotada en la entrada (el registro permanente para auditar: la poda le saca el archivo, no esto).
+        ...(r.elegida.excepcion ? { excepcion: { ...r.elegida.excepcion, cuando: ahora.toISOString() } } : {}),
       };
       archivos[archivo] = guardar.bytes;
+      if (r.elegida.excepcion) {
+        porExcepcion.push({ id: n.id, fuente: r.elegida.excepcion.fuente ?? r.elegida.medio ?? null, motivo: r.elegida.excepcion.motivo ?? null, titulo: n.titulo ?? null });
+      }
     } catch (e) {
       bancoNuevo[n.id] = { intentado: true, origen: 'error', error: e.message, cuando: ahora.toISOString(), intentos };
     }
   }
-  return { banco: bancoNuevo, archivos };
+  return { banco: bancoNuevo, archivos, porExcepcion };
 }
 
 /**
@@ -179,6 +206,13 @@ export function podarFotos({ banco = {}, enDisco = [], quedan = new Set(), retir
   const fija = (f) => /^(efemeride|clima)-[\w-]+\.jpg$/.test(f); // la base (efemeride-fondo.jpg) y la de cada día (efemeride-2026-10-14.jpg, web/scripts/foto-efemeride.mjs)
   return { banco: bancoNuevo, borrar: enDisco.filter((f) => !vivas.has(f) && !delRepaso(f) && !fija(f)) };
 }
+
+/**
+ * ¿Se puede mostrar HOY la foto con chicos que entró por la excepción de la regla 186? Con el interruptor prendido y la nota, como está
+ * ahora, todavía permitiéndola (una corrección o una fuente nueva pudo volverla policial o de salud). Apagado el interruptor, esas fotos
+ * dejan de mostrarse en la próxima corrida: el interruptor también es el freno.
+ */
+export const fotoConMenorPermitida = (nota, { activa = excepcionActiva() } = {}) => activa && menorEnActividadOficial(nota).ok;
 
 /** La nota lista para la web: `{archivo, credito}`, o nada si no tiene. */
 export function fotoDeLaWeb(banco, id) {
@@ -248,9 +282,15 @@ function ilustracionDeLaWeb(ilustraciones, id) {
  * `ilustraciones` (web/data/fotos-ia.json) va al final: sólo si el banco no tiene una foto que la nota pueda mostrar, la nota no es propia e
  * `ilustracionPermitida` dice que sí. Una nota que tenía la ilustración y ya no puede (o el libro ya no la tiene) la pierde.
  */
-export function conFotosDelBanco(notas = [], banco = {}, { ilustraciones = {}, ilustracionPermitida: permitida = () => true } = {}) {
+export function conFotosDelBanco(notas = [], banco = {}, {
+  ilustraciones = {}, ilustracionPermitida: permitida = () => true, fotoConMenorPermitida: conMenor = fotoConMenorPermitida,
+} = {}) {
   for (const n of notas) {
-    const foto = fotoDeLaWeb(banco, n.id);
+    // Una foto con chicos que entró por la excepción de la regla 186 sólo se muestra si hoy se sigue pudiendo (fotoConMenorPermitida);
+    // si no, se le saca a la nota aunque ya la tuviera puesta.
+    const bloqueada = !!banco?.[n.id]?.excepcion && !conMenor(n);
+    if (bloqueada && n.foto?.archivo && n.foto.archivo === banco[n.id].archivo) delete n.foto;
+    const foto = bloqueada ? null : fotoDeLaWeb(banco, n.id);
     // Policiales sin fuente oficial no lleva foto real, ni aunque esté en el banco o la haya sumado una persona desde el panel
     // (8/10/2026: "Choque frontal en la Ruta 226" salía con una foto de El Eco de Tandil). Regla firme: CRITERIO-EDITORIAL.md, "Las fotos".
     if (foto && elegiblePorSeccion(n)) { n.foto = foto; continue; }

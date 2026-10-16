@@ -297,7 +297,8 @@ export function conCreditoDeFoto(texto, nota) {
  * públicas" queda #ObrasPúblicas. Sin repetir, aunque cambie la tilde.
  */
 export function hashtagsDe(nota, cuantos = POSTEO.hashtagsMaximo) {
-  const local = !!(nota?.local || nota?.seccion === 'Balcarce');
+  // Una nota de acá que la IA pasó a Educación o Salud (regla 187) sigue llevando #Balcarce.
+  const local = !!(nota?.local || nota?.seccion === 'Balcarce' || nota?.seccionAntes === 'Balcarce');
   const candidatas = [...(local ? ['Balcarce'] : []), ...(nota?.etiquetas ?? [])];
   const vistos = new Set();
   const tags = [];

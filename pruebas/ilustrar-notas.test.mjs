@@ -683,7 +683,8 @@ test('generar-datos suma fotos-ia.json con la prioridad más baja, lo pasa a la 
   assert.match(g, /const FOTOS_IA = path\.join\(AQUI, '\.\.', 'data', 'fotos-ia\.json'\)/);
   assert.match(g, /conFotosDelBanco\(deLaIngesta, bancoDeFotos, conIlustraciones\)/);
   assert.match(g, /ilustraciones: ilustracionesIA,?\s*\}\);/);
-  assert.match(g, /\.map\(conLaFotoPasada\)\.map\(conLaIlustracion\)/);
+  // La regla 186 mete en el medio sinFotoConMenorBloqueada (saca la foto con chicos de la excepción si ya no se puede); la ilustración sigue después.
+  assert.match(g, /\.map\(conLaFotoPasada\)(?:\.map\(sinFotoConMenorBloqueada\))?\.map\(conLaIlustracion\)/);
   assert.match(g, /yaTienen:[^\n]*!esIlustracionDeNota\(n\.foto\)/);
   assert.match(g, /ilustracionPermitida\(n, \{ semaforo: semaforoDelTexto \}\)/);
   assert.ok(!/writeFileSync\(FOTOS_IA/.test(g), 'generar-datos no escribe fotos-ia.json (lo escribe sólo "Ilustrar notas sin foto")');

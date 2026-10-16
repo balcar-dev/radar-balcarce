@@ -9,7 +9,7 @@
 // explican cada cosa están en textos.js. Cómo funciona todo: docs/09-PANEL.md.
 
 import {
-  crearCliente, ARCHIVOS, SECCIONES, ErrorDeGitHub, marcaNueva, corridaConMarca,
+  crearCliente, ARCHIVOS, seccionesDelPanel, ErrorDeGitHub, marcaNueva, corridaConMarca,
   conDecision, sinDecision, conRedes, conCorreccion, conLlave, sinRetirada, haceCuanto, palabras, conEleccionDeDia, conDecisionDeFeriado, conDecisionDePieza, conPistaSinNovedad, conPistaEstado, conPistaResultado, conNotaDePista, conNotaDePistaRetirada, idDeNotaDePista, conFotoManual,
 } from './github.js';
 import {
@@ -42,6 +42,8 @@ const dormir = (ms) => new Promise((r) => { setTimeout(r, ms); });
 const COLOR = {
   Balcarce: 'balcarce', Política: 'politica', Policiales: 'policiales', Fútbol: 'futbol', Deportes: 'deportes', Automovilismo: 'automovilismo',
   Agro: 'agro', Economía: 'economia', 'Cultura y agenda': 'cultura', Tecnología: 'tecnologia', Argentina: 'pais',
+  // Etapa 2 del mapa (regla 187): sólo aparecen con el interruptor SECCIONES_NUEVAS.
+  Educación: 'educacion', Salud: 'salud',
 };
 const chip = (s) => (s ? `<span class="chip" style="background:var(--s-${COLOR[s] ?? 'pais'})">${esc(s)}</span>` : '');
 const GUARDADO = 'radar-panel';
@@ -1596,7 +1598,7 @@ function vistaBorrador(tipo, id, b = null) {
       <label for="t-cuerpo">Cuerpo <span class="ayuda" id="c-cuerpo"></span></label>
       <textarea id="t-cuerpo" class="cuerpo">${esc(t.cuerpo)}</textarea>
       <label for="t-seccion">Sección</label>
-      <select id="t-seccion">${SECCIONES.map((s) => `<option ${s === seccion ? 'selected' : ''}>${esc(s)}</option>`).join('')}</select>
+      <select id="t-seccion">${seccionesDelPanel(E.estadoCel).map((s) => `<option ${s === seccion ? 'selected' : ''}>${esc(s)}</option>`).join('')}</select>
       ${tipo === 'pendiente' || tipo === 'sin-cuerpo' ? `<label class="check"><input type="checkbox" id="t-redes" ${marcadaParaRedes(id) ? 'checked' : ''}> Mandarla también a Facebook e Instagram</label>
       <p class="ayuda">Si no la marcás, sale sólo en la web. Si la marcás, antes te pregunta.</p>` : ''}
       <div class="botones">

@@ -277,6 +277,10 @@ Ver `docs/07-REDES.md`.
 - **Lo que identificaría a un menor o a una víctima**: lo frena el semáforo
   rojo antes de publicarse, así que nunca llega a esta etapa (pero ver "Qué
   puede fallar").
+- **Una foto con un chico reconocible** (la IA lo marca con `menor`): nunca, salvo
+  la única excepción de la regla 186 (§ 13): la foto propia de la Municipalidad, el
+  Concejo o la Facultad en una actividad deportiva, escolar o cultural, con todo en
+  regla y el interruptor `FOTOS_MENORES_OFICIALES` prendido.
 - **Policiales**, salvo que la fuente sea oficial (paso 2).
 - **Una foto inventada por IA que parezca real**: el sistema no genera fotos de
   hechos. Las imágenes de IA son las ilustraciones genéricas, etiquetadas, del
@@ -302,6 +306,7 @@ Ver `docs/07-REDES.md`.
 | `reels/claves.mjs` | `claveClasificacion` y `claveGroq` | `ingesta/fotos.mjs` | `.env`, variables | — |
 | `web/scripts/ilustrar-notas.mjs` | Las ilustraciones con IA para notas sin foto (reglas 182 y 185): filtros (`motivoParaSaltar`), tono (`tonoDeLaNota`), prompt con Gemini, imagen con el Worker de Cloudflare, control con visión, topes (`cupoAutomatico`); `revisar`, `aplicar` y `automatico` | `ilustrar-notas.yml` (el reloj de Cloudflare cada 2 h, o a mano) | `portada.json`, `archivo.json`, el banco, las manuales, `fotos-ia.json` | En la revisión, sólo el adjunto; al aplicar (a mano o en automático), `web/data/fotos-ia.json` y `web/public/fotos-notas/<id>-ia.jpg` |
 | `web/data/fotos-ia.json` | Las ilustraciones aplicadas (lo escribe sólo «Ilustrar notas sin foto») | — | — | — |
+| `ingesta/fotos-menores.mjs` | La excepción de la regla 186 (§ 13): `menorEnActividadOficial`, `esFuenteOficialParaMenores`, `nombraAUnMenor`, las listas `ACTIVIDADES` y `PROHIBIDAS`, el interruptor | `ingesta/fotos.mjs`, `web/scripts/fotos-notas.mjs` | La nota, `FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES` (`ingesta/fuentes.mjs`), `FOTOS_MENORES_OFICIALES` | — |
 
 ## Dónde se toca cada cosa
 
@@ -317,6 +322,9 @@ Ver `docs/07-REDES.md`.
 | Que el espejo de Instagram lleve (o no) la foto del banco | `FOTO_EN_INSTAGRAM` (`web/lib/tarjeta-diseno.js`; hoy `true`) |
 | Cómo se ve en la página | El bloque `{n.foto && …}` de `web/app/nota/[id]/page.js` |
 | Ilustrar con IA las notas sin foto | Workflow «Ilustrar notas sin foto» (§ 12; automático cada 2 h); qué se salta, `motivoParaSaltar` (`web/scripts/ilustrar-notas.mjs`) y `tocaUnaMuerte` (`web/scripts/fotos-notas.mjs`); el tono, `tonoDeLaNota` y `TONOS`; los topes, `TOPE_POR_CORRIDA`, `TOPE_POR_DIA` y `cupoAutomatico`; las horas, `HORAS_AUTOMATICAS` y `HORAS_ILUSTRAR_UTC` (`infra/reloj-cloudflare/worker.mjs`); con Gemini web, `docs/flujos/IMAGENES-CON-GEMINI-WEB.md` |
+| Qué organismos entran en la excepción de las fotos con chicos (regla 186) | `FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES` (`ingesta/fuentes.mjs`): **preguntar antes** |
+| Qué actividades la permiten y qué temas la frenan | `ACTIVIDADES` y `PROHIBIDAS` (`ingesta/fotos-menores.mjs`) |
+| Prender o apagar la excepción | La variable de GitHub `FOTOS_MENORES_OFICIALES` ("Si" la prende; apagarla también saca de la web las fotos que entraron por ella) |
 | Sacar una ilustración que no debía salir | Borrar su entrada de `web/data/fotos-ia.json` (y el archivo `<id>-ia.jpg`): la próxima corrida de «Actualizar la web» ya no la pone |
 
 ## Qué puede fallar y cómo se nota
@@ -432,3 +440,53 @@ las notas ilustradas siguen en la búsqueda de fotos reales. Una nota propia con
 muestra (`ilustracionPermitida`); una de Policiales con una foto del banco que no es oficial muestra la ilustración en lugar de esa foto. La poda
 no borra los `*-ia.jpg` de notas vivas. El epígrafe de la página, el RSS y el pie de Instagram dicen «Ilustración generada con IA».
 Para sacar una: borrar su entrada de `fotos-ia.json` y el archivo.
+
+## 13. Fotos con chicos de los organismos de Balcarce (17/10/2026, regla 186)
+
+**La decisión.** Hernán, el 17/10/2026: "si hay menores en la foto y la fuente es de Balcarce y es un juego, olimpíadas o algo
+deportivo/escolar/cultural, y son fuentes que realmente no suben nada policial, como el municipio, estaría bueno dejarlo". Hasta ese día la
+regla era firme y sin excepciones: ninguna foto real con un menor reconocible. Ese día el 42 % de las notas sin foto lo era por eso (la IA veía
+un chico), muchas de una escuela deportiva municipal. Lo implementó Claude el mismo día, **apagado**, para que Andrés lo prenda después de
+revisarlo.
+
+**Qué cambia.** Una sola excepción, `menorEnActividadOficial` (`ingesta/fotos-menores.mjs`). La foto con chicos se puede usar **sólo si se
+cumple todo**:
+
+1. **La foto es del organismo** (no de un medio, ni siquiera de uno de Balcarce): la página de donde sale es de la lista cerrada
+   `FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES` (`ingesta/fuentes.mjs`): la Municipalidad de Balcarce y sus áreas (Deportes, Cultura,
+   Educación, Juventud, Turismo publican en `balcarce.gob.ar`), el Concejo Deliberante y la Facultad de Ciencias Agrarias. Tienen que
+   coincidir el nombre del medio **y** el dominio. Sumar un organismo es una decisión editorial: preguntar antes.
+2. **La nota es de una actividad**: sección Deportes, Cultura y agenda, Educación o Balcarce; el título o la bajada nombran algo de la lista
+   cerrada `ACTIVIDADES` (torneo, juegos, olimpíadas, escuela, festival, muestra, coro, taller, colonia…).
+3. **No toca nada sensible**, en ningún lugar del texto: policial, judicial, salud o discapacidad (la foto de un chico de una escuela especial
+   dice algo de su salud), accidentes, violencia, abuso, denuncias, muertes, desaparecidos, chicos bajo protección (`PROHIBIDAS`); ni nada
+   que el semáforo marque en rojo o amarillo (`semaforoDelTexto`; la lista roja **no** se tocó); ni la edad de un chico ("un nene de 9 años").
+4. **Sin marca**: la IA la evaluó explícitamente sin marca de agua ni logo sobreimpreso (`tiene_marca: false`), como siempre.
+5. **Sin nombres**: ni una persona con nombre y apellido en el título o la bajada (el protagonista de la nota puede ser el chico de la foto), ni
+   en el cuerpo una lista de nombres o un nombre pegado a "alumna", "jugador", "infantil"… (`nombraAUnMenor`). Salta de más a propósito.
+6. **El crédito en el epígrafe**, como cualquier foto ("Foto: Municipalidad de Balcarce").
+
+Fuera de eso, todo sigue igual: ninguna foto real con un menor. Para el resto están las ilustraciones sin personas (§ 12).
+
+**El interruptor.** La variable de GitHub `FOTOS_MENORES_OFICIALES` (Settings → Secrets and variables → Actions → Variables). Con "Si", prendida;
+vacía o cualquier otra cosa, apagada (así arranca). Prendida: la IA recibe un párrafo que le dice que la foto de esa letra (la del organismo)
+puede elegirse aunque tenga chicos, y que igual los marque; y una nota que ya se había descartado por "menor" se vuelve a probar **una** vez.
+Apagada: además de no aceptar ninguna nueva, **las que ya entraron dejan de mostrarse** en la próxima corrida (también si la nota, por una
+corrección, pasa a tocar algo prohibido).
+
+**El registro, para auditar.** Cada foto aceptada por la excepción queda: (1) en su entrada de `web/data/banco-fotos.json`, con
+`excepcion: { regla, motivo, fuente, cuando }` (la poda le saca el archivo, no esto); (2) en el log del paso «Buscar noticias y armar los datos»
+de «Actualizar la web», con la línea «fotos: CON CHICOS por la excepción menorEnActividadOficial (regla 186): id · fuente · motivo · título»; y
+(3) en `npm run auditar-fotos`, en «Fotos con chicos aceptadas por la excepción».
+
+**Dónde no van.** El collage de los repasos (que va a las redes) nunca usa una de estas fotos. Una nota de Deportes o Balcarce que sale sola en
+Facebook o Instagram sí puede llevarla, como cualquier foto de su nota.
+
+**Cuánto cambia.** Medido con los datos del 17/10 (las notas que la IA descartó por un chico y cuyo texto pasa todas las condiciones, con la foto
+del organismo entre las candidatas): de las 11 notas de los últimos 7 días sin foto por un menor, **1** (la Escuela Municipal de Básquet); de 39
+en 30 días, **3** (además, el torneo de gimnasia artística y el vóley sub-21). Casi todos los descartes son fotos de medios, que la excepción
+no cubre. Se quedan afuera a propósito, entre otras, la nota del fútbol playa (nombra a los siete chicos), la del básquet por el cáncer de mama,
+la del Día del Sordo y la del juez Ariel Bilbao (su nombre en el título). Que la foto salga depende además de que la IA la vea sin marca.
+
+**La prueba**: `pruebas/fotos-menores-oficiales.test.mjs` (en el núcleo legal: corre en cada vuelta de «Actualizar la web»).
+

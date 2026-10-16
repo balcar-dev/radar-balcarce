@@ -53,6 +53,9 @@ export const COLOR = {
   Balcarce: '#B91C1C',
   Política: '#3730A3',
   Policiales: '#831843',
+  // Las dos de la etapa 2 del mapa (regla 187): sólo aparecen con el interruptor SECCIONES_NUEVAS.
+  Educación: '#1D4BE0',
+  Salud: '#004E5C',
   Fútbol: '#7C3AED',
   Deportes: '#0F766E',
   Automovilismo: '#B45309',

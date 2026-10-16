@@ -4,6 +4,12 @@
 arriba. Una decisión no se borra: si se cambia, se anota la nueva y se dice cuál reemplaza. Lo que falta hacer
 está en `PENDIENTES.md`; las reglas numeradas con su prueba, en `docs/10-REGLAS-Y-PRUEBAS.md`.*
 
+## 17/10/2026
+
+| Qué | Por qué | Quién |
+|---|---|---|
+| **Fotos con chicos: una sola excepción (regla 186, `menorEnActividadOficial`).** La foto propia de la Municipalidad (y sus áreas), el Concejo Deliberante o la Facultad de Ciencias Agrarias (lista cerrada `FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES`) puede salir aunque tenga chicos, sólo en una nota de Deportes, Cultura y agenda, Educación o Balcarce sobre una actividad deportiva, escolar o cultural, que no toque nada policial, judicial, de salud, accidentes, violencia, abuso, denuncias, muertes ni desaparecidos (ni nada del semáforo, cuya lista roja no se tocó), sin marca y sin nombres de chicos, con el crédito en el epígrafe. Detrás de la variable de GitHub `FOTOS_MENORES_OFICIALES`, **apagada** hasta que Andrés la revise y la prenda; apagarla saca de la web las fotos que entraron por ella. Cada foto aceptada queda registrada en `banco-fotos.json` (`excepcion`), en el log de la corrida y en `npm run auditar-fotos`. Con los datos del 17/10 habría recuperado 1 foto de 11 en 7 días (3 de 39 en 30): casi todos los descartes son fotos de medios, que no entran. Detalle: `docs/05-FOTOS.md`, § 13 | El 42 % de las notas sin foto lo era porque la IA veía un chico, muchas de escuelas deportivas municipales; esos organismos no suben nada policial | Hernán (decisión) / Claude (implementación) |
+
 ## 15/10/2026
 
 | Qué | Por qué | Quién |

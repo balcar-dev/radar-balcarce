@@ -106,6 +106,11 @@ export function auditarFotos({ notas = [], banco = {}, desde = 0 } = {}) {
     porSeccion,
     sinFoto: medibles.filter((x) => x.motivo !== 'conFoto'),
     arreglables: arreglables.length,
+    // Las fotos con chicos que entraron por la excepción de la regla 186 (ingesta/fotos-menores.mjs): para revisarlas una por una.
+    porExcepcion: lista.filter((x) => x.entrada?.excepcion).map(({ nota, entrada }) => ({
+      id: nota.id, titulo: nota.titulo, seccion: nota.seccion, fuente: entrada.excepcion.fuente ?? entrada.medio ?? null,
+      motivo: entrada.excepcion.motivo ?? null, cuando: entrada.excepcion.cuando ?? entrada.cuando ?? null, archivo: entrada.archivo ?? null,
+    })),
   };
 }
 
@@ -186,6 +191,13 @@ async function main() {
     console.log(`  [${nota.seccion}] ${String(nota.titulo).slice(0, 62)}`);
     console.log(`      → ${MOTIVOS[motivo]}${entrada?.intentos ? ` · intentos: ${entrada.intentos}` : ''}`);
     if (motivo === 'otra' && entrada?.razon) console.log(`        "${String(entrada.razon).slice(0, 110)}"`);
+  }
+
+  titulo('FOTOS CON CHICOS ACEPTADAS POR LA EXCEPCIÓN (regla 186, FOTOS_MENORES_OFICIALES)');
+  if (!a.porExcepcion.length) console.log('  Ninguna en estos días.');
+  for (const x of a.porExcepcion) {
+    console.log(`  [${x.seccion}] ${String(x.titulo).slice(0, 62)}`);
+    console.log(`      → ${x.id} · ${x.fuente} · ${x.motivo}${x.archivo ? ` · ${x.archivo}` : ' · (foto ya podada)'}`);
   }
 
   if (process.argv.includes('--html')) {

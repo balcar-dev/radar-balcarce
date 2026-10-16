@@ -268,6 +268,11 @@ controla que nada de producción lo importe: esa prueba se da vuelta).
    sola" (C1) si se aprueban.
 2. **Educación y Salud**, "Cultura" y "Tecnología e IA" como nombres, el menú con "Más secciones", la portada
    con bloques por grupo; reclasificar 30 días.
+   *17/10: Educación, Salud y el menú quedaron hechos **detrás del interruptor `SECCIONES_NUEVAS`** (apagado; regla 187).
+   Diferencias con lo de arriba: las notas se muestran en la sección nueva al armar el sitio, todas las del archivo y
+   sólo las firmes, sin tocar los datos; los nombres "Cultura" y "Tecnología e IA" y los bloques por grupo de la
+   portada quedan para después (Educación y Salud tienen su bloque de 3, como las otras). Vista previa:
+   `cd web && npm run vista-previa-secciones` → `docs/secciones/vista-previa/index.html`.*
 3. **Dos semanas después**: Ciencia (con C1 andando) y Espectáculos.
 4. **Turismo y gastronomía y Ambiente y clima** si en la etapa 1 llegan a 4 por semana; si no, como temas.
 

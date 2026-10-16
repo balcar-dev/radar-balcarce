@@ -13,6 +13,9 @@ import { interpretarDolarApi } from './dolar.js';
 import {
   rutaDeEvento, claveDeEvento, claveDeRuta, proximos, confirmacionDeAnual,
 } from './eventos.js';
+import {
+  seccionesNuevasActivas, DATOS_ETAPA_2, SECCIONES_NUEVAS as MAPA_DE_SECCIONES, seccionDeLaEtapa2, esDeLaEtapa2,
+} from '../../ingesta/secciones-nuevas.mjs';
 
 // Se arma en el momento y no al cargar el módulo: las pruebas se paran en
 // otra carpeta para leer datos de mentira.
@@ -50,9 +53,23 @@ const VACIO = () => ({
   utiles: { numeros: [], diaDeLaSemana: null, tocaHoy: false },
 });
 
+/**
+ * La sección con que se MUESTRA una nota (regla 187). Con el interruptor SECCIONES_NUEVAS apagado, la de siempre: sólo si
+ * una nota trae Educación o Salud (la eligió la IA o una persona mientras estuvo prendido) vuelve a la que tenía antes
+ * (`seccionAntes`) o, si no se sabe, a Balcarce o Argentina. Prendido, lo que el clasificador del mapa manda sin duda a
+ * Educación o Salud se muestra ahí (`seccionDeLaEtapa2`, ingesta/secciones-nuevas.mjs). Los archivos de datos no se tocan
+ * y la dirección no cambia: /nota/<slug>-<id> no lleva la sección.
+ */
+export function conSeccionDelSitio(n, activas = seccionesNuevasActivas()) {
+  if (!n) return n;
+  if (!activas) return esDeLaEtapa2(n.seccion) ? { ...n, seccion: n.seccionAntes ?? (n.local ? 'Balcarce' : 'Argentina') } : n;
+  const nueva = seccionDeLaEtapa2(n);
+  return nueva ? { ...n, seccion: nueva.seccion, seccionAntes: nueva.antes } : n;
+}
+
 // La dirección de cada nota se arma acá y no en cada página: ninguna página
 // tiene que saber cómo se arma. Sale del `slug` fijado (ver lib/ruta.js).
-const conRuta = (n) => ({ ...n, ruta: rutaDeNota(n) });
+const conRuta = (n) => ({ ...conSeccionDelSitio(n), ruta: rutaDeNota(n) });
 
 function leerPortada() {
   return leerConMemoria(path.join(carpetaDeDatos(), 'portada.json'), (crudo) => {
@@ -431,7 +448,7 @@ export const REDES_SOCIALES = {
 // que pasa en Balcarce, después lo que a Balcarce le interesa. País va
 // último a propósito — si alguien quiere nacionales, tiene mil lugares;
 // acá viene por lo local.
-export const SECCIONES = [
+const LAS_ONCE = [
   { nombre: 'Balcarce', ranura: 'balcarce', color: 'var(--s-balcarce)' },
   { nombre: 'Política', ranura: 'politica', color: 'var(--s-politica)' },
   { nombre: 'Policiales', ranura: 'policiales', color: 'var(--s-policiales)' },
@@ -445,9 +462,56 @@ export const SECCIONES = [
   { nombre: 'Argentina', ranura: 'argentina', color: 'var(--s-pais)' },
 ];
 
+// Educación y Salud, la etapa 2 del mapa de 17 secciones (regla 187; docs/secciones/MAPA-DE-SECCIONES.md). Existen sólo con
+// el interruptor SECCIONES_NUEVAS prendido al compilar; apagado, el sitio tiene las once de siempre y sale igual que antes.
+// Van después de las ocho de la barra: en la portada sus bloques quedan debajo de los de Economía.
+const DE_LA_ETAPA_2 = DATOS_ETAPA_2.map((s) => ({ nombre: s.nombre, ranura: s.ranura, color: `var(--s-${s.ranura})` }));
+
+export { seccionesNuevasActivas };
+
+/** Las secciones del sitio, con o sin las de la etapa 2. */
+export function seccionesDelSitio(activas = seccionesNuevasActivas()) {
+  return activas ? [...LAS_ONCE.slice(0, 8), ...DE_LA_ETAPA_2, ...LAS_ONCE.slice(8)] : LAS_ONCE;
+}
+export const SECCIONES = seccionesDelSitio();
+
 // Las que van en la barra de navegación: el resto existe igual como página,
 // pero no ocupa lugar arriba.
 export const EN_NAVEGACION = ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo', 'Agro', 'Economía', 'Cultura y agenda', 'Tecnología', 'Argentina'];
+
+// Con el interruptor prendido, el menú nuevo (docs/secciones/PROTOTIPO-MENU.html): en la barra, las ocho fuertes; el resto,
+// en "Más secciones", agrupado como en el mapa. El panel muestra TODAS las secciones agrupadas (también las de la barra).
+export const EN_LA_BARRA = ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo', 'Agro', 'Economía'];
+const GRUPOS_DEL_MENU = [['Balcarce', 'Balcarce'], ['Deportes', 'Deportes'], ['Economía', 'Economía y campo'],
+  ['Sociedad', 'Sociedad'], ['Ciencia y tecnología', 'Ciencia y tecnología'], ['Cultura y ocio', 'Cultura y ocio']];
+
+/** Cuántos días mira el "Más secciones" para mostrar una sección (decisión 14 del mapa: si tuvo una nota en 7 días). */
+export const DIAS_PARA_EL_MAS = 7;
+
+/**
+ * Lo que recibe la navegación (components/navegacion.js). Apagado el interruptor, exactamente lo de siempre: las
+ * secciones de EN_NAVEGACION con al menos una nota en la portada, sin `mas`. Prendido: en la barra, las de EN_LA_BARRA con
+ * notas en la portada; y `mas`, los grupos del mapa con las secciones que tuvieron una nota en DIAS_PARA_EL_MAS días (en la
+ * portada o en el archivo), cada una con su color, y si es nueva.
+ */
+export function navegacionDelSitio({ notas = [], archivo = [], activas = seccionesNuevasActivas(), ahora = Date.now() } = {}) {
+  const conNotas = new Set(notas.map((n) => n.seccion));
+  const enlace = (s) => ({ href: `/seccion/${s.ranura}`, nombre: nombreCorto(s.nombre) });
+  if (!activas) return { secciones: EN_NAVEGACION.filter((s) => conNotas.has(s)).map(datosSeccion).map(enlace) };
+  const secciones = seccionesDelSitio(true);
+  const corte = Number(ahora) - DIAS_PARA_EL_MAS * 864e5;
+  const recientes = new Set([...conNotas, ...archivo.filter((n) => new Date(n.fecha).getTime() >= corte).map((n) => n.seccion)]);
+  const delMapa = (nombre) => MAPA_DE_SECCIONES.find((m) => m.nombre === nombre);
+  const grupos = GRUPOS_DEL_MENU.map(([clave, nombre]) => ({
+    nombre,
+    secciones: secciones.filter((s) => delMapa(s.nombre)?.grupo === clave && recientes.has(s.nombre))
+      .map((s) => ({ ...enlace(s), color: s.color, ...(delMapa(s.nombre)?.nueva ? { nueva: true } : {}) })),
+  })).filter((g) => g.secciones.length);
+  return {
+    secciones: EN_LA_BARRA.filter((s) => conNotas.has(s)).map((s) => enlace(datosSeccion(s))),
+    mas: { grupos, enLaBarra: EN_LA_BARRA.map((s) => `/seccion/${datosSeccion(s).ranura}`) },
+  };
+}
 
 export function datosSeccion(nombre) {
   return SECCIONES.find((s) => s.nombre === nombre)
@@ -472,6 +536,8 @@ export function frasesDeSeccion(nombre) {
     Balcarce: { lema: 'Noticias de Balcarce', enBalcarce: 'Noticias de Balcarce' },
     Política: { lema: 'Política local y nacional que importa en Balcarce', enBalcarce: 'Política en Balcarce' },
     Policiales: { lema: 'Policiales de Balcarce y la zona', enBalcarce: 'Policiales en Balcarce' },
+    Educación: { lema: 'Escuelas, docentes y universidades: la educación en Balcarce y la provincia', enBalcarce: 'Educación en Balcarce' },
+    Salud: { lema: 'El hospital, las vacunas, PAMI e IOMA: la salud en Balcarce y el país', enBalcarce: 'Salud en Balcarce' },
     Fútbol: { lema: 'Fútbol de Balcarce y de Argentina', enBalcarce: 'Fútbol en Balcarce' },
     Deportes: { lema: 'Deportes en Balcarce y la región', enBalcarce: 'Deportes en Balcarce' },
     Automovilismo: { lema: 'Automovilismo: Balcarce, tierra de fierros', enBalcarce: 'Automovilismo en Balcarce' },

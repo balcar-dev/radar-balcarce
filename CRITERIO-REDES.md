@@ -382,6 +382,8 @@ que esta tabla diga lo mismo que el código.
 | Balcarce | #B91C1C | Lo de acá; participá con noticias; una efeméride de Balcarce |
 | Política | #3730A3 | Política (nunca sale sola) |
 | Policiales | #831843 | Policiales (nunca sale sola) |
+| Educación | #1D4BE0 | Educación: escuelas, docentes, la Facultad (sección nueva, con el interruptor SECCIONES_NUEVAS) |
+| Salud | #004E5C | Salud: hospital, vacunas, PAMI, IOMA (sección nueva, con el interruptor SECCIONES_NUEVAS) |
 | Fútbol | #7C3AED | Fútbol y el resumen de los lunes |
 | Deportes | #0F766E | Deportes |
 | Automovilismo | #B45309 | Automovilismo y Fangio |
