@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T16:11:43.251Z",
- "portada": 49,
+ "generado": "2026-10-16T16:32:46.774Z",
+ "portada": 47,
  "archivo": 1168,
- "esperandoCuerpo": 6,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-16T16:11:43.288Z",
+  "generado": "2026-10-16T16:32:46.818Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 53,
     "notas": [
      {
       "id": "npazulcervantino",
@@ -134,19 +134,19 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "1vhit3n",
-      "titulo": "El segundo llamado a licitación del matadero municipal queda desierto",
+      "id": "1jdsdep",
+      "titulo": "La Dirección de Juventud firma un acuerdo para vender entradas online",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "10ephb3",
+      "titulo": "La Justicia investiga el patrimonio de Claudio Tapia y pide informes a Suiza",
+      "seccion": "Argentina"
      },
      {
       "id": "7rb12z",
       "titulo": "Lautaro Martínez cuestiona las dudas sobre el compromiso del seleccionado",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "32f6mu",
-      "titulo": "Lando Norris califica a Franco Colapinto como un buen amigo",
-      "seccion": "Automovilismo"
      }
     ]
    },
@@ -157,12 +157,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 46,
     "notas": [
      {
-      "id": "1vqqg6",
-      "titulo": "La Dirección de Juventud relanza el programa Arte Urbano",
-      "seccion": "Balcarce"
+      "id": "32f6mu",
+      "titulo": "Lando Norris califica a Franco Colapinto como un buen amigo",
+      "seccion": "Automovilismo"
      },
      {
       "id": "n6v2wu",
@@ -205,12 +205,6 @@
      "id": "aa7nni",
      "titulo": "Reprograman la Caravana de la Alegría para noviembre",
      "seccion": "Cultura y agenda",
-     "marcada": false
-    },
-    {
-     "id": "1vhit3n",
-     "titulo": "El segundo llamado a licitación del matadero municipal queda desierto",
-     "seccion": "Balcarce",
      "marcada": false
     }
    ],

@@ -667,11 +667,6 @@
   "ultimo": "2026-10-13T03:01:56.146Z",
   "motivo": "con cuerpo"
  },
- "1i5839k": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T16:31:55.947Z",
-  "motivo": "con cuerpo"
- },
  "1imkz6n": {
   "intentos": 1,
   "ultimo": "2026-10-12T22:31:57.521Z",
@@ -732,11 +727,6 @@
  "1j7l7ky": {
   "intentos": 1,
   "ultimo": "2026-10-14T03:02:00.074Z",
-  "motivo": "con cuerpo"
- },
- "1j94k5u": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T16:31:55.947Z",
   "motivo": "con cuerpo"
  },
  "1jdsdep": {
@@ -929,11 +919,6 @@
   "ultimo": "2026-10-13T21:31:54.790Z",
   "motivo": "con cuerpo"
  },
- "1ntwg3r": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T16:31:55.947Z",
-  "motivo": "cuerpo: 2 problemas (nombre, promesa): el cuerpo nombra a \"camara\" y la fuente no; sin esas oraciones quedan 110 palabras"
- },
  "1nxc5o2": {
   "intentos": 3,
   "ultimo": "2026-10-12T22:02:01.969Z",
@@ -975,9 +960,9 @@
   "motivo": "con cuerpo"
  },
  "1oye0ii": {
-  "intentos": 2,
-  "ultimo": "2026-10-16T16:09:51.193Z",
-  "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
+  "intentos": 3,
+  "ultimo": "2026-10-16T16:32:00.220Z",
+  "motivo": "título o bajada: 2 problemas (numero): el guion dice 50 y la fuente no lo dice"
  },
  "1pi4mqa": {
   "intentos": 1,
@@ -1755,8 +1740,8 @@
   "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "e353o5": {
-  "intentos": 2,
-  "ultimo": "2026-10-16T15:40:08.396Z",
+  "intentos": 3,
+  "ultimo": "2026-10-16T16:32:00.220Z",
   "motivo": "con cuerpo"
  },
  "e8pivp": {
@@ -2038,13 +2023,6 @@
   "intentos": 2,
   "ultimo": "2026-10-11T06:01:31.609Z",
   "motivo": "con cuerpo"
- },
- "lf3dro": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T16:31:55.947Z",
-  "motivo": "verificación baja: espera a una persona",
-  "baja": true,
-  "fuentes": 1
  },
  "lf9d6b": {
   "intentos": 2,
