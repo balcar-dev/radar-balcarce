@@ -14969,16 +14969,16 @@
   "borrada": true
  },
  "1f8plkr": {
-  "archivo": "fotos-notas/vdepn2.jpg",
   "medio": "Diario La Vanguardia",
-  "credito": "Foto: Diario La Vanguardia",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Cementerio Municipal actualiza sus horarios desde el 26 de octubre",
   "enlace": "https://www.diariolavanguardia.com/noticias/45092-el-cementerio-de-balcarce-tendra-nuevos-horarios-desde-el-26-de-octubre/",
   "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66059.png",
   "razon": "Es la única foto disponible, tiene buen encuadre del Cementerio Municipal, sin marcas ni menores.",
-  "cuando": "2026-10-15T21:06:23.271Z"
+  "cuando": "2026-10-15T21:06:23.271Z",
+  "intentado": true,
+  "borrada": true
  },
  "1kppi96": {
   "archivo": "fotos-notas/1kppi96.jpg",
@@ -15550,5 +15550,17 @@
   "cuando": "2026-10-16T06:04:33.548Z",
   "intentos": 3,
   "fuentes": 4
+ },
+ "1bw93m4": {
+  "archivo": "fotos-notas/1bw93m4.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Suteba Balcarce alcanza un noventa por ciento de adhesión al paro",
+  "enlace": "https://www.diariolavanguardia.com/noticias/45095-paro-y-movilizacion-suteba-balcarce-se-sumo-al-reclamo-nacional-en-defensa-de-la-educacion-publica/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66062.png",
+  "razon": "Es la única opción disponible y muestra claramente el contexto de la protesta con banderas y remeras sindicales, sin marcas de agua ni menores de edad.",
+  "cuando": "2026-10-16T06:31:45.828Z"
  }
 }
