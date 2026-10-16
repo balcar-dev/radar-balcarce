@@ -37,14 +37,20 @@ function notasDelSitio() {
 async function promptDeImagen(nota) {
   const instruccion = `${PROMPT_DE_HERNAN}\n\nTu salida NO es la imagen: es el PROMPT para un generador de imágenes (FLUX), escrito en INGLÉS, de 50 a 80 palabras, en una sola línea, que describa esa foto cumpliendo los requisitos de arriba (empezá por «Candid photojournalistic close-up still life of…», incluí «no people, no text, no logos» y la luz). Respondé SOLO con el prompt.\n\nNota:\n${nota.titulo}\n\n${nota.cuerpo}`;
   if (process.env.MOSTRAR_PEDIDO) console.log(['--- PEDIDO COMPLETO A GEMINI ---', instruccion, '--- FIN DEL PEDIDO ---'].join(String.fromCharCode(10)));
-  const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-lite-latest:generateContent', {
-    method: 'POST', headers: { 'x-goog-api-key': gemini, 'content-type': 'application/json' },
-    body: JSON.stringify({ contents: [{ parts: [{ text: instruccion }] }] }), signal: AbortSignal.timeout(60_000),
-  });
-  const j = await r.json().catch(() => null);
-  const t = j?.candidates?.[0]?.content?.parts?.[0]?.text;
-  if (r.status !== 200 || !t) throw new Error(`Gemini HTTP ${r.status}`);
-  return t.replace(/\s+/g, ' ').trim().slice(0, 690);
+  // Gemini a veces contesta 503 (saturado): hasta 4 intentos, con una pausa que crece, y probando también el modelo flash normal.
+  let ultimo = 0;
+  for (const [intento, modelo] of [['1', 'gemini-flash-lite-latest'], ['2', 'gemini-flash-lite-latest'], ['3', 'gemini-flash-latest'], ['4', 'gemini-flash-latest']]) {
+    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`, {
+      method: 'POST', headers: { 'x-goog-api-key': gemini, 'content-type': 'application/json' },
+      body: JSON.stringify({ contents: [{ parts: [{ text: instruccion }] }] }), signal: AbortSignal.timeout(60_000),
+    });
+    ultimo = r.status;
+    const j = await r.json().catch(() => null);
+    const t = j?.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (r.status === 200 && t) return t.replace(/\s+/g, ' ').trim().slice(0, 690);
+    await new Promise((ok) => { setTimeout(ok, 4000 * Number(intento)); });
+  }
+  throw new Error(`Gemini HTTP ${ultimo}`);
 }
 
 // Con NOTA_ID se usa esa nota del sitio (título + cuerpo ENTERO) en lugar de las de ejemplo.
