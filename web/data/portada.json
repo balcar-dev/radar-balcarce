@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T05:33:59.679Z",
+  "generado": "2026-10-16T06:01:32.340Z",
   "notas": [
     {
       "id": "ddz0um",
@@ -2871,7 +2871,6 @@
       "guion": "Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027",
       "seccion": "Automovilismo",
       "medios": [
-        "Campeones",
         "Motorsport",
         "La Nación",
         "Infobae",
@@ -2887,6 +2886,7 @@
         "Minuto Uno",
         "La Capital (Rosario)",
         "Los Andes (Mendoza)",
+        "Campeones",
         "Clarín",
         "La Gaceta (Tucumán)",
         "El Gráfico"
@@ -3617,7 +3617,6 @@
         "La Nación",
         "Infobae",
         "Clarín",
-        "TN (Todo Noticias)",
         "Página/12",
         "El Cronista",
         "iProfesional"
@@ -3751,80 +3750,6 @@
       "foto": {
         "archivo": "fotos-notas/1ge6irq.jpg",
         "credito": "Foto: Acción 5 (Balcarce)"
-      }
-    },
-    {
-      "id": "1qu6ie7",
-      "titulo": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
-      "copete": "El informe climático para la próxima semana anticipa registros pluviométricos modestos en gran parte del país y mínimas inferiores a 10 grados en el este bonaerense.",
-      "cuerpo": "La Bolsa de Cereales de Buenos Aires difundió el pronóstico para el período del 15 al 21 de octubre, que anticipa precipitaciones escasas en la mayor parte de la región agrícola, con la excepción del extremo norte. Según el informe, la entrada de aire marítimo mantendrá las temperaturas mínimas por debajo de los valores habituales, mientras que el este de Buenos Aires registrará marcas inferiores a 10 grados con leve riesgo de heladas localizadas. Hacia el final del periodo, el regreso de vientos tropicales provocará un ascenso térmico generalizado, aunque el sur de la Región Pampeana y la Costa Atlántica se mantendrán con máximas por debajo de los 20 grados debido a la circulación marina.",
-      "guion": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
-      "seccion": "Agro",
-      "medios": [
-        "Agrositio",
-        "Noticias Agropecuarias"
-      ],
-      "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T17:34:56.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T19:32:01.897Z",
-      "relevancia": 28,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Pronóstico vigente del 15 al 21 de octubre.",
-        "Lluvias escasas en la mayor parte del país.",
-        "Mínimas menores a 10 grados en el este bonaerense."
-      ],
-      "seSabe": [
-        "La Bolsa de Cereales de Buenos Aires informó el pronóstico para la próxima semana.",
-        "Habrá precipitaciones escasas en la mayor parte del área agrícola.",
-        "El este de Buenos Aires registrará mínimas menores a 10 grados."
-      ],
-      "textoRedes": "El informe climático para la próxima semana anticipa lluvias escasas en gran parte del país y temperaturas mínimas inferiores a 10 grados en el este de Buenos Aires.",
-      "etiquetas": [
-        "Clima",
-        "Bolsa de Cereales",
-        "Lluvias",
-        "Temperaturas"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
-          "fecha": "2026-10-14T17:34:56.000Z",
-          "oficial": false,
-          "aporte": "Detalló los registros de precipitaciones, temperaturas mínimas y máximas por región según el informe de la Bolsa de Cereales."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/10/14/la-region-agricola-recibira-lluvias-escasas-durante-los-proximos-dias-excepto-en-el-extremo-norte/",
-          "fecha": "2026-10-14T19:09:51.000Z",
-          "oficial": false,
-          "aporte": "Informó que se esperan lluvias escasas en la mayor parte de la región agrícola para el período del 15 al 21 de octubre."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "vqv317",
-          "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
-          "fecha": "2026-10-05T11:23:01.000Z",
-          "ruta": "/nota/el-clima-muestra-cielo-nublado-y-posibles-lluvias-debiles-vqv317"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "pronostican-lluvias-escasas-y-marcada-amplitud-termica-en-el-area",
-      "foto": {
-        "archivo": "fotos-notas/1qu6ie7.jpg",
-        "credito": "Foto: Agrositio"
       }
     }
   ],
