@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T08:01:31.861Z",
+  "generado": "2026-10-16T08:08:29.669Z",
   "notas": [
     {
       "id": "al99go",
@@ -2335,7 +2335,6 @@
         "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
         "El Día",
-        "La Nueva",
         "0221",
         "La Brújula 24",
         "La Tecla",
@@ -2354,6 +2353,7 @@
         "Clarín",
         "0223 (Mar del Plata)",
         "NDEN – Noticias de Necochea",
+        "La Nueva",
         "La Noticia 1",
         "A24"
       ],
@@ -3315,8 +3315,8 @@
     "ahora": {
       "temp": 5,
       "sensacion": 2,
-      "humedad": 96,
-      "viento": 14,
+      "humedad": 99,
+      "viento": 13,
       "rumbo": "S",
       "cielo": "Despejado",
       "esDeDia": false
@@ -3326,10 +3326,10 @@
         "fecha": "2026-10-16",
         "dia": "vie",
         "max": 12,
-        "min": 5,
+        "min": 6,
         "lluvia": 16,
         "codigo": 51,
-        "viento": 20,
+        "viento": 19,
         "milimetros": 1,
         "cielo": "Llovizna leve"
       },
@@ -3340,7 +3340,7 @@
         "min": 7,
         "lluvia": 8,
         "codigo": 51,
-        "viento": 19,
+        "viento": 20,
         "milimetros": 1,
         "cielo": "Llovizna leve"
       },
@@ -3351,7 +3351,7 @@
         "min": 5,
         "lluvia": 12,
         "codigo": 51,
-        "viento": 13,
+        "viento": 16,
         "milimetros": 0,
         "cielo": "Llovizna leve"
       },
@@ -3359,10 +3359,10 @@
         "fecha": "2026-10-19",
         "dia": "lun",
         "max": 15,
-        "min": 3,
+        "min": 4,
         "lluvia": 0,
         "codigo": 3,
-        "viento": 15,
+        "viento": 13,
         "milimetros": 0,
         "cielo": "Nublado"
       }
