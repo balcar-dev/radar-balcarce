@@ -127,7 +127,36 @@ export const LIMITES = {
   horasEntreAvisosDeRedesApagadas: 24, // el recordatorio de "redes apagadas": una vez por día
   minimoDeNotasConCuerpo: 0.35, // de las últimas 24 horas; con 10 notas o más
   horaDelResumen: 21,
+  horasSinArchivar: 6,          // el archivo permanente corre en cada despliegue (cada 30 minutos)
+  horasSinArchivarAlta: 24,     // las notas tienen ~4 días de margen antes de salir del sitio
 };
+
+/** Dónde muestra el Worker del archivo permanente el estado de su última corrida (infra/archivo-cloudflare/, 16/10/2026). */
+export const ESTADO_DEL_ARCHIVO = 'https://radar-balcarce-archivo.radarbalcarce.workers.dev/_archivo/estado';
+
+/**
+ * Lo que está mal en el archivo permanente (16/10/2026), según su estado.json (`obs` = { http, estado } o null si el archivo no está
+ * prendido: sin la variable R2_ARCHIVO no se mira nada). Si deja de correr o falla, las notas viejas se pueden perder cuando salgan del
+ * sitio, y lo retirado (menores, víctimas) podría no haberse borrado del archivo.
+ */
+export function problemasDelArchivoR2(obs, ahora = new Date()) {
+  if (!obs) return [];
+  const paso = 'el paso "Archivar las notas por salir (R2)" del workflow "Cloudflare Pages" en GitHub Actions';
+  const e = obs.estado;
+  if (!e || typeof e !== 'object' || !e.cuando) {
+    return [{ clave: 'archivo-r2-sin-estado', nivel: 'media', texto: `No pude leer el estado del archivo permanente (HTTP ${obs.http || 'sin respuesta'} en ${ESTADO_DEL_ARCHIVO}). Con la variable R2_ARCHIVO puesta, el Worker radar-balcarce-archivo tiene que contestar: revisá Cloudflare → Workers y ${paso}.` }];
+  }
+  const problemas = [];
+  const horas = (ahora.getTime() - new Date(e.cuando).getTime()) / 3600e3;
+  if (Number.isFinite(horas) && horas > LIMITES.horasSinArchivar) {
+    problemas.push({ clave: 'archivo-r2-atrasado', nivel: horas > LIMITES.horasSinArchivarAlta ? 'alta' : 'media', texto: `El archivo permanente no corre hace ${Math.round(horas)} horas (tendría que correr en cada despliegue, cada media hora). Las notas tienen unos días de margen antes de salir del sitio, pero si sigue así se pierden páginas viejas. Mirá ${paso}.` });
+  }
+  if (e.ok === false) {
+    const soloTiempo = /se acabó el tiempo/.test(String(e.motivo ?? '')) && !e.fallidos;
+    problemas.push({ clave: 'archivo-r2-fallo', nivel: soloTiempo ? 'media' : 'alta', texto: `La última corrida del archivo permanente salió mal${e.motivo ? ` (${String(e.motivo).slice(0, 160)})` : ''}${e.fallidos ? `: ${e.fallidos} objeto(s) no se pudieron subir o borrar` : ''}. El sitio se publica igual, pero lo que está por salir puede no estar guardado y lo retirado puede no haberse borrado de R2. Mirá ${paso}.` });
+  }
+  return problemas;
+}
 
 /**
  * Cosas que vencen en una fecha conocida y hay que renovar a mano. El aviso
@@ -274,7 +303,7 @@ export function lecturaWebFallando(puntos = []) {
 
 export function evaluar({
   ahora, web, www = null, corridas = {}, libro = {}, contenido = null, auditoria = null, contrato = null,
-  redesActivas = true, claves = [], voces = null, copiasEnInstagram = [], efemerides = null, puntosWeb = null,
+  redesActivas = true, claves = [], voces = null, copiasEnInstagram = [], efemerides = null, puntosWeb = null, archivoR2 = null,
 }) {
   const problemas = [];
   const de = (clave, nivel, texto) => problemas.push({ clave, nivel, texto });
@@ -311,6 +340,9 @@ export function evaluar({
       de('pocos-cuerpos', 'media', `Sólo ${conCuerpo} de ${total} notas de las últimas 24 horas tienen cuerpo. Miré la reescritura en "Actualizar la web" (clave de Gemini, cuota, verificador).`);
     }
   }
+
+  // --- el archivo permanente en R2 (16/10/2026): que corra y que no falle
+  for (const p of problemasDelArchivoR2(archivoR2, ahora)) de(p.clave, p.nivel, p.texto);
 
   // --- "Un día como hoy" y las fijas de participá: que no se acaben sin aviso (C-17)
   if (efemerides) for (const a of avisosDeEfemerides({ ahora, ...efemerides })) de(a.clave, a.nivel, a.texto);
@@ -746,7 +778,16 @@ export async function observar({ sitio, repo, token, ahora = new Date(), env = p
     } catch { /* sin datos */ }
   }
   const { claves, voces } = await revisarClaves({ env });
+  // El archivo permanente, sólo si está prendido (variable R2_ARCHIVO): su Worker muestra el estado de la última corrida.
+  let archivoR2 = null;
+  if (String(env.R2_ARCHIVO ?? '').trim()) {
+    const r = await pedir(String(env.ARCHIVO_ESTADO_URL ?? '').trim() || ESTADO_DEL_ARCHIVO, { headers: { 'cache-control': 'no-cache' } });
+    let estado = null;
+    try { estado = r?.ok ? await r.json() : null; } catch { estado = null; }
+    archivoR2 = { http: r?.status ?? 0, estado };
+  }
   return {
+    archivoR2,
     copiasEnInstagram,
     ahora,
     web: { estado: inicio?.status ?? 0, actualizado: portada?.ok ? actualizado : null },
@@ -808,6 +849,10 @@ ${c.texto}`);
     process.exit(0);
   }
 
+  // Lo que tiene página: en el sitio (Cloudflare Pages, con su tope de archivos) y, aparte, en el archivo permanente (R2, sin tope).
+  const enElSitio = (leer(path.join(RAIZ, 'web', 'data', 'archivo.json'), { notas: [] }).notas ?? []).length;
+  const r2 = obs.archivoR2?.estado;
+  console.log(`  Notas con página: ${enElSitio} en el sitio${r2 ? ` · ${r2.notas ?? '?'} guardadas en el archivo permanente (R2; última corrida ${r2.cuando}, ${r2.ok ? 'bien' : 'con problemas'})` : obs.archivoR2 ? ' · archivo permanente: sin estado' : ' · archivo permanente: apagado (sin R2_ARCHIVO)'}.`);
   console.log(`  ${problemas.length ? `${problemas.length} problema(s):` : 'Todo en orden.'}`);
   for (const p of problemas) console.log(`   [${p.nivel}] ${p.texto}`);
 

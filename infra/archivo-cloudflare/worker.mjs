@@ -26,6 +26,10 @@
 //   CACHE_SEGUNDOS     cuánto guarda Cloudflare una nota archivada (3600 = 1 hora; es lo que tarda en desaparecer una nota retirada).
 //   FOTOS_DE_RESPALDO  "1" sirve también /fotos-notas/* desde R2 si Pages no la tiene.
 //   ARCHIVO_PRIMERO    "1" mira R2 ANTES que el sitio. Sólo para el ensayo en workers.dev; en producción tiene que ser "0".
+//
+// Además (16/10/2026): GET /_archivo/estado devuelve estado.json, el resumen de la última corrida del exportador (lo mira el vigilante; sólo
+// se llega por workers.dev, porque la ruta del sitio es /nota/*). Y una nota guardada en la caché se confirma contra R2 (`head`, sin bajarla)
+// antes de servirla: lo que se borra de R2 deja de verse en el pedido siguiente.
 
 export const PREFIJO_DE_NOTAS = 'nota/';
 export const PREFIJO_DE_FOTOS = 'fotos-notas/';
@@ -143,6 +147,25 @@ async function respuestaDelObjeto(request, ruta, objeto, env) {
   return new Response(metodo === 'HEAD' ? null : objeto.body, { status: 200, headers: cabeceras(base) });
 }
 
+/** El camino donde el Worker muestra el estado del archivo (sólo responde en su dirección de workers.dev: la ruta del sitio es /nota/*). */
+export const CAMINO_DEL_ESTADO = '/_archivo/estado';
+export const CLAVE_DEL_ESTADO = 'estado.json';
+
+function esPedidoDeEstado(request) {
+  try { return new URL(request.url).pathname === CAMINO_DEL_ESTADO; } catch { return false; }
+}
+
+async function estadoDelArchivo(env, metodo) {
+  const base = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'X-Radar-Archivo': 'estado' };
+  let objeto = null;
+  try { objeto = await env.ARCHIVO.get(CLAVE_DEL_ESTADO); } catch {
+    return new Response(JSON.stringify({ ok: false, error: 'no se pudo leer R2' }), { status: 503, headers: cabeceras(base) });
+  }
+  if (!objeto) return new Response(JSON.stringify({ ok: false, error: 'todavía no hay estado (el exportador no corrió)' }), { status: 404, headers: cabeceras(base) });
+  const texto = await objeto.text();
+  return new Response(metodo === 'HEAD' ? null : texto, { status: 200, headers: cabeceras(base) });
+}
+
 /**
  * Atiende un pedido. `fetchFn` y `cache` se pueden reemplazar para probar sin red; en Cloudflare son `fetch` y `caches.default`.
  * Nunca lanza: cualquier falla propia termina devolviendo lo que habría devuelto el sitio solo.
@@ -154,14 +177,22 @@ export async function manejar(request, env, ctx, { fetchFn = (r) => fetch(r), ca
   if (!apagado && (metodo === 'GET' || metodo === 'HEAD')) {
     try { ruta = analizarRuta(new URL(request.url).pathname, { fotos: String(env?.FOTOS_DE_RESPALDO ?? '') === '1' }); } catch { ruta = null; }
   }
+  // El estado de la última corrida del exportador (estado.json, chico y sin nada secreto): lo mira el vigilante. Nunca el manifiesto.
+  if (!apagado && env?.ARCHIVO && (metodo === 'GET' || metodo === 'HEAD') && esPedidoDeEstado(request)) return estadoDelArchivo(env, metodo);
   if (!ruta || !env?.ARCHIVO) return fetchFn(request); // tubo: no es del archivo (o no hay depósito conectado)
 
-  // Una nota archivada ya vista hace poco: sin preguntar a nadie.
+  // Una nota archivada ya vista hace poco: sin bajarla de nuevo de R2, pero preguntando si SIGUE ahí (16/10/2026): una nota retirada
+  // (borrada de R2) deja de verse en el próximo pedido, no una hora después. Si R2 no contesta, se sirve lo guardado.
   const llaveDeCache = new Request(new URL(ruta.camino, request.url).toString(), { method: 'GET' });
   if (cache && metodo === 'GET') {
     try {
       const guardada = await cache.match(llaveDeCache);
-      if (guardada) return guardada;
+      if (guardada) {
+        let sigue = true;
+        try { sigue = Boolean(await env.ARCHIVO.head(ruta.clave)); } catch { sigue = true; }
+        if (sigue) return guardada;
+        try { await cache.delete(llaveDeCache); } catch { /* se va sola con el tiempo */ }
+      }
     } catch { /* la caché es un lujo */ }
   }
 

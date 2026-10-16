@@ -64,3 +64,5 @@ jobs:
           VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
           # Si las redes están apagadas, el informe lo dice en vez de contar piezas que faltan.
           REDES_ACTIVAS: ${{ vars.REDES_ACTIVAS }}
+          # Con el archivo permanente prendido (16/10/2026), llegar al tope de notas no es un problema: el informe no avisa por eso.
+          R2_ARCHIVO: ${{ vars.R2_ARCHIVO }}

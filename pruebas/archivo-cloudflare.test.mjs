@@ -14,8 +14,15 @@ const pagina = (canonica = `https://radarbalcarce.com${RUTA}`) => `<!DOCTYPE htm
 /** Un R2 de mentira: sólo lee. Cuenta cuántas veces lo consultaron. */
 function r2(objetos = {}, { falla = false } = {}) {
   const consultas = [];
+  const cabezas = [];
   return {
     consultas,
+    cabezas,
+    async head(clave) {
+      cabezas.push(clave);
+      if (falla) throw new Error('R2 caído');
+      return objetos[clave] === undefined ? null : { httpEtag: '"abc"' };
+    },
     async get(clave) {
       consultas.push(clave);
       if (falla) throw new Error('R2 caído');
@@ -238,6 +245,50 @@ test('la caché de Cloudflare: la segunda vez no pregunta ni al sitio ni a R2; s
   assert.equal(guardado.size, 0);
 });
 
+test('una nota retirada (borrada de R2) deja de verse en el pedido siguiente aunque esté en la caché (no una hora después)', async () => {
+  const guardado = new Map();
+  const cache = { async match(k) { return guardado.get(k.url)?.clone(); }, async put(k, r) { guardado.set(k.url, r); }, async delete(k) { return guardado.delete(k.url); } };
+  const objetos = { 'nota/1abc2de.html': pagina() };
+  const deposito = r2(objetos);
+  const s = sitio(new Response('no está', { status: 404 }));
+  assert.equal((await manejar(pedir(RUTA), { ARCHIVO: deposito }, ctx, { fetchFn: s.fetchFn, cache })).status, 200);
+  assert.equal(guardado.size, 1);
+  // de la caché, confirmando contra R2 con un head (sin bajar la página)
+  assert.equal((await manejar(pedir(RUTA), { ARCHIVO: deposito }, ctx, { fetchFn: s.fetchFn, cache })).status, 200);
+  assert.deepEqual(deposito.cabezas, ['nota/1abc2de.html']);
+  // se borra de R2 (el exportador con --borrar o --quitar): el próximo pedido ya da el 404 del sitio y la caché se limpia
+  delete objetos['nota/1abc2de.html'];
+  const despues = await manejar(pedir(RUTA), { ARCHIVO: deposito }, ctx, { fetchFn: s.fetchFn, cache });
+  assert.equal(despues.status, 404);
+  assert.equal(guardado.size, 0);
+  // si R2 no contesta el head, se sirve lo guardado (no se rompe nada)
+  const otro = r2({ 'nota/1abc2de.html': pagina() });
+  await manejar(pedir(RUTA), { ARCHIVO: otro }, ctx, { fetchFn: s.fetchFn, cache });
+  const caido = { ...otro, async head() { throw new Error('R2 caído'); } };
+  assert.equal((await manejar(pedir(RUTA), { ARCHIVO: caido }, ctx, { fetchFn: s.fetchFn, cache })).status, 200);
+});
+
+test('/_archivo/estado: el resumen de la última corrida (nunca el manifiesto), sin caché; sin estado, 404', async () => {
+  const estado = JSON.stringify({ version: 1, cuando: '2026-10-16T12:00:00.000Z', ok: true, notas: 1130 });
+  const s = sitio(new Response('del sitio', { status: 200 }));
+  const r = await manejar(pedir('/_archivo/estado'), { ARCHIVO: r2({ 'estado.json': estado, 'manifiesto.json': '{"notas":{}}' }) }, ctx, { fetchFn: s.fetchFn, ...sinCache });
+  assert.equal(r.status, 200);
+  assert.equal(await r.text(), estado);
+  assert.equal(r.headers.get('cache-control'), 'no-store');
+  assert.match(r.headers.get('content-type'), /application\/json/);
+  assert.equal(s.pedidos.length, 0);
+  assert.equal((await manejar(pedir('/_archivo/estado'), { ARCHIVO: r2({}) }, ctx, { fetchFn: s.fetchFn, ...sinCache })).status, 404);
+  assert.equal((await manejar(pedir('/_archivo/estado'), { ARCHIVO: r2({}, { falla: true }) }, ctx, { fetchFn: s.fetchFn, ...sinCache })).status, 503);
+  // el manifiesto no se sirve por ningún camino
+  for (const camino of ['/manifiesto.json', '/nota/manifiesto.json', '/_archivo/manifiesto', '/_archivo/estado/../manifiesto.json']) {
+    const x = await manejar(pedir(camino), { ARCHIVO: r2({ 'manifiesto.json': '{"notas":{}}' }) }, ctx, { fetchFn: s.fetchFn, ...sinCache });
+    assert.equal(await x.text(), 'del sitio', camino);
+  }
+  // apagado, ni el estado
+  const apagado = await manejar(pedir('/_archivo/estado'), { ARCHIVO: r2({ 'estado.json': estado }), ARCHIVO_ACTIVO: '0' }, ctx, { fetchFn: s.fetchFn, ...sinCache });
+  assert.equal(await apagado.text(), 'del sitio');
+});
+
 test('CACHE_SEGUNDOS manda sobre el tiempo de caché (lo que tarda en desaparecer una nota retirada)', async () => {
   const s = sitio(new Response('404', { status: 404 }));
   const r = await manejar(pedir(RUTA), { ARCHIVO: r2({ 'nota/1abc2de.html': pagina() }), CACHE_SEGUNDOS: '60' }, ctx, { fetchFn: s.fetchFn, ...sinCache });
@@ -303,6 +354,10 @@ test('wrangler.toml: la producción no tiene ruta activa, el ensayo vive aparte 
   assert.match(produccion, /ARCHIVO_PRIMERO = "0"/);
   assert.match(ensayo, /ARCHIVO_PRIMERO = "1"/);
   assert.match(produccion, /ARCHIVO_ACTIVO = "1"/);
+  // producción vive en workers.dev (para probarla antes de la ruta y para /_archivo/estado); la ruta la maneja ruta.mjs, no este archivo
+  assert.match(produccion, /^name = "radar-balcarce-archivo"\s*$/m);
+  assert.match(produccion, /^workers_dev = true\s*$/m);
+  assert.match(produccion, /bucket_name = "radar-archivo"/);
 });
 
 test('el workflow de staging es sólo a mano, con wrangler fijo, y nunca toca el depósito de respaldos ni usa --produccion', () => {

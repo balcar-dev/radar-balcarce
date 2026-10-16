@@ -147,6 +147,11 @@ jobs:
           # Sólo para contarle al panel del celular si las redes están prendidas
           # (celular-estado.json, 29/09). Acá no se publica nada en las redes.
           REDES_ACTIVAS: ${{ vars.REDES_ACTIVAS }}
+          # El tope de notas con página (16/10/2026, archivo permanente). Vacías = como siempre (MAXIMO_EN_ARCHIVO, 3.700). TOPE_DE_NOTAS sólo
+          # BAJA el tope, y sólo con el archivo permanente prendido (R2_ARCHIVO): ver web/lib/archivo.js (topeDeNotas) y la guía
+          # docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md, paso 7.
+          TOPE_DE_NOTAS: ${{ vars.TOPE_DE_NOTAS }}
+          R2_ARCHIVO: ${{ vars.R2_ARCHIVO }}
 
       # El sitio se compila acá antes de publicar. Si no, un cambio que
       # rompía Next se descubría recién cuando fallaba el despliegue — con la

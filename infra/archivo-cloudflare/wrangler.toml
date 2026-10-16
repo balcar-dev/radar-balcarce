@@ -1,21 +1,25 @@
 # El archivo permanente de Radar Balcarce en Cloudflare (ver worker.mjs y docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md).
 #
-# ESTADO (15/10/2026): sólo existe el entorno "staging", que se sube a mano con el workflow "Archivo permanente (staging)" y vive en
-# workers.dev, SIN ninguna ruta de radarbalcarce.com. El entorno de producción está escrito pero NO tiene `routes`: mientras no se agreguen
-# (paso 5 de la guía de activación), subirlo no cambia nada del sitio.
+# ESTADO (16/10/2026): el ensayo ("staging") anduvo el 16/10. La producción la sube SÓLO el workflow "Archivo permanente (producción)"
+# (archivo-produccion.yml), y vive en su dirección de workers.dev (https://radar-balcarce-archivo.radarbalcarce.workers.dev), SIN ninguna
+# ruta de radarbalcarce.com: mientras no tenga ruta, subirlo no cambia nada del sitio.
+#
+# LA RUTA (radarbalcarce.com/nota/*) NO va en este archivo: la pone y la saca infra/archivo-cloudflare/ruta.mjs (desde ese mismo workflow:
+# activar_ruta / sacar_ruta), así volver a subir el Worker nunca pone ni saca la ruta sin querer.
 
 name = "radar-balcarce-archivo"
 main = "worker.mjs"
 compatibility_date = "2026-10-01"
-workers_dev = false
+# La dirección de workers.dev queda prendida: sirve para probarlo antes de poner la ruta y para que el vigilante lea /_archivo/estado.
+workers_dev = true
 
-# Para activarlo (sólo cuando la guía lo diga): descomentar y subir. Con el Worker delante, cada pedido a /nota/* pasa por acá primero.
-# OJO: tiene que quedar acá arriba, antes de la primera tabla ([[r2_buckets]]); más abajo TOML lo tomaría como parte de otra tabla.
+# NO descomentar: la ruta la maneja ruta.mjs (ver arriba). Queda escrita sólo como referencia de cómo sería.
+# OJO: tendría que quedar acá arriba, antes de la primera tabla ([[r2_buckets]]); más abajo TOML la tomaría como parte de otra tabla.
 # routes = [
 #   { pattern = "radarbalcarce.com/nota/*", zone_name = "radarbalcarce.com" },
 # ]
 
-# Producción (todavía sin activar). El depósito se crea a mano en Cloudflare → R2 (privado, sin acceso público).
+# Producción. El depósito es privado (sin acceso público ni dominio); lo crea el workflow de producción si no existe.
 [[r2_buckets]]
 binding = "ARCHIVO"
 bucket_name = "radar-archivo"
@@ -23,7 +27,9 @@ bucket_name = "radar-archivo"
 [vars]
 ORIGEN_PAGES = "https://radar-balcarce.pages.dev"
 CACHE_SEGUNDOS = "3600"
-FOTOS_DE_RESPALDO = "0"
+# Prendido, pero sólo actúa si se pone la ruta de las fotos (radarbalcarce.com/fotos-notas/*, ruta.mjs poner fotos): sin esa ruta, ningún
+# pedido de una foto del sitio pasa por acá. Con la ruta, el sitio manda y R2 sólo cubre las fotos que el sitio ya borró.
+FOTOS_DE_RESPALDO = "1"
 ARCHIVO_ACTIVO = "1"
 ARCHIVO_PRIMERO = "0"
 

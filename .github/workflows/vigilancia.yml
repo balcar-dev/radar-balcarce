@@ -96,6 +96,8 @@ jobs:
           # Si las redes están apagadas, que el vigilante lo sepa: es esperable que
           # no salga nada y no tiene que avisar pieza por pieza.
           REDES_ACTIVAS: ${{ vars.REDES_ACTIVAS }}
+          # Con el archivo permanente prendido (16/10/2026), se mira el estado de su última corrida (redes/vigilar.mjs, problemasDelArchivoR2).
+          R2_ARCHIVO: ${{ vars.R2_ARCHIVO }}
 
       - name: Guardar lo avisado y lo medido
         if: always() && github.event.inputs.modo != 'probar-resumen' && github.event.inputs.modo != 'probar-cierre'

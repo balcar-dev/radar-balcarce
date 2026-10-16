@@ -1,0 +1,218 @@
+name: Archivo permanente (producción)
+
+# El archivo permanente de verdad (16/10/2026; guía con los pasos exactos: docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md, § 5).
+# SÓLO a mano. Hace una de tres cosas, según lo que se tilde:
+#
+#   · VUELTA ATRÁS (sacar_ruta): saca las rutas del archivo (radarbalcarce.com/nota/* y, si estaba, /fotos-notas/*) y nada más. En un
+#     minuto el sitio responde solo, como antes.
+#   · QUITAR (quitar_ids): saca YA del depósito esas notas (menores, víctimas), con su foto. No compila nada. Además hay que sumarlas a
+#     web/data/retiradas.json, si no el despliegue las vuelve a archivar mientras sigan en el sitio.
+#   · Lo normal (sin esas dos): crea el depósito PRIVADO radar-archivo si no existe (nunca el de respaldos ni el de fotos), sube el Worker
+#     radar-balcarce-archivo SIN ruta del sitio (sólo su dirección de workers.dev), si se pide compila el sitio y sube TODAS sus notas
+#     (sólo lo que falta o cambió), y comprueba el Worker en workers.dev. Sólo si se tilda activar_ruta (apagado por defecto) y todo dio
+#     bien, pone la ruta radarbalcarce.com/nota/* (y, con activar_fotos, también radarbalcarce.com/fotos-notas/*) y comprueba el sitio;
+#     si el sitio no da, las saca solas.
+#
+# No commitea nada. Mientras la variable de GitHub R2_ARCHIVO no exista, el despliegue de cada media hora (cloudflare-deploy.yml) no archiva
+# nada: esta carga es la primera y se hace ANTES de crear esa variable.
+#
+# Hace falta (los pega una persona, nunca en un chat):
+#   secreto  CLOUDFLARE_API_TOKEN   con "Workers Scripts: Edit" y "Workers R2 Storage: Edit" (como el del ensayo) y, sólo para la ruta,
+#                                   "Zone → Workers Routes: Edit" y "Zone → Zone: Read" (o la variable CLOUDFLARE_ZONE_ID)
+#   secreto  CLOUDFLARE_ACCOUNT_ID
+#   variables R2_RESPALDOS, R2_FOTOS y R2_PIEZAS (si existen): sólo para que el exportador se niegue a escribir ahí
+
+on:
+  workflow_dispatch:
+    inputs:
+      sacar_ruta:
+        description: 'VUELTA ATRÁS: sacar las rutas del archivo (radarbalcarce.com/nota/* y /fotos-notas/*); no hace nada más, tarda un minuto'
+        type: boolean
+        default: false
+      quitar_ids:
+        description: 'Sacar YA del depósito estas notas (ids separados por comas). Vacío = nada'
+        type: string
+        default: ''
+      cargar_notas:
+        description: 'Compilar el sitio y subir TODAS sus notas al depósito radar-archivo (sólo lo que falta o cambió)'
+        type: boolean
+        default: true
+      activar_ruta:
+        description: 'Poner la ruta radarbalcarce.com/nota/* (ES EL CAMBIO QUE VE EL LECTOR). Sólo si las comprobaciones dan bien'
+        type: boolean
+        default: false
+      activar_fotos:
+        description: 'Con activar_ruta: poner también la ruta de las fotos radarbalcarce.com/fotos-notas/* (hace falta cuando las notas archivadas ya no tengan su foto en el sitio)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: archivo-produccion
+  cancel-in-progress: false
+
+jobs:
+  produccion:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 80
+    env:
+      TZ: America/Argentina/Buenos_Aires
+      DEPOSITO: radar-archivo
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_ZONE_ID: ${{ vars.CLOUDFLARE_ZONE_ID }}
+      R2_RESPALDOS: ${{ vars.R2_RESPALDOS }}
+      R2_FOTOS: ${{ vars.R2_FOTOS }}
+      R2_PIEZAS: ${{ vars.R2_PIEZAS }}
+      CON_FOTOS: ${{ inputs.activar_fotos }}
+      QUITAR_IDS: ${{ inputs.quitar_ids }}
+      # Lo normal = ni vuelta atrás ni quitar.
+      NORMAL: ${{ !inputs.sacar_ruta && inputs.quitar_ids == '' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # ---------------------------------------------------------------- VUELTA ATRÁS (va primero y sola)
+      - name: VUELTA ATRÁS - sacar la ruta radarbalcarce.com/nota/*
+        if: ${{ inputs.sacar_ruta }}
+        run: |
+          set -o pipefail
+          node infra/archivo-cloudflare/ruta.mjs sacar | tee -a "$GITHUB_STEP_SUMMARY"
+
+      # ---------------------------------------------------------------- lo de siempre
+      - name: Pruebas del archivo permanente
+        if: ${{ !inputs.sacar_ruta }}
+        run: node --test pruebas/archivo-cloudflare.test.mjs pruebas/archivar-a-r2.test.mjs pruebas/archivo-produccion.test.mjs
+
+      - name: Comprobar que el depósito no es el de respaldos ni el de fotos
+        if: ${{ !inputs.sacar_ruta }}
+        run: |
+          case "$DEPOSITO" in *respaldo*|*backup*|*fotos*|*piezas*) echo "El depósito $DEPOSITO parece de respaldos, de fotos o de piezas: no se toca."; exit 1;; esac
+          if [ -n "$R2_RESPALDOS" ] && [ "$DEPOSITO" = "$R2_RESPALDOS" ]; then echo "$DEPOSITO es el depósito de respaldos: no se toca."; exit 1; fi
+          if [ -n "$R2_FOTOS" ] && [ "$DEPOSITO" = "$R2_FOTOS" ]; then echo "$DEPOSITO es el depósito de fotos: no se toca."; exit 1; fi
+          if [ -n "$R2_PIEZAS" ] && [ "$DEPOSITO" = "$R2_PIEZAS" ]; then echo "$DEPOSITO es el depósito de las piezas de las redes: no se toca."; exit 1; fi
+          echo "Depósito: $DEPOSITO"
+
+      # ---------------------------------------------------------------- QUITAR notas del depósito (menores, víctimas)
+      - name: QUITAR del depósito las notas pedidas
+        if: ${{ !inputs.sacar_ruta && inputs.quitar_ids != '' }}
+        run: |
+          set -o pipefail
+          node web/scripts/archivar-a-r2.mjs --quitar="$QUITAR_IDS" --bucket="$DEPOSITO" --produccion | tee -a "$GITHUB_STEP_SUMMARY"
+
+      # ---------------------------------------------------------------- lo normal
+      - name: Crear el depósito privado si no existe
+        if: ${{ env.NORMAL == 'true' }}
+        run: |
+          if npx --yes wrangler@4.139.0 r2 bucket list | grep -q "name:[[:space:]]*$DEPOSITO\$"; then
+            echo "El depósito $DEPOSITO ya existe."
+          else
+            npx --yes wrangler@4.139.0 r2 bucket create "$DEPOSITO"
+            echo "Depósito $DEPOSITO creado (privado: sin acceso público ni dominio)." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      # Si la ruta ya estaba puesta, se anota: subir el Worker de nuevo no tiene que sacarla (la ruta se maneja con ruta.mjs, no con wrangler.toml).
+      - name: Ver si la ruta está puesta (antes de subir el Worker)
+        id: ruta_antes
+        if: ${{ env.NORMAL == 'true' }}
+        continue-on-error: true
+        run: node infra/archivo-cloudflare/ruta.mjs ver
+
+      - name: Subir el Worker de producción (sin ruta del sitio; sólo workers.dev)
+        if: ${{ env.NORMAL == 'true' }}
+        working-directory: infra/archivo-cloudflare
+        # --env="" = el entorno de arriba de wrangler.toml (producción), dicho a propósito: nunca el de ensayo.
+        run: npx --yes wrangler@4.139.0 deploy --env=""
+
+      - name: Si la ruta estaba puesta, que siga puesta
+        if: ${{ env.NORMAL == 'true' && (steps.ruta_antes.outputs.presente == 'si' || steps.ruta_antes.outputs.fotos == 'si') }}
+        env:
+          HABIA_NOTAS: ${{ steps.ruta_antes.outputs.presente }}
+          HABIA_FOTOS: ${{ steps.ruta_antes.outputs.fotos }}
+        run: |
+          if [ "$HABIA_NOTAS" = "si" ]; then node infra/archivo-cloudflare/ruta.mjs poner notas; fi
+          if [ "$HABIA_FOTOS" = "si" ]; then node infra/archivo-cloudflare/ruta.mjs poner fotos; fi
+
+      - name: Instalar el sitio
+        if: ${{ env.NORMAL == 'true' && inputs.cargar_notas }}
+        working-directory: web
+        run: |
+          n=0; until npm ci --no-audit --no-fund; do n=$((n+1)); [ $n -ge 3 ] && exit 1; echo "npm ci falló (intento $n), se reintenta"; sleep 20; done
+
+      - name: Compilar el sitio
+        if: ${{ env.NORMAL == 'true' && inputs.cargar_notas }}
+        working-directory: web
+        run: npx next build
+        env:
+          SITIO: https://radarbalcarce.com
+          FOTOS_BASE: ${{ vars.FOTOS_BASE }}
+
+      # --tope=1 --margen=0 = "archivá todas las notas que tiene el sitio". Sólo sube lo que falta o cambió (compara con el manifiesto del
+      # depósito); --borrar saca lo retirado. Con 1.130 notas, unos 2.000 objetos: entre 15 y 25 minutos la primera vez (medido en el ensayo).
+      - name: Subir TODAS las notas del sitio al depósito
+        if: ${{ env.NORMAL == 'true' && inputs.cargar_notas }}
+        timeout-minutes: 55
+        run: |
+          set -o pipefail
+          node web/scripts/archivar-a-r2.mjs --subir --produccion --bucket="$DEPOSITO" --tope=1 --margen=0 --borrar --concurrencia=10 --manifiesto="$RUNNER_TEMP/manifiesto.json" | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Bajar el manifiesto del depósito (si no se cargó recién)
+        if: ${{ env.NORMAL == 'true' && !inputs.cargar_notas }}
+        run: npx --yes wrangler@4.139.0 r2 object get "$DEPOSITO/manifiesto.json" --file "$RUNNER_TEMP/manifiesto.json" --remote
+
+      # La primera vez que se sube, la dirección de workers.dev puede tardar un minuto en contestar: hasta tres intentos.
+      - name: Comprobar el Worker en su dirección de workers.dev
+        if: ${{ env.NORMAL == 'true' }}
+        run: |
+          set -o pipefail
+          for intento in 1 2 3; do
+            if node infra/archivo-cloudflare/verificar.mjs workers-dev --manifiesto="$RUNNER_TEMP/manifiesto.json" | tee -a "$GITHUB_STEP_SUMMARY"; then exit 0; fi
+            [ $intento -lt 3 ] && { echo "Se reintenta en 30 segundos…"; sleep 30; }
+          done
+          exit 1
+
+      # ---------------------------------------------------------------- LA RUTA (el cambio que ve el lector)
+      - name: PONER LA RUTA radarbalcarce.com/nota/*
+        if: ${{ success() && env.NORMAL == 'true' && inputs.activar_ruta }}
+        run: |
+          set -o pipefail
+          if [ "$CON_FOTOS" = "true" ]; then cuales=todas; else cuales=notas; fi
+          node infra/archivo-cloudflare/ruta.mjs poner "$cuales" | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Comprobar radarbalcarce.com con la ruta puesta
+        id: verificar_sitio
+        if: ${{ success() && env.NORMAL == 'true' && inputs.activar_ruta }}
+        run: |
+          set -o pipefail
+          sleep 20
+          for intento in 1 2 3; do
+            if node infra/archivo-cloudflare/verificar.mjs sitio --manifiesto="$RUNNER_TEMP/manifiesto.json" $( [ "$CON_FOTOS" = "true" ] && echo --con-fotos ) | tee -a "$GITHUB_STEP_SUMMARY"; then exit 0; fi
+            [ $intento -lt 3 ] && { echo "Se reintenta en 30 segundos…"; sleep 30; }
+          done
+          exit 1
+
+      # Si el sitio no dio bien con la ruta puesta, se vuelve atrás solo: mejor sin archivo que con notas rotas.
+      - name: El sitio no dio bien - sacar la ruta sola
+        if: ${{ failure() && steps.verificar_sitio.outcome == 'failure' }}
+        run: |
+          node infra/archivo-cloudflare/ruta.mjs sacar | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "**Se sacó la ruta sola porque radarbalcarce.com no pasó las comprobaciones.** El sitio responde como antes." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Cómo quedó
+        if: ${{ always() }}
+        continue-on-error: true
+        run: |
+          {
+            echo ""
+            echo "### Cómo quedó"
+            node infra/archivo-cloudflare/ruta.mjs ver || echo "(no se pudo leer la ruta: ¿el token tiene 'Workers Routes: Edit'?)"
+            echo "- Worker: radar-balcarce-archivo (https://radar-balcarce-archivo.radarbalcarce.workers.dev/_archivo/estado)."
+            echo "- Vuelta atrás en un minuto: correr este workflow con **sacar_ruta** tildado (o Cloudflare → Workers → radar-balcarce-archivo → Settings → Domains & Routes → borrar la ruta)."
+          } >> "$GITHUB_STEP_SUMMARY"

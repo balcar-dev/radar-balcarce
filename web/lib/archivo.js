@@ -201,6 +201,37 @@ export const DIAS_DE_ARCHIVO = 180;
  *  el recuento real se sale de la cuenta. Más allá hace falta el archivo permanente (R2). */
 export const MAXIMO_EN_ARCHIVO = 3700;
 
+/** Lo menos que puede quedar el tope cuando se baja con la variable TOPE_DE_NOTAS (por si alguien escribe 20 en vez de 2000). */
+export const TOPE_MINIMO_DE_NOTAS = 500;
+/** Cuántas notas puede perder el sitio por vuelta cuando se baja el tope: menos que el margen del archivo permanente (200, o más con
+ *  `--margen=auto`), así cada nota que sale del sitio ya está guardada en R2 desde el despliegue anterior. */
+export const PASO_DE_BAJA_DEL_TOPE = 100;
+
+/**
+ * El tope de notas con página que se quiere (16/10/2026, archivo permanente: docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md).
+ * Es MAXIMO_EN_ARCHIVO salvo que la variable de GitHub TOPE_DE_NOTAS lo baje Y el archivo permanente esté prendido (variable R2_ARCHIVO):
+ * sin el archivo en R2, bajar el tope sólo haría perder páginas. Nunca pasa de MAXIMO_EN_ARCHIVO (el límite de archivos de Cloudflare
+ * Pages) ni baja de TOPE_MINIMO_DE_NOTAS. Devuelve { tope, aviso } (aviso: por qué no se usó lo pedido, o null).
+ */
+export function topeDeNotas(env = {}) {
+  const pedido = String(env?.TOPE_DE_NOTAS ?? '').trim();
+  if (!pedido) return { tope: MAXIMO_EN_ARCHIVO, aviso: null };
+  const n = Number(pedido);
+  if (!Number.isInteger(n) || n <= 0) return { tope: MAXIMO_EN_ARCHIVO, aviso: `TOPE_DE_NOTAS="${pedido.slice(0, 20)}" no es un número entero: se usa ${MAXIMO_EN_ARCHIVO}` };
+  if (!String(env?.R2_ARCHIVO ?? '').trim()) return { tope: MAXIMO_EN_ARCHIVO, aviso: `TOPE_DE_NOTAS (${n}) no se usa mientras el archivo permanente no esté prendido (falta la variable R2_ARCHIVO): se usa ${MAXIMO_EN_ARCHIVO}` };
+  if (n > MAXIMO_EN_ARCHIVO) return { tope: MAXIMO_EN_ARCHIVO, aviso: `TOPE_DE_NOTAS (${n}) no puede pasar de ${MAXIMO_EN_ARCHIVO} (el límite de archivos de Cloudflare Pages)` };
+  if (n < TOPE_MINIMO_DE_NOTAS) return { tope: TOPE_MINIMO_DE_NOTAS, aviso: `TOPE_DE_NOTAS (${n}) es menos que el mínimo (${TOPE_MINIMO_DE_NOTAS}): se usa ${TOPE_MINIMO_DE_NOTAS}` };
+  return { tope: n, aviso: null };
+}
+
+/**
+ * El tope de ESTA vuelta: baja hacia el pedido de a PASO_DE_BAJA_DEL_TOPE notas por vuelta (nunca de golpe), así el despliegue anterior ya
+ * archivó en R2 lo que sale ahora (el exportador archiva con el tope pedido, antes que el sitio). `antes` = notas que tenía el archivo.
+ */
+export function topeDeEstaVuelta(objetivo, antes = 0, { paso = PASO_DE_BAJA_DEL_TOPE, maximo = MAXIMO_EN_ARCHIVO } = {}) {
+  return Math.min(maximo, Math.max(Number(objetivo) || maximo, Number(antes) - paso));
+}
+
 const HORA = 3600e3;
 const tiempo = (n) => new Date(n?.fecha).getTime();
 const porFecha = (a, b) => (tiempo(b) || 0) - (tiempo(a) || 0);

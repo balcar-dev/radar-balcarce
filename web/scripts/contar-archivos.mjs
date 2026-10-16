@@ -6,8 +6,13 @@
 // 16.500 quiere decir que la cuenta se quedó corta (más fotos, más imágenes) y hay que revisar el tope de notas.
 // Se corre al final de `npm run build`.
 
+// 16/10/2026 (archivo permanente): sólo cuenta lo que sube a Pages. Las notas que ya salieron del sitio y viven en el depósito R2
+// (web/scripts/archivar-a-r2.mjs) NO cuentan para los 20.000 archivos; su cuenta la da el Worker en /_archivo/estado y la anota el vigilante.
+// Dice además cuántas notas tiene el sitio y con qué tope (topeDeNotas: MAXIMO_EN_ARCHIVO o la variable TOPE_DE_NOTAS, si el archivo está prendido).
+
 import fs from 'node:fs';
 import path from 'node:path';
+import { topeDeNotas, MAXIMO_EN_ARCHIVO } from '../lib/archivo.js';
 
 export const TOPE_DE_CLOUDFLARE = 20000;
 export const AVISO_DESDE = 16500;
@@ -36,19 +41,29 @@ export function contarArchivos(carpeta) {
   return n;
 }
 
-/** Qué decir según la cantidad: null si hay margen. */
-export function mensajeSegunCantidad(n) {
-  if (n >= ALERTA_DESDE) return { nivel: 'error', texto: `El sitio tiene ${n} archivos: está pegado al tope de Cloudflare Pages (${TOPE_DE_CLOUDFLARE}). Hay que pasar las fotos a R2 o bajar el tope de notas (MAXIMO_EN_ARCHIVO) ya.` };
-  if (n >= AVISO_DESDE) return { nivel: 'warning', texto: `El sitio tiene ${n} archivos de los ${TOPE_DE_CLOUDFLARE} que acepta Cloudflare Pages. Es más de lo que da la cuenta del tope de notas (unos 15.900 con 3.700 notas): conviene revisar el tope o pasar las fotos a R2.` };
+/** Qué decir según la cantidad: null si hay margen. `tope` es el tope de notas con el que se arma el sitio. */
+export function mensajeSegunCantidad(n, { tope = MAXIMO_EN_ARCHIVO } = {}) {
+  const cuenta = `unos ${archivosEstimados(tope).toLocaleString('es-AR')} con ${tope.toLocaleString('es-AR')} notas`;
+  if (n >= ALERTA_DESDE) return { nivel: 'error', texto: `El sitio tiene ${n} archivos: está pegado al tope de Cloudflare Pages (${TOPE_DE_CLOUDFLARE}). Hay que pasar las fotos a R2 o bajar el tope de notas ya (con el archivo permanente prendido: la variable TOPE_DE_NOTAS; si no, MAXIMO_EN_ARCHIVO).` };
+  if (n >= AVISO_DESDE) return { nivel: 'warning', texto: `El sitio tiene ${n} archivos de los ${TOPE_DE_CLOUDFLARE} que acepta Cloudflare Pages. Es más de lo que da la cuenta del tope de notas (${cuenta}): conviene revisar el tope o pasar las fotos a R2.` };
   return null;
+}
+
+/** Cuántas páginas de nota tiene el sitio compilado (web/out/nota/*.html). */
+export function notasConPagina(salida) {
+  const carpeta = path.join(salida, 'nota');
+  return fs.existsSync(carpeta) ? fs.readdirSync(carpeta).filter((f) => f.endsWith('.html')).length : 0;
 }
 
 if (process.argv[1] && process.argv[1].endsWith('contar-archivos.mjs')) {
   const salida = path.join(import.meta.dirname, '..', 'out');
   if (!fs.existsSync(salida)) { console.log('Archivos: no hay web/out.'); process.exit(0); }
   const n = contarArchivos(salida);
-  console.log(`Archivos del sitio: ${n} de ${TOPE_DE_CLOUDFLARE} (el tope de Cloudflare Pages).`);
-  const m = mensajeSegunCantidad(n);
+  const { tope, aviso } = topeDeNotas(process.env);
+  console.log(`Archivos del sitio: ${n} de ${TOPE_DE_CLOUDFLARE} (el tope de Cloudflare Pages). Notas con página en el sitio: ${notasConPagina(salida)} (tope ${tope}).`);
+  if (aviso) console.log(`Tope de notas: ${aviso}.`);
+  if (String(process.env.R2_ARCHIVO ?? '').trim()) console.log('Las notas que ya salieron del sitio están en el archivo permanente (R2) y no cuentan acá.');
+  const m = mensajeSegunCantidad(n, { tope });
   if (m) {
     console.log(m.texto);
     if (process.env.GITHUB_ACTIONS) console.log(`::${m.nivel}::${m.texto}`);

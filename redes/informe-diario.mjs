@@ -455,7 +455,7 @@ export function audiosDelDia(libro, dia) {
   return Object.keys(libro?.instagram ?? {}).filter((k) => k.startsWith(`${dia}/`) && !k.slice(dia.length + 1).startsWith('participa-')).length;
 }
 
-export function seccionSalud({ momento, dia, ahora, datos, enVivo = null, redesActivas = true }) {
+export function seccionSalud({ momento, dia, ahora, datos, enVivo = null, redesActivas = true, archivoActivo = false }) {
   const { portada, vigilancia, archivo, historia, usoIA, libro } = datos;
   const atencion = [];
   const lineas = [];
@@ -538,8 +538,9 @@ export function seccionSalud({ momento, dia, ahora, datos, enVivo = null, redesA
       return dias.length >= 3 ? sumar(dias.map((f) => historia.dias[f]?.publicadas ?? 0)) / dias.length : null;
     })();
     const llena = ritmo && ritmo > 0 ? Math.ceil((TOPE_DE_NOTAS - n) / ritmo) : null;
-    lineas.push({ t: `Archivo de notas: ${num(n)} de ${num(TOPE_DE_NOTAS)} (${Math.round(fraccion * 100)} %). Archivos del sitio estimados: ${num(archivos)} de ${num(TOPE_DE_CLOUDFLARE)} que acepta Cloudflare (${Math.round((archivos / TOPE_DE_CLOUDFLARE) * 100)} %).${llena && fraccion < 1 ? ` Al ritmo de ${num(Math.round(ritmo))} notas por día, el tope de notas se alcanza en unos ${num(llena)} días y desde ahí las más viejas dejan lugar a las nuevas.` : ''}` });
-    if (fraccion >= LIMITES_DEL_INFORME.topeDeNotasAlerta) atencion.push({ nivel: 'alta', t: `El archivo de notas está al ${Math.round(fraccion * 100)} % del tope (${num(n)} de ${num(TOPE_DE_NOTAS)}).` });
+    lineas.push({ t: `Archivo de notas: ${num(n)} de ${num(TOPE_DE_NOTAS)} (${Math.round(fraccion * 100)} %). Archivos del sitio estimados: ${num(archivos)} de ${num(TOPE_DE_CLOUDFLARE)} que acepta Cloudflare (${Math.round((archivos / TOPE_DE_CLOUDFLARE) * 100)} %).${llena && fraccion < 1 ? ` Al ritmo de ${num(Math.round(ritmo))} notas por día, el tope de notas se alcanza en unos ${num(llena)} días y desde ahí las más viejas ${archivoActivo ? 'pasan al archivo permanente (R2) con la misma dirección' : 'dejan lugar a las nuevas'}.` : ''}${archivoActivo ? ' El archivo permanente está prendido: llegar al tope es lo esperable, lo que sale del sitio sigue en R2.' : ''}` });
+    // Con el archivo permanente prendido (16/10/2026) llegar al tope no es un problema: lo que sale del sitio queda en R2.
+    if (archivoActivo) { /* sin aviso */ } else if (fraccion >= LIMITES_DEL_INFORME.topeDeNotasAlerta) atencion.push({ nivel: 'alta', t: `El archivo de notas está al ${Math.round(fraccion * 100)} % del tope (${num(n)} de ${num(TOPE_DE_NOTAS)}).` });
     else if (fraccion >= LIMITES_DEL_INFORME.topeDeNotasAviso) atencion.push({ nivel: 'media', t: `El archivo de notas está al ${Math.round(fraccion * 100)} % del tope (${num(n)} de ${num(TOPE_DE_NOTAS)}); conviene decidir qué hacer antes de llegar.` });
   } else {
     lineas.push({ t: 'No pude contar las notas del archivo (web/data/archivo.json).', sub: true });
@@ -589,9 +590,9 @@ export function asuntoDelInforme({ momento, dia, ahora, atencion, publicadas, vi
  * Arma el informe. Función pura: recibe lo ya leído (`datos`, y `enVivo` si se pudo consultar GitHub/Cloudflare) y devuelve
  * { asunto, texto, html, atencion, secciones }.
  */
-export function armarInforme({ momento = 'noche', ahora = new Date(), datos, enVivo = null, redesActivas = true, sitio = SITIO } = {}) {
+export function armarInforme({ momento = 'noche', ahora = new Date(), datos, enVivo = null, redesActivas = true, sitio = SITIO, archivoActivo = false } = {}) {
   const dia = diaDelInforme(momento, ahora);
-  const ctx = { momento, dia, ahora, datos, enVivo, redesActivas, sitio };
+  const ctx = { momento, dia, ahora, datos, enVivo, redesActivas, sitio, archivoActivo };
   const hacer = [seccionPublicacion, seccionEspera, seccionRedes, seccionVisitas, seccionSalud];
   const secciones = [];
   const atencion = [];
@@ -788,7 +789,7 @@ async function main() {
   const raiz = path.join(import.meta.dirname, '..');
   const datos = leerArchivos(raiz);
   const enVivo = process.argv.includes('--sin-red') ? { omitido: true } : await consultarEnVivo({ ahora });
-  const informe = armarInforme({ momento, ahora, datos, enVivo, redesActivas: redesPrendidas() });
+  const informe = armarInforme({ momento, ahora, datos, enVivo, redesActivas: redesPrendidas(), archivoActivo: Boolean(String(process.env.R2_ARCHIVO ?? '').trim()) });
 
   console.log(`ASUNTO: [Radar Balcarce] ${informe.asunto}\n`);
   console.log(informe.texto);

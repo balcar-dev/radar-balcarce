@@ -71,7 +71,7 @@ import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, aligerarViejas, idsEnRedes, sinPuntaje, comoArchivoJson, guardiaDelArchivo, ingestaSana, bajasDelArchivo, mesDeLaNota, conBajasEnElHistorico,
   idsRetiradosAMano, correccionesAMano, conCorreccion, cambiosDeLaAuditoria, conCambiosDeLaAuditoria, fechaDeLaNota, llegaTarde,
-  esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson, sePodaPorFaltaDeCuerpo,
+  esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson, sePodaPorFaltaDeCuerpo, topeDeNotas, topeDeEstaVuelta, MAXIMO_EN_ARCHIVO,
 } from '../lib/archivo.js';
 import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
 import { esperaSoloPorCantidad, semaforoDelTexto, esEfemerideAjena, esDeUnMedioDeAca } from '../../ingesta/ingesta.mjs';
@@ -1055,6 +1055,12 @@ const sinCola = (n) => (n && (!n.publicadaPor || n.publicadaPor === 'ia') && !n.
 const sinServicios = (n) => conCorreccion(sinColaDe(n), CORRECCIONES);
 const sinColaDe = (n) => sinCola(n?.seccion === 'Servicios' ? { ...n, seccion: n.local ? 'Balcarce' : 'Argentina' }
   : n?.seccion === 'País' ? { ...n, seccion: 'Argentina' } : n);
+// El tope de notas con página (16/10/2026): MAXIMO_EN_ARCHIVO, salvo que la variable TOPE_DE_NOTAS lo baje con el archivo permanente
+// prendido (R2_ARCHIVO). Baja de a poco (topeDeEstaVuelta) para que cada nota que sale del sitio ya esté guardada en R2.
+const pedidoDelTope = topeDeNotas(process.env);
+if (pedidoDelTope.aviso) console.log(`  tope de notas: ${pedidoDelTope.aviso}`);
+const topeDeHoy = topeDeEstaVuelta(pedidoDelTope.tope, (archivoAnterior.notas ?? []).length);
+if (topeDeHoy < MAXIMO_EN_ARCHIVO) console.log(`  tope de notas de esta vuelta: ${topeDeHoy} (se pidió ${pedidoDelTope.tope}; las que salen ya están en el archivo permanente)`);
 // Lo de más de unos días guarda sólo lo que ve el lector (aligerarViejas, 29/09).
 const archivo = aligerarViejas(actualizarArchivo({
   archivo: conLasUnidas([...(archivoAnterior.notas ?? []), ...restaurar.filter((n) => !(archivoAnterior.notas ?? []).some((a) => a.id === n.id))]).map(conLaFotoPasada).map(conLaIlustracion).map(sinServicios),
@@ -1066,6 +1072,7 @@ const archivo = aligerarViejas(actualizarArchivo({
   enPortada: new Set(vigentes.map((n) => n.id)),
   retiradas,
   enRedes: idsEnRedes(libroRedes),
+  maximo: topeDeHoy,
 }));
 if (JSON.stringify(archivo) !== JSON.stringify(archivoAnterior.notas ?? [])) {
   // Lo que se saca a propósito por no tener cuerpo (sePodaPorFaltaDeCuerpo) no cuenta como una baja sospechosa.

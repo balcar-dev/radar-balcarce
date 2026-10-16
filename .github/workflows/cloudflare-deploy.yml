@@ -76,6 +76,52 @@ jobs:
           # De dónde salen las fotos de las notas: vacío = el propio sitio (web/lib/fotos.js).
           FOTOS_BASE: ${{ vars.FOTOS_BASE }}
 
+      # El ARCHIVO PERMANENTE (16/10/2026; docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md). Antes de subir el sitio, guarda en el
+      # depósito R2 las notas que están por salir del sitio por el tope (las de los próximos ~4 días al ritmo de la última semana: --margen=auto)
+      # y borra de ahí lo retirado (retiradas.json o lo que el semáforo sacó), con su foto. Sólo sube lo nuevo o lo que cambió.
+      # DORMIDO hasta que exista la variable de GitHub R2_ARCHIVO (= radar-archivo): se crea DESPUÉS de la carga inicial con
+      # "Archivo permanente (producción)". Si falla, NO frena el despliegue (continue-on-error): avisa por mail en el paso de abajo, deja
+      # estado.json con ok=false y el vigilante lo anota. Corta solo a los 6 minutos (lo que no llegó a subir sale en la vuelta siguiente).
+      - name: Archivar las notas por salir (R2)
+        id: archivo
+        if: ${{ vars.R2_ARCHIVO != '' }}
+        continue-on-error: true
+        timeout-minutes: 8
+        run: |
+          set -o pipefail
+          node web/scripts/archivar-a-r2.mjs --subir --borrar --produccion --bucket="$R2_ARCHIVO" --margen=auto --limite-segundos=360 | tee -a "$GITHUB_STEP_SUMMARY"
+        env:
+          R2_ARCHIVO: ${{ vars.R2_ARCHIVO }}
+          TOPE_DE_NOTAS: ${{ vars.TOPE_DE_NOTAS }}
+          R2_RESPALDOS: ${{ vars.R2_RESPALDOS }}
+          R2_FOTOS: ${{ vars.R2_FOTOS }}
+          R2_PIEZAS: ${{ vars.R2_PIEZAS }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      # Un aviso por mail (el Worker del vigilante; de respaldo, WhatsApp). Con `clave`, el Worker no repite el mismo aviso en 6 horas aunque
+      # falle cada media hora. Nunca frena nada.
+      - name: Avisar si el archivo permanente falló
+        if: ${{ always() && steps.archivo.outcome == 'failure' }}
+        continue-on-error: true
+        run: |
+          node --input-type=module <<'JS'
+          import { avisar } from './redes/avisar-por-mail.mjs';
+          const corrida = `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`;
+          const texto = [
+            'Radar Balcarce: falló el paso del archivo permanente (guardar en R2 las notas que están por salir del sitio).',
+            'El sitio SÍ se publicó igual. Las notas tienen unos días de margen antes de salir, pero si sigue fallando se pueden perder páginas viejas,',
+            'y lo retirado (menores, víctimas) podría no haberse borrado del archivo: mirar la corrida.',
+            `Detalle: ${corrida}`,
+          ].join('\n');
+          const r = await avisar({ asunto: 'Falló el archivo permanente (R2): el sitio se publicó igual', texto, clave: 'archivo-r2-fallo', nivel: 'alta' });
+          console.log(r.ok ? `Aviso enviado por ${r.via}.` : `El aviso no salió: ${r.motivo}`);
+          JS
+        env:
+          WHATSAPP_TELEFONO: ${{ secrets.WHATSAPP_TELEFONO }}
+          WHATSAPP_APIKEY: ${{ secrets.WHATSAPP_APIKEY }}
+          VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
+
       # Direct Upload: se sube lo que ya compilamos, sin que Cloudflare
       # corra su propio build. Así no cuenta contra el límite de 500 builds
       # gratis por mes — con una corrida cada 30 minutos, lo superaríamos

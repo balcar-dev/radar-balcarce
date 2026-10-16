@@ -289,6 +289,15 @@ test('salud: web vieja es urgente de día y de noche mide más tranquilo; el arc
   assert.ok(!r.atencion.some((a) => /La IA falló/.test(a.t)), 'con 1 error en 10 no avisa');
 });
 
+test('salud: con el archivo permanente prendido (R2), llegar al tope de notas no es un aviso (lo que sale queda en R2)', () => {
+  const lleno = datosDeEjemplo({ archivo: { total: 3600, notas: [] } });
+  const r = armarInforme({ momento: 'noche', ahora: NOCHE, datos: lleno, enVivo: { omitido: true }, archivoActivo: true });
+  assert.ok(!r.atencion.some((a) => /tope/.test(a.t)), 'sin aviso por el tope');
+  const texto = JSON.stringify(r);
+  assert.match(texto, /archivo permanente/);
+  assert.match(leer('redes/informe-diario.mjs'), /archivoActivo: Boolean\(String\(process\.env\.R2_ARCHIVO \?\? ''\)\.trim\(\)\)/);
+});
+
 test('salud: lo que el vigilante tiene abierto y los vencimientos cercanos suben a la atención, ordenados por gravedad', () => {
   const datos = datosDeEjemplo({ vigilancia: { abiertos: [
     { clave: 'a', nivel: 'media', texto: 'La auditoría semanal no corre hace más de 10 días.', desde: '2026-10-15T00:00:00Z' },

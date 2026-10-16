@@ -9,6 +9,7 @@ import path from 'node:path';
 import {
   juntarNotas, elegirViejas, prepararHtml, fotosDeLaPagina, armarPlan, armarManifiesto, diferencias, comprobarDeposito, sinSecretos,
   leerArgumentos, principal, subirAlDeposito, idsDesaparecidos, borradoRazonable, fusionarManifiesto, leerManifiestoPrevio, depositosProtegidos, MINIMO_DE_BYTES_DE_UNA_PAGINA, CLAVE_DEL_MANIFIESTO,
+  CLAVE_DEL_ESTADO, huellaDeContenido, margenPorRitmo, manifiestoTrasSubir, borrarParaQuitar, leerManifiestoConEstado, armarEstado, MARGEN_POR_DEFECTO,
 } from '../web/scripts/archivar-a-r2.mjs';
 import { manejar, rutaCanonicaDe, analizarRuta } from '../infra/archivo-cloudflare/worker.mjs';
 import { MAXIMO_EN_ARCHIVO } from '../web/lib/archivo.js';
@@ -37,7 +38,10 @@ function paginaDeNext({ parte, titulo, foto = 'abc1234.jpg', tarjeta = false, cu
     `<main id="contenido"><article class="cuerpo-nota" data-pagefind-body=""><div class="chapa-nota"><span class="tag">Balcarce</span><time class="meta" dateTime="2026-10-10T12:30:24.000Z" data-hace="">hace 5 días</time></div>`,
     `<p class="fecha-de-la-nota"><time class="meta fecha-exacta" dateTime="2026-10-10T12:30:24.000Z">sábado 10 de octubre de 2026 · 09:30</time></p><h1>${titulo}</h1><p class="copete">La bajada</p>`,
     `<figure><img src="/fotos-notas/${foto}" alt="${titulo}" width="1200" height="675"/><figcaption>Foto: Municipalidad</figcaption></figure>`,
-    `<p>${cuerpo}</p><button type="button" class="boton-compartir whatsapp">WhatsApp</button><button type="button" class="boton-compartir">Copiar</button></article></main>`,
+    `<p>${cuerpo}</p><button type="button" class="boton-compartir whatsapp">WhatsApp</button><button type="button" class="boton-compartir">Copiar</button>`,
+    '<section class="bloque-seccion"><div class="titulo-seccion"><span class="barra"></span><h2>Seguí leyendo</h2><a href="/seccion/balcarce" class="ver-todo">Ver todo →</a></div>',
+    '<div class="fila-nota"><a href="/nota/otra-nota-que-despues-se-retira-zz9">Otra nota que después se retira</a></div></section>',
+    '<section class="cierre"><p>¿Tenés más información sobre esto?</p></section></article></main>',
     '<footer class="principal"><div class="aclaracion" data-armada="15:32">Los resúmenes los escribe una inteligencia artificial.</div></footer>',
     '<script src="/_next/static/chunks/webpack-f51b7a4e7e383c5e.js" id="_R_" async=""></script>',
     '<script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\\"$Sreact.fragment\\"\\n"])</script></body></html>',
@@ -207,12 +211,20 @@ test('armarManifiesto y diferencias: sólo se suben los objetos nuevos o cambiad
 
     // cambia la página de n2 (una corrección): sólo ese objeto
     const cambiado = JSON.parse(JSON.stringify(m));
-    cambiado.notas.n2.objetos[0].sha256 = '0'.repeat(64);
+    cambiado.notas.n2.objetos[0].huella = '0'.repeat(64); // las páginas se comparan por su huella de contenido
     assert.deepEqual(diferencias(plan, cambiado).subir.map((o) => o.clave), ['nota/n2.html']);
 
-    // n1 se retiró (menor, víctima, retirada a mano): se borran sus objetos de nota, no la foto compartida
+    // n1 se retiró (menor, víctima, retirada a mano): se borran sus objetos, también su foto (16/10/2026)...
     const d = diferencias({ entradas: [plan.entradas[1]], omitidas: [] }, m, new Set(['n1']));
-    assert.deepEqual(d.borrar.map((b) => b.clave).sort(), ['nota/n1.html', 'nota/n1/opengraph-image']);
+    assert.deepEqual(d.borrar.map((b) => b.clave).sort(), ['fotos-notas/n1.jpg', 'nota/n1.html', 'nota/n1/opengraph-image']);
+    // ...salvo que la misma foto la use otra nota que se queda
+    const compartida = JSON.parse(JSON.stringify(m));
+    compartida.notas.n2.objetos.push({ clave: 'fotos-notas/n1.jpg', bytes: 1, sha256: 'x' });
+    const d2 = diferencias({ entradas: [], omitidas: [] }, compartida, new Set(['n1']));
+    assert.deepEqual(d2.borrar.map((b) => b.clave).sort(), ['nota/n1.html', 'nota/n1/opengraph-image']);
+    // dos retiradas con la misma foto: se borra una sola vez
+    const dos = { notas: { a: { objetos: [{ clave: 'nota/a.html' }, { clave: 'fotos-notas/f.jpg' }] }, b: { objetos: [{ clave: 'nota/b.html' }, { clave: 'fotos-notas/f.jpg' }] } } };
+    assert.deepEqual(diferencias({ entradas: [], omitidas: [] }, dos, new Set(['a', 'b'])).borrar.map((x) => x.clave).sort(), ['fotos-notas/f.jpg', 'nota/a.html', 'nota/b.html']);
     // una nota que sólo desapareció del plan (el tope cambió) NO se borra: el archivo es permanente
     assert.deepEqual(diferencias({ entradas: [plan.entradas[1]], omitidas: [] }, m).borrar, []);
   } finally { sitio.borrar(); }
@@ -221,7 +233,9 @@ test('armarManifiesto y diferencias: sólo se suben los objetos nuevos o cambiad
 // ------------------------------------------------------------------ las guardas
 
 test('comprobarDeposito: nunca respaldos ni fotos; sin --produccion sólo depósitos de ensayo', () => {
-  const env = { R2_RESPALDOS: 'radar-respaldos', R2_FOTOS: 'radar-fotos' };
+  const env = { R2_RESPALDOS: 'radar-respaldos', R2_FOTOS: 'radar-fotos', R2_PIEZAS: 'otro-nombre' };
+  assert.equal(comprobarDeposito('otro-nombre', { env, produccion: true }).ok, false, 'el de las piezas de las redes, tampoco (R2_PIEZAS)');
+  assert.equal(comprobarDeposito('radar-piezas', { env: {}, produccion: true }).ok, false, 'ni algo que se llame "piezas"');
   assert.equal(comprobarDeposito('radar-archivo-staging', { env }).ok, true);
   assert.equal(comprobarDeposito('radar-archivo-prueba', { env }).ok, true);
   assert.equal(comprobarDeposito('radar-archivo', { env }).ok, false, 'producción pide --produccion');
@@ -230,7 +244,7 @@ test('comprobarDeposito: nunca respaldos ni fotos; sin --produccion sólo depós
     assert.equal(comprobarDeposito(protegido, { env, produccion: true }).ok, false, protegido);
   }
   for (const raro of ['', undefined, 'Con Espacios', '../x', 'a']) assert.equal(comprobarDeposito(raro, { env, produccion: true }).ok, false, String(raro));
-  assert.deepEqual(depositosProtegidos({ R2_RESPALDOS: ' a ', R2_FOTOS: '' }), ['a']);
+  assert.deepEqual(depositosProtegidos({ R2_RESPALDOS: ' a ', R2_FOTOS: '', R2_PIEZAS: 'p' }), ['a', 'p']);
 });
 
 test('sinSecretos tapa los valores de las claves en cualquier texto', () => {
@@ -244,19 +258,27 @@ test('leerArgumentos', () => {
 
 // ------------------------------------------------------------------ la corrida
 
-/** Un wrangler de mentira que anota lo que le piden. */
+/**
+ * Un wrangler de mentira que anota lo que le piden. `previo` es el manifiesto que devuelve el depósito (o una lista: uno por cada lectura,
+ * para simular otra corrida que lo cambió en el medio). Guarda lo que se sube como texto en `subido` (clave → texto).
+ */
 function wranglerFalso({ fallan = () => false, previo = null } = {}) {
   const llamadas = [];
+  const subido = new Map();
+  let lecturas = 0;
   const ejecutar = async (args) => {
     llamadas.push(args);
     if (fallan(args)) return { ok: false, salida: 'boom tok_SECRETO_123456' };
     if (args[1] === 'object' && args[2] === 'get') {
-      if (!previo) return { ok: false, salida: 'no existe' };
-      fs.writeFileSync(args[args.indexOf('--file') + 1], JSON.stringify(previo));
+      const este = Array.isArray(previo) ? previo[Math.min(lecturas, previo.length - 1)] : previo;
+      lecturas += 1;
+      if (!este) return { ok: false, salida: '✘ [ERROR] The specified key does not exist.' };
+      fs.writeFileSync(args[args.indexOf('--file') + 1], JSON.stringify(este));
     }
+    if (args[1] === 'object' && args[2] === 'put' && /\.json$/.test(args[3])) subido.set(args[3].split('/').slice(1).join('/'), fs.readFileSync(args[args.indexOf('--file') + 1], 'utf8'));
     return { ok: true, salida: '' };
   };
-  return { llamadas, ejecutar };
+  return { llamadas, ejecutar, subido };
 }
 
 const ENV_CON_CLAVES = { CLOUDFLARE_API_TOKEN: 'tok_SECRETO_123456', CLOUDFLARE_ACCOUNT_ID: 'cuenta987654' };
@@ -330,10 +352,11 @@ test('--subir al depósito de ensayo: sube cada objeto con su tipo y su caché, 
     const codigo = await principal([`--out=${sitio.out}`, `--datos=${sitio.datos}`, '--tope=1', '--margen=0', '--subir', '--bucket=radar-archivo-staging'], { env: ENV_CON_CLAVES, ejecutar: w.ejecutar, escribir: (t) => salida.push(t) });
     assert.equal(codigo, 0);
     const puts = w.llamadas.filter((a) => a[2] === 'put');
-    // n1 (3 objetos) + n2 (2): n3 es la que se queda en el sitio
-    assert.equal(puts.length, 5 + 1);
-    assert.equal(puts.at(-1)[3], `radar-archivo-staging/${CLAVE_DEL_MANIFIESTO}`, 'el manifiesto es lo último');
-    for (const p of puts.slice(0, -1)) {
+    // n1 (3 objetos) + n2 (2): n3 es la que se queda en el sitio; después el manifiesto y el estado
+    assert.equal(puts.length, 5 + 2);
+    assert.equal(puts.at(-2)[3], `radar-archivo-staging/${CLAVE_DEL_MANIFIESTO}`, 'el manifiesto va después de los objetos');
+    assert.equal(puts.at(-1)[3], `radar-archivo-staging/${CLAVE_DEL_ESTADO}`, 'y el estado al final');
+    for (const p of puts.slice(0, -2)) {
       assert.ok(p.includes('--remote'));
       assert.ok(p[3].startsWith('radar-archivo-staging/'));
       assert.ok(p.includes('--content-type') && p.includes('--cache-control'));
@@ -342,7 +365,16 @@ test('--subir al depósito de ensayo: sube cada objeto con su tipo y su caché, 
     assert.equal(html[html.indexOf('--content-type') + 1], 'text/html; charset=utf-8');
     assert.ok(!w.llamadas.some((a) => a[2] === 'delete'));
     assert.ok(!salida.join('\n').includes('tok_SECRETO') && !salida.join('\n').includes('cuenta987654'));
-    assert.match(salida.join('\n'), /subidos 5, borrados 0, fallidos 0, manifiesto al día/);
+    assert.match(salida.join('\n'), /subidos 5, borrados 0, fallidos 0, manifiesto al día · 2 notas archivadas en total/);
+    // el estado: chico, sin claves, con lo que hizo
+    const estado = JSON.parse(w.subido.get(CLAVE_DEL_ESTADO));
+    assert.equal(estado.ok, true);
+    assert.equal(estado.notas, 2);
+    assert.equal(estado.subidos, 5);
+    assert.equal(estado.bucket, 'radar-archivo-staging');
+    assert.ok(!JSON.stringify(estado).includes('tok_SECRETO') && !JSON.stringify(estado).includes('cuenta987654'));
+    const control = puts.at(-1);
+    assert.equal(control[control.indexOf('--cache-control') + 1], 'no-store', 'el estado no se guarda en ninguna caché');
   } finally { sitio.borrar(); }
 });
 
@@ -357,7 +389,7 @@ test('la segunda vez no vuelve a subir lo que no cambió; --borrar saca del dep�
 
     const w2 = wranglerFalso({ previo });
     await principal(args, { env: ENV_CON_CLAVES, ejecutar: w2.ejecutar, escribir: () => {} });
-    assert.equal(w2.llamadas.filter((a) => a[2] === 'put').length, 1, 'sólo el manifiesto');
+    assert.deepEqual(w2.llamadas.filter((a) => a[2] === 'put').map((a) => a[3]), [`radar-archivo-staging/${CLAVE_DEL_ESTADO}`], 'nada cambió: sólo el estado (ni el manifiesto)');
 
     // n1 pasa a retiradas: sin --borrar no se toca nada; con --borrar se borran sus objetos de nota
     fs.writeFileSync(path.join(sitio.datos, 'retiradas.json'), JSON.stringify({ notas: { n1: { motivo: 'menor', cuando: '2026-10-15', por: 'hernan' } } }));
@@ -367,8 +399,9 @@ test('la segunda vez no vuelve a subir lo que no cambió; --borrar saca del dep�
     const w4 = wranglerFalso({ previo });
     await principal([...args, '--borrar'], { env: ENV_CON_CLAVES, ejecutar: w4.ejecutar, escribir: () => {} });
     assert.deepEqual(w4.llamadas.filter((a) => a[2] === 'delete').map((a) => a[3]).sort(), [
-      'radar-archivo-staging/nota/n1.html', 'radar-archivo-staging/nota/n1/opengraph-image',
-    ]);
+      'radar-archivo-staging/fotos-notas/n1.jpg', 'radar-archivo-staging/nota/n1.html', 'radar-archivo-staging/nota/n1/opengraph-image',
+    ], 'la página, la tarjeta y la foto (que no usa ninguna otra nota)');
+    assert.ok(!JSON.parse(w4.subido.get(CLAVE_DEL_MANIFIESTO)).notas.n1, 'y sale del manifiesto');
   } finally { sitio.borrar(); }
 });
 
@@ -420,7 +453,7 @@ test('--borrar también saca lo que desapareció del archivo vivo (el semáforo 
     const salida = [];
     // zzz es 1 de 2 notas del depósito: más del 5 %, pero hasta 10 notas siempre se puede
     assert.equal(await principal([...base, `--manifiesto=${m}`], { env: ENV_CON_CLAVES, ejecutar: w.ejecutar, escribir: (t) => salida.push(t) }), 0);
-    assert.deepEqual(w.llamadas.filter((a) => a[2] === 'delete').map((a) => a[3]).sort(), ['radar-archivo-staging/nota/zzz.html', 'radar-archivo-staging/nota/zzz/opengraph-image']);
+    assert.deepEqual(w.llamadas.filter((a) => a[2] === 'delete').map((a) => a[3]).sort(), ['radar-archivo-staging/fotos-notas/zzz.jpg', 'radar-archivo-staging/nota/zzz.html', 'radar-archivo-staging/nota/zzz/opengraph-image']);
     assert.ok(!JSON.parse(fs.readFileSync(m, 'utf8')).notas.zzz, 'ya no figura en el manifiesto');
 
     // un depósito grande al que "se le fue" casi todo: frenado salvo --confirmar-borrado
@@ -441,16 +474,19 @@ test('--borrar también saca lo que desapareció del archivo vivo (el semáforo 
   } finally { sitio.borrar(); }
 });
 
-test('si una subida falla (con reintentos), la corrida falla, no sube el manifiesto y no filtra la clave', async () => {
-  const sitio = armarSitio([nota('n1', 1), nota('n2', 2)]);
+test('si una subida falla (con reintentos), la corrida falla, el manifiesto anota sólo lo que sí se subió y no filtra la clave', async () => {
+  const sitio = armarSitio([nota('n1', 1), nota('n2', 2), nota('n3', 3)]);
   try {
     const w = wranglerFalso({ fallan: (a) => a[3]?.endsWith('/nota/n1.html') });
     const salida = [];
     const codigo = await principal([`--out=${sitio.out}`, `--datos=${sitio.datos}`, '--tope=1', '--margen=0', '--subir', '--bucket=radar-archivo-prueba'], { env: ENV_CON_CLAVES, ejecutar: w.ejecutar, escribir: (t) => salida.push(t) });
     assert.equal(codigo, 1);
     assert.equal(w.llamadas.filter((a) => a[3]?.endsWith('/nota/n1.html')).length, 3, 'tres intentos');
-    assert.ok(!w.llamadas.some((a) => a[2] === 'put' && a[3]?.endsWith(CLAVE_DEL_MANIFIESTO)), 'sin manifiesto si algo falló: la próxima vez se reintenta todo');
+    const m = JSON.parse(w.subido.get(CLAVE_DEL_MANIFIESTO));
+    assert.deepEqual(Object.keys(m.notas), ['n2'], 'n1 no figura (se reintenta la próxima vez); n2 sí, y no se vuelve a subir');
+    assert.equal(JSON.parse(w.subido.get(CLAVE_DEL_ESTADO)).ok, false, 'el estado dice que falló (lo ve el vigilante)');
     assert.match(salida.join('\n'), /FALLÓ nota\/n1\.html/);
+    assert.ok(!salida.join('\n').includes('tok_SECRETO') && !w.subido.get(CLAVE_DEL_ESTADO).includes('tok_SECRETO'));
   } finally { sitio.borrar(); }
 });
 
@@ -469,6 +505,196 @@ test('el exportador no lleva claves escritas y sólo usa wrangler fijo', () => {
   assert.ok(!/console\.(log|error)\([^)]*process\.env/.test(codigo), 'no imprime el entorno');
 });
 
+// ------------------------------------------------------------------ producción (16/10/2026): margen por ritmo, huella, estado, tiempo, quitar
+
+test('prepararHtml saca el "Seguí leyendo" (títulos de otras notas del día del armado) y deja el resto del pie', () => {
+  const { html } = prepararHtml(unaPagina(), { css: copiaCss });
+  assert.ok(!html.includes('Seguí leyendo') && !html.includes('Otra nota que después se retira'), 'una nota retirada después no puede quedar nombrada en otra archivada');
+  assert.ok(html.includes('<section class="cierre">'), 'las otras secciones del artículo quedan');
+  assert.ok(html.includes('</article></main>'));
+});
+
+test('margenPorRitmo: 4 días al ritmo de la última semana, nunca menos de 200', () => {
+  const ahora = Date.parse('2026-10-16T12:00:00Z');
+  const deHace = (horas) => ({ id: `x${horas}`, fecha: new Date(ahora - horas * 3600e3).toISOString() });
+  const poco = Array.from({ length: 70 }, (_, i) => deHace(i * 2)); // 70 notas en una semana = 10 por día
+  assert.equal(margenPorRitmo(poco, { ahora }).margen, MARGEN_POR_DEFECTO);
+  const mucho = Array.from({ length: 1050 }, (_, i) => deHace((i % 160) + 0.5)); // 150 por día
+  const r = margenPorRitmo(mucho, { ahora });
+  assert.equal(r.ritmo, 150);
+  assert.equal(r.margen, 600);
+  assert.equal(margenPorRitmo([deHace(24 * 9), { id: 'sin' }], { ahora }).margen, MARGEN_POR_DEFECTO, 'lo de hace más de una semana y lo sin fecha no cuentan');
+});
+
+test('huellaDeContenido: no cambia con lo que cambia en cada armado; sí con el texto de la nota', () => {
+  const base = prepararHtml(unaPagina(), { css: copiaCss }).html;
+  const otroArmado = base.replace('data-armada="15:32"', 'data-armada="16:02"').replace('<style>', '<style>.nuevo{}').replace('Radar <span>Balcarce</span>', 'Radar <span>Balcarce</span><a href="/temas/x">Tema del día</a>');
+  assert.notEqual(otroArmado, base);
+  assert.equal(huellaDeContenido(otroArmado), huellaDeContenido(base));
+  assert.notEqual(huellaDeContenido(base.replace('La bajada</p>', 'La bajada corregida</p>')), huellaDeContenido(base), 'una corrección del texto se vuelve a subir');
+  assert.notEqual(huellaDeContenido(base.replace('<title>Titular n1</title>', '<title>Otro</title>')), huellaDeContenido(base));
+  assert.match(huellaDeContenido('sin cabeza ni artículo'), /^[0-9a-f]{64}$/);
+});
+
+test('diferencias usa la huella: la misma nota armada otra vez (otro pie, otro CSS) NO se vuelve a subir', () => {
+  const sitio = armarSitio([nota('n1', 1), nota('n2', 2)]);
+  try {
+    const plan = armarPlan([nota('n1', 1)], { out: sitio.out });
+    const previo = armarManifiesto(plan, { tope: 1, margen: 0 });
+    assert.ok(previo.notas.n1.objetos[0].huella, 'el manifiesto guarda la huella de la página');
+    const parte = parteDeNota(nota('n1', 1));
+    const archivo = path.join(sitio.out, 'nota', `${parte}.html`);
+    fs.writeFileSync(archivo, fs.readFileSync(archivo, 'utf8').replace('data-armada="15:32"', 'data-armada="18:00"'));
+    const otra = armarPlan([nota('n1', 1)], { out: sitio.out });
+    assert.notEqual(otra.entradas[0].objetos[0].sha256, plan.entradas[0].objetos[0].sha256, 'los bytes cambiaron');
+    assert.equal(diferencias(otra, previo).subir.length, 0, 'pero lo que dice la nota no');
+    // un manifiesto viejo, sin huella: se sube una vez y desde ahí queda la huella
+    const viejo = JSON.parse(JSON.stringify(previo));
+    delete viejo.notas.n1.objetos[0].huella;
+    assert.deepEqual(diferencias(otra, viejo).subir.map((o) => o.clave), ['nota/n1.html']);
+  } finally { sitio.borrar(); }
+});
+
+test('leerManifiestoConEstado distingue "no hay" de "no se pudo leer"', async () => {
+  const sin = await leerManifiestoConEstado({ bucket: 'x-staging', ejecutar: wranglerFalso().ejecutar });
+  assert.equal(sin.estado, 'no-existe');
+  const roto = await leerManifiestoConEstado({ bucket: 'x-staging', ejecutar: async () => ({ ok: false, salida: 'fetch failed: ECONNRESET' }) });
+  assert.equal(roto.estado, 'error');
+  const bien = await leerManifiestoConEstado({ bucket: 'x-staging', ejecutar: wranglerFalso({ previo: { notas: {} } }).ejecutar });
+  assert.equal(bien.estado, 'ok');
+});
+
+test('si no se puede leer el manifiesto del depósito NO se sube nada (se perdería la memoria de lo archivado) y el estado lo dice', async () => {
+  const sitio = armarSitio([nota('n1', 1), nota('n2', 2)]);
+  try {
+    const llamadas = [];
+    const subido = new Map();
+    const ejecutar = async (args) => {
+      llamadas.push(args);
+      if (args[2] === 'get') return { ok: false, salida: 'Failed to fetch: 500 Internal Server Error tok_SECRETO_123456' };
+      if (args[2] === 'put') subido.set(args[3], fs.readFileSync(args[args.indexOf('--file') + 1], 'utf8'));
+      return { ok: true, salida: '' };
+    };
+    const salida = [];
+    const codigo = await principal([`--out=${sitio.out}`, `--datos=${sitio.datos}`, '--tope=1', '--margen=0', '--subir', '--borrar', '--bucket=radar-archivo-staging'], { env: ENV_CON_CLAVES, ejecutar, escribir: (t) => salida.push(t) });
+    assert.equal(codigo, 1);
+    assert.deepEqual([...subido.keys()], [`radar-archivo-staging/${CLAVE_DEL_ESTADO}`], 'sólo el estado, ninguna nota ni manifiesto');
+    const estado = JSON.parse(subido.get(`radar-archivo-staging/${CLAVE_DEL_ESTADO}`));
+    assert.equal(estado.ok, false);
+    assert.match(estado.motivo, /manifiesto/);
+    assert.ok(!JSON.stringify(estado).includes('tok_SECRETO') && !salida.join('\n').includes('tok_SECRETO'));
+  } finally { sitio.borrar(); }
+});
+
+test('--limite-segundos: pasado el tiempo no empieza subidas nuevas; el manifiesto guarda lo que sí subió y la corrida avisa', async () => {
+  const sitio = armarSitio([nota('n1', 1), nota('n2', 2), nota('n3', 3), nota('n4', 4)]);
+  try {
+    let reloj = 0;
+    const w = wranglerFalso();
+    const ejecutar = async (args) => { if (args[2] === 'put' && args[3].includes('/nota/')) reloj += 4000; return w.ejecutar(args); };
+    const salida = [];
+    const codigo = await principal([`--out=${sitio.out}`, `--datos=${sitio.datos}`, '--tope=1', '--margen=0', '--subir', '--bucket=radar-archivo-staging', '--concurrencia=1', '--limite-segundos=5'], { env: ENV_CON_CLAVES, ejecutar, escribir: (t) => salida.push(t), ahora: () => reloj });
+    assert.equal(codigo, 1, 'la corrida queda marcada (el vigilante lo ve), aunque lo subido quedó anotado');
+    const m = JSON.parse(w.subido.get(CLAVE_DEL_MANIFIESTO));
+    assert.deepEqual(Object.keys(m.notas), ['n1'], 'n1 (página y foto) entró antes del límite; las demás, en la próxima corrida');
+    const estado = JSON.parse(w.subido.get(CLAVE_DEL_ESTADO));
+    assert.ok(estado.pendientes > 0);
+    assert.match(estado.motivo, /se acabó el tiempo/);
+    assert.match(salida.join('\n'), /pendientes \d+ \(se acabó el tiempo\)/);
+  } finally { sitio.borrar(); }
+});
+
+test('el manifiesto se vuelve a leer antes de escribirlo: lo que anotó otra corrida en el medio no se pisa', async () => {
+  const sitio = armarSitio([nota('n1', 1), nota('n2', 2)]);
+  try {
+    const alEmpezar = { version: 1, notas: { viejo: { ruta: '/nota/x-viejo', objetos: [{ clave: 'nota/viejo.html', sha256: 'a' }] } } };
+    const enElMedio = { version: 1, notas: { ...alEmpezar.notas, otra: { ruta: '/nota/x-otra', objetos: [{ clave: 'nota/otra.html', sha256: 'b' }] } } };
+    const w = wranglerFalso({ previo: [alEmpezar, enElMedio] });
+    await principal([`--out=${sitio.out}`, `--datos=${sitio.datos}`, '--tope=1', '--margen=0', '--subir', '--bucket=radar-archivo-staging'], { env: ENV_CON_CLAVES, ejecutar: w.ejecutar, escribir: () => {} });
+    assert.deepEqual(Object.keys(JSON.parse(w.subido.get(CLAVE_DEL_MANIFIESTO)).notas).sort(), ['n1', 'otra', 'viejo']);
+  } finally { sitio.borrar(); }
+});
+
+test('manifiestoTrasSubir: lo que falló no entra con su versión nueva; un borrado fallido deja la nota anotada para reintentar', () => {
+  const previo = { notas: { a: { objetos: [{ clave: 'nota/a.html', sha256: '1' }] }, r: { objetos: [{ clave: 'nota/r.html' }, { clave: 'fotos-notas/r.jpg' }] } } };
+  const nuevo = { notas: { a: { objetos: [{ clave: 'nota/a.html', sha256: '2' }] }, b: { objetos: [{ clave: 'nota/b.html', sha256: '3' }] } } };
+  const hacer = { borrar: [{ id: 'r', clave: 'nota/r.html' }, { id: 'r', clave: 'fotos-notas/r.jpg' }] };
+  const m = manifiestoTrasSubir(previo, nuevo, hacer, { noSubidas: new Set(['nota/a.html']), noBorradas: new Set(['fotos-notas/r.jpg']) });
+  assert.equal(m.notas.a.objetos[0].sha256, '1', 'a queda con lo de antes');
+  assert.ok(m.notas.b);
+  assert.ok(m.notas.r, 'r sigue anotada: su foto no se pudo borrar');
+  assert.ok(!manifiestoTrasSubir(previo, nuevo, hacer).notas.r, 'con todo borrado, sale');
+});
+
+test('--quitar: saca YA del depósito la página, las tarjetas y la foto de esas notas, sin sitio compilado, y no sube nada', async () => {
+  const previo = { version: 1, notas: {
+    abc123: { ruta: '/nota/x-abc123', objetos: [{ clave: 'nota/abc123.html' }, { clave: 'nota/abc123/opengraph-image' }, { clave: 'fotos-notas/abc123.jpg' }] },
+    otra1: { ruta: '/nota/y-otra1', objetos: [{ clave: 'nota/otra1.html' }, { clave: 'fotos-notas/compartida.jpg' }] },
+    otra2: { ruta: '/nota/z-otra2', objetos: [{ clave: 'nota/otra2.html' }, { clave: 'fotos-notas/compartida.jpg' }] },
+  } };
+  const w = wranglerFalso({ previo });
+  const salida = [];
+  const codigo = await principal(['--quitar=abc123,otra1', '--bucket=radar-archivo', '--produccion', '--out=/no/existe'], { env: ENV_CON_CLAVES, ejecutar: w.ejecutar, escribir: (t) => salida.push(t) });
+  assert.equal(codigo, 0);
+  const borrados = w.llamadas.filter((a) => a[2] === 'delete').map((a) => a[3].replace('radar-archivo/', '')).sort();
+  assert.deepEqual(borrados, ['fotos-notas/abc123.jpg', 'nota/abc123.html', 'nota/abc123/instagram.png', 'nota/abc123/opengraph-image', 'nota/otra1.html', 'nota/otra1/instagram.png', 'nota/otra1/opengraph-image'], 'la foto compartida con otra2 se queda');
+  assert.ok(!w.llamadas.some((a) => a[2] === 'put' && a[3].includes('/nota/')), 'no sube ninguna nota');
+  assert.deepEqual(Object.keys(JSON.parse(w.subido.get(CLAVE_DEL_MANIFIESTO)).notas), ['otra2']);
+  assert.equal(JSON.parse(w.subido.get(CLAVE_DEL_ESTADO)).modo, 'quitar');
+  assert.match(salida.join('\n'), /retiradas\.json/, 'recuerda sumarla a retiradas.json');
+  // las guardas valen igual: sin --produccion no toca producción, y los ids tienen que ser ids
+  assert.equal(await principal(['--quitar=abc123', '--bucket=radar-archivo'], { env: ENV_CON_CLAVES, ejecutar: w.ejecutar, escribir: () => {} }), 2);
+  assert.equal(await principal(['--quitar=../x', '--bucket=radar-archivo', '--produccion'], { env: ENV_CON_CLAVES, ejecutar: w.ejecutar, escribir: () => {} }), 2);
+  assert.equal(await principal(['--quitar=abc123', '--bucket=radar-respaldos', '--produccion'], { env: { ...ENV_CON_CLAVES, R2_RESPALDOS: 'radar-respaldos' }, ejecutar: w.ejecutar, escribir: () => {} }), 2);
+  assert.deepEqual(borrarParaQuitar(['q1'], null).map((b) => b.clave), ['nota/q1.html', 'nota/q1/opengraph-image', 'nota/q1/instagram.png'], 'sin manifiesto, las claves de siempre');
+});
+
+test('UNA NOTA RETIRADA NO QUEDA EN R2: de punta a punta, con retiradas.json, --borrar la saca con su foto y el Worker deja de servirla', async () => {
+  const notas = [nota('n1', 1, { tarjeta: true }), nota('n2', 2), nota('n3', 3)];
+  const sitio = armarSitio(notas);
+  try {
+    const args = [`--out=${sitio.out}`, `--datos=${sitio.datos}`, '--tope=1', '--margen=0', '--subir', '--borrar', '--produccion', '--bucket=radar-archivo'];
+    // el depósito, de mentira pero con estado: lo que se sube queda, lo que se borra se va
+    const deposito = new Map();
+    const ejecutar = async (a) => {
+      const clave = a[3]?.split('/').slice(1).join('/');
+      if (a[2] === 'put') deposito.set(clave, fs.readFileSync(a[a.indexOf('--file') + 1]));
+      if (a[2] === 'delete') deposito.delete(clave);
+      if (a[2] === 'get') {
+        if (!deposito.has(clave)) return { ok: false, salida: 'The specified key does not exist.' };
+        fs.writeFileSync(a[a.indexOf('--file') + 1], deposito.get(clave));
+      }
+      return { ok: true, salida: '' };
+    };
+    assert.equal(await principal(args, { env: ENV_CON_CLAVES, ejecutar, escribir: () => {} }), 0);
+    assert.ok(deposito.has('nota/n1.html') && deposito.has('fotos-notas/n1.jpg') && deposito.has('nota/n1/opengraph-image'));
+    const r2 = { async get(k) { const b = deposito.get(k); return b ? { httpEtag: '"e"', async text() { return b.toString('utf8'); }, body: b } : null; }, async head(k) { return deposito.has(k) ? {} : null; } };
+    const parte = parteDeNota(notas[0]);
+    const pedir = () => manejar(new Request(`https://radarbalcarce.com/nota/${parte}`), { ARCHIVO: r2 }, { waitUntil() {} }, { fetchFn: async () => new Response('404', { status: 404 }), cache: null });
+    assert.equal((await pedir()).status, 200, 'archivada, se sirve');
+
+    fs.writeFileSync(path.join(sitio.datos, 'retiradas.json'), JSON.stringify({ notas: { n1: { motivo: 'nombra a un menor', cuando: '2026-10-16', por: 'hernan' } } }));
+    assert.equal(await principal(args, { env: ENV_CON_CLAVES, ejecutar, escribir: () => {} }), 0);
+    assert.ok(![...deposito.keys()].some((k) => k.includes('n1')), `no queda nada de n1 en el depósito: ${[...deposito.keys()].join(', ')}`);
+    assert.ok(!JSON.parse(deposito.get(CLAVE_DEL_MANIFIESTO).toString()).notas.n1);
+    assert.equal((await pedir()).status, 404, 'y el Worker ya no la sirve');
+    assert.ok(deposito.has('nota/n2.html'), 'lo demás sigue');
+
+    // aunque después se borre de retiradas.json (a los 7 días), no vuelve: ya no está en el sitio compilado
+    fs.rmSync(path.join(sitio.out, 'nota', `${parte}.html`));
+    fs.writeFileSync(path.join(sitio.datos, 'retiradas.json'), JSON.stringify({ notas: {} }));
+    const archivo = JSON.parse(fs.readFileSync(path.join(sitio.datos, 'archivo.json'), 'utf8'));
+    fs.writeFileSync(path.join(sitio.datos, 'archivo.json'), JSON.stringify({ notas: archivo.notas.filter((n) => n.id !== 'n1') }));
+    assert.equal(await principal(args, { env: ENV_CON_CLAVES, ejecutar, escribir: () => {} }), 0);
+    assert.ok(![...deposito.keys()].some((k) => k.includes('n1')));
+  } finally { sitio.borrar(); }
+});
+
+test('armarEstado no lleva nada más que números, fechas y el nombre del depósito', () => {
+  const e = armarEstado({ ok: true, bucket: 'radar-archivo', tope: 3700, margen: 200, manifiesto: { totales: { notas: 3, objetos: 5, bytes: 9 } }, resultado: { subidos: 2, fallidos: [{ clave: 'x', salida: 'secreto' }] }, segundos: 4, cuando: '2026-10-16T00:00:00.000Z' });
+  assert.deepEqual(e, { version: 1, cuando: '2026-10-16T00:00:00.000Z', ok: true, modo: 'archivar', bucket: 'radar-archivo', tope: 3700, margen: 200, notas: 3, objetos: 5, bytes: 9, subidos: 2, borrados: 0, pendientes: 0, fallidos: 1, omitidas: 0, segundos: 4 });
+});
+
 // ------------------------------------------------------------------ LA PRUEBA DE CONTRATO
 
 /** Lo que el lector ve de una página (head y artículo), sin lo que cambia a propósito: scripts, estilos, hace-N, botones y franja del día. */
@@ -480,7 +706,9 @@ function lectura(html) {
   const ld = [...head.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => m[1]);
   const articulo = /<article\b[\s\S]*?<\/article>/.exec(html)[0]
     .replace(/<time\b[^>]*data-hace=[^>]*>[\s\S]*?<\/time>/g, '')
-    .replace(/<button\b[^>]*>[\s\S]*?<\/button>/g, '');
+    .replace(/<button\b[^>]*>[\s\S]*?<\/button>/g, '')
+    // el "Seguí leyendo" (las notas del día del armado) se saca a propósito (16/10/2026); en Next es un <section> sin otros adentro
+    .replace(/<section class="bloque-seccion"(?:(?!<\/section>)[\s\S])*?>Seguí leyendo<[\s\S]*?<\/section>/g, '');
   return { metas, ld, articulo };
 }
 
