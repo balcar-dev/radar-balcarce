@@ -1,6 +1,63 @@
 {
-  "generado": "2026-10-16T10:05:46.856Z",
+  "generado": "2026-10-16T10:31:53.752Z",
   "notas": [
+    {
+      "id": "clima20261016",
+      "propia": "clima",
+      "titulo": "El clima de hoy en Balcarce: mínima de 6° y máxima de 11°",
+      "copete": "El pronóstico de este viernes 16 de octubre para Balcarce marca una mínima de 6° y máxima de 11°, con llovizna leve.",
+      "cuerpo": "En Balcarce, a las 07:31 hay 7° y el cielo está nublado; la sensación térmica es de 4°; el viento sopla del S a 17 km/h; la humedad es del 84%. Son los datos de Open-Meteo de ese momento.\n\nPara todo el viernes 16, el pronóstico marca una mínima de 6° y máxima de 11° y llovizna leve. La probabilidad de lluvia es del 16%. El viento llegaría a 19 km/h.\n\nPara los días que siguen, el pronóstico dice: el sábado 17, mínima de 7° y máxima de 10°; el domingo 18, mínima de 5° y máxima de 12°, con 12% de probabilidad de lluvia; el lunes 19, mínima de 4° y máxima de 14°.\n\nEl clima se actualiza a lo largo del día: los valores de ahora, hora por hora, están en la página del clima de Radar Balcarce. El clima de la mañana también salió como video en nuestra página de Facebook.",
+      "guion": null,
+      "seccion": "Balcarce",
+      "local": true,
+      "relevancia": 58,
+      "medios": [
+        "Open-Meteo"
+      ],
+      "enlace": "https://open-meteo.com",
+      "fuentesConsultadas": [
+        {
+          "medio": "Open-Meteo",
+          "enlace": "https://open-meteo.com"
+        }
+      ],
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-16T10:31:50.618Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T10:31:50.618Z",
+      "publicadaPor": null,
+      "publicadaCuando": "2026-10-16T10:31:50.618Z",
+      "temas": [],
+      "etiquetas": [
+        "clima",
+        "pronóstico",
+        "Balcarce",
+        "tiempo"
+      ],
+      "como": "automatica",
+      "firma": "Nota de Radar Balcarce armada con los datos de Open-Meteo a las 07:31.",
+      "enlacesEnTexto": [
+        {
+          "texto": "página del clima de Radar Balcarce",
+          "href": "/clima"
+        },
+        {
+          "texto": "nuestra página de Facebook",
+          "href": "https://www.facebook.com/reel/2082537799037780/"
+        }
+      ],
+      "destacados": [
+        {
+          "texto": "Ver el clima de ahora",
+          "href": "/clima"
+        },
+        {
+          "texto": "Mirá el clima de hoy en video, en Facebook",
+          "href": "https://www.facebook.com/reel/2082537799037780/"
+        }
+      ],
+      "slug": "el-clima-de-hoy-en-balcarce-minima-de-6-y-maxima-de-11"
+    },
     {
       "id": "al99go",
       "titulo": "Estudiantes y Flamengo empatan sin goles en la ida de la copa",
@@ -491,87 +548,6 @@
         "archivo": "fotos-notas/1lkffhb.jpg",
         "credito": "Foto: Clarín"
       }
-    },
-    {
-      "id": "3gzh4e",
-      "titulo": "Belgrano empata con Independiente del Valle en su debut copero",
-      "copete": "El conjunto cordobés igualó 1-1 en Ecuador por la primera fecha de la Copa Libertadores Femenina y sumó su primer punto en el certamen continental.",
-      "cuerpo": "Belgrano empató 1-1 frente a Independiente del Valle en Ecuador, en su presentación absoluta por el Grupo B de la Copa Libertadores Femenina. Julieta Alaides Paz abrió el marcador para las representantes argentinas a los 23 minutos del primer tiempo, mientras que Karen Páez decretó la igualdad de penal a los 40 minutos de la misma etapa en el estadio de Quito. Sobre el cierre del encuentro, el equipo dirigido por Mariana Sánchez sufrió la expulsión de Andrea Amaya por doble amonestación.\n\nEl plantel cordobés accedió al torneo continental tras consagrarse en el Trofeo de Campeonas 2025 frente a Newell's Old Boys, luego de obtener el título en el Campeonato Femenino de Primera División.\n\nEn la continuidad del certamen, las Piratas enfrentarán a Palmeiras el domingo 18 de octubre a las 17:00 y cerrarán la fase de grupos ante Universitario de Perú el miércoles 21 a las 21:00.",
-      "guion": "Belgrano empata con Independiente del Valle en su debut copero",
-      "seccion": "Fútbol",
-      "medios": [
-        "Infobae",
-        "Perfil",
-        "Olé"
-      ],
-      "enlace": "https://www.ole.com.ar/belgrano/belgrano-cordoba-debut-copa-libertadores-femenina-empate-independiente-valle-dragonas-idv-goles-video-juegan_0_N4JthKfblO.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T22:06:09.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T04:01:32.104Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Belgrano igualó 1-1 ante Independiente del Valle en Ecuador.",
-        "Julieta Alaides Paz marcó el tanto del conjunto cordobés.",
-        "Karen Páez empató de penal para las ecuatorianas.",
-        "El domingo 18 de octubre jugará su segundo partido frente a Palmeiras."
-      ],
-      "seSabe": [
-        "El encuentro finalizó 1-1 en el estadio de Quito.",
-        "Julieta Alaides Paz convirtió el gol de Belgrano a los 23 minutos.",
-        "Karen Páez anotó el empate de penal a los 40 minutos.",
-        "Andrea Amaya recibió la tarjeta roja sobre el final del partido."
-      ],
-      "noConfirmado": [
-        "Las fuentes difieren en algunas precisiones sobre el desarrollo de las jugadas de ataque durante el complemento."
-      ],
-      "textoRedes": "Belgrano igualó 1-1 frente a Independiente del Valle en Ecuador por la primera fecha de la Copa Libertadores Femenina y sumó un histórico punto en su presentación absoluta en el certamen continental.",
-      "etiquetas": [
-        "Belgrano",
-        "Copa Libertadores Femenina",
-        "Fútbol Femenino"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/belgrano/belgrano-cordoba-debut-copa-libertadores-femenina-empate-independiente-valle-dragonas-idv-goles-video-juegan_0_N4JthKfblO.html",
-          "fecha": "2026-10-15T22:06:09.000Z",
-          "oficial": false,
-          "aporte": "Aportó el contexto histórico de la participación de Belgrano y el cronograma de los siguientes partidos."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/deportes/2026/10/15/belgrano-fue-superior-pero-empato-1-1-ante-independiente-del-valle-en-su-historico-debut-en-la-copa-libertadores-femenina/",
-          "fecha": "2026-10-15T22:53:38.000Z",
-          "oficial": false,
-          "aporte": "Detalló el desarrollo del partido, los minutos de los goles y las acciones de las jugadoras."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/cordoba/historico-debut-de-belgrano-en-la-copa-libertadores.phtml",
-          "fecha": "2026-10-15T23:13:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó la formación inicial dispuesta por la entrenadora Mariana Sánchez para el debut."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/peru/deportes/2026/10/16/universitario-vs-independiente-del-valle-dia-hora-y-canal-tv-del-partido-por-fecha-2-de-la-copa-libertadores-femenina-2026/",
-          "fecha": "2026-10-16T02:53:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la situación del Grupo B y los próximos compromisos de Universitario."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "belgrano-empata-con-independiente-del-valle-en-su-debut-copero"
     },
     {
       "id": "n6v2wu",
@@ -1287,11 +1263,11 @@
       "guion": "Nadie dice nada estrena su serie Somos así en Disney+",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Perfil",
         "A24",
         "TyC Sports",
         "Infobae",
-        "La Nación"
+        "La Nación",
+        "Perfil"
       ],
       "enlace": "https://www.infobae.com/que-puedo-ver/2026/10/15/nadie-dice-nada-da-el-salto-a-la-ficcion-con-somos-asi-en-hulu-en-disney/",
       "teniaImagenLaFuente": true,
@@ -2724,100 +2700,6 @@
       }
     },
     {
-      "id": "7tqcv3",
-      "titulo": "El Gobierno nacional actualiza los aranceles de discapacidad",
-      "copete": "El Ejecutivo nacional dispuso una suba del 1,9% en las prestaciones básicas para personas con discapacidad. La medida se rige por la inflación de septiembre y mantiene el adicional patagónico.",
-      "cuerpo": "El Gobierno nacional oficializó una suba del 1,90 por ciento en los aranceles destinados al Sistema de Prestaciones Básicas para Personas con Discapacidad. La medida se instrumentó a través de la Resolución 1/2026 de la Agencia Nacional de Discapacidad, publicada en el Boletín Oficial y firmada por el subdirector ejecutivo del organismo, Gianfranco Scigliano.\n\nAsimismo, se ratificó que las atenciones brindadas en la región patagónica conservarán el suplemento del 20 por ciento por zona desfavorable.",
-      "guion": "El Gobierno nacional actualiza los aranceles de discapacidad",
-      "seccion": "Política",
-      "medios": [
-        "El Destape",
-        "Noticias Argentinas (NA)",
-        "QZ Noticias (Mar del Plata)",
-        "Ámbito",
-        "La Capital (Rosario)",
-        "El Cronista",
-        "Perfil"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/salud-oficializo-un-aumento-en-los-aranceles-de-las-prestaciones-por-discapacidad---de-cuanto-es-_a6ad0a55888153cda2dec84c4",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T10:09:30.171Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T12:31:36.164Z",
-      "relevancia": 62,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Ejecutivo nacional fijó un incremento del 1,90 por ciento en las prestaciones.",
-        "La medida se formalizó mediante la Resolución 1/2026 en el Boletín Oficial.",
-        "El porcentaje responde a la variación del Índice de Precios al Consumidor de septiembre.",
-        "Las atenciones en la Patagonia conservan el plus del 20 por ciento."
-      ],
-      "seSabe": [
-        "Se dispuso una suba del 1,90 por ciento en las prestaciones básicas para personas con discapacidad.",
-        "La medida fue establecida por la Agencia Nacional de Discapacidad mediante la Resolución 1/2026.",
-        "El ajuste se calculó a partir de la inflación informada para el mes de septiembre.",
-        "Las prestaciones en la Patagonia mantienen un suplemento del 20 por ciento."
-      ],
-      "etiquetas": [
-        "discapacidad",
-        "aranceles",
-        "Gobierno nacional",
-        "Boletín Oficial",
-        "Agencia Nacional de Discapacidad"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/salud-oficializo-un-aumento-en-los-aranceles-de-las-prestaciones-por-discapacidad---de-cuanto-es-_a6ad0a55888153cda2dec84c4",
-          "fecha": "2026-10-15T10:09:30.171Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles de la Resolución 1/2026 y el porcentaje de aumento del 1,90 por ciento."
-        },
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/el-pais/el-gobierno-oficializo-un-aumento-del-19-en-los-aranceles-de-las-prestaciones-por-discapacidad",
-          "fecha": "2026-10-15T11:45:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la oficialización de la medida por parte del Gobierno nacional."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/el-gobierno-aumento-19-los-aranceles-las-prestaciones-personas-discapacidad-octubre-n6333968",
-          "fecha": "2026-10-15T11:47:00.000Z",
-          "oficial": false,
-          "aporte": "Informó que la suba abarca a todas las prestaciones y que se mantiene el adicional patagónico."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/el-gobierno-aumento-las-prestaciones-por-discapacidad-de-cuanto-sera-la-suba-en-octubre/",
-          "fecha": "2026-10-15T11:38:42.000Z",
-          "oficial": false,
-          "aporte": "Precisó que el incremento corresponde al mes de octubre en base al IPC de septiembre."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/sociedad/aumento-en-las-prestaciones-por-discapacidad-en-octubre-de-2026-de-cuanto-es-y-como-se-aplica.phtml",
-          "fecha": "2026-10-15T11:27:10.000Z",
-          "oficial": false,
-          "aporte": "Indicó la intervención del Ministerio de Salud en el ajuste arancelario."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-nacional-actualiza-los-aranceles-de-discapacidad",
-      "foto": {
-        "archivo": "fotos-notas/7tqcv3.jpg",
-        "credito": "Foto: El Cronista"
-      }
-    },
-    {
       "id": "1m9svv0",
       "titulo": "Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027",
       "copete": "El piloto brasileño de 21 años dejará la Fórmula 2 para sumarse a la máxima categoría con un contrato plurianual. Ocupará el lugar de Esteban Ocon en la escudería estadounidense.",
@@ -3301,8 +3183,8 @@
     }
   ],
   "secciones": [
-    "Fútbol",
     "Balcarce",
+    "Fútbol",
     "Política",
     "Tecnología",
     "Economía",
@@ -3315,12 +3197,12 @@
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 6,
-      "sensacion": 3,
-      "humedad": 92,
-      "viento": 14,
+      "temp": 7,
+      "sensacion": 4,
+      "humedad": 84,
+      "viento": 17,
       "rumbo": "S",
-      "cielo": "Parcialmente nublado",
+      "cielo": "Nublado",
       "esDeDia": true
     },
     "dias": [
@@ -3667,6 +3549,12 @@
   },
   "pendientes": [
     {
+      "id": "dpwrvn",
+      "titulo": "Murió Fernando Confessore, el reconocido meteorólogo, a…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
+    },
+    {
       "id": "w75cgw",
       "titulo": null,
       "seccion": "Argentina",
@@ -3691,22 +3579,16 @@
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
-      "id": "1jq3vmm",
-      "titulo": "El folclore y fútbol de duelo: falleció el “Chiqui”…",
+      "id": "405jgy",
+      "titulo": "Balcarce despide al “Chiqui”, un referente de la danza y…",
       "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"falleció\""
+      "motivo": "necesita ojo humano: \"falleció\" (en otro medio que cuenta lo mismo)"
     },
     {
       "id": "120b8gy",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
-      "id": "dpwrvn",
-      "titulo": "Murió Fernando Confessore, el reconocido meteorólogo, a…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
     },
     {
       "id": "2dhhlx",
@@ -3721,16 +3603,16 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "1qxojgh",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
       "id": "1mmg03q",
       "titulo": "La Justicia archivó la denuncia por usura contra Marcos…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "15yqk6f",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "17gc53m",
@@ -3755,6 +3637,12 @@
       "titulo": "La Justicia de San Nicolás absolvió al líder sindical de…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
+      "id": "1f409fv",
+      "titulo": null,
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1qjwxca",
