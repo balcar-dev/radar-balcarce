@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa de secciones</title>
+<meta name="description" content="Radar Balcarce: propuesta del mapa nuevo de secciones (de 11 a 17), con los números reales de 30 días, las reglas probadas en modo sombra, el menú y el plan para aplicarlo. Con cajas para decidir.">
+<style>
+:root{--fondo:#f6f5f1;--papel:#fff;--texto:#1c1c1a;--suave:#5b5a55;--linea:#dcd9cf;--acento:#1f5fa8;--acento-suave:#e6eef8;--verde:#1e7a46;--verde-suave:#e2f2e8;--amarillo:#8a6400;--amarillo-suave:#fbf1d6;--rojo:#b3261e;--rojo-suave:#fbe5e3;--codigo:#efede6;--sombra:0 1px 2px rgba(0,0,0,.06);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--fondo:#131313;--papel:#1c1c1c;--texto:#ecebe6;--suave:#a9a7a0;--linea:#34332f;--acento:#86b5ee;--acento-suave:#1c2a3b;--verde:#72d39e;--verde-suave:#16291e;--amarillo:#e9c25a;--amarillo-suave:#2c2513;--rojo:#f2928a;--rojo-suave:#351a18;--codigo:#262624;--sombra:none;color-scheme:dark}}
+:root[data-theme="dark"]{--fondo:#131313;--papel:#1c1c1c;--texto:#ecebe6;--suave:#a9a7a0;--linea:#34332f;--acento:#86b5ee;--acento-suave:#1c2a3b;--verde:#72d39e;--verde-suave:#16291e;--amarillo:#e9c25a;--amarillo-suave:#2c2513;--rojo:#f2928a;--rojo-suave:#351a18;--codigo:#262624;--sombra:none;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:64px}
+body{margin:0;background:var(--fondo);color:var(--texto);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+a{color:var(--acento)}
+code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.82em;background:var(--codigo);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+pre{background:var(--codigo);padding:12px;border-radius:8px;overflow-x:auto;font-size:.8rem;line-height:1.45;white-space:pre-wrap}
+h1{font-size:1.85rem;line-height:1.2;margin:6px 0 8px}
+h2{font-size:1.4rem;line-height:1.25;margin:44px 0 10px;padding-top:12px;border-top:2px solid var(--linea)}
+h3{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--suave);margin:22px 0 6px}
+p,li{max-width:76ch}
+.chico,small{font-size:.86rem;color:var(--suave)}
+.bajada{color:var(--suave);font-size:1.04rem;margin:0 0 12px}
+main{padding:16px 16px 90px;max-width:1040px;margin:0 auto}
+.barra-sup{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:8px;padding:8px 16px;background:var(--papel);border-bottom:1px solid var(--linea)}
+.barra-sup .marca{font-weight:700;font-size:.95rem;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.boton{font:inherit;font-size:.9rem;border:1px solid var(--linea);background:var(--papel);color:var(--texto);border-radius:8px;padding:6px 10px;cursor:pointer;min-height:36px}
+.boton:hover{border-color:var(--acento)}
+.boton.prim{background:var(--acento);border-color:var(--acento);color:var(--papel);font-weight:600}
+.progreso{font-size:.8rem;color:var(--suave);white-space:nowrap}
+.indice{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:12px 0}
+.indice a{display:inline-block;padding:4px 10px;border:1px solid var(--linea);border-radius:999px;background:var(--papel);text-decoration:none;color:var(--texto);font-size:.84rem}
+.caja,.recomendacion,.alerta{background:var(--papel);border:1px solid var(--linea);border-radius:10px;padding:12px 16px;box-shadow:var(--sombra);margin:12px 0}
+.recomendacion{border-left:4px solid var(--verde)}
+.alerta{border-left:4px solid var(--amarillo)}
+.resumen li{margin:6px 0}
+.tabla-envoltura{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{border-bottom:1px solid var(--linea);padding:7px 8px;text-align:left;vertical-align:top}
+thead th{font-size:.76rem;color:var(--suave);font-weight:600}
+td.v{font-variant-numeric:tabular-nums}
+.muestra-color{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.barrita{display:block;height:6px;background:var(--codigo);border-radius:3px;margin:4px 0 2px;min-width:80px}
+.barrita span{display:block;height:6px;border-radius:3px}
+.et{display:inline-block;font-size:.72rem;font-weight:700;border-radius:999px;padding:1px 8px;white-space:nowrap}
+.et.nueva{background:var(--acento-suave);color:var(--acento)}
+.et.sigue{background:var(--verde-suave);color:var(--verde)}
+.et.cambia{background:var(--amarillo-suave);color:var(--amarillo);white-space:normal}
+.et.mal{background:var(--rojo-suave);color:var(--rojo)}
+tr.mal td{background:var(--rojo-suave)}
+.cifras{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0}
+.cifra{background:var(--papel);border:1px solid var(--linea);border-radius:10px;padding:10px 12px}
+.cifra b{display:block;font-size:1.5rem;line-height:1.1}
+.cifra span{font-size:.82rem;color:var(--suave)}
+.dos{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:760px){.dos{grid-template-columns:1fr 1fr}}
+ul.archivos li{margin:4px 0}
+.decision{background:var(--papel);border:1px solid var(--linea);border-left:4px solid var(--linea);border-radius:10px;padding:12px 16px;margin:12px 0}
+.decision[data-d="Sí"]{border-left-color:var(--verde)}
+.decision[data-d="No"]{border-left-color:var(--rojo)}
+.decision[data-d="Duda"]{border-left-color:var(--amarillo)}
+.decision-tit{font-weight:700;margin:0 0 4px}
+.propuesta{margin:0 0 8px}
+.opciones{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0}
+.op{font:inherit;font-weight:600;min-width:76px;min-height:40px;border:1px solid var(--linea);border-radius:8px;background:var(--papel);color:var(--texto);cursor:pointer}
+.op[aria-pressed="true"][data-v="Sí"]{background:var(--verde-suave);border-color:var(--verde);color:var(--verde)}
+.op[aria-pressed="true"][data-v="No"]{background:var(--rojo-suave);border-color:var(--rojo);color:var(--rojo)}
+.op[aria-pressed="true"][data-v="Duda"]{background:var(--amarillo-suave);border-color:var(--amarillo);color:var(--amarillo)}
+.coment{display:block;font-size:.85rem;color:var(--suave);margin-top:6px}
+.coment textarea,.campo{display:block;width:100%;font:inherit;font-size:.95rem;margin-top:4px;padding:8px;border:1px solid var(--linea);border-radius:8px;background:var(--papel);color:var(--texto)}
+.fila{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+#caja{width:100%;min-height:160px;font:13px/1.4 ui-monospace,monospace;margin-top:8px}
+#toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:var(--texto);color:var(--fondo);padding:8px 14px;border-radius:8px;font-size:.9rem;opacity:0;transition:opacity .2s;pointer-events:none}
+#toast.ver{opacity:1}
+@media (max-width:640px){table.mapa thead{display:none}table.mapa tr{display:block;border-bottom:2px solid var(--linea);padding:8px 0}table.mapa th,table.mapa td{display:block;border:0;padding:3px 0}}
+</style>
+</head>
+<body>
+<div class="barra-sup"><span class="marca">Radar Balcarce · Mapa de secciones</span><span class="progreso" id="progreso">0 de 14</span><button type="button" class="boton" id="tema" title="Cambiar entre claro y oscuro">Tema</button></div>
+<main>
+<p class="chico">Propuesta del 16/10/2026. <b>No se cambió nada del sitio</b>: el clasificador nuevo corre sólo "en sombra" (<code>ingesta/secciones-nuevas.mjs</code>). Es un cambio visible: se propone y se muestra, y lo deciden ustedes.</p>
+<h1>De 11 a 17 secciones</h1>
+<p class="bajada">Hernán pidió más secciones para que todo caiga más parejo, y más tecnología, ciencia e IA. Esto es el mapa que proponemos, con lo publicado de verdad en los últimos 30 días, las reglas probadas sobre esas notas, el menú y lo que hay que tocar para aplicarlo.</p>
+<ul class="indice"><li><a href="#resumen">En una página</a></li><li><a href="#mapa">El mapa</a></li><li><a href="#no">Lo que no</a></li><li><a href="#reglas">Las reglas</a></li><li><a href="#sombra">La prueba en sombra</a></li><li><a href="#menu">El menú</a></li><li><a href="#aplicar">Para aplicarlo</a></li><li><a href="#etapas">Por etapas</a></li><li><a href="#decisiones">Decidir</a></li></ul>
+
+<h2 id="resumen">En una página</h2>
+<div class="cifras">
+<div class="cifra"><b>1.311</b><span>notas publicadas del 16/09 al 15/10 (sin las propias)</span></div>
+<div class="cifra"><b>258</b><span>cambiarían de sección (20 %)</span></div>
+<div class="cifra"><b>37 de 40</b><span>bien en la muestra revisada a mano (92 %)</span></div>
+<div class="cifra"><b>21 de 24</b><span>bien en notas que no se usaron para afinar (88 %)</span></div>
+</div>
+<ol class="resumen">
+<li><b>17 secciones, no 20.</b> Las 11 de hoy siguen, con la misma dirección, y se suman 6: <b>Educación, Salud, Ciencia, Espectáculos, Turismo y gastronomía y Ambiente y clima</b>. Para llegar a 20 habría que inventar secciones sin notas.</li>
+<li><b>Educación y Salud ya tienen material</b>: unas 10 y 11 notas por semana que hoy se pierden adentro de Balcarce, Política y Argentina. Llegan al piso de 10 por semana que se fijó el 8/10.</li>
+<li><b>Ciencia y Tecnología e IA tienen poco publicado</b> (3,5 y 2,8 por semana) porque lo de un solo medio no pasa el cruce, no porque falte en las fuentes. Ciencia conviene abrirla <b>junto con</b> la regla "fuente sola" del diagnóstico (C1).</li>
+<li><b>La IA no va como sección aparte</b>: Tecnología se lee "Tecnología e IA" y la IA tiene su página de tema. Si pasa 10 notas por semana, se separa.</li>
+<li><b>Cultura se parte</b>: lo de afuera de la tele y los recitales va a Espectáculos; lo de acá, libros y arte quedan en Cultura (el nombre que se lee pierde "y agenda": la agenda ya es /agenda).</li>
+<li><b>Turismo y Ambiente son "duda"</b>: 4 y 5 notas por semana. Valen por Balcarce (Fiesta del Postre, sierras, alertas), pero no llegan al piso: también pueden ser temas.</li>
+<li><b>No se parten las grandes</b> (Economía 42, Política 40, Automovilismo 38, Deportes 37, Fútbol 36 por semana): ya son precisas. Lo que las hace grandes es lo de afuera; eso se regula con los cupos, no con secciones.</li>
+<li><b>Balcarce baja de 50 a 22 por semana</b>: deja de ser el cajón de todo lo de acá. Lo que queda es lo que de verdad no tiene otra sección.</li>
+<li><b>El menú</b>: una barra con las 8 más fuertes y un botón <b>"Más secciones"</b> que abre las otras 9 agrupadas. Prototipo en <a href="PROTOTIPO-MENU.html">PROTOTIPO-MENU.html</a>.</li>
+<li><b>Las direcciones no cambian</b>: ninguna nota lleva la sección en su dirección y ninguna sección de hoy cambia de ranura. No hace falta ninguna redirección.</li>
+<li><b>El clasificador nuevo no clasifica de cero</b>: refina la sección que ya decidió el sistema (palabras más IA) con palabras firmes y débiles, como siempre. 43 notas (3 %) quedan marcadas como dudosas.</li>
+<li><b>Por etapas</b>: primero la IA elige con la lista nueva sin publicar nada (una semana), después Educación y Salud con el menú nuevo, después Ciencia con "fuente sola" y Espectáculos, y al final Turismo y Ambiente si llegan.</li>
+</ol>
+
+<h2 id="mapa">El mapa</h2>
+<p class="chico">"Hoy" es la sección actual en las mismas 1.311 notas; "con el mapa nuevo" es lo que da el clasificador en sombra sobre esas notas. "Esperado" suma lo que cambiaría con las propuestas de la etapa 1 (fuentes de ciencia, Policiales de servicio): es una estimación, no una medición.</p>
+<div class="tabla-envoltura"><table class="mapa"><thead><tr><th>Sección</th><th>Qué entra</th><th>Por semana hoy</th><th>Por semana con el mapa nuevo</th><th>Esperado por semana</th><th>Menú</th><th>Estado y color</th></tr></thead><tbody>
+<tr><th scope="row"><span class="muestra-color" style="background:#B91C1C"></span>Balcarce<br><small><code>/seccion/balcarce</code></small></th><td>Lo de acá que no tiene sección más precisa: vecinos, instituciones, obras, comercios, servicios y trámites (cortes, tasas, DNI, tarifas).</td><td class="v">49,5</td><td class="v"><b>21,9</b><span class="barrita"><span style="width:51.5%;background:#B91C1C"></span></span><small>94 en 30 días · 94 de acá</small></td><td class="v">20 a 25</td><td>Barra</td><td><span class="et sigue">sigue</span><br><small><code>#B91C1C</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#3730A3"></span>Política<br><small><code>/seccion/politica</code></small></th><td>Concejo, intendente, Provincia y Nación, leyes, elecciones, Cancillería y Malvinas.</td><td class="v">40,4</td><td class="v"><b>40,4</b><span class="barrita"><span style="width:95.1%;background:#3730A3"></span></span><small>173 en 30 días · 68 de acá</small></td><td class="v">40</td><td>Barra</td><td><span class="et sigue">sigue</span><br><small><code>#3730A3</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#831843"></span>Policiales<br><small><code>/seccion/policiales</code></small></th><td>Sólo de Balcarce y la zona: delitos, choques, incendios, estafas y prevención.</td><td class="v">4,9</td><td class="v"><b>7,9</b><span class="barrita"><span style="width:18.6%;background:#831843"></span></span><small>34 en 30 días · 33 de acá</small></td><td class="v">8 (unas 20 si se aprueban P1 y P2)</td><td>Barra</td><td><span class="et sigue">sigue</span><br><small><code>#831843</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#1D4BE0"></span>Educación<br><small><code>/seccion/educacion</code></small></th><td>Escuelas, jardines, docentes y paros, la Facultad y las universidades, becas e inscripciones.</td><td class="v">—</td><td class="v"><b>9,6</b><span class="barrita"><span style="width:22.6%;background:#1D4BE0"></span></span><small>41 en 30 días · 32 de acá</small></td><td class="v">10 a 14</td><td>"Más"</td><td><span class="et nueva">nueva</span><br><small><code>#1D4BE0</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#004E5C"></span>Salud<br><small><code>/seccion/salud</code></small></th><td>Hospital y salas, vacunas, brotes, PAMI e IOMA, LALCEC, zoonosis, salud mental, campañas.</td><td class="v">—</td><td class="v"><b>10,7</b><span class="barrita"><span style="width:25.2%;background:#004E5C"></span></span><small>46 en 30 días · 29 de acá</small></td><td class="v">11 a 15</td><td>"Más"</td><td><span class="et nueva">nueva</span><br><small><code>#004E5C</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#7C3AED"></span>Fútbol<br><small><code>/seccion/futbol</code></small></th><td>De la Liga Balcarceña a la Selección.</td><td class="v">27,3</td><td class="v"><b>35,7</b><span class="barrita"><span style="width:84.0%;background:#7C3AED"></span></span><small>153 en 30 días · 16 de acá</small></td><td class="v">36</td><td>Barra</td><td><span class="et sigue">sigue</span><br><small><code>#7C3AED</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#0F766E"></span>Deportes<br><small><code>/seccion/deportes</code></small></th><td>Todo lo demás (básquet, hockey, boxeo, atletismo, Juegos Bonaerenses).</td><td class="v">42,0</td><td class="v"><b>37,3</b><span class="barrita"><span style="width:87.8%;background:#0F766E"></span></span><small>160 en 30 días · 130 de acá</small></td><td class="v">37</td><td>Barra</td><td><span class="et sigue">sigue</span><br><small><code>#0F766E</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#B45309"></span>Automovilismo<br><small><code>/seccion/automovilismo</code></small></th><td>TC, Fórmula 1, karting, el autódromo y Fangio.</td><td class="v">38,0</td><td class="v"><b>38</b><span class="barrita"><span style="width:89.4%;background:#B45309"></span></span><small>163 en 30 días · 112 de acá</small></td><td class="v">38</td><td>Barra</td><td><span class="et sigue">sigue</span><br><small><code>#B45309</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#5A6B0A"></span>Agro<br><small><code>/seccion/agro</code></small></th><td>Campo, papa, ganadería, granos, el INTA cuando es producción.</td><td class="v">20,8</td><td class="v"><b>18,9</b><span class="barrita"><span style="width:44.5%;background:#5A6B0A"></span></span><small>81 en 30 días · 23 de acá</small></td><td class="v">19</td><td>Barra</td><td><span class="et sigue">sigue</span><br><small><code>#5A6B0A</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#8A6500"></span>Economía<br><small><code>/seccion/economia</code></small></th><td>Precios, salarios y jubilaciones, empleo, empresas, combustibles.</td><td class="v">41,1</td><td class="v"><b>42,5</b><span class="barrita"><span style="width:100.0%;background:#8A6500"></span></span><small>182 en 30 días · 12 de acá</small></td><td class="v">42</td><td>Barra</td><td><span class="et sigue">sigue</span><br><small><code>#8A6500</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#0A7C99"></span>Ciencia<br><small><code>/seccion/ciencia</code></small></th><td>Investigación y descubrimientos: CONICET, INTA y la Facultad cuando es ciencia, espacio, paleontología, premios.</td><td class="v">—</td><td class="v"><b>3,5</b><span class="barrita"><span style="width:8.2%;background:#0A7C99"></span></span><small>15 en 30 días · 10 de acá</small></td><td class="v">10 a 20 con &quot;fuente sola&quot; (C1); sin eso, 3 o 4</td><td>"Más"</td><td><span class="et nueva">nueva</span><br><small><code>#0A7C99</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#0B6FB8"></span>Tecnología e IA<br><small><code>/seccion/tecnologia</code></small></th><td>Empresas tecnológicas, celulares y aplicaciones, ciberseguridad, robots e inteligencia artificial (con su página de tema).</td><td class="v">2,8</td><td class="v"><b>2,8</b><span class="barrita"><span style="width:6.6%;background:#0B6FB8"></span></span><small>12 en 30 días · 2 de acá</small></td><td class="v">7 a 15 con La Nación Tecnología y C4; sin eso, 3</td><td>"Más"</td><td><span class="et cambia">cambia el nombre que se lee</span><br><small><code>#0B6FB8</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#9D2C8F"></span>Cultura<br><small><code>/seccion/cultura</code></small></th><td>La cultura de acá (Teatro Municipal, Casa del Bicentenario, museos, talleres, artistas locales), libros y arte. En el menú se lee &quot;Cultura&quot;: la agenda ya es /agenda.</td><td class="v">19,8</td><td class="v"><b>12,4</b><span class="barrita"><span style="width:29.2%;background:#9D2C8F"></span></span><small>53 en 30 días · 46 de acá</small></td><td class="v">12</td><td>"Más"</td><td><span class="et cambia">cambia el nombre que se lee</span><br><small><code>#9D2C8F</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#C0258F"></span>Espectáculos<br><small><code>/seccion/espectaculos</code></small></th><td>Tele, streaming, cine, recitales y giras de afuera, premios. Nunca chimentos.</td><td class="v">—</td><td class="v"><b>4,7</b><span class="barrita"><span style="width:11.1%;background:#C0258F"></span></span><small>20 en 30 días · 0 de acá</small></td><td class="v">5 (con el cupo de afuera de hoy)</td><td>"Más"</td><td><span class="et nueva">nueva</span><br><small><code>#C0258F</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#5E3729"></span>Turismo y gastronomía<br><small><code>/seccion/turismo</code></small></th><td>Escapadas, fines de semana largos, la Fiesta del Postre, las sierras, restaurantes y productos de la zona.</td><td class="v">—</td><td class="v"><b>4</b><span class="barrita"><span style="width:9.4%;background:#5E3729"></span></span><small>17 en 30 días · 11 de acá</small></td><td class="v">4 (más en noviembre y en verano)</td><td>"Más"</td><td><span class="et nueva">nueva</span><br><small><code>#5E3729</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#006516"></span>Ambiente y clima<br><small><code>/seccion/ambiente</code></small></th><td>Alertas y temporales, inundaciones, sequía, incendios forestales, residuos y reciclaje, árboles y fauna. El pronóstico diario no es nota.</td><td class="v">—</td><td class="v"><b>4,9</b><span class="barrita"><span style="width:11.5%;background:#006516"></span></span><small>21 en 30 días · 13 de acá</small></td><td class="v">4 o 5 (sin los pronósticos)</td><td>"Más"</td><td><span class="et nueva">nueva</span><br><small><code>#006516</code></small></td></tr>
+<tr><th scope="row"><span class="muestra-color" style="background:#4B5563"></span>Argentina<br><small><code>/seccion/argentina</code></small></th><td>Lo nacional que no es de otra sección: sociedad, transporte, trámites, la Iglesia.</td><td class="v">19,4</td><td class="v"><b>10,7</b><span class="barrita"><span style="width:25.2%;background:#4B5563"></span></span><small>46 en 30 días · 1 de acá</small></td><td class="v">10</td><td>"Más"</td><td><span class="et sigue">sigue</span><br><small><code>#4B5563</code></small></td></tr>
+</tbody></table></div>
+<p class="chico">Los colores nuevos se eligieron para que se lean con letras blancas y sobre el papel (contraste 4,5 o más) y no se confundan con ningún otro de las piezas (distancia OKLab 0,06 o más): lo controla <code>pruebas/secciones-nuevas.test.mjs</code>. Espectáculos y Ciencia usan los dos colores que estaban reservados desde el 30/09 (fucsia <code>#C0258F</code> y celeste <code>#0A7C99</code>); quedan como reservados nuevos <code>#5E4F11</code> y <code>#7563C0</code>.</p>
+<div class="alerta"><b>Sobre los 60 días:</b> el archivo guarda notas desde el 3/09, así que "60 días" son en la práctica 43. Con 60 días los números por semana salen a la mitad sólo porque el período es más largo; por eso se usan los 30.</div>
+
+<h2 id="no">Lo que no recomendamos</h2>
+<div class="tabla-envoltura"><table><thead><tr><th>Candidata</th><th>Por qué no</th><th>En su lugar</th></tr></thead><tbody>
+<tr><th scope="row">Mundo / Internacional</th><td>El criterio dice que lo del extranjero sin un argentino no entra (§ 2). Una sección empuja a traerlo.</td><td>Lo argentino en el mundo, en Argentina o Política.</td></tr>
+<tr><th scope="row">IA como sección aparte</th><td>3 notas publicadas en 30 días. Con "fuente sola" y C4 podría llegar a 2 o 3 por día, pero todavía no está.</td><td>"Tecnología e IA" y la página de tema <code>/tema/inteligencia-artificial</code>.</td></tr>
+<tr><th scope="row">Sociedad (en vez de Argentina)</th><td>Cambia una dirección que ya está en Google y mezcla lo nacional con lo local. Con Salud, Educación y Ambiente, Argentina ya queda chica (10 por semana) y más limpia.</td><td>Argentina.</td></tr>
+<tr><th scope="row">Deportes por disciplina (básquet, hockey…)</th><td>Ninguna llega a 4 por semana sola.</td><td>Temas (<code>/tema/basquet</code>) si se quiere una página.</td></tr>
+<tr><th scope="row">Balcarce por tema (Instituciones, Servicios, Policiales de acá)</th><td>Servicios existió y se sacó el 27/09 (Hernán). Instituciones, 2 o 3 por semana. Policiales ya es sólo de acá.</td><td>Quedan en Balcarce.</td></tr>
+<tr><th scope="row">Trabajo / Empleo</th><td>Lo que hay (paritarias, despidos) ya está bien en Economía y Política.</td><td>Economía.</td></tr>
+<tr><th scope="row">Agenda como sección</th><td>Ya existe <code>/agenda</code>, una página por evento con fecha.</td><td>/agenda, enlazada desde Cultura.</td></tr>
+</tbody></table></div>
+
+<h2 id="reglas">Las reglas de asignación</h2>
+<h3>Cómo decide</h3>
+<ol>
+<li>Parte de la sección que <b>ya decidió el sistema de hoy</b> (palabras de <code>REGLAS_SECCION</code> y la lectura con IA). No clasifica de cero.</li>
+<li>Cada sección de hoy tiene una lista de secciones nuevas que <b>se la pueden llevar</b>. Balcarce reparte en 12; Argentina en 10; Cultura en Espectáculos, Turismo y otras; Tecnología y Agro sólo en Ciencia; Política sólo en Educación y Salud; Deportes sólo en Fútbol. <b>Fútbol, Automovilismo y Policiales no se tocan</b>.</li>
+<li>Una palabra <b>firme</b> decide desde el título. En la bajada hacen falta <b>dos firmes distintas</b> (o una firme y una débil en el título): una sola engaña ("Nito Lezcano reflexiona sobre su sobreseimiento" nombraba el paro docente de pasada).</li>
+<li>Una palabra <b>débil</b> (ambigua: "clases", "serie", "colegio", "IA") decide sólo desde el título y si ninguna firme encontró nada, igual que <code>PALABRAS_DEBILES</code> hoy.</li>
+<li>Las <b>contras</b> anulan: "carne vacuna" no es Salud, "a ciencia cierta" no es Ciencia, "conductores" no es la tele, "Turismo Carretera" no es Turismo, "educación vial" no es Educación.</li>
+<li>De una sección ya temática (Política, Agro, Deportes…) una nota se va sólo con una firme <b>en el título</b> y <b>si no hay empate</b>: "El Municipio impulsa un plan de obras públicas en salud, educación y caminos" se queda en Política.</li>
+<li>Lo de acá nunca es Espectáculos (un show en la Casa del Bicentenario es Cultura) y la música de afuera va a Espectáculos aunque la palabra sea de Cultura.</li>
+<li>Lo que parece un pronóstico del tiempo queda marcado: según el criterio no es una nota (4 se publicaron en 30 días).</li>
+</ol>
+<h3>Las palabras (resumen; la lista entera está en el código)</h3>
+<div class="tabla-envoltura"><table><thead><tr><th>Sección</th><th>Firmes</th><th>Débiles (sólo en el título)</th><th>Contras</th></tr></thead><tbody>
+<tr><th scope="row">Educación</th><td><small>escuela, escuelas, escolar, escolares, docente, docentes, paro docente, alumnos, alumnas, estudiantes, estudiante, estudiantil, universidad, universidades … (46)</small></td><td><small>clases, colegio, primaria, maestros, maestras, aulas, aula, becas, esi, inscripción, inscripcion, jardín, jardin, técnica, tecnica</small></td><td><small>colegio de abogados, colegio de escribanos, colegio de martilleros, colegio médico, colegio medico, clases de cocina …</small></td></tr>
+<tr><th scope="row">Salud</th><td><small>salud, hospital, hospitales, médico, medico, médicos, medicos, médica, vacuna, vacunas, vacunación, vacunacion, sarampión, sarampion … (73)</small></td><td><small>virus, brote, brotes, tratamiento, síntomas, sintomas, rabia, nutrición, nutricion</small></td><td><small>carne vacuna, vacunos, salud financiera, salud de la economía, salud de la economia, salud fiscal</small></td></tr>
+<tr><th scope="row">Ciencia</th><td><small>ciencia, científico, cientifico, científicos, cientificos, científica, cientifica, investigadores, investigadora, conicet, conae, nasa, telescopio, astronomía … (64)</small></td><td><small>investigador, descubren, descubrimiento, laboratorio, universo, luna, cerebro, especie, especies</small></td><td><small>a ciencia cierta, miss universo, luna de miel, investigadores de la causa, investigadores judiciales, ciencias económicas …</small></td></tr>
+<tr><th scope="row">Tecnología</th><td><small>tecnología, tecnologia, tecnológica, tecnologica, tecnológico, tecnologico, inteligencia artificial, chatgpt, openai, anthropic, deepseek, nvidia, machine learning, modelo de lenguaje … (50)</small></td><td><small>ia, gemini, claude, copilot, grok, celular, celulares, app, aplicación, aplicacion, internet, chip, chips, spotify</small></td><td><small>transporte de aplicaciones, robo de celular, robaron un celular, robaron el celular</small></td></tr>
+<tr><th scope="row">Espectáculos</th><td><small>netflix, disney, hbo, prime video, streaming, película, pelicula, estreno, actor, actriz, cantante, recital, recitales, gran hermano … (40)</small></td><td><small>serie, show, gira, oscar, álbum, album, disco, cine</small></td><td><small>conductor ebrio, conductor alcoholizado, serie de robos, conductora alcoholizada, disco de freno, programa de gobierno …</small></td></tr>
+<tr><th scope="row">Turismo</th><td><small>turismo, turistas, turístico, turistico, turística, turistica, turísticos, turisticos, escapada, escapadas, fin de semana largo, ocupación hotelera, ocupacion hotelera, gastronomía … (31)</small></td><td><small>vacaciones, reservas, hotel, hoteles, sierras, receta, cocina, vino, vinos, bodega, paraje, visitantes</small></td><td><small>transporte público, transporte publico, turismo carretera, turismo nacional, turismo pista, tc pista …</small></td></tr>
+<tr><th scope="row">Ambiente</th><td><small>medio ambiente, ambiental, ambientales, cambio climático, cambio climatico, calentamiento global, contaminación, contaminacion, reciclaje, ecopunto, ecopuntos, residuos, basural, incendio forestal … (57)</small></td><td><small>clima, lluvias, lluvia, viento, fauna, árboles, arboles, jabalíes, jabalies</small></td><td><small>clima político, clima politico, clima de negocios, clima electoral, clima social, temporal de la economía …</small></td></tr>
+<tr><th scope="row">Cultura</th><td><small>teatro, teatro municipal, museo, libro, libros, escritor, escritora, poesía, poesia, biblioteca, feria del libro, orquesta, coro, danza … (41)</small></td><td><small>muestra, exposición, exposicion, taller, humor, música, musica, arte</small></td><td><small>teatro de operaciones, muestra de sangre, la muestra nacional</small></td></tr>
+<tr><th scope="row">Política</th><td><small>concejo deliberante, concejales, concejal, intendente, intendenta, ordenanza, legislatura, senado, diputados, senadores, candidatura, elecciones, gobernador, canciller … (22)</small></td><td><small>concejo</small></td><td><small>operativo de documentación, operativo de documentacion, operativo de dni, en el concejo deliberante funciona, dni</small></td></tr>
+<tr><th scope="row">Policiales</th><td><small>robo, robos, robar, robaron, roban, ladrones, ladrón, ladron, detenido, detenidos, detuvieron, aprehendido, aprehenden, choque … (36)</small></td><td><small>denuncia, seguridad</small></td><td><small>seguridad social, seguridad alimentaria, incendio forestal, incendios forestales, educación vial, educacion vial</small></td></tr>
+<tr><th scope="row">Deportes</th><td><small>boxeo, boxeador, juegos bonaerenses, atletismo, ciclistas, ciclismo, maratón, maraton, gimnasia artística, gimnasia artistica, newcom, hockey, básquet, basquet … (29)</small></td><td><small>torneo, carrera, campeonato, final provincial</small></td><td><small>malambo, carrera de grado, carrera universitaria, carrera docente, carrera hacia la onu, carrera para liderar</small></td></tr>
+<tr><th scope="row">Fútbol</th><td><small>fútbol, futbol, liga balcarceña, liga balcarcena, champions league, selección argentina, seleccion argentina, messi, scaloni, torneo clausura, torneo apertura, liga profesional, copa argentina, libertadores … (19)</small></td><td><small>—</small></td><td><small>mural de messi, básquet, basquet, hockey, vóley, voley …</small></td></tr>
+<tr><th scope="row">Economía</th><td><small>anses, jubilaciones, jubilados, nafta, combustibles, inflación, inflacion, dólar, dolar, salarios, paritarias, desocupación, desocupacion, puestos de trabajo … (17)</small></td><td><small>precios</small></td><td><small>—</small></td></tr>
+</tbody></table></div>
+<h3>Lo que leería la IA (reemplaza las líneas de "seccion" de <code>ingesta/lectura-ia.mjs</code>)</h3>
+<p class="chico">En producción la IA es la que más decide: sin estas líneas nunca elegiría una sección nueva. La lista de opciones (<code>SECCIONES_DE_LA_FICHA</code>) pasa a tener las 17.</p>
+<pre>- "seccion", qué va en cada una:
+  · Balcarce: lo que pasa en la ciudad y no tiene una sección más precisa: vecinos, instituciones y clubes (lo no deportivo), obras, comercios de acá, y lo práctico: cortes de luz o agua, trámites, tasas, horarios, tarifas y subsidios de servicios públicos.
+  · Política: el Concejo, el intendente, el gobierno provincial y nacional, leyes, elecciones, la Cancillería y Malvinas.
+  · Policiales: delitos, accidentes de tránsito, incendios, bomberos, policía, estafas y prevención.
+  · Educación: escuelas, jardines, docentes y paros docentes, universidades y la Facultad, becas, inscripciones, el ciclo lectivo.
+  · Salud: hospitales, salas, vacunas, enfermedades y brotes, PAMI, IOMA, obras sociales y prepagas (lo que cubren), salud mental, zoonosis y campañas de prevención.
+  · Fútbol: el fútbol, de la liga de Balcarce a la Selección y los clubes argentinos.
+  · Deportes: todos los demás deportes (básquet, hockey, rugby, tenis, boxeo, atletismo, ciclismo, Juegos Bonaerenses…), salvo el automovilismo.
+  · Automovilismo: autos de carrera (TC, Turismo Nacional, Fórmula 1, MotoGP, karting, rally), el autódromo Juan Manuel Fangio y Fangio. Nunca Deportes ni Turismo.
+  · Agro: campo, papa, ganadería, granos, maquinaria agrícola, el INTA y la Facultad cuando es producción, clima para el productor.
+  · Economía: precios, inflación, dólar, salarios y jubilaciones, empleo, empresas, combustibles, consumo.
+  · Ciencia: investigación y descubrimientos: CONICET, universidades e INTA cuando es ciencia (no producción), espacio y astronomía, paleontología, biología, premios científicos.
+  · Tecnología: tecnología e inteligencia artificial: empresas tecnológicas, celulares y aplicaciones, ciberseguridad, robots, IA (ChatGPT, Gemini, OpenAI…). No las guías de uso ni las ofertas.
+  · Cultura y agenda: la cultura de acá (Teatro Municipal, Casa del Bicentenario, museos, talleres, fiestas, artistas locales) y libros, arte, teatro, música y patrimonio.
+  · Espectáculos: televisión, streaming, cine, recitales y giras de artistas de afuera, premios del espectáculo. No chimentos (vida privada de famosos).
+  · Turismo: turismo y gastronomía: escapadas, fines de semana largos, ocupación, la Fiesta del Postre, las sierras, restaurantes y productos de la zona.
+  · Ambiente: ambiente y clima: alertas meteorológicas, temporales, inundaciones, sequía, incendios forestales, residuos y reciclaje, árboles, fauna. El pronóstico de todos los días NO es una nota (está /clima).
+  · Argentina: lo nacional que no entra en ninguna de las anteriores (sociedad, transporte, trámites nacionales, la Iglesia, grandes hechos).</pre>
+
+<h2 id="sombra">La prueba en sombra</h2>
+<p>Se corre con <code>node ingesta/secciones-nuevas-sombra.mjs</code> (no toca nada, no usa la red ni la IA). Sobre las 1.311 notas de 30 días, 258 cambian de sección y 43 quedan marcadas como dudosas.</p>
+<h3>De dónde sale cada sección nueva</h3>
+<div class="tabla-envoltura"><table><thead><tr><th>Sección de hoy</th><th>Notas</th><th>Se quedan</th><th>Se van a…</th></tr></thead><tbody>
+<tr><th scope="row">Balcarce</th><td class="v">212</td><td class="v">94</td><td>Educación 26 · Salud 24 · Deportes 13 · Ambiente 13 · Policiales 13 · Política 10 · Cultura 8 · Economía 4 · Turismo 2 · Ciencia 2 · Tecnología 2 · Fútbol 1</td></tr>
+<tr><th scope="row">Cultura y agenda</th><td class="v">85</td><td class="v">45</td><td>Espectáculos 18 · Turismo 14 · Educación 4 · Deportes 2 · Salud 1 · Ambiente 1</td></tr>
+<tr><th scope="row">Deportes</th><td class="v">180</td><td class="v">145</td><td>Fútbol 35</td></tr>
+<tr><th scope="row">Política</th><td class="v">173</td><td class="v">157</td><td>Educación 8 · Salud 8</td></tr>
+<tr><th scope="row">Agro</th><td class="v">89</td><td class="v">81</td><td>Ciencia 8</td></tr>
+<tr><th scope="row">Automovilismo</th><td class="v">163</td><td class="v">163</td><td>—</td></tr>
+<tr><th scope="row">Economía</th><td class="v">176</td><td class="v">175</td><td>Turismo 1</td></tr>
+<tr><th scope="row">Argentina</th><td class="v">83</td><td class="v">46</td><td>Salud 13 · Ambiente 7 · Política 6 · Economía 3 · Educación 3 · Espectáculos 2 · Ciencia 2 · Tecnología 1</td></tr>
+<tr><th scope="row">Fútbol</th><td class="v">117</td><td class="v">117</td><td>—</td></tr>
+<tr><th scope="row">Policiales</th><td class="v">21</td><td class="v">21</td><td>—</td></tr>
+<tr><th scope="row">Tecnología</th><td class="v">12</td><td class="v">9</td><td>Ciencia 3</td></tr>
+</tbody></table></div>
+<h3>La muestra revisada a mano (40: 25 que cambian y 15 que se quedan)</h3>
+<p class="chico">Elegidas por un número fijo de cada nota (siempre las mismas con los mismos datos). Revisadas una por una el 16/10.</p>
+<div class="dos">
+<div class="caja"><b>37 de 40 bien (92 %).</b> De las 25 que cambian, 24 bien (96 %); de las 15 que se quedan, 13 (una es un error de hoy que el mapa no arregla).</div>
+<div class="caja"><b>Ojo:</b> las reglas se afinaron mirando estas mismas notas, así que el 92 % es optimista. En notas que <b>no</b> se usaron para afinar (las 4 que cambian del 3 al 15/09 y 20 de la lectura de feeds de hoy) dio <b>19 de 24 (79 %)</b>; con dos arreglos generales que salieron de ahí (la música de afuera a Espectáculos), <b>21 de 24 (88 %)</b>.</div>
+</div>
+<div class="tabla-envoltura"><table><thead><tr><th>#</th><th>Título</th><th>Hoy</th><th>Nueva</th><th>Por qué</th><th>Revisión</th></tr></thead><tbody>
+<tr class="ok"><td class="v">1</td><td>Festejos por el Día del Estudiante en el cerro El Triunfo</td><td>Balcarce</td><td><b>Educación</b></td><td><small>firme en el título: &quot;estudiante&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">2</td><td>En qué canal San Lorenzo vs. Boca por el Torneo Clausura 2026 hoy</td><td>Deportes</td><td><b>Fútbol</b></td><td><small>firme en el título: &quot;torneo clausura&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">3</td><td>Impulsan un banco municipal de elementos de fisiatría</td><td>Balcarce</td><td><b>Salud</b></td><td><small>firme en el título: &quot;fisiatría&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">4</td><td>La APDH rechaza la factible exoneración de la Dra. Virginia Aparicio, investigadora del INTA Balcarce y del CONICET</td><td>Agro</td><td><b>Ciencia</b></td><td><small>firme en el título: &quot;investigadora&quot;</small></td><td><span class="et sigue">bien</span><br><small>Bien: es política científica (el caso de una investigadora del INTA). Marcada como dudosa (podría ser Agro).</small></td></tr>
+<tr class="ok"><td class="v">5</td><td>La Escuela Técnica impulsa una campaña solidaria para arreglar su gimnasio</td><td>Balcarce</td><td><b>Educación</b></td><td><small>firme en el título: &quot;escuela&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">6</td><td>La foto casera que reveló la esposa de Dibu Martínez tras los dichos sobre el retiro de Lionel Messi</td><td>Deportes</td><td><b>Fútbol</b></td><td><small>firme en el título: &quot;messi&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">7</td><td>El Club de Leones entrega nuevos equipos al Hospital Municipal</td><td>Balcarce</td><td><b>Salud</b></td><td><small>firme en el título: &quot;hospital&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">8</td><td>ANSES: quiénes cobran este miércoles 23 de septiembre</td><td>Balcarce</td><td><b>Economía</b></td><td><small>firme en el título: &quot;anses&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="mal"><td class="v">9</td><td>Nito Lezcano reflexiona sobre su sobreseimiento tras una denuncia penal</td><td>Balcarce</td><td><b>Policiales</b></td><td><small>débil en el título: &quot;denuncia&quot;</small></td><td><span class="et mal">mal</span><br><small>Es una causa judicial de una persona (sobreseimiento): Balcarce o Policiales; &quot;denuncia&quot; sola es débil y acá decidió mal.</small></td></tr>
+<tr class="ok"><td class="v">10</td><td>Agustín Conti repasa su vocación y los desafíos de la docencia</td><td>Cultura y agenda</td><td><b>Educación</b></td><td><small>firme en la bajada: &quot;educación&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">11</td><td>La Asociación de Maestros convoca a un paro docente para el miércoles</td><td>Balcarce</td><td><b>Educación</b></td><td><small>firme en el título: &quot;asociación de maestros&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">12</td><td>U2 regresa a la Argentina y toca en el estadio de River</td><td>Cultura y agenda</td><td><b>Espectáculos</b></td><td><small>firme en el título: &quot;u2&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">13</td><td>El Gobierno lanza un plan nacional de salud vascular</td><td>Argentina</td><td><b>Salud</b></td><td><small>firme en el título: &quot;salud&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">14</td><td>Giuliana Romero afronta una nueva cirugía en el pie derecho</td><td>Balcarce</td><td><b>Salud</b></td><td><small>firme en el título: &quot;cirugía&quot;</small></td><td><span class="et sigue">bien</span><br><small>Bien, pero discutible: es una historia solidaria de una vecina; podría quedar en Balcarce.</small></td></tr>
+<tr class="ok"><td class="v">15</td><td>Continúa el alerta por lluvias y descartan la suspensión de clases</td><td>Balcarce</td><td><b>Ambiente</b></td><td><small>firme en el título: &quot;alerta por lluvias&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">16</td><td>Se agotaron las entradas para la despedida de Messi de la selección argentina</td><td>Deportes</td><td><b>Fútbol</b></td><td><small>firme en el título: &quot;selección argentina&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">17</td><td>De Balcarce al Mundial: la historia del periodista que vive el fútbol desde adentro</td><td>Deportes</td><td><b>Fútbol</b></td><td><small>firme en el título: &quot;fútbol&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">18</td><td>El Jardín 905 suspende las clases tras el robo de caños de gas</td><td>Balcarce</td><td><b>Policiales</b></td><td><small>firme en el título: &quot;robo&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">19</td><td>UATRE Balcarce abre la inscripción para útiles escolares</td><td>Balcarce</td><td><b>Educación</b></td><td><small>firme en el título: &quot;escolares&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">20</td><td>ANSES oficializó el aumento de octubre para jubilaciones</td><td>Balcarce</td><td><b>Economía</b></td><td><small>firme en el título: &quot;jubilaciones&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">21</td><td>La agenda de la Selección Argentina en la fecha FIFA: días, horarios y venta de entradas</td><td>Deportes</td><td><b>Fútbol</b></td><td><small>firme en el título: &quot;selección argentina&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">22</td><td>La Provincia crea un programa para formar en oficios a secundarios</td><td>Argentina</td><td><b>Educación</b></td><td><small>firme en el título: &quot;secundarios&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">23</td><td>El INTA Balcarce enfrenta una polémica por la posible exoneración de una científica</td><td>Agro</td><td><b>Ciencia</b></td><td><small>firme en el título: &quot;científica&quot;</small></td><td><span class="et sigue">bien</span><br><small>Igual que la 4.</small></td></tr>
+<tr class="ok"><td class="v">24</td><td>El Congreso declara Héroe Nacional a Estanislao López</td><td>Argentina</td><td><b>Política</b></td><td><small>firme en el título: &quot;congreso&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">25</td><td>Investigadores locales reciben una distinción en congreso nacional</td><td>Agro</td><td><b>Ciencia</b></td><td><small>firme en el título: &quot;investigadores&quot;</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">26</td><td>Se suspendieron los partidos de Los Pumas 7's y Las Yaguaretés y jugarán directamente por el oro en los Juegos Suramericanos</td><td>Deportes</td><td><b>Deportes</b></td><td><small>queda donde estaba</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">27</td><td>A 70 años del tetracampeonato: Balcarce homenajeó a Fangio y recordó su consagración con Ferrari</td><td>Automovilismo</td><td><b>Automovilismo</b></td><td><small>queda donde estaba</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">28</td><td>Avanza la limpieza de desagües pluviales en la ciudad</td><td>Balcarce</td><td><b>Balcarce</b></td><td><small>queda donde estaba</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">29</td><td>La menor oferta de hacienda presiona a la industria frigorífica</td><td>Agro</td><td><b>Agro</b></td><td><small>queda donde estaba</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">30</td><td>El Museo Comunitario Isla Maciel abre una muestra sobre Juan Carlos Romero</td><td>Cultura y agenda</td><td><b>Cultura</b></td><td><small>queda donde estaba</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">31</td><td>Talleres y Atlético Tucumán protagonizan pelea en Reserva</td><td>Fútbol</td><td><b>Fútbol</b></td><td><small>queda donde estaba</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">32</td><td>El «Bocha» Ciantini corre en Balcarce después de 8 años, junto a su hijo</td><td>Automovilismo</td><td><b>Automovilismo</b></td><td><small>queda donde estaba</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">33</td><td>Ferroviarios +40 cayó ante Unión Quincho en básquet</td><td>Deportes</td><td><b>Deportes</b></td><td><small>queda donde estaba</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">34</td><td>Carrera homenaje a Luis Vildoza: preparan la segunda edición</td><td>Deportes</td><td><b>Deportes</b></td><td><small>queda donde estaba</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">35</td><td>Encuentro nacional de básquet en Tandil</td><td>Deportes</td><td><b>Deportes</b></td><td><small>queda donde estaba</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="mal"><td class="v">36</td><td>El Servicio Meteorológico Nacional anticipa lluvias superiores a lo normal</td><td>Agro</td><td><b>Agro</b></td><td><small>queda donde estaba</small></td><td><span class="et mal">mal</span><br><small>Un pronóstico trimestral del Servicio Meteorológico: con el mapa nuevo va a Ambiente; quedó en Agro porque de Agro sólo se va a Ciencia.</small></td></tr>
+<tr class="ok"><td class="v">37</td><td>Hernán Palazzo gana en el regreso del TC Pick Up</td><td>Automovilismo</td><td><b>Automovilismo</b></td><td><small>queda donde estaba</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="ok"><td class="v">38</td><td>Autódromo Juan Manuel Fangio: cronograma y nuevas reglas</td><td>Automovilismo</td><td><b>Automovilismo</b></td><td><small>queda donde estaba</small></td><td><span class="et sigue">bien</span></td></tr>
+<tr class="mal"><td class="v">39</td><td>Fiorella Cacace detalla la labor de los escribanos</td><td>Cultura y agenda</td><td><b>Cultura</b></td><td><small>queda donde estaba</small></td><td><span class="et mal">mal</span><br><small>Error de hoy que el mapa no arregla: es una entrevista a una escribana (Balcarce), no Cultura.</small></td></tr>
+<tr class="ok"><td class="v">40</td><td>Ignacio Fain logra la pole en San Nicolás y corta la sequia de Torino</td><td>Automovilismo</td><td><b>Automovilismo</b></td><td><small>queda donde estaba</small></td><td><span class="et sigue">bien</span></td></tr>
+</tbody></table></div>
+<h3>Algunas de las 43 dudosas</h3>
+<ul><li><b>Cultura y agenda → Deportes</b>: La delegación local parte el lunes hacia la final provincial <small>(débil en el título: &quot;final provincial&quot;)</small></li>
+<li><b>Argentina → Salud</b> (o Política): El oficialismo busca dictaminar la reforma de salud mental en el Senado <small>(firme en el título: &quot;salud mental&quot;)</small></li>
+<li><b>Balcarce → Ambiente</b>: El miércoles presenta ambiente fresco y probabilidad de chaparrones <small>(firme en la bajada: &quot;pronóstico&quot;)</small></li>
+<li><b>Balcarce → Ciencia</b> (o Salud): Abren convocatoria para investigadores de hospitales bonaerenses <small>(firme en el título: &quot;investigadores&quot;)</small></li>
+<li><b>Balcarce → Deportes</b>: Organizan la segunda edición de la carrera en homenaje al profesor Luis Vildoza <small>(débil en el título: &quot;carrera&quot;)</small></li>
+<li><b>Balcarce → Política</b>: El Concejo declara de interés el aniversario del Club Amigos Unidos <small>(firme en la bajada: &quot;concejales&quot;)</small></li>
+<li><b>Cultura y agenda → Espectáculos</b>: Wanda Nara debuta en el cine con una comedia romántica <small>(débil en el título: &quot;cine&quot;)</small></li>
+<li><b>Cultura y agenda → Educación</b>: Agustín Conti repasa su vocación y los desafíos de la docencia <small>(firme en la bajada: &quot;educación&quot;)</small></li>
+<li><b>Balcarce → Política</b>: El Concejo discute las intimaciones de Aguas de la Ciudad <small>(débil en el título: &quot;concejo&quot;)</small></li>
+<li><b>Argentina → Ciencia</b> (o Ambiente): Investigadores registran fuerte baja de algas en el dique Paso de las Piedras <small>(firme en el título: &quot;investigadores&quot;)</small></li>
+<li><b>Balcarce → Educación</b> (o Economía): Docentes locales paran el jueves 15 por salarios y presupuesto <small>(firme en el título: &quot;docentes&quot;)</small></li>
+<li><b>Balcarce → Cultura y agenda</b> (o Educación): Estudiantes presentan diecinueve cortometrajes por el aniversario <small>(firme en el título: &quot;cortometrajes&quot;)</small></li>
+<li><b>Balcarce → Salud</b> (o Educación): El quirófano móvil de castraciones sigue en la Escuela de Arte <small>(firme en el título: &quot;castraciones&quot;)</small></li>
+<li><b>Balcarce → Educación</b>: El Jardín 905 reanuda las clases por la tarde tras revisar las instalaciones de gas <small>(firme en la bajada: &quot;jardín de infantes&quot;)</small></li>
+<li><b>Cultura y agenda → Turismo</b>: Mar del Plata registra un cincuenta por ciento de reservas <small>(firme en la bajada: &quot;fin de semana largo&quot;)</small></li>
+<li><b>Balcarce → Educación</b>: La Técnica N° 1 prepara dos autos para el Desafío ECO <small>(firme en la bajada: &quot;educativa&quot;)</small></li></ul>
+<h3>Pronósticos del tiempo publicados como nota</h3>
+<ul><li>El miércoles presenta ambiente fresco y probabilidad de chaparrones</li><li>El pronóstico anticipa una semana fresca con lluvias y mínimas bajas</li><li>El martes llega con una máxima de 22 grados y posibles lluvias</li><li>El viernes se presenta agradable y con una máxima de hasta veinticuatro grados</li></ul>
+<h3>Lo que la ingesta lee hoy (antes de filtrar), con el mapa nuevo</h3>
+<p class="chico">Bajados los 100 feeds activos el 16/10 (las fuentes que se raspan no): 6.413 notas de 72 horas, 6.163 títulos distintos. Es la materia prima, no lo que se publica: casi todo es de afuera y de un solo medio, y el cruce y los cupos lo cortan. Sirve para ver que Educación, Salud, Tecnología y Ambiente tienen de dónde salir, y que Ciencia casi no (11 por día con las fuentes de hoy: por eso hacen falta las fuentes nuevas del diagnóstico).</p>
+<div class="tabla-envoltura"><table style="max-width:360px"><thead><tr><th>Sección (mapa nuevo)</th><th>Títulos por día</th></tr></thead><tbody><tr><th scope="row">Argentina</th><td class="v">632</td></tr><tr><th scope="row">Fútbol</th><td class="v">266</td></tr><tr><th scope="row">Economía</th><td class="v">197</td></tr><tr><th scope="row">Política</th><td class="v">184</td></tr><tr><th scope="row">Educación</th><td class="v">107</td></tr><tr><th scope="row">Deportes</th><td class="v">96</td></tr><tr><th scope="row">Cultura</th><td class="v">84</td></tr><tr><th scope="row">Espectáculos</th><td class="v">81</td></tr><tr><th scope="row">Automovilismo</th><td class="v">71</td></tr><tr><th scope="row">Agro</th><td class="v">67</td></tr><tr><th scope="row">Tecnología</th><td class="v">67</td></tr><tr><th scope="row">Ambiente</th><td class="v">60</td></tr><tr><th scope="row">Policiales</th><td class="v">59</td></tr><tr><th scope="row">Salud</th><td class="v">46</td></tr><tr><th scope="row">Turismo</th><td class="v">22</td></tr><tr><th scope="row">Ciencia</th><td class="v">11</td></tr><tr><th scope="row">Balcarce</th><td class="v">5</td></tr></tbody></table></div>
+
+<h2 id="menu">El menú</h2>
+<p>Con 17 secciones no hay barra que alcance. Propuesta (ver <a href="PROTOTIPO-MENU.html">el prototipo</a>, con celular, escritorio y modo oscuro):</p>
+<div class="dos">
+<div class="caja"><b>En el celular</b><ul><li>La fila que se desliza sigue, con <b>Portada y las 8</b> de la barra.</li><li>A la derecha, <b>fijo y siempre visible</b>, un botón <b>"Secciones"</b> que abre una pantalla con las 17 agrupadas (Balcarce · Deportes · Economía y campo · Sociedad · Ciencia y tecnología · Cultura y ocio) y los servicios (Agenda, Clima, Farmacias, Dólar, Teléfonos).</li><li>Se cierra con la X, con Escape o tocando afuera; cada toque mide 44 px.</li></ul></div>
+<div class="caja"><b>En la computadora</b><ul><li>La barra con <b>Portada, las 8 y "Más secciones ▾"</b>; los servicios a la derecha, en verde, como hoy.</li><li>"Más secciones" despliega un panel de tres columnas (Sociedad, Ciencia y tecnología, Cultura y ocio) con el color de cada sección.</li><li>Con 8 secciones más el botón entra en una línea en una pantalla de computadora común (hoy, con 11, hacen falta 1.180 px).</li></ul></div>
+</div>
+<h3>Accesibilidad</h3>
+<ul><li>El botón es un <code>&lt;button&gt;</code> con <code>aria-expanded</code> y <code>aria-controls</code>; el panel se abre y se cierra con el teclado (Enter, Espacio, Escape) y la tecla Tab no se escapa del panel en el celular.</li><li>La sección donde está la persona lleva <code>aria-current="page"</code>, también si está adentro del "Más" (y el botón lo avisa: "Más secciones · estás en Salud").</li><li>Los colores de sección nunca son la única pista: siempre va el nombre escrito.</li><li>Sin JavaScript, el panel se ve como una lista de enlaces debajo de la barra (nada queda inaccesible).</li></ul>
+<h3>Buscadores (SEO)</h3>
+<ul><li>Cada sección ya tiene su página y su feed (<code>/seccion/[ranura]</code> y <code>/seccion/[ranura]/feed.xml</code>): las 6 nuevas aparecen solas.</li><li>Los enlaces del "Más" están en el HTML aunque el panel esté cerrado: Google los sigue igual.</li><li>El pie de página lista las 17 secciones, para que ninguna quede a más de un clic de cualquier página.</li><li>El sitemap ya incluye sólo las secciones con notas (<code>web/app/sitemap.js</code>): una sección nueva sin notas no se indexa vacía.</li></ul>
+<h3>La portada</h3>
+<p>Hoy la portada dibuja un bloque de 3 notas por sección (11 bloques). Con 17 serían demasiados. Propuesta: <b>un bloque por cada sección de la barra (8) y tres bloques por grupo</b> (Sociedad, Ciencia y tecnología, Cultura y ocio), de 4 notas cada uno con la etiqueta de color de su sección. Son 11 bloques, como hoy. Cambia <code>armarTapa</code> (<code>web/lib/datos.js</code>).</p>
+
+<h2 id="aplicar">Para aplicarlo</h2>
+<h3>Los archivos (según CLAUDE.md, "Una sección nueva")</h3>
+<ul class="archivos">
+<li><code>web/lib/datos.js</code>: <code>SECCIONES</code> (las 6 nuevas y un campo <code>etiqueta</code> para "Cultura" y "Tecnología e IA"), <code>EN_NAVEGACION</code> (las 8) y una lista nueva <code>EN_MAS</code> con los grupos, <code>frasesDeSeccion</code>, <code>nombreCorto</code>, <code>armarTapa</code> (bloques por grupo).</li>
+<li><code>web/components/navegacion.js</code> (el botón y el panel) y <code>web/app/layout.js</code> (le pasa las secciones del "Más"); el pie con las 17.</li>
+<li><code>web/app/globals.css</code>: <code>--s-educacion</code>, <code>--s-salud</code>, <code>--s-ciencia</code>, <code>--s-espectaculos</code>, <code>--s-turismo</code>, <code>--s-ambiente</code> y los estilos del panel; las mismas variables en <code>web/public/panel/index.html</code>.</li>
+<li><code>ingesta/fuentes.mjs</code>: <code>REGLAS_SECCION</code> con las palabras de las nuevas; las ambiguas a <code>PALABRAS_DEBILES</code> (<code>ingesta/ingesta.mjs</code>). O, más simple, que <code>clasificar</code> llame a <code>seccionNueva</code> después de decidir.</li>
+<li><code>ingesta/lectura-ia.mjs</code>: <code>SECCIONES_DE_LA_FICHA</code> y las líneas de "seccion" de la instrucción (arriba, tal cual).</li>
+<li><code>ingesta/criterio.mjs</code>: <code>MEDIOS_DE_AFUERA</code> y <code>CUPO_DE_AFUERA</code> de cada nueva (propuesta: Educación y Salud 3 medios, Ciencia 2, Espectáculos 3 y cupo 4, Turismo y Ambiente 3), <b>y</b> la tabla "Los números" y la de secciones del § 2 de <code>CRITERIO-EDITORIAL.md</code>.</li>
+<li><code>ingesta/auditoria-ia.mjs</code> (<code>SECCIONES_VALIDAS</code>), <code>ingesta/foto-ia.mjs</code> y <code>ingesta/foto-stock.mjs</code> (qué secciones pueden tener foto libre y con qué búsqueda).</li>
+<li><code>web/public/panel/github.js</code> (<code>SECCIONES</code>), <code>web/public/panel/app.js</code> y <code>web/public/panel/numeros.js</code> (sección → color).</li>
+<li><code>web/lib/notas-de-pistas.js</code> (<code>SECCIONES</code>), <code>web/lib/tarjeta-diseno.js</code> (<code>COLOR</code>).</li>
+<li><code>reels/placa.mjs</code>: <code>COLOR_SECCION</code> y <code>COLORES_RESERVADOS</code> (los dos nuevos), <b>y</b> la tabla de <code>CRITERIO-REDES.md</code> § 8.</li>
+<li><code>web/scripts/generar-redirects.mjs</code> (<code>RANURAS_DE_SECCION</code>; <code>SECCIONES_VIEJAS</code> no cambia).</li>
+<li><code>infra/mcp-cloudflare/worker.mjs</code> (lista de secciones) y <code>web/lib/para-agentes.js</code> si lista secciones.</li>
+<li><code>CLAUDE.md</code> ("Las secciones son once" → diecisiete), <code>docs/06-WEB.md</code>, <code>docs/03-SELECCION.md</code>, <code>docs/12-GLOSARIO.md</code> y una regla nueva en <code>docs/10-REGLAS-Y-PRUEBAS.md</code>.</li>
+</ul>
+<h3>Las pruebas</h3>
+<p>Las que tienen listas fijas de secciones y hay que actualizar: <code>titulos-colores</code>, <code>colores-placas</code>, <code>nota-de-pista</code> (espera 11), <code>notas-de-pistas</code>, <code>redirects</code>, <code>secciones-flacas</code>, <code>criterio</code>, <code>lectura-ia</code>, <code>auditoria-ia</code>, <code>celular-app</code>, <code>mcp-worker</code>, <code>portada</code>, <code>seo-paginas</code>, <code>foto-ia</code>, <code>foto-stock</code>. Y <code>secciones-nuevas.test.mjs</code> pasa de "sombra" a "en uso" (hoy controla, entre otras cosas, que nada de producción lo importe: esa prueba se da vuelta).</p>
+<h3>En las redes</h3>
+<ul><li><b>Colores de placas</b>: 6 nuevos (tabla de arriba), en <code>COLOR_SECCION</code> y en el § 8 de <code>CRITERIO-REDES.md</code>; la prueba que los compara ya existe.</li><li><b>Hashtags</b>: no cambian. Salen de las etiquetas que escribe la IA y de #Balcarce si es de acá (<code>hashtagsDe</code>, <code>redes/elegir.mjs</code>), no de la sección.</li><li><b>Quién espera a una persona</b>: Política y Policiales siguen esperando. Salud: propuesta de que no (decisión m13).</li><li><b>Repasos y podcasts</b>: prefieren "secciones distintas"; con 17, el repaso se reparte más solo.</li></ul>
+<h3>Las direcciones viejas y el archivo</h3>
+<ul><li>Las notas no cambian de dirección: es <code>/nota/titulo-id</code>, sin sección. "Una sola dirección, fija desde que sale" se respeta.</li><li>Ninguna sección cambia de ranura: <b>no hace falta ninguna redirección</b>. Cultura y Tecnología cambian sólo el nombre que se lee.</li><li><b>Reclasificar</b>: propuesta de pasar a su sección nueva sólo las notas de los últimos 30 días que el clasificador manda sin duda (unas 215), con una función en <code>web/scripts/generar-datos.mjs</code> que se aplica al leer el archivo (como <code>conCambiosDeLaAuditoria</code>), no reescribiendo <code>archivo.json</code> a mano. Lo que corrigió una persona (<code>correcciones.json</code>) no se toca.</li><li><b>SEO</b>: las páginas de sección nuevas entran al sitemap cuando tienen notas; las viejas no pierden nada (siguen con sus notas menos las que se mudan, que ahora suman en otra página).</li></ul>
+
+<h2 id="etapas">Plan por etapas</h2>
+<ol>
+<li><b>Etapa 0 (hecha):</b> el mapa en sombra, sus pruebas y este documento.</li>
+<li><b>Etapa 1 (una semana, sin cambio visible):</b> la IA elige también con la lista nueva, en un campo aparte que no se publica (<code>seccionNueva</code> de la ficha). Se compara con el clasificador y se afinan las palabras. Sumar las fuentes de ciencia y la regla "fuente sola" (C1) si se aprueban.</li>
+<li><b>Etapa 2:</b> Educación y Salud, "Cultura" y "Tecnología e IA" como nombres, el menú con "Más secciones" y la portada con bloques por grupo. Reclasificar 30 días.</li>
+<li><b>Etapa 3 (dos semanas después):</b> Ciencia (con C1 andando) y Espectáculos.</li>
+<li><b>Etapa 4:</b> Turismo y gastronomía y Ambiente y clima si en la etapa 1 llegan a 4 por semana; si no, como temas.</li>
+</ol>
+<p class="chico">Cada etapa con sus pruebas, <code>npm test</code> antes de subir, y mirando la web publicada después (regla de la casa).</p>
+
+<h2 id="decisiones">Decidir</h2>
+<p class="chico">Marquen Sí, No o Duda en cada caja. Se guarda en este navegador; al final, "Copiar mis decisiones" arma un texto para pegar en el chat.</p>
+<div class="decision" data-k="m1" data-titulo="Mapa · Las 17 secciones" data-propuesta="Pasar de 11 a 17 secciones: las 11 de hoy (con la misma dirección) y 6 nuevas, Educación, Salud, Ciencia, Espectáculos, Turismo y gastronomía y Ambiente y clima, de a etapas (ver el plan).">
+  <p class="decision-tit">Mapa · Las 17 secciones</p>
+  <p class="propuesta"><b>Propuesta:</b> Pasar de 11 a 17 secciones: las 11 de hoy (con la misma dirección) y 6 nuevas, Educación, Salud, Ciencia, Espectáculos, Turismo y gastronomía y Ambiente y clima, de a etapas (ver el plan).</p>
+  <div class="opciones" role="group" aria-label="Decisión: Mapa · Las 17 secciones"><button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button></div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="m2" data-titulo="Nueva · Educación" data-propuesta="Sumar Educación (escuelas, docentes, universidades). Hoy tendría unas 10 notas por semana: llega al piso.">
+  <p class="decision-tit">Nueva · Educación</p>
+  <p class="propuesta"><b>Propuesta:</b> Sumar Educación (escuelas, docentes, universidades). Hoy tendría unas 10 notas por semana: llega al piso.</p>
+  <div class="opciones" role="group" aria-label="Decisión: Nueva · Educación"><button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button></div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="m3" data-titulo="Nueva · Salud" data-propuesta="Sumar Salud (hospital, vacunas, PAMI, IOMA, LALCEC, zoonosis). Hoy tendría unas 11 notas por semana.">
+  <p class="decision-tit">Nueva · Salud</p>
+  <p class="propuesta"><b>Propuesta:</b> Sumar Salud (hospital, vacunas, PAMI, IOMA, LALCEC, zoonosis). Hoy tendría unas 11 notas por semana.</p>
+  <div class="opciones" role="group" aria-label="Decisión: Nueva · Salud"><button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button></div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="m4" data-titulo="Nueva · Ciencia" data-propuesta="Sumar Ciencia junto con la regla &quot;fuente sola&quot; para 5 a 7 fuentes serias de ciencia (C1 del diagnóstico). Sin esa regla quedaría con 3 o 4 por semana: no conviene abrirla antes.">
+  <p class="decision-tit">Nueva · Ciencia</p>
+  <p class="propuesta"><b>Propuesta:</b> Sumar Ciencia junto con la regla &quot;fuente sola&quot; para 5 a 7 fuentes serias de ciencia (C1 del diagnóstico). Sin esa regla quedaría con 3 o 4 por semana: no conviene abrirla antes.</p>
+  <div class="opciones" role="group" aria-label="Decisión: Nueva · Ciencia"><button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button></div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="m5" data-titulo="Tecnología e IA" data-propuesta="Tecnología se lee &quot;Tecnología e IA&quot; (misma dirección) y la inteligencia artificial tiene su página de tema (/tema/inteligencia-artificial), no una sección aparte, hasta que pase 10 notas por semana.">
+  <p class="decision-tit">Tecnología e IA</p>
+  <p class="propuesta"><b>Propuesta:</b> Tecnología se lee &quot;Tecnología e IA&quot; (misma dirección) y la inteligencia artificial tiene su página de tema (/tema/inteligencia-artificial), no una sección aparte, hasta que pase 10 notas por semana.</p>
+  <div class="opciones" role="group" aria-label="Decisión: Tecnología e IA"><button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button></div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="m6" data-titulo="Nueva · Espectáculos" data-propuesta="Separar Espectáculos (tele, streaming, recitales de afuera) de Cultura, que pasa a leerse &quot;Cultura&quot; y queda para lo de acá, libros y arte. Unas 5 por semana con el cupo de hoy.">
+  <p class="decision-tit">Nueva · Espectáculos</p>
+  <p class="propuesta"><b>Propuesta:</b> Separar Espectáculos (tele, streaming, recitales de afuera) de Cultura, que pasa a leerse &quot;Cultura&quot; y queda para lo de acá, libros y arte. Unas 5 por semana con el cupo de hoy.</p>
+  <div class="opciones" role="group" aria-label="Decisión: Nueva · Espectáculos"><button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button></div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="m7" data-titulo="Nueva · Turismo y gastronomía" data-propuesta="Sumar Turismo y gastronomía (Fiesta del Postre, escapadas, sierras). Hoy, unas 4 por semana; crece en noviembre y en verano. Alternativa: dejarlo como tema.">
+  <p class="decision-tit">Nueva · Turismo y gastronomía</p>
+  <p class="propuesta"><b>Propuesta:</b> Sumar Turismo y gastronomía (Fiesta del Postre, escapadas, sierras). Hoy, unas 4 por semana; crece en noviembre y en verano. Alternativa: dejarlo como tema.</p>
+  <div class="opciones" role="group" aria-label="Decisión: Nueva · Turismo y gastronomía"><button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button></div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="m8" data-titulo="Nueva · Ambiente y clima" data-propuesta="Sumar Ambiente y clima (alertas, temporales, residuos, árboles). Unas 5 por semana, y el pronóstico diario sigue sin ser nota. Alternativa: dejarlo como tema.">
+  <p class="decision-tit">Nueva · Ambiente y clima</p>
+  <p class="propuesta"><b>Propuesta:</b> Sumar Ambiente y clima (alertas, temporales, residuos, árboles). Unas 5 por semana, y el pronóstico diario sigue sin ser nota. Alternativa: dejarlo como tema.</p>
+  <div class="opciones" role="group" aria-label="Decisión: Nueva · Ambiente y clima"><button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button></div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="m9" data-titulo="No · Lo que no se suma" data-propuesta="No sumar Mundo, Sociedad, IA como sección, deportes por disciplina ni partir Balcarce por tema (Instituciones, Servicios, Policiales locales).">
+  <p class="decision-tit">No · Lo que no se suma</p>
+  <p class="propuesta"><b>Propuesta:</b> No sumar Mundo, Sociedad, IA como sección, deportes por disciplina ni partir Balcarce por tema (Instituciones, Servicios, Policiales locales).</p>
+  <div class="opciones" role="group" aria-label="Decisión: No · Lo que no se suma"><button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button></div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="m10" data-titulo="Menú · Barra de 8 y &quot;Más secciones&quot;" data-propuesta="La barra muestra 8 (Balcarce, Política, Policiales, Fútbol, Deportes, Automovilismo, Agro, Economía) y un botón &quot;Más secciones&quot; abre las otras 9 agrupadas, más los servicios. En el celular, el botón queda fijo a la derecha de la fila.">
+  <p class="decision-tit">Menú · Barra de 8 y &quot;Más secciones&quot;</p>
+  <p class="propuesta"><b>Propuesta:</b> La barra muestra 8 (Balcarce, Política, Policiales, Fútbol, Deportes, Automovilismo, Agro, Economía) y un botón &quot;Más secciones&quot; abre las otras 9 agrupadas, más los servicios. En el celular, el botón queda fijo a la derecha de la fila.</p>
+  <div class="opciones" role="group" aria-label="Decisión: Menú · Barra de 8 y &quot;Más secciones&quot;"><button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button></div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="m11" data-titulo="Portada · Bloques por grupo" data-propuesta="La portada sigue con un bloque de 3 notas para cada sección de la barra y suma 3 bloques por grupo (Sociedad, Ciencia y tecnología, Cultura y ocio) con 4 notas cada uno y la etiqueta de su sección.">
+  <p class="decision-tit">Portada · Bloques por grupo</p>
+  <p class="propuesta"><b>Propuesta:</b> La portada sigue con un bloque de 3 notas para cada sección de la barra y suma 3 bloques por grupo (Sociedad, Ciencia y tecnología, Cultura y ocio) con 4 notas cada uno y la etiqueta de su sección.</p>
+  <div class="opciones" role="group" aria-label="Decisión: Portada · Bloques por grupo"><button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button></div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="m12" data-titulo="Archivo · Reclasificar 30 días" data-propuesta="Pasar a su sección nueva sólo las notas de los últimos 30 días que el clasificador manda sin duda (unas 215), para que las secciones nuevas no arranquen vacías. Las dudosas y las más viejas quedan donde están. Las direcciones de las notas no cambian.">
+  <p class="decision-tit">Archivo · Reclasificar 30 días</p>
+  <p class="propuesta"><b>Propuesta:</b> Pasar a su sección nueva sólo las notas de los últimos 30 días que el clasificador manda sin duda (unas 215), para que las secciones nuevas no arranquen vacías. Las dudosas y las más viejas quedan donde están. Las direcciones de las notas no cambian.</p>
+  <div class="opciones" role="group" aria-label="Decisión: Archivo · Reclasificar 30 días"><button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button></div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="m13" data-titulo="Redes · Salud" data-propuesta="Salud sale sola en la web y en las redes como cualquier sección (lo sensible ya lo frena el semáforo); no se suma a las que esperan a una persona.">
+  <p class="decision-tit">Redes · Salud</p>
+  <p class="propuesta"><b>Propuesta:</b> Salud sale sola en la web y en las redes como cualquier sección (lo sensible ya lo frena el semáforo); no se suma a las que esperan a una persona.</p>
+  <div class="opciones" role="group" aria-label="Decisión: Redes · Salud"><button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button></div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<div class="decision" data-k="m14" data-titulo="Regla · Cuándo una sección se esconde" data-propuesta="Una sección del &quot;Más&quot; se muestra en el menú si tuvo al menos una nota en los últimos 7 días; si dos semanas seguidas baja de 4 por semana, se revisa. La página sigue existiendo siempre.">
+  <p class="decision-tit">Regla · Cuándo una sección se esconde</p>
+  <p class="propuesta"><b>Propuesta:</b> Una sección del &quot;Más&quot; se muestra en el menú si tuvo al menos una nota en los últimos 7 días; si dos semanas seguidas baja de 4 por semana, se revisa. La página sigue existiendo siempre.</p>
+  <div class="opciones" role="group" aria-label="Decisión: Regla · Cuándo una sección se esconde"><button type="button" class="op" data-v="Sí">Sí</button><button type="button" class="op" data-v="No">No</button><button type="button" class="op" data-v="Duda">Duda</button></div>
+  <label class="coment">Comentario (opcional)<textarea rows="2" placeholder="Por qué, o qué cambiarían"></textarea></label>
+</div>
+<p id="aviso-almacen" hidden>Este navegador no deja guardar: lo que marquen se pierde al cerrar la página. Copien las decisiones antes de salir.</p>
+<label class="coment">¿Quién decide? (va arriba del texto que se copia)<input class="campo" id="quien" type="text" placeholder="Hernán, Andrés o los dos" autocomplete="off"></label>
+<p id="cuenta" class="chico"></p>
+<div class="fila"><button type="button" class="boton prim" id="copiar">Copiar mis decisiones</button><button type="button" class="boton" id="descargar">Descargar</button><button type="button" class="boton" id="borrar">Borrar todo</button></div>
+<textarea id="caja" hidden readonly aria-label="Texto de las decisiones"></textarea>
+</main>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+(function () {
+  var CLAVE = 'radar-mapa-secciones-v1', CLAVE_TEMA = 'radar-mapa-secciones-tema', CLAVE_QUIEN = 'radar-mapa-secciones-quien';
+  var hayAlmacen = true;
+  function leer(k, def) { try { var v = localStorage.getItem(k); return v == null ? def : v; } catch (e) { hayAlmacen = false; return def; } }
+  function escribir(k, v) { try { localStorage.setItem(k, v); } catch (e) { hayAlmacen = false; } }
+  var decisiones = {};
+  try { decisiones = JSON.parse(leer(CLAVE, '{}')) || {}; } catch (e) { decisiones = {}; }
+  function guardar() { escribir(CLAVE, JSON.stringify(decisiones)); }
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var cajas = $$('.decision');
+  function pintar(caja) {
+    var d = decisiones[caja.getAttribute('data-k')] || {};
+    if (d.d) caja.setAttribute('data-d', d.d); else caja.removeAttribute('data-d');
+    $$('.op', caja).forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-v') === d.d)); });
+    var ta = $('textarea', caja); if (ta && document.activeElement !== ta) ta.value = d.c || '';
+  }
+  function contar() {
+    var t = { 'Sí': 0, 'No': 0, 'Duda': 0 }, hechas = 0;
+    cajas.forEach(function (c) { var d = (decisiones[c.getAttribute('data-k')] || {}).d; if (d) { t[d] += 1; hechas += 1; } });
+    $('#progreso').textContent = hechas + ' de ' + cajas.length;
+    $('#cuenta').textContent = 'Decididas ' + hechas + ' de ' + cajas.length + ': Sí ' + t['Sí'] + ' · No ' + t['No'] + ' · Duda ' + t['Duda'] + '.';
+  }
+  function cambiar(caja, cambios) {
+    var k = caja.getAttribute('data-k'); var nuevo = Object.assign({}, decisiones[k] || {}, cambios);
+    if (!nuevo.d) delete nuevo.d; if (!nuevo.c) delete nuevo.c;
+    if (!nuevo.d && !nuevo.c) delete decisiones[k]; else decisiones[k] = nuevo;
+    guardar(); pintar(caja); contar();
+  }
+  cajas.forEach(function (caja) {
+    $$('.op', caja).forEach(function (b) { b.addEventListener('click', function () { var v = b.getAttribute('data-v'); var actual = (decisiones[caja.getAttribute('data-k')] || {}).d; cambiar(caja, { d: actual === v ? '' : v }); }); });
+    var ta = $('textarea', caja), t = null;
+    ta.addEventListener('input', function () { clearTimeout(t); t = setTimeout(function () { cambiar(caja, { c: ta.value.trim() }); }, 300); });
+    ta.addEventListener('blur', function () { cambiar(caja, { c: ta.value.trim() }); });
+    pintar(caja);
+  });
+  contar();
+  if (!hayAlmacen) $('#aviso-almacen').hidden = false;
+  var quien = $('#quien'); quien.value = leer(CLAVE_QUIEN, ''); quien.addEventListener('input', function () { escribir(CLAVE_QUIEN, quien.value); });
+  function armarTexto() {
+    var t = { 'Sí': 0, 'No': 0, 'Duda': 0 }, sin = 0, lineas = [];
+    cajas.forEach(function (c) {
+      var d = decisiones[c.getAttribute('data-k')] || {};
+      if (d.d) t[d.d] += 1; else sin += 1;
+      if (!d.d && !d.c) return;
+      lineas.push(c.getAttribute('data-titulo')); lineas.push('  Propuesta: ' + c.getAttribute('data-propuesta')); lineas.push('  Decisión: ' + (d.d || 'sin decidir'));
+      if (d.c) lineas.push('  Comentario: ' + d.c); lineas.push('');
+    });
+    var cab = 'Decisiones sobre el mapa de secciones de Radar Balcarce (' + new Date().toLocaleDateString('es-AR') + ')' + (quien.value.trim() ? ' — de: ' + quien.value.trim() : '');
+    return cab + '\nSí ' + t['Sí'] + ' · No ' + t['No'] + ' · Duda ' + t['Duda'] + ' · sin decidir ' + sin + '\n\n' + (lineas.length ? lineas.join('\n') : '(todavía no marcaron nada)\n');
+  }
+  function aviso(txt) { var el = $('#toast'); el.textContent = txt; el.classList.add('ver'); clearTimeout(aviso.t); aviso.t = setTimeout(function () { el.classList.remove('ver'); }, 3500); }
+  $('#copiar').addEventListener('click', function () {
+    var texto = armarTexto(), caja = $('#caja'); caja.value = texto; caja.hidden = false;
+    var respaldo = function () { try { caja.focus(); caja.select(); var ok = document.execCommand('copy'); aviso(ok ? 'Copiado. Péguenlo en el chat.' : 'No se pudo copiar solo: está seleccionado abajo.'); } catch (e) { aviso('No se pudo copiar solo: cópienlo desde la caja de abajo.'); } };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(texto).then(function () { aviso('Copiado. Péguenlo en el chat.'); }, respaldo); else respaldo();
+  });
+  $('#descargar').addEventListener('click', function () {
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([armarTexto()], { type: 'text/plain;charset=utf-8' }));
+    a.download = 'decisiones-secciones-' + new Date().toISOString().slice(0, 10) + '.txt'; document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  });
+  $('#borrar').addEventListener('click', function () { if (!window.confirm('¿Borrar todas las decisiones y comentarios guardados en este navegador?')) return; decisiones = {}; guardar(); cajas.forEach(pintar); contar(); $('#caja').hidden = true; });
+  var tema = leer(CLAVE_TEMA, ''); if (tema) document.documentElement.setAttribute('data-theme', tema);
+  $('#tema').addEventListener('click', function () {
+    var oscuro = document.documentElement.getAttribute('data-theme') ? document.documentElement.getAttribute('data-theme') === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nuevo = oscuro ? 'light' : 'dark'; document.documentElement.setAttribute('data-theme', nuevo); escribir(CLAVE_TEMA, nuevo);
+  });
+})();
+</script>
+</body>
+</html>

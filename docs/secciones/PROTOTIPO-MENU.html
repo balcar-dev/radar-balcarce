@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prototipo del menú</title>
+<meta name="description" content="Radar Balcarce: prototipo del menú y la portada con el mapa nuevo de 17 secciones (barra de 8 y Más secciones), en celular y escritorio, claro y oscuro. No es el sitio: es para decidir.">
+<style>
+/* La página que envuelve el prototipo */
+:root{--fondo:#ecebe6;--panel:#fff;--txt:#1c1c1a;--suave:#5b5a55;--borde:#d6d3c9;--acento:#1f5fa8;color-scheme:light;
+  /* el sitio */
+  --tinta:#14161A;--papel:#FFFFFF;--crema:#F4F1EA;--linea:#E4DFD2;--texto:#3B403C;--gris:#6B6F6C;--rojo:#C7381C;--verde:#16615B;--sombra:0 10px 30px rgba(0,0,0,.18);
+  --s-balcarce:#B91C1C;--s-politica:#3730A3;--s-policiales:#831843;--s-futbol:#7C3AED;--s-deportes:#0F766E;--s-automovilismo:#B45309;--s-agro:#5A6B0A;--s-economia:#8A6500;
+  --s-educacion:#1D4BE0;--s-salud:#004E5C;--s-ambiente:#006516;--s-pais:#4B5563;--s-ciencia:#0A7C99;--s-tecnologia:#0B6FB8;--s-cultura:#9D2C8F;--s-espectaculos:#C0258F;--s-turismo:#5E3729}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--fondo:#0e0e0e;--panel:#1a1a1a;--txt:#ecebe6;--suave:#a9a7a0;--borde:#34332f;--acento:#86b5ee;color-scheme:dark;
+  --tinta:#F1EFE9;--papel:#16181B;--crema:#202328;--linea:#30343A;--texto:#D3D0C8;--gris:#A3A6A2;--rojo:#F07A5F;--verde:#6FCBB7;--sombra:0 10px 30px rgba(0,0,0,.6)}}
+:root[data-theme="dark"]{--fondo:#0e0e0e;--panel:#1a1a1a;--txt:#ecebe6;--suave:#a9a7a0;--borde:#34332f;--acento:#86b5ee;color-scheme:dark;
+  --tinta:#F1EFE9;--papel:#16181B;--crema:#202328;--linea:#30343A;--texto:#D3D0C8;--gris:#A3A6A2;--rojo:#F07A5F;--verde:#6FCBB7;--sombra:0 10px 30px rgba(0,0,0,.6)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fondo);color:var(--txt);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.cabeza{max-width:1240px;margin:0 auto;padding:16px}
+.cabeza h1{font-size:1.4rem;margin:0 0 4px}
+.cabeza p{margin:4px 0;color:var(--suave);font-size:.92rem;max-width:80ch}
+.controles{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.controles button{font:inherit;font-size:.9rem;min-height:40px;padding:6px 12px;border-radius:8px;border:1px solid var(--borde);background:var(--panel);color:var(--txt);cursor:pointer}
+.controles button[aria-pressed="true"]{border-color:var(--acento);color:var(--acento);font-weight:700}
+.escenario{display:flex;justify-content:center;padding:8px 16px 40px}
+/* El marco: en "celular" mide 375 px; el sitio se acomoda con consultas de contenedor, no de pantalla. */
+.marco{container-type:inline-size;container-name:sitio;width:100%;max-width:1200px;background:var(--papel);border:1px solid var(--borde);border-radius:14px;overflow:hidden;position:relative;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.marco.celular{max-width:375px;height:760px;overflow:hidden;border-radius:28px;border-width:8px;border-color:#2a2a2a}
+/* En el celular el sitio se desliza adentro del marco y el panel tapa el marco entero (en el sitio real: position: fixed). */
+.marco.celular .sitio{height:100%;overflow-y:auto;position:static}
+.marco.celular nav.principal{position:static}
+.nota-prototipo{max-width:1240px;margin:0 auto;padding:0 16px 30px;color:var(--suave);font-size:.88rem}
+.nota-prototipo li{margin:4px 0;max-width:90ch}
+
+/* ------------------------------------------------ el sitio (prototipo) */
+.sitio{color:var(--texto);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--papel);min-height:100%;position:relative}
+.sitio a{color:inherit;text-decoration:none}
+.sitio a:focus-visible,.sitio button:focus-visible{outline:3px solid var(--acento);outline-offset:2px}
+.tope{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px 10px}
+.logo{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-weight:900;font-size:26px;letter-spacing:-.5px;color:var(--tinta);line-height:1;white-space:nowrap}
+.logo b{color:var(--rojo)}
+.fecha{font-size:12px;color:var(--gris);text-align:right}
+/* la barra */
+nav.principal{position:relative;border-top:2px solid var(--tinta);border-bottom:1px solid var(--linea);background:var(--papel);z-index:5}
+.fila{display:flex;align-items:center}
+.desliza{display:flex;align-items:center;gap:2px;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none;padding:0 6px 0 10px;scroll-snap-type:x proximity}
+.desliza::-webkit-scrollbar{display:none}
+.desliza a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding:0 10px;font-weight:600;font-size:14px;white-space:nowrap;color:var(--tinta);scroll-snap-align:center}
+.desliza a[aria-current="page"]{color:var(--rojo);box-shadow:inset 0 -3px 0 var(--rojo)}
+.desliza .servicio{color:var(--verde)}
+.desliza .serv-sep{flex:none;width:1px;height:20px;background:var(--linea);margin:0 6px}
+.boton-mas{flex:none;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 12px;border:0;border-left:1px solid var(--linea);background:var(--papel);color:var(--tinta);font:600 14px/1 Inter,system-ui,sans-serif;cursor:pointer;box-shadow:-10px 0 12px -6px var(--papel)}
+.boton-mas .icono{display:inline-grid;gap:3px}
+.boton-mas .icono i{display:block;width:16px;height:2px;background:currentColor;border-radius:1px}
+.boton-mas .flecha{display:none;width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin:-3px 0 0 2px;transition:transform .15s}
+.boton-mas[aria-expanded="true"] .flecha{transform:rotate(225deg);margin-top:3px}
+.boton-mas .donde{display:none}
+.boton-mas.hay-actual{color:var(--rojo)}
+/* el panel de "Más secciones": en el celular, pantalla completa dentro del sitio */
+.panel-mas{position:absolute;inset:0;z-index:30;background:var(--papel);overflow-y:auto;padding:0 16px 30px}
+.panel-mas[hidden]{display:none}
+.panel-cab{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;background:var(--papel);padding:14px 0 10px;border-bottom:2px solid var(--tinta);margin-bottom:6px}
+.panel-cab h2{margin:0;font:800 20px/1.1 "Source Serif 4",Georgia,serif;color:var(--tinta)}
+.cerrar{width:44px;height:44px;border:1px solid var(--linea);border-radius:50%;background:var(--papel);color:var(--tinta);font-size:22px;line-height:1;cursor:pointer}
+.grupo{margin:14px 0 4px}
+.grupo h3{margin:0 0 4px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gris)}
+.grupo ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:2px 10px}
+.grupo li a{display:flex;align-items:center;gap:8px;min-height:44px;font-weight:600;font-size:15px;color:var(--tinta);border-bottom:1px solid var(--linea)}
+.grupo li a::before{content:"";flex:none;width:10px;height:10px;border-radius:3px;background:var(--c)}
+.grupo li a[aria-current="page"]{color:var(--rojo)}
+.grupo li a .nuevo{font-size:10px;font-weight:700;color:var(--acento);border:1px solid currentColor;border-radius:999px;padding:0 5px;margin-left:auto}
+.grupo.servicios li a{color:var(--verde)}
+.grupo.servicios li a::before{background:var(--verde);border-radius:50%}
+.velo{display:none}
+.serv-barra{display:none}
+/* escritorio: barra en una línea, panel desplegable de tres columnas */
+@container sitio (min-width: 900px){
+  .tope{padding:20px 24px 14px}
+  .logo{font-size:34px}
+  .desliza{flex:0 1 auto;overflow:visible;padding:0 8px 0 24px;gap:2px 12px}
+  .serv-barra{display:flex;gap:12px;margin-left:auto}
+  .serv-barra a{display:inline-flex;align-items:center;min-height:52px;font-weight:600;font-size:14px;color:var(--verde)}
+  .desliza a{padding:0;min-height:52px}
+  .desliza .crece{flex:1}
+  .boton-mas{border-left:0;box-shadow:none;padding:0 10px;min-height:52px;order:0}
+  .boton-mas .icono{display:none}
+  .boton-mas .flecha{display:inline-block}
+  .fila{padding-right:24px}
+  .panel-mas{position:absolute;inset:auto 0 auto 0;top:100%;padding:8px 24px 22px;border-bottom:1px solid var(--linea);box-shadow:var(--sombra);display:grid;grid-template-columns:repeat(4,1fr);gap:8px 28px;overflow:visible}
+  .panel-mas[hidden]{display:none}
+  .panel-cab{display:none}
+  .grupo ul{grid-template-columns:1fr}
+  .velo{display:block;position:absolute;left:0;right:0;top:100%;height:2000px;background:rgba(0,0,0,.15);z-index:-1}
+}
+/* la portada */
+.portada{padding:16px}
+.etiqueta{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--c);padding:2px 7px;border-radius:3px}
+.titular{font-family:"Source Serif 4",Georgia,serif;font-weight:800;color:var(--tinta);line-height:1.18;margin:6px 0 4px}
+.hora{font-size:12px;color:var(--gris)}
+.placa{aspect-ratio:16/9;border-radius:6px;background:var(--c);display:flex;align-items:flex-end;padding:10px;color:#fff;font:800 13px/1.1 Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;background-image:linear-gradient(135deg,rgba(255,255,255,.18),rgba(0,0,0,.18))}
+.grande .titular{font-size:24px}
+.secundarias{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0;border-top:1px solid var(--linea);padding-top:14px}
+.secundarias .titular{font-size:17px}
+.secundarias article{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:start}
+.secundarias .placa{font-size:10px;padding:6px}
+.bloques{display:grid;grid-template-columns:1fr;gap:20px}
+.bloque{border-top:3px solid var(--c);padding-top:8px}
+.bloque h2{margin:0 0 6px;font:800 18px/1.2 "Source Serif 4",Georgia,serif;color:var(--tinta);display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.bloque h2 a.ver{font:600 12px/1 Inter,sans-serif;color:var(--gris)}
+.bloque ol{list-style:none;margin:0;padding:0}
+.bloque li{padding:8px 0;border-bottom:1px solid var(--linea)}
+.bloque li .titular{font-size:15.5px;font-weight:700;margin:3px 0 2px}
+.bloque.grupal{border-top-color:var(--tinta);background:var(--crema);padding:10px 12px 4px;border-radius:0 0 8px 8px}
+.bloque.grupal .etiqueta{font-size:10px}
+.titulo-grupos{font:800 13px/1 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);margin:26px 0 8px}
+.pie{border-top:2px solid var(--tinta);margin-top:24px;padding:16px;font-size:13px;color:var(--gris)}
+.pie ul{list-style:none;padding:0;margin:6px 0 0;display:flex;flex-wrap:wrap;gap:4px 14px}
+.pie a{color:var(--tinta);font-weight:600}
+@container sitio (min-width: 900px){
+  .portada{padding:24px}
+  .arriba{display:grid;grid-template-columns:1.6fr 1fr;gap:28px}
+  .grande .titular{font-size:34px}
+  .secundarias{margin:0;border-top:0;padding-top:0}
+  .bloques{grid-template-columns:repeat(4,1fr);gap:24px}
+  .bloques.grupales{grid-template-columns:repeat(3,1fr)}
+  .pie{padding:20px 24px}
+}
+</style>
+</head>
+<body>
+<div class="cabeza">
+<h1>Prototipo: el menú y la portada con 17 secciones</h1>
+<p>No es el sitio: es un dibujo que funciona, para decidir (es un cambio visible, se propone antes). Los títulos son reales, de septiembre y octubre; las horas son de ejemplo. El detalle y las decisiones están en <a href="MAPA-DE-SECCIONES.html#menu">MAPA-DE-SECCIONES.html</a>.</p>
+<div class="controles" role="group" aria-label="Cómo ver el prototipo">
+<button type="button" data-vista="celular" aria-pressed="true">Celular (375 px)</button>
+<button type="button" data-vista="escritorio" aria-pressed="false">Computadora</button>
+<button type="button" id="tema">Claro / oscuro</button>
+<button type="button" id="ir-salud">Ver estando en "Salud"</button>
+</div>
+</div>
+<div class="escenario"><div class="marco celular" id="marco">
+<div class="sitio" id="sitio">
+  <header class="tope"><a href="#" class="logo" aria-label="Radar Balcarce, portada">Radar <b>Balcarce</b></a><div class="fecha">Viernes 16 de octubre<br>14° · nublado</div></header>
+  <nav class="principal" aria-label="Secciones">
+    <div class="fila">
+      <div class="desliza" id="desliza"></div>
+      <button type="button" class="boton-mas" id="boton-mas" aria-expanded="false" aria-controls="panel-mas"><span class="icono" aria-hidden="true"><i></i><i></i><i></i></span><span class="rotulo">Secciones</span><span class="flecha" aria-hidden="true"></span><span class="donde"></span></button>
+      <div class="serv-barra" id="serv-barra"></div>
+    </div>
+    <div class="panel-mas" id="panel-mas" hidden role="region" aria-label="Todas las secciones">
+      <div class="panel-cab"><h2>Secciones</h2><button type="button" class="cerrar" id="cerrar" aria-label="Cerrar las secciones">×</button></div>
+      <div id="grupos" style="display:contents"></div>
+      <div class="velo" id="velo"></div>
+    </div>
+  </nav>
+  <main class="portada" id="portada"></main>
+  <footer class="pie"><b>Todas las secciones</b><ul id="pie"></ul></footer>
+</div>
+</div></div>
+<div class="nota-prototipo">
+<p><b>Qué mirar:</b></p>
+<ul>
+<li><b>Celular:</b> la fila se desliza con Portada y las 8 secciones de la barra; el botón <b>"Secciones"</b> queda fijo a la derecha y abre una pantalla con las 17 agrupadas y los servicios. Se cierra con la ×, con Escape o eligiendo una sección.</li>
+<li><b>Computadora:</b> la barra en una sola línea con <b>"Más secciones ▾"</b>, que despliega un panel de cuatro columnas. Los servicios quedan a la derecha, en verde.</li>
+<li><b>"Ver estando en Salud":</b> la sección actual está adentro del "Más", y el botón lo dice ("· Salud") para que no se pierda.</li>
+<li><b>La portada:</b> un bloque por cada sección de la barra y, abajo, tres bloques por grupo (Sociedad, Ciencia y tecnología, Cultura y ocio) con la etiqueta de color de cada nota. Son 11 bloques, como hoy.</li>
+<li>Con el teclado: Tab llega al botón, Enter lo abre, Escape lo cierra y el foco vuelve al botón.</li>
+</ul>
+</div>
+<script>
+(function () {
+  var BARRA = [
+    ['Balcarce', 'balcarce'], ['Política', 'politica'], ['Policiales', 'policiales'], ['Fútbol', 'futbol'],
+    ['Deportes', 'deportes'], ['Automovilismo', 'automovilismo'], ['Agro', 'agro'], ['Economía', 'economia']];
+  var GRUPOS = [
+    ['Balcarce', [['Balcarce', 'balcarce'], ['Política', 'politica'], ['Policiales', 'policiales']]],
+    ['Deportes', [['Fútbol', 'futbol'], ['Deportes', 'deportes'], ['Automovilismo', 'automovilismo']]],
+    ['Economía y campo', [['Economía', 'economia'], ['Agro', 'agro']]],
+    ['Sociedad', [['Educación', 'educacion', 1], ['Salud', 'salud', 1], ['Ambiente y clima', 'ambiente', 1], ['Argentina', 'pais']]],
+    ['Ciencia y tecnología', [['Ciencia', 'ciencia', 1], ['Tecnología e IA', 'tecnologia']]],
+    ['Cultura y ocio', [['Cultura', 'cultura'], ['Espectáculos', 'espectaculos', 1], ['Turismo y gastronomía', 'turismo', 1]]]];
+  var SERVICIOS = ['Agenda', 'Clima', 'Farmacias', 'Dólar', 'Teléfonos'];
+  var PORTADA = {
+    grande: ['Educación', 'educacion', 'Docentes locales paran el jueves 15 por salarios y presupuesto', 'hace 2 h'],
+    secundarias: [
+      ['Automovilismo', 'automovilismo', 'El Turismo Nacional evalúa incorporar a Balcarce para su calendario', 'hace 3 h'],
+      ['Salud', 'salud', 'LALCEC organiza actividades y mamografías gratuitas por el mes rosa', 'hace 4 h'],
+      ['Política', 'politica', 'El Concejo discute las intimaciones de Aguas de la Ciudad', 'hace 5 h'],
+      ['Agro', 'agro', 'Productores de papa adaptan la siembra y enfrentan la suba de precios', 'hace 6 h']],
+    bloques: [
+      ['Balcarce', 'balcarce', ['El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre', 'La Cooperativa de Electricidad anuncia un corte de luz para el miércoles', 'ARBal lanza planes de pago con quitas para regularizar tasas']],
+      ['Política', 'politica', ['Proponen mayores exigencias para radares viales y anular multas irregulares', 'El Senado aprueba la reforma de Zona Fría y Balcarce pierde el subsidio al gas', 'El canciller Pablo Quirno defiende la estrategia por Malvinas']],
+      ['Policiales', 'policiales', ['Allanamiento policial deja un imputado por robos comerciales', 'Choque frontal en la Ruta 226 deja tres heridos', 'Advierten por una estafa de TelePASE en la Autovía 226']],
+      ['Fútbol', 'futbol', ['La Liga Balcarceña suspende toda la fecha del fútbol local', 'Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección', 'Se agotaron las entradas para la despedida de Messi de la selección argentina']],
+      ['Deportes', 'deportes', ['Kevin Gómez se consagró campeón argentino de boxeo', 'Atletas de AACYC completan exigente competencia de trail', 'El Centro de Tenis de Mesa suma mesas de nivel internacional']],
+      ['Automovilismo', 'automovilismo', ['Hernán Palazzo gana en el regreso del TC Pick Up', 'Autódromo Juan Manuel Fangio: cronograma y nuevas reglas', 'Ignacio Fain logra la pole en San Nicolás y corta la sequía de Torino']],
+      ['Agro', 'agro', ['Rosgan y Banco Nación rematan quince mil cabezas de ganado', 'La papa sube de categoría en el semáforo regional de Coninagro', 'Estiman el costo operativo de usar drones para pulverizar papa']],
+      ['Economía', 'economia', ['ANSES oficializó el aumento de octubre para jubilaciones', 'Aumentó la nafta en Balcarce: ¿cuáles son los valores actualizados en las estaciones de servicio?', 'La desocupación desplaza a la inflación como principal preocupación']]],
+    grupos: [
+      ['Sociedad', [['Educación', 'educacion', 'La Asociación de Maestros convoca a un paro docente para el miércoles'], ['Salud', 'salud', 'El Club de Leones entrega nuevos equipos al Hospital Municipal'], ['Ambiente y clima', 'ambiente', 'Balcarce bajo alerta naranja por fuertes vientos: hubo caída de ramas y cortes de luz'], ['Argentina', 'pais', 'La Ciudad avanza con la licitación para construir la Línea F del subte']]],
+      ['Ciencia y tecnología', [['Ciencia', 'ciencia', 'Un científico formado en Balcarce investiga para la NASA'], ['Ciencia', 'ciencia', 'Científicos descubren 57 nuevas especies marinas frente a la costa'], ['Tecnología e IA', 'tecnologia', 'Google habilita Gemini 4 Argon para usuarios de pago'], ['Tecnología e IA', 'tecnologia', 'Argentina firma un acuerdo global para aplicar inteligencia artificial a la ciencia']]],
+      ['Cultura y ocio', [['Cultura', 'cultura', 'Pampa Dúo presenta su espectáculo en el Teatro Municipal'], ['Espectáculos', 'espectaculos', 'U2 vuelve a la Argentina con dos recitales en River'], ['Turismo y gastronomía', 'turismo', 'El Paraje La Alianza propone una escapada rural entre sierras'], ['Cultura', 'cultura', 'La Escuela de Arte Astor Piazzolla expone en el Museo Histórico']]]]
+  };
+  var $ = function (s) { return document.querySelector(s); };
+  var actual = '';
+  var marco = $('#marco'), boton = $('#boton-mas'), panel = $('#panel-mas');
+  var esc = function (t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;'); };
+  var ranuraDe = function (n) { return n === 'pais' ? 'argentina' : n; };
+  var enlace = function (nombre, r, clase) { return '<a href="#' + ranuraDe(r) + '"' + (clase ? ' class="' + clase + '"' : '') + (actual === nombre ? ' aria-current="page"' : '') + ' data-seccion="' + esc(nombre) + '">' + esc(nombre) + '</a>'; };
+  function dibujar() {
+    var fila = '<a href="#"' + (actual ? '' : ' aria-current="page"') + ' data-seccion="">Portada</a>';
+    BARRA.forEach(function (s) { fila += enlace(s[0], s[1]); });
+    fila += '<span class="crece"></span>';
+    $('#desliza').innerHTML = fila;
+    $('#grupos').innerHTML = GRUPOS.map(function (g) {
+      return '<div class="grupo"><h3>' + esc(g[0]) + '</h3><ul>' + g[1].map(function (s) {
+        return '<li><a href="#' + ranuraDe(s[1]) + '" style="--c:var(--s-' + s[1] + ')"' + (actual === s[0] ? ' aria-current="page"' : '') + ' data-seccion="' + esc(s[0]) + '">' + esc(s[0]) + (s[2] ? '<span class="nuevo">nueva</span>' : '') + '</a></li>';
+      }).join('') + '</ul></div>';
+    }).join('') + '<div class="grupo servicios"><h3>Servicios</h3><ul>' + SERVICIOS.map(function (s) { return '<li><a href="#">' + s + '</a></li>'; }).join('') + '</ul></div>';
+    $('#serv-barra').innerHTML = SERVICIOS.map(function (x) { return '<a href="#">' + x + '</a>'; }).join('');
+    var enMas = actual && !BARRA.some(function (s) { return s[0] === actual; });
+    boton.classList.toggle('hay-actual', !!enMas);
+    var ancho = marco.classList.contains('celular');
+    boton.querySelector('.rotulo').textContent = ancho ? 'Secciones' : 'Más secciones';
+    var donde = boton.querySelector('.donde');
+    donde.textContent = enMas ? ' · ' + actual : '';
+    donde.style.display = enMas ? 'inline' : 'none';
+    boton.setAttribute('aria-label', (ancho ? 'Secciones' : 'Más secciones') + (enMas ? ', estás en ' + actual : ''));
+    $('#pie').innerHTML = GRUPOS.map(function (g) { return g[1].map(function (s) { return '<li><a href="#' + ranuraDe(s[1]) + '">' + esc(s[0]) + '</a></li>'; }).join(''); }).join('');
+    var p = PORTADA, h = '';
+    h += '<div class="arriba"><article class="grande"><div class="placa" style="--c:var(--s-' + p.grande[1] + ')">' + esc(p.grande[0]) + '</div><p style="margin:10px 0 0"><span class="etiqueta" style="--c:var(--s-' + p.grande[1] + ')">' + esc(p.grande[0]) + '</span></p><h2 class="titular">' + esc(p.grande[2]) + '</h2><span class="hora">' + p.grande[3] + '</span></article>';
+    h += '<div class="secundarias">' + p.secundarias.map(function (n) { return '<article><div class="placa" style="--c:var(--s-' + n[1] + ')">' + esc(n[0]) + '</div><div><span class="etiqueta" style="--c:var(--s-' + n[1] + ')">' + esc(n[0]) + '</span><h3 class="titular">' + esc(n[2]) + '</h3><span class="hora">' + n[3] + '</span></div></article>'; }).join('') + '</div></div>';
+    h += '<div class="bloques" style="margin-top:26px">' + p.bloques.map(function (b, i) { return '<section class="bloque" style="--c:var(--s-' + b[1] + ')"><h2>' + esc(b[0]) + '<a class="ver" href="#' + ranuraDe(b[1]) + '">Ver todo</a></h2><ol>' + b[2].map(function (t, j) { return '<li><h3 class="titular">' + esc(t) + '</h3><span class="hora">hace ' + (j * 3 + i % 4 + 1) + ' h</span></li>'; }).join('') + '</ol></section>'; }).join('') + '</div>';
+    h += '<p class="titulo-grupos">Más para leer</p><div class="bloques grupales">' + p.grupos.map(function (g) { return '<section class="bloque grupal"><h2>' + esc(g[0]) + '</h2><ol>' + g[1].map(function (n, j) { return '<li><span class="etiqueta" style="--c:var(--s-' + n[1] + ')">' + esc(n[0]) + '</span><h3 class="titular">' + esc(n[2]) + '</h3><span class="hora">hace ' + (j * 4 + 2) + ' h</span></li>'; }).join('') + '</ol></section>'; }).join('') + '</div>';
+    $('#portada').innerHTML = h;
+  }
+  function abrir() { panel.hidden = false; boton.setAttribute('aria-expanded', 'true'); var primero = panel.querySelector(marco.classList.contains('celular') ? '.cerrar' : '.grupo a'); if (primero) primero.focus(); }
+  function cerrar(volver) { panel.hidden = true; boton.setAttribute('aria-expanded', 'false'); if (volver) boton.focus(); }
+  boton.addEventListener('click', function () { if (panel.hidden) abrir(); else cerrar(false); });
+  $('#cerrar').addEventListener('click', function () { cerrar(true); });
+  $('#velo').addEventListener('click', function () { cerrar(true); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !panel.hidden) { cerrar(true); return; }
+    // En el celular el panel tapa todo: Tab no se escapa.
+    if (e.key === 'Tab' && !panel.hidden && marco.classList.contains('celular')) {
+      var foc = panel.querySelectorAll('a, button'); var a = foc[0], z = foc[foc.length - 1];
+      if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); } else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
+    }
+  });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('#sitio a[data-seccion]');
+    if (a) { e.preventDefault(); actual = a.getAttribute('data-seccion'); cerrar(false); dibujar(); }
+    else if (!panel.hidden && !marco.classList.contains('celular') && !e.target.closest('nav.principal')) cerrar(false);
+  });
+  document.querySelectorAll('[data-vista]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.querySelectorAll('[data-vista]').forEach(function (o) { o.setAttribute('aria-pressed', String(o === b)); });
+      marco.classList.toggle('celular', b.getAttribute('data-vista') === 'celular'); cerrar(false); dibujar();
+    });
+  });
+  $('#ir-salud').addEventListener('click', function () { actual = 'Salud'; cerrar(false); dibujar(); });
+  var guardado = null; try { guardado = localStorage.getItem('radar-prototipo-menu-tema'); } catch (e) {}
+  if (guardado) document.documentElement.setAttribute('data-theme', guardado);
+  $('#tema').addEventListener('click', function () {
+    var t = document.documentElement.getAttribute('data-theme');
+    var oscuro = t ? t === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nuevo = oscuro ? 'light' : 'dark'; document.documentElement.setAttribute('data-theme', nuevo);
+    try { localStorage.setItem('radar-prototipo-menu-tema', nuevo); } catch (e) {}
+  });
+  dibujar();
+})();
+</script>
+</body>
+</html>
