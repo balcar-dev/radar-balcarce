@@ -15603,16 +15603,16 @@
   "cuando": "2026-10-16T12:02:14.674Z"
  },
  "e99t2o": {
-  "archivo": "fotos-notas/e99t2o.jpg",
   "medio": "Radio Gabal (FM 104.1)",
-  "credito": "Foto: Radio Gabal (FM 104.1)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Jennifer Lasa gana el primer puesto en el Argentino de Powerlifting",
   "enlace": "https://www.radiogabal.com.ar/index.php/deportes/jennifer-lasa-se-quedo-con-el-primer-puesto-en-el-argentino-de-powerlifting",
   "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/jeniferr.jpg",
   "razon": "La foto tiene buen encuadre y nitidez, muestra claramente a la protagonista con su medalla y certificado, sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-16T12:32:39.333Z"
+  "cuando": "2026-10-16T12:32:39.333Z",
+  "intentado": true,
+  "borrada": true
  },
  "vn4avv": {
   "archivo": "fotos-notas/vn4avv.jpg",
@@ -15637,5 +15637,17 @@
   "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/jeniferr.jpg",
   "razon": "Es la única opción disponible, cumple con los requisitos de calidad, no tiene marca de agua ni se observa a menores.",
   "cuando": "2026-10-16T12:32:39.333Z"
+ },
+ "1e6e9wy": {
+  "archivo": "fotos-notas/1e6e9wy.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Docentes y estatales bonaerenses discuten una nueva oferta salarial",
+  "enlace": "https://www.diariolavanguardia.com/noticias/45097-paritarias-en-balcarce-crece-la-expectativa-por-una-definicion-salarial-para-docentes-y-estatales/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66064.png",
+  "razon": "Muestra claramente la reunión de negociación paritaria sin marcas de agua ni menores.",
+  "cuando": "2026-10-16T12:37:18.327Z"
  }
 }
