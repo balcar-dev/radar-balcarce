@@ -15567,15 +15567,15 @@
   "borrada": true
  },
  "7jnpk": {
-  "archivo": "fotos-notas/7jnpk.jpg",
   "medio": "Infocampo",
-  "credito": "Foto: Infocampo",
   "licencia": null,
   "origen": "medio",
   "titulo": "La Rioja registra lluvias ligeras y temperaturas moderadas",
   "enlace": "https://www.infocampo.com.ar/clima-en-la-rioja-lluvia-ligera-el-pronostico-para-hoy-16-de-octubre/",
   "imagenOriginal": "https://www.infocampo.com.ar/wp-content/uploads/2025/10/tormenta-nubes-frio-clima.jpg",
   "razon": "Es la única imagen válida que ilustra el clima y el campo, mientras que la opción B es un error de sistema.",
-  "cuando": "2026-10-16T09:36:29.116Z"
+  "cuando": "2026-10-16T09:36:29.116Z",
+  "intentado": true,
+  "borrada": true
  }
 }

@@ -1,90 +1,6 @@
 {
-  "generado": "2026-10-16T09:36:36.523Z",
+  "generado": "2026-10-16T10:01:45.275Z",
   "notas": [
-    {
-      "id": "7jnpk",
-      "titulo": "La Rioja registra lluvias ligeras y temperaturas moderadas",
-      "copete": "El Servicio Meteorológico Nacional anuncia marcas térmicas entre 9°C y 19°C en el territorio riojano. Las precipitaciones alcanzan los 0.65 milímetros durante la jornada.",
-      "cuerpo": "El Servicio Meteorológico Nacional anticipa un clima variable para La Rioja este viernes 16 de octubre, con lluvias ligeras y temperaturas que oscilan entre los 9°C y los 19°C. De acuerdo con la información difundida, las precipitaciones alcanzan los 0.65 milímetros, acompañadas por una humedad del 68% y vientos a 3.2 metros por segundo con ráfagas de hasta 7.3 metros por segundo.\n\nPor otra parte, otra fuente registra valores diferentes para el mismo período, al señalar una máxima de 8°C y una mínima de 4°C, junto con datos técnicos que ubican la temperatura en 16°C y la humedad en el 59%. Las condiciones actuales permiten planificar tareas rurales como la siembra o el control de plagas, aunque se recomienda el monitoreo constante ante posibles cambios repentinos en la atmósfera.",
-      "guion": "La Rioja registra lluvias ligeras y temperaturas moderadas",
-      "seccion": "Agro",
-      "medios": [
-        "Infocampo",
-        "TN (Todo Noticias)"
-      ],
-      "enlace": "https://www.infocampo.com.ar/clima-en-la-rioja-lluvia-ligera-el-pronostico-para-hoy-16-de-octubre/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-16T04:00:16.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T09:35:52.351Z",
-      "relevancia": 41,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Servicio Meteorológico Nacional anticipa lluvias ligeras en La Rioja.",
-        "Las temperaturas oscilan entre los 9°C y los 19°C según el informe principal.",
-        "Se registran precipitaciones de 0.65 milímetros y humedad del 68%."
-      ],
-      "seSabe": [
-        "El Servicio Meteorológico Nacional prevé lluvias ligeras para La Rioja.",
-        "Se registran precipitaciones de 0.65 milímetros.",
-        "La humedad alcanza el 68% según la primera fuente."
-      ],
-      "noConfirmado": [
-        "Las fuentes presentan cifras contradictorias sobre las marcas térmicas previstas para la jornada.",
-        "No hay precisiones unificadas sobre la velocidad exacta del viento y el porcentaje de nubosidad."
-      ],
-      "textoRedes": "El Servicio Meteorológico Nacional anuncia lluvias ligeras y temperaturas moderadas para La Rioja con marcas entre 9°C y 19°C.",
-      "etiquetas": [
-        "La Rioja",
-        "clima",
-        "Servicio Meteorologico Nacional",
-        "lluvias"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infocampo",
-          "enlace": "https://www.infocampo.com.ar/clima-en-la-rioja-lluvia-ligera-el-pronostico-para-hoy-16-de-octubre/",
-          "fecha": "2026-10-16T04:00:16.000Z",
-          "oficial": false,
-          "aporte": "Aportó los datos sobre precipitaciones de 0.65 mm, humedad del 68% y temperaturas de 9°C a 19°C."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/10/16/clima-en-la-rioja-hoy-viernes-16-de-octubre-lluvia-ligera-y-frio/",
-          "fecha": "2026-10-16T09:03:26.000Z",
-          "oficial": false,
-          "aporte": "Aportó valores alternativos de temperatura con mínimas de 4°C y máximas de 8°C, además de recomendaciones preventivas."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "clima20261014",
-          "titulo": "Clima en Balcarce: 60% de probabilidad de lluvia, con mínima de 10° y máxima de 16°",
-          "fecha": "2026-10-14T10:31:49.607Z",
-          "ruta": "/nota/clima-en-balcarce-60-de-probabilidad-de-lluvia-con-minima-de-10-y-clima20261014"
-        },
-        {
-          "id": "clima20261010",
-          "titulo": "Clima en Balcarce: 70% de probabilidad de lluvia, con mínima de 7° y máxima de 13°",
-          "fecha": "2026-10-10T10:31:54.966Z",
-          "ruta": "/nota/clima-en-balcarce-70-de-probabilidad-de-lluvia-con-minima-de-7-y-clima20261010"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-rioja-registra-lluvias-ligeras-y-temperaturas-moderadas",
-      "foto": {
-        "archivo": "fotos-notas/7jnpk.jpg",
-        "credito": "Foto: Infocampo"
-      }
-    },
     {
       "id": "al99go",
       "titulo": "Estudiantes y Flamengo empatan sin goles en la ida de la copa",
@@ -794,6 +710,108 @@
       }
     },
     {
+      "id": "1jpdkrm",
+      "titulo": "La inflación de septiembre varía según cada provincia",
+      "copete": "El costo de vida alcanzó el 1,9% a nivel nacional en septiembre, aunque el incremento de precios mostró diferencias en las jurisdicciones con índices propios.",
+      "cuerpo": "La inflación alcanzó el 1,9% a nivel nacional en septiembre, pero el incremento de precios no fue uniforme en los diez distritos con mediciones propias, según un informe de la consultora Politikon Chaco.\n\nRío Negro lideró el índice con el 2,5%, seguida por Neuquén y Tucumán con el 2,1%, mientras que Jujuy igualó el promedio del país con el 1,9%. En el otro extremo, Córdoba registró la menor suba mensual con el 1,4%.\n\nEn cuanto al acumulado entre enero y septiembre, el indicador nacional llegó al 23,6%, por encima del 22% registrado en el mismo período de 2025, de acuerdo con los datos difundidos.",
+      "guion": "La inflación de septiembre varía según cada provincia.",
+      "seccion": "Economía",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Noticias Argentinas (NA)",
+        "La Nueva",
+        "Los Andes (Mendoza)"
+      ],
+      "enlace": "https://tn.com.ar/economia/2026/10/15/inflacion-en-las-provincias-donde-subieron-mas-los-precios-en-septiembre-y-cuales-quedaron-por-debajo-del-promedio-nacional/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T19:58:37.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T02:32:42.919Z",
+      "relevancia": 56,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La inflación nacional de septiembre se ubicó en el 1,9%.",
+        "Río Negro registró la mayor suba mensual con el 2,5%.",
+        "Córdoba presentó el menor incremento con el 1,4%."
+      ],
+      "seSabe": [
+        "La inflación nacional de septiembre fue del 1,9% según los datos relevados.",
+        "Río Negro registró la mayor suba mensual con el 2,5%.",
+        "Córdoba presentó el menor aumento mensual con el 1,4%."
+      ],
+      "textoRedes": "La inflación de septiembre llegó al 1,9% a nivel nacional, aunque las diez jurisdicciones con índices propios registraron variaciones heterogéneas entre el 2,5% de Río Negro y el 1,4% de Córdoba.",
+      "etiquetas": [
+        "inflacion",
+        "septiembre",
+        "precios",
+        "provincias"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/15/inflacion-en-las-provincias-donde-subieron-mas-los-precios-en-septiembre-y-cuales-quedaron-por-debajo-del-promedio-nacional/",
+          "fecha": "2026-10-15T19:58:37.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo la misma información de la fuente tres sin aportar datos nuevos."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/cuales-fueron-las-provincias-con-mayor-y-menor-inflacion-que-el-promedio-nacional-de-septiembre_a6ad1373d88153cda2d007520",
+          "fecha": "2026-10-15T21:45:56.220Z",
+          "oficial": false,
+          "aporte": "Aportó los datos generales del índice nacional y la comparación de la velocidad de crecimiento con el mes previo."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-15-21-41-0-inflacion-en-las-provincias-donde-subieron-mas-los-precios-y-cuales-quedaron-por-debajo-del-promedio",
+          "fecha": "2026-10-16T02:02:07.000Z",
+          "oficial": false,
+          "aporte": "Aportó el listado completo de los diez distritos con IPC propio, el acumulado anual y la comparación interanual."
+        },
+        {
+          "medio": "Los Andes (Mendoza)",
+          "enlace": "https://www.losandes.com.ar/economia/que-provincias-tuvieron-mas-inflacion-que-el-promedio-nacional-septiembre-los-rubros-alza-n6010542",
+          "fecha": "2026-10-16T01:09:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó el detalle de las variaciones mensuales, la aceleración frente a agosto y los rubros con mayores aumentos por provincia."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1iw56bi",
+          "titulo": "El Indec ubica la canasta básica por debajo de la inflación en septiembre",
+          "fecha": "2026-09-24T03:00:00.000Z",
+          "ruta": "/nota/el-indec-ubica-la-canasta-basica-por-debajo-de-la-inflacion-en-1iw56bi"
+        },
+        {
+          "id": "gw45ft",
+          "titulo": "El Gobierno celebra una inflación de 1,9 por ciento en septiembre",
+          "fecha": "2026-10-13T20:24:38.245Z",
+          "ruta": "/nota/el-gobierno-celebra-una-inflacion-de-1-9-por-ciento-en-septiembre-gw45ft"
+        },
+        {
+          "id": "e5v4vp",
+          "titulo": "La inflación porteña llega al 1,8 por ciento en septiembre",
+          "fecha": "2026-10-08T14:00:00.000Z",
+          "ruta": "/nota/la-inflacion-portena-llega-al-1-8-por-ciento-en-septiembre-e5v4vp"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-inflacion-de-septiembre-varia-segun-cada-provincia",
+      "foto": {
+        "archivo": "fotos-notas/1jpdkrm.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "5yic3w",
       "titulo": "La industria utiliza el 58,5% de su capacidad instalada en agosto",
       "copete": "Las fábricas operaron por debajo del nivel registrado en el mismo mes del año pasado según el INDEC. La refinación de petróleo encabezó los sectores con mayor uso.",
@@ -1348,14 +1366,14 @@
       "guion": "Facundo Cambeses y Ivan Marcone palpitan el Clasico de Avellaneda",
       "seccion": "Fútbol",
       "medios": [
-        "Clarín",
         "TyC Sports",
         "Olé",
         "Crónica",
         "Diario Popular",
         "Doble Amarilla",
         "Minuto Uno",
-        "La Gaceta (Tucumán)"
+        "La Gaceta (Tucumán)",
+        "Clarín"
       ],
       "enlace": "https://www.ole.com.ar/futbol-primera/racing-vs-independiente-cambeces-marcone-conferencia-prensa-vivo-clasico-avellaneda-liga-profesional-clasura_0_TOkWemyfRr.html",
       "teniaImagenLaFuente": true,
@@ -2448,6 +2466,7 @@
         "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
         "El Día",
+        "0221",
         "La Tecla",
         "La Verdad",
         "QZ Noticias (Mar del Plata)",
@@ -2459,7 +2478,6 @@
         "Ámbito",
         "Minuto Uno",
         "Agencia DIB",
-        "0221",
         "Infoeme",
         "Ecos Diarios (Necochea)",
         "Clarín",
@@ -2703,6 +2721,100 @@
       "foto": {
         "archivo": "fotos-notas/1b4z7qp.jpg",
         "credito": "Foto: Ámbito"
+      }
+    },
+    {
+      "id": "7tqcv3",
+      "titulo": "El Gobierno nacional actualiza los aranceles de discapacidad",
+      "copete": "El Ejecutivo nacional dispuso una suba del 1,9% en las prestaciones básicas para personas con discapacidad. La medida se rige por la inflación de septiembre y mantiene el adicional patagónico.",
+      "cuerpo": "El Gobierno nacional oficializó una suba del 1,90 por ciento en los aranceles destinados al Sistema de Prestaciones Básicas para Personas con Discapacidad. La medida se instrumentó a través de la Resolución 1/2026 de la Agencia Nacional de Discapacidad, publicada en el Boletín Oficial y firmada por el subdirector ejecutivo del organismo, Gianfranco Scigliano.\n\nAsimismo, se ratificó que las atenciones brindadas en la región patagónica conservarán el suplemento del 20 por ciento por zona desfavorable.",
+      "guion": "El Gobierno nacional actualiza los aranceles de discapacidad",
+      "seccion": "Política",
+      "medios": [
+        "El Destape",
+        "Noticias Argentinas (NA)",
+        "QZ Noticias (Mar del Plata)",
+        "Ámbito",
+        "La Capital (Rosario)",
+        "El Cronista",
+        "Perfil"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/salud-oficializo-un-aumento-en-los-aranceles-de-las-prestaciones-por-discapacidad---de-cuanto-es-_a6ad0a55888153cda2dec84c4",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T10:09:30.171Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T12:31:36.164Z",
+      "relevancia": 62,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Ejecutivo nacional fijó un incremento del 1,90 por ciento en las prestaciones.",
+        "La medida se formalizó mediante la Resolución 1/2026 en el Boletín Oficial.",
+        "El porcentaje responde a la variación del Índice de Precios al Consumidor de septiembre.",
+        "Las atenciones en la Patagonia conservan el plus del 20 por ciento."
+      ],
+      "seSabe": [
+        "Se dispuso una suba del 1,90 por ciento en las prestaciones básicas para personas con discapacidad.",
+        "La medida fue establecida por la Agencia Nacional de Discapacidad mediante la Resolución 1/2026.",
+        "El ajuste se calculó a partir de la inflación informada para el mes de septiembre.",
+        "Las prestaciones en la Patagonia mantienen un suplemento del 20 por ciento."
+      ],
+      "etiquetas": [
+        "discapacidad",
+        "aranceles",
+        "Gobierno nacional",
+        "Boletín Oficial",
+        "Agencia Nacional de Discapacidad"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/salud-oficializo-un-aumento-en-los-aranceles-de-las-prestaciones-por-discapacidad---de-cuanto-es-_a6ad0a55888153cda2dec84c4",
+          "fecha": "2026-10-15T10:09:30.171Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles de la Resolución 1/2026 y el porcentaje de aumento del 1,90 por ciento."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/el-pais/el-gobierno-oficializo-un-aumento-del-19-en-los-aranceles-de-las-prestaciones-por-discapacidad",
+          "fecha": "2026-10-15T11:45:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la oficialización de la medida por parte del Gobierno nacional."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/el-gobierno-aumento-19-los-aranceles-las-prestaciones-personas-discapacidad-octubre-n6333968",
+          "fecha": "2026-10-15T11:47:00.000Z",
+          "oficial": false,
+          "aporte": "Informó que la suba abarca a todas las prestaciones y que se mantiene el adicional patagónico."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/el-gobierno-aumento-las-prestaciones-por-discapacidad-de-cuanto-sera-la-suba-en-octubre/",
+          "fecha": "2026-10-15T11:38:42.000Z",
+          "oficial": false,
+          "aporte": "Precisó que el incremento corresponde al mes de octubre en base al IPC de septiembre."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/sociedad/aumento-en-las-prestaciones-por-discapacidad-en-octubre-de-2026-de-cuanto-es-y-como-se-aplica.phtml",
+          "fecha": "2026-10-15T11:27:10.000Z",
+          "oficial": false,
+          "aporte": "Indicó la intervención del Ministerio de Salud en el ajuste arancelario."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-nacional-actualiza-los-aranceles-de-discapacidad",
+      "foto": {
+        "archivo": "fotos-notas/7tqcv3.jpg",
+        "credito": "Foto: El Cronista"
       }
     },
     {
@@ -3272,7 +3384,7 @@
       "fecha": "2026-10-14T22:03:55.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T03:05:56.344Z",
-      "relevancia": 88,
+      "relevancia": 81,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3332,12 +3444,12 @@
     }
   ],
   "secciones": [
-    "Agro",
     "Fútbol",
     "Balcarce",
     "Política",
     "Tecnología",
     "Economía",
+    "Agro",
     "Cultura y agenda",
     "Automovilismo",
     "Deportes",
@@ -3348,10 +3460,10 @@
     "ahora": {
       "temp": 6,
       "sensacion": 3,
-      "humedad": 95,
-      "viento": 13,
+      "humedad": 92,
+      "viento": 14,
       "rumbo": "S",
-      "cielo": "Mayormente despejado",
+      "cielo": "Parcialmente nublado",
       "esDeDia": true
     },
     "dias": [
@@ -3728,12 +3840,6 @@
       "motivo": "necesita ojo humano: \"falleció\""
     },
     {
-      "id": "1hkr9k8",
-      "titulo": "Gabriel Solano denunció penalmente a Javier Milei y Luis…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
       "id": "120b8gy",
       "titulo": null,
       "seccion": "Policiales",
@@ -3752,10 +3858,10 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "1333xd6",
-      "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"denunció\""
+      "id": "1qxojgh",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1mmg03q",
@@ -3768,6 +3874,12 @@
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "1333xd6",
+      "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "n6pah5",

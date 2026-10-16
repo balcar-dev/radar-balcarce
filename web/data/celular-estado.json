@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T09:36:36.523Z",
- "portada": 39,
- "archivo": 1140,
+ "generado": "2026-10-16T10:01:45.275Z",
+ "portada": 40,
+ "archivo": 1139,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-16T09:36:36.549Z",
+  "generado": "2026-10-16T10:01:45.311Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -108,14 +108,14 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "16q0gf8",
-      "titulo": "Lalcec Balcarce ofrece mamografías y prepara la jornada comunitaria de octubre rosa",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "2g6pf5",
       "titulo": "Atletas locales logran buenos puestos en Tamangueyú y Balcarce",
       "seccion": "Deportes"
+     },
+     {
+      "id": "16q0gf8",
+      "titulo": "Lalcec Balcarce ofrece mamografías y prepara la jornada comunitaria de octubre rosa",
+      "seccion": "Balcarce"
      }
     ]
    },
