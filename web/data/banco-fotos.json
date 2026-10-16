@@ -16121,8 +16121,8 @@
   "origen": "ninguna",
   "titulo": "Luciano Nakis apunta a Gabriel Milito como técnico de Independiente",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-16T19:02:07.287Z",
-  "intentos": 1,
+  "cuando": "2026-10-16T20:02:30.772Z",
+  "intentos": 2,
   "fuentes": 5
  },
  "mhaxsk": {
@@ -16193,5 +16193,38 @@
   "cuando": "2026-10-16T19:32:11.003Z",
   "intentos": 1,
   "fuentes": 4
+ },
+ "1wze6ju": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Trenes Argentinos compra cuarenta y tres formaciones para el AMBA",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-16T20:02:30.772Z",
+  "intentos": 1,
+  "fuentes": 3
+ },
+ "1wg0k3x": {
+  "archivo": "fotos-notas/1wg0k3x.jpg",
+  "medio": "Infocampo",
+  "credito": "Foto: Infocampo",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El IPCVA y el Gobierno nacional realizan una misión comercial en Israel",
+  "enlace": "https://www.infocampo.com.ar/argentina-tuvo-su-dia-de-la-carne-en-israel-es-su-tercer-mayor-comprador-detras-de-china-y-eeuu/",
+  "imagenOriginal": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/IMG_7359.JPG.jpeg",
+  "razon": "La foto de Infocampo muestra el contexto de la misión comercial con el backdrop oficial de 'Prom Argentina' y las banderas, sin marcas de agua del medio ni menores, mientras que la de Noticias Agropecuarias tiene su logo superpuesto.",
+  "cuando": "2026-10-16T20:02:30.772Z"
+ },
+ "gu1v3q": {
+  "archivo": "fotos-notas/gu1v3q.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Altos funcionarios de Estados Unidos visitan el país la semana próxima",
+  "enlace": "https://www.clarin.com/politica/altos-funcionarios-trump-visitaran-argentina-avanzar-millonario-proyecto-infraestructura-ampliar-inversiones_0_NIwA6uB3Ms.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/10/12/RuO_WsyRK_2000x1500__1.jpg",
+  "razon": "Tiene excelente nitidez, encuadre formal sin marcas de agua ni menores, y muestra claramente a los funcionarios.",
+  "cuando": "2026-10-16T20:02:30.772Z"
  }
 }

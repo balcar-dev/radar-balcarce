@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-16T19:36:16.756Z",
+ "generado": "2026-10-16T20:03:14.508Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -79,11 +79,6 @@
      "fecha": "2026-10-16T13:07:14.000Z"
     },
     {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/politica/los-gobernadores-piden-mas-obras-y-santilli-lanzo-una-advertencia-deberian-estar-preocupados-si-nid16102026/",
-     "fecha": "2026-10-16T16:43:13.000Z"
-    },
-    {
      "medio": "LU9 Mar del Plata",
      "enlace": "https://www.lu9mardelplata.com.ar/diego-santilli-advirtio-que-los-gobernadores-deben-preocuparse-por-un-posible-regreso-del-kirchnerismo",
      "fecha": "2026-10-16T18:52:15.000Z"
@@ -94,9 +89,9 @@
      "fecha": "2026-10-16T17:53:00.000Z"
     },
     {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/politica/2026/10/16/el-fuerte-mensaje-de-santilli-en-la-previa-al-2027-los-gobernadores-deberian-estar-preocupados-si-gana-kicillof/",
-     "fecha": "2026-10-16T18:38:12.000Z"
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/politica/los-gobernadores-piden-mas-obras-y-santilli-lanzo-una-advertencia-deberian-estar-preocupados-si-nid16102026/",
+     "fecha": "2026-10-16T16:43:13.000Z"
     },
     {
      "medio": "A24",
@@ -139,11 +134,6 @@
      "fecha": "2026-10-16T16:29:00.000Z"
     },
     {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/politica/diego-santilli-comparte-cumbre-gobernadores-abordar-obras-e-inversiones-n6334470",
-     "fecha": "2026-10-16T12:58:00.000Z"
-    },
-    {
      "medio": "La Gaceta (Tucumán)",
      "enlace": "https://www.lagaceta.com.ar/nota/1158369/politica/gobernadores-reclamaron-plan-infraestructura-santilli-advirtio-sobre-eventual-triunfo-kicillof.html",
      "fecha": "2026-10-16T16:21:00.000Z"
@@ -164,48 +154,6 @@
    "maximo": 5
   },
   {
-   "id": "gu1v3q",
-   "titulo": "El canciller de Trump habló con Milei y se anunció que dos altos funcionarios de EE.UU. visitarán la Argentina para avanzar con las inversiones",
-   "copete": "El secretario de Estado Marco Rubio se comunicó este viernes con el presidente para afianzar la relación bilateral. Además, se anunció que el subsecretario de Estado Christopher Landau y el subsecretario para el Hemisferio Occidental Juan Pablo Segura llegarán la semana próxima.",
-   "seccion": "Argentina",
-   "fecha": "2026-10-16T14:34:55.000Z",
-   "fuentes": [
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/politica/altos-funcionarios-trump-visitaran-argentina-avanzar-millonario-proyecto-infraestructura-ampliar-inversiones_0_NIwA6uB3Ms.html",
-     "fecha": "2026-10-16T14:34:55.000Z"
-    },
-    {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/internacionales/llamada-marco-rubio-javier-milei-puntos-clave-conversaron-comercio-bilateral-20261016143259",
-     "fecha": "2026-10-16T17:32:00.000Z"
-    },
-    {
-     "medio": "iProfesional",
-     "enlace": "https://www.iprofesional.com/politica/466805-milei-hablo-con-marco-rubio-y-se-confirmo-que-dos-funcionarios-de-trump-visitaran-el-pais",
-     "fecha": "2026-10-16T19:11:00.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/politica/dos-altos-funcionarios-del-gobierno-de-trump-visitaran-la-argentina-la-proxima-semana_a6ad25840f8e83a89471dd041",
-     "fecha": "2026-10-16T18:03:38.328Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/politica/javier-milei-hablo-marco-rubio-ratificaron-la-alianza-y-pusieron-el-foco-las-inversiones-n6334703",
-     "fecha": "2026-10-16T18:44:00.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/politica/javier-milei-hablo-telefono-marco-rubio-analizaron-oportunidades-ampliar-las-inversiones-el-pais-n251801",
-     "fecha": "2026-10-16T18:11:00.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (promesa): el título dice 2 y el cuerpo no lo explica; sin esas oraciones quedan 118 palabras",
-   "maximo": 4
-  },
-  {
    "id": "dpwrvn",
    "titulo": "Murió Fernando Confessore, el reconocido meteorólogo, a los 58 años",
    "copete": "El reconocido meteorólogo Fernando Confessore , murió esta madrugada del viernes 16 de octubre. Al aire en Alguien tiene que decirlo, Gabriel Iezzi compartió los primeros detalles del fallecimiento, ocurrió dentro de su casa por una descompensación repentina. Fernando Confessore…",
@@ -224,6 +172,11 @@
     },
     {
      "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/sociedad/murio-fernando-confessore-reacciones-y-mensajes-de-despedida-al-meteorologo-que-trabajaba-en-el-nid16102026/",
+     "fecha": "2026-10-16T19:56:00.000Z"
+    },
+    {
+     "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/espectaculos/de-que-murio-fernando-confessore-nid16102026/",
      "fecha": "2026-10-16T16:57:13.000Z"
     },
@@ -236,11 +189,6 @@
      "medio": "TN (Todo Noticias)",
      "enlace": "https://tn.com.ar/show/television/2026/10/16/video-asi-fue-la-despedida-de-fernando-confessore-en-el-programa-donde-cada-tarde-daba-el-pronostico/",
      "fecha": "2026-10-16T17:25:49.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/videos/show/television/2026/10/16/video-asi-fue-la-despedida-de-fernando-confessore-en-el-programa-donde-cada-tarde-daba-el-pronostico-video-2/",
-     "fecha": "2026-10-16T16:55:54.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
@@ -273,14 +221,9 @@
      "fecha": "2026-10-16T11:02:43.000Z"
     },
     {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/sociedad/murio-el-meteorologo-fernando-confessore-a-los-58-anos/",
-     "fecha": "2026-10-16T11:55:29.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/espectaculos/quienes-son-las-hijas-de-fernando-confessore-el-reconocido-meteorologo-que-murio-a-los-58-anos/",
-     "fecha": "2026-10-16T15:06:28.000Z"
+     "medio": "A24",
+     "enlace": "https://www.a24.com/primiciasya/conmocion-murio-fernando-confessore-el-reconocido-meteorologo-tn-los-58-anos-n1607020",
+     "fecha": "2026-10-16T10:14:00.000Z"
     },
     {
      "medio": "Canal 26",
@@ -383,16 +326,6 @@
      "fecha": "2026-10-16T10:30:00.000Z"
     },
     {
-     "medio": "Los Andes (Mendoza)",
-     "enlace": "https://www.losandes.com.ar/espectaculos/murio-los-58-anos-fernando-confessore-el-historico-meteorologo-tn-y-el-trece-n6010552",
-     "fecha": "2026-10-16T10:32:00.000Z"
-    },
-    {
-     "medio": "elDiarioAR",
-     "enlace": "https://www.eldiarioar.com/medios/murio-fernando-confessore-58-anos-historico-meteorologo-tn-trece_1_13591768.html",
-     "fecha": "2026-10-16T13:16:02.000Z"
-    },
-    {
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/sociedad/murio-fernando-confessore-el-meteorologo-que-trabajaba-en-el-canal-tn-nid16102026/",
      "fecha": "2026-10-16T10:03:07.000Z"
@@ -411,11 +344,6 @@
      "medio": "Perfil",
      "enlace": "https://www.perfil.com/noticias/protagonistas/a-los-58-anos-murio-el-periodista-fernando-confessore.phtml",
      "fecha": "2026-10-16T09:55:00.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/conmocion-murio-fernando-confessore-el-reconocido-meteorologo-tn-los-58-anos-n1607020",
-     "fecha": "2026-10-16T10:14:00.000Z"
     },
     {
      "medio": "Radio Mitre",
@@ -443,6 +371,11 @@
      "fecha": "2026-10-16T10:56:29.000Z"
     },
     {
+     "medio": "Los Andes (Mendoza)",
+     "enlace": "https://www.losandes.com.ar/espectaculos/murio-los-58-anos-fernando-confessore-el-historico-meteorologo-tn-y-el-trece-n6010552",
+     "fecha": "2026-10-16T10:32:00.000Z"
+    },
+    {
      "medio": "0223 (Mar del Plata)",
      "enlace": "https://www.0223.com.ar/nota/2026-10-16-8-15-19-conmocion-murio-fernando-confessore-referente-historico-de-la-meteorologia-a-los-58-anos",
      "fecha": "2026-10-16T11:15:00.000Z"
@@ -451,6 +384,11 @@
      "medio": "A24",
      "enlace": "https://www.a24.com/primiciasya/se-supo-que-murio-fernando-confessore-y-como-vivio-la-situacion-su-mujer-n1607029",
      "fecha": "2026-10-16T11:08:00.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/sociedad/murio-el-meteorologo-fernando-confessore-a-los-58-anos/",
+     "fecha": "2026-10-16T11:55:29.000Z"
     },
     {
      "medio": "Infobae",
@@ -463,9 +401,19 @@
      "fecha": "2026-10-16T13:15:56.000Z"
     },
     {
+     "medio": "elDiarioAR",
+     "enlace": "https://www.eldiarioar.com/medios/murio-fernando-confessore-58-anos-historico-meteorologo-tn-trece_1_13591768.html",
+     "fecha": "2026-10-16T13:16:02.000Z"
+    },
+    {
      "medio": "A24",
      "enlace": "https://www.a24.com/primiciasya/la-ultima-aparicion-al-aire-fernando-confessore-y-la-frase-que-causa-conmocion-su-muerte-n1607089",
      "fecha": "2026-10-16T13:40:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/espectaculos/quienes-son-las-hijas-de-fernando-confessore-el-reconocido-meteorologo-que-murio-a-los-58-anos/",
+     "fecha": "2026-10-16T15:06:28.000Z"
     },
     {
      "medio": "A24",
@@ -595,6 +543,80 @@
    "intentos": 5,
    "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 5
+  },
+  {
+   "id": "1mru4qv",
+   "titulo": "El FMI elogió las reformas de Milei y anticipó una recuperación de la economía argentina en 2027",
+   "copete": "El organismo destacó los avances en la reducción de los subsidios energéticos y el fortalecimiento de la sostenibilidad de la deuda.",
+   "seccion": "Economía",
+   "fecha": "2026-10-16T08:37:00.000Z",
+   "fuentes": [
+    {
+     "medio": "La Gaceta (Tucumán)",
+     "enlace": "https://www.lagaceta.com.ar/nota/1158292/economia/fmi-elogio-reformas-milei-anticipo-recuperacion-economia-argentina-2027.html",
+     "fecha": "2026-10-16T08:37:00.000Z"
+    },
+    {
+     "medio": "El Cronista",
+     "enlace": "https://www.cronista.com/economia-politica/el-fmi-le-puso-fecha-a-la-recuperacion-de-la-demanda-interna-y-el-crecimiento-de-argentina/",
+     "fecha": "2026-10-16T12:22:16.797Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/economia/el-fmi-elogio-las-reformas-milei-y-proyecto-una-recuperacion-la-economia-argentina-2027-n1607018",
+     "fecha": "2026-10-16T10:24:00.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/el-fmi-destaco-la-gestion-de-javier-milei-y-preve-un-repunte-de-la-economia-en-2027/",
+     "fecha": "2026-10-16T10:59:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/politica/el-fmi-destaco-los-progresos-de-la-argentina-y-anticipo-que-espera-para-la-economia-en-2027/",
+     "fecha": "2026-10-16T11:45:44.000Z"
+    },
+    {
+     "medio": "La Brújula 24",
+     "enlace": "https://www.labrujula24.com/notas/2026/10/16/el-fmi-elogio-reformas-de-milei-anticipa-recuperacion-de-la-economia-argentina-n525781/",
+     "fecha": "2026-10-16T12:29:31.000Z"
+    }
+   ],
+   "intentos": 4,
+   "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
+   "maximo": 4
+  },
+  {
+   "id": "8sfd4e",
+   "titulo": "Los precios mayoristas no ceden: aumentaron en septiembre un 3,2%",
+   "copete": "",
+   "seccion": "Economía",
+   "fecha": "2026-10-16T19:04:00.000Z",
+   "fuentes": [
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/economia/los-precios-mayoristas-no-ceden-aumentaron-septiembre-un-32-n251810",
+     "fecha": "2026-10-16T19:04:00.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/economia/2026/10/16/los-precios-mayoristas-aumentaron-un-32-en-septiembre-y-acumulan-un-alza-del-228-en-lo-que-va-del-ano/",
+     "fecha": "2026-10-16T19:50:12.000Z"
+    },
+    {
+     "medio": "Infobrisas (Radio Brisas)",
+     "enlace": "https://www.infobrisas.com/noticias/2026/10/16/111716-los-precios-mayoristas-aumentaron-3_2por_ciento-en-septiembre",
+     "fecha": "2026-10-16T19:36:55.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/economia/los-precios-mayoristas-subieron-32-septiembre-acumularon-un-alza-del-228-2026-n6334737",
+     "fecha": "2026-10-16T19:40:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
+   "maximo": 3
   }
  ]
 }

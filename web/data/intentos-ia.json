@@ -1092,8 +1092,8 @@
   "motivo": "con cuerpo"
  },
  "1uey0kx": {
-  "intentos": 2,
-  "ultimo": "2026-10-16T19:35:52.997Z",
+  "intentos": 3,
+  "ultimo": "2026-10-16T20:01:19.064Z",
   "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "1ummanb": {
@@ -1193,6 +1193,11 @@
   "baja": true,
   "fuentes": 1
  },
+ "1wg0k3x": {
+  "intentos": 1,
+  "ultimo": "2026-10-16T20:01:19.064Z",
+  "motivo": "con cuerpo"
+ },
  "1wl47fn": {
   "intentos": 1,
   "ultimo": "2026-10-13T12:32:20.432Z",
@@ -1212,6 +1217,11 @@
   "intentos": 2,
   "ultimo": "2026-10-14T16:32:27.799Z",
   "motivo": "sin material"
+ },
+ "1wze6ju": {
+  "intentos": 1,
+  "ultimo": "2026-10-16T20:01:19.064Z",
+  "motivo": "con cuerpo"
  },
  "1x4gtj1": {
   "intentos": 1,
@@ -1570,6 +1580,11 @@
   "ultimo": "2026-10-13T17:33:56.444Z",
   "motivo": "título o bajada: 2 problemas (numero, copia): el copete dice 0 y la fuente no lo dice"
  },
+ "8sfd4e": {
+  "intentos": 1,
+  "ultimo": "2026-10-16T20:01:19.064Z",
+  "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
+ },
  "8u3cip": {
   "intentos": 1,
   "ultimo": "2026-10-10T03:31:52.337Z",
@@ -1902,9 +1917,9 @@
   "motivo": "con cuerpo"
  },
  "gu1v3q": {
-  "intentos": 1,
-  "ultimo": "2026-10-16T19:35:52.997Z",
-  "motivo": "cuerpo: 1 problema (promesa): el título dice 2 y el cuerpo no lo explica; sin esas oraciones quedan 118 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-16T20:01:19.064Z",
+  "motivo": "con cuerpo"
  },
  "gw45ft": {
   "intentos": 1,
@@ -2120,11 +2135,6 @@
   "intentos": 1,
   "ultimo": "2026-10-15T21:36:21.050Z",
   "motivo": "con cuerpo"
- },
- "n9eggk": {
-  "intentos": 3,
-  "ultimo": "2026-10-09T20:01:49.111Z",
-  "motivo": "sin material"
  },
  "n9qhwn": {
   "intentos": 3,
