@@ -1,7 +1,44 @@
 {
- "generado": "2026-10-16T12:41:11.261Z",
+ "generado": "2026-10-16T13:02:38.337Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "1mru4qv",
+   "titulo": "El FMI elogió las reformas de Milei y anticipó una recuperación de la economía argentina en 2027",
+   "copete": "El Fondo Monetario Internacional (FMI) elogió las medidas económicas implementadas por el gobierno de Javier Milei y proyectó un repunte de la actividad económica en la Argentina impulsado por la baja de la inflación, el flujo de inversiones y las reformas estructurales en…",
+   "seccion": "Economía",
+   "fecha": "2026-10-16T08:37:00.000Z",
+   "fuentes": [
+    {
+     "medio": "La Gaceta (Tucumán)",
+     "enlace": "https://www.lagaceta.com.ar/nota/1158292/economia/fmi-elogio-reformas-milei-anticipo-recuperacion-economia-argentina-2027.html",
+     "fecha": "2026-10-16T08:37:00.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/economia/el-fmi-elogio-las-reformas-milei-y-proyecto-una-recuperacion-la-economia-argentina-2027-n1607018",
+     "fecha": "2026-10-16T10:24:00.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/el-fmi-destaco-la-gestion-de-javier-milei-y-preve-un-repunte-de-la-economia-en-2027/",
+     "fecha": "2026-10-16T10:59:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/politica/el-fmi-destaco-los-progresos-de-la-argentina-y-anticipo-que-espera-para-la-economia-en-2027/",
+     "fecha": "2026-10-16T11:45:44.000Z"
+    },
+    {
+     "medio": "La Brújula 24",
+     "enlace": "https://www.labrujula24.com/notas/2026/10/16/el-fmi-elogio-reformas-de-milei-anticipa-recuperacion-de-la-economia-argentina-n525781/",
+     "fecha": "2026-10-16T12:29:31.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
+   "maximo": 4
+  },
   {
    "id": "dpwrvn",
    "titulo": "Murió Fernando Confessore, el reconocido meteorólogo, a los 58 años",
@@ -26,6 +63,11 @@
     },
     {
      "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/espectaculos/de-que-murio-fernando-confessore-nid16102026/",
+     "fecha": "2026-10-16T12:49:50.000Z"
+    },
+    {
+     "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/sociedad/murio-fernando-confessore-el-meteorologo-que-trabajaba-en-el-canal-tn-nid16102026/",
      "fecha": "2026-10-16T11:29:46.000Z"
     },
@@ -35,9 +77,9 @@
      "fecha": "2026-10-16T11:02:20.000Z"
     },
     {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/espectaculos/de-que-murio-fernando-confessore-nid16102026/",
-     "fecha": "2026-10-16T10:59:22.000Z"
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/espectaculos/momento-mario-massaccesi-anuncio-vivo-muerte-fernando-confessore_0_dkSopl7g5d.html",
+     "fecha": "2026-10-16T12:27:17.000Z"
     },
     {
      "medio": "0223 (Mar del Plata)",
@@ -45,9 +87,14 @@
      "fecha": "2026-10-16T11:15:00.000Z"
     },
     {
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/sociedad/a-los-58-anos-murio-fernando-confessore-el-hombre-que-nos-daba-el-clima-cada-manana-n56552",
+     "fecha": "2026-10-16T12:39:00.000Z"
+    },
+    {
      "medio": "TN (Todo Noticias)",
      "enlace": "https://tn.com.ar/show/famosos/2026/10/16/asi-despiden-los-famosos-a-fernando-confessore-meteorologo-de-tn/",
-     "fecha": "2026-10-16T12:34:23.000Z"
+     "fecha": "2026-10-16T12:49:29.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
@@ -157,17 +204,12 @@
     {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-16-7-24-0-murio-a-los-58-anos-fernando-confessore-uno-de-los-historicos-meteorologos-de-tn",
-     "fecha": "2026-10-16T12:34:34.000Z"
+     "fecha": "2026-10-16T12:50:46.000Z"
     },
     {
      "medio": "0221",
      "enlace": "https://www.0221.com.ar/nacional/murio-el-meteorologo-tn-fernando-confessore-los-58-anos-sufrir-un-infarto-n135905",
      "fecha": "2026-10-16T11:36:00.000Z"
-    },
-    {
-     "medio": "La Brújula 24",
-     "enlace": "https://www.labrujula24.com/notas/2026/10/16/a-los-58-anos-murio-el-reconocido-meteorologo-fernando-confessore-n525737/",
-     "fecha": "2026-10-16T10:03:27.000Z"
     },
     {
      "medio": "La Tecla",
@@ -205,14 +247,14 @@
      "fecha": "2026-10-16T10:15:00.000Z"
     },
     {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/sociedad/de-que-murio-el-meteorologo-fernando-confessore-sus-58-anos-n251763",
-     "fecha": "2026-10-16T11:07:00.000Z"
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/espectaculos/asi-anuncio-mario-mario-massaccesi-la-muerte-fernando-confessore-siempre-estaba-aqui-trabajando-n6334485",
+     "fecha": "2026-10-16T12:54:00.000Z"
     },
     {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/sociedad/luto-la-television-murio-el-reconocido-meteorologo-fernando-confessore-n251761",
-     "fecha": "2026-10-16T10:26:00.000Z"
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/espectaculos/que-dice-el-parte-policial-la-muerte-del-meteorologo-fernando-confessore-n6334473",
+     "fecha": "2026-10-16T12:33:00.000Z"
     },
     {
      "medio": "Minuto Uno",
@@ -235,6 +277,11 @@
      "fecha": "2026-10-16T10:32:00.000Z"
     },
     {
+     "medio": "La Brújula 24",
+     "enlace": "https://www.labrujula24.com/notas/2026/10/16/a-los-58-anos-murio-el-reconocido-meteorologo-fernando-confessore-n525737/",
+     "fecha": "2026-10-16T10:03:27.000Z"
+    },
+    {
      "medio": "Infobae",
      "enlace": "https://www.infobae.com/teleshow/2026/10/16/murio-fernando-confessore-a-las-58-anos-historico-meteorologo-de-tn-y-el-trece/",
      "fecha": "2026-10-16T10:27:08.000Z"
@@ -245,19 +292,41 @@
      "fecha": "2026-10-16T10:23:00.000Z"
     },
     {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/sociedad/luto-la-television-murio-el-reconocido-meteorologo-fernando-confessore-n251761",
+     "fecha": "2026-10-16T10:26:07.000Z"
+    },
+    {
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/espectaculos/murio-fernando-confessore-historicos-meteorologos-canal-noticias-tn_0_XGpw7d7UBM.html",
      "fecha": "2026-10-16T10:09:50.000Z"
     },
     {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/16/la-historia-de-amor-de-fernando-confessore-y-paula-tres-hijas-una-vida-juntos-y-un-apoyo-clave-para-su-carrera/",
-     "fecha": "2026-10-16T11:53:27.000Z"
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/sociedad/de-que-murio-el-meteorologo-fernando-confessore-sus-58-anos-n251763",
+     "fecha": "2026-10-16T11:07:00.000Z"
     }
    ],
    "intentos": 5,
    "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 5
+  },
+  {
+   "id": "1eb747m",
+   "titulo": "La Estudiantina 2026 comenzará el lunes con la participación de estudiantes",
+   "copete": "La 19ª edición se pondrá en marcha el 19 de octubre, a las 8:30, en el estadio del Club Racing. Durante dos semanas, alumnos de los últimos años de las escuelas secundarias del distrito participarán de actividades deportivas, culturales y académicas.",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-16T13:01:11.428Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45078-la-estudiantina-2026-comenzara-el-lunes-con-la-participacion-de-estudiantes-de-balcarce/",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
+   "maximo": 3
   }
  ]
 }
