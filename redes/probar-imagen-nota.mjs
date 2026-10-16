@@ -36,6 +36,7 @@ function notasDelSitio() {
 
 async function promptDeImagen(nota) {
   const instruccion = `${PROMPT_DE_HERNAN}\n\nTu salida NO es la imagen: es el PROMPT para un generador de imágenes (FLUX), escrito en INGLÉS, de 50 a 80 palabras, en una sola línea, que describa esa foto cumpliendo los requisitos de arriba (empezá por «Candid photojournalistic close-up still life of…», incluí «no people, no text, no logos» y la luz). Respondé SOLO con el prompt.\n\nNota:\n${nota.titulo}\n\n${nota.cuerpo}`;
+  if (process.env.MOSTRAR_PEDIDO) console.log(['--- PEDIDO COMPLETO A GEMINI ---', instruccion, '--- FIN DEL PEDIDO ---'].join(String.fromCharCode(10)));
   const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-lite-latest:generateContent', {
     method: 'POST', headers: { 'x-goog-api-key': gemini, 'content-type': 'application/json' },
     body: JSON.stringify({ contents: [{ parts: [{ text: instruccion }] }] }), signal: AbortSignal.timeout(60_000),
@@ -46,7 +47,23 @@ async function promptDeImagen(nota) {
   return t.replace(/\s+/g, ' ').trim().slice(0, 690);
 }
 
-for (const nota of [AZUL, ...notasDelSitio()]) {
+// Con NOTA_ID se usa esa nota del sitio (título + cuerpo ENTERO) en lugar de las de ejemplo.
+function notaPorId(id) {
+  for (const archivo of ['web/data/archivo.json', 'web/data/portada.json']) {
+    try {
+      const j = JSON.parse(fs.readFileSync(archivo, 'utf8'));
+      const lista = Array.isArray(j) ? j : (j.notas ? (Array.isArray(j.notas) ? j.notas : Object.values(j.notas)) : Object.values(j));
+      const n = lista.find((x) => x?.id === id);
+      if (n) return { id: n.id, titulo: n.titulo, cuerpo: [n.copete, n.cuerpo].filter(Boolean).join(String.fromCharCode(10, 10)).slice(0, 6000) };
+    } catch { /* sigue */ }
+  }
+  return null;
+}
+const NOTA_ID = (process.env.NOTA_ID ?? '').trim();
+const lista = NOTA_ID ? [notaPorId(NOTA_ID)].filter(Boolean) : [AZUL, ...notasDelSitio()];
+if (NOTA_ID && !lista.length) console.log('No encontré la nota ' + NOTA_ID);
+
+for (const nota of lista) {
   try {
     const prompt = await promptDeImagen(nota);
     console.log(`[${nota.id}] «${nota.titulo.slice(0, 70)}»\n    prompt: ${prompt}`);
