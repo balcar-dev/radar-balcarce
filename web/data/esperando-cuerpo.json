@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-16T16:05:16.497Z",
+ "generado": "2026-10-16T16:11:43.251Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -35,6 +35,23 @@
    "maximo": 3
   },
   {
+   "id": "5bzm11",
+   "titulo": "Sin oferentes, finalizó el acto administrativo de la Licitación Pública nº 3/26",
+   "copete": "Esta mañana se llevó a cabo en la Oficina de Compras y Suministros de la Municipalidad de Balcarce el acto administrativo correspondiente a la Licitación Pública Nº 3/26, destinada a otorgar la concesión de uso de un inmueble municipal ubicado sobre la ruta nacional 226, a la…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-16T15:21:30.000Z",
+   "fuentes": [
+    {
+     "medio": "Municipalidad de Balcarce",
+     "enlace": "https://balcarce.gob.ar/2026/10/16/sin-oferentes-finalizo-el-acto-administrativo-de-la-licitacion-publica-no-3-26/",
+     "fecha": "2026-10-16T15:21:30.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
    "id": "1x4gtj1",
    "titulo": "Diego Santilli: “Los que deberían estar preocupados son los gobernadores si el kirchnerismo vuelve y gana Kicillof”",
    "copete": "El jefe de Gabinete, Diego Santilli , afirmó que los mandatarios provinciales deberían inquietarse ante la posibilidad de un regreso del kirchnerismo al poder con Axel Kicillof como figura central . En una entrevista con Radio Mitre , vinculó ese escenario con una eventual…",
@@ -59,7 +76,7 @@
     {
      "medio": "Perfil",
      "enlace": "https://www.perfil.com/noticias/politica/santilli-lanzo-una-advertencia-a-los-gobernadores-por-kicillof-y-agito-el-fantasma-de-la-vuelta-del-kirchnerismo.phtml",
-     "fecha": "2026-10-16T14:50:00.000Z"
+     "fecha": "2026-10-16T15:30:00.000Z"
     },
     {
      "medio": "Radio Mitre",
@@ -90,23 +107,6 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
-  },
-  {
-   "id": "5bzm11",
-   "titulo": "Sin oferentes, finalizó el acto administrativo de la Licitación Pública nº 3/26",
-   "copete": "Esta mañana se llevó a cabo en la Oficina de Compras y Suministros de la Municipalidad de Balcarce el acto administrativo correspondiente a la Licitación Pública Nº 3/26, destinada a otorgar la concesión de uso de un inmueble municipal ubicado sobre la ruta nacional 226, a la…",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-16T15:21:30.000Z",
-   "fuentes": [
-    {
-     "medio": "Municipalidad de Balcarce",
-     "enlace": "https://balcarce.gob.ar/2026/10/16/sin-oferentes-finalizo-el-acto-administrativo-de-la-licitacion-publica-no-3-26/",
-     "fecha": "2026-10-16T15:21:30.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "con cuerpo",
-   "maximo": 3
   },
   {
    "id": "1mru4qv",
@@ -141,7 +141,7 @@
      "fecha": "2026-10-16T12:29:31.000Z"
     }
    ],
-   "intentos": 3,
+   "intentos": 4,
    "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
    "maximo": 4
   },
@@ -186,6 +186,11 @@
      "medio": "TN (Todo Noticias)",
      "enlace": "https://tn.com.ar/show/famosos/2026/10/16/murio-fernando-confessore-a-los-58-anos/",
      "fecha": "2026-10-16T12:15:57.000Z"
+    },
+    {
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/espectaculos/murio-confessore-asi-fueron-ultimos-minutos-vida-20261016124846",
+     "fecha": "2026-10-16T15:48:46.543Z"
     },
     {
      "medio": "El Destape",
@@ -343,11 +348,6 @@
      "fecha": "2026-10-16T10:32:00.000Z"
     },
     {
-     "medio": "elDiarioAR",
-     "enlace": "https://www.eldiarioar.com/medios/murio-fernando-confessore-58-anos-historico-meteorologo-tn-trece_1_13591768.html",
-     "fecha": "2026-10-16T13:16:02.000Z"
-    },
-    {
      "medio": "La Brújula 24",
      "enlace": "https://www.labrujula24.com/notas/2026/10/16/a-los-58-anos-murio-el-reconocido-meteorologo-fernando-confessore-n525737/",
      "fecha": "2026-10-16T10:03:27.000Z"
@@ -398,11 +398,6 @@
      "fecha": "2026-10-16T11:53:27.000Z"
     },
     {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/16/mensajes-de-despedida-tras-la-muerte-de-fernando-confessore-en-vivo-ultimas-noticias-minuto-a-minuto/",
-     "fecha": "2026-10-16T13:28:46.000Z"
-    },
-    {
      "medio": "A24",
      "enlace": "https://www.a24.com/primiciasya/tras-la-muerte-fernando-confessore-la-historia-amor-su-esposa-paula-que-emociona-mucho-mas-que-mi-companera-n1607049",
      "fecha": "2026-10-16T12:37:00.000Z"
@@ -411,6 +406,11 @@
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/fama/murio-fernando-confessore-meteorologo-tn-58-anos_0_4qAj2WmvWD.html",
      "fecha": "2026-10-16T13:15:56.000Z"
+    },
+    {
+     "medio": "elDiarioAR",
+     "enlace": "https://www.eldiarioar.com/medios/murio-fernando-confessore-58-anos-historico-meteorologo-tn-trece_1_13591768.html",
+     "fecha": "2026-10-16T13:16:02.000Z"
     },
     {
      "medio": "Clarín",
@@ -458,58 +458,6 @@
    "intentos": 4,
    "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 4
-  },
-  {
-   "id": "bo9vhl",
-   "titulo": "“Fue un mentor”: la emotiva despedida de Matías Bertolotti a Fernando Confessore tras su muerte",
-   "copete": "La muerte de Fernando Confessore a los 58 años provocó una fuerte conmoción entre sus compañeros de televisión. Matías Bertolotti lo despidió a través de sus redes sociales, donde compartió una foto de ambos en el estudio de televisión donde trabajaban y le dedicó un sentido…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-16T10:58:42.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/fue-un-mentor-la-emotiva-despedida-de-matias-bertolotti-a-fernando-confessore-tras-su-muerte/",
-     "fecha": "2026-10-16T10:58:42.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/deportes/2026/10/16/velez-despidio-a-fernando-confessore-con-un-emotivo-mensaje-su-partida-genera-una-profunda-tristeza/",
-     "fecha": "2026-10-16T15:35:46.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/show/famosos/2026/10/16/matias-bertolotti-destaco-el-aporte-de-fernando-confessore-fue-un-gran-mentor-inicio-la-carrera-de-meteorologia-en-la-tv/",
-     "fecha": "2026-10-16T11:44:03.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/sociedad/el-doloroso-pedido-de-matias-bertolotti-a-fernando-confessore-tras-su-muerte/",
-     "fecha": "2026-10-16T11:10:34.000Z"
-    },
-    {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/espectaculos/la-despedida-matias-bertolotti-fernando-confessore-fue-un-gran-mentor-n924843",
-     "fecha": "2026-10-16T12:07:00.000Z"
-    },
-    {
-     "medio": "Infobrisas (Radio Brisas)",
-     "enlace": "https://www.infobrisas.com/noticias/2026/10/16/111653-marcela-pagano-despidio-a-fernando-confessore-con-un-emotivo-mensaje",
-     "fecha": "2026-10-16T13:09:47.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/16/la-emotiva-despedida-de-matias-bertolotti-a-fernando-confessore-se-fue-el-mentor-de-todos-nosotros/",
-     "fecha": "2026-10-16T12:53:24.000Z"
-    },
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/espectaculos/matias-bertolotti-despidio-fernando-confessore-emotivo-mensaje-pedido-especial_0_WAwN1JNxOX.html",
-     "fecha": "2026-10-16T12:19:39.000Z"
-    }
-   ],
-   "intentos": 4,
-   "motivo": "título o bajada: 2 problemas (numero): el guion dice 50 y la fuente no lo dice",
-   "maximo": 5
   }
  ]
 }

@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T16:05:16.497Z",
- "portada": 51,
+ "generado": "2026-10-16T16:11:43.251Z",
+ "portada": 49,
  "archivo": 1168,
- "esperandoCuerpo": 7,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-16T16:05:16.539Z",
+  "generado": "2026-10-16T16:11:43.288Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 51,
     "notas": [
      {
       "id": "npazulcervantino",
@@ -134,8 +134,8 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "1jdsdep",
-      "titulo": "La Dirección de Juventud firma un acuerdo para vender entradas online",
+      "id": "1vhit3n",
+      "titulo": "El segundo llamado a licitación del matadero municipal queda desierto",
       "seccion": "Balcarce"
      },
      {
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 51,
     "notas": [
+     {
+      "id": "1vqqg6",
+      "titulo": "La Dirección de Juventud relanza el programa Arte Urbano",
+      "seccion": "Balcarce"
+     },
      {
       "id": "n6v2wu",
       "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
@@ -172,11 +177,6 @@
      {
       "id": "1vrfi9w",
       "titulo": "Proyecto 10 repasa su historia social",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1o2y75j",
-      "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
       "seccion": "Balcarce"
      }
     ]
@@ -205,6 +205,12 @@
      "id": "aa7nni",
      "titulo": "Reprograman la Caravana de la Alegría para noviembre",
      "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "1vhit3n",
+     "titulo": "El segundo llamado a licitación del matadero municipal queda desierto",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],

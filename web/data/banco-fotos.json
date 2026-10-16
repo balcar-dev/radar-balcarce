@@ -15925,16 +15925,16 @@
   "cuando": "2026-10-16T15:44:44.307Z"
  },
  "17lukls": {
-  "archivo": "fotos-notas/17lukls.webp",
   "medio": "Infocampo",
-  "credito": "Foto: Infocampo",
   "licencia": null,
   "origen": "medio",
   "titulo": "San Luis presenta registros dispares en su pronóstico",
   "enlace": "https://www.infocampo.com.ar/clima-hoy-en-san-luis-el-pronostico-del-tiempo-para-este-16-octubre-2026/",
   "imagenOriginal": "https://www.infocampo.com.ar/wp-content/uploads/2026/02/clima-en-san-luis.webp",
   "razon": "La foto A muestra una vista panorámica ideal para una nota agropecuaria, sin marcas de agua ni menores visibles.",
-  "cuando": "2026-10-16T15:44:44.307Z"
+  "cuando": "2026-10-16T15:44:44.307Z",
+  "intentado": true,
+  "borrada": true
  },
  "94s29q": {
   "archivo": "fotos-notas/94s29q.jpg",
@@ -15959,5 +15959,17 @@
   "imagenOriginal": "https://www.cronica.com.ar/files/image/1721/1721861/6ad245e808fb9_600_315!.jpg?s=3a6279f3fb53f38136d035adf8c6eebf&d=1792119600",
   "razon": "Es la única foto nítida de la temática sin marca de agua del medio ni menores.",
   "cuando": "2026-10-16T16:04:42.324Z"
+ },
+ "1vhit3n": {
+  "archivo": "fotos-notas/1vhit3n.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El segundo llamado a licitación del matadero municipal queda desierto",
+  "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/matadero-municipal-la-licitacion-volvio-a-quedar-desierta-y-habra-un-tercer-llamado",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/mayo/Friogorifico%20Municipal.png",
+  "razon": "La foto A muestra una vista aérea panorámica limpia del matadero municipal, sin personas y sin marcas de agua agregadas por el medio.",
+  "cuando": "2026-10-16T16:11:18.661Z"
  }
 }
