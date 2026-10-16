@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T08:08:29.669Z",
- "portada": 39,
- "archivo": 1140,
+ "generado": "2026-10-16T08:31:37.603Z",
+ "portada": 29,
+ "archivo": 1139,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-16T08:08:29.693Z",
+  "generado": "2026-10-16T08:31:37.637Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,26 +95,21 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 44,
+    "segundos": 37,
     "notas": [
-     {
-      "id": "u0hcbv",
-      "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1m9svv0",
       "titulo": "Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027",
       "seccion": "Automovilismo"
      },
      {
-      "id": "16q0gf8",
-      "titulo": "Lalcec Balcarce ofrece mamografías y prepara la jornada comunitaria de octubre rosa",
+      "id": "u0hcbv",
+      "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
       "seccion": "Balcarce"
      },
      {
-      "id": "2g6pf5",
-      "titulo": "Atletas locales logran buenos puestos en Tamangueyú y Balcarce",
+      "id": "107aa47",
+      "titulo": "Atletas de AACYC completan exigente competencia de trail",
       "seccion": "Deportes"
      }
     ]
@@ -126,29 +121,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
-    "notas": [
-     {
-      "id": "1vrfi9w",
-      "titulo": "Proyecto 10 repasa su historia social",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1o2y75j",
-      "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1ao5ic",
-      "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "wfa595",
-      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    },
    {
     "nombre": "podcast",
