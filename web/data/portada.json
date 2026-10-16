@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T19:32:34.339Z",
+  "generado": "2026-10-16T19:36:16.756Z",
   "notas": [
     {
       "id": "jgf5ur",
@@ -13,8 +13,10 @@
         "La Nación",
         "El Cronista",
         "Perfil",
+        "Crónica",
         "Noticias Argentinas (NA)",
         "La Nueva",
+        "La Verdad",
         "Ámbito"
       ],
       "enlace": "https://noticiasargentinas.com/economia/la-inflacion-mayorista-fue-de-3-2--en-septiembre-y-acumulo-una-suba-de-29-2--en-doce-meses_a6ad2741ff8e83a8947249edf",
@@ -847,6 +849,101 @@
       }
     },
     {
+      "id": "1k4p85d",
+      "titulo": "El personal de casas particulares cobra con aumento en octubre",
+      "copete": "La hora de tareas generales arranca en $4.064,08 con retiro y $4.337,53 sin retiro. La actualización salarial llega al 1,7% respecto a septiembre.",
+      "cuerpo": "El personal de casas particulares percibe un salario mínimo por hora de $4.064,08 para tareas generales con retiro y de $4.337,53 para quienes cumplen funciones sin retiro durante octubre de 2026.\n\nLa suba del 1,7% frente a septiembre fue fijada por la Comisión Nacional de Trabajo en Casas Particulares a través de la Resolución 6/2026, cuyos montos ya fueron integrados por la Agencia de Recaudación y Control Aduanero.\n\nEl esquema salarial también contempla la incorporación progresiva de una suma extraordinaria otorgada en agosto, sumando un 50% adicional en octubre al salario básico.",
+      "guion": "El personal de casas particulares cobra con aumento en octubre",
+      "seccion": "Economía",
+      "medios": [
+        "El Destape",
+        "iProUP"
+      ],
+      "enlace": "https://www.eldestapeweb.com/economia/empleadas-domesticas-cuanto-vale-hora-octubre-2026-20261016104717",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T13:47:17.007Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T15:38:51.233Z",
+      "relevancia": 39,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La hora de tareas generales con retiro vale $4.064,08.",
+        "El valor sin retiro asciende a $4.337,53 por hora.",
+        "El incremento salarial respecto a septiembre es del 1,7%.",
+        "La actualización fue dispuesta por la Resolución 6/2026."
+      ],
+      "seSabe": [
+        "El valor mínimo por hora para tareas generales con retiro es de $4.064,08 en octubre de 2026, según la Comisión Nacional de Trabajo en Casas Particulares.",
+        "La tarifa por hora para el personal sin retiro llega a $4.337,53.",
+        "El incremento salarial alcanza el 1,7% en relación con septiembre mediante la Resolución 6/2026.",
+        "La Agencia de Recaudación y Control Aduanero incorporó los nuevos valores para liquidaciones.",
+        "El acuerdo incluye la integración gradual de un monto extraordinario otorgado en agosto."
+      ],
+      "noConfirmado": [
+        "No se detallaron los montos específicos para las demás categorías profesionales ni para el personal mensualizado en el texto recibido.",
+        "No se especificaron las cifras correspondientes a los adicionales por antigüedad o zona desfavorable."
+      ],
+      "textoRedes": "Las empleadas domésticas cobran desde $4.064,08 la hora para tareas generales con retiro y $4.337,53 sin retiro en octubre de 2026. La actualización salarial alcanza el 1,7% según la normativa oficial.",
+      "etiquetas": [
+        "empleadas domesticas",
+        "casas particulares",
+        "salarios",
+        "aumento",
+        "octubre 2026"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/economia/empleadas-domesticas-cuanto-vale-hora-octubre-2026-20261016104717",
+          "fecha": "2026-10-16T13:47:17.007Z",
+          "oficial": false,
+          "aporte": "Detalló la escala salarial, los porcentajes de aumento, la resolución oficial y la incorporación de sumas extraordinarias."
+        },
+        {
+          "medio": "iProUP",
+          "enlace": "https://www.iproup.com/economia-digital/72403-precio-de-criptomonedas-en-argentina-cuanto-valen-hoy-16-de-octubre-de-2026",
+          "fecha": "2026-10-16T14:18:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "iProUP",
+          "enlace": "https://www.iproup.com/economia-digital/72402-precio-de-criptomonedas-en-argentina-cuanto-valen-hoy-16-de-octubre-de-2026",
+          "fecha": "2026-10-16T14:18:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "iProUP",
+          "enlace": "https://www.iproup.com/economia-digital/72401-precio-de-criptomonedas-en-argentina-cuanto-valen-hoy-16-de-octubre-de-2026",
+          "fecha": "2026-10-16T14:18:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "iProUP",
+          "enlace": "https://www.iproup.com/economia-digital/72400-precio-de-criptomonedas-en-argentina-cuanto-valen-hoy-16-de-octubre-de-2026",
+          "fecha": "2026-10-16T14:18:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-personal-de-casas-particulares-cobra-con-aumento-en-octubre",
+      "foto": {
+        "archivo": "fotos-notas/1k4p85d.jpg",
+        "credito": "Foto: El Destape"
+      }
+    },
+    {
       "id": "a6hpqz",
       "titulo": "El peronismo local debate su estrategia de cara a las elecciones",
       "copete": "A un año de los comicios, el PJ tradicional, La Cámpora, el kicillofismo y el Frente Renovador discuten la construcción de una alternativa en Balcarce. Las diferencias internas y el desafío de lograr una síntesis.",
@@ -1051,9 +1148,9 @@
         "La Nación",
         "Clarín",
         "TN (Todo Noticias)",
-        "A24",
         "La Nueva",
-        "Infobae"
+        "Infobae",
+        "A24"
       ],
       "enlace": "https://www.clarin.com/politica/corrupcion-afa-llego-corte-suprema-causa-mansion-pilar-definira-investiga-caso_0_u9SDL14b95.html",
       "teniaImagenLaFuente": true,
@@ -1672,8 +1769,8 @@
         "C5N",
         "Minuto Uno",
         "La Gaceta (Tucumán)",
-        "Infobae",
-        "elDiarioAR"
+        "elDiarioAR",
+        "Infobae"
       ],
       "enlace": "https://www.lagaceta.com.ar/nota/1158339/politica/causa-andis-procesaron-24-personas-diferencia-precios-bajo-investigacion-supera-7800-millones.html",
       "teniaImagenLaFuente": true,
@@ -2502,8 +2599,8 @@
       "medios": [
         "La Nación",
         "Infobae",
-        "A24",
-        "Canal 26"
+        "Canal 26",
+        "A24"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/16/anses-quienes-cobran-hoy-viernes-16-de-octubre-de-2026/",
       "teniaImagenLaFuente": true,
@@ -2600,9 +2697,9 @@
         "El Día",
         "La Capital (Rosario)",
         "La Gaceta (Tucumán)",
+        "Los Andes (Mendoza)",
         "A24",
-        "Clarín",
-        "Los Andes (Mendoza)"
+        "Clarín"
       ],
       "enlace": "https://www.eldia.com/espectaculos/lo-dejamos-aca-el-duelo-entre-darin-y-peretti-que-promete-incomodar-y-hacer-reir-espectaculos_1792130770",
       "teniaImagenLaFuente": true,
@@ -2757,7 +2854,6 @@
         "La Nación",
         "Infobae",
         "TN (Todo Noticias)",
-        "A24",
         "TyC Sports",
         "Olé",
         "Crónica",
@@ -2765,7 +2861,8 @@
         "Bolavip Argentina",
         "La Gaceta (Tucumán)",
         "La Brújula 24",
-        "La Nueva"
+        "La Nueva",
+        "A24"
       ],
       "enlace": "https://www.ole.com.ar/seleccion/lautaromartinez-seleccionargentina-mundial2026-afa-lionelmessi_0_c6ZfyJlAij.html",
       "teniaImagenLaFuente": true,
@@ -2850,164 +2947,6 @@
       "foto": {
         "archivo": "fotos-notas/7rb12z.jpg",
         "credito": "Foto: La Brújula 24"
-      }
-    },
-    {
-      "id": "1lkffhb",
-      "titulo": "Javier Milei cierra su visita a Washington con un acto contra el antisemitismo",
-      "copete": "El presidente argentino brindó un discurso en la embajada en Estados Unidos, mantuvo un encuentro con el secretario de Energía Chris Wright y emprendió su regreso al país.",
-      "cuerpo": "El presidente Javier Milei concluyó su estadía de 36 horas en Estados Unidos con un evento centrado en la lucha contra el antisemitismo, realizado en la embajada argentina en Washington. Durante la ceremonia, el mandatario ratificó su posición contra el terrorismo y prometió tolerancia cero frente al odio, de acuerdo con la información difundida por los medios.\n\nAntes del discurso, el jefe de Estado se reunió en la planta alta de la sede diplomática con el secretario de Energía estadounidense, Chris Wright, para dialogar sobre la relación bilateral. Del cónclave participaron también la secretaria general de la Presidencia, Karina Milei, el canciller Pablo Quirno y el embajador argentino Alec Oxenford.\n\nTras el acto institucional, la comitiva se trasladó en una camioneta blindada hacia la Base Andrews para iniciar el viaje de regreso hacia Buenos Aires.",
-      "guion": "Javier Milei cierra su visita a Washington con un acto contra el antisemitismo",
-      "seccion": "Política",
-      "medios": [
-        "Infobae",
-        "TN (Todo Noticias)",
-        "A24",
-        "El Marplatense",
-        "Ámbito",
-        "C5N",
-        "Minuto Uno",
-        "Clarín",
-        "La Nueva",
-        "Radio Mitre",
-        "Los Andes (Mendoza)"
-      ],
-      "enlace": "https://www.clarin.com/politica/milei-cerro-visita-washington-acto-antisemitismo-reunion-alto-funcionario-trump_0_KkhV5wypC4.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T23:08:44.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T03:01:31.781Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Javier Milei encabezó un acto contra el antisemitismo en la embajada argentina en Washington.",
-        "El mandatario mantuvo un encuentro bilateral con el secretario de Energía de Estados Unidos, Chris Wright.",
-        "La ceremonia se enmarcó en la presidencia temporal argentina de la Alianza Internacional para el Recuerdo del Holocausto.",
-        "Tras las actividades oficiales, el Presidente emprendió su regreso hacia la Argentina."
-      ],
-      "seSabe": [
-        "Javier Milei realizó una visita de 36 horas a Washington, según detalló Clarín.",
-        "El mandatario mantuvo una reunión privada con el secretario de Energía estadounidense, Chris Wright, antes del acto oficial.",
-        "El discurso principal del Presidente tuvo una duración aproximada de 15 minutos en la embajada argentina.",
-        "La delegación argentina estuvo integrada por Karina Milei, Pablo Quirno y Alec Oxenford.",
-        "El Presidente partió hacia la Base Andrews para retornar al país tras concluir su agenda oficial."
-      ],
-      "noConfirmado": [
-        "No se informaron detalles adicionales sobre los acuerdos energéticos específicos conversados en la bilateral con Chris Wright."
-      ],
-      "textoRedes": "El presidente Javier Milei concluyó su visita oficial a Washington con un discurso en la embajada argentina enfocado en la lucha contra el antisemitismo y mantuvo un encuentro bilateral con el secretario de Energía estadounidense, Chris Wright.",
-      "etiquetas": [
-        "Javier Milei",
-        "Washington",
-        "antisemitismo",
-        "Estados Unidos",
-        "embajada argentina"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/politica/milei-cerro-visita-washington-acto-antisemitismo-reunion-alto-funcionario-trump_0_KkhV5wypC4.html",
-          "fecha": "2026-10-15T23:08:44.000Z",
-          "oficial": false,
-          "aporte": "Detalló que la visita oficial tuvo una duración de 36 horas y la ubicación de la sede diplomática."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/15/desde-eeuu-milei-ratifico-su-apoyo-a-israel-ataco-a-iran-y-condeno-la-ola-global-de-antisemitismo/",
-          "fecha": "2026-10-16T00:48:30.000Z",
-          "oficial": false,
-          "aporte": "Informó la reunión previa entre Milei y Chris Wright en la planta alta de la embajada."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/10/15/en-el-cierre-de-su-gira-por-eeuu-javier-milei-ratifico-la-lucha-de-la-argentina-contra-el-antisemitismo/",
-          "fecha": "2026-10-16T01:33:19.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/politica/milei-ratifico-washington-su-apoyo-israel-y-volvio-pronunciarse-contra-el-antisemitismo-habra-tolerancia-cero-n1606982",
-          "fecha": "2026-10-16T01:58:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó la mención específica al ataque de Hamas del 7 de octubre de 2023."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/politica/javier-milei-ratifico-su-apoyo-a-israel-y-condeno-el-antisemitismo-en-su-visita-a-estados-unidos-habra-tolerancia-cero/",
-          "fecha": "2026-10-16T02:30:36.000Z",
-          "oficial": false,
-          "aporte": "Precisó la duración del discurso presidencial y el horario de partida hacia la Base Andrews."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-15-22-39-0-en-el-cierre-de-su-visita-a-eeuu-milei-prometio-tolerancia-cero-contra-el-antisemitismo",
-          "fecha": "2026-10-16T02:33:08.000Z",
-          "oficial": false,
-          "aporte": "Señaló que el acto formó parte de las actividades vinculadas al recuerdo del Holocausto."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/javier-milei-cerro-su-visita-eeuu-un-acto-contra-el-antisemitismo-y-prometio-tolerancia-cero-n6334410",
-          "fecha": "2026-10-16T01:20:57.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/politica/con-un-acto-contra-el-antisemitismo-javier-milei-cerro-su-gira-washington-y-emprendio-el-regreso-la-argentina-n251753",
-          "fecha": "2026-10-16T01:28:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/tolerancia-cero-javier-milei-cerro-su-gira-estados-unidos-un-acto-contra-el-antisemitismo-n6334418",
-          "fecha": "2026-10-16T02:12:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Los Andes (Mendoza)",
-          "enlace": "https://www.losandes.com.ar/politica/milei-estados-unidos-mientras-sea-presidente-la-argentina-habra-tolerancia-cero-el-antisemitismo-n6010548",
-          "fecha": "2026-10-16T02:33:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "b04zc8",
-          "titulo": "Javier Milei defiende su plan económico ante inversores en Washington",
-          "fecha": "2026-10-15T14:24:51.000Z",
-          "ruta": "/nota/javier-milei-defiende-su-plan-economico-ante-inversores-en-washington-b04zc8"
-        },
-        {
-          "id": "1y2q715",
-          "titulo": "Javier Milei evalúa reprogramar la visita del papa León XIV por su operación",
-          "fecha": "2026-10-12T11:52:38.000Z",
-          "ruta": "/nota/javier-milei-evalua-reprogramar-la-visita-del-papa-leon-xiv-por-su-1y2q715"
-        },
-        {
-          "id": "1wp6u10",
-          "titulo": "Intendentes piden una reunión urgente con Milei y reclaman fondos",
-          "fecha": "2026-10-07T20:23:27.000Z",
-          "ruta": "/nota/intendentes-piden-una-reunion-urgente-con-milei-y-reclaman-fondos-1wp6u10"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 10 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "javier-milei-cierra-su-visita-a-washington-con-un-acto-contra-el",
-      "foto": {
-        "archivo": "fotos-notas/1lkffhb.jpg",
-        "credito": "Foto: Clarín"
       }
     },
     {
