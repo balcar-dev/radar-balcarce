@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-17T01:02:19.952Z",
+ "generado": "2026-10-17T01:31:36.118Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -35,48 +35,6 @@
    "maximo": 3
   },
   {
-   "id": "8dpdqi",
-   "titulo": "El Colegio de Médicos bonaerense advirtió que la crisis del PAMI amenaza al sistema sanitario",
-   "copete": "La entidad denunció el desfinanciamiento del organismo y alertó sobre las consecuencias de la interrupción de prestaciones para jubilados y pensionados. Reclamó una mesa de diálogo urgente, actualización de aranceles y cancelación de las deudas con prestadores y profesionales…",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-16T13:21:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Puntonueve (FM 100.9)",
-     "enlace": "https://puntonueve.com.ar/el-colegio-de-medicos-bonaerense-advirtio-que-la-crisis-del-pami-amenaza-al-sistema-sanitario/",
-     "fecha": "2026-10-16T14:26:33.000Z"
-    },
-    {
-     "medio": "El Día",
-     "enlace": "https://www.eldia.com/la-ciudad/crisis-del-pami-los-medicos-advierten-que-pueden-colapsar-los-hospitales-publicos-la-ciudad_1792156440",
-     "fecha": "2026-10-16T13:21:00.000Z"
-    },
-    {
-     "medio": "0221",
-     "enlace": "https://www.0221.com.ar/provincia/el-colegio-medicos-advirtio-que-la-crisis-del-pami-amenaza-desbordar-los-hospitales-publicos-n135924",
-     "fecha": "2026-10-16T15:37:00.000Z"
-    },
-    {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/el-colegio-de-medicos-advirtio-que-la-crisis-del-pami-amenaza-con-desbordar-los-hospitales-publicos/",
-     "fecha": "2026-10-16T14:19:04.000Z"
-    },
-    {
-     "medio": "El Marplatense",
-     "enlace": "https://www.elmarplatense.com/medicos-advirtieron-por-la-presion-sobre-los-hospitales-publicos-bonaerenses-ante-la-crisis-del-pami",
-     "fecha": "2026-10-16T23:15:04.000Z"
-    },
-    {
-     "medio": "Punto Noticias",
-     "enlace": "https://puntonoticias.com/colegio-de-medicos-advirtio-que-la-crisis-del-pami-amenaza-con-desbordar-los-hospitales-publicos/",
-     "fecha": "2026-10-16T16:38:25.000Z"
-    }
-   ],
-   "intentos": 4,
-   "motivo": "semáforo: necesita ojo humano: \"denunció\", en lo que escribió la IA (título, bajada o texto para redes)",
-   "maximo": 4
-  },
-  {
    "id": "rng086",
    "titulo": "Los ciudadanos italianos tienen tiempo hasta el 4 de noviembre para inscribirse y votar en las elecciones del COMITES",
    "copete": "La comunidad italiana de Balcarce se prepara para una nueva instancia electoral del COMITES (Comité de los Italianos en el Exterior), organismo que representa a los ciudadanos italianos residentes fuera de su país de origen. En ese marco, se inform",
@@ -89,8 +47,8 @@
      "fecha": "2026-10-17T00:10:28.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"martes\" y la fuente no; sin esas oraciones quedan 25 palabras",
+   "intentos": 3,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
    "maximo": 3
   },
   {
@@ -188,95 +146,6 @@
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
-   "maximo": 5
-  },
-  {
-   "id": "f9bo89",
-   "titulo": "MasterChef Junior se estrena hoy por Telefe y HBO Max: a qué hora y quiénes son los jurados",
-   "copete": "Después de una década fuera de pantalla, MasterChef Junior vuelve a la televisión argentina. La nueva temporada se estrena este viernes 16 de octubre a las 21:30 por Telefe y HBO Max . En esta edición, chicos y chicas asumirán el desafío de cocinar y mostrar sus habilidades…",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-16T13:18:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Los Andes (Mendoza)",
-     "enlace": "https://www.losandes.com.ar/espectaculos/masterchef-junior-se-estrena-hoy-telefe-y-hbo-max-que-hora-y-quienes-son-los-jurados-n6010568",
-     "fecha": "2026-10-16T13:18:00.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/espectaculos/masterchef-junior-vuelve-a-la-pantalla-cuando-empieza-y-quienes-seran-los-jurados/",
-     "fecha": "2026-10-16T21:32:23.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/espectaculos/vuelve-masterchef-junior-con-un-ex-ganador-de-la-edicion-famosos_a6ad22825c55c21457e8fbbb6",
-     "fecha": "2026-10-16T13:45:00.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/espectaculos/a-que-hora-arranca-una-nueva-edicion-masterchef-junior-telefe-n6334812",
-     "fecha": "2026-10-16T23:28:00.000Z"
-    },
-    {
-     "medio": "La Capital (Rosario)",
-     "enlace": "https://www.lacapital.com.ar/zoom/vuelve-masterchef-junior-cuando-comienza-y-quienes-seran-los-jurados-n10287119.html",
-     "fecha": "2026-10-16T20:30:00.000Z"
-    }
-   ],
-   "intentos": 4,
-   "motivo": "semáforo: necesita ojo humano: \"chicos de entre 8 y 13 anos\", en lo que escribió la IA",
-   "maximo": 4
-  },
-  {
-   "id": "gymja6",
-   "titulo": "La desgarradora despedida de Julieta, la hija de Fernando Confessore tras su muerte: “Te voy a amar y extrañar toda la eternidad”",
-   "copete": "Juliet a, una de las hijas de Fernando Confessore , despidió al meteorólogo de TN con una foto de su infancia y un mensaje cargado de dolor. Meses atrás, su papá había compartido con orgullo la graduación de la joven como ingeniera química. El emotivo mensaje de Julieta para…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-16T13:19:56.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/sociedad/la-desgarradora-despedida-de-julieta-la-hija-de-fernando-confessore-tras-su-muerte-te-voy-a-amar-y-extranar-toda-la-eternidad/",
-     "fecha": "2026-10-16T13:19:56.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/show/famosos/2026/10/16/el-mensaje-que-compartio-la-hija-de-fernando-confessore-para-despedir-a-su-papa-te-voy-a-amar-y-extranar-toda-la-eternidad/",
-     "fecha": "2026-10-16T13:35:18.000Z"
-    },
-    {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/espectaculos/desgarrador-mensaje-hija-fernando-confessore-muerte-padre-toda-eternidad-20261016142815",
-     "fecha": "2026-10-16T17:28:15.161Z"
-    },
-    {
-     "medio": "Canal 26",
-     "enlace": "https://www.canal26.com/espectaculos/2026/10/16/el-doloroso-mensaje-de-la-hija-de-fernando-confessore-tras-su-muerte-te-voy-a-amar-toda-la-eternidad/",
-     "fecha": "2026-10-16T14:05:00.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/espectaculos/el-mensaje-una-las-hijas-fernando-confessore-te-voy-amar-y-extranar-toda-la-eternidad-n6334540",
-     "fecha": "2026-10-16T13:56:00.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/el-desgarrador-mensaje-la-hija-fernando-confessore-la-muerte-su-papa-n1607133",
-     "fecha": "2026-10-16T14:27:00.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/16/la-conmovedora-despedida-de-julieta-la-hija-mayor-de-fernando-confessore-te-voy-a-extranar-toda-la-eternidad/",
-     "fecha": "2026-10-16T16:04:45.000Z"
-    },
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/fama/murio-fernando-confessore-meteorologo-tn-emotivo-mensaje-hijas_0_cbPuXgLVuW.html",
-     "fecha": "2026-10-16T16:43:28.000Z"
-    }
-   ],
-   "intentos": 5,
-   "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 5
   },
   {

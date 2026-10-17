@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-17T01:02:19.952Z",
+  "generado": "2026-10-17T01:31:36.118Z",
   "notas": [
     {
       "id": "1n6g7ka",
@@ -13,7 +13,7 @@
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45105-el-ministerio-de-desarrollo-agrario-y-el-cpr-balcarce-reforzaron-los-controles-de-pesca-en-laguna-la-brava/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-17T00:31:13.977Z",
+      "fecha": "2026-10-17T01:01:19.495Z",
       "sinFecha": true,
       "visto": "2026-10-17T01:01:19.495Z",
       "relevancia": 63,
@@ -158,7 +158,7 @@
       "fecha": "2026-10-16T22:18:23.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T23:31:14.393Z",
-      "relevancia": 53,
+      "relevancia": 43,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -310,15 +310,14 @@
         "Clarín",
         "TN (Todo Noticias)",
         "Diario Popular",
-        "Ámbito",
-        "C5N"
+        "Ámbito"
       ],
       "enlace": "https://www.clarin.com/economia/agosto-morosidad-familias-leve-baja-marco-128_0_ksSwdDjX91.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-16T21:04:58.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T22:31:13.685Z",
-      "relevancia": 79,
+      "relevancia": 69,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -375,6 +374,98 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "la-morosidad-de-las-familias-baja-en-agosto-y-llega-al-12-81"
+    },
+    {
+      "id": "1te62vo",
+      "titulo": "Ministro chileno critica a Javier Milei por la obra pública y luego se disculpa",
+      "copete": "El titular de Vivienda del gobierno de Chile cuestionó la postura del mandatario argentino y afirmó que está \"cada vez más loco\". Horas más tarde, el funcionario se retractó en las redes sociales.",
+      "cuerpo": "El ministro de Vivienda y Urbanismo de Chile, Iván Poduje, criticó duramente el viernes 16/10/2026 al presidente Javier Milei por su postura contraria a la inversión estatal en infraestructura.\n\nHoras después de sus declaraciones, el ministro chileno emitió un mensaje en las redes sociales para retractarse y pedir disculpas por sus comentarios. Tras las disculpas públicas, sectores políticos locales debatieron sobre el manejo comunicacional de las autoridades en un contexto de relación bilateral delicada.",
+      "guion": "Ministro chileno critica a Javier Milei por la obra pública y luego se disculpa",
+      "seccion": "Argentina",
+      "medios": [
+        "La Nación",
+        "Clarín",
+        "El Día",
+        "La Gaceta (Tucumán)"
+      ],
+      "enlace": "https://www.lagaceta.com.ar/nota/1158414/politica/ministro-kast-apunto-contra-milei-cuestiono-postura-sobre-obra-publica-cada-vez-mas-loco.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T20:33:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-17T01:31:12.973Z",
+      "relevancia": 65,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El ministro chileno Iván Poduje cuestionó las críticas de Javier Milei a la obra pública.",
+        "El funcionario calificó de tontería la posición del mandatario argentino y dijo que está loco.",
+        "Horas más tarde, Poduje se retractó y pidió disculpas públicas por sus dichos."
+      ],
+      "seSabe": [
+        "El ministro de Vivienda y Urbanismo de Chile, Iván Poduje, criticó al presidente Javier Milei durante el foro \"Conoce a tu ministro\" el viernes 16/10/2026.",
+        "El funcionario chileno calificó la postura sobre la obra pública como una tontería y afirmó que el mandatario está \"cada vez más loco\".",
+        "Poduje se retractó horas más tarde y pidió disculpas a través de sus redes sociales.",
+        "El vicepresidente del Senado respaldó al secretario de Estado tras sus disculpas, según la cobertura periodística."
+      ],
+      "noConfirmado": [
+        "No se informaron posibles medidas diplomáticas formales por parte del gobierno argentino ante los dichos del funcionario chileno."
+      ],
+      "textoRedes": "El ministro de Vivienda de Chile, Iván Poduje, criticó duramente a Javier Milei por su postura sobre la obra pública y afirmó que está \"cada vez más loco\". Horas después, el funcionario se retractó y pidió disculpas en las redes sociales.",
+      "etiquetas": [
+        "Iván Poduje",
+        "Javier Milei",
+        "Chile",
+        "obra pública",
+        "José Antonio Kast",
+        "declaraciones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Gaceta (Tucumán)",
+          "enlace": "https://www.lagaceta.com.ar/nota/1158414/politica/ministro-kast-apunto-contra-milei-cuestiono-postura-sobre-obra-publica-cada-vez-mas-loco.html",
+          "fecha": "2026-10-16T20:33:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los argumentos del ministro sobre los costos de la infraestructura y la corrupción."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/el-mundo/el-inesperado-ataque-de-un-ministro-de-kast-contra-javier-milei-por-la-obra-publica-nid16102026/",
+          "fecha": "2026-10-17T01:14:03.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el foro empresarial y las declaraciones originales del ministro chileno."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/vez-loco-ministro-chile-lanzo-exabrupto-milei-pedir-disculpas_0_LPG4bcxCkV.html",
+          "fecha": "2026-10-16T23:18:25.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la retractación del funcionario y las repercusiones del senador Iván Moreira."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/esta-cada-vez-mas-loco-un-ministro-de-kast-realizo-una-dura-critica-a-milei-y-reavivo-las-tensiones-politica-y-economia_1792183500",
+          "fecha": "2026-10-16T20:45:00.000Z",
+          "oficial": false,
+          "aporte": "Agregó la postura del vicepresidente sobre las disculpas del titular de la cartera de Vivienda."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1lkffhb",
+          "titulo": "Javier Milei cierra su visita a Washington con un acto contra el antisemitismo",
+          "fecha": "2026-10-15T23:08:44.000Z",
+          "ruta": "/nota/javier-milei-cierra-su-visita-a-washington-con-un-acto-contra-el-1lkffhb"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "ministro-chileno-critica-a-javier-milei-por-la-obra-publica-y-luego"
     },
     {
       "id": "1ifa1zl",
@@ -2829,6 +2920,7 @@
         "A24",
         "Crónica",
         "Diario Popular",
+        "La Nueva",
         "El Marplatense",
         "El Eco de Tandil",
         "Ámbito",
@@ -3772,110 +3864,6 @@
       }
     },
     {
-      "id": "1o58pw8",
-      "titulo": "Lautaro Martínez recuerda su agónico gol a Inglaterra y se emociona",
-      "copete": "A tres meses de la semifinal del Mundial 2026, el delantero de la Selección Argentina repasó el triunfo ante Inglaterra y valoró el esfuerzo del plantel y el legado de los excombatientes de Malvinas.",
-      "cuerpo": "El delantero de la Selección Argentina Lautaro Martínez recordó su agónico gol para vencer por 2 a 1 a Inglaterra en la semifinal del Mundial 2026 y se emocionó al ver la reacción de un excombatiente de Malvinas.\n\nEl futbolista del Inter de Milán destacó que el rendimiento del equipo se sostuvo gracias a la entrega y aseguró que las teorías sobre una falta de compromiso en la derrota por 1 a 0 frente a España en la final generan malestar en el plantel, ya que los jugadores dieron el máximo esfuerzo.",
-      "guion": "Lautaro Martínez recuerda su agónico gol a Inglaterra y se emociona",
-      "seccion": "Fútbol",
-      "medios": [
-        "El Destape",
-        "TyC Sports",
-        "Radio Mitre",
-        "La Capital (Rosario)"
-      ],
-      "enlace": "https://radiomitre.cienradios.com/deportes/la-emocion-de-lautaro-martinez-al-ver-el-llanto-de-un-excombatiente-de-malvinas-en-su-gol-ante-inglaterra/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-16T03:33:46.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T14:01:00.593Z",
-      "relevancia": 72,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Lautaro Martínez recordó el triunfo ante Inglaterra en el Mundial 2026.",
-        "El delantero se emocionó al ver la reacción de un excombatiente de Malvinas.",
-        "El jugador destacó que el partido tenía un condimento especial por la historia.",
-        "El atacante desestimó las críticas sobre el rendimiento del equipo en la final."
-      ],
-      "seSabe": [
-        "Lautaro Martínez brindó una entrevista en AFA Studio a tres meses del Mundial 2026.",
-        "El delantero recordó su gol agónico en la semifinal ante Inglaterra.",
-        "El jugador se refirió a la derrota en la final ante España."
-      ],
-      "textoRedes": "Lautaro Martínez recordó su agónico gol ante Inglaterra en el Mundial 2026 y se emocionó al ver la reacción de un excombatiente de Malvinas en una entrevista.",
-      "etiquetas": [
-        "Lautaro Martínez",
-        "Selección Argentina",
-        "Mundial 2026",
-        "Malvinas",
-        "Inglaterra"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/la-emocion-de-lautaro-martinez-al-ver-el-llanto-de-un-excombatiente-de-malvinas-en-su-gol-ante-inglaterra/",
-          "fecha": "2026-10-16T03:33:46.000Z",
-          "oficial": false,
-          "aporte": "Aportó el contexto de la reacción del excombatiente y las declaraciones sobre el desarrollo del encuentro."
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/deportes/emotivo-mensaje-lautaro-martinez-excombatientes-malvinas-tres-meses-gol-vs-inglaterra-gracias-ellos-20261016104419",
-          "fecha": "2026-10-16T13:44:19.378Z",
-          "oficial": false,
-          "aporte": "Aportó detalles sobre la entrevista en AFA Studio y las declaraciones acerca de las críticas al plantel."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/seleccion-argentina/la-emocion-de-lautaro-martinez-al-ver-la-reaccion-de-un-excombatiente-tras-su-gol-ante-inglaterra-id766651.html",
-          "fecha": "2026-10-16T10:59:56.000Z",
-          "oficial": false,
-          "aporte": "Repitió la información sobre el agónico tanto y el recuerdo de la semifinal mundialista."
-        },
-        {
-          "medio": "La Capital (Rosario)",
-          "enlace": "https://www.lacapital.com.ar/ovacion/el-mensaje-lautaro-martinez-los-excombatientes-malvinas-nos-ensenaron-luchar-n10287017.html",
-          "fecha": "2026-10-16T13:33:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó las declaraciones principales sobre el partido ante Inglaterra, el vínculo con los excombatientes y el análisis de la final."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "7rb12z",
-          "titulo": "Lautaro Martínez cuestiona las dudas sobre el compromiso del seleccionado",
-          "fecha": "2026-10-15T23:28:33.000Z",
-          "ruta": "/nota/lautaro-martinez-cuestiona-las-dudas-sobre-el-compromiso-del-7rb12z"
-        },
-        {
-          "id": "repaso20261015tarde",
-          "titulo": "El repaso de la tarde en Radar Balcarce: tenis de mesa, Lautaro Martínez y Cristian Méndez",
-          "fecha": "2026-10-15T18:07:39.825Z",
-          "ruta": "/nota/el-repaso-de-la-tarde-en-radar-balcarce-tenis-de-mesa-vtv-y-lautaro-repaso20261015tarde"
-        },
-        {
-          "id": "9y985f",
-          "titulo": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección",
-          "fecha": "2026-10-14T18:51:00.000Z",
-          "ruta": "/nota/lautaro-martinez-padece-una-lesion-muscular-y-peligra-su-presencia-en-9y985f"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "lautaro-martinez-recuerda-su-agonico-gol-a-inglaterra-y-se-emociona",
-      "foto": {
-        "archivo": "fotos-notas/1o58pw8.jpg",
-        "credito": "Foto: Agencia de Noticias ANDES / Wikimedia Commons (CC BY-SA 3.0)"
-      }
-    },
-    {
       "id": "1ax3e8b",
       "titulo": "Atlético Tucumán y Rosario Central juegan el sábado por la noche",
       "copete": "El conjunto tucumano recibe al líder de la Zona B en el estadio Monumental José Fierro por la 13ª fecha del Torneo Clausura. El encuentro se jugará desde las 20 y será televisado por ESPN Premium.",
@@ -4755,6 +4743,99 @@
       }
     },
     {
+      "id": "1uvhput",
+      "titulo": "Leonel Flores visita un club de barrio para donar comida",
+      "copete": "El delantero de Boca se acercó al Club Santa María Futsal en Monte Chingolo durante la noche del miércoles. Donó alimentos y compartió un encuentro con los vecinos.",
+      "cuerpo": "La presencia del deportista generó gran repercusión en el lugar. Quienes organizaron la actividad y los vecinos publicaron las imágenes en redes sociales recién después de que el futbolista se retirara del predio, con la intención de preservar la tranquilidad de la jornada y evitar aglomeraciones.\n\nDurante el recorrido, el atacante le firmó la indumentaria a un fanático de la zona apodado Leito Silva en la puerta de su domicilio. Los mensajes difundidos destacaron su gesto solidario y su vínculo con el ámbito barrial.",
+      "guion": "Leonel Flores visita un club de barrio para donar comida",
+      "seccion": "Fútbol",
+      "medios": [
+        "Infobae",
+        "TN (Todo Noticias)",
+        "El Destape",
+        "TyC Sports",
+        "Olé",
+        "Radio Mitre",
+        "Noticias Argentinas (NA)",
+        "Doble Amarilla",
+        "C5N",
+        "Minuto Uno"
+      ],
+      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/15/leonel-flores-el-jugador-de-boca-y-la-seleccion-que-visito-una-olla-popular-en-monte-chingolo-y-revoluciono-el-barrio/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T16:55:32.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T21:05:59.806Z",
+      "relevancia": 74,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Leonel Flores visitó el Club Santa María Futsal",
+        "El delantero donó alimentos y compartió con los vecinos",
+        "Las fotos se publicaron después de su partida"
+      ],
+      "seSabe": [
+        "Leonel Flores concurrió al Club Santa María Futsal en Monte Chingolo el miércoles por la noche.",
+        "El futbolista entregó donaciones de comida junto a su pareja Cami Espinoza.",
+        "Las imágenes del encuentro se difundieron en Instagram una vez que el jugador se retiró."
+      ],
+      "textoRedes": "El delantero de Boca Leonel Flores visitó el Club Santa María Futsal en Monte Chingolo para donar alimentos y compartir un encuentro con los vecinos.",
+      "etiquetas": [
+        "Leonel Flores",
+        "Monte Chingolo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/15/leonel-flores-el-jugador-de-boca-y-la-seleccion-que-visito-una-olla-popular-en-monte-chingolo-y-revoluciono-el-barrio/",
+          "fecha": "2026-10-15T16:55:32.000Z",
+          "oficial": false,
+          "aporte": "Detalló la visita del jugador al club de Monte Chingolo, la donación y la modalidad de difusión en redes."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/leonel-flores-crack-boca-seleccion-argentina-fue-olla-popular-lanus-20261015172640",
+          "fecha": "2026-10-15T20:26:40.624Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/boca-juniors/el-gesto-solidario-de-leo-flores-participo-de-una-olla-popular-en-monte-chingolo-id766419.html",
+          "fecha": "2026-10-15T18:23:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/boca-juniors/gran-gesto-leo-flores-participo-olla-popular-monte-chingolo_0_vhNaJfrcfM.html",
+          "fecha": "2026-10-15T17:27:45.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/el-gesto-solidario-leonel-flores-participo-una-olla-popular-monte-chingolo-n6334247",
+          "fecha": "2026-10-15T20:11:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "leonel-flores-visita-un-club-de-barrio-para-donar-comida",
+      "foto": {
+        "archivo": "fotos-notas/1uvhput.jpg",
+        "credito": "Foto: Olé"
+      }
+    },
+    {
       "id": "1o2y75j",
       "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
       "copete": "El balcarceño de 59 años forma parte de la primera camada de guardavidas argentinos que viajó a Europa en 2002 para trabajar en las playas catalanas.",
@@ -5095,288 +5176,6 @@
         "archivo": "fotos-notas/1ao5ic.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
-    },
-    {
-      "id": "9nw59b",
-      "titulo": "El Municipio impulsa un plan de obras públicas en salud, educación y caminos",
-      "copete": "La gestión del intendente Esteban Reino detalla una serie de trabajos en infraestructura sanitaria, vial, educativa y rural en todo el partido de Balcarce.",
-      "cuerpo": "El Gobierno municipal detalla una agenda de intervenciones que abarca salud, educación, pavimentación, alumbrado y caminos rurales. Según informó la comuna, entre los trabajos previstos se encuentra la reparación integral del centro sanitario de Laguna La Brava y la reconstrucción de la Escuela Rural N.º 34, junto al polideportivo del CEF y la guardia pediátrica del Hospital Municipal Felipe A. Fossati.\n\nEn materia vial, las tareas incluyen el ensanche de la avenida Centenario, la intervención en un tramo de la avenida San Martín y pavimentación en los barrios Soldado Llamas e Hipólito. Además, se ejecutan bacheos, cordón cuneta y el recambio a luces LED con la Cooperativa, mientras que hacia fines de octubre se licitará el alquiler de maquinaria para los caminos rurales.",
-      "guion": "El Municipio impulsa un plan de obras públicas en salud, educación y caminos",
-      "seccion": "Política",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/45086-reino-busca-recuperar-la-centralidad-de-su-gestion-con-una-nueva-apuesta-por-la-obra-publica/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T13:31:35.699Z",
-      "sinFecha": true,
-      "visto": "2026-10-15T13:31:35.699Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Reparación integral del centro sanitario de Laguna La Brava.",
-        "Reconstrucción de la Escuela Rural N.º 34 y obras en el CEF.",
-        "Trabajos viales en avenidas y pavimentación en barrios.",
-        "Licitación de maquinaria para caminos rurales hacia fines de octubre."
-      ],
-      "seSabe": [
-        "El Municipio planifica obras en salud, educación, vialidad y caminos rurales.",
-        "Se proyecta reparar el centro de salud de Laguna La Brava y la Escuela Rural N.º 34.",
-        "Avanzan los trabajos en la guardia pediátrica del Hospital Municipal.",
-        "Se prevé una licitación a fines de octubre para alquilar maquinaria vial."
-      ],
-      "noConfirmado": [
-        "No se detalló el monto total de inversión para el conjunto de las obras planificadas.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Municipio detalla un plan de trabajos que incluye obras en salud, educación, pavimentación, alumbrado y caminos rurales en todo el partido.",
-      "etiquetas": [
-        "obras públicas",
-        "Balcarce",
-        "infraestructura",
-        "caminos rurales"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45086-reino-busca-recuperar-la-centralidad-de-su-gestion-con-una-nueva-apuesta-por-la-obra-publica/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló la agenda municipal de obras públicas en salud, educación, vialidad, alumbrado y caminos rurales."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-municipio-impulsa-un-plan-de-obras-publicas-en-salud-educacion-y",
-      "foto": {
-        "archivo": "fotos-notas/9nw59b.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "repaso20261015manana",
-      "propia": "repaso",
-      "titulo": "El repaso de la mañana en Radar Balcarce: cultura, Ángela Servín y Turismo Nacional",
-      "copete": "Radar Balcarce publicó a las 10:09 de este jueves 15 de octubre el repaso de la mañana en Instagram y Facebook, un audio con 4 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 4 notas que se contaron en el repaso de la mañana del jueves 15, en el orden en que salieron en el audio.\n\nLa delegación local parte el lunes hacia la final provincial. Los representantes locales recibieron la indumentaria oficial y los detalles del viaje. El contingente partirá rumbo a Mar del Plata para participar en las distintas disciplinas.\n\nÁngela Servín sube al podio en la Atlántica Ultra. La deportista local completó el exigente trayecto de setenta kilómetros entre Mar del Plata y Villa Gesell. Obtuvo el segundo lugar en su categoría tras unas diez horas de competencia.\n\nEmprendedora local crea accesorios únicos con cámaras de neumáticos. La bióloga Silvina Ibáñez encabeza un proyecto de economía circular en la ciudad. Desde 2017 elabora bolsos y billeteras con materiales en desuso para reducir el impacto ambiental.\n\nEl Turismo Nacional evalúa incorporar a Balcarce para su calendario. La categoría nacional analiza la inclusión del autódromo local para su próxima temporada. El circuito genera interés tras su reapertura, aunque todavía no cuenta con una programación oficial.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
-      "guion": null,
-      "seccion": "Balcarce",
-      "local": true,
-      "relevancia": 60,
-      "medios": [],
-      "enlace": null,
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-15T13:09:21.887Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T13:09:21.887Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-15T13:09:21.887Z",
-      "temas": [],
-      "etiquetas": [
-        "cultura",
-        "Ángela Servín",
-        "Turismo Nacional"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
-      "notasDelRepaso": [
-        "1v9h1ps",
-        "vt870i",
-        "wzunxc",
-        "1s8weuc"
-      ],
-      "enlacesEnTexto": [
-        {
-          "texto": "La delegación local parte el lunes hacia la final provincial",
-          "href": "/nota/la-delegacion-local-parte-el-lunes-hacia-la-final-provincial-1v9h1ps"
-        },
-        {
-          "texto": "Ángela Servín sube al podio en la Atlántica Ultra",
-          "href": "/nota/angela-servin-sube-al-podio-en-la-atlantica-ultra-vt870i"
-        },
-        {
-          "texto": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
-          "href": "/nota/emprendedora-local-crea-accesorios-unicos-con-camaras-de-neumaticos-wzunxc"
-        },
-        {
-          "texto": "El Turismo Nacional evalúa incorporar a Balcarce para su calendario",
-          "href": "/nota/el-turismo-nacional-evalua-incorporar-a-balcarce-para-su-calendario-1s8weuc"
-        }
-      ],
-      "destacados": [
-        {
-          "texto": "Mirá y escuchá el repaso en Instagram",
-          "href": "https://www.instagram.com/reel/DehB_S9jqd-/",
-          "externo": true
-        },
-        {
-          "texto": "Mirá y escuchá el repaso en Facebook",
-          "href": "https://www.facebook.com/reel/1604262347284689/",
-          "externo": true
-        }
-      ],
-      "slug": "el-repaso-de-la-manana-en-radar-balcarce-cultura-angela-servin-y",
-      "foto": {
-        "archivo": "fotos-notas/collage-repaso20261015manana.jpg",
-        "credito": "Fotos: Radio Gabal (FM 104.1) y Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "u0hcbv",
-      "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
-      "copete": "El deportista local fue convocado por la Federación de Tiro para desempeñarse como juez en las competencias de la disciplina durante la instancia final del certamen provincial.",
-      "cuerpo": "El balcarceño Ariel Bilbao integra el equipo de jueces encargado de las competencias de tiro en los Juegos Bonaerenses 2026. La designación estuvo a cargo de la Federación de Tiro de la Provincia de Buenos Aires y se suma a su incorporación por parte de la Subsecretaría de Deportes provincial para cumplir funciones como Juez Nacional, categoría B.\n\nLas pruebas se desarrollarán del 19 al 23 de octubre en la ciudad de Mar del Plata, donde competirán deportistas de todo el territorio bonaerense.",
-      "guion": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://balcarce.gob.ar/2026/10/15/atilio-ariel-bilbao-volvera-a-desempenarse-como-juez-nacional-en-los-juegos-bonaerenses-2026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T13:09:17.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T13:31:35.699Z",
-      "relevancia": 89,
-      "local": true,
-      "oficial": true,
-      "deUnMedioDeAca": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Ariel Bilbao fue convocado como juez de tiro.",
-        "Participará en la instancia final de los Juegos Bonaerenses 2026.",
-        "Las competencias serán en Mar del Plata del 19 al 23 de octubre."
-      ],
-      "seSabe": [
-        "Ariel Bilbao fue designado juez de tiro para los Juegos Bonaerenses 2026 por la Federación de Tiro provincial.",
-        "Ejerce funciones como Juez Nacional, categoría B, convocado por la Subsecretaría de Deportes de la Provincia.",
-        "El certamen se llevará a cabo del 19 al 23 de octubre en Mar del Plata."
-      ],
-      "textoRedes": "El balcarceño Ariel Bilbao fue designado como juez de tiro para la instancia final de los Juegos Bonaerenses 2026, que se disputarán en Mar del Plata.",
-      "etiquetas": [
-        "Ariel Bilbao",
-        "Juegos Bonaerenses",
-        "tiro deportivo",
-        "Mar del Plata",
-        "deportes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Municipalidad de Balcarce",
-          "enlace": "https://balcarce.gob.ar/2026/10/15/atilio-ariel-bilbao-volvera-a-desempenarse-como-juez-nacional-en-los-juegos-bonaerenses-2026/",
-          "fecha": "2026-10-15T13:09:17.000Z",
-          "oficial": true,
-          "aporte": "Informó la designación oficial, la categoría del juez y las fechas y lugar del evento."
-        },
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/ariel-bilbao-volvera-a-desempenarse-como-juez-en-los-juegos-bonaerenses",
-          "fecha": "2026-10-15T13:30:45.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la designación de Bilbao por parte de la Federación de Tiro."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo informaron Municipalidad de Balcarce y un medio independiente.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "ariel-bilbao-asume-como-juez-en-las-finales-de-los-juegos-bonaerenses",
-      "foto": {
-        "archivo": "fotos-notas/u0hcbv-ia.jpg",
-        "credito": "Ilustración generada con IA"
-      }
-    },
-    {
-      "id": "1fb5jbq",
-      "titulo": "Productores ganaderos trasladan vacas ante la crecida de los ríos",
-      "copete": "Ganaderos del Litoral mueven animales a tierras altas por el avance del agua. Estiman que unas 200.000 cabezas sufren el impacto directo.",
-      "cuerpo": "Productores agropecuarios del Litoral comenzaron a mover sus animales desde las zonas bajas hacia terrenos elevados para protegerlos de las inundaciones provocadas por la crecida de los ríos Paraná y Uruguay. Las estimaciones señalan que unas 200.000 cabezas sufren el impacto directo, mientras que el perjuicio indirecto podría alcanzar a 700.000 animales.\n\nLa situación se origina por las precipitaciones de entre 500 y 600 milímetros registradas en el sur de Brasil durante las últimas dos semanas. El volumen de agua complica el cauce principal y amenaza con extender las consecuencias hacia los Bajos Submeridionales, en el norte de Santa Fe, debido al comportamiento de los afluentes.\n\nFrente al avance del agua, los ganaderos realizan tareas de arreo para salvar al ganado y evitar que quede atrapado en campos anegados. La magnitud final del fenómeno y la cantidad total de animales afectados dependerán de la evolución del caudal durante las próximas semanas.",
-      "guion": "Productores ganaderos trasladan vacas ante la crecida de los ríos",
-      "seccion": "Agro",
-      "medios": [
-        "TN (Todo Noticias)",
-        "A24",
-        "El Día"
-      ],
-      "enlace": "https://tn.com.ar/videos/sociedad/2026/10/15/la-desesperacion-de-los-productores-ganaderos-por-las-inundaciones-en-el-litoral-en-15-dias-se-tapan-todos-los-campos/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T13:08:33.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T15:33:58.707Z",
-      "relevancia": 34,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Productores mueven animales a zonas altas por la crecida en el Litoral.",
-        "Calculan unas 200.000 cabezas afectadas de forma directa.",
-        "Lluvias intensas en Brasil explican el aumento del caudal de los ríos."
-      ],
-      "seSabe": [
-        "Los productores ganaderos trasladan animales a terrenos elevados.",
-        "Unas 200.000 cabezas sufren el impacto directo.",
-        "Las precipitaciones en el sur de Brasil alcanzaron entre 500 y 600 milímetros.",
-        "El problema podría extenderse a los Bajos Submeridionales."
-      ],
-      "noConfirmado": [
-        "El alcance definitivo del impacto y la cantidad total de animales afectados.",
-        "La evolución exacta del nivel del agua en las próximas semanas."
-      ],
-      "textoRedes": "Productores ganaderos del Litoral trasladan animales a terrenos elevados debido a la crecida de los ríos Paraná y Uruguay. Estiman que unas 200.000 cabezas sufren el impacto directo del agua.",
-      "etiquetas": [
-        "produccion agropecuaria",
-        "inundaciones",
-        "rio parana",
-        "litoral"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/videos/sociedad/2026/10/15/la-desesperacion-de-los-productores-ganaderos-por-las-inundaciones-en-el-litoral-en-15-dias-se-tapan-todos-los-campos/",
-          "fecha": "2026-10-15T13:08:36.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la crecida de los ríos Paraná y Uruguay y el traslado de vacas a terrenos elevados."
-        },
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/actualidad/alerta-el-rio-parana-la-desesperacion-los-ganaderos-las-inundaciones-el-litoral-n1606696",
-          "fecha": "2026-10-15T14:56:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló las estimaciones de ganado afectado, las lluvias en Brasil y la posible extensión a los Bajos Submeridionales."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/informacion-general/desesperacion-en-el-litoral-asi-sufren-los-animales-afectados-por-las-inundaciones-informacion-general_1792075980",
-          "fecha": "2026-10-15T15:12:29.000Z",
-          "oficial": false,
-          "aporte": "Indicó el impacto sobre los animales en el Litoral con imágenes de la situación."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "productores-ganaderos-trasladan-vacas-ante-la-crecida-de-los-rios",
-      "foto": {
-        "archivo": "fotos-notas/1fb5jbq.jpg",
-        "credito": "Foto: A24"
-      }
     }
   ],
   "secciones": [
@@ -5394,10 +5193,10 @@
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 7,
-      "sensacion": 4,
-      "humedad": 80,
-      "viento": 13,
+      "temp": 8,
+      "sensacion": 5,
+      "humedad": 81,
+      "viento": 12,
       "rumbo": "S",
       "cielo": "Nublado",
       "esDeDia": false
@@ -5418,32 +5217,32 @@
         "fecha": "2026-10-17",
         "dia": "sáb",
         "max": 11,
-        "min": 7,
+        "min": 5,
         "lluvia": 8,
         "codigo": 51,
-        "viento": 19,
-        "milimetros": 0,
+        "viento": 20,
+        "milimetros": 1,
         "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-18",
         "dia": "dom",
-        "max": 11,
+        "max": 12,
         "min": 5,
         "lluvia": 2,
-        "codigo": 51,
-        "viento": 16,
+        "codigo": 3,
+        "viento": 15,
         "milimetros": 0,
-        "cielo": "Llovizna leve"
+        "cielo": "Nublado"
       },
       {
         "fecha": "2026-10-19",
         "dia": "lun",
-        "max": 15,
+        "max": 16,
         "min": 5,
         "lluvia": 0,
         "codigo": 3,
-        "viento": 16,
+        "viento": 17,
         "milimetros": 0,
         "cielo": "Nublado"
       }
@@ -5762,12 +5561,6 @@
       "motivo": "necesita ojo humano: \"el bebé\", en el texto completo de la fuente 2 (visto al reescribir)"
     },
     {
-      "id": "10sxbsm",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"la menor de\", en el texto completo de la fuente 1 (visto al reescribir)"
-    },
-    {
       "id": "c9axi4",
       "titulo": "Exclusivo: la carta de justificación de INTA para…",
       "seccion": "Agro",
@@ -5912,5 +5705,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 7
+  "esperandoCuerpo": 4
 }

@@ -15170,16 +15170,16 @@
   "borrada": true
  },
  "1xctidq": {
-  "archivo": "fotos-notas/1xctidq.jpg",
   "medio": "Ámbito",
-  "credito": "Foto: Ámbito",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Gobierno nacional convoca a empresas para optimizar ramales de trenes en Salta",
   "enlace": "https://www.ambito.com/energia/el-gobierno-busca-inversiones-reactivar-dos-ramales-ferroviarios-clave-la-mineria-salta-n6334032",
   "imagenOriginal": "https://media.ambito.com/p/ce479102d955e3cd4fdcf9878fd6afce/adjuntos/239/imagenes/043/705/0043705310/1200x675/884x425:904x445/belgrano-cargas-tren.jpg",
   "razon": "La foto B muestra claramente un tren de cargas en contexto sin marcas de agua ni menores, siendo apta para la nota.",
-  "cuando": "2026-10-15T18:04:00.026Z"
+  "cuando": "2026-10-15T18:04:00.026Z",
+  "intentado": true,
+  "borrada": true
  },
  "183np9p": {
   "medio": "La Nación",
@@ -16398,6 +16398,15 @@
   "titulo": "Enzo Fernández analiza el futuro de la Selección sin Lionel Messi",
   "razon": "Groq también falló: HTTP 413",
   "cuando": "2026-10-17T01:01:58.190Z",
+  "intentos": 1,
+  "fuentes": 4
+ },
+ "1te62vo": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Ministro chileno critica a Javier Milei por la obra pública y luego se disculpa",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-17T01:31:31.348Z",
   "intentos": 1,
   "fuentes": 4
  }
