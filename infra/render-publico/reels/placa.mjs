@@ -65,11 +65,11 @@ export const COLOR_SECCION = {
   Balcarce: '#B91C1C',
   Política: '#3730A3',
   Policiales: '#831843',
-  // Educación y Salud (17/10, regla 187): las dos primeras del mapa de 17 secciones
-  // (docs/secciones/MAPA-DE-SECCIONES.md). Sólo salen en una pieza si el interruptor
-  // SECCIONES_NUEVAS está prendido; el color ya queda fijo para que no se elija otro.
+  // Educación, Salud y Ciencia (17/10, reglas 187 y 211): las tres primeras del mapa de 17 secciones
+  // (docs/secciones/MAPA-DE-SECCIONES.md), activas desde el 17/10.
   Educación: '#1D4BE0',
   Salud: '#004E5C',
+  Ciencia: '#772E9E',
   Fútbol: '#7C3AED',
   Deportes: '#0F766E',
   Automovilismo: '#B45309',
