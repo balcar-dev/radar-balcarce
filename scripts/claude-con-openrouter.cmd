@@ -4,6 +4,8 @@ rem Usa la clave OPENROUTER_API_KEY que ya esta en esta PC (variable de entorno 
 rem Uso: scripts\claude-con-openrouter.cmd      (despues, dentro de Claude Code, /status muestra la direccion de OpenRouter)
 rem Si antes entraste con tu cuenta de Anthropic, hace /logout dentro de Claude Code y volve a abrirlo con este archivo.
 rem Costo aproximado de DeepSeek V4 Pro: unos US$ 0,21 por millon de tokens de entrada y 0,42 de salida (precios de OpenRouter del 17/10/2026).
+rem Siempre trabaja en la carpeta del proyecto, aunque se abra con doble clic.
+cd /d "%~dp0.."
 if "%OPENROUTER_API_KEY%"=="" (
   echo Falta la variable OPENROUTER_API_KEY. Crearla en https://openrouter.ai/keys y guardarla como variable de entorno de Windows.
   exit /b 1
