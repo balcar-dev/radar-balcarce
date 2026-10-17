@@ -17547,9 +17547,9 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "La morosidad de las familias baja en agosto y llega al 12,81%",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-17T01:01:58.190Z",
-  "intentos": 3,
+  "razon": "La mejor foto era la de Ámbito, pero no se puede usar (parece una foto de stock), y ninguna de las otras sirve: no se elige ninguna.",
+  "cuando": "2026-10-17T07:02:20.840Z",
+  "intentos": 4,
   "fuentes": 3
  },
  "1blsn1i": {
@@ -17698,14 +17698,28 @@
   "huella": "2eaa0952931333b2"
  },
  "1r0oe4f": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1r0oe4f.jpg",
+  "medio": "TyC Sports",
+  "credito": "Foto: TyC Sports",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Boca vence a Talleres con goles de Merentiel y Flores",
-  "razon": "Groq también falló: HTTP 429: Request too large for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on output tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T03:02:30.657Z",
-  "intentos": 1,
-  "fuentes": 3,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.tycsports.com/boca-juniors/matias-galarza-talleres-golazo-boca-la-bombonera-viejo-anhelo-id766881.html",
+  "imagenOriginal": "https://media.tycsports.com/files/2026/10/16/996743/matias-galarza-talleres-festejo-de-gol_1440x810.webp?v=2",
+  "razon": "La foto B muestra correctamente al jugador en el partido sin marcas de agua ni elementos gráficos sobreimpresos.",
+  "cuando": "2026-10-17T07:02:20.840Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Jugador de Talleres corriendo en la cancha"
+  },
+  "huella": "8a0b0b0b4a25672b"
  },
  "1sf5zma": {
   "intentado": true,
@@ -17932,5 +17946,122 @@
    "descripcion": "Retrato de un hombre sonriendo frente a un fondo con logos de campaña."
   },
   "huella": "2065706367e3313d"
+ },
+ "4aww82": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Fallece Fernando Confessore, el histórico meteorólogo de TN",
+  "razon": "Ninguna de las fotos corresponde a Fernando Confessore; muestran a otras personas (como José Bianco u otro meteorólogo), por lo que ninguna sirve para ilustrar la nota sobre su fallecimiento. (se probó una foto libre de \"Fernando Confessore\" en Wikimedia Commons de los últimos 2 años, sin resultado)",
+  "cuando": "2026-10-17T07:02:20.840Z",
+  "intentos": 1,
+  "fuentes": 2
+ },
+ "1itm824": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Los lentes inteligentes de Meta graban charlas sin la orden de voz",
+  "razon": "La mejor foto era la de Infobae, pero no se puede usar (parece una foto de stock), y ninguna de las otras sirve: no se elige ninguna.",
+  "cuando": "2026-10-17T07:02:20.840Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "1fvhvbr": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Riot Games discontinúa el modo Classic de League of Legends",
+  "razon": "La mejor foto era la de C5N, pero no se puede usar (es un flyer, un afiche o una captura de pantalla, no una foto), y ninguna de las otras sirve: no se elige ninguna.",
+  "cuando": "2026-10-17T07:02:20.840Z",
+  "intentos": 1,
+  "fuentes": 4
+ },
+ "c1ho07": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Un estudio vincula el inicio de antipsicóticos con mayor riesgo de diabetes",
+  "razon": "La mejor foto era la de Infobae, pero no se puede usar (parece una foto de stock), y ninguna de las otras sirve: no se elige ninguna.",
+  "cuando": "2026-10-17T07:02:20.840Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "5emyh9": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Crean inteligencia artificial para detectar rechazo tras trasplante",
+  "razon": "La única foto disponible es una imagen generada por computadora (stock/ilustrativa artificial) y no una fotografía real del hecho.",
+  "cuando": "2026-10-17T07:02:20.840Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "2cnihf": {
+  "archivo": "fotos-notas/2cnihf.jpg",
+  "medio": "La Nueva",
+  "credito": "Foto: La Nueva",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Javier Milei conversa con Marco Rubio sobre el vínculo bilateral",
+  "enlace": "https://www.lanueva.com/nota/2026-10-16-18-15-0-milei-converso-con-marco-rubio-y-reafirmaron-la-solidez-del-vinculo-entre-argentina-y-ee-uu",
+  "imagenOriginal": "https://pxcdn.lanueva.com/102026/1792185378195.jpg?&cw=600&ch=365",
+  "razon": "Es la mejor foto que corresponde al hecho, sin marcas de agua y sin menores reconocibles.",
+  "cuando": "2026-10-17T07:02:20.840Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Javier Milei y Marco Rubio posando sonrientes de traje"
+  },
+  "huella": "dddd85152d2d094f"
+ },
+ "zbpvf9": {
+  "archivo": "fotos-notas/zbpvf9.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Daniel Bertoni baja su candidatura a la presidencia de Independiente",
+  "enlace": "https://www.clarin.com/deportes/elecciones-independiente-bertoni-candidato-presidente-suma-espacio-nakis-apoyo-kun-aguero-propone-milito-dt_0_iXglcHYGEd.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/10/01/_qX_NJYl1_2000x1500__1.jpg",
+  "razon": "Es la mejor foto que corresponde a la nota, tiene buena nitidez y no posee marca de agua, menores ni otros impedimentos.",
+  "cuando": "2026-10-17T07:02:20.840Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Daniel Bertoni hablando con un micrófono en la mano."
+  },
+  "huella": "0034203169ccd4e8"
+ },
+ "ywsilb": {
+  "archivo": "fotos-notas/ywsilb.jpg",
+  "medio": "La Brújula 24",
+  "credito": "Foto: La Brújula 24",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Boca vence 2-1 a Talleres y trepa a la cima de la tabla anual",
+  "enlace": "https://www.labrujula24.com/notas/2026/10/16/boca-reacciono-a-tiempo-y-lo-dio-vuelta-en-la-bombonera-n525911/",
+  "imagenOriginal": "https://www.labrujula24.com/wp-content/uploads/2026/10/boca-4-1000x600.jpg",
+  "razon": "La foto B muestra de cuerpo entero el festejo de un jugador de Boca en pleno partido contra Talleres, con buen encuadre, sin marcas ni menores reconocibles en primer plano, a diferencia de la C que tiene zócalo y logo sobreimpreso.",
+  "cuando": "2026-10-17T07:02:20.840Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Jugador de Boca festejando un gol en la cancha con rivales alrededor y tribuna llena"
+  },
+  "huella": "aa0ead697171522f"
  }
 }

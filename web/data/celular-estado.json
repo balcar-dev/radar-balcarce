@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T06:31:50.499Z",
- "portada": 72,
- "archivo": 1207,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-17T07:02:54.236Z",
+ "portada": 84,
+ "archivo": 1212,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-17T06:31:50.529Z",
+  "generado": "2026-10-17T07:02:54.276Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -170,5 +170,10 @@
    "hastaHora": 22
   },
   "activas": true
- }
+ },
+ "seccionesNuevas": [
+  "Educación",
+  "Salud",
+  "Ciencia"
+ ]
 }
