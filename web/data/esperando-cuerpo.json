@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-17T15:31:41.706Z",
+ "generado": "2026-10-17T16:02:29.051Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,11 +15,6 @@
      "fecha": "2026-10-16T15:21:30.000Z"
     },
     {
-     "medio": "Puntonueve (FM 100.9)",
-     "enlace": "https://puntonueve.com.ar/la-licitacion-por-un-inmueble-municipal-sobre-la-ruta-226-quedo-sin-oferentes/",
-     "fecha": "2026-10-16T22:57:05.000Z"
-    },
-    {
      "medio": "Infórmese Primero (FM 104.9)",
      "enlace": "http://www.informeseprimero.com.ar/2026/10/sin-oferentes-la-municipalidad.html",
      "fecha": "2026-10-16T16:49:02.306Z"
@@ -28,6 +23,11 @@
      "medio": "Diario La Vanguardia",
      "enlace": "https://www.diariolavanguardia.com/noticias/45101-el-segundo-llamado-a-licitacion-del-frigorifico-municipal-volvio-a-quedar-desierto/",
      "fecha": null
+    },
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/la-licitacion-por-un-inmueble-municipal-sobre-la-ruta-226-quedo-sin-oferentes/",
+     "fecha": "2026-10-16T22:57:05.000Z"
     }
    ],
    "intentos": 1,
@@ -62,9 +62,19 @@
      "fecha": "2026-10-16T16:41:00.000Z"
     },
     {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
+     "fecha": "2026-10-16T18:08:00.000Z"
+    },
+    {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/politica/para-santilli--los-gobernadores-deberian-estar--preocupados--por-un-eventual-regreso-del-kirchnerismo_a6ad22aa6c55c21457e903f0f",
      "fecha": "2026-10-16T13:53:48.393Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/politica-y-economia/santilli-celebro-el-respaldo-de-los-gobernadores-al-dnu-70-no-dar-quorum-es-trabajar-a-favor-de-los-argentinos-politica-y-economia_1792161840",
+     "fecha": "2026-10-17T04:43:00.000Z"
     },
     {
      "medio": "El Marplatense",
@@ -82,16 +92,6 @@
      "fecha": "2026-10-16T13:44:00.000Z"
     },
     {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/politica/diego-santilli-los-gobernadores-deberian-estar-preocupados-un-eventual-regreso-del-kirchnerismo-n6334610",
-     "fecha": "2026-10-16T16:29:00.000Z"
-    },
-    {
-     "medio": "Los Andes (Mendoza)",
-     "enlace": "https://www.losandes.com.ar/politica/diego-santilli-dijo-que-los-gobernadores-deberian-estar-preocupados-un-posible-regreso-del-kirchnerismo-n6010629",
-     "fecha": "2026-10-16T21:51:00.000Z"
-    },
-    {
      "medio": "Radio Mitre",
      "enlace": "https://radiomitre.cienradios.com/videos/diego-santilli-los-que-deberian-estar-preocupados-son-los-gobernadores-si-el-kirchnerismo-vuelve-y-gana-kicillof/",
      "fecha": "2026-10-16T13:52:11.000Z"
@@ -107,14 +107,24 @@
      "fecha": "2026-10-16T14:53:47.000Z"
     },
     {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/diego-santilli-los-gobernadores-deberian-estar-preocupados-un-eventual-regreso-del-kirchnerismo-n6334610",
+     "fecha": "2026-10-16T16:29:00.000Z"
+    },
+    {
      "medio": "Agencia DIB",
      "enlace": "https://dib.com.ar/politica/santilli-los-que-deberian-estar-preocupados-el-regreso-del-kirchnerismo-son-los-gobernadores-n56559",
      "fecha": "2026-10-16T17:53:00.000Z"
     },
     {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
-     "fecha": "2026-10-16T18:08:00.000Z"
+     "medio": "La Gaceta (Tucumán)",
+     "enlace": "https://www.lagaceta.com.ar/nota/1158369/politica/gobernadores-reclamaron-plan-infraestructura-santilli-advirtio-sobre-eventual-triunfo-kicillof.html",
+     "fecha": "2026-10-16T16:21:00.000Z"
+    },
+    {
+     "medio": "Los Andes (Mendoza)",
+     "enlace": "https://www.losandes.com.ar/politica/diego-santilli-dijo-que-los-gobernadores-deberian-estar-preocupados-un-posible-regreso-del-kirchnerismo-n6010629",
+     "fecha": "2026-10-16T21:51:00.000Z"
     }
    ],
    "intentos": 1,
@@ -134,7 +144,7 @@
      "fecha": "2026-10-17T15:10:00.000Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "sin material",
    "maximo": 3
   },

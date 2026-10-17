@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T15:31:41.706Z",
- "portada": 77,
- "archivo": 1229,
+ "generado": "2026-10-17T16:02:29.051Z",
+ "portada": 76,
+ "archivo": 1231,
  "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-17T15:31:41.740Z",
+  "generado": "2026-10-17T16:02:29.087Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-17T13:07:32.466Z"
    },
    {
@@ -93,7 +93,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-17T13:07:32.466Z",
     "segundos": null,
     "notas": [
@@ -126,17 +126,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 38,
+    "segundos": 30,
     "notas": [
-     {
-      "id": "1ae6llz",
-      "titulo": "Dibu Martínez sufre un fuerte golpe en la cabeza y sale en camilla",
-      "seccion": "Fútbol"
-     },
      {
       "id": "1e6e9wy",
       "titulo": "Docentes y estatales bonaerenses discuten una nueva oferta salarial",
       "seccion": "Economía"
+     },
+     {
+      "id": "1mfnr70",
+      "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
+      "seccion": "Deportes"
      }
     ]
    },
