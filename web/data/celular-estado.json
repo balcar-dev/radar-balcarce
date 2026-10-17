@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T13:31:52.104Z",
- "portada": 76,
- "archivo": 1224,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-17T14:02:28.149Z",
+ "portada": 75,
+ "archivo": 1223,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-17T13:31:52.135Z",
+  "generado": "2026-10-17T14:02:28.172Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-17T10:06:48.991Z"
    },
    {
@@ -126,8 +126,13 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 30,
+    "segundos": 43,
     "notas": [
+     {
+      "id": "1ae6llz",
+      "titulo": "Dibu Martínez sufre un fuerte golpe en la cabeza y sale en camilla",
+      "seccion": "Fútbol"
+     },
      {
       "id": "1e6e9wy",
       "titulo": "Docentes y estatales bonaerenses discuten una nueva oferta salarial",

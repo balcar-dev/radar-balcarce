@@ -16587,7 +16587,8 @@
   "imagenOriginal": "https://www.labrujula24.com/wp-content/uploads/2026/02/lautaro-martinez-1-1000x600.jpg",
   "razon": "La foto C muestra claramente a Lautaro con la camiseta de la selección y sin marcas de agua agregadas, a diferencia de A y B que tienen elementos superpuestos.",
   "cuando": "2026-10-16T02:01:43.662Z",
-  "huella": "674b4b3918181f1f"
+  "huella": "674b4b3918181f1f",
+  "ausenteDesde": "2026-10-17T14:02:28.138Z"
  },
  "1jpdkrm": {
   "archivo": "fotos-notas/1jpdkrm.jpg",
@@ -17694,7 +17695,8 @@
    },
    "dudosa": "la nota habla de chicos o de categorías juveniles"
   },
-  "huella": "a0a2a6b692a9cdcd"
+  "huella": "a0a2a6b692a9cdcd",
+  "ausenteDesde": "2026-10-17T14:02:28.138Z"
  },
  "1n6g7ka": {
   "archivo": "fotos-notas/1n6g7ka.jpg",
@@ -18085,7 +18087,8 @@
    "corresponde": "si",
    "descripcion": "Detalle de manos escribiendo cuentas sobre un escritorio con tarjetas de crédito y calculadora."
   },
-  "huella": "460e0c9c9ed48e16"
+  "huella": "460e0c9c9ed48e16",
+  "ausenteDesde": "2026-10-17T14:02:28.138Z"
  },
  "13sxop4": {
   "archivo": "fotos-notas/13sxop4.jpg",
@@ -18332,7 +18335,8 @@
    "corresponde": "si",
    "descripcion": "Cosechadora trabajando en un campo de soja y descargando en un tractor con acoplado tolva."
   },
-  "huella": "0c6266c20a095123"
+  "huella": "0c6266c20a095123",
+  "ausenteDesde": "2026-10-17T14:02:28.138Z"
  },
  "p3f4x9": {
   "intentado": true,
@@ -18462,7 +18466,8 @@
    "corresponde": "si",
    "descripcion": "El DT Arruabarrena hablando con Paredes en el partido."
   },
-  "huella": "3d0b950c45455ad9"
+  "huella": "3d0b950c45455ad9",
+  "ausenteDesde": "2026-10-17T14:02:28.138Z"
  },
  "1kblme4": {
   "archivo": "fotos-notas/1kblme4.jpg",
@@ -18553,5 +18558,62 @@
    "descripcion": "Jugador de Boca con la cinta de capitán en el campo de juego."
   },
   "huella": "411d8e26a6a6b31b"
+ },
+ "1b25lqu": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "OpenAI admite que modelos de IA vulneran sitios y gastan fondos ajenos",
+  "razon": "La mejor foto era la de Infobae, pero no se puede usar (parece una foto de stock), y ninguna de las otras sirve: no se elige ninguna.",
+  "cuando": "2026-10-17T14:02:03.797Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "1ae6llz": {
+  "archivo": "fotos-notas/1ae6llz.jpg",
+  "medio": "La Gaceta (Tucumán)",
+  "credito": "Foto: La Gaceta (Tucumán)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Dibu Martínez sufre un fuerte golpe en la cabeza y sale en camilla",
+  "enlace": "https://www.lagaceta.com.ar/nota/1158456/deportes/video-dibu-martinez-sufrio-durisimo-golpe-cabeza-lo-retiraron-camilla.html",
+  "imagenOriginal": "https://img.lagaceta.com.ar/fotos/notas/2026/10/17/martinez-golpeo-cabeza-contra-jarrad-branthwaite-foto-reuters-phil-noble-1158456-102823.jpg",
+  "razon": "Muestra claramente el momento del golpe en la cabeza al Dibu Martínez durante el partido, sin marcas agregadas, menores ni problemas de contenido.",
+  "cuando": "2026-10-17T14:02:03.797Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Dibu Martínez sufriendo el golpe en la cabeza durante una jugada aérea"
+  },
+  "huella": "dabbae3337aba98d"
+ },
+ "1yhn69m": {
+  "archivo": "fotos-notas/1yhn69m.jpg",
+  "medio": "C5N",
+  "credito": "Foto: C5N",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Boca viaja a Brasil con plantel completo y mantiene la duda de Paredes",
+  "enlace": "https://www.c5n.com/deportes/rodolfo-arruabarrena-confirmo-que-leandro-paredes-viajara-brasil-el-plantel-boca-jugara-n251853",
+  "imagenOriginal": "https://media.c5n.com/p/267eca60f53d2b52a05878ef1dbe48d8/adjuntos/326/imagenes/000/396/0000396233/1200x675/smart/aranda-paredes.jpg",
+  "razon": "Es la foto más limpia y representativa del plantel de Boca con sus figuras, sin menores ni marcas de agua.",
+  "cuando": "2026-10-17T14:02:03.797Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Jugadores de Boca festejando un gol juntos"
+  },
+  "huella": "ccf1c4d87ada2929"
  }
 }
