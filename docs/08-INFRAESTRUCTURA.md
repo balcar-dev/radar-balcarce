@@ -14,7 +14,7 @@ la web: `06-WEB`.
 Todo lo automático corre gratis en GitHub Actions, con la PC apagada: un
 reloj propio (un programa chico de Cloudflare, el Worker `radar-balcarce-reloj`) lo
 despierta cada media hora, GitHub busca las
-noticias, escribe con IA (Gemini, con Groq de respaldo en la lectura), arma la
+noticias, escribe con IA (Gemini, con Groq de respaldo en la lectura y OpenRouter, gratis, de último respaldo), arma la
 web una sola vez y la sube a Cloudflare Pages, publica en Facebook e Instagram con la API de
 Meta, y dos vigilantes revisan y avisan **por mail** (WhatsApp quedó de respaldo):
 el de Cloudflare, cada media hora, lo urgente (la web y "Actualizar la web"); el de
@@ -58,7 +58,7 @@ Workers de Cloudflare (cuenta radarbalcarce@gmail.com, plan Workers Paid):
   reloj (el despertador), vigilante (mira desde afuera y manda los mails),
   imágenes (ilustraciones con Workers AI), archivo (archivo permanente, sin ruta todavía)
 
-  IA: Gemini (Google AI Studio, cuenta radarbalcarce@gmail.com), Groq y Workers AI (imágenes)
+  IA: Gemini (Google AI Studio, cuenta radarbalcarce@gmail.com), Groq, OpenRouter (último respaldo, sólo modelos gratis) y Workers AI (imágenes)
 
 Panel del celular (radarbalcarce.com/panel/) ── llave de GitHub ──▶ API de GitHub
    lee web/data/, escribe sus decisiones y correcciones, dispara
@@ -384,7 +384,7 @@ nunca se usó y se borró el 17/10.
 
 ## Las claves de IA
 
-Cuatro claves, **todas gratis** y separadas a propósito: en Google el cupo es
+Cinco claves (la quinta, OpenRouter, es opcional y sólo de último respaldo), **todas gratis** y separadas a propósito: en Google el cupo es
 **por proyecto y por modelo**, y si dos usos compartieran un proyecto, un día
 de muchos pedidos de uno se comería el cupo del otro. Si dos claves son del
 mismo proyecto, comparten el cupo de cada modelo (el de texto y el de voz son
@@ -396,6 +396,7 @@ modelos distintos: no compiten entre sí). Las lee `reels/claves.mjs`.
 | `GEMINI_API_KEY_REDES` | Las voces de las piezas (`reels/voz-gemini.mjs`), Auditar voz y Crear voces. Las dos voces propias viven en el proyecto de esta clave: si la clave pasa a otro proyecto, hay que crearlas de nuevo. Segundo respaldo de la redacción | `gemini-3.8-flash-tts` (voz) | **10 audios por día**, compartidos por Redes, Piezas, Auditar voz y Crear voces (cuánto gasta un día normal: `07-REDES`, "El cupo de voz"); 2 segundos entre pedidos | La pieza no sale: nunca con otra voz |
 | `GEMINI_API_KEY_CLASIFICACION` | La lectura con IA (`ingesta/lectura-ia.mjs`, `03-SELECCION`) y el banco de fotos (`ingesta/fotos.mjs`, `05-FOTOS`). Último respaldo de la redacción | `gemini-flash-lite-latest` | Fichas: **200 pedidos por día** (60 sin esta clave, `topeDeLecturas`), 5 por corrida, 12 notas por pedido; repetidas: 60 por día; fotos: hasta 10 por corrida | Prueba con Groq. Sin esta clave, usa la de redacción; **nunca la de redes** |
 | `GROQ_API_KEY` | Segundo proveedor de la lectura con IA y de las fotos: si Gemini falla o se queda sin cupo, el mismo pedido va a Groq | `openai/gpt-oss-120b` (lectura), `qwen/qwen3.8-27b` (fotos, con visión) | Los de la cuenta gratis: 8.000 tokens por minuto, por eso **no sirve para redactar** (un pedido de redacción ocupa unos 9.000) | La lectura sigue sólo con Gemini |
+| `OPENROUTER_API_KEY` (opcional, desde el 17/10/2026) | **Último respaldo** de la lectura con IA, la redacción, la Auditoría IA y la revisión del archivo, cuando Gemini y Groq fallaron o se agotaron. Nunca las voces ni las imágenes (`reels/openrouter.mjs`, regla 240) | Sólo modelos gratis (terminan en `:free`; el código se niega a pedir uno pago). Por defecto, en este orden: `google/gemma-4-31b-it:free`, `nvidia/nemotron-3-super-120b-a12b:free`, `nvidia/nemotron-3.5-super-vl:free`; se cambian con la variable `OPENROUTER_MODELOS` (separados por coma) sin tocar el código | La cuenta gratis da **20 pedidos por minuto y 50 por día** en los modelos `:free` (1.000 por día si alguna vez se compraron US$ 10 de crédito: no es el caso). El sistema se pone **45 por día** (`TOPE_DIARIO`; `OPENROUTER_TOPE_DIARIO` lo sube el día que se compren créditos) y reparte: la redacción puede gastar los 45, la lectura 40, la Auditoría IA 22 y la revisión del archivo 18. Cada modelo probado cuenta como un pedido. Se cuentan en `web/data/uso-ia.json` (clave `openrouter`) | Sin la clave, no se llama a nadie y nada cambia. Un saldo negativo da 402 (hasta en los gratis): se corta por esa corrida y el vigilante avisa. Los modelos gratis rotan sin aviso: **Probar las claves de Gemini** prueba cada uno y dice cuál ya no existe |
 
 **El orden de la redacción** (`reescribir`, `reels/reescritura.mjs`):
 
@@ -403,6 +404,24 @@ modelos distintos: no compiten entre sí). Las lee `reels/claves.mjs`.
 2. La de **redes**, sólo si la de redacción no está o contesta 429 ("sin cupo").
 3. La de **clasificación**, si las anteriores fallaron por el servicio (sin
    cupo, saturado, clave rechazada o sin crédito).
+4. **OpenRouter** (modelos gratis), sólo si existe `OPENROUTER_API_KEY` y las tres de
+   Gemini fallaron por el servicio. Lo que escribe pasa por el mismo verificador
+   y el mismo semáforo que lo de Gemini (un dato inventado se descarta igual);
+   el modelo queda anotado en `web/data/intentos-ia.json` (`modelo`), en el
+   registro de "Actualizar la web" y en `uso-ia.json`.
+
+**El orden de los demás** (siempre OpenRouter al final, y sólo si hay clave):
+la lectura con IA, Gemini → Groq → OpenRouter; la Auditoría IA de cada hora,
+Groq → OpenRouter; la revisión del archivo, Groq → Gemini (con su tope) →
+OpenRouter. Las voces y las imágenes no tienen respaldo en OpenRouter.
+
+**Crear la clave de OpenRouter (3 pasos, los hace una persona; nunca se pega en un chat):**
+
+1. Entrar a <https://openrouter.ai/keys> con `radarbalcarce@gmail.com` y crear una clave (*Create Key*; sin límite de crédito, no hace falta cargar plata).
+2. En GitHub, repositorio `radarbalcarce/radar-balcarce` → *Settings* → *Secrets and variables* → *Actions* → *New repository secret*: nombre `OPENROUTER_API_KEY`, valor la clave.
+3. Correr a mano el workflow **Probar las claves de Gemini**: en el resumen tiene que aparecer `[openrouter] clave: HTTP 200` y cada modelo con `HTTP 200`.
+
+Para sacarla de servicio, borrar el secreto: el código vuelve a no llamar a nadie.
 
 Una nota que falla por el servicio (por ejemplo, una clave rechazada: 401, 402
 o 403) no gasta sus intentos. El registro de "Actualizar la web" dice cuántos
@@ -414,7 +433,7 @@ tope del día.
 `redes/vigilar.mjs`): en cada vuelta (cada 3 horas desde el 17/10), sin gastar cupo, pide la lista de
 modelos con cada clave y, con la de redes, la ficha de cada voz propia (si
 existe y cuándo vence, según Google). Avisa si una clave contesta 400 a 403 o
-si una voz ya no existe o vence en menos de 30 días. "Sin cupo" (429) y los 5xx
+si una voz ya no existe o vence en menos de 30 días. Con `OPENROUTER_API_KEY` cargada también la mira (`GET https://openrouter.ai/api/v1/key`, que no gasta ninguno de los 50 pedidos del día); sin la variable, no pregunta ni avisa nada. "Sin cupo" (429) y los 5xx
 no se avisan: son de un rato y los maneja cada corrida.
 
 ## Vigilancia y avisos (mail primero, WhatsApp de respaldo)
@@ -436,7 +455,7 @@ no se avisan: son de un rato y los maneja cada corrida.
 | Volvió algo que se pidió sacar: "la vimos hace…", hasta qué hora está la farmacia, la fuente arriba de un título (reglas 1 a 3 de `10-REGLAS-Y-PRUEBAS`) | `regla-…` | alta |
 | Menos del 35 % de las notas de las últimas 24 horas tiene cuerpo (con 10 o más) | `pocos-cuerpos` | media |
 | La auditoría semanal no corre hace más de 10 días | `auditoria-vencida` | media |
-| Una clave de IA no anda (Google o Groq contestan 400 a 403) | `clave-<NOMBRE>` | alta |
+| Una clave de IA no anda (Google, Groq u OpenRouter contestan 400 a 403) | `clave-<NOMBRE>` | alta |
 | Una voz propia ya no existe | `voz-locutora`, `voz-locutor` | alta |
 | Faltan 30 días o menos para un vencimiento: el dominio o una voz (con la fecha de Google). El del token de cron-job.org se sacó el 15/10 | `vence-dominio`, `vence-voz-…` | alta en la última semana |
 | Redes: piezas fijas y contrato del día, duplicados, espejos (`07-REDES`) | `pieza-…`, `falta-…`, `duplicado-…`, `sin-espejo-…`, `redes-apagadas` | según el caso |
@@ -493,7 +512,8 @@ Qué workflow usa cada uno está en la tabla de los workflows.
 | Nombre | Tipo | Para qué |
 |---|---|---|
 | `META_TOKEN` | Secreto | Publicar y leer en Facebook e Instagram (`07-REDES`). No vence. Al regenerarlo, tildar todos los permisos de ahora **más** `read_insights` e `instagram_manage_insights` |
-| `GEMINI_API_KEY_REDACCION`, `GEMINI_API_KEY_REDES`, `GEMINI_API_KEY_CLASIFICACION`, `GROQ_API_KEY` | Secretos | Las claves de IA ("Las claves de IA") |
+| `GEMINI_API_KEY_REDACCION`, `GEMINI_API_KEY_REDES`, `GEMINI_API_KEY_CLASIFICACION`, `GROQ_API_KEY`, `OPENROUTER_API_KEY` (opcional) | Secretos | Las claves de IA ("Las claves de IA") |
+| `OPENROUTER_MODELOS`, `OPENROUTER_TOPE_DIARIO` (opcionales) | Variables | La lista de modelos gratis de OpenRouter en orden (separados por coma) y el tope de pedidos por día. Si no están, valen los de `reels/openrouter.mjs` |
 | `CLOUDFLARE_API_TOKEN` | Secreto | Subir el sitio y los Workers, escribir en R2 y KV; tiene también el permiso *Account · Account Analytics · Read*. Para poner la ruta del archivo permanente le falta «Zone → Workers Routes: Edit» |
 | `CLOUDFLARE_ACCOUNT_ID` | Secreto | La cuenta de Cloudflare: el sitio y las estadísticas |
 | `CLOUDFLARE_ANALYTICS_TOKEN` | Secreto | Leer las visitas de Web Analytics. Sin permiso, el resumen dice "falta permiso de Analytics" |
@@ -526,6 +546,7 @@ encabezado `Authorization` de sus trabajos) y, en la PC, el `.env`.
 |---|---|---|
 | Google AI Studio | Las claves de Gemini y sus cupos | `radarbalcarce@gmail.com` |
 | Groq (console.groq.com) | La clave de respaldo de la lectura | `radarbalcarce@gmail.com` |
+| OpenRouter (openrouter.ai) | La clave del último respaldo gratis (opcional) | `radarbalcarce@gmail.com` |
 | Google Search Console | Indexación; propiedad de dominio, con los dos sitemaps enviados (`SEO.md`) | `radarbalcarce@gmail.com` |
 | DonWeb | El registro del dominio (el DNS está en Cloudflare) | — |
 | Tailscale | **Para dar de baja**: era el túnel para entrar al panel de la PC desde afuera, y ese panel se retiró el 17/10/2026. Ya no lo usa nada | `radarbalcarce@gmail.com` |
@@ -684,7 +705,7 @@ límite de gasto en Google (`PENDIENTES.md`).
 | **La web no responde** | `web-caida` | Mirar Cloudflare (dash.cloudflare.com) |
 | **Choque al commitear** | "No se pudo subir la portada después de tres intentos" o "Conflicto fuera de web/data" | Suele arreglarse en la corrida siguiente; si se repite, alguien subió a mano algo que choca |
 | **Vigilancia no pudo guardar su estado** | Corrida roja en "Guardar lo avisado": "No se pudo guardar el estado de los avisos después de tres intentos" | La vuelta siguiente lo reintenta; puede repetir un aviso |
-| **Google o Groq rechazan una clave** (suspendida, borrada, sin crédito) | Aviso `clave-<NOMBRE>` (alta) con lo que contestó el servicio | Una persona crea otra clave (Google AI Studio o console.groq.com) y la pega en GitHub → Secrets. Si es la de redes y cambia de proyecto, crear de nuevo las voces (`11-OPERACION`) |
+| **Google, Groq u OpenRouter rechazan una clave** (suspendida, borrada, sin crédito) | Aviso `clave-<NOMBRE>` (alta) con lo que contestó el servicio | Una persona crea otra clave (Google AI Studio, console.groq.com u openrouter.ai/keys) y la pega en GitHub → Secrets. Si es la de redes y cambia de proyecto, crear de nuevo las voces (`11-OPERACION`) |
 | **La redacción se quedó sin cupo** | Registro: "tope del día" o pedidos a los respaldos; aviso `pocos-cuerpos`; crece "Esperando cuerpo" en el resumen | Esperar al día siguiente o escribir los cuerpos (panel del celular o `11-OPERACION`) |
 | **Se acabó el cupo de voz** | Registro de Redes: "se acabó el cupo del día (429)"; faltan piezas | Vuelve al día siguiente. No correr Piezas, Auditar voz ni Crear voces sin necesidad un día de redes |
 | **Una voz ya no existe o está por vencer** | Aviso `voz-…` o `vence-voz-…` | Crearla de nuevo (`11-OPERACION`) |

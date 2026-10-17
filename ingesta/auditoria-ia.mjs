@@ -10,6 +10,7 @@
 // Sin dependencias. Corre en el workflow "Auditoría IA" (redes/auditar-notas.mjs).
 
 import crypto from 'node:crypto';
+import { pedirJsonAOpenRouter } from '../reels/openrouter.mjs';
 
 /** Groq: gpt-oss-20b. 1.000 pedidos por día y 8.000 tokens por minuto (sondeo del 1/10, docs/05-FOTOS.md). */
 export const MODELO_AUDITORIA = 'openai/gpt-oss-20b';
@@ -174,30 +175,60 @@ export async function auditarLoteGemini(lote, { clave, fetchFn = fetch, modelo =
 }
 
 /**
+ * El mismo pedido, a los modelos gratis de OpenRouter (17/10/2026): el ÚLTIMO respaldo, cuando Groq (o Groq y Gemini, en la revisión
+ * del archivo) no contestó. Misma instrucción y misma lectura de la respuesta (las citas que no están en la nota se descartan).
+ * `tarea` decide cuánto del tope diario puede gastar: 'auditoria' (la de cada hora) o 'revision' (la del archivo). Lanza si falla
+ * (con `status`).
+ */
+export async function auditarLoteOpenRouter(lote, { clave, fetchFn = fetch, tarea = 'auditoria', modelos, ahora, archivoDeUso } = {}) {
+  const r = await pedirJsonAOpenRouter({
+    tarea, prompt: pedidoDeAuditoria(lote), clave, fetchFn, modelos, ahora, archivoDeUso, temperatura: 0, maxTokens: 4000,
+  });
+  const leido = leerHallazgos(r.texto, new Set(lote.map((n) => n.id)), new Map(lote.map((n) => [n.id, n])));
+  return { ...leido, modelo: r.modelo };
+}
+
+/**
  * Lee todas las notas de a lotes, con una espera entre un pedido y otro. Un lote que falla no frena a los demás y se
  * cuenta aparte (esas notas no se marcan como leídas: se vuelven a intentar en la próxima corrida).
  * Devuelve { hallazgos, leidas: [ids], fallas: [mensajes], descartados }.
  */
-export async function auditarNotas(notas, { clave, fetchFn = fetch, dormir = (s) => new Promise((r) => { setTimeout(r, s * 1000); }), porPedido = AUDITORIA.porPedido } = {}) {
+export async function auditarNotas(notas, {
+  clave, fetchFn = fetch, dormir = (s) => new Promise((r) => { setTimeout(r, s * 1000); }), porPedido = AUDITORIA.porPedido,
+  claveOpenRouter = null, archivoDeUso = null,
+} = {}) {
   const hallazgos = [];
   const leidas = [];
   const fallas = [];
   let descartados = 0;
+  const usadas = [];
   for (let i = 0; i < notas.length; i += porPedido) {
     if (i > 0) await dormir(AUDITORIA.esperaEntrePedidos);
     const lote = notas.slice(i, i + porPedido);
-    try {
-      const r = await auditarLote(lote, { clave, fetchFn });
+    let r = null;
+    let error = null;
+    if (clave) {
+      try { r = await auditarLote(lote, { clave, fetchFn }); } catch (e) { error = e; }
+    }
+    // Groq no contestó: último respaldo, los modelos gratis de OpenRouter (17/10/2026). Sin su clave, no se llama a nadie.
+    if (!r && claveOpenRouter) {
+      try {
+        r = await auditarLoteOpenRouter(lote, { clave: claveOpenRouter, fetchFn, tarea: 'auditoria', archivoDeUso });
+        usadas.push(r.modelo);
+        error = null;
+      } catch (e) { error = e; }
+    }
+    if (r) {
       hallazgos.push(...r.hallazgos);
       descartados += r.descartados;
       leidas.push(...lote.map((n) => n.id));
-    } catch (e) {
-      fallas.push(e.message);
+    } else {
+      fallas.push(error?.message ?? 'sin clave de IA');
       // Sin cupo: seguir pidiendo no sirve de nada.
-      if (e.status === 429 || e.status === 401 || e.status === 403) break;
+      if (error && (error.status === 429 || error.status === 401 || error.status === 403)) break;
     }
   }
-  return { hallazgos, leidas, fallas, descartados };
+  return { hallazgos, leidas, fallas, descartados, openrouter: usadas };
 }
 
 /**

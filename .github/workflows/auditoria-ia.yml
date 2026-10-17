@@ -44,6 +44,7 @@ jobs:
         run: node redes/auditar-notas.mjs ${{ github.event.inputs.simular == 'true' && '--simular' || '' }}
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           WHATSAPP_TELEFONO: ${{ secrets.WHATSAPP_TELEFONO }}
           WHATSAPP_APIKEY: ${{ secrets.WHATSAPP_APIKEY }}
           VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}

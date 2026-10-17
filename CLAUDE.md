@@ -132,7 +132,9 @@ la 211, las fotos con chicos de las fuentes de Balcarce, y la 212, la revisión 
   `GEMINI_API_KEY_REDACCION` (redactar), `GEMINI_API_KEY_REDES` (las voces; respaldo de la
   redacción sólo con 429), `GEMINI_API_KEY_CLASIFICACION` (lectura con IA y fotos; último
   respaldo de la redacción) y `GROQ_API_KEY` (respaldo de la lectura y las fotos; no
-  redacta); aparte, `TAVILY_API_KEY` (búsqueda, sólo Pistas). **Cupo de voz: 10 audios por
+  redacta); aparte, `TAVILY_API_KEY` (búsqueda, sólo Pistas). **Opcional, `OPENROUTER_API_KEY`**
+  (17/10, regla 240): el último respaldo de la lectura, la redacción y las auditorías con modelos `:free`
+  (50 pedidos por día, tope propio de 45, `reels/openrouter.mjs`); sin ella no se llama a nadie. **Cupo de voz: 10 audios por
   día**; si se acaba, la pieza no sale (nunca con otra voz). Una clave rechazada
   (401/402/403) no gasta los intentos de una nota. Texto: `gemini-flash-lite-latest`; voz:
   `gemini-3.8-flash-tts`, dos voces propias que **vencen el 29/09/2027** (`CRITERIO-REDES.md` § 6).

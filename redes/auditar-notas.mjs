@@ -11,7 +11,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { leerVariable } from '../reels/claves.mjs';
+import { leerVariable, claveOpenRouter as leerClaveOpenRouter } from '../reels/claves.mjs';
 import { cerrar, leerLlaves } from '../panel/cifrado.mjs';
 import { avisar } from './avisar-por-mail.mjs';
 import {
@@ -31,11 +31,12 @@ const leerJson = (f, defecto) => { try { return JSON.parse(fs.readFileSync(f, 'u
  */
 export async function correrAuditoria({
   portada = { notas: [] }, estado = {}, llaves = [], clave, fetchFn = fetch, dormir, ahora = new Date(), corregir = true,
+  claveOpenRouter = null, archivoDeUso = null,
 } = {}) {
   const notas = portada.notas ?? [];
   const revisadas = estado.revisadas ?? {};
   const paraLeer = notasParaAuditar(notas, { revisadas, ahora: ahora.getTime() });
-  const leido = paraLeer.length ? await auditarNotas(paraLeer, { clave, fetchFn, dormir }) : { hallazgos: [], leidas: [], fallas: [], descartados: 0 };
+  const leido = paraLeer.length ? await auditarNotas(paraLeer, { clave, fetchFn, dormir, claveOpenRouter, archivoDeUso }) : { hallazgos: [], leidas: [], fallas: [], descartados: 0 };
   const { leidas, fallas, descartados } = leido;
   // Lo mecánico se corrige solo (ETAPA 2) y sale de la lista de avisos: queda anotado aparte, en lo corregido.
   const porId = new Map(paraLeer.map((n) => [n.id, n]));
@@ -88,6 +89,7 @@ export async function correrAuditoria({
     cambios,
     notasLeidas: paraLeer,
     leidas,
+    openrouter: leido.openrouter ?? [],
     fallas,
     descartados,
     texto: resumenParaWhatsApp(hallazgos, paraLeer),
@@ -97,12 +99,14 @@ export async function correrAuditoria({
 async function main() {
   const simular = process.argv.includes('--simular');
   const clave = leerVariable('GROQ_API_KEY');
-  if (!clave) { console.log('Sin GROQ_API_KEY: no se audita.'); return; }
+  // Groq primero; los modelos gratis de OpenRouter, sólo de último respaldo (17/10/2026). Sin ninguna de las dos, no se audita.
+  const claveOpenRouter = leerClaveOpenRouter();
+  if (!clave && !claveOpenRouter) { console.log('Sin GROQ_API_KEY: no se audita.'); return; }
   const portada = leerJson(path.join(RAIZ, 'web', 'data', 'portada.json'), { notas: [] });
   const estado = leerJson(ARCHIVO, {});
   const llaves = leerLlaves(leerJson(path.join(RAIZ, 'web', 'data', 'celular-llaves.json'), {}));
-  const r = await correrAuditoria({ portada, estado, llaves, clave, corregir: !process.env.AUDITORIA_SIN_CORREGIR });
-  console.log(`Auditoría: ${r.leidas.length} notas leídas, ${r.hallazgos.length} hallazgos${r.cambios.length ? `, ${r.cambios.length} corregidos solos` : ''}${r.descartados ? ` (${r.descartados} descartados: la cita no estaba en la nota)` : ''}${r.fallas.length ? `, ${r.fallas.length} pedidos fallaron (${[...new Set(r.fallas)].join('; ')})` : ''}.`);
+  const r = await correrAuditoria({ portada, estado, llaves, clave, claveOpenRouter, corregir: !process.env.AUDITORIA_SIN_CORREGIR });
+  console.log(`Auditoría: ${r.leidas.length} notas leídas, ${r.hallazgos.length} hallazgos${r.cambios.length ? `, ${r.cambios.length} corregidos solos` : ''}${r.descartados ? ` (${r.descartados} descartados: la cita no estaba en la nota)` : ''}${r.fallas.length ? `, ${r.fallas.length} pedidos fallaron (${[...new Set(r.fallas)].join('; ')})` : ''}${r.openrouter?.length ? `, ${r.openrouter.length} pedidos con OpenRouter de respaldo (${[...new Set(r.openrouter)].join(', ')})` : ''}.`);
   for (const h of r.hallazgos) console.log(`  [${h.gravedad}] ${h.tipo}: ${h.detalle}`);
   for (const c of r.cambios) console.log(`  corregido (${c.campo}): "${c.antes}" → "${c.despues}"`);
   if (simular) return;

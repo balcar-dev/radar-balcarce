@@ -16,7 +16,8 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { claveClasificacion, claveGroq, leerVariable, MODELO_DE_TEXTO } from '../reels/claves.mjs';
+import { claveClasificacion, claveGroq, claveOpenRouter, leerVariable, MODELO_DE_TEXTO } from '../reels/claves.mjs';
+import { pedirJsonAOpenRouter } from '../reels/openrouter.mjs';
 import { fichaDeFuente, FUENTES, FUENTES_NACIONALES, CONEXION_ARGENTINA, PALABRAS_LOCALES, PALABRAS_ZONA, nombraLocalidadDudosa } from './fuentes.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
 import { diaAR, minutoDelDiaAR } from './zona.mjs';
@@ -316,7 +317,15 @@ export async function leerGrupoGroq(notas, { clave, fetchFn = fetch, modelo = MO
     throw error;
   }
   const j = await res.json();
-  const texto = j.choices?.[0]?.message?.content ?? '';
+  return fichasDeTexto(j.choices?.[0]?.message?.content ?? '', notas, { ia: 'groq' });
+}
+
+/**
+ * Las fichas válidas que trae el texto de una respuesta tipo OpenAI (Groq u OpenRouter): { id: ficha }. Se anota quién contestó
+ * (`ia`, y `modelo` si se sabe; auditoría 2.0, 04 § 4): sin esto no se sabe cuántas veces se usa el respaldo ni con qué.
+ * Lanza si el texto no es JSON.
+ */
+function fichasDeTexto(texto, notas, marca) {
   let obj;
   try { obj = JSON.parse(texto); } catch { throw new Error('la respuesta no es JSON'); }
   // Por las dudas de que conteste una lista sola en vez del objeto pedido.
@@ -326,10 +335,24 @@ export async function leerGrupoGroq(notas, { clave, fetchFn = fetch, modelo = MO
   for (const cruda of lista) {
     const f = fichaDeGroq(cruda);
     const v = fichaValida(f);
-    // Se anota quién contestó (auditoría 2.0, 04 § 4): sin esto no se sabe cuántas veces se usa el respaldo.
-    if (v && pedidos.has(f.id)) fichas[f.id] = { ...v, ia: 'groq' };
+    if (v && pedidos.has(f.id)) fichas[f.id] = { ...v, ...marca };
   }
   return fichas;
+}
+
+/**
+ * Igual que leerGrupoGroq, con OpenRouter (17/10/2026): el ÚLTIMO respaldo, con modelos gratis (reels/openrouter.mjs), sólo si
+ * Gemini y Groq fallaron. Mismo prompt, misma forma contada en palabras y la misma validación (fichaValida): una ficha mal formada
+ * se descarta, nunca se arregla. La ficha queda marcada con `ia: 'openrouter'` y el `modelo` que la escribió. Lanza si falla
+ * (con `status`).
+ */
+export async function leerGrupoOpenRouter(notas, { clave, fetchFn = fetch, modelos, ahora, archivoDeUso } = {}) {
+  const instruccion = `${pedidoPara(notas)}\n\nDevolvé un objeto JSON con esta forma exacta y nada más, con una ficha por nota, `
+    + `estos nombres de campo tal cual y, en los que tienen opciones, sólo uno de esos valores:\n${formaDeLaFicha()}`;
+  const r = await pedirJsonAOpenRouter({
+    tarea: 'lectura', prompt: instruccion, clave, fetchFn, modelos, ahora, archivoDeUso, temperatura: 0, maxTokens: 6000,
+  });
+  return fichasDeTexto(r.texto, notas, { ia: 'openrouter', modelo: r.modelo });
 }
 
 /** Las fichas guardadas, sin las de más de `diasDeFichas`. */
@@ -347,13 +370,14 @@ export function podarFichas(guardado = {}, { ahora = Date.now(), dias = LECTURA.
  */
 export async function leerNotasNuevas(notas, {
   guardado = {}, fetchFn = fetch, ahora = new Date(), clave = claveClasificacion(), claveRespaldo = claveGroq(), registro = () => {},
+  claveOpenRouterDeRespaldo = claveOpenRouter(),
 } = {}) {
   const dia = diaAR(ahora);
   let archivo = podarFichas(guardado, { ahora: ahora.getTime() });
   if (archivo.dia !== dia) archivo = { ...archivo, dia, pedidosHoy: 0 };
   archivo.pedidosHoy ??= 0;
   const cuenta = {
-    pedidos: 0, nuevas: 0, fallas: 0, sinClave: !clave, groq: 0,
+    pedidos: 0, nuevas: 0, fallas: 0, sinClave: !clave, groq: 0, openrouter: 0,
   };
   if (!clave) return { archivo, cuenta };
 
@@ -382,6 +406,17 @@ export async function leerNotasNuevas(notas, {
         error = null;
       } catch (e2) {
         error = e2;
+      }
+    }
+    // Gemini y Groq fallaron: último respaldo, los modelos gratis de OpenRouter (17/10/2026). Sin su clave, no se llama a nadie.
+    if (!nuevas && claveOpenRouterDeRespaldo) {
+      try {
+        nuevas = await leerGrupoOpenRouter(grupo, { clave: claveOpenRouterDeRespaldo, fetchFn, ahora });
+        cuenta.openrouter += 1;
+        registro(`  lectura con IA: un pedido salió con OpenRouter (${Object.values(nuevas)[0]?.modelo ?? 'modelo gratis'})`);
+        error = null;
+      } catch (e3) {
+        error = e3;
       }
     }
     if (nuevas) {

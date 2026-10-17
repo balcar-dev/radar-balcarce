@@ -49,7 +49,7 @@ import { porQueNoEsNota } from '../../ingesta/no-es-nota.mjs';
 import { arreglarEscritura } from '../../ingesta/verificar.mjs';
 import { compararNotas, huella } from '../../ingesta/repetidas-publicadas.mjs';
 import {
-  auditarLote, auditarLoteGemini, cambioMecanico, conCambiosGuardados, vecesComoPalabra, AUDITORIA, TIPOS,
+  auditarLote, auditarLoteGemini, auditarLoteOpenRouter, cambioMecanico, conCambiosGuardados, vecesComoPalabra, AUDITORIA, TIPOS,
 } from '../../ingesta/auditoria-ia.mjs';
 import { revisarUnaFoto, anioDeLaFoto, nombraALaPersona, ANTIGUEDAD_MAXIMA_WIKIMEDIA, sinConsulta } from '../../ingesta/fotos.mjs';
 import { cerrar, leerLlaves } from '../../panel/cifrado.mjs';
@@ -456,7 +456,7 @@ const comoSeLee = (n, cambios) => conCambiosDeLaAuditoria(n, cambios);
  */
 export async function revisarTanda({
   datos, estado = estadoVacio(), ahora = new Date(), claves = {}, fetchFn = fetch, dormir = dormirDe, llaves = [], leerFoto = () => null,
-  registro = () => {}, criterio = REVISION,
+  registro = () => {}, criterio = REVISION, archivoDeUso = null,
 } = {}) {
   const notas = notasConPagina(datos);
   const faltan = pendientes(notas, estado, criterio);
@@ -506,6 +506,13 @@ export async function revisarTanda({
     }
     if (!leido && claves.gemini && geminiQueda() > 0) {
       try { uso.gemini += 1; leido = await auditarLoteGemini(lote, { clave: claves.gemini, fetchFn }); } catch (e) { fallas.push(String(e.message ?? e).slice(0, 120)); }
+    }
+    // Último respaldo (17/10/2026): los modelos gratis de OpenRouter, con su propio tope diario (reels/openrouter.mjs). Sin su clave, nada.
+    if (!leido && claves.openrouter) {
+      try {
+        uso.openrouter = (uso.openrouter ?? 0) + 1;
+        leido = await auditarLoteOpenRouter(lote, { clave: claves.openrouter, fetchFn, tarea: 'revision', ahora, archivoDeUso });
+      } catch (e) { fallas.push(String(e.message ?? e).slice(0, 120)); }
     }
     for (const nota of lote) {
       const r = resultados.find((x) => x.id === nota.id);
@@ -824,7 +831,7 @@ async function principal() {
     const avisarSalida = (hay) => { if (process.env.GITHUB_OUTPUT) { try { fs.appendFileSync(process.env.GITHUB_OUTPUT, `hay_tanda=${hay ? 1 : 0}\n`); } catch { /* no frena */ } } };
     if (no) { console.log(`Revisión del archivo: no corre (${no}).`); avisarSalida(false); return; }
     const { leerVariable } = await import('../../reels/claves.mjs');
-    const claves = { groq: leerVariable('GROQ_API_KEY'), gemini: leerVariable('GEMINI_API_KEY_CLASIFICACION') };
+    const claves = { groq: leerVariable('GROQ_API_KEY'), gemini: leerVariable('GEMINI_API_KEY_CLASIFICACION'), openrouter: leerVariable('OPENROUTER_API_KEY') };
     const llaves = leerLlaves(leerJson(RUTAS.llaves, {}));
     const { tanda, graves, faltaban } = await revisarTanda({
       datos: leerDatos(), estado, ahora, claves, llaves, leerFoto: (a) => leerFotoDelSitio(a), registro: console.log,
