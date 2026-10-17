@@ -4179,28 +4179,6 @@
    "metricas": {}
   },
   {
-   "clave": "facebook/historia/1702417828556313",
-   "red": "facebook",
-   "parte": "historia",
-   "pieza": "clima-noche",
-   "dia": "2026-10-13",
-   "cuando": "2026-10-13T23:06:36.626Z",
-   "medida": "2026-10-14T23:30:19.100Z",
-   "metricas": {
-    "total_video_views": 0
-   }
-  },
-  {
-   "clave": "facebook/reel/1795205285020873",
-   "red": "facebook",
-   "parte": "reel",
-   "pieza": "clima-noche",
-   "dia": "2026-10-13",
-   "cuando": "2026-10-13T23:07:03.348Z",
-   "medida": "2026-10-14T23:30:19.100Z",
-   "metricas": {}
-  },
-  {
    "clave": "instagram/reel/18356101156170186",
    "red": "instagram",
    "parte": "reel",
@@ -4216,28 +4194,6 @@
     "shares": 0,
     "saved": 0,
     "total_interactions": 0
-   }
-  },
-  {
-   "clave": "facebook/reel/1659290602278152",
-   "red": "facebook",
-   "parte": "reel",
-   "pieza": "podcast",
-   "dia": "2026-10-13",
-   "cuando": "2026-10-14T00:06:46.624Z",
-   "medida": "2026-10-15T00:30:18.287Z",
-   "metricas": {}
-  },
-  {
-   "clave": "facebook/historia/2203995860550331",
-   "red": "facebook",
-   "parte": "historia",
-   "pieza": "podcast",
-   "dia": "2026-10-13",
-   "cuando": "2026-10-14T00:07:21.125Z",
-   "medida": "2026-10-15T00:30:18.287Z",
-   "metricas": {
-    "total_video_views": 0
    }
   },
   {
@@ -4278,28 +4234,6 @@
    "dia": "2026-10-14",
    "cuando": "2026-10-14T18:07:10.729Z",
    "medida": "2026-10-15T06:30:20.012Z",
-   "metricas": {}
-  },
-  {
-   "clave": "facebook/historia/1445093294495567",
-   "red": "facebook",
-   "parte": "historia",
-   "pieza": "clima-manana",
-   "dia": "2026-10-14",
-   "cuando": "2026-10-14T10:06:12.739Z",
-   "medida": "2026-10-15T10:30:18.220Z",
-   "metricas": {
-    "total_video_views": 0
-   }
-  },
-  {
-   "clave": "facebook/reel/4123247081139224",
-   "red": "facebook",
-   "parte": "reel",
-   "pieza": "clima-manana",
-   "dia": "2026-10-14",
-   "cuando": "2026-10-14T10:06:20.673Z",
-   "medida": "2026-10-15T10:30:18.220Z",
    "metricas": {}
   },
   {
@@ -4373,28 +4307,6 @@
    }
   },
   {
-   "clave": "facebook/reel/1089305360617839",
-   "red": "facebook",
-   "parte": "reel",
-   "pieza": "efemeride",
-   "dia": "2026-10-14",
-   "cuando": "2026-10-14T12:06:01.149Z",
-   "medida": "2026-10-15T12:30:21.939Z",
-   "metricas": {}
-  },
-  {
-   "clave": "facebook/historia/1099037396216642",
-   "red": "facebook",
-   "parte": "historia",
-   "pieza": "efemeride",
-   "dia": "2026-10-14",
-   "cuando": "2026-10-14T12:06:27.664Z",
-   "medida": "2026-10-15T12:30:21.939Z",
-   "metricas": {
-    "total_video_views": 0
-   }
-  },
-  {
    "clave": "facebook/posteo/1254237411116171_122111572743495512",
    "red": "facebook",
    "parte": "posteo",
@@ -4430,28 +4342,6 @@
     "shares": 0,
     "saved": 0,
     "total_interactions": 0
-   }
-  },
-  {
-   "clave": "facebook/reel/2251933415755282",
-   "red": "facebook",
-   "parte": "reel",
-   "pieza": "noticia1",
-   "dia": "2026-10-14",
-   "cuando": "2026-10-14T13:09:16.365Z",
-   "medida": "2026-10-15T13:30:20.584Z",
-   "metricas": {}
-  },
-  {
-   "clave": "facebook/historia/3581001558745289",
-   "red": "facebook",
-   "parte": "historia",
-   "pieza": "noticia1",
-   "dia": "2026-10-14",
-   "cuando": "2026-10-14T13:10:08.681Z",
-   "medida": "2026-10-15T13:30:20.584Z",
-   "metricas": {
-    "total_video_views": 0
    }
   },
   {
@@ -4502,28 +4392,6 @@
     "shares": 0,
     "saved": 0,
     "total_interactions": 0
-   }
-  },
-  {
-   "clave": "facebook/reel/1411511103898015",
-   "red": "facebook",
-   "parte": "reel",
-   "pieza": "participa-reclamos",
-   "dia": "2026-10-14",
-   "cuando": "2026-10-14T15:06:51.628Z",
-   "medida": "2026-10-15T15:32:20.745Z",
-   "metricas": {}
-  },
-  {
-   "clave": "facebook/historia/1620392242922629",
-   "red": "facebook",
-   "parte": "historia",
-   "pieza": "participa-reclamos",
-   "dia": "2026-10-14",
-   "cuando": "2026-10-14T15:07:32.213Z",
-   "medida": "2026-10-15T15:32:20.745Z",
-   "metricas": {
-    "total_video_views": 0
    }
   },
   {
@@ -6233,6 +6101,180 @@
     "post_video_social_actions": 0,
     "post_video_likes_by_reaction_type": 1
    }
+  },
+  {
+   "clave": "facebook/historia/1702417828556313",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "clima-noche",
+   "dia": "2026-10-13",
+   "cuando": "2026-10-13T23:06:36.626Z",
+   "medida": "2026-10-17T15:00:45.250Z",
+   "v": 2,
+   "metricas": {},
+   "sinPosteo": true
+  },
+  {
+   "clave": "facebook/reel/1795205285020873",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "clima-noche",
+   "dia": "2026-10-13",
+   "cuando": "2026-10-13T23:07:03.348Z",
+   "medida": "2026-10-17T15:00:45.250Z",
+   "v": 2,
+   "metricas": {
+    "blue_reels_play_count": 11,
+    "fb_reels_total_plays": 12,
+    "post_video_avg_time_watched": 5637,
+    "post_video_social_actions": 0,
+    "post_video_likes_by_reaction_type": 0
+   }
+  },
+  {
+   "clave": "facebook/reel/1659290602278152",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "podcast",
+   "dia": "2026-10-13",
+   "cuando": "2026-10-14T00:06:46.624Z",
+   "medida": "2026-10-17T15:00:45.250Z",
+   "v": 2,
+   "metricas": {
+    "blue_reels_play_count": 3,
+    "fb_reels_total_plays": 3,
+    "post_video_avg_time_watched": 1392,
+    "post_video_social_actions": 0,
+    "post_video_likes_by_reaction_type": 0
+   }
+  },
+  {
+   "clave": "facebook/historia/2203995860550331",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "podcast",
+   "dia": "2026-10-13",
+   "cuando": "2026-10-14T00:07:21.125Z",
+   "medida": "2026-10-17T15:00:45.250Z",
+   "v": 2,
+   "metricas": {},
+   "sinPosteo": true
+  },
+  {
+   "clave": "facebook/historia/1445093294495567",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "clima-manana",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T10:06:12.739Z",
+   "medida": "2026-10-17T15:00:45.250Z",
+   "v": 2,
+   "metricas": {},
+   "sinPosteo": true
+  },
+  {
+   "clave": "facebook/reel/4123247081139224",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "clima-manana",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T10:06:20.673Z",
+   "medida": "2026-10-17T15:00:45.250Z",
+   "v": 2,
+   "metricas": {
+    "blue_reels_play_count": 2686,
+    "fb_reels_total_plays": 3008,
+    "post_video_avg_time_watched": 4708,
+    "post_video_social_actions": 1,
+    "post_video_likes_by_reaction_type": 9
+   }
+  },
+  {
+   "clave": "facebook/reel/1089305360617839",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "efemeride",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T12:06:01.149Z",
+   "medida": "2026-10-17T15:00:45.250Z",
+   "v": 2,
+   "metricas": {
+    "blue_reels_play_count": 196,
+    "fb_reels_total_plays": 207,
+    "post_video_avg_time_watched": 2022,
+    "post_video_social_actions": 0,
+    "post_video_likes_by_reaction_type": 1
+   }
+  },
+  {
+   "clave": "facebook/historia/1099037396216642",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "efemeride",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T12:06:27.664Z",
+   "medida": "2026-10-17T15:00:45.250Z",
+   "v": 2,
+   "metricas": {},
+   "sinPosteo": true
+  },
+  {
+   "clave": "facebook/reel/2251933415755282",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "noticia1",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T13:09:16.365Z",
+   "medida": "2026-10-17T15:00:45.250Z",
+   "v": 2,
+   "metricas": {
+    "blue_reels_play_count": 288,
+    "fb_reels_total_plays": 300,
+    "post_video_avg_time_watched": 1853,
+    "post_video_social_actions": 0,
+    "post_video_likes_by_reaction_type": 0
+   }
+  },
+  {
+   "clave": "facebook/historia/3581001558745289",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "noticia1",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T13:10:08.681Z",
+   "medida": "2026-10-17T15:00:45.250Z",
+   "v": 2,
+   "metricas": {},
+   "sinPosteo": true
+  },
+  {
+   "clave": "facebook/reel/1411511103898015",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "participa-reclamos",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T15:06:51.628Z",
+   "medida": "2026-10-17T15:00:45.250Z",
+   "v": 2,
+   "metricas": {
+    "blue_reels_play_count": 196,
+    "fb_reels_total_plays": 208,
+    "post_video_avg_time_watched": 1329,
+    "post_video_social_actions": 0,
+    "post_video_likes_by_reaction_type": 0
+   }
+  },
+  {
+   "clave": "facebook/historia/1620392242922629",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "participa-reclamos",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T15:07:32.213Z",
+   "medida": "2026-10-17T15:00:45.250Z",
+   "v": 2,
+   "metricas": {},
+   "sinPosteo": true
   }
  ]
 }
