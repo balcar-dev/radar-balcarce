@@ -326,5 +326,21 @@
    "motivo": null,
    "razon": "Un cuaderno cerrado y una lapicera sobre una mesa de madera."
   }
+ },
+ "np0iti": {
+  "archivo": "fotos-notas/np0iti-ia.jpg",
+  "credito": "Ilustración generada con IA",
+  "medio": "Ilustración generada con IA",
+  "origen": "ia",
+  "cuando": "2026-10-17T18:22:24.714Z",
+  "titulo": "Ayala analiza el futuro de la Selección tras el retiro de Messi",
+  "modelo": "sdxl",
+  "prompt": "Candid photojournalistic close-up still life of worn leather football boots and a classic classic leather soccer ball resting on a bright green grass sideline under warm sunny daylight, vibrant colors, blurred stadium background with bokeh, no people, no text, no logos, 16:9 format, bright warm sunny daylight, vivid clean cheerful colors, blank paper, no writing, no letters, no signs, no logos, no people",
+  "automatica": true,
+  "control": {
+   "ok": true,
+   "motivo": null,
+   "razon": "Un balón de fútbol de cuero antiguo sobre el césped de un estadio vacío."
+  }
  }
 }
