@@ -1,6 +1,65 @@
 {
-  "generado": "2026-10-17T09:01:46.510Z",
+  "generado": "2026-10-17T09:32:01.173Z",
   "notas": [
+    {
+      "id": "ey70ps",
+      "titulo": "Evitan errores frecuentes al medir la presión arterial en el hogar",
+      "copete": "Especialistas detallan los cuidados necesarios al usar el tensiómetro en casa. Factores como la cafeína, la postura corporal o una vejiga llena pueden alterar el registro.",
+      "cuerpo": "Controlar la presión arterial en el hogar requiere evitar errores cotidianos que alteran los valores del tensiómetro. La Organización Mundial de la Salud calcula que 1.280 millones de adultos de 30 a 79 años viven con presión alta y casi la mitad lo desconoce.\n\nLa American Heart Association y Mayo Clinic aconsejan no consumir tabaco, cafeína ni alcohol y evitar la actividad física durante los treinta minutos previos a la medición. Harvard Health Publishing señala que vaciar la vejiga antes de sentarse evita variaciones, ya que una vejiga llena activa mecanismos que aumentan la presión.\n\nLa postura también influye en el resultado. Harvard Health Publishing advierte que cruzar las piernas, dejar los pies sin apoyo o tensar los músculos puede elevar la lectura hasta 25 milímetros de mercurio. La American Heart Association recomienda utilizar un monitor automático de brazo validado y colocar el brazalete sobre la piel a la altura del corazón.",
+      "guion": "Evitan errores frecuentes al medir la presión arterial en el hogar.",
+      "seccion": "Salud",
+      "medios": [
+        "Infobae"
+      ],
+      "enlace": "https://www.infobae.com/salud/2026/10/17/desde-tomar-cafe-a-cruzar-las-piernas-los-errores-frecuentes-que-pueden-alterar-una-medicion-de-la-presion-arterial/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-17T07:00:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-17T09:31:27.066Z",
+      "relevancia": 47,
+      "local": false,
+      "deFuenteEspecializada": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La preparación incluye evitar cafeína, alcohol, tabaco y ejercicio media hora antes.",
+        "Una vejiga llena puede alterar el flujo sanguíneo y modificar las cifras.",
+        "Cruzar las piernas o los pies suspendidos eleva el resultado de la medición.",
+        "Conviene usar un monitor automático de brazo validado y del tamaño correcto."
+      ],
+      "seSabe": [
+        "La OMS calcula que 1.280 millones de adultos tienen presión alta.",
+        "Evitar tabaco, cafeína, alcohol y ejercicio media hora antes mejora la precisión.",
+        "Una vejiga llena puede incrementar la presión arterial.",
+        "Cruzarlas piernas puede elevar la lectura entre 10 y 25 mm Hg."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Conocé los errores más comunes al medir la presión arterial en casa y cómo evitarlos para obtener registros confiables.",
+      "etiquetas": [
+        "salud",
+        "presión arterial",
+        "tensiómetro"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/salud/2026/10/17/desde-tomar-cafe-a-cruzar-las-piernas-los-errores-frecuentes-que-pueden-alterar-una-medicion-de-la-presion-arterial/",
+          "fecha": "2026-10-17T07:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los errores frecuentes y recomendaciones para medir la presión arterial en el hogar."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": null
+      },
+      "slug": "evitan-errores-frecuentes-al-medir-la-presion-arterial-en-el-hogar"
+    },
     {
       "id": "1b2v5n",
       "titulo": "El cansancio persistente tras dormir bien responde a un desgaste mental",
@@ -860,7 +919,7 @@
       "fecha": "2026-10-16T21:16:57.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T07:01:20.112Z",
-      "relevancia": 37,
+      "relevancia": 30,
       "local": false,
       "deFuenteEspecializada": true,
       "publicadaPor": null,
@@ -910,7 +969,9 @@
       "seccion": "Economía",
       "medios": [
         "Agencia DIB",
+        "El Día",
         "La Brújula 24",
+        "El Marplatense",
         "El Eco de Tandil"
       ],
       "enlace": "https://dib.com.ar/politica/kicillof-cerro-un-aumento-del-6-los-estatales-mientras-que-los-docentes-analizan-una-respuesta-n56570",
@@ -918,7 +979,7 @@
       "fecha": "2026-10-16T21:11:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T04:01:04.212Z",
-      "relevancia": 46,
+      "relevancia": 42,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1014,15 +1075,15 @@
         "Infobae",
         "Clarín",
         "TN (Todo Noticias)",
-        "Diario Popular",
-        "Ámbito"
+        "Ámbito",
+        "Diario Popular"
       ],
       "enlace": "https://www.clarin.com/economia/agosto-morosidad-familias-leve-baja-marco-128_0_ksSwdDjX91.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-16T21:04:58.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T22:31:13.685Z",
-      "relevancia": 55,
+      "relevancia": 48,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1824,8 +1885,8 @@
       },
       "slug": "enzo-fernandez-analiza-el-futuro-de-la-seleccion-sin-lionel-messi",
       "foto": {
-        "archivo": "fotos-notas/1ifa1zl-ia.jpg",
-        "credito": "Ilustración generada con IA"
+        "archivo": "fotos-notas/1ifa1zl.jpg",
+        "credito": "Foto: TyC Sports"
       }
     },
     {
@@ -1838,8 +1899,8 @@
       "medios": [
         "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
-        "Minuto Uno",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Minuto Uno"
       ],
       "enlace": "https://tn.com.ar/videos/show/2026/10/16/la-base-aerea-de-moron-despidio-a-fernando-confessore-con-un-emotivo-homenaje-extranaremos-siempre-su-presencia/",
       "teniaImagenLaFuente": true,
@@ -2452,11 +2513,11 @@
         "La Nación",
         "TN (Todo Noticias)",
         "Crónica",
-        "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
         "El Marplatense",
-        "Clarín"
+        "Clarín",
+        "Diario Popular"
       ],
       "enlace": "https://noticiasargentinas.com/politica/rematan-bienes-de-austral-construcciones-en-la-pagina-de-la-corte-suprema_a6ad262aef8e83a89472053e9",
       "teniaImagenLaFuente": true,
@@ -2652,8 +2713,8 @@
       "seccion": "Argentina",
       "medios": [
         "El Día",
-        "C5N",
-        "Infobae"
+        "Infobae",
+        "C5N"
       ],
       "enlace": "https://www.infobae.com/america/agencias/2026/10/16/panama-respaldara-al-argentino-rafael-grossi-para-la-secretaria-general-de-la-onu/",
       "teniaImagenLaFuente": false,
@@ -2745,11 +2806,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45102-roxana-la-mama-de-valentina-verlotta-saber-que-una-parte-mia-va-a-estar-en-ella-es-maravilloso/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-16T18:00:38.301Z",
       "sinFecha": true,
       "visto": "2026-10-16T18:00:38.301Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3453,14 +3514,14 @@
         "A24",
         "iProfesional",
         "Crónica",
-        "Diario Popular",
         "Noticias Argentinas (NA)",
-        "Ámbito",
-        "C5N",
-        "Minuto Uno",
-        "elDiarioAR",
         "Clarín",
-        "Radio Mitre"
+        "C5N",
+        "Ámbito",
+        "Minuto Uno",
+        "Radio Mitre",
+        "elDiarioAR",
+        "Diario Popular"
       ],
       "enlace": "https://www.clarin.com/politica/altos-funcionarios-trump-visitaran-argentina-avanzar-millonario-proyecto-infraestructura-ampliar-inversiones_0_NIwA6uB3Ms.html",
       "teniaImagenLaFuente": true,
@@ -3658,11 +3719,11 @@
       "guion": "La Justicia investiga el patrimonio de Claudio Tapia y pide informes a Suiza",
       "seccion": "Argentina",
       "medios": [
-        "Infobae",
         "La Nación",
         "TN (Todo Noticias)",
         "Perfil",
         "Crónica",
+        "Infobae",
         "iProfesional",
         "Clarín"
       ],
@@ -3673,6 +3734,11 @@
       "visto": "2026-10-16T15:38:51.233Z",
       "relevancia": 52,
       "local": false,
+      "muyContada": {
+        "medios": 6,
+        "porque": "5 medios en sus primeras 3 horas",
+        "desde": "2026-10-17T03:01:14.154Z"
+      },
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
@@ -4358,12 +4424,12 @@
         "Crónica",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "C5N",
-        "Minuto Uno",
         "Clarín",
         "0223 (Mar del Plata)",
         "Radio Mitre",
-        "La Nueva"
+        "La Nueva",
+        "Minuto Uno",
+        "C5N"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/16/el-choque-de-verstappen-al-argentino-perez-companc-en-el-gt-world-challenge-el-gesto-desde-el-auto-y-la-sancion-que-podria-sufrir-el-neerlandes/",
       "teniaImagenLaFuente": true,
@@ -4681,7 +4747,9 @@
       "guion": "Jennifer Lasa gana en el campeonato argentino de powerlifting",
       "seccion": "Deportes",
       "medios": [
-        "Municipalidad de Balcarce"
+        "Municipalidad de Balcarce",
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/16/nueva-victoria-de-lasa-en-powerlifting/",
       "teniaImagenLaFuente": true,
@@ -4692,6 +4760,7 @@
       "local": true,
       "oficial": true,
       "deUnMedioDeAca": true,
+      "muyContadaDeAca": 3,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
@@ -5049,11 +5118,11 @@
       "medios": [
         "A24",
         "Crónica",
-        "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
-        "La Capital (Rosario)",
-        "La Nueva"
+        "La Nueva",
+        "Diario Popular",
+        "La Capital (Rosario)"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-finaliza-su-viaje-en-estados-unidos-y-se-prepara-para-su-visita-a-espana_a6ad1525c88153cda2d050c06",
       "teniaImagenLaFuente": true,
@@ -5242,15 +5311,15 @@
       "medios": [
         "Noticias Argentinas (NA)",
         "La Verdad",
-        "Minuto Uno",
-        "La Nueva"
+        "La Nueva",
+        "Minuto Uno"
       ],
       "enlace": "https://noticiasargentinas.com/economia/el-banco-central-difunde-el-dato-de-morosidad-de-agosto_a6ad145f288153cda2d02fd2d",
       "teniaImagenLaFuente": false,
       "fecha": "2026-10-16T09:14:36.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T12:01:34.474Z",
-      "relevancia": 36,
+      "relevancia": 28,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -5532,9 +5601,9 @@
         "Radio Mitre",
         "0221",
         "Doble Amarilla",
-        "Los Andes (Mendoza)",
         "El Gráfico",
-        "El Día"
+        "El Día",
+        "Los Andes (Mendoza)"
       ],
       "enlace": "https://www.ole.com.ar/gimnasia-y-esgrima/nacho-fernandez-lloro-recordar-maradona_3_b0rU2ghW9N.html",
       "teniaImagenLaFuente": true,
@@ -5898,7 +5967,6 @@
         "iProfesional",
         "Crónica",
         "Canal 26",
-        "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
         "La Tecla",
@@ -5906,11 +5974,12 @@
         "Mi8 (Canal 8 Mar del Plata)",
         "El Eco de Tandil",
         "Ámbito",
-        "Los Andes (Mendoza)",
         "El Cronista",
         "La Nueva",
         "La Brújula 24",
-        "La Gaceta (Tucumán)"
+        "La Gaceta (Tucumán)",
+        "Diario Popular",
+        "Los Andes (Mendoza)"
       ],
       "enlace": "https://noticiasargentinas.com/economia/la-inflacion-mayorista-fue-de-3-2--en-septiembre-y-acumulo-una-suba-de-29-2--en-doce-meses_a6ad2741ff8e83a8947249edf",
       "teniaImagenLaFuente": true,
@@ -6043,14 +6112,14 @@
         "El Día",
         "Infobrisas (Radio Brisas)",
         "El Eco de Tandil",
+        "El Cronista",
         "Ámbito",
         "C5N",
-        "Los Andes (Mendoza)",
-        "El Cronista",
         "La Nueva",
         "La Gaceta (Tucumán)",
         "La Brújula 24",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Los Andes (Mendoza)"
       ],
       "enlace": "https://www.ambito.com/el-gobierno-logro-octubre-un-superavit-primario-14-billones-y-acumula-12-del-pbi-2026-n6334632",
       "teniaImagenLaFuente": true,
@@ -6118,8 +6187,8 @@
       "guion": "Ministro chileno critica a Javier Milei por la obra pública y luego se disculpa",
       "seccion": "Política",
       "medios": [
-        "La Nación",
         "Clarín",
+        "La Nación",
         "El Día",
         "La Gaceta (Tucumán)"
       ],
@@ -6128,7 +6197,7 @@
       "fecha": "2026-10-16T00:00:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T01:31:12.973Z",
-      "relevancia": 44,
+      "relevancia": 40,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -6216,11 +6285,11 @@
       "medios": [
         "Ámbito",
         "El Destape",
-        "La Capital (Rosario)",
-        "Los Andes (Mendoza)",
         "El Día",
         "A24",
         "Clarín",
+        "Los Andes (Mendoza)",
+        "La Capital (Rosario)",
         "La Gaceta (Tucumán)"
       ],
       "enlace": "https://www.eldia.com/espectaculos/lo-dejamos-aca-el-duelo-entre-darin-y-peretti-que-promete-incomodar-y-hacer-reir-espectaculos_1792130770",
@@ -6305,11 +6374,11 @@
       "seccion": "Argentina",
       "medios": [
         "El Destape",
-        "Ámbito",
-        "C5N",
-        "Minuto Uno",
-        "La Capital (Rosario)",
         "Infobae",
+        "Ámbito",
+        "Minuto Uno",
+        "C5N",
+        "La Capital (Rosario)",
         "La Gaceta (Tucumán)"
       ],
       "enlace": "https://www.infobae.com/sociedad/2026/10/16/la-anmat-prohibio-un-dispositivo-de-depilacion-definitiva-por-irregularidades-sanitarias/",
@@ -6512,13 +6581,13 @@
         "TN (Todo Noticias)",
         "A24",
         "El Marplatense",
+        "Clarín",
+        "La Nueva",
         "Ámbito",
         "C5N",
         "Minuto Uno",
-        "Los Andes (Mendoza)",
-        "Clarín",
-        "La Nueva",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Los Andes (Mendoza)"
       ],
       "enlace": "https://www.clarin.com/politica/milei-cerro-visita-washington-acto-antisemitismo-reunion-alto-funcionario-trump_0_KkhV5wypC4.html",
       "teniaImagenLaFuente": true,
@@ -6666,8 +6735,8 @@
       "guion": "Diego Santilli celebra la falta de quórum en Diputados para el DNU",
       "seccion": "Política",
       "medios": [
-        "elDiarioAR",
         "Radio Mitre",
+        "elDiarioAR",
         "Crónica"
       ],
       "enlace": "https://radiomitre.cienradios.com/videos/diego-santilli-celebro-que-diputados-no-haya-dado-quorum-para-el-rechazo-del-dnu-7023-habria-sido-algo-espantoso-para-la-sociedad-argentina/",
@@ -6675,7 +6744,7 @@
       "fecha": "2026-10-15T21:41:41.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T00:01:19.897Z",
-      "relevancia": 34,
+      "relevancia": 30,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -6829,105 +6898,6 @@
         "archivo": "fotos-notas/n6v2wu.jpg",
         "credito": "Foto: El Diario Balcarce"
       }
-    },
-    {
-      "id": "32f6mu",
-      "titulo": "Lando Norris califica a Franco Colapinto como un buen amigo",
-      "copete": "El piloto británico de Fórmula 1 bajó la tensión con su colega argentino en una transmisión en streaming, tras el choque que protagonizaron en el Gran Premio de Azerbaiyán.",
-      "cuerpo": "Lando Norris calificó a Franco Colapinto como un buen amigo durante una transmisión en streaming junto a Max Fewtrell, al recibir una figurita del piloto argentino. El gesto buscó bajar la tensión tras el incidente en la vuelta 36 del Gran Premio de Azerbaiyán, donde el representante de Alpine bloqueó los neumáticos y provocó un choque que involucró a su compañero Pierre Gasly y obligó al abandono de los tres corredores.\n\nTras aquella competencia, los comisarios aplicaron una penalización de diez segundos al argentino, traducida en una pérdida de cinco lugares en la grilla siguiente.",
-      "guion": "Lando Norris califica a Franco Colapinto como un buen amigo",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Infobae",
-        "TyC Sports",
-        "Olé",
-        "Radio Mitre",
-        "Bolavip Argentina"
-      ],
-      "enlace": "https://www.infobae.com/deportes/2026/10/15/el-guino-de-lando-norris-a-franco-colapinto-tras-el-incidente-en-el-gran-premio-de-azerbaiyan/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T21:05:10.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T03:01:31.781Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Lando Norris calificó a Franco Colapinto como un buen amigo en una transmisión.",
-        "El gesto bajó la tensión tras el choque múltiple en el Gran Premio de Azerbaiyán.",
-        "Colapinto había recibido una sanción deportiva por la maniobra en la vuelta 36.",
-        "El británico había pedido inicialmente una suspensión para el piloto de Alpine."
-      ],
-      "seSabe": [
-        "Lando Norris definió a Franco Colapinto como un buen amigo durante una transmisión en streaming.",
-        "El incidente ocurrió en la vuelta 36 del Gran Premio de Azerbaiyán.",
-        "El choque afectó a Pierre Gasly, a Colapinto y a Norris, quienes debieron abandonar.",
-        "Los comisarios sancionaron al piloto argentino con una pérdida de cinco posiciones en la grilla.",
-        "El británico había pedido una suspensión de al menos una fecha tras la competencia."
-      ],
-      "textoRedes": "Lando Norris calificó a Franco Colapinto como un buen amigo durante una transmisión en streaming y bajó la tensión tras el incidente que protagonizaron en el Gran Premio de Azerbaiyán de Fórmula 1.",
-      "etiquetas": [
-        "Lando Norris",
-        "Franco Colapinto",
-        "Formula 1",
-        "Azerbaiyan"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/deportes/2026/10/15/el-guino-de-lando-norris-a-franco-colapinto-tras-el-incidente-en-el-gran-premio-de-azerbaiyan/",
-          "fecha": "2026-10-15T21:05:10.000Z",
-          "oficial": false,
-          "aporte": "Detalló el streaming con Max Fewtrell, los pedidos iniciales de suspensión de Norris y el contexto de las críticas en redes sociales."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/automovilismo/formula-1-lando-norris-franco-colapinto-gesto-buen-amigo-id766576.html",
-          "fecha": "2026-10-15T23:07:18.000Z",
-          "oficial": false,
-          "aporte": "Informó la reacción del campeón mundial y la sanción aplicada por los comisarios deportivos."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/el-inesperado-gesto-de-lando-norris-con-franco-colapinto-tras-el-incidente-en-el-gran-premio-de-azerbaiyan/",
-          "fecha": "2026-10-16T02:29:44.000Z",
-          "oficial": false,
-          "aporte": "Confirmó las declaraciones amigables del piloto de McLaren sobre el conductor de Alpine."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1vuh3vs",
-          "titulo": "Lando Norris le pide disculpas a Franco Colapinto tras Bakú",
-          "fecha": "2026-09-28T10:03:48.000Z",
-          "ruta": "/nota/lando-norris-le-pide-disculpas-a-franco-colapinto-tras-baku-1vuh3vs"
-        },
-        {
-          "id": "g2u3l1",
-          "titulo": "Flavio Briatore critica a Franco Colapinto tras el Gran Premio de Azerbaiyán",
-          "fecha": "2026-09-26T22:12:00.000Z",
-          "ruta": "/nota/flavio-briatore-critica-a-franco-colapinto-tras-el-gran-premio-de-g2u3l1"
-        },
-        {
-          "id": "xtbw5",
-          "titulo": "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán",
-          "fecha": "2026-09-25T19:13:53.000Z",
-          "ruta": "/nota/franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan-xtbw5"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "lando-norris-califica-a-franco-colapinto-como-un-buen-amigo",
-      "foto": {
-        "archivo": "fotos-notas/32f6mu.jpg",
-        "credito": "Foto: TyC Sports"
-      }
     }
   ],
   "secciones": [
@@ -6954,11 +6924,11 @@
     "ahora": {
       "temp": 7,
       "sensacion": 4,
-      "humedad": 88,
-      "viento": 15,
+      "humedad": 86,
+      "viento": 14,
       "rumbo": "S",
       "cielo": "Nublado",
-      "esDeDia": false
+      "esDeDia": true
     },
     "dias": [
       {

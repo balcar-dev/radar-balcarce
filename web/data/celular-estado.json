@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T09:01:46.510Z",
+ "generado": "2026-10-17T09:32:01.173Z",
  "portada": 79,
- "archivo": 1211,
+ "archivo": 1212,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-17T09:01:46.545Z",
+  "generado": "2026-10-17T09:32:01.209Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 51,
     "notas": [
      {
       "id": "rwxsr5",
@@ -113,9 +113,9 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1edq6ii",
-      "titulo": "Una vecina dona un riñón a su hija y transitan la recuperación",
-      "seccion": "Balcarce"
+      "id": "1e6e9wy",
+      "titulo": "Docentes y estatales bonaerenses discuten una nueva oferta salarial",
+      "seccion": "Economía"
      }
     ]
    },
@@ -126,19 +126,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 37,
-    "notas": [
-     {
-      "id": "1e6e9wy",
-      "titulo": "Docentes y estatales bonaerenses discuten una nueva oferta salarial",
-      "seccion": "Economía"
-     },
-     {
-      "id": "n6v2wu",
-      "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    },
    {
     "nombre": "podcast",
@@ -147,8 +136,19 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 40,
+    "notas": [
+     {
+      "id": "n6v2wu",
+      "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1edq6ii",
+      "titulo": "Una vecina dona un riñón a su hija y transitan la recuperación",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {

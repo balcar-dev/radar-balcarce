@@ -17685,14 +17685,28 @@
   "huella": "67b0089b99d9d6d2"
  },
  "1ifa1zl": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1ifa1zl.jpg",
+  "medio": "TyC Sports",
+  "credito": "Foto: TyC Sports",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Enzo Fernández analiza el futuro de la Selección sin Lionel Messi",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T03:31:20.114Z",
-  "intentos": 3,
-  "fuentes": 4,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.tycsports.com/seleccion-argentina/enzo-fernandez-a-corazon-abierto-la-seleccion-post-messi-las-cargadas-con-companeros-ingleses-y-su-amor-por-river-id766806.html",
+  "imagenOriginal": "https://media.tycsports.com/files/2026/03/29/936318/enzo-fernandez_1440x810.webp",
+  "razon": "Es la única foto que muestra claramente a Enzo Fernández solo, cumple con todos los requisitos y no tiene marcas de agua agregadas por el medio.",
+  "cuando": "2026-10-17T09:31:51.680Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Enzo Fernández con la camiseta de la Selección celebrando en la cancha."
+  },
+  "huella": "020c2e4646551931"
  },
  "1te62vo": {
   "intentado": true,
@@ -18127,6 +18141,15 @@
   "titulo": "El cansancio persistente tras dormir bien responde a un desgaste mental",
   "razon": "La única imagen disponible es una ilustración gráfica y no una fotografía real.",
   "cuando": "2026-10-17T08:01:41.126Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "ey70ps": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Evitan errores frecuentes al medir la presión arterial en el hogar",
+  "razon": "La mejor foto era la de Infobae, pero no se puede usar (es un flyer, un afiche o una captura de pantalla, no una foto), y ninguna de las otras sirve: no se elige ninguna.",
+  "cuando": "2026-10-17T09:31:51.680Z",
   "intentos": 1,
   "fuentes": 1
  }
