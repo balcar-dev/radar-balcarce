@@ -5,8 +5,8 @@
 # entregar directo, sin dejarlo en un sitio público.
 #
 # La voz sale de Gemini con el secreto GEMINI_API_KEY_REDES (la clave de redes,
-# separada de la que redacta las notas). Si Gemini falla, la pieza sale igual
-# con otra voz: no sale y el reloj la vuelve a pedir en la vuelta siguiente.
+# separada de la que redacta las notas). Si Gemini falla, la pieza no sale (nunca
+# con otra voz) y el reloj la vuelve a pedir en la vuelta siguiente.
 #
 # Publicar necesita el secreto META_TOKEN y que la variable REDES_ACTIVAS valga
 # "si". Sin esa variable sólo simula.
