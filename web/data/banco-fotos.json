@@ -18743,7 +18743,8 @@
    "corresponde": "si",
    "descripcion": "Personas transportando colchones en una lancha por la zona inundada"
   },
-  "huella": "66cca785ddcacae3"
+  "huella": "66cca785ddcacae3",
+  "ausenteDesde": "2026-10-17T22:02:00.842Z"
  },
  "4m5150": {
   "archivo": "fotos-notas/4m5150.jpg",
@@ -19257,7 +19258,8 @@
    "descripcion": "Retrato de Axel Kicillof sonriendo con camisa celeste y saco oscuro",
    "anio": 2024
   },
-  "huella": "70c8848804831717"
+  "huella": "70c8848804831717",
+  "ausenteDesde": "2026-10-17T22:02:00.842Z"
  },
  "hlnzhq": {
   "archivo": "fotos-notas/hlnzhq.jpg",
@@ -19317,7 +19319,8 @@
    },
    "dudosa": "la nota habla de chicos o de categorías juveniles"
   },
-  "huella": "f6744c7c9c8c4444"
+  "huella": "f6744c7c9c8c4444",
+  "ausenteDesde": "2026-10-17T22:02:00.842Z"
  },
  "r0lv7v": {
   "archivo": "fotos-notas/r0lv7v.jpg",
@@ -19544,6 +19547,91 @@
    },
    "dudosa": "la nota habla de chicos o de categorías juveniles"
   },
-  "huella": "4103870333538973"
+  "huella": "4103870333538973",
+  "ausenteDesde": "2026-10-17T22:02:00.842Z"
+ },
+ "1kx30ao": {
+  "archivo": "fotos-notas/1kx30ao.jpg",
+  "medio": "Puntonueve (FM 100.9)",
+  "credito": "Foto: Puntonueve (FM 100.9)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Peregrinación une la Parroquia Santa María con Los Pinos",
+  "enlace": "https://puntonueve.com.ar/fieles-caminaron-desde-balcarce-hasta-los-pinos-para-honrar-a-la-virgen-de-san-nicolas/",
+  "imagenOriginal": "https://puntonueve.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-17-at-12.47.42-e1792274384568.jpeg",
+  "razon": "Es la única foto disponible, cumple con todos los requisitos editoriales y muestra claramente la peregrinación.",
+  "cuando": "2026-10-17T22:01:37.138Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Misa al aire libre frente a una estructura vidriada durante la peregrinación."
+  },
+  "huella": "33f1f1738ba9fd59"
+ },
+ "hhlpca": {
+  "archivo": "fotos-notas/hhlpca.jpg",
+  "medio": "Olé",
+  "credito": "Foto: Olé",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "River visita a Belgrano de Córdoba por el Torneo Clausura",
+  "enlace": "https://www.ole.com.ar/river-plate/river-plate-lista-convocados-citados-belgrano-ponzio_0_L8gjxzxUkj.html",
+  "imagenOriginal": "https://www.ole.com.ar/images/2026/10/12/8KrtHHZdf_2000x1500__1.jpg",
+  "razon": "Es la única foto de acción del partido que corresponde a la nota, muestra claramente la jugada y no tiene marcas de agua, menores ni formato gráfico.",
+  "cuando": "2026-10-17T22:01:37.138Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Director técnico con indumentaria roja en el campo de juego",
+   "segunda": {
+    "proveedor": "groq",
+    "marca": false,
+    "menor": false,
+    "jovenes": false,
+    "deArchivo": true,
+    "grafica": false,
+    "stock": false,
+    "corresponde": "si",
+    "descripcion": "Entrenador de River Plate (probablemente Marcelo Gallardo) vistiendo la ropa de entrenamiento del club."
+   },
+   "dudosa": "la nota habla de chicos o de categorías juveniles"
+  },
+  "huella": "f720316b6a48f0b0"
+ },
+ "x83ds0": {
+  "archivo": "fotos-notas/x83ds0.jpg",
+  "medio": "El Destape",
+  "credito": "Foto: El Destape",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El papa León XIV recibe el alta médica y su visita a la Argentina sigue en duda",
+  "enlace": "https://www.eldestapeweb.com/internacionales/papa-leon-xiv-recibio-alta-medica-dejo-hospital-pasara-visita-argentina-20261017111446",
+  "imagenOriginal": "https://cdn.eldestapeweb.com/eldestape/102026/1792246148369.jpg?&cw=1600&ch=900",
+  "razon": "Es la única foto nítida, sin marcas añadidas, menor de edad ni recortes gráficos, que muestra directamente al Papa León XIV recibiendo el alta médica.",
+  "cuando": "2026-10-17T22:01:37.138Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "El Papa León XIV saludando al salir de recibir el alta médica."
+  },
+  "huella": "8f8f058d8d8fcdcd"
  }
 }

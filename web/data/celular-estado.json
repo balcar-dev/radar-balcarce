@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T21:32:00.630Z",
- "portada": 75,
+ "generado": "2026-10-17T22:02:00.853Z",
+ "portada": 73,
  "archivo": 1240,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-17T21:32:01.121Z",
+  "generado": "2026-10-17T22:02:01.047Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -43,7 +43,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-17T18:07:30.250Z"
    },
    {
@@ -63,7 +63,7 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -124,7 +124,7 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-17T18:07:30.250Z",
     "segundos": null,
     "notas": [
@@ -152,8 +152,19 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 31,
+    "notas": [
+     {
+      "id": "1kx30ao",
+      "titulo": "Peregrinación une la Parroquia Santa María con Los Pinos",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1kgatx3",
+      "titulo": "Virginia Aparicio presenta los resultados del proyecto SPRINT sobre plaguicidas",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
@@ -185,6 +196,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "1kx30ao",
+     "titulo": "Peregrinación une la Parroquia Santa María con Los Pinos",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
     {
      "id": "quke5a",
      "titulo": "Atlético de Madrid derrota al Espanyol con un tanto agónico",

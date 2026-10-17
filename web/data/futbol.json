@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-17T21:31:57.906Z",
+ "consultado": "2026-10-17T22:01:59.169Z",
  "equipos": [
   "9739",
   "3",
@@ -822,12 +822,12 @@
     "id": "401841621",
     "competencia": "liga",
     "inicio": "2026-10-17T20:30:00.000Z",
-    "estado": "entretiempo",
-    "minuto": "45'+2'",
+    "estado": "en-juego",
+    "minuto": "71'",
     "local": {
      "id": "9744",
      "nombre": "Independiente Rivadavia",
-     "goles": 1
+     "goles": 2
     },
     "visitante": {
      "id": "7767",
@@ -847,6 +847,12 @@
       "jugador": "Alan Barrionuevo",
       "minuto": "26'",
       "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "José Florentín",
+      "minuto": "52'",
+      "tipo": "gol"
      }
     ],
     "estadio": "Bautista Gargantini",
@@ -858,8 +864,8 @@
     "id": "401841619",
     "competencia": "liga",
     "inicio": "2026-10-17T20:30:00.000Z",
-    "estado": "entretiempo",
-    "minuto": "45'+2'",
+    "estado": "en-juego",
+    "minuto": "74'",
     "local": {
      "id": "7764",
      "nombre": "Platense",
@@ -1645,7 +1651,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-17T20:31:51.589Z",
+ "tablaCuando": "2026-10-17T22:01:59.169Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",
