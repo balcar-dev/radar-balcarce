@@ -37,6 +37,7 @@ dice cada uno). Lo que se pudo medir está medido; lo que no, está dicho.*
    si se indexa sólo lo de Balcarce, activar o no el MCP, y las páginas visibles que conviene
    sumar ("Quién escribe", correcciones públicas).
 10. **Trámites que son de ustedes** (con enlaces) en la parte 7; ninguno cuesta plata.
+11. **Ronda 2 (17/10/2026)**: mapa de noticias e índice, marcado completo, títulos de sección, velocidad medida, nota con "Publicado" y "Actualizado", `/hoy`, "Cómo trabajamos" y canales: parte 11.
 
 ---
 
@@ -495,6 +496,54 @@ Ninguno cuesta plata. Todos con la cuenta `radarbalcarce@gmail.com`.
   y la página de D6). Qué publicar es cosa de ustedes.
 
 ---
+
+## 11. Ronda 2 (17/10/2026): mapas, marcado, velocidad, nota, /hoy y canales
+
+*Pedido de Hernán: "mejorá todo lo que puedas, innová; cuando quede todo bien hacemos publicidad". Sin costo nuevo. Se hizo lo que no cambia la
+estructura visible (reglas 250 a 257); la portada nueva queda como vista previa para elegir (`docs/diseno/VISTA-PREVIA-PORTADA-2.html`).*
+
+### 11.1 Lo que se hizo
+
+| # | Qué | Dónde | Prueba |
+|---|---|---|---|
+| 1 | **Mapa de noticias** con `<news:news>` (publicación, idioma, fecha con zona, título): últimas 48 horas, hora real, sin `noindex`, hasta 1.000, más nuevas primero. **Índice de mapas** `/sitemap-index.xml`; `robots.txt` anuncia los tres. `sitemap.xml` NO se convirtió en índice: el vigilante de Cloudflare lee su `<lastmod>` | `web/lib/sitemap-noticias.js`, `web/app/sitemap-news.xml/`, `web/app/sitemap-index.xml/`, `web/lib/robots.js` | `sitemaps-noticias.test.mjs`; `revisar-seo.mjs` mira el compilado |
+| 1b | **IndexNow verificado**: la clave publicada, el aviso después de cada subida en los tres caminos (`actualizar.yml`, `cloudflare-deploy.yml`, el motor de Cloudflare) y nada con `noindex`. No se tocó | `redes/indexnow.mjs` | `indexnow.test.mjs` y la nueva |
+| 2 | **Datos estructurados**: `publisher` completo (nombre, dirección, logo 512) en cada `NewsArticle`; la foto de la nota, no la tarjeta del sitio, primera en el marcado de las notas archivadas; `CollectionPage` + `ItemList` en cada sección; `sameAs` con los canales si existen; `dateModified` sube con una corrección a mano. Ya estaban `headline`, `image`, `datePublished`, `author`, `description`, `isAccessibleForFree` y las migas | `web/lib/datos-estructurados.js`, `web/components/ficha.js` | `seo-fichas-17-10.test.mjs` |
+| 2b | **Títulos y descripciones de sección** (C9): "Salud en Balcarce: hospital y vacunas · Radar Balcarce" en vez de "Salud · Radar Balcarce", para las 14 secciones (Educación, Salud, Ciencia y Tecnología e IA incluidas); la descripción suma titulares enteros, nunca uno cortado | `tituloDeSeccion`, `descripcionDeSeccion` (`web/lib/datos.js`) | idem |
+| 2c | **Open Graph/Twitter con la imagen de cada nota**: la tarjeta propia (la de la portada y las de redes) y su foto detrás si mide 1200 px o más; las notas archivadas comparten su foto con el tamaño real (antes, la tarjeta del sitio, igual para todas); `article:tag` | `imagenesParaCompartir`, `web/app/nota/[id]/page.js` | idem; `revisar-seo.mjs` controla que la foto exista |
+| 3 | **Velocidad**: control del HTML compilado: toda imagen con ancho y alto, una sola prioritaria (`fetchpriority="high"`) y el resto `loading="lazy"`, ningún recurso de otro dominio, ninguna tipografía de Google, scripts `async`. Se arregló lo que faltaba (postales, destacada, logo de aviso). **WebP no**: cada copia suma archivos al tope de 20.000 de Cloudflare Pages; mejor cuando las fotos vivan en R2 | `web/lib/auditoria-html.js`, `web/scripts/revisar-seo.mjs` | `velocidad-html.test.mjs` (con el HTML de verdad si está compilado) |
+| 4 | **Nota**: "Publicado" y, si una persona la corrigió más de media hora después, "Actualizado" (la fecha de la nota no se mueve: regla de una sola fecha); **fuente original a la vista** con enlace; WhatsApp como **enlace común** (anda sin JavaScript, con la dirección canónica) y "Copiar enlace"; "Avisanos" de un error | `web/components/piezas.js`, `compartir.js`, `copiar-enlace.js`, `web/lib/tiempo.js`, `web/lib/archivo.js` | `nota-del-lector-17-10.test.mjs` |
+| 5 | **`/hoy`**: lo de Balcarce primero, lo más contado, farmacia de turno y agenda de hoy, con el día en el título y en la tarjeta; en el sitemap y el pie | `web/app/hoy/`, `web/lib/hoy.js` | `hoy.test.mjs` |
+| 7 | **Cómo trabajamos** completado en `/quienes-somos` y un camino claro de correcciones (el correo y el WhatsApp que ya existían) | `web/app/quienes-somos/page.js`, `web/app/contacto/page.js` | `como-trabajamos.test.mjs` |
+| 8 | **Canales** (WhatsApp, Telegram, Bluesky): sólo si se carga la variable `WHATSAPP_CANAL_URL`, `TELEGRAM_CANAL_URL` o `BLUESKY_URL` | `web/lib/canales.js`, `web/components/canales.js`, los workflows | `canales-del-medio.test.mjs` |
+
+### 11.2 Lo que se propone y no se hizo
+
+- **6. Etiquetas por barrio, calle y ruta.** Ya hay un mecanismo (`/tema/ranura`, `TEMAS` en `ingesta/fuentes.mjs`), pero: (a) está apagado (`MOSTRAR_TEMAS = false`)
+  y las páginas de tema no están en el sitemap a propósito (son finas); (b) sólo mira las notas de las últimas 36 horas, no el archivo; (c) no hay una lista cerrada de
+  barrios ni de calles (`ingesta/perfil-balcarce.md` nombra las localidades del partido y dos rutas); (d) lo que habría que sumar a `TEMAS` es de la selección editorial.
+  Notas con ese lugar en el título, la bajada o el cuerpo, en las 1.296 que tenía el repositorio el 17/10: Napaleofú 1, Ramos Otero 2, San Agustín 3 (ambigua con otros San
+  Agustín), Los Pinos 8 (ambigua), Laguna La Brava 3, Cerro El Triunfo 8, ruta 226 13, ruta 55 4, hospital 21, autódromo 105 (esas cuatro últimas ya son temas). *Qué hace falta*:
+  una lista cerrada de lugares aprobada por Hernán (con barrios y calles de verdad, y con la regla de las localidades ambiguas de la regla 179), que las páginas de tema lean
+  el archivo y no sólo la portada, un mínimo de 3 notas para generar la página, y decidir si se enlazan (cambio visible: se consulta). Con 1 o 2 notas por lugar hoy serían
+  páginas finas que Google puede tomar por contenido de poco valor (A1): se hace cuando haya volumen.
+- **Portada más visual**: dos propuestas en `docs/diseno/VISTA-PREVIA-PORTADA-2.html`, para elegir.
+- **Fotos en tres tamaños y WebP**: sólo cuando las fotos estén en R2 (`FOTOS_BASE`).
+- **Registro público de correcciones** (D6): sigue sin hacerse; la página dice que hoy no hay. Lo único que se ve es "Actualizado" en la nota corregida.
+
+### 11.3 Para decidir (Hernán)
+
+- **D9. ¿Va bien el compromiso de "Si no querés que usemos algo"?** La página dice que, si un medio o autor lo pide, se revisa y "si corresponde" se saca el contenido o se deja de usar la fuente. Es una promesa editorial: confirmar o cambiar el texto.
+- **D10. ¿"Actualizado" sólo por correcciones de una persona?** Hoy es así (no por una nueva versión de la fuente ni por arreglos de ortografía de la auditoría). Un cambio chico: una nota cuyo cuerpo escribió una persona horas después de aparecer puede mostrar "Actualizado".
+- **D11. Enlaces nuevos en el pie**: "Lo de hoy" y "Cómo trabajamos" (menores; se sacan con una línea).
+- **D12. ¿Un enlace a `/hoy` desde la portada?** No se hizo (la portada y el menú no se tocan sin vista previa).
+
+### 11.4 Trámites nuevos (de ustedes, sin costo)
+
+1. Search Console y Bing: cargar `https://radarbalcarce.com/sitemap-index.xml` (opcional: ya tienen los otros dos).
+2. Crear el canal de WhatsApp, y si quieren el de Telegram y la cuenta de Bluesky, y cargar la dirección en GitHub → Settings → Secrets and variables → Actions → **Variables**
+   (`WHATSAPP_CANAL_URL`, `TELEGRAM_CANAL_URL`, `BLUESKY_URL`); si el motor corre en Cloudflare, las mismas variables en su configuración. Sin variable no aparece nada.
+3. Google Publisher Center (D7): el mapa de noticias sólo cuenta si el sitio está aceptado en Noticias; mientras tanto no hace daño.
 
 ## 10. Fuentes consultadas (16/10/2026)
 

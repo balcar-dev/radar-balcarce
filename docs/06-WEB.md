@@ -532,7 +532,7 @@ Todas se generan al compilar, como archivos.
 | Dirección | Archivo | Qué muestra / de dónde sale |
 |---|---|---|
 | `/` | `app/page.js` | La tapa (ver arriba) |
-| `/nota/titular-ID` | `app/nota/[id]/page.js` | Título, bajada, **foto si la hay** (con el crédito en el epígrafe, nunca adentro de la imagen; en 16:9, y desde el 16/10 una foto que no es ancha se recorta **desde arriba**, `object-position: center 25%`; lo mismo en la destacada, las postales y las miniaturas; una ilustración de IA dice «Ilustración generada con IA»; si no hay nada, desde el 29/09, la placa de la sección con su dibujo), cuerpo (con enlaces si es propia), botones de las notas propias, el desplegable cerrado "Fuentes (N)" con la firma (`components/verificacion.js`), compartir, "Seguí leyendo" y la invitación a escribir. Se genera una página por **cada nota de la portada y del archivo** (`todasLasNotas`) |
+| `/nota/titular-ID` | `app/nota/[id]/page.js` | Título, bajada, **foto si la hay** (con el crédito en el epígrafe, nunca adentro de la imagen; en 16:9, y desde el 16/10 una foto que no es ancha se recorta **desde arriba**, `object-position: center 25%`; lo mismo en la destacada, las postales y las miniaturas; una ilustración de IA dice «Ilustración generada con IA»; si no hay nada, desde el 29/09, la placa de la sección con su dibujo), cuerpo (con enlaces si es propia), botones de las notas propias, la fecha como **"Publicado"** y, si una persona la corrigió después, **"Actualizado"** (`FechasDeLaNota`, regla 253), **la fuente original a la vista** (una línea "Fuente: medio · Leer la nota original ↗", regla 254), el desplegable cerrado "Fuentes (N)" con la firma (`components/verificacion.js`), compartir (**WhatsApp como enlace común** y "Copiar enlace", sin scripts de terceros), "Avisanos" de un error (regla 256), el cartel del canal de WhatsApp si está cargado (regla 257), "Seguí leyendo" y la invitación a escribir. Se genera una página por **cada nota de la portada y del archivo** (`todasLasNotas`) |
 | `/nota/titular-ID/opengraph-image` | `app/nota/[id]/opengraph-image/route.js` | La tarjeta apaisada para compartir (1200 × 630, con la foto del banco si hay) |
 | `/nota/titular-ID/instagram.png` | `app/nota/[id]/instagram.png/route.js` | La tarjeta vertical del espejo en Instagram (1080 × 1350). Lleva la foto del banco si la nota tiene una, y si no la placa sin foto (`FOTO_EN_INSTAGRAM = true` desde el 28/09, `web/lib/tarjeta-diseno.js`) |
 | `/nota/indice.json` | `app/nota/indice.json/route.js` | `{ id: "titular-id" }` de todas las notas con página, para el rescate de la 404 |
@@ -547,11 +547,13 @@ Todas se generan al compilar, como archivos.
 | `/farmacias` | `app/farmacias/page.js` | La de turno con "Llamar" y "Cómo llegar", y cómo sigue la semana |
 | `/dolar` | `app/dolar/page.js` | Todos los tipos de dólar, consultados al abrir la página |
 | `/util` | `app/util/page.js` | Los teléfonos útiles por categoría |
-| `/quienes-somos`, `/contacto`, `/politica-de-privacidad` | sus `page.js` | Páginas fijas |
+| `/hoy` | `app/hoy/page.js` (+ `opengraph-image.js`) y `lib/hoy.js` | **Lo de hoy en una sola dirección** para mandar por WhatsApp (17/10, regla 255): lo de Balcarce primero, "Lo más contado" (2 medios o más), la farmacia de turno y la agenda de hoy; con el día en el título ("Lo de hoy en Balcarce · sábado 17 de octubre") y en la tarjeta. Si hay pocas notas de hoy se completa con las últimas 24 horas y lo dice. Está en el sitemap y en el pie, no en el menú ni en la portada |
+| `/quienes-somos`, `/contacto`, `/politica-de-privacidad` | sus `page.js` | Páginas fijas. "Quiénes somos" es también **"Cómo trabajamos"** (resumimos lo de otros medios, la fuente siempre enlazada, la IA, qué espera a una persona, las fechas, cómo corregimos un error y cómo pedir que no usemos algo; regla 256). Los `id` de sus títulos (`quienes-somos`, `como-trabajamos`, `lo-que-no-hacemos`, `si-algo-esta-mal`, `como-corregimos`, `no-usar-algo`) los usan los datos estructurados: no se cambian |
 | `/feed.xml` | `app/feed.xml/route.js` | RSS con todas las notas vigentes |
 | `/sitemap.xml` | `app/sitemap.js` | Páginas fijas, secciones (con sus páginas), temas, notas vigentes, notas archivadas **con cuerpo** y eventos que vienen. Desde el 16/10 no lista ninguna nota con `noindex` (`noSeOfreceAGoogle`) y lleva la foto de cada nota de la portada (regla 177); unas 1.245 direcciones al 16/10 |
-| `/sitemap-news.xml` | `app/sitemap-news.xml/route.js` | Para Google Noticias: sólo notas con hora real de las últimas 48 horas |
-| `/robots.txt` | `app/robots.txt/route.js` y `lib/robots.js` | Permite todo menos `/panel/` en el dominio propio, con la política hacia las IA (`Content-Signal`, bots nombrados); fuera de él, pide no indexar |
+| `/sitemap-news.xml` | `app/sitemap-news.xml/route.js` y `lib/sitemap-noticias.js` | Para Google Noticias: sólo notas con hora real, sin `noindex`, de las últimas 48 horas, las más nuevas primero y hasta 1.000 (regla 250); cada una con publicación, idioma `es`, fecha con zona y título |
+| `/sitemap-index.xml` | `app/sitemap-index.xml/route.js` | El índice de mapas (17/10, regla 250): lista `/sitemap.xml` y `/sitemap-news.xml` con su fecha, para cargar una sola dirección en Search Console y Bing. `sitemap.xml` **no** se volvió índice: el vigilante de Cloudflare lee su `<lastmod>` |
+| `/robots.txt` | `app/robots.txt/route.js` y `lib/robots.js` | Anuncia los tres mapas (`sitemap-index.xml`, `sitemap.xml`, `sitemap-news.xml`). Permite todo menos `/panel/` en el dominio propio, con la política hacia las IA (`Content-Signal`, bots nombrados); fuera de él, pide no indexar |
 | `/agentes/ultimas.json`, `/agentes/indice.json`, `/agentes/servicios.json` | `app/agentes/*/route.js` y `lib/para-agentes.js` | Datos para programas y asistentes de IA (16/10): sólo lo que Google puede ver, sin el cuerpo, con fuentes, firma y cómo citar; `noindex` |
 | `/llms.txt` | `app/llms.txt/route.js` | Un resumen del sitio para sistemas de IA (mejorado el 16/10). No anuncia el servidor MCP mientras `MCP_URL` sea `null`; no hay `llms-full.txt` |
 | `/opengraph-image` | `app/opengraph-image.js` | La tarjeta del sitio |
@@ -739,6 +741,18 @@ El detalle y lo que falta está en `SEO.md` y, desde el 16/10, en
 - **Tarjetas para compartir** generadas al compilar (`web/lib/tarjeta.js` y
   `web/lib/tarjeta-diseno.js`, con las letras de `web/fuentes/`).
 - **Sitemaps** (`sitemap.xml` y `sitemap-news.xml`) y feed.
+- **La ronda de SEO y velocidad del 17/10** (reglas 250 a 252, `docs/seo/AUDITORIA-SEO-LLM.md`, parte 11):
+  el mapa de noticias y el índice de mapas; `publisher` completo (nombre, dirección y logo) en cada `NewsArticle`; `CollectionPage` con la
+  lista de notas en cada sección (`FichaDeSeccion`); títulos de sección que dicen qué son ("Salud en Balcarce: hospital y vacunas", `tituloDeSeccion`,
+  `web/lib/datos.js`) y descripciones que nunca cortan un titular (`descripcionDeSeccion`); las notas archivadas, que no tienen tarjeta, comparten
+  su **foto** con el tamaño real en vez de la tarjeta del sitio (`imagenesParaCompartir`); y un control de velocidad del HTML compilado
+  (`web/lib/auditoria-html.js`, corre en `revisar-seo.mjs`): toda imagen con ancho y alto, una sola con `fetchpriority="high"` y todas las demás
+  `loading="lazy"`, ningún recurso de otro dominio, ninguna tipografía de Google, scripts `async`. **Formatos**: no se hace WebP: cada copia suma archivos
+  al tope de 20.000 de Cloudflare Pages (5.554 en la compilación del 17/10 con 1.212 notas; al tope de 3.700 notas son unos 15.900) y las fotos ya se achican a ~72 KB;
+  se puede hacer cuando las fotos vivan en R2 (`FOTOS_BASE`).
+- **Los canales propios** (regla 257): `WHATSAPP_CANAL_URL`, `TELEGRAM_CANAL_URL` y `BLUESKY_URL` (variables de GitHub, o del motor de Cloudflare). Sin la
+  variable no aparece nada; con ella, un cartel discreto al final de cada nota y de `/hoy` (sólo WhatsApp), enlaces en el pie y `sameAs` en el marcado
+  del medio. Se validan (https, de la web de ese servicio) en `web/lib/canales.js`; una dirección mal pegada se ignora.
 - **Encabezados** (`web/public/_headers`): seguridad (HSTS, nosniff,
   SAMEORIGIN), que las tarjetas salgan como `image/png` y el `.ics` como
   calendario, y caché de un año para `/_next/static`.
@@ -835,6 +849,7 @@ Las pruebas que cuidan el diseño: `pruebas/tipografia.test.mjs`,
 | `web/lib/notas-de-pistas.js` | Las notas propias de una pista o de un mail de prensa | `generar-datos.mjs` | `notas-de-pistas.json` | — |
 | `web/lib/fondos-clima.js` | Qué ilustración fija lleva la nota del clima | `notas-propias.js` | — | — |
 | `web/lib/robots.js`, `web/lib/datos-estructurados.js`, `web/lib/para-agentes.js` | `robots.txt`, los datos para Google y los JSON de `/agentes/` | Las rutas de esas páginas | — | — |
+| `web/lib/sitemap-noticias.js`, `web/lib/hoy.js`, `web/lib/canales.js`, `web/lib/compartir.js`, `web/lib/auditoria-html.js` | El mapa de noticias y el índice; las listas de `/hoy`; los canales de WhatsApp, Telegram y Bluesky; el enlace de WhatsApp; el control de velocidad del HTML | `sitemap-news.xml`, `sitemap-index.xml`, `hoy`; `layout`, la nota y `/hoy`; el componente de compartir; `revisar-seo.mjs` y las pruebas | — | — |
 | `web/lib/eventos.js` | Los eventos con página | `generar-datos`, `datos.js`, páginas de agenda | — | — |
 | `web/lib/dolar.js` | Pedir y leer el dólar, textos de "actualizado" | `/dolar`, portada, `foto-dolar`, `generar-datos` | DolarApi, Bluelytics | — |
 | `web/lib/pedir-clima.js`, `web/lib/clima.js` | El clima en el navegador y el dibujo de cada cielo | Componentes de clima | Open-Meteo | — |
@@ -881,6 +896,10 @@ Las pruebas que cuidan el diseño: `pruebas/tipografia.test.mjs`,
 | Las redirecciones de secciones viejas | `SECCIONES_VIEJAS` (`web/scripts/generar-redirects.mjs`) |
 | Los encabezados de Cloudflare | `web/public/_headers` |
 | Prender las etiquetas de temas | `MOSTRAR_TEMAS` (`web/lib/sitio.js`) |
+| Qué entra en `/hoy` o cuántas notas lleva cada bloque | `web/lib/hoy.js` (`MINIMO_DE_NOTAS_DE_HOY`, `NOTAS_DE_BALCARCE`, `NOTAS_MAS_CONTADAS`, `MEDIOS_PARA_MAS_CONTADA`) |
+| Sumar el canal de WhatsApp, Telegram o Bluesky | Cargar la variable `WHATSAPP_CANAL_URL`, `TELEGRAM_CANAL_URL` o `BLUESKY_URL` (GitHub → Settings → Secrets and variables → Actions → Variables) y esperar la próxima vuelta; sin variable, no aparece nada (`web/lib/canales.js`) |
+| El título de una página de sección en Google | `tituloDeSeccion` (`web/lib/datos.js`; hasta 45 caracteres) |
+| Cuándo la nota dice "Actualizado" | `actualizadaCuando` (`web/lib/tiempo.js`: sólo una corrección a mano de más de 30 minutos después de que salió; la fecha viene de `cuando` en `web/data/correcciones.json`) |
 | Que la imagen de Instagram lleve (o no) la foto del banco | `FOTO_EN_INSTAGRAM` (`web/lib/tarjeta-diseno.js`; hoy `true`) |
 | Los avisos publicitarios | `web/data/avisos.json`, a mano (`PUBLICIDAD.md`) |
 
@@ -908,6 +927,12 @@ Las pruebas que cuidan el diseño: `pruebas/tipografia.test.mjs`,
 
 ## Lo que sigue abierto
 
+- **Propuestas de la ronda 2 que NO se hicieron** (17/10): **etiquetas por barrio, calle y ruta**. Ya hay páginas de tema (`/tema/ranura`, con `TEMAS` en
+  `ingesta/fuentes.mjs`), pero están apagadas (`MOSTRAR_TEMAS = false`), sólo miran las notas de las últimas 36 horas y no hay una lista cerrada de barrios
+  ni calles (el perfil de Balcarce nombra localidades y dos rutas). Medido en el archivo del 17/10 (en el título o la bajada): Napaleofú, 1 nota; Ramos Otero, 1; San Agustín, 1;
+  Los Pinos, 3 (ambigua); Laguna La Brava, 2; Cerro El Triunfo, 5; ruta 226, 5; ruta 55, 1. Con tan pocas notas serían páginas finas. Detalle y qué hace
+  falta en `docs/seo/AUDITORIA-SEO-LLM.md`, parte 11.
+- **La portada 2** (`docs/diseno/VISTA-PREVIA-PORTADA-2.html`): dos propuestas para elegir; no se aplicó nada.
 - Comentarios que quedaron viejos (al 16/10): la descripción de
   `web/package.json` ("datos generados desde el panel"), `web/app/sitemap.js`
   (el feed "trae las últimas veinte"), `web/lib/tarjeta-diseno.js` (nombra una

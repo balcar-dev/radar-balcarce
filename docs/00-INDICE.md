@@ -128,6 +128,7 @@ cómo funciona algo que ya anda), **para decidir** (propuesta o página con caja
 | `docs/panel/PLAN-NUEVO-PANEL.md` y `PROTOTIPO-PANEL.html` | Auditoría del panel del celular, diseño del nuevo y prototipo para tocar | para decidir |
 | `docs/auditoria-2-0/` (01 a 09 y `RADAR-2-0.html`) | La auditoría para Radar 2.0 del 16 y 17/10: armado e infraestructura, fuentes y repetidas, fotos, IA y modelos, módulos y redes, prompts, medios parecidos, ideas de otras IA y el orden de las claves | vigente (la base del rediseño) |
 | `docs/diseno/COMPARACION.html` (y `DIRECCION-A`, `DIRECCION-B`) | Dos direcciones para el rediseño del sitio | para decidir (cambio visible) |
+| `docs/diseno/VISTA-PREVIA-PORTADA-2.html` | Dos propuestas de portada para el celular (servicio arriba, nota principal grande, «Lo último» con hora y carruseles por sección), con datos reales y lo que cuesta cada una | para decidir (cambio visible; 17/10) |
 | `docs/secciones/MINI-PORTALES.html` | Mini portales por tema | para decidir |
 | `docs/seo/AUDITORIA-SEO-LLM.md` | SEO y asistentes de IA: estado real, problemas, plan, política de bots, `llms.txt`, servidor MCP | vigente (16/10) |
 | `docs/seo/AUDITORIA-FEEDS.md` | Si los feeds RSS de texto y de audio están bien armados | foto del 15/10 |
