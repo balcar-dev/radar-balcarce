@@ -1,6 +1,7 @@
 # 03 · La selección: qué sale, dónde y cuándo
 
-*Actualizado el 16/10/2026. Si el código cambia, manda el código.*
+*Actualizado el 17/10/2026 (lo de Balcarce entra todo; lo nacional, por popularidad: reglas 197 a 202). Si el código
+cambia, manda el código.*
 
 Arranca donde termina `docs/02-INGESTA.md` (cada hecho ya es una historia con sus
 fuentes). Cómo se escribe la nota está en `docs/04-REDACCION.md`; cómo se ve en la
@@ -9,17 +10,19 @@ web, en `docs/06-WEB.md`.
 ## En una frase
 
 Cada historia recibe una sección (por el feed o por palabras), un puntaje que sólo
-sirve para ordenar y un color del semáforo; lo de afuera sale solo si lo cuentan
-los medios que pide su sección y entra en el cupo; una IA lee cada nota y puede
-sacarla o cambiarle la sección, pero nunca destrabarla; y al final sale sólo lo
-que no llega tarde, tiene cuerpo y nadie retiró.
+sirve para ordenar y un color del semáforo; **lo de Balcarce entra todo** (no pide
+medios ni ocupa cupo); lo de afuera sale solo si lo cuentan los medios que pide su
+sección y entra en el cupo, o si es **muy contada** (8 medios, o 5 en sus primeras 3
+horas), que sale sin cupo; una IA lee cada nota y puede sacarla o cambiarle la
+sección, pero nunca destrabarla; y al final sale sólo lo que no llega tarde, tiene
+cuerpo y nadie retiró.
 
 **Los tres colores** (qué va en cada uno es criterio: `CRITERIO-EDITORIAL.md` § 3):
 
 | Color | Qué pasa |
 |---|---|
 | **Verde** | Sale sola (si después tiene cuerpo: `docs/04-REDACCION.md`) |
-| **Amarillo** | Espera a una persona, que decide en el panel del celular (o en el de la PC). Si nadie la aprueba, no sale |
+| **Amarillo** | Espera a una persona, que decide en el panel del celular (o en el de la PC). Si nadie la aprueba, no sale. Desde el 17/10 (regla 200) al celular va sólo lo de acá, cinco por día; lo de afuera amarillo no va |
 | **Rojo** | No se publica nunca, ni aprobada |
 
 ---
@@ -91,7 +94,7 @@ No decide si lo de afuera sale: eso lo deciden los medios (paso 6).
 | El peso de la fuente principal (`peso`; 10 si no tiene) | 24 a 30 los de Balcarce, 8 casi todos los nacionales |
 | Es de Balcarce (medio de acá o Balcarce en el título) | +25 |
 | Frescura: menos de 3 horas / de 12 / de 24 | +25 / +15 / +8 (una nota raspada sin fecha real cuenta como de 24 horas: 0) |
-| Cada medio más que cuenta lo mismo (los del mismo `grupo`, como Grupo Clarín, cuentan uno) | +10 por medio, hasta +40 |
+| Los medios que cuentan lo mismo (los del mismo `grupo`, como Grupo Clarín, cuentan uno) | +8 cada vez que se duplican, sin tope: 2 medios +8, 4 +16, 8 +24, 16 +32, 32 +40 (`puntosPorMedios`, `PUNTAJE.porDuplicarMedios`; hasta el 17/10 eran +10 por medio hasta +40, y desde los 5 medios daba lo mismo) |
 | La fuente trae imagen / texto completo | +6 / +4 |
 | Un medio de afuera dice Balcarce en el título (`nombraBalcarce`) | +22 (más los +25 de "es de Balcarce") |
 | Nombra a una figura argentina | +16 |
@@ -109,10 +112,11 @@ Si la lectura con IA dice que una nota "de Balcarce" no lo es, le resta 25 (paso
 | 1 | La lista roja (`REGLAS_SEMAFORO.rojo`: menor de edad, abuso sexual, violación, femicidio, grooming, suicidio, trata…), siempre, sin ninguna exención (regla 172) | Título y primeros 600 caracteres | **Rojo** "tema sensible" |
 | 2 | Una efeméride de otro medio (`esEfemerideAjena`, 14/10: la dirección dice `/efemerides-…` o el título arranca con "Efemérides", "Un día como hoy"…): las efemérides son propias | Dirección y título | **Rojo** "efeméride de otro medio: las efemérides son propias, no se publica" |
 | 3 | Lo que no se publica nunca (`REGLAS_SEMAFORO.nunca`: sepelio, inhumación). Va **antes** del amarillo: una lista de sepelios dice "falleció" y, amarilla, una persona podía aprobarla | Sólo el título | **Rojo** "lista de sepelios: no se publica" |
+| 3b | Lo que no es nota (`porQueNoEsNota`, `ingesta/no-es-nota.mjs`, regla 199, 17/10): de cualquier medio, el pronóstico del día y el cronograma de farmacias (el sitio tiene los suyos; una alerta, el campo o un cambio en el sistema de farmacias sí son noticia); de un medio de acá, además, el medio que habla de sí (audiencia, aniversario, programación, sede), el que anuncia su propia entrevista, su sorteo y la publicidad evidente de un comercio. Nunca lo de un organismo | Casi todo, el título (y la dirección de la nota) | **Rojo** "no es nota: …" (una persona igual lo puede publicar) |
 | 4 | La lista amarilla (`REGLAS_SEMAFORO.amarillo`: denuncia, detenido, imputado, homicidio, víctima, niño, adolescente, "un menor de", "alumno de"…; los plurales de chicos, `AMARILLO_SOLO_EN_EL_PRINCIPIO`), una persona menor de 18 dicha por su edad ("una chica de 16 años": `menorPorEdad`, `ingesta/menores.mjs`) y, sólo en Policiales, Balcarce, lo de acá o de la zona y lo de un solo medio, la de una muerte o un herido (`amarilloMuerte`: murió, falleció, velatorio, herido…; `laMuerteFrena`). Antes de mirar el amarillo se sacan unas pocas frases que no son lo que parecen ("El Niño" del clima, "cuando era niño": `ingesta/exenciones.mjs`, regla 172); una palabra sensible del mismo texto sigue frenando. En lo de acá se sueltan algunas palabras (`AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA`, regla 96; en Política, sólo si la confirma una fuente oficial o dos medios) y "detenido", "acusado" o "imputado" si lo confirman (`AMARILLO_QUE_SE_SUELTA_SI_LA_CONFIRMAN`) | Título y primeros 600 caracteres | **Amarillo** "necesita ojo humano" |
 | 5 | La cotización del dólar (`REGLAS_SEMAFORO.cotizacion`: dólar hoy, dólar blue, a cuánto cotiza…) | Sólo el título | **Amarillo** "cotización del dólar: se muestra en /dolar" |
 | 6 | Lo internacional (`REGLAS_SEMAFORO.internacional`: Trump, Putin, Gaza, Ucrania…), en lo de afuera que no dice Balcarce en el título ni nombra a un argentino (`tituloConArgentino`, regla 172) | Sólo el título | **Amarillo** "internacional: sin relación con Balcarce" |
-| 7 | La promoción (`REGLAS_SEMAFORO.promocional`: sorteo, ganá tu entrada, suscribite…; el sorteo de un fixture o de jueces no cuenta, `sinSorteosDeportivos`) | Título y primeros 600 caracteres | **Amarillo** "parece promoción, no noticia" |
+| 7 | La promoción (`pareceDePromocion`, regla 199): en cualquier medio, `REGLAS_SEMAFORO.promocional` ("ganá tu entrada", "participá del sorteo"…); de afuera, "sorteo" sólo con un premio (`sorteoConPremio`: la Corte que sortea la sala o el sorteo del Mundial no son una rifa); de un medio de acá, `promocionalDeAca` (sorteo, publicidad, suscribite…), salvo el sorteo o la rifa de una institución (`INSTITUCIONES_QUE_SORTEAN`) o de un organismo. El sorteo de un fixture o de jueces no cuenta (`sinSorteosDeportivos`) | Título y primeros 600 caracteres | **Amarillo** "parece promoción, no noticia" |
 | 8 | La fuente es oficial | — | **Verde** "comunicado oficial" |
 | 9 | No es de acá (paso 5) y la cuentan menos medios de los que pide su sección (paso 6) | — | **Amarillo** "de afuera y poco contada (N medios; Sección pide M)" |
 | 10 | Si nada la frenó | — | **Verde** "sección X" |
@@ -197,6 +201,40 @@ Balcarce que nombra algo de acá (`esDeUnMedioDeAca`, regla 180).
 Los números están en `CUPO_DE_AFUERA` y `CUPO_POR_DEFECTO`. **Primero los medios,
 después el cupo**: al revés, los lugares se los llevaban notas que después
 quedaban frenadas.
+
+**Desde el 17/10/2026 (regla 197):**
+
+- **El cupo cuenta sólo lo que se puede estrenar** (el hecho de menos de 12 horas,
+  `PORTADA.horasParaEstrenar`) **y lo ya publicado que sigue a la vista** (menos de
+  36 horas; en `generar-datos` se pasan `yaSalieron` y `fechaReal`). El 16/10 a las
+  12, en Economía, 10 de los 12 lugares los tenían notas de 28 a 56 horas que ya no
+  podían salir. Lo que no cuenta tampoco se toca: la web no lo estrena igual.
+- **Se puede llamar dos veces.** Lo que la ingesta mandó a esperar sólo por el cupo
+  vuelve a competir cuando `generar-datos` lo aplica otra vez, después de la lectura
+  con IA (que saca notas y libera lugares). Vuelve con su motivo de antes
+  (`motivoAntesDelCupo`). Lo de un medio de acá no vuelve solo (pudo esperar también
+  por la lectura con IA).
+- **Lo muy contado sale aunque el cupo esté lleno y no ocupa lugar**
+  (`marcarMuyContadas`, `ingesta/muy-contada.mjs`): lo de afuera que cuentan 8 medios
+  distintos o más, o que junta 5 en sus primeras 3 horas (4 si empezó de 20 a 7), con
+  el hecho de menos de 24 horas y alguna nota de las últimas 12. No cuentan "dónde
+  ver", "a qué hora juega", la formación, el "en vivo", el dólar, el clima ni las
+  alertas (`noEsNoticiaAunqueLaCuentenTodos`). Como mucho 2 del mismo tema a la vez
+  (`mismoTema`: dos raíces de palabras en común, o una de una palabra larga), las de
+  más medios; la tercera compite por el cupo como cualquier otra. Policiales de
+  afuera sigue en 0. En la web va **primera en su sección durante 6 horas** desde que
+  es muy contada (`muyContada.desde`, que fija `generar-datos`; `primeroLasMuyContadas`
+  en `web/lib/datos.js`: los bloques de la tapa y las páginas de sección).
+- **Lo de acá sigue sin cupo** (regla 198): se verificó con las lecturas del 16/10
+  que ningún cupo ni tope lo frena; sólo el semáforo y la espera de la lectura con
+  IA, que ahora lee primero lo de acá (`primeroLoDeAca`). Lo que cuentan 3 medios de
+  acá o más (`muyContadaDeAca`) es la primera candidata a la nota grande y a Facebook.
+
+**Lo que se simuló** con las lecturas guardadas del 16/10 a las 12 y la memoria del
+cruce a las 22 del 15/10 y a las 20 del 16/10 (la lista, en `docs/DECISIONES.md`,
+17/10): no baja ninguna nota que hoy sale; suben entre 10 y 21 por corte, la mayoría
+porque el cupo ya no lo ocupan notas viejas (51, 12 y 29 lugares); y hay de 6 a 19
+muy contadas por corte.
 
 ### 8. La lectura con IA (sólo en la nube)
 
@@ -330,6 +368,8 @@ texto completo de la fuente y por lo que escribió, y el código calcula el nive
 verificación. Si algo da rojo, amarillo o verificación BAJA, **la nota verde cambia
 de color** ahí mismo ("… (visto al reescribir)" o "verificación baja: espera a una
 persona").
+
+Lo que escribió la IA se mira **con la nota de verdad** (regla 201, 17/10/2026: sinLosTextos(nota); hasta ese día iba una nota vacía y cualquier "murió" del título esperaba aunque la contaran 30 medios, como la muerte de Fernando Confessore). Valen las mismas exenciones que en el paso 4.
 
 ### 10. La fecha de la nota y "llega tarde"
 
@@ -480,7 +520,9 @@ corrida siguiente de "Actualizar la web".
 | `ingesta/repetidas-publicadas.mjs` | La misma noticia contra lo ya publicado, sin IA (regla 171) y la misma fuente (`mismaFuente`, regla 175) | `generar-datos.mjs` |
 | `ingesta/seleccion-nueva.mjs`, `ingesta/comparar-seleccion.mjs`, `ingesta/secciones-nuevas.mjs` | La selección nueva y el mapa de 17 secciones, **en modo sombra**: miden con datos reales qué saldría, sin decidir nada (`docs/flujo/FLUJO-NUEVO.html`, `docs/secciones/`) | A mano |
 | `ingesta/fuentes.mjs` | `REGLAS_SECCION`, `REGLAS_SEMAFORO` (rojo, nunca, amarillo, amarilloMuerte, promocional, cotizacion, internacional), `AMARILLO_MENORES`, `PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO`, `FIGURAS`, `TEMAS` | Todo el motor |
-| `ingesta/criterio.mjs` | Los números: `MEDIOS_DE_AFUERA`, `MEDIOS_POR_DEFECTO`, `MEDIOS_CON_FIGURA`, `CUPO_DE_AFUERA`, `CUPO_POR_DEFECTO`, `PORTADA` | Todo |
+| `ingesta/criterio.mjs` | Los números: `MEDIOS_DE_AFUERA`, `MEDIOS_POR_DEFECTO`, `MEDIOS_CON_FIGURA`, `CUPO_DE_AFUERA`, `CUPO_POR_DEFECTO`, `MUY_CONTADA`, `PUNTAJE`, `ESPERA_PERSONA`, `PORTADA` | Todo |
+| `ingesta/muy-contada.mjs` | `porQueEsMuyContada`, `marcarMuyContadas`, `mismoTema`, `noEsNoticiaAunqueLaCuentenTodos` (regla 197) | `aplicarCupos` |
+| `ingesta/no-es-nota.mjs` | `porQueNoEsNota`: el autobombo de los medios, el clima y las farmacias de otro medio, el comercio (regla 199) | `semaforo` |
 | `ingesta/lectura-ia.mjs` | Fichas (`leerNotasNuevas`, `aplicarFichas`, `mencionaAca`), repetidas (`agruparRepetidas`, `unirGrupos`, `quitarRepetidas`) | `generar-datos.mjs` (nube) |
 | `ingesta/perfil-balcarce.md` | Lo que la IA sabe de Balcarce | `lectura-ia.mjs` |
 | `ingesta/utiles.mjs` | `decisionHumana`: qué decisión es de una persona | `generar-datos.mjs`, `reels/reescritura.mjs`, paneles |

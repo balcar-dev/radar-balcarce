@@ -21,9 +21,22 @@ const hace = (ahora, minutos) => new Date(ahora.getTime() - minutos * 60000).toI
 
 // ------------------------------------------------ notas esperando a una persona
 
+// De acá (`local`): desde el 17/10/2026 (regla 200) lo de afuera que espera ya no es para una persona.
 const deIngesta = (id, o = {}) => ({
   id, titulo: `Titular de la nota ${id}`, semaforo: 'amarillo', motivo: 'sección general, sin regla verde',
-  seccion: 'Balcarce', fecha: hace(A('12:00'), 60), ...o,
+  seccion: 'Balcarce', local: true, fecha: hace(A('12:00'), 60), ...o,
+});
+
+test('pendientes: lo de afuera que espera no es para una persona, y de lo de acá van cinco por día (regla 200, 17/10/2026)', () => {
+  // Del 8/10 al 16/10 nadie decidió nada desde el celular y esperaban unas 33 notas por día, casi todas de afuera.
+  const r = pendientesDeLaIngesta([
+    deIngesta('afuera', { local: false, seccion: 'Argentina', alcance: 'pais', titulo: 'Murió un actor de la tele', motivo: 'necesita ojo humano: "murió"' }),
+    ...[1, 2, 3, 4, 5, 6, 7].map((i) => deIngesta(`aca${i}`, { relevancia: 50 + i })),
+  ], {}, A('12:00'));
+  assert.deepEqual(r.map((p) => p.id).sort(), ['aca3', 'aca4', 'aca5', 'aca6', 'aca7']);
+  // Lo que marcó "pendiente" una persona sigue, sea de donde sea.
+  const marcada = pendientesDeLaIngesta([deIngesta('afuera', { local: false, alcance: 'pais', semaforo: 'verde' })], { afuera: { estado: 'pendiente', por: 'Hernán' } }, A('12:00'));
+  assert.deepEqual(marcada.map((p) => p.id), ['afuera']);
 });
 
 test('pendientes: sólo las amarillas sin decidir; nunca una roja ni una verde', () => {

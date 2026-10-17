@@ -1013,9 +1013,47 @@ export function verificar(fuente, nuevo, { soloForma = false, deBalcarce = null,
   // publicado). Lo pide la reescritura (reels/reescritura.mjs) y el panel; no
   // se aplica al revalidar lo ya publicado (`soloForma`): son heurísticas, y
   // una nota que ya está en la portada no se baja por una de ellas.
-  if (estilo && !soloForma) problemas.push(...problemasDeEstilo(nuevo));
+  if (estilo && !soloForma) problemas.push(...problemasDeEstilo(nuevo), ...exageraLaDecision(fuente, nuevo));
 
   return { ok: problemas.length === 0, problemas };
+}
+
+// Los verbos de una decisión (regla 202, 17/10/2026): [cómo se dice en el título, cómo aparece en la fuente].
+// Sin "confirma" (lo usa cualquier declaración) ni "completa" (también es adjetivo: "la grilla completa").
+const DECISIONES = [
+  ['aprueba', /\b(aprueba|aprueban|aprobo|aprobaron|aprobada|aprobado)\b/, /\b(aprob|aprueb)\w*/],
+  ['sanciona', /\b(sanciona|sancionan|sanciono|sancionaron)\b/, /\bsancion\w*/],
+  ['habilita', /\b(habilita|habilitan|habilito|habilitaron)\b/, /\bhabilit\w*/],
+  ['prohíbe', /\b(prohibe|prohiben|prohibio|prohibieron)\b/, /\bprohib\w*/],
+  ['inaugura', /\b(inaugura|inauguran|inauguro|inauguraron)\b/, /\binaugur\w*/],
+];
+/** El título de la fuente cuenta un pedido o un proyecto, no una decisión. */
+const UN_PEDIDO = /\b(solicit\w*|proyecto de comunicacion|minuta de comunicacion|pedido de informes|proyecto de resolucion|presentan un proyecto|presento un proyecto|piden|pidio|pide)\b/;
+const EL_TITULO_DICE_PEDIDO = /\b(pide|piden|pidio|pedido|solicit\w*|informes|comunicacion|proyecto|propone|proponen|propuesta)\b/;
+
+/**
+ * ¿El título exagera una decisión? (regla 202) El 27/09 salió "El Concejo aprueba reducir las tasas a taxis y
+ * remises" y la fuente decía "Solicitan reducir y eliminar tributos para taxis y remises en el Presupuesto 2027": el
+ * Concejo sólo había pedido que se estudie. Dos casos:
+ *   · el título dice "aprueba" (o sanciona, habilita, prohíbe, inaugura) y ninguna fuente usa ese verbo;
+ *   · el título dice "aprueba" y el título de la fuente cuenta un pedido o un proyecto (sin decir que se aprobó), y
+ *     el título nuevo no lo cuenta como pedido.
+ * Sólo en lo que se escribe nuevo (con `estilo`), sólo el título: es donde la exageración engaña.
+ */
+export function exageraLaDecision(fuente = {}, nuevo = {}) {
+  const titulo = sinTildes(String(nuevo?.titulo ?? ''));
+  const origen = sinTildes(`${fuente?.titulo ?? ''} ${fuente?.resumen ?? ''}`);
+  const tituloFuente = sinTildes(String(fuente?.titulo ?? ''));
+  const problemas = [];
+  for (const [verbo, enElTitulo, enLaFuente] of DECISIONES) {
+    if (!enElTitulo.test(titulo)) continue;
+    if (!enLaFuente.test(origen)) {
+      problemas.push({ tipo: 'exagera', detalle: `el título dice "${verbo}" y ninguna fuente dice que eso ya se decidió o se hizo: si es un pedido, un proyecto o algo que se estudia, va "pide", "propone" o "analiza"` });
+    } else if (verbo === 'aprueba' && UN_PEDIDO.test(tituloFuente) && !enLaFuente.test(tituloFuente) && !EL_TITULO_DICE_PEDIDO.test(titulo)) {
+      problemas.push({ tipo: 'exagera', detalle: 'el título dice "aprueba" y la fuente cuenta un pedido o un proyecto: va "pide", "propone" o "presenta un proyecto para"' });
+    }
+  }
+  return problemas;
 }
 
 /**

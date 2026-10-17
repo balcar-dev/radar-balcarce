@@ -235,7 +235,7 @@ const VENTANA_HORAS = 6;
  *
  * Así que la grande es la de más puntaje de las últimas VENTANA_HORAS. El
  * puntaje ya sabe lo que importa acá: suma 25 si es de Balcarce, 22 si un medio
- * de afuera nombra a Balcarce, 10 por cada medio que la contó, y baja con las
+ * de afuera nombra a Balcarce, 8 cada vez que se duplican los medios que la contaron (regla 197), y baja con las
  * horas. Si no hay nada en esa ventana, manda el puntaje a secas.
  */
 export function ordenarPortada(notas = []) {
@@ -253,12 +253,32 @@ export function ordenarPortada(notas = []) {
   // la portada de cualquier diario del país; Ferroviarios, no. Si no hay
   // nada de acá en la ventana, manda el puntaje a secas.
   const deAca = ventana.filter((n) => n.local || n.nombraBalcarce);
-  const candidatas = deAca.length ? deAca : ventana;
+  // Y entre lo de acá, primero lo que cuentan tres medios de Balcarce o más (`muyContadaDeAca`, regla 198): es lo que
+  // más se lee del sitio (4,7 a 8,7 visitas por nota contra 2,6 con un medio, docs/auditoria-2-0/02-FUENTES-CRITERIO-REPETIDAS.md).
+  const muyContadasDeAca = deAca.filter((n) => n.muyContadaDeAca);
+  const candidatas = muyContadasDeAca.length ? muyContadasDeAca : deAca.length ? deAca : ventana;
 
   // Con el mismo puntaje gana la más nueva, que es el orden en que ya vienen.
   const principal = candidatas.reduce((a, b) => (b.relevancia > a.relevancia ? b : a));
 
   return { principal, resto: porHora.filter((n) => n.id !== principal.id) };
+}
+
+/** Cuántas horas va primera en su sección una nota muy contada (MUY_CONTADA.horasPrimeraEnSuSeccion de
+ *  ingesta/criterio.mjs, regla 197; una prueba controla que digan lo mismo). */
+export const HORAS_MUY_CONTADA_PRIMERA = 6;
+
+/** ¿Es una muy contada que todavía va primera en su sección? Cuenta desde que es muy contada (`muyContada.desde`). */
+export function muyContadaArriba(n, ahora = Date.now()) {
+  const desde = Date.parse(n?.muyContada?.desde ?? '');
+  return Number.isFinite(desde) && Number(ahora) - desde < HORAS_MUY_CONTADA_PRIMERA * 3600e3;
+}
+
+/** La lista con las muy contadas vigentes primero (la de más medios arriba) y el resto como venía (regla 197). */
+export function primeroLasMuyContadas(lista = [], ahora = Date.now()) {
+  const arriba = lista.filter((n) => muyContadaArriba(n, ahora))
+    .sort((a, b) => ((b.muyContada.medios ?? 0) - (a.muyContada.medios ?? 0)) || (new Date(b.fecha) - new Date(a.fecha)));
+  return arriba.length ? [...arriba, ...lista.filter((n) => !arriba.includes(n))] : lista;
 }
 
 /** Hasta cuántas horas atrás se va al archivo a completar una sección: las
@@ -277,12 +297,13 @@ export const NOTAS_POR_SECCION = 3;
  * tapas siguen mostrando sólo lo último; la sección es el lugar donde está todo. Sólo notas con cuerpo, con
  * respaldo y con fecha: lo que no cumple eso no tiene página ni se ofrece.
  */
-export function notasDeLaSeccion(nombre, { archivo = obtenerArchivo(), portada = obtenerDatos().notas } = {}) {
+export function notasDeLaSeccion(nombre, { archivo = obtenerArchivo(), portada = obtenerDatos().notas, ahora = Date.now() } = {}) {
   const ids = new Set(portada.map((n) => n.id));
   const deLaPortada = portada.filter((n) => n.seccion === nombre);
   const delArchivo = archivo.filter((n) => n?.id && !ids.has(n.id) && n.seccion === nombre && !n.sinFecha && !n.propia
     && tieneCuerpo(n) && tieneRespaldo(n) && Number.isFinite(new Date(n.fecha).getTime()));
-  return [...deLaPortada, ...delArchivo].sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+  // Lo muy contado va primero unas horas (regla 197); el resto, de la más nueva a la más vieja.
+  return primeroLasMuyContadas([...deLaPortada, ...delArchivo].sort((a, b) => new Date(b.fecha) - new Date(a.fecha)), ahora);
 }
 /**
  * La tapa entera: la nota grande, cuatro de abajo y los bloques por sección.
@@ -358,7 +379,8 @@ export function armarTapa(notasSueltas = [], orden = SECCIONES.map((s) => s.nomb
   // puede completar dos secciones (27/09, los sepelios en Balcarce y en Fútbol).
   const sumadas = [];
   for (const s of secciones) {
-    const suyas = (porSeccion[s] ?? []).slice(0, NOTAS_POR_SECCION);
+    // Lo muy contado de la sección va primero unas horas (regla 197).
+    const suyas = primeroLasMuyContadas(porSeccion[s] ?? [], ahora).slice(0, NOTAS_POR_SECCION);
     if (suyas.length < NOTAS_POR_SECCION) {
       // Sin repetir historia con nada de lo que ya está en la portada ni con lo
       // que se va sumando, en esta sección o en otra.
@@ -370,7 +392,7 @@ export function armarTapa(notasSueltas = [], orden = SECCIONES.map((s) => s.nomb
         sumadas.push(v);
       }
     }
-    if (suyas.length) bloques.push([s, suyas.sort((a, b) => new Date(b.fecha) - new Date(a.fecha))]);
+    if (suyas.length) bloques.push([s, primeroLasMuyContadas(suyas.sort((a, b) => new Date(b.fecha) - new Date(a.fecha)), ahora)]);
   }
 
   return { principal, secundarias, bloques };

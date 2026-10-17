@@ -16,6 +16,34 @@
 // (pruebas/celular.test.mjs). Sin dependencias.
 
 import { decisionHumana } from '../ingesta/utiles.mjs';
+import { esDeAca, esDeUnMedioDeAca } from '../ingesta/ingesta.mjs';
+import { ESPERA_PERSONA } from '../ingesta/criterio.mjs';
+import { diaAR } from '../ingesta/zona.mjs';
+
+/** ¿Es de acá, para esperar a una persona? (esDeAca, o un organismo o un medio de Balcarce que nombra algo de acá) */
+const deAcaParaUnaPersona = (n) => esDeAca(n) || esDeUnMedioDeAca(n);
+
+/**
+ * De lo amarillo que todavía no miró nadie, lo que va a una persona (regla 200, 17/10/2026): sólo lo de acá, y como
+ * mucho ESPERA_PERSONA.deAcaPorDia por día (las de más puntaje). Lo de afuera que no sale solo no va al celular:
+ * desde el 8/10 no hubo una sola decisión de una persona y esperaban unas 33 notas por día, casi todas de afuera
+ * (docs/auditoria-2-0/02-FUENTES-CRITERIO-REPETIDAS.md § 5.1). Devuelve los identificadores que quedan.
+ */
+export function idsParaUnaPersona(notas = [], { porDia = ESPERA_PERSONA.deAcaPorDia } = {}) {
+  const porDiaDeLaNota = new Map();
+  for (const n of notas) {
+    if (!n?.id || !deAcaParaUnaPersona(n)) continue;
+    const t = Date.parse(n.fecha ?? '');
+    const dia = Number.isFinite(t) ? diaAR(new Date(t)) : 'sin fecha';
+    if (!porDiaDeLaNota.has(dia)) porDiaDeLaNota.set(dia, []);
+    porDiaDeLaNota.get(dia).push(n);
+  }
+  const quedan = new Set();
+  for (const lista of porDiaDeLaNota.values()) {
+    for (const n of [...lista].sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0)).slice(0, porDia)) quedan.add(n.id);
+  }
+  return quedan;
+}
 
 /** Lo que puede decidir una persona desde el celular. */
 export const ESTADOS_DEL_CELULAR = ['publicada', 'descartada', 'bloqueada'];
@@ -108,12 +136,23 @@ const recortar = (t, n) => {
  * Nunca una roja (no se publica nunca, ni aprobada), ni lo de más de `horas`
  * (como el WhatsApp). Lo que se descartó desde el celular sigue en la lista,
  * marcado (`decision`), para poder deshacerlo mientras la nota esté en la ingesta.
+ * Desde el 17/10/2026 (regla 200), de lo que no miró nadie, sólo lo de acá y como mucho cinco por día
+ * (idsParaUnaPersona).
  */
 export function paraDecidir(notas = [], decisiones = {}, {
   ahora = new Date(), horas = 72, maximo = 40, fichas = {},
 } = {}) {
   const desde = ahora.getTime() - horas * 3600e3;
   const lista = [];
+  // Lo que espera sin que nadie lo haya mirado, sólo lo de acá y con tope por día (regla 200). Lo que ya decidió o
+  // marcó una persona sigue en la lista, sea de donde sea.
+  const enVentana = (n) => {
+    const t = Date.parse(n.fecha ?? '');
+    return n.cuando === 'sin fecha en la fuente' || !Number.isFinite(t) || t >= desde;
+  };
+  const automaticas = (notas ?? []).filter((n) => n?.id && n.semaforo === 'amarillo' && !decisionHumana(decisiones?.[n.id])
+    && !RELLENO.test(n.motivo ?? '') && enVentana(n));
+  const paraUnaPersona = idsParaUnaPersona(automaticas);
   for (const n of notas ?? []) {
     if (!n?.id || n.semaforo === 'rojo') continue;
     const d = decisiones?.[n.id];
@@ -121,8 +160,8 @@ export function paraDecidir(notas = [], decisiones = {}, {
     const descartadaEnElCelular = humana && d.desdeElCelular && d.estado === 'descartada';
     const esperando = humana ? (d.estado === 'pendiente' || descartadaEnElCelular) : n.semaforo === 'amarillo';
     if (!esperando || (!humana && RELLENO.test(n.motivo ?? ''))) continue;
-    const t = Date.parse(n.fecha ?? '');
-    if (n.cuando !== 'sin fecha en la fuente' && Number.isFinite(t) && t < desde) continue;
+    if (!humana && !paraUnaPersona.has(n.id)) continue;
+    if (!enVentana(n)) continue;
     const ficha = fichas?.[n.id];
     lista.push({
       id: n.id,

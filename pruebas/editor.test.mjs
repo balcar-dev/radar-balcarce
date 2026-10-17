@@ -92,7 +92,10 @@ test('la instrucción es la del editor digital y conserva las 20 reglas fijas', 
   for (const campo of ['claves', 'seSabe', 'noConfirmado', 'aportes', 'textoRedes', 'etiquetas']) {
     assert.match(INSTRUCCION_EDITORIAL, new RegExp(`"${campo}"`), `el JSON de salida no pide ${campo}`);
   }
-  assert.match(INSTRUCCION_EDITORIAL, /lo calcula el sistema/);
+  // Desde el 17/10/2026 (regla 202) no se le pide el guion ni el nivel (los arma y lo calcula el sistema), y la regla 7
+  // es la de los verbos de una decisión ("aprueba" sólo si la fuente dice que se aprobó).
+  assert.doesNotMatch(INSTRUCCION_EDITORIAL, /"guion"|"nivel"/);
+  assert.match(INSTRUCCION_EDITORIAL, /\n7\. Los verbos de una decisión/);
 });
 
 test('la IA recibe las fuentes numeradas, con medio y fecha, y los antecedentes marcados como anteriores', async () => {

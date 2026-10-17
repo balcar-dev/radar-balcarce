@@ -74,7 +74,10 @@ import {
   esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson, sePodaPorFaltaDeCuerpo, topeDeNotas, topeDeEstaVuelta, MAXIMO_EN_ARCHIVO,
 } from '../lib/archivo.js';
 import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
-import { esperaSoloPorCantidad, semaforoDelTexto, esEfemerideAjena, esDeUnMedioDeAca } from '../../ingesta/ingesta.mjs';
+import {
+  esperaSoloPorCantidad, semaforoDelTexto, esEfemerideAjena, esDeUnMedioDeAca, esDeAca, cuantosMediosDeAca,
+} from '../../ingesta/ingesta.mjs';
+import { MUY_CONTADA } from '../../ingesta/criterio.mjs';
 import { conFotosDelBanco, podarFotos, esIlustracionDeNota, ilustracionPermitida, fotoConMenorPermitida } from './fotos-notas.mjs';
 import { actualizarAgenda, aplicarSuspendidos, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
@@ -253,6 +256,10 @@ const fechaAntes = Object.fromEntries([...(archivoAnterior.notas ?? []), ...(ant
 // lib/archivo.js).
 const yaSalieron = new Set([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])].map((n) => n.id));
 const ahoraISO = new Date().toISOString();
+// Desde cuándo es muy contada cada nota (regla 197): va primera en su sección MUY_CONTADA.horasPrimeraEnSuSeccion
+// horas desde ese momento (web/lib/datos.js), y esa hora no se mueve en cada corrida.
+const muyContadaDesde = new Map([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])]
+  .filter((n) => n.muyContada?.desde).map((n) => [n.id, n.muyContada.desde]));
 
 // Las uniones firmes (regla 175, hueco 4): una nota que ya se unió a otra (fusionadas.json) no vuelve a tener página propia ni se
 // vuelve a escribir con IA aunque en esta corrida las dos ya no "se reconozcan" (la VTV del 15/10 volvió a la portada y se escribió
@@ -311,7 +318,10 @@ if (enLaNube) {
     const { claveClasificacion } = await import('../../reels/claves.mjs');
     const { exigirMedios, aplicarCupos, MOTIVO_POCO_CONTADA } = await import('../../ingesta/ingesta.mjs');
     const fichasAntes = leerJson(FICHAS, {});
-    const { archivo: fichas, cuenta } = await leerNotasNuevas(ultima.notas ?? [], { guardado: fichasAntes, registro: console.log });
+    // Lo de un medio de acá se lee primero (regla 198): si el cupo diario de la lectura se acaba, lo que espera a la IA
+    // (MOTIVO_ESPERA_LECTURA) es lo de acá, y lo de acá entra todo.
+    const primeroLoDeAca = [...(ultima.notas ?? [])].sort((a, b) => Number(b.alcance === 'local') - Number(a.alcance === 'local'));
+    const { archivo: fichas, cuenta } = await leerNotasNuevas(primeroLoDeAca, { guardado: fichasAntes, registro: console.log });
     if (cuenta.sinClave) console.log('  lectura con IA: sin clave, se decide como siempre');
     const { notas: conFichas, cambios } = aplicarFichas(ultima.notas ?? [], fichas.fichas, {
       // Lo de un medio de acá que no nombra nada de acá espera a la IA, si la
@@ -361,7 +371,9 @@ if (enLaNube) {
     // puede ser otro: la regla se vuelve a mirar, en los dos sentidos. Lo que
     // la IA dijo que no es de acá también la cumple. Y después, el cupo.
     exigirMedios(notas);
-    aplicarCupos(notas.sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0)));
+    // Con lo ya publicado y la fecha de cada nota: el cupo cuenta sólo lo que se puede estrenar y lo publicado a la
+    // vista, y lo muy contado sale sin cupo (regla 197). Lo que la ingesta mandó a esperar por el cupo vuelve a competir.
+    aplicarCupos(notas.sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0)), { publicadas: yaSalieron, fecha: fechaReal });
     ultima = { ...ultima, notas };
     console.log(`  lectura con IA: ${cuenta.nuevas} fichas nuevas en ${cuenta.pedidos} pedidos (${fichas.pedidosHoy ?? 0} hoy${cuenta.groq ? `, ${cuenta.groq} con Groq de respaldo` : ''})`
       + ` · sacó ${cambios.sacadas.length}, ${cambios.dejanDeSerLocales.length} dejaron de ser de Balcarce,`
@@ -554,6 +566,10 @@ function notaPublicada(n) {
     // Lo que cuenta un organismo o un medio de Balcarce nombrando algo de acá sale con un solo medio aunque la IA diga
     // que el hecho es de la región, y también conserva la página (regla 180, esDeUnMedioDeAca y tieneRespaldo).
     ...(esDeUnMedioDeAca(n) ? { deUnMedioDeAca: true } : {}),
+    // Lo de afuera que cuenta medio país (regla 197): va primera en su sección unas horas (web/lib/datos.js).
+    ...(n.muyContada ? { muyContada: { medios: n.muyContada.medios, porque: n.muyContada.porque, desde: muyContadaDesde.get(n.id) ?? ahoraISO } } : {}),
+    // Lo de acá que cuentan tres medios de Balcarce o más (regla 198): la primera candidata a la nota grande y a Facebook.
+    ...((esDeAca(n) || esDeUnMedioDeAca(n)) && cuantosMediosDeAca(n) >= MUY_CONTADA.mediosDeAca ? { muyContadaDeAca: cuantosMediosDeAca(n) } : {}),
     publicadaPor: d?.por ?? null,
     publicadaCuando: d?.cuando ?? null,
     // Una persona la marcó desde el celular para que también vaya a Facebook e

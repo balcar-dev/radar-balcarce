@@ -207,14 +207,15 @@ test('"rural" sólo en la bajada no manda a Agro una nota de un gremio local (8/
 });
 
 test('un medio que cuenta su propia sede y su teléfono no sale solo (regla 142, 8/10)', () => {
+  // Desde el 17/10/2026 (regla 199) no espera a nadie: no es una nota de Radar (ingesta/no-es-nota.mjs).
   const n = nota({
     titulo: 'El Diario Balcarce detalla su rol periodístico y sus vías de contacto',
     cuerpo: 'El Diario Balcarce se define como el único medio de la ciudad con edición en papel y formato digital. La sede legal se encuentra en la calle 17.',
-    local: true,
+    local: true, alcance: 'local',
   });
   const s = semaforo(n, 'Balcarce');
-  assert.equal(s.color, 'amarillo');
-  assert.match(s.motivo, /promoción/);
+  assert.equal(s.color, 'rojo');
+  assert.match(s.motivo, /^no es nota/);
 });
 
 test('si la fuente ya viene separada por sección, se le cree', () => {
@@ -371,8 +372,11 @@ test('el piso no pisa a las reglas de arriba', () => {
   // promoción sigue esperando por más local que sea.
   const grave = nota({ titulo: 'Detuvieron a un hombre por un femicidio', local: true });
   assert.equal(semaforo(grave, 'Balcarce').color, 'rojo');
-  const rifa = nota({ titulo: 'La rifa de Bomberos ya tiene su sorteo', local: true });
-  assert.equal(semaforo(rifa, 'Balcarce').color, 'amarillo');
+  // La rifa de una institución es noticia del pueblo desde el 17/10/2026 (regla 199); el sorteo de un comercio, no.
+  const rifa = nota({ titulo: 'La rifa de Bomberos ya tiene su sorteo', local: true, alcance: 'local' });
+  assert.equal(semaforo(rifa, 'Balcarce').color, 'verde');
+  const comercio = nota({ titulo: 'La panadería Del Centro sortea una torta entre sus clientes', local: true, alcance: 'local' });
+  assert.equal(semaforo(comercio, 'Balcarce').color, 'amarillo');
 });
 
 test('Política y Policiales salen solas cuando no hay nada sensible', () => {
