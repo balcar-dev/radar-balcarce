@@ -297,8 +297,9 @@ test('el panel ofrece las catorce; las redes siguen con #Balcarce y las etiqueta
   assert.match(gd, /\.\.\.\(n\.seccionAntes \? \{ seccionAntes: n\.seccionAntes \} : \{\}\)/);
   // Una nota de acá que la IA pasó a Educación sigue llevando #Balcarce.
   assert.equal(hashtagsDe({ seccion: 'Educación', seccionAntes: 'Balcarce', etiquetas: ['paro docente'] })[0], '#Balcarce');
-  assert.deepEqual(hashtagsDe({ seccion: 'Ciencia', etiquetas: ['química', 'investigación'] }), ['#Química', '#Investigación']);
-  assert.deepEqual(hashtagsDe({ seccion: 'Tecnología', etiquetas: ['inteligencia artificial'] }), ['#InteligenciaArtificial']);
+  // (Desde la regla 281, `#Balcarce #RadarBalcarce` van siempre primeros, también en lo de afuera; después, las etiquetas de la IA.)
+  assert.deepEqual(hashtagsDe({ seccion: 'Ciencia', etiquetas: ['química', 'investigación'] }), ['#Balcarce', '#RadarBalcarce', '#Química', '#Investigación']);
+  assert.deepEqual(hashtagsDe({ seccion: 'Tecnología', etiquetas: ['inteligencia artificial'] }), ['#Balcarce', '#RadarBalcarce', '#InteligenciaArtificial']);
 });
 
 // ------------------------------------------------------------------ las fuentes que alimentan las áreas

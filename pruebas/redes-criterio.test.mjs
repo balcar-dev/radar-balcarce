@@ -35,7 +35,7 @@ import {
   CLIMA_VOZ, PODCAST_VOZ, PIEZA_FIJA_VOZ,
 } from '../redes/guiones.mjs';
 import {
-  repasoConPresupuesto, elegirParaPodcast, REGLAS_PIEZAS, mensajeDeNota, FRASES_DEL_ENLACE,
+  repasoConPresupuesto, elegirParaPodcast, REGLAS_PIEZAS, mensajeDeNota, FRASES_DEL_ENLACE, HASHTAGS_FIJOS,
 } from '../redes/elegir.mjs';
 import { pieDePieza, PODCASTS } from '../redes/piezas.mjs';
 import { IDS_PARTICIPA, guionParticipa } from '../redes/participa.mjs';
@@ -478,8 +478,10 @@ test('el posteo (Facebook e Instagram): con enlace radarbalcarce.com, sin fuente
       assert.doesNotMatch(m, /Resumen hecho con IA|con IA/);
       assert.ok(!/Puntonueve|Infobae|Vanguardia|Gabal|Clarín/.test(m), `nombró a la fuente: ${m}`);
       assert.doesNotMatch(m, /punto com|\.com\.ar/);
+      // Regla 281: #Balcarce y #RadarBalcarce fijos y primeros, y hasta POSTEO.hashtagsMaximo de la nota (con los fijos, cinco: el tope de Instagram).
       const hashtags = m.match(/#\p{L}+/gu) ?? [];
-      assert.ok(hashtags.length <= criterio.POSTEO.hashtagsMaximo, `demasiados hashtags: ${m}`);
+      assert.deepEqual(hashtags.slice(0, 2), ['#Balcarce', '#RadarBalcarce'], `los fijos van primero: ${m}`);
+      assert.ok(hashtags.length <= HASHTAGS_FIJOS.length + criterio.POSTEO.hashtagsMaximo, `demasiados hashtags: ${m}`);
     }
     frases.add(FRASES_DEL_ENLACE.find((f) => mensajeDeNota(n, 'https://radarbalcarce.com').includes(f)));
   }

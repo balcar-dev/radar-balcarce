@@ -83,14 +83,17 @@ de `CRITERIO-EDITORIAL.md`):
 | Tema | No repite un tema publicado en las últimas 24 horas (`temaParecido`: el 24/09 salieron tres del autódromo en cuatro horas) |
 | Repetición | Una nota sale una sola vez (el libro) |
 
-**Cinco por día (12/10, Hernán):** primero sale lo de Balcarce; si no alcanza para los cinco, se sigue con lo de afuera de mayor puntaje
-(`vaAFacebookDeRelleno`, `FACEBOOK.relevanciaMinimaDeRelleno`, hoy 0 = sin piso). Valen las mismas guardas: nada propio ni sin cuerpo, nunca Política ni
-Policiales, nada que una persona aprobó sin marcarlo para las redes. Instagram copia lo de Facebook.
+**Sólo Balcarce y lo más contado del país (17/10, regla 280, Hernán):** "en posteos de Facebook y de Instagram, sólo notas de Balcarce o, si no son de Balcarce, las más populares que tengamos, vengan de donde vengan". Se
+sacó el relleno del 12/10 (`vaAFacebookDeRelleno`, `relevanciaMinimaDeRelleno`), que completaba los cinco del día con lo de afuera sin piso y dejó pasar, el 17/10, la agenda de espectáculos de La Plata (2 medios).
+Ahora lo de afuera sale sólo si lo cuentan **`FACEBOOK.mediosParaRedes` (5) medios distintos o más** (`esPopularParaRedes`: los del mismo dueño cuentan uno, `redes/medios-contados.mjs`; y nada de "dónde ver",
+"en vivo", pronóstico ni cotización: `noEsNoticiaAunqueLaCuentenTodos`). Valen las mismas guardas: nada propio ni sin cuerpo, nunca Política ni Policiales, nada que una persona aprobó sin marcarlo para las
+redes. Orden dentro del cupo: lo marcado por una persona, lo de acá que cuentan tres medios de Balcarce o más, el resto de lo de acá y, al final, lo más contado del país. Instagram copia lo de Facebook. La medición de
+cuántas notas pasan con 4, 5, 6 y 8 medios y la propuesta de cuántos posteos por día están en `docs/redes/PROPUESTA-POSTEOS-POR-DIA.md`.
 
 **Qué nota puede ir** (`vaAFacebookPorLoQueEs`, regla 78):
 
-- **Sola:** de Balcarce (`esParaLasRedes`: `local: true`, o Automovilismo con
-  una figura argentina), relevancia 75 o más, nunca Política ni Policiales
+- **Sola:** o de Balcarce (`esParaLasRedes`: `local: true`, o Automovilismo con
+  una figura argentina) con relevancia 75 o más, o lo más contado del país (`esPopularParaRedes`, regla 280); nunca Política ni Policiales
   (`SECCIONES_QUE_ESPERAN_PERSONA`: en una red la nota viaja sin contexto) y
   que haya salido en la web por el semáforo verde. Lo que salió en la web
   porque lo aprobó una persona (era amarillo) **no va solo**.
@@ -108,14 +111,17 @@ de ahora.
 
 **3c. El texto del posteo** (`mensajeDeNota`): el `textoRedes` que la IA
 escribió con la nota (pasa por el verificador, `04-REDACCION`) o, si no hay, el
-titular y la bajada cortada en 220 caracteres; después, el cierre y hasta tres
-hashtags (`hashtagsDe`: `#Balcarce` primero si es de acá). El cierre depende
-de la red (16/10, `lineaFinal`):
+titular y la bajada cortada en 220 caracteres; después, el cierre y los hashtags
+(regla 281, `hashtagsDe`): **`#Balcarce #RadarBalcarce` siempre, primeros** (`HASHTAGS_FIJOS`), y hasta tres de la nota (sus etiquetas o, si no trae, el tema de su sección),
+sin repetir: con los fijos, cinco como mucho, el tope que Instagram anunció en diciembre de 2025. Los pies de los reels llevan los dos fijos y uno del tipo de pieza
+(`hashtagsDePieza`: #Noticias, #Clima, #FarmaciaDeTurno…) después del aviso de la voz. El largo, los enlaces y los hashtags de las demás redes (Threads, X, Telegram, Bluesky, TikTok, YouTube Shorts, el canal de WhatsApp) están en
+`docs/redes/FORMATOS-POR-RED.md` y en `textoParaRed` (`redes/texto-por-red.mjs`, sin publicar nada). El cierre depende de la red (16/10, `lineaFinal`):
 
 - **En Facebook**, una línea con el enlace a la nota (la frase cambia de nota en
   nota y es siempre la misma para la misma nota: `FRASES_DEL_ENLACE`). Desde el
   15/10 el enlace lleva de dónde sale (`utm_source=facebook`, `utm_medium=social`,
-  `utm_campaign=posteo`: `enlaceConOrigen`, regla 169).
+  `utm_campaign=posteo`: `enlaceConOrigen`, regla 169). Con la variable `ENLACES_CORTOS` ("Si", apagada por defecto, regla 282) el enlace es `radarbalcarce.com/r/f/<id>` (36
+  caracteres contra 178) y el Worker `infra/enlaces-cloudflare/` manda a la nota con las mismas UTM y cuenta los toques: `docs/redes/ACORTADOR-DE-ENLACES.md`.
 - **En Instagram, nunca un enlace** (no se puede tocar en el celular): "La nota
   completa, en radarbalcarce.com (link en la bio)".
 
@@ -136,8 +142,12 @@ perdido un error de Meta, se mira si igual se publicó (`posteoYaPublicado`: el
 
 **3d. Publicar y anotar.** `publicarFotoEnFacebook` o `publicarEnFacebook`
 (`redes/meta.mjs`) publica con el token de la página. Apenas Meta contesta se anota en el libro
-(`libro.facebook[id de la nota]`: cuándo, número del posteo, titular, enlace y
-temas) y se guarda. Si Meta dice que el token murió (código 190), se corta todo.
+(`libro.facebook[id de la nota]`: cuándo, número del posteo, titular, enlace, temas, `como` —'foto' o 'enlace'— y la foto con que salió) y se guarda. Si Meta dice que el token murió (código 190), se corta todo.
+
+**3d-bis. Si la foto de la nota cambia después del posteo** (regla 283, `redes/foto-cambiada.mjs`). Antes de elegir qué publicar, `--facebook` mira los posteos de las últimas **48 horas**: si el banco de fotos, las fotos manuales
+o las ilustraciones de IA le dieron a la nota otra foto **después** del `cuando` del posteo, le pide a Facebook que vuelva a leer la página (`releerEnlace`: `POST /?id=<url>&scrape=true`), **una vez por cambio**
+(`relectura` en el libro). Ojo: eso actualiza la vista previa de un posteo "enlace", **no la foto de un posteo con foto** (Facebook la guarda al publicar). Lo que de verdad lo evita es esperar a la foto real antes de
+publicar (`FACEBOOK.horasEsperandoFotoReal`, hoy 0 = no espera). Medición, alternativas y pregunta: `docs/redes/FOTO-CAMBIADA-DESPUES-DEL-POSTEO.md`.
 
 **3e. El espejo en Instagram.** Enseguida, `publicarFotoEnInstagram` publica
 en el feed la tarjeta vertical de **1080 × 1350** (`/nota/ID/instagram.png`)
@@ -478,7 +488,8 @@ ni reels de una sola nota: dichas de a una sonaban raras.
    pista aprobada para las redes) y, si la publicó una persona, que la haya
    marcado para las redes. **De Balcarce
    primero** (`esParaLasRedes`, la misma regla que Facebook); **de afuera**,
-   desde el 29/09, sólo con relevancia 80 o más (también a la noche) y **dos
+   desde el 29/09, sólo con relevancia 80 o más (también a la noche) **y, desde el
+   17/10 (regla 280), que las cuenten 5 medios o más** (`esPopularParaRedes`), y **dos
    como mucho por repaso**, las de más puntaje (`PIEZAS.relevanciaAfueraPodcast`
    y `PIEZAS.notasDeAfueraPorPodcast`; Hernán: "podrían ser también fuera de
    Balcarce si son las mejores rankeadas"). Compiten por puntaje con las de acá.
@@ -654,7 +665,11 @@ anteriores cuenta las historias por el libro y lo dice.
 | `.github/workflows/redes.yml` | La corrida: Facebook, piezas, direcciones y libro | El Worker `radar-balcarce-reloj` (:05, :35 y :45) y el final de "Actualizar la web"; a mano (`reloj`, `verificar`, `facebook`) | `META_TOKEN`, `GEMINI_API_KEY_REDES`, `REDES_ACTIVAS`, `R2_PIEZAS` | commit de `web/data/redes.json`; artefacto con los videos (3 días); el archivo de piezas en R2 (apagado) |
 | `.github/workflows/piezas.yml` | Armar (y si se pide, publicar) piezas a mano | una persona, Actions → Piezas | `solo` (vacío no arma nada), `todas`, `publicar`, `destino`; los mismos secretos | artefacto (7 días); el libro si publicó |
 | `redes/publicar.mjs` | El programa: `--verificar`, `--facebook`, `--piezas [--sin-horario] [--destino=…]`, `--enlaces` | los dos workflows | `portada.json`, `redes.json`, `reels/salida/piezas.json` | `redes.json` |
-| `redes/elegir.mjs` | Qué se publica: reglas de Facebook (`vaAFacebookPorLoQueEs`), texto del posteo, hashtags, qué notas cuenta cada podcast y su guion con presupuesto, el interruptor | `publicar.mjs`, `reels/plan.mjs`, contrato, avisos | `ingesta/criterio.mjs`, `web/lib/cuerpo.js` | — (funciones puras) |
+| `redes/medios-contados.mjs` | Cuántos medios distintos cuentan una nota (los del mismo dueño, uno): la barra de lo de afuera (regla 280) | `elegir.mjs` | `ingesta/fuentes*.mjs` | — |
+| `redes/texto-por-red.mjs` | `textoParaRed`: el texto de una nota o pieza para cada red (Facebook e Instagram como ya salen; Threads, X, Telegram, Bluesky, TikTok, YouTube, WhatsApp listos y probados, sin publicar) | pruebas | `elegir.mjs`, `piezas.mjs` | — |
+| `redes/enlaces-cortos.mjs` | La gramática `/r/<red>/<destino>` y el interruptor `ENLACES_CORTOS` (regla 282) | `elegir.mjs`, el Worker de enlaces | — | — |
+| `redes/foto-cambiada.mjs` | Qué posteos de Facebook cambiaron de foto después de salir (regla 283) y la espera a la foto real | `publicar.mjs`, `elegir.mjs` | — | — |
+| `redes/elegir.mjs` | Qué se publica: reglas de Facebook (`vaAFacebookPorLoQueEs`, `esPopularParaRedes`), texto del posteo, hashtags fijos, qué notas cuenta cada podcast y su guion con presupuesto, el interruptor | `publicar.mjs`, `reels/plan.mjs`, contrato, avisos | `ingesta/criterio.mjs`, `web/lib/cuerpo.js` | — (funciones puras) |
 | `redes/espejo.mjs` | Qué espejos reintentar | `publicar.mjs` | el libro y la portada | — |
 | `redes/reloj.mjs` | ¿Toca alguna pieza ahora? (sin farmacia de turno en la web, no la pide) | `redes.yml` | `redes.json`, el clima y la farmacia de `portada.json` | `hay` y `solo` |
 | `redes/piezas.mjs` | Cronograma, ventanas, podcasts, aviso de clima, pie de los reels (con los enlaces a `/clima` y `/farmacias`), techo de historias | reloj, plan, publicar-piezas, contrato, vigilante | `redes/horarios.mjs`, `ingesta/utiles.mjs`, `ingesta/alertas.mjs` | — |

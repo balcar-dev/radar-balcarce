@@ -136,7 +136,10 @@ cómo funciona algo que ya anda), **para decidir** (propuesta o página con caja
 | `docs/redes/ARCHIVO-DE-PIEZAS.md` | Dónde se guardan para siempre los videos, audios y placas (R2, depósito `radar-piezas`; la variable `R2_PIEZAS` se cargó el 15/10, aunque el documento diga «apagado») | vigente |
 | `docs/redes/PLAN-REELS-OTRAS-REDES.md` | Publicar los reels en TikTok, YouTube, etc. (el esqueleto `redes/destinos.mjs` se sacó el 17/10; queda en el historial) | para decidir |
 | `docs/redes/AUTOMATIZAR-REDES-ALTERNATIVAS.md` | Alternativas para automatizar TikTok, YouTube, X, Threads y el canal de WhatsApp | investigación (15/10) |
-| `docs/redes/FORMATOS-POR-RED.md` | Qué se puede publicar en cada red, con qué medidas y qué enlaces | investigación (16/10) |
+| `docs/redes/FORMATOS-POR-RED.md` | Qué se puede publicar en cada red, con qué medidas y qué enlaces; § 0b: el texto de cada red (largo, enlace, hashtags, plantilla) | investigación (16/10) y tabla (17/10) |
+| `docs/redes/PROPUESTA-POSTEOS-POR-DIA.md` | Qué va a Facebook e Instagram (sólo Balcarce y lo más contado) y cuántos posteos por día | propuesta con pregunta (17/10) |
+| `docs/redes/ACORTADOR-DE-ENLACES.md` | Enlaces cortos y rastreables con un Worker de Cloudflare (`/r/<red>/<id>`): opciones, números, cómo activarlo | escrito, apagado (17/10) |
+| `docs/redes/FOTO-CAMBIADA-DESPUES-DEL-POSTEO.md` | La foto de una nota cambia después de salir en Facebook: qué se puede, medición, alternativas | propuesta con pregunta (17/10) |
 | `docs/etapa-1-fuentes/LISTA-ELEGIDA.md` | La lista de fuentes elegida el 15/10 (Balcarce + 50 del país + 10 de la zona), ya aplicada | vigente |
 | `docs/etapa-1-fuentes/ANALISIS.md` | Qué aportaba cada una de las 254 fuentes y tres listas posibles | foto del 15/10 (superada por la lista elegida) |
 | `docs/etapa-1-fuentes/BALCARCE-INVESTIGACION.md` | 35 fuentes posibles de Balcarce y su partido, con feed o sin feed | para decidir |

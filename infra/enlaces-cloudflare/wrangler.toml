@@ -1,0 +1,39 @@
+# Los enlaces cortos de las redes de Radar Balcarce (ver worker.mjs y docs/redes/ACORTADOR-DE-ENLACES.md).
+#
+# ESTADO (17/10/2026): escrito y probado sin red, NO subido y SIN ruta. Mientras no tenga la ruta radarbalcarce.com/r/*, subirlo no cambia nada del
+# sitio, y mientras la variable ENLACES_CORTOS de GitHub (o del Worker de tareas) esté vacía, ningún texto lleva un enlace corto.
+#
+# ORDEN PARA ACTIVARLO (lo hace una persona; la vuelta atrás, al final):
+#   1. subir este Worker (wrangler deploy desde esta carpeta, o el workflow que se arme para eso);
+#   2. poner la ruta con `node infra/enlaces-cloudflare/ruta.mjs poner` (necesita CLOUDFLARE_API_TOKEN con "Workers Routes: Edit");
+#   3. probar a mano: radarbalcarce.com/r/f/<id de una nota de hoy> tiene que llevar a la nota (y /r/zz/abc a la portada);
+#   4. recién entonces, la variable ENLACES_CORTOS = Si. Vacía, vuelven los enlaces largos de siempre.
+#   La ruta NO se saca nunca después de haber publicado un enlace corto: ese enlace tiene que seguir andando.
+#
+# LA RUTA (radarbalcarce.com/r/*) NO va en este archivo: la pone y la saca infra/enlaces-cloudflare/ruta.mjs, así volver a subir el Worker nunca
+# la pone ni la saca sin querer (igual que el archivo permanente).
+
+name = "radar-balcarce-enlaces"
+main = "worker.mjs"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+# NO descomentar: la ruta la maneja ruta.mjs. Queda escrita sólo como referencia.
+# OJO: tendría que quedar acá arriba, antes de la primera tabla ([vars]); más abajo TOML la tomaría como parte de otra tabla.
+# routes = [
+#   { pattern = "radarbalcarce.com/r/*", zone_name = "radarbalcarce.com" },
+# ]
+
+[vars]
+SITIO = "https://radarbalcarce.com"
+# De dónde se baja /nota/indice.json (el índice { id: "titular-id" } que publica el sitio).
+ORIGEN_PAGES = "https://radar-balcarce.pages.dev"
+CACHE_SEGUNDOS = "600"
+# "0" deja de contar las visitas; la redirección sigue funcionando.
+ENLACES_ACTIVO = "1"
+
+# La cuenta de visitas (red, tipo, destino, persona o robot): Analytics Engine, que entra en el plan Workers Paid (10 millones de datos escritos
+# por mes incluidos; con Workers Free, 100.000 por día). El conjunto de datos se crea solo con la primera visita.
+[[analytics_engine_datasets]]
+binding = "CLICS"
+dataset = "radar_enlaces_cortos"

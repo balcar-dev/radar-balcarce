@@ -423,17 +423,18 @@ test('Facebook usa el texto para redes, el enlace a nuestra nota y hashtags, sin
   assert.ok(m.startsWith('El Concejo aprobó la ordenanza de tránsito.'));
   assert.match(m, /\n\n[^\n]+ https:\/\/radarbalcarce\.com\/nota\/un-titular-abc/);
   assert.doesNotMatch(m, /Resumen hecho con IA/, "los posteos ya no dicen eso (26/09)");
-  assert.ok(m.endsWith('#Balcarce #Tránsito #ConcejoDeliberante'), m);
+  // Regla 281: #Balcarce #RadarBalcarce fijos y primeros, y hasta tres de la nota (sin repetir el "balcarce" de las etiquetas).
+  assert.ok(m.endsWith('#Balcarce #RadarBalcarce #Tránsito #ConcejoDeliberante #Multas'), m);
   assert.ok(!m.includes('Puntonueve'));
   assert.ok(!m.includes('Copete.'));
 });
 
-test('sin texto para redes, el posteo es como antes; y una nota de afuera no lleva #Balcarce', () => {
+test('sin texto para redes, el posteo es como antes pero con los hashtags; y una nota de afuera también lleva los fijos (regla 281)', () => {
   const nota = { id: 'abc', slug: 's', titulo: 'Un titular', copete: 'Copete.', seccion: 'Deportes', etiquetas: ['fútbol'] };
   const m = mensajeDeNota(nota, 'https://radarbalcarce.com');
   assert.ok(m.startsWith('Un titular\n\nCopete.'));
-  assert.ok(!m.includes('#'));
-  assert.deepEqual(hashtagsDe(nota), ['#Fútbol']);
+  assert.ok(m.endsWith('#Balcarce #RadarBalcarce #Fútbol'), m);
+  assert.deepEqual(hashtagsDe(nota), ['#Balcarce', '#RadarBalcarce', '#Fútbol']);
 });
 
 // ---------------------------------------------------------------- el panel

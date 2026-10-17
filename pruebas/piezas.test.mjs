@@ -149,7 +149,7 @@ test('los reels van como reel y lo demás como historia', () => {
 
 test('las historias no llevan texto y los reels sí', () => {
   assert.equal(pieDePieza(PIEZAS[0]), '');
-  assert.match(pieDePieza(PIEZAS[1]), /^Una noticia con gancho\n\nMás en radarbalcarce\.com\n\nVoz generada con inteligencia artificial\.$/);
+  assert.match(pieDePieza(PIEZAS[1]), /^Una noticia con gancho\n\nMás en radarbalcarce\.com\n\nVoz generada con inteligencia artificial\.\n\n#Balcarce #RadarBalcarce #Noticias$/);
   assert.match(pieDePieza({ nombre: 'podcast', tipo: 'reel' }), /repaso del día/);
 });
 

@@ -21,6 +21,10 @@
 //   · Una nota que salió sola y no tiene cuerpo no va a ninguna red (25/09,
 //     web/lib/cuerpo.js): el enlace llevaría a una nota de dos renglones.
 //     generar-datos ya no la pone en la portada; esto es la segunda red.
+//   · Sólo sale lo de Balcarce y lo MÁS CONTADO del país (regla 280, 17/10/2026, Hernán: "sólo notas de Balcarce o, si no son de Balcarce, las más
+//     populares que tengamos, vengan de donde vengan"). Lo de afuera tiene que contarlo `mediosParaRedes` medios distintos o más
+//     (esPopularParaRedes): antes, si no alcanzaban las de Balcarce, se "rellenaba" hasta cinco con lo de afuera de mayor puntaje y así
+//     salió, el 17/10, la agenda de espectáculos de La Plata (2 medios, de otra ciudad).
 //   · Las notas propias del sitio (la del dólar y la de cada podcast,
 //     web/lib/notas-propias.js) no van a Facebook como posteo ni a los
 //     podcasts: la del repaso ES un podcast, y la del dólar es un número que
@@ -29,6 +33,10 @@
 import { rutaDeNota } from '../web/lib/ruta.js';
 import { sinTildes } from '../web/lib/texto.js';
 import { esperaCuerpo } from '../web/lib/cuerpo.js';
+import { noEsNoticiaAunqueLaCuentenTodos } from '../ingesta/muy-contada.mjs';
+import { mediosDeLaNota } from './medios-contados.mjs';
+import { enlaceCorto, hayEnlacesCortos } from './enlaces-cortos.mjs';
+import { esperaFotoDefinitiva } from './foto-cambiada.mjs';
 import {
   FACEBOOK, PIEZAS, PODCAST_VOZ, POSTEO, SECCIONES_QUE_ESPERAN_PERSONA,
 } from '../ingesta/criterio.mjs';
@@ -54,7 +62,7 @@ export const REGLAS_FACEBOOK = {
   // por día, y más adelante se mezclan con las notas propias y originales.
   porDia: FACEBOOK.porDia,
   relevanciaMinima: FACEBOOK.relevanciaMinima,
-  relevanciaMinimaDeRelleno: FACEBOOK.relevanciaMinimaDeRelleno, // completa los cinco del día con lo de afuera de mayor puntaje
+  mediosParaRedes: FACEBOOK.mediosParaRedes, // lo de afuera sólo sale si lo cuentan tantos medios distintos o más (regla 280)
   porCorrida: 1,           // así no salen dos pegadas
   minutosEntrePosteos: FACEBOOK.minutosEntrePosteos,
   esperaMinutos: FACEBOOK.esperaMinutos,       // que el deploy de la web ya haya terminado
@@ -66,6 +74,7 @@ export const REGLAS_FACEBOOK = {
   // noticia tres veces. Ver temaParecido.
   horasSinRepetirTema: FACEBOOK.horasSinRepetirTema,
   horasEsperandoFoto: FACEBOOK.horasEsperandoFoto, // una nota sin foto espera a que aparezca; lo que una persona marcó, no
+  horasEsperandoFotoReal: FACEBOOK.horasEsperandoFotoReal, // una nota con sólo una ilustración de IA espera a la foto real (0 = no espera, regla 283)
   seccionesQueEsperanPersona: SECCIONES_QUE_ESPERAN_PERSONA,
 };
 
@@ -104,7 +113,9 @@ export const loAproboUnaPersona = (n) => n?.como === 'publicada';
  *     de Política o Policiales, de afuera o de poca relevancia: lo decidió ella;
  *   · si no: de Balcarce (esParaLasRedes), con la relevancia mínima, de una
  *     sección que sale sola y que no haya salido en la web porque la aprobó una
- *     persona.
+ *     persona;
+ *   · o lo más contado del país (esPopularParaRedes, regla 280): lo de afuera que cuentan
+ *     `mediosParaRedes` medios distintos o más, con las mismas guardas.
  *
  * Nunca una nota propia ni una sin cuerpo.
  */
@@ -113,25 +124,31 @@ export function vaAFacebookPorLoQueEs(n, reglas = REGLAS_FACEBOOK) {
   if (aprobadaParaLasRedes(n)) return true;
   // Lo de acá que cuentan tres medios de Balcarce o más (`muyContadaDeAca`, regla 198) no pide la relevancia mínima:
   // es lo que más se lee del sitio. Política y Policiales siguen esperando a una persona.
-  return esParaLasRedes(n) && !loAproboUnaPersona(n)
-    && ((n.relevancia ?? 0) >= reglas.relevanciaMinima || muyContadaDeAca(n))
-    && !reglas.seccionesQueEsperanPersona.includes(n.seccion);
+  if (loAproboUnaPersona(n) || reglas.seccionesQueEsperanPersona.includes(n.seccion)) return false;
+  if (esParaLasRedes(n)) return (n.relevancia ?? 0) >= reglas.relevanciaMinima || muyContadaDeAca(n);
+  return esPopularParaRedes(n, reglas);
+}
+
+/**
+ * ¿Es de afuera y la cuentan tantos medios que es LA noticia del momento? (regla 280, 17/10/2026). Hernán: "en posteos de Facebook y de Instagram, sólo
+ * notas de Balcarce o, si no son de Balcarce, las más populares que tengamos, vengan de donde vengan. Hoy se publicó una de eventos de La Plata y no suma."
+ *
+ *   · `mediosParaRedes` medios distintos o más (los del mismo dueño cuentan uno: `mediosDeLaNota`), no 3 como para entrar al sitio: en el sitio entra todo lo que
+ *     cuentan tres medios, pero en una red salen pocas y tienen que ser las que cuenta medio país;
+ *   · que sea noticia: ni "dónde ver", ni el "en vivo", ni la cotización, ni el pronóstico, ni el horóscopo (`noEsNoticiaAunqueLaCuentenTodos`);
+ *   · nada de lo que espera a una persona (Política, Policiales), ni lo que una persona aprobó sin marcarlo para las redes, ni notas propias ni sin cuerpo.
+ *
+ * Lo de Balcarce NO pasa por acá (va por esParaLasRedes): esto es sólo la puerta de lo de afuera.
+ */
+export function esPopularParaRedes(n, reglas = REGLAS_FACEBOOK) {
+  if (esNotaPropia(n) || esperaCuerpo(n) || loAproboUnaPersona(n)) return false;
+  if (esParaLasRedes(n) || SECCIONES_QUE_ESPERAN_PERSONA.includes(n?.seccion)) return false;
+  if (noEsNoticiaAunqueLaCuentenTodos(n?.titulo)) return false;
+  return mediosDeLaNota(n) >= (reglas.mediosParaRedes ?? FACEBOOK.mediosParaRedes);
 }
 
 /** ¿Es de acá y la cuentan tres medios de Balcarce o más? (generar-datos la marca; regla 198) */
 export const muyContadaDeAca = (n) => Boolean(n?.muyContadaDeAca) && esParaLasRedes(n);
-
-/**
- * Lo que puede salir en Facebook para completar los cinco del día cuando no alcanzan las de Balcarce (12/10, Hernán): lo de afuera de mayor
- * puntaje. Valen las mismas guardas: nada propio ni sin cuerpo, nunca Política ni Policiales ni lo que una persona aprobó sin marcarlo para
- * las redes. Sin `relevanciaMinimaDeRelleno` en las reglas, no hay relleno.
- */
-export function vaAFacebookDeRelleno(n, reglas = REGLAS_FACEBOOK) {
-  if (reglas.relevanciaMinimaDeRelleno == null) return false;
-  if (esNotaPropia(n) || esperaCuerpo(n)) return false;
-  return !loAproboUnaPersona(n) && !reglas.seccionesQueEsperanPersona.includes(n.seccion)
-    && (n.relevancia ?? 0) >= reglas.relevanciaMinimaDeRelleno;
-}
 
 /**
  * Las notas que corresponde publicar ahora en Facebook, en orden.
@@ -167,21 +184,24 @@ export function elegirParaFacebook({ notas, libro = libroNuevo(), ahora = new Da
 
   const candidatas = notas.filter((n) => {
     if (yaPublicada(libro, 'facebook', n.id)) return false;
-    if (!vaAFacebookPorLoQueEs(n, reglas) && !vaAFacebookDeRelleno(n, reglas)) return false;
+    if (!vaAFacebookPorLoQueEs(n, reglas)) return false;
     if (recientes.some((p) => temaParecido(n, p))) return false;
     const salio = cuandoSalio(n);
     if (!salio) return false;
     const edad = minutosDesde(salio, ahora);
     if (edad < reglas.esperaMinutos || edad > reglas.edadMaximaHoras * 60) return false;
+    // Con sólo una ilustración de IA se puede esperar a la foto real (regla 283; apagado por defecto).
+    if (esperaFotoDefinitiva(n, edad, reglas.horasEsperandoFotoReal)) return false;
     // Sin foto todavía: se espera (la foto se sigue buscando) salvo que una persona la haya marcado.
     return Boolean(n.foto?.archivo) || aprobadaParaLasRedes(n) || edad >= (reglas.horasEsperandoFoto ?? 0) * 60;
   });
 
   // Lo que aprobó una persona para las redes va primero; después lo de Balcarce que cuentan tres medios de acá o más (regla 198),
-  // después el resto de lo de Balcarce y sólo si no hay, lo de afuera de mayor puntaje; dentro de cada grupo, con foto y por relevancia.
-  const deAca = (n) => Number(esParaLasRedes(n));
-  const muyDeAca = (n) => Number(muyContadaDeAca(n));
-  candidatas.sort((a, b) => (Number(aprobadaParaLasRedes(b)) - Number(aprobadaParaLasRedes(a))) || (muyDeAca(b) - muyDeAca(a)) || (deAca(b) - deAca(a)) || (Number(Boolean(b.foto?.archivo)) - Number(Boolean(a.foto?.archivo))) || ((b.relevancia ?? 0) - (a.relevancia ?? 0)));
+  // después el resto de lo de Balcarce y, al final, lo más contado del país (regla 280: los que cuentan más medios primero); dentro de cada
+  // grupo, con foto y por relevancia.
+  const grupo = (n) => (aprobadaParaLasRedes(n) ? 0 : muyContadaDeAca(n) ? 1 : esParaLasRedes(n) ? 2 : 3);
+  const medios = (n) => (grupo(n) === 3 ? mediosDeLaNota(n) : 0);
+  candidatas.sort((a, b) => (grupo(a) - grupo(b)) || (medios(b) - medios(a)) || (Number(Boolean(b.foto?.archivo)) - Number(Boolean(a.foto?.archivo))) || ((b.relevancia ?? 0) - (a.relevancia ?? 0)));
   return candidatas.slice(0, Math.min(cupo, reglas.porCorrida));
 }
 
@@ -254,6 +274,12 @@ export function ponerOrigen(enlace, { fuente, medio = 'social', campana, conteni
   const f = utm(fuente);
   const c = utm(campana);
   if (!enlace || !f || !c) return enlace;
+  // Con ENLACES_CORTOS prendido (regla 282) el enlace de las redes es radarbalcarce.com/r/<red>/<destino>: el Worker de infra/enlaces-cloudflare/ lo manda
+  // a la nota con las mismas UTM. Si no se puede (otra red, otra página), sale el enlace largo de siempre.
+  if (hayEnlacesCortos() && (medio === 'social' || !medio)) {
+    const corto = enlaceCorto(enlace, { fuente: f, campana: c, contenido: utm(contenido) });
+    if (corto) return corto;
+  }
   let u;
   try { u = new URL(enlace); } catch { return enlace; }
   u.searchParams.set('utm_source', f);
@@ -298,26 +324,50 @@ export function conCreditoDeFoto(texto, nota) {
   return [texto, linea].join('\n\n');
 }
 
+/** Los hashtags que llevan TODAS las piezas de Facebook e Instagram, siempre primeros y en este orden (regla 281, 17/10/2026, Hernán: "'Balcarce' y 'Radar Balcarce' deberían ser FIJOS"). */
+export const HASHTAGS_FIJOS = ['Balcarce', 'RadarBalcarce'];
+
+/** Un hashtag con su forma: "obras públicas" queda ObrasPúblicas. Devuelve '' si no sirve (vacío o de más de 30 letras). */
+const aHashtag = (e) => {
+  const tag = String(e ?? '').replace(/^#+/, '').split(/[^\p{L}\p{N}]+/u).filter(Boolean)
+    .map((p) => p[0].toUpperCase() + p.slice(1)).join('');
+  return tag && tag.length <= 30 ? tag : '';
+};
+const claveDeHashtag = (tag) => sinTildes(tag).toLowerCase();
+
+/** El tema de una sección como hashtag, para la nota que no trae etiquetas (las secciones que no dicen nada, como Balcarce o Argentina, no). */
+const HASHTAG_DE_SECCION = {
+  Política: 'Política', Policiales: 'Policiales', Fútbol: 'Fútbol', Deportes: 'Deportes', Automovilismo: 'Automovilismo', Agro: 'Agro',
+  Economía: 'Economía', 'Cultura y agenda': 'Cultura', Tecnología: 'Tecnología', Educación: 'Educación', Salud: 'Salud', Ciencia: 'Ciencia',
+};
+
 /**
- * Los hashtags del posteo: #Balcarce primero si la nota es de acá, y después
- * las etiquetas que escribió la IA (ya verificadas), hasta tres. "obras
- * públicas" queda #ObrasPúblicas. Sin repetir, aunque cambie la tilde.
+ * Los hashtags de un posteo (regla 281): primero los FIJOS (`#Balcarce #RadarBalcarce`, siempre, aunque la nota sea de afuera) y después, hasta `cuantos`
+ * (3, `POSTEO.hashtagsMaximo`) de la nota: las etiquetas que escribió la IA (ya verificadas) o, si no trae, el tema de su sección. Nunca repetidos (ni
+ * "balcarce" ni "radar balcarce" otra vez, aunque cambie la tilde o las mayúsculas). Con dos fijos y tres de la nota son cinco, el tope que Instagram
+ * anunció en diciembre de 2025. `fijos` en vacío saca los fijos (lo usan las redes que no los quieren).
  */
-export function hashtagsDe(nota, cuantos = POSTEO.hashtagsMaximo) {
-  // Una nota de acá que la IA pasó a Educación, Salud o Ciencia (reglas 187 y 211) sigue llevando #Balcarce. Los demás hashtags salen
-  // de las etiquetas de la IA (#Ciencia, #IA, #Educación…): no hay una lista fija por sección.
-  const local = !!(nota?.local || nota?.seccion === 'Balcarce' || nota?.seccionAntes === 'Balcarce');
-  const candidatas = [...(local ? ['Balcarce'] : []), ...(nota?.etiquetas ?? [])];
+export function hashtagsDe(nota, cuantos = POSTEO.hashtagsMaximo, opciones = {}) {
+  const deLaNota = [...(nota?.etiquetas ?? []), ...(nota?.etiquetas?.length ? [] : [HASHTAG_DE_SECCION[nota?.seccion]])];
+  return armarHashtags(deLaNota, cuantos, opciones);
+}
+
+/** Los fijos y después hasta `cuantos` de `propios` (palabras sueltas o ya hashtags), sin repetir. Es lo que usan los posteos de notas y los pies de los reels. */
+export function armarHashtags(propios = [], cuantos = POSTEO.hashtagsMaximo, { fijos = HASHTAGS_FIJOS } = {}) {
   const vistos = new Set();
   const tags = [];
-  for (const e of candidatas) {
-    const tag = String(e ?? '').replace(/^#+/, '').split(/[^\p{L}\p{N}]+/u).filter(Boolean)
-      .map((p) => p[0].toUpperCase() + p.slice(1)).join('');
-    const clave = sinTildes(tag);
-    if (!tag || tag.length > 30 || vistos.has(clave)) continue;
-    vistos.add(clave);
+  for (const e of fijos) {
+    const tag = aHashtag(e);
+    if (tag && !vistos.has(claveDeHashtag(tag))) { vistos.add(claveDeHashtag(tag)); tags.push(`#${tag}`); }
+  }
+  let agregados = 0;
+  for (const e of propios) {
+    if (agregados >= cuantos) break;
+    const tag = aHashtag(e);
+    if (!tag || vistos.has(claveDeHashtag(tag))) continue;
+    vistos.add(claveDeHashtag(tag));
     tags.push(`#${tag}`);
-    if (tags.length >= cuantos) break;
+    agregados += 1;
   }
   return tags;
 }
@@ -365,6 +415,7 @@ export function mensajeDeNota(nota, sitio, origen = null) {
   const copete = recortar(nota.copete);
   if (copete) partes.push(copete);
   if (sitio) partes.push(lineaFinal(nota, sitio, origen));
+  partes.push(hashtagsDe(nota).join(' '));
   // Sin "Resumen hecho con IA" (desde el 26/09, a pedido de Hernán y Andrés):
   // quién escribió la nota se dice en la nota, en la web.
   return partes.join('\n\n');
@@ -482,7 +533,9 @@ export function elegirParaPodcast(notas, { cuantas = PIEZAS.notasPorPodcast, exc
   const reglas = { ...REGLAS_PIEZAS, ...reglasPedidas };
   // Lo que una persona pidió para el próximo repaso (`paraElRepaso`, notas de pistas aprobadas para las redes) entra primero, sin pasar por el puntaje.
   const pedidas = sinRepetidos(notas.filter((n) => n.paraElRepaso === true && sePuedeEnUnRepaso(n)).sort(porRelevancia), excluir).slice(0, Math.max(0, cuantas - 1));
-  const alcanza = (n) => (n.relevancia ?? 0) >= (esParaLasRedes(n) ? reglas.relevanciaParaPodcast : reglas.relevanciaAfuera);
+  // Lo de afuera, además del puntaje, tiene que ser de lo más contado del país (esPopularParaRedes, regla 280): el reel y la historia también son Facebook e Instagram.
+  const alcanza = (n) => (n.relevancia ?? 0) >= (esParaLasRedes(n) ? reglas.relevanciaParaPodcast : reglas.relevanciaAfuera)
+    && (esParaLasRedes(n) || esPopularParaRedes(n));
   let deAfuera = 0;
   const candidatas = sinRepetidos(
     [...notas]

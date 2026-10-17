@@ -891,7 +891,7 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Lo de acá que espera a una persona en el celular: notas por día, como mucho | 5 | `ESPERA_PERSONA.deAcaPorDia` |
 | Facebook: notas por día, como máximo | 5 | `FACEBOOK.porDia` |
 | Facebook: relevancia mínima | 75 | `FACEBOOK.relevanciaMinima` |
-| Facebook: relevancia mínima para completar los cinco con lo de afuera | 0 | `FACEBOOK.relevanciaMinimaDeRelleno` |
+| Facebook e Instagram: medios distintos que tiene que contar lo de afuera para salir (lo de Balcarce no lo pide) | 5 | `FACEBOOK.mediosParaRedes` |
 | Facebook: desde la hora | 8 | `FACEBOOK.desdeHora` |
 | Facebook: hasta la hora (en punto) | 22 | `FACEBOOK.hastaHora` |
 | Facebook: minutos entre un posteo y otro | 90 | `FACEBOOK.minutosEntrePosteos` |
@@ -899,6 +899,7 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Facebook: horas de vida de una nota para salir | 8 | `FACEBOOK.edadMaximaHoras` |
 | Facebook: horas sin repetir un tema | 24 | `FACEBOOK.horasSinRepetirTema` |
 | Facebook: horas que espera una nota sin foto | 3 | `FACEBOOK.horasEsperandoFoto` |
+| Facebook: horas que espera una nota con sólo una ilustración de IA a que llegue la foto real (0 = no espera) | 0 | `FACEBOOK.horasEsperandoFotoReal` |
 | Podcasts: relevancia mínima | 62 | `PIEZAS.relevanciaPodcast` |
 | Podcasts (los tres repasos): notas | 4 | `PIEZAS.notasPorPodcast` |
 | Podcast: notas mínimas para que salga | 2 | `PIEZAS.notasMinimasPodcast` |

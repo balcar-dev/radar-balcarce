@@ -161,19 +161,22 @@ test('lo viejo no se publica', () => {
   assert.equal(elegirParaFacebook({ notas: [vieja], ahora: AHORA }).length, 0);
 });
 
-test('lo flojo no sale por lo que es: sin relleno en las reglas no se publica', () => {
-  const sinRelleno = { ...REGLAS_FACEBOOK, relevanciaMinimaDeRelleno: undefined };
-  assert.equal(elegirParaFacebook({ notas: [nota({ relevancia: 60 })], ahora: AHORA, reglas: sinRelleno }).length, 0);
+test('lo flojo de Balcarce no sale por lo que es, y lo de afuera tampoco: no hay relleno (regla 280)', () => {
+  assert.equal(elegirParaFacebook({ notas: [nota({ relevancia: 60 })], ahora: AHORA }).length, 0);
+  // El 17/10 salió la agenda de espectáculos de La Plata (2 medios, otra ciudad) por el relleno de los cinco del día.
+  const laPlata = nota({ id: 'laplata', local: false, seccion: 'Cultura y agenda', relevancia: 99, medios: ['El Día', 'Infobrisas (Radio Brisas)'], titulo: 'La Plata concentra propuestas culturales y deportivas para el sábado' });
+  assert.equal(elegirParaFacebook({ notas: [laPlata], ahora: AHORA }).length, 0);
 });
 
-test('tienen que salir cinco por día (12/10): si no alcanza lo de Balcarce se sigue con lo de mayor puntaje, y lo de acá va primero', () => {
-  const deAfuera = nota({ id: 'afuera', local: false, seccion: 'Argentina', relevancia: 99, titulo: 'El Gobierno anunció un nuevo esquema de subsidios para el transporte' });
+test('cinco por día como máximo: lo de acá va primero y lo de afuera sólo si lo cuentan cinco medios o más (regla 280, antes el relleno de la 161)', () => {
+  const deAfuera = nota({ id: 'afuera', local: false, seccion: 'Argentina', relevancia: 70, medios: ['A', 'B', 'C', 'D', 'E', 'F'], titulo: 'El Gobierno anunció un nuevo esquema de subsidios para el transporte' });
   const floja = nota({ id: 'flojaDeAca', relevancia: 60, titulo: 'Abre la inscripción a la escuela de verano en el club' });
   const buena = nota({ id: 'buenaDeAca', relevancia: 80, titulo: 'Inauguran la nueva sala de guardia en el hospital municipal' });
-  const elegidas = elegirParaFacebook({ notas: [deAfuera, floja, buena], ahora: AHORA, reglas: { ...REGLAS_FACEBOOK, porCorrida: 3 } });
-  assert.deepEqual(elegidas.map((n) => n.id), ['buenaDeAca', 'flojaDeAca', 'afuera'], 'Balcarce primero, y después lo de afuera por puntaje');
+  const pocoContada = nota({ id: 'poco', local: false, seccion: 'Argentina', relevancia: 99, medios: ['A', 'B'], titulo: 'El Congreso tratará una ley sobre humedales la semana próxima' });
+  const elegidas = elegirParaFacebook({ notas: [deAfuera, floja, buena, pocoContada], ahora: AHORA, reglas: { ...REGLAS_FACEBOOK, porCorrida: 3 } });
+  assert.deepEqual(elegidas.map((n) => n.id), ['buenaDeAca', 'afuera'], 'Balcarce primero; después lo más contado; lo flojo de acá y lo poco contado de afuera, no');
   // Política y Policiales siguen esperando a una persona, aunque sea lo de mayor puntaje.
-  const politica = nota({ id: 'pol', local: false, seccion: 'Política', relevancia: 99, titulo: 'El Senado debate la reforma del régimen de zona fría esta semana' });
+  const politica = nota({ id: 'pol', local: false, seccion: 'Política', relevancia: 99, medios: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'], titulo: 'El Senado debate la reforma del régimen de zona fría esta semana' });
   assert.equal(elegirParaFacebook({ notas: [politica], ahora: AHORA }).length, 0);
 });
 
@@ -283,7 +286,7 @@ test('parecido de temas: ni tan estricto que deje pasar lo mismo, ni tan flojo q
 
 test('el mensaje lleva el enlace a la nota, no dice "Resumen hecho con IA" y NO nombra la fuente', () => {
   const m = mensajeDeNota(nota({ id: 'abc', titulo: 'Un titular' }), 'https://radarbalcarce.com');
-  assert.match(m, /^Un titular\n\nUn copete\n\n[^\n]+ https:\/\/radarbalcarce\.com\/nota\/un-titular-abc$/);
+  assert.match(m, /^Un titular\n\nUn copete\n\n[^\n]+ https:\/\/radarbalcarce\.com\/nota\/un-titular-abc\n\n#Balcarce #RadarBalcarce( #\p{L}+)*$/u);
   assert.ok(!/Fuente|Vanguardia/i.test(m), 'nombró la fuente en una red social');
 });
 
@@ -600,12 +603,14 @@ test('a las redes va sólo lo de Balcarce; del automovilismo de afuera, lo que n
 test('los repasos también cuentan lo de afuera si está entre lo de más puntaje: 80 o más y dos como mucho (29/09)', () => {
   // Hernán, 29/09: "las 4 noticias podrían ser también fuera de Balcarce si son
   // las mejores rankeadas". Casos de la portada de ese día.
-  const afuera = (id, titulo, seccion, relevancia) => ({ id, titulo, seccion, relevancia, local: false, semaforo: 'verde' });
+  // Desde la regla 280 lo de afuera también tiene que ser de lo más contado (cinco medios o más).
+  const afuera = (id, titulo, seccion, relevancia, medios = 6) => ({ id, titulo, seccion, relevancia, local: false, semaforo: 'verde', medios: Array.from({ length: medios }, (_, i) => `Medio ${i + 1}`) });
   const notas = [
     afuera('f1', 'Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll', 'Automovilismo', 97),
     afuera('f2', 'Lionel Scaloni libera a Tomás Palacios para jugar en Estudiantes', 'Fútbol', 91),
     afuera('f3', 'La cuenta corriente de la balanza de pagos cierra con superávit', 'Economía', 88),
     afuera('f4', 'Artista deja la ciudad y levanta una casa con doce parabrisas', 'Argentina', 73),
+    afuera('f6', 'Elecciones en Chile: gana el candidato de la oposición por poco margen', 'Argentina', 96, 2),
     afuera('f5', 'Luis Caputo califica a Kicillof como el anticristo', 'Política', 99),
     nn('a', 'La Cooperativa anuncia un corte de luz para el miércoles', 'Balcarce', 100),
     nn('b', 'Pato Naranja gana por 99 a 12 y queda entre los cuatro mejores', 'Deportes', 90),
@@ -614,6 +619,7 @@ test('los repasos también cuentan lo de afuera si está entre lo de más puntaj
   assert.deepEqual(elegidas.map((x) => x.id), ['a', 'f1', 'f2', 'b'], 'las dos de afuera de más puntaje, y lo de acá');
   assert.ok(!elegidas.some((x) => x.id === 'f3'), 'una tercera de afuera no entra aunque tenga 88');
   assert.ok(!elegidas.some((x) => x.id === 'f5'), 'Política nunca, sea de donde sea');
+  assert.ok(!elegidas.some((x) => x.id === 'f6'), 'con 96 pero contada por 2 medios, no es de las más populares (regla 280)');
   // A la noche lo de acá no pide puntaje; lo de afuera sigue pidiendo 80.
   const noche = elegirParaPodcast(notas, { cuantas: 4, excluir: elegidas }, { ...REGLAS_PIEZAS, relevanciaParaPodcast: 0 });
   assert.deepEqual(noche.map((x) => x.id), ['f3'], 'con 73, la del artista no entra ni a la noche');

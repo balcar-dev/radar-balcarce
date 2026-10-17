@@ -19,12 +19,15 @@ import { publicarPiezas, completarEnlaces } from './publicar-piezas.mjs';
 import { espejosPendientes, esLimiteDeMeta, posteoYaPublicado, comoSaleEnFacebook, ESPEJO } from './espejo.mjs';
 import { FOTO_EN_INSTAGRAM } from '../web/lib/tarjeta-diseno.js';
 import { raizDelProyecto } from './raiz.mjs';
+import { fijarEnlacesCortos } from './enlaces-cortos.mjs';
+import { fotosCambiadasDespuesDelPosteo } from './foto-cambiada.mjs';
 import {
   elegirParaFacebook, mensajeDeNota, enlaceDeNota, enlaceConOrigen, imagenDeNota, conCreditoDeFoto, libroNuevo, anotar, yaPublicada, estaActivo,
 } from './elegir.mjs';
 
 // Los archivos que lee y escribe, relativos a la carpeta del proyecto (el corredor de tareas de Cloudflare los baja y los guarda: infra/tareas-cloudflare/).
-export const ARCHIVOS_QUE_LEE = ['web/data/portada.json', 'web/data/redes.json'];
+// (Los tres libros de fotos son para saber si la foto de una nota ya posteada cambió: regla 283. Sin ellos, simplemente no hay relecturas.)
+export const ARCHIVOS_QUE_LEE = ['web/data/portada.json', 'web/data/redes.json', 'web/data/banco-fotos.json', 'web/data/fotos-manuales.json', 'web/data/fotos-ia.json'];
 export const ARCHIVOS_QUE_ESCRIBE = ['web/data/redes.json'];
 
 // Estas cinco se calculan al importar (la terminal y GitHub, como siempre) y `main` las vuelve a calcular con el entorno que reciba: en un Worker de
@@ -144,6 +147,32 @@ async function facebook() {
     }
   }
 
+  /**
+   * La foto de una nota ya posteada cambió (por ejemplo, llegó la real y el posteo salió con la ilustración de IA): se le pide a Facebook que vuelva a leer
+   * la página, UNA vez por cambio y sólo para posteos de las últimas 48 horas (regla 283). Ojo: eso actualiza la vista previa de un posteo que salió como
+   * ENLACE; la foto de un posteo con foto la guarda Facebook al publicar y no cambia (docs/redes/FOTO-CAMBIADA-DESPUES-DEL-POSTEO.md).
+   */
+  async function releerLasQueCambiaronDeFoto() {
+    const datos = (f) => leer(path.join(RAIZ, 'web', 'data', f), {});
+    const cambiadas = fotosCambiadasDespuesDelPosteo({ libro, banco: datos('banco-fotos.json'), manuales: datos('fotos-manuales.json'), fotosIA: datos('fotos-ia.json') });
+    for (const c of cambiadas) {
+      const aclaracion = c.comoSalio === 'foto' ? ' (salió con foto: Facebook ya guardó la imagen)' : '';
+      console.log(`  Facebook · la foto de «${c.titulo}» cambió después del posteo (${c.origen}); se pide releer ${c.enlace}${aclaracion}`);
+      if (!ACTIVO) { console.log('             (modo prueba: no se pidió. Falta REDES_ACTIVAS=si)'); continue; }
+      const relectura = { cuando: new Date().toISOString(), deLaFoto: c.desde };
+      try {
+        const r = await api.releerEnlace({ enlace: c.enlace });
+        libro.facebook[c.id].relectura = { ...relectura, ok: r.ok };
+      } catch (e) {
+        libro.facebook[c.id].relectura = { ...relectura, ok: false, error: sinToken(e.message, token).slice(0, 160) };
+        console.error(`             no se pudo pedir la relectura: ${sinToken(e.message, token)}`);
+        if (e instanceof ErrorMeta && e.tokenMuerto) break;
+      }
+      fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
+    }
+  }
+  await releerLasQueCambiaronDeFoto();
+
   const elegidas = elegirParaFacebook({ notas: portada.notas ?? [], libro });
   if (!elegidas.length) {
     console.log('  Nada para publicar en Facebook ahora.');
@@ -166,7 +195,8 @@ async function facebook() {
       libro.facebookFoto ??= {};
       const intentosDeFoto = libro.facebookFoto[nota.id]?.intentos ?? 0;
       let r;
-      if (comoSaleEnFacebook({ intentosDeFoto, conFoto: FACEBOOK_COMO_FOTO }) === 'foto') {
+      const como = comoSaleEnFacebook({ intentosDeFoto, conFoto: FACEBOOK_COMO_FOTO });
+      if (como === 'foto') {
         const pie = FOTO_EN_INSTAGRAM ? conCreditoDeFoto(mensajeDeNota(nota, SITIO, ORIGEN_FACEBOOK), nota) : mensajeDeNota(nota, SITIO, ORIGEN_FACEBOOK);
         try {
           r = await api.publicarFotoEnFacebook({ imagenUrl: imagenDeNota(nota, SITIO), mensaje: pie });
@@ -192,6 +222,8 @@ async function facebook() {
       // y los temas sirven para no repetir tema al día siguiente.
       anotar(libro, 'facebook', nota.id, {
         postId: r.id, titulo: nota.titulo, enlace, temas: nota.temas ?? [],
+        // Cómo salió y con qué foto: si la foto de la nota cambia después, se sabe qué vale la pena releer (regla 283).
+        como, fotoAlPublicar: nota.foto?.archivo ?? null,
       });
       fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
       console.log(`             publicado: ${r.id}`);
@@ -274,6 +306,8 @@ export async function main({ argv = process.argv.slice(2), env = process.env, ra
   LIBRO = path.join(RAIZ, 'web', 'data', 'redes.json');
   SITIO = env.SITIO ?? 'https://radarbalcarce.com';
   ACTIVO = estaActivo(env.REDES_ACTIVAS);
+  // ENLACES_CORTOS ("Si"): los enlaces de los posteos y los pies salen como radarbalcarce.com/r/<red>/<destino> (regla 282). Vacía, todo sale como siempre.
+  fijarEnlacesCortos(env.ENLACES_CORTOS);
   const modo = argv[0];
   try {
     if (modo === '--verificar') await verificar();
