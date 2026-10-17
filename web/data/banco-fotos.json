@@ -17817,8 +17817,8 @@
   "origen": "ninguna",
   "titulo": "Rafael Grossi avanza en la carrera para la secretaría general de la ONU",
   "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:01:26.183Z",
-  "intentos": 2,
+  "cuando": "2026-10-17T06:31:39.806Z",
+  "intentos": 3,
   "fuentes": 3,
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
@@ -17852,8 +17852,8 @@
   "origen": "ninguna",
   "titulo": "El dólar mayorista finaliza la semana con una suba y cotiza a $1.518",
   "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:31:31.461Z",
-  "intentos": 2,
+  "cuando": "2026-10-17T06:31:39.806Z",
+  "intentos": 3,
   "fuentes": 2,
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
@@ -17884,14 +17884,29 @@
   "ausenteDesde": "2026-10-17T05:01:34.541Z"
  },
  "dhznnq": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/dhznnq.jpg",
+  "medio": "El Eco de Tandil",
+  "credito": "Foto: El Eco de Tandil",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El Banco Central registra una baja mensual en la mora de las familias",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:31:31.461Z",
-  "intentos": 2,
-  "fuentes": 2,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.eleco.com.ar/economia/se-freno-el-crecimiento-de-la-mora-en-las-familias-aunque-mantiene-niveles-elevados",
+  "imagenOriginal": "https://cdnartic.ar/gV0gIKegtRefs_wX1jc_wMht2qo=/1200x630/smart/filters:format(jpeg):quality(70)/https://cdn.eleco.com.ar/media/2026/10/mora.webp",
+  "razon": "Es la única opción que no contiene marcas de agua ni logos de otros medios superpuestos, mostrando la escena de forma limpia y nítida.",
+  "cuando": "2026-10-17T06:31:39.806Z",
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.",
+  "vision": {
+   "proveedor": "groq",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Detalle de manos escribiendo cuentas sobre un escritorio con tarjetas de crédito y calculadora."
+  },
+  "huella": "460e0c9c9ed48e16"
  },
  "13sxop4": {
   "archivo": "fotos-notas/13sxop4.jpg",

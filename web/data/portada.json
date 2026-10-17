@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-17T06:01:23.430Z",
+  "generado": "2026-10-17T06:31:50.499Z",
   "notas": [
     {
       "id": "rwxsr5",
@@ -937,7 +937,11 @@
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": null
       },
-      "slug": "el-banco-central-registra-una-baja-mensual-en-la-mora-de-las-familias"
+      "slug": "el-banco-central-registra-una-baja-mensual-en-la-mora-de-las-familias",
+      "foto": {
+        "archivo": "fotos-notas/dhznnq.jpg",
+        "credito": "Foto: El Eco de Tandil"
+      }
     },
     {
       "id": "1ufokdk",
@@ -1745,7 +1749,7 @@
       "fecha": "2026-10-16T18:06:23.211Z",
       "sinFecha": false,
       "visto": "2026-10-16T20:31:11.316Z",
-      "relevancia": 55,
+      "relevancia": 48,
       "local": false,
       "muyContada": {
         "medios": 7,
@@ -1862,7 +1866,7 @@
       "fecha": "2026-10-16T18:05:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T03:01:14.154Z",
-      "relevancia": 42,
+      "relevancia": 35,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1942,7 +1946,7 @@
       "fecha": "2026-10-16T18:02:09.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T03:01:14.154Z",
-      "relevancia": 36,
+      "relevancia": 29,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2735,14 +2739,14 @@
         "A24",
         "iProfesional",
         "Crónica",
-        "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "Ámbito",
         "C5N",
         "Minuto Uno",
         "elDiarioAR",
-        "Clarín"
+        "Clarín",
+        "Radio Mitre"
       ],
       "enlace": "https://www.clarin.com/politica/altos-funcionarios-trump-visitaran-argentina-avanzar-millonario-proyecto-infraestructura-ampliar-inversiones_0_NIwA6uB3Ms.html",
       "teniaImagenLaFuente": true,
@@ -4715,6 +4719,7 @@
       "seccion": "Fútbol",
       "medios": [
         "La Nación",
+        "TN (Todo Noticias)",
         "TyC Sports",
         "Olé",
         "Canal 26",
@@ -5466,96 +5471,6 @@
       }
     },
     {
-      "id": "cg6k1i",
-      "titulo": "Netflix estrena Lo dejamos acá con Ricardo Darín y Diego Peretti",
-      "copete": "La comedia negra argentina dirigida por Hernán Goldfrid desembarca el viernes en la plataforma de streaming tras su paso por el Festival de San Sebastián.",
-      "cuerpo": "Netflix estrena el viernes Lo dejamos acá, una comedia negra argentina protagonizada por Ricardo Darín y Diego Peretti. La película cuenta con la dirección de Hernán Goldfrid y un guion escrito por Emanuel Díez.\n\nLa trama gira en torno a un psicoanalista interpretado por Darín que cuestiona los métodos tradicionales y cruza límites éticos al involucrarse en la vida de sus pacientes. El conflicto principal se desata con la llegada de un escritor encarnado por Peretti, quien acude al consultorio en medio de un bloqueo creativo.\n\nEl largometraje tuvo su presentación mundial en la septuagésima cuarta edición del Festival Internacional de Cine de San Sebastián. La producción estuvo a cargo de Kenya Films, compañía integrada por Ricardo Darín, Chino Darín y Federico Posternak.",
-      "guion": "Netflix estrena Lo dejamos acá con Ricardo Darín y Diego Peretti",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Ámbito",
-        "El Destape",
-        "La Capital (Rosario)",
-        "Los Andes (Mendoza)",
-        "El Día",
-        "A24",
-        "Clarín",
-        "La Gaceta (Tucumán)"
-      ],
-      "enlace": "https://www.eldia.com/espectaculos/lo-dejamos-aca-el-duelo-entre-darin-y-peretti-que-promete-incomodar-y-hacer-reir-espectaculos_1792130770",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-16T00:00:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T17:01:11.630Z",
-      "relevancia": 48,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Estrena este viernes en la plataforma de streaming.",
-        "Reúne nuevamente a Ricardo Darín y Diego Peretti.",
-        "La dirección corre por cuenta de Hernán Goldfrid.",
-        "Cuenta con producción de Kenya Films."
-      ],
-      "textoRedes": "Netflix estrena este viernes Lo dejamos acá, la nueva comedia negra argentina protagonizada por Ricardo Darín y Diego Peretti bajo la dirección de Hernán Goldfrid.",
-      "etiquetas": [
-        "Netflix",
-        "Ricardo Darín",
-        "Diego Peretti",
-        "Cine argentino",
-        "Estrenos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/espectaculos/lo-dejamos-aca-el-duelo-entre-darin-y-peretti-que-promete-incomodar-y-hacer-reir-espectaculos_1792130770",
-          "fecha": "2026-10-16T06:06:10.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la dirección de Hernán Goldfrid y el paso previo por el Festival de San Sebastián."
-        },
-        {
-          "medio": "La Capital (Rosario)",
-          "enlace": "https://www.lacapital.com.ar/zoom/netflix-ya-estreno-lo-dejamos-aca-la-pelicula-darin-y-peretti-n10287061.html",
-          "fecha": "2026-10-16T16:54:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los antecedentes del guionista y la productora Kenya Films."
-        },
-        {
-          "medio": "Los Andes (Mendoza)",
-          "enlace": "https://www.losandes.com.ar/espectaculos/hoy-netflix-la-nueva-pelicula-ricardo-darin-y-diego-peretti-una-comedia-negra-argentina-n6010583",
-          "fecha": "2026-10-16T15:44:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/trends/netflix-ricardo-darin-y-diego-peretti-arrasan-el-estreno-la-pelicula-mas-esperada-del-ano-n1607031",
-          "fecha": "2026-10-16T11:34:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la fecha exacta de estreno en la plataforma de streaming."
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/espectaculos/ricardo-darin-diego-peretti-protagonizan-pelicula-dejamos-aca-beso-giro-inesperado-cameo-sorpresa_0_SGjoHophhV.html",
-          "fecha": "2026-10-16T15:06:37.000Z",
-          "oficial": false,
-          "aporte": "Aportó detalles sobre la trama y declaraciones de los actores sobre sus experiencias con la terapia."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "netflix-estrena-lo-dejamos-aca-con-ricardo-darin-y-diego-peretti",
-      "foto": {
-        "archivo": "fotos-notas/cg6k1i.jpg",
-        "credito": "Foto: Los Andes (Mendoza)"
-      }
-    },
-    {
       "id": "yfn1ih",
       "titulo": "La ANMAT prohíbe un equipo de depilación láser y frena a una firma",
       "copete": "La ANMAT prohibió un cabezal de depilación láser y restringió la actividad de una distribuidora de insumos médicos por irregularidades sanitarias.",
@@ -5651,6 +5566,96 @@
       "foto": {
         "archivo": "fotos-notas/yfn1ih.jpg",
         "credito": "Foto: Infobae"
+      }
+    },
+    {
+      "id": "cg6k1i",
+      "titulo": "Netflix estrena Lo dejamos acá con Ricardo Darín y Diego Peretti",
+      "copete": "La comedia negra argentina dirigida por Hernán Goldfrid desembarca el viernes en la plataforma de streaming tras su paso por el Festival de San Sebastián.",
+      "cuerpo": "Netflix estrena el viernes Lo dejamos acá, una comedia negra argentina protagonizada por Ricardo Darín y Diego Peretti. La película cuenta con la dirección de Hernán Goldfrid y un guion escrito por Emanuel Díez.\n\nLa trama gira en torno a un psicoanalista interpretado por Darín que cuestiona los métodos tradicionales y cruza límites éticos al involucrarse en la vida de sus pacientes. El conflicto principal se desata con la llegada de un escritor encarnado por Peretti, quien acude al consultorio en medio de un bloqueo creativo.\n\nEl largometraje tuvo su presentación mundial en la septuagésima cuarta edición del Festival Internacional de Cine de San Sebastián. La producción estuvo a cargo de Kenya Films, compañía integrada por Ricardo Darín, Chino Darín y Federico Posternak.",
+      "guion": "Netflix estrena Lo dejamos acá con Ricardo Darín y Diego Peretti",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Ámbito",
+        "El Destape",
+        "La Capital (Rosario)",
+        "Los Andes (Mendoza)",
+        "El Día",
+        "A24",
+        "Clarín",
+        "La Gaceta (Tucumán)"
+      ],
+      "enlace": "https://www.eldia.com/espectaculos/lo-dejamos-aca-el-duelo-entre-darin-y-peretti-que-promete-incomodar-y-hacer-reir-espectaculos_1792130770",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T00:00:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T17:01:11.630Z",
+      "relevancia": 40,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Estrena este viernes en la plataforma de streaming.",
+        "Reúne nuevamente a Ricardo Darín y Diego Peretti.",
+        "La dirección corre por cuenta de Hernán Goldfrid.",
+        "Cuenta con producción de Kenya Films."
+      ],
+      "textoRedes": "Netflix estrena este viernes Lo dejamos acá, la nueva comedia negra argentina protagonizada por Ricardo Darín y Diego Peretti bajo la dirección de Hernán Goldfrid.",
+      "etiquetas": [
+        "Netflix",
+        "Ricardo Darín",
+        "Diego Peretti",
+        "Cine argentino",
+        "Estrenos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/espectaculos/lo-dejamos-aca-el-duelo-entre-darin-y-peretti-que-promete-incomodar-y-hacer-reir-espectaculos_1792130770",
+          "fecha": "2026-10-16T06:06:10.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la dirección de Hernán Goldfrid y el paso previo por el Festival de San Sebastián."
+        },
+        {
+          "medio": "La Capital (Rosario)",
+          "enlace": "https://www.lacapital.com.ar/zoom/netflix-ya-estreno-lo-dejamos-aca-la-pelicula-darin-y-peretti-n10287061.html",
+          "fecha": "2026-10-16T16:54:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los antecedentes del guionista y la productora Kenya Films."
+        },
+        {
+          "medio": "Los Andes (Mendoza)",
+          "enlace": "https://www.losandes.com.ar/espectaculos/hoy-netflix-la-nueva-pelicula-ricardo-darin-y-diego-peretti-una-comedia-negra-argentina-n6010583",
+          "fecha": "2026-10-16T15:44:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/trends/netflix-ricardo-darin-y-diego-peretti-arrasan-el-estreno-la-pelicula-mas-esperada-del-ano-n1607031",
+          "fecha": "2026-10-16T11:34:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha exacta de estreno en la plataforma de streaming."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/espectaculos/ricardo-darin-diego-peretti-protagonizan-pelicula-dejamos-aca-beso-giro-inesperado-cameo-sorpresa_0_SGjoHophhV.html",
+          "fecha": "2026-10-16T15:06:37.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre la trama y declaraciones de los actores sobre sus experiencias con la terapia."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "netflix-estrena-lo-dejamos-aca-con-ricardo-darin-y-diego-peretti",
+      "foto": {
+        "archivo": "fotos-notas/cg6k1i.jpg",
+        "credito": "Foto: Los Andes (Mendoza)"
       }
     },
     {
@@ -6330,69 +6335,6 @@
         "archivo": "fotos-notas/1caxs1v.jpg",
         "credito": "Foto: TN (Todo Noticias)"
       }
-    },
-    {
-      "id": "repaso20261015tarde",
-      "propia": "repaso",
-      "titulo": "El repaso de la tarde en Radar Balcarce: tenis de mesa, Lautaro Martínez y Cristian Méndez",
-      "copete": "Radar Balcarce publicó a las 15:07 de este jueves 15 de octubre el repaso de la tarde en Instagram y Facebook, un audio con 3 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 3 notas que se contaron en el repaso de la tarde del jueves 15, en el orden en que salieron en el audio.\n\nLa Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa. El centro de entrenamiento local sumó dos unidades importadas de China. Las mesas cuentan con homologación internacional y mejoran la infraestructura para la práctica y la formación deportiva en la ciudad.\n\nLautaro Martínez padece una lesión muscular y peligra su presencia en la Selección. El delantero argentino presenta una distensión en el muslo izquierdo, según confirmó el Inter de Milán. Estaría inactivo alrededor de un mes.\n\nCristian Méndez regresa a Balcarce tras una exitosa gira por España. El payador local completó su recorrido por las Islas Canarias junto a Emanuel Gabotto. Participó en festivales y universidades, y ya confirmó una próxima gira en Puerto Rico.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
-      "guion": null,
-      "seccion": "Balcarce",
-      "local": true,
-      "relevancia": 60,
-      "medios": [],
-      "enlace": null,
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-15T18:07:39.825Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T18:07:39.825Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-15T18:07:39.825Z",
-      "temas": [],
-      "etiquetas": [
-        "tenis de mesa",
-        "Lautaro Martínez",
-        "Cristian Méndez"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
-      "notasDelRepaso": [
-        "mly1kv",
-        "9y985f",
-        "1e22az3"
-      ],
-      "enlacesEnTexto": [
-        {
-          "texto": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
-          "href": "/nota/la-cuna-del-quintuple-incorpora-mesas-profesionales-de-tenis-de-mesa-mly1kv"
-        },
-        {
-          "texto": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección",
-          "href": "/nota/lautaro-martinez-padece-una-lesion-muscular-y-peligra-su-presencia-en-9y985f"
-        },
-        {
-          "texto": "Cristian Méndez regresa a Balcarce tras una exitosa gira por España",
-          "href": "/nota/cristian-mendez-regresa-a-balcarce-tras-una-exitosa-gira-por-espana-1e22az3"
-        }
-      ],
-      "destacados": [
-        {
-          "texto": "Mirá y escuchá el repaso en Instagram",
-          "href": "https://www.instagram.com/reel/DehkH3XDMDU/",
-          "externo": true
-        },
-        {
-          "texto": "Mirá y escuchá el repaso en Facebook",
-          "href": "https://www.facebook.com/reel/1096617216589165/",
-          "externo": true
-        }
-      ],
-      "slug": "el-repaso-de-la-tarde-en-radar-balcarce-tenis-de-mesa-vtv-y-lautaro",
-      "foto": {
-        "archivo": "fotos-notas/collage-repaso20261015tarde.jpg",
-        "credito": "Fotos: Puntonueve (FM 100.9) y Olé"
-      }
     }
   ],
   "secciones": [
@@ -6416,7 +6358,7 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 8,
+      "temp": 7,
       "sensacion": 5,
       "humedad": 91,
       "viento": 12,
