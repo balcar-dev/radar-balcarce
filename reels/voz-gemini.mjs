@@ -21,6 +21,9 @@ import ffmpeg from 'ffmpeg-static';
 import { alinear } from './alinear.mjs';
 import { claveRedes } from './claves.mjs';
 import { VOCES, INDICACION_BASE } from '../redes/prompt-redes.mjs';
+import {
+  motivoParaNoPedir, anotarPedido, marcarAgotado, SinCupoDeVoz,
+} from './cupo-voz.mjs';
 
 const correr = promisify(execFile);
 
@@ -135,6 +138,21 @@ export function leerDeLaMemoriaDeVoz(clave, destino, carpeta = process.env.VOZ_C
   } catch { return null; }
 }
 
+/**
+ * El audio CRUDO, apenas llega (17/10/2026, regla 208): si después falla la conversión o la alineación, o se corta la corrida, la vuelta
+ * siguiente lo toma de acá y no vuelve a pedir (antes el audio se guardaba recién al final y una falla en el medio lo perdía).
+ */
+export function guardarCrudoEnLaMemoria(clave, wav, carpeta = process.env.VOZ_CACHE) {
+  if (!carpeta) return;
+  try { fs.mkdirSync(carpeta, { recursive: true }); fs.writeFileSync(path.join(carpeta, `${clave}.wav`), wav); } catch { /* sin memoria no pasa nada */ }
+}
+
+/** El audio crudo guardado de un pedido anterior que no llegó a terminarse, o null. */
+export function crudoDeLaMemoria(clave, carpeta = process.env.VOZ_CACHE) {
+  if (!carpeta) return null;
+  try { return fs.readFileSync(path.join(carpeta, `${clave}.wav`)); } catch { return null; }
+}
+
 /** Guarda un audio recién pedido en la memoria y borra lo de más de `dias` días. No lanza: la memoria nunca frena una pieza. */
 export function guardarEnLaMemoriaDeVoz(clave, resultado, carpeta = process.env.VOZ_CACHE, { dias = 3, ahora = Date.now() } = {}) {
   if (!carpeta) return;
@@ -147,9 +165,23 @@ export function guardarEnLaMemoriaDeVoz(clave, resultado, carpeta = process.env.
       // recién escritos parecían viejos y la memoria se vaciaba sola).
       if (f.startsWith(`${clave}.`)) continue;
       const ruta = path.join(carpeta, f);
-      if (ahora - fs.statSync(ruta).mtimeMs > dias * 864e5) fs.rmSync(ruta, { force: true });
+      if (ahora - fs.statSync(ruta).mtimeMs > dias * 864e5) fs.rmSync(ruta, { force: true, recursive: true });
     }
+    // El crudo ya no hace falta: quedó el mp3 con sus tiempos.
+    fs.rmSync(path.join(carpeta, `${clave}.wav`), { force: true });
   } catch { /* sin memoria no pasa nada */ }
+}
+
+/** Del WAV que da Gemini al mp3 con los tiempos de cada palabra; lo guarda en la memoria. */
+async function terminarAudio(wav, texto, destino, claveDeMemoria) {
+  const crudo = `${destino}.wav`;
+  fs.writeFileSync(crudo, wav);
+  await correr(ffmpeg, ['-y', '-v', 'error', '-i', crudo, '-b:a', '128k', destino]);
+  fs.rmSync(crudo, { force: true });
+  const { palabras, duracion, anclasUsadas } = await alinear(texto, destino);
+  const resultado = { archivo: destino, duracion, palabras, anclasUsadas };
+  guardarEnLaMemoriaDeVoz(claveDeMemoria, resultado);
+  return resultado;
 }
 
 /**
@@ -157,20 +189,34 @@ export function guardarEnLaMemoriaDeVoz(clave, resultado, carpeta = process.env.
  * tiempos de cada palabra resueltos por alineación (ver alinear.mjs).
  * `voz` es el identificador de la voz de la pieza (vozDePieza, redes/prompt-redes.mjs)
  * e `indicacion`, el estilo corto (componerIndicacion).
+ *
+ * El cupo (regla 208, reels/cupo-voz.mjs): cada pedido se anota antes de hacerse, y no se pide si dejaría sin voz a una pieza más
+ * importante que falta hoy (`reservar`, lo calcula el plan). `pieza` es el nombre, para el registro del contador.
  */
 export async function decirGemini(texto, destino, {
-  voz = VOZ_POR_DEFECTO, indicacion = ESTILO_POR_DEFECTO, intentos = 4, fetchFn = fetch,
+  voz = VOZ_POR_DEFECTO, indicacion = ESTILO_POR_DEFECTO, intentos = 4, fetchFn = fetch, pieza = null, reservar = 0,
 } = {}) {
   // Antes de gastar un audio: ¿ya se pidió exactamente esto?
   const claveDeMemoria = claveDeVoz(texto, voz, indicacion);
   const guardado = leerDeLaMemoriaDeVoz(claveDeMemoria, destino);
   if (guardado) return guardado;
+  fs.mkdirSync(path.dirname(destino), { recursive: true });
+  // ¿Llegó el audio en una vuelta anterior y se cortó antes de terminarlo? Se termina sin volver a pedirlo.
+  const crudoGuardado = crudoDeLaMemoria(claveDeMemoria);
+  if (crudoGuardado && !vozDeMas(texto, segundosDeWav(crudoGuardado))) {
+    return { ...(await terminarAudio(crudoGuardado, texto, destino, claveDeMemoria)), deLaMemoria: true };
+  }
   const k = clave();
   if (!k) throw new Error('falta GEMINI_API_KEY_REDES (en el entorno o en .env)');
-  fs.mkdirSync(path.dirname(destino), { recursive: true });
 
   let ultimoError = null;
   for (let intento = 1; intento <= intentos; intento += 1) {
+    // El contador, antes de cada pedido (también los reintentos: cada uno es un audio del cupo).
+    const motivo = motivoParaNoPedir({ pieza, reservar });
+    if (motivo) {
+      throw new SinCupoDeVoz(ultimoError ? `${motivo}; el intento anterior había fallado: ${ultimoError.message.slice(0, 120)}` : motivo);
+    }
+    anotarPedido(pieza);
     const esperar = Math.max(0, ultimoPedido + ESPACIADO - Date.now());
     if (esperar) await dormir(esperar);
     ultimoPedido = Date.now();
@@ -201,7 +247,7 @@ export async function decirGemini(texto, destino, {
       ultimoError = new Error(`Gemini pidió esperar (429, límite de pedidos): ${cuerpo.slice(0, 300)}`);
       // Con una clave gratis (10 audios por día y por modelo) el límite del DÍA no se arregla
       // esperando: reintentar sólo gasta tiempo. Se corta acá y la pieza espera a la próxima vuelta.
-      if (esCupoDelDia(cuerpo)) throw new Error(`Gemini: se acabó el cupo del día (429). ${cuerpo.slice(0, 200)}`);
+      if (esCupoDelDia(cuerpo)) { marcarAgotado(); throw new Error(`Gemini: se acabó el cupo del día (429). ${cuerpo.slice(0, 200)}`); }
       if (intento < intentos) { await dormir((seg + 2) * 1000); continue; }
       throw ultimoError;
     }
@@ -232,15 +278,9 @@ export async function decirGemini(texto, destino, {
       if (intento < intentos) { await dormir(3000 * intento); continue; }
       throw ultimoError;
     }
-    const crudo = `${destino}.wav`;
-    fs.writeFileSync(crudo, wav);
-    await correr(ffmpeg, ['-y', '-v', 'error', '-i', crudo, '-b:a', '128k', destino]);
-    fs.rmSync(crudo, { force: true });
-
-    const { palabras, duracion, anclasUsadas } = await alinear(texto, destino);
-    const resultado = { archivo: destino, duracion, palabras, anclasUsadas };
-    guardarEnLaMemoriaDeVoz(claveDeMemoria, resultado);
-    return resultado;
+    // Llegó un audio bueno: se guarda crudo YA, antes de convertirlo (si algo falla de acá en adelante, no se vuelve a pedir).
+    guardarCrudoEnLaMemoria(claveDeMemoria, wav);
+    return terminarAudio(wav, texto, destino, claveDeMemoria);
   }
   throw ultimoError ?? new Error('no se pudo sintetizar');
 }

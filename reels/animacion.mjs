@@ -147,7 +147,9 @@ export async function renderizarEntrada(svg, dir, prefijo, { ancho = 1080, anio 
   for (let i = 0; i < n; i += 1) {
     // El primer cuadro de un video es la portada que muestran Facebook e Instagram: si fuera el papel vacío antes de que entre el contenido, el Reel se ve
     // en blanco en la grilla (9/10). Con `poster`, el cuadro 0 es la placa ya entrada (dura 50 ms) y la entrada sigue desde el 1.
-    const r = new Resvg(placaEn(partida, poster && i === 0 ? n / FPS + 5 : i / FPS, { anio }), {
+    // Si `poster` es un SVG, el cuadro 0 es ESA imagen: la tapa elegida a propósito (17/10, el repaso: la lista completa; regla 209).
+    const cuadro = poster && i === 0 ? (typeof poster === 'string' ? poster : placaEn(partida, n / FPS + 5, { anio })) : placaEn(partida, i / FPS, { anio });
+    const r = new Resvg(cuadro, {
       fitTo: { mode: 'width', value: ancho },
       font: { fontFiles: propias, loadSystemFonts: propias.length === 0, defaultFontFamily: 'Inter' },
     });

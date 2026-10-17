@@ -41,7 +41,8 @@ test('los días se suman bien', () => {
 
 test('el plan usa la fija si vale hoy y no pide la voz; --sin-fijas la fuerza; --incluir arma una pieza que hoy no toca', () => {
   const plan = leer('reels/plan.mjs');
-  assert.match(plan, /fijaVigente\(p\.nombre, diaAR\(\)\)/);
+  assert.match(plan, /fijaVigente\(p\.nombre, hoy\)/);
+  assert.match(plan, /const hoy = diaAR\(\);/);
   assert.match(plan, /sinFijas \? null : fijaVigente/);
   assert.match(plan, /vozUsada: `fija hasta el/);
   assert.match(plan, /forzar\.includes\(id\) \|\| toca\(cuando\[id\], fecha, \{ estado \}\)/);

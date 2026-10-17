@@ -111,7 +111,8 @@ test('repaso: cuatro títulos largos entran enteros, sin puntos suspensivos ni d
 
 test('los podcasts del plan usan la placa del repaso con las notas que cuentan', () => {
   const plan = fs.readFileSync(path.join(RAIZ, 'reels', 'plan.mjs'), 'utf8');
-  assert.equal((plan.match(/svg: placaRepaso\(/g) ?? []).length, 2, 'los tres podcasts (mañana/tarde y noche) usan placaRepaso');
+  // Desde el 17/10 los tres se arman en una sola vuelta: la lista queda de respaldo y de tapa; el video sigue a la voz (regla 209).
+  assert.equal((plan.match(/svg: placaRepaso\(/g) ?? []).length, 1, 'los tres podcasts usan placaRepaso');
   assert.ok(!/placaNoticia\(/.test(plan), 'el plan ya no usa la placa de una sola nota para los podcasts');
 });
 

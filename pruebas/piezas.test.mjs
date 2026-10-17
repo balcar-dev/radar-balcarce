@@ -663,7 +663,9 @@ test('la primera corrida después de la hora de cada pieza la encuentra en venta
 test('los podcasts del plan llevan el rojo de la marca, no un color rotativo', async () => {
   const fs = await import('node:fs');
   const plan = fs.readFileSync(new URL('../reels/plan.mjs', import.meta.url), 'utf8');
-  assert.equal((plan.match(/color: COLORES.rojo/g) ?? []).length, 2, 'los dos tipos de podcast usan el rojo de la marca');
+  // Desde el 17/10 los tres repasos se arman en una sola vuelta (antes eran dos bloques): un solo lugar con el rojo de la marca.
+  assert.equal((plan.match(/color: COLORES.rojo/g) ?? []).length, 1, 'los podcasts usan el rojo de la marca');
+  assert.match(plan, /for \(const ronda of PODCASTS\)/);
   assert.ok(!/colorDelDia|COLORES_DEL_DIA/.test(plan));
 });
 

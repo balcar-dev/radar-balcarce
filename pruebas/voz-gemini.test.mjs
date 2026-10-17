@@ -6,8 +6,8 @@
 //
 // El fetch de mentira falla siempre "por tiempo", así decirGemini no llega a
 // sintetizar nada. (Hasta el 28/09 anotaba cada pedido en un registro de cuota
-// de la PC, panel/datos/cuota-gemini.json, que nadie leía: la clave de redes es
-// paga y no hay cupo gratis que contar.)
+// de la PC, panel/datos/cuota-gemini.json, que nadie leía. Desde el 17/10 el cupo
+// gratis se cuenta en la memoria de voces: reels/cupo-voz.mjs, regla 208.)
 
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
@@ -36,13 +36,14 @@ test('la clave va en el encabezado, el pedido tiene tiempo máximo, y un corte s
   assert.ok(pedidos[0].init.signal instanceof AbortSignal);
 });
 
-test('la voz ya no lleva la cuenta de un cupo gratis: no escribe en panel/datos', async () => {
+// Desde el 17/10 (regla 208) el cupo gratis SÍ se cuenta, pero en la memoria de voces (reels/cupo-voz.mjs, la caché de Actions), no
+// en el registro de la PC que se sacó el 28/09.
+test('la voz cuenta el cupo en la memoria de voces, no en panel/datos', async () => {
   const fs = await import('node:fs');
   const codigo = fs.readFileSync(new URL('../reels/voz-gemini.mjs', import.meta.url), 'utf8');
-  assert.ok(!/cuota-gemini\.json'/.test(codigo), 'volvió el registro de cuota');
-  assert.ok(!/CUPO_DIARIO|anotarPedido/.test(codigo));
-  const modulo = await import('../reels/voz-gemini.mjs');
-  assert.equal('CUPO_DIARIO' in modulo, false);
+  assert.ok(!/cuota-gemini\.json'/.test(codigo), 'volvió el registro de cuota de la PC');
+  assert.match(codigo, /from '\.\/cupo-voz\.mjs'/);
+  assert.ok(codigo.indexOf('motivoParaNoPedir({ pieza, reservar })') < codigo.indexOf('res = await fetchFn(ENDPOINT'), 'se mira el cupo antes de pedir');
 });
 
 // ------- 28/09: el modelo 3.8 y su Interactions API
