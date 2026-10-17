@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-17T17:32:30.131Z",
+ "generado": "2026-10-17T18:02:33.464Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -62,6 +62,11 @@
      "fecha": "2026-10-16T16:41:00.000Z"
     },
     {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
+     "fecha": "2026-10-16T18:08:00.000Z"
+    },
+    {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/politica/para-santilli--los-gobernadores-deberian-estar--preocupados--por-un-eventual-regreso-del-kirchnerismo_a6ad22aa6c55c21457e903f0f",
      "fecha": "2026-10-16T13:53:48.393Z"
@@ -87,6 +92,11 @@
      "fecha": "2026-10-16T16:29:00.000Z"
     },
     {
+     "medio": "Los Andes (Mendoza)",
+     "enlace": "https://www.losandes.com.ar/politica/diego-santilli-dijo-que-los-gobernadores-deberian-estar-preocupados-un-posible-regreso-del-kirchnerismo-n6010629",
+     "fecha": "2026-10-16T21:51:00.000Z"
+    },
+    {
      "medio": "Radio Mitre",
      "enlace": "https://radiomitre.cienradios.com/videos/diego-santilli-los-que-deberian-estar-preocupados-son-los-gobernadores-si-el-kirchnerismo-vuelve-y-gana-kicillof/",
      "fecha": "2026-10-16T13:52:11.000Z"
@@ -105,16 +115,6 @@
      "medio": "Agencia DIB",
      "enlace": "https://dib.com.ar/politica/santilli-los-que-deberian-estar-preocupados-el-regreso-del-kirchnerismo-son-los-gobernadores-n56559",
      "fecha": "2026-10-16T17:53:00.000Z"
-    },
-    {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
-     "fecha": "2026-10-16T18:08:00.000Z"
-    },
-    {
-     "medio": "Los Andes (Mendoza)",
-     "enlace": "https://www.losandes.com.ar/politica/diego-santilli-dijo-que-los-gobernadores-deberian-estar-preocupados-un-posible-regreso-del-kirchnerismo-n6010629",
-     "fecha": "2026-10-16T21:51:00.000Z"
     }
    ],
    "intentos": 1,
@@ -122,25 +122,30 @@
    "maximo": 5
   },
   {
-   "id": "1m52u47",
-   "titulo": "Por qué no juega Enzo Fernández hoy en Manchester City vs. Ipswich Town por la Premier League",
-   "copete": "",
+   "id": "1glopob",
+   "titulo": "Sigue la acción con cinco encuentros",
+   "copete": "En el estadio Florencio Sola, Banfield recibe a Argentinos Juniors el sábado a las 15.00, por la decimotercera fecha del Torneo Clausura 2026. El Taladro buscará prolongar su invicto de cinco partidos después de volver al triunfo ante Tigre, mientras que el Bicho intentará sumar…",
    "seccion": "Fútbol",
-   "fecha": "2026-10-17T13:06:47.000Z",
+   "fecha": "2026-10-17T11:00:16.000Z",
    "fuentes": [
     {
-     "medio": "Bolavip Argentina",
-     "enlace": "https://bolavip.com/ar/futbol-internacional/por-que-no-juega-enzo-fernandez-hoy-en-manchester-city-vs-ipswich-town-por-la-premier-league",
-     "fecha": "2026-10-17T13:06:47.000Z"
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/sigue-la-accion-con-cinco-encuentros/",
+     "fecha": "2026-10-17T11:00:16.000Z"
     },
     {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/17/manchester-city-vs-ipswich-en-vivo-por-la-fecha-7-de-la-premier-league-hora-donde-ver-y-formaciones/",
-     "fecha": "2026-10-17T16:54:30.000Z"
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/deportes/2026/10/17/la-fecha-13-del-torneo-clausura-continuara-con-cinco-partidos-claves-la-agenda-completa/",
+     "fecha": "2026-10-17T17:41:49.000Z"
+    },
+    {
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/futbol/liga-profesional-de-futbol/banfield-vs-argentinos-juniors-en-vivo-hoy-resultado-goles-y-minuto-a-minuto-del-torneo-clausura-2026/",
+     "fecha": "2026-10-17T17:00:18.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "título o bajada: 1 problema (antecedente): el copete usa 11, que sale de una nota anterior, como si fuera de hoy",
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (relleno): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 54 palabras",
    "maximo": 3
   },
   {

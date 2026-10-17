@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T17:32:30.131Z",
- "portada": 85,
- "archivo": 1234,
+ "generado": "2026-10-17T18:02:33.464Z",
+ "portada": 89,
+ "archivo": 1238,
  "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-17T17:32:30.167Z",
+  "generado": "2026-10-17T18:02:33.489Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -43,7 +43,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -124,14 +124,19 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 38,
+    "segundos": 42,
     "notas": [
      {
       "id": "1ae6llz",
       "titulo": "Dibu Martínez sufre un fuerte golpe en la cabeza y sale en camilla",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "wrghr",
+      "titulo": "Detallan la ubicación de cada centro de salud y sala",
+      "seccion": "Salud"
      },
      {
       "id": "1e6e9wy",
@@ -174,7 +179,14 @@
      "cuando": "2026-10-17T16:35:59.059Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "wrghr",
+     "titulo": "Detallan la ubicación de cada centro de salud y sala",
+     "seccion": "Salud",
+     "marcada": false
+    }
+   ],
    "cupo": 1,
    "proximoDesde": "2026-10-17T18:05:59.059Z",
    "porDia": 5,
