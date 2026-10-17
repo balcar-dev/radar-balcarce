@@ -265,6 +265,23 @@ clima nunca se sacan.
    arranca con la primera nota, la más fuerte, y cierra con la lista. **La tapa**
    del reel (el cuadro 0, lo que muestran Instagram y Facebook antes del play) es
    la lista completa. Si la animación falla, sale la placa quieta.
+   **Con movimiento** (18/10, regla 300): el repaso es una escena dibujada cuadro
+   a cuadro (`escenaDelRepaso`) y todas las piezas arrancan ya con contenido.
+   Cómo se ve el repaso: la tapa 0,5 s y una transición de 10 cuadros a la
+   primera nota; entre nota y nota, la foto nueva se desliza y se aclara sobre la
+   anterior, el titular entra palabra por palabra, el "2 de 4" rueda y las
+   rayitas de arriba se llenan; sobre cada foto, una deriva lenta (zoom de 1,04 a
+   1,11 y paneo de unos píxeles, que alterna entre notas). La regla 90 vale para el
+   texto: lo escrito entra una vez y queda quieto; lo que deriva es la foto, ya
+   dibujada por resvg (no hay `zoompan`). Los subtítulos (fila 1660) y el crédito
+   de la foto nunca quedan tapados. **Cuánto cuesta:** se dibujan sólo los cuadros
+   distintos (30 por segundo donde algo entra, 15 en la deriva lenta), ffmpeg lee
+   la secuencia directo (sin video intermedio) y las escenas de servicio pasan de
+   20 a 30 cuadros por segundo. Medido el 18/10 en una PC de 4 núcleos, con voz
+   falsa y datos reales de `portada.json`: repaso de 48,6 s de audio, 78 s de
+   armado (antes, 79 s); clima de la mañana, 51 s (antes, 50 s); farmacia, 55 s
+   (antes, 42 s); efeméride, 72 s (antes, 48 s). El `timeout-minutes: 25`
+   alcanza de sobra.
 5. **La medida de verdad.** Se mide lo que dura el archivo. Si pasa de **58
    segundos** (`PODCAST_VOZ.segundosMaximoHistoria`; Meta acepta 60), la
    historia sube una copia cortada con fundido (`recortarParaHistoria`,
@@ -779,8 +796,8 @@ vuelve a pedir: la historia de un reel que sí salió, o una red secundaria que 
 - **Que el contador de voz vea todo lo que gasta voz**: "Auditar voz", "Probar Gemini", "Crear voces" y "Fijar
   piezas" usan la misma clave pero no restauran ni guardan la memoria de voces (`.cache/voz`, `VOZ_CACHE`), así
   que sus audios no se cuentan. Hace falta sumarles los dos pasos de caché que tienen `redes.yml` y `piezas.yml`.
-- **"Redes" puede tardar un poco más a la hora de un repaso**: la secuencia del repaso dibuja unos 350 cuadros
-  (en la PC, 2 minutos; en GitHub, del orden de uno). El `timeout-minutes: 25` alcanza; si algún día no, la
+- **"Redes" puede tardar un poco más a la hora de un repaso**: la secuencia del repaso dibuja unos 800 cuadros
+  distintos (regla 300; en una PC de 4 núcleos, unos 80 segundos; en GitHub, del orden de uno o dos minutos). El `timeout-minutes: 25` alcanza; si algún día no, la
   pieza sale con la lista quieta.
 
 ## El video, como módulo aparte (`radarbalcarce/radar-balcarce-render`)

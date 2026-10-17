@@ -43,13 +43,15 @@ test('lo que no se puede partir devuelve null y la pieza sigue con la placa quie
   assert.equal(partirSvg('<svg width="1"><g></svg>'), null);
 });
 
-test('al empezar sólo se ve el fondo y la firma, y pasada la entrada el cuadro es la placa original', () => {
+test('desde el primer cuadro se ve todo, aunque más tenue (regla 300), y pasada la entrada el cuadro es la placa original', () => {
   const svg = PLACAS.participa();
   const p = partirSvg(svg);
   const inicio = placaEn(p, 0);
-  assert.ok(!inicio.includes('ESCRIBINOS'), 'la franja verde todavía no entró');
-  assert.ok(!inicio.includes('TU RECLAMO'), 'el rótulo tampoco, en el primer cuadro');
-  assert.ok(inicio.includes('radarbalcarce.com'), 'la firma está (aunque se aclara de a poco)');
+  assert.ok(inicio.includes('ESCRIBINOS'), 'la franja verde ya se ve en el primer cuadro (más tenue), nunca en blanco');
+  assert.ok(inicio.includes('TU RECLAMO'), 'el rótulo también');
+  assert.ok(inicio.includes('radarbalcarce.com'), 'y la firma');
+  const opacidades = [...inicio.matchAll(/opacity="([\d.]+)"/g)].map((m) => Number(m[1]));
+  assert.ok(opacidades.length > 0 && opacidades.every((o) => o >= ENTRADA.piso - 0.001), `ningún bloque baja del piso (${ENTRADA.piso})`);
   const fin = placaEn(p, duracionDeLaEntrada(p) + 0.05);
   assert.equal(sinEspacios(fin), sinEspacios(svg), 'sin ningún envoltorio ni movimiento al terminar');
   assert.ok(!fin.includes('translate('), 'nada quedó corrido');
