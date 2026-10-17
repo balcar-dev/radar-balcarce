@@ -20,7 +20,8 @@ test('se borran las fotos de lo retirado a mano y de lo que ya no está en ning�
   const banco = {
     viva: { intentado: true, archivo: 'fotos-notas/viva.jpg', credito: 'Foto: A' },
     retirada: { intentado: true, archivo: 'fotos-notas/retirada.jpg', credito: 'Foto: B' },
-    vieja: { intentado: true, archivo: 'fotos-notas/vieja.png', credito: 'Foto: C' },
+    // Desde el 17/10/2026 (regla 203) lo que ya no está se borra recién después de una semana de faltar (ausenteDesde).
+    vieja: { intentado: true, archivo: 'fotos-notas/vieja.png', credito: 'Foto: C', ausenteDesde: '2026-10-01T00:00:00Z' },
     sinFoto: { intentado: true, origen: 'ninguna' },
   };
   const { banco: nuevo, borrar } = podarFotos({
@@ -28,11 +29,13 @@ test('se borran las fotos de lo retirado a mano y de lo que ya no está en ning�
     enDisco: ['viva.jpg', 'retirada.jpg', 'vieja.png', 'huerfana.jpg'],
     quedan: new Set(['viva', 'retirada', 'sinFoto']),
     retiradas: new Set(['retirada']),
+    ahora: new Date('2026-10-17T00:00:00Z'),
   });
   assert.deepEqual(borrar.sort(), ['huerfana.jpg', 'retirada.jpg', 'vieja.png']);
   assert.equal(nuevo.viva.archivo, 'fotos-notas/viva.jpg');
   assert.equal(nuevo.retirada.archivo, undefined, 'la nota retirada no vuelve a mostrar la foto');
   assert.equal(nuevo.retirada.intentado, true, 'y no se vuelve a gastar cupo en ella');
+  assert.equal(nuevo.retirada.retirada, true, 'y queda dicho que fue a mano: no se reintenta nunca');
   assert.equal(nuevo.vieja.credito, undefined);
   assert.deepEqual(nuevo.sinFoto, banco.sinFoto);
 });

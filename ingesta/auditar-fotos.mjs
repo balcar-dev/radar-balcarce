@@ -26,11 +26,13 @@ const RAIZ = path.join(import.meta.dirname, '..');
 export const INTENTOS_MAXIMOS = 5;
 
 // Mismo criterio que sePuedeReintentar (web/scripts/fotos-notas.mjs): esto no es una decisión sobre la foto sino una falla.
-const FALLA = /^(Gemini falló|Groq también falló|sin clave para comparar|sin fotos para comparar)/;
+const FALLA = /^(Gemini falló|Groq también falló|sin clave para comparar|sin fotos para comparar|Segunda opinión no disponible)/;
 
 /** Los motivos, de lo que no se toca a lo que se puede arreglar. */
 export const MOTIVOS = {
   conFoto: 'con foto',
+  ilustracion: 'sin foto real: lleva una ilustración hecha con IA',
+  sacada: 'una persona (o la auditoría) sacó la foto que tenía (reglas 203 a 206)',
   propia: 'nota propia (los repasos y el dólar no llevan foto de otro, por regla)',
   sinProbar: 'todavía no se probó',
   menor: 'la IA vio un menor reconocible (regla firme)',
@@ -54,9 +56,13 @@ export const MOTIVOS_FIRMES = new Set(['menor', 'marca', 'propia', 'policiales']
  * Devuelve la clave de MOTIVOS.
  */
 export function motivoDeLaNota(nota, entrada) {
-  if (nota?.foto?.archivo || entrada?.archivo) return 'conFoto';
+  // Una ilustración no es una foto real (17/10/2026: el "90 % con foto" contaba las ilustraciones; era 85 % de foto real).
+  if (entrada?.archivo) return 'conFoto';
+  if (/(^|\/)[a-z0-9]+-ia(?:-\d+)?\.jpg$/.test(String(nota?.foto?.archivo ?? ''))) return 'ilustracion';
+  if (nota?.foto?.archivo) return 'conFoto';
   if (nota?.propia) return 'propia';
   if (!entrada) return nota?.seccion === 'Policiales' ? 'policiales' : 'sinProbar';
+  if (entrada.descartada) return 'sacada';
   if (entrada.borrada) return 'borrada';
   const razon = String(entrada.razon ?? entrada.error ?? '');
   const falla = entrada.origen === 'error' || !!entrada.error || FALLA.test(razon);
@@ -96,7 +102,7 @@ export function auditarFotos({ notas = [], banco = {}, desde = 0 } = {}) {
   }
   const medibles = lista.filter((x) => x.motivo !== 'propia');
   const conFoto = medibles.filter((x) => x.motivo === 'conFoto').length;
-  const arreglables = medibles.filter((x) => !MOTIVOS_FIRMES.has(x.motivo) && x.motivo !== 'conFoto');
+  const arreglables = medibles.filter((x) => !MOTIVOS_FIRMES.has(x.motivo) && !['conFoto', 'ilustracion', 'sacada'].includes(x.motivo));
   return {
     total: lista.length,
     medibles: medibles.length,

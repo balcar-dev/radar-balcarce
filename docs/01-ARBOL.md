@@ -98,7 +98,6 @@ la caché de Actions), `web/.next/`, `web/out/`, `web/public/_redirects`,
 | `vigilante-cloudflare.yml` | "Vigilante de Cloudflare": sube el Worker `radar-balcarce-vigilante` (mira la web desde afuera y manda los mails) | A mano | A mano |
 | `imagenes-cloudflare.yml` | "Imágenes con Workers AI": sube el Worker de imágenes y genera tres de prueba | A mano | A mano |
 | `generar-fondos-clima.yml` | "Generar fondos del clima": las ilustraciones fijas de la nota del clima (regla 181) | A mano | A mano |
-| `probar-flux.yml`, `probar-imagen-nota.yml` | Pruebas de imágenes con Workers AI (flux) y del camino "nota → prompt → imagen"; dejan las imágenes como adjunto | A mano | A mano |
 | `archivo-staging.yml` | "Archivo permanente (staging)": el Worker del archivo en un nombre de ensayo, con un depósito de prueba | A mano | A mano |
 | `archivo-produccion.yml` | "Archivo permanente (producción)": la carga, la ruta o sacar notas del archivo permanente (regla 183); todavía sin activar | A mano | A mano |
 | `sondeo-fuentes-cloudflare.yml` | "Sondeo de fuentes desde Cloudflare": ¿los feeds que no contestan a GitHub contestan a Cloudflare? (`infra/sondeo-fuentes/`) | A mano | A mano |
@@ -147,8 +146,6 @@ algunas, un `LEEME.md`.
 | `estadistica-diaria.mjs` | Cuántas notas se publicaron hoy y por sección (`web/data/notas-por-dia.json`) | `generar-datos.mjs`, `redes/avisos.mjs`, `redes/informe-diario.mjs` | Sí |
 | `exenciones.mjs` | Las pocas frases que no frenan el amarillo ("El Niño" del clima, el sorteo de un fixture, el título con un argentino; regla 172) | `ingesta.mjs` | Sí |
 | `f1.mjs`, `futbol.mjs` | Las notas propias de Fórmula 1 (Jolpica) y de fútbol (ESPN) | `generar-datos.mjs` | Sí |
-| `foto-ia.mjs` | El módulo apagado de ilustraciones con la API de Google (15/10); hoy sólo se usa su lista de nombres de personas (`nombresDePersona`) | `web/scripts/ilustrar-notas.mjs` | No (salvo esa lista) |
-| `foto-stock.mjs` | Fotos de stock libres para las notas sin foto (15/10), sin conectar | Nadie en producción | No |
 | `fotos.mjs` | Candidatas de foto, comparación con Gemini o Groq, la red de seguridad contra la marca de agua, Wikimedia y el crédito | `web/scripts/fotos-notas.mjs` | Sí |
 | `fuentes-cruce.mjs` | Las fuentes del cruce de medios, una por línea | `ingesta.mjs`, `lectura-ia.mjs`, `listar-fuentes.mjs` | Sí |
 | `fuentes.mjs` | Las fuentes de siempre y todas las listas de palabras: sección, semáforo, local, localidades dudosas, zona, figuras, filtro de entrada, temas; `fichaDeFuente` | `ingesta.mjs`, `lectura-ia.mjs`, `reels/reescritura.mjs`, `generar-datos.mjs` y más | Sí |
@@ -236,7 +233,7 @@ algunas, un `LEEME.md`.
 | `reintentar.mjs` | Reintenta una parte de una pieza que no salió, con el video ya armado | `reintentar.yml` | Sí |
 | `reparar-estadisticas.mjs` | Rehace los días de `estadisticas.json` guardados con ceros falsos (regla 168) | `reparar-estadisticas.yml` | A mano |
 | `uso-ia.mjs` | Cuánta IA se usa por día: llamadas y tokens por tarea y por modelo (`web/data/uso-ia.json`) | `reels/reescritura.mjs` y más | Sí |
-| `probar-gemini.mjs`, `probar-flux.mjs`, `probar-imagen-nota.mjs` | Pruebas a mano de las claves de Gemini y de las imágenes con Workers AI | Sus workflows | A mano |
+| `probar-gemini.mjs` | Prueba a mano de las claves de Gemini | Su workflow | A mano |
 
 ## `panel/` — los paneles, sin dependencias (`docs/09-PANEL.md`)
 
@@ -361,7 +358,7 @@ quedó en desuso el 8/10: el único que se usa es el del celular.
 |---|---|---|---|
 | `generar-datos.mjs` | Arma todos los datos de la web (el corazón de "Actualizar la web") | `actualizar.yml`; `npm run datos` | Sí |
 | `fotos-notas.mjs` | A qué notas probarles foto (nube) y poner las del banco (siempre) | `generar-datos.mjs` | Sí |
-| `achicar-foto.mjs` | Pasa la foto elegida a JPEG de hasta 1.200 px, calidad 7 (con el ffmpeg del proyecto) | `fotos-notas.mjs` | Sí |
+| `achicar-foto.mjs` | Pasa la foto elegida a JPEG de hasta 1.200 px, calidad 7; la achica a 1.024 px para mandarla a la IA y le calcula la huella (con el ffmpeg del proyecto) | `fotos-notas.mjs`, `ilustrar-notas.mjs` | Sí |
 | `foto-dolar.mjs` | Guarda la foto del dólar en `web/data/dolar.json` | `npm run build` (script `dolar`) | Sí |
 | `generar-redirects.mjs` | Escribe `web/public/_redirects`: secciones viejas, repetidas unidas y `/nota/ID` | `npm run build` (script `redirects`) | Sí |
 | `revisar-seo.mjs` | Revisa el HTML compilado y frena la subida si falta algo | `actualizar.yml` | Sí |
@@ -376,6 +373,8 @@ quedó en desuso el 8/10: el único que se usa es el del celular.
 | `foto-manual.mjs` | Suma a mano la foto de una nota (pestaña Fotos del panel) | `panel.yml` (`accion=foto`) | Sí |
 | `escudos.mjs` | Baja una vez los escudos de los clubes (ESPN) a `web/public/escudos/` | A mano | A mano |
 | `ilustrar-notas.mjs` | Las ilustraciones con IA para las notas sin foto: revisar, aplicar o automático (reglas 182 y 185); escribe `web/data/fotos-ia.json` | `ilustrar-notas.yml` | Sí |
+| `nombres-de-persona.mjs` | Los nombres de persona de un texto (el control del prompt de las ilustraciones) | `ilustrar-notas.mjs` | Sí |
+| `arreglar-fotos-17-10.mjs` | El arreglo de los datos de fotos de la auditoría del 16/10 (reglas 203 a 206; `docs/05-FOTOS.md`, § 14) | Una persona, una vez | No |
 | `archivar-a-r2.mjs` | El exportador del archivo permanente: sube a R2 las notas con página y saca lo retirado (regla 183) | `cloudflare-deploy.yml` (con `R2_ARCHIVO`, desde el 16/10), `archivo-staging.yml`, `archivo-produccion.yml` | Sí (el Worker, todavía sin ruta) |
 | `armado-vacio.mjs` | Prueba de humo: arma el sitio con datos vacíos o a medias | `armado-vacio.yml` | Sí |
 | `podcast-feed.mjs` | El feed de podcast de los repasos, sin conectar | Nadie todavía | No |
