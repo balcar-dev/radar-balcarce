@@ -77,6 +77,49 @@ agente de fotos ya lo hizo en las reglas 203 a 206.
 Extras de M: página `/hoy` (una sola dirección con lo de hoy, fácil de mandar por WhatsApp), botón "Sólo Balcarce",
 etiquetas por barrio, calle y ruta, y "Publicado" y "Actualizado" como dos fechas.
 
+## Ronda 3: redes, audiencia y formatos (Gemini, 17/10)
+
+**Crecer en Facebook y WhatsApp sin plata (por impacto):** placa diaria de "farmacia de turno, clima y datos útiles" a las 7 de la
+mañana en Facebook y en los Estados de WhatsApp (ya existe: falta el Estado, a mano); servicio útil y trámites ("¿cómo hago…?":
+ANSES, calendario de cobros, cortes de luz, colectivos, recolección); "Historias de Balcarce" los fines de semana (fotos y calles
+viejas: nostalgia = compartidos); promocionar el canal de WhatsApp al final de cada nota; **etiquetar a clubes, escuelas y
+mutuales** cuando se publica algo sobre ellos (la mayoría lo resube); álbumes de fotos de eventos locales; horarios pico del
+interior (7 a 8:30, 12:30 a 14 y 20 a 21:30; ya los usan los repasos); sorteos con comercios (el comercio pone el premio);
+cerrar con una pregunta en notas de opinión.
+**Frecuencia por red:** canal de WhatsApp 3 a 5 envíos por día; Facebook 8 a 15; Instagram 1 reel y 3 a 5 historias;
+TikTok y YouTube Shorts 1 a 2 videos verticales; Threads 2 a 4; X, Telegram y Bluesky automático con todas las notas.
+**Suscriptores propios:** botón del canal de WhatsApp al final de cada nota (prioridad uno); notificaciones web push gratis
+(OneSignal) para avisos urgentes; newsletter diario de lunes a viernes a las 7 con 5 noticias (Brevo gratis).
+**Métricas de referencia para un sitio nuevo (G, referenciales):** 300 a 500 usuarios por día al principio y 1.500 a 3.000 a los 6
+meses; más de 20 % de tráfico directo o recurrente; más de 1,4 páginas por sesión; más de 45 segundos por nota; clic de Facebook
+de 3 a 5 % del alcance; 15 a 30 seguidores nuevos por semana en el canal; convertir el 1 % de los visitantes diarios en
+suscriptores.
+**No conviene:** compartir "automático" en grupos de Facebook (no hay forma oficial desde 2024: a mano y con permiso del
+administrador).
+
+## Ronda 4: audio, video, comercial y riesgos (Gemini, 17/10)
+
+**Reel de noticias de 60 segundos que funciona:** arrancar con el dato (sin saludo) en los primeros 3 segundos; subtítulos
+grandes y de alto contraste (7 de 10 miran sin sonido); cambio de imagen cada 3 a 5 segundos (la foto de cada nota, ya hecho en el
+repaso nuevo); música de fondo tenue; cierre fijo de 3 segundos ("más en radarbalcarce.com o en el canal de WhatsApp").
+**Podcast diario gratis:** sí conviene: un mp3 con la locución y una cortina, publicado con un feed RSS de podcast en el propio
+sitio, que Spotify y Apple leen; para YouTube, el audio con una imagen fija.
+**Modelo comercial (ARS, referencial; no hay tarifas públicas medidas en pueblos bonaerenses):** ficha básica gratis en la guía;
+destacado ($8.000 a $15.000 por mes: primero en la guía, logo, WhatsApp y horarios); patrocinio de un servicio ($20.000 a $40.000
+por mes: "la farmacia de turno de hoy es presentada por…", clima, agenda). Secciones: guía de comercios, clasificados y
+empleos, agenda patrocinada. Etiqueta visible "Publicidad" o "Contenido patrocinado" y `rel="sponsored"` en los enlaces. Cobro
+por transferencia o Mercado Pago con débito automático; reporte mensual con impresiones y clics al WhatsApp del negocio, sin
+prometer ventas.
+**Rutina semanal de 30 minutos para los dueños:** 10 minutos leyendo 5 a 10 notas al azar (errores, nombres, fotos fuera de
+contexto); 10 minutos mirando si hay fuentes caídas; 10 minutos con las 3 notas más leídas y los mensajes de comercios.
+**Alarmas:** sitio caído (un monitor gratis cada 5 minutos, como UptimeRobot; el vigilante propio ya avisa por mail), más de 3
+horas sin publicar, error de compilación, nota sensible esperando.
+**Tres causas de fracaso en el primer año (G):** publicar algo erróneo o delicado sin verificar; no salir a vender los espacios (no
+alcanza con AdSense); cansancio operativo por tareas manuales repetitivas.
+**Otras herramientas que mencionó (verificar antes):** NotebookLM para resumir ordenanzas y boletines largos; DeepL gratis para
+traducir ciencia y tecnología; Edge-TTS como voz gratis alternativa (la nuestra es Gemini; sólo como respaldo); CapCut para
+plantillas a mano. Ojo: nombró "Gemini 1.5 Flash" (ya no es el modelo actual) y Pollinations (se descartó para imágenes).
+
 ## Ronda 1 (anterior, 17/10 madrugada): ideas generales
 
 ### Periodismo y criterio
