@@ -89,7 +89,7 @@ const DESCARTE_POR_MENOR = /menor|adolescen|niñ|alumn/i;
 
 /**
  * La excepción de la regla 186 (ingesta/fotos-menores.mjs), con el interruptor prendido: una nota que quedó sin foto porque la IA vio un
- * chico, que tiene una fuente de la lista cerrada y que permite la excepción, se vuelve a probar UNA vez (`probadaConExcepcion`).
+ * chico, que tiene una fuente de Balcarce (regla 211) y que permite la excepción, se vuelve a probar UNA vez (`probadaConExcepcion`).
  * Sin esto, prender el interruptor no cambiaba nada para las notas que ya estaban en el banco.
  */
 export function reintentoPorExcepcion(entrada, nota, { activa = excepcionActiva() } = {}) {

@@ -898,6 +898,42 @@ export const FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES = [
   { id: 'fca-unmdp', medio: 'Facultad de Ciencias Agrarias (UNMdP)', dominios: ['fca.mdp.edu.ar'] },
 ];
 
+/**
+ * Las páginas donde publica cada fuente de Balcarce, cuando no son las de su feed (el de Infórmese Primero está en FeedBurner, pero sus
+ * notas y sus fotos están en informeseprimero.com.ar). Lo demás sale solo del `url` de cada fuente.
+ */
+const PAGINAS_DE_LAS_FUENTES_DE_BALCARCE = {
+  informeseprimero: ['informeseprimero.com.ar'],
+};
+
+/**
+ * Regla 211 (17/10/2026, Hernán: "si es de fuentes de Balcarce no hay problema, sobre todo si no son de tinte policial"): la excepción de
+ * la regla 186 vale para la foto PROPIA de cualquier fuente de Balcarce, no sólo de los tres organismos de arriba: los medios de acá
+ * (Radio Gabal, La Vanguardia, El Diario, Infórmese Primero, Puntonueve, News Balcarce, Acción 5, Ahora Balcarce) y los organismos
+ * (Municipalidad, Concejo, Facultad). Sale sola de FUENTES: toda fuente con `alcance: 'local'`, una entrada por medio, con el dominio de su
+ * feed (o el de PAGINAS_DE_LAS_FUENTES_DE_BALCARCE). Igual que antes, la foto tiene que venir de una página de ESE medio: coinciden el nombre
+ * (`medio`) y el dominio de la nota. Las demás condiciones no cambian (ingesta/fotos-menores.mjs): Deportes, Cultura y agenda, Educación o
+ * Balcarce; una actividad deportiva, escolar, cultural o recreativa; nada policial, judicial, de salud, accidentes, violencia, abuso, muertes,
+ * desaparecidos ni chicos bajo protección; sin marca; sin nombres de chicos; el crédito en el epígrafe; nunca en las redes; y el interruptor
+ * FOTOS_MENORES_OFICIALES, que prende una persona. Una fuente de Balcarce nueva entra sola (una prueba lista las de hoy: sumarla es a la vista).
+ */
+export const FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES = (() => {
+  const porMedio = new Map();
+  for (const f of FUENTES) {
+    if (f.alcance !== 'local') continue;
+    const medio = f.medio ?? f.nombre;
+    const propias = PAGINAS_DE_LAS_FUENTES_DE_BALCARCE[f.id];
+    let host = null;
+    try { host = new URL(f.url).hostname.toLowerCase().replace(/^www\./, ''); } catch { /* sin dirección */ }
+    const dominios = propias ?? (host && !/feedburner|feeds\./.test(host) ? [host] : []);
+    if (!dominios.length) continue;
+    const antes = porMedio.get(medio);
+    if (antes) { for (const d of dominios) if (!antes.dominios.includes(d)) antes.dominios.push(d); continue; }
+    porMedio.set(medio, { id: f.id, medio, dominios: [...dominios], oficial: !!f.oficial });
+  }
+  return [...porMedio.values()];
+})();
+
 // Palabras que hacen que una noticia sea "de Balcarce" aunque venga de afuera.
 // OJO: acá sólo van nombres que no puedan aparecer por casualidad en una nota
 // nacional. "El Triunfo" y "Los Pinos" son lugares de Balcarce, pero también

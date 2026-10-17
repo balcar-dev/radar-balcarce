@@ -2,6 +2,8 @@
 // Concejo, Facultad) puede salir aunque la IA vea chicos, sólo en una actividad deportiva, escolar o cultural que no toque nada policial,
 // judicial, de salud, accidentes, violencia, muertes ni desaparecidos, sin marca, sin nombres de chicos, y con el interruptor
 // FOTOS_MENORES_OFICIALES prendido ("Si"; por defecto, apagado). Todo lo demás sigue igual: ninguna foto real con un menor.
+// Regla 211 (17/10/2026, Hernán: "si es de fuentes de Balcarce no hay problema, sobre todo si no son de tinte policial"): desde ese día la
+// foto también puede ser de un MEDIO de Balcarce (Radio Gabal, La Vanguardia, El Diario…), con las mismas condiciones de contenido.
 //
 // Los casos "reales" son notas de web/data (archivo.json, banco-fotos.json) que quedaron sin foto porque la IA vio un menor, copiadas
 // acá con su texto de ese día. Sin red: la IA es un fetchFn de mentira.
@@ -11,9 +13,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {
   excepcionActiva, esFuenteOficialParaMenores, tieneFuenteOficialParaMenores, menorEnActividadOficial, nombraAUnMenor,
-  REGLA_FOTOS_MENORES, INTERRUPTOR_FOTOS_MENORES,
+  REGLA_FOTOS_MENORES, INTERRUPTOR_FOTOS_MENORES, esFuenteDeBalcarceParaMenores, tieneFuenteDeBalcarceParaMenores,
 } from '../ingesta/fotos-menores.mjs';
-import { FUENTES, FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES, REGLAS_SEMAFORO } from '../ingesta/fuentes.mjs';
+import {
+  FUENTES, FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES, FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES, REGLAS_SEMAFORO,
+} from '../ingesta/fuentes.mjs';
 import { elegirFoto } from '../ingesta/fotos.mjs';
 import {
   elegirFotosNuevas, reintentoPorExcepcion, conFotosDelBanco, fotoConMenorPermitida,
@@ -79,7 +83,7 @@ const JUEZ_CON_NOMBRE_EN_EL_TITULO = {
   cuerpo: 'El balcarceño Ariel Bilbao integra el equipo de jueces encargado de las competencias de tiro en los Juegos Bonaerenses 2026.',
   fuentesConsultadas: [MUNI('https://balcarce.gob.ar/2026/10/15/atilio-ariel-bilbao-volvera-a-desempenarse-como-juez-nacional-en-los-juegos-bonaerenses-2026/'), GABAL('https://www.radiogabal.com.ar/index.php/deportes/ariel-bilbao-volvera-a-desempenarse-como-juez-en-los-juegos-bonaerenses')],
 };
-// La IA vio menores, pero la foto no es de un organismo: un medio (aunque sea de Balcarce) no entra en la excepción.
+// La IA vio menores y la foto es de un medio de Balcarce: hasta la regla 211 no entraba; desde el 17/10/2026, sí (escolar y cultural).
 const MUSICAL_DE_UN_MEDIO = {
   id: '97f98g', seccion: 'Balcarce',
   titulo: 'El Instituto Adventista celebra cuarenta años con un musical',
@@ -108,6 +112,48 @@ const INCIDENTES_EN_JUNIN = {
   copete: 'Se registraron corridas y uso de gas pimienta en los accesos al estadio Eva Perón.',
   fuentesConsultadas: [{ medio: 'Infobae', enlace: 'https://www.infobae.com/deportes/2026/10/14/caos/' }],
 };
+// Regla 211: casos reales de MEDIOS de Balcarce (archivo.json del 17/10/2026).
+const INFORMESE = (enlace) => ({ medio: 'Infórmese Primero (FM 104.9)', enlace, oficial: false });
+const VANGUARDIA = (enlace) => ({ medio: 'Diario La Vanguardia', enlace, oficial: false });
+const PUNTONUEVE = (enlace) => ({ medio: 'Puntonueve (FM 100.9)', enlace, oficial: false });
+// Pasa: la escuela de básquet contada por dos medios de acá (sin la Municipalidad entre las fuentes).
+const BASQUET_EN_MEDIOS_DE_ACA = {
+  id: '12yxkc9', seccion: 'Deportes',
+  titulo: 'La Escuela Municipal de Básquet comienza los playoffs con un triunfo y una derrota',
+  copete: 'Los cadetes vencieron a Círculo Deportivo en Otamendi y los juveniles cayeron ante Unión de Mar del Plata. El sábado jugarán como locales en Ferroviarios.',
+  cuerpo: 'Los equipos de la Escuela Municipal de Básquet iniciaron su participación en los playoffs del torneo organizado por la Asociación de Básquet de Mar del Plata, según informó un medio local. La categoría cadetes se impuso como visitante frente a Círculo Deportivo en la localidad de Otamendi por 44 a 35, mientras que los juveniles perdieron ante Unión de Mar del Plata por 55 a 49 en un encuentro parejo.\n\nEl próximo sábado se disputará el segundo punto de las series en el gimnasio del Club Ferroviarios, donde los representantes locales buscarán asegurar la clasificación.',
+  fuentesConsultadas: [INFORMESE('http://www.informeseprimero.com.ar/2026/10/la-escuela-municipal-de-basquet-arranco.html'), VANGUARDIA('https://www.diariolavanguardia.com/deportes/14294-resultados-dispares-cosecho-la-escuela-municipal/')],
+};
+const BASQUET_INTERNACIONAL = {
+  id: 'p961ye', seccion: 'Deportes',
+  titulo: 'La Escuela Municipal de Básquet compite en un torneo en Mar del Plata',
+  copete: 'Jugadoras de las categorías U13 y U15 de la Escuela Municipal de Básquet participan este fin de semana de un torneo internacional en Mar del Plata para sumar minutos de competencia.',
+  cuerpo: 'Un grupo de jugadoras de la Escuela Municipal de Básquet participará durante tres días del decimoctavo Torneo Internacional de Básquet en Mar del Plata, organizado por CAP Eventos.\n\nLa actividad comenzará este viernes en el Club Unión, donde las categorías U15 y U13 se enfrentarán a Quilmes. El sábado, los partidos continuarán en el Complejo Ciromar ante Peñarol y por la tarde en el Instituto Albert Einstein frente a Comunicaciones.\n\nComo antecedente, los equipos locales habían disputado días atrás una nueva fecha de la Asociación de Básquet de Mar del Plata en el gimnasio del Club Ferroviarios, según se informó oportunamente.',
+  fuentesConsultadas: [GABAL('https://www.radiogabal.com.ar/index.php/deportes/experiencia-internacional-para-las-jugadoras-de-la-escuela-municipal-de-basquet'), PUNTONUEVE('https://puntonueve.com.ar/la-escuela-municipal-de-basquet-participara-de-un-torneo-internacional-en-mar-del-plata/')],
+};
+const GIMNASIA_RITMICA_EN_GABAL = {
+  id: '1ckhubg', seccion: 'Deportes',
+  titulo: 'El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica',
+  copete: 'El Club Amigos Unidos albergó un certamen amistoso de gimnasia rítmica. Participaron delegaciones locales y de otras ciudades de la zona en los niveles E y D.',
+  cuerpo: 'El gimnasio del Club Amigos Unidos albergó un certamen amistoso de gimnasia rítmica que reunió a deportistas de la región. La competencia estuvo destinada a las categorías E y D.\n\nDe acuerdo con la organización a cargo de Gimnasia Rítmica Balcarce, las actividades incluyeron exhibiciones y permitieron sumar experiencia. De las presentaciones formaron parte representaciones provenientes de Miramar y Mar del Plata, junto con el CEF 119 local y la entidad organizadora.',
+  fuentesConsultadas: [GABAL('https://www.radiogabal.com.ar/index.php/deportes/balcarce-fue-sede-de-un-encuentro-de-gimnasia-ritmica')],
+};
+// No pasan aunque la foto sea de un medio de acá: un choque (Policiales) y los Bomberos tras una emergencia.
+const CHOQUE_EN_LA_VANGUARDIA = {
+  id: 'wyhea8', seccion: 'Policiales',
+  titulo: 'Un motociclista es hospitalizado tras un choque',
+  copete: 'Un choque entre una utilitaria y una moto dejó a un conductor hospitalizado en la madrugada del domingo. Ocurrió en avenida Gonzáles Chaves y calle 9.',
+  cuerpo: 'Un siniestro vial entre una utilitaria y una motocicleta tipo motocross se registró durante la madrugada del domingo en la intersección de avenida Gonzáles Chaves y calle 9, en la ciudad de Balcarce.\n\nComo consecuencia del impacto, el conductor del rodado menor debió ser trasladado de urgencia al Hospital Municipal Felipe Fossati para recibir la atención médica correspondiente.\n\nEn el lugar del hecho trabajaron agentes del área de Tránsito y dotaciones de los servicios de emergencia para asistir a los involucrados y realizar las pericias necesarias.',
+  fuentesConsultadas: [VANGUARDIA('https://www.diariolavanguardia.com/noticias/44913-un-motociclista-fue-hospitalizado-tras-un-choque-con-una-utilitaria/')],
+};
+const BOMBEROS_TRAS_EL_TERREMOTO = {
+  id: '16ml7pn', seccion: 'Balcarce',
+  titulo: 'Bomberos locales brindan una charla sobre el operativo en Venezuela',
+  copete: 'La Asociación de Bomberos Voluntarios recibe el sábado a la Brigada ARG-13 PUMA. Exponen desde las 17 sobre el trabajo realizado tras el terremoto.',
+  cuerpo: 'El cuartel de Bomberos Voluntarios de Balcarce alberga el sábado 3 de octubre una charla abierta sobre las tareas realizadas tras el terremoto registrado este año en Venezuela. La exposición está a cargo de los servidores públicos locales que integran la Brigada ARG-13 PUMA. Los rescatistas detallan las tareas de emergencia que llevaron adelante en el país caribeño.',
+  fuentesConsultadas: [GABAL('https://www.radiogabal.com.ar/index.php/comunidad/este-sabado-se-realizara-una-charla-de-bomberos-sobre-la-experiencia-tras-el-terremoto-en-venezuela')],
+};
+
 // Inventados, con la forma de lo que podría llegar del municipio.
 const inventada = (titulo, copete = '', cuerpo = '', seccion = 'Balcarce') => ({
   id: 'x', seccion, titulo, copete, cuerpo, fuentesConsultadas: [MUNI('https://balcarce.gob.ar/2026/10/17/x/')],
@@ -135,8 +181,95 @@ test('regla 186: la lista cerrada son organismos de Balcarce que existen en FUEN
     const host = new URL(f.url).hostname.replace(/^www\./, '');
     assert.ok(e.dominios.some((d) => host === d || host.endsWith(`.${d}`)), `${e.id}: el dominio es el de su feed (${host})`);
   }
-  // Ningún medio (ni de Balcarce) está en la lista: sólo organismos.
+  // Ningún medio (ni de Balcarce) está en la lista de los organismos.
   for (const e of FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES) assert.ok(!/radio|fm|diario|news|noticias|ahora|acci[oó]n/i.test(e.medio), e.medio);
+});
+
+test('regla 211: las fuentes de Balcarce para la excepción son TODAS las de FUENTES con alcance local (medios y organismos), una por medio', () => {
+  // La lista de hoy, a la vista: sumar una fuente de Balcarce la suma acá (y esta prueba lo muestra).
+  assert.deepEqual(FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES.map((f) => f.medio).sort(), [
+    'Acción 5 (Balcarce)', 'Ahora Balcarce', 'Concejo Deliberante de Balcarce', 'Diario La Vanguardia', 'El Diario Balcarce',
+    'Facultad de Ciencias Agrarias (UNMdP)', 'Infórmese Primero (FM 104.9)', 'Municipalidad de Balcarce', 'News Balcarce (FM 91.7)',
+    'Puntonueve (FM 100.9)', 'Radio Gabal (FM 104.1)',
+  ]);
+  const locales = new Set(FUENTES.filter((f) => f.alcance === 'local').map((f) => f.medio ?? f.nombre));
+  for (const e of FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES) {
+    assert.ok(locales.has(e.medio), `${e.medio} es una fuente de Balcarce`);
+    assert.ok(e.dominios.length && e.dominios.every((d) => !/feedburner|feeds\./.test(d)), `${e.medio}: el dominio de sus páginas, no el del feed`);
+  }
+  // Los tres organismos de la regla 186 siguen, con el mismo dominio.
+  for (const o of FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES) {
+    const e = FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES.find((x) => x.medio === o.medio);
+    assert.deepEqual(e?.dominios, o.dominios, o.medio);
+  }
+  // Infórmese Primero publica su feed en FeedBurner, pero sus notas y sus fotos están en su sitio.
+  assert.deepEqual(FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES.find((x) => x.medio === 'Infórmese Primero (FM 104.9)').dominios, ['informeseprimero.com.ar']);
+  // Ninguna de afuera: ni un medio regional ni uno nacional.
+  for (const medio of ['El Eco de Tandil', 'Infobae', 'La Capital (Mar del Plata)', '0223']) {
+    assert.equal(FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES.some((x) => x.medio === medio), false, medio);
+  }
+});
+
+test('regla 211 (a): la foto de un medio de acá entra, siempre de SU página; nunca de su sección policial', () => {
+  assert.ok(esFuenteDeBalcarceParaMenores(GABAL('https://www.radiogabal.com.ar/index.php/deportes/x')));
+  assert.ok(esFuenteDeBalcarceParaMenores(INFORMESE('http://www.informeseprimero.com.ar/2026/10/x.html')));
+  assert.ok(esFuenteDeBalcarceParaMenores(VANGUARDIA('https://www.diariolavanguardia.com/deportes/14294-x/')));
+  assert.ok(esFuenteDeBalcarceParaMenores({ medio: 'El Diario Balcarce', enlace: 'https://eldiariobalcarce.com.ar/un-dia-840' }));
+  // El nombre de un medio con la página de otro: no.
+  assert.equal(esFuenteDeBalcarceParaMenores(GABAL('https://www.diariolavanguardia.com/deportes/x/')), null);
+  assert.equal(esFuenteDeBalcarceParaMenores(VANGUARDIA('https://www.radiogabal.com.ar/index.php/deportes/x')), null);
+  // Un medio de afuera, aunque cuente lo mismo: no.
+  assert.equal(esFuenteDeBalcarceParaMenores({ medio: 'El Eco de Tandil', enlace: 'https://www.eleco.com.ar/la-ciudad/x' }), null);
+  // La sección policial de un medio de acá, nunca (de más: "sobre todo si no son de tinte policial").
+  assert.equal(esFuenteDeBalcarceParaMenores(GABAL('https://www.radiogabal.com.ar/index.php/policiales/un-choque')), null);
+  assert.equal(esFuenteDeBalcarceParaMenores(VANGUARDIA('https://www.diariolavanguardia.com/policiales/123-x/')), null);
+  // Los nombres de antes siguen andando igual.
+  assert.equal(esFuenteOficialParaMenores, esFuenteDeBalcarceParaMenores);
+  assert.equal(tieneFuenteOficialParaMenores, tieneFuenteDeBalcarceParaMenores);
+});
+
+test('regla 211: un medio de acá con la escuela de básquet o un torneo pasa; con un choque o una emergencia, no', () => {
+  for (const n of [BASQUET_EN_MEDIOS_DE_ACA, BASQUET_INTERNACIONAL, GIMNASIA_RITMICA_EN_GABAL, MUSICAL_DE_UN_MEDIO]) {
+    assert.equal(tieneFuenteDeBalcarceParaMenores(n), true, n.id);
+    const r = menorEnActividadOficial(n);
+    assert.equal(r.ok, true, `${n.id}: ${r.motivo}`);
+  }
+  for (const [n, motivo] of [[CHOQUE_EN_LA_VANGUARDIA, /sección Policiales/], [BOMBEROS_TRAS_EL_TERREMOTO, /emergencia|rescate/]]) {
+    assert.equal(tieneFuenteDeBalcarceParaMenores(n), true, `${n.id}: la fuente es de acá`);
+    const r = menorEnActividadOficial(n);
+    assert.equal(r.ok, false, n.id);
+    assert.match(r.motivo, motivo, `${n.id}: ${r.motivo}`);
+  }
+  // Lo policial con chicos contado por un medio de acá, aunque esté en otra sección y nombre una actividad: no.
+  for (const [titulo, copete] of [
+    ['Detienen a un adolescente a la salida del torneo de fútbol infantil', 'Intervino la Policía tras una pelea.'],
+    ['Un alumno resultó herido en un accidente camino a la escuela', 'Lo trasladaron al hospital.'],
+    ['Denuncian un caso de acoso en el colegio', 'La familia presentó una denuncia.'],
+  ]) {
+    const n = { id: 'x', seccion: 'Balcarce', titulo, copete, cuerpo: '', fuentesConsultadas: [GABAL('https://www.radiogabal.com.ar/index.php/comunidad/x')] };
+    assert.equal(menorEnActividadOficial(n).ok, false, titulo);
+  }
+});
+
+test('regla 211: con el interruptor prendido, la foto con chicos de un medio de acá en la escuela de básquet se elige y queda anotada', async () => {
+  const pedidos = [];
+  const r = await elegirFoto(BASQUET_INTERNACIONAL, conDatos(BASQUET_INTERNACIONAL.fuentesConsultadas), {
+    clave: 'g', claveRespaldo: null, fetchFn: iaQueResponde(AMBAS_CON_CHICOS, pedidos), fotosMenoresOficiales: true,
+  });
+  assert.equal(r.elegida.medio, 'Radio Gabal (FM 104.1)');
+  assert.equal(r.elegida.excepcion.regla, REGLA_FOTOS_MENORES);
+  assert.equal(r.elegida.excepcion.fuente, 'Radio Gabal (FM 104.1)');
+  assert.match(pedidos[0], /Única excepción[\s\S]*una fuente de Balcarce/);
+  // Apagado (lo normal), nada.
+  const apagado = await elegirFoto(BASQUET_INTERNACIONAL, conDatos(BASQUET_INTERNACIONAL.fuentesConsultadas), {
+    clave: 'g', claveRespaldo: null, fetchFn: iaQueResponde(AMBAS_CON_CHICOS), fotosMenoresOficiales: false,
+  });
+  assert.equal(apagado.elegida, null);
+  // La del choque, aun prendida, no.
+  const choque = await elegirFoto(CHOQUE_EN_LA_VANGUARDIA, conDatos(CHOQUE_EN_LA_VANGUARDIA.fuentesConsultadas), {
+    clave: 'g', claveRespaldo: null, fetchFn: iaQueResponde({ elegida: 'A', razon: 'x', fotos: [{ letra: 'A', tiene_marca: false, menor: true }] }), fotosMenoresOficiales: true,
+  });
+  assert.equal(choque.elegida, null);
 });
 
 test('regla 186 (a): la foto tiene que salir de una página del organismo: el nombre del medio Y el dominio', () => {
@@ -152,9 +285,12 @@ test('regla 186 (a): la foto tiene que salir de una página del organismo: el no
   assert.equal(esFuenteOficialParaMenores(MUNI('https://nobalcarce.gob.ar/x')), null);
   assert.equal(esFuenteOficialParaMenores(MUNI('no es una dirección')), null);
   assert.equal(esFuenteOficialParaMenores({ medio: 'Municipalidad de Balcarce' }), null);
-  assert.equal(tieneFuenteOficialParaMenores(CONCEJO_ESTUDIANTIL_SIN_FOTO_DEL_CONCEJO), false, 'el Concejo contó la nota pero no fue fuente de la foto');
-  assert.equal(tieneFuenteOficialParaMenores(MUSICAL_DE_UN_MEDIO), false);
+  // Desde la regla 211 cuentan también las fotos de los medios de acá: el Concejo no fue fuente de la foto, pero Gabal y Puntonueve sí.
+  assert.equal(tieneFuenteOficialParaMenores(CONCEJO_ESTUDIANTIL_SIN_FOTO_DEL_CONCEJO), true, 'Gabal y Puntonueve son de Balcarce');
+  assert.equal(tieneFuenteOficialParaMenores(MUSICAL_DE_UN_MEDIO), true, 'El Diario Balcarce es de Balcarce');
   assert.equal(tieneFuenteOficialParaMenores(ESCUELA_DE_BASQUET), true);
+  // Sólo con medios de afuera, no.
+  assert.equal(tieneFuenteOficialParaMenores(INCIDENTES_EN_JUNIN), false);
 });
 
 // ---------------------------------------------------------------- la nota
@@ -274,9 +410,15 @@ test('regla 186: con el interruptor prendido, la foto del municipio con chicos e
   assert.equal(r.elegida.excepcion.fuente, 'Municipalidad de Balcarce');
   assert.match(r.elegida.excepcion.motivo, /Deportes/);
   assert.match(r.razon, /menorEnActividadOficial/);
-  // La IA supo de la excepción, y sólo para la letra del municipio.
-  assert.match(pedidos[0], /Única excepción[\s\S]*la letra A \(Municipalidad de Balcarce\)/);
-  assert.ok(!/letra B/.test(pedidos[0].split('Única excepción')[1]));
+  // La IA supo de la excepción, para las letras de las fuentes de Balcarce (desde la regla 211, también la de Radio Gabal).
+  assert.match(pedidos[0], /Única excepción[\s\S]*las letras A \(Municipalidad de Balcarce\), B \(Radio Gabal \(FM 104\.1\)\) son de esas fuentes/);
+  // Con una sola, en singular; y una de afuera nunca está en la lista.
+  const uno = [];
+  await elegirFoto(ESCUELA_DE_BASQUET, conDatos([{ medio: 'El Eco de Tandil', enlace: 'https://www.eleco.com.ar/x' }, ESCUELA_DE_BASQUET.fuentesConsultadas[0]]), {
+    clave: 'g', claveRespaldo: null, fetchFn: iaQueResponde(AMBAS_CON_CHICOS, uno), fotosMenoresOficiales: true,
+  });
+  assert.match(uno[0], /la foto de la letra B \(Municipalidad de Balcarce\) es la suya/);
+  assert.ok(!/El Eco de Tandil/.test(uno[0].split('Única excepción')[1]));
 });
 
 test('regla 186: con el interruptor APAGADO (lo normal), la misma foto no se elige y la instrucción es la de siempre', async () => {
@@ -293,18 +435,26 @@ test('regla 186: con el interruptor APAGADO (lo normal), la misma foto no se eli
   assert.equal(r2.elegida, null);
 });
 
-test('regla 186: prendida, si la IA elige la foto con chicos de OTRO medio, se usa la del municipio, nunca la del medio', async () => {
-  const r = await elegirFoto(ESCUELA_DE_BASQUET, conDatos(ESCUELA_DE_BASQUET.fuentesConsultadas), {
-    clave: 'g', claveRespaldo: null, fetchFn: iaQueResponde({ ...AMBAS_CON_CHICOS, elegida: 'B' }), fotosMenoresOficiales: true,
+test('regla 186 y 211: prendida, si la IA elige la foto con chicos de un medio de AFUERA, se usa la de Balcarce, nunca la de afuera', async () => {
+  const ECO = { medio: 'El Eco de Tandil', enlace: 'https://www.eleco.com.ar/deportes/basquet-x', oficial: false };
+  const fuentes = [ECO, ...ESCUELA_DE_BASQUET.fuentesConsultadas];
+  const tres = { elegida: 'A', razon: 'la mejor', fotos: ['A', 'B', 'C'].map((letra) => ({ letra, tiene_marca: false, menor: true })) };
+  const r = await elegirFoto(ESCUELA_DE_BASQUET, conDatos(fuentes), {
+    clave: 'g', claveRespaldo: null, fetchFn: iaQueResponde(tres), fotosMenoresOficiales: true,
   });
   assert.equal(r.elegida.medio, 'Municipalidad de Balcarce');
   assert.ok(r.elegida.excepcion);
-  // Si sólo está la del medio, nada.
+  // Desde la regla 211 la del medio de acá (Radio Gabal) también entra.
   const soloGabal = conDatos([ESCUELA_DE_BASQUET.fuentesConsultadas[1]]);
   const r2 = await elegirFoto(ESCUELA_DE_BASQUET, soloGabal, {
     clave: 'g', claveRespaldo: null, fetchFn: iaQueResponde({ elegida: 'A', razon: 'x', fotos: [{ letra: 'A', tiene_marca: false, menor: true }] }), fotosMenoresOficiales: true,
   });
-  assert.equal(r2.elegida, null);
+  assert.equal(r2.elegida?.medio, 'Radio Gabal (FM 104.1)');
+  // Si sólo está la de afuera, nada.
+  const r3 = await elegirFoto(ESCUELA_DE_BASQUET, conDatos([ECO]), {
+    clave: 'g', claveRespaldo: null, fetchFn: iaQueResponde({ elegida: 'A', razon: 'x', fotos: [{ letra: 'A', tiene_marca: false, menor: true }] }), fotosMenoresOficiales: true,
+  });
+  assert.equal(r3.elegida, null);
 });
 
 test('regla 186 (c): prendida, la foto del municipio con una marca o un logo sobreimpreso, o sin evaluar, no sirve', async () => {
@@ -383,7 +533,9 @@ test('regla 186: al prenderla, una nota que ya se había descartado por "menor" 
   assert.equal(reintentoPorExcepcion(descartada, ESCUELA_DE_BASQUET, { activa: false }), false, 'apagada, no');
   assert.equal(reintentoPorExcepcion({ ...descartada, probadaConExcepcion: true }, ESCUELA_DE_BASQUET, { activa: true }), false, 'una sola vez');
   assert.equal(reintentoPorExcepcion(descartada, FUTBOL_PLAYA_CON_NOMBRES, { activa: true }), false, 'la nota no la permite');
-  assert.equal(reintentoPorExcepcion(descartada, MUSICAL_DE_UN_MEDIO, { activa: true }), false, 'sin foto de un organismo');
+  // Regla 211: la de un medio de acá (El Diario Balcarce) también se vuelve a probar; la de un medio de afuera, no.
+  assert.equal(reintentoPorExcepcion(descartada, MUSICAL_DE_UN_MEDIO, { activa: true }), true, 'foto de un medio de Balcarce');
+  assert.equal(reintentoPorExcepcion(descartada, { ...MUSICAL_DE_UN_MEDIO, fuentesConsultadas: [{ medio: 'Infobae', enlace: 'https://www.infobae.com/x' }] }, { activa: true }), false, 'sin foto de Balcarce');
   assert.equal(reintentoPorExcepcion({ ...descartada, razon: 'la foto tenía una marca de agua' }, ESCUELA_DE_BASQUET, { activa: true }), false, 'descartada por otra cosa');
   assert.equal(reintentoPorExcepcion({ ...descartada, archivo: 'fotos-notas/x.jpg' }, ESCUELA_DE_BASQUET, { activa: true }), false);
 });

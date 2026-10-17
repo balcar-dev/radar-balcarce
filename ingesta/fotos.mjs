@@ -24,8 +24,8 @@
 //
 // Los menores: una foto con un chico reconocible nunca se elige (28/09), con
 // UNA excepción desde el 17/10/2026 (regla 186, `menorEnActividadOficial`,
-// ingesta/fotos-menores.mjs): la foto propia de un organismo de Balcarce de
-// la lista cerrada, en una actividad deportiva, escolar o cultural que no
+// ingesta/fotos-menores.mjs): la foto propia de una fuente de Balcarce (un
+// organismo o, desde la regla 211, un medio de acá), en una actividad deportiva, escolar o cultural que no
 // toque nada sensible, sin marca y sin nombres de chicos, y sólo con el
 // interruptor FOTOS_MENORES_OFICIALES prendido. Apagado, todo como siempre.
 //
@@ -202,8 +202,8 @@ const paraComparar = (candidatas) => candidatas.filter((c) => c.datos && !c.repe
 
 const LETRAS = 'ABCDEFGH';
 
-/** El párrafo de la excepción de la regla 186 (ingesta/fotos-menores.mjs): sólo si esta nota la permite y hay fotos de un organismo de la
- *  lista cerrada. Sin excepción, la instrucción es exactamente la de siempre. */
+/** El párrafo de la excepción de la regla 186 (ingesta/fotos-menores.mjs): sólo si esta nota la permite y hay fotos de una fuente de
+ *  Balcarce (regla 211). Sin excepción, la instrucción es exactamente la de siempre. */
 function parrafoDeLaExcepcion(candidatas, excepcion) {
   if (!excepcion?.permiteMenor) return '';
   const letras = candidatas.map((c, i) => (excepcion.permiteMenor(c) ? `${LETRAS[i]} (${c.medio})` : null)).filter(Boolean);
@@ -211,8 +211,9 @@ function parrafoDeLaExcepcion(candidatas, excepcion) {
   return `
 
 Única excepción, sólo para esta nota (decisión de Radar Balcarce del 17/10/2026): es una actividad deportiva, escolar o cultural contada
-por un organismo oficial de Balcarce, y la foto de ${letras.length > 1 ? 'las letras' : 'la letra'} ${letras.join(', ')} es la suya. ESA foto
-sí puede ser la "elegida" aunque tenga chicos reconocibles. Igual poné "menor" en true si los tiene (queda registrado), y "tiene_marca"
+por una fuente de Balcarce (un medio de acá o un organismo), y ${letras.length > 1 ? `las fotos de las letras ${letras.join(', ')} son de esas fuentes. ESAS fotos
+sí pueden` : `la foto de la letra ${letras[0]} es la suya. ESA foto
+sí puede`} ser la "elegida" aunque tenga chicos reconocibles. Igual poné "menor" en true si los tiene (queda registrado), y "tiene_marca"
 sigue igual que siempre: si tiene un logo o una marca sobreimpresa, no sirve. Para las fotos de las demás letras no hay excepción.`;
 }
 
@@ -331,8 +332,8 @@ function interpretarRespuesta(respuesta, candidatas, excepcion = null) {
   };
   const fotos = obj.fotos;
   const porLetra = new Map(fotos.filter((f) => letraValida(f?.letra)).map((f) => [f.letra, f]));
-  // La excepción de la regla 186 (ingesta/fotos-menores.mjs): una foto con chicos, evaluada EXPLÍCITAMENTE sin marca, de un organismo de la
-  // lista cerrada, en una nota que la permite y con el interruptor prendido. Cualquier otra foto con un menor sigue afuera.
+  // La excepción de la regla 186 (ingesta/fotos-menores.mjs): una foto con chicos, evaluada EXPLÍCITAMENTE sin marca, de una fuente de
+  // Balcarce (regla 211), en una nota que la permite y con el interruptor prendido. Cualquier otra foto con un menor sigue afuera.
   const porExcepcion = (letra) => {
     const f = porLetra.get(letra);
     return !!excepcion?.permiteMenor && f?.tiene_marca === false && f?.menor === true
@@ -575,7 +576,7 @@ export const SEGUNDAS_OPINIONES_POR_NOTA = 2;
 
 /**
  * La excepción de la regla 186 para esta nota, o null: con el interruptor prendido y la nota que la permite (menorEnActividadOficial),
- * una función que dice qué candidatas son de un organismo de la lista cerrada. Apagada (lo normal), null y todo como siempre.
+ * una función que dice qué candidatas son de una fuente de Balcarce (regla 211). Apagada (lo normal), null y todo como siempre.
  */
 export function excepcionParaNota(nota, { activa = excepcionActiva() } = {}) {
   if (!activa) return null;

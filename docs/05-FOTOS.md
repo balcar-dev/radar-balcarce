@@ -306,9 +306,9 @@ Ver `docs/07-REDES.md`.
   rojo antes de publicarse, así que nunca llega a esta etapa (pero ver "Qué
   puede fallar").
 - **Una foto con un chico reconocible** (la IA lo marca con `menor`): nunca, salvo
-  la única excepción de la regla 186 (§ 13): la foto propia de la Municipalidad, el
-  Concejo o la Facultad en una actividad deportiva, escolar o cultural, con todo en
-  regla y el interruptor `FOTOS_MENORES_OFICIALES` prendido.
+  la única excepción de las reglas 186 y 211 (§ 13): la foto propia de una fuente de
+  Balcarce (un medio de acá o un organismo) en una actividad deportiva, escolar, cultural
+  o recreativa, con todo en regla y el interruptor `FOTOS_MENORES_OFICIALES` prendido.
 - **Policiales**, salvo que la fuente sea oficial (paso 2).
 - **Una foto inventada por IA que parezca real**: el sistema no genera fotos de
   hechos. Las imágenes de IA son las ilustraciones genéricas, etiquetadas, del
@@ -336,7 +336,7 @@ Ver `docs/07-REDES.md`.
 | `web/data/fotos-ia.json` | Las ilustraciones aplicadas (lo escribe sólo «Ilustrar notas sin foto») | — | — | — |
 | `web/scripts/achicar-foto.mjs` | Achicar para guardar (1.200 px) y para la IA (1.024 px, `achicarParaIA`); la huella (`huellaDeFoto`, `mismaFoto`) | `fotos-notas.mjs`, `ilustrar-notas.mjs` | — | — |
 | `web/scripts/nombres-de-persona.mjs` | `nombresDePersona`: el control del prompt de las ilustraciones (antes en `ingesta/foto-ia.mjs`, que se borró) | `ilustrar-notas.mjs` | — | — |
-| `ingesta/fotos-menores.mjs` | La excepción de la regla 186 (§ 13): `menorEnActividadOficial`, `esFuenteOficialParaMenores`, `nombraAUnMenor`, las listas `ACTIVIDADES` y `PROHIBIDAS`, el interruptor | `ingesta/fotos.mjs`, `web/scripts/fotos-notas.mjs` | La nota, `FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES` (`ingesta/fuentes.mjs`), `FOTOS_MENORES_OFICIALES` | — |
+| `ingesta/fotos-menores.mjs` | La excepción de las reglas 186 y 211 (§ 13): `menorEnActividadOficial`, `esFuenteDeBalcarceParaMenores` (antes `esFuenteOficialParaMenores`, que sigue como alias), `nombraAUnMenor`, las listas `ACTIVIDADES` y `PROHIBIDAS`, el interruptor | `ingesta/fotos.mjs`, `web/scripts/fotos-notas.mjs` | La nota, `FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES` (`ingesta/fuentes.mjs`), `FOTOS_MENORES_OFICIALES` | — |
 
 ## Dónde se toca cada cosa
 
@@ -356,7 +356,7 @@ Ver `docs/07-REDES.md`.
 | Que el espejo de Instagram lleve (o no) la foto del banco | `FOTO_EN_INSTAGRAM` (`web/lib/tarjeta-diseno.js`; hoy `true`) |
 | Cómo se ve en la página | El bloque `{n.foto && …}` de `web/app/nota/[id]/page.js` |
 | Ilustrar con IA las notas sin foto | Workflow «Ilustrar notas sin foto» (§ 12; automático cada 2 h); qué se salta, `motivoParaSaltar` (`web/scripts/ilustrar-notas.mjs`) y `tocaUnaMuerte` (`web/scripts/fotos-notas.mjs`); el tono, `tonoDeLaNota` y `TONOS`; los topes, `TOPE_POR_CORRIDA`, `TOPE_POR_DIA` y `cupoAutomatico`; las horas, `HORAS_AUTOMATICAS` y `HORAS_ILUSTRAR_UTC` (`infra/reloj-cloudflare/worker.mjs`); con Gemini web, `docs/flujos/IMAGENES-CON-GEMINI-WEB.md` |
-| Qué organismos entran en la excepción de las fotos con chicos (regla 186) | `FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES` (`ingesta/fuentes.mjs`): **preguntar antes** |
+| Qué fuentes entran en la excepción de las fotos con chicos (reglas 186 y 211) | `FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES` (`ingesta/fuentes.mjs`): sale sola de las fuentes con `alcance: 'local'`; una fuente de Balcarce nueva entra sola (la prueba lista las de hoy). La página de un medio cuyas notas no están en el dominio de su feed va en `PAGINAS_DE_LAS_FUENTES_DE_BALCARCE` |
 | Qué actividades la permiten y qué temas la frenan | `ACTIVIDADES` y `PROHIBIDAS` (`ingesta/fotos-menores.mjs`) |
 | Prender o apagar la excepción | La variable de GitHub `FOTOS_MENORES_OFICIALES` ("Si" la prende; apagarla también saca de la web las fotos que entraron por ella) |
 | Sacar una ilustración que no debía salir | Borrar su entrada de `web/data/fotos-ia.json` (y el archivo `<id>-ia.jpg`): la próxima corrida de «Actualizar la web» ya no la pone |
@@ -480,7 +480,25 @@ muestra (`ilustracionPermitida`); una de Policiales con una foto del banco que n
 no borra los `*-ia.jpg` de notas vivas. El epígrafe de la página, el RSS y el pie de Instagram dicen «Ilustración generada con IA».
 Para sacar una: borrar su entrada de `fotos-ia.json` y el archivo.
 
-## 13. Fotos con chicos de los organismos de Balcarce (17/10/2026, regla 186)
+## 13. Fotos con chicos de las fuentes de Balcarce (17/10/2026, reglas 186 y 211)
+
+**La ampliación (regla 211, el mismo 17/10).** Hernán: "si es de fuentes de Balcarce no hay problema, sobre todo si no son de tinte policial".
+Desde ese día la condición 1 de abajo ya no pide que la foto sea de un **organismo**: alcanza con que sea la foto propia de **cualquier fuente de
+Balcarce**, un medio de acá (Radio Gabal, La Vanguardia, El Diario Balcarce, Infórmese Primero, Puntonueve, News Balcarce, Acción 5, Ahora
+Balcarce) o un organismo (Municipalidad, Concejo, Facultad). La lista sale sola de las fuentes con `alcance: 'local'` de `ingesta/fuentes.mjs`
+(`FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES`, una entrada por medio con el dominio de sus páginas) y una prueba la muestra entera, así que sumar
+una fuente de Balcarce la suma acá y se ve. Siguen coincidiendo el nombre del medio **y** el dominio de la página de la foto, y además una foto de
+la sección policial de un medio de acá (la dirección dice `polic…`, como `radiogabal.com.ar/index.php/policiales/…`) nunca entra. **Todo lo
+demás es igual**: la sección, la actividad, nada sensible (policial, judicial, salud, accidentes, violencia, abuso, muertes, desaparecidos, chicos
+bajo protección), sin marca, sin nombres de chicos, el crédito en el epígrafe, nunca en el collage de las redes, y el interruptor
+`FOTOS_MENORES_OFICIALES`, **que sigue apagado hasta que lo prenda una persona** (Settings → Secrets and variables → Actions → Variables, «Si»).
+Con los datos del 17/10: de las 63 notas del archivo que quedaron sin foto porque la IA vio un chico, pasarían el texto y la fuente **11** (antes de
+la ampliación, 3), entre ellas la Escuela Municipal de Básquet contada por Gabal, Puntonueve, Infórmese y La Vanguardia, el torneo de gimnasia
+rítmica de Amigos Unidos y el musical del Instituto Adventista; siguen afuera el choque de la moto (Policiales), la charla de Bomberos tras el
+terremoto (una emergencia), el fútbol playa con los siete nombres y el Día del Sordo. Que la foto salga depende además de que la IA la vea sin marca.
+Prueba: `pruebas/fotos-menores-oficiales.test.mjs` («regla 211…»).
+
+Lo que sigue es la regla 186 como se escribió primero (sólo organismos); donde dice "organismo", desde la 211 vale "fuente de Balcarce".
 
 **La decisión.** Hernán, el 17/10/2026: "si hay menores en la foto y la fuente es de Balcarce y es un juego, olimpíadas o algo
 deportivo/escolar/cultural, y son fuentes que realmente no suben nada policial, como el municipio, estaría bueno dejarlo". Hasta ese día la
@@ -491,10 +509,11 @@ revisarlo.
 **Qué cambia.** Una sola excepción, `menorEnActividadOficial` (`ingesta/fotos-menores.mjs`). La foto con chicos se puede usar **sólo si se
 cumple todo**:
 
-1. **La foto es del organismo** (no de un medio, ni siquiera de uno de Balcarce): la página de donde sale es de la lista cerrada
-   `FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES` (`ingesta/fuentes.mjs`): la Municipalidad de Balcarce y sus áreas (Deportes, Cultura,
-   Educación, Juventud, Turismo publican en `balcarce.gob.ar`), el Concejo Deliberante y la Facultad de Ciencias Agrarias. Tienen que
-   coincidir el nombre del medio **y** el dominio. Sumar un organismo es una decisión editorial: preguntar antes.
+1. **La foto es de una fuente de Balcarce** (desde la regla 211; hasta ahí, sólo del organismo y no de un medio): la página de donde sale es
+   de `FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES` (`ingesta/fuentes.mjs`): los medios de acá y los organismos (la Municipalidad de Balcarce y
+   sus áreas —Deportes, Cultura, Educación, Juventud, Turismo publican en `balcarce.gob.ar`—, el Concejo Deliberante y la Facultad de Ciencias
+   Agrarias; ésos siguen en `FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES`). Tienen que coincidir el nombre del medio **y** el dominio, y nunca
+   de la sección policial de un medio.
 2. **La nota es de una actividad**: sección Deportes, Cultura y agenda, Educación o Balcarce; el título o la bajada nombran algo de la lista
    cerrada `ACTIVIDADES` (torneo, juegos, olimpíadas, escuela, festival, muestra, coro, taller, colonia…).
 3. **No toca nada sensible**, en ningún lugar del texto: policial, judicial, salud o discapacidad (la foto de un chico de una escuela especial

@@ -42,7 +42,8 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 211: del 189 al 210 son los arreglos de Radar 2.0 del 17/10, por tandas y con huecos.)
+próxima regla es la 212: del 189 al 210 son los arreglos de Radar 2.0 del 17/10, por tandas y con huecos;
+la 211, las fotos con chicos de las fuentes de Balcarce.)
 
 - **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Una prueba lo
   vigila (sigue los imports en cadena).
@@ -60,14 +61,16 @@ próxima regla es la 211: del 189 al 210 son los arreglos de Radar 2.0 del 17/10
 - **Las fotos**: la de otro medio o de un organismo, sólo sin su marca (lo que estaba en
   la escena, como el micrófono de una radio, sí: 29/09), con el crédito en el epígrafe y guardada en el banco propio
   (`web/data/banco-fotos.json`). Nunca foto real de un menor o una víctima, ni en
-  Policiales salvo fuente oficial (`docs/05-FOTOS.md`). **Única excepción (regla 186, Hernán,
-  17/10):** la foto propia de la Municipalidad, el Concejo o la Facultad
-  (`FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES`, lista cerrada: no sumar sin preguntar) con chicos
-  en una actividad deportiva, escolar o cultural que no toque nada policial, judicial, de salud,
-  accidentes, violencia, muertes ni desaparecidos, sin marca y sin nombres de chicos
-  (`ingesta/fotos-menores.mjs`), y sólo con la variable de GitHub `FOTOS_MENORES_OFICIALES`
-  en "Si" (por defecto apagada; apagarla saca esas fotos de la web). La placa es lo que sale
-  cuando no hay foto que sirva.
+  Policiales salvo fuente oficial (`docs/05-FOTOS.md`). **Única excepción (reglas 186 y 211, Hernán,
+  17/10: "si es de fuentes de Balcarce no hay problema, sobre todo si no son de tinte policial"):**
+  la foto propia de una **fuente de Balcarce** —un medio de acá o un organismo; son las de
+  `alcance: 'local'` de `ingesta/fuentes.mjs` (`FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES`), de su
+  propia página y nunca de su sección policial— con chicos en una actividad deportiva, escolar,
+  cultural o recreativa que no toque nada policial, judicial, de salud, accidentes, violencia, abuso,
+  muertes, desaparecidos ni chicos bajo protección, sin marca, sin nombres de chicos, con el crédito
+  en el epígrafe y nunca en el collage de redes (`ingesta/fotos-menores.mjs`), y sólo con la variable
+  de GitHub `FOTOS_MENORES_OFICIALES` en "Si" (por defecto apagada: la prende una persona; apagarla
+  saca esas fotos de la web). La placa es lo que sale cuando no hay foto que sirva.
 - **Todo lo que va a Instagram es video con voz**, salvo el espejo de cada posteo de Facebook.
 - **Tokens y claves nunca en un chat ni en el código.** Van a GitHub Secrets o al `.env`,
   y los pega una persona. El repositorio es **público**: por eso lo que espera a una
