@@ -195,7 +195,7 @@ test('el HTML compilado de /dolar no dice "en vivo" (si ya se compiló)', (t) =>
   if (!html) { t.skip('todavía no se compiló el sitio'); return; }
   // Sólo el cuerpo de la página: el buscador del encabezado lleva los
   // titulares de las notas, que no son de esta página.
-  const principal = html.match(/<main>([\s\S]*?)<\/main>/)?.[1] ?? '';
+  const principal = html.match(/<main[^>]*>([\s\S]*?)<\/main>/)?.[1] ?? '';
   assert.ok(principal.includes('Dólar hoy'), 'no encontré la página en el HTML');
   assert.ok(!/en vivo/i.test(principal), 'el HTML estático de /dolar dice "en vivo"');
 });

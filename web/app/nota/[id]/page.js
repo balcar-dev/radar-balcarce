@@ -2,9 +2,12 @@ import {
   obtenerDatos, obtenerArchivo, obtenerNota, todasLasNotas, datosSeccion, temasVivos, tieneTarjetaPropia, paramsNoVacios,
 } from '@/lib/datos';
 import {
-  Etiqueta, FilaNota, Cierre, Invitacion, TemasDeLaNota, Hace, FechaExacta, PlacaSeccion,
+  Etiqueta, FilaNota, Cierre, Invitacion, TemasDeLaNota, Hace, FechasDeLaNota, PlacaSeccion, FuenteOriginal, AvisarDeUnError,
 } from '@/components/piezas';
 import Compartir from '@/components/compartir';
+import { CartelDelCanal } from '@/components/canales';
+import { fuentesDeLaNota } from '@/lib/fuentes-de-la-nota';
+import { enlace } from '@/lib/sitio';
 import CuerpoDeFutbol from '@/components/futbol';
 import FuentesDeLaNota from '@/components/verificacion';
 import { OG_COMUN, TARJETA_DEL_SITIO, tituloDeNota, titularDeNota } from '@/components/metadatos';
@@ -15,6 +18,8 @@ import { MOSTRAR_TEMAS } from '@/lib/sitio';
 import { descripcionParaBuscador } from '@/lib/texto';
 import { noSeOfreceAGoogle } from '@/lib/cuerpo';
 import { urlDeFoto } from '@/lib/fotos';
+import { dimensionesDeFoto } from '@/lib/dimensiones-foto';
+import { imagenesParaCompartir } from '@/lib/datos-estructurados';
 import { fechaDeModificacion } from '@/lib/tiempo';
 import { seguirLeyendo } from '@/lib/seguir-leyendo';
 import { parrafosConEnlaces } from '@/lib/enlaces-en-texto';
@@ -42,9 +47,17 @@ export async function generateMetadata({ params }) {
   if (!n) return {};
 
   const camino = n.ruta;
-  const imagen = tieneTarjetaPropia(n)
-    ? { url: `${camino}/opengraph-image`, width: 1200, height: 630, type: 'image/png', alt: n.titulo }
-    : TARJETA_DEL_SITIO;
+  // Las imágenes para compartir (17/10/2026, regla 251): la tarjeta propia si la tiene (y la foto sola detrás); y las notas archivadas, que
+  // no tienen tarjeta, comparten su FOTO con el tamaño real en vez de la tarjeta del sitio, igual para todas (imagenesParaCompartir).
+  const imagenes = imagenesParaCompartir({
+    nota: n,
+    tarjeta: tieneTarjetaPropia(n),
+    urlTarjeta: `${camino}/opengraph-image`,
+    tarjetaDelSitio: TARJETA_DEL_SITIO,
+    urlFoto: urlDeFoto,
+    dimensiones: dimensionesDeFoto,
+  });
+  const imagen = imagenes[0];
   // Ni el título ni la descripción llevan un "…" puesto por nosotros (D5, 16/10/2026): Google corta sola lo que no entra.
   const descripcion = descripcionParaBuscador(n.copete || `${n.seccion} en Balcarce: ${n.titulo}`);
   const titular = titularDeNota(n.titulo);
@@ -66,9 +79,10 @@ export async function generateMetadata({ params }) {
       publishedTime: n.fecha,
       modifiedTime: fechaDeModificacion(n),
       section: n.seccion,
-      images: [imagen],
+      tags: [...new Set([...(n.temas ?? []), ...(n.etiquetas ?? [])])].slice(0, 8),
+      images: imagenes,
     },
-    twitter: { card: 'summary_large_image', title: titular, description: descripcion, images: [imagen.url] },
+    twitter: { card: 'summary_large_image', title: titular, description: descripcion, images: [{ url: imagen.url, alt: imagen.alt }] },
   };
 }
 
@@ -100,7 +114,8 @@ export default async function PaginaNota({ params }) {
           <Etiqueta seccion={n.seccion} />
           <Hace nota={n} />
         </div>
-        <p className="fecha-de-la-nota" data-pagefind-ignore=""><FechaExacta nota={n} /></p>
+        {/* "Publicado" y, si una persona la corrigió después, "Actualizado" (regla 253): se suma a la fecha única de la nota, no la reemplaza. */}
+        <p className="fecha-de-la-nota" data-pagefind-ignore=""><FechasDeLaNota nota={n} /></p>
 
         <h1>{n.titulo}</h1>
         {n.copete && <p className="copete">{n.copete}</p>}
@@ -163,10 +178,15 @@ export default async function PaginaNota({ params }) {
             qué falta confirmar, lo que aportó cada fuente y el nivel de
             verificación son de uso interno: se usan para escribir la nota y
             se ven en el panel, no acá (CRITERIO-EDITORIAL.md, sección 7). */}
+        {/* La fuente original, a la vista y con enlace común (regla 254), arriba del desplegable que sigue teniendo todas. */}
+        <FuenteOriginal fuentes={fuentesDeLaNota(n)} />
         <FuentesDeLaNota nota={n} />
 
         {MOSTRAR_TEMAS && <TemasDeLaNota temas={n.temas} catalogo={temas} />}
-        <Compartir titulo={n.titulo} />
+        <Compartir titulo={n.titulo} camino={n.ruta} />
+        <AvisarDeUnError titulo={n.titulo} url={enlace(n.ruta)} />
+        {/* El cartel del canal de WhatsApp: sólo si una persona cargó WHATSAPP_CANAL_URL (regla 257); sin la variable no sale nada. */}
+        <CartelDelCanal />
 
         {relacionadas.length > 0 && (
           <section className="bloque-seccion">

@@ -159,6 +159,10 @@ jobs:
         run: npm run build
         env:
           SITIO: https://radarbalcarce.com
+          # Los canales propios (regla 257): sólo salen en el sitio si una persona carga la variable en GitHub; vacías, no aparece nada.
+          WHATSAPP_CANAL_URL: ${{ vars.WHATSAPP_CANAL_URL }}
+          TELEGRAM_CANAL_URL: ${{ vars.TELEGRAM_CANAL_URL }}
+          BLUESKY_URL: ${{ vars.BLUESKY_URL }}
           FOTOS_BASE: ${{ vars.FOTOS_BASE }}
           # Las secciones nuevas y el menú nuevo (regla 187): vacía = el sitio de siempre.
           SECCIONES_NUEVAS: ${{ vars.SECCIONES_NUEVAS }}
@@ -252,6 +256,10 @@ jobs:
           node scripts/revisar-seo.mjs
         env:
           SITIO: https://radarbalcarce.com
+          # Los canales propios (regla 257): sólo salen en el sitio si una persona carga la variable en GitHub; vacías, no aparece nada.
+          WHATSAPP_CANAL_URL: ${{ vars.WHATSAPP_CANAL_URL }}
+          TELEGRAM_CANAL_URL: ${{ vars.TELEGRAM_CANAL_URL }}
+          BLUESKY_URL: ${{ vars.BLUESKY_URL }}
           FOTOS_BASE: ${{ vars.FOTOS_BASE }}
           SECCIONES_NUEVAS: ${{ vars.SECCIONES_NUEVAS }}
 

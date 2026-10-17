@@ -40,6 +40,7 @@ ${secciones}
 
 ## Servicios
 
+- [Lo de hoy en Balcarce](${enlace('/hoy')}): las notas del día en una sola página, lo de acá primero
 - [Farmacias de turno](${enlace('/farmacias')})
 - [Clima en Balcarce](${enlace('/clima')})
 - [Agenda de eventos](${enlace('/agenda')})
@@ -51,7 +52,7 @@ ${secciones}
 - [Últimas notas (JSON)](${enlace('/agentes/ultimas.json')}): las de las últimas 36 horas, con bajada, fuentes y quién las escribió
 - [Índice de notas (JSON)](${enlace('/agentes/indice.json')}): título, bajada, sección, fecha y fuentes de todo lo publicado, para buscar por palabras
 - [Farmacia de turno, clima y agenda (JSON)](${enlace('/agentes/servicios.json')})
-- [Feed RSS](${enlace('/feed.xml')}) y [mapa del sitio](${enlace('/sitemap.xml')})${MCP_URL ? `\n- [Servidor MCP de sólo lectura](${MCP_URL}): buscar notas, última hora, por sección, agenda, farmacia de turno y clima` : ''}
+- [Feed RSS](${enlace('/feed.xml')}), [mapa del sitio](${enlace('/sitemap.xml')}) y [mapa de noticias de las últimas 48 horas](${enlace('/sitemap-news.xml')})${MCP_URL ? `\n- [Servidor MCP de sólo lectura](${MCP_URL}): buscar notas, última hora, por sección, agenda, farmacia de turno y clima` : ''}
 
 ## Sobre el medio
 

@@ -49,6 +49,12 @@ export default function Contacto() {
           conviene avisarle a ese medio, que figura en la nota.
         </p>
         <p>
+          Cómo seguimos cada pedido está en{' '}
+          <a href="/quienes-somos#como-corregimos">cómo corregimos un error</a>. Si lo que querés es que
+          no usemos una foto, un texto o una fuente, mirá{' '}
+          <a href="/quienes-somos#no-usar-algo">si no querés que usemos algo</a>.
+        </p>
+        <p>
           <a
             href={`mailto:${MAIL}?subject=${encodeURIComponent('Pedido de corrección')}`}
             className="boton rojo"

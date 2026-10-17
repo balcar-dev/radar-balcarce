@@ -1,13 +1,12 @@
 import {
-  porRanura, nombreCorto, frasesDeSeccion, SECCIONES, notasDeLaSeccion, paramsNoVacios } from '@/lib/datos';
+  porRanura, nombreCorto, frasesDeSeccion, tituloDeSeccion, descripcionDeSeccion, SECCIONES, notasDeLaSeccion, paramsNoVacios } from '@/lib/datos';
 import { Cierre, Invitacion } from '@/components/piezas';
 import { Postales, FilaConMiniatura } from '@/components/postales';
 import { notFound } from 'next/navigation';
 import {
   POSTALES, rangoDePagina, partirRanura, cuantasPaginas, direccionDePagina,
 } from '@/lib/paginas';
-import { Migas } from '@/components/ficha';
-import { recortarEn } from '@/lib/texto';
+import { Migas, FichaDeSeccion } from '@/components/ficha';
 import { OG_COMUN } from '@/components/metadatos';
 
 // Se generan todas las secciones. Las que hoy no tienen notas salen con un
@@ -33,13 +32,13 @@ export async function generateMetadata({ params }) {
   const s = porRanura(base);
   if (!s) return {};
 
-  const titulo = pagina > 1 ? `${s.nombre} · página ${pagina}` : s.nombre;
+  // El <title> dice qué es y de dónde ("Salud en Balcarce: hospital y vacunas · Radar Balcarce"), no sólo el nombre de la sección
+  // (17/10/2026, regla 251, C9 de la auditoría SEO). El h1 de la página sigue siendo el nombre.
+  const titulo = pagina > 1 ? `${tituloDeSeccion(s.nombre)} · página ${pagina}` : tituloDeSeccion(s.nombre);
   const delDia = notasDeLaSeccion(s.nombre);
-  const ultimas = delDia.slice(0, 2).map((n) => n.titulo).join(' · ');
-  const descripcion = recortarEn(
-    `${frasesDeSeccion(s.nombre).lema}${pagina > 1 ? ` (página ${pagina})` : ''}: ${ultimas || 'las últimas noticias'}.`,
-    155,
-  );
+  // Los titulares más nuevos que entren ENTEROS en 155 caracteres (descripcionDeSeccion): antes se cortaba a mitad de un titular.
+  const ultimas = delDia.slice(0, 3).map((n) => n.titulo);
+  const descripcion = descripcionDeSeccion({ lema: frasesDeSeccion(s.nombre).lema, pagina, titulares: ultimas });
   const camino = direccionDePagina(s.ranura, pagina);
 
   return {
@@ -76,6 +75,10 @@ export default async function PaginaSeccion({ params }) {
   return (
     <div className="envoltura" style={{ maxWidth: 760 }}>
       <Migas pasos={[{ nombre: s.nombre, camino: `/seccion/${s.ranura}` }]} />
+      {/* La lista de notas de esta página para Google (CollectionPage + ItemList): sin notas no hay nada que listar. */}
+      {notas.length > 0 && (
+        <FichaDeSeccion camino={direccion(pagina)} nombre={tituloDeSeccion(s.nombre)} descripcion={frasesDeSeccion(s.nombre).lema} notas={notas} />
+      )}
       <div className="titulo-seccion" style={{ marginBottom: 22 }}>
         <span className="barra" style={{ background: s.color }} />
         <h1 style={{ fontSize: 28 }}>{s.nombre}</h1>

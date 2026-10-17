@@ -150,7 +150,7 @@ export default async function PaginaEvento({ params }) {
         )}
 
         <PieConFuentes firma={firma.texto} explicacion={firma.explicacion} fuentes={fuentesDeEvento(e)} />
-        <Compartir titulo={`${nombre}: ${copeteDeEvento(e)}`} />
+        <Compartir titulo={`${nombre}: ${copeteDeEvento(e)}`} camino={e.ruta} />
 
         {otros.length > 0 && (
           <section className="bloque-seccion">

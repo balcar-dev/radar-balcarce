@@ -97,6 +97,8 @@ export function correccionesAMano(json) {
     // del celular, 29/09): la firma dice "Redacción con IA, revisada por la
     // redacción", no "Revisada por la redacción".
     if (Object.keys(campos).length && c.deIA === true) campos.deIA = true;
+    // Cuándo se corrigió (la fecha que ya exige el archivo): la nota la muestra como "Actualizado" (regla 252, lib/tiempo.js).
+    if (Object.keys(campos).length && Number.isFinite(Date.parse(c.cuando ?? ''))) campos.cuando = new Date(c.cuando).toISOString();
     if (Object.keys(campos).length) salida.set(id, campos);
   }
   return salida;
@@ -148,11 +150,13 @@ export function conCambiosDeLaAuditoria(nota, cambios) {
 export function conCorreccion(nota, correcciones) {
   const c = nota?.id ? correcciones?.get(nota.id) : null;
   if (!c) return nota;
-  const { deIA, ...campos } = c;
+  const { deIA, cuando, ...campos } = c;
+  // `corregidaCuando`: cuándo la corrigió una persona; la nota lo muestra como "Actualizado" (regla 252). No toca `fecha`.
+  const cuandoSeCorrigio = cuando ? { corregidaCuando: cuando } : {};
   // Un cuerpo que escribió la IA (y revisó una persona) no es "a mano": la
   // nota sigue firmando como redactada con IA, y revisada.
-  if (deIA) return { ...nota, ...campos, corregidaAMano: true, guion: nota.guion || `${String(campos.titulo ?? nota.titulo ?? '').replace(/[.:]+$/, '')}.` };
-  return { ...nota, ...campos, corregidaAMano: true, ...(campos.cuerpo ? { cuerpoAMano: true } : {}) };
+  if (deIA) return { ...nota, ...campos, ...cuandoSeCorrigio, corregidaAMano: true, guion: nota.guion || `${String(campos.titulo ?? nota.titulo ?? '').replace(/[.:]+$/, '')}.` };
+  return { ...nota, ...campos, ...cuandoSeCorrigio, corregidaAMano: true, ...(campos.cuerpo ? { cuerpoAMano: true } : {}) };
 }
 
 /**

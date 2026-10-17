@@ -9,7 +9,7 @@ import {
   datosSeccion, nombreCorto, cuando, partirFecha, whatsapp, MAIL, WHATSAPP,
 } from '@/lib/datos';
 import { comoNombre } from '@/lib/texto';
-import { fechaLarga, fechaCorta } from '@/lib/tiempo';
+import { fechaLarga, fechaCorta, actualizadaCuando } from '@/lib/tiempo';
 import { nombreDeEvento } from '@/lib/eventos';
 import { enlaceDeLlamada } from '@/lib/farmacias';
 
@@ -249,6 +249,62 @@ export function FechaExacta({ nota, className = 'meta fecha-exacta' }) {
   const texto = fechaLarga(nota?.fecha);
   if (!texto) return null;
   return <time className={className} dateTime={new Date(nota.fecha).toISOString()}>{texto}</time>;
+}
+
+/**
+ * "Publicado" y, cuando corresponde, "Actualizado" (17/10/2026, regla 253). "Publicado" es la fecha única de la nota (`fecha`, que sólo
+ * envejece: lib/archivo.js, `fechaDeLaNota`). "Actualizado" se suma, nunca la reemplaza: sólo aparece si una persona corrigió la nota más
+ * de media hora después (`actualizadaCuando`, lib/tiempo.js), y dice la fecha de esa corrección. Las dos van en un <time> con la fecha
+ * exacta, que es lo que lee Google (`datePublished` y `dateModified` de la ficha dicen lo mismo).
+ */
+export function FechasDeLaNota({ nota }) {
+  const publicado = fechaLarga(nota?.fecha);
+  if (!publicado) return null;
+  const actualizadoISO = actualizadaCuando(nota);
+  return (
+    <>
+      <span className="meta fecha-exacta">Publicado: <time dateTime={new Date(nota.fecha).toISOString()}>{publicado}</time></span>
+      {actualizadoISO && (
+        <span className="meta fecha-exacta fecha-actualizada">
+          <span className="sep-fecha" aria-hidden="true">· </span>Actualizado: <time dateTime={actualizadoISO}>{fechaLarga(actualizadoISO)}</time>
+        </span>
+      )}
+    </>
+  );
+}
+
+/**
+ * La fuente original, a la vista (17/10/2026, regla 254). Hasta hoy la única forma de llegar a la nota del medio que la contó era abrir el
+ * desplegable "Fuentes (N)". Ahora, debajo del cuerpo, una línea con el medio principal y un enlace común a su nota. El desplegable sigue
+ * ahí, con todas las fuentes y la firma; esto no muestra nada del análisis (qué aportó cada una, qué falta confirmar): sólo la atribución,
+ * que es lo que el lector tiene que poder ver sin buscarla. Sin una fuente con enlace, no se dibuja.
+ */
+export function FuenteOriginal({ fuentes = [] }) {
+  const principal = fuentes.find((f) => /^https?:[/][/]/i.test(f.enlace ?? ''));
+  if (!principal) return null;
+  const otras = fuentes.length - 1;
+  return (
+    <p className="fuente-original">
+      Fuente: <strong>{principal.medio ?? 'nota original'}</strong>
+      {' · '}
+      <a href={principal.enlace} target="_blank" rel="noopener noreferrer">Leer la nota original ↗</a>
+      {otras > 0 && <span className="mas-fuentes">{' · '}y {otras === 1 ? 'otra fuente' : `${otras} fuentes más`}, abajo</span>}
+    </p>
+  );
+}
+
+/** Un enlace para avisar de un error en esta nota, con el titular y la dirección ya escritos (17/10/2026, regla 256). */
+export function AvisarDeUnError({ titulo, url }) {
+  const asunto = `Corrección: ${titulo}`;
+  const cuerpo = `Hola, encontré un error en esta nota:\n${url}\n\nEl error es:\n`;
+  return (
+    <p className="avisar-error">
+      ¿Hay un error en esta nota?{' '}
+      <a href={`mailto:${MAIL}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`}>Avisanos</a>
+      {' · '}
+      <a href="/quienes-somos#como-corregimos">cómo corregimos</a>
+    </p>
+  );
 }
 
 // ----------------------------------------------------------------- agenda

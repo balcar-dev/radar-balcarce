@@ -564,6 +564,49 @@ export function frasesDeSeccion(nombre) {
   return frases[nombre] ?? { lema: `${nombre} en Balcarce`, enBalcarce: `${nombre} en Balcarce` };
 }
 
+/**
+ * El título de la etiqueta `<title>` de cada página de sección (17/10/2026, regla 251). Hasta hoy era el nombre pelado ("Balcarce ·
+ * Radar Balcarce", "Salud · Radar Balcarce"), que no le dice a Google que son noticias. Ahora dice qué es y de dónde, en 45 caracteres o
+ * menos para que, con " · Radar Balcarce" detrás, entre en los 62 que Google muestra sin cortar. Es invisible para el lector (se ve en
+ * la pestaña); el `h1` de la página no cambia. Una sección sin frase propia usa "<nombre> en Balcarce".
+ */
+export const LARGO_MAXIMO_TITULO_DE_SECCION = 45;
+
+/**
+ * La descripción (`<meta name="description">`) de una página de sección: la frase de la sección y, detrás, los titulares más nuevos
+ * que entren enteros en `largo` caracteres. Antes se cortaba a mitad del segundo titular con "…" ("…: Un estudio vincula el inicio de
+ * antipsicóticos con mayor riesgo de diabetes ·…"); ahora nunca queda un titular a medias. Sin ningún titular que entre, la frase sola.
+ */
+export function descripcionDeSeccion({ lema, pagina = 1, titulares = [], largo = 155 }) {
+  const base = `${lema}${pagina > 1 ? ` (página ${pagina})` : ''}`;
+  let texto = base;
+  for (const t of titulares.slice(0, 3)) {
+    const prox = `${texto}${texto === base ? ': ' : ' · '}${String(t).replace(/\s+/g, ' ').trim()}`;
+    if (prox.length + 1 > largo) break;
+    texto = prox;
+  }
+  return texto === base ? (base.length + 1 > largo ? `${base.slice(0, largo - 2).replace(/\s+\S*$/, '')}…` : `${base}.`) : `${texto}.`;
+}
+export function tituloDeSeccion(nombre) {
+  const titulos = {
+    Balcarce: 'Noticias de Balcarce',
+    Política: 'Política en Balcarce y el país',
+    Policiales: 'Policiales de Balcarce y la zona',
+    Educación: 'Educación en Balcarce y la provincia',
+    Salud: 'Salud en Balcarce: hospital y vacunas',
+    Fútbol: 'Fútbol de Balcarce y de Argentina',
+    Deportes: 'Deportes en Balcarce y la región',
+    Automovilismo: 'Automovilismo y autódromo de Balcarce',
+    Agro: 'El campo y el agro de Balcarce',
+    Economía: 'Economía que se siente en Balcarce',
+    'Cultura y agenda': 'Cultura y agenda de Balcarce',
+    Ciencia: 'Ciencia e investigación en Argentina',
+    Tecnología: 'Tecnología e IA en la vida diaria',
+    Argentina: 'Argentina: lo que se lee en Balcarce',
+  };
+  return titulos[nombre] ?? `${nombreCorto(nombre)} en Balcarce`;
+}
+
 // Cómo se lee cada sección en la navegación y las etiquetas (la clave guardada en las notas no cambia): "Cultura y agenda" se lee
 // "Cultura" y "Tecnología" se lee "Tecnología e IA" (regla 215, ETIQUETAS_DE_SECCION de ingesta/secciones-nuevas.mjs).
 export function nombreCorto(nombre) {

@@ -46,7 +46,8 @@ test('la sección pagina de a 10, muestra la más nueva arriba y no tiene "Antes
   assert.doesNotMatch(seccion, /últimas 36 horas/);
   assert.match(seccion, /Más viejas →/);
   const pagina = leer('web/app/nota/[id]/page.js');
-  assert.match(pagina, /<FechaExacta nota=\{n\} \/>/);
+  // Desde el 17/10 (regla 253) la nota dice "Publicado" y, si corresponde, "Actualizado" (FechasDeLaNota, pruebas/nota-del-lector-17-10.test.mjs).
+  assert.match(pagina, /<FechasDeLaNota nota=\{n\} \/>/);
   const piezas = leer('web/components/piezas.js');
   assert.match(piezas, /export function FechaExacta/);
   assert.match(piezas, /fechaLarga\(nota\?\.fecha\)/);

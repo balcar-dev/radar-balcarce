@@ -15,6 +15,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { parteDeNota } from '../lib/ruta.js';
 import { noSeOfreceAGoogle } from '../lib/cuerpo.js';
+import { problemasDeVelocidad } from '../lib/auditoria-html.js';
 
 const SALIDA = path.join(process.cwd(), '.next', 'server', 'app');
 const fallas = [];
@@ -83,6 +84,18 @@ if (!primera) {
     if (!declarada) { sinImagen.push(`${f}: sin og:image`); continue; }
     let ruta;
     try { ruta = new URL(declarada).pathname; } catch { sinImagen.push(`${f}: og:image inválida (${declarada})`); continue; }
+    // Una nota archivada comparte su FOTO (regla 251): es un archivo de web/public, no una ruta de Next. Si las fotos van a otro dominio
+    // (FOTOS_BASE) no hay nada que mirar acá.
+    if (ruta.startsWith('/fotos-notas/')) {
+      const foto = path.join(process.cwd(), 'public', ruta.replace(/^\//, ''));
+      const deOtroDominio = !!process.env.FOTOS_BASE;
+      if (!fs.existsSync(foto)) {
+        if (!deOtroDominio) sinImagen.push(`${f}: declara la foto ${ruta} pero no existe`);
+      } else if (fs.statSync(foto).size < 4000) {
+        sinImagen.push(`${f}: la foto ${ruta} está vacía o rota`);
+      }
+      continue;
+    }
     const archivo = path.join(SALIDA, `${ruta.replace(/^\//, '')}.body`);
     if (!fs.existsSync(archivo)) sinImagen.push(`${f}: declara ${ruta} pero no existe`);
     else if (fs.statSync(archivo).size < 4000) sinImagen.push(`${f}: la imagen ${ruta} salió vacía o rota`);
@@ -134,6 +147,47 @@ const robots = leer('robots.txt.body');
 if (!robots) fallas.push('el robots: no se generó');
 else if (!robots.includes('/sitemap.xml')) fallas.push('el robots: no apunta al sitemap');
 else if (!robots.split('\n').some((l) => l.trim() === 'Disallow: /panel/' || l.trim() === 'Disallow: /')) fallas.push('el robots: no protege /panel/');
+
+// --- Los mapas nuevos y /hoy (17/10/2026, reglas 250 y 255) ------------
+{
+  const noticias = leer('sitemap-news.xml.body');
+  if (noticias === null) fallas.push('el mapa de noticias: no se generó');
+  else {
+    if (!noticias.includes('xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"')) fallas.push('el mapa de noticias: perdió su espacio de nombres');
+    const urls = (noticias.match(/<url>/g) ?? []).length;
+    const titulos = (noticias.match(/<news:title>/g) ?? []).length;
+    const fechas = (noticias.match(/<news:publication_date>/g) ?? []).length;
+    if (urls > 1000) fallas.push(`el mapa de noticias: ${urls} direcciones (Google admite 1.000)`);
+    if (urls !== titulos || urls !== fechas) fallas.push(`el mapa de noticias: ${urls} direcciones, ${titulos} títulos y ${fechas} fechas`);
+  }
+  const indice = leer('sitemap-index.xml.body');
+  if (indice === null) fallas.push('el índice de mapas: no se generó');
+  else if (!indice.includes('/sitemap.xml</loc>') || !indice.includes('/sitemap-news.xml</loc>')) fallas.push('el índice de mapas: no lista el sitemap.xml y el de noticias');
+  const robotsTexto = leer('robots.txt.body');
+  if (robotsTexto && !robotsTexto.includes('/sitemap-index.xml')) fallas.push('el robots: no anuncia el índice de mapas');
+  exigir('/hoy', leer('hoy.html'), {
+    'el título con el día': 'Lo de hoy en Balcarce ·',
+    'el enlace canónico': 'rel="canonical"',
+    'el h1': '<h1>Lo de hoy en Balcarce</h1>',
+    'el botón de WhatsApp': 'https://wa.me/?text=',
+  });
+}
+
+// --- Velocidad (17/10/2026, regla 252): imágenes con tamaño, la principal prioritaria y el resto perezosas, nada de terceros ----------
+{
+  const paginas = [['/', 'index.html'], ['/hoy', 'hoy.html'], ['/quienes-somos', 'quienes-somos.html']];
+  for (const carpeta of ['nota', 'seccion']) {
+    const dir = path.join(SALIDA, carpeta);
+    if (!fs.existsSync(dir)) continue;
+    for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.html'))) paginas.push([`/${carpeta}/${f.replace(/\.html$/, '')}`, path.join(carpeta, f)]);
+  }
+  const problemas = [];
+  for (const [donde, archivo] of paginas) {
+    const html = leer(archivo);
+    if (html !== null) problemas.push(...problemasDeVelocidad(html, { pagina: donde }));
+  }
+  if (problemas.length) fallas.push(`${problemas.length} problemas de velocidad en ${paginas.length} páginas; por ejemplo ${problemas.slice(0, 3).join(' | ')}`);
+}
 
 // ----------------------------------------------------------------------
 if (fallas.length) {
