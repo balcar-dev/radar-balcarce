@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-17T07:02:54.236Z",
+ "generado": "2026-10-17T07:32:03.835Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -79,9 +79,9 @@
      "fecha": "2026-10-16T22:56:17.000Z"
     },
     {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
-     "fecha": "2026-10-16T18:08:00.000Z"
+     "medio": "A24",
+     "enlace": "https://www.a24.com/politica/santilli-los-que-tendrian-que-estar-preocupados-son-los-gobernadores-si-gana-kicillof-n1607140",
+     "fecha": "2026-10-16T16:41:00.000Z"
     },
     {
      "medio": "Noticias Argentinas (NA)",
@@ -129,56 +129,14 @@
      "fecha": "2026-10-16T14:53:47.000Z"
     },
     {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/politica/santilli-los-que-tendrian-que-estar-preocupados-son-los-gobernadores-si-gana-kicillof-n1607140",
-     "fecha": "2026-10-16T16:41:00.000Z"
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
+     "fecha": "2026-10-16T18:08:00.000Z"
     }
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
-  },
-  {
-   "id": "8sfd4e",
-   "titulo": "Los precios mayoristas no ceden: aumentaron en septiembre un 3,2%",
-   "copete": "",
-   "seccion": "Economía",
-   "fecha": "2026-10-16T19:04:00.000Z",
-   "fuentes": [
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/economia/los-precios-mayoristas-no-ceden-aumentaron-septiembre-un-32-n251810",
-     "fecha": "2026-10-16T19:04:00.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/economia/2026/10/16/los-precios-mayoristas-aumentaron-un-32-en-septiembre-y-acumulan-un-alza-del-228-en-lo-que-va-del-ano/",
-     "fecha": "2026-10-16T19:50:12.000Z"
-    },
-    {
-     "medio": "Infobrisas (Radio Brisas)",
-     "enlace": "https://www.infobrisas.com/noticias/2026/10/16/111716-los-precios-mayoristas-aumentaron-3_2por_ciento-en-septiembre",
-     "fecha": "2026-10-16T19:36:55.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/economia/los-precios-mayoristas-se-aceleraron-septiembre-el-petroleo-explica-casi-la-mitad-del-aumento-n6334825",
-     "fecha": "2026-10-17T03:19:00.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/economia/los-precios-mayoristas-subieron-32-septiembre-acumularon-un-alza-del-228-2026-n6334737",
-     "fecha": "2026-10-16T19:40:00.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/economia/indec-informo-que-los-precios-mayoristas-subieron-32-en-septiembre-y-aceleraron-frente-a-agosto/",
-     "fecha": "2026-10-16T23:08:49.000Z"
-    }
-   ],
-   "intentos": 4,
-   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
-   "maximo": 4
   },
   {
    "id": "7zwjs1",
@@ -193,7 +151,7 @@
      "fecha": "2026-10-17T09:15:00.000Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "sin material",
    "maximo": 3
   }

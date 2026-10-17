@@ -4212,7 +4212,8 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/NWOAIDCC5NDIXAAV7XTWQQ6LPU.jpg?auth=84b1fb4b0c9b8cfb58e08363b4ec538bdb6b0ee44ac522aac193f63df5caf405&smart=true&width=1200&height=630&quality=85",
   "razon": "Muestra la fachada de la facultad con buena calidad y sin menores identificables ni marcas de medios.",
   "cuando": "2026-10-01T13:32:05.036Z",
-  "huella": "df475151773b2ffd"
+  "huella": "df475151773b2ffd",
+  "ausenteDesde": "2026-10-17T07:32:03.820Z"
  },
  "1ckhubg": {
   "intentado": true,
@@ -8579,7 +8580,8 @@
   "imagenOriginal": "https://www.argentina.gob.ar/sites/default/files/2026/09/carne_tambo_2.jpg",
   "razon": "La foto A tiene mejor encuadre, mostrando más terreno y flores, y ninguna de las dos presenta marcas ni menores.",
   "cuando": "2026-10-06T13:02:48.398Z",
-  "huella": "6d5033e6e5ad2d63"
+  "huella": "6d5033e6e5ad2d63",
+  "ausenteDesde": "2026-10-17T07:32:03.820Z"
  },
  "dowztx": {
   "medio": "Wikimedia Commons",
@@ -17387,7 +17389,8 @@
   "imagenOriginal": "https://tn.com.ar/resizer/v2/el-extitular-de-la-agencia-nacional-de-discapacidad-diego-spagnuolo-foto-andis-OPV2MDIHINFJNN6KWQS4TRANJ4.jpg?auth=08db8fe7aa5dfa91df22a7d833a507e7856956d9de9d8629b24b2ce2e0f4c51d&width=1023",
   "razon": "Tiene excelente nitidez, encuadre adecuado y muestra claramente al protagonista sin marcas de agua ni menores.",
   "cuando": "2026-10-16T19:08:25.304Z",
-  "huella": "d9c9edcc8d89c9c9"
+  "huella": "d9c9edcc8d89c9c9",
+  "ausenteDesde": "2026-10-17T07:32:03.820Z"
  },
  "jgf5ur": {
   "archivo": "fotos-notas/jgf5ur.jpg",
@@ -18062,6 +18065,31 @@
    "corresponde": "si",
    "descripcion": "Jugador de Boca festejando un gol en la cancha con rivales alrededor y tribuna llena"
   },
-  "huella": "aa0ead697171522f"
+  "huella": "aa0ead697171522f",
+  "ausenteDesde": "2026-10-17T07:32:03.820Z"
+ },
+ "iofi4t": {
+  "archivo": "fotos-notas/iofi4t.jpg",
+  "medio": "C5N",
+  "credito": "Foto: C5N",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Boca vence a Talleres y llega con triunfo al duelo de Copa",
+  "enlace": "https://www.c5n.com/deportes/boca-juniors-vs-talleres-fecha-13-torneo-clausura-16-octubre-2026",
+  "imagenOriginal": "https://media.c5n.com/p/382941942c3c0c870917121d1b7d2b56/adjuntos/326/imagenes/000/403/0000403667/1200x675/smart/boca-talleres.jpg",
+  "razon": "Es la foto de mejor calidad, encuadre limpio y nítido de la jugada, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-17T07:31:50.890Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Jugador de Boca disputando el balón con un rival de Talleres."
+  },
+  "huella": "139bab5567664e93"
  }
 }
