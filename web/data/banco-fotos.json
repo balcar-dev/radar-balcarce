@@ -17137,7 +17137,8 @@
   "imagenOriginal": "https://fotos.perfil.com/2026/08/20/trim/1140/641/la-ciudad-desregulo-la-vtv-y-ya-se-pueden-inscribir-los-talleres-mecanicos-que-quieran-dar-el-servicio-2308183.jpg",
   "razon": "La foto B ilustra directamente el tema de la VTV al mostrar una inspección vehicular, sin marcas de agua ni menores.",
   "cuando": "2026-10-16T16:04:42.324Z",
-  "huella": "d8fce85870e0d836"
+  "huella": "d8fce85870e0d836",
+  "ausenteDesde": "2026-10-17T08:32:11.753Z"
  },
  "k4nvoi": {
   "archivo": "fotos-notas/k4nvoi.jpg",
@@ -17607,9 +17608,9 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Atlético Tucumán y Rosario Central juegan el sábado por la noche",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-17T02:31:19.553Z",
-  "intentos": 3,
+  "razon": "Ninguna de las fotos corresponde al partido entre Atlético Tucumán y Rosario Central; muestran otros equipos o gráficos genéricos.",
+  "cuando": "2026-10-17T08:31:46.101Z",
+  "intentos": 4,
   "fuentes": 17
  },
  "1w9aja0": {
@@ -17635,13 +17636,40 @@
   "fuentes": 2
  },
  "z7cv8i": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/z7cv8i.jpg",
+  "medio": "Radio Mitre",
+  "credito": "Foto: Radio Mitre",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Diego Santilli celebra la falta de quórum en Diputados para el DNU",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-17T02:31:19.553Z",
-  "intentos": 3,
-  "fuentes": 5
+  "enlace": "https://radiomitre.cienradios.com/videos/diego-santilli-celebro-que-diputados-no-haya-dado-quorum-para-el-rechazo-del-dnu-7023-habria-sido-algo-espantoso-para-la-sociedad-argentina/",
+  "imagenOriginal": "https://radiomitre.cienradios.com/resizer/v2/QKOKCECRVZBTBE4ZQ2AIUTDXXY.jpg?smart=true&auth=0d93680b9e18c58cb131e21dab6feac5043dd9c5f2044b46f1b79cc1fd3893a6&width=1200&height=630",
+  "razon": "Es la única foto que cumple con todos los requisitos de calidad, nitidez y correspondencia sin presentar marcas de agua, menores de edad ni problemas de formato.",
+  "cuando": "2026-10-17T08:31:46.101Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Diego Santilli caminando con traje y corbata azul",
+   "segunda": {
+    "proveedor": "groq",
+    "marca": false,
+    "menor": false,
+    "jovenes": false,
+    "deArchivo": true,
+    "grafica": false,
+    "stock": false,
+    "corresponde": "si",
+    "descripcion": "Diego Santilli camina al aire libre con traje y corbata, acompañado por otros hombres."
+   },
+   "dudosa": "la nota habla de chicos o de categorías juveniles"
+  },
+  "huella": "a0a2a6b692a9cdcd"
  },
  "1n6g7ka": {
   "archivo": "fotos-notas/1n6g7ka.jpg",
