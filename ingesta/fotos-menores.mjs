@@ -1,13 +1,19 @@
-// La excepción `menorEnActividadOficial` (regla 186, 17/10/2026): la foto PROPIA de un organismo de Balcarce puede salir aunque la IA vea
+// La excepción `menorEnActividadOficial` (regla 186, ampliada por la 211, 17/10/2026): la foto PROPIA de una fuente de Balcarce (un
+// organismo o, desde la regla 211, un medio de acá) puede salir aunque la IA vea
 // chicos reconocibles, sólo en una actividad deportiva, escolar, cultural o recreativa, y sólo si se cumplen TODAS las condiciones.
 //
 // Hernán, 17/10/2026: "si hay menores en la foto y la fuente es de Balcarce y es un juego, olimpíadas o algo deportivo/escolar/cultural, y
 // son fuentes que realmente no suben nada policial, como el municipio, estaría bueno dejarlo". Hasta ese día la regla era firme y sin
 // excepciones ("nunca foto real de un menor"): el 42 % de las notas sin foto lo era por eso, muchas de una escuela deportiva municipal.
 //
+// Regla 211 (17/10/2026, Hernán: "si es de fuentes de Balcarce no hay problema, sobre todo si no son de tinte policial"): desde ese día
+// la foto puede ser de CUALQUIER fuente de Balcarce, un medio de acá o un organismo, no sólo de la Municipalidad, el Concejo y la Facultad.
+// Lo demás no cambió: el contenido manda (nada policial ni sensible), y la foto tiene que ser de la página de esa fuente.
+//
 // Las condiciones (docs/05-FOTOS.md, § 13):
-//   (a) la foto viene de una página de un organismo de la lista cerrada FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES (ingesta/fuentes.mjs):
-//       el nombre del medio y el dominio de la nota tienen que coincidir los dos (`esFuenteOficialParaMenores`);
+//   (a) la foto viene de una página de una fuente de Balcarce, FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES (ingesta/fuentes.mjs: las fuentes
+//       con `alcance: 'local'`, medios y organismos; hasta la regla 211, sólo los organismos de FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES):
+//       el nombre del medio y el dominio de la nota tienen que coincidir los dos (`esFuenteDeBalcarceParaMenores`);
 //   (b) la nota es de Deportes, Cultura y agenda, Educación o Balcarce; su título o su bajada nombran una actividad de la lista cerrada
 //       ACTIVIDADES (torneo, juegos, olimpíadas, escuela, festival, muestra…); y en NINGUNA parte del texto aparece algo policial, judicial,
 //       de salud o discapacidad, un accidente, violencia, abuso, una denuncia, una muerte o un desaparecido (PROHIBIDAS), ni nada que el
@@ -21,7 +27,7 @@
 //
 // Sin dependencias: sólo lo que trae Node.
 
-import { FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES } from './fuentes.mjs';
+import { FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES } from './fuentes.mjs';
 import { semaforoDelTexto } from './ingesta.mjs';
 import { menorPorEdad } from './menores.mjs';
 
@@ -154,23 +160,34 @@ export function personaNombrada(texto) {
   return null;
 }
 
-/** (a) La entrada de la lista cerrada a la que pertenece esta foto candidata ({ medio, enlace }), o null. Tienen que coincidir el nombre
- *  del medio y el dominio de la página de donde salió la foto. */
-export function esFuenteOficialParaMenores(candidata, lista = FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES) {
+/** (a) La fuente de Balcarce (FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES) a la que pertenece esta foto candidata ({ medio, enlace }), o
+ *  null. Tienen que coincidir el nombre del medio y el dominio de la página de donde salió la foto. */
+export function esFuenteDeBalcarceParaMenores(candidata, lista = FUENTES_DE_BALCARCE_PARA_FOTOS_DE_MENORES) {
   if (!candidata?.medio || !candidata?.enlace) return null;
   let host;
-  try { host = new URL(String(candidata.enlace)).hostname.toLowerCase().replace(/^www\./, ''); } catch { return null; }
+  let ruta;
+  try {
+    const u = new URL(String(candidata.enlace));
+    host = u.hostname.toLowerCase().replace(/^www\./, '');
+    ruta = decodeURIComponent(u.pathname).toLowerCase();
+  } catch { return null; }
+  // Una foto de la sección policial de un medio de acá (radiogabal.com.ar/index.php/policiales/…) nunca: de más, por las dudas (regla 211).
+  if (/polic/.test(ruta)) return null;
   return lista.find((f) => f.medio === candidata.medio
     && f.dominios.some((d) => host === d || host.endsWith(`.${d}`))) ?? null;
 }
 
-/** ¿La nota tiene, entre las fuentes donde se buscan las fotos, una de la lista cerrada? */
-export function tieneFuenteOficialParaMenores(nota) {
+/** ¿La nota tiene, entre las fuentes donde se buscan las fotos, una de Balcarce? */
+export function tieneFuenteDeBalcarceParaMenores(nota) {
   const fuentes = nota?.fuentesConsultadas?.length
     ? nota.fuentesConsultadas
     : (nota?.enlace ? [{ medio: nota.medios?.[0] ?? nota.medio, enlace: nota.enlace }] : []);
-  return fuentes.some((f) => esFuenteOficialParaMenores(f));
+  return fuentes.some((f) => esFuenteDeBalcarceParaMenores(f));
 }
+
+/** Los nombres de antes de la regla 211 (cuando sólo valían los organismos), para lo que ya los usa. */
+export const esFuenteOficialParaMenores = esFuenteDeBalcarceParaMenores;
+export const tieneFuenteOficialParaMenores = tieneFuenteDeBalcarceParaMenores;
 
 /**
  * (b) y (d): ¿la NOTA permite la excepción? `{ ok, motivo }`: el motivo dice por qué sí (la actividad que encontró) o por qué no (lo

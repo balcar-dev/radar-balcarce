@@ -860,6 +860,7 @@ const MULETILLA_DE_ARRANQUE = /(^|[.!?]\s+|\n\s*)(?:cabe|vale|vale la pena|es im
 
 const DIAS_DE_LA_SEMANA = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
 const ESTE_DIA = /(?<![\p{L}])(este|Este|ESTE)\s+(lunes|martes|miércoles|miercoles|jueves|viernes|sábado|sabado|domingo|fin de semana)(?![\p{L}])/gu;
+const CONTRACCION_CON_EL_DIA = /(?<![\p{L}])(de|De|a|A) el (lunes|martes|miércoles|miercoles|jueves|viernes|sábado|sabado|domingo|fin de semana)(?![\p{L}])/gu;
 
 /**
  * Lo que se puede corregir sin inventar nada, antes de verificar (28/09).
@@ -910,6 +911,14 @@ export function arreglarEscritura(nuevo = {}, { hoy = new Date() } = {}) {
       if (esHoy) return m;
       arreglos.push(`${campo}: "${m}" → "${este === 'este' ? 'el' : 'El'} ${dia}"`);
       return `${este === 'este' ? 'el' : 'El'} ${dia}`;
+    });
+    // "de este lunes" pasaba a "de el lunes" y "a este sábado", a "a el sábado" (17/10/2026: diez así en el archivo, las encontró la
+    // revisión del archivo, regla 212): con un día, siempre se contrae.
+    t = t.replace(CONTRACCION_CON_EL_DIA, (m, prep, dia) => {
+      const junta = /^d/i.test(prep) ? 'del' : 'al';
+      const bien = `${/^\p{Lu}/u.test(prep) ? junta.charAt(0).toUpperCase() + junta.slice(1) : junta} ${dia}`;
+      arreglos.push(`${campo}: "${m}" → "${bien}"`);
+      return bien;
     });
     if (campo === 'copete' || campo === 'cuerpo') {
       t = t.replace(MULETILLA_DE_ARRANQUE, (m, antes, letra) => {

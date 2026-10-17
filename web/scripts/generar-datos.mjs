@@ -72,6 +72,7 @@ import {
 } from '../../ingesta/ingesta.mjs';
 import { MUY_CONTADA } from '../../ingesta/criterio.mjs';
 import { conFotosDelBanco, podarFotos, esIlustracionDeNota, ilustracionPermitida, fotoConMenorPermitida, fotoDelArchivoAlDia } from './fotos-notas.mjs';
+import { idsRetiradosPorLaRevision, parejasDeLaRevision } from '../lib/revision-archivo.js';
 import { actualizarAgenda, aplicarSuspendidos, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
 import {
@@ -139,8 +140,15 @@ const ESPERANDO_CUERPO = path.join(AQUI, '..', 'data', 'esperando-cuerpo.json');
 // que llevaba días en el feed salía como recién publicada. Se poda a 7 días.
 const VISTAS = path.join(AQUI, '..', 'data', 'vistas.json');
 const DIAS_DE_VISTAS = 7;
-// Lo que se sacó a mano de la web, fuera del panel (lib/archivo.js).
-const RETIRADAS_A_MANO = idsRetiradosAMano(leerJson(path.join(AQUI, '..', 'data', 'retiradas.json'), null));
+// La revisión del archivo (regla 212, web/scripts/revisar-archivo.mjs; web/data/revision-archivo.json, lo escribe sólo su workflow): lo
+// que retiró por lo que hoy no saldría nunca (rojo, "nunca", "no es nota", sin cuerpo) y las copias de una noticia que ya estaba.
+const REVISION_DEL_ARCHIVO = leerJson(path.join(AQUI, '..', 'data', 'revision-archivo.json'), null);
+const RETIRADAS_POR_LA_REVISION = idsRetiradosPorLaRevision(REVISION_DEL_ARCHIVO);
+const REPETIDAS_DE_LA_REVISION = parejasDeLaRevision(REVISION_DEL_ARCHIVO);
+// Lo que se sacó a mano de la web, fuera del panel (lib/archivo.js), y lo que retiró la revisión del archivo: cuenta igual (no sale en
+// ninguna lista, no tiene página, su foto se borra) y, como esa lista no se poda los lunes, no vuelve aunque un feed la traiga de nuevo.
+const RETIRADAS_A_MANO = new Set([...idsRetiradosAMano(leerJson(path.join(AQUI, '..', 'data', 'retiradas.json'), null)), ...RETIRADAS_POR_LA_REVISION]);
+if (RETIRADAS_POR_LA_REVISION.size || REPETIDAS_DE_LA_REVISION.length) console.log(`  revisión del archivo: ${RETIRADAS_POR_LA_REVISION.size} retiradas, ${REPETIDAS_DE_LA_REVISION.length} unidas a la que ya estaba`);
 // Lo que se corrigió a mano (título, bajada, sección), fuera del panel.
 const CORRECCIONES = correccionesAMano(leerJson(path.join(AQUI, '..', 'data', 'correcciones.json'), null));
 // Las notas que se unieron a otra (lib/repetidas.js, 29/09): su dirección redirige a la que quedó. Desde el 15/10 (regla 175)
@@ -1042,6 +1050,10 @@ const conPaginaHoy = [...deLaIngesta, ...propias];
     console.log(`  parejas: falló el pedido (${e.message}); se vuelve a probar en la próxima corrida`);
   }
 }
+// Las copias que encontró la revisión del archivo (regla 212): la misma noticia publicada dos veces, ya fuera de la ventana de 72 horas.
+// Se unen como las parejas que confirma la IA, y queda la que ya estaba (como las anclas de significado: la copia nunca queda).
+parejasConfirmadas = [...parejasConfirmadas, ...REPETIDAS_DE_LA_REVISION];
+anclasDeSignificado = [...anclasDeSignificado, ...REPETIDAS_DE_LA_REVISION];
 const conFotoEnElBanco = new Set(Object.entries(bancoDeFotos).filter(([, b]) => b?.archivo).map(([id]) => id));
 const fusion = repetidasConOtraDireccion(
   [...(archivoAnterior.notas ?? []).filter((a) => !retiradas.has(a.id)), ...conPaginaHoy],
@@ -1120,6 +1132,10 @@ if (repetidas) console.log(`  ${repetidas} notas repetidas (mismo titular) salen
 // coma colgando).
 const sinCola = (n) => (n && (!n.publicadaPor || n.publicadaPor === 'ia') && !n.propia ? { ...n, titulo: tituloAutomatico(n.titulo) } : n);
 const sinServicios = (n) => conCorreccion(sinColaDe(n), CORRECCIONES);
+// Lo que corrigió sola la auditoría (correcciones-auditoria.json) también llega a las notas del archivo que ya no trae la ingesta: hasta el
+// 17/10 sólo se aplicaba a lo de esta corrida, y lo que corrige la revisión del archivo (regla 212) son justamente notas viejas. Si el texto
+// ya cambió (lo corrigió una persona, o ya se aplicó), el par no calza y no hace nada.
+const conLoQueCorrigioLaAuditoria = (n) => conCambiosDeLaAuditoria(n, CAMBIOS_AUDITORIA);
 const sinColaDe = (n) => sinCola(n?.seccion === 'Servicios' ? { ...n, seccion: n.local ? 'Balcarce' : 'Argentina' }
   : n?.seccion === 'País' ? { ...n, seccion: 'Argentina' } : n);
 // El tope de notas con página (16/10/2026): MAXIMO_EN_ARCHIVO, salvo que la variable TOPE_DE_NOTAS lo baje con el archivo permanente
@@ -1130,7 +1146,7 @@ const topeDeHoy = topeDeEstaVuelta(pedidoDelTope.tope, (archivoAnterior.notas ??
 if (topeDeHoy < MAXIMO_EN_ARCHIVO) console.log(`  tope de notas de esta vuelta: ${topeDeHoy} (se pidió ${pedidoDelTope.tope}; las que salen ya están en el archivo permanente)`);
 // Lo de más de unos días guarda sólo lo que ve el lector (aligerarViejas, 29/09).
 const archivo = aligerarViejas(actualizarArchivo({
-  archivo: conLasUnidas([...(archivoAnterior.notas ?? []), ...restaurar.filter((n) => !(archivoAnterior.notas ?? []).some((a) => a.id === n.id))]).map(conLaFotoPasada).map(conLaFotoAlDia).map(sinFotoConMenorBloqueada).map(conLaIlustracion).map(sinServicios),
+  archivo: conLasUnidas([...(archivoAnterior.notas ?? []), ...restaurar.filter((n) => !(archivoAnterior.notas ?? []).some((a) => a.id === n.id))]).map(conLaFotoPasada).map(conLaFotoAlDia).map(sinFotoConMenorBloqueada).map(conLaIlustracion).map(sinServicios).map(conLoQueCorrigioLaAuditoria),
   // Las partes nuevas que hoy no están (una persona corrigió el texto, o la
   // reescritura se cayó) tampoco quedan de la vez anterior en el archivo: el
   // `undefined` pisa lo viejo al mezclar y no se escribe.

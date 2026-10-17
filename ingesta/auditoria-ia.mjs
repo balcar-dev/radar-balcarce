@@ -148,6 +148,31 @@ export async function auditarLote(lote, { clave, fetchFn = fetch, modelo = MODEL
   return leerHallazgos(j.choices?.[0]?.message?.content ?? '', new Set(lote.map((n) => n.id)), new Map(lote.map((n) => [n.id, n])));
 }
 
+/** El modelo de Gemini para el respaldo (el mismo texto chico y gratis de la lectura con IA). */
+export const MODELO_AUDITORIA_GEMINI = 'gemini-flash-lite-latest';
+
+/**
+ * El mismo pedido, a Gemini (17/10/2026, la revisión del archivo: web/scripts/revisar-archivo.mjs). Sirve de respaldo cuando Groq no
+ * tiene cupo. Misma instrucción, misma lectura de la respuesta (las citas que no están en la nota se descartan). Lanza si falla (con `status`).
+ */
+export async function auditarLoteGemini(lote, { clave, fetchFn = fetch, modelo = MODELO_AUDITORIA_GEMINI } = {}) {
+  const res = await fetchFn(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`, {
+    method: 'POST',
+    // La clave va en el encabezado, nunca en la dirección (regla 16).
+    headers: { 'content-type': 'application/json', 'x-goog-api-key': clave },
+    body: JSON.stringify({ contents: [{ parts: [{ text: pedidoDeAuditoria(lote) }] }], generationConfig: { responseMimeType: 'application/json', temperature: 0 } }),
+    signal: AbortSignal.timeout(90_000),
+  });
+  if (!res.ok) {
+    const e = new Error(`Gemini HTTP ${res.status}`);
+    e.status = res.status;
+    throw e;
+  }
+  const j = await res.json();
+  const texto = j.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') ?? '';
+  return leerHallazgos(texto, new Set(lote.map((n) => n.id)), new Map(lote.map((n) => [n.id, n])));
+}
+
 /**
  * Lee todas las notas de a lotes, con una espera entre un pedido y otro. Un lote que falla no frena a los demás y se
  * cuenta aparte (esas notas no se marcan como leídas: se vuelven a intentar en la próxima corrida).

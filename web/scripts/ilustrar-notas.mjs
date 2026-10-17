@@ -47,6 +47,7 @@ import { REGLAS_SEMAFORO } from '../../ingesta/fuentes.mjs';
 import { nombresDePersona } from './nombres-de-persona.mjs';
 import { diaAR, horaAR } from '../../ingesta/zona.mjs';
 import { leerJson } from '../../ingesta/json.mjs';
+import { idsParaIlustrar } from '../lib/revision-archivo.js';
 import { fotoParaGuardar, nombreDeFotoNueva, PESO_MINIMO_DE_UNA_FOTO } from './achicar-foto.mjs';
 import { CREDITO_ILUSTRACION, esIlustracionDeNota, elegiblePorSeccion, tocaUnaMuerte, esPropiaConImagen } from './fotos-notas.mjs';
 
@@ -60,6 +61,8 @@ export const RUTAS = {
   manuales: path.join(RAIZ, 'data', 'fotos-manuales.json'),
   ilustraciones: path.join(RAIZ, 'data', 'fotos-ia.json'),
   carpeta: path.join(RAIZ, 'public', 'fotos-notas'),
+  // La revisión del archivo (regla 212): las notas viejas que dejó sin foto, para ilustrarlas después de las del día.
+  revision: path.join(RAIZ, 'data', 'revision-archivo.json'),
 };
 
 // ------------------------------------------------------------------ números
@@ -213,7 +216,9 @@ const cuandoSalio = (n) => Date.parse(n?.fecha ?? n?.publicadaCuando ?? n?.visto
  * Qué notas se ilustrarían: las de la portada publicadas en las últimas `horas` (con `ids`, sólo ésas, de la portada o del archivo y sin
  * mirar la hora), las más nuevas primero. Devuelve `{ candidatas, saltadas }`; cada saltada con su motivo.
  */
-export function elegirCandidatas({ portada = [], archivo = [], banco = {}, manuales = {}, ilustraciones = {}, horas = HORAS_POR_DEFECTO, ids = [], ahora = new Date() } = {}) {
+export function elegirCandidatas({
+  portada = [], archivo = [], banco = {}, manuales = {}, ilustraciones = {}, horas = HORAS_POR_DEFECTO, ids = [], ahora = new Date(), delArchivo = [],
+} = {}) {
   let notas;
   const saltadas = [];
   if (ids.length) {
@@ -228,6 +233,13 @@ export function elegirCandidatas({ portada = [], archivo = [], banco = {}, manua
     notas = portada.filter((n) => cuandoSalio(n) >= desde && cuandoSalio(n) <= ahora.getTime() + 3_600_000);
   }
   notas = [...new Map(notas.map((n) => [n.id, n])).values()].sort((a, b) => cuandoSalio(b) - cuandoSalio(a));
+  // Las notas del archivo a las que la revisión del archivo les sacó la foto (regla 212, `delArchivo`, en el orden en que quedaron): van
+  // DESPUÉS de las del día, con el mismo cupo y los mismos filtros. Así las del día nunca se quedan sin su ilustración por las viejas.
+  if (!ids.length && delArchivo.length) {
+    const yaEstan = new Set(notas.map((n) => n.id));
+    const porId = new Map(archivo.map((n) => [n?.id, n]));
+    for (const id of delArchivo) if (!yaEstan.has(id) && porId.has(id)) { notas.push(porId.get(id)); yaEstan.add(id); }
+  }
   const candidatas = [];
   for (const n of notas) {
     const motivo = motivoParaSaltar(n, { banco, manuales, ilustraciones });
@@ -467,14 +479,16 @@ export async function revisar({
   automatico = false, fetchFn = fetch, achicar, esperar = dormir, registro = console.log,
 } = {}) {
   const portada = leerJson(rutas.portada, { notas: [] }).notas ?? [];
-  const archivo = ids.length ? (leerJson(rutas.archivo, { notas: [] }).notas ?? []) : [];
+  // En el modo automático, también las notas del archivo que la revisión del archivo dejó sin foto (regla 212), después de las del día.
+  const delArchivo = automatico && !ids.length && rutas.revision ? idsParaIlustrar(leerJson(rutas.revision, null)) : [];
+  const archivo = ids.length || delArchivo.length ? (leerJson(rutas.archivo, { notas: [] }).notas ?? []) : [];
   const banco = leerJson(rutas.banco, {});
   const manuales = leerJson(rutas.manuales, {});
   const ilustraciones = leerJson(rutas.ilustraciones, {});
   const dia = diaAR(ahora);
   const usadas = Math.max(aplicadasHoy(ilustraciones, dia), generadasHoy(cuentas, dia));
   const cupo = automatico ? cupoAutomatico(usadas, horaAR(ahora)) : cupoDeLaCorrida(usadas);
-  const { candidatas, saltadas } = elegirCandidatas({ portada, archivo, banco, manuales, ilustraciones, horas, ids, ahora });
+  const { candidatas, saltadas } = elegirCandidatas({ portada, archivo, banco, manuales, ilustraciones, horas, ids, ahora, delArchivo });
   const porImagen = neuronasEstimadas();
   const clavesDelPrompt = [clave, claveClasificacion];
   const clavesDelControl = [claveClasificacion, clave];

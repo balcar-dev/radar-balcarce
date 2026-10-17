@@ -41,6 +41,7 @@ export const ARCHIVOS = {
   estadisticas: 'web/data/estadisticas.json',
   produccion: 'web/data/notas-por-dia.json',
   auditoria: 'web/data/auditoria-ia.json',
+  revisionArchivo: 'web/data/revision-archivo.json',
   banco: 'web/data/banco-fotos.json',
   piezas: 'web/data/efemerides-piezas.json',
   cambiosIA: 'web/data/correcciones-auditoria.json',

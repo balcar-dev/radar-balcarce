@@ -129,6 +129,7 @@ export function leerArchivos(raiz = path.join(import.meta.dirname, '..')) {
     usoIA: d('uso-ia.json'),
     vigilancia: d('vigilancia.json'),
     esperandoCuerpo: d('esperando-cuerpo.json'),
+    revision: d('revision-archivo.json'),
     archivo: archivo ? { total: Array.isArray(archivo.notas) ? archivo.notas.length : null, notas: archivo.notas ?? [] } : null,
   };
 }
@@ -202,7 +203,37 @@ export function grupoDelMotivo(motivo = '') {
   return 'otros motivos del semáforo';
 }
 
-export function seccionEspera({ datos }) {
+/**
+ * La revisión del archivo entero, por tandas (regla 212, web/scripts/revisar-archivo.mjs): cuánto va, qué hizo y lo que dejó para una
+ * persona (el detalle viaja cifrado al panel; acá, sólo el título de la nota y el enlace). Sin la revisión empezada, nada.
+ */
+export function lineasDeLaRevision(revision, { ahora = new Date(), notas = [], sitio = SITIO } = {}) {
+  const lineas = [];
+  const atencion = [];
+  if (!revision?.generado) return { lineas, atencion };
+  const c = revision.contadores ?? {};
+  const porciento = c.total ? Math.round((100 * (c.revisadas ?? 0)) / c.total) : 0;
+  const hizo = [
+    c.retiradas ? `retiró ${plural(c.retiradas, 'nota', 'notas')}` : null,
+    c.repetidas ? `unió ${plural(c.repetidas, 'repetida', 'repetidas')} a la que ya estaba` : null,
+    c.fotosSacadas ? `sacó ${plural(c.fotosSacadas, 'foto', 'fotos')}` : null,
+    c.arreglos ? `corrigió solo ${plural(c.arreglos, 'detalle', 'detalles')} de escritura` : null,
+  ].filter(Boolean);
+  const estado = revision.terminada ? 'terminó' : `va ${num(c.revisadas ?? 0)} de ${num(c.total ?? 0)} notas (${porciento} %)`;
+  lineas.push({ t: `Revisión del archivo (las notas viejas con el criterio de hoy): ${estado}${hizo.length ? `; ${hizo.join(', ')}` : ''}.` });
+  const paraMirar = Object.entries(revision.paraUnaPersona ?? {}).sort(([, a], [, b]) => String(b?.cuando ?? '').localeCompare(String(a?.cuando ?? '')));
+  if (paraMirar.length) {
+    const titulos = new Map((notas ?? []).map((n) => [n.id, n.titulo]));
+    lineas.push({ t: `${plural(paraMirar.length, 'nota vieja quedó', 'notas viejas quedaron')} para que la mire una persona (título o sección dudosos, algo para confirmar): el detalle está en la pestaña Revisión del panel.`, url: PANEL, sub: true });
+    for (const [id, p] of paraMirar.slice(0, 3)) lineas.push({ t: recortar(titulos.get(id) ?? id, 100), url: p?.ruta ? `${sitio}${p.ruta}` : null, sub: true });
+    const nuevas = paraMirar.filter(([, p]) => ahora.getTime() - (Date.parse(p?.cuando ?? '') || 0) <= 24 * 3600e3).length;
+    if (nuevas) atencion.push({ nivel: 'info', t: `La revisión del archivo dejó ${plural(nuevas, 'nota vieja', 'notas viejas')} para mirar en las últimas 24 horas (pestaña Revisión del panel).`, url: PANEL });
+  }
+  if (c.fallas) lineas.push({ t: `${plural(c.fallas, 'nota se revisó', 'notas se revisaron')} sin la parte de la IA (no hubo cupo en tres intentos).`, sub: true });
+  return { lineas, atencion };
+}
+
+export function seccionEspera({ datos, ahora = new Date(), sitio = SITIO }) {
   const { portada, esperandoCuerpo } = datos;
   const atencion = [];
   const lineas = [];
@@ -233,6 +264,10 @@ export function seccionEspera({ datos }) {
     for (const n of sinCuerpo.slice(0, 3)) lineas.push({ t: n.titulo, nota: n.motivo, sub: true });
     atencion.push({ nivel: 'media', t: sinCuerpo.length === 1 ? '1 nota automática no consiguió cuerpo en 3 intentos y no sale: conviene escribirla a mano o retirarla.' : `${num(sinCuerpo.length)} notas automáticas no consiguieron cuerpo en 3 intentos y no salen: conviene escribirlas a mano o retirarlas.`, url: PANEL });
   }
+  // La revisión del archivo (regla 212): una línea, y lo que dejó para una persona.
+  const rev = lineasDeLaRevision(datos.revision, { ahora, notas: datos.archivo?.notas ?? [], sitio });
+  lineas.push(...rev.lineas);
+  atencion.push(...rev.atencion);
   return { seccion: { id: 'espera', titulo: 'ESPERANDO A UNA PERSONA', lineas }, atencion };
 }
 

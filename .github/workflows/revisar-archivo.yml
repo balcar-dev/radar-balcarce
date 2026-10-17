@@ -1,0 +1,121 @@
+# Revisar el archivo (regla 212, 17/10/2026; empieza el jueves 22/10/2026): todas las notas con página, de la más vieja a la más nueva, en
+# tandas chicas, con el mismo criterio que hoy tiene una nota nueva (web/scripts/revisar-archivo.mjs; docs/flujos/REVISION-DEL-ARCHIVO.md).
+#
+# Lo despierta el reloj de Cloudflare (infra/reloj-cloudflare/) a los :12 de las horas UTC impares: una tanda cada 2 horas, día y noche,
+# lejos de los :00/:30 de "Actualizar la web". Antes del 22/10 no hace nada (avisa y termina). También a mano (Actions → Revisar el archivo →
+# Run workflow; con "simular" revisa y muestra, sin guardar).
+#
+# Dos pasos, como «Ilustrar notas sin foto»:
+#   · REVISAR (sin candado de la web): arma la tanda, le pregunta a la IA (Groq gpt-oss-20b para el texto y su visión para las fotos; Gemini
+#     sólo de respaldo y con tope) y deja todo en el adjunto "tanda". No toca el repositorio.
+#   · GUARDAR, EN LA FILA DE "Actualizar la web" (su mismo grupo de concurrency): con `main` recién bajado, aplica la tanda (vuelve a mirar
+#     cada cosa con los datos de ahora), commitea sólo sus archivos y sube; si el push choca, baja otra vez y repite. Nunca pisa lo de otro.
+# Secretos: GROQ_API_KEY y GEMINI_API_KEY_CLASIFICACION (gratis), y los del aviso por mail si encuentra algo grave. Ninguna otra clave.
+# Interruptor: la variable de GitHub REVISION_DEL_ARCHIVO en "no" la frena.
+name: Revisar el archivo
+run-name: "Revisar el archivo${{ inputs.simular && ' (simular)' || '' }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      simular:
+        description: 'Revisar y mostrar, sin guardar nada'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+# Una tanda por vez.
+concurrency:
+  group: revisar-archivo
+  cancel-in-progress: false
+
+jobs:
+  revisar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      TZ: America/Argentina/Buenos_Aires
+    outputs:
+      hay_tanda: ${{ steps.revisar.outputs.hay_tanda }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Revisar una tanda (no toca el repositorio)
+        id: revisar
+        run: node web/scripts/revisar-archivo.mjs revisar --salida=salida-revision
+        env:
+          REVISION_DEL_ARCHIVO: ${{ vars.REVISION_DEL_ARCHIVO }}
+          FOTOS_MENORES_OFICIALES: ${{ vars.FOTOS_MENORES_OFICIALES }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY_CLASIFICACION: ${{ secrets.GEMINI_API_KEY_CLASIFICACION }}
+          VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
+          WHATSAPP_TELEFONO: ${{ secrets.WHATSAPP_TELEFONO }}
+          WHATSAPP_APIKEY: ${{ secrets.WHATSAPP_APIKEY }}
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: tanda
+          path: salida-revision
+          retention-days: 7
+          if-no-files-found: ignore
+
+  guardar:
+    needs: revisar
+    if: ${{ !cancelled() && needs.revisar.result == 'success' && needs.revisar.outputs.hay_tanda == '1' && !inputs.simular }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    concurrency:
+      group: actualizar-web
+      cancel-in-progress: false
+    env:
+      TZ: America/Argentina/Buenos_Aires
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Bajar la tanda
+        uses: actions/download-artifact@v4
+        with:
+          name: tanda
+          path: revision
+
+      - name: Aplicar y guardar
+        env:
+          FOTOS_MENORES_OFICIALES: ${{ vars.FOTOS_MENORES_OFICIALES }}
+        run: |
+          git config user.name "Radar Balcarce"
+          git config user.email "272334999+balcar-dev@users.noreply.github.com"
+          # Tres intentos. En cada uno: main recién bajado, aplicar otra vez sobre los datos de ahora, commit de SUS archivos y push.
+          # correcciones-auditoria.json también lo escribe la Auditoría IA y banco-fotos.json, "Actualizar la web": nunca se resuelve un choque a ciegas.
+          for intento in 1 2 3; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            node web/scripts/revisar-archivo.mjs aplicar --desde=revision
+            for f in web/data/revision-archivo.json web/data/banco-fotos.json web/data/correcciones-auditoria.json; do [ -e "$f" ] && git add -- "$f"; done
+            if git diff --cached --quiet; then
+              echo "Nada nuevo que guardar."
+              exit 0
+            fi
+            git commit -q -m "Revisión del archivo · $(date '+%d/%m %H:%M')"
+            if git push -q origin HEAD:main; then
+              echo "Guardada (intento $intento)."
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "No se pudo guardar la revisión después de tres intentos"
+          exit 1

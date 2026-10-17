@@ -10,6 +10,8 @@ export const TIPOS = {
   sensible: 'Tema sensible',
   afirmacion: 'Afirmación sin sostén',
   titulo: 'Título que no corresponde',
+  // La revisión del archivo (regla 212): lo que hoy no saldría, pero su enlace circula en las redes o es una nota propia.
+  retiro: 'Hoy no saldría',
 };
 const ORDEN_GRAVEDAD = { alta: 0, media: 1, baja: 2 };
 const NOMBRE_GRAVEDAD = { alta: 'Grave', media: 'A mirar', baja: 'Menor' };
@@ -63,7 +65,7 @@ export function htmlDeRevision({
   const resumen = `<p class="meta">${total} ${total === 1 ? 'hallazgo' : 'hallazgos'} en ${lista.length} ${lista.length === 1 ? 'nota' : 'notas'}${graves ? `, ${graves} ${graves === 1 ? 'grave' : 'graves'}` : ''}. Lo marca una IA: puede equivocarse.</p>`;
   const tarjetas = lista.map((e) => {
     const filas = e.hallazgos.map((h) => `<li class="hallazgo ${esc(h.gravedad)}"><b>${esc(NOMBRE_GRAVEDAD[h.gravedad] ?? h.gravedad)} · ${esc(TIPOS[h.tipo] ?? h.tipo)}</b> ${esc(h.detalle)}${h.sugerencia ? `<span class="meta"> Quedaría: ${esc(h.sugerencia)}</span>` : ''}</li>`).join('');
-    return `<article class="tarjeta revision"><div>${chip(e.seccion)}<span class="meta">${esc(haceCuanto(e.cuando))}</span></div>${titulo(e)}<ul class="hallazgos">${filas}</ul></article>`;
+    return `<article class="tarjeta revision"><div>${chip(e.seccion)}<span class="meta">${esc(haceCuanto(e.cuando))}${e.delArchivo ? ' · nota vieja (revisión del archivo)' : ''}</span></div>${titulo(e)}<ul class="hallazgos">${filas}</ul></article>`;
   }).join('');
   const paraMirar = lista.length ? `<h2>Para que mires (${total})</h2>${resumen}${tarjetas}` : '<h2>Para que mires</h2><p class="vacio">Nada para mirar: lo único que encontró lo corrigió sola.</p>';
   return `<h1>Revisión</h1>${cuando}${queHizo}${corregido}${paraMirar}${!abierto ? '<p class="meta">Este celular se registró después de la última revisión: los avisos para mirar le llegan a partir de la próxima.</p>' : ''}`;
