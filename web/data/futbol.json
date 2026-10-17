@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-17T23:02:24.554Z",
+ "consultado": "2026-10-17T23:31:41.386Z",
  "equipos": [
   "9739",
   "3",
@@ -901,7 +901,7 @@
     "competencia": "liga",
     "inicio": "2026-10-17T23:00:00.000Z",
     "estado": "en-juego",
-    "minuto": "2'",
+    "minuto": "32'",
     "local": {
      "id": "9785",
      "nombre": "Atlético Tucumán",
@@ -910,10 +910,23 @@
     "visitante": {
      "id": "17",
      "nombre": "Rosario Central",
-     "goles": 0
+     "goles": 2
     },
     "penales": null,
-    "goles": [],
+    "goles": [
+     {
+      "equipo": "visitante",
+      "jugador": "Gastón Ávila",
+      "minuto": "3'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Gastón Ávila",
+      "minuto": "6'",
+      "tipo": "gol"
+     }
+    ],
     "estadio": "Monumental Presidente José Fierro",
     "fase": null,
     "partidoDeLaSerie": null,
@@ -924,7 +937,7 @@
     "competencia": "liga",
     "inicio": "2026-10-17T23:00:00.000Z",
     "estado": "en-juego",
-    "minuto": "2'",
+    "minuto": "31'",
     "local": {
      "id": "21",
      "nombre": "Vélez Sarsfield",

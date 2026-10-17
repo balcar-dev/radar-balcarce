@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T23:02:27.640Z",
- "portada": 76,
- "archivo": 1244,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-17T23:31:42.847Z",
+ "portada": 75,
+ "archivo": 1243,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-17T23:02:27.945Z",
+  "generado": "2026-10-17T23:31:43.044Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -74,7 +74,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-17T23:07:01.369Z"
    },
    {
     "nombre": "podcast",
@@ -152,8 +152,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 31,
+    "segundos": 37,
     "notas": [
+     {
+      "id": "mcgl08",
+      "titulo": "Ciudadanos italianos tienen plazo hasta noviembre para votar en el COMITES",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1kx30ao",
       "titulo": "Peregrinación une la Parroquia Santa María con Los Pinos",
