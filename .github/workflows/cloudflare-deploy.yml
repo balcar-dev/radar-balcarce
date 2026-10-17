@@ -8,8 +8,10 @@
 # ilimitado. El sitio se exporta como archivos estáticos puros (ver
 # next.config.mjs), así que no hace falta nada especial del lado del hosting.
 #
-# Corre solo cada vez que "Actualizar la web" termina bien (cada 30 minutos), y
-# también a mano (Actions → "Cloudflare Pages" → Run workflow).
+# DESDE EL 17/10/2026 ES SÓLO A MANO, DE RESCATE (regla 189). Lo de cada media hora lo sube "Actualizar la web" (actualizar.yml) con lo que
+# ya compiló, sin compilar dos veces. Este workflow sirve para volver a subir el sitio tal como está en main sin buscar noticias: si una
+# subida falló y no se quiere esperar a la vuelta siguiente, o después de tocar algo de la web a mano (Actions → "Cloudflare Pages" →
+# Run workflow). Compila, archiva en R2 lo que está por salir, sube y avisa a Bing, igual que la vuelta.
 #
 # SECRETOS (Settings → Secrets and variables → Actions; los pega una persona):
 #   CLOUDFLARE_API_TOKEN    token con permiso Account.Cloudflare Pages: Edit
@@ -21,15 +23,10 @@ name: Cloudflare Pages
 
 on:
   workflow_dispatch:
-  # Cada vez que "Actualizar la web" termina bien (cada 30 minutos), se sube
-  # la versión nueva.
-  workflow_run:
-    workflows: ['Actualizar la web']
-    types: [completed]
 
 concurrency:
   group: cloudflare-pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 # Sólo lee el repositorio: lo que sube va a Cloudflare con su propio token.
 permissions:
@@ -37,16 +34,16 @@ permissions:
 
 jobs:
   desplegar:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-24.04
-    # Hoy tarda entre uno y uno y medio minutos. Quince es de sobra y corta
-    # una subida colgada.
+    # Tarda unos 3 minutos (compilar ~2,5 y subir). Veinticinco es de sobra y corta una subida colgada.
     timeout-minutes: 25
     env:
       # Que "hoy" y las horas que se compilan sean los de Balcarce, no UTC.
       TZ: America/Argentina/Buenos_Aires
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         with:
@@ -144,6 +141,5 @@ jobs:
       # Después de subir, se le avisa a Bing (IndexNow, sin cuenta ni clave secreta) qué notas nuevas hay (redes/indexnow.mjs). Es un aviso:
       # si falla, el despliegue sigue verde.
       - name: Avisar a Bing de las notas nuevas
-        if: github.event_name == 'workflow_run' || github.event_name == 'workflow_dispatch'
         continue-on-error: true
         run: node redes/indexnow.mjs

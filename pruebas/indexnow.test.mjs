@@ -37,8 +37,11 @@ test('el pedido lleva el host, la clave y dónde está publicada', async () => {
 test('la clave está publicada en el sitio y el workflow avisa sin frenar el despliegue', () => {
   const archivo = new URL(`../web/public/${CLAVE_INDEXNOW}.txt`, import.meta.url);
   assert.equal(fs.readFileSync(archivo, 'utf8').trim(), CLAVE_INDEXNOW);
-  const w = fs.readFileSync(new URL('../.github/workflows/cloudflare-deploy.yml', import.meta.url), 'utf8').replace(/\r\n/g, '\n');
-  const i = w.indexOf('node redes/indexnow.mjs');
-  assert.ok(i > w.indexOf('wrangler@'), 'después de subir el sitio');
-  assert.match(w.slice(w.lastIndexOf('- name:', i), i), /continue-on-error: true/);
+  // 17/10/2026 (regla 189): sube "Actualizar la web"; "Cloudflare Pages" queda a mano, con el mismo aviso.
+  for (const archivo of ['actualizar.yml', 'cloudflare-deploy.yml']) {
+    const w = fs.readFileSync(new URL(`../.github/workflows/${archivo}`, import.meta.url), 'utf8').replace(/\r\n/g, '\n');
+    const i = w.indexOf('node redes/indexnow.mjs');
+    assert.ok(i > 0 && i > w.indexOf('wrangler@'), `${archivo}: después de subir el sitio`);
+    assert.match(w.slice(w.lastIndexOf('- name:', i), i), /continue-on-error: true/, archivo);
+  }
 });

@@ -101,6 +101,9 @@ export const QUE_SIGNIFICA_EL_PASO = {
   'Compilar el sitio': 'El sitio no compila con los datos de esta vuelta: la web sigue con lo último bueno pero no se actualiza (hay que ver el error en GitHub Actions).',
   'Buscar noticias y armar los datos': 'No se pudieron armar los datos de esta vuelta: la web sigue con lo último bueno.',
   'Revisar que el SEO siga en pie': 'Falta algo del SEO en el HTML (título, descripción o tarjeta): la web no se actualiza hasta arreglarlo.',
+  // 17/10/2026 (regla 189): "Actualizar la web" sube el sitio ella misma, con lo que compiló (antes lo hacía "Cloudflare Pages").
+  'Volver a compilar con lo que entró': 'Los datos se guardaron, pero el sitio no compiló con lo que entró mientras se armaba (código o datos de otro lado): la web sigue con la versión anterior hasta que se arregle.',
+  'Subir a Cloudflare Pages': 'Los datos se guardaron, pero Cloudflare no aceptó la subida: la web sigue con la versión anterior; la vuelta siguiente lo vuelve a intentar (o correr "Cloudflare Pages" a mano).',
 };
 
 /**
@@ -110,7 +113,8 @@ export const QUE_SIGNIFICA_EL_PASO = {
 export const WORKFLOWS_VIGILADOS = {
   'actualizar.yml': 'Actualizar la web',
   'redes.yml': 'Redes',
-  'cloudflare-deploy.yml': 'Cloudflare Pages',
+  // (17/10/2026: sale "Cloudflare Pages", cloudflare-deploy.yml: quedó sólo a mano, de rescate. La subida de cada media hora es un paso de
+  // "Actualizar la web", que ya se mira arriba; una corrida a mano que falló quedaría avisando para siempre.)
   'respaldo.yml': 'Respaldo',
   'armado-vacio.yml': 'Armado con datos vacíos',
   'pruebas-otra-hora.yml': 'Pruebas con otra hora',
@@ -141,7 +145,7 @@ export const ESTADO_DEL_ARCHIVO = 'https://radar-balcarce-archivo.radarbalcarce.
  */
 export function problemasDelArchivoR2(obs, ahora = new Date()) {
   if (!obs) return [];
-  const paso = 'el paso "Archivar las notas por salir (R2)" del workflow "Cloudflare Pages" en GitHub Actions';
+  const paso = 'el paso "Archivar las notas por salir (R2)" del workflow "Actualizar la web" en GitHub Actions';
   const e = obs.estado;
   if (!e || typeof e !== 'object' || !e.cuando) {
     return [{ clave: 'archivo-r2-sin-estado', nivel: 'media', texto: `No pude leer el estado del archivo permanente (HTTP ${obs.http || 'sin respuesta'} en ${ESTADO_DEL_ARCHIVO}). Con la variable R2_ARCHIVO puesta, el Worker radar-balcarce-archivo tiene que contestar: revisá Cloudflare → Workers y ${paso}.` }];
