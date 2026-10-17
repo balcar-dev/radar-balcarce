@@ -39,6 +39,7 @@ permiso a un programa en otro servicio: se trata como una contraseña.
                          │  :41, de 7 a 23: "Auditoría IA" · :23 cada 3 horas: "Pistas"
                          │  8:15 y 21:15 (otra vez a las 8:30 y 21:30): "Informe diario"
                          │  cada 2 horas, a los :20, de 7:20 a 23:20: "Ilustrar notas sin foto"
+                         │  cada 2 horas, a los :12, día y noche (desde el 22/10/2026): "Revisar el archivo"
                          ▼
 GitHub Actions (repo radarbalcarce/radar-balcarce, público, cuenta radarbalcarce@gmail.com)
   ├─ Actualizar la web ── compila UNA vez, guarda en main ──▶ Cloudflare Pages ──▶ radarbalcarce.com
@@ -146,6 +147,7 @@ Los que sólo corren a mano y no escriben nada en el repositorio están marcados
 | **Reloj de Cloudflare** (`reloj-cloudflare.yml`) | A mano (cuando cambia el reloj) | Sube el Worker `radar-balcarce-reloj` (`infra/reloj-cloudflare/`) con wrangler 4.139.0 y le carga el secreto | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `RELOJ_GITHUB_TOKEN` | Nada | 10 min |
 | **Vigilante de Cloudflare** (`vigilante-cloudflare.yml`) | A mano (cuando cambia el vigilante) | Sube el Worker `radar-balcarce-vigilante` (`infra/vigilante-cloudflare/`) con wrangler 4.139.0, crea su KV si falta y le carga los secretos | `CLOUDFLARE_API_TOKEN` (con «Workers KV Storage: Edit»), `CLOUDFLARE_ACCOUNT_ID`, `VIGILANTE_TOKEN`; opcional `VIGILANTE_GITHUB_TOKEN` (está cargado) | Nada | 10 min |
 | **Ilustrar notas sin foto** (`ilustrar-notas.yml`) | El reloj de Cloudflare a los :20 cada 2 horas, de 7:20 a 23:20 de Balcarce, con `automatico` = `true`; a mano: revisar (`horas`, `ids`) o aplicar (`aplicar`, `corrida`, `ids`) | `web/scripts/ilustrar-notas.mjs`: elige las notas sin foto real (salta muertes, sepelios, semáforo rojo y lo que ya tiene imagen), pide a Gemini el prompt y al Worker de imágenes la ilustración (SDXL, 1024 × 576), la hace mirar otra vez por Gemini y, en automático, guarda sólo las que pasan ese control. Hasta 12 llamadas al Worker por corrida y 20 por día. Nunca pisa una ilustración hecha con Gemini web. Regla 185; `docs/flujos/IMAGENES-CON-GEMINI-WEB.md` | `GEMINI_API_KEY_REDACCION`, `GEMINI_API_KEY_CLASIFICACION`, `VIGILANTE_TOKEN` (la contraseña del Worker) | `web/data/fotos-ia.json` y `web/public/fotos-notas/<id>-ia.jpg` (el paso que guarda hace fila con "Actualizar la web") | 30 min (guardar, 15) |
+| **Revisar el archivo** (`revisar-archivo.yml`) | El reloj de Cloudflare a los :12 de las horas UTC impares (12 por día, desde el 22/10/2026); a mano, con *simular* para no guardar | `web/scripts/revisar-archivo.mjs` (regla 212): una tanda de notas viejas con el criterio de hoy; el paso «Guardar» va en el grupo `actualizar-web` y escribe `web/data/revision-archivo.json`, `banco-fotos.json` y `correcciones-auditoria.json` (`docs/flujos/REVISION-DEL-ARCHIVO.md`). Variable `REVISION_DEL_ARCHIVO` ("no" la frena) | `GROQ_API_KEY`, `GEMINI_API_KEY_CLASIFICACION` (sólo respaldo), `VIGILANTE_TOKEN` (aviso de lo grave) | Nada (Groq y Gemini gratis) | 15 + 10 min |
 | **Imágenes con Workers AI** (`imagenes-cloudflare.yml`) | A mano (subir un Worker) | Sube el Worker `radar-balcarce-imagenes` (`infra/imagenes-cloudflare/`), le carga la contraseña y compara varios modelos con el mismo prompt (adjunto de 3 días) | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `VIGILANTE_TOKEN` | Nada | 15 min |
 | **Generar fondos del clima** (`generar-fondos-clima.yml`) | A mano (`candidatas`) | Pide al Worker de imágenes candidatas de paisaje para nueve estados del tiempo y las deja como adjunto; una persona elige y las guarda como `web/public/fotos-notas/clima-<estado>-<n>.jpg` | `VIGILANTE_TOKEN` | Nada | 30 min |
 | **Probar las claves de Gemini** (`probar-gemini.yml`) | A mano (de prueba) | `redes/probar-gemini.mjs`: qué modelos ve cada clave, un texto mínimo por clave, una voz de 3 segundos (gasta 1 del cupo de voz) y una imagen | Las tres claves de Gemini | Nada | 10 min |
@@ -214,7 +216,9 @@ Balcarce).**
   "Actualizar la web", siempre; **"Vigilancia" cada 3 horas** (a los :00 de las 0, 3,
   6… 21 de Balcarce) y otra vez a las **9:30, 21:30 y 0:30**; a los **:05, :35 y :45,
   sólo de 7 a 23 de Balcarce**, "Redes" con la acción `reloj`; a los **:41 de 7 a
-  23**, "Auditoría IA"; a los **:23 cada 3 horas**, "Pistas". Antes del 17/10: los :00 y
+  23**, "Auditoría IA"; a los **:23 cada 3 horas**, "Pistas"; a los **:12 de las horas
+  UTC impares** (22:12, 0:12… 20:12 de Balcarce), "Revisar el archivo" (regla 212; antes del
+  22/10/2026 no hace nada; **hay que desplegar el reloj a mano** para que lo pida). Antes del 17/10: los :00 y
   :30 pedían "Actualizar" y "Vigilancia" siempre, y "Redes" corría las 24 horas. Y desde
   el 15/10, a las **8:15 y 21:15 de Balcarce** (11:15 y 0:15 UTC, una sola
   expresión `15 0,11 * * *`), "Informe diario" con `momento` = `manana` o `noche`,
@@ -647,7 +651,8 @@ límite de gasto en Google (`PENDIENTES.md`).
 
 | Archivo | Qué hace | Quién lo llama | Qué lee | Qué escribe |
 |---|---|---|---|---|
-| `.github/workflows/*.yml` | Los treinta workflows (tabla de arriba) | El reloj de Cloudflare, GitHub, el panel del celular, una persona | secretos y variables | commits en `main`, artefactos |
+| `web/scripts/revisar-archivo.mjs` | La revisión del archivo entero por tandas (regla 212) | `revisar-archivo.yml` | `web/data/archivo.json`, `portada.json`, `banco-fotos.json`, `web/public/fotos-notas/` | `web/data/revision-archivo.json`, `banco-fotos.json`, `correcciones-auditoria.json` |
+| `.github/workflows/*.yml` | Los treinta y un workflows (tabla de arriba) | El reloj de Cloudflare, GitHub, el panel del celular, una persona | secretos y variables | commits en `main`, artefactos |
 | `infra/*/worker.mjs` y `wrangler.toml` | Los Workers de Cloudflare (reloj, vigilante, imágenes, archivo) | Cloudflare | lo de cada uno | — |
 | `redes/avisar-por-mail.mjs` | Manda un aviso: mail por el Worker vigilante y, si no sale, WhatsApp | vigilancia, auditorías, pistas, núcleo legal, archivo | `VIGILANTE_TOKEN`, `WHATSAPP_*` | — |
 | `redes/informe-diario.mjs` | Los informes de las 8:15 y 21:15 | `informe-diario.yml` | `web/data/`, la API de GitHub | — (manda el mail) |

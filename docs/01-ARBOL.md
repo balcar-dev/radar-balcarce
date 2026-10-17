@@ -73,6 +73,7 @@ la caché de Actions), `web/.next/`, `web/out/`, `web/public/_redirects`,
 | `informe-diario.yml` | "Informe diario": el mail de las 8:15 y el de las 21:15 (`redes/informe-diario.mjs`, regla 176) | El reloj de Cloudflare (:15, con segundo intento a los :30); `schedule` 8:45 y 21:45 de respaldo; a mano | Sí |
 | `pruebas.yml` | "Pruebas": `npm test` entero (ya no corre en cada vuelta de "Actualizar la web") | Al subir código (no datos ni fotos); lunes; a mano | Sí |
 | `ilustrar-notas.yml` | "Ilustrar notas sin foto": ilustraciones con IA sin personas para las notas sin foto; revisar, aplicar o automático (reglas 182 y 185) | El reloj de Cloudflare a los :20 cada 2 horas, de 7 a 23 (automático); a mano | Sí |
+| `revisar-archivo.yml` | "Revisar el archivo": las notas viejas, por tandas, con el criterio de hoy (regla 212; `docs/flujos/REVISION-DEL-ARCHIVO.md`) | El reloj de Cloudflare a los :12 cada 2 horas, día y noche, desde el 22/10/2026; a mano | Sí |
 | `auditoria.yml` | "Auditoría": medidas, íconos, SEO en vivo y la semana del contrato; guarda `web/data/auditoria.json` | Lunes 12:00 UTC; a mano | Sí |
 | `auditar-voz.yml` | "Auditar voz": clips con la voz real y su transcripción (gasta cupo de voz) | A mano | A mano |
 | `crear-voces.yml` | "Crear voces": crea, recrea, lista o borra las voces propias (los modos de diálogo fueron pruebas descartadas) | A mano | A mano |
@@ -318,6 +319,7 @@ medir o calibrar. Hasta el 17/10 estaban en `docs/flujo/` y `docs/etapa-2-5/`.
 | Archivo | Qué hace | Quién lo usa | ¿En uso? |
 |---|---|---|---|
 | `archivo.js` | Qué se muestra (36 h), qué tiene página (180 días, con tope de 3.700 notas: `MAXIMO_EN_ARCHIVO`, `topeDeNotas`), llega tarde, fecha de la nota, retiradas, correcciones, `pierdeLaPagina`, la dirección fija, `aligerarViejas` | `generar-datos.mjs`, `datos.js` | Sí |
+| `revision-archivo.js` | Lo que los demás leen de la revisión del archivo (regla 212): lo retirado, las repetidas, lo que espera su ilustración | `generar-datos.mjs`, `ilustrar-notas.mjs`, `revisar-archivo.mjs` | Sí |
 | `clima.js`, `pedir-clima.js` | Qué dibujo le toca a cada cielo; el pedido del clima en el navegador (Open-Meteo, un solo pedido por página) | `clima-vivo.js`, `hoy-balcarce.js` | Sí |
 | `cuerpo.js` | `tieneCuerpo` (70 palabras), `tieneRespaldo`, `esperaCuerpo` | `generar-datos.mjs`, `datos.js`, `sitemap.js`, redes, panel, reescritura | Sí |
 | `datos.js` | La puerta de entrada a los datos para todas las páginas: secciones, tapa, horas, contacto (`WHATSAPP`, `MAIL`) | Todas las páginas | Sí |
@@ -367,6 +369,7 @@ medir o calibrar. Hasta el 17/10 estaban en `docs/flujo/` y `docs/etapa-2-5/`.
 | `foto-manual.mjs` | Suma a mano la foto de una nota (pestaña Fotos del panel) | `panel.yml` (`accion=foto`) | Sí |
 | `escudos.mjs` | Baja una vez los escudos de los clubes (ESPN) a `web/public/escudos/` | A mano | A mano |
 | `ilustrar-notas.mjs` | Las ilustraciones con IA para las notas sin foto: revisar, aplicar o automático (reglas 182 y 185); escribe `web/data/fotos-ia.json` | `ilustrar-notas.yml` | Sí |
+| `revisar-archivo.mjs` | La revisión del archivo entero por tandas (regla 212): revisar, aplicar y simular; escribe `web/data/revision-archivo.json` | `revisar-archivo.yml` | Sí |
 | `nombres-de-persona.mjs` | Los nombres de persona de un texto (el control del prompt de las ilustraciones) | `ilustrar-notas.mjs` | Sí |
 | `archivar-a-r2.mjs` | El exportador del archivo permanente: sube a R2 las notas con página y saca lo retirado (regla 183) | `actualizar.yml` (cada vuelta, con `R2_ARCHIVO`), `cloudflare-deploy.yml` (a mano), `archivo-staging.yml`, `archivo-produccion.yml` | Sí (el Worker, todavía sin ruta) |
 | `armado-vacio.mjs` | Prueba de humo: arma el sitio con datos vacíos o a medias | `armado-vacio.yml` | Sí |
@@ -394,6 +397,7 @@ medir o calibrar. Hasta el 17/10 estaban en `docs/flujo/` y `docs/etapa-2-5/`.
 | `celular-llaves.json` | La llave pública de cada celular registrado (la privada no sale del celular) | El panel del celular |
 | `correcciones.json` | Lo corregido o escrito a mano, con motivo, cuándo y quién | El panel del celular, una persona o Claude |
 | `retiradas.json` | Lo sacado a mano, con motivo, cuándo y quién | Una persona o Claude; los lunes "Actualizar la web" saca las de más de 7 días |
+| `revision-archivo.json` | La revisión del archivo (regla 212): cuánto va, lo que retiró (no se poda), las repetidas, las fotos que sacó, lo que dejó para una persona (cifrado) | Sólo `revisar-archivo.yml` |
 | `avisos.json` | Los tres espacios de publicidad que lee la web | Una persona, a mano |
 | `redes.json` | El libro de las redes | "Redes" y "Piezas" |
 | `vigilancia.json`, `estadisticas.json` | Lo que ya avisó el vigilante; visitas y seguidores | "Vigilancia" |

@@ -15,15 +15,15 @@ Hecho el 17/10 (reglas 188 a 210): una sola compilación por vuelta; el reloj di
 **Para autorizar (Hernán y Andrés):**
 - Limpiar el historial de GitHub (dejar una sola versión con el estado actual, con copia completa guardada antes en R2): borra las notas retiradas que hoy siguen en las versiones viejas. No tiene vuelta atrás en GitHub.
 - Ordenar las claves de Google (`docs/auditoria-2-0/09-CLAVES-DE-IA-ORDEN.md`): la facturación está en un proyecto que Radar no usa; proyectos de otras cosas en la cuenta del medio.
-- Prender `SECCIONES_NUEVAS` (Educación y Salud; vista previa en `docs/secciones/vista-previa/`) y decidir `FOTOS_MENORES_OFICIALES`.
+- Prender `SECCIONES_NUEVAS` (Educación y Salud; vista previa en `docs/secciones/vista-previa/`) y decidir `FOTOS_MENORES_OFICIALES` (desde la regla 211, el 17/10, vale para las fotos propias de cualquier fuente de Balcarce: medios de acá y organismos; la prende una persona con "Si").
 - Los dos bloques de portada propuestos ("Lo que se cuenta en todo el país" y "En los medios de Balcarce"): `docs/propuestas/EN-LOS-MEDIOS-DE-BALCARCE.md`.
 - Permiso del token de Cloudflare (Workers Routes: Edit + Zone: Read) para activar el archivo permanente (antes del ~2/11).
 - Pasar el robot a Cloudflare (motor como Workflow + D1/R2, video al repo público `radar-balcarce-render`) para que el principal pueda ser privado sin pagar: `docs/08-INFRAESTRUCTURA.md`, "Los minutos de GitHub".
 - Pedir permiso de fotos a los medios de Balcarce (investigación 07: un fallo de julio de 2026 por una sola foto).
 
-**A mano (una persona):** borrar en la PC `panel/datos/` y `respaldos/` (tienen claves) y dar de baja Tailscale; borrar el Worker `radar-balcarce-sondeo-fuentes` y el secreto `SONDEO_TOKEN`; revisar el aviso de cambio de contraseña de Instagram en el Gmail del medio y activar la verificación en dos pasos en Google, Meta, GitHub y Cloudflare.
+**A mano (una persona):** **desplegar el reloj de Cloudflare** (Actions → «Reloj de Cloudflare» → Run workflow) para que pida la revisión del archivo, que empieza sola el jueves 22/10 a los :12 (regla 212, `docs/flujos/REVISION-DEL-ARCHIVO.md`; para frenarla, la variable `REVISION_DEL_ARCHIVO` en "no"); borrar en la PC `panel/datos/` y `respaldos/` (tienen claves) y dar de baja Tailscale; borrar el Worker `radar-balcarce-sondeo-fuentes` y el secreto `SONDEO_TOKEN`; revisar el aviso de cambio de contraseña de Instagram en el Gmail del medio y activar la verificación en dos pasos en Google, Meta, GitHub y Cloudflare.
 
-**Lo que mira Claude en los próximos días:** las uniones de repetidas en el registro de "Actualizar la web" (deshacer una mala: borrar su renglón de `fusionadas.json`); que la temperatura 0,3 de la redacción no aumente las copias (medir con `reels/comparar-instruccion.mjs`); que el reloj dispare Auditoría IA y Pistas; las primeras métricas de historias de Facebook (API v25).
+**Lo que mira Claude en los próximos días:** desde el 22/10, las tandas de «Revisar el archivo» (lo que retira, une y saca: que no se equivoque; los números en `web/data/revision-archivo.json` y en el informe diario); las uniones de repetidas en el registro de "Actualizar la web" (deshacer una mala: borrar su renglón de `fusionadas.json`); que la temperatura 0,3 de la redacción no aumente las copias (medir con `reels/comparar-instruccion.mjs`); que el reloj dispare Auditoría IA y Pistas; las primeras métricas de historias de Facebook (API v25).
 
 **Quedó sacado y se rehace cuando lo pidan:** el prototipo de audio en la página (los podcasts para escuchar desde la nota); el panel nuevo del celular se hace de cero.
 

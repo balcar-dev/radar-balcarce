@@ -287,7 +287,9 @@ async function cargar({ archivo = false } = {}) {
 async function cargarRevision() {
   try {
     const j = await leerSiHay(E.cliente, ARCHIVOS.auditoria, null);
-    const sobres = j?.sobres ?? {};
+    // Y lo que dejó para una persona la revisión del archivo entero (regla 212): los mismos sobres, de notas viejas.
+    const r = await leerSiHay(E.cliente, ARCHIVOS.revisionArchivo, null).catch(() => null);
+    const sobres = { ...(r?.sobres ?? {}), ...(j?.sobres ?? {}) };
     const ids = Object.keys(sobres);
     const abiertos = (await Promise.all(ids.map(async (id) => { const e = await abrir(sobres[id], E.llaves); return e ? { id, ...e } : null; }))).filter(Boolean);
     // Lo que corrigió sola (ortografía chica y segura, 2/10): es público y no se cifra; sólo los últimos días.

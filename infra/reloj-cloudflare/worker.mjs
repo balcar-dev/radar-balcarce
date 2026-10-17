@@ -24,6 +24,9 @@ export const RAMA = 'main';
  *  - :41 de 7 a 23 de Balcarce → "Auditoría IA" (antes con el horario de GitHub, que la corría una de cada cuatro horas). De noche no
  *    hace falta: la de las 7:41 lee lo que entró mientras tanto.
  *  - :23 cada 3 horas (las mismas que tenía en GitHub: 21:23, 0:23, 3:23… de Balcarce) → "Pistas" (antes con el horario de GitHub).
+ *  - :12 de las horas UTC impares (22:12, 0:12, 2:12… 20:12 de Balcarce), día y noche → "Revisar el archivo" (regla 212): una tanda chica
+ *    cada 2 horas, lejos de los :00/:30 de "Actualizar la web" (que a los :12 ya terminó) y de los demás. Antes del 22/10/2026 el script no
+ *    hace nada (avisa y termina en segundos).
  * Sin la hora UTC (el segundo parámetro) sólo se pide "Actualizar la web": lo demás depende de la hora.
  */
 const DE_7_A_23_UTC = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 0, 1, 2];
@@ -34,6 +37,8 @@ export const HORAS_VIGILANCIA_UTC = [0, 3, 6, 9, 12, 15, 18, 21];
 export const REINTENTOS_VIGILANCIA_UTC = [12, 0, 3];
 export const HORAS_PISTAS_UTC = [0, 3, 6, 9, 12, 15, 18, 21];
 export const HORAS_ILUSTRAR_UTC = [10, 12, 14, 16, 18, 20, 22, 0, 2];
+/** "Revisar el archivo" (regla 212): a los :12 de las horas UTC impares, 12 tandas por día. */
+export const HORAS_REVISION_UTC = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23];
 
 /** La hora de Balcarce (0 a 23) de una hora UTC. */
 export const horaDeBalcarce = (horaUtc) => (Number(horaUtc) + 21) % 24;
@@ -62,6 +67,7 @@ export function trabajosDelMinuto(minuto, horaUtc = null) {
   if (m === 20 && conHora && HORAS_ILUSTRAR_UTC.includes(h)) lista.push({ archivo: 'ilustrar-notas.yml', inputs: { automatico: 'true' } });
   if (m === 23 && conHora && HORAS_PISTAS_UTC.includes(h)) lista.push({ archivo: 'pistas.yml' });
   if (m === 41 && conHora && HORAS_AUDITORIA_IA_UTC.includes(h)) lista.push({ archivo: 'auditoria-ia.yml' });
+  if (m === 12 && conHora && HORAS_REVISION_UTC.includes(h)) lista.push({ archivo: 'revisar-archivo.yml' });
   return lista;
 }
 

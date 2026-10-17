@@ -42,8 +42,8 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 212: del 189 al 210 son los arreglos de Radar 2.0 del 17/10, por tandas y con huecos;
-la 211, las fotos con chicos de las fuentes de Balcarce.)
+próxima regla es la 213: del 189 al 210 son los arreglos de Radar 2.0 del 17/10, por tandas y con huecos;
+la 211, las fotos con chicos de las fuentes de Balcarce, y la 212, la revisión del archivo entero por tandas.)
 
 - **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Una prueba lo
   vigila (sigue los imports en cadena).
@@ -95,7 +95,9 @@ la 211, las fotos con chicos de las fuentes de Balcarce.)
 - **Los archivos que escribe una persona**: `web/data/celular-decisiones.json` y
   `web/data/correcciones.json` (los escribe el celular; ningún workflow los toca) y
   `web/data/retiradas.json` (a mano; los lunes "Actualizar la web" le saca las de más de
-  7 días). Siempre con `motivo`, `cuando` y `por`: sin eso la web falla y se congela.
+  7 días). Siempre con `motivo`, `cuando` y `por`: sin eso la web falla y se congela. Lo que
+  retira la revisión del archivo (regla 212) va aparte, en `web/data/revision-archivo.json`, que
+  escribe sólo su workflow y no se poda: cuenta igual que lo retirado a mano.
 - **Las ventanas de tiempo**: la portada muestra **36 horas** (`HORAS_EN_PORTADA`; las secciones
   guardan todo, 10 por página); lo que nunca salió no se estrena si el hecho tiene más de **12**;
   la página dura 180 días en teoría, pero el tope es de 3.700 notas (a ~46 por día, unos 80 días: medido el 15/10, 15.900 archivos de los 20.000 de Cloudflare); lo raspado de más de 72 horas no entra. Los
@@ -179,7 +181,8 @@ la 211, las fotos con chicos de las fuentes de Balcarce.)
 | Sacar o corregir una nota sin el celular | `web/data/retiradas.json` / `web/data/correcciones.json` (motivo, cuándo y quién) |
 | Sacar de la agenda un evento suspendido que el municipio sigue teniendo | `web/data/agenda-suspendidos.json` (`id`, motivo, cuándo y quién; regla 163) |
 | Las estadísticas (pestaña Números del panel del celular) | `redes/estadisticas.mjs` (mide) y `redes/estadisticas-detalle.mjs` (el detalle diario de Cloudflare: horas, notas, de dónde llegan, aparatos, países → `web/data/estadisticas.json`), `web/public/panel/numeros.js` (lo que se muestra) |
-| La auditoría con IA de lo ya publicado (pestaña Revisión del panel; avisa y corrige sola sólo la ortografía chica y segura, regla 98) | `ingesta/auditoria-ia.mjs` (qué lee, qué busca y `cambioMecanico`), `redes/auditar-notas.mjs`, `.github/workflows/auditoria-ia.yml`, `web/public/panel/revision.js`, `web/data/correcciones-auditoria.json` (lo escribe sólo la auditoría), `conCambiosDeLaAuditoria` (`web/lib/archivo.js`) |
+| La auditoría con IA de lo ya publicado (pestaña Revisión del panel; avisa y corrige sola sólo la ortografía chica y segura, regla 98) | `ingesta/auditoria-ia.mjs` (qué lee, qué busca y `cambioMecanico`), `redes/auditar-notas.mjs`, `.github/workflows/auditoria-ia.yml`, `web/public/panel/revision.js`, `web/data/correcciones-auditoria.json` (lo escriben la auditoría y la revisión del archivo), `conCambiosDeLaAuditoria` (`web/lib/archivo.js`; desde el 17/10 también sobre las notas viejas del archivo) |
+| La revisión del archivo entero, por tandas, con el criterio de hoy (desde el 22/10/2026, cada 2 h a los :12 por el reloj de Cloudflare: retira lo que hoy no saldría, une repetidas, saca fotos que no pasan, corrige lo seguro y deja lo dudoso para una persona; regla 212) | `web/scripts/revisar-archivo.mjs` (`REVISION`: tandas, cupo, versión del criterio y `desde`; `simular` sin IA), `.github/workflows/revisar-archivo.yml`, `web/data/revision-archivo.json` (lo escribe sólo ese workflow; su lista `retiradas` no se poda), `web/lib/revision-archivo.js` (lo que leen generar-datos, «Ilustrar notas sin foto» y el informe diario), variable `REVISION_DEL_ARCHIVO` ("no" la frena); `docs/flujos/REVISION-DEL-ARCHIVO.md` |
 | Las notas sin foto del panel (pestaña Fotos: por qué, dónde buscarla y sumarla a mano) | `web/public/panel/fotos.js`, `web/scripts/foto-manual.mjs`, `web/data/fotos-manuales.json` (lo escribe sólo "Panel del celular"), `accion=foto` de `panel.yml` |
 | Los contactos del celular (instituciones y propios, a quién se le escribió; cifrado) | `web/public/panel/contactos.js`, `web/public/panel/cifrado.js` (`cerrar`), `web/data/contactos-celular.json`, `ingesta/contactos-agenda.json` (público) |
 | Las pistas del panel (pegar un tuit o un enlace; quedan abiertas, se vuelven a mirar cada 3 horas y se sigue en qué quedó cada una) | `ingesta/pistas.mjs`, `panel/pistas-libro.mjs`, `panel/revisar-pistas.mjs`, `.github/workflows/pistas.yml`, `web/data/pistas.json`, `web/public/panel/pistas.js`, `panel/celular.mjs` (acciones `pista` y `nota-pista`) |

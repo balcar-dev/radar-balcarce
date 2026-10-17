@@ -122,6 +122,7 @@ cómo funciona algo que ya anda), **para decidir** (propuesta o página con caja
 | `docs/flujo/REPETIDAS-2-0.md` | Lo de acá que no sale repetido (memoria de acá, huella de significado, parejas entre secciones, tope repartido) y la fecha que no envejece por una nota vieja pegada (reglas 193 a 196), con la medición; `scripts/medir/repetidas-2-0.mjs` la repite | vigente |
 | `docs/flujos/NOTA-DESDE-MAIL.md` | Los pasos para armar una nota desde un mail de prensa | vigente (lo sigue Claude) |
 | `docs/flujos/IMAGENES-CON-GEMINI-WEB.md` | El flujo de ilustrar con Gemini web: desactivado el 17/10/2026 (regla 206), por qué y qué hay que apagar | desactivado |
+| `docs/flujos/REVISION-DEL-ARCHIVO.md` | La revisión del archivo entero por tandas, con el criterio de hoy, desde el 22/10/2026 (regla 212): qué mira, qué hace, el cupo, la simulación | vigente |
 | `docs/secciones/MAPA-DE-SECCIONES.md` (y `.html`) | De 11 a 17 secciones: el mapa propuesto, con el clasificador nuevo en sombra (`ingesta/secciones-nuevas.mjs`) | para decidir |
 | `docs/secciones/PROTOTIPO-MENU.html` | El menú y la portada con 17 secciones, dibujados | para decidir (cambio visible) |
 | `docs/panel/PLAN-NUEVO-PANEL.md` y `PROTOTIPO-PANEL.html` | Auditoría del panel del celular, diseño del nuevo y prototipo para tocar | para decidir |
