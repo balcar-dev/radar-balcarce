@@ -358,7 +358,8 @@ for (const [nombre, casos] of Object.entries({
       assert.deepEqual(leyoDeMas, [], `lee sin declarar (agregar a «lee» de ${nombre}): ${leyoDeMas.join(', ')}`);
       // Lo que lee del repositorio por la ruta de su propio archivo (no por RADAR_RAIZ) en un Worker cae en la carpeta de trabajo (el [define] de import.meta.dirname):
       // sirve si es de web/data/ o reels/fijas/ y está declarado.
-      const delRepoSinDeclarar = r.delRepo.filter((x) => !d.lee.has(x));
+      // El `.env` (donde una persona guarda claves en su PC) lo prueba `leerVariable` y, si no está, sigue con el entorno: en un Worker no existe y no pasa nada.
+      const delRepoSinDeclarar = r.delRepo.filter((x) => !d.lee.has(x) && x !== '.env');
       assert.deepEqual(delRepoSinDeclarar, [], `lee archivos del repositorio que un Worker no tiene (hay que llevarlos a «lee» o empaquetarlos): ${delRepoSinDeclarar.join(', ')}`);
       const escribioDeMas = r.escritos.filter((x) => !d.escribe.has(x) && !IGNORADOS.some((re) => re.test(x)));
       assert.deepEqual(escribioDeMas, [], `escribe sin declarar (agregar a «escribe» de ${nombre}): ${escribioDeMas.join(', ')}`);

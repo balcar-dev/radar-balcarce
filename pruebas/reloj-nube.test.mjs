@@ -20,6 +20,8 @@ test('NUBE: lista separada por comas o JSON, "todo", mayúsculas y basura; lo de
   // todo lo que el reloj pide en algún momento es mudable, y nada más
   const pedidos = new Set();
   for (let h = 0; h < 24; h++) for (let m = 0; m < 60; m++) for (const t of trabajosDelMinuto(m, h)) pedidos.add(t.archivo);
+  // 'revisar-archivo.yml' (la revisión del archivo, 17/10) sigue en GitHub: el reloj la pide pero todavía no se muda a la nube.
+  pedidos.delete('revisar-archivo.yml');
   assert.deepEqual([...pedidos].sort(), [...TRABAJOS_QUE_SE_PUEDEN_MUDAR].sort());
   assert.equal(MOTOR, 'actualizar.yml');
   assert.equal(Object.keys(TAREA_DE).length, 6);
