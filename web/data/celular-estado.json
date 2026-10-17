@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T20:02:50.643Z",
+ "generado": "2026-10-17T20:31:53.936Z",
  "portada": 84,
- "archivo": 1244,
+ "archivo": 1245,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-17T20:02:50.859Z",
+  "generado": "2026-10-17T20:31:54.236Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -54,7 +54,7 @@
     "voz": "locutor",
     "ventana": 60,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-17T20:06:58.325Z"
    },
    {
     "nombre": "farmacia",
@@ -185,12 +185,6 @@
     }
    ],
    "cola": [
-    {
-     "id": "u6k0o2",
-     "titulo": "Emiliano Martínez sufre fractura de mandíbula y será operado",
-     "seccion": "Fútbol",
-     "marcada": false
-    },
     {
      "id": "quke5a",
      "titulo": "Atlético de Madrid derrota al Espanyol con un tanto agónico",

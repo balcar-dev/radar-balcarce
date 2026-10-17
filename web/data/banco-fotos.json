@@ -19361,7 +19361,8 @@
    "corresponde": "si",
    "descripcion": "Asistencia médica a Emiliano Martínez tendido en el césped."
   },
-  "huella": "2e1830b418126124"
+  "huella": "2e1830b418126124",
+  "ausenteDesde": "2026-10-17T20:31:53.923Z"
  },
  "1cgklh9": {
   "archivo": "fotos-notas/1cgklh9.jpg",
@@ -19431,5 +19432,53 @@
   "cuando": "2026-10-17T20:02:14.217Z",
   "intentos": 1,
   "fuentes": 3
+ },
+ "12dkxub": {
+  "archivo": "fotos-notas/12dkxub.jpg",
+  "medio": "Página/12",
+  "credito": "Foto: Página/12",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Cristina Kirchner saluda a la militancia desde su domicilio",
+  "enlace": "https://www.pagina12.com.ar/2026/10/17/el-dia-de-la-lealtad-siguio-con-un-asado-para-cristina-kirchner-en-la-puerta-de-su-casa/",
+  "imagenOriginal": "https://www.pagina12.com.ar/resizer/v2/ZNV6YJ4TBBFZZFUAGYILAOUX4U.JPEG?smart=true&auth=7d54a7b6a7cced03d66919e86967ed11d9198a24077b6ec75b38ccfdcd187b1a&width=1200&height=630",
+  "razon": "Es la foto con mejor encuadre, nitidez y calidad de imagen, mostrando claramente a Cristina Kirchner saludando desde el balcón sin marcas añadidas ni otros inconvenientes.",
+  "cuando": "2026-10-17T20:31:41.422Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Cristina Kirchner saluda desde el balcón de su domicilio."
+  },
+  "huella": "3171737373f3f3f3"
+ },
+ "4tx679": {
+  "archivo": "fotos-notas/4tx679.jpg",
+  "medio": "Perfil",
+  "credito": "Foto: Perfil",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Máximo Kirchner pide una alternativa política en Chaco",
+  "enlace": "https://www.perfil.com/noticias/politica/maximo-kirchner-con-capitanich-en-chaco-hay-que-organizar-una-propuesta-politica-alternativa-a-milei.phtml",
+  "imagenOriginal": "https://fotos.perfil.com/2026/10/17/trim/1140/641/maximo-kirchner-y-capitanich-en-el-acto-por-el-dia-de-la-lealtad-del-pj-chaqueno-2350621.jpg",
+  "razon": "Es la única foto válida que muestra claramente el hecho sin marcas añadidas, menores reconocibles ni problemas de calidad.",
+  "cuando": "2026-10-17T20:31:41.422Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Máximo Kirchner saludando junto a otra persona en un escenario con bandera argentina."
+  },
+  "huella": "0e26161616975e49"
  }
 }
