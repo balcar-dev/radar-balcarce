@@ -131,7 +131,7 @@ tamaño real; los feeds salen como `application/rss+xml` (`pruebas/rss.test.mjs`
 
 ### Lo que se dejó hecho: el generador (sin conectar)
 
-`web/scripts/podcast-feed.mjs` (pruebas: `pruebas/podcast-feed.test.mjs`, 9 pruebas). **Ningún workflow ni página lo usa** (una prueba lo
+`web/scripts/podcast-feed.mjs` (pruebas: `pruebas/podcast-feed.test.mjs`, 9 pruebas; **los dos se borraron el 17/10** porque nada los usaba: quedan en el historial de git). **Ningún workflow ni página lo usaba** (una prueba lo
 vigila: si se conecta, esa prueba se cambia a propósito).
 
 - Entrada: el **manifiesto de audios** `web/data/podcast-audios.json` (todavía no existe: lo escribirá el paso que suba cada mp3) y las

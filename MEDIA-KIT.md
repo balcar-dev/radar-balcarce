@@ -113,7 +113,7 @@ navegador ya consultó la fuente).
 |---|---|
 | La web | Google Fonts, pedidas en `web/app/layout.js` (Source Serif 4 de 600 a 900 e Inter de 400 a 700, con tamaño óptico). Servirlas desde el propio sitio, para que Google no vea la IP de cada lector, está en `PENDIENTES.md` (A9) |
 | Las placas, el avatar, la portada de Facebook, las tarjetas para compartir y el espejo de Instagram | `reels/marca/fuentes/`: `SourceSerif4-700.ttf` y `-900.ttf` (el corte de 60 puntos) e `Inter-400.ttf` a `Inter-700.ttf`. Las tarjetas (`web/lib/tarjeta.js`) las leen de ahí desde el 29/09: la copia que había en `web/fuentes/` se borró y una prueba cuida que no vuelva |
-| El panel de la PC, la vista de la guía comercial y la vista previa de la ingesta | Google Fonts (`panel/panel.html`, `panel/acceso.mjs`, `comercial/vista.plantilla.html`, `ingesta/ingesta.mjs`) |
+| La vista de la guía comercial y la vista previa de la ingesta | Google Fonts (`comercial/vista.plantilla.html`, `ingesta/ingesta.mjs`) |
 | El panel del celular | Las letras del sistema del teléfono: no pide nada afuera de GitHub |
 
 ## Los íconos

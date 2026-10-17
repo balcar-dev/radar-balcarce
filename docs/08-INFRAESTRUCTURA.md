@@ -5,7 +5,7 @@ nombres de secretos y variables cargados en GitHub ese día; el 15/10 el reposit
 `radarbalcarce/radar-balcarce` y el reloj pasó a Cloudflare). Si algo de acá no coincide con los `.yml` o con el
 código, mandan ellos.* Los secretos figuran **sólo por nombre**: sus valores no
 se escriben en ningún documento ni se pegan en un chat. Qué se publica en las
-redes: [`07-REDES.md`](07-REDES.md); los paneles: [`09-PANEL.md`](09-PANEL.md);
+redes: [`07-REDES.md`](07-REDES.md); el panel del celular: [`09-PANEL.md`](09-PANEL.md);
 qué hacer cuando algo falla: [`11-OPERACION.md`](11-OPERACION.md); cómo se arma
 la web: `06-WEB`.
 
@@ -62,8 +62,10 @@ Workers de Cloudflare (cuenta radarbalcarce@gmail.com, plan Workers Paid):
 Panel del celular (radarbalcarce.com/panel/) ── llave de GitHub ──▶ API de GitHub
    lee web/data/, escribe sus decisiones y correcciones, dispara
    "Panel del celular", "Pistas" y "Actualizar la web"
-PC de Hernán: el panel de la PC (puerto 4321) — en desuso desde el 8/10
 ```
+
+El panel de la PC (puerto 4321) se retiró el 17/10/2026: nunca se usó; queda en el
+historial de git.
 
 ## El recorrido, paso a paso (una media hora cualquiera)
 
@@ -197,9 +199,7 @@ Detalles que importan:
 - **El panel del celular** escribe por la API de GitHub archivos que ningún
   workflow toca (`celular-decisiones.json`, `correcciones.json`,
   `celular-llaves.json`); si alguien cambió el archivo en el medio, lo vuelve a
-  leer y reintenta. **El de la PC** (en desuso desde el 8/10) subía
-  `decisiones.json`, `avisos.json` y `eventos-panel.json` con
-  `pull --rebase --autostash` (`09-PANEL`).
+  leer y reintenta. `avisos.json` (la publicidad) se sube a mano, con commit.
 
 ## El reloj de Cloudflare: el despertador (desde el 15/10/2026)
 
@@ -365,13 +365,12 @@ nunca se usó y se borró el 17/10.
   colaboradores: `balcardev`, Andrés (`agerace`) y Hernán
   (`hernanaccomo-pixel`). Hasta el 15/10/2026 fue `balcar-dev/radar-balcarce`
   (cuenta `balcardev@gmail.com`); GitHub redirige la dirección vieja, pero lo que
-  figure en los workflows, los paneles y los tokens tiene que usar la nueva.
+  figure en los workflows, el panel del celular y los tokens tiene que usar la nueva.
   **Sigue siendo público**, desde el 25/09 (los públicos no pagan minutos de
   Actions; se revisó el historial y no hay claves): **pasarlo a privado costaría
   minutos de Actions**, y no conviene mientras el robot siga corriendo en
   Actions. **Hay que mantenerlo público** hasta que eso cambie. **Nada sensible va al repositorio sin cifrar**: ni claves, ni
-  datos de personas (el panel de la PC guarda los suyos en `panel/datos/`, que
-  no se sube), y lo que espera a una persona viaja cifrado para el panel del
+  datos de personas, y lo que espera a una persona viaja cifrado para el panel del
   celular (regla 79).
 - El panel del celular escribe con la **llave de GitHub** de cada persona (de
   grano fino: sólo este repositorio, Contents y Actions de lectura y
@@ -525,7 +524,7 @@ encabezado `Authorization` de sus trabajos) y, en la PC, el `.env`.
 | Groq (console.groq.com) | La clave de respaldo de la lectura | `radarbalcarce@gmail.com` |
 | Google Search Console | Indexación; propiedad de dominio, con los dos sitemaps enviados (`SEO.md`) | `radarbalcarce@gmail.com` |
 | DonWeb | El registro del dominio (el DNS está en Cloudflare) | — |
-| Tailscale | El túnel que deja entrar al panel de la PC desde afuera (con el panel del celular ya no hace falta; `09-PANEL`) | `radarbalcarce@gmail.com` |
+| Tailscale | **Para dar de baja**: era el túnel para entrar al panel de la PC desde afuera, y ese panel se retiró el 17/10/2026. Ya no lo usa nada | `radarbalcarce@gmail.com` |
 | Tavily | La búsqueda con texto de las Pistas (`TAVILY_API_KEY`) | — |
 | GitLab | El espejo del respaldo: **todavía no hay cuenta ni proyecto** (faltan `GITLAB_TOKEN` y `GITLAB_REPO`) | — |
 | Vercel | Apagado; falta borrar el proyecto | `radarbalcarce@gmail.com` |
@@ -571,8 +570,8 @@ para cuando el robot se mude, US$ 5 a 8 por mes, está en
 
 ### Los minutos de GitHub (17/10/2026)
 
-Medido con las 4.427 corridas del 1 al 15/10 (`docs/etapa-10-operacion/runs-14d.ndjson`)
-y proyectado a 30 días con los cambios del 17/10. "Fact." = como cobraría GitHub en un
+Medido con las 4.427 corridas del 1 al 15/10 (la planilla, `runs-14d.ndjson`, se borró el 17/10;
+queda en el historial de git) y proyectado a 30 días con los cambios del 17/10. "Fact." = como cobraría GitHub en un
 repositorio privado, redondeando cada corrida al minuto.
 
 | Workflow | Antes (1-15/10): corridas/día · reales · fact. por mes | Desde el 17/10 [estimado] |
@@ -691,4 +690,4 @@ límite de gasto en Google (`PENDIENTES.md`).
 | **La auditoría semanal no corre** | `auditoria-vencida` si `web/data/auditoria.json` tiene más de 10 días (si el archivo faltara, no avisaría) | Correrla a mano (Actions → Auditoría → Run workflow) |
 | **Se vence un token, el dominio o una voz** | Aviso 30 días antes | Ver "Vencimientos" |
 | **El archivo permanente no corre** | Aviso `archivo-r2-…`; en "Actualizar la web", el paso "Archivar las notas por salir (R2)" en rojo (no frena el despliegue) y un mail | Leer ese paso (casi siempre el token de Cloudflare). Las notas tienen unos días de margen antes de salir del sitio |
-| **La PC está apagada** | Sólo deja de andar el panel de la PC (en desuso) y las ilustraciones con Gemini web de las 10:00 y 18:00 (las automáticas de Cloudflare siguen) | Nada se rompe: la web, las redes, la vigilancia y el panel del celular siguen |
+| **La PC está apagada** | Nada automático depende de la PC: el panel de la PC se retiró el 17/10/2026 y las ilustraciones con Gemini web de la tarea programada de la PC se desactivaron ese día (regla 206; las automáticas de Cloudflare siguen) | Nada se rompe: la web, las redes, la vigilancia y el panel del celular siguen |

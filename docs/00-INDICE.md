@@ -1,6 +1,6 @@
 # 00 · Índice: Radar Balcarce de punta a punta
 
-*Actualizado el 16/10/2026. Es la puerta de entrada a la documentación: qué es el
+*Actualizado el 17/10/2026. Es la puerta de entrada a la documentación: qué es el
 proyecto, por dónde pasa una noticia y qué documento cuenta cada cosa. Si un
 documento y el código no coinciden, manda el código.*
 
@@ -24,8 +24,8 @@ sobra: `docs/COMO-FUNCIONA-HOY.html`.**
 **Todo eso corre en GitHub y en Cloudflare, con la PC apagada** (el reloj, el
 vigilante y los mails viven en Cloudflare; el trabajo pesado, en GitHub Actions). Lo que el sistema no puede
 decidir solo lo deciden Hernán y Andrés desde el **panel del celular**
-(`radarbalcarce.com/panel/`); el panel de la PC quedó en desuso desde el 8/10
-(nunca se usó; se decide si se retira).
+(`radarbalcarce.com/panel/`); el panel de la PC, que nunca se usó, se retiró el
+17/10.
 
 **Desde el 15/10/2026 se rediseña todo desde cero, una etapa por vez** (fuentes →
 entrada → duplicadas → clasificación → puntaje → contexto → redacción y verificación →
@@ -67,11 +67,11 @@ Un dato vive en **un** lugar; los demás documentos remiten a ése.
 | El criterio editorial (qué se publica, cómo se escribe, fuentes, verificación, firma) | `CRITERIO-EDITORIAL.md` | La IA lee su § 12 tal cual (`ingesta/prompt-editorial.mjs`); `pruebas/criterio.test.mjs` |
 | Los números del criterio (largos, topes, medios, cupos, horas, contrato) | `ingesta/criterio.mjs` **y** la tabla de `CRITERIO-EDITORIAL.md` § 11 | `pruebas/criterio.test.mjs` controla que digan lo mismo |
 | Cómo suenan y qué dicen las piezas de redes | `CRITERIO-REDES.md` | `redes/prompt-redes.mjs` lo lee tal cual; `pruebas/redes-criterio.test.mjs` |
-| Los horarios de las piezas | `docs/07-REDES.md` (el código: `redes/piezas.mjs`, `panel/horarios.mjs`) | `pruebas/piezas.test.mjs` |
+| Los horarios de las piezas | `docs/07-REDES.md` (el código: `redes/piezas.mjs`, `redes/horarios.mjs`) | `pruebas/piezas.test.mjs` |
 | Las fuentes | `ingesta/fuentes.mjs` y `ingesta/fuentes-cruce.mjs`; `FUENTES.md` es el registro **generado** | `pruebas/fuentes-registro.test.mjs` |
 | Lo que la IA sabe de Balcarce | `ingesta/perfil-balcarce.md` (sólo datos seguros) | Lo lee `ingesta/lectura-ia.mjs` |
 | Las claves de IA, los secretos, los workflows, los costos y los vencimientos | `docs/08-INFRAESTRUCTURA.md` | — |
-| Los dos paneles (el del celular y el de la PC) | `docs/09-PANEL.md` | — |
+| El panel del celular | `docs/09-PANEL.md` | — |
 | Las reglas numeradas y la prueba que cuida cada una | `docs/10-REGLAS-Y-PRUEBAS.md` | Las pruebas de `pruebas/` |
 | El uso diario (corregir, retirar, instalar el panel del celular, qué mirar si algo no sale) | `docs/11-OPERACION.md` | — |
 | La identidad visual (colores, letras, íconos, plantillas) | `MEDIA-KIT.md` | `pruebas/titulos-colores.test.mjs`, `pruebas/tipografia.test.mjs` |
@@ -96,7 +96,7 @@ Un dato vive en **un** lugar; los demás documentos remiten a ése.
 | `docs/06-WEB.md` | Cómo se arma el sitio: `generar-datos.mjs` paso a paso, los archivos de `web/data/`, la tapa, las páginas, cuánto dura la página de una nota (tope de 3.700), la dirección fija, las repetidas, las notas propias, el SEO y el diseño |
 | `docs/07-REDES.md` | Facebook e Instagram: el interruptor, los posteos y el espejo, el reloj, las piezas, los podcasts, el contrato del día, el libro, la conexión con Meta y las auditorías |
 | `docs/08-INFRAESTRUCTURA.md` | Qué corre dónde: los workflows, el reloj (Worker de Cloudflare), Cloudflare, GitHub, las claves de IA y sus topes, los secretos por nombre, la vigilancia, los vencimientos y lo que cuesta |
-| `docs/09-PANEL.md` | Los dos paneles: el del celular (el de todos los días) y el de la PC (en desuso): qué muestra cada uno, qué pasa cuando alguien decide y cómo llega a la web |
+| `docs/09-PANEL.md` | El panel del celular: qué muestra, qué pasa cuando alguien decide y cómo llega a la web (el de la PC se retiró el 17/10) |
 | `docs/13-EFEMERIDES.md` | "Un día como hoy" y los feriados: la base mensual de candidatas, la pestaña Fechas del panel y cómo se afina el criterio con lo que se elige |
 | `docs/10-REGLAS-Y-PRUEBAS.md` | **Las reglas numeradas**, qué prueba cuida cada una, el mapa de `pruebas/` y la regla de la prueba después del error |
 | `docs/11-OPERACION.md` | El manual de uso diario: los enlaces, corregir, retirar, escribir cuerpos, el panel del celular, prender o apagar las redes, qué mirar cuando algo deja de salir |
@@ -105,7 +105,6 @@ Un dato vive en **un** lugar; los demás documentos remiten a ése.
 | `docs/efemerides-octubre-para-revisar.md` | Las efemérides de octubre para aprobar; se archiva después del 31/10 |
 | `docs/COMO-FUNCIONA-HOY.html` | **Cómo funciona hoy, de punta a punta** (16/10): diagrama, quién corre y cuándo, fuentes, la nota por dentro, redes, mails, panel, archivo y respaldos, costos reales, qué pasa si algo falla, lo que existe y no se usa, y las pruebas que sobran. Para leer en el celular |
 | `docs/COMO-SE-ELIGE-UNA-NOTA.html` | Desde el feed hasta la nota (15/10): filtros, puntaje, semáforo, cruce y repetidas, explicados con ejemplos. *No incluye el cruce coherente ni la regla 180 del 16/10* |
-| `docs/ESTADO-DE-LAS-MEJORAS.md` (y `.html`) | Las 144 recomendaciones de las auditorías del 15/10 y en qué estado estaba cada una el 16/10 a la mañana (hecho, a medias, pendiente, decisión). Es una foto de ese momento |
 
 ### Nuevos del 15 y 16/10: análisis, propuestas y flujos
 
@@ -116,20 +115,22 @@ cómo funciona algo que ya anda), **para decidir** (propuesta o página con caja
 | Documento | Qué cuenta | Estado |
 |---|---|---|
 | `docs/flujo/GUIA-DEL-FLUJO.html` | Los trece pasos que hace el sistema con cada noticia, con un ejemplo real, los números y los prompts tal cual | vigente (16/10), para revisar juntos |
-| `docs/flujo/FLUJO-NUEVO.html` | El flujo nuevo pedido por Hernán: todo lo de Balcarce sale, lo nacional con 3 medios, tope de 150 por día | para decidir (sin conectar) |
-| `docs/flujo/FLUJO-NUEVO-SIMULACION.html` | La simulación del flujo nuevo con la corrida real del 16/10 | para decidir |
+| `docs/flujo/FLUJO-NUEVO.html` | El flujo nuevo pedido por Hernán: todo lo de Balcarce sale, lo nacional con 3 medios, tope de 150 por día | para decidir (lo de Balcarce y lo muy contado entró con las reglas 197 a 202; la selección en sombra que lo simulaba se borró el 17/10) |
+| `docs/flujo/FLUJO-NUEVO-SIMULACION.html` | La simulación del flujo nuevo con la corrida real del 16/10 | foto del 16/10 |
 | `docs/flujo/INFORME-DE-HOY.html` | Cómo llegó la información el 16/10, cómo anduvo cada fuente y cómo quedarían las secciones; diez preguntas (se rehace con `scripts/medir/informe-del-dia.mjs`) | para decidir |
 | `docs/flujo/CRUCE-COHERENTE.md` | El cruce que ya no encadena noticias distintas (regla 184, interruptor `CRUCE_COHERENTE`) y cómo se midió | vigente |
-| `docs/flujo/REPETIDAS-2-0.md` | Lo de acá que no sale repetido (memoria de acá, huella de significado, parejas entre secciones, tope repartido) y la fecha que no envejece por una nota vieja pegada (reglas 193 a 196), con la medición; `medir-repetidas-2-0.mjs` la repite | vigente |
+| `docs/flujo/REPETIDAS-2-0.md` | Lo de acá que no sale repetido (memoria de acá, huella de significado, parejas entre secciones, tope repartido) y la fecha que no envejece por una nota vieja pegada (reglas 193 a 196), con la medición; `scripts/medir/repetidas-2-0.mjs` la repite | vigente |
 | `docs/flujos/NOTA-DESDE-MAIL.md` | Los pasos para armar una nota desde un mail de prensa | vigente (lo sigue Claude) |
 | `docs/flujos/IMAGENES-CON-GEMINI-WEB.md` | El flujo de ilustrar con Gemini web: desactivado el 17/10/2026 (regla 206), por qué y qué hay que apagar | desactivado |
 | `docs/secciones/MAPA-DE-SECCIONES.md` (y `.html`) | De 11 a 17 secciones: el mapa propuesto, con el clasificador nuevo en sombra (`ingesta/secciones-nuevas.mjs`) | para decidir |
 | `docs/secciones/PROTOTIPO-MENU.html` | El menú y la portada con 17 secciones, dibujados | para decidir (cambio visible) |
 | `docs/panel/PLAN-NUEVO-PANEL.md` y `PROTOTIPO-PANEL.html` | Auditoría del panel del celular, diseño del nuevo y prototipo para tocar | para decidir |
+| `docs/auditoria-2-0/` (01 a 09 y `RADAR-2-0.html`) | La auditoría para Radar 2.0 del 16 y 17/10: armado e infraestructura, fuentes y repetidas, fotos, IA y modelos, módulos y redes, prompts, medios parecidos, ideas de otras IA y el orden de las claves | vigente (la base del rediseño) |
+| `docs/diseno/COMPARACION.html` (y `DIRECCION-A`, `DIRECCION-B`) | Dos direcciones para el rediseño del sitio | para decidir (cambio visible) |
+| `docs/secciones/MINI-PORTALES.html` | Mini portales por tema | para decidir |
 | `docs/seo/AUDITORIA-SEO-LLM.md` | SEO y asistentes de IA: estado real, problemas, plan, política de bots, `llms.txt`, servidor MCP | vigente (16/10) |
 | `docs/seo/AUDITORIA-FEEDS.md` | Si los feeds RSS de texto y de audio están bien armados | foto del 15/10 |
 | `docs/seo/SEARCH-CONSOLE-16-10.md` | Lo que dice Google: 1.085 páginas indexadas, 813 impresiones y 46 clics en 3 semanas | foto del 16/10 |
-| `docs/historico/AUDITORIA-FOTOS-15-10.md` | Cuántas notas salían sin foto y por qué (88 % con foto en 14 días); la superó `docs/auditoria-2-0/03-FOTOS.md` | foto del 15/10 |
 | `docs/redes/ARCHIVO-DE-PIEZAS.md` | Dónde se guardan para siempre los videos, audios y placas (R2, depósito `radar-piezas`; la variable `R2_PIEZAS` se cargó el 15/10, aunque el documento diga «apagado») | vigente |
 | `docs/redes/PLAN-REELS-OTRAS-REDES.md` | Publicar los reels en TikTok, YouTube, etc. (el esqueleto `redes/destinos.mjs` se sacó el 17/10; queda en el historial) | para decidir |
 | `docs/redes/AUTOMATIZAR-REDES-ALTERNATIVAS.md` | Alternativas para automatizar TikTok, YouTube, X, Threads y el canal de WhatsApp | investigación (15/10) |
@@ -152,7 +153,7 @@ cómo funciona algo que ya anda), **para decidir** (propuesta o página con caja
 | `docs/criterio/PROPUESTA-EDICION-V2.md` y `PROMPT-V2-CANDIDATO.txt` | Notas que sean síntesis de todas sus fuentes; la fase 1 (entrada ampliada, regla 174) ya está hecha | a medias: el prompt candidato sin medir |
 | `docs/criterio/PESOS-Y-PUNTAJES.md` (y `.html`) | Todos los números que deciden qué sale y en qué orden, y una recalibración | para decidir |
 | `docs/criterio/BALCARCE-TODAS-LAS-NOTAS.md` | Dónde se perdían notas de Balcarce; lo aplicado es la regla 180 | vigente + propuestas |
-| `docs/auditoria-opus/ANALISIS.md` | La auditoría independiente del 15/10 (legal, operación, seguridad) | foto del 15/10 (estado de cada punto: `docs/ESTADO-DE-LAS-MEJORAS.md`) |
+| `docs/auditoria-opus/ANALISIS.md` | La auditoría independiente del 15/10 (legal, operación, seguridad) | foto del 15/10 |
 | `docs/auditoria-opus/REVISION-CODIGO-15-10.md` | Revisión de código del 15/10, 19 hallazgos | foto del 15/10 (los urgentes se arreglaron ese día) |
 | `docs/auditoria-opus/TEXTO-PARA-OTRAS-IAS.md` y `RESPUESTAS-OTRAS-IAS.md` | La consulta a otras IAs y la respuesta de ChatGPT | foto del 15/10 |
 
@@ -161,12 +162,10 @@ cómo funciona algo que ya anda), **para decidir** (propuesta o página con caja
 | Documento | Qué cuenta |
 |---|---|
 | `docs/propuestas/LEEME.md` | Qué queda en la carpeta y en qué estado está cada cosa |
-| `docs/propuestas/PASOS-PARA-USTEDES.md` | Lo que sólo una persona puede hacer (respaldo en GitLab y R2, fotos a R2). Lo nombra el workflow "Fotos a R2": no moverlo |
+| `docs/propuestas/PASOS-PARA-USTEDES.md` | Lo que sólo una persona puede hacer (respaldo en GitLab y R2, fotos a R2) |
 | `docs/propuestas/PLANTILLAS-DE-PIEZAS.md` | Las reglas y variantes de las escenas animadas (aprobadas y conectadas, regla 157) |
-| `docs/propuestas/CRONOGRAMA-REDES.md` | Qué sale en las redes y a qué hora (generado con `node redes/cronograma-semana.mjs`). **Viejo**: es la foto del 9/10; rehacerlo antes de usarlo |
-| `docs/propuestas/CLAVES-DE-IA.md` | Las claves y servicios de IA del 9/10. **Viejo**: lo vigente está en `docs/08-INFRAESTRUCTURA.md` y `reels/claves.mjs` |
 | `docs/propuestas/DISENOS-A-ARMAR.md` | Diseños de reels y web para elegir después del rediseño |
-| `docs/propuestas/material/` | Páginas y videos de ejemplo de la auditoría del 8/10. **Viejo** (maquetas de esa fecha) |
+| `docs/propuestas/EN-LOS-MEDIOS-DE-BALCARCE.md` | Dos bloques nuevos de la tapa (lo de los medios de acá que no es nota, lo muy contado del país) | para decidir |
 
 ### En la raíz
 
@@ -197,7 +196,8 @@ cómo funciona algo que ya anda), **para decidir** (propuesta o página con caja
 
 ### Históricos (`docs/historico/`, no se mantienen)
 
-Fotos de un día o de un plan: lo que dicen puede ya no valer. Nombran documentos
+Fotos de un día o de un plan: lo que dicen puede ya no valer. El 17/10 se borraron los que
+ya no citaba nada (`AUDITORIA.md`, `REDACCION-29-09.md`, `AUDITORIA-FOTOS-15-10.md` y `propuestas-2026-10/`; quedan en git). Nombran documentos
 que se retiraron el 28/09 (`REGLAS.md`, `REDES.md`, `INFRAESTRUCTURA.md`,
 `PANEL.md`, `EMPEZAR-ACA.md`, `MANUAL.md`, `docs/RADAR-3.0.md`): su contenido
 vigente está en `docs/`.
@@ -205,13 +205,12 @@ vigente está en `docs/`.
 | Documento | Qué cuenta |
 |---|---|
 | `docs/historico/HISTORIA.md` | Qué se hizo y por qué, con fecha |
-| `docs/historico/AUDITORIA.md` | La auditoría del 25/09 y qué quedó arreglado |
 | `docs/historico/INVESTIGACION-COMPETENCIA.md` | Lo que hacen los otros medios |
 | `docs/historico/CRUCE-DE-MEDIOS.md` | La medición del 27/09 que llevó al cruce de medios |
 | `docs/historico/PLAN-V2.2.md` | El plan del 27/09 para elegir mejor las notas (filtro de entrada, lectura con IA) |
+| `docs/historico/PRUEBAS-DE-MODELOS.md` | Lo que dieron los ensayos de modelos de IA del 10 al 16/10 (la carpeta `pruebas-modelos/` se borró el 17/10) |
+| `docs/historico/criterio-unico/` | El borrador del criterio único del 11/10, nunca aplicado (lo retoma `docs/auditoria-2-0/06-PROMPTS-Y-AGENTES.md`) |
 | `docs/historico/VARIANTES-29-09.md` | La medición de las reglas de la IA del 29/09 y las opciones para las redes |
-| `docs/historico/REDACCION-29-09.md` | 18 notas de la IA leídas contra sus originales: qué falla, qué se arregló y qué falta probar |
-| `docs/historico/propuestas-2026-10/` | Las listas y auditorías del 8 y 9/10 (`PRIORIDADES`, `MEJORAS`, `PLAN-INTEGRAL`, `DONDE-SEGUIMOS`, `PENDIENTES-AL-9-10`, `RESUMEN-PARA-LA-PC`, `SEMAFORO-HOY`, `PANEL-NUEVO`, `IDEAS-NUEVAS`, `MAPA-COMERCIAL-PLAN`, `registro/`) y `PENDIENTES.md` como estaba hasta el 15/10. Archivadas el 15/10/2026 |
 
 ## La historia corta
 
@@ -225,6 +224,7 @@ vigente está en `docs/`.
 | 8 y 9/10 | Auditorías; semáforo mejorado (regla 118); pantalla Hoy y Borradores en el panel del celular; escenas animadas en las piezas (regla 157) |
 | 12 a 15/10 | Decisiones del 12/10; el repositorio se muda a `radarbalcarce/radar-balcarce`, el reloj pasa al Worker de Cloudflare y empieza el rediseño desde cero (`docs/DECISIONES.md`); fuentes de 254 a unas 100; avisos por mail y vigilante en Cloudflare; respaldo en R2; en cada vuelta sólo corre el núcleo legal de las pruebas |
 | 16/10 | Cruce coherente (regla 184); todo lo de Balcarce entra (regla 180); informes por mail de las 8:15 y las 21:15; ilustraciones con IA para las notas sin foto (reglas 181, 182 y 185); archivo permanente en R2 listo sin activar (regla 183); redes sin enlaces en Instagram; propuestas del flujo nuevo y de 17 secciones para decidir |
+| 17/10 | Radar 2.0, primeras tandas (reglas 189 a 210: una sola compilación, lo de Balcarce entra todo, repetidas y fotos 2.0, cupo de voz) y la limpieza final: se retiran el panel de la PC, los ensayos en sombra, `pruebas-modelos/` y los programas de `docs/` (los que se usan, en `scripts/medir/`) |
 
 El detalle, en `docs/historico/HISTORIA.md` y en los mensajes de los commits.
 

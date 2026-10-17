@@ -1,13 +1,13 @@
 # Publicidad y monetización
 
-*Actualizado el 29/09/2026.* Cómo se piensa ganar plata sin arruinar lo que hace
+*Actualizado el 17/10/2026.* Cómo se piensa ganar plata sin arruinar lo que hace
 distinto al medio: una portada liviana, sin banners de terceros. Lo que falta
 hacer, con quién y qué urgencia, está en `PENDIENTES.md`.
 
 ## Dónde estamos
 
-- **Los tres avisos fijos de la web están armados** (panel de la PC → Avisos; el
-  del celular no los toca). **Falta el primer comercio.**
+- **Los tres avisos fijos de la web están armados** (se cargan a mano en
+  `web/data/avisos.json`; el panel del celular no los toca). **Falta el primer comercio.**
 - **Los precios no están escritos, a propósito**: hay que preguntar qué paga hoy un
   comercio de Balcarce en la radio y en los otros medios, y arrancar por debajo.
 - **Google AdSense** lo pidieron Hernán y Andrés; la cuenta no se abrió (abajo).
@@ -35,12 +35,12 @@ Maqueta en el lienzo de diseño, artboard "Dónde irían los avisos".
 - **Aviso 3** (`pie`): abajo de todo. Vale poco; sirve para regalarlo los primeros
   meses y que un comercio se anime.
 
-**Cómo se cargan:** panel de la PC → **Avisos**: comercio, texto y, si se quiere,
-un logo, por cada espacio (con el nombre vacío se borra). Se guarda en
-`web/data/avisos.json` (lo lee `web/components/avisos.js`) y el panel lo sube solo
-a GitHub (`panel/sincronizar.mjs`): en unos minutos está en la web. Requiere la PC
-prendida (`docs/09-PANEL.md`). Prueba: `pruebas/panel.test.mjs` ("son exactamente
-tres espacios, los mismos que dibuja la web").
+**Cómo se cargan:** a mano, en `web/data/avisos.json` (lo lee `web/components/avisos.js`):
+comercio, texto y, si se quiere, un logo, por cada espacio (`apertura`, `clima` o
+`pie`; con `null` el espacio no se muestra). Se edita en GitHub o lo hace Claude, y el
+commit dice quién lo cargó y cuándo; sale en la web con la vuelta siguiente de
+"Actualizar la web" (`docs/11-OPERACION.md`). Hasta el 17/10 lo cargaba el panel de
+la PC, que se retiró sin haberse usado.
 
 ### Reglas que no se negocian
 
@@ -67,7 +67,7 @@ los vea**, en el lugar donde ya mira.
 
 | # | Qué se vende | Dónde vive | Estado |
 |---|---|---|---|
-| 1 | **Los 3 avisos fijos** de la web | `web/data/avisos.json`, panel → Avisos | Armado. Falta el primer comercio |
+| 1 | **Los 3 avisos fijos** de la web | `web/data/avisos.json`, a mano | Armado. Falta el primer comercio |
 | 2 | **"El clima de hoy, presentado por…"**: una mención en la historia del clima y en la de la farmacia, que son lo que más se mira | Una línea más en lo que lee la voz | Idea |
 | 3 | **Mención en los podcasts** ("y esta mañana, gracias a…") | `redes/elegir.mjs`, un cierre distinto por auspiciante | Idea. Los 3 podcasts diarios ya salen |
 | 4 | **La guía comercial y el mapa** | Sección nueva de la web, con los datos de `comercial/` (`COMERCIAL.md`) | Propuesta |

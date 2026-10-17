@@ -46,7 +46,7 @@ pasa a ser el principal y el viejo queda guardado en `/panel/viejo/` por si hay 
   renglones y 141 KB, `hoy.js`, `github.js`, `textos.js`, `revision.js`, `numeros.js`, `fotos.js`,
   `fechas.js`, `pistas.js`, `contactos.js`, `borradores.js`, `redes-estado.js`, `recorrido.js`,
   `cifrado.js`, `sw.js`), la CSP de `web/public/_headers`, `panel/celular.mjs`,
-  `panel/celular-datos.mjs`, `panel/horarios.mjs`, `docs/09-PANEL.md` y las pruebas del panel.
+  `panel/celular-datos.mjs`, `redes/horarios.mjs`, `docs/09-PANEL.md` y las pruebas del panel.
 - Se abrió el panel real en el navegador de pruebas en modo celular (375 × 812): la pantalla de ingreso
   y el **modo de prueba** (`/panel/?demo`, `prueba.js`), sin ninguna llave real.
 - Se midió el tamaño de lo que baja cada pantalla con los archivos de `web/data/` del 15/10.

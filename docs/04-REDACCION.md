@@ -1,6 +1,6 @@
 # 04 · La redacción: cómo se escribe, se verifica y se firma una nota
 
-*Actualizado el 16/10/2026. Si el código cambia, manda el código.*
+*Actualizado el 17/10/2026. Si el código cambia, manda el código.*
 
 Qué pasa desde que una historia está en verde (`docs/03-SELECCION.md`) hasta que
 tiene título, bajada y cuerpo propios, verificados contra sus fuentes, o queda
@@ -24,8 +24,7 @@ mientras tanto la nota no sale.
 La reescritura automática la hace `reescribirAutomaticas()`
 (`reels/reescritura.mjs`), y la llama un solo lugar: `web/scripts/generar-datos.mjs`,
 en cada corrida de "Actualizar la web" (en la nube). Una persona puede además
-pedir que la IA escriba una nota desde el panel del celular (paso 15); el botón
-"Reescribir" del panel de la PC sigue en el código, pero ese panel ya no se usa.
+pedir que la IA escriba una nota desde el panel del celular (paso 15).
 Las notas que nacen de una pista o de un mail de prensa van por otro camino (paso 16).
 
 ### 1. Qué notas se escriben
@@ -122,7 +121,6 @@ tenga más fuentes que entonces.
      párrafos de otra nota de la página.
 
    Cómo se saca el texto de la página: `docs/02-INGESTA.md`, paso 14.
-   `textoCompletoDe` (un solo texto) queda sólo para el panel de la PC.
 2. **Los antecedentes** (`antecedentesDe`): hasta 3 notas que el sitio publicó en
    los últimos 30 días, anteriores a ésta, que comparten un tema de los que se
    siguen (`TEMAS`) o dos palabras que dicen algo del titular. Salen de
@@ -419,7 +417,7 @@ que desde el 15/10 reemplazan al resumen de las 21 del vigilante.
 | | Qué | Dónde |
 |---|---|---|
 | **El lector** | Título, bajada, la foto si la hay (`docs/05-FOTOS.md`), cuerpo y, al pie, una línea gris con la firma y un desplegable **cerrado** "Fuentes (N)" con el nombre de cada medio y el enlace a su nota | `web/app/nota/[id]/page.js`, `web/components/verificacion.js`, `web/lib/fuentes-de-la-nota.js` |
-| **La redacción** | Claves, qué se sabe, qué falta confirmar, lo que aportó cada fuente, antecedentes, nivel de verificación, texto para redes | En `portada.json` y `archivo.json` (`CAMPOS_EXTRA`; en el archivo, sólo los primeros 4 días: `aligerarViejas`), para los paneles. No van a la web ni a los datos para Google (las etiquetas sí, como palabras clave) |
+| **La redacción** | Claves, qué se sabe, qué falta confirmar, lo que aportó cada fuente, antecedentes, nivel de verificación, texto para redes | En `portada.json` y `archivo.json` (`CAMPOS_EXTRA`; en el archivo, sólo los primeros 4 días: `aligerarViejas`), para el panel del celular. No van a la web ni a los datos para Google (las etiquetas sí, como palabras clave) |
 
 Las fuentes que ve el lector: las de "Fuentes consultadas" o, si no hay, los medios
 de la nota; sin repetir enlaces; una entrada de feed de Blogger se muestra sin
@@ -508,12 +506,12 @@ tienen que tener cuerpo de 70 palabras o más.
 
 | Archivo | Qué hace | Quién lo llama |
 |---|---|---|
-| `reels/reescritura.mjs` | `reescribirAutomaticas` (todo el flujo), `reescribir` (el pedido, las claves, `pedido`), `entradaDe`, `esTemaSerio`, `ordenarParaReescribir`, `textosDeLasFuentes`, `conEntradaAmpliada`, `textoCompletoDe` (sólo el panel de la PC), `antecedentesDe`, `completarReescritura`, `nivelDeVerificacion`, `semaforoDeLaReescritura`, `revalidarExtras`, `previasDeLaPortada`, `topeDeReescrituras` | `generar-datos.mjs` (nube), `panel/reescribir-una.mjs`, `panel/servidor.mjs` |
+| `reels/reescritura.mjs` | `reescribirAutomaticas` (todo el flujo), `reescribir` (el pedido, las claves, `pedido`), `entradaDe`, `esTemaSerio`, `ordenarParaReescribir`, `textosDeLasFuentes`, `conEntradaAmpliada`, `antecedentesDe`, `completarReescritura`, `nivelDeVerificacion`, `semaforoDeLaReescritura`, `revalidarExtras`, `previasDeLaPortada`, `topeDeReescrituras` | `generar-datos.mjs` (nube), `panel/reescribir-una.mjs` |
 | `ingesta/fuentes-para-la-ia.mjs` | La entrada ampliada (regla 174): `armarFuentesParaLaIA` (qué textos van y en qué orden), `limpiarTextoBajado`, las copias (`parecidoEntreTextos`, `mediosQueNoCuentan`) | `reels/reescritura.mjs` |
 | `ingesta/prompt-editorial.mjs` | Lee la sección 12 de `CRITERIO-EDITORIAL.md` entre las marcas; lanza si falta algo | `reels/reescritura.mjs` |
 | `CRITERIO-EDITORIAL.md` | **El criterio único**: las reglas (§ 4 a § 10), los números (§ 11) y la instrucción exacta de la IA (§ 12) | La IA, las personas, las pruebas |
 | `ingesta/criterio.mjs` | Los números del criterio (`TITULO`, `BAJADA`, `CUERPO`, `GUION`, `PARTES`, `COPIA_MAXIMA`, `ESTILO`, `RELLENO`, `REESCRITURA`) | Verificador, reescritura, web |
-| `ingesta/verificar.mjs` | `verificar`, `verificarExtras`, `depurarCuerpo`, `arreglarEscritura`, `problemasDeEstilo`, `tituloEnPasado`, `diceEnVivo` | `reels/reescritura.mjs`, paneles, `generar-datos.mjs` |
+| `ingesta/verificar.mjs` | `verificar`, `verificarExtras`, `depurarCuerpo`, `arreglarEscritura`, `problemasDeEstilo`, `tituloEnPasado`, `diceEnVivo` | `reels/reescritura.mjs`, el panel del celular, `generar-datos.mjs` |
 | `web/lib/titulos.js` | `tituloAutomatico`: etiqueta adelante, cierre colgado, "en Balcarce" al final | `generar-datos.mjs`, `verificar.mjs` |
 | `web/lib/cuerpo.js` | `tieneCuerpo` (70 palabras) | `generar-datos.mjs`, reescritura, redes, web |
 | `web/scripts/generar-datos.mjs` | Elige qué se le pide a la IA, arma el texto final, aplica correcciones y la regla del cuerpo; escribe `intentos-ia.json` y `esperando-cuerpo.json` | `actualizar.yml` |
@@ -530,7 +528,7 @@ tienen que tener cuerpo de 70 palabras o más.
 
 | Quiero… | Dónde |
 |---|---|
-| Cambiar cómo escribe la IA (el tono, una regla, un ejemplo) | `CRITERIO-EDITORIAL.md` § 12, sin borrar las marcas `<!-- … -->` ni `{{TONO}}`. Sirve desde la corrida siguiente (el panel de la PC, después de reiniciarlo) |
+| Cambiar cómo escribe la IA (el tono, una regla, un ejemplo) | `CRITERIO-EDITORIAL.md` § 12, sin borrar las marcas `<!-- … -->` ni `{{TONO}}`. Sirve desde la corrida siguiente |
 | Medir un cambio de reglas antes de hacerlo | `node reels/comparar-instruccion.mjs actual otra.txt` (gasta cupo) |
 | Que una palabra pida el tono serio | La línea entre las marcas `PALABRAS_SERIAS` de `CRITERIO-EDITORIAL.md` § 4 |
 | Cambiar un largo, un tope o una cantidad | `ingesta/criterio.mjs` **y** la tabla de `CRITERIO-EDITORIAL.md` § 11 (`pruebas/criterio.test.mjs` controla que coincidan) |

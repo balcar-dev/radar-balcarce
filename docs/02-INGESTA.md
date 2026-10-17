@@ -1,6 +1,6 @@
 # 02 · La ingesta: de dónde salen las noticias y cómo se leen
 
-*Actualizado el 16/10/2026. Si el código cambia, manda el código.*
+*Actualizado el 17/10/2026. Si el código cambia, manda el código.*
 
 El primer tramo del recorrido: desde que se sale a buscar a los medios hasta que
 cada hecho queda armado como una "historia" con sus fuentes. Qué se decide
@@ -31,16 +31,17 @@ historia con todas sus fuentes numeradas.
 
 - **En la nube (lo normal):** "Actualizar la web" (`.github/workflows/actualizar.yml`,
   cada media hora; lo dispara el reloj de Cloudflare, el Worker `radar-balcarce-reloj`
-  de `infra/reloj-cloudflare/`, a los :00 y :30, y el `schedule` del propio workflow
-  a los :07 y :37 es el respaldo) corre `web/scripts/generar-datos.mjs`.
-  Ese script ve que no está en la PC (no existe `panel/datos/ultima.json`) y llama
+  de `infra/reloj-cloudflare/`, a los :00 y :30; desde el 17/10 el workflow no tiene
+  `schedule` propio) corre `web/scripts/generar-datos.mjs`.
+  Ese script llama
   a `ingestar()` de `ingesta/ingesta.mjs`, con `idsConocidos`: los identificadores
   de lo que ya está en `web/data/portada.json` y `web/data/archivo.json`, para que
   una nota publicada no cambie de dirección (paso 12), e `idsUnidos`: las que ya se
   unieron a otra (`web/data/fusionadas.json`, regla 175).
-- **En la PC:** el panel de la PC (`panel/servidor.mjs`) corre la misma
-  `ingestar()` cada 10 minutos, con las fuentes como estén en el panel (pesos
-  cambiados o pausadas). Ver `docs/09-PANEL.md`.
+- **En la PC:** `generar-datos.mjs` no hace nada (sale con un aviso) salvo con
+  `ARMAR_EN_LA_PC=1 npm run datos`, y lo que deja en `web/data/` no se sube. El
+  panel de la PC (puerto 4321) se retiró el 17/10/2026: nunca se usó; queda en el
+  historial de git.
 - **A mano:** `node ingesta/ingesta.mjs` corre todo y deja el resultado en
   `ingesta/salida/` (`portada.json`, `preview.html`, `farmacias-crudo.txt`).
 
@@ -85,8 +86,7 @@ Cada fuente es una ficha con estos datos:
 
 `fichaDeFuente()` (`ingesta/fuentes.mjs`) deduce de esos campos el **tipo** de
 fuente (oficial, de Balcarce, de la región, provincial, nacional por sección o
-general) y su **ciudad**. La lista `CANDIDATOS` del mismo archivo son fuentes que
-se probaron y no funcionaron: no se leen.
+general) y su **ciudad**.
 
 ### 3. Bajar cada fuente
 
@@ -234,8 +234,7 @@ un hecho lo sigue partiendo el cruce coherente; para eso está la huella de
 significado (`docs/flujo/REPETIDAS-2-0.md`).
 
 - **Dónde vive:** `.cache/cruce-memoria.json` (`MEMORIA_DEL_CRUCE`). No va al
-  repositorio: en GitHub la guarda la caché de Actions entre corridas; en la PC,
-  el mismo archivo.
+  repositorio: en GitHub la guarda la caché de Actions entre corridas.
 - **Qué se guarda** (`paraLaMemoria`): título, los primeros 400 caracteres del
   resumen, enlace (y `enlaceFeed`), fecha, cuándo se vio, medio, fuente, alcance,
   si es oficial, sección fija, peso, imagen y categorías. **Sólo lo de afuera**: lo
@@ -376,7 +375,7 @@ ingesta), se baja la página de la nota original (`ingesta/articulo.mjs`):
    (`textosCompletosMaximo`), la más completa primero, con 12.000 caracteres entre
    todos (`caracteresDeTextosEnTotal`); dos textos que comparten la mitad o más
    (`copiaEntreFuentes`) son copia y cuentan como una voz. Antes iba el texto de
-   una sola fuente (`textoCompletoDe`, que sigue para una sola). Ver
+   una sola fuente. Ver
    `docs/04-REDACCION.md`, paso 4.
 2. **Bajar** (`traerTexto`): 8 segundos como máximo, User-Agent
    `RadarBalcarce/1.0 (+https://radarbalcarce.com)`. Si falla, la nota se escribe
@@ -411,7 +410,7 @@ ingesta), se baja la página de la nota original (`ingesta/articulo.mjs`):
 | `ingesta/fuentes.mjs` | Las fuentes de siempre, las palabras de Balcarce y de la zona, el filtro de entrada, las figuras, `fichaDeFuente` (y las reglas de sección y semáforo, ver 03) | Todo el motor | — |
 | `ingesta/fuentes-cruce.mjs` | Las fuentes del cruce, una por línea | `ingesta.mjs`, `lectura-ia.mjs`, `listar-fuentes.mjs` | — |
 | `ingesta/listar-fuentes.mjs` | Escribe `FUENTES.md` desde el código | Una persona | `FUENTES.md` |
-| `ingesta/ingesta.mjs` | `ingestar()`: baja, lee, filtra, marca, cruza; `armarHistorias()` elige la principal y arma cada historia (también clasifica y da el semáforo, ver 03) | `generar-datos.mjs` (nube), `panel/servidor.mjs` (PC), a mano | La memoria; a mano, `ingesta/salida/` |
+| `ingesta/ingesta.mjs` | `ingestar()`: baja, lee, filtra, marca, cruza; `armarHistorias()` elige la principal y arma cada historia (también clasifica y da el semáforo, ver 03) | `generar-datos.mjs` (nube), a mano | La memoria; a mano, `ingesta/salida/` |
 | `ingesta/cruce.mjs` | Agrupa por hecho (TF-IDF, coseno, 0,42), el cruce coherente (`CRUCE_COHERENTE`, regla 184) y la memoria de 36 horas | `ingesta.mjs` | `.cache/cruce-memoria.json` |
 | `ingesta/repetidas-publicadas.mjs` | `enlaceNormalizado` (el mismo enlace sin `?utm_…`) y las marcas de "un anuncio y su resultado" y "un hecho y el contrario" que usa el cruce coherente (lo demás, en 03) | `ingesta.mjs`, `cruce.mjs`, `generar-datos.mjs` | — |
 | `ingesta/articulo.mjs` | Baja la página original y saca el texto de la nota; `decodificar` | `reels/reescritura.mjs`, `ingesta.mjs` | — |
@@ -419,14 +418,14 @@ ingesta), se baja la página de la nota original (`ingesta/articulo.mjs`):
 | `ingesta/auditar-fuentes.mjs` | La auditoría de las fuentes: cuánto aporta cada medio según lo ya publicado (sin red): sin aporte, dormida, redundante, imprescindible | `node ingesta/auditar-fuentes.mjs` (a mano) | Nada (lo muestra en pantalla) |
 | `ingesta/medir-fuentes.mjs` | Mide cada fuente con el archivo y, además, prueba cada feed en vivo (con `--sin-red`, sólo el archivo); sólo lee | A mano (rediseño, etapa 1) | `docs/etapa-1-fuentes/fuentes-medidas.csv` |
 | `web/scripts/generar-datos.mjs` | Dispara la ingesta en la nube y anota la primera vista | `actualizar.yml` | `web/data/vistas.json` (y todo lo de 03 a 06) |
-| `.github/workflows/actualizar.yml` | Corre todo cada media hora y guarda `.cache/` en la caché de Actions (la memoria del cruce y las notas para el panel del celular) | El reloj de Cloudflare (`radar-balcarce-reloj`); su `schedule` de respaldo | Los commits "Datos de la portada" |
+| `.github/workflows/actualizar.yml` | Corre todo cada media hora y guarda `.cache/` en la caché de Actions (la memoria del cruce y las notas para el panel del celular) | El reloj de Cloudflare (`radar-balcarce-reloj`) | Los commits "Datos de la portada" |
 
 ## Dónde se toca cada cosa
 
 | Quiero… | Dónde |
 |---|---|
 | Sumar, sacar o apagar una fuente | `FUENTES` o `FUENTES_NACIONALES` (`ingesta/fuentes.mjs`) o una línea de `ingesta/fuentes-cruce.mjs` (`activa: false` para apagar; el mismo `medio` para todos los feeds de un medio). Después, `node ingesta/listar-fuentes.mjs` |
-| Cambiar el peso de una fuente | Campo `peso` de su ficha (o, en la PC, desde el panel) |
+| Cambiar el peso de una fuente | Campo `peso` de su ficha |
 | Que un medio sin feed se lea bien | `patronEnlace`, `base` y `prefijoTitulo` de su ficha (`parsearScrape`) |
 | Cuántas horas puede tener una nota raspada para entrar | `HORAS_DE_UNA_NOTA_NUEVA` (`ingesta/ingesta.mjs`) |
 | Que una sección de un medio de afuera no se traiga | `SECCIONES_QUE_NO_ENTRAN` (`ingesta/fuentes.mjs`) |
@@ -448,7 +447,7 @@ ingesta), se baja la página de la nota original (`ingesta/articulo.mjs`):
 
 | Qué pasa | Cómo se nota | Qué hacer |
 |---|---|---|
-| Un medio cambia su feed o lo cierra | Aviso amarillo "Fuente caída" en la corrida; en el panel de la PC, la fuente en rojo | Buscar el feed nuevo o apagarla con `activa: false` |
+| Un medio cambia su feed o lo cierra | Aviso amarillo "Fuente caída" en la corrida | Buscar el feed nuevo o apagarla con `activa: false` |
 | Un medio que se raspa rediseña su página | Aviso "Fuente vacía" (0 notas), sin ningún error | Ajustar su `patronEnlace` |
 | Un feed sin fechas | La nota figura "sin fecha en la fuente"; en la web cuenta desde que se vio (`vistas.json`) | Nada. Ojo: en el puntaje, una entrada sin fecha recibe el premio de frescura en cada corrida (sólo las raspadas quedan `fechaEstimada`) |
 | Una página raspada no contesta al abrirla | La nota entra sin fecha real y queda con la hora de la primera vista | Se corrige sola si la página contesta en otra corrida antes de publicarse |

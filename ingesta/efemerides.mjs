@@ -173,12 +173,6 @@ export function estiloDe(texto = '') {
   return 'historia';
 }
 
-export const NOMBRE_DE_ESTILO = {
-  balcarce: 'Balcarce', nacimiento: 'Nació', muerte: 'Murió', campo: 'Campo', ciencia: 'Ciencia', deporte: 'Deporte',
-  cultura: 'Cultura', fundacion: 'Fundación', historia: 'Historia', 'dia-especial': 'Día especial', patria: 'Fecha patria',
-  curioso: 'Dato curioso',
-};
-
 // ------------------------------------------------------------ el puntaje
 
 const BONO_POR_ESTILO = { fundacion: 6, ciencia: 8, cultura: 7, deporte: 5, campo: 6, nacimiento: 4, muerte: -12, historia: 0, balcarce: 30, curioso: 6 };

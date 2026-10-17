@@ -1,14 +1,14 @@
 # 01 · El árbol: cada carpeta y cada archivo
 
-*Actualizado el 16/10/2026 con `git ls-files` (la lista de lo versionado),
+*Actualizado el 17/10/2026 con `git ls-files` (la lista de lo versionado),
 mirando quién importa a quién, qué corre cada workflow y cada script de
 `package.json`. Si se suma o se saca un archivo, se corrige acá.*
 
 ## En una frase
 
 El repositorio tiene el motor (`ingesta/`), la voz y el video (`reels/`), las
-redes y la vigilancia (`redes/`), los paneles (`panel/` y `web/public/panel/`) y
-el sitio (`web/`); lo que corre solo lo disparan los workflows de
+redes y la vigilancia (`redes/`), el panel del celular (`panel/` y
+`web/public/panel/`), los programas de medir (`scripts/medir/`) y el sitio (`web/`); lo que corre solo lo disparan los workflows de
 `.github/workflows/`, despertados por el reloj de Cloudflare (`infra/`).
 
 En las tablas, **Quién lo llama** es el workflow que lo corre, el archivo que lo
@@ -21,31 +21,29 @@ se listan en `docs/00-INDICE.md`.
 
 ```
 radar-balcarce/
-├── .github/workflows/   36 workflows: lo que corre en GitHub, solo o a mano (docs/08)
-├── infra/               los Workers de Cloudflare: el reloj, el vigilante, las imágenes, el archivo permanente,
-│                        el servidor MCP y el sondeo de fuentes (docs/08)
+├── .github/workflows/   30 workflows: lo que corre en GitHub, solo o a mano (docs/08)
+├── infra/               los Workers de Cloudflare: el reloj, el vigilante, las imágenes y el archivo permanente (docs/08)
 ├── motor/               el motor nuevo (base D1): esquema e importador, sin tocar producción (15/10/2026)
 ├── ingesta/             el motor: fuentes, cruce, selección, lectura con IA, verificador. SIN dependencias (docs/02, 03, 04)
 ├── reels/               placas, escenas animadas, voz, video y la reescritura con IA. SÍ tiene dependencias (docs/04, 07)
 ├── redes/               Facebook, Instagram, contrato, vigilante, informe diario, avisos por mail. SIN dependencias (docs/07, 08)
-├── panel/               el lado de GitHub del panel del celular, las pistas y el panel de la PC (puerto 4321, en desuso). SIN dependencias (docs/09)
+├── panel/               el lado de GitHub del panel del celular y las pistas. SIN dependencias (docs/09)
+├── scripts/medir/       los programas que miden el motor con datos reales (repetidas, cruce, informe del día); a mano
 ├── web/                 el sitio: Next.js 15 exportado como HTML estático (docs/06)
 │   ├── app/             las páginas
 │   ├── components/      las piezas de la interfaz
 │   ├── lib/             la lógica compartida (datos, archivo, rutas, tarjetas…)
 │   ├── scripts/         generar-datos y los ayudantes del build
-│   ├── data/            los JSON que lee el sitio (los escriben GitHub, los paneles o una persona)
+│   ├── data/            los JSON que lee el sitio (los escriben GitHub, el panel del celular o una persona)
 │   └── public/          íconos, letras, escudos, encabezados de Cloudflare, fotos del banco y el panel del celular (public/panel/)
-├── pruebas/             las pruebas (unos 200 archivos *.test.mjs, unas 2.000 pruebas), el núcleo legal y material (docs/10)
-├── pruebas-modelos/     las comparaciones de modelos de IA del rediseño (datos y resultados; no corre en producción)
-├── criterio-unico/      el borrador del criterio único (11/10/2026) y sus scripts; no rige todavía
+├── pruebas/             las pruebas (198 archivos *.test.mjs, unas 2.500 pruebas), el núcleo legal y material (docs/10)
 ├── comercial/           la base de comercios, aparte del sitio (COMERCIAL.md)
 ├── docs/                la documentación (docs/00-INDICE.md), las etapas del rediseño, flujo/, secciones/ e historico/
-└── (raíz)               CLAUDE.md, los criterios, PENDIENTES.md y demás documentos; package.json; ARRANCAR.bat
+└── (raíz)               CLAUDE.md, los criterios, PENDIENTES.md y demás documentos; package.json
 ```
 
 Lo que **no** se versiona (`.gitignore`): `node_modules/`, `.env*`,
-`panel/datos/` (usuarios, decisiones completas, buzón), `respaldos/`,
+`panel/datos/` y `respaldos/` (lo que guardaba el panel de la PC, retirado el 17/10),
 `reels/salida/`, `reels/marca/` salvo `reels/marca/fuentes/`, `ingesta/salida/`,
 `.cache/` (la memoria del cruce y las notas para el panel del celular, que guarda
 la caché de Actions), `web/.next/`, `web/out/`, `web/public/_redirects`,
@@ -58,8 +56,7 @@ la caché de Actions), `web/.next/`, `web/out/`, `web/public/_redirects`,
 | Archivo | Qué hace | Quién lo llama | ¿En uso? |
 |---|---|---|---|
 | `.gitignore` | Lo que no va al repositorio (lista de arriba) | git | Sí |
-| `ARRANCAR.bat` | Abre la ventana "Radar Balcarce - PANEL" con `node panel/servidor.mjs` y el navegador en `localhost:4321` | Una persona, doble clic | A mano (el panel de la PC está en desuso desde el 8/10) |
-| `package.json` | Las dependencias de `reels/` (`@resvg/resvg-js`, `ffmpeg-static`) y los scripts `test`, `test:nucleo` (el núcleo legal), `panel`, `ingesta`, `auditar`, `auditar-fotos` | `npm`; los workflows (`npm ci`) | Sí |
+| `package.json` | Las dependencias de `reels/` (`@resvg/resvg-js`, `ffmpeg-static`) y los scripts `test`, `test:nucleo` (el núcleo legal), `ingesta`, `auditar`, `auditar-fotos` | `npm`; los workflows (`npm ci`) | Sí |
 | `package-lock.json` | Las versiones exactas de esas dependencias | `npm ci` | Sí |
 | `*.md` | Los documentos: ver `docs/00-INDICE.md` | Personas; `CRITERIO-EDITORIAL.md` y `CRITERIO-REDES.md` también el código | Sí |
 
@@ -122,7 +119,7 @@ algunas, un `LEEME.md`.
 
 | Archivo | Qué hace | Quién lo llama | ¿En uso? |
 |---|---|---|---|
-| `agenda.mjs` | La agenda del municipio (su API de eventos), las fiestas del calendario anual, la base de contactos y el mensaje para pedir fechas | `web/scripts/generar-datos.mjs`, `panel/servidor.mjs` | Sí |
+| `agenda.mjs` | La agenda del municipio (su API de eventos), las fiestas del calendario anual, la base de contactos y el mensaje para pedir fechas | `web/scripts/generar-datos.mjs` | Sí |
 | `alertas.mjs` | Los avisos de clima (helada, granizo, viento, lluvia) y sus `UMBRALES` | `generar-datos.mjs`, `redes/piezas.mjs` | Sí |
 | `articulo.mjs` | Baja la página de la nota original y saca su texto (sin menús, pies ni necrológicas); `decodificar` traduce entidades HTML | `reels/reescritura.mjs`, `ingesta.mjs` | Sí |
 | `auditar.mjs` | Muestra qué decide el filtro sobre las notas de hoy y con qué palabra | `npm run auditar` | A mano |
@@ -130,8 +127,6 @@ algunas, un `LEEME.md`.
 | `auditar-fuentes.mjs` | Cuánto aporta cada medio según lo ya publicado, sin red (sin aporte, dormida, redundante) | A mano | A mano |
 | `auditoria-ia.mjs` | La auditoría con IA de lo ya publicado: qué lee, qué busca y qué ortografía chica corrige sola (`cambioMecanico`, regla 98) | `redes/auditar-notas.mjs` ("Auditoría IA") | Sí |
 | `busqueda.mjs` | Búsqueda en internet con el texto de las páginas (Tavily), para hacer la nota de una pista | `panel/nota-de-pista.mjs` | Sí |
-| `combinar-auditorias.mjs`, `exportar-efemerides.mjs` | Juntan en una propuesta por día lo que varias IA dijeron del mes de "Un día como hoy"; pasan las candidatas a texto para otra IA | A mano | A mano |
-| `comparar-seleccion.mjs` | Compara la selección de hoy con la nueva (`seleccion-nueva.mjs`) con datos reales y escribe `docs/flujo/FLUJO-NUEVO-SIMULACION.html` | A mano | A mano (modo sombra) |
 | `contactos-agenda.json` | Las instituciones a las que se les piden fechas, con sus canales oficiales | `agenda.mjs` | Sí |
 | `criterio.mjs` | Los números del criterio editorial (largos, topes, medios, cupos, horas, Facebook, podcasts, contrato, nota del dólar) | Casi todo el código; `pruebas/criterio.test.mjs` lo compara con `CRITERIO-EDITORIAL.md` | Sí |
 | `cruce.mjs` | Junta las notas que cuentan el mismo hecho (TF-IDF, 0,42), el cruce coherente que parte lo encadenado (`CRUCE_COHERENTE`, regla 184) y la memoria de 36 horas | `ingesta.mjs` | Sí |
@@ -141,24 +136,27 @@ algunas, un `LEEME.md`.
 | `exenciones.mjs` | Las pocas frases que no frenan el amarillo ("El Niño" del clima, el sorteo de un fixture, el título con un argentino; regla 172) | `ingesta.mjs` | Sí |
 | `f1.mjs`, `futbol.mjs` | Las notas propias de Fórmula 1 (Jolpica) y de fútbol (ESPN) | `generar-datos.mjs` | Sí |
 | `fotos.mjs` | Candidatas de foto, comparación con Gemini o Groq, la red de seguridad contra la marca de agua, Wikimedia y el crédito | `web/scripts/fotos-notas.mjs` | Sí |
+| `fotos-menores.mjs` | La excepción de la regla 186: la foto propia de un organismo de la lista cerrada con chicos en una actividad deportiva, escolar o cultural, con todas sus condiciones (`menorEnActividadOficial`) y el interruptor `FOTOS_MENORES_OFICIALES` | `fotos.mjs`, `web/scripts/fotos-notas.mjs` | Sí (con el interruptor apagado no deja pasar nada) |
 | `fuentes-cruce.mjs` | Las fuentes del cruce de medios, una por línea | `ingesta.mjs`, `lectura-ia.mjs`, `listar-fuentes.mjs` | Sí |
 | `fuentes.mjs` | Las fuentes de siempre y todas las listas de palabras: sección, semáforo, local, localidades dudosas, zona, figuras, filtro de entrada, temas; `fichaDeFuente` | `ingesta.mjs`, `lectura-ia.mjs`, `reels/reescritura.mjs`, `generar-datos.mjs` y más | Sí |
 | `fuentes-para-la-ia.mjs` | La entrada ampliada de la redacción (regla 174): qué textos completos van a la IA, en qué orden, cuáles son copia, y la limpieza del texto bajado | `reels/reescritura.mjs` | Sí |
 | `generar-efemerides.mjs` | Arma la base mensual de "Un día como hoy" y las piezas de los feriados (Wikipedia y la API de feriados) | A mano, una vez por mes (el vigilante avisa cuando se acaba) | A mano |
-| `ingesta.mjs` | `ingestar()`: baja, lee, filtra, marca, cruza (`armarHistorias`), clasifica, puntúa, semáforo, medios, cupos, clima y farmacias. Corrido solo, deja `ingesta/salida/` | `generar-datos.mjs` (nube), `panel/servidor.mjs` (PC); `npm run ingesta` | Sí |
+| `huellas-significado.mjs` | La huella de significado de lo de acá (regla 195): elige qué parejas de notas de Balcarce de 72 horas preguntarle a la IA si son la misma noticia contada con otras palabras (`anclasConfirmadas`) | `generar-datos.mjs` | Sí |
+| `ingesta.mjs` | `ingestar()`: baja, lee, filtra, marca, cruza (`armarHistorias`), clasifica, puntúa, semáforo, medios, cupos, clima y farmacias. Corrido solo, deja `ingesta/salida/` | `generar-datos.mjs`; `npm run ingesta` | Sí |
 | `json.mjs` | Leer un JSON sin que un archivo faltante o roto tire abajo el proceso | `generar-datos.mjs`, `panel/`, varios de `redes/` y `web/scripts/` | Sí |
 | `lectura-ia.mjs` | La lectura con IA: fichas, qué saca, secciones, dos llaves, repetidas; Gemini con Groq de respaldo | `generar-datos.mjs` (nube) | Sí |
 | `listar-fuentes.mjs` | Escribe `FUENTES.md` desde las dos listas de fuentes | `node ingesta/listar-fuentes.mjs` | A mano |
 | `medir-fuentes.mjs` | Mide cada fuente con el archivo y prueba cada feed en vivo (rediseño, etapa 1); sólo lee | A mano | A mano |
 | `menores.mjs` | Una persona menor de 18 dicha por su edad ("una chica de 16 años") | `ingesta.mjs`, `pistas.mjs` | Sí |
+| `muy-contada.mjs` | "Muy contada" (regla 197): lo de afuera que cuentan 8 medios o más (o 5 en sus primeras 3 horas) sale aunque el cupo esté lleno; los números, en `MUY_CONTADA` de `criterio.mjs` | `ingesta.mjs` | Sí |
+| `no-es-nota.mjs` | Lo que publica un medio de Balcarce y no es una nota de Radar (regla 199): el medio hablando de sí mismo, el anuncio de su propia entrevista, su clima o su farmacia (`porQueNoEsNota`) | `ingesta.mjs` | Sí |
 | `perfil-balcarce.md` | Lo que la IA de lectura sabe de Balcarce (sólo datos seguros) | La IA lo lee (vía `lectura-ia.mjs`) | Sí |
 | `pistas.mjs` | Las pistas del panel: investiga si un dato ya lo cubrieron los medios (Google Noticias) | `panel/celular.mjs`, `panel/revisar-pistas.mjs` | Sí |
-| `probar.mjs` | Prueba si las fuentes candidatas (`CANDIDATOS`) o una URL suelta están vivas | `node ingesta/probar.mjs [url]` | A mano |
 | `prompt-editorial.mjs` | Lee la instrucción de la IA de `CRITERIO-EDITORIAL.md` § 12, entre sus marcas; sin ella, la reescritura no arranca | `reels/reescritura.mjs` | Sí |
 | `README.md` | Cómo está armada la carpeta | Personas | — |
 | `repetidas-publicadas.mjs` | La misma noticia contra lo ya publicado, sin IA (regla 171), la misma fuente (`mismaFuente`, regla 175) y `enlaceNormalizado` | `generar-datos.mjs`, `ingesta.mjs`, `cruce.mjs` | Sí |
-| `secciones-nuevas.mjs`, `secciones-nuevas-sombra.mjs` | El mapa de 17 secciones (16/10) en modo sombra: cómo quedarían repartidas las notas reales; nada cambia mientras el interruptor `SECCIONES_NUEVAS` esté apagado | `lectura-ia.mjs` (sólo con el interruptor); a mano | Modo sombra |
-| `seleccion-nueva.mjs` | La selección del flujo nuevo (16/10), en modo sombra: nadie la llama en producción | `comparar-seleccion.mjs` | Modo sombra |
+| `secciones-nuevas.mjs` | El mapa de 17 secciones (`seccionNueva`) y su etapa 2, Educación y Salud, detrás del interruptor `SECCIONES_NUEVAS` (regla 187: `SECCIONES_ETAPA_2`, `seccionesNuevasActivas`); apagado, nada cambia | `lectura-ia.mjs`, `generar-datos.mjs`, `web/lib/datos.js`, `secciones-nuevas-sombra.mjs`, `scripts/medir/informe-del-dia.mjs` | Sí (con el interruptor apagado no cambia nada) |
+| `secciones-nuevas-sombra.mjs` | Cómo quedarían repartidas las notas reales ya publicadas con el mapa nuevo de secciones; sólo lee y muestra, sin red ni IA | A mano | A mano |
 | `utiles.mjs` | Los teléfonos útiles (`NUMEROS`), la farmacia de turno que cambia a las 8:30 (`diaDeTurno`), qué día tocan los útiles y qué decisión es de una persona (`decisionHumana`) | `ingesta.mjs`, `generar-datos.mjs`, `panel/`, `redes/`, `reels/` | Sí |
 | `verificar.mjs` | El verificador de lo que escribe la IA, los arreglos que no inventan (`arreglarEscritura`) y `diceEnVivo` | `reels/reescritura.mjs`, `panel/`, `generar-datos.mjs` | Sí |
 | `zona.mjs` | La hora de Balcarce, la única del código (GitHub corre en UTC) | Casi todo lo que mira "hoy" | Sí |
@@ -167,6 +165,8 @@ algunas, un `LEEME.md`.
 
 | Archivo | Qué hace | Quién lo llama | ¿En uso? |
 |---|---|---|---|
+| `armadas.mjs` | Las piezas ya armadas hoy (regla 208): el video queda en la memoria de voces (`VOZ_CACHE`) hasta que termina el día y un reintento lo sube sin gastar otro audio | `plan.mjs` | Sí |
+| `cupo-voz.mjs` | El contador de los 10 audios del día (regla 208): anota cada pedido antes de hacerlo, guarda audios para las piezas más importantes que faltan y avisa al 80 % | `voz-gemini.mjs`, `plan.mjs` | Sí |
 | `alinear.mjs`, `tiempos.mjs` | Cuándo arranca cada palabra: los silencios del audio (ffmpeg) y el reparto del tiempo según las sílabas | `voz-gemini.mjs`, `alinear.mjs` | Sí |
 | `auditar-voz.mjs` | La auditoría de voz: clips de prueba, transcripción y juicio | `auditar-voz.yml` | A mano |
 | `avatar.mjs`, `portada.mjs` | Dibujan la foto de perfil de las redes y la portada de la página de Facebook (las sube una persona) | A mano | A mano |
@@ -177,16 +177,14 @@ algunas, un `LEEME.md`.
 | `placa.mjs` | Dibuja las placas (SVG → PNG de 1080 × 1920) | `plan.mjs`, `reel.mjs` | Sí |
 | `plan.mjs` | El plan del día: qué pieza, con qué guion, placa y hora; con `--generar`, arma los videos. Lee lo publicado (`web/data/portada.json`, `agenda.json`) | `redes.yml`, `piezas.yml` | Sí |
 | `reel.mjs` | Arma un video: placa, voz (sólo Gemini), subtítulos, ffmpeg | `plan.mjs` | Sí |
-| `reescritura.mjs` | La reescritura con IA de punta a punta: orden, topes, texto completo, pedido, verificación, partes internas, nivel de verificación, semáforo sobre lo escrito | `generar-datos.mjs` (nube), `panel/reescribir-una.mjs`, `panel/servidor.mjs` | Sí |
+| `reescritura.mjs` | La reescritura con IA de punta a punta: orden, topes, texto completo, pedido, verificación, partes internas, nivel de verificación, semáforo sobre lo escrito | `generar-datos.mjs` (nube), `panel/reescribir-una.mjs` | Sí |
 | `voz-gemini.mjs` | La voz de Gemini 3.8 (Interactions API, clave de redes): texto literal, estilo aparte, la voz propia de cada pieza; corta si se acabó el cupo del día | `reel.mjs`, `auditar-voz.mjs` | Sí |
 | `voz.mjs` | `paraLeer` (los símbolos dichos en voz alta) y `enCarteles` (los subtítulos de 3 a 5 palabras) | `reel.mjs`, `auditar-voz.mjs` | Sí |
 | `animacion.mjs`, `render-cuadros.mjs` | La animación de las piezas (8/10: ninguna queda con la imagen fija), cuadro a cuadro, repartida entre los núcleos | `reel.mjs` | Sí |
-| `escenas/` (`comun`, `del-plan`, `clima`, `fechas`, `servicios`, `deportes`) | Las escenas animadas de cada pieza; `del-plan.mjs` pasa los datos reales del plan a su escena (si falla, sale la placa de siempre). Las de deportes, para más adelante | `plan.mjs` | Sí (deportes, no) |
+| `escenas/` (`comun`, `del-plan`, `clima`, `fechas`, `servicios`, `repaso`, `deportes`) | Las escenas animadas de cada pieza; `del-plan.mjs` pasa los datos reales del plan a su escena (si falla, sale la placa de siempre). `repaso.mjs` (regla 209): el repaso sigue a la voz, con la foto y el titular de cada nota. Las de deportes, para más adelante | `plan.mjs`, `reel.mjs` | Sí (deportes, no) |
 | `fijas.mjs`, `fijas/` | Piezas armadas de antemano con su voz, que se reutilizan (los videos de "participá" y su `vigencia.json`) | `plan.mjs`, `fijar-piezas.yml` | Sí |
 | `placas-efemeride.mjs`, `previa-efemerides.mjs` | Las dos placas de "Un día como hoy" y su vista previa sin voz | `plan.mjs`; a mano | Sí |
 | `catalogo-plantillas.mjs`, `ejemplos-plantillas.mjs` | El catálogo y los ejemplos de las plantillas animadas, para mirar y aprobar (sin gastar voz) | A mano | A mano |
-| `cronograma-html.mjs`, `hoja-cronograma.mjs` | El cronograma de las redes como página web y como imagen (usan `redes/cronograma-semana.mjs`) | A mano | A mano |
-| `presentacion.mjs` | El video de presentación de Radar Balcarce (4/10) | A mano | A mano |
 | `marca/fuentes/*.ttf` (6) | Source Serif 4 (700 y 900) e Inter (400 a 700): las placas, el avatar, la portada y las tarjetas de la web | `placa.mjs`, `avatar.mjs`, `portada.mjs`, `web/lib/tarjeta.js` | Sí |
 
 ## `redes/` — Facebook, Instagram, la vigilancia y los informes, sin dependencias
@@ -203,7 +201,8 @@ algunas, un `LEEME.md`.
 | `espejo.mjs` | Qué espejos de Instagram reintentar | `publicar.mjs` | Sí |
 | `estadisticas.mjs` | Visitas (Cloudflare) y seguidores (Meta) | `vigilar.mjs` | Sí |
 | `formatos.mjs` | Las medidas de cada red, con fecha de verificación | `auditar.mjs`, pruebas | Sí |
-| `guiones.mjs` | Lo que dice la voz en cada pieza (bancos de frases) y `revisarTexto` | `reels/plan.mjs`, `elegir.mjs`, `panel/servidor.mjs`, `reels/reescritura.mjs` | Sí |
+| `guiones.mjs` | Lo que dice la voz en cada pieza (bancos de frases) y `revisarTexto` | `reels/plan.mjs`, `elegir.mjs`, `reels/reescritura.mjs` | Sí |
+| `horarios.mjs` | El horario de las redes: los horarios de las historias fijas (`HISTORIAS_FIJAS`, `horariosDe`) y `toca` (qué día sale cada una). Hasta el 17/10 estaba en `panel/` | `piezas.mjs`, `cronograma-semana.mjs`, `reels/plan.mjs` | Sí |
 | `meta.mjs` | Habla con Meta (Graph v23.0): posteo, foto, video, dirección pública, verificación; `PAGINA_DE_FACEBOOK`, el único identificador de la página | `publicar.mjs`, `auditar-redes.mjs`, `estadisticas.mjs`, `ver-facebook.mjs` | Sí |
 | `piezas.mjs` | Cronograma, ventanas, podcasts, aviso de clima, color del día, techo de historias | `reloj.mjs`, `publicar-piezas.mjs`, `reels/plan.mjs`, `contrato.mjs`, `vigilar.mjs` | Sí |
 | `prompt-redes.mjs` | Lee la identidad, las dos voces, el reparto de voces por pieza y el estilo de `CRITERIO-REDES.md` | `guiones.mjs`, `elegir.mjs`, `reels/plan.mjs`, `reels/reel.mjs`, `reels/voz-gemini.mjs` | Sí |
@@ -216,8 +215,8 @@ algunas, un `LEEME.md`.
 | `archivar-piezas.mjs` | Guarda en R2 lo que se armó para las redes (videos, audios, subtítulos, placas), sin poder frenar la publicación; prendido con `R2_PIEZAS` (regla 178) | `redes.yml`, `piezas.yml`, `fijar-piezas.yml` | Sí |
 | `auditar-notas.mjs` | "Auditoría IA": lee las notas nuevas y avisa lo que esté mal (`ingesta/auditoria-ia.mjs`) | `auditoria-ia.yml` | Sí |
 | `avisar-por-mail.mjs` | Los avisos de GitHub salen por mail, por el vigilante de Cloudflare (`POST /avisar`, regla 173) | `vigilar.mjs`, `actualizar.yml`, `cloudflare-deploy.yml` (a mano), `informe-diario.mjs` y más | Sí |
-| `cronograma-semana.mjs` | El cronograma de las redes de varios días, como lo arma el reloj | `informe-diario.mjs`, `reels/cronograma-html.mjs`, `reels/hoja-cronograma.mjs` | Sí |
-| `efemeride.mjs`, `feriado.mjs`, `participa.mjs` | Las piezas de "Un día como hoy", del feriado y de "participá" | `reels/plan.mjs`, `panel/horarios.mjs` | Sí |
+| `cronograma-semana.mjs` | El cronograma de las redes de varios días, como lo arma el reloj | `informe-diario.mjs`; `node redes/cronograma-semana.mjs` | Sí |
+| `efemeride.mjs`, `feriado.mjs`, `participa.mjs` | Las piezas de "Un día como hoy", del feriado y de "participá" | `reels/plan.mjs`, `horarios.mjs` | Sí |
 | `estadisticas-detalle.mjs`, `estadisticas-piezas.mjs` | El detalle diario de las visitas (horas, notas, de dónde llegan, aparatos, países) y los números de cada pieza de redes | `vigilar.mjs`, `estadisticas.mjs`, `informe-diario.mjs` | Sí |
 | `indexnow.mjs` | Le avisa a Bing (IndexNow) qué notas nuevas hay después de cada despliegue | `actualizar.yml` (y `cloudflare-deploy.yml`, a mano) | Sí |
 | `informe-diario.mjs` | El informe diario por mail, a las 8:15 y a las 21:15 (regla 176) | `informe-diario.yml` | Sí |
@@ -227,15 +226,15 @@ algunas, un `LEEME.md`.
 | `uso-ia.mjs` | Cuánta IA se usa por día: llamadas y tokens por tarea y por modelo (`web/data/uso-ia.json`) | `reels/reescritura.mjs` y más | Sí |
 | `probar-gemini.mjs` | Prueba a mano de las claves de Gemini (las de imágenes, `probar-flux.mjs` y `probar-imagen-nota.mjs`, se borraron el 17/10/2026) | `probar-gemini.yml` | A mano |
 
-## `panel/` — los paneles, sin dependencias (`docs/09-PANEL.md`)
+## `panel/` — el panel del celular, sin dependencias (`docs/09-PANEL.md`)
 
 El panel del celular vive en dos lados: la app, en `web/public/panel/` (más
-abajo), y lo que corre en GitHub, acá. El panel de la PC (las filas "en la PC")
-quedó en desuso el 8/10: el único que se usa es el del celular.
+abajo), y lo que corre en GitHub, acá. El panel de la PC (puerto 4321) se retiró
+el 17/10/2026: nunca se usó; queda en el historial de git.
 
 | Archivo | Qué hace | Quién lo llama | ¿En uso? |
 |---|---|---|---|
-| `celular-datos.mjs` | Lo que decide el celular y lo que necesita para decidir: valida sus decisiones, las une encima de las de la PC (`unirDecisiones`, gana la más nueva), arma lo que espera a una persona (`paraDecidir`) y las notas para escribir (`notasParaEscribir`) | `generar-datos.mjs`, `celular.mjs` | Sí |
+| `celular-datos.mjs` | Lo que decide el celular y lo que necesita para decidir: valida sus decisiones, arma lo que espera a una persona (`paraDecidir`) y las notas para escribir (`notasParaEscribir`) | `generar-datos.mjs`, `celular.mjs` | Sí |
 | `celular.mjs` | El pedido a la IA desde el celular: busca la nota, la escribe con `reescribir-una.mjs` y deja el borrador cifrado en `web/data/celular-borradores.json` | "Panel del celular" (`panel.yml`) | Sí |
 | `cifrado.mjs` | El sobre cifrado (AES-256-GCM y RSA-OAEP): cierra para cada celular registrado lo que espera a una persona y los borradores. El otro lado es `web/public/panel/cifrado.js` | `generar-datos.mjs`, `celular.mjs` | Sí |
 | `reescribir-una.mjs` | Escribe una nota a pedido de una persona por el mismo camino que la automática, pero devuelve lo que no cuadra en vez de descartarlo | `celular.mjs` | Sí |
@@ -244,15 +243,18 @@ quedó en desuso el 8/10: el único que se usa es el del celular.
 | `pistas-solas.mjs` | Una pista que ya cubren tres medios o más se escribe sola y, si el verificador no objeta, queda lista | `revisar-pistas.mjs` | Sí |
 | `revisar-pistas.mjs` | Vuelve a mirar las pistas abiertas | `pistas.yml` (cada 3 h) | Sí |
 | `unir-conflictos.mjs` | Cuando dos corridas tocan el mismo archivo de pistas, une cambio por cambio en vez de pisar | `panel.yml`, `pistas.yml` | Sí |
-| `acceso.mjs`, `seguridad.mjs` | Usuarios, claves con hash, sesiones firmadas, freno de intentos; control de origen y de qué direcciones se pueden probar | `servidor.mjs`, `clave.mjs` | Sí (en la PC) |
-| `agenda.mjs`, `avisos.mjs`, `buzon.mjs` | Las pestañas propias de la PC: eventos cargados a mano (qué es público, a quién pedirle fechas), cargar o borrar un aviso, los cuatro tipos del buzón | `servidor.mjs` | Sí (en la PC) |
-| `clave.mjs` | Crear una cuenta o cambiar la contraseña | `node panel/clave.mjs <usuario> "<clave>"` | A mano |
-| `horarios.mjs` | Los horarios de fábrica de las historias fijas y `toca` (qué día sale cada una) | `servidor.mjs`, `redes/piezas.mjs`, `reels/plan.mjs` | Sí |
-| `notas.mjs` | Qué campos se editan y qué va a la web (`decisionParaLaWeb`; `vaALaWeb`: sólo lo que decidió una persona y los textos recientes de la IA) | `servidor.mjs` | Sí (en la PC) |
-| `panel.html` | El tablero de la PC entero, en una sola página con pestañas | El navegador, servido por `servidor.mjs` | Sí (en la PC) |
-| `respaldo.mjs` | Copia `panel/datos/` al arrancar y cada 6 horas | `servidor.mjs`; a mano | Sí (en la PC) |
-| `servidor.mjs` | El servidor de la PC: ingesta cada 10 minutos, el botón "Reescribir", la API del tablero, exportar y sincronizar | `ARRANCAR.bat`, `npm run panel` | Sí (en la PC) |
-| `sincronizar.mjs` | Sube a GitHub `decisiones.json`, `avisos.json` y `eventos-panel.json`, 30 segundos después del último cambio | `servidor.mjs` | Sí (en la PC) |
+
+## `scripts/medir/` — medir el motor con datos reales (a mano)
+
+Nada de esto corre solo ni escribe en `web/data/`: lo corre una persona para
+medir o calibrar. Hasta el 17/10 estaban en `docs/flujo/` y `docs/etapa-2-5/`.
+
+| Archivo | Qué hace | ¿Gasta cupo? |
+|---|---|---|
+| `informe-del-dia.mjs` | El informe del día: cómo llegó la información, cómo anduvo cada fuente, lo de Balcarce y lo nacional, las secciones; escribe `docs/flujo/INFORME-DE-HOY.html` y guarda la lectura en `.cache/` | No (sin IA) |
+| `cruce-coherente.mjs` | Compara el cruce coherente (regla 184) con el de antes sobre la misma lectura guardada (`docs/flujo/CRUCE-COHERENTE.md`) | No |
+| `repetidas-2-0.mjs` | Mide las repetidas por significado (regla 195) sobre lo de acá ya publicado (`docs/flujo/REPETIDAS-2-0.md`) | Sí, cupo gratis de clasificación |
+| `calibrar-repetidas.mjs`, `etiquetas-duplicadas.json` | Calibra la comparación sin IA de repetidas (regla 171) contra 127 pares etiquetados a mano (el `.json`) | No |
 
 ## `web/` — el sitio (`docs/06-WEB.md`)
 
@@ -262,7 +264,7 @@ quedó en desuso el 8/10: el único que se usa es el del celular.
 |---|---|---|---|
 | `web/README.md` | Cómo correr la web en la PC; remite a `docs/06-WEB.md` | Personas | — |
 | `web/.gitignore` | Que no se suba ningún `.env` de la web | git | Sí |
-| `web/package.json` | Next 15 y React 18, `"type": "module"`; scripts `datos`, `dev`, `dolar`, `redirects`, `redirects-paginas`, `build`, `indexar`, `contar` (el `build` corre `dolar`, `redirects`, `next build`, `redirects-paginas`, `indexar` y `contar`) | `npm` en `actualizar.yml` y `cloudflare-deploy.yml` | Sí |
+| `web/package.json` | Next 15 y React 18, `"type": "module"`; scripts `datos`, `dev`, `dolar`, `redirects`, `redirects-paginas`, `build`, `indexar`, `contar`, `vista-previa-secciones` (el `build` corre `dolar`, `redirects`, `next build`, `redirects-paginas`, `indexar` y `contar`) | `npm` en `actualizar.yml` y `cloudflare-deploy.yml` | Sí |
 | `web/package-lock.json` | Las versiones exactas | `npm ci` | Sí |
 | `web/next.config.mjs` | Exportar el sitio como archivos (`output: 'export'`) | `next build` | Sí |
 | `web/jsconfig.json` | El atajo `@/` para importar desde la raíz de `web/` | Next | Sí |
@@ -315,7 +317,7 @@ quedó en desuso el 8/10: el único que se usa es el del celular.
 
 | Archivo | Qué hace | Quién lo usa | ¿En uso? |
 |---|---|---|---|
-| `archivo.js` | Qué se muestra (36 h), qué tiene página (180 días, con tope de 3.700 notas: `MAXIMO_EN_ARCHIVO`, `topeDeNotas`), llega tarde, fecha de la nota, retiradas, correcciones, `pierdeLaPagina`, la dirección fija, `aligerarViejas` | `generar-datos.mjs`, `datos.js`, `recuperar-archivo.mjs` | Sí |
+| `archivo.js` | Qué se muestra (36 h), qué tiene página (180 días, con tope de 3.700 notas: `MAXIMO_EN_ARCHIVO`, `topeDeNotas`), llega tarde, fecha de la nota, retiradas, correcciones, `pierdeLaPagina`, la dirección fija, `aligerarViejas` | `generar-datos.mjs`, `datos.js` | Sí |
 | `clima.js`, `pedir-clima.js` | Qué dibujo le toca a cada cielo; el pedido del clima en el navegador (Open-Meteo, un solo pedido por página) | `clima-vivo.js`, `hoy-balcarce.js` | Sí |
 | `cuerpo.js` | `tieneCuerpo` (70 palabras), `tieneRespaldo`, `esperaCuerpo` | `generar-datos.mjs`, `datos.js`, `sitemap.js`, redes, panel, reescritura | Sí |
 | `datos.js` | La puerta de entrada a los datos para todas las páginas: secciones, tapa, horas, contacto (`WHATSAPP`, `MAIL`) | Todas las páginas | Sí |
@@ -348,7 +350,7 @@ quedó en desuso el 8/10: el único que se usa es el del celular.
 
 | Archivo | Qué hace | Quién lo llama | ¿En uso? |
 |---|---|---|---|
-| `generar-datos.mjs` | Arma todos los datos de la web (el corazón de "Actualizar la web") | `actualizar.yml`; `npm run datos` | Sí |
+| `generar-datos.mjs` | Arma todos los datos de la web (el corazón de "Actualizar la web"). En la PC no hace nada salvo con `ARMAR_EN_LA_PC=1` (y entonces deja `web/data/` cambiado: no se sube) | `actualizar.yml`; `npm run datos` | Sí |
 | `fotos-notas.mjs` | A qué notas probarles foto (nube) y poner las del banco (siempre) | `generar-datos.mjs` | Sí |
 | `achicar-foto.mjs` | Pasa la foto elegida a JPEG de hasta 1.200 px, calidad 7; la achica a 1.024 px para mandarla a la IA y le calcula la huella (con el ffmpeg del proyecto) | `fotos-notas.mjs`, `ilustrar-notas.mjs` | Sí |
 | `foto-dolar.mjs` | Guarda la foto del dólar en `web/data/dolar.json` | `npm run build` (script `dolar`) | Sí |
@@ -357,7 +359,6 @@ quedó en desuso el 8/10: el único que se usa es el del celular.
 | `revisar-seo.mjs` | Revisa el HTML compilado y frena la subida si falta algo | `actualizar.yml` | Sí |
 | `auditar-seo-vivo.mjs` | Audita las páginas publicadas | `node web/scripts/auditar-seo-vivo.mjs [url]`; la auditoría semanal | A mano |
 | `hacer-iconos.mjs` | Dibuja los íconos del sitio (usa resvg) | A mano, una vez | A mano |
-| `recuperar-archivo.mjs` | Rearma `archivo.json` desde el historial de git | A mano, si se pierde el archivo | A mano |
 | `indexar.mjs` | Arma el índice del buscador (Pagefind) sobre el sitio compilado: busca en todo el archivo | `npm run build` (script `indexar`) | Sí |
 | `contar-archivos.mjs` | Cuenta los archivos del sitio compilado y avisa si se acerca a los 20.000 de Cloudflare (nunca frena) | `npm run build` (script `contar`) | Sí |
 | `collage.mjs` | El collage de fotos de la nota de cada repaso | `generar-datos.mjs` | Sí |
@@ -367,10 +368,9 @@ quedó en desuso el 8/10: el único que se usa es el del celular.
 | `escudos.mjs` | Baja una vez los escudos de los clubes (ESPN) a `web/public/escudos/` | A mano | A mano |
 | `ilustrar-notas.mjs` | Las ilustraciones con IA para las notas sin foto: revisar, aplicar o automático (reglas 182 y 185); escribe `web/data/fotos-ia.json` | `ilustrar-notas.yml` | Sí |
 | `nombres-de-persona.mjs` | Los nombres de persona de un texto (el control del prompt de las ilustraciones) | `ilustrar-notas.mjs` | Sí |
-| `arreglar-fotos-17-10.mjs` | El arreglo de los datos de fotos de la auditoría del 16/10 (reglas 203 a 206; `docs/05-FOTOS.md`, § 14) | Una persona, una vez | No |
 | `archivar-a-r2.mjs` | El exportador del archivo permanente: sube a R2 las notas con página y saca lo retirado (regla 183) | `actualizar.yml` (cada vuelta, con `R2_ARCHIVO`), `cloudflare-deploy.yml` (a mano), `archivo-staging.yml`, `archivo-produccion.yml` | Sí (el Worker, todavía sin ruta) |
 | `armado-vacio.mjs` | Prueba de humo: arma el sitio con datos vacíos o a medias | `armado-vacio.yml` | Sí |
-| `podcast-feed.mjs` | El feed de podcast de los repasos, sin conectar | Nadie todavía | No |
+| `vista-previa-secciones.mjs` | Compila el sitio con `SECCIONES_NUEVAS` prendido sólo para esa vez y guarda capturas en `docs/secciones/vista-previa/`; no toca `web/data/` ni sube nada (regla 187) | `cd web && npm run vista-previa-secciones` | A mano |
 
 ### `web/data/` — los datos (detalle en `docs/06-WEB.md`)
 
@@ -394,8 +394,7 @@ quedó en desuso el 8/10: el único que se usa es el del celular.
 | `celular-llaves.json` | La llave pública de cada celular registrado (la privada no sale del celular) | El panel del celular |
 | `correcciones.json` | Lo corregido o escrito a mano, con motivo, cuándo y quién | El panel del celular, una persona o Claude |
 | `retiradas.json` | Lo sacado a mano, con motivo, cuándo y quién | Una persona o Claude; los lunes "Actualizar la web" saca las de más de 7 días |
-| `decisiones.json` | Lo que decidió el panel de la PC (sólo lo de una persona y los textos recientes de la IA) | El panel de la PC |
-| `avisos.json`, `eventos-panel.json` | Los tres avisos publicitarios; los eventos publicados desde la pestaña Agenda | El panel de la PC |
+| `avisos.json` | Los tres espacios de publicidad que lee la web | Una persona, a mano |
 | `redes.json` | El libro de las redes | "Redes" y "Piezas" |
 | `vigilancia.json`, `estadisticas.json` | Lo que ya avisó el vigilante; visitas y seguidores | "Vigilancia" |
 | `auditoria.json` | El resultado de la auditoría semanal | "Auditoría" |
@@ -449,27 +448,27 @@ Nada de esta carpeta lo usa la web ni lo corre un workflow: todo es **a mano**.
 
 ## `docs/` y `pruebas/`
 
-- **`docs/`**: los documentos `00` a `13`, `DECISIONES.md`, las carpetas de las
-  etapas del rediseño (`etapa-1-fuentes/`, `etapa-2-5/`, `etapa-6-9/`,
-  `etapa-10-operacion/`), las de los temas nuevos (`flujo/`: el flujo nuevo, la
-  guía del flujo, el cruce coherente y el informe de hoy; `secciones/`;
-  `criterio/`; `fotos/`; `flujos/`: cómo hacer a mano las imágenes con Gemini web
-  y una nota desde un mail; `redes/`; `panel/`; `seo/`; `salud-tecnica/`;
-  `analiticas/`; `auditoria-opus/`), `propuestas/` e `historico/`; ver
-  `docs/00-INDICE.md`.
-- **`pruebas/`**: unos 200 `*.test.mjs` (unas 2.000 pruebas) y su material: el
+- **`docs/`**: los documentos `00` a `13`, `DECISIONES.md`, `COMO-FUNCIONA-HOY.html`,
+  `COMO-SE-ELIGE-UNA-NOTA.html`, las carpetas de las etapas del rediseño
+  (`etapa-1-fuentes/`, con sus programas de la revisión de fuentes, que sigue
+  abierta; `etapa-2-5/`, `etapa-6-9/` y `etapa-10-operacion/`, ya sin programas:
+  los que se usan pasaron a `scripts/medir/`), la auditoría del 16/10
+  (`auditoria-2-0/`), las de los temas nuevos (`flujo/`: el flujo nuevo, la guía
+  del flujo, el cruce coherente, las repetidas 2.0 y el informe de hoy;
+  `secciones/`: el mapa de secciones, `MINI-PORTALES.html`, el prototipo del menú
+  y `vista-previa/`; `diseno/`: las dos direcciones de diseño y su comparación;
+  `criterio/`; `flujos/`: cómo hacer a mano las imágenes con Gemini web y una nota
+  desde un mail; `redes/`; `panel/`; `seo/`; `salud-tecnica/`; `analiticas/`;
+  `auditoria-opus/`), `propuestas/` e `historico/` (con `PRUEBAS-DE-MODELOS.md`,
+  el resumen de los ensayos de modelos, y `criterio-unico/`, el borrador del
+  criterio único, que no rige); ver `docs/00-INDICE.md`.
+- **`pruebas/`**: 198 `*.test.mjs` (unas 2.500 pruebas) y su material: el
   núcleo legal (`nucleo-legal.txt`, la lista, y `nucleo-legal.mjs`, que la corre),
   `datos-fijos.mjs` y `datos-fijos/` (casos reales guardados), `hora-falsa.mjs`,
   `cuerpo-de-prueba.mjs` y `libro-real-24-25-09.json`. Cada prueba tiene su
   línea en `docs/10-REGLAS-Y-PRUEBAS.md`. Se corren con `npm test` (en GitHub, el
   workflow "Pruebas"); el núcleo legal, con `npm run test:nucleo` y en cada vuelta
   de "Actualizar la web".
-- **`pruebas-modelos/`**: las comparaciones de modelos de IA del rediseño
-  (muestras, pares, resultados por modelo y sus scripts). No corre en producción.
-- **`criterio-unico/`**: el borrador del criterio único del 11/10 (`CRITERIO-UNICO.md`,
-  `CAMBIOS.md`) y los scripts que arman y controlan sus prompts
-  (`prompts-armados/`). No rige: el criterio que vale sigue siendo
-  `CRITERIO-EDITORIAL.md`.
 
 ## Lo que existe sin enlaces
 

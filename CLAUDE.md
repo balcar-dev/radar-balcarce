@@ -1,6 +1,6 @@
 # Radar Balcarce
 
-*Actualizado el 15/10/2026. Corto a propósito: el detalle está en `docs/` (empezar por
+*Actualizado el 17/10/2026. Corto a propósito: el detalle está en `docs/` (empezar por
 `docs/00-INDICE.md`). Si esto y el código no coinciden, manda el código, y se corrige
 esto.*
 
@@ -16,10 +16,11 @@ escribir siempre en castellano rioplatense, claro y sin voseo forzado.
     ingesta/   el motor: fuentes, cruce, selección, lectura con IA, verificador, números del criterio. SIN dependencias
     reels/     placas, voz (Gemini), video… y la reescritura con IA (reels/reescritura.mjs). SÍ tiene dependencias (resvg, ffmpeg)
     redes/     Facebook e Instagram (API de Meta), contrato del día, vigilante, WhatsApp. SIN dependencias
-    panel/     lo del panel del celular (cifrado, pedidos a la IA) y el panel de la PC (puerto 4321), que NO se usa y queda en desuso. SIN dependencias
+    panel/     lo del panel del celular que corre en GitHub (cifrado, pedidos a la IA, pistas). SIN dependencias (el panel de la PC se retiró el 17/10)
     web/       el sitio (Next.js 15, JavaScript, HTML estático); web/public/panel/ es el panel del celular; web/scripts/generar-datos.mjs arma los datos
-    pruebas/   `npm test`: unas 2.500 pruebas, sin red (en la vuelta de 30 minutos sólo corre el núcleo legal, `npm run test:nucleo`)
-    docs/      la documentación: 00-INDICE a 13-EFEMERIDES, DECISIONES.md, propuestas/ (lo abierto) e historico/
+    pruebas/   `npm test`: unas 2.600 pruebas, sin red (en la vuelta de 30 minutos sólo corre el núcleo legal, `npm run test:nucleo`)
+    docs/      la documentación: 00-INDICE a 13-EFEMERIDES, DECISIONES.md, propuestas/ (lo abierto) e historico/. Sin programas adentro
+    scripts/medir/  mediciones a mano: repetidas por significado, cruce coherente, informe del día, calibrar repetidas
 
 Flujo: fuentes → ingesta → cruce → sección, puntaje y semáforo → lectura con IA →
 reescritura con IA → verificación → `web/data/*.json` → una sola compilación → Cloudflare Pages, todo
@@ -35,7 +36,7 @@ vigilancia y el panel del celular andan con la PC apagada.**
     npm run auditar-fotos qué notas tienen foto y, de las que no, por qué (no gasta cupo; `-- --dias=7`, `-- --html` para ver las fotos)
     node ingesta/auditar-fuentes.mjs   cuánto aportó cada fuente en la semana y cuál se durmió (sin red; `--dias=30`, `--json`)
     node ingesta/listar-fuentes.mjs    rehace FUENTES.md después de tocar una fuente
-    cd web && npm run datos && npm run build     regenerar y compilar (en la PC trabaja en "modo PC")
+    cd web && npm run build     compilar con los datos que hay (git pull antes). `npm run datos` lo corre Actions: en la PC no hace nada (ARMAR_EN_LA_PC=1 para la corrida entera, con IA)
     node reels/comparar-instruccion.mjs actual otra.txt   compara versiones de las reglas de la IA (gasta cupo)
 
 ## Reglas que no se negocian
@@ -86,8 +87,8 @@ próxima regla es la 211: del 189 al 210 son los arreglos de Radar 2.0 del 17/10
 - **GitHub Actions regenera `web/data/` cada media hora** (corre a los :00 y :30 UTC y
   tarda ~5 minutos con la subida). Antes de `git push`, `git pull --rebase`; si choca en `web/data/`,
   `git checkout --theirs` sobre esos archivos y seguir. Commitear sólo los archivos
-  tocados (`git commit -- archivos`). Correr `npm run datos` en la PC deja esos archivos
-  cambiados: no subirlos. Subir `banco-fotos.json` o fotos sólo entre corridas.
+  tocados (`git commit -- archivos`). Correr `ARMAR_EN_LA_PC=1 npm run datos` en la PC deja esos
+  archivos cambiados: no subirlos. Subir `banco-fotos.json` o fotos sólo entre corridas.
 - **Los archivos que escribe una persona**: `web/data/celular-decisiones.json` y
   `web/data/correcciones.json` (los escribe el celular; ningún workflow los toca) y
   `web/data/retiradas.json` (a mano; los lunes "Actualizar la web" le saca las de más de
@@ -153,6 +154,9 @@ próxima regla es la 211: del 189 al 210 son los arreglos de Radar 2.0 del 17/10
   celular). El 15/10 el repositorio se mudó y el reloj pasó al Worker: mirar que dispare.
 - **Rediseño desde cero, una etapa por vez** (empieza por las fuentes). Las reglas de arriba
   valen hasta que se cambien con su prueba; las claves nuevas, cuando se elijan los modelos.
+- **17/10, limpieza final**: se retiraron el panel de la PC y su "modo PC", los ensayos en sombra (selección nueva, feed de
+  podcast, audio en la página, video de presentación), `pruebas-modelos/`, `criterio-unico/` y los programas de `docs/`
+  (los que se usan, en `scripts/medir/`). Todo queda en el historial de git (`docs/DECISIONES.md`, 17/10).
 - Lo que falta: **`PENDIENTES.md`**. Qué se decidió y las preguntas abiertas: **`docs/DECISIONES.md`**.
 
 ## Dónde tocar cada cosa
@@ -200,7 +204,7 @@ próxima regla es la 211: del 189 al 210 son los arreglos de Radar 2.0 del 17/10
 | Qué archivos guarda "Actualizar la web" | La línea `git add` de `.github/workflows/actualizar.yml` (un archivo nuevo de `web/data/` que no esté ahí se pierde) |
 | Qué obliga a recompilar antes de subir, y las redirecciones | `NO_CAMBIAN_EL_SITIO` (`web/scripts/recompilar.mjs`, regla 189); `planDeRedirecciones` (`web/scripts/generar-redirects.mjs`, regla 191) |
 | La política hacia buscadores e IA (`robots.txt`, bots), los datos estructurados, los sitemaps, `llms.txt`, y los datos para agentes (el servidor MCP escrito y sin activar se borró el 17/10) | `web/lib/robots.js`, `web/lib/datos-estructurados.js`, `web/components/ficha.js`, `web/app/sitemap.js`, `web/app/llms.txt/route.js`, `web/lib/para-agentes.js` (`/agentes/*.json`); el estado, los trámites y las decisiones: `docs/seo/AUDITORIA-SEO-LLM.md` |
-| Los avisos publicitarios, la agenda a mano | El panel de la PC (`PUBLICIDAD.md`, `panel/agenda.mjs`) |
+| Los avisos publicitarios | `web/data/avisos.json`, a mano, con quién y cuándo en el commit (`PUBLICIDAD.md`); la agenda sale sólo del municipio (`ingesta/agenda.mjs`) |
 | Qué se decidió, por qué y quién; las preguntas abiertas | `docs/DECISIONES.md` (lo nuevo arriba) |
 
 ## Cuentas
