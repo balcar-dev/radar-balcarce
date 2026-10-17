@@ -313,7 +313,7 @@ Lo que falta es ver los resultados: alta en Bing Webmaster Tools (trámite 2).
 | Sitemaps sin `noindex` y con foto de cada nota | `web/app/sitemap.js`, `sitemap-news.xml/route.js`, `web/scripts/revisar-seo.mjs` | idem |
 | `llms.txt` mejorado (cómo citar, servicios, datos para programas) | `web/app/llms.txt/route.js` | idem |
 | Datos para agentes: `/agentes/ultimas.json`, `indice.json`, `servicios.json` | `web/lib/para-agentes.js`, `web/app/agentes/*/route.js`, `_headers` | idem |
-| Servidor MCP de sólo lectura (sin activar) | `infra/mcp-cloudflare/` | `pruebas/mcp-worker.test.mjs` |
+| ~~Servidor MCP de sólo lectura (sin activar)~~ **borrado el 16/10** (commit `73be4c80`; ver 5.0) | `infra/mcp-cloudflare/` (ya no está) | `pruebas/mcp-worker.test.mjs` (ya no está) |
 | IndexNow | ya estaba (regla 150) | `pruebas/indexnow.test.mjs`, y la nueva sobre la clave única |
 
 Lo que **no** se tocó, por pedido: feed RSS y podcast; diseño y navegación visibles.
@@ -321,6 +321,22 @@ Lo que **no** se tocó, por pedido: feed RSS y podcast; diseño y navegación vi
 ---
 
 ## 5. Servidor MCP y datos para agentes
+
+### 5.0 Recomendación del 17/10/2026: no hace falta un MCP propio; alcanza con lo que hay
+
+*Pregunta de Hernán: "No sé si hace falta un MCP propio para ubicar bien a Radar; analizalo." No se implementó nada. El Worker de abajo (5.1 a 5.4) **se borró en la limpieza del 16/10** (commit `73be4c80`: "servidor MCP escrito
+y nunca activado"); está en el historial: `git show 73be4c80^:infra/mcp-cloudflare/worker.mjs` (648 líneas, 7 herramientas, 512 de pruebas). Lo de abajo se conserva como referencia de cómo se haría.*
+
+1. **Hoy no.** ChatGPT, Gemini y Claude encuentran a un medio por la **búsqueda y el rastreo**: HTML con datos estructurados (`NewsArticle`), sitemap de noticias, `robots.txt` que deja entrar a los bots de búsqueda e IndexNow. Eso ya está (partes 1 a 4 y 11) y es lo que mueve citas y visitas.
+2. **Un servidor MCP no se descubre solo:** quien lo quiere usar tiene que cargar su dirección a mano. En ChatGPT hace falta el modo desarrollador y un plan pago; en Claude, un conector personalizado de los planes pagos; para la aplicación común de Gemini no encontré el paso (Simon Willison, *Adding a custom MCP server to Claude and ChatGPT*; Kadoa; comparativas de julio de 2026: fuentes secundarias, 17/10/2026). Eso lo hace un técnico, no el vecino que pregunta qué farmacia está de turno.
+3. **MCP no resuelve descubrimiento, ranking ni confianza:** sólo da un canal directo a quien ya nos eligió (Contexte Tech, RuntimeWire, 17/10/2026; secundaria). Medios con MCP encontré uno solo y es una agencia que lo vende a clientes (Reuters, según un agregador); de medios locales, ninguno.
+4. **Su hermano más difundido, `llms.txt`, casi no se lee:** el 97 % de los archivos no recibió ni un pedido en mayo de 2026 (Ahrefs, 137.000 dominios, vía ppc.land, junio de 2026) y Google dice que lo ignora (fuente secundaria). Por eso esta auditoría ya decidió no hacer `llms-full.txt`.
+5. **Lo que ya cubre la misma necesidad:** `/agentes/ultimas.json`, `indice.json` y `servicios.json` (`web/lib/para-agentes.js`), `llms.txt`, `/hoy` y `/sitemap-news.xml`: un script o un asistente con navegación tiene todo, sin servidor nuevo.
+6. **Cuándo sí rehacerlo (revisar en enero de 2027):** (a) si Cloudflare muestra pedidos de agentes de IA a `/agentes/*` (más de ~100 por semana; hoy no se mide), (b) si un directorio de conectores (el registro oficial de MCP, el de Claude o el de ChatGPT) permite listarlo y que se instale con un clic, o (c) si el municipio o el Concejo quieren consultar al medio por asistente. Costaría ~1 hora restaurar el código borrado.
+7. **Qué conviene hacer en su lugar** (gratis; recomendación general, sin fuente leída): una entrada de **Wikidata** y fichas de **Google Business Profile** y **Bing Places** para "Radar Balcarce" con el sitio y las redes (el marcado ya declara `sameAs`); Search Console y Bing Webmaster al día; y medir las visitas con *referer* de `chatgpt.com`, `perplexity.ai` y `gemini.google.com` en la pestaña Números.
+8. **Riesgo de hacerlo ahora:** un servicio más para mantener y vigilar, otro punto de ataque (aunque sólo lee lo público) y asistentes que citen un resumen de IA sin remitir a la fuente.
+9. **Qué se cambió en este documento:** D4 pasa de "sí, en 2 o 3 semanas" a "no por ahora"; el renglón 8 del plan queda descartado; el Worker figura como borrado.
+10. **Respuesta corta:** no hace falta un MCP propio para que ubiquen bien a Radar; lo que ubica es el sitio bien marcado, citado y enlazado, y eso se sigue trabajando.
 
 ### 5.1 Qué es y para qué sirve
 
@@ -410,7 +426,7 @@ repositorio (sin dependencias); migrar es cuestión de reemplazar el despacho.
 | 5 | Publicar la página "Quién escribe y cómo corregimos" (política editorial y de IA, registro de correcciones, responsables con apellido si quieren) y enlazarla en el pie (D6) | 2 horas | Claude, tras aprobación | Alto para E-E-A-T y Publisher Center |
 | 6 | Reactivar las páginas de tema/entidad con enlaces discretos (C8, D6) | 3 horas | Claude, tras aprobación | Alto a años |
 | 7 | Solicitar Google Publisher Center (D7) | 30 min | Ustedes | Incierto, gratis |
-| 8 | Activar el MCP (D4) | 1 hora | Ustedes + Claude | Bajo hoy, alto a años |
+| 8 | ~~Activar el MCP (D4)~~ **descartado por ahora** (5.0), revisar en enero de 2027 | 1 hora | Ustedes + Claude | Bajo hoy, alto a años |
 | 9 | Tarjetas de compartir < 300 KB (C1) y tipografías más livianas (C2) | 3 horas | Claude | Medio |
 | 10 | Conseguir 5 a 10 enlaces de sitios de Balcarce (municipio, Cámara de Comercio, clubes, escuelas, bibliotecas): "Radar Balcarce" en sus páginas de links | Continuo | Ustedes | El que más mueve en SEO local |
 | 11 | Revisar este informe cada 3 meses: Google cambia sus guías de IA seguido (la de optimización es de mayo de 2026 y ya se actualizó) | 1 hora | Claude | Mantenimiento |
@@ -474,7 +490,7 @@ Ninguno cuesta plata. Todos con la cuenta `radarbalcarce@gmail.com`.
 - **D3. ¿Las fotos van al sitemap de imágenes?** *Hoy: sí* (62% son de 1200 px o más, y siempre
   con crédito). Ayuda a Google Imágenes y Discover; también deja que otros medios vean sus fotos
   ahí. Para sacarlo: borrar `images: [foto]` en `web/app/sitemap.js`.
-- **D4. ¿Activamos el MCP?** Recomendación: **sí, en 2 o 3 semanas**, después de ver los números
+- **D4. ¿Activamos el MCP?** *(17/10/2026: no por ahora, ver 5.0; el Worker se borró el 16/10.)* Recomendación de entonces: **sí, en 2 o 3 semanas**, después de ver los números
   de Search Console y con la regla de límite puesta. Nada de lo que hoy hay en la web cambia.
 - **D5. (HECHA el 16/10/2026) Título de las notas y firma del autor en el marcado.** (a) Que la etiqueta `<title>`
   lleve el titular entero y no cortado con "…"; (b) que `author.name` sea sólo "Radar Balcarce" y
