@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-17T21:01:44.228Z",
+  "generado": "2026-10-17T21:32:00.630Z",
   "notas": [
     {
       "id": "hlnzhq",
@@ -13,7 +13,7 @@
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/politica/adelanto-capeccio-confirmo-que-trabaja-en-un-plan-de-gobierno-para-balcarce",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-17T18:41:21.000Z",
+      "fecha": "2026-10-17T18:39:56.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T19:01:24.769Z",
       "relevancia": 84,
@@ -169,7 +169,7 @@
       "fecha": "2026-10-17T18:05:14.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T20:31:25.974Z",
-      "relevancia": 56,
+      "relevancia": 46,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -239,65 +239,6 @@
       "foto": {
         "archivo": "fotos-notas/4tx679.jpg",
         "credito": "Foto: Perfil"
-      }
-    },
-    {
-      "id": "wrghr",
-      "titulo": "Detallan la ubicación de cada centro de salud y sala",
-      "copete": "La red sanitaria municipal cuenta con establecimientos distribuidos en distintos puntos de la ciudad y el ámbito rural para facilitar la atención de los vecinos.",
-      "cuerpo": "Los Centros de Atención Primaria de la Salud y las salas de primeros auxilios del distrito disponen de establecimientos distribuidos en distintos sectores urbanos y rurales.\n\nLa cobertura barrial incluye además al CAPS Gendarmería en avenida Cereijo esquina 6, al CAPS San Martín en calle 7 esquina 6, al CAPS Güemes en calle 26 entre 7 y 9, y a la Sala Independencia en calle 7 entre Chacabuco y San Lorenzo. Por su parte, el barrio El Cruce cuenta con una unidad sanitaria en avenida Central y calle 20, mientras que el directorio provincial ubica al establecimiento de Malvinas Argentinas en avenida Pueyrredón Nº 1229.\n\nEn las localidades rurales, la atención se presta en Los Pinos sobre calle 11, en San Agustín en avenida José Hernández, en Napaleofú a través de la Delegación Municipal y en La Brava mediante la unidad sanitaria situada junto a la ruta nacional 226.",
-      "guion": "Detallan la ubicación de cada centro de salud y sala.",
-      "seccion": "Salud",
-      "seccionAntes": "Balcarce",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/uno-por-uno-donde-se-encuentra-cada-caps-de-balcarce",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-17T17:59:57.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-17T18:01:32.765Z",
-      "relevancia": 74,
-      "local": true,
-      "deUnMedioDeAca": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El CIC 1 opera en calle 20 esquina 3 y el CIC 2 en calle 15 esquina 116 bis",
-        "El CAPS Veteranos Continentales de Malvinas funciona en calles 45 y 22",
-        "Las salas y centros abarcan tanto los barrios urbanos como las localidades del interior"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Conocé la ubicación exacta de cada centro de atención primaria de la salud y sala de primeros auxilios distribuidos en los barrios y las localidades del distrito.",
-      "etiquetas": [
-        "salud",
-        "CAPS",
-        "Balcarce",
-        "barrios",
-        "rurales"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/uno-por-uno-donde-se-encuentra-cada-caps-de-balcarce",
-          "fecha": "2026-10-17T17:59:57.000Z",
-          "oficial": false,
-          "aporte": "Detalló la ubicación exacta de cada centro de atención primaria y sala de primeros auxilios en la ciudad y las localidades"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": null
-      },
-      "slug": "detallan-la-ubicacion-de-cada-centro-de-salud-y-sala",
-      "foto": {
-        "archivo": "fotos-notas/wrghr.jpg",
-        "credito": "Foto: Radio Gabal (FM 104.1)"
       }
     },
     {
@@ -779,24 +720,30 @@
         "LU9 Mar del Plata",
         "Agencia DIB",
         "Infobae",
+        "TN (Todo Noticias)",
         "Perfil",
         "A24",
         "Crónica",
         "Canal 26",
         "C5N",
         "Minuto Uno",
-        "La Gaceta (Tucumán)"
+        "La Gaceta (Tucumán)",
+        "El Cronista",
+        "Noticias Argentinas (NA)",
+        "La Nueva",
+        "Página/12",
+        "Mi8 (Canal 8 Mar del Plata)"
       ],
       "enlace": "https://www.c5n.com/politica/axel-kicillof-el-dia-la-lealtad-cuenten-conmigo-asumir-las-responsabilidades-n251858",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-17T14:40:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T18:31:25.789Z",
-      "relevancia": 60,
+      "relevancia": 61,
       "local": false,
       "muyContada": {
-        "medios": 10,
-        "porque": "10 medios",
+        "medios": 16,
+        "porque": "16 medios",
         "desde": "2026-10-17T19:31:29.614Z"
       },
       "publicadaPor": null,
@@ -859,8 +806,8 @@
         "La Nación",
         "Crónica",
         "Minuto Uno",
-        "Clarín",
-        "Perfil"
+        "Perfil",
+        "Clarín"
       ],
       "enlace": "https://www.cronica.com.ar/depo/laliga/julian-alvarez-fue-decisivo-sobre-el-final-y-el-atletico-de-madrid-consiguio-un-triunfazo/",
       "teniaImagenLaFuente": true,
@@ -1174,72 +1121,6 @@
       }
     },
     {
-      "id": "19nga6r",
-      "titulo": "Santiago Gilligan busca sumar sus primeros minutos en la Serie A de Italia",
-      "copete": "El rugbier formado en Campo de Pato superó las lesiones que lo marginaron del plantel superior de Valorugby y se prepara para afrontar la nueva temporada del rugby italiano.",
-      "cuerpo": "Santiago Gilligan integra el plantel superior de Valorugby, equipo de la máxima categoría del rugby italiano, tras superar lesiones en el hombro y en el tendón de Aquiles que le impidieron disputar partidos oficiales durante el año pasado. El deportista, surgido en las divisiones inferiores del Club Social y Campo de Pato General Balcarce, transita su segunda temporada en la institución tras su paso previo por el Biella Rugby Club 1977, donde se consagró campeón en la segunda división.\n\nCon el inicio de un nuevo torneo previsto para los próximos días, el balcarceño mantiene expectativas de sumar sus primeros minutos en cancha y colaborar para que el equipo repita el rendimiento que le permitió obtener la triple corona durante el año anterior.",
-      "guion": "Santiago Gilligan busca sumar sus primeros minutos en la Serie A de Italia.",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce",
-        "Acción 5 (Balcarce)"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/santiago-gilligan-busca-asentarse-en-la-serie-a-del-rugby-italiano-776",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-17T13:01:31.993Z",
-      "sinFecha": true,
-      "visto": "2026-10-17T13:01:31.993Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Santiago Gilligan integra el plantel de Valorugby en la Serie A italiana",
-        "El rugbier se formó en el Club Social y Campo de Pato General Balcarce",
-        "Superó lesiones en el hombro y en el tendón de Aquiles que lo marginaron la temporada pasada",
-        "El equipo italiano logró la triple corona en 2026 con el Scudetto, la Copa Italia y la Supercopa"
-      ],
-      "seSabe": [
-        "Santiago Gilligan forma parte de Valorugby desde 2025, según informó el medio local",
-        "El club italiano obtuvo la triple corona en 2026",
-        "El deportista sufrió la rotura del tendón de Aquiles en diciembre del año pasado",
-        "El plantel cuenta con diez jugadores argentinos"
-      ],
-      "noConfirmado": [
-        "Todavía no se informó la fecha exacta del debut del rugbier en la presente temporada",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El rugbier balcarceño Santiago Gilligan superó sus lesiones y se prepara para debutar en el plantel superior de Valorugby, equipo que milita en la Serie A de Italia.",
-      "etiquetas": [
-        "Santiago Gilligan",
-        "Rugby",
-        "Italia",
-        "Valorugby",
-        "Deportes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/santiago-gilligan-busca-asentarse-en-la-serie-a-del-rugby-italiano-776",
-          "fecha": "2026-10-17T12:46:02.000Z",
-          "oficial": false,
-          "aporte": "Detalló su trayectoria en el rugby italiano, las lesiones sufridas y sus expectativas para la nueva temporada"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": null
-      },
-      "slug": "santiago-gilligan-busca-sumar-sus-primeros-minutos-en-la-serie-a-de",
-      "foto": {
-        "archivo": "fotos-notas/19nga6r.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
       "id": "12xnbwz",
       "titulo": "Joaquín Cortina consigue la pole positión en Concepción del Uruguay",
       "copete": "El piloto se queda con el mejor registro de la clasificación del Turismo Pista Clase 1 tras una sanción a Santiago Possiel. Las series se disputan desde las 13:09 horas.",
@@ -1394,100 +1275,6 @@
       "foto": {
         "archivo": "fotos-notas/np0iti-ia.jpg",
         "credito": "Ilustración generada con IA"
-      }
-    },
-    {
-      "id": "1xx0gii",
-      "titulo": "Los gremios docentes definen si aceptan el aumento salarial del gobierno bonaerense",
-      "copete": "Los sindicatos analizan la oferta del seis por ciento en dos tramos presentada por la administración de Axel Kicillof. Los estatales ya dieron su aval al entendimiento.",
-      "cuerpo": "Los gremios docentes bonaerenses analizan por estas horas la propuesta salarial presentada por la administración de Axel Kicillof en la última reunión paritaria. El ofrecimiento oficial contempla un incremento del 6% bimestral, dividido en dos tramos del 3% cada uno para octubre y noviembre, calculados sobre los haberes de septiembre, con el compromiso de retomar las negociaciones en diciembre.\n\nEn paralelo, los sindicatos estatales enrolados en UPCN y Fegeppba ya aceptaron la misma oferta, mientras que ATE la calificó de insuficiente pero decidió aceptarla tras un plenario. En el sector educativo, Suteba define su postura y la FEB lleva la propuesta a su congreso de delegados el martes 20.\n\nDurante el encuentro paritario, el Ejecutivo provincial también propuso avanzar en la simplificación de tareas burocráticas en las escuelas, la implementación del boletín y la asistencia digital, modificaciones en el régimen académico secundario y la incorporación de nuevas licencias parentales.",
-      "guion": "Los gremios docentes definen si aceptan el aumento salarial del gobierno bonaerense.",
-      "seccion": "Educación",
-      "seccionAntes": "Economía",
-      "medios": [
-        "El Día",
-        "0221"
-      ],
-      "enlace": "https://www.0221.com.ar/provincia/paritarias-bonaerenses-la-aceptacion-estatales-los-docentes-definen-si-aceptan-el-6-dos-cuotas-n135957",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-17T12:29:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-17T19:31:29.614Z",
-      "relevancia": 33,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El gobierno bonaerense ofreció un incremento salarial del 6% en dos tramos para octubre y noviembre.",
-        "Los gremios estatales de UPCN y Fegeppba ya aceptaron el ofrecimiento oficial.",
-        "Suteba define este sábado y la FEB vota el martes la aceptación de la propuesta.",
-        "La Provincia propuso medidas para reducir la carga administrativa en las escuelas."
-      ],
-      "seSabe": [
-        "El Ejecutivo provincial ofreció una suba del 6% distribuida en un 3% en octubre y un 3% en noviembre sobre la base de septiembre.",
-        "Los sindicatos estatales UPCN y Fegeppba aceptaron la propuesta salarial.",
-        "ATE consideró insuficiente la oferta pero resolvió aceptarla.",
-        "Suteba evalúa la aceptación este sábado y la FEB lo definirá en un congreso el martes 20.",
-        "La Provincia se comprometió a reabrir la negociación paritaria en diciembre."
-      ],
-      "noConfirmado": [
-        "Todavía no se informó la resolución definitiva del Sindicato Unificado de Trabajadores de la Educación de Buenos Aires (Suteba) tras la evaluación interna."
-      ],
-      "textoRedes": "Los gremios docentes bonaerenses definen si aceptan el aumento salarial del 6% en dos cuotas ofrecido por la Provincia, luego de que los estatales ya dieran su aval.",
-      "etiquetas": [
-        "docentes",
-        "paritarias",
-        "aumento salarial",
-        "gobierno bonaerense",
-        "sindicatos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "0221",
-          "enlace": "https://www.0221.com.ar/provincia/paritarias-bonaerenses-la-aceptacion-estatales-los-docentes-definen-si-aceptan-el-6-dos-cuotas-n135957",
-          "fecha": "2026-10-17T12:29:00.000Z",
-          "oficial": false,
-          "aporte": "Informó los plazos de definición de Suteba y FEB, la postura de ATE y el rechazo inicial estimado en los contactos previos."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/politica-y-economia/docentes-bonaerenses-definen-si-aceptan-la-oferta-de-aumento-salarial-de-la-provincia-politica-y-economia_1792264260",
-          "fecha": "2026-10-17T19:13:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los porcentajes de aumento salarial, los detalles de la simplificación administrativa y las modificaciones en licencias y régimen académico."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1e6e9wy",
-          "titulo": "Docentes y estatales bonaerenses discuten una nueva oferta salarial",
-          "fecha": "2026-10-16T12:36:41.504Z",
-          "ruta": "/nota/docentes-y-estatales-bonaerenses-discuten-una-nueva-oferta-salarial-1e6e9wy"
-        },
-        {
-          "id": "ebpyd0",
-          "titulo": "El Gobierno bonaerense retoma las paritarias con estatales y docentes",
-          "fecha": "2026-10-15T16:05:58.000Z",
-          "ruta": "/nota/el-gobierno-bonaerense-retoma-las-paritarias-con-estatales-y-docentes-ebpyd0"
-        },
-        {
-          "id": "12un4a6",
-          "titulo": "La Provincia convoca a paritarias docentes para el viernes",
-          "fecha": "2026-10-14T13:42:00.000Z",
-          "ruta": "/nota/la-provincia-convoca-a-paritarias-docentes-para-el-viernes-12un4a6"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": null
-      },
-      "slug": "los-gremios-docentes-definen-si-aceptan-el-aumento-salarial-del",
-      "foto": {
-        "archivo": "fotos-notas/1xx0gii.jpg",
-        "credito": "Foto: 0221"
       }
     },
     {
@@ -1706,8 +1493,7 @@
         "TyC Sports",
         "Olé",
         "Crónica",
-        "Noticias Argentinas (NA)",
-        "La Nueva",
+        "Doble Amarilla",
         "Bolavip Argentina",
         "El Gráfico"
       ],
@@ -1716,13 +1502,8 @@
       "fecha": "2026-10-17T09:15:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T20:01:43.159Z",
-      "relevancia": 57,
+      "relevancia": 48,
       "local": false,
-      "muyContada": {
-        "medios": 8,
-        "porque": "8 medios",
-        "desde": "2026-10-17T20:01:43.159Z"
-      },
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
@@ -1977,12 +1758,12 @@
         "Bolavip Argentina",
         "El Gráfico",
         "Ámbito",
-        "La Gaceta (Tucumán)",
-        "Clarín",
         "C5N",
         "Minuto Uno",
-        "Los Andes (Mendoza)",
         "La Capital (Rosario)",
+        "La Gaceta (Tucumán)",
+        "Los Andes (Mendoza)",
+        "Clarín",
         "0221"
       ],
       "enlace": "https://www.lagaceta.com.ar/nota/1158456/deportes/video-dibu-martinez-sufrio-durisimo-golpe-cabeza-lo-retiraron-camilla.html",
@@ -2226,8 +2007,8 @@
         "Perfil",
         "Diario Popular",
         "Bolavip Argentina",
-        "Clarín",
-        "C5N"
+        "C5N",
+        "Clarín"
       ],
       "enlace": "https://tn.com.ar/deportes/futbol/2026/10/17/arruabarrena-confirmo-que-paredes-viajara-a-brasil-para-el-partido-de-boca-ante-vasco-da-gama-para-nosotros-es-importante/",
       "teniaImagenLaFuente": true,
@@ -2416,8 +2197,8 @@
         "TN (Todo Noticias)",
         "La Nación",
         "El Cronista",
-        "Radio Mitre",
-        "La Gaceta (Tucumán)"
+        "La Gaceta (Tucumán)",
+        "Radio Mitre"
       ],
       "enlace": "https://tn.com.ar/clima/alertas/2026/10/17/hay-alerta-amarilla-por-lluvias-para-este-sabado-17-de-octubre-en-la-rioja-las-zonas-afectadas/",
       "teniaImagenLaFuente": true,
@@ -2890,6 +2671,7 @@
         "TN (Todo Noticias)",
         "Olé",
         "El Gráfico",
+        "Crónica",
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
         "Clarín"
@@ -2899,7 +2681,7 @@
       "fecha": "2026-10-17T00:31:56.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T20:01:43.159Z",
-      "relevancia": 31,
+      "relevancia": 24,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2955,91 +2737,13 @@
       "slug": "argentinos-juniors-le-gana-1-a-0-a-banfield-y-alcanza-la-cima-anual"
     },
     {
-      "id": "mcgl08",
-      "titulo": "Ciudadanos italianos tienen plazo hasta noviembre para votar en el COMITES",
-      "copete": "Los residentes locales con ciudadanía deben completar un trámite antes del 4 de noviembre para recibir el sobre electoral en sus domicilios y participar de los comicios.",
-      "cuerpo": "Los ciudadanos italianos residentes en Balcarce tienen tiempo hasta el 4 de noviembre para completar la inscripción y recibir el sobre electoral en sus domicilios para los comicios del COMITES, según informó una fuente. La convocatoria abarca a los inscriptos en la circunscripción consular de Mar del Plata.\n\nPara realizar el procedimiento, los interesados deben presentar un formulario firmado junto con una fotocopia de ambas caras del DNI argentino. La Sociedad Italiana de Balcarce brinda asesoramiento en su sede de lunes a viernes, entre las 9:30 y las 12.\n\nEn estos comicios, Antonio Malatesta, miembro de la comisión directiva de la asociación local, participa como candidato por la lista MAIE Mar del Plata.",
-      "guion": "Ciudadanos italianos tienen plazo hasta noviembre para votar en el COMITES.",
-      "seccion": "Balcarce",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "El Diario Balcarce"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/10/elecciones-del-comites-los-ciudadanos.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-17T00:10:28.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-17T16:01:35.131Z",
-      "relevancia": 88,
-      "local": true,
-      "deUnMedioDeAca": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Plazo de inscripción hasta el 4 de noviembre para los comicios del COMITES.",
-        "Trámite obligatorio para recibir el sobre electoral en el domicilio.",
-        "Asesoramiento disponible en la sede de la Sociedad Italiana de lunes a viernes.",
-        "Antonio Malatesta es candidato por la lista MAIE Mar del Plata."
-      ],
-      "seSabe": [
-        "Hay plazo hasta el 4 de noviembre para la inscripción.",
-        "La convocatoria incluye a los residentes de Balcarce y la región.",
-        "Se requiere un formulario firmado y copia del DNI argentino.",
-        "La Sociedad Italiana ofrece asesoramiento matutino en su sede."
-      ],
-      "textoRedes": "Los ciudadanos italianos de Balcarce tienen tiempo hasta el 4 de noviembre para inscribirse y recibir el sobre electoral para las elecciones del COMITES.",
-      "etiquetas": [
-        "ciudadanos italianos",
-        "COMITES",
-        "elecciones",
-        "Sociedad Italiana",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/elecciones-del-comites-los-ciudadanos.html",
-          "fecha": "2026-10-17T12:14:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los plazos, requisitos y detalles de la postulación para las elecciones del COMITES."
-        },
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/los-ciudadanos-italianos-tienen-tiempo-hasta-el-4-de-noviembre-para-inscribirse-y-votar-en-las-elecciones-del-comites-783",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Presentación institucional del medio sin información sobre el tema."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "16btgej",
-          "titulo": "Pedro Sánchez adelanta las elecciones generales en España al 29 de noviembre",
-          "fecha": "2026-10-05T13:01:23.078Z",
-          "ruta": "/nota/pedro-sanchez-adelanta-las-elecciones-generales-en-espana-al-29-de-16btgej"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": null
-      },
-      "slug": "ciudadanos-italianos-tienen-plazo-hasta-noviembre-para-votar-en-el",
-      "foto": {
-        "archivo": "fotos-notas/mcgl08.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
       "id": "repaso20261016noche",
       "propia": "repaso",
-      "titulo": "El repaso de la noche en Radar Balcarce: Museo Histórico Municipal, morosidad y fútbol",
-      "copete": "Radar Balcarce publicó a las 21:06 de este viernes 16 de octubre el repaso de la noche en Instagram y Facebook, un audio con 4 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 4 notas que se contaron en el repaso de la noche del viernes 16, en el orden en que salieron en el audio.\n\nEl Museo Histórico Municipal expone el Proyecto Cruz del Centenario. El arquitecto Rubén Kavanagh encabezó una charla sobre patrimonio e identidad en el Museo Histórico Municipal.\n\nLa morosidad de las familias baja en agosto y llega al 12,81%. El Banco Central informó que el retraso en los pagos de los hogares registró una leve merma durante el último mes. En paralelo, la irregularidad en las empresas continuó en aumento.\n\nPanichelli recuerda su grave lesión y la emoción de Scaloni. El delantero Joaquín Panichelli recordó la lesión ligamentaria que lo dejó fuera del Mundial 2026. Reveló detalles de su charla íntima con Lionel Scaloni y el apoyo que recibió de Lionel Messi.\n\nLa Subsecretaría de Deporte mantiene las clases de yoga con vacantes. La Subsecretaría de Deporte anunció que siguen las clases de yoga dictadas por Vilma Suárez en la sala Dr. Victorio Tommasi y quedan lugares libres para nuevos asistentes.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
+      "titulo": "El repaso de la noche en Radar Balcarce: morosidad, fútbol y yoga",
+      "copete": "Radar Balcarce publicó a las 21:06 de este viernes 16 de octubre el repaso de la noche en Instagram y Facebook, un audio con 3 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
+      "cuerpo": "Estas son las 3 notas que se contaron en el repaso de la noche del viernes 16, en el orden en que salieron en el audio.\n\nLa morosidad de las familias baja en agosto y llega al 12,81%. El Banco Central informó que el retraso en los pagos de los hogares registró una leve merma durante el último mes. En paralelo, la irregularidad en las empresas continuó en aumento.\n\nPanichelli recuerda su grave lesión y la emoción de Scaloni. El delantero Joaquín Panichelli recordó la lesión ligamentaria que lo dejó fuera del Mundial 2026. Reveló detalles de su charla íntima con Lionel Scaloni y el apoyo que recibió de Lionel Messi.\n\nLa Subsecretaría de Deporte mantiene las clases de yoga con vacantes. La Subsecretaría de Deporte anunció que siguen las clases de yoga dictadas por Vilma Suárez en la sala Dr. Victorio Tommasi y quedan lugares libres para nuevos asistentes.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
       "guion": null,
-      "seccion": "Cultura y agenda",
+      "seccion": "Economía",
       "local": false,
       "relevancia": 60,
       "medios": [],
@@ -3052,7 +2756,6 @@
       "publicadaCuando": "2026-10-17T00:06:36.597Z",
       "temas": [],
       "etiquetas": [
-        "Museo Histórico Municipal",
         "morosidad",
         "fútbol",
         "yoga"
@@ -3060,16 +2763,11 @@
       "como": "automatica",
       "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
       "notasDelRepaso": [
-        "1xyp583",
         "30azdn",
         "bgdvlg",
         "1qtfiwu"
       ],
       "enlacesEnTexto": [
-        {
-          "texto": "El Museo Histórico Municipal expone el Proyecto Cruz del Centenario",
-          "href": "/nota/el-museo-historico-municipal-expone-el-proyecto-cruz-del-centenario-1xyp583"
-        },
         {
           "texto": "La morosidad de las familias baja en agosto y llega al 12,81%",
           "href": "/nota/la-morosidad-de-las-familias-baja-en-agosto-y-llega-al-12-81-30azdn"
@@ -3098,7 +2796,7 @@
       "slug": "el-repaso-de-la-noche-en-radar-balcarce-museo-historico-municipal",
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261016noche.jpg",
-        "credito": "Fotos: Infórmese Primero (FM 104.9) y Los Andes (Mendoza)"
+        "credito": "Fotos: Los Andes (Mendoza) y Infórmese Primero (FM 104.9)"
       }
     },
     {
@@ -3111,9 +2809,9 @@
       "medios": [
         "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
+        "C5N",
         "La Nueva",
-        "Radio Mitre",
-        "C5N"
+        "Radio Mitre"
       ],
       "enlace": "https://tn.com.ar/politica/2026/10/16/santilli-pidio-acuerdos-con-los-gobernadores-para-avanzar-con-las-reformas-y-cuestiono-a-kicillof-por-la-falta-de-inversiones/",
       "teniaImagenLaFuente": true,
@@ -3463,87 +3161,6 @@
       }
     },
     {
-      "id": "30azdn",
-      "titulo": "La morosidad de las familias baja en agosto y llega al 12,81%",
-      "copete": "El Banco Central informó que el retraso en los pagos de los hogares registró una leve merma durante el último mes. En paralelo, la irregularidad en las empresas continuó en aumento.",
-      "cuerpo": "La morosidad de los créditos destinados a los hogares registró una leve baja en agosto y se ubicó en el 12,81 por ciento, de acuerdo con los registros difundidos por el Banco Central. El indicador descendió 0,13 puntos porcentuales frente a julio a partir de una reducción del saldo de préstamos en situación irregular.\n\nEl relevamiento oficial indicó que la mejora estuvo explicada principalmente por el comportamiento en las tarjetas de crédito, mientras que los préstamos personales y prendarios mostraron incrementos leves. En contraste, el ratio de irregularidad de las compañías subió al 3,80 por ciento.\n\nEl organismo monetario aclaró que parte de la disminución en los hogares respondió a la transferencia de carteras impagas fuera de los balances por parte de las entidades bancarias. Por su parte, la mora del sector privado en su conjunto se mantuvo estable en el 7,75 por ciento.",
-      "guion": "La morosidad de las familias baja en agosto y llega al 12,81 por ciento.",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "TN (Todo Noticias)",
-        "Diario Popular",
-        "Ámbito",
-        "Clarín"
-      ],
-      "enlace": "https://www.clarin.com/economia/agosto-morosidad-familias-leve-baja-marco-128_0_ksSwdDjX91.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-16T21:04:58.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T22:31:13.685Z",
-      "relevancia": 48,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La mora de las familias bajó al 12,81% en agosto.",
-        "El Banco Central atribuyó parte de la baja a un pase de carteras fuera de balance.",
-        "El índice de las empresas subió al 3,80%."
-      ],
-      "seSabe": [
-        "La morosidad de las familias se ubicó en el 12,81% en agosto según el Banco Central.",
-        "El indicador de las empresas subió al 3,80%.",
-        "La mora del crédito total al sector privado se mantuvo en el 7,75%."
-      ],
-      "noConfirmado": [
-        "El impacto real de la refinanciación de deudas y su peso definitivo en la reducción del índice."
-      ],
-      "textoRedes": "El Banco Central informó que la morosidad de los créditos a las familias bajó al 12,81% en agosto, mientras que el índice en las empresas subió al 3,80%.",
-      "etiquetas": [
-        "Economía",
-        "Banco Central",
-        "Morosidad",
-        "Créditos",
-        "Familias",
-        "Empresas"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/economia/agosto-morosidad-familias-leve-baja-marco-128_0_ksSwdDjX91.html",
-          "fecha": "2026-10-16T21:04:58.000Z",
-          "oficial": false,
-          "aporte": "Aportó datos de consultoras privadas sobre la cantidad de personas endeudadas y el alcance de las refinanciaciones."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/16/la-mora-de-las-familias-tuvo-una-leve-baja-en-agosto-pero-subio-el-atraso-en-los-pagos-de-las-empresas/",
-          "fecha": "2026-10-16T21:16:10.000Z",
-          "oficial": false,
-          "aporte": "Aportó las cifras oficiales del Banco Central sobre la baja de la mora en las familias y el desglose por tipo de préstamo."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/finanzas/la-mora-las-familias-mostro-una-leve-baja-agosto-pero-volvio-subir-las-empresas-n6334778",
-          "fecha": "2026-10-16T21:57:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre el traslado de créditos impagos fuera de balances y la evolución del financiamiento corporativo."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-morosidad-de-las-familias-baja-en-agosto-y-llega-al-12-81",
-      "foto": {
-        "archivo": "fotos-notas/30azdn-ia.jpg",
-        "credito": "Ilustración generada con IA"
-      }
-    },
-    {
       "id": "4gdhzi",
       "titulo": "Diputados piden que el embajador chileno explique la ruta a Malvinas",
       "copete": "Un grupo de legisladores nacionales reclama que el representante diplomático de Chile rinda cuentas en el Congreso sobre la conexión marítima hacia las islas prevista para noviembre.",
@@ -3640,90 +3257,6 @@
       "foto": {
         "archivo": "fotos-notas/4gdhzi.jpg",
         "credito": "Foto: Clarín"
-      }
-    },
-    {
-      "id": "10pra4l",
-      "titulo": "La CGT reclama unidad al peronismo y apunta contra el Gobierno",
-      "copete": "La central obrera conmemoró el Día de la Lealtad con críticas a la gestión nacional y un llamado a dejar de lado las disputas internas de cara a las elecciones de 2027.",
-      "cuerpo": "La Confederación General del Trabajo (CGT) conmemoró el Día de la Lealtad el viernes 16 de octubre en la histórica sede de la calle Azopardo con un llamado a la unidad partidaria. Desde el Salón Felipe Vallese, el cotitular de la central Cristian Jerónimo exigió a los dirigentes archivar \"los egos y las vanidades\" de cara a las elecciones presidenciales de 2027.\n\nDurante el acto, el dirigente sindical sostuvo que la sociedad aguarda otra respuesta tanto del sector gremial como de la política. A su turno, los referentes Octavio Argüello y Jorge Sola coincidieron en la necesidad de consolidar un bloque opositor con eje en los trabajadores y criticaron el modelo económico del Gobierno nacional.\n\nLa ceremonia contó con la presencia de dirigentes políticos como el ex presidente Eduardo Duhalde, el ex jefe de Gabinete Juan Manuel Abal Medina y el intendente de La Plata, Julio Alak. Además, los organizadores leyeron un mensaje enviado por el gobernador bonaerense, Axel Kicillof, quien remarcó que el espacio debe priorizar los problemas de la ciudadanía.",
-      "guion": "La CGT reclama unidad al peronismo y apunta contra el Gobierno.",
-      "seccion": "Política",
-      "medios": [
-        "Perfil",
-        "Página/12",
-        "Noticias Argentinas (NA)",
-        "El Eco de Tandil"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/la-cgt-celebro-el-17-de-octubre-y-reclamo-a-la-dirigencia-dejar-de-lado--los-egos-y-las-vanidades--de-cara-a-2027_a6ad28a19f8e83a89472bcb65",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-16T20:44:25.504Z",
-      "sinFecha": false,
-      "visto": "2026-10-17T03:01:14.154Z",
-      "relevancia": 34,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La CGT conmemoró el Día de la Lealtad en la calle Azopardo.",
-        "Reclamaron unidad a la dirigencia de cara a las presidenciales de 2027.",
-        "Participaron referentes sindicales y dirigentes políticos.",
-        "Cuestionaron el modelo económico y la represión en protestas."
-      ],
-      "seSabe": [
-        "La CGT celebró el Día de la Lealtad el viernes 16 de octubre en su sede porteña.",
-        "Cristian Jerónimo pidió dejar atrás los egos sectoriales para 2027.",
-        "Eduardo Duhalde y Julio Alak asistieron a la ceremonia."
-      ],
-      "textoRedes": "La CGT celebró el Día de la Lealtad con un acto en la sede de la calle Azopardo donde reclamó unidad a la diligencia política de cara a 2027 y cuestionó el modelo económico nacional.",
-      "etiquetas": [
-        "CGT",
-        "Día de la Lealtad",
-        "Peronismo",
-        "Elecciones 2027",
-        "Política"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/la-cgt-celebro-el-17-de-octubre-y-reclamo-a-la-dirigencia-dejar-de-lado--los-egos-y-las-vanidades--de-cara-a-2027_a6ad28a19f8e83a89472bcb65",
-          "fecha": "2026-10-16T20:44:25.504Z",
-          "oficial": false,
-          "aporte": "Aportó declaraciones textuales de los referentes gremiales sobre la unidad y las elecciones."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/la-cgt-celebro-el-dia-de-la-lealtad-con-un-ultimatum-al-pj-dejen-de-lado-los-egos-y-las-vanidades.phtml",
-          "fecha": "2026-10-16T22:23:28.000Z",
-          "oficial": false,
-          "aporte": "Detalló los discursos de la cúpula sindical, las críticas a la represión y los dirigentes presentes."
-        },
-        {
-          "medio": "Página/12",
-          "enlace": "https://www.pagina12.com.ar/2026/10/17/la-cgt-y-el-17-de-octubre/",
-          "fecha": "2026-10-17T01:53:57.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/nacionales/la-cgt-celebro-el-17-de-octubre-y-reclamo-dejar-de-lado-los-egos-y-las-vanidades",
-          "fecha": "2026-10-16T21:59:43.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": null
-      },
-      "slug": "la-cgt-reclama-unidad-al-peronismo-y-apunta-contra-el-gobierno",
-      "foto": {
-        "archivo": "fotos-notas/10pra4l.jpg",
-        "credito": "Foto: El Eco de Tandil"
       }
     },
     {
@@ -4009,8 +3542,8 @@
       "medios": [
         "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
-        "Radio Mitre",
-        "Minuto Uno"
+        "Minuto Uno",
+        "Radio Mitre"
       ],
       "enlace": "https://tn.com.ar/videos/show/2026/10/16/la-base-aerea-de-moron-despidio-a-fernando-confessore-con-un-emotivo-homenaje-extranaremos-siempre-su-presencia/",
       "teniaImagenLaFuente": true,
@@ -4370,13 +3903,16 @@
       "guion": "Cristina Kirchner saluda a la militancia desde su domicilio.",
       "seccion": "Política",
       "medios": [
+        "La Nación",
         "LU9 Mar del Plata",
         "Agencia DIB",
         "TN (Todo Noticias)",
         "El Destape",
+        "Perfil",
         "Página/12",
         "Noticias Argentinas (NA)",
         "El Día",
+        "La Nueva",
         "La Tecla"
       ],
       "enlace": "https://www.pagina12.com.ar/2026/10/17/el-dia-de-la-lealtad-siguio-con-un-asado-para-cristina-kirchner-en-la-puerta-de-su-casa/",
@@ -4384,7 +3920,7 @@
       "fecha": "2026-10-16T19:01:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T20:31:25.974Z",
-      "relevancia": 67,
+      "relevancia": 71,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4750,8 +4286,8 @@
       "seccion": "Argentina",
       "medios": [
         "El Día",
-        "Infobae",
-        "C5N"
+        "C5N",
+        "Infobae"
       ],
       "enlace": "https://www.infobae.com/america/agencias/2026/10/16/panama-respaldara-al-argentino-rafael-grossi-para-la-secretaria-general-de-la-onu/",
       "teniaImagenLaFuente": false,
@@ -4964,65 +4500,83 @@
       }
     },
     {
-      "id": "1xyp583",
-      "titulo": "El Museo Histórico Municipal expone el Proyecto Cruz del Centenario",
-      "copete": "El arquitecto Rubén Kavanagh encabezó una charla sobre patrimonio e identidad en el Museo Histórico Municipal.",
-      "cuerpo": "El Museo Histórico Municipal albergó una nueva edición del ciclo de charlas destinado a reflexionar sobre la historia local. En esta oportunidad, el encuentro giró en torno al Proyecto Cruz del Centenario: memoria, patrimonio e identidad, según informó un medio local.\n\nLa exposición estuvo a cargo del arquitecto Rubén Kavanagh, quien detalló los alcances de la iniciativa y remarcó la necesidad de preservar el patrimonio comunal para las futuras generaciones.",
-      "guion": "El Museo Histórico Municipal expone el Proyecto Cruz del Centenario",
-      "seccion": "Cultura y agenda",
+      "id": "mcgl08",
+      "titulo": "Ciudadanos italianos tienen plazo hasta noviembre para votar en el COMITES",
+      "copete": "Los residentes locales con ciudadanía deben completar un trámite antes del 4 de noviembre para recibir el sobre electoral en sus domicilios y participar de los comicios.",
+      "cuerpo": "Los ciudadanos italianos residentes en Balcarce tienen tiempo hasta el 4 de noviembre para completar la inscripción y recibir el sobre electoral en sus domicilios para los comicios del COMITES, según informó una fuente. La convocatoria abarca a los inscriptos en la circunscripción consular de Mar del Plata.\n\nPara realizar el procedimiento, los interesados deben presentar un formulario firmado junto con una fotocopia de ambas caras del DNI argentino. La Sociedad Italiana de Balcarce brinda asesoramiento en su sede de lunes a viernes, entre las 9:30 y las 12.\n\nEn estos comicios, Antonio Malatesta, miembro de la comisión directiva de la asociación local, participa como candidato por la lista MAIE Mar del Plata.",
+      "guion": "Ciudadanos italianos tienen plazo hasta noviembre para votar en el COMITES.",
+      "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)"
+        "Infórmese Primero (FM 104.9)",
+        "El Diario Balcarce",
+        "Puntonueve (FM 100.9)"
       ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/10/el-proyecto-cruz-del-centenario-fue.html",
+      "enlace": "http://www.informeseprimero.com.ar/2026/10/elecciones-del-comites-los-ciudadanos.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-16T17:01:21.088Z",
       "sinFecha": false,
-      "visto": "2026-10-16T17:34:11.188Z",
-      "relevancia": 73,
+      "visto": "2026-10-17T16:01:35.131Z",
+      "relevancia": 88,
       "local": true,
       "deUnMedioDeAca": true,
+      "muyContadaDeAca": 3,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      "claves": [
+        "Plazo de inscripción hasta el 4 de noviembre para los comicios del COMITES.",
+        "Trámite obligatorio para recibir el sobre electoral en el domicilio.",
+        "Asesoramiento disponible en la sede de la Sociedad Italiana de lunes a viernes.",
+        "Antonio Malatesta es candidato por la lista MAIE Mar del Plata."
       ],
-      "textoRedes": "El arquitecto Rubén Kavanagh presentó el Proyecto Cruz del Centenario en una nueva charla organizada en el Museo Histórico Municipal.",
+      "seSabe": [
+        "Hay plazo hasta el 4 de noviembre para la inscripción.",
+        "La convocatoria incluye a los residentes de Balcarce y la región.",
+        "Se requiere un formulario firmado y copia del DNI argentino.",
+        "La Sociedad Italiana ofrece asesoramiento matutino en su sede."
+      ],
+      "textoRedes": "Los ciudadanos italianos de Balcarce tienen tiempo hasta el 4 de noviembre para inscribirse y recibir el sobre electoral para las elecciones del COMITES.",
       "etiquetas": [
-        "Museo Histórico Municipal",
-        "Cruz del Centenario",
-        "Rubén Kavanagh",
-        "patrimonio",
-        "historia local"
+        "ciudadanos italianos",
+        "COMITES",
+        "elecciones",
+        "Sociedad Italiana",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
         {
           "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/el-proyecto-cruz-del-centenario-fue.html",
-          "fecha": "2026-10-16T17:01:21.088Z",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/elecciones-del-comites-los-ciudadanos.html",
+          "fecha": "2026-10-17T12:14:00.000Z",
           "oficial": false,
-          "aporte": "Informó sobre la charla del arquitecto Rubén Kavanagh acerca del Proyecto Cruz del Centenario en el Museo Histórico Municipal."
+          "aporte": "Aportó los plazos, requisitos y detalles de la postulación para las elecciones del COMITES."
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/los-ciudadanos-italianos-tienen-tiempo-hasta-el-4-de-noviembre-para-inscribirse-y-votar-en-las-elecciones-del-comites-783",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Presentación institucional del medio sin información sobre el tema."
         }
       ],
       "antecedentes": [
         {
-          "id": "1o1dlqq",
-          "titulo": "La Escuela de Arte Astor Piazzolla expone desde el 2 de octubre en el Museo Histórico",
-          "fecha": "2026-09-29T14:32:05.000Z",
-          "ruta": "/nota/arte-fusion-expo-anual-2026-en-el-museo-historico-1o1dlqq"
+          "id": "16btgej",
+          "titulo": "Pedro Sánchez adelanta las elecciones generales en España al 29 de noviembre",
+          "fecha": "2026-10-05T13:01:23.078Z",
+          "ruta": "/nota/pedro-sanchez-adelanta-las-elecciones-generales-en-espana-al-29-de-16btgej"
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": null
       },
-      "slug": "el-museo-historico-municipal-expone-el-proyecto-cruz-del-centenario",
+      "slug": "ciudadanos-italianos-tienen-plazo-hasta-noviembre-para-votar-en-el",
       "foto": {
-        "archivo": "fotos-notas/1xyp583.jpg",
-        "credito": "Foto: Infórmese Primero (FM 104.9)"
+        "archivo": "fotos-notas/mcgl08.jpg",
+        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -5119,89 +4673,6 @@
       "foto": {
         "archivo": "fotos-notas/1o0mwr9.jpg",
         "credito": "Foto: Infórmese Primero (FM 104.9)"
-      }
-    },
-    {
-      "id": "191geto",
-      "titulo": "El río Iguazú supera su marca habitual por veinticinco metros y genera evacuaciones",
-      "copete": "El caudal del río Iguazú creció veinticinco metros debido al fenómeno de El Niño y obligó a declarar la etapa de evacuación en Misiones, Corrientes y Entre Ríos.",
-      "cuerpo": "El río Iguazú alcanzó una altura de veinticinco metros por encima de su marca habitual en la ciudad misionera de Puerto Iguazú, lo que provocó la inundación de instalaciones turísticas y anegamientos en el paso fronterizo, según informó la Prefectura Naval Argentina. Debido a la crecida extraordinaria impulsada por las intensas precipitaciones del fenómeno de El Niño, el puerto local permanece cerrado y las autoridades activaron la etapa de evacuación preventiva.\n\nLa situación hídrica también afecta a las provincias de Corrientes y Entre Ríos por la crecida generalizada de los ríos Paraná y Uruguay, lo que motivó la apertura de compuertas en la represa de Yacyretá y el desplazamiento de pobladores en localidades como Paso de los Libres.\n\nLas autoridades mantienen el monitoreo permanente de los cursos de agua ante la previsión de nuevas lluvias intensas dentro de los próximos seis días y la continuidad del fenómeno climático durante los próximos meses.",
-      "guion": "El río Iguazú supera su marca habitual por veinticinco metros y genera evacuaciones",
-      "seccion": "Argentina",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Crónica",
-        "El Marplatense",
-        "A24"
-      ],
-      "enlace": "https://tn.com.ar/videos/sociedad/2026/10/16/alerta-en-el-litoral-por-el-nino-el-rio-iguazu-esta-25-metros-por-encima-de-su-nivel-habitual-y-el-agua-cubrio-zonas-turisticas/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-16T16:01:53.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T21:31:01.284Z",
-      "relevancia": 34,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El río Iguazú creció veinticinco metros por encima de su nivel habitual.",
-        "Prefectura decretó la etapa de evacuación en Puerto Iguazú.",
-        "El puerto local permanece cerrado y se suspendieron las operaciones.",
-        "La crecida afecta también a las provincias de Corrientes y Entre Ríos."
-      ],
-      "noConfirmado": [
-        "No se especificó la cantidad exacta de personas evacuadas en cada una de las provincias afectadas."
-      ],
-      "textoRedes": "El río Iguazú superó su nivel habitual por veinticinco metros, provocó inundaciones en Puerto Iguazú y mantiene activa la etapa de evacuación en Misiones, Corrientes y Entre Ríos debido al impacto del fenómeno de El Niño.",
-      "etiquetas": [
-        "río Iguazú",
-        "crecida",
-        "Puerto Iguazú",
-        "Misiones",
-        "El Niño",
-        "evacuaciones"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/videos/sociedad/2026/10/16/alerta-en-el-litoral-por-el-nino-el-rio-iguazu-esta-25-metros-por-encima-de-su-nivel-habitual-y-el-agua-cubrio-zonas-turisticas/",
-          "fecha": "2026-10-16T16:01:53.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/actualidad/alerta-el-nino-el-litoral-el-rio-iguazu-crecio-25-metros-cerraron-el-puerto-y-hay-evacuaciones-n1607253",
-          "fecha": "2026-10-16T19:45:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/sociedad/rio-iguazu-crecida-el-nino-puerto-iguazu/",
-          "fecha": "2026-10-16T19:12:22.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/el-litoral-en-alerta-por-el-nino",
-          "fecha": "2026-10-16T17:00:04.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-rio-iguazu-supera-su-marca-habitual-por-veinticinco-metros-y",
-      "foto": {
-        "archivo": "fotos-notas/191geto.jpg",
-        "credito": "Foto: Crónica"
       }
     },
     {
@@ -5378,7 +4849,7 @@
       "fecha": "2026-10-16T14:47:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T04:01:04.212Z",
-      "relevancia": 46,
+      "relevancia": 38,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -5919,72 +5390,6 @@
       }
     },
     {
-      "id": "a6hpqz",
-      "titulo": "El peronismo local debate su estrategia de cara a las elecciones",
-      "copete": "A un año de los comicios, el PJ tradicional, La Cámpora, el kicillofismo y el Frente Renovador discuten la construcción de una alternativa en Balcarce. Las diferencias internas y el desafío de lograr una síntesis.",
-      "cuerpo": "El peronismo de Balcarce discute los pasos necesarios para conformar una alternativa electoral de cara a los comicios del próximo año.\n\nLos distintos sectores analizan cómo alcanzar una síntesis política que evite la dispersión de votos. Las negociaciones involucran la definición de liderazgos, la ocupación de espacios de decisión y la elaboración de propuestas para la ciudad.\n\nLa construcción del espacio incluye a referentes territoriales, organizaciones sociales y sindicatos. Las discusiones sobre candidaturas y mecanismos de participación quedarán supeditadas a la capacidad de acuerdo entre las diferentes corrientes internas.",
-      "guion": "El peronismo local debate su estrategia de cara a las elecciones",
-      "seccion": "Política",
-      "medios": [
-        "Diario La Vanguardia",
-        "News Balcarce (FM 91.7)",
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/45098-los-desafios-del-peronismo-en-balcarce-la-politica-y-el-arte-de-lo-imposible/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-16T13:17:26.305Z",
-      "sinFecha": true,
-      "visto": "2026-10-16T13:17:26.305Z",
-      "relevancia": 63,
-      "local": true,
-      "deUnMedioDeAca": true,
-      "muyContadaDeAca": 3,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Participan el PJ tradicional, La Cámpora, el kicillofismo y el Frente Renovador.",
-        "El debate se centra en la búsqueda de unidad sin perder identidades.",
-        "La discusión abarca la definición de candidaturas y un proyecto común."
-      ],
-      "seSabe": [
-        "El peronismo de Balcarce debate la estrategia electoral de cara al próximo año, según informó un medio local.",
-        "Participan del espacio el PJ tradicional, La Cámpora, el kicillofismo y el Frente Renovador, de acuerdo con la información difundida."
-      ],
-      "noConfirmado": [
-        "Todavía no se definieron las candidaturas ni los mecanismos de selección.",
-        "No se precisó si habrá una lista de unidad o competencia interna.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El peronismo de Balcarce debate su estrategia de cara a las elecciones del próximo año con la participación de distintos espacios políticos locales.",
-      "etiquetas": [
-        "peronismo",
-        "elecciones",
-        "politica",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45098-los-desafios-del-peronismo-en-balcarce-la-politica-y-el-arte-de-lo-imposible/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló los sectores que componen el peronismo local y los debates sobre la estrategia electoral hacia 2027."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-peronismo-local-debate-su-estrategia-de-cara-a-las-elecciones",
-      "foto": {
-        "archivo": "fotos-notas/a6hpqz.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
       "id": "1jdsdep",
       "titulo": "La Dirección de Juventud firma un acuerdo para vender entradas online",
       "copete": "El Teatro Municipal contará con una nueva plataforma de venta de localidades a partir de 2027. Permitirá operaciones digitales y presenciales.",
@@ -6427,14 +5832,14 @@
         "TyC Sports",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
+        "C5N",
+        "Minuto Uno",
         "Clarín",
         "0223 (Mar del Plata)",
         "Radio Mitre",
         "Crónica",
         "La Nueva",
-        "Minuto Uno",
-        "Canal 26",
-        "C5N"
+        "Canal 26"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/16/el-choque-de-verstappen-al-argentino-perez-companc-en-el-gt-world-challenge-el-gesto-desde-el-auto-y-la-sancion-que-podria-sufrir-el-neerlandes/",
       "teniaImagenLaFuente": true,
@@ -6823,6 +6228,72 @@
       }
     },
     {
+      "id": "19nga6r",
+      "titulo": "Santiago Gilligan busca sumar sus primeros minutos en la Serie A de Italia",
+      "copete": "El rugbier formado en Campo de Pato superó las lesiones que lo marginaron del plantel superior de Valorugby y se prepara para afrontar la nueva temporada del rugby italiano.",
+      "cuerpo": "Santiago Gilligan integra el plantel superior de Valorugby, equipo de la máxima categoría del rugby italiano, tras superar lesiones en el hombro y en el tendón de Aquiles que le impidieron disputar partidos oficiales durante el año pasado. El deportista, surgido en las divisiones inferiores del Club Social y Campo de Pato General Balcarce, transita su segunda temporada en la institución tras su paso previo por el Biella Rugby Club 1977, donde se consagró campeón en la segunda división.\n\nCon el inicio de un nuevo torneo previsto para los próximos días, el balcarceño mantiene expectativas de sumar sus primeros minutos en cancha y colaborar para que el equipo repita el rendimiento que le permitió obtener la triple corona durante el año anterior.",
+      "guion": "Santiago Gilligan busca sumar sus primeros minutos en la Serie A de Italia.",
+      "seccion": "Deportes",
+      "medios": [
+        "El Diario Balcarce",
+        "Acción 5 (Balcarce)"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/santiago-gilligan-busca-asentarse-en-la-serie-a-del-rugby-italiano-776",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T12:00:07.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-17T13:01:31.993Z",
+      "relevancia": 78,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Santiago Gilligan integra el plantel de Valorugby en la Serie A italiana",
+        "El rugbier se formó en el Club Social y Campo de Pato General Balcarce",
+        "Superó lesiones en el hombro y en el tendón de Aquiles que lo marginaron la temporada pasada",
+        "El equipo italiano logró la triple corona en 2026 con el Scudetto, la Copa Italia y la Supercopa"
+      ],
+      "seSabe": [
+        "Santiago Gilligan forma parte de Valorugby desde 2025, según informó el medio local",
+        "El club italiano obtuvo la triple corona en 2026",
+        "El deportista sufrió la rotura del tendón de Aquiles en diciembre del año pasado",
+        "El plantel cuenta con diez jugadores argentinos"
+      ],
+      "noConfirmado": [
+        "Todavía no se informó la fecha exacta del debut del rugbier en la presente temporada",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El rugbier balcarceño Santiago Gilligan superó sus lesiones y se prepara para debutar en el plantel superior de Valorugby, equipo que milita en la Serie A de Italia.",
+      "etiquetas": [
+        "Santiago Gilligan",
+        "Rugby",
+        "Italia",
+        "Valorugby",
+        "Deportes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/santiago-gilligan-busca-asentarse-en-la-serie-a-del-rugby-italiano-776",
+          "fecha": "2026-10-17T12:46:02.000Z",
+          "oficial": false,
+          "aporte": "Detalló su trayectoria en el rugby italiano, las lesiones sufridas y sus expectativas para la nueva temporada"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": null
+      },
+      "slug": "santiago-gilligan-busca-sumar-sus-primeros-minutos-en-la-serie-a-de",
+      "foto": {
+        "archivo": "fotos-notas/19nga6r.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
       "id": "aa7nni",
       "titulo": "Reprograman la Caravana de la Alegría para noviembre",
       "copete": "La Escuela Emilio Lamarca pasó la fecha del tradicional evento familiar al aire libre debido a los pronósticos del tiempo. Se hará el domingo 15 de noviembre en el Colegio Rural San José.",
@@ -6978,9 +6449,9 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
+        "La Capital (Rosario)",
         "La Nueva",
-        "Crónica",
-        "La Capital (Rosario)"
+        "Crónica"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-finaliza-su-viaje-en-estados-unidos-y-se-prepara-para-su-visita-a-espana_a6ad1525c88153cda2d050c06",
       "teniaImagenLaFuente": true,
@@ -7160,120 +6631,17 @@
         "archivo": "fotos-notas/4p4uuv.jpg",
         "credito": "Foto: Perfil"
       }
-    },
-    {
-      "id": "1kd7az5",
-      "titulo": "El Banco Central publica el informe con los datos de morosidad",
-      "copete": "La entidad financiera da a conocer los niveles de incumplimiento del sector privado correspondientes a agosto. La mora en hogares se ubica en el 12,8 por ciento y afecta a unos seis millones de personas.",
-      "cuerpo": "La morosidad en los préstamos a los hogares se ubica en el 12,8 por ciento, lo que representa una baja frente al récord del 12,9 por ciento registrado en julio. El indicador de irregularidad en las empresas se posiciona en el 3,6 por ciento y el promedio general para los bancos se sostiene en el 7,7 por ciento.\n\nEn paralelo, el sector de fintechs y billeteras virtuales registra una mora del 33,9 por ciento, mientras que los plásticos de las grandes cadenas comerciales superan el 50 por ciento de rojo. Se estima que la falta de pago afecta a unos seis millones de personas en todo el país, impactando en el consumo. En la Cámara de Diputados, los bloques debatieron el martes proyectos sobre el endeudamiento y la mora familiar.",
-      "guion": "El Banco Central publica el informe con los datos de morosidad",
-      "seccion": "Economía",
-      "medios": [
-        "Noticias Argentinas (NA)",
-        "La Verdad",
-        "La Nueva",
-        "Minuto Uno",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "C5N",
-        "Los Andes (Mendoza)",
-        "El Eco de Tandil"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/el-banco-central-difunde-el-dato-de-morosidad-de-agosto_a6ad145f288153cda2d02fd2d",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-16T09:14:36.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T12:01:34.474Z",
-      "relevancia": 24,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Banco Central difunde los datos de morosidad de agosto.",
-        "La morosidad en los hogares se ubica en el 12,8 por ciento.",
-        "El incumplimiento en las empresas llega al 3,6 por ciento.",
-        "La mora afecta a unos seis millones de personas en el país."
-      ],
-      "noConfirmado": [
-        "Todavía no se detallan los montos globales del endeudamiento privado."
-      ],
-      "textoRedes": "El Banco Central da a conocer los niveles de incumplimiento del sector privado de agosto. La mora en hogares se ubica en el 12,8 por ciento y afecta a unos seis millones de personas en todo el país.",
-      "etiquetas": [
-        "Banco Central",
-        "morosidad",
-        "créditos",
-        "Diputados"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/el-banco-central-difunde-el-dato-de-morosidad-de-agosto_a6ad145f288153cda2d02fd2d",
-          "fecha": "2026-10-16T09:14:36.000Z",
-          "oficial": false,
-          "aporte": "Reprodujo la información sobre la publicación del informe del Banco Central."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-16-8-29-0-el-banco-central-difunde-el-dato-de-morosidad-de-agosto",
-          "fecha": "2026-10-16T11:55:07.000Z",
-          "oficial": false,
-          "aporte": "Republicó el texto sin aportar información nueva."
-        },
-        {
-          "medio": "La Verdad",
-          "enlace": "https://laverdadonline.com/el-banco-central-difunde-el-dato-de-morosidad-de-agosto/",
-          "fecha": "2026-10-16T11:23:36.000Z",
-          "oficial": false,
-          "aporte": "Aportó la comparación con el mes anterior y la evolución interanual del ratio de irregularidad."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/economia/el-banco-central-da-conocer-este-lunes-la-morosidad-agosto-2026-n6334440",
-          "fecha": "2026-10-16T11:15:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los datos de morosidad por sector, la cifra de afectados y el debate en la Cámara de Diputados."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "132b801",
-          "titulo": "El Banco Central actualiza el techo de la banda cambiaria para noviembre",
-          "fecha": "2026-10-14T10:14:54.000Z",
-          "ruta": "/nota/el-banco-central-actualiza-el-techo-de-la-banda-cambiaria-para-132b801"
-        },
-        {
-          "id": "1dd0fj4",
-          "titulo": "El Banco Central compra dólares y las acciones suben",
-          "fecha": "2026-10-13T21:02:16.000Z",
-          "ruta": "/nota/el-banco-central-compra-dolares-y-las-acciones-suben-1dd0fj4"
-        },
-        {
-          "id": "1jx823a",
-          "titulo": "El Banco Central compra US$291 millones en el mercado cambiario",
-          "fecha": "2026-10-09T22:59:16.000Z",
-          "ruta": "/nota/el-banco-central-compra-us-291-millones-en-el-mercado-cambiario-1jx823a"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-banco-central-publica-el-informe-con-los-datos-de-morosidad"
     }
   ],
   "secciones": [
     "Política",
     "Balcarce",
-    "Salud",
     "Argentina",
     "Fútbol",
     "Economía",
     "Cultura y agenda",
-    "Deportes",
     "Automovilismo",
-    "Educación",
+    "Deportes",
     "Agro",
     "Tecnología",
     "Ciencia"
@@ -7290,7 +6658,7 @@
       "temp": 9,
       "sensacion": 5,
       "humedad": 77,
-      "viento": 17,
+      "viento": 16,
       "rumbo": "S",
       "cielo": "Nublado",
       "esDeDia": true
@@ -7643,6 +7011,18 @@
   },
   "pendientes": [
     {
+      "id": "p7tzod",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "ovw5cv",
+      "titulo": "Familiares y amigos de Claribel Medina volvieron a…",
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"muerte\""
+    },
+    {
       "id": "tlfbsi",
       "titulo": "Exclusivo: Proyectan una admisión única y mayor…",
       "seccion": "Salud",
@@ -7653,18 +7033,6 @@
       "titulo": "Exclusivo: Trabajan en una aplicación para reunir turnos…",
       "seccion": "Balcarce",
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "wlh8pm",
-      "titulo": "Francisco Ridao sobre 2027: “Este equipo va a tener un…",
-      "seccion": "Política",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "p7tzod",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "sm31hz",

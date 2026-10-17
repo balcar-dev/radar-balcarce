@@ -16833,7 +16833,8 @@
   "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66065.png",
   "razon": "Es la única opción disponible y no presenta marcas de agua ni menores de edad.",
   "cuando": "2026-10-16T13:19:51.254Z",
-  "huella": "224a4d1524cc482c"
+  "huella": "224a4d1524cc482c",
+  "ausenteDesde": "2026-10-17T21:32:00.614Z"
  },
  "130eay0": {
   "medio": "Diario La Vanguardia",
@@ -17313,7 +17314,8 @@
   "imagenOriginal": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGQ_1NsWqetVTqCZFJnAbZTFoGsZRbyC81buDdA2ObbSiwO_Ov05YAYCp3QydKuh-S94tDW4TYBcnzQvIBt_QJyqho8j50UUyRVRfFy21aKVFZxHvzALXtCC4QxxpDGoROEvaW0dN8NSHjaYoQMfVmQJiVKOZ2KsDIxhimDD4qN3oonsj9cOoZapQkG6g/w640-h462/Cruz%20del%20Centenario1.jpg",
   "razon": "Es la única imagen completa que ilustra el hecho (la presentación del proyecto) con buena nitidez, sin marcas de agua ni menores de edad.",
   "cuando": "2026-10-16T19:02:07.287Z",
-  "huella": "4e1b1aabbb080809"
+  "huella": "4e1b1aabbb080809",
+  "ausenteDesde": "2026-10-17T21:32:00.614Z"
  },
  "1d0f1sq": {
   "medio": "Diario La Vanguardia",
@@ -17550,7 +17552,8 @@
   "imagenOriginal": "https://www.cronica.com.ar/files/image/1721/1721975/6ad2780e0beeb_600_315!.jpg?s=f324030b5b2bcb14e9adfaabb58ed5ea&d=1792119600",
   "razon": "La foto C muestra una vista cenital de las cataratas con el río crecido, sin marcas de agua ni menores reconocibles.",
   "cuando": "2026-10-16T21:31:37.230Z",
-  "huella": "3b3b3c3838383617"
+  "huella": "3b3b3c3838383617",
+  "ausenteDesde": "2026-10-17T21:32:00.614Z"
  },
  "1idlalr": {
   "archivo": "fotos-notas/1idlalr.jpg",
@@ -19023,7 +19026,8 @@
    "corresponde": "si",
    "descripcion": "Axel Kicillof hablando por micrófono en un acto."
   },
-  "huella": "32525266262525c9"
+  "huella": "32525266262525c9",
+  "ausenteDesde": "2026-10-17T21:32:00.614Z"
  },
  "quke5a": {
   "archivo": "fotos-notas/quke5a.jpg",
@@ -19503,6 +19507,43 @@
    "corresponde": "si",
    "descripcion": "Axel Kicillof hablando en un atril rodeado de dirigentes políticos."
   },
-  "huella": "78ecd98494b4b6b2"
+  "huella": "78ecd98494b4b6b2",
+  "ausenteDesde": "2026-10-17T21:32:00.614Z"
+ },
+ "1uov8qv": {
+  "archivo": "fotos-notas/1uov8qv.jpg",
+  "medio": "El Día",
+  "credito": "Foto: El Día",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Los docentes bonaerenses aceptan el aumento salarial del gobierno provincial",
+  "enlace": "https://www.eldia.com/politica-y-economia/docentes-bonaerenses-definen-si-aceptan-la-oferta-de-aumento-salarial-de-la-provincia-politica-y-economia_1792264260",
+  "imagenOriginal": "https://cdn1.eldia.com/102026/1792264347864.jpg?&cw=1200&ch=630",
+  "razon": "Es la única foto que muestra una manifestación docente relacionada con el aumento salarial, sin menores de edad y sin marcas de agua añadidas.",
+  "cuando": "2026-10-17T21:31:36.228Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Protesta docente con un cartel que pide aumento salarial en la calle",
+   "segunda": {
+    "proveedor": "groq",
+    "marca": false,
+    "menor": false,
+    "jovenes": false,
+    "deArchivo": true,
+    "grafica": false,
+    "stock": false,
+    "corresponde": "si",
+    "descripcion": "Multitud de docentes en una marcha callejera sosteniendo un cartel que reclama un salario mínimo vital."
+   },
+   "dudosa": "la nota habla de chicos o de categorías juveniles"
+  },
+  "huella": "4103870333538973"
  }
 }
