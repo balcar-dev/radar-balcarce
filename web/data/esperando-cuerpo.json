@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-17T17:03:28.389Z",
+ "generado": "2026-10-17T17:32:30.131Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -35,28 +35,6 @@
    "maximo": 3
   },
   {
-   "id": "14l7end",
-   "titulo": "Alexis Mac Allister fue clave en la remontada del Liverpool ante Brentford por la Premier League",
-   "copete": "El Liverpool consiguió una victoria fundamental ante Brentford por la Premier League y tuvo en Alexis Mac Allister a uno de sus grandes protagonistas. El mediocampista argentino se destacó en un encuentro que se presentó cuesta arriba para los Reds, aportó equilibrio cuando el…",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-17T16:17:04.000Z",
-   "fuentes": [
-    {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/depo/premierleague/alexis-mac-allister-remontada-liverpool-brentford-premier-league/",
-     "fecha": "2026-10-17T16:17:04.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/17/brentford-vs-liverpool-en-vivo-por-la-fecha-7-de-la-premier-league-hora-donde-ver-y-formaciones/",
-     "fecha": "2026-10-17T16:36:44.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (relleno): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 127 palabras",
-   "maximo": 3
-  },
-  {
    "id": "1x4gtj1",
    "titulo": "Diego Santilli: “Los que deberían estar preocupados son los gobernadores si el kirchnerismo vuelve y gana Kicillof”",
    "copete": "El jefe de Gabinete, Diego Santilli , afirmó que los mandatarios provinciales deberían inquietarse ante la posibilidad de un regreso del kirchnerismo al poder con Axel Kicillof como figura central . En una entrevista con Radio Mitre , vinculó ese escenario con una eventual…",
@@ -82,11 +60,6 @@
      "medio": "A24",
      "enlace": "https://www.a24.com/politica/santilli-los-que-tendrian-que-estar-preocupados-son-los-gobernadores-si-gana-kicillof-n1607140",
      "fecha": "2026-10-16T16:41:00.000Z"
-    },
-    {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
-     "fecha": "2026-10-16T18:08:00.000Z"
     },
     {
      "medio": "Noticias Argentinas (NA)",
@@ -134,6 +107,11 @@
      "fecha": "2026-10-16T17:53:00.000Z"
     },
     {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
+     "fecha": "2026-10-16T18:08:00.000Z"
+    },
+    {
      "medio": "Los Andes (Mendoza)",
      "enlace": "https://www.losandes.com.ar/politica/diego-santilli-dijo-que-los-gobernadores-deberian-estar-preocupados-un-posible-regreso-del-kirchnerismo-n6010629",
      "fecha": "2026-10-16T21:51:00.000Z"
@@ -158,33 +136,11 @@
     {
      "medio": "TN (Todo Noticias)",
      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/17/manchester-city-vs-ipswich-en-vivo-por-la-fecha-7-de-la-premier-league-hora-donde-ver-y-formaciones/",
-     "fecha": "2026-10-17T16:03:38.000Z"
+     "fecha": "2026-10-17T16:54:30.000Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "título o bajada: 1 problema (antecedente): el copete usa 11, que sale de una nota anterior, como si fuera de hoy",
-   "maximo": 3
-  },
-  {
-   "id": "1223qry",
-   "titulo": "Axel Kicillof, en el Día de la Lealtad: \"Cuenten conmigo para asumir las responsabilidades\"",
-   "copete": "",
-   "seccion": "Política",
-   "fecha": "2026-10-17T14:49:00.000Z",
-   "fuentes": [
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/politica/axel-kicillof-el-dia-la-lealtad-cuenten-conmigo-asumir-las-responsabilidades-n251858",
-     "fecha": "2026-10-17T14:49:00.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/politica/axel-kicillof-el-dia-la-lealtad-cuenten-conmigo-asumir-las-responsabilidades-que-haya-que-asumir-n6334879",
-     "fecha": "2026-10-17T15:04:00.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (nombre, promesa): el cuerpo nombra a \"ejecutivo\" y la fuente no; sin esas oraciones quedan 109 palabras",
    "maximo": 3
   },
   {

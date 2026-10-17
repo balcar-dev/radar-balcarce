@@ -64,6 +64,11 @@
   "ultimo": "2026-10-17T17:01:36.958Z",
   "motivo": "cuerpo: 2 problemas (nombre, promesa): el cuerpo nombra a \"ejecutivo\" y la fuente no; sin esas oraciones quedan 109 palabras"
  },
+ "12b46u9": {
+  "intentos": 1,
+  "ultimo": "2026-10-17T17:31:38.787Z",
+  "motivo": "con cuerpo"
+ },
  "12un4a6": {
   "intentos": 1,
   "ultimo": "2026-10-14T18:31:54.186Z",
@@ -117,9 +122,9 @@
   "motivo": "con cuerpo"
  },
  "14l7end": {
-  "intentos": 1,
-  "ultimo": "2026-10-17T17:01:36.958Z",
-  "motivo": "cuerpo: 1 problema (relleno): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 127 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-17T17:31:38.787Z",
+  "motivo": "con cuerpo"
  },
  "14mtnxg": {
   "intentos": 3,
@@ -887,8 +892,8 @@
   "motivo": "título o bajada: 1 problema (numero): el guion dice 9 y la fuente no lo dice"
  },
  "1m52u47": {
-  "intentos": 1,
-  "ultimo": "2026-10-17T17:01:36.958Z",
+  "intentos": 2,
+  "ultimo": "2026-10-17T17:31:38.787Z",
   "motivo": "título o bajada: 1 problema (antecedente): el copete usa 11, que sale de una nota anterior, como si fuera de hoy"
  },
  "1m9svv0": {
@@ -1100,13 +1105,6 @@
   "intentos": 5,
   "ultimo": "2026-10-15T03:02:11.634Z",
   "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)"
- },
- "1stahh": {
-  "intentos": 1,
-  "ultimo": "2026-10-10T17:31:46.971Z",
-  "motivo": "verificación baja: espera a una persona",
-  "baja": true,
-  "fuentes": 1
  },
  "1t5zb3r": {
   "intentos": 1,
@@ -2474,6 +2472,18 @@
   "intentos": 1,
   "ultimo": "2026-10-17T04:31:07.603Z",
   "motivo": "con cuerpo"
+ },
+ "quke5a": {
+  "intentos": 1,
+  "ultimo": "2026-10-17T17:31:38.787Z",
+  "motivo": "con cuerpo"
+ },
+ "qwwmm2": {
+  "intentos": 1,
+  "ultimo": "2026-10-17T17:31:38.787Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 2
  },
  "r0o8z3": {
   "intentos": 2,
