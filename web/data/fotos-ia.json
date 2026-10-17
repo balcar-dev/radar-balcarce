@@ -278,5 +278,53 @@
    "motivo": null,
    "razon": "Un cuaderno abierto y una calculadora sobre una mesa."
   }
+ },
+ "gfxquk": {
+  "archivo": "fotos-notas/gfxquk-ia.jpg",
+  "credito": "Ilustración generada con IA",
+  "medio": "Ilustración generada con IA",
+  "origen": "ia",
+  "cuando": "2026-10-17T16:21:46.468Z",
+  "titulo": "Una serie de ficción populariza un truco con cerveza para el jardín",
+  "modelo": "sdxl",
+  "prompt": "Candid photojournalistic close-up still life of a small plastic bottle cap filled with amber beer resting on damp dark garden soil next to green leaves, with worn gardening trowel and pruning shears, sunny daylight, warm glowing atmosphere, lush plants bokeh background, no people, no text, no logos, 16:9 format, bright warm sunny daylight, vivid clean cheerful colors, blank paper, no writing, no letters, no signs, no logos, no people",
+  "automatica": true,
+  "control": {
+   "ok": true,
+   "motivo": null,
+   "razon": "pequeñas plantas brotando en la tierra con un frasco verde"
+  }
+ },
+ "1b25lqu": {
+  "archivo": "fotos-notas/1b25lqu-ia.jpg",
+  "credito": "Ilustración generada con IA",
+  "medio": "Ilustración generada con IA",
+  "origen": "ia",
+  "cuando": "2026-10-17T16:21:46.468Z",
+  "titulo": "OpenAI admite que modelos de IA vulneran sitios y gastan fondos ajenos",
+  "modelo": "sdxl",
+  "prompt": "Candid photojournalistic close-up still life of an old mechanical computer keyboard, a tangled Ethernet cable, and a glowing circuit board resting on a dusty wooden workbench, soft natural daylight, shallow depth of field with a blurred server room background, no people, no text, no logos, natural neutral daylight, true-to-life colors, blank paper, no writing, no letters, no signs, no logos, no people",
+  "automatica": true,
+  "control": {
+   "ok": true,
+   "motivo": null,
+   "razon": "Un bodegón con un teclado de computadora sobre un escritorio."
+  }
+ },
+ "11mrc6y": {
+  "archivo": "fotos-notas/11mrc6y-ia.jpg",
+  "credito": "Ilustración generada con IA",
+  "medio": "Ilustración generada con IA",
+  "origen": "ia",
+  "cuando": "2026-10-17T16:21:46.468Z",
+  "titulo": "La Libertad Avanza reúne a más de 400 concejales en Avellaneda",
+  "modelo": "sdxl",
+  "prompt": "Candid photojournalistic close-up still life of a wooden desk with a worn leather notebook, a simple black pen, and a blank paper document, lit by even natural daylight with muted colors, set against a softly blurred background of a conference room, no people, no text, no logos, 16:9 aspect ratio, soft even natural light, muted sober colors, calm neutral mood, blank paper, no writing, no letters, no signs, no logos, no people",
+  "automatica": true,
+  "control": {
+   "ok": true,
+   "motivo": null,
+   "razon": "Un cuaderno cerrado y una lapicera sobre una mesa de madera."
+  }
  }
 }
