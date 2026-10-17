@@ -104,9 +104,9 @@ test('las notas de los últimos días quedan como estaban cuando se guardaron', 
   assert.ok(!notas[1].destacados.some((d) => d.href === FB));
 });
 
-test('generar-datos la arma sólo en la nube y el workflow guarda clima-historia.json', () => {
+test('generar-datos la arma y el workflow guarda clima-historia.json', () => {
   const g = fs.readFileSync(new URL('../web/scripts/generar-datos.mjs', import.meta.url), 'utf8').replace(/\r\n/g, '\n');
-  assert.match(g, /if \(enLaNube\) \{\n  const toca = cuandoArmarClima\(/);
+  assert.match(g, /^\{\n  const toca = cuandoArmarClima\(/m);
   assert.match(g, /\.\.\.notasDelClima\(historiaClima, libroRedes\)/);
   const w = fs.readFileSync(new URL('../.github/workflows/actualizar.yml', import.meta.url), 'utf8');
   assert.match(w, /web\/data\/clima-historia\.json/);

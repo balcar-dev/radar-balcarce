@@ -7,7 +7,7 @@ import { FichaDeEvento, Migas } from '@/components/ficha';
 import { notFound } from 'next/navigation';
 import {
   parteDeEvento, nombreDeEvento, copeteDeEvento, cuandoEs, dondeEs, entradaDe, firmaDeEvento, yaPaso,
-  enlaceGoogleCalendar, fuentesDeEvento, detallesDeEvento, descripcionPropia,
+  enlaceGoogleCalendar, fuentesDeEvento, detallesDeEvento,
 } from '@/lib/eventos';
 import { enlace } from '@/lib/sitio';
 import { recortarEn } from '@/lib/texto';
@@ -65,7 +65,6 @@ export default async function PaginaEvento({ params }) {
   const firma = firmaDeEvento(e);
   const fuente = e.fuente && /^municipalidad/i.test(e.fuente) ? `la ${e.fuente}` : e.fuente;
   const detalles = detallesDeEvento(e);
-  const descripcion = descripcionPropia(e);
   const otros = proximosEventos().filter((o) => o.id !== e.id).slice(0, 3);
 
   return (
@@ -148,16 +147,6 @@ export default async function PaginaEvento({ params }) {
             <a href={enlaceGoogleCalendar(e, url)} className="boton borde" target="_blank" rel="noopener noreferrer">Google Calendar</a>
             {e.web && <a href={e.web} className="boton borde" target="_blank" rel="noopener noreferrer">Entradas e información ↗</a>}
           </div>
-        )}
-
-        {descripcion && (
-          <section className="descripcion-evento">
-            <h2>De qué se trata</h2>
-            {descripcion.split(/\r?\n/).map((p) => p.trim()).filter(Boolean).map((parrafo, i) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <p key={`${i}-${parrafo.slice(0, 30)}`}>{parrafo}</p>
-            ))}
-          </section>
         )}
 
         <PieConFuentes firma={firma.texto} explicacion={firma.explicacion} fuentes={fuentesDeEvento(e)} />

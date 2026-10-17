@@ -347,7 +347,7 @@ const lineaFinal = (nota, sitio, origen = null) => (origen?.fuente === 'instagra
  * la nota y pasa por el verificador, que controla además que no nombre al
  * medio de origen), el posteo usa ese texto en vez del titular y el copete,
  * y cierra con dos o tres hashtags. Ese texto siempre lo escribió la IA: si
- * una persona corrige la nota en el panel, se borra (panel/notas.mjs).
+ * una persona corrige el texto de la nota, se borra.
  *
  * `origen` ({ fuente: 'facebook' | 'instagram' | … }) agrega las UTM al enlace del texto (enlaceConOrigen);
  * sin él, el enlace sale limpio como siempre.

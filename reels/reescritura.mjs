@@ -287,7 +287,7 @@ function entradaAmpliadaDe(nota) {
  *  `aportes` diga qué dio cada una), el texto completo de la principal y los
  *  antecedentes, marcados como información anterior. Con la entrada ampliada
  *  (regla 174), entradaAmpliadaDe; esto queda para las notas armadas a mano
- *  con un solo texto (las pruebas de modelos, el panel de la PC). */
+ *  con un solo texto (las pruebas). */
 function entradaDe(nota) {
   if (nota.entradaAmpliada) return entradaAmpliadaDe(nota);
   const origenes = origenesDe(nota);
@@ -536,8 +536,7 @@ export async function reescribirConRespaldo(nota, mecanico, opciones) {
 }
 
 // El respaldo mecánico por defecto: lo que se mostraba antes de que
-// existiera la reescritura. Lo usa reescribirAutomaticas(); el panel arma el
-// mismo (`mecanico` en panel/servidor.mjs): los dos toman el guion de
+// existiera la reescritura. Lo usa reescribirAutomaticas(); el guion es el de
 // guionNoticia (redes/guiones.mjs), el titular con un punto.
 function mecanicoPorDefecto(nota) {
   return { titulo: nota.titulo, copete: nota.resumenFuente || '', guion: guionNoticia(nota) };

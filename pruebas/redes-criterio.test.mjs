@@ -24,7 +24,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import * as criterio from '../ingesta/criterio.mjs';
-import { HISTORIAS_FIJAS } from '../panel/horarios.mjs';
+import { HISTORIAS_FIJAS } from '../redes/horarios.mjs';
 import {
   leerCriterioRedes, RUTA_CRITERIO_REDES, MEDIO, SITIO, SITIO_DICHO, VOCES, REPARTO, vozDePieza, INDICACION_BASE, INDICACIONES,
   opcionesDeVoz, componerIndicacion, momentoDeHora, MOMENTOS,

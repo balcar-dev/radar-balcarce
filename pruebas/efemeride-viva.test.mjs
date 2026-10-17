@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { efemerideDelDia, entradaCompleta, diasPreparados, HORA_EFEMERIDE } from '../redes/efemeride.mjs';
-import { HISTORIAS_FIJAS, toca } from '../panel/horarios.mjs';
+import { HISTORIAS_FIJAS, toca } from '../redes/horarios.mjs';
 import { cronogramaDelDia, historiasQueSobran, EXTRAS_DE_HISTORIAS } from '../redes/piezas.mjs';
 import { planDelDia } from '../reels/plan.mjs';
 import { vozDePieza, VOCES } from '../redes/prompt-redes.mjs';

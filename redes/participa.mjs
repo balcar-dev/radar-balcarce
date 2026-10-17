@@ -1,6 +1,6 @@
 // Las piezas para invitar a participar (IDEAS 18; cronograma del 30/09): una historia con voz
 // a las 12:00, cuatro días por semana, cada una con su pregunta. Acá está lo que dice cada una;
-// la placa es placaParticipa (reels/placa.mjs) y el día y la hora, panel/horarios.mjs.
+// la placa es placaParticipa (reels/placa.mjs) y el día y la hora, redes/horarios.mjs.
 // Sin dependencias de afuera de Node.
 
 import { semillaDe, variante } from './guiones.mjs';

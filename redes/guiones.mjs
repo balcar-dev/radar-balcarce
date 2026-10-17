@@ -192,9 +192,7 @@ export const comoNombre = (s) => String(s).toLowerCase()
 /**
  * El guion mecánico de UNA nota: el mismo titular que está en la placa, y nada
  * más (sin el punto o los dos puntos del final, con un punto). Es el respaldo
- * de la reescritura en el panel (panel/servidor.mjs). Vive acá, sin nada de afuera de Node, para que
- * reels/reescritura.mjs pueda usar este mismo en vez de su copia
- * (`mecanicoPorDefecto` lo usa desde el 28/09).
+ * de la reescritura (`mecanicoPorDefecto`, reels/reescritura.mjs, desde el 28/09). Vive acá, sin nada de afuera de Node.
  */
 export function guionNoticia(n) {
   const titulo = String(n?.titulo ?? '').replace(/\s+/g, ' ').trim().replace(/[.:]+$/, '');

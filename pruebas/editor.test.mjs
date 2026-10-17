@@ -20,7 +20,6 @@ import {
 import { verificar, verificarExtras } from '../ingesta/verificar.mjs';
 import { MEDIOS_OFICIALES } from '../ingesta/fuentes.mjs';
 import { mensajeDeNota, hashtagsDe } from '../redes/elegir.mjs';
-import { camposEditables, decisionParaLaWeb, conTextoCorregido } from '../panel/notas.mjs';
 import { fuentesDeLaNota } from '../web/lib/fuentes-de-la-nota.js';
 import { CUERPO } from './cuerpo-de-prueba.mjs';
 
@@ -438,44 +437,6 @@ test('sin texto para redes, el posteo es como antes; y una nota de afuera no lle
 });
 
 // ---------------------------------------------------------------- el panel
-
-test('el panel guarda y exporta las partes nuevas, y las borra si una persona corrige el texto', () => {
-  const d = { estado: 'automatica', titulo: 'T', copete: 'C', cuerpo: 'B', guion: 'T', por: 'ia', claves: ['k'], verificacion: { nivel: 'MEDIA', porque: 'x' } };
-  assert.deepEqual(decisionParaLaWeb(d).claves, ['k']);
-  assert.equal(camposEditables({ titulo: 'x' }, d).verificacion.nivel, 'MEDIA');
-  assert.ok(!('claves' in decisionParaLaWeb({ estado: 'publicada' })), 'sin partes nuevas no se escriben nulos');
-  assert.deepEqual(conTextoCorregido(d, { estado: 'publicada', titulo: 'T', copete: 'C', cuerpo: 'B' }).claves, ['k'], 'publicar sin cambiar el texto no borra nada');
-  assert.equal(conTextoCorregido(d, { titulo: 'Otro título' }).claves, undefined);
-  assert.equal(conTextoCorregido(d, { cuerpo: 'Otro cuerpo' }).verificacion, undefined);
-});
-
-test('el panel muestra el análisis interno (plegado) y sigue mostrando la instrucción', () => {
-  const html = leer('panel/panel.html');
-  const servidor = leer('panel/servidor.mjs');
-  assert.match(html, /\$\{analisisInterno\(n\)\}/);
-  assert.match(html, /<details class="analisis"/);
-  for (const t of ['Qué se sabe', 'Qué falta confirmar', 'Fuentes y qué aportó cada una', 'Antecedentes']) assert.ok(html.includes(t), `falta "${t}"`);
-  assert.match(servidor, /instruccionEditorial: INSTRUCCION_EDITORIAL/);
-  assert.match(servidor, /completarReescritura\(conAntecedentes, r\)/);
-  assert.match(servidor, /conTextoCorregido\(previo,/);
-});
-
-test('el panel no tiene una copia propia de la reescritura automática (desde el 28/09 la hace sólo la nube)', () => {
-  const servidor = leer('panel/servidor.mjs');
-  // La copia vieja verificaba a mano y marcaba "rechazadaPorVerificacion" para no reintentar nunca.
-  assert.ok(!/rechazadaPorVerificacion: true/.test(servidor));
-});
-
-test('desde el panel no se publica una nota sin cuerpo sin confirmarlo con un botón de la página', () => {
-  const servidor = leer('panel/servidor.mjs');
-  const html = leer('panel/panel.html');
-  assert.match(servidor, /accion === 'publicada' && !confirmarSinCuerpo && !tieneCuerpo\(cuerpoFinal\)/);
-  assert.match(servidor, /sinCuerpo: true/);
-  assert.match(html, /Publicar igual, sin cuerpo/);
-  assert.match(html, /confirmarSinCuerpo: true/);
-  const bloque = html.slice(html.indexOf('if (d.sinCuerpo)'), html.indexOf('if (d.sinCuerpo)') + 1500);
-  assert.ok(!/confirm\(/.test(bloque), 'con un botón en la página, no con confirm()');
-});
 
 test('completarReescritura con una nota de antes (sin origenes) no inventa el medio de las otras fuentes', () => {
   const { extras } = completarReescritura({ titulo: 'x', resumenFuente: RESUMEN, fuentesTexto: ['otro resumen'], medios: ['A', 'B'], enlace: 'https://a' }, { titulo: 'x', copete: 'y' });

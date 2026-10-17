@@ -67,11 +67,11 @@ test('todos los eventos del calendario anual tienen mes, categoría y contacto p
   }
 });
 
-test('cada contacto tiene a quién escribirle y para qué sirve (la base completa, en agenda-panel.test.mjs)', () => {
+test('cada contacto tiene a quién escribirle y para qué sirve (la base completa, en contactos-panel.test.mjs)', () => {
   for (const c of CONTACTOS) {
     assert.ok(c.quien, `${c.id} sin nombre`);
     assert.ok(Object.keys(c.canales).length, `${c.id} sin ningún canal`);
-    assert.ok(c.para, `${c.id} sin decir para qué sirve`);
+    assert.ok(c.organiza, `${c.id} sin decir para qué sirve`);
   }
 });
 

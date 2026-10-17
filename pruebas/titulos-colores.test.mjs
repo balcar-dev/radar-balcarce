@@ -98,7 +98,7 @@ test('placas y tarjetas usan Source Serif 4 e Inter, con los archivos en su luga
     assert.ok(marca.includes(f), `falta reels/marca/fuentes/${f}`);
   }
   assert.ok(!marca.some((f) => /Fraunces|Plex/.test(f)), 'sin las letras de antes');
-  for (const f of ['reels/placa.mjs', 'reels/portada.mjs', 'reels/avatar.mjs', 'reels/reel.mjs', 'web/lib/tarjeta.js', 'panel/panel.html', 'panel/acceso.mjs', 'ingesta/ingesta.mjs', 'comercial/vista.plantilla.html']) {
+  for (const f of ['reels/placa.mjs', 'reels/portada.mjs', 'reels/avatar.mjs', 'reels/reel.mjs', 'web/lib/tarjeta.js', 'ingesta/ingesta.mjs', 'comercial/vista.plantilla.html']) {
     const sin = fs.readFileSync(new URL(f, raiz), 'utf8').replace(/\/\/[^\n]*/g, '').replace(/\/\*[\s\S]*?\*\//g, '');
     assert.ok(!/Fraunces|IBM Plex|IBMPlex/.test(sin), `${f} todavía usa la letra de antes`);
   }

@@ -121,7 +121,7 @@ próxima regla es la 211: del 189 al 210 son los arreglos de Radar 2.0 del 17/10
   `tituloAutomatico`); lo de una persona no se toca.
 - **Las redes tienen un interruptor**: la variable de GitHub `REDES_ACTIVAS` ("Si"); apagado,
   todo simula. "Piezas" con `solo` vacío no arma nada (marcar `todas`). En GitHub las piezas
-  salen de lo ya publicado (`web/data/portada.json`), con los horarios de `panel/horarios.mjs`.
+  salen de lo ya publicado (`web/data/portada.json`), con los horarios de `redes/horarios.mjs`.
 - **Cuatro claves de IA, todas gratis desde el 29/09** (`reels/claves.mjs`):
   `GEMINI_API_KEY_REDACCION` (redactar), `GEMINI_API_KEY_REDES` (las voces; respaldo de la
   redacción sólo con 429), `GEMINI_API_KEY_CLASIFICACION` (lectura con IA y fotos; último
@@ -189,7 +189,7 @@ próxima regla es la 211: del 189 al 210 son los arreglos de Radar 2.0 del 17/10
 | La nota del dólar o la de cada podcast | `web/lib/notas-propias.js` |
 | Las notas de F1 (horarios, clasificación, resultado; Jolpica) y de fútbol (Liga, Copa Argentina, Libertadores y Sudamericana con equipos argentinos; ESPN) | `ingesta/f1.mjs`, `ingesta/futbol.mjs`, `web/data/f1.json`, `web/data/futbol.json`; la foto libre, `web/scripts/foto-libre.mjs` |
 | Qué va a las redes | `vaAFacebookPorLoQueEs`, `elegirParaFacebook`, `sePuedeSola`; en los repasos, `elegirParaPodcast` y `sePuedeEnUnRepaso` (`redes/elegir.mjs`) |
-| A qué hora sale una pieza | `HORAS_REELS`, `VENTANAS` (`redes/piezas.mjs`) y `HISTORIAS_FIJAS` (`panel/horarios.mjs`) |
+| A qué hora sale una pieza | `HORAS_REELS`, `VENTANAS` (`redes/piezas.mjs`) y `HISTORIAS_FIJAS` (`redes/horarios.mjs`) |
 | Cómo suenan o qué dicen las piezas | `CRITERIO-REDES.md` y `redes/guiones.mjs` |
 | Las voces | `CRITERIO-REDES.md` § 6; crearlas, "Crear voces" (`reels/crear-voces.mjs`) |
 | El contrato del día | `redes/contrato.mjs` y `CONTRATO_DIARIO` (`ingesta/criterio.mjs` **y** `CRITERIO-EDITORIAL.md`) |

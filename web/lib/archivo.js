@@ -22,10 +22,8 @@ import { slugDe } from './ruta.js';
 import { tieneRespaldo, tieneCuerpo } from './cuerpo.js';
 import { sinTildes } from './texto.js';
 
-/** Cuánto se queda una nota en las listas del sitio. Es el mismo criterio que
- *  usa el panel para archivar lo que nadie decidió (panel/servidor.mjs,
- *  HORAS_PARA_ARCHIVAR), pero corre en la nube: el panel sólo archiva con la
- *  PC prendida, y el 25/09 la portada tenía 43 notas de más de tres días. */
+/** Cuánto se queda una nota en las listas del sitio (el 25/09 la portada tenía
+ *  43 notas de más de tres días). */
 export const HORAS_EN_PORTADA = 36;
 
 /**

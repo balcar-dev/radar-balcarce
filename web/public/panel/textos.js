@@ -18,7 +18,6 @@ export function tipoDeMotivo(motivo = '') {
   if (/internacional|extranjero|otro pa[ií]s/.test(m)) return con('extranjero');
   if (/sin nombrar balcarce|espera la lectura/.test(m)) return con('lectura');
   if (/s[oó]lo de balcarce/.test(m)) return con('seccion-de-aca');
-  if (/marcada "pendiente"/.test(m)) return con('pc');
   if (/ojo humano|necesita/.test(m) && palabra) {
     if (/detenid|imputad|acusad|denunci|allanamient|sospechos|investigad|aprehendid|arrestad/.test(palabra)) return con('acusa');
     if (/muert|falleci|herid|choque|accidente|v[ií]ctima|homicid|asesin/.test(palabra)) return con('muerte');
@@ -42,7 +41,6 @@ export function motivoCorto(motivo = '') {
     extranjero: 'De otro país',
     lectura: 'De un medio de acá, ¿es de acá?',
     'seccion-de-aca': 'Sección sólo de Balcarce',
-    pc: 'Dejada esperando en la PC',
     acusa: `Acusa a alguien${cita}`,
     muerte: `Muerto o herido${cita}`,
     chico: `Involucra a un chico${cita}`,
@@ -64,7 +62,6 @@ export function explicarMotivo(motivo = '') {
     case 'extranjero': return 'Habla de otro país y no se ve la conexión con la Argentina.';
     case 'lectura': return 'La publicó un medio de Balcarce pero no nombra Balcarce ni la zona: puede ser una noticia de afuera copiada. Espera a que la IA la lea, o a que una persona decida.';
     case 'seccion-de-aca': return 'Es de afuera y quedó en una sección que es sólo para lo de Balcarce y la zona.';
-    case 'pc': return 'Alguien la dejó esperando en el panel de la PC.';
     case 'acusa': return `${dice}: acusa a alguien. Hay que mirar que la acusación esté atribuida a quien la hizo (la Policía, la Justicia, un denunciante) y en condicional, y que no se afirme como un hecho.`;
     case 'muerte': return `${dice}: habla de un muerto o un herido. Hay que mirar que no identifique a una víctima y que el tono sea el serio.`;
     case 'chico': return `${dice}: involucra a un chico. Hay que mirar que no se lo pueda identificar (ni nombre, ni escuela, ni foto).`;

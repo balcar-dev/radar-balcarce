@@ -428,9 +428,7 @@ test('generar-datos arma las notas propias con la regla de cuerpo y guarda la hi
   assert.match(g, /notasDelDolar\(historiaDolar\)/);
   assert.match(g, /notasDeRepasos\(libroRedes, conPagina/);
   assert.match(g, /\.filter\(\(n\) => tieneCuerpo\(n\)\)/);
-  // La cotización se sale a buscar sólo en la nube (en la PC trabaría la
-  // sincronización del panel).
-  assert.match(g, /if \(enLaNube\) \{\n?\s*const toca = cuandoArmarDolar/);
+  assert.match(g, /\{\n?\s*const toca = cuandoArmarDolar/);
   assert.match(leer('.github/workflows/actualizar.yml'), /git add [^\n]*web\/data\/dolar-historia\.json/);
   assert.ok(fs.existsSync(path.join(RAIZ, 'web/data/dolar-historia.json')), 'tiene que existir para el git add');
   assert.match(leer('.github/workflows/redes.yml'), /node redes\/publicar\.mjs --enlaces/);

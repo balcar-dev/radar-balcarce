@@ -1,34 +1,20 @@
-// Cuándo salen las historias fijas.
+// Cuándo salen las historias fijas: el horario de las redes. Lo usan el reloj de Redes (redes/piezas.mjs), el plan que arma
+// los videos (reels/plan.mjs) y el cronograma de la semana (redes/cronograma-semana.mjs).
 //
-// Hasta ahora los horarios estaban escritos en reels/plan.mjs, así que
-// cambiarlos era tocar código. Son justamente lo que más se va a querer
-// ajustar cuando vean qué hora rinde en Balcarce, así que tienen que poder
-// cambiarse desde el panel.
-//
-// Lo que se guarda vive en panel/datos/estado.json, que no se versiona: son
-// decisiones de la redacción, no del proyecto.
+// Hasta el 17/10 vivía en panel/ y se podía cambiar desde el panel de la PC (panel/datos/estado.json), que no se usaba y se
+// retiró. Ahora el horario es el de este archivo y se cambia acá; si una pieza pasa a salir antes de las 7 o después de las 23,
+// también hay que cambiar el Worker del reloj (infra/reloj-cloudflare/, `HORAS_REDES_UTC`). `estado.horarios` sigue existiendo
+// para que las pruebas puedan apagar o mover una pieza sin tocar el código.
 
 import { diaRotativoDeUtiles } from '../ingesta/utiles.mjs';
-import { PIEZAS_PARTICIPA } from '../redes/participa.mjs';
-import { feriadoDelDia } from '../redes/feriado.mjs';
-import { efemerideDelDia } from '../redes/efemeride.mjs';
+import { PIEZAS_PARTICIPA } from './participa.mjs';
+import { feriadoDelDia } from './feriado.mjs';
+import { efemerideDelDia } from './efemeride.mjs';
 import { diaSemanaAR } from '../ingesta/zona.mjs';
-
-// Los días de la semana como los devuelve Date#getDay(): 0 es domingo.
-export const DIAS = [
-  { n: 1, corto: 'L', nombre: 'lunes' },
-  { n: 2, corto: 'M', nombre: 'martes' },
-  { n: 3, corto: 'M', nombre: 'miércoles' },
-  { n: 4, corto: 'J', nombre: 'jueves' },
-  { n: 5, corto: 'V', nombre: 'viernes' },
-  { n: 6, corto: 'S', nombre: 'sábado' },
-  { n: 0, corto: 'D', nombre: 'domingo' },
-];
 
 const TODOS = [0, 1, 2, 3, 4, 5, 6];
 
-/** Las piezas fijas y su horario por defecto. Cada una explica por qué sale
- *  a esa hora: si alguien lo cambia, que sepa qué estaba pensado. */
+/** Las piezas fijas y su horario. Cada una explica por qué sale a esa hora: si alguien lo cambia, que sepa qué estaba pensado. */
 export const HISTORIAS_FIJAS = [
   {
     id: 'clima-manana',
@@ -68,7 +54,7 @@ export const HISTORIAS_FIJAS = [
     porQue: 'Una vez por semana, los sábados a la tarde. No es noticia: es para que lo guarden en el celular.',
     activa: true,
     hora: '17:00',
-    // Fijo, los sábados (1/10/2026). Si alguien lo cambia desde el panel (`estado.horarios.utiles.dias`), manda lo que se guardó.
+    // Fijo, los sábados (1/10/2026). Si `estado.horarios.utiles.dias` trae otros días, mandan ésos.
     dias: [6],
   },
 ];
@@ -94,8 +80,8 @@ for (const [id, p] of Object.entries(PIEZAS_PARTICIPA)) {
   });
 }
 
-/** Mezcla lo guardado con los valores por defecto. Una pieza que se agregue
- *  al código más adelante aparece sola, sin perder lo que ya se ajustó. */
+/** Los horarios de fábrica, con lo que traiga `estado.horarios` encima (las pruebas apagan o mueven piezas así). El nombre y el
+ *  porqué no se pisan. */
 export function horariosDe(estado) {
   const guardado = estado?.horarios ?? {};
   return HISTORIAS_FIJAS.map((h) => ({
@@ -107,36 +93,13 @@ export function horariosDe(estado) {
   }));
 }
 
-/** Guarda un cambio del panel. Devuelve la lista completa ya mezclada. */
-export function guardarHorario(estado, { id, activa, hora, dias }) {
-  if (!HISTORIAS_FIJAS.some((h) => h.id === id)) throw new Error('esa pieza no existe');
-  estado.horarios ??= {};
-  const previo = estado.horarios[id] ?? {};
-  const limpio = { ...previo };
-
-  if (activa !== undefined) limpio.activa = !!activa;
-  if (hora !== undefined) {
-    if (!/^([01]\d|2[0-3]):[0-5]\d$/.test(hora)) throw new Error('la hora tiene que ser como 07:30');
-    limpio.hora = hora;
-  }
-  if (dias !== undefined) {
-    const validos = [...new Set(dias)].filter((d) => TODOS.includes(d)).sort();
-    if (!validos.length) throw new Error('tiene que quedar al menos un día');
-    limpio.dias = validos;
-  }
-
-  estado.horarios[id] = limpio;
-  return horariosDe(estado);
-}
-
 /**
  * ¿Toca hoy esta pieza? LA ÚNICA FUENTE: el reloj de Redes (redes/piezas.mjs) y
  * el plan que arma los videos (reels/plan.mjs) usan esta misma función, así que
  * no puede pasar que uno diga "toca" y el otro no arme nada (PENDIENTES 16c).
  *
  * Los teléfonos útiles salen fijos los sábados (`diaRotativoDeUtiles`). Si
- * alguien fija los días a mano desde el panel (`estado.horarios.utiles.dias`),
- * manda eso.
+ * `estado.horarios.utiles.dias` trae otros días, mandan ésos.
  *
  * El día es el de Balcarce, no el de la máquina: en GitHub el reloj es UTC.
  */

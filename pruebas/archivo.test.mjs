@@ -47,9 +47,9 @@ test('las retiradas de más de una semana salen de la lista, salvo las que la in
   assert.equal(podarRetiradas(null, { hoy: '2026-10-05' }).quitadas.length, 0);
 });
 
-test('la poda de retiradas corre los lunes en la nube y el workflow guarda el archivo', () => {
+test('la poda de retiradas corre los lunes y el workflow guarda el archivo', () => {
   const script = fs.readFileSync(new URL('../web/scripts/generar-datos.mjs', import.meta.url), 'utf8');
-  assert.match(script, /enLaNube && diaSemanaAR\(\) === 1/);
+  assert.match(script, /if \(diaSemanaAR\(\) === 1\)/);
   const flujo = fs.readFileSync(new URL('../.github/workflows/actualizar.yml', import.meta.url), 'utf8');
   assert.match(flujo, /git add [^\n]*web\/data\/retiradas\.json/);
 });

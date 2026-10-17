@@ -1,19 +1,10 @@
 # Busca noticias y actualiza la web, sin depender de que haya una PC prendida.
 #
 # Corre en los servidores de GitHub cada media hora (lo dispara el Worker de Cloudflare
-# `radar-balcarce-reloj`; no tiene otro horario de respaldo). Lo que hace es lo mismo que hace el panel
-# en casa: leer las fuentes activas (las de ingesta/fuentes.mjs y las del cruce
-# de medios, ingesta/fuentes-cruce.mjs; la lista entera, en FUENTES.md), cruzar
-# los medios, clasificar, poner puntaje, y escribir web/data/portada.json.
-#
-# La diferencia está en las decisiones humanas. Acá no hay panel, así que se
-# leen de web/data/decisiones.json, que el panel exporta al repositorio cada
-# vez que alguien publica o descarta algo. O sea:
-#
-#   · Lo que sale solo (el semáforo verde, el clima, la farmacia, la agenda)
-#     se actualiza siempre, con la computadora apagada.
-#   · Lo que ustedes decidieron a mano se respeta hasta la última vez que el
-#     panel estuvo prendido y sincronizó.
+# `radar-balcarce-reloj`; no tiene otro horario de respaldo). Lee las fuentes activas (las de ingesta/fuentes.mjs y
+# las del cruce de medios, ingesta/fuentes-cruce.mjs; la lista entera, en FUENTES.md), cruza los medios, clasifica, pone
+# puntaje, lee y escribe con IA, verifica y escribe web/data/portada.json. Las decisiones de las personas llegan del panel
+# del celular (web/data/celular-decisiones.json, correcciones.json y retiradas.json).
 #
 # Y PUBLICA ella misma (17/10/2026, regla 189): compila el sitio UNA vez, guarda los datos en `main` y sube a Cloudflare Pages lo que
 # compiló (antes, al terminar, arrancaba "Cloudflare Pages", cloudflare-deploy.yml, que volvía a compilar exactamente lo mismo: ~2,5 minutos

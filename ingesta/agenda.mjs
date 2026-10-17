@@ -137,8 +137,8 @@ export const CALENDARIO_ANUAL = [
 // la institución. No se mezcla con comercial/: aquello son comercios, para
 // vender publicidad; esto son organizadores, para pedir fechas.
 //
-// Cuándo se les escribió y si respondieron lo lleva el panel (panel/datos/,
-// que no va a GitHub), no este archivo.
+// Cuándo se les escribió y si respondieron lo lleva el panel del celular
+// (cifrado, web/data/contactos-celular.json), no este archivo.
 const F_CONTACTOS = new URL('./contactos-agenda.json', import.meta.url);
 
 /** Los canales que puede tener un contacto, en el orden en que se muestran. */
@@ -151,8 +151,6 @@ function leerContactos() {
       ...c,
       meses: c.meses ?? [],
       canales: c.canales ?? {},
-      // `para` es el nombre viejo de `organiza`: lo sigue usando el panel.
-      para: c.organiza ?? c.para ?? '',
     }));
   } catch (e) {
     console.error('  no se pudo leer ingesta/contactos-agenda.json:', e.message);
