@@ -1,4 +1,4 @@
-# Sube (o actualiza) el Worker de imágenes con Workers AI de Cloudflare (infra/imagenes-cloudflare/, 16/10/2026) y genera 3 imágenes de prueba.
+# Sube (o actualiza) el Worker de imágenes con Workers AI de Cloudflare (infra/imagenes-cloudflare/, 16/10/2026) y genera una imagen de prueba.
 # SÓLO a mano. Usa los secretos que ya están en GitHub (CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID y VIGILANTE_TOKEN, que el Worker usa como su
 # contraseña): nadie tiene que pegar nada. No escribe nada en el repositorio; las imágenes de prueba quedan como adjunto de la corrida.
 name: Imágenes con Workers AI
@@ -28,28 +28,16 @@ jobs:
       - name: Cargar su contraseña
         working-directory: infra/imagenes-cloudflare
         run: printf '%s' "$VIGILANTE_TOKEN" | npx --yes wrangler@4.139.0 secret put TOKEN
-      - name: Comparar los modelos con el mismo prompt (sin texto ni escritura)
+      - name: Probar que genera (una imagen con SDXL, el único modelo)
         run: |
           mkdir -p salida
           sleep 8
           URL='https://radar-balcarce-imagenes.radarbalcarce.workers.dev/generar'
           P='Candid photojournalistic close-up still life of a wooden desk with a vintage microphone, a worn BLANK notepad with empty pages, and a steaming ceramic coffee mug, natural window daylight, shallow depth of field with a blurred radio studio background, no people, no text, no writing, no letters, no logos, authentic newspaper archive aesthetic'
           N='text, letters, words, writing, handwriting, logo, watermark, people, face, hands, cartoon, illustration, painting'
-          for M in flux sdxl-lightning dreamshaper sdxl phoenix; do
-            T0=$(date +%s)
-            code=$(curl -s -o "salida/$M.img" -w '%{http_code}' -X POST "$URL" -H "x-token: $VIGILANTE_TOKEN" -H 'content-type: application/json' --max-time 150               -d "{\"prompt\":\"$P\",\"modelo\":\"$M\",\"ancho\":1024,\"alto\":576,\"negativo\":\"$N\"}")
-            tipo=$(file -b --mime-type "salida/$M.img")
-            ext=jpg; [ "$tipo" = "image/png" ] && ext=png
-            if [ "$code" = "200" ]; then mv "salida/$M.img" "salida/$M.$ext"; else mv "salida/$M.img" "salida/$M.error.txt"; fi
-            echo "[$M] HTTP $code, $(date +%s) - $T0 s, $tipo, $(ls -l salida | grep "$M." | awk '{print $5}') bytes"
-          done
-          # Pollinations (gratis, sin clave, de terceros) para comparar
-          PE=$(node -e "console.log(encodeURIComponent(process.argv[1]))" "$P")
-          code=$(curl -s -L -o salida/pollinations.img -w '%{http_code}' --max-time 150 "https://image.pollinations.ai/prompt/$PE?width=1024&height=576&model=flux&nologo=true&seed=7")
-          tipo=$(file -b --mime-type salida/pollinations.img)
-          ext=jpg; [ "$tipo" = "image/png" ] && ext=png
-          if [ "$code" = "200" ]; then mv salida/pollinations.img "salida/pollinations.$ext"; else mv salida/pollinations.img salida/pollinations.error.txt; fi
-          echo "[pollinations] HTTP $code, $tipo"
+          code=$(curl -s -o salida/sdxl.img -w '%{http_code}' -X POST "$URL" -H "x-token: $VIGILANTE_TOKEN" -H 'content-type: application/json' --max-time 150             -d "{\"prompt\":\"$P\",\"modelo\":\"sdxl\",\"ancho\":1024,\"alto\":576,\"negativo\":\"$N\"}")
+          if [ "$code" = "200" ]; then mv salida/sdxl.img salida/sdxl.jpg; else mv salida/sdxl.img salida/sdxl.error.txt; fi
+          echo "[sdxl] HTTP $code"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

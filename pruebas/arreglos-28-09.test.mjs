@@ -203,6 +203,8 @@ const COMMONS = {
     descriptionurl: 'https://commons.wikimedia.org/wiki/File:Werner.jpg',
     extmetadata: {
       LicenseShortName: { value: 'CC BY-SA 4.0' },
+      // Desde el 17/10/2026 (regla 205) una foto de Commons sin fecha, o de hace más de dos años, no va.
+      DateTimeOriginal: { value: `${new Date().getFullYear()}-03-01` },
       Artist: { value: '<bdi><a href="//commons.wikimedia.org/wiki/User:Juan_P%C3%A9rez" title="User:Juan Pérez">Juan Pérez</a></bdi>' },
     },
   }] } } },
@@ -221,8 +223,11 @@ test('la foto de Wikimedia guarda al autor y el crédito dice autor y licencia (
 
   // De punta a punta: la fuente no tiene foto, la IA dice de quién es la nota,
   // Commons tiene una libre, y el banco la guarda con autor y crédito completo.
-  const fetchFn = async (url) => {
+  const fetchFn = async (url, init) => {
     const u = String(url);
+    // Sin imagen, la pregunta por la persona; con imagen, el control de la foto de Wikimedia (regla 205).
+    const conImagen = u.includes('generativelanguage') && JSON.parse(init.body).contents[0].parts.length > 1;
+    if (conImagen) return respuesta({ candidates: [{ content: { parts: [{ text: '{"menor":false,"tiene_marca":false,"grafica":false,"stock":false,"corresponde":"si"}' }] } }] });
     if (u.includes('generativelanguage')) return respuesta({ candidates: [{ content: { parts: [{ text: '{"persona":"Mariano Werner"}' }] } }] });
     if (u.includes('commons.wikimedia.org/w/api.php')) return respuesta(COMMONS);
     if (u.includes('upload.wikimedia.org')) return respuesta(new Uint8Array([0xff, 0xd8, 0xff, 0xe0]), 'image/jpeg');

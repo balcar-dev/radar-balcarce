@@ -11,9 +11,11 @@
 // cupo, ninguna foto en ese momento, una descarga): ésa se prueba hasta tres
 // veces, con una hora entre una y otra (`sePuedeReintentar`, 29/09).
 
-import { elegirFotoParaNota, descargarImagen, creditoDeFoto } from '../../ingesta/fotos.mjs';
+import {
+  elegirFotoParaNota, descargarImagen, creditoDeFoto, bytesOriginales, mimeOriginal, normalizarMime, sinConsulta,
+} from '../../ingesta/fotos.mjs';
 import { excepcionActiva, menorEnActividadOficial, tieneFuenteOficialParaMenores } from '../../ingesta/fotos-menores.mjs';
-import { achicarFoto, fotoParaGuardar } from './achicar-foto.mjs';
+import { achicarFoto, achicarParaIA, fotoParaGuardar, huellaDeFoto, mismaFoto } from './achicar-foto.mjs';
 
 // Por corrida, no por día: la corrida se repite cada media hora, así que el
 // banco se completa solo en un par de horas sin gastar de una todo el cupo
@@ -53,12 +55,18 @@ export const REINTENTOS_DE_FOTO = {
 // no se pudo volver a bajar. Eso se vuelve a probar (29/09: cinco de 17 notas
 // sin foto eran esto, y el banco no las volvía a mirar nunca). Lo que la IA
 // descartó a propósito (menores, marcas, otro medio) no se vuelve a preguntar.
-const FALLA = /^(Gemini falló|Groq también falló|sin clave para comparar|sin fotos para comparar)/;
+// Desde el 17/10/2026 también la segunda opinión que no estuvo (sin cupo del otro modelo) y la foto de Wikimedia que no se pudo mirar.
+const FALLA = /^(Gemini falló|Groq también falló|sin clave para comparar|sin fotos para comparar|Segunda opinión no disponible)/;
 
 /** ¿Esta entrada del banco se puede volver a probar ahora? */
 export function sePuedeReintentar(entrada, { ahora = new Date(), reintentos = REINTENTOS_DE_FOTO, fuentes = null } = {}) {
   if (!entrada) return true;
-  if (entrada.archivo || entrada.borrada) return false;
+  // Una foto que una persona (o la auditoría) sacó a propósito no vuelve nunca: la nota queda con su ilustración o la placa (regla 203).
+  if (entrada.descartada) return false;
+  if (entrada.archivo) return false;
+  // La poda borró la foto porque la nota no estaba, y la nota volvió a publicarse (17/10/2026: seis notas vivas quedaron sin foto para
+  // siempre): se prueba de nuevo. La de una nota retirada a mano, no.
+  if (entrada.borrada) return !entrada.retirada;
   const intentos = entrada.intentos ?? 1;
   const pasaron = ahora.getTime() - Date.parse(entrada.cuando ?? 0);
   const falla = entrada.origen === 'error' || !!entrada.error || FALLA.test(String(entrada.razon ?? ''));
@@ -85,10 +93,66 @@ const DESCARTE_POR_MENOR = /menor|adolescen|niñ|alumn/i;
  * Sin esto, prender el interruptor no cambiaba nada para las notas que ya estaban en el banco.
  */
 export function reintentoPorExcepcion(entrada, nota, { activa = excepcionActiva() } = {}) {
-  if (!activa || !entrada || entrada.archivo || entrada.borrada || entrada.probadaConExcepcion) return false;
+  if (!activa || !entrada || entrada.archivo || entrada.borrada || entrada.descartada || entrada.probadaConExcepcion) return false;
   if (entrada.origen === 'error' || entrada.error || FALLA.test(String(entrada.razon ?? ''))) return false;
   if (!DESCARTE_POR_MENOR.test(String(entrada.razon ?? ''))) return false;
   return tieneFuenteOficialParaMenores(nota) && menorEnActividadOficial(nota).ok;
+}
+
+// ------------------------------------------------- la misma foto en dos notas (17/10/2026, regla 204)
+//
+// La auditoría del 16/10 encontró 31 imágenes usadas en 69 notas: la misma foto de Messi de 2012 en siete (una era el show de un grupo
+// musical), la hornalla de Camuzzi de 2024 en dos notas distintas. Desde ahora la misma foto (la misma huella, o la misma dirección) sólo
+// puede ilustrar dos notas del MISMO tema, y una foto que una persona sacó (`descartada`) no vuelve en ninguna.
+
+const PALABRAS_QUE_NO_DICEN_EL_TEMA = new Set(('para sobre entre tras ante desde hasta contra porque como cuando donde segun este esta estos estas '
+  + 'aquel otra otro otras otros todo toda todos todas cada mismo misma luego tambien ademas antes despues durante mientras sigue siguen '
+  + 'nueva nuevo nuevas nuevos primer primera segunda segundo tercer tercera ultimo ultima gran grande mayor menor mejor peor '
+  + 'balcarce argentina argentino argentinos nacional provincial municipal provincia gobierno ciudad pais local locales vecinos '
+  + 'anuncia anuncian presenta presentan realiza realizan participa participan suma suman llega llegan queda quedan habra tiene tienen '
+  + 'hace hacen dice dicen pide piden busca buscan lanza lanzan abre abren cierra cierran inicia inician '
+  + 'lunes martes miercoles jueves viernes sabado domingo semana enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre').split(/\s+/));
+
+const planoT = (t) => String(t ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+/** Las palabras que dicen de qué trata un título (de 4 letras o más, sin las que aparecen en cualquier nota). */
+export function palabrasDelTema(titulo) {
+  return new Set(planoT(titulo).split(/[^a-z0-9ñ]+/).filter((p) => p.length >= 4 && !/^\d+$/.test(p) && !PALABRAS_QUE_NO_DICEN_EL_TEMA.has(p)));
+}
+
+/** ¿Dos títulos cuentan el mismo tema? Comparten por lo menos dos palabras que dicen el tema ("Werner", "multa"; no sólo "Messi"). */
+export function mismoTema(tituloA, tituloB) {
+  const a = palabrasDelTema(tituloA);
+  let comunes = 0;
+  for (const p of palabrasDelTema(tituloB)) if (a.has(p)) comunes += 1;
+  return comunes >= 2;
+}
+
+/**
+ * ¿Esta foto ya está en el banco para otra nota de otro tema, o una persona la sacó? `{ huella, imagen }` de la foto candidata; devuelve
+ * `{ id, motivo }` de la nota con la que choca, o null. Las fotos libres de F1 y fútbol (`origen: 'libre'`) no cuentan: tienen su propio
+ * control (foto-libre.mjs) y las tres notas de un Gran Premio llevan la misma a propósito.
+ */
+export function fotoRepetidaEnElBanco(banco, nota, { huella = null, imagen = null } = {}) {
+  const direccion = imagen ? sinConsulta(imagen) : null;
+  for (const [id, e] of Object.entries(banco ?? {})) {
+    if (!e || id === nota?.id || e.origen === 'libre') continue;
+    const vetada = e.descartada;
+    const huellaDeEsa = e.huella ?? vetada?.huella ?? null;
+    const direccionDeEsa = e.imagenOriginal ? sinConsulta(e.imagenOriginal) : (vetada?.imagenOriginal ? sinConsulta(vetada.imagenOriginal) : null);
+    const igual = (huella && huellaDeEsa && mismaFoto(huella, huellaDeEsa)) || (direccion && direccionDeEsa && direccion === direccionDeEsa);
+    if (!igual) continue;
+    if (vetada) return { id, motivo: `una persona sacó esa foto de "${e.titulo ?? id}": ${vetada.motivo ?? 'sin motivo'}` };
+    if (!e.archivo) continue;
+    if (!mismoTema(nota?.titulo, e.titulo)) return { id, motivo: `ya ilustra "${e.titulo ?? id}", que es de otro tema` };
+  }
+  return null;
+}
+
+/** Las direcciones de Wikimedia que ya están en el banco (usadas o sacadas): no se repiten (regla 205). */
+export function wikimediaYaUsadas(banco) {
+  return new Set(Object.values(banco ?? {}).filter((e) => e?.origen === 'wikimedia' || e?.descartada?.origen === 'wikimedia')
+    .map((e) => sinConsulta(e.imagenOriginal ?? e.descartada?.imagenOriginal)).filter(Boolean));
 }
 
 /**
@@ -102,7 +166,7 @@ export function reintentoPorExcepcion(entrada, nota, { activa = excepcionActiva(
  */
 export async function elegirFotosNuevas(notas, {
   banco = {}, tope = TOPE_POR_CORRIDA, clave, claveRespaldo, fetchFn = fetch, ahora = new Date(), achicar = achicarFoto,
-  fotosMenoresOficiales = excepcionActiva(),
+  fotosMenoresOficiales = excepcionActiva(), prepararParaIA = achicarParaIA, huellaDe = huellaDeFoto,
 } = {}) {
   const bancoNuevo = { ...banco };
   const archivos = {};
@@ -128,24 +192,36 @@ export async function elegirFotosNuevas(notas, {
     procesadas += 1;
     const intentos = (banco[n.id]?.intentos ?? (banco[n.id] ? 1 : 0)) + 1;
     try {
-      const r = await elegirFotoParaNota(n, { clave, claveRespaldo, fetchFn, fotosMenoresOficiales });
+      const r = await elegirFotoParaNota(n, {
+        clave, claveRespaldo, fetchFn, fotosMenoresOficiales, prepararParaIA, huellaDe,
+        // Con el banco de este momento (también lo que se eligió antes en esta misma corrida).
+        esRepetida: (foto) => fotoRepetidaEnElBanco(bancoNuevo, n, foto),
+        excluirWikimedia: wikimediaYaUsadas(bancoNuevo),
+      });
+      // El error de Gemini queda en la ficha aunque después Groq haya contestado (17/10/2026).
+      const deGemini = r.errorGemini ? { errorGemini: r.errorGemini } : {};
       if (!r.elegida) {
         bancoNuevo[n.id] = {
-          intentado: true, origen: r.origen, titulo: n.titulo ?? null, razon: r.razon ?? null, cuando: ahora.toISOString(), intentos, fuentes: cuantasFuentes(n), ...marca,
+          intentado: true, origen: r.origen, titulo: n.titulo ?? null, razon: r.razon ?? null, cuando: ahora.toISOString(), intentos, fuentes: cuantasFuentes(n), ...deGemini, ...marca,
         };
         continue;
       }
-      // La comparación ya bajó la imagen para mirarla, pero no la guardó: se
-      // vuelve a bajar para quedarse con los bytes de la elegida nada más.
+      // La comparación ya bajó la imagen para mirarla: se guarda ésa (la original, no la achicada que vio la IA). Sólo si no la trae, se baja.
       const datos = r.elegida.datos ?? await descargarImagen(r.elegida.imagen, { fetchFn });
-      const ext = EXTENSION[datos?.mime];
-      if (!datos || !ext) {
-        bancoNuevo[n.id] = { intentado: true, origen: r.origen, cuando: ahora.toISOString(), error: 'no se pudo volver a bajar la elegida', intentos, fuentes: cuantasFuentes(n), ...marca };
+      const mime = normalizarMime(mimeOriginal(datos) ?? '');
+      const ext = EXTENSION[mime] ?? null;
+      // Achicada a 1.200 px y JPEG (29/09): la original pesaba hasta 1,8 MB y crecía el repositorio unos 25 MB por día. Si no se puede
+      // achicar, se guarda la original; una foto en otro formato (AVIF, GIF: 17/10/2026, "no se pudo volver a bajar la elegida") se guarda
+      // si ffmpeg la pudo pasar a JPEG.
+      const guardar = datos ? await fotoParaGuardar(bytesOriginales(datos), ext, { achicar }) : null;
+      if (!guardar) {
+        bancoNuevo[n.id] = {
+          intentado: true, origen: r.origen, cuando: ahora.toISOString(),
+          error: datos ? `no se pudo guardar la elegida (formato ${mime || 'desconocido'})` : 'no se pudo volver a bajar la elegida',
+          imagenOriginal: r.elegida.imagen ?? null, intentos, fuentes: cuantasFuentes(n), ...deGemini, ...marca,
+        };
         continue;
       }
-      // Achicada a 1.200 px y JPEG (29/09): la original pesaba hasta 1,8 MB y crecía el
-      // repositorio unos 25 MB por día. Si no se puede achicar, se guarda la original.
-      const guardar = await fotoParaGuardar(Buffer.from(datos.base64, 'base64'), ext, { achicar });
       const archivo = `fotos-notas/${n.id}.${guardar.ext}`;
       // Con todo lo necesario para revisarla y reusarla (28/09, Hernán: "que
       // esas fotos se estén guardando con los datos que corresponda"): de qué
@@ -155,7 +231,11 @@ export async function elegirFotosNuevas(notas, {
         archivo, medio: r.elegida.medio, credito: creditoDeFoto(r.elegida),
         licencia: r.elegida.licencia ?? null, ...(r.elegida.autor ? { autor: r.elegida.autor } : {}), origen: r.origen,
         titulo: n.titulo ?? null, enlace: r.elegida.enlace ?? null, imagenOriginal: r.elegida.imagen ?? null,
-        razon: r.razon ?? null, cuando: ahora.toISOString(), ...marca,
+        razon: r.razon ?? null, cuando: ahora.toISOString(), ...deGemini, ...marca,
+        // Lo que vio la IA (y la segunda opinión, si la hubo) y la huella de la foto (17/10/2026, reglas 203 y 204): para auditar después
+        // y para que la misma foto no ilustre otra nota de otro tema.
+        ...(r.elegida.vision ? { vision: r.elegida.vision } : {}),
+        ...(r.elegida.huella ? { huella: r.elegida.huella } : {}),
         // La excepción de la regla 186 queda anotada en la entrada (el registro permanente para auditar: la poda le saca el archivo, no esto).
         ...(r.elegida.excepcion ? { excepcion: { ...r.elegida.excepcion, cuando: ahora.toISOString() } } : {}),
       };
@@ -180,16 +260,38 @@ export async function elegirFotosNuevas(notas, {
  * es de ninguna nota del banco también se borra. Devuelve el banco nuevo y los
  * nombres a borrar; no toca el disco.
  */
-export function podarFotos({ banco = {}, enDisco = [], quedan = new Set(), retiradas = new Set(), ilustraciones = {} } = {}) {
+/**
+ * Cuánto se espera antes de borrar la foto de una nota que dejó de estar (17/10/2026, regla 203): seis notas vivas perdieron su foto para
+ * siempre porque en UNA vuelta no figuraban (una unión que se deshizo, un cambio de semáforo) y la poda la borró en el momento. Ahora la
+ * primera vez que falta queda anotado (`ausenteDesde`) y la foto se borra recién si sigue faltando una semana después. Lo retirado a mano
+ * se borra en el momento, como siempre (puede ser por un menor o una víctima).
+ */
+export const HORAS_DE_GRACIA_DE_LA_PODA = 7 * 24;
+
+export function podarFotos({
+  banco = {}, enDisco = [], quedan = new Set(), retiradas = new Set(), ilustraciones = {}, ahora = new Date(), horasDeGracia = HORAS_DE_GRACIA_DE_LA_PODA,
+} = {}) {
   const bancoNuevo = { ...banco };
   const vivas = new Set();
   for (const [id, b] of Object.entries(banco)) {
     if (!b?.archivo) continue;
     const nombre = b.archivo.split('/').pop();
-    if (retiradas.has(id) || !quedan.has(id)) {
-      const { archivo, credito, ...resto } = b;
-      bancoNuevo[id] = { ...resto, intentado: true, borrada: true };
+    if (retiradas.has(id)) {
+      const { archivo, credito, ausenteDesde, ...resto } = b;
+      bancoNuevo[id] = { ...resto, intentado: true, borrada: true, retirada: true };
+    } else if (!quedan.has(id)) {
+      const desde = Date.parse(b.ausenteDesde ?? '');
+      if (!Number.isFinite(desde)) {
+        bancoNuevo[id] = { ...b, ausenteDesde: ahora.toISOString() };
+        vivas.add(nombre);
+      } else if (ahora.getTime() - desde < horasDeGracia * 3_600_000) {
+        vivas.add(nombre);
+      } else {
+        const { archivo, credito, ausenteDesde, ...resto } = b;
+        bancoNuevo[id] = { ...resto, intentado: true, borrada: true };
+      }
     } else {
+      if (b.ausenteDesde) { const { ausenteDesde, ...resto } = b; bancoNuevo[id] = resto; }
       vivas.add(nombre);
     }
   }
@@ -214,6 +316,32 @@ export function podarFotos({ banco = {}, enDisco = [], quedan = new Set(), retir
  */
 export const fotoConMenorPermitida = (nota, { activa = excepcionActiva() } = {}) => activa && menorEnActividadOficial(nota).ok;
 
+const nombreDelArchivo = (a) => String(a ?? '').split('/').pop();
+// Las imágenes que no son del banco: las de las notas propias (collage, foto libre, clima, efemérides).
+const DE_NOTA_PROPIA = /^(collage-|libre-|clima-|efemeride)/;
+
+/**
+ * La foto de una nota del ARCHIVO, al día con el banco (17/10/2026, regla 203). El archivo guardaba la foto de cada nota tal como salió y
+ * nadie la volvía a comparar: nueve notas mostraban una imagen rota (ocho apuntaban al .png o .webp de antes del achique del 29/09, cuando
+ * el banco ya decía .jpg, y una a una foto que se sacó a propósito). Ahora, en cada vuelta:
+ *   - una foto del banco toma la dirección y el crédito que dice el banco, si el archivo está;
+ *   - si el banco ya no la tiene (se sacó, se podó) o el archivo no está, la nota queda sin foto (después le toca su ilustración o la placa);
+ *   - Policiales sin fuente oficial no lleva foto real (elegiblePorSeccion), como en la portada;
+ *   - las ilustraciones y las imágenes de las notas propias quedan si el archivo está.
+ * `existe(nombre)` dice si el archivo está en web/public/fotos-notas/. Devuelve la nota (la misma si no cambió).
+ */
+export function fotoDelArchivoAlDia(nota, banco = {}, { existe = () => true } = {}) {
+  if (!nota?.foto?.archivo) return nota;
+  const sinFoto = () => { const { foto, ...resto } = nota; return resto; };
+  const nombre = nombreDelArchivo(nota.foto.archivo);
+  if (esIlustracionDeNota(nota.foto) || DE_NOTA_PROPIA.test(nombre)) return existe(nombre) ? nota : sinFoto();
+  const b = banco?.[nota.id];
+  if (!b) return existe(nombre) ? nota : sinFoto();
+  if (!b.archivo || !existe(nombreDelArchivo(b.archivo)) || !elegiblePorSeccion(nota)) return sinFoto();
+  if (b.archivo === nota.foto.archivo && b.credito === nota.foto.credito) return nota;
+  return { ...nota, foto: { archivo: b.archivo, credito: b.credito } };
+}
+
 /** La nota lista para la web: `{archivo, credito}`, o nada si no tiene. */
 export function fotoDeLaWeb(banco, id) {
   const b = banco?.[id];
@@ -224,7 +352,7 @@ export function fotoDeLaWeb(banco, id) {
 // ------------------------------------------------- las ilustraciones con IA
 //
 // Reglas 182 y 185 (16 y 17/10/2026): las notas que quedaron sin foto pueden llevar una ilustración hecha con IA (un bodegón sin gente:
-// web/scripts/ilustrar-notas.mjs, workflow "Ilustrar notas sin foto", automático cada 2 horas o a mano; o Gemini web, a mano). Se anotan en
+// web/scripts/ilustrar-notas.mjs, workflow "Ilustrar notas sin foto", automático cada 2 horas o a mano: el único camino desde el 17/10/2026). Se anotan en
 // web/data/fotos-ia.json y tienen la prioridad MÁS BAJA: una foto real del banco o una que sumó una persona siempre gana. El epígrafe dice
 // siempre que es de IA.
 

@@ -240,7 +240,7 @@ test('personaPublicaDeNota: null si la IA dice null, si falla, o si no hay clave
   assert.equal(await personaPublicaDeNota(nota, { clave: null, fetchFn: async () => { throw new Error('no debería llamarse'); } }), null);
 });
 
-const paginaWikimedia = (props) => ({ 1: { imageinfo: [{ mime: 'image/jpeg', width: 1200, height: 800, url: 'https://upload.wikimedia.org/f.jpg', descriptionurl: 'https://commons.wikimedia.org/wiki/File:F.jpg', extmetadata: { LicenseShortName: { value: 'CC BY-SA 4.0' } }, ...props }] } });
+const paginaWikimedia = (props) => ({ 1: { imageinfo: [{ mime: 'image/jpeg', width: 1200, height: 800, url: 'https://upload.wikimedia.org/f.jpg', descriptionurl: 'https://commons.wikimedia.org/wiki/File:F.jpg', extmetadata: { LicenseShortName: { value: 'CC BY-SA 4.0' }, DateTimeOriginal: { value: `${new Date().getFullYear()}-03-01` } }, ...props }] } });
 
 test('buscarFotoWikimedia: acepta una licencia libre, de tamaño razonable', async () => {
   const fetchFn = async (url) => {
@@ -288,11 +288,19 @@ test('elegirFotoParaNota: si una fuente sirve, ni pregunta por la persona públi
   assert.equal(preguntoPersona, false);
 });
 
-test('elegirFotoParaNota: sin foto de fuente, prueba Wikimedia si hay una persona pública clara', async () => {
+test('elegirFotoParaNota: sin foto de fuente, prueba Wikimedia si hay una persona pública clara (y la IA mira la foto: 17/10/2026)', async () => {
   const nota = { titulo: 'Mariano Werner lidera la clasificación del TC Pick Up', seccion: 'Automovilismo', fuentesConsultadas: [] };
-  const fetchFn = async (url) => {
-    if (String(url).includes('generativelanguage')) return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ persona: 'Mariano Werner' }) }] } }] }) };
-    if (String(url).includes('commons.wikimedia.org')) return { ok: true, json: async () => ({ query: { pages: paginaWikimedia({}) } }) };
+  const fetchFn = async (url, init) => {
+    if (String(url).includes('generativelanguage')) {
+      // Sin imagen: la pregunta por la persona. Con imagen: el control de la foto de Wikimedia.
+      const conImagen = JSON.parse(init.body).contents[0].parts.length > 1;
+      const respuesta = conImagen
+        ? { menor: false, tiene_marca: false, grafica: false, stock: false, corresponde: 'si', descripcion: 'Werner junto a su auto' }
+        : { persona: 'Mariano Werner' };
+      return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify(respuesta) }] } }] }) };
+    }
+    if (String(url).includes('commons.wikimedia.org/w/api.php')) return { ok: true, json: async () => ({ query: { pages: paginaWikimedia({}) } }) };
+    if (String(url).includes('upload.wikimedia.org')) return { ok: true, headers: { get: () => 'image/jpeg' }, arrayBuffer: async () => Buffer.from('foto') };
   };
   const r = await elegirFotoParaNota(nota, { clave: 'g', claveRespaldo: null, fetchFn });
   assert.equal(r.origen, 'wikimedia');
@@ -340,7 +348,11 @@ test('elegirFoto: una foto con un menor nunca es la elegida, aunque la IA la pre
     elegida: 'A', razon: 'la mejor',
     fotos: [{ letra: 'A', tiene_marca: false, menor: true, detalle: 'equipo U15 con las caras a la vista' }, { letra: 'B', tiene_marca: false, menor: false }],
   });
-  const r = await elegirFoto({ titulo: 'La Selección U15 femenina gana la copa', seccion: 'Deportes' }, candidatas, { clave: 'g', claveRespaldo: null, fetchFn });
+  // Es un caso dudoso (U15): desde el 17/10/2026 la elegida la mira también Groq (la segunda opinión), que acá está de acuerdo.
+  const conGroq = async (url, init) => (String(url).includes('api.groq.com')
+    ? { ok: true, json: async () => ({ choices: [{ message: { content: JSON.stringify({ menor: false, tiene_marca: false, grafica: false, corresponde: 'si' }) } }] }) }
+    : fetchFn(url, init));
+  const r = await elegirFoto({ titulo: 'La Selección U15 femenina gana la copa', seccion: 'Deportes' }, candidatas, { clave: 'g', claveRespaldo: 'r', fetchFn: conGroq });
   assert.equal(r.elegida.medio, 'Municipio');
   assert.equal(r.candidatas[0].sospechaMenor, true);
 });

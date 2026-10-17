@@ -15,8 +15,9 @@ import {
   promptFinal, problemaDelPrompt, interpretarControl, pedidoAlWorker, llamarAlWorker, revisar, aplicar, entradaDeIlustracion, neuronasEstimadas,
   TOPE_POR_CORRIDA, TOPE_POR_DIA, REINTENTOS_POR_IMAGEN, NEURONAS_GRATIS_POR_DIA, AGREGADO, NEGATIVO, PROMPT_DE_HERNAN,
   PROMPT_MAXIMO, MODELO, ANCHO, ALTO, PASOS, URL_DEL_WORKER, CUERPO_MAXIMO, PREGUNTA_DE_CONTROL,
-  tonoDeLaNota, TONOS, esDeGeminiWeb, cupoAutomatico, automatico, HORAS_AUTOMATICAS, MINIMO_POR_CORRIDA_AUTOMATICA,
+  tonoDeLaNota, TONOS, esDeGeminiWeb, cupoAutomatico, automatico, HORAS_AUTOMATICAS, MINIMO_POR_CORRIDA_AUTOMATICA, ilustracionControlada,
 } from '../web/scripts/ilustrar-notas.mjs';
+import { nombresDePersona } from '../web/scripts/nombres-de-persona.mjs';
 import {
   conFotosDelBanco, podarFotos, ilustracionPermitida, esIlustracionDeNota, CREDITO_ILUSTRACION, tocaUnaMuerte,
 } from '../web/scripts/fotos-notas.mjs';
@@ -107,7 +108,10 @@ test('se saltan: las notas propias con imagen y lo que ya tiene foto o ilustraci
   assert.match(motivoParaSaltar(base, { manuales: { z1: { archivo: 'fotos-notas/z1-2.jpg' } } }), /persona/);
   assert.match(motivoParaSaltar(base, { ilustraciones: { z1: { archivo: 'fotos-notas/z1-ia.jpg', modelo: 'sdxl' } } }), /^ya tiene una ilustración$/);
   const deGeminiWeb = { archivo: 'fotos-notas/z1-ia.jpg', prompt: 'Prompt de bodegón sin personas de Hernán Accomo (docs/flujos/IMAGENES-CON-GEMINI-WEB.md) con la nota entera; generada en Gemini web y revisada a mano' };
-  assert.match(motivoParaSaltar(base, { ilustraciones: { z1: deGeminiWeb } }), /Gemini web.*no se pisa/);
+  // Regla 206 (17/10/2026): la de Gemini web ya no "nunca se pisa": sin control, la revisión la mira; con el control pasado, salta.
+  assert.equal(motivoParaSaltar(base, { ilustraciones: { z1: deGeminiWeb } }), null);
+  assert.equal(ilustracionControlada(deGeminiWeb), false);
+  assert.match(motivoParaSaltar(base, { ilustraciones: { z1: { ...deGeminiWeb, control: { ok: true } } } }), /^ya tiene una ilustración$/);
   assert.equal(esDeGeminiWeb(deGeminiWeb), true);
   assert.equal(esDeGeminiWeb({ archivo: 'x', modelo: 'gemini-web' }), true);
   assert.equal(esDeGeminiWeb({ archivo: 'x', modelo: 'sdxl', prompt: 'Candid photojournalistic…' }), false);
@@ -157,8 +161,8 @@ test('elegirCandidatas: sólo la portada de las últimas horas, las más nuevas 
 
 // ------------------------------------------------------------------ el prompt
 
-test('el pedido a Gemini es el de Hernán (el mismo de probar-imagen-nota) con la nota COMPLETA, el 16:9 y el tono, y pide un prompt sin nombres ni personas', () => {
-  assert.ok(leer('redes/probar-imagen-nota.mjs').includes(PROMPT_DE_HERNAN), 'el pedido de Hernán es el mismo en los dos archivos');
+test('el pedido a Gemini es el de Hernán con la nota COMPLETA, el 16:9 y el tono, y pide un prompt sin nombres ni personas', () => {
+  assert.match(PROMPT_DE_HERNAN, /No debe aparecer ninguna persona/);
   for (const pedido of ['No debe aparecer ninguna persona', 'bodegón', 'superficie de trabajo', 'desgaste por uso', 'logotipos', 'bokeh', 'archivo de diario']) assert.ok(PROMPT_DE_HERNAN.includes(pedido), pedido);
   const cuerpo = `${'Cuerpo '.repeat(1000)}FINAL-DEL-CUERPO`;
   const i = armarInstruccion(nota('n1', 'El Festival Cervantino de Azul cumple 20 años', 'Cultura y agenda', { copete: 'Bajada', cuerpo }));
@@ -494,16 +498,20 @@ test('automático: respeta el tope del día (lo aplicado hoy y lo generado por o
   assert.deepEqual(r2.aplicadas, []);
 });
 
-test('automático: nunca pisa una ilustración de Gemini web, ni una que llegó mientras tanto (el aplicar vuelve a mirar)', async () => {
+test('automático: una ilustración de Gemini web que pasa el control queda (y se anota); nunca pisa una que llegó mientras tanto (regla 206)', async () => {
   const e = escenario(3, { ahora: new Date('2026-10-16T14:20:00Z') });
   const deGeminiWeb = { archivo: 'fotos-notas/n00-ia.jpg', credito: CREDITO_ILUSTRACION, origen: 'ia', cuando: '2026-10-16T13:00:00Z', prompt: 'generada en Gemini web y revisada a mano' };
   fs.writeFileSync(e.rutas.ilustraciones, JSON.stringify({ n00: deGeminiWeb }));
+  fs.mkdirSync(e.rutas.carpeta, { recursive: true });
+  fs.writeFileSync(path.join(e.rutas.carpeta, 'n00-ia.jpg'), JPEG(20_000));
   const red = redSimulada();
   const r = await automatico({ ...e, clave: 'k', token: 't', fetchFn: red.fetchFn, achicar, esperar: sinEspera, registro: () => {} });
-  assert.ok(r.revision.saltadas.some((s) => s.id === 'n00' && /Gemini web/.test(s.motivo)));
-  assert.equal(red.pedidos.worker, 2);
+  assert.deepEqual(r.revision.revisadas.map((x) => x.id), ['n00'], 'la miró el control y pasó');
+  assert.equal(red.pedidos.worker, 2, 'para n00 no se gastó el Worker');
   assert.deepEqual(r.aplicadas, ['n01', 'n02']);
-  assert.deepEqual(JSON.parse(fs.readFileSync(e.rutas.ilustraciones, 'utf8')).n00, deGeminiWeb);
+  const n00 = JSON.parse(fs.readFileSync(e.rutas.ilustraciones, 'utf8')).n00;
+  assert.equal(n00.archivo, deGeminiWeb.archivo);
+  assert.equal(n00.control.ok, true, 'queda anotado que pasó: no se vuelve a mirar');
   // entre la revisión y el guardado subieron una de Gemini web para n01: el aplicar otra vez (el reintento del workflow) no la toca
   const libro = JSON.parse(fs.readFileSync(e.rutas.ilustraciones, 'utf8'));
   const otra = { ...deGeminiWeb, archivo: 'fotos-notas/n01-ia-2.jpg' };
@@ -512,6 +520,55 @@ test('automático: nunca pisa una ilustración de Gemini web, ni una que llegó 
   assert.deepEqual(otraVez.aplicadas, ['n02']);
   assert.ok(otraVez.noAplicadas.some((x) => x.id === 'n01' && /Gemini web/.test(x.motivo)));
   assert.deepEqual(otraVez.libro.n01, otra);
+});
+
+// Regla 206, caso real (auditoría del 16/10/2026): 5 de las 6 ilustraciones hechas a mano con Gemini web tenían texto legible ("CARAVANA DE LA
+// ALEGRÍA", "JUEZ FINAL PROVINCIAL"), marcas (Spalding, Sennheiser) o gente de fondo. Ahora pasan por el mismo control que las automáticas.
+test('regla 206: una ilustración de Gemini web que NO pasa el control se reemplaza por la automática; sin cupo para otra, se saca', async () => {
+  const e = escenario(1, { ahora: new Date('2026-10-16T14:20:00Z') });
+  const caravana = { archivo: 'fotos-notas/n00-ia.jpg', credito: CREDITO_ILUSTRACION, origen: 'ia', cuando: '2026-10-16T13:00:00Z', titulo: 'Reprograman la Caravana de la Alegría para noviembre', prompt: 'Prompt de bodegón sin personas de Hernán Accomo (docs/flujos/IMAGENES-CON-GEMINI-WEB.md) con la nota entera; generada en Gemini web y revisada a mano' };
+  fs.writeFileSync(e.rutas.ilustraciones, JSON.stringify({ n00: caravana }));
+  fs.mkdirSync(e.rutas.carpeta, { recursive: true });
+  fs.writeFileSync(path.join(e.rutas.carpeta, 'n00-ia.jpg'), JPEG(20_000));
+  // el primer control (la de Gemini web) ve texto; el segundo (la nueva del Worker) pasa
+  const red = redSimulada({ control: (n) => (n === 1 ? { ...CONTROL_BIEN, texto: true, razon: 'un cartel que dice CARAVANA DE LA ALEGRÍA' } : CONTROL_BIEN) });
+  const r = await automatico({ ...e, clave: 'k', token: 't', fetchFn: red.fetchFn, achicar, esperar: sinEspera, registro: () => {} });
+  assert.deepEqual(r.revision.aSacar.map((x) => x.id), ['n00']);
+  assert.equal(red.pedidos.worker, 1);
+  assert.deepEqual(r.aplicadas, ['n00']);
+  const libro = JSON.parse(fs.readFileSync(e.rutas.ilustraciones, 'utf8'));
+  assert.equal(libro.n00.archivo, 'fotos-notas/n00-ia-2.jpg', 'la nueva, con otro nombre');
+  assert.equal(libro.n00.modelo, MODELO);
+  assert.equal(libro.n00.control.ok, true, 'con su control anotado');
+  assert.deepEqual(r.sacadas, [], 'se reemplazó: no hace falta sacarla');
+
+  // Sin cupo del Worker para hacer otra: la que no pasó se saca igual (la nota vuelve a la placa).
+  const b = escenario(1, { ahora: new Date('2026-10-16T14:20:00Z') });
+  fs.writeFileSync(b.rutas.ilustraciones, JSON.stringify({ n00: caravana, ...Object.fromEntries(Array.from({ length: TOPE_POR_DIA }, (_, i) => [`v${i}`, { archivo: `fotos-notas/v${i}-ia.jpg`, cuando: '2026-10-16T13:00:00Z', modelo: 'sdxl' }])) }));
+  fs.mkdirSync(b.rutas.carpeta, { recursive: true });
+  fs.writeFileSync(path.join(b.rutas.carpeta, 'n00-ia.jpg'), JPEG(20_000));
+  const red2 = redSimulada({ control: { ...CONTROL_BIEN, logos: true } });
+  const r2 = await automatico({ ...b, clave: 'k', token: 't', fetchFn: red2.fetchFn, achicar, esperar: sinEspera, registro: () => {} });
+  assert.equal(red2.pedidos.worker, 0);
+  assert.deepEqual(r2.sacadas.map((x) => x.id), ['n00']);
+  assert.equal(JSON.parse(fs.readFileSync(b.rutas.ilustraciones, 'utf8')).n00, undefined);
+});
+
+test('la entrada de fotos-ia.json guarda lo que dijo el control', () => {
+  const x = entradaDeIlustracion({ archivo: 'fotos-notas/a-ia.jpg', nota: { titulo: 'T' }, prompt: 'p', control: { ok: true, motivo: null, razon: 'un mostrador' } });
+  assert.deepEqual(x.control, { ok: true, motivo: null, razon: 'un mostrador' });
+  assert.equal(ilustracionControlada(x), true);
+  assert.equal(ilustracionControlada({ archivo: 'x', modelo: 'sdxl' }), true, 'las automáticas de antes, que sólo se aplicaban si pasaban');
+});
+
+test('nombresDePersona (salió de ingesta/foto-ia.mjs, que se borró): nombres y figuras, no instituciones', () => {
+  assert.deepEqual(nombresDePersona('Luis Caputo pide confianza a los empresarios'), ['Luis Caputo']);
+  assert.deepEqual(nombresDePersona('Franco Colapinto penaliza quince puestos en la grilla'), ['Franco Colapinto']);
+  assert.deepEqual(nombresDePersona('Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España'), ['Fernando de la Torre']);
+  assert.deepEqual(nombresDePersona('El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre'), []);
+  assert.deepEqual(nombresDePersona('La Bolsa de Comercio y el Banco Central'), []);
+  assert.deepEqual(nombresDePersona('Milei sube el tono contra la oposición'), ['Milei']);
+  assert.deepEqual(nombresDePersona(''), []);
 });
 
 test('aplicar en automático ignora los ids: lo que el control vio mal no se publica solo, aunque lo pidan', () => {
@@ -684,7 +741,8 @@ test('generar-datos suma fotos-ia.json con la prioridad más baja, lo pasa a la 
   assert.match(g, /conFotosDelBanco\(deLaIngesta, bancoDeFotos, conIlustraciones\)/);
   assert.match(g, /ilustraciones: ilustracionesIA,?\s*\}\);/);
   // La regla 186 mete en el medio sinFotoConMenorBloqueada (saca la foto con chicos de la excepción si ya no se puede); la ilustración sigue después.
-  assert.match(g, /\.map\(conLaFotoPasada\)(?:\.map\(sinFotoConMenorBloqueada\))?\.map\(conLaIlustracion\)/);
+  // La regla 203 suma conLaFotoAlDia (la foto del archivo al día con el banco: sin imágenes rotas), antes de la de la regla 186.
+  assert.match(g, /\.map\(conLaFotoPasada\)(?:\.map\(conLaFotoAlDia\))?(?:\.map\(sinFotoConMenorBloqueada\))?\.map\(conLaIlustracion\)/);
   assert.match(g, /yaTienen:[^\n]*!esIlustracionDeNota\(n\.foto\)/);
   assert.match(g, /ilustracionPermitida\(n, \{ semaforo: semaforoDelTexto \}\)/);
   assert.ok(!/writeFileSync\(FOTOS_IA/.test(g), 'generar-datos no escribe fotos-ia.json (lo escribe sólo "Ilustrar notas sin foto")');
