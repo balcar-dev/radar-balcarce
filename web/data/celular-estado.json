@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T02:31:46.042Z",
- "portada": 60,
- "archivo": 1200,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-17T03:03:03.946Z",
+ "portada": 79,
+ "archivo": 1207,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-17T02:31:46.081Z",
+  "generado": "2026-10-17T03:03:03.980Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,8 +13,8 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-16T10:05:44.326Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "efemeride",
@@ -23,8 +23,8 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-16T12:06:25.086Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia1",
@@ -33,18 +33,8 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-16T13:06:19.378Z"
-   },
-   {
-    "nombre": "participa-nota",
-    "tipo": "reel",
-    "hora": "12:00",
-    "que": "Tu nota",
-    "voz": "locutor",
-    "ventana": 60,
-    "momento": "cerrada",
-    "salio": "2026-10-16T15:06:11.930Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia2",
@@ -53,8 +43,18 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-16T18:09:35.412Z"
+    "momento": "antes",
+    "salio": null
+   },
+   {
+    "nombre": "utiles",
+    "tipo": "reel",
+    "hora": "17:00",
+    "que": "Los teléfonos útiles",
+    "voz": "locutor",
+    "ventana": 60,
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "farmacia",
@@ -63,8 +63,8 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "en-hora",
-    "salio": "2026-10-16T22:05:41.323Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "clima-noche",
@@ -73,8 +73,8 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
-    "salio": "2026-10-16T23:05:10.932Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "podcast",
@@ -83,8 +83,8 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
-    "salio": "2026-10-17T00:06:36.597Z"
+    "momento": "antes",
+    "salio": null
    }
   ],
   "repasos": [
@@ -93,29 +93,29 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "cerrada",
-    "salio": "2026-10-16T13:06:19.378Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 54,
     "notas": [
      {
-      "id": "aa7nni",
-      "titulo": "Reprograman la Caravana de la Alegría para noviembre",
-      "seccion": "Cultura y agenda"
+      "id": "rwxsr5",
+      "titulo": "El INTA Balcarce participa de una investigación global sobre suelo",
+      "seccion": "Agro"
      },
      {
-      "id": "u0hcbv",
-      "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
-      "seccion": "Balcarce"
+      "id": "1w9aja0",
+      "titulo": "La organización designa los árbitros para la primera fecha del torneo",
+      "seccion": "Fútbol"
      },
      {
-      "id": "1m9svv0",
-      "titulo": "Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "1h2xfr3",
-      "titulo": "Jennifer Lasa gana en el campeonato argentino de powerlifting",
+      "id": "1mfnr70",
+      "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
       "seccion": "Deportes"
+     },
+     {
+      "id": "1edq6ii",
+      "titulo": "Una vecina dona un riñón a su hija y transitan la recuperación",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -124,29 +124,24 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "cerrada",
-    "salio": "2026-10-16T18:09:35.412Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 53,
     "notas": [
      {
-      "id": "npazulcervantino",
-      "titulo": "El Festival Cervantino de Azul cumple 20 años con más de 50 actividades",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "1jdsdep",
-      "titulo": "La Dirección de Juventud firma un acuerdo para vender entradas online",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "x3s2ug",
-      "titulo": "El Ministerio de Economía informa un superávit primario de un billón y medio en septiembre",
+      "id": "1e6e9wy",
+      "titulo": "Docentes y estatales bonaerenses discuten una nueva oferta salarial",
       "seccion": "Economía"
      },
      {
-      "id": "10ephb3",
-      "titulo": "La Justicia investiga el patrimonio de Claudio Tapia y pide informes a Suiza",
-      "seccion": "Argentina"
+      "id": "n6v2wu",
+      "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1o2y75j",
+      "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -155,62 +150,21 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "en-hora",
-    "salio": "2026-10-17T00:06:36.597Z",
+    "momento": "antes",
+    "salio": null,
     "segundos": null,
-    "notas": [
-     {
-      "id": "1xyp583",
-      "titulo": "El Museo Histórico Municipal expone el Proyecto Cruz del Centenario",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "30azdn",
-      "titulo": "La morosidad de las familias baja en agosto y llega al 12,81%",
-      "seccion": "Economía"
-     },
-     {
-      "id": "bgdvlg",
-      "titulo": "Panichelli recuerda su grave lesión y la emoción de Scaloni",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "1qtfiwu",
-      "titulo": "La Subsecretaría de Deporte mantiene las clases de yoga con vacantes",
-      "seccion": "Balcarce"
-     }
-    ]
+    "notas": []
    }
   ],
   "facebook": {
-   "hoy": [
-    {
-     "id": "1kd7az5",
-     "titulo": "El Banco Central publica el informe con los datos de morosidad",
-     "cuando": "2026-10-16T12:09:19.709Z"
-    },
-    {
-     "id": "1vqqg6",
-     "titulo": "La Dirección de Juventud relanza el programa Arte Urbano",
-     "cuando": "2026-10-16T13:45:37.336Z"
-    },
-    {
-     "id": "ahqycd",
-     "titulo": "SUTEBA Balcarce adhiere al paro nacional en defensa de la educación pública",
-     "cuando": "2026-10-16T15:35:31.538Z"
-    },
-    {
-     "id": "aa7nni",
-     "titulo": "Reprograman la Caravana de la Alegría para noviembre",
-     "cuando": "2026-10-16T17:07:59.683Z"
-    },
-    {
-     "id": "1mfnr70",
-     "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
-     "cuando": "2026-10-16T18:38:18.880Z"
-    }
-   ],
+   "hoy": [],
    "cola": [
+    {
+     "id": "rwxsr5",
+     "titulo": "El INTA Balcarce participa de una investigación global sobre suelo",
+     "seccion": "Agro",
+     "marcada": false
+    },
     {
      "id": "1w9aja0",
      "titulo": "La organización designa los árbitros para la primera fecha del torneo",
@@ -218,7 +172,7 @@
      "marcada": false
     }
    ],
-   "cupo": 0,
+   "cupo": 5,
    "proximoDesde": "2026-10-16T20:08:18.880Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,

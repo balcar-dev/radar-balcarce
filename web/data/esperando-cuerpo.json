@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-17T02:31:46.042Z",
+ "generado": "2026-10-17T03:03:03.946Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -56,7 +56,7 @@
    "titulo": "Diego Santilli: “Los que deberían estar preocupados son los gobernadores si el kirchnerismo vuelve y gana Kicillof”",
    "copete": "El jefe de Gabinete, Diego Santilli , afirmó que los mandatarios provinciales deberían inquietarse ante la posibilidad de un regreso del kirchnerismo al poder con Axel Kicillof como figura central . En una entrevista con Radio Mitre , vinculó ese escenario con una eventual…",
    "seccion": "Política",
-   "fecha": "2026-10-16T11:30:00.000Z",
+   "fecha": "2026-10-16T00:00:00.000Z",
    "fuentes": [
     {
      "medio": "Infobae",
@@ -121,12 +121,12 @@
     {
      "medio": "La Gaceta (Tucumán)",
      "enlace": "https://www.lagaceta.com.ar/nota/1158369/politica/gobernadores-reclamaron-plan-infraestructura-santilli-advirtio-sobre-eventual-triunfo-kicillof.html",
-     "fecha": "2026-10-16T16:21:00.000Z"
+     "fecha": "2026-10-16T00:00:00.000Z"
     },
     {
      "medio": "La Gaceta (Tucumán)",
      "enlace": "https://www.lagaceta.com.ar/nota/1158330/politica/diego-santilli-que-deberian-estar-preocupados-son-gobernadores-si-kirchnerismo-vuelve-gana-kicillof.html",
-     "fecha": "2026-10-16T11:30:00.000Z"
+     "fecha": "2026-10-16T00:00:00.000Z"
     },
     {
      "medio": "Los Andes (Mendoza)",
@@ -184,6 +184,33 @@
    "intentos": 4,
    "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 4
+  },
+  {
+   "id": "1i8drj0",
+   "titulo": "Fórmula 1 en Brasil: vuelo chárter desde Rosario para el Gran Premio de São Paulo",
+   "copete": "",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-16T21:57:27.000Z",
+   "fuentes": [
+    {
+     "medio": "La Capital (Rosario)",
+     "enlace": "https://www.lacapital.com.ar/turismo/formula-1-brasil-vuelo-charter-rosario-el-gran-premio-sao-paulo-n10287146.html",
+     "fecha": "2026-10-16T21:57:27.000Z"
+    },
+    {
+     "medio": "TyC Sports",
+     "enlace": "https://www.tycsports.com/brasileirao/sao-paulo-vs-vasco-da-gama-en-vivo-donde-ver-por-tv-y-online-id766874.html",
+     "fecha": "2026-10-17T00:00:06.000Z"
+    },
+    {
+     "medio": "TyC Sports",
+     "enlace": "https://www.tycsports.com/brasileirao/brasil-campeonato-brasileiro-2026-sao-paulo-vs-vasco-da-gama-fecha-31-id766588.html",
+     "fecha": "2026-10-17T00:00:06.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 2 problemas (promesa): el título nombra a \"brasil\", \"formula\" y el cuerpo no los explica; sin esas oraciones quedan 115 palabras",
+   "maximo": 3
   }
  ]
 }
