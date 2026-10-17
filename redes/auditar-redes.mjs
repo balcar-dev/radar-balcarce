@@ -353,7 +353,7 @@ export function textoCierre(inf, maximo = 700) {
     if (largo + d.length + 3 > maximo - 40) break;
     l.push(`• ${d}`); largo += d.length + 3; puestas += 1;
   }
-  if (puestas < dedup.length) l.push(`…y ${dedup.length - puestas} más (workflow "Auditar redes").`);
+  if (puestas < dedup.length) l.push(`…y ${dedup.length - puestas} más (Vigilancia, probar-cierre).`);
   if (!inf.consultoMeta) l.push('(no pude consultar Meta: es sólo lo que dice el libro)');
   else {
     const nv = Object.values(inf.redes).flatMap((r) => r.noVerificado.filter((n) => !/^\d+ historia/.test(n)).map((n) => `${r.nombre} ${n.replace(/ \(.*$/, '')}`));

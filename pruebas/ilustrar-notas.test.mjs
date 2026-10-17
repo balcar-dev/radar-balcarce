@@ -157,8 +157,8 @@ test('elegirCandidatas: sólo la portada de las últimas horas, las más nuevas 
 
 // ------------------------------------------------------------------ el prompt
 
-test('el pedido a Gemini es el de Hernán (el mismo de probar-imagen-nota) con la nota COMPLETA, el 16:9 y el tono, y pide un prompt sin nombres ni personas', () => {
-  assert.ok(leer('redes/probar-imagen-nota.mjs').includes(PROMPT_DE_HERNAN), 'el pedido de Hernán es el mismo en los dos archivos');
+// (17/10/2026: se borró la prueba a mano de un día, probar-imagen-nota, que tenía una copia de este pedido: queda uno solo, acá.)
+test('el pedido a Gemini es el de Hernán con la nota COMPLETA, el 16:9 y el tono, y pide un prompt sin nombres ni personas', () => {
   for (const pedido of ['No debe aparecer ninguna persona', 'bodegón', 'superficie de trabajo', 'desgaste por uso', 'logotipos', 'bokeh', 'archivo de diario']) assert.ok(PROMPT_DE_HERNAN.includes(pedido), pedido);
   const cuerpo = `${'Cuerpo '.repeat(1000)}FINAL-DEL-CUERPO`;
   const i = armarInstruccion(nota('n1', 'El Festival Cervantino de Azul cumple 20 años', 'Cultura y agenda', { copete: 'Bajada', cuerpo }));

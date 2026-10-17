@@ -90,7 +90,7 @@ export function neuronasEstimadas({ ancho = ANCHO, alto = ALTO, pasos = PASOS } 
 }
 export const NEURONAS_GRATIS_POR_DIA = 10_000;
 
-/** El pedido de Hernán (el mismo de redes/probar-imagen-nota.mjs; una prueba controla que digan lo mismo). */
+/** El pedido de Hernán (16/10/2026; el único: la prueba a mano de ese día, redes/probar-imagen-nota.mjs, se borró el 17/10). */
 export const PROMPT_DE_HERNAN = `Generá una imagen fotoperiodística y conceptual para ilustrar la nota periodística que te dejo abajo. Requisitos importantes:
 1. No debe aparecer ninguna persona en la imagen (completamente sin gente) para evitar confusiones de identidad.
 2. Debe ser un plano detalle o bodegón natural y espontáneo de los objetos y herramientas típicos de la actividad o profesión de la que habla la nota.

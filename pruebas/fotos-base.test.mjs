@@ -40,8 +40,6 @@ test('ninguna página arma a mano la dirección de una foto, y los workflows pas
     assert.match(t, /urlDeFoto\(/, f);
   }
   for (const f of ['.github/workflows/cloudflare-deploy.yml', '.github/workflows/actualizar.yml']) assert.match(leer(f), /FOTOS_BASE: \$\{\{ vars\.FOTOS_BASE \}\}/, f);
-  const r2 = leer('.github/workflows/fotos-a-r2.yml');
-  assert.match(r2, /vars\.R2_FOTOS/);
-  assert.match(r2, /wrangler r2 object put/);
-  assert.ok(!/delete|rm -|--delete/i.test(r2.replace(/#[^\n]*/g, '').replace(/\bno borra\b/gi, '')), 'sólo copia: no borra nada');
+  // (17/10/2026: se borró "Fotos a R2", fotos-a-r2.yml, que nunca se corrió. Si algún día las fotos pasan a un depósito, FOTOS_BASE sigue
+  // siendo el único lugar donde se cambia la dirección.)
 });

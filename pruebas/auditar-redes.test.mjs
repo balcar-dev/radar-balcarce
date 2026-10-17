@@ -1,6 +1,6 @@
 // La auditoría del contrato contra Meta (redes/auditar-redes.mjs). Todo con
 // respuestas SIMULADAS de la API, con la forma de las verdaderas del 25/09/2026
-// (las que vio "Ver Facebook" y "Auditar redes"): sin red y sin token.
+// (las que vio "Ver Facebook" y el viejo workflow "Auditar redes", borrado el 17/10/2026): sin red y sin token.
 //
 // Lo que dejó a la vista ese día: el repaso de la mañana salió DOS veces en las
 // dos redes (10:03/10:07 en Instagram, 10:04/10:08 en Facebook, y la historia de

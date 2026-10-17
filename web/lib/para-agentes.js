@@ -1,5 +1,5 @@
 // Los "datos para agentes" (16/10/2026, docs/seo/AUDITORIA-SEO-LLM.md): tres archivos JSON públicos, armados al compilar, para que un
-// programa (un asistente de IA, el Worker MCP de infra/mcp-cloudflare/, un script) lea Radar Balcarce sin raspar el HTML.
+// programa (un asistente de IA, un script) lea Radar Balcarce sin raspar el HTML.
 //
 //   /agentes/ultimas.json    las últimas notas de la portada (36 horas), con su bajada, sus fuentes y quién las escribió
 //   /agentes/indice.json     un índice compacto de todo lo que tiene página y se ofrece a Google (para buscar por palabras)
