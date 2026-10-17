@@ -4,7 +4,16 @@ main = "worker.mjs"
 compatibility_date = "2026-10-01"
 
 [triggers]
-# "15 0,11 * * *": el informe diario por mail, a las 8:15 y a las 21:15 de Balcarce (11:15 y 0:15 UTC). Es UNA sola expresión para no gastar triggers de la cuenta.
-# "20 0,2,10,12,14,16,18,20,22 * * *": "Ilustrar notas sin foto" en modo automático, cada 2 horas de 7:20 a 23:20 de Balcarce (regla 185). Cuatro
-# expresiones en total: no sumar más (los triggers de la cuenta son pocos).
-crons = ["0,30 * * * *", "5,35,45 * * * *", "15 0,11 * * *", "20 0,2,10,12,14,16,18,20,22 * * *"]
+# Cada expresión sólo DESPIERTA al Worker; qué pide a GitHub en cada minuto (y a qué horas) lo decide `trabajosDelMinuto` en worker.mjs, que
+# tiene su prueba (pruebas/reloj-cloudflare.test.mjs). Despertarlo de más no cuesta nada: si no toca nada, no pide nada.
+#   "0,30 * * * *"                       Actualizar la web (siempre); Vigilancia (cada 3 horas y sus reintentos); 2º intento del informe
+#   "5,35,45 * * * *"                    Redes, sólo de 7 a 23 de Balcarce
+#   "15 0,11 * * *"                      el informe diario por mail, 8:15 y 21:15 de Balcarce
+#   "20 0,2,10,12,14,16,18,20,22 * * *"  Ilustrar notas sin foto, cada 2 horas de 7:20 a 23:20 de Balcarce (regla 185)
+#   "23 */3 * * *"                       Pistas, cada 3 horas (17/10/2026: antes, con el horario de GitHub)
+#   "41 * * * *"                         Auditoría IA, cada hora de 7 a 23 de Balcarce (17/10/2026: antes, con el horario de GitHub, que la
+#                                        corría una de cada cuatro horas)
+# Hasta el 16/10 este comentario decía que había que apretar todo en cuatro expresiones porque "los triggers de la cuenta son pocos": eso
+# era el plan gratis (5 por cuenta). Con Workers Paid, que ya se paga, son 250 por cuenta: se puede separar cada trabajo en la suya.
+# OJO: este archivo no se sube solo. Después de cambiarlo hay que correr a mano el workflow "Reloj de Cloudflare" (reloj-cloudflare.yml).
+crons = ["0,30 * * * *", "5,35,45 * * * *", "15 0,11 * * *", "20 0,2,10,12,14,16,18,20,22 * * *", "23 */3 * * *", "41 * * * *"]

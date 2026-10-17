@@ -1,7 +1,8 @@
 # 11 · Operación: el manual de uso diario
 
 *Escrito el 28/09/2026 para Hernán y Andrés. Actualizado el 16/10/2026, verificado contra el código, los
-workflows y el reloj de Cloudflare de ese día. Es un manual de tareas: cada sección dice qué hacer, paso
+workflows y el reloj de Cloudflare de ese día; el 17/10, lo de la subida del sitio, los horarios del reloj y los
+workflows que se borraron (reglas 189 a 191). Es un manual de tareas: cada sección dice qué hacer, paso
 a paso, y qué va a pasar después. Por qué funciona así está en los otros
 documentos: las redes en [`07-REDES.md`](07-REDES.md), dónde corre cada cosa
 en [`08-INFRAESTRUCTURA.md`](08-INFRAESTRUCTURA.md), el panel en `09-PANEL`,
@@ -49,7 +50,7 @@ interruptor de las redes.
 | **GitHub** (github.com/radarbalcarce/radar-balcarce; se entra con la cuenta de GitHub de cada uno) | Ver si algo falló (pestaña **Actions**), correr un workflow a mano (**Run workflow**), corregir o retirar una nota editando un archivo, prender o apagar las redes (**Settings**) | Sí, desde el navegador |
 | **El panel de la PC** (en desuso desde el 8/10; http://localhost:4321 en la PC; afuera, la dirección de `panel/datos/DIRECCION-DEL-PANEL.txt`) | Cargar avisos, la agenda a mano, el buzón (lo que el celular no hace) | Sí, si la PC está prendida |
 | **El mail** (`radarbalcarce@gmail.com`) | Leer los informes de las 8:15 y 21:15 y los avisos del vigilante (desde el 15/10 llegan por mail; el WhatsApp quedó de respaldo) | Sí |
-| **Cloudflare, Workers** (dash.cloudflare.com, cuenta `radarbalcarce@gmail.com`) | Ver que el reloj `radar-balcarce-reloj` despierte a GitHub (sus ejecuciones, a los :00, :05, :15 a las 8 y 21, :20 cada dos horas, :30, :35 y :45) y que el vigilante `radar-balcarce-vigilante` corra (a los :12 y :42). Los trabajos viejos de cron-job.org están pausados, por si hay que volver | Sí |
+| **Cloudflare, Workers** (dash.cloudflare.com, cuenta `radarbalcarce@gmail.com`) | Ver que el reloj `radar-balcarce-reloj` despierte a GitHub (sus ejecuciones: :00 y :30 siempre; :05, :35 y :45 de 7 a 23; :15 a las 8 y 21; :20 cada dos horas; :23 cada tres; :41 de 7 a 23) y que el vigilante `radar-balcarce-vigilante` corra (a los :12 y :42). Los trabajos viejos de cron-job.org están pausados, por si hay que volver | Sí |
 | **Claude** (una sesión de Claude Code sobre la carpeta del proyecto) | Cualquier cambio de código, escribir cuerpos, repasos editoriales, mirar la web publicada | Según dónde esté abierta la sesión |
 | **Meta, Cloudflare, Google AI Studio, DonWeb** | Cuentas: claves, borrar publicaciones, pagos, dominio | Sí, pero lo hace siempre una persona |
 
@@ -361,30 +362,37 @@ hace N horas".
      pruebas"** (también llega un mail «Falló el núcleo legal…»), una prueba
      falló: la causa más común es un `.json` editado a mano con un error (ver
      "Antes de empezar"). Si es "Buscar noticias y armar los datos",
-     "Compilar el sitio" o
+     "Compilar el sitio", "Volver a compilar con lo que entró" o
      "Revisar que el SEO siga en pie", es código: pedírselo a Claude. Si es
      "Guardar si cambió algo" con "después de tres intentos", suele arreglarse
-     solo en la corrida siguiente.
+     solo en la corrida siguiente. Si es **"Subir a Cloudflare Pages"** (desde el
+     17/10 la subida es parte de esta misma corrida), los datos se guardaron pero
+     Cloudflare no aceptó el sitio: suele ser el token de Cloudflare (lo arregla una
+     persona); la vuelta siguiente lo vuelve a intentar. Si el que falla es
+     "Archivar las notas por salir (R2)", la web se sube igual: es el archivo
+     permanente, y llega un mail.
    - **Está en verde** y dice "Sin novedades" → no había nada nuevo: está bien.
-2. Actions → **Cloudflare Pages**: ¿corrió después, y en verde? Si está en
-   rojo, leer el paso "Subir a Cloudflare Pages" (suele ser el token de
-   Cloudflare: lo arregla una persona). Se puede correr a mano. Si el que falla
-   es "Archivar las notas por salir (R2)", la web se sube igual: es el archivo
-   permanente, y llega un mail.
-3. Si las dos están en verde y la web sigue vieja: mirar Cloudflare
+2. Para volver a subir la web sin esperar la vuelta siguiente: Actions → **Cloudflare
+   Pages** → Run workflow (desde el 17/10 sólo corre a mano: compila lo que está en
+   `main` y lo sube).
+3. Si "Actualizar la web" está en verde y la web sigue vieja: mirar Cloudflare
    (dash.cloudflare.com → Pages) y probar recargar sin caché.
 
 ## 10. El reloj dejó de despertar
 
 Desde el 15/10/2026 despierta a GitHub el **reloj de Cloudflare** (el Worker
-`radar-balcarce-reloj`, `infra/reloj-cloudflare/`): a los :00 y :30 (web y
-vigilancia), a los :05, :35 y :45 (el reloj de Redes), a las 8:15 y 21:15 y otra
-vez a las 8:30 y 21:30 (el informe diario) y a los :20 cada dos horas de 7:20 a
-23:20 (las ilustraciones automáticas). Se nota con avisos "No hay corridas
-nuevas de «Actualizar la web»: el reloj de Cloudflare pudo haber fallado…" o "El
-reloj de Redes no corre", porque no llega el informe por mail a horario, o
-porque la web se actualiza tarde (queda el respaldo de GitHub, que es
-impuntual).
+`radar-balcarce-reloj`, `infra/reloj-cloudflare/`). Desde el 17/10 (regla 190): a los
+:00 y :30, la web, siempre; la vigilancia, cada 3 horas (0, 3… 21) y otra vez a las 9:30,
+21:30 y 0:30; a los :05, :35 y :45, el reloj de Redes, de 7 a 23; a los :41 de 7 a 23, la
+auditoría IA; a los :23 cada 3 horas, las pistas; a las 8:15 y 21:15 y otra vez a las 8:30
+y 21:30, el informe diario; y a los :20 cada dos horas de 7:20 a 23:20, las ilustraciones
+automáticas. Se nota con avisos "No hay corridas nuevas de «Actualizar la web»: el reloj de
+Cloudflare pudo haber fallado…", "El reloj de Redes no corre" o "La «Auditoría IA» no corre
+hace horas", porque no llega el informe por mail a horario, o porque la web no se actualiza
+(ya no hay respaldo de GitHub: avisa por mail el vigilante de Cloudflare).
+
+**Después de cambiar el reloj** (`infra/reloj-cloudflare/`), hay que subirlo a mano:
+Actions → **Reloj de Cloudflare** → Run workflow. Si no se sube, sigue el horario viejo.
 
 1. Entrar a https://dash.cloudflare.com con `radarbalcarce@gmail.com` →
    Workers y Pages → `radar-balcarce-reloj` y mirar las ejecuciones: si salen
@@ -451,8 +459,9 @@ no salió.
 
 **Si hace falta el WhatsApp de respaldo:**
 
-1. Actions → **Prueba de WhatsApp** → Run workflow. Manda un mensaje de prueba
-   y muestra lo que contestó CallMeBot.
+1. Actions → **Probar el aviso por mail** → Run workflow: si el mail no sale, prueba el
+   WhatsApp y muestra lo que contestó CallMeBot (el workflow "Prueba de WhatsApp" se
+   borró el 17/10: CallMeBot está sin cupo desde el 1/10).
 2. Si dice "APIKey is invalid": la clave de CallMeBot está mal copiada en
    `WHATSAPP_APIKEY`. Si el teléfono tiene pocos dígitos: `WHATSAPP_TELEFONO`
    va completo, con 549 adelante, sin + ni espacios. Los corrige una persona en
@@ -575,14 +584,14 @@ La lista completa y al día de lo pendiente: `PENDIENTES.md`.
 | Publicar una pieza ya | Actions → Piezas (tarea 6) |
 | Reintentar una pieza que falló al subir | Panel del celular → Redes → **Reintentar** (o Actions → Reintentar pieza) |
 | Forzar una actualización de la web | Actions → Actualizar la web → Run workflow (o "Actualizar la web ahora" en el panel) |
-| Volver a subir la web sin rearmar los datos | Actions → Cloudflare Pages → Run workflow |
+| Volver a subir la web sin rearmar los datos | Actions → Cloudflare Pages → Run workflow (sólo a mano desde el 17/10: la subida de cada media hora la hace "Actualizar la web") |
 | Comprobar el acceso a Meta | Actions → Redes → Run workflow → `verificar` |
 | Mandar o probar el informe diario | Actions → Informe diario → Run workflow (`manana` o `noche`; con «enviar» apagado, sólo se ve en el registro) |
 | Probar que los avisos por mail llegan | Actions → Probar el aviso por mail |
 | Correr todas las pruebas | Actions → Pruebas → Run workflow (en la PC, `npm test`; el núcleo legal solo, `npm run test:nucleo`) |
 | Ver el viejo resumen de las 21 del vigilante | Actions → Vigilancia → Run workflow → `probar-resumen` (lo manda por mail, no guarda nada; el de todos los días lo reemplazó el informe de las 21:15) |
 | Ver el cierre del día contra Meta sin mandar nada | Actions → Vigilancia → `probar-cierre` |
-| Auditar lo publicado en redes | Actions → Auditar redes |
+| Auditar lo publicado en redes | Un día: Actions → Vigilancia → `probar-cierre`; la semana: la "Auditoría" de los lunes (o a mano). "Auditar redes" se borró el 17/10 |
 | Ver las estadísticas ahora | Panel del celular → pestaña **Números** (las mide la vigilancia) |
 | Cargar un aviso | Panel de la PC → Avisos, o `web/data/avisos.json` (tarea 13) |
 | Cambiar una regla, un número o el diseño | Pedírselo a Claude (tarea 14); la tabla completa, en `CLAUDE.md` |

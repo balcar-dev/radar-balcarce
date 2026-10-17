@@ -15,8 +15,13 @@
 #   · Lo que ustedes decidieron a mano se respeta hasta la última vez que el
 #     panel estuvo prendido y sincronizó.
 #
-# Quien PUBLICA es Cloudflare Pages: cuando esta corrida termina bien, arranca
-# sola "Cloudflare Pages" (cloudflare-deploy.yml), que compila y sube el sitio.
+# Y PUBLICA ella misma (17/10/2026, regla 189): compila el sitio UNA vez, guarda los datos en `main` y sube a Cloudflare Pages lo que
+# compiló (antes, al terminar, arrancaba "Cloudflare Pages", cloudflare-deploy.yml, que volvía a compilar exactamente lo mismo: ~2,5 minutos
+# y ~4.000 minutos de GitHub por mes tirados). "Cloudflare Pages" queda sólo a mano, de rescate.
+#
+# Lo que se publica es lo que quedó en `main`: si mientras se armaba entró algo que el sitio lee (una retirada o una corrección del celular,
+# el libro de redes, código), se vuelve a compilar antes de subir (web/scripts/recompilar.mjs). Si sólo entró lo que el sitio no lee (la
+# vigilancia, las estadísticas, documentos), se sube lo ya compilado. Si no compila o no se pudo guardar en `main`, no se sube nada.
 
 name: Actualizar la web
 
@@ -36,10 +41,9 @@ concurrency:
 jobs:
   actualizar:
     runs-on: ubuntu-24.04
-    # Hoy tarda entre 2 y 3 minutos y medio. Veinte es de sobra, y corta una
-    # corrida colgada (un pedido que no contesta) antes de que se pise con la
-    # de la media hora siguiente.
-    timeout-minutes: 20
+    # Hoy tarda unos 4 minutos y medio con la subida (8 en el peor 5 %; más ~2,5 si hay que recompilar y hasta 8 del archivo R2).
+    # Treinta corta una corrida colgada (un pedido que no contesta); la de la media hora siguiente la espera (el candado de arriba).
+    timeout-minutes: 30
     permissions:
       contents: write # para poder commitear portada.json
     env:
@@ -156,12 +160,8 @@ jobs:
           # vacía, APAGADAS: la IA elige entre las once de siempre y el sitio sale igual que antes. Va también en "Compilar el sitio".
           SECCIONES_NUEVAS: ${{ vars.SECCIONES_NUEVAS }}
 
-      # El sitio se compila acá antes de publicar. Si no, un cambio que
-      # rompía Next se descubría recién cuando fallaba el despliegue — con la
-      # web anterior sirviéndose mientras tanto, pero sin que nadie se
-      # enterara de que dejó de actualizarse.
-      #
-      # Si no compila, no se commitea: la web se queda como está.
+      # El sitio se compila acá, UNA vez, antes de guardar y de publicar: esto mismo es lo que se sube a Cloudflare al final (regla 189).
+      # Si no compila, no se commitea ni se sube: la web se queda como está.
       - name: Compilar el sitio
         working-directory: web
         run: npm run build
@@ -179,6 +179,7 @@ jobs:
         run: node scripts/revisar-seo.mjs
 
       - name: Guardar si cambió algo
+        id: guardar
         run: |
           git config user.name "Radar Balcarce"
           # El mail interno de la cuenta balcar-dev, que GitHub reconoce. No
@@ -202,10 +203,16 @@ jobs:
           # fusionadas.json: las notas repetidas con otra dirección y adónde
           # redirige cada una (29/09, web/lib/repetidas.js).
           git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/clima-historia.json web/data/f1.json web/data/futbol.json web/data/fichas.json web/data/notas-por-dia.json web/data/uso-ia.json web/data/banco-fotos.json web/data/esperando-cuerpo.json web/data/vistas.json web/data/retiradas.json web/data/celular-pendientes.json web/data/celular-estado.json web/data/fusionadas.json web/data/historico/ web/public/fotos-notas/ web/public/escudos/
+          # `compilado` es el commit cuyo contenido es exactamente lo que se acaba de compilar (los datos de esta vuelta sobre lo que había).
+          # Después del pull, web/scripts/recompilar.mjs compara ese commit con lo que quedó en main para decidir si hay que recompilar.
           if git diff --cached --quiet; then
-            echo "Sin novedades: no hay nada que publicar."
+            echo "Sin novedades en los datos: se sube igual lo compilado (con lo que haya entrado de otros, si hace falta)."
+            compilado=$(git rev-parse HEAD)
+            # No hay nada propio que reaplicar: sólo se trae lo que subieron los demás, para publicar lo que está en main.
+            git pull --rebase -q || echo "No se pudo traer lo nuevo de main: se publica lo compilado."
           else
             git commit -m "Datos de la portada · $(TZ=America/Argentina/Buenos_Aires date '+%d/%m %H:%M')"
+            compilado=$(git rev-parse HEAD)
             # El reloj de las redes y el panel también guardan en este
             # repositorio: se traen sus cambios antes de subir los nuestros.
             # Si chocan en un archivo de datos, gana lo que acaba de armar esta
@@ -227,3 +234,96 @@ jobs:
             git fetch -q origin main
             [ "$(git rev-list --count origin/main..HEAD)" = 0 ] || { echo "No se pudo subir la portada después de tres intentos"; exit 1; }
           fi
+          echo "compilado=$compilado" >> "$GITHUB_OUTPUT"
+
+      # ------------------------------------------------------------------ publicar (17/10/2026, regla 189)
+      # Lo que sigue corre sólo si lo de arriba salió bien: si no compiló o no se pudo guardar en main, no se sube nada.
+      #
+      # ¿Entró algo mientras se armaba? El `git pull --rebase` de arriba trae lo que subieron los demás en esos minutos (el libro de Redes,
+      # la Vigilancia, lo que manda el celular). Si es algo que el sitio lee, se vuelve a compilar con eso, para que lo publicado sea lo que
+      # quedó en main (antes lo garantizaba "Cloudflare Pages", que compilaba main de nuevo). Lo que entre DESPUÉS de este punto sale en la
+      # vuelta siguiente, igual que antes. La lista de lo que no obliga a recompilar: web/scripts/recompilar.mjs.
+      - name: Ver si entró algo que cambie el sitio
+        id: recompilar
+        run: node web/scripts/recompilar.mjs "${{ steps.guardar.outputs.compilado }}"
+
+      - name: Volver a compilar con lo que entró
+        if: steps.recompilar.outputs.recompilar == 'true'
+        working-directory: web
+        run: |
+          # Si entró código con dependencias nuevas, se instalan de nuevo (si no, la compilación usaría las viejas).
+          compilado="${{ steps.guardar.outputs.compilado }}"
+          if [ -n "$compilado" ] && ! git diff --quiet "$compilado" HEAD -- ../package-lock.json package-lock.json; then
+            (cd .. && npm ci --no-audit --no-fund) && npm ci --no-audit --no-fund
+          fi
+          npm run build
+          node scripts/revisar-seo.mjs
+        env:
+          SITIO: https://radarbalcarce.com
+          FOTOS_BASE: ${{ vars.FOTOS_BASE }}
+          SECCIONES_NUEVAS: ${{ vars.SECCIONES_NUEVAS }}
+
+      # El ARCHIVO PERMANENTE (16/10/2026; docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md). Antes de subir el sitio, guarda en el
+      # depósito R2 las notas que están por salir del sitio por el tope (las de los próximos ~4 días al ritmo de la última semana: --margen=auto)
+      # y borra de ahí lo retirado (retiradas.json o lo que el semáforo sacó), con su foto. Sólo sube lo nuevo o lo que cambió. Lee web/out: por
+      # eso va después de la última compilación. DORMIDO sin la variable de GitHub R2_ARCHIVO (= radar-archivo). Si falla, NO frena la subida
+      # (continue-on-error): avisa por mail en el paso de abajo, deja estado.json con ok=false y el vigilante lo anota. Corta solo a los 6
+      # minutos (lo que no llegó a subir sale en la vuelta siguiente).
+      - name: Archivar las notas por salir (R2)
+        id: archivo
+        if: ${{ vars.R2_ARCHIVO != '' }}
+        continue-on-error: true
+        timeout-minutes: 8
+        run: |
+          set -o pipefail
+          node web/scripts/archivar-a-r2.mjs --subir --borrar --produccion --bucket="$R2_ARCHIVO" --margen=auto --limite-segundos=360 | tee -a "$GITHUB_STEP_SUMMARY"
+        env:
+          R2_ARCHIVO: ${{ vars.R2_ARCHIVO }}
+          TOPE_DE_NOTAS: ${{ vars.TOPE_DE_NOTAS }}
+          R2_RESPALDOS: ${{ vars.R2_RESPALDOS }}
+          R2_FOTOS: ${{ vars.R2_FOTOS }}
+          R2_PIEZAS: ${{ vars.R2_PIEZAS }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      # Un aviso por mail (el Worker del vigilante; de respaldo, WhatsApp). Con `clave`, el Worker no repite el mismo aviso en 6 horas aunque
+      # falle cada media hora. Nunca frena nada.
+      - name: Avisar si el archivo permanente falló
+        if: ${{ always() && steps.archivo.outcome == 'failure' }}
+        continue-on-error: true
+        run: |
+          node --input-type=module <<'JS'
+          import { avisar } from './redes/avisar-por-mail.mjs';
+          const corrida = `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`;
+          const texto = [
+            'Radar Balcarce: falló el paso del archivo permanente (guardar en R2 las notas que están por salir del sitio).',
+            'El sitio SÍ se publicó igual. Las notas tienen unos días de margen antes de salir, pero si sigue fallando se pueden perder páginas viejas,',
+            'y lo retirado (menores, víctimas) podría no haberse borrado del archivo: mirar la corrida.',
+            `Detalle: ${corrida}`,
+          ].join('\n');
+          const r = await avisar({ asunto: 'Falló el archivo permanente (R2): el sitio se publicó igual', texto, clave: 'archivo-r2-fallo', nivel: 'alta' });
+          console.log(r.ok ? `Aviso enviado por ${r.via}.` : `El aviso no salió: ${r.motivo}`);
+          JS
+        env:
+          WHATSAPP_TELEFONO: ${{ secrets.WHATSAPP_TELEFONO }}
+          WHATSAPP_APIKEY: ${{ secrets.WHATSAPP_APIKEY }}
+          VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
+
+      # Direct Upload: se sube lo que ya compilamos, sin que Cloudflare corra su propio build (no cuenta contra los 500 builds por mes de Pages).
+      # La versión de wrangler va fija: para subirla, cambiar el número acá y en cloudflare-deploy.yml, y probar con "Cloudflare Pages" a mano.
+      # Si falla, la corrida sale en rojo (los datos ya quedaron en main y la web sigue con la versión anterior): la vuelta siguiente lo vuelve
+      # a intentar, y el vigilante lo avisa ("Actualizar la web" falló en el paso "Subir a Cloudflare Pages").
+      # Sin `if`: corre sólo si todo lo anterior salió bien (el archivo R2 no cuenta: tiene continue-on-error). Si la recompilación falló, no se sube.
+      - name: Subir a Cloudflare Pages
+        working-directory: web
+        run: npx --yes wrangler@4.139.0 pages deploy out --project-name="$PROYECTO" --branch=main
+        env:
+          PROYECTO: ${{ vars.CLOUDFLARE_PROJECT || 'radar-balcarce' }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      # Después de subir, se le avisa a Bing (IndexNow, sin cuenta ni clave secreta) qué notas nuevas hay (redes/indexnow.mjs). Es un aviso:
+      # si falla, la corrida sigue verde.
+      - name: Avisar a Bing de las notas nuevas
+        continue-on-error: true
+        run: node redes/indexnow.mjs

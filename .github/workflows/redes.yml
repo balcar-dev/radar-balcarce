@@ -16,12 +16,11 @@
 # El 21/09 el planificador de GitHub llegó a dejar cinco horas entre dos
 # corridas que debían distar treinta minutos, y una tarde entera sin ejecutar
 # ninguna: la farmacia de esa noche se perdió y hubo que publicarla a mano.
-# El reloj llama a este workflow cada 30 minutos (7 a 23, hora de Balcarce)
-# con la acción "reloj", con un token de GitHub limitado a este repositorio
-# (RELOJ_GITHUB_TOKEN, permiso Actions: lectura y escritura). Cada pieza tiene su propia ventana (ver redes/piezas.mjs): si el
-# disparador se atrasa, igual alcanza; lo que no sale dentro de su ventana se
-# pierde. Un segundo disparador de respaldo sigue siendo la corrida de
-# "Actualizar la web".
+# El reloj llama a este workflow a los :05, :35 y :45, de 7 a 23 de Balcarce (de madrugada no hay piezas ni Facebook; antes la llamaba
+# las 24 horas), con la acción "reloj", con un token de GitHub limitado a este repositorio (RELOJ_GITHUB_TOKEN, permiso Actions: lectura y
+# escritura). Cada pieza tiene su propia ventana (ver redes/piezas.mjs): si el disparador se atrasa, igual alcanza; lo que no sale dentro
+# de su ventana se pierde. Hasta el 17/10/2026 arrancaba ADEMÁS al terminar cada "Actualizar la web" (workflow_run), un respaldo de cuando
+# el reloj era el de GitHub (21/09): con el Worker eran dos corridas casi juntas cada media hora (la de las :04 y la de las :05). Se sacó.
 #
 # INTERRUPTOR: la variable REDES_ACTIVAS ("Si") en Settings → Secrets and
 # variables → Actions → Variables. Con otro valor, Facebook sólo simula (dice qué
@@ -32,7 +31,7 @@
 # SECRETOS: META_TOKEN (publicar) y GEMINI_API_KEY_REDES (la voz).
 #
 # A mano (pestaña Actions → "Redes" → Run workflow):
-#   reloj      lo mismo que hace el reloj de Cloudflare cada 30 minutos (es la acción que
+#   reloj      lo mismo que hace el reloj de Cloudflare a los :05, :35 y :45 (es la acción que
 #              manda ese disparador)
 #   verificar  comprueba que el token, la página y el Instagram andan
 #   facebook   sólo la elección de Facebook
@@ -40,13 +39,7 @@
 name: Redes
 
 on:
-  # Un segundo disparador: cuando termina "Actualizar la web". El planificador de
-  # GitHub es tan impuntual que el 21/09 no ejecutó ninguna corrida de esta
-  # cola entre las 19:00 y las 21:00, mientras que "Actualizar la web" sí corrió
-  # (tarde, pero corrió). Colgarse de esa corrida da más oportunidades por día.
-  workflow_run:
-    workflows: ["Actualizar la web"]
-    types: [completed]
+  # Lo dispara el reloj de Cloudflare (acción "reloj") y, a mano, la pestaña Actions.
   workflow_dispatch:
     inputs:
       accion:

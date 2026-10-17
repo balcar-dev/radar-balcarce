@@ -252,7 +252,7 @@ test('llms.txt dice cómo citar, enlaza los datos para programas y no anuncia un
   for (const frase of ['## Cómo citarnos', '/agentes/ultimas.json', '/agentes/indice.json', '/agentes/servicios.json', '/farmacias', 'fuente original']) {
     assert.ok(r.includes(frase), `falta: ${frase}`);
   }
-  assert.match(r, /export const MCP_URL = null;/, 'el servidor MCP no se anuncia hasta que se active (infra/mcp-cloudflare/LEEME.md)');
+  assert.match(r, /export const MCP_URL = null;/, 'no se anuncia ningún servidor MCP (el que estaba escrito en infra/mcp-cloudflare/ sin activar se borró el 17/10/2026)');
   assert.ok(!fs.existsSync(new URL('../web/app/llms-full.txt', import.meta.url)), 'llms-full.txt no se hace a propósito (ver el informe)');
 });
 

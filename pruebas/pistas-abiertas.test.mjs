@@ -178,7 +178,9 @@ test('lo conectado: la nube guarda la pista abierta, un workflow la vuelve a mir
   assert.match(cel, /enriquecerConEnlaces\(pedido\)/);
   assert.match(cel, /conPista\(leerJson\(ARCHIVO_PISTAS, \{ pistas: \{\} \}\), id,/);
   const w = leer('.github/workflows/pistas.yml');
-  assert.match(w, /cron: '23 \*\/3 \* \* \*'/);
+  // 17/10/2026: cada tres horas la despierta el reloj de Cloudflare (a los :23, las mismas horas que tenía en GitHub, que no las cumplía).
+  assert.ok(!/^\s*schedule:/m.test(w), 'sin horario de GitHub');
+  assert.match(leer('infra/reloj-cloudflare/wrangler.toml'), /"23 \*\/3 \* \* \*"/);
   assert.match(w, /group: pistas\b/, 'candado propio (A-3): no se cancela con los pedidos de "Panel del celular"; los choques en pistas.json los une panel/unir-conflictos.mjs');
   assert.doesNotMatch(w, /group: panel-celular/);
   assert.match(w, /git add web\/data\/pistas\.json/);

@@ -64,11 +64,13 @@ test('reels/fijas/ no está en el .gitignore (hay que subir los videos)', () => 
   assert.ok(!/^reels\/\*$/m.test(ign) || /!reels\/fijas/.test(ign));
 });
 
-test('las cuatro piezas de Participá se vuelven a armar solas el 10/10 a las 05:30 con el diseño nuevo, ya con el cupo del día nuevo, y sólo en 2026', () => {
-  const y = leer('.github/workflows/fijar-piezas.yml');
-  assert.match(y, /cron: '30 8 10 10 \*'/, '05:30 de Balcarce el 10 de octubre');
-  assert.match(y, /inputs\.piezas \|\| 'participa-noticias,participa-evento,participa-reclamos,participa-nota'/);
-  assert.match(y, /inputs\.desde \|\| '2026-10-10'/);
-  assert.match(y, /date \+%Y\)" != "2026"/, 'no se repite el año que viene');
-  assert.ok((y.match(/env\.SEGUIR != 'false'/g) ?? []).length >= 6, 'todos los pasos respetan la guarda');
+// 17/10/2026: el horario de una sola vez del 10/10/2026 (rearmar las cuatro de participá) ya corrió y se sacó: con "30 8 10 10 *" GitHub
+// lo hubiera vuelto a despertar cada 10 de octubre. Gasta voz: sólo a mano, con lo pedido.
+test('"Fijar piezas" es sólo a mano y arma lo que se le pide (sin horario ni valores por defecto escondidos)', () => {
+  const y = leer('.github/workflows/fijar-piezas.yml').replace(/^\s*#.*$/gm, '');
+  assert.ok(!/schedule:|cron:/.test(y), 'sin horario');
+  assert.match(y, /on:\s+workflow_dispatch:/);
+  assert.match(y, /PIEZAS: \$\{\{ inputs\.piezas \}\}/);
+  assert.match(y, /DESDE: \$\{\{ inputs\.desde \}\}/);
+  assert.ok(!/SEGUIR/.test(y), 'sin la guarda del año, que era de la corrida programada');
 });

@@ -284,7 +284,7 @@ test('el interruptor viaja desde la variable de GitHub y nadie lo prende en el c
     assert.match(y, /SECCIONES_NUEVAS: \$\{\{ vars\.SECCIONES_NUEVAS \}\}/, wf);
     assert.doesNotMatch(y, /SECCIONES_NUEVAS: ['"]?(si|sí|1|true)/i, wf);
   }
-  assert.equal((leer('../.github/workflows/actualizar.yml').match(/SECCIONES_NUEVAS: \$\{\{ vars\.SECCIONES_NUEVAS \}\}/g) ?? []).length, 2, 'en la ingesta (la IA) y al compilar');
+  assert.equal((leer('../.github/workflows/actualizar.yml').match(/SECCIONES_NUEVAS: \$\{\{ vars\.SECCIONES_NUEVAS \}\}/g) ?? []).length, 3, 'en la ingesta (la IA), al compilar y al volver a compilar antes de subir (regla 189)');
   // La vista previa lo prende sólo para su propia compilación y guarda en docs/secciones/vista-previa/.
   const vista = leer('../web/scripts/vista-previa-secciones.mjs');
   assert.match(vista, /SECCIONES_NUEVAS: 'si'/);

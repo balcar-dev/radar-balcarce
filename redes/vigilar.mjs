@@ -6,12 +6,12 @@
 //   node redes/vigilar.mjs --probar-cierre  muestra el cierre del día contra Meta
 //                                           y el WhatsApp que saldría, sin mandarlo
 //
-// Corre cada 30 minutos (workflow "Vigilancia", disparado por el reloj de Cloudflare) y
-// mira, desde afuera, lo que un lector vería:
+// Corre cada 3 horas (workflow "Vigilancia", disparado por el reloj de Cloudflare; hasta el 17/10/2026, cada 30 minutos) y
+// mira, desde afuera, lo que un lector vería (lo urgente de la web lo mira además, cada media hora, el vigilante de Cloudflare):
 //
 //   · que la web responda y se haya actualizado hace poco;
 //   · que las corridas de GitHub (web, redes, Cloudflare) no estén fallando;
-//   · que el reloj de redes esté corriendo;
+//   · que el reloj esté despertando a Redes, a la Auditoría IA y a las Pistas;
 //   · que las piezas fijas del día (clima, farmacia) hayan salido en su hora,
 //     y el contrato del día (redes/contrato.mjs), con el cierre de las 23:30
 //     contra lo que Meta tiene de verdad; con REDES_ACTIVAS apagado, sólo lo
@@ -101,6 +101,9 @@ export const QUE_SIGNIFICA_EL_PASO = {
   'Compilar el sitio': 'El sitio no compila con los datos de esta vuelta: la web sigue con lo último bueno pero no se actualiza (hay que ver el error en GitHub Actions).',
   'Buscar noticias y armar los datos': 'No se pudieron armar los datos de esta vuelta: la web sigue con lo último bueno.',
   'Revisar que el SEO siga en pie': 'Falta algo del SEO en el HTML (título, descripción o tarjeta): la web no se actualiza hasta arreglarlo.',
+  // 17/10/2026 (regla 189): "Actualizar la web" sube el sitio ella misma, con lo que compiló (antes lo hacía "Cloudflare Pages").
+  'Volver a compilar con lo que entró': 'Los datos se guardaron, pero el sitio no compiló con lo que entró mientras se armaba (código o datos de otro lado): la web sigue con la versión anterior hasta que se arregle.',
+  'Subir a Cloudflare Pages': 'Los datos se guardaron, pero Cloudflare no aceptó la subida: la web sigue con la versión anterior; la vuelta siguiente lo vuelve a intentar (o correr "Cloudflare Pages" a mano).',
 };
 
 /**
@@ -110,7 +113,8 @@ export const QUE_SIGNIFICA_EL_PASO = {
 export const WORKFLOWS_VIGILADOS = {
   'actualizar.yml': 'Actualizar la web',
   'redes.yml': 'Redes',
-  'cloudflare-deploy.yml': 'Cloudflare Pages',
+  // (17/10/2026: sale "Cloudflare Pages", cloudflare-deploy.yml: quedó sólo a mano, de rescate. La subida de cada media hora es un paso de
+  // "Actualizar la web", que ya se mira arriba; una corrida a mano que falló quedaría avisando para siempre.)
   'respaldo.yml': 'Respaldo',
   'armado-vacio.yml': 'Armado con datos vacíos',
   'pruebas-otra-hora.yml': 'Pruebas con otra hora',
@@ -121,7 +125,9 @@ export const WORKFLOWS_VIGILADOS = {
 
 export const LIMITES = {
   minutosSinActualizar: 100,   // la web se arma cada 30
-  minutosSinReloj: 100,        // el reloj de redes corre cada 30
+  minutosSinReloj: 100,        // el reloj de redes corre a los :05, :35 y :45, de 7 a 23
+  minutosSinAuditoriaIA: 180,  // la auditoría IA corre cada hora (:41) de 7 a 23 (17/10/2026: la dispara el reloj)
+  minutosSinPistas: 420,       // las pistas, cada 3 horas (:23)
   minutosSinRespaldo: 10 * 24 * 60, // el respaldo corre cada domingo
   horasEntreAvisos: 6,
   horasEntreAvisosDeRedesApagadas: 24, // el recordatorio de "redes apagadas": una vez por día
@@ -141,7 +147,7 @@ export const ESTADO_DEL_ARCHIVO = 'https://radar-balcarce-archivo.radarbalcarce.
  */
 export function problemasDelArchivoR2(obs, ahora = new Date()) {
   if (!obs) return [];
-  const paso = 'el paso "Archivar las notas por salir (R2)" del workflow "Cloudflare Pages" en GitHub Actions';
+  const paso = 'el paso "Archivar las notas por salir (R2)" del workflow "Actualizar la web" en GitHub Actions';
   const e = obs.estado;
   if (!e || typeof e !== 'object' || !e.cuando) {
     return [{ clave: 'archivo-r2-sin-estado', nivel: 'media', texto: `No pude leer el estado del archivo permanente (HTTP ${obs.http || 'sin respuesta'} en ${ESTADO_DEL_ARCHIVO}). Con la variable R2_ARCHIVO puesta, el Worker radar-balcarce-archivo tiene que contestar: revisá Cloudflare → Workers y ${paso}.` }];
@@ -415,17 +421,20 @@ export function evaluar({
     }
   }
 
-  // --- que los relojes estén corriendo (sólo de día: de noche no hay nada que hacer)
-  if (hora >= 7 && hora <= 23) {
-    for (const [nombre, tope, texto] of [
-      ['Actualizar la web', LIMITES.minutosSinActualizar, 'No hay corridas nuevas de "Actualizar la web": el reloj de Cloudflare pudo haber fallado (mirar sus ejecuciones en Workers → radar-balcarce-reloj).'],
-      ['Redes', LIMITES.minutosSinReloj, 'El reloj de Redes no corre: el reloj de Cloudflare pudo haber fallado (o la llave RELOJ_GITHUB_TOKEN dejó de servir), o el workflow está apagado.'],
-    ]) {
-      const lista = corridas[nombre];
-      if (!lista) continue;
-      const ultima = lista.find((r) => r.status === 'completed' || r.status === 'in_progress' || r.status === 'queued');
-      if (!ultima || minutos(ultima.createdAt, ahora) > tope) de(`reloj-${nombre}`, 'alta', texto);
-    }
+  // --- que los relojes estén corriendo (sólo de día: de noche no hay nada que hacer). Desde el 17/10/2026 el reloj de Cloudflare dispara
+  // también "Auditoría IA" (cada hora de 7 a 23) y "Pistas" (cada 3 horas), que antes tenían horario de GitHub: si el reloj nuevo no se
+  // subió o dejó de pedirlas, esto lo dice. Cada una se mira desde la hora en que ya tendría que haber corrido (Redes arranca 7:05).
+  for (const [nombre, tope, desde, texto] of [
+    ['Actualizar la web', LIMITES.minutosSinActualizar, 7, 'No hay corridas nuevas de "Actualizar la web": el reloj de Cloudflare pudo haber fallado (mirar sus ejecuciones en Workers → radar-balcarce-reloj).'],
+    ['Redes', LIMITES.minutosSinReloj, 8, 'El reloj de Redes no corre: el reloj de Cloudflare pudo haber fallado (o la llave RELOJ_GITHUB_TOKEN dejó de servir), o el workflow está apagado.'],
+    ['Auditoría IA', LIMITES.minutosSinAuditoriaIA, 9, 'La "Auditoría IA" no corre hace horas: la dispara el reloj de Cloudflare a los :41 de 7 a 23. ¿Se subió el reloj nuevo (workflow "Reloj de Cloudflare", a mano)? Mirar Workers → radar-balcarce-reloj.'],
+    ['Pistas', LIMITES.minutosSinPistas, 7, 'La revisión de las "Pistas" no corre hace horas: la dispara el reloj de Cloudflare cada 3 horas (a los :23). ¿Se subió el reloj nuevo (workflow "Reloj de Cloudflare", a mano)? Mirar Workers → radar-balcarce-reloj.'],
+  ]) {
+    if (hora < desde || hora > 23) continue;
+    const lista = corridas[nombre];
+    if (!lista) continue;
+    const ultima = lista.find((r) => r.status === 'completed' || r.status === 'in_progress' || r.status === 'queued');
+    if (!ultima || minutos(ultima.createdAt, ahora) > tope) de(`reloj-${nombre}`, nombre === 'Actualizar la web' || nombre === 'Redes' ? 'alta' : 'media', texto);
   }
 
   // --- redes apagadas: con REDES_ACTIVAS sin prender no se publica nada y no se

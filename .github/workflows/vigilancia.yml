@@ -7,9 +7,13 @@
 # estadísticas a las 9 y el resumen del día a las 21 (con las estadísticas).
 # Todo en UN solo WhatsApp por corrida.
 #
-# EL DISPARADOR ES el Worker de Cloudflare `radar-balcarce-reloj` (cada 30 minutos; hasta el 15/10, cron-job.org), igual que
-# los otros dos: el planificador de GitHub no es puntual. La programación de
-# abajo es sólo un respaldo.
+# EL DISPARADOR ES el Worker de Cloudflare `radar-balcarce-reloj` (hasta el 15/10, cron-job.org). Desde el 17/10/2026 corre CADA TRES
+# HORAS (a las 0, 3, 6, 9, 12, 15, 18 y 21 de Balcarce) y no cada media hora: lo urgente (la web que no se actualiza, "Actualizar la web"
+# que falla) ya lo avisa por mail el vigilante de Cloudflare (infra/vigilante-cloudflare/) cada media hora. Lo que depende de la hora tiene
+# su corrida: las estadísticas de las 9 y de las 21 (la de las 21 queda antes del informe de las 21:15) y el cierre del día (la de la
+# medianoche cierra el día anterior), con un segundo intento a las 9:30, 21:30 y 0:30 por si el primero no llegó. Las notas que esperan a
+# una persona ya se avisaban como mucho una vez cada tres horas (redes/avisos.mjs). Ya no tiene horario propio de GitHub: si el reloj se
+# para, se para todo y lo avisa el vigilante de Cloudflare.
 #
 # A mano (Actions → Vigilancia → Run workflow) se puede elegir "probar-resumen":
 # manda UN WhatsApp con el resumen de las 21 tal cual, para ver cómo llega, y
@@ -46,8 +50,6 @@ on:
         type: choice
         options: [vigilar, probar-resumen, probar-cierre]
         default: vigilar
-  schedule:
-    - cron: '17 */3 * * *'
 
 permissions:
   contents: write

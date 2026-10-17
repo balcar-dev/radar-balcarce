@@ -301,8 +301,9 @@ test('archivo-produccion.yml: sólo a mano, depósito propio, la ruta apagada po
   assert.ok(!/^\s+(node|npx)[^\n]*\$\{\{\s*inputs\./m.test(codigo));
 });
 
-test('cloudflare-deploy.yml: el paso del archivo va después de compilar y antes de subir, dormido sin R2_ARCHIVO, y nunca frena el sitio', () => {
-  const w = sinComentarios(leer('.github/workflows/cloudflare-deploy.yml'));
+// 17/10/2026 (regla 189): la subida de cada media hora es parte de actualizar.yml; cloudflare-deploy.yml queda a mano, con los mismos pasos.
+for (const archivo of ['actualizar.yml', 'cloudflare-deploy.yml']) test(`${archivo}: el paso del archivo va después de compilar y antes de subir, dormido sin R2_ARCHIVO, y nunca frena el sitio`, () => {
+  const w = sinComentarios(leer(`.github/workflows/${archivo}`));
   const compilar = w.indexOf('- name: Compilar el sitio');
   const archivar = w.indexOf('- name: Archivar las notas por salir (R2)');
   const avisar = w.indexOf('- name: Avisar si el archivo permanente falló');

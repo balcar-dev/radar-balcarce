@@ -1,6 +1,6 @@
 # 08 · Infraestructura: qué corre dónde
 
-*Actualizado el 16/10/2026 (revisado contra los 36 `.yml`, los Workers de `infra/` y los
+*Actualizado el 17/10/2026 (una sola compilación por vuelta, el reloj que dispara cada cosa sólo cuando hace falta, la limpieza de workflows y Workers y el tope de las redirecciones: reglas 189 a 191). Antes, el 16/10 (revisado contra los 36 `.yml`, los Workers de `infra/` y los
 nombres de secretos y variables cargados en GitHub ese día; el 15/10 el repositorio se mudó a
 `radarbalcarce/radar-balcarce` y el reloj pasó a Cloudflare). Si algo de acá no coincide con los `.yml` o con el
 código, mandan ellos.* Los secretos figuran **sólo por nombre**: sus valores no
@@ -15,9 +15,10 @@ Todo lo automático corre gratis en GitHub Actions, con la PC apagada: un
 reloj propio (un programa chico de Cloudflare, el Worker `radar-balcarce-reloj`) lo
 despierta cada media hora, GitHub busca las
 noticias, escribe con IA (Gemini, con Groq de respaldo en la lectura), arma la
-web y la sube a Cloudflare Pages, publica en Facebook e Instagram con la API de
-Meta, y dos vigilantes (uno en GitHub y otro en Cloudflare) revisan todo y avisan
-**por mail** (WhatsApp quedó de respaldo). El panel del celular habla directo con
+web una sola vez y la sube a Cloudflare Pages, publica en Facebook e Instagram con la API de
+Meta, y dos vigilantes revisan y avisan **por mail** (WhatsApp quedó de respaldo):
+el de Cloudflare, cada media hora, lo urgente (la web y "Actualizar la web"); el de
+GitHub ("Vigilancia"), cada 3 horas, lo demás (redes, claves, voces, contenido, estadísticas). El panel del celular habla directo con
 GitHub. Se pagan el dominio y el plan Workers Paid de Cloudflare (US$ 5 por mes).
 
 **Tres palabras.** Un **workflow** es una tarea automática de GitHub (pestaña
@@ -32,23 +33,24 @@ permiso a un programa en otro servicio: se trata como una contraseña.
 
 ```
                          Reloj de Cloudflare  (Worker radar-balcarce-reloj, desde el 15/10/2026)
-                         │  cada 30 min: "Actualizar la web" y "Vigilancia" (:00 y :30)
-                         │  varias por hora: "Redes" (:05, :35, :45)
+                         │  cada 30 min (:00 y :30): "Actualizar la web"
+                         │  cada 3 horas (0, 3… 21; reintento 9:30, 21:30 y 0:30): "Vigilancia"
+                         │  :05, :35 y :45, de 7 a 23: "Redes"
+                         │  :41, de 7 a 23: "Auditoría IA" · :23 cada 3 horas: "Pistas"
                          │  8:15 y 21:15 (otra vez a las 8:30 y 21:30): "Informe diario"
                          │  cada 2 horas, a los :20, de 7:20 a 23:20: "Ilustrar notas sin foto"
                          ▼
 GitHub Actions (repo radarbalcarce/radar-balcarce, público, cuenta radarbalcarce@gmail.com)
-  ├─ Actualizar la web ──(termina bien)──▶ Cloudflare Pages ──▶ radarbalcarce.com
-  │        │                                (archiva en R2 lo que sale del sitio,
-  │        │                                 sube web/out con wrangler, avisa a Bing)
-  │        └──(termina, bien o mal)──▶ Redes
+  ├─ Actualizar la web ── compila UNA vez, guarda en main ──▶ Cloudflare Pages ──▶ radarbalcarce.com
+  │                                (archiva en R2 lo que sale del sitio, sube web/out
+  │                                 con wrangler, avisa a Bing; regla 189)
   ├─ Redes ───────────▶ Meta (página de Facebook + @radarbalcarce)
   ├─ Vigilancia ──────▶ mail (Worker vigilante) y, de respaldo, WhatsApp (CallMeBot)
   ├─ Informe diario ──▶ mail a radarbalcarce@gmail.com (8:15 y 21:15)
-  ├─ Auditoría (lunes 9:00), Auditoría IA (cada hora), Pistas (cada 3 horas),
-  │  Respaldo (domingos), Pruebas (con cada cambio de código y los lunes)
+  ├─ Auditoría IA y Pistas (por el reloj), Auditoría (lunes 9:00), Respaldo (domingos),
+  │  Pruebas (con cada cambio de código y los lunes)
   ├─ Panel del celular (lo dispara el celular: la IA escribe, una pista, una foto)
-  └─ A mano: Piezas, Crear voces, Auditar redes, Auditar voz, Ver Facebook,
+  └─ A mano: Cloudflare Pages (rescate), Piezas, Crear voces, Auditar voz, Ver Facebook,
      los "Probar…", los que suben Workers, el archivo permanente…
 
 Workers de Cloudflare (cuenta radarbalcarce@gmail.com, plan Workers Paid):
@@ -66,26 +68,31 @@ PC de Hernán: el panel de la PC (puerto 4321) — en desuso desde el 8/10
 ## El recorrido, paso a paso (una media hora cualquiera)
 
 1. **:00 — el reloj de Cloudflare** le pide a la API de GitHub que corra
-   "Actualizar la web" y "Vigilancia", con un token propio ("Vencimientos"). El
-   reloj de GitHub (`schedule`) es sólo el respaldo: llegó a dejar cinco horas
-   entre dos corridas.
+   "Actualizar la web" (y, cada 3 horas, "Vigilancia"), con un token propio
+   ("Vencimientos"). Desde el 17/10 ni "Actualizar" ni "Vigilancia" ni "Redes"
+   tienen horario propio de GitHub: llegó a dejar cinco horas entre dos corridas
+   y, cuando sí andaba, duplicaba las del reloj.
 2. **Actualizar la web** corre el **núcleo legal de las pruebas**
    (`npm run test:nucleo`: la lista de `pruebas/nucleo-legal.txt`, unos
    segundos: semáforo, verificador, cola de las personas, retiradas y
    correcciones con motivo, cuerpo mínimo) y, si pasa, busca noticias, las
    cruza, las lee y las escribe con IA, arma los datos (también la lista
-   cifrada para el panel del celular), compila el sitio, revisa el SEO y
-   commitea `web/data/`. **Si el núcleo falla, no sigue: la web queda como
+   cifrada para el panel del celular), compila el sitio **una sola vez**, revisa el SEO,
+   commitea `web/data/` y **sube lo compilado** (paso 3). **Si el núcleo falla, no sigue: la web queda como
    estaba y sale un aviso por mail.** Las 2.000 pruebas enteras (`npm test`)
    ya no corren en cada vuelta desde el 15/10: corren en el workflow "Pruebas",
    con cada cambio de código y los lunes (cada paso, en `02-INGESTA` a `06-WEB`).
-3. **Si terminó bien**, arranca **Cloudflare Pages**: vuelve a compilar, guarda
-   en el archivo permanente de R2 las notas que están por salir del sitio
-   (desde el 16/10), sube `web/out` y le avisa a Bing de las notas nuevas
-   (IndexNow). En uno o dos minutos la web nueva está en línea.
-4. **Bien o mal**, arranca también **Redes** (que el reloj además llama
-   varias veces por hora): Facebook y las piezas que tocan (`07-REDES`).
-5. **Vigilancia** mira la web publicada, las corridas, el libro de las redes,
+3. **En la misma corrida, después de guardar** (desde el 17/10, regla 189; antes
+   lo hacía "Cloudflare Pages" compilando todo otra vez): si mientras se armaba
+   entró a `main` algo que el sitio lee (una retirada o una corrección del celular,
+   el libro de redes, código), **vuelve a compilar** con eso (`web/scripts/recompilar.mjs`;
+   si sólo entró la vigilancia, las estadísticas o documentos, no); guarda en el
+   archivo permanente de R2 las notas que están por salir del sitio, sube `web/out`
+   y le avisa a Bing (IndexNow). Si no compiló o no se pudo guardar en `main`, no
+   sube nada. La nota se ve unos 2 minutos y medio antes que con la compilación doble.
+4. **A los :05, :35 y :45, de 7 a 23**, el reloj despierta a **Redes**: Facebook y las
+   piezas que tocan (`07-REDES`). Ya no arranca además al terminar cada "Actualizar".
+5. **Vigilancia** (cada 3 horas) mira la web publicada, las corridas, el libro de las redes,
    el contrato del día y las claves de IA, y manda **un solo aviso** si hay
    algo para decir: por mail, a través del Worker vigilante, y por WhatsApp
    sólo si el mail no salió.
@@ -96,9 +103,12 @@ Aparte, lo que decide una persona en el panel del celular se escribe en el
 repositorio con su llave de GitHub, y "Escribir con IA" dispara "Panel del
 celular", que tarda un minuto (`09-PANEL`).
 
-## Los treinta y seis workflows
+## Los treinta workflows
 
-(Son los 36 archivos de `.github/workflows/` al 16/10/2026. El 15/10 se borraron
+(Son los 30 archivos de `.github/workflows/` al 17/10/2026. Ese día se borraron seis que
+no se usaban, con sus scripts: Prueba de WhatsApp, Probar imágenes con Workers AI
+(flux), Probar imagen desde la nota, Sondeo de fuentes desde Cloudflare (con su Worker
+`infra/sondeo-fuentes/`), Auditar redes y Fotos a R2 (nunca corrió). El 15/10 se borraron
 cuatro de prueba suelta que ya no se usaban: Prueba de estadísticas, Prueba de
 Gemini (`prueba-gemini.yml`), Sondear búsqueda y Sondear Groq; el historial de git
 los guarda. Entre el 8 y el 16/10 se fueron sumando los del respaldo, el archivo
@@ -109,31 +119,28 @@ Los que sólo corren a mano y no escriben nada en el repositorio están marcados
 
 | Workflow (archivo) | Cuándo corre | Qué corre | Secretos y variables | Qué commitea | Tope |
 |---|---|---|---|---|---|
-| **Actualizar la web** (`actualizar.yml`) | El reloj de Cloudflare a los :00 y :30 (sin `schedule` propio desde el 17/10: duplicaba las corridas); a mano; "Actualizar la web ahora" del celular | `npm ci` (raíz y `web/`), **el núcleo legal** (`npm run test:nucleo`; si falla, avisa por mail y corta), la caché `.cache` (la memoria de 36 horas del cruce y las notas enteras para el celular), `node web/scripts/generar-datos.mjs`, `npm run build` con `SITIO` y `FOTOS_BASE`, `node web/scripts/revisar-seo.mjs` | Las cuatro claves de IA; `VIGILANTE_TOKEN` y `WHATSAPP_*` (sólo el aviso del núcleo); variables `REDES_ACTIVAS`, `R2_ARCHIVO`, `TOPE_DE_NOTAS` y `FOTOS_BASE` (estas dos últimas no están cargadas) | En `web/data/`: `portada`, `archivo`, `agenda`, `intentos-ia`, `dolar-historia`, `clima-historia`, `f1`, `futbol`, `fichas`, `notas-por-dia`, `uso-ia`, `banco-fotos`, `esperando-cuerpo`, `vistas`, `retiradas`, `celular-pendientes`, `celular-estado` y `fusionadas` (`.json`) y la carpeta `web/data/historico/`; y `web/public/fotos-notas/` y `web/public/escudos/`. Mensaje "Datos de la portada · dd/mm hh:mm" | 20 min |
+| **Actualizar la web** (`actualizar.yml`) | El reloj de Cloudflare a los :00 y :30 (sin `schedule` propio desde el 16/10: duplicaba las corridas); a mano; "Actualizar la web ahora" del celular | `npm ci` (raíz y `web/`), **el núcleo legal** (`npm run test:nucleo`; si falla, avisa por mail y corta), la caché `.cache` (la memoria de 36 horas del cruce y las notas enteras para el celular), `node web/scripts/generar-datos.mjs`, `npm run build` con `SITIO` y `FOTOS_BASE`, `node web/scripts/revisar-seo.mjs`, el commit; **y desde el 17/10 la subida** (regla 189): `web/scripts/recompilar.mjs` (¿entró algo que el sitio lee mientras se armaba? entonces `npm run build` otra vez), el archivo R2 (`archivar-a-r2.mjs`, con su aviso si falla), `npx wrangler@4.139.0 pages deploy out --branch=main` y `redes/indexnow.mjs` | Las cuatro claves de IA; `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; `VIGILANTE_TOKEN` y `WHATSAPP_*` (los avisos del núcleo y del archivo); variables `REDES_ACTIVAS`, `R2_ARCHIVO`, `TOPE_DE_NOTAS`, `FOTOS_BASE`, `SECCIONES_NUEVAS`, `FOTOS_MENORES_OFICIALES` y la opcional `CLOUDFLARE_PROJECT` | En `web/data/`: `portada`, `archivo`, `agenda`, `intentos-ia`, `dolar-historia`, `clima-historia`, `f1`, `futbol`, `fichas`, `notas-por-dia`, `uso-ia`, `banco-fotos`, `esperando-cuerpo`, `vistas`, `retiradas`, `celular-pendientes`, `celular-estado` y `fusionadas` (`.json`) y la carpeta `web/data/historico/`; y `web/public/fotos-notas/` y `web/public/escudos/`. Mensaje "Datos de la portada · dd/mm hh:mm" | 30 min (el archivo, 8) |
 | **Pruebas** (`pruebas.yml`) | Cada `push` a `main` que toque código (no los commits del robot en `web/data/`, fotos y escudos), cada pull request, lunes 6:17 UTC (3:17 en Balcarce); a mano | `npm ci` (raíz y `web/`) y `npm test`, las 2.000 pruebas. Si fallan, GitHub avisa por mail a quien hizo el cambio; **no frena la web** | Ninguno | Nada | 15 min |
-| **Cloudflare Pages** (`cloudflare-deploy.yml`) | Al terminar **bien** "Actualizar la web"; a mano | `npm ci` y `npm run build` en `web/`; **si existe la variable `R2_ARCHIVO`** (está cargada desde el 16/10/2026: `radar-archivo`), `archivar-a-r2.mjs --subir --borrar --produccion --margen=auto --limite-segundos=360` (no frena el despliegue: si falla, avisa por mail); después `npx wrangler@4.139.0 pages deploy out --branch=main`; al final, `redes/indexnow.mjs` le avisa a Bing de las notas nuevas | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; variable opcional `CLOUDFLARE_PROJECT` (no está cargada: usa `radar-balcarce`); para el archivo, variables `R2_ARCHIVO` y `TOPE_DE_NOTAS` y secretos `VIGILANTE_TOKEN` y `WHATSAPP_*` (el aviso) | Nada | 25 min (el archivo, 8) |
+| **Cloudflare Pages** (`cloudflare-deploy.yml`) | **Sólo a mano, de rescate** (desde el 17/10: lo de cada media hora lo sube "Actualizar la web"). Sirve para volver a subir `main` tal como está sin buscar noticias | `npm ci` y `npm run build` en `web/`; el archivo R2 (igual que en la vuelta; si falla, avisa por mail); `npx wrangler@4.139.0 pages deploy out --branch=main`; `redes/indexnow.mjs` | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; variable opcional `CLOUDFLARE_PROJECT` (no está cargada: usa `radar-balcarce`); para el archivo, variables `R2_ARCHIVO` y `TOPE_DE_NOTAS` y secretos `VIGILANTE_TOKEN` y `WHATSAPP_*` (el aviso) | Nada | 25 min (el archivo, 8) |
 | **Archivo permanente (staging)** (`archivo-staging.yml`) | A mano | Pruebas, depósito `radar-archivo-staging`, Worker de ensayo `radar-balcarce-archivo-staging` (workers.dev) y, si se pide, una muestra de notas | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` | Nada | 40 min |
 | **Archivo permanente (producción)** (`archivo-produccion.yml`) | A mano | *sacar_ruta*: saca la ruta `radarbalcarce.com/nota/*` (vuelta atrás). *quitar_ids*: saca ya esas notas del depósito. Lo normal: crea el depósito privado `radar-archivo`, sube el Worker `radar-balcarce-archivo` sin ruta (workers.dev), sube todas las notas del sitio, lo comprueba y, sólo con *activar_ruta*, pone la ruta y comprueba el sitio (si no da, la saca sola). Guía: `docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md`. **Corrió una vez, el 16/10 (carga inicial, sin poner la ruta)** | `CLOUDFLARE_API_TOKEN` (más «Zone → Workers Routes: Edit» y «Zone: Read» para la ruta), `CLOUDFLARE_ACCOUNT_ID`; variables opcionales `CLOUDFLARE_ZONE_ID`, `R2_RESPALDOS`, `R2_FOTOS` (sólo para negarse a escribir ahí) | Nada | 80 min |
-| **Redes** (`redes.yml`) | El reloj de Cloudflare (acción `reloj`, a los :05, :35 y :45); al terminar "Actualizar la web"; a mano: `reloj`, `verificar` o `facebook` | `redes/publicar.mjs --facebook`; `redes/reloj.mjs`; si toca: `npm ci`, `reels/plan.mjs --generar --solo=…`, `redes/publicar.mjs --piezas`; `redes/publicar.mjs --enlaces` | `META_TOKEN`, `GEMINI_API_KEY_REDES`; variable `REDES_ACTIVAS` | `web/data/redes.json` ("Redes: libro de publicaciones · …"); los videos quedan 3 días como artefacto; si hay `R2_PIEZAS`, al final (con `continue-on-error`) `redes/archivar-piezas.mjs` los copia a R2 para siempre | 25 min |
+| **Redes** (`redes.yml`) | El reloj de Cloudflare (acción `reloj`) a los :05, :35 y :45, **de 7 a 23 de Balcarce** (desde el 17/10; antes las 24 horas y, además, al terminar cada "Actualizar la web"); a mano: `reloj`, `verificar` o `facebook` | `redes/publicar.mjs --facebook`; `redes/reloj.mjs`; si toca: `npm ci`, `reels/plan.mjs --generar --solo=…`, `redes/publicar.mjs --piezas`; `redes/publicar.mjs --enlaces` | `META_TOKEN`, `GEMINI_API_KEY_REDES`; variable `REDES_ACTIVAS` | `web/data/redes.json` ("Redes: libro de publicaciones · …"); los videos quedan 3 días como artefacto; si hay `R2_PIEZAS`, al final (con `continue-on-error`) `redes/archivar-piezas.mjs` los copia a R2 para siempre | 25 min |
 | **Piezas** (`piezas.yml`) | Sólo a mano: `solo` (nombres separados por coma; **vacío no arma nada**), `todas` (armar todas las del día, a propósito), `publicar` (sí/no), `destino` (ambas, instagram, facebook) | `npm ci`, `reels/plan.mjs --generar [--solo=…]`; si `publicar`: `redes/publicar.mjs --piezas --sin-horario --destino=…` | `GEMINI_API_KEY_REDES`, `META_TOKEN`; `REDES_ACTIVAS` | `web/data/redes.json` si publicó; artefacto "piezas" 7 días (mp4, mp3, png, manifiesto); si hay `R2_PIEZAS`, al final los copia a R2 (`continue-on-error`) | 30 min |
 | **Panel del celular** (`panel.yml`) | Lo dispara el panel del celular con la llave de quien lo usa: `accion` (`escribir`, `pista`, `nota-pista` o `foto`), `id`, `pedido` (opcional; o el texto de la pista; queda a la vista), `credito` (sólo para `foto`), `marca` (para que el celular encuentre su corrida) | Trae la caché `.cache` (`celular-notas.json`); con `escribir`, `pista` o `nota-pista` corre `node panel/celular.mjs <accion> --id=… --pedido=…`; con `foto`, `node web/scripts/foto-manual.mjs` | `GEMINI_API_KEY_REDACCION`, `GEMINI_API_KEY_REDES`, `GEMINI_API_KEY_CLASIFICACION`, `TAVILY_API_KEY` (la nota de una pista) | `web/data/celular-borradores.json` (cifrado), `pistas.json`, `fotos-manuales.json` y `web/public/fotos-notas/` | 8 min |
-| **Vigilancia** (`vigilancia.yml`) | El reloj de Cloudflare a los :00 y :30; respaldo `schedule` cada 3 horas (a los :17 UTC); a mano: `vigilar`, `probar-resumen`, `probar-cierre` | `node redes/vigilar.mjs` | `VIGILANTE_TOKEN` (los avisos por mail), `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` (respaldo), `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ANALYTICS_TOKEN`, `CLOUDFLARE_API_TOKEN`, `META_TOKEN`, las cuatro claves de IA (sólo para preguntar si andan), `GITHUB_TOKEN` (automático); variables `REDES_ACTIVAS` y `R2_ARCHIVO` | `web/data/vigilancia.json`, `web/data/estadisticas.json` y `estadisticas-piezas.json` (no en los modos de prueba) | 10 min |
+| **Vigilancia** (`vigilancia.yml`) | El reloj de Cloudflare **cada 3 horas** (0, 3, 6, 9, 12, 15, 18 y 21 de Balcarce) y otra vez a las 9:30, 21:30 y 0:30 (las estadísticas de las 9 y las 21 y el cierre del día no se pierden si un pedido no llega); sin `schedule` propio desde el 17/10; a mano: `vigilar`, `probar-resumen`, `probar-cierre` | `node redes/vigilar.mjs` | `VIGILANTE_TOKEN` (los avisos por mail), `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` (respaldo), `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ANALYTICS_TOKEN`, `CLOUDFLARE_API_TOKEN`, `META_TOKEN`, las cuatro claves de IA (sólo para preguntar si andan), `GITHUB_TOKEN` (automático); variables `REDES_ACTIVAS` y `R2_ARCHIVO` | `web/data/vigilancia.json`, `web/data/estadisticas.json` y `estadisticas-piezas.json` (no en los modos de prueba) | 10 min |
 | **Informe diario** (`informe-diario.yml`) | El reloj de Cloudflare a las 8:15 y 21:15 de Balcarce y, por si ése no despertó, otra vez a las 8:30 y 21:30 (`momento`: `manana` o `noche`; el Worker vigilante no repite el mail); respaldo `schedule` a las 8:45 y 21:45; a mano: `momento` y `enviar` (apagado = simulacro en el registro) | `node redes/informe-diario.mjs --momento=… --enviar` | `VIGILANTE_TOKEN`, `GITHUB_TOKEN` (automático, sólo lectura), variables `REDES_ACTIVAS` y `R2_ARCHIVO` | Nada | 10 min |
 | **Auditoría** (`auditoria.yml`) | Lunes 12:00 UTC (9:00 en Balcarce); a mano | `redes/auditar.mjs`; `redes/auditar-redes.mjs --semana` (si falla, sigue) | `VIGILANTE_TOKEN`, `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY`, `META_TOKEN` | `web/data/auditoria.json` | 30 min |
-| **Auditar redes** (`auditar-redes.yml`) | A mano (opcional: `desde`, AAAA-MM-DD) | `redes/auditar-redes.mjs` cuatro veces: hoy, ayer, la semana y "crudo" | `META_TOKEN` | Nada | 10 min |
 | **Crear voces** (`crear-voces.yml`) | A mano, con un `modo` | `npm ci`, `reels/crear-voces.mjs`. **`crear`**: seis candidatos nuevos, cada uno con un audio de prueba; **`recrear`**: dos versiones nuevas de la locutora y del locutor aprobados (por ejemplo, para una clave de otro proyecto de Google), cada una con su audio; **`listar`**: la biblioteca de voces de Google; **`borrar`**: quita una voz propia. Los modos `dialogo` fueron pruebas de una charla entre las dos voces, descartadas porque sonaban falsas | `GEMINI_API_KEY_REDES` | Nada (los audios quedan 7 días como artefacto) | 30 min |
 | **Auditar voz** (`auditar-voz.yml`) | A mano (opcional: `explorar`) | `npm ci`, `reels/auditar-voz.mjs [--explorar]` | `GEMINI_API_KEY_REDES` | Nada | 15 min |
 | **Ver Facebook** (`ver-facebook.yml`) | A mano | `redes/ver-facebook.mjs` | `META_TOKEN` | Nada | 5 min |
 | **Reintentar pieza** (`reintentar.yml`) | Botón del panel o a mano | `redes/reintentar.mjs`: sube de nuevo el video que "Redes" guardó tres días, sin gastar voz | `META_TOKEN`, `REDES_ACTIVAS` | `web/data/redes.json` | 15 min |
-| **Prueba de WhatsApp** (`prueba-whatsapp.yml`) | A mano | `redes/probar-whatsapp.mjs` (manda un mensaje y muestra la respuesta de CallMeBot, sin la clave ni el teléfono) | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` | Nada | 5 min |
-| **Auditoría IA** (`auditoria-ia.yml`) | Cada hora, a los :41 (`schedule`); a mano (`simular`) | `redes/auditar-notas.mjs` (lee las notas nuevas con Groq y avisa lo que esté mal; corrige sola sólo la ortografía chica y segura) | `GROQ_API_KEY`, `VIGILANTE_TOKEN`, `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` | `web/data/auditoria-ia.json` (cifrado) y `web/data/correcciones-auditoria.json` | 12 min |
-| **Pistas** (`pistas.yml`) | Cada 3 horas, a los :23 (`schedule`); el botón "Volver a mirar" del panel del celular; a mano (`id`, `marca`, `simular`) | `panel/revisar-pistas.mjs` (vuelve a mirar las pistas abiertas y avisa si un medio las cubrió) | `GEMINI_API_KEY_REDACCION`, `GEMINI_API_KEY_CLASIFICACION`, `TAVILY_API_KEY`, `VIGILANTE_TOKEN`, `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` | `web/data/pistas.json` y `web/data/notas-de-pistas.json` | 10 min |
-| **Fijar piezas** (`fijar-piezas.yml`) | A mano (`piezas`, `desde`, `dias`); tiene además un `schedule` que sólo cae el 10/10 a las 8:30 UTC (una vez por año) | `reels/plan.mjs --generar`, `reels/fijas.mjs`: arma de antemano piezas con voz y las guarda para reutilizarlas unos días | `GEMINI_API_KEY_REDES` | `reels/fijas/` (y, si hay `R2_PIEZAS`, una copia a R2 de lo armado, con `continue-on-error`) | 30 min |
+| **Auditoría IA** (`auditoria-ia.yml`) | El reloj de Cloudflare a los :41, de 7 a 23 de Balcarce (desde el 17/10; el `schedule` de GitHub que tenía la corría una de cada cuatro horas); a mano (`simular`) | `redes/auditar-notas.mjs` (lee las notas nuevas con Groq y avisa lo que esté mal; corrige sola sólo la ortografía chica y segura) | `GROQ_API_KEY`, `VIGILANTE_TOKEN`, `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` | `web/data/auditoria-ia.json` (cifrado) y `web/data/correcciones-auditoria.json` | 12 min |
+| **Pistas** (`pistas.yml`) | El reloj de Cloudflare cada 3 horas, a los :23 (desde el 17/10; antes, `schedule` de GitHub); el botón "Volver a mirar" del panel del celular; a mano (`id`, `marca`, `simular`) | `panel/revisar-pistas.mjs` (vuelve a mirar las pistas abiertas y avisa si un medio las cubrió) | `GEMINI_API_KEY_REDACCION`, `GEMINI_API_KEY_CLASIFICACION`, `TAVILY_API_KEY`, `VIGILANTE_TOKEN`, `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` | `web/data/pistas.json` y `web/data/notas-de-pistas.json` | 10 min |
+| **Fijar piezas** (`fijar-piezas.yml`) | Sólo a mano (`piezas`, `desde`, `dias`; el horario de una vez del 10/10 se sacó el 17/10) | `reels/plan.mjs --generar`, `reels/fijas.mjs`: arma de antemano piezas con voz y las guarda para reutilizarlas unos días | `GEMINI_API_KEY_REDES` | `reels/fijas/` (y, si hay `R2_PIEZAS`, una copia a R2 de lo armado, con `continue-on-error`) | 30 min |
 | **Armado con datos vacíos** (`armado-vacio.yml`) | Al subir cambios al código de la web; lunes 9:17 UTC | `web/scripts/armado-vacio.mjs`: arma el sitio con datos vacíos o a medias, para descubrir un código que rompe esos casos antes de que congele la web | Ninguno | Nada | 25 min |
-| **Pruebas con otra hora** (`pruebas-otra-hora.yml`) | Lunes 8:43 UTC; a mano | Corre las pruebas como si fuera otra hora y otra fecha (`pruebas/hora-falsa.mjs`) | Ninguno | Nada | 40 min |
+| **Pruebas con otra hora** (`pruebas-otra-hora.yml`) | Lunes 8:43 UTC; a mano | Corre las pruebas como si fuera otra hora y otra fecha (`pruebas/hora-falsa.mjs`). Falló el 5 y el 12/10 (la memoria de voces); el 17/10 pasa | Ninguno | Nada | 40 min |
 | **Respaldo** (`respaldo.yml`) | Domingos 6:17 UTC (3:17 en Balcarce); a mano | Arma un paquete de git con todo el historial y una copia de datos y fotos (artefacto de 90 días); si hay GitLab (`GITLAB_TOKEN`, variable `GITLAB_REPO`) sube un espejo, y si hay R2 (variable `R2_RESPALDOS`) sube el paquete. **Hoy (16/10) sube a R2** (`radar-balcarce-respaldos`); **el espejo de GitLab no corre**: no están cargados ni `GITLAB_TOKEN` ni `GITLAB_REPO` | `GITLAB_TOKEN`, `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; variables `GITLAB_REPO`, `R2_RESPALDOS` | Nada | 40 min |
 | **Probar la restauración del respaldo** (`probar-restauracion.yml`) | A mano (opcional: `fecha`) | Baja de R2 el respaldo de ese día (junta las partes según el manifiesto y compara el sha256), rearma el repositorio desde el paquete, corre `git fsck`, compara el último commit con GitHub y abre el archivo de datos y fotos. Anduvo el 15/10 | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; variable `R2_RESPALDOS` | Nada | 20 min |
-| **Fotos a R2** (`fotos-a-r2.yml`) | A mano | Copia `web/public/fotos-notas/` a un depósito de Cloudflare R2; no borra nada ni cambia lo que ve el lector. **Nunca corrió: falta la variable `R2_FOTOS`** (y, para que el sitio use esas fotos, `FOTOS_BASE`) | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; variable `R2_FOTOS` | Nada | 60 min |
 | **Reloj de Cloudflare** (`reloj-cloudflare.yml`) | A mano (cuando cambia el reloj) | Sube el Worker `radar-balcarce-reloj` (`infra/reloj-cloudflare/`) con wrangler 4.139.0 y le carga el secreto | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `RELOJ_GITHUB_TOKEN` | Nada | 10 min |
 | **Vigilante de Cloudflare** (`vigilante-cloudflare.yml`) | A mano (cuando cambia el vigilante) | Sube el Worker `radar-balcarce-vigilante` (`infra/vigilante-cloudflare/`) con wrangler 4.139.0, crea su KV si falta y le carga los secretos | `CLOUDFLARE_API_TOKEN` (con «Workers KV Storage: Edit»), `CLOUDFLARE_ACCOUNT_ID`, `VIGILANTE_TOKEN`; opcional `VIGILANTE_GITHUB_TOKEN` (está cargado) | Nada | 10 min |
 | **Ilustrar notas sin foto** (`ilustrar-notas.yml`) | El reloj de Cloudflare a los :20 cada 2 horas, de 7:20 a 23:20 de Balcarce, con `automatico` = `true`; a mano: revisar (`horas`, `ids`) o aplicar (`aplicar`, `corrida`, `ids`) | `web/scripts/ilustrar-notas.mjs`: elige las notas sin foto real (salta muertes, sepelios, semáforo rojo y lo que ya tiene imagen), pide a Gemini el prompt y al Worker de imágenes la ilustración (SDXL, 1024 × 576), la hace mirar otra vez por Gemini y, en automático, guarda sólo las que pasan ese control. Hasta 12 llamadas al Worker por corrida y 20 por día. Nunca pisa una ilustración hecha con Gemini web. Regla 185; `docs/flujos/IMAGENES-CON-GEMINI-WEB.md` | `GEMINI_API_KEY_REDACCION`, `GEMINI_API_KEY_CLASIFICACION`, `VIGILANTE_TOKEN` (la contraseña del Worker) | `web/data/fotos-ia.json` y `web/public/fotos-notas/<id>-ia.jpg` (el paso que guarda hace fila con "Actualizar la web") | 30 min (guardar, 15) |
@@ -142,7 +149,6 @@ Los que sólo corren a mano y no escriben nada en el repositorio están marcados
 | **Probar las claves de Gemini** (`probar-gemini.yml`) | A mano (de prueba) | `redes/probar-gemini.mjs`: qué modelos ve cada clave, un texto mínimo por clave, una voz de 3 segundos (gasta 1 del cupo de voz) y una imagen | Las tres claves de Gemini | Nada | 10 min |
 | **Probar el aviso por mail** (`probar-mail.yml`) | A mano (de prueba) | Manda un mail de prueba a `radarbalcarce@gmail.com` por `POST /avisar` del Worker vigilante (si no sale, prueba el WhatsApp) | `VIGILANTE_TOKEN` | Nada | 5 min |
 | **Reparar las estadísticas** (`reparar-estadisticas.yml`) | A mano (`aplicar`, `con_hoy`) | `redes/reparar-estadisticas.mjs`: vuelve a pedir a Cloudflare los días que quedaron en cero o incompletos. Sin `aplicar` = `true`, sólo simula | `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ANALYTICS_TOKEN` | `web/data/estadisticas.json` (sólo con `aplicar`) | 10 min |
-| **Sondeo de fuentes desde Cloudflare** (`sondeo-fuentes-cloudflare.yml`) | A mano (de prueba; `agente`) | Sube el Worker de prueba `radar-balcarce-sondeo-fuentes` (`infra/sondeo-fuentes/`, sin cron) y le pide el estado de todos los feeds activos, para ver si contestan desde Cloudflare los que desde GitHub no llegan (adjunto de 30 días) | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `SONDEO_TOKEN` | Nada | 25 min |
 
 **Respaldo en R2 y los 300 MB** (15/10/2026): wrangler sube hasta 300 MB por archivo y el paquete de git (unos 185 MB, +3,5 MB por día) los pasa hacia el 20/11/2026. Por eso "Respaldo" parte en pedazos de 200 MB (`<archivo>.part-000`, `.part-001`…, más `<archivo>.partes.txt` con nombres, tamaños y sha256 del archivo entero) lo que pase de 250 MB, y sube siempre un `SHA256SUMS`; lo chico sigue yendo entero. "Probar la restauración del respaldo" baja las partes, las junta y compara el sha256. Sin secretos ni herramientas nuevas; la prueba es `pruebas/respaldo-partes.test.mjs`.
 
@@ -156,7 +162,7 @@ Detalles que importan:
 
 - **La hora:** los que miran la hora ponen `TZ: America/Argentina/Buenos_Aires`
   (GitHub corre en UTC); no la ponen los de prueba, los que suben Workers,
-  "Crear voces", "Ver Facebook", "Fotos a R2" ni "Auditoría IA". **Node 24** en
+  "Crear voces", "Ver Facebook" ni "Auditoría IA". **Node 24** en
   todos; los que no arman videos ni imágenes no instalan nada en la raíz
   (`ingesta/`, `panel/` y `redes/` no usan dependencias).
 - **Permisos:** los que commitean ("Actualizar la web", "Redes", "Piezas",
@@ -168,8 +174,8 @@ Detalles que importan:
 - **Siempre la última versión:** casi todos los que leen o escriben
   `web/data/` ("Actualizar la web", "Redes", "Piezas", "Fijar piezas",
   "Reintentar pieza", "Panel del celular", "Vigilancia", "Informe diario",
-  "Auditoría IA", "Pistas", "Ilustrar notas sin foto", "Auditar redes",
-  "Respaldo", "Fotos a R2" y los del archivo permanente) bajan `main` al día
+  "Auditoría IA", "Pistas", "Ilustrar notas sin foto", "Cloudflare Pages",
+  "Respaldo" y los del archivo permanente) bajan `main` al día
   (`ref: main`), no la del momento en que se los disparó.
 - **Lo que manda el celular** a "Panel del celular" va por variables de
   entorno, nunca pegado en el comando: un texto con comillas no ejecuta nada.
@@ -179,10 +185,10 @@ Detalles que importan:
 - **Candados** (`concurrency`): `actualizar-web` (la siguiente espera; el paso
   que guarda de "Ilustrar notas sin foto" hace la misma fila), `redes` (Redes,
   Piezas, Fijar piezas y Reintentar pieza: nunca dos publicando a la vez),
-  `cloudflare-pages` (la nueva **cancela** la que estaba subiendo),
+  `cloudflare-pages` (la subida a mano; desde el 17/10 la siguiente espera),
   `panel-celular` (un borrador a la vez), `vigilancia`, `informe-diario`,
   `auditoria`, `auditoria-ia`, `pistas`, `ilustrar-notas`, `respaldo`,
-  `reparar-estadisticas`, `fotos-a-r2`, los dos del archivo permanente y
+  `reparar-estadisticas`, los dos del archivo permanente y
   `pruebas` (una nueva cancela la anterior del mismo cambio).
 - **Al commitear**, los que escriben en `main` hacen `git pull --rebase`; si chocan en
   `web/data/` (o, en "Actualizar la web", en `web/public/fotos-notas/`), gana lo
@@ -203,9 +209,13 @@ de GitHub que corra los workflows. No cuesta aparte (entra en el plan Workers Pa
 se apaga solo si una vez falla. **Anda desde el 15/10/2026, 14:46 UTC (11:46 en
 Balcarce).**
 
-- **Qué pide y cuándo** (las horas del Worker son UTC, pero los minutos son los
-  mismos que en Balcarce): a los **:00 y :30**, "Actualizar la web" y
-  "Vigilancia"; a los **:05, :35 y :45**, "Redes" con la acción `reloj`; y desde
+- **Qué pide y cuándo, desde el 17/10/2026** (regla 190; las horas del Worker son UTC, pero
+  los minutos son los mismos que en Balcarce, que es UTC−3): a los **:00 y :30**,
+  "Actualizar la web", siempre; **"Vigilancia" cada 3 horas** (a los :00 de las 0, 3,
+  6… 21 de Balcarce) y otra vez a las **9:30, 21:30 y 0:30**; a los **:05, :35 y :45,
+  sólo de 7 a 23 de Balcarce**, "Redes" con la acción `reloj`; a los **:41 de 7 a
+  23**, "Auditoría IA"; a los **:23 cada 3 horas**, "Pistas". Antes del 17/10: los :00 y
+  :30 pedían "Actualizar" y "Vigilancia" siempre, y "Redes" corría las 24 horas. Y desde
   el 15/10, a las **8:15 y 21:15 de Balcarce** (11:15 y 0:15 UTC, una sola
   expresión `15 0,11 * * *`), "Informe diario" con `momento` = `manana` o `noche`,
   y **otra vez a las 8:30 y 21:30** (desde el 16/10, dentro de la expresión de los
@@ -214,11 +224,15 @@ Balcarce).**
   mail); y desde el 16/10 a la tarde (el reloj con este horario se subió a las
   15:45 de Balcarce), a los **:20 cada 2 horas de 7:20 a 23:20 de Balcarce**
   (expresión `20 0,2,10,12,14,16,18,20,22 * * *`), "Ilustrar notas sin foto" con
-  `automatico` = `true` (regla 185; `docs/flujos/IMAGENES-CON-GEMINI-WEB.md`). Son
-  **cuatro expresiones: no sumar más**.
-  Lo dicen `worker.mjs` (`trabajosDelMinuto(minuto, horaUtc)`) y `wrangler.toml`.
-  Después de tocarlo hay que correr «Reloj de Cloudflare»; mientras no se corra,
-  el informe sale igual por el `schedule` de respaldo (con media hora de atraso).
+  `automatico` = `true` (regla 185; `docs/flujos/IMAGENES-CON-GEMINI-WEB.md`).
+  Lo decide `trabajosDelMinuto(minuto, horaUtc)` (`worker.mjs`); `wrangler.toml` tiene
+  **seis expresiones**, una por trabajo, que sólo despiertan al Worker (despertarlo de
+  más no cuesta nada). El comentario viejo de "cuatro expresiones, no sumar más" era
+  del plan gratis (5 por cuenta); con Workers Paid son **250 por cuenta**.
+  **Después de tocarlo hay que correr «Reloj de Cloudflare»**: el reloj no se sube solo.
+  Mientras no se corra, sigue el horario viejo (y "Auditoría IA" y "Pistas", que ya no
+  tienen `schedule`, no corren: la Vigilancia avisa con `reloj-Auditoría IA` y
+  `reloj-Pistas`); el informe sale igual por su `schedule` de respaldo.
 - **La llave:** un token de GitHub de grano fino, **sólo para este
   repositorio**, con «Actions: lectura y escritura», **creado sin vencimiento**.
   Está guardado en el secreto de GitHub **`RELOJ_GITHUB_TOKEN`**; el workflow «Reloj de Cloudflare»
@@ -231,11 +245,11 @@ Balcarce).**
 - **Para ver si está vivo:** la página del Worker responde «Reloj de Radar
   Balcarce: en hora.»; el panel de Cloudflare (Workers) muestra cada ejecución,
   y una que GitHub no aceptó figura como fallida.
-- **Si el reloj se rompe:** "Actualizar la web" corre con su `schedule`
-  (impuntual), "Redes" arranca al final de cada "Actualizar la web",
-  "Vigilancia" corre cada 3 horas, el informe diario sale a las 8:45 y 21:45 y
-  las ilustraciones automáticas no corren. Avisan los dos vigilantes (`reloj-…`,
-  `web-vieja`; el de Cloudflare, por mail, aunque GitHub no corra).
+- **Si el reloj se rompe:** desde el 16-17/10 no hay horarios de respaldo en GitHub
+  (salvo el del informe diario, a las 8:45 y 21:45, y los semanales): se para la web,
+  las redes, la vigilancia, la auditoría IA, las pistas y las ilustraciones. Lo avisa
+  por mail el vigilante de Cloudflare (`actualizar-vieja`, `web-vieja`), que no depende
+  de GitHub. De urgencia se puede correr "Actualizar la web" a mano o desde el celular.
   Se puede volver al despertador anterior reactivando los trabajos de
   cron-job.org (abajo), pero **no los dos juntos más de un rato**: si dos relojes
   piden lo mismo, el `concurrency` de los workflows evita que se pisen, pero se
@@ -307,12 +321,20 @@ Un segundo Worker, **`radar-balcarce-vigilante`** (`infra/vigilante-cloudflare/`
 - **Web Analytics** está activado (gratis, sin cookies): de ahí salen las
   visitas de las estadísticas.
 - `wrangler` va con la versión fija (4.139.0), para que una nueva no rompa el
-  despliegue sola. Para subirla: cambiar el número y correr "Cloudflare Pages".
-- **Servidor MCP de sólo lectura** (16/10/2026, `infra/mcp-cloudflare/`, Worker `radar-balcarce-mcp`):
-  **escrito y probado, NO activado** (sin ruta, sin dominio y sin workflow que lo suba). Cuando se
-  active, vive en `mcp.radarbalcarce.com`, lee los JSON de `/agentes/` del sitio y no necesita
-  secretos. Los pasos, el límite de pedidos en el WAF y los riesgos están en su `LEEME.md` y en
-  `docs/seo/AUDITORIA-SEO-LLM.md`.
+  despliegue sola. Para subirla: cambiar el número en `actualizar.yml` **y** en
+  `cloudflare-deploy.yml` (una prueba controla que digan lo mismo) y probar con
+  "Cloudflare Pages" a mano.
+- **Las redirecciones** (`web/public/_redirects`, las arma `web/scripts/generar-redirects.mjs`
+  al compilar): Pages acepta **2.000 fijas** (más 100 con comodines) e ignora sin avisar las
+  que sobran. Desde el 17/10 (regla 191) se escriben como mucho 1.950: las secciones viejas,
+  las notas repetidas que se unieron a otra (su dirección sí se publicó) y las direcciones
+  cortas `/nota/ID` sólo de las notas de antes del 25/09 (después nadie tuvo esa dirección).
+  Eran 1.419 el 16/10 y se llenaba hacia el 26/10; con los datos del 17/10 son 210. Si alguna
+  vez las repetidas no entran, las que sobran salen como una página chica de redirección
+  (canónica + meta refresh) en su dirección vieja. Lo demás lo resuelve la página 404.
+- **Servidor MCP:** el que estaba escrito (16/10/2026, `infra/mcp-cloudflare/`) y nunca se
+  activó **se borró el 17/10** (no lo usaba nada; queda en el historial de git). Los JSON de
+  `/agentes/` del sitio siguen.
 - **Vercel** está apagado; borrar el proyecto y su DNS está en `PENDIENTES.md`.
 
 ## Los Workers de Cloudflare y los depósitos R2 (16/10/2026)
@@ -326,16 +348,16 @@ La cuenta de Cloudflare (`radarbalcarce@gmail.com`) tiene contratado el plan
 | `radar-balcarce-reloj` (`infra/reloj-cloudflare/`) | El despertador (arriba) | **Andando** desde el 15/10 | «Reloj de Cloudflare» |
 | `radar-balcarce-vigilante` (`infra/vigilante-cloudflare/`) | Mira desde afuera a los :12 y :42 y manda todos los mails (`POST /avisar`) | **Andando** desde el 15/10 | «Vigilante de Cloudflare» |
 | `radar-balcarce-imagenes` (`infra/imagenes-cloudflare/`) | Genera imágenes con Workers AI (SDXL y otros) en `…workers.dev/generar`, con `VIGILANTE_TOKEN` como contraseña. Lo usan «Ilustrar notas sin foto» y «Generar fondos del clima» | **Andando** desde el 16/10 | «Imágenes con Workers AI» |
-| `radar-balcarce-archivo` (`infra/archivo-cloudflare/`) | El archivo permanente: sirve desde el depósito `radar-archivo` las notas que ya salieron del sitio | **Subido sin ruta** (sólo en workers.dev) desde el 16/10, con la carga inicial hecha (1.165 notas). Cada despliegue de "Cloudflare Pages" guarda ahí las que están por salir. **Los lectores todavía no lo ven**: falta poner la ruta `radarbalcarce.com/nota/*` (el token de Cloudflare necesita «Zone → Workers Routes: Edit») | «Archivo permanente (producción)»; el de ensayo, `radar-balcarce-archivo-staging`, con «Archivo permanente (staging)» |
-| `radar-balcarce-sondeo-fuentes` (`infra/sondeo-fuentes/`) | Prueba de una vez: si los feeds contestan pedidos desde Cloudflare. Sin cron | De prueba; se puede borrar (su `LEEME.md`) | «Sondeo de fuentes desde Cloudflare» |
-| `radar-balcarce-mcp` (`infra/mcp-cloudflare/`) | Servidor MCP de sólo lectura (arriba) | **Escrito, no activado**: sin ruta, sin workers.dev y sin workflow | — |
+| `radar-balcarce-archivo` (`infra/archivo-cloudflare/`) | El archivo permanente: sirve desde el depósito `radar-archivo` las notas que ya salieron del sitio | **Subido sin ruta** (sólo en workers.dev) desde el 16/10, con la carga inicial hecha (1.165 notas). Cada vuelta de "Actualizar la web", antes de subir el sitio, guarda ahí las que están por salir. **Los lectores todavía no lo ven**: falta poner la ruta `radarbalcarce.com/nota/*` (el token de Cloudflare necesita «Zone → Workers Routes: Edit») | «Archivo permanente (producción)»; el de ensayo, `radar-balcarce-archivo-staging`, con «Archivo permanente (staging)» |
+| `radar-balcarce-sondeo-fuentes` | Fue una prueba de una vez (15/10): si los feeds contestan pedidos desde Cloudflare | **Su carpeta y su workflow se borraron el 17/10. Falta, a mano: borrarlo en Cloudflare** (Workers → `radar-balcarce-sondeo-fuentes` → Settings → Delete) | — |
 
 **Depósitos R2** (variables de GitHub cargadas al 16/10): `radar-balcarce-respaldos`
 (`R2_RESPALDOS`, los respaldos de los domingos), `radar-piezas` (`R2_PIEZAS`,
 desde el 15/10: los videos, audios y placas de las redes) y `radar-archivo`
 (`R2_ARCHIVO`, desde el 16/10: el archivo permanente). **No hay depósito de
 fotos**: `R2_FOTOS` y `FOTOS_BASE` no están cargadas, así que las fotos siguen
-saliendo del sitio (`web/public/fotos-notas/`).
+saliendo del sitio (`web/public/fotos-notas/`); el workflow que las copiaba ("Fotos a R2")
+nunca se usó y se borró el 17/10.
 
 ## GitHub: el repositorio
 
@@ -386,7 +408,7 @@ con la de redes, K con la de clasificación (respaldo)") y cuándo se llegó al
 tope del día.
 
 **La vigilancia pregunta por las claves** (regla 80, `revisarClaves` en
-`redes/vigilar.mjs`): cada media hora, sin gastar cupo, pide la lista de
+`redes/vigilar.mjs`): en cada vuelta (cada 3 horas desde el 17/10), sin gastar cupo, pide la lista de
 modelos con cada clave y, con la de redes, la ficha de cada voz propia (si
 existe y cuándo vence, según Google). Avisa si una clave contesta 400 a 403 o
 si una voz ya no existe o vence en menos de 30 días. "Sin cupo" (429) y los 5xx
@@ -394,7 +416,7 @@ no se avisan: son de un rato y los maneja cada corrida.
 
 ## Vigilancia y avisos (mail primero, WhatsApp de respaldo)
 
-`redes/vigilar.mjs`, cada media hora. Mira **desde afuera**, como un lector:
+`redes/vigilar.mjs`, **cada 3 horas** desde el 17/10 (antes, cada media hora; lo urgente de la web lo mira cada media hora el vigilante de Cloudflare). Mira **desde afuera**, como un lector:
 
 | Qué mira | Clave del aviso | Nivel |
 |---|---|---|
@@ -402,8 +424,8 @@ no se avisan: son de un rato y los maneja cada corrida.
 | La web no se actualiza hace más de 100 minutos (la fecha más nueva del `sitemap.xml`) | `web-vieja` | alta |
 | No se puede leer cuándo se actualizó | `web-sin-fecha` | media |
 | `www` no redirige | `www` | media |
-| La última corrida de "Actualizar la web", "Redes" o "Cloudflare Pages" falló | `falla-<nombre>` | alta si fallaron 3 de las últimas 5 |
-| No hay corridas nuevas de "Actualizar la web" o "Redes" en 100 minutos (sólo de 7 a 23) | `reloj-<nombre>` | alta: "el reloj de Cloudflare pudo haber fallado" |
+| La última corrida de "Actualizar la web" (también si falló la subida, desde el 17/10), "Redes", "Respaldo", "Armado con datos vacíos", "Pruebas con otra hora", "Auditoría IA", "Pistas" o "Informe diario" falló ("Cloudflare Pages" ya no se mira: es a mano) | `falla-<nombre>` | alta si fallaron 3 de las últimas 5 |
+| No hay corridas nuevas de "Actualizar la web" (de 7 a 23) o de "Redes" (de 8 a 23) en 100 minutos, de "Auditoría IA" en 3 horas (de 9 a 23) o de "Pistas" en 7 horas (de 7 a 23) | `reloj-<nombre>` | alta para la web y Redes ("el reloj de Cloudflare pudo haber fallado"); media para las otras dos ("¿se subió el reloj nuevo?") |
 | No hay un "Respaldo" bueno hace más de 10 días | `respaldo-viejo` | media |
 | El archivo permanente (R2) no corre hace más de 6 horas, o no se puede leer su estado (sólo con `R2_ARCHIVO` cargada, como desde el 16/10) | `archivo-r2-atrasado`, `archivo-r2-sin-estado`, `archivo-r2-…` | media; alta pasadas las 24 horas |
 | Dos días sin una lectura confiable de las visitas de Cloudflare | `estadisticas-sin-lectura` | media |
@@ -442,7 +464,7 @@ Cómo avisa:
 mismo: sólo manda al número que lo activó (`WHATSAPP_TELEFONO`, completo con
 549, sin + ni espacios) con la clave que dio al activarlo (`WHATSAPP_APIKEY`).
 La clave viaja en la dirección del pedido, así que el código la borra de todo
-lo que muestra. Se prueba con "Prueba de WhatsApp". **Se quedó sin cupo cerca
+lo que muestra (el workflow "Prueba de WhatsApp" se borró el 17/10). **Se quedó sin cupo cerca
 del 1/10**: por eso los avisos pasaron al mail y WhatsApp quedó sólo de respaldo.
 
 ## Todos los secretos y variables, por nombre
@@ -456,7 +478,7 @@ correr el workflow de prueba que corresponda.
 **Lo cargado el 16/10/2026.** Secretos (15): `CLOUDFLARE_ACCOUNT_ID`,
 `CLOUDFLARE_ANALYTICS_TOKEN`, `CLOUDFLARE_API_TOKEN`, las tres
 `GEMINI_API_KEY_*`, `GROQ_API_KEY`, `META_TOKEN`, `RELOJ_GITHUB_TOKEN`,
-`SONDEO_TOKEN`, `TAVILY_API_KEY`, `VIGILANTE_GITHUB_TOKEN`, `VIGILANTE_TOKEN`,
+`SONDEO_TOKEN` (sin uso desde el 17/10: borrarlo), `TAVILY_API_KEY`, `VIGILANTE_GITHUB_TOKEN`, `VIGILANTE_TOKEN`,
 `WHATSAPP_APIKEY` y `WHATSAPP_TELEFONO`. Variables (4): `R2_ARCHIVO`,
 `R2_PIEZAS`, `R2_RESPALDOS` y `REDES_ACTIVAS` (en `Si`). **No están cargados**
 (los workflows siguen sin ellos): `GITLAB_TOKEN` y `GITLAB_REPO` (el espejo en
@@ -475,7 +497,7 @@ Qué workflow usa cada uno está en la tabla de los workflows.
 | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` | Secretos | El número de los avisos de respaldo (completo con 549, sin + ni espacios) y la clave que dio CallMeBot |
 | `VIGILANTE_TOKEN` | Secreto | La contraseña compartida con el Worker vigilante (`POST /avisar`, todos los avisos por mail y los informes) y con el Worker de imágenes. El mismo valor está cargado en los dos Workers |
 | `VIGILANTE_GITHUB_TOKEN` | Secreto | Opcional: un token de GitHub de grano fino sin permisos (sólo lectura pública) que «Vigilante de Cloudflare» carga en el Worker, por si GitHub limita las lecturas sin llave |
-| `SONDEO_TOKEN` | Secreto | Sólo para «Sondeo de fuentes desde Cloudflare» (cualquier texto largo al azar) |
+| `SONDEO_TOKEN` | Secreto | **Sin uso desde el 17/10** (era del «Sondeo de fuentes desde Cloudflare», borrado): una persona lo borra en GitHub → Settings → Secrets |
 | `GITLAB_TOKEN` / `GITLAB_REPO` | Secreto / variable (no cargados) | El espejo semanal del repositorio en GitLab que hace "Respaldo" |
 | `GITHUB_TOKEN` | Automático | Lo pone GitHub en cada corrida |
 | `REDES_ACTIVAS` | Variable | El interruptor de las redes (`07-REDES`) |
@@ -483,9 +505,9 @@ Qué workflow usa cada uno está en la tabla de los workflows.
 | `TAVILY_API_KEY` | Secreto | La búsqueda con texto de las Pistas (`ingesta/busqueda.mjs`; workflow «Pistas») |
 | `R2_PIEZAS` | Variable | (Cargada el 15/10: `radar-piezas`.) El depósito de Cloudflare R2 donde "Redes", "Piezas" y "Fijar piezas" archivan los videos, audios, subtítulos y placas que arman (`redes/archivar-piezas.mjs`; el script lo crea si falta; usa `CLOUDFLARE_API_TOKEN` con *Workers R2 Storage: Edit* y `CLOUDFLARE_ACCOUNT_ID`). Sin ella, cada corrida dice «sin archivo de piezas» y sigue. Qué guarda, cuánto pesa y cuesta, cómo bajar una pieza: `docs/redes/ARCHIVO-DE-PIEZAS.md` |
 | `R2_RESPALDOS` | Variable (cargada: `radar-balcarce-respaldos`) | El depósito donde "Respaldo" sube el paquete de git y los datos; lo lee "Probar la restauración del respaldo" |
-| `R2_ARCHIVO` | Variable (cargada el 16/10: `radar-archivo`) | Prende el archivo permanente: con ella, cada despliegue de "Cloudflare Pages" guarda en R2 las notas por salir, y el vigilante y el informe lo controlan |
+| `R2_ARCHIVO` | Variable (cargada el 16/10: `radar-archivo`) | Prende el archivo permanente: con ella, cada vuelta de "Actualizar la web" (y "Cloudflare Pages" a mano) guarda en R2 las notas por salir, y el vigilante y el informe lo controlan |
 | `TOPE_DE_NOTAS` | Variable opcional (no cargada) | Sólo **baja** el tope de notas con página (3.700), y sólo con `R2_ARCHIVO` puesta (`topeDeNotas`, `web/lib/archivo.js`) |
-| `R2_FOTOS`, `FOTOS_BASE` | Variables opcionales (no cargadas) | El depósito de fotos de "Fotos a R2" y el dominio desde el que el sitio sacaría las fotos (`web/lib/fotos.js`). Sin `FOTOS_BASE`, las fotos salen del sitio |
+| `R2_FOTOS`, `FOTOS_BASE` | Variables opcionales (no cargadas) | El depósito de fotos (sólo para que el archivo R2 y los respaldos se nieguen a escribir ahí; "Fotos a R2" se borró el 17/10) y el dominio desde el que el sitio sacaría las fotos (`web/lib/fotos.js`). Sin `FOTOS_BASE`, las fotos salen del sitio |
 | `CLOUDFLARE_ZONE_ID` | Variable opcional (no cargada) | Sólo para la ruta del archivo permanente (si falta, la busca por el nombre del dominio, para lo que el token necesita «Zone: Read») |
 | `CLOUDFLARE_PROJECT` | Variable opcional (no cargada) | Sin ella se usa `radar-balcarce`, el nombre real del proyecto de Pages |
 
@@ -534,7 +556,7 @@ imágenes de Workers AI entra en lo incluido o en los cupos gratis; la estimaci�
 para cuando el robot se mude, US$ 5 a 8 por mes, está en
 `docs/etapa-10-operacion/ANALISIS.md`). Todo lo demás es gratis:
 
-- **GitHub Actions**: el 15/10 se midieron unos **13.700 minutos reales por mes**
+- **GitHub Actions** (el detalle, en "Los minutos de GitHub", abajo): el 15/10 se midieron unos **13.700 minutos reales por mes**
   (unos 19.000 si GitHub redondea cada corrida al minuto; del 1 al 14/10,
   `docs/etapa-10-operacion/ANALISIS.md`). Son gratis porque el repositorio es
   **público**; en privado costarían entre US$ 70 y US$ 136 por mes, por eso
@@ -542,8 +564,56 @@ para cuando el robot se mude, US$ 5 a 8 por mes, está en
   al 15/10, unos 14.600 reales (19.800 redondeados); y desde el 16/10, unos
   23.500 (32.000 redondeados, unos US$ 240 si fuera privado), porque el
   `schedule` de respaldo de "Actualizar la web" (:07 y :37) empezó a cumplirse
-  casi siempre y la web se arma unas 92 veces por día en vez de 48, cada una con
-  su "Cloudflare Pages" y su "Redes" (`docs/COMO-FUNCIONA-HOY.html`, Costos).
+  casi siempre (65 a 73 vueltas por día el 15 y el 16/10, no 92: esa fue la cuenta
+  de una tarde), cada una con su "Cloudflare Pages" y su "Redes". Ese horario se
+  sacó el 16/10 a la tarde, y el 17/10 se unieron las compilaciones y se recortaron
+  Redes y Vigilancia: **unos 11.000 reales (~14.500 redondeados)** [estimado].
+
+### Los minutos de GitHub (17/10/2026)
+
+Medido con las 4.427 corridas del 1 al 15/10 (`docs/etapa-10-operacion/runs-14d.ndjson`)
+y proyectado a 30 días con los cambios del 17/10. "Fact." = como cobraría GitHub en un
+repositorio privado, redondeando cada corrida al minuto.
+
+| Workflow | Antes (1-15/10): corridas/día · reales · fact. por mes | Desde el 17/10 [estimado] |
+|---|---|---|
+| Actualizar la web | 54,5 · 6.800 · 7.600 | 48 · ~7.200 · ~8.100 (ahora también sube: +30 s, y recompila ~1 de cada 10) |
+| Cloudflare Pages | 54,5 · 3.600 · 4.400 | 0 (a mano) |
+| Redes | 123 · 2.250 · 4.750 | 51 · ~1.900 · ~3.200 (las ~14 piezas por día pesan lo mismo; se van ~70 corridas vacías) |
+| Vigilancia | 52 · 740 · 1.700 | 11 · ~160 · ~330 |
+| Auditoría IA | 4,5 · 150 · 220 | 17 · ~570 · ~1.000 (sube: ahora corre todas las veces que le toca) |
+| Pistas | 2,8 · 40 · 90 | 8 · ~115 · ~240 |
+| Ilustrar notas sin foto | (empezó el 16/10) | 9 · ~680 · ~810 |
+| Informe diario | ~2 · ~40 · ~60 | 3 · ~60 · ~90 |
+| Pruebas, armado vacío, semanales y a mano | ~500 · ~800 | ~400 · ~600 (las pruebas dependen de cuántos cambios de código haya) |
+| **Total** | **~13.800 · ~19.200** | **~11.100 · ~14.400** |
+
+Con el mismo trabajo que antes (la auditoría IA y las ilustraciones corriendo todas sus
+vueltas), lo de antes habría sido ~14.900 reales y ~20.500 facturables: **el ahorro es de
+~3.800 minutos reales y ~6.000 facturables por mes (~30 %)**. En privado (plan Free, 2.000
+incluidos, US$ 0,006 a 0,008 el minuto) serían todavía **unos US$ 75 a 100 por mes**.
+
+**Qué haría falta para que el repositorio principal entre en los 2.000 minutos gratis**
+(no está hecho; es la etapa del motor, `docs/etapa-10-operacion/DISENO-MOTOR.md`):
+
+- **A Cloudflare, dentro de los US$ 5 de Workers Paid** (Workers, Cron, Workflows, D1, R2, KV):
+  "Vigilancia" (~330), "Auditoría IA" (~1.000), "Pistas" (~240), "Informe diario" (~90) e
+  "Ilustrar notas sin foto" (~810) son Node sin dependencias que piden cosas por la red: pasan a
+  Workers con su cron (el estado, a KV o D1 en vez de commitear JSON). De "Redes", la pregunta
+  "¿toca una pieza?" y los posteos de Facebook (~1.100 de corridas cortas) también. Y el grande,
+  **"Actualizar la web" (~8.100)**: el motor (leer, juntar, decidir, escribir con IA, verificar)
+  como Workflow de Cloudflare con D1/R2, y el sitio armado por un Worker desde D1 (o, como paso
+  intermedio, servido como Worker con archivos estáticos) [SIN VERIFICAR que una compilación de
+  Next quepa en lo que da Cloudflare: por eso el diseño propone armar las páginas en el Worker].
+- **Al repositorio público de render** (`radarbalcarce/radar-balcarce-render`, vacío): sólo el
+  **video** (ffmpeg, resvg y la voz de Gemini): las ~14 piezas por día de "Redes" (~2.100
+  facturables) y las herramientas a mano que arman video (Piezas, Fijar piezas, Reintentar
+  pieza, Crear voces, Auditar voz). Lo despertaría el Worker de redes sólo cuando toca una pieza,
+  leería lo publicado del sitio (no del repositorio) y anotaría el libro en D1/KV, sin commitear
+  datos: así ese repositorio puede ser público sin mostrar nada sensible (sus secretos no se ven).
+- **Lo que queda en el principal**: "Pruebas" (con `cancel-in-progress`, ~300 a 600),
+  "Armado con datos vacíos", los semanales, "Respaldo" y lo de a mano: **~600 a 900 facturables
+  por mes**, dentro de los 2.000.
 - **Las claves de IA**: las tres de Gemini son gratis desde el 29/09 (ninguna
   cobra) y Groq y Tavily, también, con sus cupos por día.
 - Cloudflare Pages, el DNS y Web Analytics (el plan gratis permite publicidad;
@@ -556,12 +626,14 @@ límite de gasto en Google (`PENDIENTES.md`).
 
 | Quiero… | Dónde |
 |---|---|
-| Cambiar cada cuánto corre algo | El reloj de Cloudflare (`infra/reloj-cloudflare/wrangler.toml` y `worker.mjs`, y después el workflow «Reloj de Cloudflare»); el `schedule` del `.yml` es sólo el respaldo |
+| Cambiar cada cuánto corre algo | El reloj de Cloudflare: `trabajosDelMinuto` (`infra/reloj-cloudflare/worker.mjs`) y, si hace falta despertarlo en otro minuto, `wrangler.toml`; después, **a mano**, el workflow «Reloj de Cloudflare». Los de lo que corre solo ya no tienen `schedule` de GitHub (salvo el informe diario y los semanales) |
 | Cambiar un Worker | Su carpeta en `infra/` y después su workflow (tabla "Los Workers de Cloudflare") |
 | Cómo se manda un aviso | `avisar` (`redes/avisar-por-mail.mjs`: mail primero, WhatsApp de respaldo) y `POST /avisar` (`infra/vigilante-cloudflare/worker.mjs`) |
 | Agregar o cambiar un secreto | GitHub → Settings → Secrets and variables → Actions (lo hace una persona) y, si un workflow nuevo lo necesita, el bloque `env:` de ese paso en el `.yml` |
 | Prender o apagar las redes | Variable `REDES_ACTIVAS` |
-| Cambiar la versión de wrangler o el proyecto de Pages | `cloudflare-deploy.yml` (versión) y variable `CLOUDFLARE_PROJECT` |
+| Cambiar la versión de wrangler o el proyecto de Pages | `actualizar.yml` **y** `cloudflare-deploy.yml` (la misma versión en los dos) y variable `CLOUDFLARE_PROJECT` |
+| Qué obliga a recompilar antes de subir | `NO_CAMBIAN_EL_SITIO` (`web/scripts/recompilar.mjs`): lo que se sabe que el sitio no lee; todo lo demás recompila |
+| Las redirecciones y su tope | `planDeRedirecciones` (`web/scripts/generar-redirects.mjs`, regla 191) |
 | Qué archivos commitea "Actualizar la web" | La línea `git add` de `actualizar.yml` (un archivo nuevo de `web/data/` que no esté ahí se arma y se pierde al terminar la corrida: pasó el 28/09 con el banco de fotos) |
 | El tope diario de la redacción o de la lectura | `REESCRITURA` en `ingesta/criterio.mjs` (y la tabla de `CRITERIO-EDITORIAL.md`); `LECTURA` en `ingesta/lectura-ia.mjs` |
 | El orden de las claves de la redacción | `reescribir` (`reels/reescritura.mjs`) y `reels/claves.mjs` |
@@ -576,11 +648,12 @@ límite de gasto en Google (`PENDIENTES.md`).
 
 | Archivo | Qué hace | Quién lo llama | Qué lee | Qué escribe |
 |---|---|---|---|---|
-| `.github/workflows/*.yml` | Los treinta y seis workflows (tabla de arriba) | El reloj de Cloudflare, GitHub, el panel del celular, una persona | secretos y variables | commits en `main`, artefactos |
-| `infra/*/worker.mjs` y `wrangler.toml` | Los Workers de Cloudflare (reloj, vigilante, imágenes, archivo, sondeo, MCP) | Cloudflare | lo de cada uno | — |
+| `.github/workflows/*.yml` | Los treinta workflows (tabla de arriba) | El reloj de Cloudflare, GitHub, el panel del celular, una persona | secretos y variables | commits en `main`, artefactos |
+| `infra/*/worker.mjs` y `wrangler.toml` | Los Workers de Cloudflare (reloj, vigilante, imágenes, archivo) | Cloudflare | lo de cada uno | — |
 | `redes/avisar-por-mail.mjs` | Manda un aviso: mail por el Worker vigilante y, si no sale, WhatsApp | vigilancia, auditorías, pistas, núcleo legal, archivo | `VIGILANTE_TOKEN`, `WHATSAPP_*` | — |
 | `redes/informe-diario.mjs` | Los informes de las 8:15 y 21:15 | `informe-diario.yml` | `web/data/`, la API de GitHub | — (manda el mail) |
-| `web/scripts/archivar-a-r2.mjs` | Guarda en R2 las notas que salen del sitio | `cloudflare-deploy.yml`, los dos del archivo permanente | `web/out`, `web/data/` | el depósito `radar-archivo` |
+| `web/scripts/archivar-a-r2.mjs` | Guarda en R2 las notas que salen del sitio | `actualizar.yml` (cada vuelta), `cloudflare-deploy.yml` (a mano), los dos del archivo permanente |
+| `web/scripts/recompilar.mjs` | ¿Entró a `main`, mientras se armaba, algo que el sitio lee? Entonces se recompila antes de subir (regla 189) | `actualizar.yml` | `git diff` | — | `web/out`, `web/data/` | el depósito `radar-archivo` |
 | `web/scripts/ilustrar-notas.mjs` | Las ilustraciones con IA de las notas sin foto | `ilustrar-notas.yml` | `web/data/portada.json` | `web/data/fotos-ia.json`, `web/public/fotos-notas/` |
 | `web/scripts/generar-datos.mjs` | Todo lo que hace "Actualizar la web" entre las pruebas y la compilación | `actualizar.yml` | fuentes, `web/data/`, claves de IA | `web/data/*.json`, `web/public/fotos-notas/`, `.cache/` |
 | `web/scripts/revisar-seo.mjs` | Que el SEO siga en el HTML compilado | `actualizar.yml` | `web/out` | — |
@@ -588,7 +661,7 @@ límite de gasto en Google (`PENDIENTES.md`).
 | `panel/celular.mjs` | Escribe con IA la nota que pidió el celular, investiga una pista o escribe la nota de una pista, y deja el borrador o el informe cifrado (`09-PANEL`) | "Panel del celular" | `.cache/celular-notas.json`, `web/data/` | `web/data/celular-borradores.json`, `web/data/pistas.json` |
 | `redes/vigilar.mjs` | El vigilante, y la revisión de claves y voces (`revisarClaves`) | `vigilancia.yml` | la web en vivo, la API de GitHub, `web/data/`, Meta, Google y Groq | `web/data/vigilancia.json`, `estadisticas.json` |
 | `redes/avisos.mjs` | Qué se dice y cómo entra en un mensaje | vigilante | portada, libro | — |
-| `redes/whatsapp.mjs` | Manda el WhatsApp por CallMeBot sin mostrar la clave (hoy, sólo de respaldo del mail) | `avisar-por-mail.mjs`, "Prueba de WhatsApp" | `WHATSAPP_*` | — |
+| `redes/whatsapp.mjs` | Manda el WhatsApp por CallMeBot sin mostrar la clave (hoy, sólo de respaldo del mail) | `avisar-por-mail.mjs` | `WHATSAPP_*` | — |
 | `redes/estadisticas.mjs` | Visitas (Cloudflare) y seguidores (Meta) | vigilante | `CLOUDFLARE_*`, `META_TOKEN` | — |
 | `redes/auditar.mjs` | Auditoría semanal de lo publicado | `auditoria.yml` | la web en vivo, `redes/formatos.mjs` | `web/data/auditoria.json` |
 | `web/public/_headers` | Encabezados de Cloudflare (también los de `/panel/`) | Cloudflare Pages | — | — |
@@ -598,11 +671,12 @@ límite de gasto en Google (`PENDIENTES.md`).
 
 | Falla | Cómo se nota | Qué hacer |
 |---|---|---|
-| **El reloj de Cloudflare dejó de despertar** | "No hay corridas nuevas de «Actualizar la web»: el reloj de Cloudflare pudo haber fallado…" o "El reloj de Redes no corre"; la web deja de actualizarse puntual (no hay respaldo de GitHub desde el 17/10: avisa el vigilante de Cloudflare por mail) | Mirar el Worker `radar-balcarce-reloj` en Cloudflare (ejecuciones fallidas: ¿GitHub rechaza el token `RELOJ_GITHUB_TOKEN`?), volver a subirlo con «Reloj de Cloudflare» o, de urgencia, reactivar los trabajos pausados de cron-job.org. Si el apagado es Vigilancia, quedan sus corridas de respaldo cada 3 horas y el vigilante de Cloudflare, que avisa por mail aunque GitHub no corra |
+| **El reloj de Cloudflare dejó de despertar** | "No hay corridas nuevas de «Actualizar la web»: el reloj de Cloudflare pudo haber fallado…" o "El reloj de Redes no corre"; la web deja de actualizarse puntual (no hay respaldo de GitHub desde el 17/10: avisa el vigilante de Cloudflare por mail) | Mirar el Worker `radar-balcarce-reloj` en Cloudflare (ejecuciones fallidas: ¿GitHub rechaza el token `RELOJ_GITHUB_TOKEN`?), volver a subirlo con «Reloj de Cloudflare» o, de urgencia, reactivar los trabajos pausados de cron-job.org. Sin reloj tampoco corre Vigilancia (no tiene horario propio desde el 17/10): queda el vigilante de Cloudflare, que avisa por mail aunque GitHub no corra |
 | **Falla el núcleo legal en "Actualizar la web"** | Corrida roja en "Núcleo legal de las pruebas" y un mail «Falló el núcleo legal de las pruebas: la web no se actualiza»; a los 100 minutos, "web-vieja" | Leer el paso rojo. Un JSON de `web/data/` mal escrito a mano (`correcciones.json` o `retiradas.json`) también lo causa: lo lee `pruebas/archivo.test.mjs`, que está en el núcleo |
 | **Fallan las pruebas enteras** | Corrida roja en "Pruebas" y un mail de GitHub a quien hizo el cambio | No frena la web: arreglarlo antes del próximo cambio |
 | **La web no compila** | Corrida roja en "Compilar el sitio"; no se commitea nada | Leer el error de Next |
-| **Cloudflare no sube** | "falla-Cloudflare Pages"; la web queda con la versión anterior | Mirar el paso "Subir a Cloudflare Pages" (token vencido o sin permiso, versión de wrangler) |
+| **Cloudflare no sube** | "Actualizar la web" en rojo en el paso "Subir a Cloudflare Pages" (`falla-Actualizar la web`; los datos sí se guardaron); la web queda con la versión anterior | Mirar ese paso (token vencido o sin permiso, versión de wrangler). La vuelta siguiente lo vuelve a intentar; para no esperar, "Cloudflare Pages" a mano |
+| **No compila lo que entró mientras se armaba** | "Actualizar la web" en rojo en "Volver a compilar con lo que entró" | Entró código o datos que rompen el sitio: la vuelta siguiente falla en "Compilar el sitio" hasta que se arregle |
 | **La web no responde** | `web-caida` | Mirar Cloudflare (dash.cloudflare.com) |
 | **Choque al commitear** | "No se pudo subir la portada después de tres intentos" o "Conflicto fuera de web/data" | Suele arreglarse en la corrida siguiente; si se repite, alguien subió a mano algo que choca |
 | **Vigilancia no pudo guardar su estado** | Corrida roja en "Guardar lo avisado": "No se pudo guardar el estado de los avisos después de tres intentos" | La vuelta siguiente lo reintenta; puede repetir un aviso |
@@ -612,9 +686,9 @@ límite de gasto en Google (`PENDIENTES.md`).
 | **Una voz ya no existe o está por vencer** | Aviso `voz-…` o `vence-voz-…` | Crearla de nuevo (`11-OPERACION`) |
 | **Gemini con demasiada demanda (503)** | La redacción falla seguido | Es lo primero que se mira si vuelve a pasar: el modelo (`gemini-flash-lite-latest`) |
 | **No llegan los mails** (avisos o informes) | No llega el informe de las 8:15 o el de las 21:15; a las 22 llega el resumen de respaldo del Worker vigilante | Mirar Spam; Actions → «Probar el aviso por mail»; si falla, revisar `VIGILANTE_TOKEN` y el Worker vigilante (`GET /estado`); si el informe ni corrió, el reloj (arriba). `11-OPERACION`, "12 bis" |
-| **El WhatsApp no llega** | Sólo importa si el mail falló (es el respaldo). CallMeBot está sin cupo desde cerca del 1/10 | "Prueba de WhatsApp"; si CallMeBot dice "APIKey is invalid", la clave está mal copiada; revisar que el teléfono tenga 549 |
+| **El WhatsApp no llega** | Sólo importa si el mail falló (es el respaldo). CallMeBot está sin cupo desde cerca del 1/10 | Si CallMeBot dice "APIKey is invalid", la clave está mal copiada; revisar que el teléfono tenga 549 |
 | **Faltan permisos en un token** | El resumen dice "falta permiso de Analytics" o que faltan los de Meta | Una persona regenera el token con los permisos |
 | **La auditoría semanal no corre** | `auditoria-vencida` si `web/data/auditoria.json` tiene más de 10 días (si el archivo faltara, no avisaría) | Correrla a mano (Actions → Auditoría → Run workflow) |
 | **Se vence un token, el dominio o una voz** | Aviso 30 días antes | Ver "Vencimientos" |
-| **El archivo permanente no corre** | Aviso `archivo-r2-…`; en "Cloudflare Pages", el paso "Archivar las notas por salir (R2)" en rojo (no frena el despliegue) y un mail | Leer ese paso (casi siempre el token de Cloudflare). Las notas tienen unos días de margen antes de salir del sitio |
+| **El archivo permanente no corre** | Aviso `archivo-r2-…`; en "Actualizar la web", el paso "Archivar las notas por salir (R2)" en rojo (no frena el despliegue) y un mail | Leer ese paso (casi siempre el token de Cloudflare). Las notas tienen unos días de margen antes de salir del sitio |
 | **La PC está apagada** | Sólo deja de andar el panel de la PC (en desuso) y las ilustraciones con Gemini web de las 10:00 y 18:00 (las automáticas de Cloudflare siguen) | Nada se rompe: la web, las redes, la vigilancia y el panel del celular siguen |

@@ -8,39 +8,60 @@ export const REPOSITORIO = 'radarbalcarce/radar-balcarce';
 export const RAMA = 'main';
 
 /**
- * Qué workflows pedir según el minuto de la hora (Balcarce y UTC tienen los mismos minutos):
- *  - :00 y :30      → Actualizar la web y Vigilancia
- *  - :05, :35 y :45 → el reloj de Redes (acción "reloj")
- *  - :15 de las 11 UTC (8:15 en Balcarce) y de las 0 UTC (21:15) → el informe diario por mail (redes/informe-diario.mjs): el de la mañana y el de la noche.
- *    Sólo si se pasa la hora UTC (el segundo parámetro): sin ella, el minuto 15 no despierta nada, como siempre.
- *  - :20 de las horas UTC pares de 10 a 2 (7, 9, 11… 23 en Balcarce) → "Ilustrar notas sin foto" en modo automático (regla 185): el relleno de
- *    ilustraciones de las notas que quedaron sin foto. También sólo con la hora UTC.
+ * Qué workflows pedir según el minuto y la hora UTC (Balcarce es UTC-3 todo el año, sin horario de verano: los minutos son los mismos y la
+ * hora de Balcarce es la UTC menos 3). Desde el 17/10/2026 (auditoría 2.0, 01-ARMADO-E-INFRA) cada cosa corre sólo cuando tiene algo que hacer:
+ *  - :00 y :30, todo el día     → Actualizar la web (la web se arma de día y de noche).
+ *  - :00 de las horas UTC múltiplo de 3 (0, 3, 6… 21 en Balcarce) → Vigilancia, cada 3 horas (antes, cada media hora). Lo urgente (la web
+ *    que no se actualiza, "Actualizar" que falla) ya lo avisa el vigilante de Cloudflare cada media hora. Lo que depende de la hora tiene
+ *    su corrida: las estadísticas de las 9 y de las 21 (antes del informe de las 21:15) y el cierre del día de la medianoche (que cierra el
+ *    día anterior; acepta hasta las 3). Y un segundo intento a los :30 de esas tres (9:30, 21:30 y 0:30): si el pedido de los :00 no llegó,
+ *    la medición o el cierre no se pierden (si llegó, la segunda corrida no repite nada: el vigilante anota lo que ya hizo).
+ *  - :05, :35 y :45, de 7 a 23 de Balcarce → el reloj de Redes (acción "reloj"). Las piezas van de las 7:00 a la medianoche y Facebook de 8
+ *    a 22 (redes/piezas.mjs, panel/horarios.mjs); de madrugada no hay nada que publicar. Ya no arranca además al terminar cada "Actualizar".
+ *  - :15 de las 11 UTC (8:15 en Balcarce) y de las 0 UTC (21:15) → el informe diario por mail (redes/informe-diario.mjs); segundo intento a
+ *    los :30 de esas horas (el Worker del vigilante no manda dos mails con la misma clave).
+ *  - :20 de las horas UTC pares de 10 a 2 (7, 9, 11… 23 en Balcarce) → "Ilustrar notas sin foto" en modo automático (regla 185).
+ *  - :41 de 7 a 23 de Balcarce → "Auditoría IA" (antes con el horario de GitHub, que la corría una de cada cuatro horas). De noche no
+ *    hace falta: la de las 7:41 lee lo que entró mientras tanto.
+ *  - :23 cada 3 horas (las mismas que tenía en GitHub: 21:23, 0:23, 3:23… de Balcarce) → "Pistas" (antes con el horario de GitHub).
+ * Sin la hora UTC (el segundo parámetro) sólo se pide "Actualizar la web": lo demás depende de la hora.
  */
+const DE_7_A_23_UTC = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 0, 1, 2];
+export const HORAS_REDES_UTC = DE_7_A_23_UTC;
+export const HORAS_AUDITORIA_IA_UTC = DE_7_A_23_UTC;
+export const HORAS_VIGILANCIA_UTC = [0, 3, 6, 9, 12, 15, 18, 21];
+/** Los :30 en que la Vigilancia vuelve a intentar lo que depende de la hora: 9:30 y 21:30 (estadísticas) y 0:30 (cierre del día). */
+export const REINTENTOS_VIGILANCIA_UTC = [12, 0, 3];
+export const HORAS_PISTAS_UTC = [0, 3, 6, 9, 12, 15, 18, 21];
 export const HORAS_ILUSTRAR_UTC = [10, 12, 14, 16, 18, 20, 22, 0, 2];
+
+/** La hora de Balcarce (0 a 23) de una hora UTC. */
+export const horaDeBalcarce = (horaUtc) => (Number(horaUtc) + 21) % 24;
 
 export function trabajosDelMinuto(minuto, horaUtc = null) {
   const m = Number(minuto);
+  const conHora = horaUtc !== null && horaUtc !== undefined;
+  const h = conHora ? Number(horaUtc) : null;
   const lista = [];
-  if (m === 15 && horaUtc !== null && horaUtc !== undefined) {
-    const h = Number(horaUtc);
+  if (m === 15 && conHora) {
     if (h === 11) lista.push({ archivo: 'informe-diario.yml', inputs: { momento: 'manana' } });
     if (h === 0) lista.push({ archivo: 'informe-diario.yml', inputs: { momento: 'noche' } });
   }
-  if (m === 0 || m === 30) {
-    lista.push({ archivo: 'actualizar.yml' }, { archivo: 'vigilancia.yml' });
+  if (m === 0 || m === 30) lista.push({ archivo: 'actualizar.yml' });
+  if (conHora && ((m === 0 && HORAS_VIGILANCIA_UTC.includes(h)) || (m === 30 && REINTENTOS_VIGILANCIA_UTC.includes(h)))) {
+    lista.push({ archivo: 'vigilancia.yml' });
   }
   // Segundo intento a los :30 (16/10/2026): el cron propio de los :15 no despertó el informe ni a las 21:15 ni a las 8:15, y los :30 sí andan.
   // Si el de los :15 también llegó, el Worker del vigilante ve la misma clave (`informe-<momento>-<día>`) y NO manda un segundo mail.
-  if (m === 30 && horaUtc !== null && horaUtc !== undefined) {
-    const h = Number(horaUtc);
+  if (m === 30 && conHora) {
     if (h === 11) lista.push({ archivo: 'informe-diario.yml', inputs: { momento: 'manana' } });
     if (h === 0) lista.push({ archivo: 'informe-diario.yml', inputs: { momento: 'noche' } });
   }
-  if (m === 5 || m === 35 || m === 45) lista.push({ archivo: 'redes.yml', inputs: { accion: 'reloj' } });
-  // 17/10/2026 (regla 185): a los :20, lejos de los :00/:30 de "Actualizar la web" y de sus respaldos de los :07/:37.
-  if (m === 20 && horaUtc !== null && horaUtc !== undefined && HORAS_ILUSTRAR_UTC.includes(Number(horaUtc))) {
-    lista.push({ archivo: 'ilustrar-notas.yml', inputs: { automatico: 'true' } });
-  }
+  if ((m === 5 || m === 35 || m === 45) && conHora && HORAS_REDES_UTC.includes(h)) lista.push({ archivo: 'redes.yml', inputs: { accion: 'reloj' } });
+  // 17/10/2026 (regla 185): a los :20, lejos de los :00/:30 de "Actualizar la web".
+  if (m === 20 && conHora && HORAS_ILUSTRAR_UTC.includes(h)) lista.push({ archivo: 'ilustrar-notas.yml', inputs: { automatico: 'true' } });
+  if (m === 23 && conHora && HORAS_PISTAS_UTC.includes(h)) lista.push({ archivo: 'pistas.yml' });
+  if (m === 41 && conHora && HORAS_AUDITORIA_IA_UTC.includes(h)) lista.push({ archivo: 'auditoria-ia.yml' });
   return lista;
 }
 

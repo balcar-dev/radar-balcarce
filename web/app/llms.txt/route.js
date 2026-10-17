@@ -9,7 +9,8 @@ import { sitio, enlace, NOMBRE } from '@/lib/sitio';
 // y no hay llms-full.txt a propósito: duplicaría las notas (ya hay JSON y HTML) sin que nadie lo pida.
 export const dynamic = 'force-static';
 
-// Cuando el Worker MCP (infra/mcp-cloudflare/) esté en producción, se pone su dirección acá y aparece en este archivo. Mientras sea null no
+// Si algún día hay un servidor MCP en producción (el que estaba escrito en infra/mcp-cloudflare/ se borró el 17/10/2026 sin haberse activado;
+// queda en el historial de git), se pone su dirección acá y aparece en este archivo. Mientras sea null no
 // se menciona: no se anuncia lo que no está andando.
 export const MCP_URL = null;
 

@@ -161,6 +161,7 @@ test('elegirCandidatas: sólo la portada de las últimas horas, las más nuevas 
 
 // ------------------------------------------------------------------ el prompt
 
+// (17/10/2026: se borró la prueba a mano de un día, probar-imagen-nota, que tenía una copia de este pedido: queda uno solo, acá.)
 test('el pedido a Gemini es el de Hernán con la nota COMPLETA, el 16:9 y el tono, y pide un prompt sin nombres ni personas', () => {
   assert.match(PROMPT_DE_HERNAN, /No debe aparecer ninguna persona/);
   for (const pedido of ['No debe aparecer ninguna persona', 'bodegón', 'superficie de trabajo', 'desgaste por uso', 'logotipos', 'bokeh', 'archivo de diario']) assert.ok(PROMPT_DE_HERNAN.includes(pedido), pedido);
