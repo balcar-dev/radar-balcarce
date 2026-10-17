@@ -155,7 +155,8 @@ algunas, un `LEEME.md`.
 | `prompt-editorial.mjs` | Lee la instrucción de la IA de `CRITERIO-EDITORIAL.md` § 12, entre sus marcas; sin ella, la reescritura no arranca | `reels/reescritura.mjs` | Sí |
 | `README.md` | Cómo está armada la carpeta | Personas | — |
 | `repetidas-publicadas.mjs` | La misma noticia contra lo ya publicado, sin IA (regla 171), la misma fuente (`mismaFuente`, regla 175) y `enlaceNormalizado` | `generar-datos.mjs`, `ingesta.mjs`, `cruce.mjs` | Sí |
-| `secciones-nuevas.mjs` | El mapa de 17 secciones (`seccionNueva`) y su etapa 2, Educación y Salud, detrás del interruptor `SECCIONES_NUEVAS` (regla 187: `SECCIONES_ETAPA_2`, `seccionesNuevasActivas`); apagado, nada cambia | `lectura-ia.mjs`, `generar-datos.mjs`, `web/lib/datos.js`, `secciones-nuevas-sombra.mjs`, `scripts/medir/informe-del-dia.mjs` | Sí (con el interruptor apagado no cambia nada) |
+| `popularidad.mjs` | La popularidad de lo de afuera, sin cupos (regla 211): `mediosMinimos`, `popularidadDe`, `controlDeCalidad`, el ritmo del día (`ritmoDelDia`, `publicadasHoy`) | `ingesta.mjs`, `lectura-ia.mjs`, `generar-datos.mjs`, `auditar-fuentes.mjs` | Sí |
+| `secciones-nuevas.mjs` | El mapa de 17 secciones (`seccionNueva`); activas desde el 17/10 Educación, Salud y Ciencia (regla 211: `SECCIONES_SUMADAS`, `seccionSumada`; el interruptor `SECCIONES_NUEVAS` se sacó) y Tecnología se lee «Tecnología e IA» | `ingesta.mjs`, `lectura-ia.mjs`, `generar-datos.mjs`, `web/lib/datos.js`, `secciones-nuevas-sombra.mjs`, `scripts/medir/informe-del-dia.mjs` | Sí |
 | `secciones-nuevas-sombra.mjs` | Cómo quedarían repartidas las notas reales ya publicadas con el mapa nuevo de secciones; sólo lee y muestra, sin red ni IA | A mano | A mano |
 | `utiles.mjs` | Los teléfonos útiles (`NUMEROS`), la farmacia de turno que cambia a las 8:30 (`diaDeTurno`), qué día tocan los útiles y qué decisión es de una persona (`decisionHumana`) | `ingesta.mjs`, `generar-datos.mjs`, `panel/`, `redes/`, `reels/` | Sí |
 | `verificar.mjs` | El verificador de lo que escribe la IA, los arreglos que no inventan (`arreglarEscritura`) y `diceEnVivo` | `reels/reescritura.mjs`, `panel/`, `generar-datos.mjs` | Sí |
@@ -370,7 +371,6 @@ medir o calibrar. Hasta el 17/10 estaban en `docs/flujo/` y `docs/etapa-2-5/`.
 | `nombres-de-persona.mjs` | Los nombres de persona de un texto (el control del prompt de las ilustraciones) | `ilustrar-notas.mjs` | Sí |
 | `archivar-a-r2.mjs` | El exportador del archivo permanente: sube a R2 las notas con página y saca lo retirado (regla 183) | `actualizar.yml` (cada vuelta, con `R2_ARCHIVO`), `cloudflare-deploy.yml` (a mano), `archivo-staging.yml`, `archivo-produccion.yml` | Sí (el Worker, todavía sin ruta) |
 | `armado-vacio.mjs` | Prueba de humo: arma el sitio con datos vacíos o a medias | `armado-vacio.yml` | Sí |
-| `vista-previa-secciones.mjs` | Compila el sitio con `SECCIONES_NUEVAS` prendido sólo para esa vez y guarda capturas en `docs/secciones/vista-previa/`; no toca `web/data/` ni sube nada (regla 187) | `cd web && npm run vista-previa-secciones` | A mano |
 
 ### `web/data/` — los datos (detalle en `docs/06-WEB.md`)
 

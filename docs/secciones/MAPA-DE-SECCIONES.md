@@ -5,6 +5,16 @@
 Hernán y Andrés. La versión para decidir (con cajas Sí/No/Duda) es `MAPA-DE-SECCIONES.html`; el menú y la
 portada dibujados, `PROTOTIPO-MENU.html`.*
 
+> **17/10/2026, activadas (regla 211).** Hernán ordenó activar ya y de forma permanente lo que estaba detrás del interruptor
+> `SECCIONES_NUEVAS` (que se sacó) y sumar Ciencia: **Educación, Salud y Ciencia** son secciones del sitio, de la IA, de las placas y del
+> panel, y Tecnología se lee «Tecnología e IA» (la clave sigue siendo Tecnología). Son catorce; Espectáculos, Turismo y Ambiente siguen en
+> sombra (lo de Espectáculos va dentro de Cultura y agenda). Dos cambios sobre lo que dice este documento: (1) la sección de una nota
+> ya no se decide sólo al armar el sitio: el clasificador (`seccionSumada`) actúa en la ingesta, y las notas de antes se reparten al
+> armar el sitio como siempre; nunca se lleva una nota de Política ni de Policiales; (2) el color de Ciencia pasó de `#0A7C99` a
+> **`#772E9E`** (violeta): con catorce secciones, el celeste caía a 13 grados de tono de Tecnología y a 0,067 (OKLab) de Deportes
+> (`pruebas/titulos-colores.test.mjs`). `#0A7C99` vuelve a ser un color reservado. El cómo se decide qué sale y cuántas notas por día
+> tendría cada sección: `docs/03-SELECCION.md` y `docs/DECISIONES.md` (17/10).
+
 ## En doce renglones
 
 1. **17 secciones, no 20.** Las 11 de hoy siguen, con la misma dirección, y se suman 6: **Educación, Salud,
@@ -63,7 +73,7 @@ con las propuestas de la etapa 1 (estimación, no medición).
 | Automovilismo | TC, F1, karting, el autódromo, Fangio | 38,0 | **38,0** (163) | 38 | Barra | `#B45309` |
 | Agro | Campo, papa, ganadería, granos, INTA cuando es producción | 20,8 | **18,9** (81) | 19 | Barra | `#5A6B0A` |
 | Economía | Precios, salarios y jubilaciones, empleo, empresas, combustibles | 41,1 | **42,5** (182) | 42 | Barra | `#8A6500` |
-| Ciencia *(nueva)* | CONICET, INTA y Facultad cuando es ciencia, espacio, paleontología, premios | — | **3,5** (15) | 10 a 20 con C1; sin C1, 3 o 4 | Más | `#0A7C99` |
+| Ciencia *(nueva)* | CONICET, INTA y Facultad cuando es ciencia, espacio, paleontología, premios | — | **3,5** (15) | 10 a 20 con C1; sin C1, 3 o 4 | Más | `#772E9E` (antes `#0A7C99`) |
 | Tecnología e IA *(se lee distinto)* | Empresas tecnológicas, celulares, ciberseguridad, robots, IA | 2,8 | **2,8** (12) | 7 a 15 con La Nación Tecnología y C4 | Más | `#0B6FB8` |
 | Cultura *(se lee distinto)* | La cultura de acá, libros, arte, teatro, música, patrimonio | 19,8 | **12,4** (53) | 12 | Más | `#9D2C8F` |
 | Espectáculos *(nueva)* | Tele, streaming, cine, recitales de afuera, premios; nunca chimentos | — | **4,7** (20) | 5 (cupo de hoy) | Más | `#C0258F` |
@@ -76,8 +86,8 @@ archivos y de las notas guardadas; cambia sólo lo que se lee (un campo `etiquet
 cortas (`Turismo`, `Ambiente`) con etiqueta larga.
 
 **Colores**: los 6 nuevos se leen con letras blancas y sobre el papel (contraste 4,5 o más) y se distinguen
-de todos los de las piezas (OKLab 0,06 o más); lo controla `pruebas/secciones-nuevas.test.mjs`. Espectáculos y
-Ciencia usan los dos reservados desde el 30/09; reservados nuevos propuestos: `#5E4F11` y `#7563C0`.
+de todos los de las piezas (OKLab 0,06 o más); lo controla `pruebas/secciones-nuevas.test.mjs`. Espectáculos
+usa uno de los dos reservados desde el 30/09 (el celeste `#0A7C99` quedó libre al pasar Ciencia a violeta); reservados nuevos propuestos: `#5E4F11` y `#7563C0`.
 
 ### De dónde sale cada una (30 días)
 
