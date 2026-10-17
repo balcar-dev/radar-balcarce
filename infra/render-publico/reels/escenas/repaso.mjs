@@ -357,8 +357,9 @@ export function escenaDelRepaso({ placas, tapa, total }) {
       const a = partesEn(previa, t);
       const b = partesEn(e, t, { dx: (1 - entra) * DESLIZA });
       const sale = clamp(p * 2.4);
+      const tarde = suave(clamp((p - 0.4) / 0.6)); // lo escrito de la nota nueva espera a que se vaya lo de la vieja: nunca dos créditos ni dos secciones encimados
       return armar(`${b.rotulo}${grupo(a.cuenta, 1 - entra, 0, -18 * entra)}${grupo(b.cuenta, entra, 0, 18 * (1 - entra))}${b.avance}${a.foto}${grupo(b.foto, entra)}`
-        + `${grupo(a.credito, 1 - sale, -SE_VA * p)}${grupo(b.credito, entra)}${grupo(a.seccion, 1 - sale, -SE_VA * p)}${grupo(b.seccion, entra)}${grupo(a.titular, 1 - sale, -SE_VA * p)}${b.titular}`);
+        + `${grupo(a.credito, 1 - sale, -SE_VA * p)}${grupo(b.credito, tarde)}${grupo(a.seccion, 1 - sale, -SE_VA * p)}${grupo(b.seccion, tarde)}${grupo(a.titular, 1 - sale, -SE_VA * p)}${b.titular}`);
     }
     if (e.tipo === 'nota') {
       // De la tapa a la primera nota (o de cualquier página a una nota): lo viejo se aclara hacia afuera y la nota entra.
