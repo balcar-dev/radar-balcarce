@@ -17736,14 +17736,28 @@
   "huella": "020c2e4646551931"
  },
  "1te62vo": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1te62vo.jpg",
+  "medio": "La Gaceta (Tucumán)",
+  "credito": "Foto: La Gaceta (Tucumán)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Ministro chileno critica a Javier Milei por la obra pública y luego se disculpa",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:01:26.183Z",
-  "intentos": 3,
-  "fuentes": 4,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.lagaceta.com.ar/nota/1158414/politica/ministro-kast-apunto-contra-milei-cuestiono-postura-sobre-obra-publica-cada-vez-mas-loco.html",
+  "imagenOriginal": "https://img.lagaceta.com.ar/fotos/notas/2026/10/16/ministro-kast-apunto-contra-milei-cuestiono-postura-sobre-obra-publica-cada-vez-mas-loco-1158414-203233.jpg",
+  "razon": "Es una fotografía clara y limpia que muestra a los protagonistas de la nota sin marcas agregadas ni menores.",
+  "cuando": "2026-10-17T11:01:53.604Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Javier Milei y un funcionario posando en un salón oficial con banderas."
+  },
+  "huella": "8eaeaaae6b696949"
  },
  "rwxsr5": {
   "archivo": "fotos-notas/rwxsr5.jpg",
@@ -18248,5 +18262,53 @@
   "cuando": "2026-10-17T10:31:48.980Z",
   "intentos": 1,
   "fuentes": 3
+ },
+ "dg5er4": {
+  "archivo": "fotos-notas/dg5er4.jpg",
+  "medio": "El Día",
+  "credito": "Foto: El Día",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Plata concentra propuestas culturales y deportivas para el sábado",
+  "enlace": "https://www.eldia.com/espectaculos/agenda-espectaculos_1792212089",
+  "imagenOriginal": "https://cdn1.eldia.com/102026/1792212656334.jpg?&cw=1200&ch=630",
+  "razon": "La foto A muestra una propuesta cultural adecuada para la nota, sin menores ni marcas de medios.",
+  "cuando": "2026-10-17T11:01:53.604Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Elenco teatral en una escena de comedia"
+  },
+  "huella": "1b9d9dccc94c4c0e"
+ },
+ "1yhd2y8": {
+  "archivo": "fotos-notas/1yhd2y8.jpg",
+  "medio": "Crónica",
+  "credito": "Foto: Crónica",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Selección Argentina avanza a la final del Mundial de hockey sobre patines",
+  "enlace": "https://www.cronica.com.ar/depo/polideportivo/mundial-de-hockey-sobre-patines-2026-argentina-le-gano-a-espana-por-penales-y-jugara-la-final-ante-francia/",
+  "imagenOriginal": "https://www.cronica.com.ar/files/image/1722/1722127/6ad350319d5ca_600_315!.jpg?s=d71b44eb16f90e597df89d722b6dac0b&d=1792206000",
+  "razon": "La foto C corresponde perfectamente a la nota, muestra el festejo de los jugadores de hockey sobre patines, no tiene marca de agua, menores, ni es gráfica o de stock.",
+  "cuando": "2026-10-17T11:01:53.604Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Jugadores de la selección de hockey sobre patines abrazados festejando"
+  },
+  "huella": "fb63351c4a555632"
  }
 }
