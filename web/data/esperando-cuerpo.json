@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-17T03:03:03.946Z",
+ "generado": "2026-10-17T03:31:33.414Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -56,7 +56,7 @@
    "titulo": "Diego Santilli: “Los que deberían estar preocupados son los gobernadores si el kirchnerismo vuelve y gana Kicillof”",
    "copete": "El jefe de Gabinete, Diego Santilli , afirmó que los mandatarios provinciales deberían inquietarse ante la posibilidad de un regreso del kirchnerismo al poder con Axel Kicillof como figura central . En una entrevista con Radio Mitre , vinculó ese escenario con una eventual…",
    "seccion": "Política",
-   "fecha": "2026-10-16T00:00:00.000Z",
+   "fecha": "2026-10-16T11:30:00.000Z",
    "fuentes": [
     {
      "medio": "Infobae",
@@ -119,16 +119,6 @@
      "fecha": "2026-10-16T12:58:00.000Z"
     },
     {
-     "medio": "La Gaceta (Tucumán)",
-     "enlace": "https://www.lagaceta.com.ar/nota/1158369/politica/gobernadores-reclamaron-plan-infraestructura-santilli-advirtio-sobre-eventual-triunfo-kicillof.html",
-     "fecha": "2026-10-16T00:00:00.000Z"
-    },
-    {
-     "medio": "La Gaceta (Tucumán)",
-     "enlace": "https://www.lagaceta.com.ar/nota/1158330/politica/diego-santilli-que-deberian-estar-preocupados-son-gobernadores-si-kirchnerismo-vuelve-gana-kicillof.html",
-     "fecha": "2026-10-16T00:00:00.000Z"
-    },
-    {
      "medio": "Los Andes (Mendoza)",
      "enlace": "https://www.losandes.com.ar/politica/diego-santilli-dijo-que-los-gobernadores-deberian-estar-preocupados-un-posible-regreso-del-kirchnerismo-n6010629",
      "fecha": "2026-10-16T21:51:00.000Z"
@@ -139,9 +129,19 @@
      "fecha": "2026-10-16T13:52:11.000Z"
     },
     {
+     "medio": "La Gaceta (Tucumán)",
+     "enlace": "https://www.lagaceta.com.ar/nota/1158330/politica/diego-santilli-que-deberian-estar-preocupados-son-gobernadores-si-kirchnerismo-vuelve-gana-kicillof.html",
+     "fecha": "2026-10-16T11:30:00.000Z"
+    },
+    {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-16-11-48-0-para-santilli-los-gobernadores-deberian-estar-preocupados-por-un-eventual-regreso-del-kirchnerismo",
      "fecha": "2026-10-16T14:53:47.000Z"
+    },
+    {
+     "medio": "La Gaceta (Tucumán)",
+     "enlace": "https://www.lagaceta.com.ar/nota/1158369/politica/gobernadores-reclamaron-plan-infraestructura-santilli-advirtio-sobre-eventual-triunfo-kicillof.html",
+     "fecha": "2026-10-16T16:21:00.000Z"
     }
    ],
    "intentos": 1,
@@ -177,6 +177,11 @@
     },
     {
      "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/economia/los-precios-mayoristas-se-aceleraron-septiembre-el-petroleo-explica-casi-la-mitad-del-aumento-n6334825",
+     "fecha": "2026-10-17T03:19:00.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
      "enlace": "https://www.minutouno.com/economia/los-precios-mayoristas-subieron-32-septiembre-acumularon-un-alza-del-228-2026-n6334737",
      "fecha": "2026-10-16T19:40:00.000Z"
     }
@@ -208,8 +213,8 @@
      "fecha": "2026-10-17T00:00:06.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (promesa): el título nombra a \"brasil\", \"formula\" y el cuerpo no los explica; sin esas oraciones quedan 115 palabras",
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (promesa): el título dice 1 y el cuerpo no lo explica; sin esas oraciones quedan 148 palabras",
    "maximo": 3
   }
  ]

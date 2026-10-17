@@ -16168,7 +16168,8 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/KK7V2JJKXVALZGAZFBY4EP23XM.png?auth=89c41952234c23b407f81b02645d8dfbf889ac059c05fb8682e30019256759bd&smart=true&width=1200&height=630&quality=85",
   "razon": "Es la única foto con buen encuadre y nitidez de la escena que no tiene marcas añadidas por el medio ni menores reconocibles.",
   "cuando": "2026-10-15T16:34:41.849Z",
-  "huella": "cccc9e978f9d194a"
+  "huella": "cccc9e978f9d194a",
+  "ausenteDesde": "2026-10-17T03:31:33.400Z"
  },
  "1ycwu60": {
   "medio": "TN (Todo Noticias)",
@@ -17408,13 +17409,29 @@
   "fuentes": 4
  },
  "1wze6ju": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1wze6ju.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Trenes Argentinos compra cuarenta y tres formaciones para el AMBA",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-16T20:02:30.772Z",
-  "intentos": 1,
-  "fuentes": 3
+  "enlace": "https://www.infobae.com/sociedad/2026/10/16/el-gobierno-avanza-con-la-compra-de-mas-de-40-formaciones-nuevas-para-los-trenes-del-amba/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/BKXV2RFOW5GGPE2ALMJZDTMGYI.jpeg?auth=b01101a0ee6c02d47df8b278d7307f8c815bbdc5341491072f8de12f2b4873af&smart=true&width=1200&height=630&quality=85",
+  "razon": "Es la única opción disponible y muestra claramente el objeto de la nota (una formación de Trenes Argentinos) con buena nitidez y encuadre.",
+  "cuando": "2026-10-17T03:31:20.114Z",
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.",
+  "vision": {
+   "proveedor": "groq",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Formación de trenes de la empresa Trenes Argentinos circulando por vías en un entorno rural."
+  },
+  "huella": "1e7686230ce2fcde"
  },
  "1wg0k3x": {
   "archivo": "fotos-notas/1wg0k3x.jpg",
@@ -17556,10 +17573,11 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Diputados piden que el embajador chileno explique la ruta a Malvinas",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-16T23:31:58.342Z",
-  "intentos": 1,
-  "fuentes": 3
+  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
+  "cuando": "2026-10-17T03:31:20.114Z",
+  "intentos": 2,
+  "fuentes": 3,
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
  "1ax3e8b": {
   "intentado": true,
@@ -17618,19 +17636,21 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Enzo Fernández analiza el futuro de la Selección sin Lionel Messi",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-17T02:31:19.553Z",
-  "intentos": 2,
-  "fuentes": 4
+  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
+  "cuando": "2026-10-17T03:31:20.114Z",
+  "intentos": 3,
+  "fuentes": 4,
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
  "1te62vo": {
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Ministro chileno critica a Javier Milei por la obra pública y luego se disculpa",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-17T01:31:31.348Z",
-  "intentos": 1,
-  "fuentes": 4
+  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
+  "cuando": "2026-10-17T03:31:20.114Z",
+  "intentos": 2,
+  "fuentes": 4,
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
  "rwxsr5": {
   "intentado": true,
@@ -17743,6 +17763,26 @@
   "titulo": "Mediodía Noticias despide con profunda emoción a Fernando Confessore",
   "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
   "cuando": "2026-10-17T03:02:30.657Z",
+  "intentos": 1,
+  "fuentes": 3,
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+ },
+ "bfzt9z": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Dalma y Jana Maradona cruzan reproches por el juicio sobre la muerte de su padre",
+  "razon": "La única foto disponible tiene una marca de agua del medio (Noticias Argentinas), por lo que no puede ser elegida.",
+  "cuando": "2026-10-17T03:31:20.114Z",
+  "intentos": 1,
+  "fuentes": 3,
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+ },
+ "fzzf69": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Rafael Grossi avanza en la carrera para la secretaría general de la ONU",
+  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
+  "cuando": "2026-10-17T03:31:20.114Z",
   "intentos": 1,
   "fuentes": 3,
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
