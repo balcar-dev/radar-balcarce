@@ -74,41 +74,41 @@ afuera (Malvinas, un incendio en Misiones): se rige por lo de afuera (`historiaD
 Lo que cuentan **sólo** medios de otras ciudades de la zona (Mar del Plata, Tandil,
 Necochea) no se trae, salvo que diga Balcarce en el título o toque la zona.
 
-**Lo de afuera se publica por popularidad, sin cupos** (17/10/2026, regla 215; Hernán: "no hay
-ningún cupo de nada: tiene que entrar todo lo nacional en base a las notas más relevantes, las
-que más fuentes tienen a la vez"). La popularidad es **cuántos medios distintos cuentan lo
-mismo** (los del mismo dueño cuentan uno). No hay un máximo de notas por sección ni por día; los
-únicos límites son técnicos (los cupos gratis de las IA y el tope de páginas del sitio). Reemplaza
-a los viejos mínimos por sección (Fútbol y Deportes 4; Economía, Tecnología, Agro y
-Automovilismo 2; con una figura 2) y a los cupos de 6 a 15. Una nota que no es de Balcarce sale
-sola así:
+**El criterio en seis líneas** (17/10/2026, reglas 215 y 260; Hernán: "no hay ningún cupo de
+nada" y "a nivel nacional, de las secciones populares, sólo a partir de 3 fuentes; la semana que
+viene lo miramos con la estadística y ahí regularizamos"). **Popularidad** es cuántos medios
+distintos cuentan lo mismo (los del mismo dueño cuentan uno).
 
-- **Por defecto, con 3 medios:** tres medios que cuentan lo mismo son la noticia del día.
-- **En las áreas donde suele haber poco, con 2:** Tecnología e IA, Ciencia, Salud, Educación,
-  Cultura (con los espectáculos), Agro y Automovilismo. Si una sección no tiene notas todos los
-  días, no vale la pena tenerla.
-- **Una fuente especializada de esas áreas** (una agencia de ciencia, una universidad, un
-  ministerio, un medio de tecnología: `especializada` en `FUENTES.md`) alcanza con **un solo
-  medio si la lectura con IA la considera de interés** (importancia media o alta: un
-  descubrimiento, un avance, una investigación, un lanzamiento o un cambio con consecuencias
-  reales; no una guía de uso, una oferta, un truco ni una curiosidad sin respaldo) y pasa el
-  **control de calidad**: sin pronósticos del tiempo de otras ciudades, sin "dónde ver", sin
-  "en vivo", sin chimentos ni publicidad. El mismo control vale para todo lo que sale con menos
-  de 3 medios.
-- **El ritmo del día:** se buscan unas **100 noticias por día** (con lo de Balcarce adentro),
-  repartidas de las 7 a las 23. Si a esa hora lleva menos de lo que corresponde (100 por las
-  horas pasadas, sobre 16), el mínimo de lo genérico baja de 3 a 2 hasta que alcance, y vuelve a
-  3. **Nunca baja de 2** fuera de las fuentes especializadas. Si sobra, **no se saca nada**: no hay
-  tope hacia arriba.
-- **Nunca con un solo medio** fuera de esas fuentes; una fuente oficial alcanza sola. Lo que no
-  llega espera con el motivo "de afuera y poco contada (N medios; Sección pide M)" y no va al
-  celular. **Lo que ya salió no se baja** si después cambia el ritmo.
-- **Del extranjero, sólo con un argentino** (Trump, Gaza, la Fórmula 1 sin un argentino: no). La
-  única excepción es la ciencia y la tecnología (`SECCIONES_SIN_FRONTERAS`): un descubrimiento
-  o un producto del mundo es noticia. **Policiales de afuera no sale nunca**: la sección es de acá.
-- Se mira en la ingesta y otra vez después de la lectura con IA: si al juntar repetidas una nota
-  llega a los medios que pide, sale. En una sección, **más medios es más arriba**: cada vez que
-  se duplican los medios que cuentan una nota, vale 2 horas más nueva al ordenar la lista.
+1. **Lo de Balcarce entra todo**: no pide medios ni tiene tope.
+2. **Lo nacional entra si lo cuentan 3 medios distintos** (`MINIMO_NACIONAL`).
+3. **En las áreas chicas, con 2** (`MINIMO_AREAS_CHICAS`): Tecnología e IA, Ciencia, Salud,
+   Educación y Cultura (con los espectáculos). Si una sección no tiene notas todos los días, no
+   vale la pena tenerla.
+4. **No hay cupos ni topes de nada**: ni por sección, ni por día, ni por área. Los únicos
+   límites son técnicos (los cupos gratis de las IA y el tope de páginas del sitio).
+5. **Lo muy contado va primero** en su sección (más abajo).
+6. **Del extranjero, sólo con un argentino** (Trump, Gaza, la Fórmula 1 sin un argentino: no;
+   tampoco la ciencia ni la tecnología). **Policiales de afuera no sale nunca**: la sección es de acá.
+
+**Dónde se cambian los números:** los dos mínimos, sin tocar código, con las variables de GitHub
+`MINIMO_NACIONAL` y `MINIMO_AREAS_CHICAS` (Settings, Secrets and variables, Actions, Variables;
+un número de 2 a 10; vacío o roto vale el de siempre). El valor de siempre y las áreas chicas
+están en `ingesta/criterio.mjs` (`POPULARIDAD`, `AREAS_CHICAS`) y en la tabla de la sección 11.
+Nunca con un solo medio: una fuente oficial alcanza sola. Lo que no llega espera con el motivo
+"de afuera y poco contada (N medios; Sección pide M)" y no va al celular. **Lo que ya salió no se
+baja** si se sube el mínimo. Lo que sale con menos de 3 medios (el área chica) pasa un **control de
+calidad**: sin pronósticos del tiempo de otras ciudades, sin "dónde ver", sin "en vivo", sin
+horóscopo. Se mira en la ingesta y otra vez después de la lectura con IA: si al juntar repetidas
+una nota llega a los medios que pide, sale. En una sección, **más medios es más arriba**: cada
+vez que se duplican los medios que cuentan una nota, vale 2 horas más nueva al ordenar la lista.
+
+**Cómo se regula** (reemplaza al ritmo de 100 notas por día y a las fuentes de un solo medio): cada
+vuelta de "Actualizar la web" anota en `web/data/estadistica-seleccion.json` cuántas historias
+llegaron, con cuántos medios, cuántas salieron y por qué las que no (`scripts/medir/estadistica-seleccion.mjs`
+arma el reporte semanal, con cuántas notas saldrían si el mínimo fuera 2, 3, 4 o 5). Cada semana
+Hernán lo mira y, si hace falta, cambia las dos variables. Si se llega muy rápido a las 150 por
+día, se pueden sumar fuentes; si una sección falta (Tecnología), se baja su mínimo o se suma a las
+áreas chicas, sin tocar nada más.
 
 **Lo de Balcarce entra todo** (Hernán, 16/10 y 17/10). Lo de acá no compite con lo nacional: no
 pide medios, no tiene tope, sin repetir, sin el autobombo de los medios y sin publicidad (más
@@ -868,13 +868,8 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Días que dura la página de una nota | 180 | `PORTADA.diasDeArchivo` |
 | Notas con página como máximo (por el tope de 20.000 archivos de Cloudflare; a unas 46 por día se llena y manda antes que los 180 días) | 3700 | `PORTADA.maximoDeNotas` |
 | Nota del dólar: cuánto tiene que moverse el blue o el oficial contra el día anterior para salir (%) | 2 | `NOTA_DEL_DOLAR.movimientoMinimo` |
-| Medios que tienen que contar lo de afuera: por defecto (sin cupos desde el 17/10) | 3 | `POPULARIDAD.mediosPorDefecto` |
-| Medios que tienen que contar lo de afuera en las áreas donde suele haber poco (Tecnología e IA, Ciencia, Salud, Educación, Cultura, Agro, Automovilismo) | 2 | `POPULARIDAD.mediosEnAreasChicas` |
-| Medios que alcanzan a una fuente especializada de esas áreas si la IA la considera de interés | 1 | `POPULARIDAD.mediosDeUnaFuenteEspecializada` |
-| Medios que tienen que contar lo genérico si el día va flojo para el ritmo | 2 | `POPULARIDAD.mediosSiVaFaltando` |
-| Noticias por día que se buscan, con lo de Balcarce adentro (el ritmo; no hay tope hacia arriba) | 100 | `POPULARIDAD.notasPorDia` |
-| Ritmo del día: desde la hora (de Balcarce) | 7 | `POPULARIDAD.ritmoDesdeHora` |
-| Ritmo del día: hasta la hora (de Balcarce) | 23 | `POPULARIDAD.ritmoHastaHora` |
+| Medios que tienen que contar lo nacional (se cambia con la variable de GitHub `MINIMO_NACIONAL`, sin tocar código) | 3 | `POPULARIDAD.minimoNacional` |
+| Medios que tienen que contar lo nacional en las áreas chicas: Tecnología e IA, Ciencia, Salud, Educación, Cultura (variable `MINIMO_AREAS_CHICAS`) | 2 | `POPULARIDAD.minimoAreasChicas` |
 | Orden de una sección: horas más nueva que vale una nota cada vez que se duplican los medios | 2 | `POPULARIDAD.horasPorDuplicarMedios` |
 | Muy contada: medios distintos que la cuentan (va primera en su sección; sobre 50 medios del país) | 8 | `MUY_CONTADA.medios` |
 | Muy contada: medios en sus primeras horas, de día | 5 | `MUY_CONTADA.mediosRapidos` |

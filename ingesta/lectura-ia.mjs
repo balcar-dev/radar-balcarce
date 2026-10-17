@@ -23,8 +23,7 @@ import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
 import { diaAR, minutoDelDiaAR } from './zona.mjs';
 import { sinTildes } from '../web/lib/texto.js';
 import { SECCIONES_SUMADAS, TEXTO_PARA_LA_FICHA, esSumada } from './secciones-nuevas.mjs';
-import { AREAS_CHICAS, SECCIONES_SIN_FRONTERAS } from './criterio.mjs';
-import { mediosMinimos, IMPORTANCIAS_DE_INTERES } from './popularidad.mjs';
+import { mediosMinimos } from './popularidad.mjs';
 
 /** ¿El título nombra a Balcarce o a una localidad del partido? San Agustín y
  *  Los Pinos, con respaldo (regla 179): en un medio de acá alcanzan solas. */
@@ -438,9 +437,7 @@ export async function leerNotasNuevas(notas, {
  * ficha a su nota, con límites que no se negocian:
  *
  *   · El semáforo manda: lo rojo o amarillo sigue igual. La IA sólo puede
- *     endurecer (sacar una nota o mandarla a esperar), nunca destrabar. Única
- *     excepción (regla 211): una fuente especializada de un solo medio que la
- *     propia ficha marca de interés (`interesDeLaIA`) puede salir.
+ *     endurecer (sacar una nota o mandarla a esperar), nunca destrabar.
  *   · Sin ficha, la nota sigue como la decidió el sistema de siempre.
  *
  * Con ficha:
@@ -517,16 +514,12 @@ export function aplicarFichas(notas, fichas = {}, {
     // cubren muchos medios o es muy importante no se saca por "no ser de acá".
     const palabrasDelTitulo = new Set(sinTildes(n.titulo ?? '').split(/[^a-z0-9ñ]+/));
     const conexionArgentina = CONEXION_ARGENTINA.some((p) => palabrasDelTitulo.has(sinTildes(p)));
-    // La popularidad manda (regla 211): lo que cuentan tantos medios como pide el área donde suele haber poco (Tecnología e IA,
-    // Ciencia, Salud, Educación, Cultura, Agro, Automovilismo) no se saca por "no tener relación con Balcarce": ya llegó a lo
-    // que se pide. Tampoco una fuente especializada que la propia ficha marca de interés (alta o media).
+    // La popularidad manda (reglas 211 y 260): lo que cuentan tantos medios como pide su sección (3, o 2 en un área chica) no se
+    // saca por "no tener relación con Balcarce": ya llegó a lo que se pide.
     const seccionDeLaIA = seccionDe(f, n);
     const medios = n.medios?.length ?? 1;
-    const deAreaChica = AREAS_CHICAS.includes(seccionDeLaIA);
-    const interesDeLaFuente = !!n.especializada && deAreaChica && IMPORTANCIAS_DE_INTERES.includes(f.importancia);
-    const llegaPorSuArea = deAreaChica && (medios >= mediosMinimos(seccionDeLaIA) || interesDeLaFuente);
-    const nacionalQueImporta = medios >= 3 || f.importancia === 'alta'
-      || ['nacional', 'popular', 'servicio'].includes(f.razon) || llegaPorSuArea;
+    const nacionalQueImporta = medios >= mediosMinimos(seccionDeLaIA) || f.importancia === 'alta'
+      || ['nacional', 'popular', 'servicio'].includes(f.razon);
     const caso = { id: n.id, titulo: n.titulo, porque: f.porque };
 
     let motivo = null;
@@ -535,8 +528,8 @@ export function aplicarFichas(notas, fichas = {}, {
     // Del extranjero, sólo si un argentino se destaca en algo o le importa a
     // Balcarce (Hernán, 27/09): una figura argentina (Colapinto, Messi) o la
     // conexión argentina en el título. La Fórmula 1 sin un argentino, no.
-    // Única excepción (regla 211): la ciencia y la tecnología (SECCIONES_SIN_FRONTERAS) no tienen frontera.
-    else if (f.ambito === 'internacional' && !n.figura && !conexionArgentina && !SECCIONES_SIN_FRONTERAS.includes(seccionDeLaIA)) motivo = 'es del extranjero';
+    // Sin excepciones (desde la regla 260 tampoco la ciencia y la tecnología).
+    else if (f.ambito === 'internacional' && !n.figura && !conexionArgentina) motivo = 'es del extranjero';
     // De un medio de acá sólo se saca si ni siquiera nombra a Balcarce en el
     // título ("precios sugeridos para alquilar en Mar del Plata", 27/09).
     else if (f.impacto === 'nulo' && !deFierros && !conexionArgentina && !nacionalQueImporta
@@ -544,11 +537,6 @@ export function aplicarFichas(notas, fichas = {}, {
     // Lo de la zona sí entra (28/09): ver esPolicialDeAfuera, ingesta/ingesta.mjs.
     else if (f.seccion === 'Policiales' && !esLocal && !n.deLaZona) motivo = 'policial que no es de Balcarce';
     if (motivo) { cambios.sacadas.push({ ...caso, motivo }); continue; }
-
-    // Una fuente especializada de un solo medio sale si la IA la considera de interés (importancia media o alta) y no es chimento
-    // ni publicidad (ya salieron arriba): `exigirMedios` (ingesta/ingesta.mjs) la destraba después, con el control de calidad.
-    // Es la única vez que la ficha destraba algo, y sólo lo que esperaba exactamente por tener un solo medio (regla 211).
-    if (interesDeLaFuente) n.interesDeLaIA = true;
 
     // Tenía la llave de la fuente o del título pero la IA dice que el hecho no
     // es de acá: se rige por lo de afuera (esDeAca, ingesta/ingesta.mjs).

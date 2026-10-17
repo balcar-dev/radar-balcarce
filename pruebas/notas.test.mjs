@@ -360,10 +360,10 @@ test('lo que nombra a una figura argentina pide lo mismo que el resto (desde el 
   assert.equal(semaforo(messi, 'Fútbol', 1).color, 'amarillo', 'nunca con un solo medio');
 });
 
-test('el automovilismo pide dos medios, no un puntaje', () => {
-  // Es la ciudad de Fangio: pide lo mínimo de afuera, dos medios.
+test('el automovilismo pide tres medios, como todos (hasta la regla 260 pedía dos), no un puntaje', () => {
   const f1 = nota({ titulo: 'El complicado arte de frenar en la Fórmula 1', alcance: 'pais', local: false });
-  assert.equal(semaforo(f1, 'Automovilismo', 2).color, 'verde');
+  assert.equal(semaforo(f1, 'Automovilismo', 3).color, 'verde');
+  assert.equal(semaforo(f1, 'Automovilismo', 2).color, 'amarillo');
   assert.equal(semaforo(f1, 'Automovilismo', 1).color, 'amarillo');
 });
 
@@ -442,20 +442,16 @@ test('lo de afuera pide 3 medios; 2 en las áreas donde suele haber poco; con un
   assert.equal(semaforo(afuera('El BCRA subió la tasa'), 'Economía', 2).color, 'amarillo');
   assert.equal(semaforo(afuera('El BCRA subió la tasa'), 'Economía', 3).color, 'verde');
   // Las áreas donde suele haber poco piden 2.
-  for (const s of ['Tecnología', 'Ciencia', 'Salud', 'Educación', 'Cultura y agenda', 'Agro', 'Automovilismo']) {
+  for (const s of ['Tecnología', 'Ciencia', 'Salud', 'Educación', 'Cultura y agenda']) {
     assert.equal(mediosMinimosDe(s), 2, s);
     assert.equal(semaforo(afuera('Una novedad sólida de la semana'), s, 2).color, 'verde', s);
   }
-  for (const s of ['Economía', 'Argentina', 'Política', 'Fútbol', 'Deportes']) assert.equal(mediosMinimosDe(s), 3, s);
+  // Agro y Automovilismo pedían 2 hasta la regla 260: ahora piden lo mismo que todos.
+  for (const s of ['Economía', 'Argentina', 'Política', 'Fútbol', 'Deportes', 'Agro', 'Automovilismo']) assert.equal(mediosMinimosDe(s), 3, s);
   for (const s of ['Economía', 'Tecnología', 'Agro', 'Automovilismo', 'Argentina', 'Política', 'Fútbol', 'Deportes', 'Cultura y agenda']) {
     assert.ok(mediosMinimosDe(s) >= 2, `${s}: de afuera nunca con un solo medio`);
     assert.equal(semaforo(afuera('Una nota con un solo medio'), s, 1).color, 'amarillo', `${s}: un solo medio espera`);
   }
-  // Si el día va flojo para el ritmo, lo genérico baja a 2; las áreas chicas ya estaban ahí y nada baja a 1.
-  assert.equal(mediosMinimosDe('Política', {}, { vaFaltando: true }), 2);
-  assert.equal(mediosMinimosDe('Fútbol', {}, { vaFaltando: true }), 2);
-  assert.equal(mediosMinimosDe('Salud', {}, { vaFaltando: true }), 2);
-  assert.equal(semaforo(afuera('Una nota con un solo medio'), 'Política', 1, { vaFaltando: true }).color, 'amarillo');
   // Una figura argentina ya no baja el mínimo (era 2): lo cuenta el puntaje, no la puerta.
   assert.equal(semaforo(nota({ titulo: 'Messi vuelve a jugar', alcance: 'pais', local: false, figura: 'messi' }), 'Fútbol', 2).color, 'amarillo');
 });
@@ -479,13 +475,13 @@ test('lo de Balcarce entra todo, ni siquiera el automovilismo tiene tope', () =>
   assert.equal(portada.filter((n) => n.semaforo === 'verde').length, 60);
 });
 
-test('el automovilismo de afuera ya no tiene cupo, pero pide dos medios (25/09: 22 de afuera contra 40 de Balcarce)', () => {
+test('el automovilismo de afuera no tiene cupo, pero pide tres medios (25/09: 22 de afuera contra 40 de Balcarce)', () => {
   const portada = Array.from({ length: 30 }, (_, i) => ({
-    id: 'a' + i, seccion: 'Automovilismo', semaforo: 'verde', local: false, nombraBalcarce: false, relevancia: 90 - i, medios: i < 25 ? ['Olé', 'TyC Sports'] : ['Olé'],
+    id: 'a' + i, seccion: 'Automovilismo', semaforo: 'verde', local: false, nombraBalcarce: false, relevancia: 90 - i, medios: i < 25 ? ['Olé', 'TyC Sports', 'Motorsport'] : ['Olé', 'TyC Sports'],
   }));
   aplicarPopularidad(portada);
   const salen = portada.filter((n) => n.semaforo === 'verde');
-  assert.equal(salen.length, 25, 'salen todas las que cuentan dos medios; las de un solo medio esperan');
+  assert.equal(salen.length, 25, 'salen todas las que cuentan tres medios; las de menos esperan');
   assert.ok(portada.slice(25).every((n) => n.semaforo === 'amarillo' && /poco contada/.test(n.motivo)));
 });
 

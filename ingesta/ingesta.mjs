@@ -237,7 +237,6 @@ export function parsearFeed(xml, fuente) {
         medio: fuente.medio,
         alcance: fuente.alcance,
         oficial: !!fuente.oficial,
-        especializada: !!fuente.especializada,
         seccionFuente: fuente.seccion ?? null,
         peso: fuente.peso ?? 10,
       };
@@ -295,7 +294,6 @@ export function parsearFeed(xml, fuente) {
       medio: fuente.medio,
       alcance: fuente.alcance,
       oficial: !!fuente.oficial,
-      especializada: !!fuente.especializada,
       seccionFuente: fuente.seccion ?? null,
       peso: fuente.peso ?? 10,
     };
@@ -437,7 +435,6 @@ function parsearScrape(html, fuente) {
       medio: fuente.medio,
       alcance: fuente.alcance,
       oficial: !!fuente.oficial,
-      especializada: !!fuente.especializada,
       seccionFuente: fuente.seccion ?? null,
       peso: fuente.peso,
       fechaEstimada: true,
@@ -766,11 +763,12 @@ function clasificarSinFutbol(nota) {
   return 'Argentina';
 }
 
-/** Cuántos medios distintos tienen que contar una nota de afuera para salir sola en esta sección: 3, o 2 en las áreas donde
- *  suele haber poco y si el día va faltando para el ritmo (POPULARIDAD en ingesta/criterio.mjs, ingesta/popularidad.mjs, regla
- *  211). Hasta el 17/10 dependía de la sección (Fútbol y Deportes 4…) y de si nombraba a una figura: ya no. */
-export function mediosMinimosDe(seccion, nota = {}, { vaFaltando = false } = {}) {
-  return mediosMinimos(seccion, { vaFaltando });
+/** Cuántos medios distintos tienen que contar una nota de afuera para salir sola en esta sección: 3, o 2 en las áreas chicas
+ *  (POPULARIDAD en ingesta/criterio.mjs, ingesta/popularidad.mjs, reglas 215 y 260; se regulan con las variables de GitHub
+ *  MINIMO_NACIONAL y MINIMO_AREAS_CHICAS). Hasta el 17/10 dependía de la sección (Fútbol y Deportes 4…) y de si nombraba a una
+ *  figura: ya no. */
+export function mediosMinimosDe(seccion) {
+  return mediosMinimos(seccion);
 }
 
 /** Los medios que comparten dueño o sistema (campo `grupo` de la fuente: Grupo Clarín, eleco.com.ar) cuentan UNA vez al contar
@@ -889,7 +887,7 @@ function pareceDePromocion(nota) {
 
 /** El color de una nota recién leída: { color, motivo }. El puntaje no entra
  *  (desde el 27/09 lo de afuera se mide en medios, no en puntaje). */
-function semaforo(nota, seccion, medios = cuantosMedios(nota), { vaFaltando = false } = {}) {
+function semaforo(nota, seccion, medios = cuantosMedios(nota)) {
   const corroborada = !!nota.oficial || medios >= 2;
   const sensible = semaforoDelTexto(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`, {
     conMuerte: laMuerteFrena(nota, seccion, medios), deAca: aflojaParaLoDeAca(nota, seccion, corroborada), corroborada: esDeAca(nota) && corroborada,
@@ -930,15 +928,14 @@ function semaforo(nota, seccion, medios = cuantosMedios(nota), { vaFaltando = fa
   if (nota.oficial) return { color: 'verde', motivo: 'comunicado oficial' };
 
   // Lo de afuera sale solo si lo cuentan bastantes medios (27/09, el cruce):
-  // la importancia se mide con cuántos lo cuentan, no con el puntaje. Desde el 17/10 (regla 215) es la popularidad
-  // (ingesta/popularidad.mjs): 3 medios, 2 en las áreas donde suele haber poco o si el día va faltando para el ritmo,
-  // y 1 si es una fuente especializada que la IA marque de interés (eso se resuelve después de la lectura).
+  // la importancia se mide con cuántos lo cuentan, no con el puntaje. Desde el 17/10 (reglas 215 y 260) es la popularidad
+  // (ingesta/popularidad.mjs): 3 medios, 2 en las áreas chicas. Nunca con uno solo.
   // Lo que toca la zona (la 226, la 55, la papa) es tema de
   // Balcarce aunque lo cuente un solo medio (Hernán, 27/09: "si son de la zona
   // y son realmente temas de Balcarce, que salga"). La lectura con IA igual
   // saca lo que no tenga relación con acá. Qué es de acá: esDeAca.
   if (!esDeAca(nota)) {
-    const pop = popularidadDe({ ...nota, seccion }, medios, { vaFaltando, seccion });
+    const pop = popularidadDe({ ...nota, seccion }, medios, { seccion });
     if (!pop.llega) return { color: 'amarillo', motivo: motivoPocoContada(medios, seccion, pop.minimo, pop.motivo) };
   }
 
@@ -1456,15 +1453,14 @@ async function cruzarFarmacias(turnosColegio, {
  * Se puede llamar más de una vez (la ingesta y, después de la lectura con IA, generar-datos).
  *
  * @param {object[]} portada
- * @param {{ ahora?: number, publicadas?: Set<string>|null, fecha?: (n) => string, vaFaltando?: boolean }} [o]
+ * @param {{ ahora?: number, publicadas?: Set<string>|null, fecha?: (n) => string }} [o]
  *   `publicadas`: los identificadores ya publicados (lo que ya salió no se baja por cantidad);
- *   `fecha`: la fecha de cada nota (generar-datos pasa la suya, fechaReal);
- *   `vaFaltando`: el día va flojo para el ritmo (ritmoDelDia): lo genérico pide 2 medios y no 3.
+ *   `fecha`: la fecha de cada nota (generar-datos pasa la suya, fechaReal).
  */
 export function aplicarPopularidad(portada, {
-  ahora = Date.now(), publicadas = null, fecha = (n) => n.fecha, vaFaltando = false,
+  ahora = Date.now(), publicadas = null, fecha = (n) => n.fecha,
 } = {}) {
-  exigirMedios(portada, { vaFaltando, publicadas });
+  exigirMedios(portada, { publicadas });
   // Lo de acá no es "muy contada" (entra todo); lo de afuera, por lo que ya pasó el semáforo y la popularidad.
   marcarMuyContadas(portada, { ahora, fecha, contar: contarMedios, esDeAca: (n) => esDeAca(n) || esDeUnMedioDeAca(n) });
   return portada;
@@ -1489,16 +1485,16 @@ export function esperaSoloPorCantidad(nota = {}) {
 
 /**
  * Lo de afuera de Balcarce sale solo sólo si lo cuentan los medios que pide la popularidad (`popularidadDe`, ingesta/popularidad.mjs):
- * 3, o 2 en las áreas donde suele haber poco o si el día va faltando para el ritmo, o 1 de una fuente especializada que la lectura
- * con IA marcó de interés. Una fuente oficial alcanza sola, y una nota propia no pide medios. Lo de acá (esDeAca: Balcarce,
- * Balcarce en el título, la zona) no pide esto. Policiales de afuera no sale solo nunca (la sección es de acá).
+ * 3, o 2 en las áreas chicas (los dos números, con las variables MINIMO_NACIONAL y MINIMO_AREAS_CHICAS). Nunca con uno solo. Una
+ * fuente oficial alcanza sola, y una nota propia no pide medios. Lo de acá (esDeAca: Balcarce, Balcarce en el título, la zona) no
+ * pide esto. Policiales de afuera no sale solo nunca (la sección es de acá).
  *
- * Se vuelve a mirar después de la lectura con IA, que puede cambiar la sección, decir que una nota no es de acá, juntar dos notas
- * del mismo hecho (y así sumar medios) o marcar el interés de una fuente especializada. Por eso va en los dos sentidos: lo que ya
- * no llega espera, y lo que esperaba por pocos medios y ahora llega, sale. Lo que YA SALIÓ (`publicadas`) no se baja por cantidad:
- * si el ritmo del día cambia, una nota que salió con 2 medios no desaparece de las listas. Modifica la portada.
+ * Se vuelve a mirar después de la lectura con IA, que puede cambiar la sección, decir que una nota no es de acá o juntar dos notas
+ * del mismo hecho (y así sumar medios). Por eso va en los dos sentidos: lo que ya no llega espera, y lo que esperaba por pocos
+ * medios y ahora llega, sale. Lo que YA SALIÓ (`publicadas`) no se baja por cantidad: si se sube el mínimo, una nota que salió con
+ * 2 medios no desaparece de las listas. Modifica la portada.
  */
-export function exigirMedios(portada, { vaFaltando = false, publicadas = null } = {}) {
+export function exigirMedios(portada, { publicadas = null } = {}) {
   for (const n of portada) {
     if (n.propia) continue;
     // El cupo se sacó (regla 215): lo que había quedado esperando por él vuelve a su motivo de antes y se mira de nuevo.
@@ -1519,16 +1515,14 @@ export function exigirMedios(portada, { vaFaltando = false, publicadas = null } 
     }
     if (n.oficial) continue;
     const medios = cuantosMedios(n);
-    const pop = popularidadDe(n, medios, { vaFaltando });
+    const pop = popularidadDe(n, medios);
     const yaSalio = !!publicadas?.has(n.id);
     if (n.semaforo === 'verde' && !pop.llega && !yaSalio) {
       n.semaforo = 'amarillo';
       n.motivo = motivoPocoContada(medios, n.seccion, pop.minimo, pop.motivo);
     } else if (n.semaforo === 'amarillo' && String(n.motivo ?? '').startsWith(MOTIVO_POCO_CONTADA) && (pop.llega || yaSalio)) {
       n.semaforo = 'verde';
-      n.motivo = !pop.llega ? 'de afuera, ya publicada: no se baja por cantidad'
-        : medios >= pop.minimo ? `de afuera, contada por ${medios} medios`
-          : `fuente especializada de ${n.seccion} con el interés de la IA (${medios} medio)`;
+      n.motivo = pop.llega ? `de afuera, contada por ${medios} medios` : 'de afuera, ya publicada: no se baja por cantidad';
     }
   }
   return portada;
@@ -1606,8 +1600,6 @@ export async function ingestar({
   // `idsUnidos`: los que se unieron a otra nota (web/data/fusionadas.json): si
   // hay otra publicada en la misma historia, la dirección es la de ésa.
   memoria = MEMORIA_DEL_CRUCE, idsConocidos = null, idsUnidos = null,
-  // `vaFaltando`: el día va flojo para el ritmo (ritmoDelDia, regla 215): lo genérico de afuera pide 2 medios y no 3.
-  vaFaltando = false,
 } = {}) {
   log = silencioso ? () => {} : console.log;
   const lista = (fuentes ?? TODAS_LAS_FUENTES).filter((f) => f.activa !== false);
@@ -1696,13 +1688,13 @@ export async function ingestar({
   // memoria, regla 195, se mira como lo de acá de siempre).
   deAntes.filter((n) => n.alcance !== 'local').forEach(marcarDeAfuera);
   const conjunto = [...todas, ...deAntes];
-  const { grupos, deUnSoloMedio, deOtraCiudad, revisados, partidos } = armarHistorias(conjunto, { idsConocidos, idsUnidos });
+  const { grupos, deUnSoloMedio, deOtraCiudad, revisados, partidos, deUnSoloMedioLista } = armarHistorias(conjunto, { idsConocidos, idsUnidos });
   // Desde el 17/10 (regla 195) también lo de acá, 72 horas (CRUCE.horasDeMemoriaDeAca); MEMORIA_DE_ACA=no lo apaga.
   if (memoria) guardarMemoria(memoria, memoriaAntes, MEMORIA_DE_ACA ? todas : todas.filter((n) => n.alcance !== 'local'));
   log(`
   cruce: ${conjunto.length} notas (${deAntes.length} de la memoria) · ${grupos.length} historias · ${deUnSoloMedio} de afuera con un solo medio y ${deOtraCiudad} de otra ciudad de la zona no entran`);
   if (revisados) log(`  cruce coherente (regla 184): ${revisados} grupos encadenados revisados, ${partidos} partidos en hechos distintos`);
-  return seguirConLasHistorias({ grupos, estadoFuentes, todas, t0, escribirArchivos, idsConocidos, vaFaltando });
+  return seguirConLasHistorias({ grupos, estadoFuentes, todas, t0, escribirArchivos, idsConocidos, deUnSoloMedioLista });
 }
 
 /**
@@ -1715,6 +1707,7 @@ export async function ingestar({
 export function armarHistorias(conjunto, { idsConocidos = null, idsUnidos = null, coherente, parametros } = {}) {
   const grupos = [];
   let deUnSoloMedio = 0;
+  const deUnSoloMedioLista = [];
   let deOtraCiudad = 0;
   const cruce = agruparConDetalle(conjunto, { ...(coherente === undefined ? {} : { coherente }), ...(parametros ? { parametros } : {}) });
   for (const indices of cruce.grupos) {
@@ -1725,12 +1718,17 @@ export function armarHistorias(conjunto, { idsConocidos = null, idsUnidos = null
     if (ns.every((n) => n.deLaMemoria && n.alcance === 'local')) continue;
     const medios = [...new Set(ns.map((n) => n.medio))];
     const importaAca = ns.some((n) => n.nombraBalcarce || n.deLaZona);
-    // Una fuente especializada (CONICET, una agencia de ciencia, una universidad, un medio de tecnología: `especializada` en
-    // la ficha de la fuente) entra aunque la cuente un solo medio: sale sólo si la lectura con IA la considera de interés
-    // (regla 215, ingesta/popularidad.mjs). Lo demás de un solo medio de afuera no se trae, como siempre.
-    const especializada = ns.some((n) => n.especializada);
-    if (!locales.length && !importaAca && !especializada && medios.length < 2) {
+    // Lo de afuera de un solo medio no se trae (regla 260: ni siquiera una fuente "especializada"). Se anota igual, con su sección
+    // y su fecha, para la estadística de la selección (ingesta/estadistica-seleccion.mjs): cuántas historias llegan con un solo medio.
+    if (!locales.length && !importaAca && medios.length < 2) {
       if (!ns.every((n) => n.deLaMemoria)) deUnSoloMedio += 1;
+      const unica = { categorias: [], ...[...ns].sort((a, b) => a.fecha - b.fecha)[0] };
+      if (!esPolicialDeAfuera(unica)) {
+        deUnSoloMedioLista.push({
+          seccion: clasificar(unica),
+          fecha: unica.fecha instanceof Date && !Number.isNaN(unica.fecha.getTime()) ? unica.fecha.toISOString() : null,
+        });
+      }
       continue;
     }
     // Lo que cuentan SÓLO medios de la región (Mar del Plata, Tandil,
@@ -1775,18 +1773,17 @@ export function armarHistorias(conjunto, { idsConocidos = null, idsUnidos = null
     }
     if (!principal.nombraBalcarce && ns.some((n) => n.nombraBalcarce)) principal.nombraBalcarce = true;
     if (!principal.figura) principal.figura = ns.find((n) => n.figura)?.figura;
-    grupos.push({ principal, medios, tambien, nombraAca: historiaDeAca && localesNombranAca, especializada });
+    grupos.push({ principal, medios, tambien, nombraAca: historiaDeAca && localesNombranAca });
   }
-  return { grupos, deUnSoloMedio, deOtraCiudad, revisados: cruce.revisados, partidos: cruce.partidos };
+  return { grupos, deUnSoloMedio, deUnSoloMedioLista, deOtraCiudad, revisados: cruce.revisados, partidos: cruce.partidos };
 }
 
 /**
  * De las historias del cruce a las notas de la portada: sección, semáforo y puntaje de cada una, ordenadas por puntaje. Sin lo
  * policial de afuera (esPolicialDeAfuera) y sin aplicar todavía la popularidad (aplicarPopularidad). Exportada para medir el
- * criterio con una lectura guardada (scripts/medir/simular-popularidad.mjs) con exactamente el mismo código que la ingesta.
- * `vaFaltando`: el día va flojo para el ritmo (ritmoDelDia). Devuelve { portada, policialesDeAfuera }.
+ * criterio con una lectura guardada con exactamente el mismo código que la ingesta. Devuelve { portada, policialesDeAfuera }.
  */
-export function armarPortada(grupos, { vaFaltando = false } = {}) {
+export function armarPortada(grupos) {
   // 3. Clasificar, semáforo y relevancia
   //
   // Policiales, sólo de Balcarce (Hernán, 27/09): lo que el sistema clasifica
@@ -1802,7 +1799,7 @@ export function armarPortada(grupos, { vaFaltando = false } = {}) {
     // (28/09: exigirMedios y tieneRespaldo preguntaban `oficial` y la historia
     // no lo traía).
     const oficial = [g.principal, ...g.tambien].some((n) => n.oficial);
-    const sem = semaforo({ ...(oficial && !g.principal.oficial ? { ...g.principal, oficial } : g.principal), especializada: g.especializada }, seccion, contarMedios(g.medios), { vaFaltando });
+    const sem = semaforo(oficial && !g.principal.oficial ? { ...g.principal, oficial } : g.principal, seccion, contarMedios(g.medios));
     return {
       // Con el enlace del feed si lo hay (Blogger): así el identificador es el
       // mismo que antes de que el enlace pasara a ser la página de la nota.
@@ -1849,8 +1846,6 @@ export function armarPortada(grupos, { vaFaltando = false } = {}) {
       // Un medio de acá de la historia nombra algo de acá (regla 180, esDeUnMedioDeAca).
       ...(g.nombraAca && g.principal.alcance === 'local' ? { nombraAca: true } : {}),
       ...(oficial ? { oficial: true } : {}),
-      // La cuenta una fuente especializada (ciencia, tecnología, educación, salud): con la lectura con IA puede salir con un solo medio.
-      ...(g.especializada ? { especializada: true } : {}),
     };
   }).sort((a, b) => b.relevancia - a.relevancia);
   return { portada, policialesDeAfuera: grupos.length - sinPolicialesDeAfuera.length };
@@ -1858,14 +1853,14 @@ export function armarPortada(grupos, { vaFaltando = false } = {}) {
 
 /** Lo que sigue al cruce en `ingestar` (paso 3 en adelante). */
 async function seguirConLasHistorias({
-  grupos, estadoFuentes, todas, t0, escribirArchivos, idsConocidos = null, vaFaltando = false,
+  grupos, estadoFuentes, todas, t0, escribirArchivos, idsConocidos = null, deUnSoloMedioLista = [],
 }) {
-  const { portada, policialesDeAfuera } = armarPortada(grupos, { vaFaltando });
+  const { portada, policialesDeAfuera } = armarPortada(grupos);
   if (policialesDeAfuera) log(`\n  ${policialesDeAfuera} policiales de afuera no entran`);
 
-  // 3b. La popularidad de lo de afuera (regla 215, 17/10/2026): no hay cupo, sólo los medios que lo cuentan (exigirMedios) y,
+  // 3b. La popularidad de lo de afuera (reglas 215 y 260, 17/10/2026): no hay cupo, sólo los medios que lo cuentan (exigirMedios) y,
   // para lo muy contado, el lugar de arriba de su sección (marcarMuyContadas).
-  aplicarPopularidad(portada, { publicadas: idsConocidos, vaFaltando });
+  aplicarPopularidad(portada, { publicadas: idsConocidos });
   const muyContadas = portada.filter((n) => n.muyContada);
   if (muyContadas.length) log(`\n  muy contadas (regla 197, van primeras en su sección): ${muyContadas.map((n) => `${n.titulo.slice(0, 50)} (${n.muyContada.porque})`).join(' · ')}`);
 
@@ -1927,6 +1922,8 @@ async function seguirConLasHistorias({
       mes: farmacias.mes, anio: farmacias.anio, turnos: farmacias.turnos, avisos: farmacias.avisos, cruce: farmacias.cruce,
     } : null,
     notas: portada,
+    // Las historias de afuera que cuenta un solo medio y no entran (con su sección): sólo para la estadística de la selección.
+    deUnSoloMedio: deUnSoloMedioLista,
   };
   if (escribirArchivos) {
     fs.mkdirSync(SALIDA, { recursive: true });

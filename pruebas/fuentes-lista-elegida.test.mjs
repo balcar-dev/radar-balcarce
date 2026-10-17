@@ -15,13 +15,14 @@ test('la lista tiene 11 medios de Balcarce, 10 de Tandil y Mar del Plata, 50 del
   const pais = activas.filter((f) => !balcarce.includes(f) && !zona.includes(f));
   assert.equal(mediosDe(balcarce).size, 11);
   assert.equal(mediosDe(zona).size, 10);
-  // Los 50 de la lista elegida más los 11 medios que se sumaron el 17/10 (CONAE, INTI, ANMAT, SENASA, la Secretaría de Innovación, Ciencia y
-  // Tecnología, cuatro universidades, IT Sitio y FayerWayer).
-  const sumadosEl17 = ['CONAE', 'INTI', 'ANMAT', 'SENASA', 'Secretaría de Innovación, Ciencia y Tecnología', 'Universidad Nacional de La Plata',
-    'Universidad Nacional de Rosario', 'UNICEN', 'Universidad Nacional de Cuyo', 'IT Sitio', 'FayerWayer'];
+  // Los 50 de la lista elegida menos dos que la regla 260 (17/10) apagó porque casi no publican (Agencia CyTA y el Ministerio de Capital Humano),
+  // más los 7 medios que se sumaron el 17/10 y siguen (SENASA, cuatro universidades, IT Sitio y FayerWayer). CONAE, INTI, ANMAT y la Secretaría de
+  // Innovación, Ciencia y Tecnología también se sumaron ese día y se apagaron por lo mismo.
+  const sumadosEl17 = ['SENASA', 'Universidad Nacional de La Plata', 'Universidad Nacional de Rosario', 'UNICEN', 'Universidad Nacional de Cuyo', 'IT Sitio', 'FayerWayer'];
   for (const m of sumadosEl17) assert.ok(mediosDe(pais).has(m), m);
-  assert.equal(mediosDe(pais).size, 50 + sumadosEl17.length);
-  assert.equal(mediosDe(activas).size, 71 + sumadosEl17.length);
+  for (const m of ['CONAE', 'INTI', 'ANMAT', 'Secretaría de Innovación, Ciencia y Tecnología', 'Agencia CyTA', 'Ministerio de Capital Humano']) assert.ok(!mediosDe(pais).has(m), `${m} está apagada`);
+  assert.equal(mediosDe(pais).size, 48 + sumadosEl17.length);
+  assert.equal(mediosDe(activas).size, 69 + sumadosEl17.length);
   // Todas las de la zona son de Tandil o de Mar del Plata.
   for (const f of zona) assert.match(f.ciudad ?? '', /Tandil|Mar del Plata/, `${f.id}: ${f.ciudad}`);
 });

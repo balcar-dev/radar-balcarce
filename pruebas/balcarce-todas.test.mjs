@@ -148,16 +148,16 @@ test('por el camino real: la AZK (medio de acá, "balcarceños" en la bajada) si
 
 test('los medios que pide lo de afuera no frenan lo de un medio de acá que nombra algo de acá (y ya no hay cupo)', () => {
   const deAfuera = Array.from({ length: 12 }, (_, i) => ({
-    id: `f${i}`, titulo: `Turismo Carretera ${i}`, seccion: 'Automovilismo', semaforo: 'verde', relevancia: 90 - i, alcance: 'pais', medios: ['Olé', 'TyC Sports'],
+    id: `f${i}`, titulo: `Turismo Carretera ${i}`, seccion: 'Automovilismo', semaforo: 'verde', relevancia: 90 - i, alcance: 'pais', medios: ['Olé', 'TyC Sports', 'Motorsport'],
   }));
   const azk = {
     id: 'rs24vh', titulo: AZK.titulo, seccion: 'Automovilismo', semaforo: 'verde', relevancia: 40, alcance: 'local', local: false, noEsDeAcaSegunLaIA: true, nombraAca: true, medios: ['El Diario Balcarce'],
   };
-  const otra = { id: 'f99', titulo: 'Una más de afuera', seccion: 'Automovilismo', semaforo: 'verde', relevancia: 30, alcance: 'pais', medios: ['Olé', 'TyC Sports'] };
+  const otra = { id: 'f99', titulo: 'Una más de afuera', seccion: 'Automovilismo', semaforo: 'verde', relevancia: 30, alcance: 'pais', medios: ['Olé', 'TyC Sports', 'Motorsport'] };
   const sola = { id: 'f98', titulo: 'Una de afuera con un solo medio', seccion: 'Automovilismo', semaforo: 'verde', relevancia: 30, alcance: 'pais', medios: ['Olé'] };
   exigirMedios([...deAfuera, azk, otra, sola]);
   assert.equal(azk.semaforo, 'verde', azk.motivo);
-  assert.equal(otra.semaforo, 'verde', 'sin cupo: la que cuentan dos medios sale aunque haya muchas');
+  assert.equal(otra.semaforo, 'verde', 'sin cupo: la que cuentan tres medios sale aunque haya muchas');
   assert.equal(sola.semaforo, 'amarillo', 'la de afuera con un solo medio sigue esperando');
 });
 

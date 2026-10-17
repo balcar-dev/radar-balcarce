@@ -27,6 +27,11 @@ import { auditarFuentes, leerPublicadas, visitasPorNota } from '../../ingesta/au
 const AQUI = path.dirname(fileURLToPath(import.meta.url));
 const RAIZ = path.join(AQUI, '..', '..');
 
+/** Los medios de ciencia, salud, educación y tecnología que se sumaron el 17/10/2026 (regla 215) y no estaban en la lista del 15/10
+ *  (hasta la regla 260 se reconocían por el campo `especializada` de la fuente, que se sacó). */
+const MEDIOS_SUMADOS_EL_17_10 = ['FayerWayer', 'SENASA', 'ANMAT', 'CONAE', 'INTI', 'IT Sitio', 'Secretaría de Innovación, Ciencia y Tecnología',
+  'UNICEN', 'Universidad Nacional de Cuyo', 'Universidad Nacional de La Plata', 'Universidad Nacional de Rosario'];
+
 /** Del registro de Actions de "Sondeo de fuentes desde Cloudflare" (corrida 38786372081, 15/10/2026 18:31 UTC,
  *  nombre de navegador): "97 de 103 feeds andan. No andan 6: 6 desafío (HTTP 403)". Y "contestan pero con lo más
  *  nuevo de hace más de 7 días: ahorabalcarce, fca-unmdp, agenciacyta, gabal-agro". */
@@ -325,8 +330,8 @@ export function armarDatos({ raiz = RAIZ, ahora = new Date() } = {}) {
     let grupo;
     if (!activo) grupo = 'apagadas';
     else if (enLista) grupo = enLista.grupo;
-    // Las fuentes de ciencia, salud, educación y tecnología que se sumaron el 17/10 (regla 215) no estaban en la lista del 15/10.
-    else if (activos.some((f) => f.especializada)) grupo = 'sumadas';
+    // Los medios de ciencia, salud, educación y tecnología que se sumaron el 17/10 (regla 215) no estaban en la lista del 15/10.
+    else if (MEDIOS_SUMADOS_EL_17_10.includes(nombre)) grupo = 'sumadas';
     else grupo = 'otras';
     const filaApagada = !activo ? apagadasLista.find((a) => a.nombres.some((n) => mismoMedio(n, nombre))) : null;
 
@@ -600,7 +605,7 @@ const NOMBRE_GRUPO = {
   balcarce: ['Balcarce a fondo', 'Todo lo de Balcarce y su partido: lo que se lee hoy y lo que se podría leer, investigado el 15/10. Los de acá entran todos.'],
   pais: ['Nacionales elegidos', 'Los 50 mejores medios del país (incluye los de provincia y otras provincias, deportes, agro y economía).'],
   zona: ['Tandil y Mar del Plata', 'Los 10 mejores de la zona.'],
-  sumadas: ['Sumadas el 17/10', 'Fuentes especializadas de ciencia, salud, educación y tecnología (regla 215): con un solo medio salen si la IA las considera de interés.'],
+  sumadas: ['Sumadas el 17/10', 'Medios de ciencia, salud, educación y tecnología (regla 215): valen como un medio más para llegar a 2 o 3; solos no salen (regla 260).'],
   otras: ['Otras activas', 'Activas que no están en la lista elegida (debería estar vacío).'],
   apagadas: ['Apagadas', 'Están en el registro con activa: false. No se leen, pero se pueden prender de nuevo.'],
   descartadas: ['Descartadas', 'Las de afuera que Claude sacó de la pantalla principal: apagadas, caídas, de mismo dueño o que no aportan.'],
@@ -790,7 +795,7 @@ function htmlResumen(d) {
     <div class="tarjeta tarjeta-balcarce"><div class="t-num">${r.balcarceFondo.filas}</div><div class="t-nom">Balcarce a fondo</div><div class="chico">${r.balcarceFondo.enUso} se leen hoy · ${r.balcarceFondo.nuevas} candidatas nuevas · ${r.balcarceFondo.porComo.feed} con feed · ${r.balcarceFondo.porComo.pagina} con página</div></div>
     ${tarjeta('pais', r.porGrupo.pais, `de ${r.porGrupoLista.pais} elegidos · ${r.feedsPorGrupo.pais} direcciones`)}
     ${tarjeta('zona', r.porGrupo.zona, `de ${r.porGrupoLista.zona} elegidos · ${r.feedsPorGrupo.zona} ${r.feedsPorGrupo.zona === 1 ? 'dirección' : 'direcciones'}`)}
-    ${r.porGrupo.sumadas ? tarjeta('sumadas', r.porGrupo.sumadas, 'especializadas, sumadas el 17/10') : ''}
+    ${r.porGrupo.sumadas ? tarjeta('sumadas', r.porGrupo.sumadas, 'de ciencia, salud, educación y tecnología, sumadas el 17/10') : ''}
     ${r.porGrupo.otras ? tarjeta('otras', r.porGrupo.otras, 'fuera de la lista elegida') : ''}
     <div class="tarjeta"><div class="t-num">${r.feedsCruce}</div><div class="t-nom">Direcciones de cruce</div><div class="chico">de ${r.feedsActivos} activas (las otras ${r.feedsFuente} son de fuentes.mjs). ${r.mediosSoloCruce} medios se leen sólo por direcciones de cruce</div></div>
     <div class="tarjeta tarjeta-desc"><div class="t-num">${r.descartadas.total}</div><div class="t-nom">Descartadas</div><div class="chico">${r.descartadas.porTipo.apagada} ya apagadas · ${r.descartadas.porTipo.dueno} de mismo dueño · ${r.descartadas.porTipo['sin-aporte']} sin aporte · ${r.descartadas.porTipo.caida} caídas. Abajo del todo, por si querés rescatar alguna</div></div>
@@ -803,7 +808,7 @@ function htmlResumen(d) {
       <li><b>Una fuente</b> es un medio u organismo cuyas noticias leemos cada media hora. Cada uno se lee por una o más direcciones: un feed (RSS o Atom), un índice de noticias o, si no hay otra, raspando la portada.</li>
       <li><b>Las fuentes de Balcarce</b> (medios de acá, Municipalidad, Concejo, Facultad) entran siempre: lo que publican puede salir solo.</li>
       <li><b>Una fuente de cruce</b> es la dirección de un medio de afuera (del país, de la provincia, de Tandil o Mar del Plata) que no se lee para copiarle, sino para contar cuántos medios distintos cuentan lo mismo. En el código esas están en <code>fuentes-cruce.mjs</code>; desde el 27/9 las de afuera que están en <code>fuentes.mjs</code> cumplen el mismo papel.</li>
-      <li>Una noticia de afuera sale sólo si la cuentan varios: ${esc(String(c.POPULARIDAD.mediosPorDefecto))} medios en general y ${esc(String(c.POPULARIDAD.mediosEnAreasChicas))} en las áreas donde suele haber poco (${cond}). Con uno solo sale sólo una fuente especializada que la IA considere de interés.</li>
+      <li>Una noticia de afuera sale sólo si la cuentan varios: ${esc(String(c.POPULARIDAD.minimoNacional))} medios en general y ${esc(String(c.POPULARIDAD.minimoAreasChicas))} en las áreas chicas (${cond}). Con uno solo no sale nada.</li>
       <li>Los medios del mismo dueño (Grupo Clarín, los del sistema eleco) cuentan como uno solo: por eso la tabla muestra quién es hermano de quién.</li>
     </ol>
   </div>

@@ -13,7 +13,7 @@ test('FUENTES.md está al día con ingesta/fuentes.mjs y fuentes-cruce.mjs', () 
 
 test('FUENTES.md explica cómo se usa cada fuente en el cruce', () => {
   const t = registroDeFuentes();
-  for (const s of ['## Cómo se usan', 'El cruce', '## De Balcarce', '## De la región', '## De la provincia', '## Nacionales', 'Con un solo medio sale sólo una fuente **especializada**']) {
+  for (const s of ['## Cómo se usan', 'El cruce', '## De Balcarce', '## De la región', '## De la provincia', '## Nacionales', 'MINIMO_NACIONAL', 'MINIMO_AREAS_CHICAS', 'Nunca con un solo medio']) {
     assert.ok(t.includes(s), `falta "${s}"`);
   }
 });

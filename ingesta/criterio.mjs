@@ -165,56 +165,38 @@ export const PORTADA = {
   maximoDeNotas: 3700,
 };
 
-// LO NACIONAL SALE POR POPULARIDAD (regla 215, 17/10/2026). Hernán: "dejá todos los criterios que tenemos antes de lado.
-// NO HAY NINGÚN CUPO DE NADA. Tiene que entrar todo lo nacional solo en base a las notas más relevantes, las que más
-// fuentes tienen a la vez, y en todo caso que entre en las áreas donde suele haber poco. La idea es que tengamos unas 100
-// notas por día y SIN TOPE de Balcarce."
+// LO NACIONAL SALE POR POPULARIDAD, EN SEIS LÍNEAS (reglas 215 y 260, 17/10/2026). Hernán: "no hay ningún cupo de nada" y,
+// el mismo día: "hay criterios viejos y no se termina de entender lo que queremos hacer; a nivel nacional, de las secciones
+// populares, sólo a partir de 3 fuentes; la semana que viene lo miramos con la estadística y ahí regularizamos".
 //
-// Hasta el 17/10 lo de afuera tenía dos controles por sección: cuántos medios lo cuentan (Fútbol y Deportes 4; Economía,
-// Tecnología, Agro y Automovilismo 2; el resto 3; con una figura 2) y un cupo de notas a la vez (de 6 a 15). Los dos se
-// reemplazan por uno solo, que se explica en una línea: la popularidad, o sea cuántos medios DISTINTOS cuentan lo mismo
-// (los del mismo dueño cuentan uno). Medido el viernes 16/10 con la lectura guardada: de afuera, 3 medios o más son unas
-// 90 historias por día, que con lo de Balcarce son las ~100 notas que se buscan.
+//   1. Lo de Balcarce entra todo: no pide medios ni tiene tope.
+//   2. Lo nacional entra si lo cuentan `minimoNacional` medios distintos (3; los del mismo dueño cuentan uno).
+//   3. En las áreas chicas (AREAS_CHICAS: Tecnología e IA, Ciencia, Salud, Educación, Cultura) alcanzan `minimoAreasChicas` (2).
+//   4. No hay cupos ni topes de nada: ni por sección, ni por día, ni por área.
+//   5. Lo "muy contado" (MUY_CONTADA) va primero en su sección.
+//   6. Del extranjero, sólo con un argentino; Policiales de afuera no sale solo nunca.
 //
-//   · Por defecto, `mediosPorDefecto` (3): tres medios distintos que cuentan lo mismo es la noticia del día.
-//   · En las áreas donde suele haber poco (AREAS_CHICAS: Tecnología e IA, Ciencia, Salud, Educación, Cultura, Agro,
-//     Automovilismo), `mediosEnAreasChicas` (2): son pocos los medios que las cubren y Hernán quiere notas de ellas todos
-//     los días ("si no, no vale la pena tener la sección").
-//   · Una fuente ESPECIALIZADA de esas áreas (CONICET, una agencia de ciencia, una universidad, un ministerio, un medio de
-//     tecnología: campo `especializada` de la fuente) alcanza con `mediosDeUnaFuenteEspecializada` (1) si la lectura con IA
-//     la considera de interés (importancia media o alta) y pasa el control de calidad (ingesta/popularidad.mjs: sin
-//     pronósticos, sin "dónde ver", sin chimentos ni publicidad).
-//   · El ritmo (ritmoDelDia): se busca `notasPorDia` (100) noticias publicadas por día, repartidas entre las
-//     `ritmoDesdeHora` y las `ritmoHastaHora` (hora de Balcarce). Si a esa hora lleva menos de lo que corresponde, el
-//     mínimo de lo "genérico" baja de 3 a `mediosSiVaFaltando` (2) hasta que alcance, y vuelve a 3. Nunca baja de 2 fuera
-//     de las fuentes especializadas. Si sobra, no hay tope: no se saca nada por llegar a 100.
-//
-// Lo de Balcarce (esDeAca, esDeUnMedioDeAca), lo oficial y las notas propias no piden medios, como siempre. Nada de afuera
-// sale con un solo medio salvo una fuente especializada con el interés de la IA. El extranjero sigue igual (sólo con un
-// argentino, salvo SECCIONES_SIN_FRONTERAS) y Policiales de afuera sigue en cero (SECCIONES_SOLO_DE_ACA). El puntaje sigue
-// sirviendo para ORDENAR (qué va primero, qué va a Facebook), no para decidir si sale.
+// Los dos números se regulan SIN tocar código con las variables de GitHub `MINIMO_NACIONAL` y `MINIMO_AREAS_CHICAS`
+// (ingesta/popularidad.mjs las lee); acá están los de siempre, que son los que controla CRITERIO-EDITORIAL.md. Hasta la regla
+// 260 había además: una fuente "especializada" que salía con un solo medio si la IA le daba interés, el ritmo del día (100 notas)
+// que bajaba el mínimo, y la ciencia y la tecnología sin frontera. Se sacaron: la estadística (web/data/estadistica-seleccion.json
+// y scripts/medir/estadistica-seleccion.mjs) y una revisión semanal de Hernán las reemplazan. El puntaje sigue sirviendo para
+// ORDENAR (qué va primero, qué va a Facebook), no para decidir si sale.
 export const POPULARIDAD = {
-  mediosPorDefecto: 3,
-  mediosEnAreasChicas: 2,
-  mediosDeUnaFuenteEspecializada: 1,
-  mediosSiVaFaltando: 2,
-  notasPorDia: 100,
-  ritmoDesdeHora: 7,
-  ritmoHastaHora: 23,
+  minimoNacional: 3,
+  minimoAreasChicas: 2,
   // Cuántas horas más "nueva" vale una nota cada vez que se duplican los medios que la cuentan, al ordenar una sección
   // (web/lib/datos.js, `ordenPorPopularidad`): más medios = más arriba, sin que una vieja le gane a lo del momento.
   horasPorDuplicarMedios: 2,
 };
 
-/** Las áreas donde suele haber poco: piden 2 medios y no 3 (claves de sección; Espectáculos va dentro de Cultura y agenda). */
-export const AREAS_CHICAS = ['Tecnología', 'Ciencia', 'Salud', 'Educación', 'Cultura y agenda', 'Agro', 'Automovilismo'];
+/** Las áreas donde suele haber poco: piden `minimoAreasChicas` medios y no `minimoNacional` (claves de sección; Espectáculos va
+ *  dentro de Cultura y agenda). Agro y Automovilismo, que pedían 2 hasta la regla 260, vuelven al mínimo de todos: si hace falta
+ *  sumarlas, es una palabra más en esta lista. */
+export const AREAS_CHICAS = ['Tecnología', 'Ciencia', 'Salud', 'Educación', 'Cultura y agenda'];
 
 /** Secciones que son sólo de Balcarce y la zona: lo de afuera no sale solo (antes, cupo 0). */
 export const SECCIONES_SOLO_DE_ACA = ['Policiales'];
-
-/** Secciones sin frontera: la ciencia y la tecnología del mundo son noticia aunque no nombren a un argentino (la regla del
- *  extranjero no las saca). Vacía, vuelve a regir en todas. Es la única excepción a "del extranjero, sólo con un argentino". */
-export const SECCIONES_SIN_FRONTERAS = ['Ciencia', 'Tecnología'];
 
 // "Muy contada": lo de afuera que cuenta medio país (regla 197, 17/10/2026; Hernán: "lo de Balcarce entra
 // todo; lo nacional, según su popularidad", docs/auditoria-2-0/02-FUENTES-CRITERIO-REPETIDAS.md § 2.5).

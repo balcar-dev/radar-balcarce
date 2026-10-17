@@ -374,7 +374,6 @@ function paraLaMemoria(n) {
     fuenteId: n.fuenteId,
     alcance: n.alcance,
     oficial: !!n.oficial,
-    especializada: !!n.especializada,
     seccionFuente: n.seccionFuente ?? null,
     peso: n.peso ?? 10,
     imagen: n.imagen ?? '',

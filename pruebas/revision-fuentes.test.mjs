@@ -36,17 +36,20 @@ test('cada fuente activa del registro aparece en la página: su medio, su direcc
   assert.equal(datos.resumen.feedsActivos, activas.length);
 });
 
-test('también están las apagadas, y la lista elegida da 11 de Balcarce, 50 del país y 10 de Tandil y Mar del Plata', () => {
+test('también están las apagadas, y la lista elegida da 11 de Balcarce, 48 del país (eran 50) y 10 de Tandil y Mar del Plata', () => {
   for (const f of registro.filter((x) => x.activa === false)) assert.ok(html.includes(`data-feed="${esc(f.id)}"`), `falta la apagada ${f.id}`);
   const p = datos.resumen.porGrupoLista;
   assert.equal(p.balcarce, 11);
-  assert.equal(p.pais, 50);
+  // Eran 50: la regla 260 (17/10) apagó dos de la lista porque casi no publican (Agencia CyTA y el Ministerio de Capital Humano).
+  assert.equal(p.pais, 48);
   assert.equal(p.zona, 10);
-  assert.equal(p.sumadas, 11, 'las 11 fuentes especializadas que se sumaron el 17/10 (regla 215) no estaban en LISTA-ELEGIDA.md');
+  // Los 11 medios que se sumaron el 17/10 (regla 215) no estaban en LISTA-ELEGIDA.md; la regla 260 apagó cuatro (ANMAT, CONAE, INTI y la
+  // Secretaría de Innovación, Ciencia y Tecnología: casi no publican) y quedan 7 activos.
+  assert.equal(p.sumadas, 7, 'los 7 medios de ciencia, salud, educación y tecnología que se sumaron el 17/10 y siguen activos');
   assert.equal(p.otras, 0, 'una activa quedó fuera de LISTA-ELEGIDA.md');
   // lo que queda en la pantalla principal más lo descartado de cada grupo es la lista entera
   const d = datos.medios.filter((m) => m.descartada && m.activo);
-  assert.equal(datos.resumen.porGrupo.pais + d.filter((m) => m.grupo === 'pais').length, 50);
+  assert.equal(datos.resumen.porGrupo.pais + d.filter((m) => m.grupo === 'pais').length, 48);
   assert.equal(datos.resumen.porGrupo.zona + d.filter((m) => m.grupo === 'zona').length, 10);
   assert.equal(datos.resumen.porGrupo.balcarce, 11);
 });
