@@ -6,12 +6,12 @@
 //   node redes/vigilar.mjs --probar-cierre  muestra el cierre del día contra Meta
 //                                           y el WhatsApp que saldría, sin mandarlo
 //
-// Corre cada 30 minutos (workflow "Vigilancia", disparado por el reloj de Cloudflare) y
-// mira, desde afuera, lo que un lector vería:
+// Corre cada 3 horas (workflow "Vigilancia", disparado por el reloj de Cloudflare; hasta el 17/10/2026, cada 30 minutos) y
+// mira, desde afuera, lo que un lector vería (lo urgente de la web lo mira además, cada media hora, el vigilante de Cloudflare):
 //
 //   · que la web responda y se haya actualizado hace poco;
 //   · que las corridas de GitHub (web, redes, Cloudflare) no estén fallando;
-//   · que el reloj de redes esté corriendo;
+//   · que el reloj esté despertando a Redes, a la Auditoría IA y a las Pistas;
 //   · que las piezas fijas del día (clima, farmacia) hayan salido en su hora,
 //     y el contrato del día (redes/contrato.mjs), con el cierre de las 23:30
 //     contra lo que Meta tiene de verdad; con REDES_ACTIVAS apagado, sólo lo
@@ -125,7 +125,9 @@ export const WORKFLOWS_VIGILADOS = {
 
 export const LIMITES = {
   minutosSinActualizar: 100,   // la web se arma cada 30
-  minutosSinReloj: 100,        // el reloj de redes corre cada 30
+  minutosSinReloj: 100,        // el reloj de redes corre a los :05, :35 y :45, de 7 a 23
+  minutosSinAuditoriaIA: 180,  // la auditoría IA corre cada hora (:41) de 7 a 23 (17/10/2026: la dispara el reloj)
+  minutosSinPistas: 420,       // las pistas, cada 3 horas (:23)
   minutosSinRespaldo: 10 * 24 * 60, // el respaldo corre cada domingo
   horasEntreAvisos: 6,
   horasEntreAvisosDeRedesApagadas: 24, // el recordatorio de "redes apagadas": una vez por día
@@ -419,17 +421,20 @@ export function evaluar({
     }
   }
 
-  // --- que los relojes estén corriendo (sólo de día: de noche no hay nada que hacer)
-  if (hora >= 7 && hora <= 23) {
-    for (const [nombre, tope, texto] of [
-      ['Actualizar la web', LIMITES.minutosSinActualizar, 'No hay corridas nuevas de "Actualizar la web": el reloj de Cloudflare pudo haber fallado (mirar sus ejecuciones en Workers → radar-balcarce-reloj).'],
-      ['Redes', LIMITES.minutosSinReloj, 'El reloj de Redes no corre: el reloj de Cloudflare pudo haber fallado (o la llave RELOJ_GITHUB_TOKEN dejó de servir), o el workflow está apagado.'],
-    ]) {
-      const lista = corridas[nombre];
-      if (!lista) continue;
-      const ultima = lista.find((r) => r.status === 'completed' || r.status === 'in_progress' || r.status === 'queued');
-      if (!ultima || minutos(ultima.createdAt, ahora) > tope) de(`reloj-${nombre}`, 'alta', texto);
-    }
+  // --- que los relojes estén corriendo (sólo de día: de noche no hay nada que hacer). Desde el 17/10/2026 el reloj de Cloudflare dispara
+  // también "Auditoría IA" (cada hora de 7 a 23) y "Pistas" (cada 3 horas), que antes tenían horario de GitHub: si el reloj nuevo no se
+  // subió o dejó de pedirlas, esto lo dice. Cada una se mira desde la hora en que ya tendría que haber corrido (Redes arranca 7:05).
+  for (const [nombre, tope, desde, texto] of [
+    ['Actualizar la web', LIMITES.minutosSinActualizar, 7, 'No hay corridas nuevas de "Actualizar la web": el reloj de Cloudflare pudo haber fallado (mirar sus ejecuciones en Workers → radar-balcarce-reloj).'],
+    ['Redes', LIMITES.minutosSinReloj, 8, 'El reloj de Redes no corre: el reloj de Cloudflare pudo haber fallado (o la llave RELOJ_GITHUB_TOKEN dejó de servir), o el workflow está apagado.'],
+    ['Auditoría IA', LIMITES.minutosSinAuditoriaIA, 9, 'La "Auditoría IA" no corre hace horas: la dispara el reloj de Cloudflare a los :41 de 7 a 23. ¿Se subió el reloj nuevo (workflow "Reloj de Cloudflare", a mano)? Mirar Workers → radar-balcarce-reloj.'],
+    ['Pistas', LIMITES.minutosSinPistas, 7, 'La revisión de las "Pistas" no corre hace horas: la dispara el reloj de Cloudflare cada 3 horas (a los :23). ¿Se subió el reloj nuevo (workflow "Reloj de Cloudflare", a mano)? Mirar Workers → radar-balcarce-reloj.'],
+  ]) {
+    if (hora < desde || hora > 23) continue;
+    const lista = corridas[nombre];
+    if (!lista) continue;
+    const ultima = lista.find((r) => r.status === 'completed' || r.status === 'in_progress' || r.status === 'queued');
+    if (!ultima || minutos(ultima.createdAt, ahora) > tope) de(`reloj-${nombre}`, nombre === 'Actualizar la web' || nombre === 'Redes' ? 'alta' : 'media', texto);
   }
 
   // --- redes apagadas: con REDES_ACTIVAS sin prender no se publica nada y no se

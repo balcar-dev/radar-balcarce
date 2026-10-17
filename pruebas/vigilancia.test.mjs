@@ -441,3 +441,31 @@ test('con la nota más nueva de hace 2,5 h pero el deploy de hace 10 minutos, no
   const problemas = evaluar({ ahora, web: { estado: 200, actualizado: ultimaModificacion(xml) } });
   assert.ok(!problemas.some((p) => p.clave === 'web-vieja'), 'no debería avisar web-vieja');
 });
+
+// 17/10/2026 (auditoría 2.0): "Auditoría IA" y "Pistas" ya no tienen horario de GitHub: las dispara el reloj de Cloudflare. Si el reloj nuevo
+// no se subió o deja de pedirlas, el vigilante lo dice (de día, y desde la hora en que ya tendrían que haber corrido). Redes, desde las 8:
+// de madrugada ya no corre, así que a las 7 todavía no hay corrida nueva.
+test('si el reloj deja de despertar a la Auditoría IA o a las Pistas, se avisa; si corren, no', () => {
+  const o = sano(A('15:00'));
+  o.corridas['Auditoría IA'] = [corrida(o.ahora, 30)];
+  o.corridas.Pistas = [corrida(o.ahora, 100)];
+  assert.deepEqual(evaluar(o), []);
+  o.corridas['Auditoría IA'] = [corrida(o.ahora, LIMITES.minutosSinAuditoriaIA + 10)];
+  o.corridas.Pistas = [corrida(o.ahora, LIMITES.minutosSinPistas + 10)];
+  const p = evaluar(o);
+  assert.deepEqual(claves(p).sort(), ['reloj-Auditoría IA', 'reloj-Pistas']);
+  assert.ok(p.every((x) => x.nivel === 'media' && /Reloj de Cloudflare/.test(x.texto)));
+  // a las 8:00 todavía no se mira la auditoría (su primera vuelta del día es a las 7:41; la última de ayer, a las 23:41)
+  const temprano = sano(A('08:00'));
+  temprano.corridas['Auditoría IA'] = [corrida(temprano.ahora, 8 * 60 + 19)];
+  assert.ok(!claves(evaluar(temprano)).includes('reloj-Auditoría IA'));
+});
+
+test('a las 7 no se sospecha del reloj de Redes por la madrugada sin corridas; a las 9, sí si sigue quieto', () => {
+  const siete = sano(A('07:02'));
+  siete.corridas.Redes = [corrida(siete.ahora, 7 * 60 + 17)]; // la última, a las 23:45 de ayer
+  assert.ok(!claves(evaluar(siete)).includes('reloj-Redes'));
+  const nueve = sano(A('09:00'));
+  nueve.corridas.Redes = [corrida(nueve.ahora, 9 * 60 + 15)];
+  assert.ok(claves(evaluar(nueve)).includes('reloj-Redes'));
+});

@@ -1,6 +1,8 @@
 # Pistas abiertas (2/10/2026, Hernán: "que quede abierta la investigación y ver si aparece en algún medio"): vuelve a mirar las pistas
 # que se pasaron por el panel del celular, cada tres horas y 14 días, y avisa (panel y WhatsApp) si un medio empezó a cubrirlas o si ya
-# las publicamos. También lo dispara el botón "Volver a mirar" de la pestaña Pistas (con el id de esa pista).
+# las publicamos. Las vueltas de cada tres horas (a los :23) las dispara el reloj de Cloudflare (infra/reloj-cloudflare/, desde el 17/10/2026;
+# el horario de GitHub que tenía se cumplía la mitad de las veces). También lo dispara el botón "Volver a mirar" de la pestaña Pistas (con
+# el id de esa pista).
 #
 # Lee y escribe web/data/pistas.json; el informe de cada pista viaja CIFRADO para los celulares registrados (el repositorio es público).
 # Qué hace y qué guarda: panel/revisar-pistas.mjs y panel/pistas-libro.mjs. Usa Google Noticias (sólo cuenta quién la cubrió) y, si la
@@ -24,8 +26,6 @@ on:
         description: 'Leer y mostrar, sin guardar ni avisar'
         type: boolean
         default: false
-  schedule:
-    - cron: '23 */3 * * *'
 
 permissions:
   contents: write

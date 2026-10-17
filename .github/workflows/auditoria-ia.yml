@@ -6,8 +6,9 @@
 # "Revisión" del panel; lo grave, además, por WhatsApp. Usa Groq (gpt-oss-20b), con su propio cupo: no toca el de la lectura.
 # Cuánto cuesta y cómo se lee: ingesta/auditoria-ia.mjs y docs/09-PANEL.md.
 #
-# Corre cada hora (el planificador de GitHub no es puntual; no importa) y a mano (Actions → Auditoría IA → Run workflow,
-# con "simular" no guarda ni avisa).
+# Corre cada hora, a los :41, de 7 a 23 de Balcarce: la despierta el reloj de Cloudflare (infra/reloj-cloudflare/, desde el 17/10/2026; hasta
+# ahí tenía un horario de GitHub que se cumplía una de cada cuatro horas). De noche no hace falta: la de las 7:41 lee lo que entró mientras
+# tanto. También a mano (Actions → Auditoría IA → Run workflow; con "simular" no guarda ni avisa).
 
 name: Auditoría IA
 
@@ -18,8 +19,6 @@ on:
         description: 'Leer y mostrar, sin guardar ni avisar'
         type: boolean
         default: false
-  schedule:
-    - cron: '41 * * * *'
 
 permissions:
   contents: write

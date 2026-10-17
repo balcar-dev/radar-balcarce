@@ -150,9 +150,12 @@ test('la pestaña Revisión: lo grave primero, escapa lo que viene de afuera y d
   assert.match(htmlDeRevision({ items: [], abierto: false }, apps), /se registró después/);
 });
 
-test('el workflow corre cada hora, a mano permite simular, y la pestaña está en el panel', () => {
+test('el workflow corre cada hora de 7 a 23 (lo dispara el reloj), a mano permite simular, y la pestaña está en el panel', async () => {
   const w = fs.readFileSync(path.join(RAIZ, '.github/workflows/auditoria-ia.yml'), 'utf8');
-  assert.match(w, /cron: '41 \* \* \* \*'/);
+  // 17/10/2026: la dispara el reloj de Cloudflare a los :41 de 7 a 23 (el horario de GitHub la corría una de cada cuatro horas).
+  assert.ok(!/^\s*schedule:/m.test(w), 'sin horario de GitHub');
+  const { trabajosDelMinuto } = await import('../infra/reloj-cloudflare/worker.mjs');
+  assert.deepEqual(trabajosDelMinuto(41, 15), [{ archivo: 'auditoria-ia.yml' }], 'a las 12:41 de Balcarce');
   assert.match(w, /--simular/);
   assert.match(w, /GROQ_API_KEY: \$\{\{ secrets\.GROQ_API_KEY \}\}/);
   assert.match(w, /git add web\/data\/auditoria-ia\.json/);

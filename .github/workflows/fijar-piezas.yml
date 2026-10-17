@@ -13,11 +13,8 @@
 name: Fijar piezas
 
 on:
-  # Una sola vez, el sábado 10/10/2026 a las 05:30 (hora de Balcarce, ya con el cupo de voz del día
-  # nuevo): vuelve a armar las CUATRO piezas de participá con el diseño nuevo (la escena animada: el sobre con el mail, el
-  # pie parejo; las fijas de antes eran de la placa vieja). Gasta cuatro audios del cupo del día. Se puede sacar después.
-  schedule:
-    - cron: '30 8 10 10 *'
+  # SÓLO A MANO (17/10/2026: se sacó el horario de una sola vez del 10/10/2026, que volvía a armar las cuatro de participá; ya corrió y,
+  # con el cron "30 8 10 10 *", GitHub lo hubiera vuelto a despertar cada 10 de octubre).
   workflow_dispatch:
     inputs:
       piezas:
@@ -45,53 +42,39 @@ jobs:
       contents: write # para guardar los videos en reels/fijas/
     env:
       TZ: America/Argentina/Buenos_Aires
-      # A mano llegan por los datos de entrada; en la corrida programada valen los de abajo.
-      PIEZAS: ${{ inputs.piezas || 'participa-noticias,participa-evento,participa-reclamos,participa-nota' }}
-      DESDE: ${{ inputs.desde || '2026-10-10' }}
-      DIAS: ${{ inputs.dias || '22' }}
+      # Llegan por los datos de entrada (y se validan en "Revisar lo pedido").
+      PIEZAS: ${{ inputs.piezas }}
+      DESDE: ${{ inputs.desde }}
+      DIAS: ${{ inputs.dias || '14' }}
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
 
       # Lo que se escribe llega por variables y se valida antes de usarlo.
-      # La corrida programada se repetiría cada 2 de octubre: sólo vale en 2026.
-      - name: Ver si corresponde
-        run: |
-          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(date +%Y)" != "2026" ]; then
-            echo "Esta corrida programada era sólo de 2026: no se hace nada."
-            echo "SEGUIR=false" >> "$GITHUB_ENV"
-          fi
-
       - name: Revisar lo pedido
-        if: env.SEGUIR != 'false'
         run: |
           case "$PIEZAS" in *[!a-z0-9,-]*|"") echo "::error::Las piezas sólo pueden tener letras minúsculas, números, guiones y comas"; exit 1;; esac
           echo "$DESDE" | grep -Eq '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' || { echo "::error::\"desde\" tiene que ser AAAA-MM-DD"; exit 1; }
           echo "$DIAS" | grep -Eq '^[0-9]{1,2}$' || { echo "::error::\"dias\" tiene que ser un número"; exit 1; }
 
       - uses: actions/setup-node@v4
-        if: env.SEGUIR != 'false'
         with:
           node-version: '24'
 
       - name: Instalar
-        if: env.SEGUIR != 'false'
         run: npm ci --no-audit --no-fund
 
       # --incluir: las pide aunque hoy no les toque; --sin-fijas: las arma de cero con la voz.
       - name: Armar las piezas con voz
-        if: env.SEGUIR != 'false'
         run: node reels/plan.mjs --generar "--solo=$PIEZAS" "--incluir=$PIEZAS" --sin-fijas
         env:
           GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
 
       - name: Guardarlas como fijas
-        if: env.SEGUIR != 'false'
         run: node reels/fijas.mjs "--piezas=$PIEZAS" "--desde=$DESDE" "--dias=$DIAS"
 
       - name: Subir lo guardado
-        if: env.SEGUIR != 'false'
         run: |
           git config user.name "Radar Balcarce"
           git config user.email "272334999+balcar-dev@users.noreply.github.com"
@@ -116,7 +99,6 @@ jobs:
           fi
 
       - name: Dejar las piezas para escucharlas
-        if: env.SEGUIR != 'false'
         uses: actions/upload-artifact@v4
         with:
           name: piezas-fijas
@@ -131,7 +113,7 @@ jobs:
       # los archivos propios. VA AL FINAL, DESPUÉS DE PUBLICAR Y DE GUARDAR EL LIBRO, y con continue-on-error: nunca frena ni atrasa la
       # publicación. Sin R2_PIEZAS o sin credenciales dice "sin archivo de piezas" y sigue. No sube lo que espera a una persona ni lo retirado.
       - name: Archivar las piezas en R2 (nunca frena nada)
-        if: always() && env.SEGUIR != 'false' && hashFiles('reels/salida/piezas.json') != ''
+        if: always() && hashFiles('reels/salida/piezas.json') != ''
         continue-on-error: true
         timeout-minutes: 6
         run: node redes/archivar-piezas.mjs --subir
