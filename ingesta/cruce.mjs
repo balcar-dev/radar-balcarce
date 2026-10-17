@@ -48,6 +48,11 @@ import { MARCAS_DE_HECHO } from './repetidas-publicadas.mjs';
 export const CRUCE = {
   umbral: 0.42,
   horasDeMemoria: 36,
+  // Lo de los medios de Balcarce se recuerda más (regla 195, 17/10/2026): Radio Gabal trae tres notas por feed y El Diario
+  // Balcarce publica lo mismo uno o dos días después con otras palabras; cuando llegaba la de El Diario, la de Gabal ya no
+  // estaba en el feed y el cruce no la veía (Campo de Pato salió tres veces entre el 14 y el 16/10). 72 horas, como lo raspado
+  // y lo viejo de un feed de acá (esViejaSinSalir). El cruce coherente sigue partiendo lo que dura más que un hecho.
+  horasDeMemoriaDeAca: 72,
   // Una palabra que aparece en más del 5 % de las notas no sirve para buscar
   // parecidas (es "gobierno", "hoy", "argentina"): no entra al índice.
   palabraComun: 0.05,
@@ -82,6 +87,12 @@ export const CRUCE = {
  * tocar el código: `CRUCE_COHERENTE=no node …`.
  */
 export const CRUCE_COHERENTE = interruptorDelCruce(process.env.CRUCE_COHERENTE, true);
+
+/**
+ * El interruptor de la memoria de lo de acá (regla 195): prendido salvo que MEMORIA_DE_ACA diga «no». Apagado, la memoria
+ * guarda sólo lo de afuera, como hasta el 16/10.
+ */
+export const MEMORIA_DE_ACA = interruptorDelCruce(process.env.MEMORIA_DE_ACA, true);
 
 /** Lee el valor del interruptor («no», «si», «0», «1»…); vacío o desconocido, el valor por defecto. */
 export function interruptorDelCruce(valor, porDefecto = true) {
@@ -341,7 +352,13 @@ function rearmar(g, { notas, vectores, eslabones, marcasDe, p }) {
 
 // ------------------------------------------------------------- la memoria
 
-/** Lo que se guarda de cada nota de afuera para cruzarla en las próximas horas. */
+/** Cuántas horas se recuerda una nota: lo de acá, `horasDeMemoriaDeAca`; lo de afuera, `horasDeMemoria`. */
+export const horasDeMemoriaDe = (n) => (n?.alcance === 'local' ? CRUCE.horasDeMemoriaDeAca : CRUCE.horasDeMemoria);
+
+/** ¿Una nota de la memoria sigue valiendo? (por su fecha y las horas que le tocan). */
+const sigueEnLaMemoria = (n, ahora) => Date.parse(n.fecha) >= ahora - horasDeMemoriaDe(n) * 3600e3;
+
+/** Lo que se guarda de cada nota para cruzarla en las próximas horas. */
 function paraLaMemoria(n) {
   return {
     titulo: n.titulo,
@@ -349,6 +366,9 @@ function paraLaMemoria(n) {
     enlace: n.enlace,
     ...(n.enlaceFeed ? { enlaceFeed: n.enlaceFeed } : {}),
     fecha: (n.fecha instanceof Date ? n.fecha : new Date(n.fecha)).toISOString(),
+    // Lo raspado sin fecha (La Vanguardia, El Diario Balcarce): la «fecha» es cuándo se vio y no cuenta para el largo de un
+    // hecho (horaDe). Sin la marca, al volver de la memoria parecía una fecha de verdad.
+    ...(n.fechaEstimada ? { fechaEstimada: true } : {}),
     visto: n.visto ?? new Date().toISOString(),
     medio: n.medio,
     fuenteId: n.fuenteId,
@@ -366,12 +386,11 @@ export function desdeLaMemoria(m) {
   return { ...m, fecha: new Date(m.fecha), textoCompleto: false, deLaMemoria: true };
 }
 
-/** Lee la memoria del archivo, sin lo de más de `horasDeMemoria`. */
+/** Lee la memoria del archivo, sin lo de más de `horasDeMemoria` (lo de acá, `horasDeMemoriaDeAca`). */
 export function leerMemoria(archivo, { ahora = Date.now() } = {}) {
   try {
     const j = JSON.parse(fs.readFileSync(archivo, 'utf8'));
-    const limite = ahora - CRUCE.horasDeMemoria * 3600e3;
-    return (j.notas ?? []).filter((n) => Date.parse(n.fecha) >= limite);
+    return (j.notas ?? []).filter((n) => sigueEnLaMemoria(n, ahora));
   } catch {
     return [];
   }
@@ -379,10 +398,9 @@ export function leerMemoria(archivo, { ahora = Date.now() } = {}) {
 
 /** Guarda la memoria: lo de antes más lo de esta corrida, sin repetir enlaces. */
 export function guardarMemoria(archivo, anteriores, nuevas, { ahora = Date.now() } = {}) {
-  const limite = ahora - CRUCE.horasDeMemoria * 3600e3;
   const porEnlace = new Map();
   for (const n of [...anteriores, ...nuevas.map(paraLaMemoria)]) {
-    if (!n.enlace || Date.parse(n.fecha) < limite) continue;
+    if (!n.enlace || !sigueEnLaMemoria(n, ahora)) continue;
     if (!porEnlace.has(n.enlace)) porEnlace.set(n.enlace, n);
   }
   fs.mkdirSync(path.dirname(archivo), { recursive: true });

@@ -262,7 +262,8 @@ export function redireccionesDeFusionadas(fusionadas, rutaDe, { rutaDeSeccion = 
 // (0,8) y la IA de la lectura, que mira cien notas juntas, a veces no las junta: el 1/10 salieron
 // dos de la Cooperativa y dos del RENAPER. Acá se eligen las parejas SOSPECHOSAS (misma sección,
 // poco tiempo de diferencia, algo de parecido) para preguntarle a la IA sólo por ellas. Desde el 15/10
-// (regla 175), también en otra sección y con menos parecido si las dos citan la misma nota de otro medio.
+// (regla 175), también en otra sección y con menos parecido si las dos citan la misma nota de otro medio. Desde el 17/10
+// (regla 195), lo de acá también en otra sección: «SUTEBA Balcarce adhiere al paro…» salió en Balcarce y en Política.
 
 export const PAREJAS = {
   /** Desde cuánto parecido de títulos vale la pena preguntar (abajo del umbral de REPETIDAS). */
@@ -273,7 +274,12 @@ export const PAREJAS = {
   horas: 72,
   /** Cuántas parejas se preguntan por corrida. */
   porCorrida: 24,
+  /** Cuántas van en el pedido de cada corrida, sumadas las de significado de lo de acá (regla 195). */
+  porPedido: 30,
 };
+
+/** ¿Las dos son de acá? Entonces se comparan aunque estén en otra sección (regla 195: SUTEBA en Balcarce y en Política). */
+const lasDosDeAca = (a, b) => [a, b].every((n) => !!(n.local || n.deLaZona || n.deUnMedioDeAca));
 
 /** La clave de una pareja, igual en cualquier orden. */
 export const clavePareja = (a, b) => [String(a), String(b)].sort().join('|');
@@ -304,7 +310,7 @@ export function parejasSospechosas(notas = [], {
       const [a, b] = [lista[i], lista[j]];
       if (Math.abs(tiempo(a) - tiempo(b)) > horas * 3600e3) continue;
       const citan = citanLoMismo(a, b);
-      if (a.seccion !== b.seccion && !citan) continue;
+      if (a.seccion !== b.seccion && !citan && !lasDosDeAca(a, b)) continue;
       const clave = clavePareja(a.id, b.id);
       if (clave in decididas) continue;
       const p = parecido(a.titulo, b.titulo);

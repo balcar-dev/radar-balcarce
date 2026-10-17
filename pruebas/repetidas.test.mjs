@@ -148,7 +148,8 @@ test('confirmarParejas: Gemini primero, Groq si falla, y sólo vale lo que conte
 test('generar-datos pregunta por las parejas sospechosas y las fusiona, sin gastar de más', () => {
   const g = fs.readFileSync(path.join(import.meta.dirname, '..', 'web/scripts/generar-datos.mjs'), 'utf8');
   assert.match(g, /parejasSospechosas\(pool, \{ decididas: guardadas \}\)/);
-  assert.match(g, /pedidosHoy < 40/);
+  // El tope del día (40 pedidos) repartido por hora desde el 17/10 (regla 196).
+  assert.match(g, /cupoDelMomento\(\{ usados: pedidosHoy, tope: LECTURA\.pedidosParejasPorDia, prioridad: hayAlgoDeAca \}\)/);
   // Se pregunta con los títulos ya escritos (después de armar las notas) y justo antes de fusionar.
   assert.ok(g.indexOf('parejasSospechosas(pool') > g.indexOf('const conPaginaHoy') && g.indexOf('parejasSospechosas(pool') < g.indexOf('const fusion = repetidasConOtraDireccion('));
   // Desde el 15/10 (regla 171) van junto con las parejas que se deciden sin IA contra lo ya publicado.

@@ -283,7 +283,11 @@ notas de la misma falsa oferta de empleo salieron con títulos distintos). Enton
    `INSTRUCCION_REPETIDAS`: sólo las que cuentan exactamente el mismo hecho). Las
    rojas no se juntan con nada.
 2. Se pide sólo si cambió la lista, hasta 60 vueltas por día
-   (`LECTURA.pedidosRepetidasPorDia`), sólo con Gemini.
+   (`LECTURA.pedidosRepetidasPorDia`), sólo con Gemini. Desde el 17/10 (regla 196)
+   el tope se reparte por hora (`cupoDelMomento`): nunca se gasta todo antes de la
+   noche, y lo que trae algo de acá nuevo puede adelantarse un poco. Las parejas
+   (lo de acá también por significado y entre secciones, contra lo publicado de 72
+   horas) están en `docs/flujo/REPETIDAS-2-0.md`.
 3. Los grupos se suman a los de corridas anteriores (`unirGrupos`: si antes A y B,
    y ahora B y C, son A, B y C), mientras sus notas sigan en la ingesta.
 4. De cada grupo **queda una** (`quitarRepetidas`): la ya publicada (en la portada
@@ -388,7 +392,9 @@ los repasos sin pedirlo aparte (`docs/DECISIONES.md`).
 | Ventana | Cuánto | Dónde | Qué hace |
 |---|---|---|---|
 | Colador de lo raspado | 72 h | `HORAS_DE_UNA_NOTA_NUEVA` | Lo raspado más viejo no entra (`docs/02-INGESTA.md`) |
-| Memoria del cruce | 36 h | `CRUCE.horasDeMemoria` | Con qué se cruza cada nota |
+| Memoria del cruce | 36 h (lo de acá, 72 h) | `CRUCE.horasDeMemoria`, `CRUCE.horasDeMemoriaDeAca` | Con qué se cruza cada nota |
+| Repetidas contra lo publicado | 72 h | `PAREJAS.horas`, `HUELLAS.horas`, `REPETIDAS_PUBLICADAS.horas` | Con qué se compara una nota nueva (regla 195) |
+| Una fuente cuenta para la fecha | 48 h antes de verla | `HORAS_DE_UN_HECHO` (`web/lib/archivo.js`) = `CRUCE.coherente.horasEnDesarrollo` | Más atrás es una nota vieja que el cruce pegó: no la envejece (regla 194) |
 | Estreno | 12 h | `HORAS_PARA_ESTRENAR` = `PORTADA.horasParaEstrenar` | Lo nunca publicado más viejo no sale |
 | Portada y secciones | 36 h | `HORAS_EN_PORTADA` = `PORTADA.horas` | Lo que se muestra en las listas (`vigenteEnPortada`) |
 | Nota grande de la tapa | 6 h | `VENTANA_HORAS` (`web/lib/datos.js`) = `PORTADA.horasNotaGrande` | Cuánto compite una nota por el lugar grande |

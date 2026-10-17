@@ -71,6 +71,7 @@ import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, aligerarViejas, idsEnRedes, sinPuntaje, comoArchivoJson, guardiaDelArchivo, ingestaSana, bajasDelArchivo, mesDeLaNota, conBajasEnElHistorico,
   idsRetiradosAMano, correccionesAMano, conCorreccion, cambiosDeLaAuditoria, conCambiosDeLaAuditoria, fechaDeLaNota, llegaTarde,
+  conFechaSinError, HORAS_DE_UN_HECHO,
   esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson, sePodaPorFaltaDeCuerpo, topeDeNotas, topeDeEstaVuelta, MAXIMO_EN_ARCHIVO,
 } from '../lib/archivo.js';
 import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
@@ -90,9 +91,11 @@ import { previaDelDia } from '../../redes/previa.mjs';
 import { estaActivo } from '../../redes/elegir.mjs';
 import {
   repetidasConOtraDireccion, fotosParaLaQueQueda, conFusionadas, parejasSospechosas, sumarFuentesDeParejas, unionesFirmes, conLaPublicadaPrimero,
+  PAREJAS,
 } from '../lib/repetidas.js';
 import { diceEnVivo } from '../../ingesta/verificar.mjs';
 import { parejasConLoPublicado, conFuentesDeLasUnidas } from '../../ingesta/repetidas-publicadas.mjs';
+import { anclasConfirmadas } from '../../ingesta/huellas-significado.mjs';
 import { traerF1, notasDeF1, comoF1Json } from '../../ingesta/f1.mjs';
 import { traerFutbol, notasDeFutbol, comoFutbolJson } from '../../ingesta/futbol.mjs';
 import { notasDePistas } from '../lib/notas-de-pistas.js';
@@ -240,6 +243,20 @@ const anterior = leerJson(SALIDA, { notas: [] });
 // El archivo también guarda el primer avistaje: una nota que salió de la
 // portada y vuelve no cambia de hora.
 const archivoAnterior = leerJsonEstricto(ARCHIVO, { notas: [] });
+// Las fechas que el cruce envejeció por error (regla 194, lib/archivo.js): una nota automática que figura con una fecha de más
+// de dos días antes de la primera vez que la vimos no se pudo haber estrenado así; envejeció después, cuando el cruce le pegó una
+// nota vieja de otro hecho (el Concejo Estudiantil del 14/10 figuraba del 30/04). Pasa a la primera vez que la vimos, una sola
+// vez: con eso ya no cumple la condición y no se vuelve a tocar.
+{
+  let corregidas = 0;
+  for (const lista of [archivoAnterior.notas ?? [], anterior.notas ?? []]) {
+    for (let i = 0; i < lista.length; i += 1) {
+      const c = conFechaSinError(lista[i]);
+      if (c !== lista[i]) { lista[i] = c; corregidas += 1; }
+    }
+  }
+  if (corregidas) console.log(`  fechas que el cruce había envejecido por error (regla 194): ${corregidas} corregidas a la primera vez que se vieron`);
+}
 const vistoAntes = Object.fromEntries([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])]
   .filter((n) => n.visto)
   .map((n) => [n.id, n.visto]));
@@ -287,9 +304,11 @@ const vistas = {};
  * muestra, la que ordena y la que decide si llega tarde (llegaTarde).
  */
 const primeraVista = (n) => vistoAntes[n.id] ?? vistas[n.id];
+// Regla 194: las fuentes de más de HORAS_DE_UN_HECHO antes de la primera vez que la vimos (notas viejas de otro hecho que el
+// cruce pegó) no la envejecen. La fecha ya publicada sigue mandando (fechaAntes, corregida arriba si era un error).
 const fechaReal = (n) => (n.cuando === 'sin fecha en la fuente'
   ? (primeraVista(n) ?? ahoraISO)
-  : fechaDeLaNota(n, { fechaAnterior: fechaAntes[n.id], visto: primeraVista(n) }));
+  : fechaDeLaNota(n, { fechaAnterior: fechaAntes[n.id], visto: primeraVista(n), horas: HORAS_DE_UN_HECHO }));
 
 // La lectura con IA (plan V2.2, ingesta/lectura-ia.mjs). Desde el 27/09 DECIDE
 // (Hernán: sin prueba, se corrige en vivo): una IA lee cada nota nueva con el
@@ -302,11 +321,16 @@ let repetidasFuera = new Set();
 // Las parejas de notas que la IA confirmó que cuentan el mismo hecho con otras palabras (1/10): [[idA, idB], …]. Se
 // preguntan más abajo, con los títulos ya escritos; acá van las que se confirmaron antes (fichas.json).
 const confirmadasDe = (pares = {}) => Object.entries(pares).filter(([, v]) => v).map(([k]) => k.split('|'));
-let parejasConfirmadas = confirmadasDe(leerJson(FICHAS, {}).repetidas?.pares);
+// Más las de significado (regla 195): cada nueva con UNA sola ancla, la que ya estaba primero ([ancla, nueva]).
+const confirmadasDeLasFichas = (rep = {}) => [...confirmadasDe(rep.pares), ...anclasConfirmadas(rep.significado)];
+let parejasConfirmadas = confirmadasDeLasFichas(leerJson(FICHAS, {}).repetidas);
+// Las [ancla, nueva] de significado: en la unión, la nueva nunca es la que queda (como las de la regla 171).
+let anclasDeSignificado = anclasConfirmadas(leerJson(FICHAS, {}).repetidas?.significado);
 if (enLaNube) {
   try {
     const {
       leerNotasNuevas, aplicarFichas, comoFichasJson, agruparRepetidas, quitarRepetidas, unirGrupos, candidatasParaAgrupar, LECTURA,
+      cupoDelMomento,
     } = await import('../../ingesta/lectura-ia.mjs');
     const { claveClasificacion } = await import('../../reels/claves.mjs');
     const { exigirMedios, aplicarCupos, MOTIVO_POCO_CONTADA } = await import('../../ingesta/ingesta.mjs');
@@ -335,9 +359,18 @@ if (enLaNube) {
     const hoy = fichas.dia;
     // Los grupos se conservan de un día al otro (mientras sus notas sigan en la
     // ingesta); sólo el contador de pedidos vuelve a cero.
-    const rep = fichas.repetidas?.dia === hoy ? fichas.repetidas : { dia: hoy, pedidosHoy: 0, grupos: fichas.repetidas?.grupos ?? [], pares: fichas.repetidas?.pares ?? {} };
+    const rep = fichas.repetidas?.dia === hoy ? fichas.repetidas : {
+      dia: hoy, pedidosHoy: 0, grupos: fichas.repetidas?.grupos ?? [], pares: fichas.repetidas?.pares ?? {},
+      // Las parejas por significado (regla 195) también se conservan de un día al otro; se podan con las notas del pool.
+      ...(fichas.repetidas?.significado ? { significado: fichas.repetidas.significado } : {}),
+    };
     const clave = claveClasificacion();
-    if (clave && rep.lista !== claveDeLaLista && rep.pedidosHoy < LECTURA.pedidosRepetidasPorDia && candidatas.length > 1) {
+    // El tope del día, repartido por hora (regla 196, cupoDelMomento): nunca se gasta todo antes de la noche. Si la lista trae
+    // algo de acá que la vuelta anterior no vio, puede adelantarse un poco.
+    const vistasAntes = new Set(String(rep.lista ?? '').split(','));
+    const hayAlgoDeAcaNuevo = candidatas.some((n) => !vistasAntes.has(n.id) && (n.local || n.deLaZona || n.alcance === 'local'));
+    const hayCupo = cupoDelMomento({ usados: rep.pedidosHoy, tope: LECTURA.pedidosRepetidasPorDia, prioridad: hayAlgoDeAcaNuevo });
+    if (clave && rep.lista !== claveDeLaLista && hayCupo && candidatas.length > 1) {
       rep.pedidosHoy += 1;
       try {
         const nuevos = await agruparRepetidas(candidatas, { clave });
@@ -964,30 +997,66 @@ const conPaginaHoy = [...deLaIngesta, ...propias];
 // fuentes no se parecen; recién con los títulos ya escritos se nota. La IA de la lectura (mira cien notas juntas) a veces
 // no las junta: acá se le pregunta sólo por las parejas sospechosas (misma sección, poco tiempo de diferencia, algo de
 // parecido) y se guarda lo que contestó (fichas.json, repetidas.pares) para no volver a preguntar.
+// Desde el 17/10 (regla 195): contra lo publicado de las últimas 72 horas (antes, sólo lo que seguía en la portada, 36), lo de
+// acá también entre secciones, y además las parejas POR SIGNIFICADO de lo de acá (ingesta/huellas-significado.mjs): la huella
+// elige a quién preguntar y la IA confirma cada nueva contra su ancla (repetidas.significado). Un solo pedido por corrida, con
+// el tope del día repartido por hora (cupoDelMomento, regla 196).
 if (enLaNube) {
   try {
-    const { confirmarParejas, comoFichasJson } = await import('../../ingesta/lectura-ia.mjs');
+    const { confirmarParejas, comoFichasJson, cupoDelMomento, LECTURA } = await import('../../ingesta/lectura-ia.mjs');
+    const {
+      huellasDe, parejasPorSignificado, leerHuellas, guardarHuellas, CACHE_DE_HUELLAS, esDeAcaParaHuella, ultimaVezQueVolvio,
+    } = await import('../../ingesta/huellas-significado.mjs');
     const { claveClasificacion, claveGroq } = await import('../../reels/claves.mjs');
     const fich = leerJson(FICHAS, {});
     const rep = fich.repetidas ?? { dia: fich.dia, pedidosHoy: 0, grupos: [] };
     const pedidosHoy = rep.dia === fich.dia ? (rep.paresPedidosHoy ?? 0) : 0;
-    const pool = [...new Map([...(archivoAnterior.notas ?? []).filter((a) => !retiradas.has(a.id) && vigenteEnPortada(a)), ...conPaginaHoy].map((n) => [n.id, n])).values()];
+    const ahoraMs = Date.now();
+    // Una publicada a la que se le unió una repetida sigue en la ventana desde la última vez que volvió (fusionadas.json).
+    const ultimaVez = ultimaVezQueVolvio(FUSIONADAS_ANTES);
+    const dentroDeLaVentana = (a) => !Number.isFinite(Date.parse(a.fecha ?? ''))
+      || ahoraMs - Math.max(Date.parse(a.fecha), ultimaVez.get(a.id) ?? 0) <= PAREJAS.horas * 3600e3;
+    const pool = [...new Map([...(archivoAnterior.notas ?? []).filter((a) => !retiradas.has(a.id) && dentroDeLaVentana(a)), ...conPaginaHoy].map((n) => [n.id, n])).values()];
     const idsDelPool = new Set(pool.map((n) => n.id));
-    const guardadas = Object.fromEntries(Object.entries(rep.pares ?? {}).filter(([k]) => k.split('|').every((id) => idsDelPool.has(id))));
+    const enElPool = (k) => k.split('|').every((id) => idsDelPool.has(id));
+    const guardadas = Object.fromEntries(Object.entries(rep.pares ?? {}).filter(([k]) => enElPool(k)));
+    const significadoAntes = Object.fromEntries(Object.entries(rep.significado ?? {}).filter(([k]) => enElPool(k)));
     const sospechosas = parejasSospechosas(pool, { decididas: guardadas });
+    // Las huellas de lo de acá del pool: las de la caché y las que falten (pocas por vuelta).
+    const clave = claveClasificacion();
+    const { huellas, cache, pedidas, faltan, falla } = await huellasDe(pool, { cache: leerHuellas(CACHE_DE_HUELLAS), clave });
+    if (pedidas) guardarHuellas(cache, CACHE_DE_HUELLAS);
+    if (falla) console.log(`  huellas de significado: falló el pedido (${falla.message}); se compara con las que ya había`);
+    else if (clave && faltan > pedidas) console.log(`  huellas de significado: ${pedidas} nuevas, ${faltan - pedidas} quedan para la próxima vuelta`);
+    const porSignificado = parejasPorSignificado(pool, { huellas, yaPublicadas: yaSalieron, decididas: { ...guardadas, ...significadoAntes }, ultimaVez });
+    // Primero las de significado (son de acá), después las sospechosas por título; sin repetir.
+    const preguntar = [];
+    const claves = new Set();
+    for (const p of [...porSignificado, ...sospechosas]) if (!claves.has(p.clave)) { claves.add(p.clave); preguntar.push(p); }
+    const enEstePedido = preguntar.slice(0, PAREJAS.porPedido);
     let pares = guardadas;
+    let significado = significadoAntes;
     let pedidos = pedidosHoy;
-    if (sospechosas.length && claveClasificacion() && pedidosHoy < 40) {
+    const hayAlgoDeAca = enEstePedido.some((p) => esDeAcaParaHuella(p.a) && esDeAcaParaHuella(p.b));
+    if (enEstePedido.length && clave && cupoDelMomento({ usados: pedidosHoy, tope: LECTURA.pedidosParejasPorDia, prioridad: hayAlgoDeAca })) {
       pedidos += 1;
-      const r = await confirmarParejas(sospechosas, { clave: claveClasificacion(), claveRespaldo: claveGroq() });
-      pares = { ...guardadas, ...r };
-      for (const p of sospechosas.filter((x) => r[x.clave])) console.log(`    misma noticia (IA): ${p.a.titulo} / ${p.b.titulo}`);
-      console.log(`  parejas: ${sospechosas.length} preguntadas, ${sospechosas.filter((x) => r[x.clave]).length} son la misma noticia`);
+      const r = await confirmarParejas(enEstePedido, { clave, claveRespaldo: claveGroq() });
+      const deTitulo = new Set(sospechosas.map((p) => p.clave));
+      pares = { ...guardadas, ...Object.fromEntries(Object.entries(r).filter(([k]) => deTitulo.has(k))) };
+      significado = { ...significadoAntes };
+      for (const p of porSignificado) {
+        if (!(p.clave in r)) continue;
+        significado[p.clave] = { mismo: r[p.clave], ancla: p.a.id, nueva: p.b.id, s: p.s };
+      }
+      for (const p of enEstePedido.filter((x) => r[x.clave])) console.log(`    misma noticia (IA): ${p.a.titulo} / ${p.b.titulo}`);
+      console.log(`  parejas: ${enEstePedido.length} preguntadas (${porSignificado.filter((p) => claves.has(p.clave)).length} por significado), ${enEstePedido.filter((x) => r[x.clave]).length} son la misma noticia`);
     }
-    if (JSON.stringify(pares) !== JSON.stringify(rep.pares ?? {}) || pedidos !== (rep.paresPedidosHoy ?? 0)) {
-      fs.writeFileSync(FICHAS, comoFichasJson({ ...fich, repetidas: { ...rep, pares, paresPedidosHoy: pedidos } }), 'utf8');
+    if (JSON.stringify(pares) !== JSON.stringify(rep.pares ?? {}) || JSON.stringify(significado) !== JSON.stringify(rep.significado ?? {})
+      || pedidos !== (rep.paresPedidosHoy ?? 0)) {
+      fs.writeFileSync(FICHAS, comoFichasJson({ ...fich, repetidas: { ...rep, pares, significado, paresPedidosHoy: pedidos } }), 'utf8');
     }
-    parejasConfirmadas = confirmadasDe(pares);
+    parejasConfirmadas = confirmadasDeLasFichas({ pares, significado });
+    anclasDeSignificado = anclasConfirmadas(significado);
   } catch (e) {
     console.log(`  parejas: falló el pedido (${e.message}); se vuelve a probar en la próxima corrida`);
   }
@@ -1001,7 +1070,8 @@ const fusion = repetidasConOtraDireccion(
     // Con lo ya publicado queda SIEMPRE la que ya estaba (una nota no rejuvenece, M2 del 15/10): la nueva no queda aunque traiga foto.
     // También en las parejas que confirmó la IA (regla 175): la que ya salió queda con su sección y su dirección, y la copia nueva
     // (aunque sea de otra sección, o de acá contra una de afuera) no se publica.
-    preferidas: [...parejasSinIA, ...conLaPublicadaPrimero(parejasConfirmadas, yaSalieron)],
+    // Y en las de significado (regla 195) la que queda es el ancla, la que ya estaba, aunque las dos hayan salido.
+    preferidas: [...parejasSinIA, ...conLaPublicadaPrimero(parejasConfirmadas, yaSalieron), ...anclasDeSignificado],
     conFoto: conFotoEnElBanco,
     // Las uniones de corridas anteriores quedan firmes (regla 175).
     firmes: UNIDAS_FIRMES,

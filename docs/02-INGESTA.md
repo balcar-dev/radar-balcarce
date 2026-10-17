@@ -224,7 +224,14 @@ entre un feed y otro tampoco entra dos veces (regla 175, 15/10).
 
 Para que una nota se junte con la que otro medio publicó hace horas (y que ya no
 está en su feed), se guarda lo de afuera de las últimas **36 horas**
-(`CRUCE.horasDeMemoria`, `ingesta/cruce.mjs`).
+(`CRUCE.horasDeMemoria`, `ingesta/cruce.mjs`) y, desde el 17/10 (regla 195), lo de
+los medios de Balcarce de las últimas **72** (`CRUCE.horasDeMemoriaDeAca`; la
+variable `MEMORIA_DE_ACA=no` lo apaga): El Diario Balcarce publica lo mismo que Radio
+Gabal uno o dos días después, cuando la de Gabal ya no está en el feed. Lo de acá que
+sólo está en la memoria no vuelve a aparecer como historia: sirve para que se le
+sume lo que llega después (y conserve la dirección ya publicada). Lo que dura más que
+un hecho lo sigue partiendo el cruce coherente; para eso está la huella de
+significado (`docs/flujo/REPETIDAS-2-0.md`).
 
 - **Dónde vive:** `.cache/cruce-memoria.json` (`MEMORIA_DEL_CRUCE`). No va al
   repositorio: en GitHub la guarda la caché de Actions entre corridas; en la PC,
