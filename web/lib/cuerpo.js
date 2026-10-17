@@ -45,9 +45,11 @@ const plano = (s) => sinTildes(s)
  * Desde el 16/10 (regla 180) también lo que contó un organismo o un medio de Balcarce nombrando algo de acá
  * (`deUnMedioDeAca`, lo pone generar-datos), aunque la IA le haya sacado la marca `local`: si salió con un solo
  * medio, no puede perder la página por tener un solo medio.
+ * Desde el 17/10 (regla 211) también lo de una fuente especializada que la lectura con IA marcó de interés
+ * (`deFuenteEspecializada`): sale con un solo medio, así que tampoco puede perder la página por eso.
  */
 export function tieneRespaldo(nota) {
-  return !!(nota?.local || nota?.deLaZona || nota?.propia || nota?.oficial || nota?.deUnMedioDeAca
+  return !!(nota?.local || nota?.deLaZona || nota?.propia || nota?.oficial || nota?.deUnMedioDeAca || nota?.deFuenteEspecializada
     || new Set(nota?.medios ?? []).size >= 2);
 }
 

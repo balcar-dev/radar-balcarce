@@ -1,5 +1,6 @@
 // La lista de fuentes elegida el 15/10/2026 (docs/etapa-1-fuentes/LISTA-ELEGIDA.md): todo lo de Balcarce,
-// los 50 mejores medios del país y los 10 mejores de Tandil y Mar del Plata. Nada más se lee.
+// los 50 mejores medios del país y los 10 mejores de Tandil y Mar del Plata. Nada más se lee, salvo las fuentes de ciencia, salud,
+// educación y tecnología que se sumaron el 17/10 (regla 211, Hernán: "todas las secciones tienen que tener notas todos los días").
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { TODAS_LAS_FUENTES, cuantosMedios, contarMedios, exigirMedios } from '../ingesta/ingesta.mjs';
@@ -7,15 +8,20 @@ import { TODAS_LAS_FUENTES, cuantosMedios, contarMedios, exigirMedios } from '..
 const activas = TODAS_LAS_FUENTES.filter((f) => f.activa !== false);
 const mediosDe = (xs) => new Set(xs.map((f) => f.medio));
 
-test('la lista tiene 11 medios de Balcarce, 10 de Tandil y Mar del Plata y 50 del país', () => {
+test('la lista tiene 11 medios de Balcarce, 10 de Tandil y Mar del Plata, 50 del país y 11 de ciencia, salud, educación y tecnología (17/10)', () => {
   const balcarce = activas.filter((f) => f.alcance === 'local');
   // Argenpapa (la papa, de Balcarce) se lee como "región" pero es un especializado nacional.
   const zona = activas.filter((f) => f.alcance === 'region' && f.id !== 'argenpapa');
   const pais = activas.filter((f) => !balcarce.includes(f) && !zona.includes(f));
   assert.equal(mediosDe(balcarce).size, 11);
   assert.equal(mediosDe(zona).size, 10);
-  assert.equal(mediosDe(pais).size, 50);
-  assert.equal(mediosDe(activas).size, 71);
+  // Los 50 de la lista elegida más los 11 medios que se sumaron el 17/10 (CONAE, INTI, ANMAT, SENASA, la Secretaría de Innovación, Ciencia y
+  // Tecnología, cuatro universidades, IT Sitio y FayerWayer).
+  const sumadosEl17 = ['CONAE', 'INTI', 'ANMAT', 'SENASA', 'Secretaría de Innovación, Ciencia y Tecnología', 'Universidad Nacional de La Plata',
+    'Universidad Nacional de Rosario', 'UNICEN', 'Universidad Nacional de Cuyo', 'IT Sitio', 'FayerWayer'];
+  for (const m of sumadosEl17) assert.ok(mediosDe(pais).has(m), m);
+  assert.equal(mediosDe(pais).size, 50 + sumadosEl17.length);
+  assert.equal(mediosDe(activas).size, 71 + sumadosEl17.length);
   // Todas las de la zona son de Tandil o de Mar del Plata.
   for (const f of zona) assert.match(f.ciudad ?? '', /Tandil|Mar del Plata/, `${f.id}: ${f.ciudad}`);
 });
@@ -65,12 +71,12 @@ test('los medios que comparten dueño o sistema llevan `grupo` y cuentan una sol
   assert.equal(cuantosMedios({}), 0);
 });
 
-test('el mismo grupo no alcanza para el mínimo: Clarín, TN, Olé y Mitre juntos no son cuatro medios para Fútbol', () => {
+test('el mismo grupo no alcanza para el mínimo: Clarín, TN, Olé y Mitre juntos no son tres medios para Fútbol', () => {
   const juntos = { id: 'a', seccion: 'Fútbol', semaforo: 'verde', local: false, medios: ['Clarín', 'TN (Todo Noticias)', 'Olé', 'Radio Mitre'] };
   const variados = { id: 'b', seccion: 'Fútbol', semaforo: 'verde', local: false, medios: ['Clarín', 'Infobae', 'Perfil', 'TyC Sports'] };
   exigirMedios([juntos, variados]);
   assert.equal(juntos.semaforo, 'amarillo');
-  assert.match(juntos.motivo, /1 medio; Fútbol pide 4/);
+  assert.match(juntos.motivo, /1 medio; Fútbol pide 3/);
   assert.equal(variados.semaforo, 'verde');
 });
 

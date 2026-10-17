@@ -1,13 +1,12 @@
-// El mapa nuevo de secciones en MODO SOMBRA (16/10/2026, docs/secciones/MAPA-DE-SECCIONES.md).
-// No está conectado a nada: estas pruebas cuidan que, el día que se apruebe,
-// el clasificador haga lo que dice el documento. Los títulos son reales
+// El mapa de secciones (16/10/2026, docs/secciones/MAPA-DE-SECCIONES.md): tres secciones están activas desde el 17/10 (Educación, Salud y
+// Ciencia, regla 211) y el resto sigue en modo sombra. Estas pruebas cuidan que el clasificador haga lo que dice el documento. Los títulos son reales
 // (web/data/archivo.json y la lectura de feeds del 16/10). Sin red.
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {
-  SECCIONES_NUEVAS, NOMBRES_NUEVOS, TEXTO_PARA_LA_FICHA, SECCIONES_DE_LA_FICHA_NUEVAS, PALABRAS_NUEVAS,
+  SECCIONES_NUEVAS, NOMBRES_NUEVOS, TEXTO_PARA_LA_FICHA, SECCIONES_DE_LA_FICHA_NUEVAS, PALABRAS_NUEVAS, SECCIONES_SUMADAS,
   PUEDEN_LLEVARSE, seccionNueva, contiene, normalizar, repartir,
 } from '../ingesta/secciones-nuevas.mjs';
 import { informe, muestra } from '../ingesta/secciones-nuevas-sombra.mjs';
@@ -22,24 +21,23 @@ test('el clasificador nuevo no importa nada (regla de ingesta/)', () => {
   for (const m of sombra.matchAll(/^import .* from '([^']+)'/gm)) assert.ok(m[1].startsWith('node:') || m[1].startsWith('./'), m[1]);
 });
 
-test('producción usa del mapa sólo la etapa 2 (Educación y Salud), detrás del interruptor (regla 187)', () => {
-  // La ingesta y las redes siguen sin usarlo.
-  for (const archivo of ['../ingesta/ingesta.mjs', '../redes/elegir.mjs']) {
-    assert.equal(fs.readFileSync(new URL(archivo, import.meta.url), 'utf8').includes('secciones-nuevas'), false, archivo);
-  }
-  // La ficha de la IA, el sitio y generar-datos importan sólo lo de la etapa 2 y el interruptor: nada de seccionNueva a secas
-  // ni de las otras cuatro secciones nuevas.
-  const permitidos = new Set(['seccionesNuevasActivas', 'SECCIONES_ETAPA_2', 'DATOS_ETAPA_2', 'TEXTO_PARA_LA_FICHA', 'esDeLaEtapa2',
-    'seccionDeLaEtapa2', 'SECCIONES_NUEVAS']);
-  for (const archivo of ['../ingesta/lectura-ia.mjs', '../web/lib/datos.js', '../web/scripts/generar-datos.mjs']) {
+test('producción usa del mapa sólo Educación, Salud y Ciencia (reglas 187 y 211); el interruptor SECCIONES_NUEVAS ya no existe', () => {
+  // Las redes siguen sin usarlo.
+  assert.equal(fs.readFileSync(new URL('../redes/elegir.mjs', import.meta.url), 'utf8').includes('secciones-nuevas'), false);
+  // La ingesta, la ficha de la IA, el sitio y generar-datos importan sólo lo de las tres activas: nada de seccionNueva a secas ni de
+  // Espectáculos, Turismo y Ambiente (todavía en sombra).
+  const permitidos = new Set(['SECCIONES_SUMADAS', 'DATOS_SUMADAS', 'TEXTO_PARA_LA_FICHA', 'esSumada', 'seccionSumada', 'ETIQUETAS_DE_SECCION',
+    'SECCIONES_NUEVAS', 'encaje']);
+  for (const archivo of ['../ingesta/ingesta.mjs', '../ingesta/lectura-ia.mjs', '../web/lib/datos.js', '../web/scripts/generar-datos.mjs']) {
     const codigo = fs.readFileSync(new URL(archivo, import.meta.url), 'utf8');
     const m = codigo.match(/import \{([^}]+)\} from '[./]+(?:ingesta\/)?secciones-nuevas\.mjs'/);
-    assert.ok(m, `${archivo} usa el interruptor`);
+    assert.ok(m, `${archivo} usa las secciones del mapa`);
     for (const nombre of m[1].split(',').map((x) => x.trim().split(/\s+as\s+/)[0]).filter(Boolean)) {
       assert.ok(permitidos.has(nombre), `${archivo} importa ${nombre}`);
     }
-    assert.match(codigo, /seccionesNuevasActivas/, `${archivo} pregunta por el interruptor`);
+    assert.doesNotMatch(codigo, /seccionesNuevasActivas/, `${archivo}: el interruptor se sacó`);
   }
+  assert.deepEqual(SECCIONES_SUMADAS, ['Educación', 'Salud', 'Ciencia']);
 });
 
 test('son 17, sin repetir, y las direcciones de hoy no cambian', () => {

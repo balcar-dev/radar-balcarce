@@ -68,10 +68,11 @@ export const SECCIONES_VIEJAS = [
   { origen: '/seccion/pais', destino: '/seccion/argentina' },
 ];
 
-/** La dirección de la página de una sección por su nombre (las once), o null. Una prueba la compara con SECCIONES de lib/datos.js. */
+/** La dirección de la página de una sección por su nombre (las catorce), o null. Una prueba la compara con SECCIONES de lib/datos.js. */
 export const RANURAS_DE_SECCION = {
   Balcarce: 'balcarce', Política: 'politica', Policiales: 'policiales', Fútbol: 'futbol', Deportes: 'deportes', Automovilismo: 'automovilismo',
   Agro: 'agro', Economía: 'economia', 'Cultura y agenda': 'cultura', Tecnología: 'tecnologia', Argentina: 'argentina',
+  Educación: 'educacion', Salud: 'salud', Ciencia: 'ciencia',
 };
 export const rutaDeSeccion = (nombre) => (RANURAS_DE_SECCION[nombre] ? `/seccion/${RANURAS_DE_SECCION[nombre]}` : null);
 

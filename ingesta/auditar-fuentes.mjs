@@ -10,7 +10,7 @@
 // web/data/estadisticas.json, las visitas de cada nota por día):
 //   · publicadas: notas publicadas en la ventana que nombran al medio entre sus fuentes.
 //   · únicas: las que contó SÓLO ese medio.
-//   · imprescindible: notas de afuera que llegaron al mínimo de medios de su sección (MEDIOS_DE_AFUERA,
+//   · imprescindible: notas de afuera que llegaron al mínimo de medios de su sección (POPULARIDAD,
 //     ingesta/criterio.mjs) y que, sin ese medio, no llegaban. Los medios del mismo dueño (`grupo`) cuentan
 //     como una sola voz, igual que en el cruce (contarMedios).
 //   · redundante: todas sus notas de afuera las contó también otro medio del mismo dueño.
@@ -29,7 +29,7 @@ import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { FUENTES, FUENTES_NACIONALES } from './fuentes.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
-import { MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO } from './criterio.mjs';
+import { mediosMinimos } from './popularidad.mjs';
 
 const RAIZ = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 export const DIAS_DORMIDA = 3;
@@ -76,7 +76,7 @@ export function visitasPorNota(raiz = RAIZ) {
 }
 
 /** El mínimo de medios de afuera de una sección (sin figura: es el caso que más pide). */
-export const minimoDe = (seccion) => MEDIOS_DE_AFUERA[seccion] ?? MEDIOS_POR_DEFECTO;
+export const minimoDe = (seccion) => mediosMinimos(seccion);
 
 /** Las voces distintas (un dueño = una voz) entre estos medios. */
 export function voces(medios, grupoDe) {

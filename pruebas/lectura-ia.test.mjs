@@ -255,13 +255,15 @@ test('lo de afuera necesita los medios que pide su sección; lo de acá y lo ofi
     { id: 'uno', seccion: 'Economía', semaforo: 'verde', local: false, medios: ['Ámbito'] },
     { id: 'dos', seccion: 'Economía', semaforo: 'verde', local: false, medios: ['Infobae', 'Clarín'] },
     { id: 'futbol', seccion: 'Fútbol', semaforo: 'verde', local: false, medios: ['Infobae', 'Clarín', 'TyC Sports'] },
+    { id: 'ciencia', seccion: 'Ciencia', semaforo: 'verde', local: false, medios: ['Infobae', 'Perfil'] },
     { id: 'aca', seccion: 'Balcarce', semaforo: 'verde', local: true, medios: ['Radio Gabal'] },
     { id: 'oficial', seccion: 'Argentina', semaforo: 'verde', local: false, oficial: true, medios: ['Gobierno de la Provincia'] },
   ];
   exigirMedios(notas);
-  assert.deepEqual(notas.map((n) => n.semaforo), ['amarillo', 'verde', 'amarillo', 'verde', 'verde']);
+  // Desde el 17/10 (regla 211): 3 medios en general, 2 en las áreas donde suele haber poco (Ciencia, Tecnología, Salud…). Economía pide 3.
+  assert.deepEqual(notas.map((n) => n.semaforo), ['amarillo', 'amarillo', 'verde', 'verde', 'verde', 'verde']);
   assert.ok(notas[0].motivo.startsWith(MOTIVO_POCO_CONTADA));
-  assert.equal(notas[2].motivo, 'de afuera y poco contada (3 medios; Fútbol pide 4)');
+  assert.equal(notas[1].motivo, 'de afuera y poco contada (2 medios; Economía pide 3)');
 });
 
 test('si al juntar repetidas una nota llega a los medios que pide, sale; y si la IA le cambió la sección, se vuelve a mirar', () => {
@@ -271,7 +273,14 @@ test('si al juntar repetidas una nota llega a los medios que pide, sale; y si la
   assert.equal(n.motivo, 'de afuera, contada por 3 medios');
   const m = { id: 'y', seccion: 'Fútbol', semaforo: 'verde', local: false, medios: ['Infobae', 'Clarín', 'Perfil'] };
   exigirMedios([m]);
-  assert.equal(m.semaforo, 'amarillo', 'la IA la pasó a Fútbol, que pide cuatro');
+  assert.equal(m.semaforo, 'verde', 'la IA la pasó a Fútbol, que pide tres y la cuentan tres');
+  const m2 = { id: 'y2', seccion: 'Fútbol', semaforo: 'verde', local: false, medios: ['Infobae', 'Clarín', 'Clarín'] };
+  exigirMedios([m2]);
+  assert.equal(m2.semaforo, 'amarillo', 'con dos medios distintos, Fútbol espera');
+  const c = { id: 'c', seccion: 'Argentina', semaforo: 'verde', local: false, medios: ['Infobae', 'Perfil'] };
+  c.seccion = 'Ciencia';
+  exigirMedios([c]);
+  assert.equal(c.semaforo, 'verde', 'y si la IA la pasa a Ciencia (un área chica), alcanzan dos');
   // Lo que espera por otra cosa no se toca.
   const s = { id: 'z', seccion: 'Argentina', semaforo: 'amarillo', motivo: 'necesita ojo humano: "murió"', local: false, medios: ['A', 'B', 'C', 'D'] };
   exigirMedios([s]);

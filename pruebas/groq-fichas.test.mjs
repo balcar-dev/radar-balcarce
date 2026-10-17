@@ -24,25 +24,27 @@ function groqFalso(respuesta) {
   return { fn, pedidos };
 }
 
-test('lo que la instrucción común NO dice: los nombres de los campos `ambito` e `importancia` y sus valores (el porqué del arreglo)', () => {
-  const comun = instruccion(false);
+test('lo que la instrucción común NO dice: el campo `ambito` ni los valores de sus listas (el porqué del arreglo)', () => {
+  const comun = instruccion();
   assert.ok(!/"ambito"|\bambito\b/.test(comun), 'la instrucción dice «ámbito», nunca el campo `ambito`');
-  assert.ok(!/importancia/.test(comun), 'ni nombra `importancia`');
-  assert.ok(!/"provincia"|"alta"/.test(comun), 'ni los valores de esas listas');
+  // Desde el 17/10 (regla 211) nombra `importancia` para decir qué es de interés en ciencia, tecnología, educación y salud, pero no
+  // sus tres valores como lista cerrada: eso sigue en el esquema (Gemini) y en formaDeLaFicha (Groq).
+  assert.ok(!/"provincia"/.test(comun), 'ni los valores de la lista de ámbitos');
+  assert.ok(!/"alta" \| "media"/.test(comun), 'ni la lista cerrada de importancias');
 });
 
 test('el pedido a Groq nombra TODOS los campos obligatorios del esquema, tal cual, con sus valores posibles', async () => {
   const { fn, pedidos } = groqFalso({ fichas: [] });
   await leerGrupoGroq([NOTA], { clave: 'g', fetchFn: fn });
   const texto = pedidos[0].cuerpo.messages[0].content;
-  const { required, properties } = esquema(false).items;
+  const { required, properties } = esquema().items;
   for (const campo of required) assert.ok(texto.includes(`"${campo}"`), `falta el campo "${campo}"`);
   for (const campo of required.filter((c) => properties[c].enum)) {
     for (const v of properties[campo].enum) assert.ok(texto.includes(`"${v}"`), `falta el valor "${v}" de ${campo}`);
   }
-  assert.ok(texto.includes(formaDeLaFicha(false)));
+  assert.ok(texto.includes(formaDeLaFicha()));
   // Y lo de Gemini queda igual, letra por letra: la forma va sólo en el pedido a Groq.
-  assert.ok(!instruccion(false).includes('"fichas"'));
+  assert.ok(!instruccion().includes('"fichas"'));
 });
 
 test('una ficha de Groq con «ámbito», «Región» o «Alta» se lee igual; lo que falta no se inventa', async () => {

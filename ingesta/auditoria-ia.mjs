@@ -14,7 +14,7 @@ import crypto from 'node:crypto';
 /** Groq: gpt-oss-20b. 1.000 pedidos por día y 8.000 tokens por minuto (sondeo del 1/10, docs/05-FOTOS.md). */
 export const MODELO_AUDITORIA = 'openai/gpt-oss-20b';
 
-export const SECCIONES_VALIDAS = ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo', 'Economía', 'Agro',
+export const SECCIONES_VALIDAS = ['Balcarce', 'Política', 'Policiales', 'Educación', 'Salud', 'Ciencia', 'Fútbol', 'Deportes', 'Automovilismo', 'Economía', 'Agro',
   'Tecnología', 'Cultura y agenda', 'Argentina'];
 
 /** Qué puede encontrar, de lo mecánico a lo delicado. */

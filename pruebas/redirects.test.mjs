@@ -40,15 +40,16 @@ test('el formato de Cloudflare/Netlify: origen, destino y 301 en una línea', ()
 
 test('las secciones que ya no existen mandan a la que las reemplazó (27/09)', async () => {
   const { SECCIONES_VIEJAS } = await import('../web/scripts/generar-redirects.mjs');
-  const { SECCIONES, EN_NAVEGACION } = await import('../web/lib/datos.js');
+  const { SECCIONES, EN_LA_BARRA } = await import('../web/lib/datos.js');
   const destinos = Object.fromEntries(SECCIONES_VIEJAS.map((r) => [r.origen, r.destino]));
   assert.equal(destinos['/seccion/servicios'], '/seccion/balcarce');
   assert.equal(destinos['/seccion/pais'], '/seccion/argentina');
   const ranuras = new Set(SECCIONES.map((s) => `/seccion/${s.ranura}`));
   for (const r of SECCIONES_VIEJAS) assert.ok(ranuras.has(r.destino), `${r.destino} existe`);
-  // Las secciones nuevas están en el menú.
-  for (const s of ['Fútbol', 'Argentina']) assert.ok(EN_NAVEGACION.includes(s), `${s} en el menú`);
-  assert.ok(!EN_NAVEGACION.includes('Servicios') && !EN_NAVEGACION.includes('País'));
+  // Fútbol está en la barra del menú y Argentina en el "Más secciones"; las que ya no existen, en ninguna parte.
+  assert.ok(EN_LA_BARRA.includes('Fútbol'));
+  assert.ok(ranuras.has('/seccion/argentina'));
+  assert.ok(!EN_LA_BARRA.includes('Servicios') && !EN_LA_BARRA.includes('País'));
 });
 
 // ------------------------------------------------------------ el tope (17/10/2026, regla 191)

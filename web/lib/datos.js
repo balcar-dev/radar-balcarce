@@ -14,8 +14,9 @@ import {
   rutaDeEvento, claveDeEvento, claveDeRuta, proximos, confirmacionDeAnual,
 } from './eventos.js';
 import {
-  seccionesNuevasActivas, DATOS_ETAPA_2, SECCIONES_NUEVAS as MAPA_DE_SECCIONES, seccionDeLaEtapa2, esDeLaEtapa2,
+  DATOS_SUMADAS, SECCIONES_NUEVAS as MAPA_DE_SECCIONES, seccionSumada, ETIQUETAS_DE_SECCION,
 } from '../../ingesta/secciones-nuevas.mjs';
+import { POPULARIDAD } from '../../ingesta/criterio.mjs';
 
 // Se arma en el momento y no al cargar el módulo: las pruebas se paran en
 // otra carpeta para leer datos de mentira.
@@ -54,16 +55,14 @@ const VACIO = () => ({
 });
 
 /**
- * La sección con que se MUESTRA una nota (regla 187). Con el interruptor SECCIONES_NUEVAS apagado, la de siempre: sólo si
- * una nota trae Educación o Salud (la eligió la IA o una persona mientras estuvo prendido) vuelve a la que tenía antes
- * (`seccionAntes`) o, si no se sabe, a Balcarce o Argentina. Prendido, lo que el clasificador del mapa manda sin duda a
- * Educación o Salud se muestra ahí (`seccionDeLaEtapa2`, ingesta/secciones-nuevas.mjs). Los archivos de datos no se tocan
- * y la dirección no cambia: /nota/<slug>-<id> no lleva la sección.
+ * La sección con que se MUESTRA una nota (regla 187, activa desde la 211). Lo que la ingesta y la IA ya mandan a Educación,
+ * Salud o Ciencia lleva esa sección guardada; las notas de antes del 17/10 (el archivo) se reparten acá: lo que el clasificador
+ * del mapa manda sin duda a una de las tres se muestra ahí (`seccionSumada`, ingesta/secciones-nuevas.mjs). Los archivos de
+ * datos no se tocan y la dirección no cambia: /nota/<slug>-<id> no lleva la sección. Nunca sale de Política ni de Policiales.
  */
-export function conSeccionDelSitio(n, activas = seccionesNuevasActivas()) {
+export function conSeccionDelSitio(n) {
   if (!n) return n;
-  if (!activas) return esDeLaEtapa2(n.seccion) ? { ...n, seccion: n.seccionAntes ?? (n.local ? 'Balcarce' : 'Argentina') } : n;
-  const nueva = seccionDeLaEtapa2(n);
+  const nueva = seccionSumada(n);
   return nueva ? { ...n, seccion: nueva.seccion, seccionAntes: nueva.antes } : n;
 }
 
@@ -302,8 +301,9 @@ export function notasDeLaSeccion(nombre, { archivo = obtenerArchivo(), portada =
   const deLaPortada = portada.filter((n) => n.seccion === nombre);
   const delArchivo = archivo.filter((n) => n?.id && !ids.has(n.id) && n.seccion === nombre && !n.sinFecha && !n.propia
     && tieneCuerpo(n) && tieneRespaldo(n) && Number.isFinite(new Date(n.fecha).getTime()));
-  // Lo muy contado va primero unas horas (regla 197); el resto, de la más nueva a la más vieja.
-  return primeroLasMuyContadas([...deLaPortada, ...delArchivo].sort((a, b) => new Date(b.fecha) - new Date(a.fecha)), ahora);
+  // Lo muy contado va primero unas horas (regla 197); el resto, de la más nueva a la más vieja, con los medios que la cuentan sumando
+  // horas (regla 211, ordenPorPopularidad): más medios = más arriba.
+  return primeroLasMuyContadas(ordenPorPopularidad([...deLaPortada, ...delArchivo]), ahora);
 }
 /**
  * La tapa entera: la nota grande, cuatro de abajo y los bloques por sección.
@@ -380,7 +380,7 @@ export function armarTapa(notasSueltas = [], orden = SECCIONES.map((s) => s.nomb
   const sumadas = [];
   for (const s of secciones) {
     // Lo muy contado de la sección va primero unas horas (regla 197).
-    const suyas = primeroLasMuyContadas(porSeccion[s] ?? [], ahora).slice(0, NOTAS_POR_SECCION);
+    const suyas = primeroLasMuyContadas(ordenPorPopularidad(porSeccion[s] ?? []), ahora).slice(0, NOTAS_POR_SECCION);
     if (suyas.length < NOTAS_POR_SECCION) {
       // Sin repetir historia con nada de lo que ya está en la portada ni con lo
       // que se va sumando, en esta sección o en otra.
@@ -392,7 +392,7 @@ export function armarTapa(notasSueltas = [], orden = SECCIONES.map((s) => s.nomb
         sumadas.push(v);
       }
     }
-    if (suyas.length) bloques.push([s, primeroLasMuyContadas(suyas.sort((a, b) => new Date(b.fecha) - new Date(a.fecha)), ahora)]);
+    if (suyas.length) bloques.push([s, primeroLasMuyContadas(ordenPorPopularidad(suyas), ahora)]);
   }
 
   return { principal, secundarias, bloques };
@@ -484,25 +484,18 @@ const LAS_ONCE = [
   { nombre: 'Argentina', ranura: 'argentina', color: 'var(--s-pais)' },
 ];
 
-// Educación y Salud, la etapa 2 del mapa de 17 secciones (regla 187; docs/secciones/MAPA-DE-SECCIONES.md). Existen sólo con
-// el interruptor SECCIONES_NUEVAS prendido al compilar; apagado, el sitio tiene las once de siempre y sale igual que antes.
+// Educación, Salud y Ciencia, las tres secciones que se suman a las once (regla 187, activas desde la 211; docs/secciones/MAPA-DE-SECCIONES.md).
 // Van después de las ocho de la barra: en la portada sus bloques quedan debajo de los de Economía.
-const DE_LA_ETAPA_2 = DATOS_ETAPA_2.map((s) => ({ nombre: s.nombre, ranura: s.ranura, color: `var(--s-${s.ranura})` }));
+const SUMADAS = DATOS_SUMADAS.map((s) => ({ nombre: s.nombre, ranura: s.ranura, color: `var(--s-${s.ranura})` }));
 
-export { seccionesNuevasActivas };
-
-/** Las secciones del sitio, con o sin las de la etapa 2. */
-export function seccionesDelSitio(activas = seccionesNuevasActivas()) {
-  return activas ? [...LAS_ONCE.slice(0, 8), ...DE_LA_ETAPA_2, ...LAS_ONCE.slice(8)] : LAS_ONCE;
+/** Las secciones del sitio: las once de siempre y las tres que se suman (catorce). */
+export function seccionesDelSitio() {
+  return [...LAS_ONCE.slice(0, 8), ...SUMADAS, ...LAS_ONCE.slice(8)];
 }
 export const SECCIONES = seccionesDelSitio();
 
-// Las que van en la barra de navegación: el resto existe igual como página,
-// pero no ocupa lugar arriba.
-export const EN_NAVEGACION = ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo', 'Agro', 'Economía', 'Cultura y agenda', 'Tecnología', 'Argentina'];
-
-// Con el interruptor prendido, el menú nuevo (docs/secciones/PROTOTIPO-MENU.html): en la barra, las ocho fuertes; el resto,
-// en "Más secciones", agrupado como en el mapa. El panel muestra TODAS las secciones agrupadas (también las de la barra).
+// Menú (docs/secciones/PROTOTIPO-MENU.html): en la barra, las ocho fuertes; el resto, en "Más secciones", agrupado como en el mapa.
+// El panel muestra TODAS las secciones agrupadas (también las de la barra).
 export const EN_LA_BARRA = ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo', 'Agro', 'Economía'];
 const GRUPOS_DEL_MENU = [['Balcarce', 'Balcarce'], ['Deportes', 'Deportes'], ['Economía', 'Economía y campo'],
   ['Sociedad', 'Sociedad'], ['Ciencia y tecnología', 'Ciencia y tecnología'], ['Cultura y ocio', 'Cultura y ocio']];
@@ -511,16 +504,14 @@ const GRUPOS_DEL_MENU = [['Balcarce', 'Balcarce'], ['Deportes', 'Deportes'], ['E
 export const DIAS_PARA_EL_MAS = 7;
 
 /**
- * Lo que recibe la navegación (components/navegacion.js). Apagado el interruptor, exactamente lo de siempre: las
- * secciones de EN_NAVEGACION con al menos una nota en la portada, sin `mas`. Prendido: en la barra, las de EN_LA_BARRA con
- * notas en la portada; y `mas`, los grupos del mapa con las secciones que tuvieron una nota en DIAS_PARA_EL_MAS días (en la
- * portada o en el archivo), cada una con su color, y si es nueva.
+ * Lo que recibe la navegación (components/navegacion.js): en la barra, las de EN_LA_BARRA con notas en la portada; y `mas`, los grupos
+ * del mapa con las secciones que tuvieron una nota en DIAS_PARA_EL_MAS días (en la portada o en el archivo), cada una con su color, y si
+ * es nueva. Una sección sin notas en una semana no se ofrece (se revisa si pasa seguido: "si no hay notas todos los días, no vale la pena").
  */
-export function navegacionDelSitio({ notas = [], archivo = [], activas = seccionesNuevasActivas(), ahora = Date.now() } = {}) {
+export function navegacionDelSitio({ notas = [], archivo = [], ahora = Date.now() } = {}) {
   const conNotas = new Set(notas.map((n) => n.seccion));
   const enlace = (s) => ({ href: `/seccion/${s.ranura}`, nombre: nombreCorto(s.nombre) });
-  if (!activas) return { secciones: EN_NAVEGACION.filter((s) => conNotas.has(s)).map(datosSeccion).map(enlace) };
-  const secciones = seccionesDelSitio(true);
+  const secciones = seccionesDelSitio();
   const corte = Number(ahora) - DIAS_PARA_EL_MAS * 864e5;
   const recientes = new Set([...conNotas, ...archivo.filter((n) => new Date(n.fecha).getTime() >= corte).map((n) => n.seccion)]);
   const delMapa = (nombre) => MAPA_DE_SECCIONES.find((m) => m.nombre === nombre);
@@ -566,16 +557,29 @@ export function frasesDeSeccion(nombre) {
     Agro: { lema: 'El campo y el agro de Balcarce y la región', enBalcarce: 'Agro en Balcarce' },
     Economía: { lema: 'Economía que se siente en Balcarce', enBalcarce: 'Economía para Balcarce' },
     'Cultura y agenda': { lema: 'Cultura y agenda de Balcarce', enBalcarce: 'Cultura y agenda de Balcarce' },
-    Tecnología: { lema: 'Tecnología que cambia la vida diaria', enBalcarce: 'Tecnología para Balcarce' },
+    Ciencia: { lema: 'Ciencia: química, biología, espacio e investigación en la Argentina y el mundo', enBalcarce: 'Ciencia vista desde Balcarce' },
+    Tecnología: { lema: 'Tecnología e inteligencia artificial que cambian la vida diaria', enBalcarce: 'Tecnología e IA para Balcarce' },
     Argentina: { lema: 'Lo que pasa en el país y se lee en Balcarce', enBalcarce: 'Argentina, vista desde Balcarce' },
   };
   return frases[nombre] ?? { lema: `${nombre} en Balcarce`, enBalcarce: `${nombre} en Balcarce` };
 }
 
-// Un nombre corto para la navegación y las etiquetas: "Cultura y agenda"
-// no entra en una etiqueta de 8 caracteres.
+// Cómo se lee cada sección en la navegación y las etiquetas (la clave guardada en las notas no cambia): "Cultura y agenda" se lee
+// "Cultura" y "Tecnología" se lee "Tecnología e IA" (regla 211, ETIQUETAS_DE_SECCION de ingesta/secciones-nuevas.mjs).
 export function nombreCorto(nombre) {
-  return nombre === 'Cultura y agenda' ? 'Cultura' : nombre;
+  return ETIQUETAS_DE_SECCION[nombre] ?? nombre;
+}
+
+/**
+ * Orden de las notas de una lista de sección: más medios = más arriba, sin que una vieja le gane a lo del momento. Cada vez que se
+ * duplican los medios que la cuentan, la nota vale POPULARIDAD.horasPorDuplicarMedios horas más nueva (2 medios +2 h, 4 +4 h, 8 +6 h,
+ * 32 +10 h) y se ordena por esa hora corrida. Con un solo medio no cambia nada, y lo de acá (que casi siempre lo cuenta uno)
+ * sigue yendo por hora. Regla 211.
+ */
+export function ordenPorPopularidad(lista = []) {
+  const medios = (n) => new Set((n?.medios ?? []).map((m) => (typeof m === 'string' ? m : m?.nombre)).filter(Boolean)).size;
+  const hora = (n) => new Date(n.fecha).getTime() + Math.log2(Math.max(1, medios(n))) * POPULARIDAD.horasPorDuplicarMedios * 3600e3;
+  return [...lista].sort((a, b) => hora(b) - hora(a));
 }
 
 // ---------------------------------------------------------------- fechas

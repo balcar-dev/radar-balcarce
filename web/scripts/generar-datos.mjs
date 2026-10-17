@@ -10,8 +10,8 @@
 //   1. Corre la ingesta en el momento y lee las decisiones de las personas (el
 //      celular, web/data/celular-decisiones.json).
 //   2. Anota la primera vez que vio cada nota y fija su fecha (fechaReal).
-//   3. La lectura con IA (fichas, repetidas) y, otra vez, los medios que pide
-//      lo de afuera y los cupos.
+//   3. La lectura con IA (fichas, repetidas) y, otra vez, la popularidad que
+//      pide lo de afuera (medios y ritmo del día; no hay cupos desde el 17/10).
 //   4. La reescritura con IA de lo que va a salir.
 //   5. Decide qué nota se publica (notaPublicada): la decisión de una persona o
 //      el semáforo, que no llegue tarde, las correcciones a mano, lo que no se
@@ -94,7 +94,8 @@ import { anclasConfirmadas } from '../../ingesta/huellas-significado.mjs';
 import { traerF1, notasDeF1, comoF1Json } from '../../ingesta/f1.mjs';
 import { traerFutbol, notasDeFutbol, comoFutbolJson } from '../../ingesta/futbol.mjs';
 import { notasDePistas } from '../lib/notas-de-pistas.js';
-import { seccionesNuevasActivas, SECCIONES_ETAPA_2 } from '../../ingesta/secciones-nuevas.mjs';
+import { SECCIONES_SUMADAS } from '../../ingesta/secciones-nuevas.mjs';
+import { ritmoDelDia, publicadasHoy } from '../../ingesta/popularidad.mjs';
 
 const AQUI = import.meta.dirname;
 const SALIDA = path.join(AQUI, '..', 'data', 'portada.json');
@@ -180,9 +181,15 @@ const { ingestar } = await import('../../ingesta/ingesta.mjs');
 const { agendaCompleta } = await import('../../ingesta/agenda.mjs');
 // Los identificadores ya publicados: cuando otro medio se suma a una
 // historia, la nota no cambia de dirección (ingesta/cruce.mjs).
-const idsConocidos = new Set([...leerJson(SALIDA, { notas: [] }).notas ?? [], ...leerJson(ARCHIVO, { notas: [] }).notas ?? []]
-  .map((n) => n.id));
-let ultima = await ingestar({ silencioso: true, idsConocidos, idsUnidos: new Set(Object.keys(FUSIONADAS_ANTES?.notas ?? {})) });
+const notasDeAntes = [...leerJson(SALIDA, { notas: [] }).notas ?? [], ...leerJson(ARCHIVO, { notas: [] }).notas ?? []];
+const idsConocidos = new Set(notasDeAntes.map((n) => n.id));
+// El ritmo del día (regla 211, ingesta/popularidad.mjs): se buscan unas 100 noticias por día. Si a esta hora lleva menos de lo que
+// corresponde, lo genérico de afuera pide 2 medios y no 3 hasta que alcance. Cuenta lo que salió antes de esta corrida.
+const RITMO = ritmoDelDia({ publicadas: publicadasHoy(notasDeAntes) });
+console.log(`  ritmo del día: ${RITMO.publicadasHoy} noticias hoy, ${RITMO.esperadas} esperadas a esta hora${RITMO.vaFaltando ? ' → va faltando: lo genérico de afuera pide 2 medios' : ''}`);
+let ultima = await ingestar({
+  silencioso: true, idsConocidos, idsUnidos: new Set(Object.keys(FUSIONADAS_ANTES?.notas ?? {})), vaFaltando: RITMO.vaFaltando,
+});
 const agenda = await agendaCompleta().catch(() => null);
 // Las decisiones de las personas son las del celular (las del panel de la PC, web/data/decisiones.json, vacías desde el 28/09,
 // se dejaron de leer el 17/10).
@@ -313,11 +320,13 @@ let anclasDeSignificado = anclasConfirmadas(leerJson(FICHAS, {}).repetidas?.sign
       cupoDelMomento,
     } = await import('../../ingesta/lectura-ia.mjs');
     const { claveClasificacion } = await import('../../reels/claves.mjs');
-    const { exigirMedios, aplicarCupos, MOTIVO_POCO_CONTADA } = await import('../../ingesta/ingesta.mjs');
+    const { aplicarPopularidad, MOTIVO_POCO_CONTADA } = await import('../../ingesta/ingesta.mjs');
     const fichasAntes = leerJson(FICHAS, {});
     // Lo de un medio de acá se lee primero (regla 198): si el cupo diario de la lectura se acaba, lo que espera a la IA
-    // (MOTIVO_ESPERA_LECTURA) es lo de acá, y lo de acá entra todo.
-    const primeroLoDeAca = [...(ultima.notas ?? [])].sort((a, b) => Number(b.alcance === 'local') - Number(a.alcance === 'local'));
+    // (MOTIVO_ESPERA_LECTURA) es lo de acá, y lo de acá entra todo. Después, las fuentes especializadas de un solo medio (regla 211):
+    // sólo salen si la IA dice que les interesa, así que sin ficha no salen. Lo demás, por puntaje.
+    const prioridadDeLectura = (n) => (n.alcance === 'local' ? 2 : n.especializada && n.semaforo === 'amarillo' ? 1 : 0);
+    const primeroLoDeAca = [...(ultima.notas ?? [])].sort((a, b) => prioridadDeLectura(b) - prioridadDeLectura(a));
     const { archivo: fichas, cuenta } = await leerNotasNuevas(primeroLoDeAca, { guardado: fichasAntes, registro: console.log });
     if (cuenta.sinClave) console.log('  lectura con IA: sin clave, se decide como siempre');
     const { notas: conFichas, cambios } = aplicarFichas(ultima.notas ?? [], fichas.fichas, {
@@ -375,11 +384,11 @@ let anclasDeSignificado = anclasConfirmadas(leerJson(FICHAS, {}).repetidas?.sign
     // Con los medios de las repetidas sumados, una nota de afuera puede llegar
     // a los que pide su sección, y con la sección que corrigió la IA el mínimo
     // puede ser otro: la regla se vuelve a mirar, en los dos sentidos. Lo que
-    // la IA dijo que no es de acá también la cumple. Y después, el cupo.
-    exigirMedios(notas);
-    // Con lo ya publicado y la fecha de cada nota: el cupo cuenta sólo lo que se puede estrenar y lo publicado a la
-    // vista, y lo muy contado sale sin cupo (regla 197). Lo que la ingesta mandó a esperar por el cupo vuelve a competir.
-    aplicarCupos(notas.sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0)), { publicadas: yaSalieron, fecha: fechaReal });
+    // la IA dijo que no es de acá también la cumple.
+    // La popularidad (regla 211): sin cupo. Lo ya publicado no se baja por cantidad (si el ritmo del día cambia, una nota que salió con 2
+    // medios no desaparece de las listas), una fuente especializada que la IA marcó de interés sale con un solo medio, y lo muy
+    // contado (regla 197) va primero en su sección.
+    aplicarPopularidad(notas.sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0)), { publicadas: yaSalieron, fecha: fechaReal, vaFaltando: RITMO.vaFaltando });
     ultima = { ...ultima, notas };
     console.log(`  lectura con IA: ${cuenta.nuevas} fichas nuevas en ${cuenta.pedidos} pedidos (${fichas.pedidosHoy ?? 0} hoy${cuenta.groq ? `, ${cuenta.groq} con Groq de respaldo` : ''})`
       + ` · sacó ${cambios.sacadas.length}, ${cambios.dejanDeSerLocales.length} dejaron de ser de Balcarce,`
@@ -535,8 +544,8 @@ function notaPublicada(n) {
     cuerpo: deLaDecision?.cuerpo ?? auto?.cuerpo ?? null,
     guion: humana ? (deLaDecision?.guion ?? null) : (tituloAutomatico(deLaDecision?.guion ?? auto?.guion ?? '') || null),
     seccion: n.seccion,
-    // Si la IA la pasó a Educación o Salud (interruptor SECCIONES_NUEVAS, regla 187), la sección de antes: con el
-    // interruptor apagado la web la vuelve a mostrar ahí (conSeccionDelSitio, lib/datos.js). Apagado no existe.
+    // Si la IA o el clasificador la pasó a Educación, Salud o Ciencia (regla 211), la sección de antes: sirve para el hashtag de las redes
+    // (#Balcarce si era de Balcarce, redes/elegir.mjs) y para saber de dónde vino.
     ...(n.seccionAntes ? { seccionAntes: n.seccionAntes } : {}),
     medios: n.medios,
     enlace: n.enlace,
@@ -569,6 +578,9 @@ function notaPublicada(n) {
     // Lo que cuenta un organismo o un medio de Balcarce nombrando algo de acá sale con un solo medio aunque la IA diga
     // que el hecho es de la región, y también conserva la página (regla 180, esDeUnMedioDeAca y tieneRespaldo).
     ...(esDeUnMedioDeAca(n) ? { deUnMedioDeAca: true } : {}),
+    // Una fuente especializada (ciencia, tecnología, salud, educación) que la lectura con IA marcó de interés sale con un solo medio
+    // (regla 211) y conserva la página: sin esta marca, tieneRespaldo (lib/cuerpo.js) la sacaría por tener un solo medio.
+    ...(n.interesDeLaIA ? { deFuenteEspecializada: true } : {}),
     // Lo de afuera que cuenta medio país (regla 197): va primera en su sección unas horas (web/lib/datos.js).
     ...(n.muyContada ? { muyContada: { medios: n.muyContada.medios, porque: n.muyContada.porque, desde: muyContadaDesde.get(n.id) ?? ahoraISO } } : {}),
     // Lo de acá que cuentan tres medios de Balcarce o más (regla 198): la primera candidata a la nota grande y a Facebook.
@@ -1339,9 +1351,9 @@ function cambioQueImporta(antes, ahora) {
       // apagadas, el celular avisa que esto es lo que saldría, no lo que sale.
       activas: process.env.REDES_ACTIVAS === undefined ? null : estaActivo(process.env.REDES_ACTIVAS),
     },
-    // El interruptor SECCIONES_NUEVAS (regla 187): prendido, el panel ofrece también Educación y Salud al corregir una
-    // nota (seccionesDelPanel, web/public/panel/github.js). Apagado, el campo no existe y el archivo queda como siempre.
-    ...(seccionesNuevasActivas() ? { seccionesNuevas: [...SECCIONES_ETAPA_2] } : {}),
+    // Las secciones que se suman a las once (Educación, Salud y Ciencia; regla 211, activas siempre): el panel las ofrece al corregir
+    // una nota (seccionesDelPanel, web/public/panel/github.js). El campo queda por los paneles que ya estaban abiertos en un celular.
+    seccionesNuevas: [...SECCIONES_SUMADAS],
   };
   const antes = leerJson(CELULAR_ESTADO, null);
   const sinHora = (o) => JSON.stringify({ ...o, generado: null, redes: o?.redes ? { ...o.redes, generado: null } : null });

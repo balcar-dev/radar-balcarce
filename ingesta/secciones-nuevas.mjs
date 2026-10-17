@@ -1,10 +1,8 @@
-// El mapa nuevo de secciones, EN MODO SOMBRA (16/10/2026).
+// El mapa de secciones (16/10/2026): 17 en el papel (docs/secciones/MAPA-DE-SECCIONES.md).
 //
-// Sirve para medir, con las notas reales, cómo quedaría el reparto
-// si se aprueba el mapa de docs/secciones/MAPA-DE-SECCIONES.md (17 secciones).
-// Desde el 17/10 la ETAPA 2 (Educación y Salud) se puede prender con el
-// interruptor SECCIONES_NUEVAS (al final del archivo, regla 187); apagado, nada
-// de producción cambia: el resto del mapa sigue en sombra.
+// Desde el 17/10/2026 (regla 211) están ACTIVAS tres: Educación, Salud y Ciencia (SECCIONES_SUMADAS, al final del archivo; el
+// interruptor SECCIONES_NUEVAS de la regla 187 se sacó) y Tecnología se lee "Tecnología e IA". El resto del mapa (Espectáculos,
+// Turismo, Ambiente) sigue en sombra: sirve para medir, con las notas reales, cómo quedaría el reparto.
 // Lo corre `node ingesta/secciones-nuevas-sombra.mjs` y lo cuida
 // pruebas/secciones-nuevas.test.mjs.
 //
@@ -48,7 +46,7 @@ export const SECCIONES_NUEVAS = [
   { nombre: 'Automovilismo', ranura: 'automovilismo', color: '#B45309', menu: 'principal', grupo: 'Deportes', nueva: false },
   { nombre: 'Agro', ranura: 'agro', color: '#5A6B0A', menu: 'principal', grupo: 'Economía', nueva: false },
   { nombre: 'Economía', ranura: 'economia', color: '#8A6500', menu: 'principal', grupo: 'Economía', nueva: false },
-  { nombre: 'Ciencia', ranura: 'ciencia', color: '#0A7C99', menu: 'mas', grupo: 'Ciencia y tecnología', nueva: true },
+  { nombre: 'Ciencia', ranura: 'ciencia', color: '#772E9E', menu: 'mas', grupo: 'Ciencia y tecnología', nueva: true },
   { nombre: 'Tecnología', etiqueta: 'Tecnología e IA', ranura: 'tecnologia', color: '#0B6FB8', menu: 'mas', grupo: 'Ciencia y tecnología', nueva: false },
   { nombre: 'Cultura y agenda', etiqueta: 'Cultura', ranura: 'cultura', color: '#9D2C8F', menu: 'mas', grupo: 'Cultura y ocio', nueva: false },
   { nombre: 'Espectáculos', ranura: 'espectaculos', color: '#C0258F', menu: 'mas', grupo: 'Cultura y ocio', nueva: true },
@@ -74,8 +72,8 @@ export const TEXTO_PARA_LA_FICHA = {
   Automovilismo: 'autos de carrera (TC, Turismo Nacional, Fórmula 1, MotoGP, karting, rally), el autódromo Juan Manuel Fangio y Fangio. Nunca Deportes ni Turismo.',
   Agro: 'campo, papa, ganadería, granos, maquinaria agrícola, el INTA y la Facultad cuando es producción, clima para el productor.',
   Economía: 'precios, inflación, dólar, salarios y jubilaciones, empleo, empresas, combustibles, consumo.',
-  Ciencia: 'investigación y descubrimientos: CONICET, universidades e INTA cuando es ciencia (no producción), espacio y astronomía, paleontología, biología, premios científicos.',
-  Tecnología: 'tecnología e inteligencia artificial: empresas tecnológicas, celulares y aplicaciones, ciberseguridad, robots, IA (ChatGPT, Gemini, OpenAI…). No las guías de uso ni las ofertas.',
+  Ciencia: 'investigación y descubrimientos: química, biología, física, investigación biomédica, espacio y astronomía, paleontología, ambiente y cambio climático como ciencia (no el pronóstico de todos los días), CONICET, universidades e INTA cuando es ciencia (no producción), premios científicos.',
+  Tecnología: 'tecnología e inteligencia artificial (se lee «Tecnología e IA»): IA (ChatGPT, Gemini, OpenAI…), empresas tecnológicas, celulares y aplicaciones, ciberseguridad, robots, videojuegos y redes. No las guías de uso ni las ofertas.',
   'Cultura y agenda': 'la cultura de acá (Teatro Municipal, Casa del Bicentenario, museos, talleres, fiestas, artistas locales) y libros, arte, teatro, música y patrimonio.',
   Espectáculos: 'televisión, streaming, cine, recitales y giras de artistas de afuera, premios del espectáculo. No chimentos (vida privada de famosos).',
   Turismo: 'turismo y gastronomía: escapadas, fines de semana largos, ocupación, la Fiesta del Postre, las sierras, restaurantes y productos de la zona.',
@@ -101,7 +99,10 @@ export const PALABRAS_NUEVAS = {
       'acreditación académica', 'acreditacion academica', 'oficios'],
     debiles: ['clases', 'colegio', 'primaria', 'maestros', 'maestras', 'aulas', 'aula', 'becas', 'esi', 'inscripción', 'inscripcion', 'jardín', 'jardin', 'técnica', 'tecnica'],
     contras: ['colegio de abogados', 'colegio de escribanos', 'colegio de martilleros', 'colegio médico', 'colegio medico', 'clases de cocina',
-      'clase media', 'river y estudiantes', 'conmebol', 'verificación técnica', 'verificacion tecnica', 'educación vial', 'educacion vial', 'elecciones primarias', 'atención primaria', 'atencion primaria', 'estudiantes de la plata', 'escuela de fútbol', 'escuela de futbol'],
+      'clase media', 'river y estudiantes', 'conmebol', 'verificación técnica', 'verificacion tecnica', 'educación vial', 'educacion vial', 'elecciones primarias', 'atención primaria', 'atencion primaria', 'estudiantes de la plata', 'escuela de fútbol', 'escuela de futbol',
+      // 17/10 (regla 211, con las notas del 16/10): "Estudiantes" es también un club. Con estas palabras la nota es de fútbol.
+      'afa', 'supercopa', 'libertadores', 'sudamericana', 'campeón de américa', 'campeon de america', 'paquetá', 'paqueta', 'clausura', 'torneo apertura',
+      'liga profesional', 'bombonera', 'tarjeta roja', 'roja para', 'roja a'],
   },
   Salud: {
     firmes: ['salud', 'hospital', 'hospitales', 'médico', 'medico', 'médicos', 'medicos', 'médica', 'vacuna', 'vacunas', 'vacunación', 'vacunacion',
@@ -114,18 +115,33 @@ export const PALABRAS_NUEVAS = {
     debiles: ['virus', 'brote', 'brotes', 'tratamiento', 'síntomas', 'sintomas', 'rabia', 'nutrición', 'nutricion'],
     contras: ['carne vacuna', 'vacunos', 'salud financiera', 'salud de la economía', 'salud de la economia', 'salud fiscal',
       // 17/10 (etapa 2, con las notas reales): la salud de UNA persona famosa y lo político del hospital no son la sección.
-      'por su salud', 'papa león', 'papa leon', 'comisión de salud', 'comision de salud', 'tribunal de cuentas'],
+      'por su salud', 'papa león', 'papa leon', 'comisión de salud', 'comision de salud', 'tribunal de cuentas',
+      // 17/10 (regla 211): la salud de una persona famosa (un futbolista operado, una internación, un juicio) es chimento o deportes.
+      'cómo sigue la salud', 'como sigue la salud', 'estado de salud de', 'parte médico', 'parte medico', 'internaron a',
+      'afectó su salud', 'afecto su salud', 'juicio por la muerte'],
   },
   Ciencia: {
     firmes: ['ciencia', 'científico', 'cientifico', 'científicos', 'cientificos', 'científica', 'cientifica', 'investigadores',
       'investigadora', 'conicet', 'conae', 'nasa', 'telescopio', 'astronomía', 'astronomia', 'astrónomos', 'astronomos', 'exoplaneta',
       'galaxia', 'asteroide', 'eclipse', 'meteorito', 'agujero negro', 'fósil', 'fosil', 'fósiles', 'fosiles', 'dinosaurio',
       'paleontólogos', 'paleontologos', 'paleontología', 'paleontologia', 'arqueólogos', 'arqueologos', 'arqueología', 'arqueologia',
-      'neandertal', 'nuevas especies', 'adn', 'genoma', 'premio nobel', 'nobel', 'spacex', 'starship', 'cohete', 'astronauta',
+      'neandertal', 'nuevas especies', 'adn', 'genoma', 'premio nobel', 'nobel', 'cohete', 'astronauta',
       'estación espacial', 'estacion espacial', 'saturno', 'júpiter', 'jupiter', 'marte', 'biólogos', 'biologos', 'bióloga', 'biologa',
-      'cuántica', 'cuantica', 'cuántico', 'cuantico', 'investigación científica', 'investigacion cientifica', 'satélite', 'satelite'],
-    debiles: ['investigador', 'descubren', 'descubrimiento', 'laboratorio', 'universo', 'luna', 'cerebro', 'especie', 'especies'],
-    contras: ['a ciencia cierta', 'miss universo', 'luna de miel', 'investigadores de la causa', 'investigadores judiciales', 'ciencias económicas', 'ciencias economicas'],
+      'cuántica', 'cuantica', 'cuántico', 'cuantico', 'investigación científica', 'investigacion cientifica', 'satélite', 'satelite',
+      // Química, biología, física, geología y ambiente como ciencia (regla 211, Hernán: "química, biología, investigación").
+      'química', 'quimica', 'químico', 'quimico', 'químicos', 'quimicos', 'biología', 'biologia', 'biológico', 'biologico',
+      'biológica', 'biologica', 'molécula', 'molecula', 'moléculas', 'moleculas', 'bacteria', 'bacterias', 'microbioma',
+      'genética', 'genetica', 'genético', 'genetico', 'neurociencia', 'neurociencias', 'células madre', 'celulas madre',
+      'ecosistema', 'ecosistemas', 'biodiversidad', 'cambio climático', 'cambio climatico', 'calentamiento global',
+      'especies en peligro', 'estudio científico', 'estudio cientifico', 'revista nature', 'revista science', 'física', 'fisica',
+      'partículas', 'particulas', 'superconductor', 'nanotecnología', 'nanotecnologia', 'james webb', 'geología', 'geologia',
+      'geólogos', 'geologos', 'microscopio', 'microorganismos'],
+    debiles: ['investigador', 'descubren', 'descubrimiento', 'laboratorio', 'universo', 'luna', 'cerebro', 'especie', 'especies',
+      'hallazgo', 'descubrieron', 'investigación', 'investigacion'],
+    contras: ['a ciencia cierta', 'miss universo', 'luna de miel', 'investigadores de la causa', 'investigadores judiciales', 'ciencias económicas', 'ciencias economicas',
+      'industria química', 'industria quimica', 'ataque químico', 'ataque quimico', 'arma química', 'arma quimica', 'armas químicas', 'armas quimicas',
+      'arma biológica', 'arma biologica', 'ecosistema emprendedor', 'ecosistema empresarial', 'ecosistema digital', 'ecosistema de negocios',
+      'química entre', 'quimica entre', 'física y mental', 'fisica y mental'],
   },
   Tecnología: {
     firmes: ['tecnología', 'tecnologia', 'tecnológica', 'tecnologica', 'tecnológico', 'tecnologico', 'inteligencia artificial', 'chatgpt', 'openai', 'anthropic',
@@ -133,7 +149,10 @@ export const PALABRAS_NUEVAS = {
       'whatsapp', 'iphone', 'android', 'smartphone', 'samsung', 'microsoft', 'google', 'videojuego', 'videojuegos', 'playstation',
       'xbox', 'nintendo', 'software', 'starlink', 'robot', 'robots', 'robótica', 'robotica', 'humanoide', 'semiconductores',
       'algoritmo', 'digitalización', 'digitalizacion', 'automatización', 'automatizacion', 'fibra óptica', 'fibra optica',
-      'punto digital', 'plataforma digital', 'streaming de audio', 'audiolibros'],
+      'punto digital', 'plataforma digital', 'streaming de audio', 'audiolibros',
+      // La IA (regla 211, Hernán: "tecnología, IA"): sus nombres propios y sus frases, firmes; "ia" suelta sigue siendo débil.
+      'ia generativa', 'modelos de ia', 'agentes de ia', 'inteligencia artificial generativa', 'gpt', 'llm', 'robotaxi', 'robotaxis',
+      'ciberdelito', 'ciberdelitos', 'criptomoneda', 'criptomonedas', 'bitcoin', 'blockchain', 'realidad virtual'],
     debiles: ['ia', 'gemini', 'claude', 'copilot', 'grok', 'celular', 'celulares', 'app', 'aplicación', 'aplicacion', 'internet', 'chip', 'chips', 'spotify'],
     contras: ['transporte de aplicaciones', 'robo de celular', 'robaron un celular', 'robaron el celular'],
   },
@@ -216,11 +235,11 @@ export const PUEDEN_LLEVARSE = {
   // Argentina, el de lo nacional.
   Argentina: ['Salud', 'Educación', 'Ciencia', 'Ambiente', 'Tecnología', 'Turismo', 'Espectáculos', 'Política', 'Economía', 'Cultura y agenda'],
   // Cultura y agenda se parte en tres: lo de afuera de la tele y los recitales, y el turismo.
-  'Cultura y agenda': ['Espectáculos', 'Turismo', 'Ambiente', 'Deportes', 'Educación', 'Salud'],
+  'Cultura y agenda': ['Espectáculos', 'Turismo', 'Ambiente', 'Deportes', 'Educación', 'Salud', 'Ciencia', 'Tecnología'],
   Tecnología: ['Ciencia'],
   Agro: ['Ciencia'],
   Política: ['Educación', 'Salud'],
-  Economía: ['Turismo'],
+  Economía: ['Turismo', 'Tecnología', 'Ciencia'],
   Deportes: ['Fútbol'],
 };
 
@@ -301,13 +320,15 @@ export function encaje(nota, seccion, texto = partes(nota)) {
  *   · `duda`: true si otra sección encajaba igual de bien, o si decidió una
  *     palabra de la bajada o una débil: son las que hay que mirar a mano.
  *   · `aviso`: algo que el mapa dice que no debería ser nota (el pronóstico).
+ * Con `entre` sólo se consideran esas secciones como destino (producción mira sólo las activas: un empate con una que sigue en
+ * sombra, como Ambiente, no frena a Ciencia); sin `entre`, todas las del mapa (la medición en sombra).
  */
-export function seccionNueva(nota = {}) {
+export function seccionNueva(nota = {}, { entre = null } = {}) {
   const antes = nota.seccion ?? null;
   const base = DE_VIEJA_A_NUEVA[antes] ?? antes ?? (esDeAca(nota) ? 'Balcarce' : 'Argentina');
   const texto = partes(nota);
   const deAca = esDeAca(nota);
-  const candidatas = (PUEDEN_LLEVARSE[base] ?? []).filter((s) => !(SOLO_DE_AFUERA.has(s) && deAca));
+  const candidatas = (PUEDEN_LLEVARSE[base] ?? []).filter((s) => !(SOLO_DE_AFUERA.has(s) && deAca)).filter((s) => !entre || entre.includes(s));
   const resultados = candidatas.map((s, orden) => ({ s, orden, ...encaje(nota, s, texto) }))
     .filter((r) => r.puntos >= (CAJONES.has(base) ? 1 : 3))
     .filter((r) => !(r.s === 'Ciencia' && base === 'Agro' && PALABRAS_DE_PRODUCCION.some((w) => contiene(texto.todo, w))));
@@ -337,30 +358,32 @@ export function seccionNueva(nota = {}) {
   };
 }
 
-// ------------------------------------------------------------- etapa 2, detrás del interruptor
+// ------------------------------------------------------------- las secciones que se suman (activas desde el 17/10/2026)
 //
-// Desde el 17/10/2026 (regla 187) el mapa deja de ser sólo sombra en DOS secciones: Educación y Salud, las
-// únicas que ya llegan a 10 notas por semana. Todo lo demás de este archivo sigue en sombra. Y aun estas dos
-// existen sólo con el interruptor prendido: la variable SECCIONES_NUEVAS ("si"). Apagado (lo normal), nadie
-// las ve: ni el sitio, ni la IA, ni el panel. Lo usan web/lib/datos.js (el sitio), ingesta/lectura-ia.mjs
-// (la ficha de la IA), web/scripts/generar-datos.mjs (el aviso al celular) y web/scripts/vista-previa-secciones.mjs.
+// Desde el 17/10/2026 (regla 211; antes, regla 187 detrás del interruptor SECCIONES_NUEVAS, que se sacó) el sitio tiene tres
+// secciones más: Educación, Salud y Ciencia. Hernán: "me interesa mucho que haya notas de tecnología, IA, química, biología,
+// investigación, educación, culturales… Todas las secciones tienen que tener notas todos los días". Tecnología se lee "Tecnología
+// e IA" (la clave sigue siendo Tecnología). El resto del mapa (Espectáculos, Turismo, Ambiente) sigue en sombra: lo de Espectáculos
+// va dentro de Cultura y agenda. Lo usan web/lib/datos.js (el sitio), ingesta/ingesta.mjs (`clasificar`), ingesta/lectura-ia.mjs
+// (la ficha de la IA) y web/scripts/generar-datos.mjs.
 
-/** Las secciones del mapa que se suman en la etapa 2. */
-export const SECCIONES_ETAPA_2 = ['Educación', 'Salud'];
+/** Las secciones del mapa que están activas (se suman a las once de siempre). */
+export const SECCIONES_SUMADAS = ['Educación', 'Salud', 'Ciencia'];
 
 /** Sus datos (ranura, color, grupo), sacados del mapa para no escribirlos dos veces. */
-export const DATOS_ETAPA_2 = SECCIONES_ETAPA_2.map((n) => SECCIONES_NUEVAS.find((s) => s.nombre === n));
+export const DATOS_SUMADAS = SECCIONES_SUMADAS.map((n) => SECCIONES_NUEVAS.find((s) => s.nombre === n));
 
-/**
- * ¿Está prendido el interruptor? La variable SECCIONES_NUEVAS con "si", "sí", "1" o "true". Vacía, ausente o
- * cualquier otra cosa: apagado. Se lee cuando se pregunta (no al cargar), así una prueba puede pasar su `env`.
- */
-export function seccionesNuevasActivas(env = globalThis.process?.env ?? {}) {
-  return /^(si|sí|1|true)$/i.test(String(env?.SECCIONES_NUEVAS ?? '').trim());
-}
+/** A dónde puede mandar una nota el clasificador de producción: las tres nuevas y Tecnología e IA (la IA, los celulares, la ciberseguridad). */
+export const DESTINOS_ACTIVOS = [...SECCIONES_SUMADAS, 'Tecnología'];
 
-/** La IA o una persona eligió una sección de la etapa 2 que no existe con el interruptor apagado. */
-export const esDeLaEtapa2 = (seccion) => SECCIONES_ETAPA_2.includes(seccion);
+/** ¿Es una de las secciones que se suman? */
+export const esSumada = (seccion) => SECCIONES_SUMADAS.includes(seccion);
+
+/** Cómo se lee cada sección (la clave de las notas no cambia): "Tecnología e IA", "Cultura". */
+export const ETIQUETAS_DE_SECCION = Object.fromEntries(SECCIONES_NUEVAS.filter((s) => s.etiqueta).map((s) => [s.nombre, s.etiqueta]));
+
+/** Secciones de las que no se lleva nada el clasificador: esperan a una persona en todas las piezas de redes (CLAUDE.md). */
+const NO_SE_TOCAN = new Set(['Política', 'Policiales']);
 
 /** ¿La sección de esta nota la decidió una persona? Lo que corrigió o publicó una persona no se toca. */
 function laDecidioUnaPersona(nota) {
@@ -369,20 +392,21 @@ function laDecidioUnaPersona(nota) {
 }
 
 /**
- * La sección con que se MUESTRA una nota con la etapa 2 prendida, o null si se queda donde está.
- * Usa `seccionNueva` tal cual (parte de la sección de hoy, las contras, la débil sólo desde el título) y
- * acepta el cambio sólo si:
- *   · lo que gana es Educación o Salud (si gana otra del mapa, todavía en sombra, la nota no se mueve);
- *   · decidió algo firme: una firme en el título, o en la bajada dos firmes distintas o una firme con una débil
- *     en el título. Una débil sola no alcanza, y en la bajada una débil no cuenta nunca;
+ * La sección del mapa (Educación, Salud, Ciencia o Tecnología e IA) que le toca a una nota, o null si se queda donde está.
+ * Usa `seccionNueva` tal cual (parte de la sección de hoy, las contras, la débil sólo desde el título), mirando sólo los destinos
+ * activos (DESTINOS_ACTIVOS: lo que sigue en sombra no frena a lo activo), y acepta el cambio sólo si:
+ *   · lo que gana es una de esas cuatro;
+ *   · decidió algo firme: una firme en el título, o en la bajada dos firmes distintas o una firme con una débil en el título.
+ *     Una débil sola no alcanza, y en la bajada una débil no cuenta nunca;
  *   · no empata con otra sección;
+ *   · no sale de Política ni de Policiales (esperan a una persona en las redes);
  *   · no es una nota propia (dólar, clima, repasos…) ni la decidió una persona.
  * No cambia la dirección: /nota/<slug>-<id> no lleva la sección (web/lib/ruta.js).
  */
-export function seccionDeLaEtapa2(nota = {}) {
-  if (!nota?.seccion || nota.propia || laDecidioUnaPersona(nota)) return null;
-  const r = seccionNueva(nota);
-  if (!esDeLaEtapa2(r.seccion) || r.seccion === nota.seccion) return null;
+export function seccionSumada(nota = {}) {
+  if (!nota?.seccion || nota.propia || NO_SE_TOCAN.has(nota.seccion) || laDecidioUnaPersona(nota)) return null;
+  const r = seccionNueva(nota, { entre: DESTINOS_ACTIVOS });
+  if (!DESTINOS_ACTIVOS.includes(r.seccion) || r.seccion === nota.seccion) return null;
   if (r.puntos < 2 || r.alternativa) return null;
   return { seccion: r.seccion, antes: nota.seccion, motivo: r.motivo };
 }

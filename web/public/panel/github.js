@@ -8,18 +8,16 @@ export const REPO = 'radarbalcarce/radar-balcarce';
 export const RAMA = 'main';
 const API = 'https://api.github.com';
 
-/** Las once secciones (web/lib/datos.js, SECCIONES; una prueba controla que coincidan). */
+/** Las once de siempre (web/lib/datos.js; una prueba controla que coincidan con las del sitio, que con las tres de SECCIONES_SUMADAS son catorce). */
 export const SECCIONES = ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo', 'Agro', 'Economía', 'Cultura y agenda', 'Tecnología', 'Argentina'];
 
-/** Las de la etapa 2 del mapa (regla 187): el panel las ofrece sólo si la web dice que el interruptor SECCIONES_NUEVAS
- *  está prendido (`seccionesNuevas` en celular-estado.json, lo escribe web/scripts/generar-datos.mjs). */
-export const SECCIONES_ETAPA_2 = ['Educación', 'Salud'];
+/** Las que se suman a las once (reglas 187 y 211; las mismas de SECCIONES_SUMADAS en ingesta/secciones-nuevas.mjs, una prueba lo controla). */
+export const SECCIONES_SUMADAS = ['Educación', 'Salud', 'Ciencia'];
 
-/** La lista para elegir sección en el celular: las once, y Educación y Salud después de Economía si están prendidas
- *  (el mismo orden que SECCIONES de web/lib/datos.js con el interruptor). */
-export function seccionesDelPanel(estadoCel = null) {
-  const nuevas = (estadoCel?.seccionesNuevas ?? []).filter((s) => SECCIONES_ETAPA_2.includes(s));
-  return nuevas.length ? [...SECCIONES.slice(0, 8), ...SECCIONES_ETAPA_2.filter((s) => nuevas.includes(s)), ...SECCIONES.slice(8)] : [...SECCIONES];
+/** La lista para elegir sección en el celular: las once y, después de Economía, Educación, Salud y Ciencia (el mismo orden que SECCIONES de
+ *  web/lib/datos.js). Desde el 17/10 no depende de ningún interruptor; el argumento queda por quien todavía lo pasa. */
+export function seccionesDelPanel() {
+  return [...SECCIONES.slice(0, 8), ...SECCIONES_SUMADAS, ...SECCIONES.slice(8)];
 }
 
 /** Los archivos que escribe el celular (panel/celular-datos.mjs). */

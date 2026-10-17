@@ -2,7 +2,7 @@ import './globals.css';
 import { createElement } from 'react';
 import {
   obtenerDatos, obtenerArchivo, whatsapp, WHATSAPP, MAIL, REDES_SOCIALES,
-  navegacionDelSitio, seccionesNuevasActivas, seccionesDelSitio, nombreCorto,
+  navegacionDelSitio, seccionesDelSitio, nombreCorto,
 } from '@/lib/datos';
 import { PastillaClima } from '@/components/clima-vivo';
 import { comoNombre } from '@/lib/texto';
@@ -79,20 +79,17 @@ export default function RaizLayout({ children }) {
 
   // Sólo se ofrecen las secciones que hoy tienen al menos una nota: una
   // pestaña que lleva a una página vacía es peor que no tenerla
-  // (navegacionDelSitio, lib/datos.js). Con el interruptor SECCIONES_NUEVAS
-  // prendido (regla 187), la barra lleva las ocho fuertes y el resto va en
-  // "Más secciones"; apagado, la barra de siempre, sin cambiar nada.
-  const nuevas = seccionesNuevasActivas();
-  const menu = navegacionDelSitio({ notas: d.notas ?? [], archivo: nuevas ? obtenerArchivo() : [], activas: nuevas });
-  // Con el menú nuevo, el pie lista todas las secciones: sin JavaScript el "Más secciones" no se abre.
-  const pieSecciones = nuevas ? [(
+  // (navegacionDelSitio, lib/datos.js). La barra lleva las ocho fuertes y el
+  // resto va en "Más secciones" (regla 187, activa desde la 211).
+  const menu = navegacionDelSitio({ notas: d.notas ?? [], archivo: obtenerArchivo() });
+  // El pie lista todas las secciones: sin JavaScript el "Más secciones" no se abre.
+  const pieSecciones = [(
     <nav className="pie-secciones" aria-label="Todas las secciones" key="pie-secciones">
-      {seccionesDelSitio(true).map((s, i) => (
+      {seccionesDelSitio().map((s, i) => (
         <span key={s.ranura}>{i > 0 ? ' · ' : ''}<a href={`/seccion/${s.ranura}`}>{nombreCorto(s.nombre)}</a></span>
       ))}
     </nav>
-  )] : [];
-
+  )];
   return (
     <html lang="es-AR">
       <head>

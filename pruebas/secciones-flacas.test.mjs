@@ -5,8 +5,8 @@
 //
 //   1. que las fuentes nuevas estén bien formadas y no le ganen a lo local;
 //   2. que sus títulos reales caigan en la sección que se busca;
-//   3. que los medios que pide y el cupo de cada sección hagan lo que dice
-//      CRITERIO-EDITORIAL.md (desde el 27/09 medios, no un piso de puntaje);
+//   3. que los medios que pide cada sección hagan lo que dice CRITERIO-EDITORIAL.md (desde el 27/09 medios, no un piso de puntaje; desde
+//      el 17/10, regla 211, la popularidad: 3 medios, 2 en las áreas chicas, y sin cupos);
 //   4. que el semáforo siga mandando (lo sensible y lo internacional esperan);
 //   5. que la IA gaste primero en la sección con menos notas escritas.
 //
@@ -14,11 +14,10 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { TODAS_LAS_FUENTES, paraPruebas, aplicarCupos } from '../ingesta/ingesta.mjs';
+import { TODAS_LAS_FUENTES, paraPruebas, aplicarPopularidad } from '../ingesta/ingesta.mjs';
 import { MOTIVO_INTERNACIONAL, REGLAS_SEMAFORO } from '../ingesta/fuentes.mjs';
-import {
-  MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO,
-} from '../ingesta/criterio.mjs';
+import { POPULARIDAD, AREAS_CHICAS, SECCIONES_SOLO_DE_ACA } from '../ingesta/criterio.mjs';
+import * as criterio from '../ingesta/criterio.mjs';
 import { ordenarParaReescribir } from '../reels/reescritura.mjs';
 
 // El motivo de la regla vieja del semáforo para el policial de afuera
@@ -64,9 +63,9 @@ test('las 13 fuentes nuevas están bien formadas y pesan poco', () => {
   }
 });
 
-test('el total de fuentes es el que dicen los documentos (64 en fuentes.mjs, más las del cruce)', async () => {
+test('el total de fuentes es el que dicen los documentos (82 en fuentes.mjs, más las del cruce)', async () => {
   const { FUENTES_CRUCE } = await import('../ingesta/fuentes-cruce.mjs');
-  assert.equal(TODAS_LAS_FUENTES.length - FUENTES_CRUCE.length, 64); // 58 y Acción 5 (30/09); FayerWayer y Agencia CyTA (1/10); Ahora Balcarce (5/10); Concejo Deliberante y Facultad de Ciencias Agrarias (15/10)
+  assert.equal(TODAS_LAS_FUENTES.length - FUENTES_CRUCE.length, 82); // 58 y Acción 5 (30/09); FayerWayer y Agencia CyTA (1/10); Ahora Balcarce (5/10); Concejo Deliberante y Facultad de Ciencias Agrarias (15/10); 15 de ciencia, salud, educación y tecnología y 3 de España apagadas (17/10, regla 211)
   assert.ok(FUENTES_CRUCE.length >= 100, 'las del cruce de medios (27/09)');
   assert.ok(FUENTES_CRUCE.every((f) => f.alcance && f.medio && f.url && f.peso), 'cada una con alcance, medio, dirección y peso');
 });
@@ -109,18 +108,18 @@ test('Tecnología: se confirma con el título, así que un reloj deportivo no es
 
 // ------------------------------------- 3. los medios y el cupo de cada sección
 
-test('los medios que pide y los cupos son los que dice el criterio', () => {
-  // Las flacas (Tecnología, Agro, Economía) piden dos; las que se inundan
-  // (Fútbol, Deportes), cuatro; el resto, tres (27/09, con el cruce).
-  assert.equal(MEDIOS_DE_AFUERA.Tecnología, 2);
-  assert.equal(MEDIOS_DE_AFUERA.Agro, 2);
-  assert.equal(MEDIOS_DE_AFUERA.Fútbol, 4);
-  assert.equal(MEDIOS_DE_AFUERA.Deportes, 4);
-  assert.equal(mediosMinimosDe('Cultura y agenda'), MEDIOS_POR_DEFECTO);
-  assert.equal(MEDIOS_POR_DEFECTO, 3);
-  assert.equal(CUPO_DE_AFUERA['Cultura y agenda'], 8);
-  assert.equal(CUPO_DE_AFUERA.Fútbol, 10);
-  assert.equal(CUPO_DE_AFUERA.Policiales, 0);
+test('los medios que pide cada sección son los que dice el criterio, y los cupos ya no existen (regla 211)', () => {
+  // Las flacas (Tecnología e IA, Ciencia, Salud, Educación, Cultura, Agro, Automovilismo) piden dos; el resto, tres (antes: Fútbol y
+  // Deportes cuatro, Economía dos). Ni un cupo por sección: Hernán, 17/10, "NO HAY NINGÚN CUPO DE NADA".
+  assert.deepEqual([...AREAS_CHICAS].sort(), ['Agro', 'Automovilismo', 'Ciencia', 'Cultura y agenda', 'Educación', 'Salud', 'Tecnología']);
+  for (const s of AREAS_CHICAS) assert.equal(mediosMinimosDe(s), POPULARIDAD.mediosEnAreasChicas, s);
+  for (const s of ['Fútbol', 'Deportes', 'Economía', 'Política', 'Argentina']) assert.equal(mediosMinimosDe(s), POPULARIDAD.mediosPorDefecto, s);
+  assert.equal(POPULARIDAD.mediosPorDefecto, 3);
+  assert.equal(POPULARIDAD.mediosEnAreasChicas, 2);
+  assert.deepEqual(SECCIONES_SOLO_DE_ACA, ['Policiales']);
+  for (const viejo of ['CUPO_DE_AFUERA', 'CUPO_POR_DEFECTO', 'MEDIOS_DE_AFUERA', 'MEDIOS_POR_DEFECTO', 'MEDIOS_CON_FIGURA']) {
+    assert.ok(!(viejo in criterio), `${viejo} ya no existe`);
+  }
 });
 
 const deAfuera = (titulo, seccion, extra = {}) => ({
@@ -128,25 +127,23 @@ const deAfuera = (titulo, seccion, extra = {}) => ({
   fecha: new Date(), imagen: 'https://x/y.jpg', local: false, nombraBalcarce: false, ...extra, seccionFuente: seccion,
 });
 
-test('una nota de espectáculos de afuera sale sola si la cuentan tres medios; con dos espera', () => {
+test('una nota de espectáculos de afuera sale sola si la cuentan dos medios (Cultura es un área chica); con uno espera', () => {
   const n = deAfuera('Lali Espósito y su tercer River: todo lo que hay que saber para el show del sábado', 'Cultura y agenda');
   assert.equal(semaforo(n, 'Cultura y agenda', 3).color, 'verde');
-  const s = semaforo(n, 'Cultura y agenda', 2);
+  assert.equal(semaforo(n, 'Cultura y agenda', 2).color, 'verde');
+  const s = semaforo(n, 'Cultura y agenda', 1);
   assert.equal(s.color, 'amarillo');
-  assert.equal(s.motivo, 'de afuera y poco contada (2 medios; Cultura y agenda pide 3)');
+  assert.equal(s.motivo, 'de afuera y poco contada (1 medio; Cultura y agenda pide 2)');
 });
 
-test('el cupo de Cultura y agenda de afuera es 8: la nota 9 espera, y Balcarce no cuenta', () => {
+test('Cultura y agenda de afuera ya no tiene cupo (era 8): salen todas las que cuentan dos medios', () => {
   const portada = [];
   for (let i = 0; i < 10; i += 1) {
-    portada.push({ id: `c${i}`, seccion: 'Cultura y agenda', semaforo: 'verde', local: false, nombraBalcarce: false });
+    portada.push({ id: `c${i}`, seccion: 'Cultura y agenda', semaforo: 'verde', local: false, nombraBalcarce: false, medios: ['Infobae', 'La Nación'] });
   }
   portada.push({ id: 'local', seccion: 'Cultura y agenda', semaforo: 'verde', local: true, nombraBalcarce: false });
-  aplicarCupos(portada);
-  assert.equal(portada.filter((n) => n.semaforo === 'verde').length, 8 + 1);
-  assert.match(portada[8].motivo, /cupo de Cultura y agenda de afuera \(8 a la vez\)/);
-  assert.equal(portada.at(-1).semaforo, 'verde');
-  assert.ok(CUPO_DE_AFUERA['Cultura y agenda'] < CUPO_POR_DEFECTO);
+  aplicarPopularidad(portada);
+  assert.equal(portada.filter((n) => n.semaforo === 'verde').length, 11);
 });
 
 // ------------------------------- Policiales: sólo Balcarce y la zona (26/09)
@@ -157,13 +154,13 @@ test('no quedan fuentes nacionales de Policiales', () => {
   }
 });
 
-test('Policiales de afuera no sale solo (cupo 0); lo de Balcarce y la zona no cuenta', () => {
+test('Policiales de afuera no sale solo (la sección es de acá); lo de Balcarce y la zona no cuenta', () => {
   const portada = [
-    { id: 'a', seccion: 'Policiales', semaforo: 'verde', local: false, nombraBalcarce: false },
+    { id: 'a', seccion: 'Policiales', semaforo: 'verde', local: false, nombraBalcarce: false, medios: ['Infobae', 'La Nación', 'Clarín', 'TN'] },
     { id: 'b', seccion: 'Policiales', semaforo: 'verde', local: true, nombraBalcarce: false },
     { id: 'c', seccion: 'Policiales', semaforo: 'verde', local: false, nombraBalcarce: true },
   ];
-  aplicarCupos(portada);
+  aplicarPopularidad(portada);
   assert.equal(portada[0].semaforo, 'amarillo');
   assert.match(portada[0].motivo, /sólo de Balcarce/);
   assert.equal(portada[1].semaforo, 'verde');

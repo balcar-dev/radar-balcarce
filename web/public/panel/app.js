@@ -42,8 +42,8 @@ const dormir = (ms) => new Promise((r) => { setTimeout(r, ms); });
 const COLOR = {
   Balcarce: 'balcarce', Política: 'politica', Policiales: 'policiales', Fútbol: 'futbol', Deportes: 'deportes', Automovilismo: 'automovilismo',
   Agro: 'agro', Economía: 'economia', 'Cultura y agenda': 'cultura', Tecnología: 'tecnologia', Argentina: 'pais',
-  // Etapa 2 del mapa (regla 187): sólo aparecen con el interruptor SECCIONES_NUEVAS.
-  Educación: 'educacion', Salud: 'salud',
+  // Las tres que se suman a las once (reglas 187 y 211).
+  Educación: 'educacion', Salud: 'salud', Ciencia: 'ciencia',
 };
 const chip = (s) => (s ? `<span class="chip" style="background:var(--s-${COLOR[s] ?? 'pais'})">${esc(s)}</span>` : '');
 const GUARDADO = 'radar-panel';

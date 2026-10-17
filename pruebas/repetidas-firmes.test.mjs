@@ -195,7 +195,7 @@ test('generar-datos: la unión firme deja afuera a la unida, no la vuelve a escr
   assert.match(fuente, /\.filter\(\(n\) => !UNIDAS_FIRMES\.has\(n\.id\)\)/, 'no se reescribe');
   assert.match(fuente, /if \(UNIDAS_FIRMES\.has\(n\.id\)\) return null;/, 'no se publica con su dirección');
   assert.match(fuente, /firmes: UNIDAS_FIRMES/, 'la fusión la mantiene');
-  assert.match(fuente, /ingestar\(\{ silencioso: true, idsConocidos, idsUnidos: new Set\(Object\.keys\(FUSIONADAS_ANTES\?\.notas \?\? \{\}\)\) \}\)/);
+  assert.match(fuente, /ingestar\(\{\s*silencioso: true, idsConocidos, idsUnidos: new Set\(Object\.keys\(FUSIONADAS_ANTES\?\.notas \?\? \{\}\)\), vaFaltando: RITMO\.vaFaltando,\s*\}\)/);
   // fusionadas.json lo sigue guardando «Actualizar la web».
   assert.match(fs.readFileSync(path.join(RAIZ, '.github', 'workflows', 'actualizar.yml'), 'utf8'), /web\/data\/fusionadas\.json/);
 });
