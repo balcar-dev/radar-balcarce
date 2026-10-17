@@ -19,7 +19,7 @@ import path from 'node:path';
 import { claveClasificacion, claveGroq, leerVariable, MODELO_DE_TEXTO } from '../reels/claves.mjs';
 import { fichaDeFuente, FUENTES, FUENTES_NACIONALES, CONEXION_ARGENTINA, PALABRAS_LOCALES, PALABRAS_ZONA, nombraLocalidadDudosa } from './fuentes.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
-import { diaAR } from './zona.mjs';
+import { diaAR, minutoDelDiaAR } from './zona.mjs';
 import { sinTildes } from '../web/lib/texto.js';
 import { seccionesNuevasActivas, SECCIONES_ETAPA_2, TEXTO_PARA_LA_FICHA, esDeLaEtapa2 } from './secciones-nuevas.mjs';
 
@@ -71,6 +71,10 @@ export const LECTURA = {
   // afuera que espera por pocos medios) y cuenta como una contra este tope
   // (web/scripts/generar-datos.mjs).
   pedidosRepetidasPorDia: 60,
+  // Las parejas (lo que la IA confirma de a dos, `confirmarParejas`): un pedido por corrida como mucho.
+  pedidosParejasPorDia: 40,
+  // Cuánto se puede adelantar el cupo del día lo que trae algo de acá nuevo (cupoDelMomento, regla 196).
+  adelantoDeAca: 6,
   // Cuánto se guarda una ficha.
   diasDeFichas: 3,
   resumenMaximo: 500,
@@ -135,6 +139,19 @@ const FUENTE_POR_MEDIO = new Map([...FUENTES_CRUCE, ...FUENTES, ...FUENTES_NACIO
 /** Cuántos pedidos de fichas se hacen por día: más con la clave propia (27/09). */
 export function topeDeLecturas(o) {
   return leerVariable('GEMINI_API_KEY_CLASIFICACION', o) ? LECTURA.pedidosPorDiaConClavePropia : LECTURA.pedidosPorDia;
+}
+
+/**
+ * ¿Se puede gastar un pedido más del tope de hoy a esta hora? (regla 196, 17/10/2026). El tope del día se reparte por hora: a
+ * cada minuto se puede haber gastado lo que corresponde al día transcurrido más media hora, así lo que sobra de la mañana queda
+ * para la tarde y nunca se acaba todo antes de la noche. El 16/10 la IA de repetidas gastó sus 60 vueltas a las 15:06 (la web
+ * se armaba 72 veces por día) y no volvió a mirar hasta la medianoche. Lo que trae algo de acá nuevo (`prioridad`) puede
+ * adelantarse `adelanto` pedidos, nunca pasar el tope del día. Con las 48 vueltas de siempre el reparto no frena nada.
+ */
+export function cupoDelMomento({ usados = 0, tope, ahora = new Date(), prioridad = false, adelanto = LECTURA.adelantoDeAca } = {}) {
+  if (!(tope > 0) || usados >= tope) return false;
+  const hastaAhora = Math.ceil((tope * (minutoDelDiaAR(ahora) + 30)) / 1440) + (prioridad ? adelanto : 0);
+  return usados < Math.min(tope, hastaAhora);
 }
 
 /** De qué ciudad es el medio de una nota. */
@@ -228,15 +245,59 @@ export async function leerGrupo(notas, { clave, fetchFn = fetch } = {}) {
 }
 
 /**
+ * La forma de la ficha contada en palabras, armada con el MISMO esquema que se le pasa a Gemini (regla 193, 17/10/2026):
+ * cada campo obligatorio con su nombre exacto y sus valores posibles. Hasta el 17/10 a Groq se le decía sólo
+ * `{"fichas": [ … ]}`, y la instrucción nombra «el ámbito» (con tilde) pero nunca el campo `ambito` ni sus valores, ni
+ * `importancia`, ni `por_que_interesa`: el modelo inventaba los nombres y `fichaValida` descartaba TODAS las fichas, así
+ * que el respaldo de la lectura no respaldaba nada.
+ */
+export function formaDeLaFicha(activas = seccionesNuevasActivas()) {
+  const { properties, required } = esquema(activas).items;
+  const campos = required.map((c) => {
+    const p = properties[c];
+    const valores = p.enum ? p.enum.map((v) => `"${v}"`).join(' | ') : p.type === 'BOOLEAN' ? 'true | false' : c === 'id' ? 'el mismo "id" de la nota' : 'una frase';
+    return `"${c}": ${valores}`;
+  });
+  return `{"fichas": [{ ${campos.join(', ')} }]}`;
+}
+
+/** El valor de una lista cerrada escrito como lo escribió el modelo («Región», «región», «Alta») → el de la lista, o tal cual. */
+const deLaLista = (valor, lista) => lista.find((x) => sinTildes(x) === sinTildes(String(valor ?? '').trim())) ?? valor;
+const comoBooleano = (v) => (v === true || v === 'true' ? true : v === false || v === 'false' ? false : v);
+
+/**
+ * Una ficha de Groq con los nombres y los valores como los pide el esquema (regla 193): los campos sin tildes ni
+ * mayúsculas («ámbito» → «ambito»), los valores de las listas cerradas como están en la lista («Región» → «region») y los
+ * sí/no como booleanos. No completa nada: lo que falta sigue faltando y `fichaValida` la descarta, como a una de Gemini.
+ */
+export function fichaDeGroq(f, { activas = seccionesNuevasActivas() } = {}) {
+  if (!f || typeof f !== 'object') return f;
+  const k = {};
+  for (const [campo, v] of Object.entries(f)) k[sinTildes(campo).trim().replace(/[\s-]+/g, '_')] = v;
+  return {
+    ...k,
+    ...(k.id != null ? { id: String(k.id) } : {}),
+    ambito: deLaLista(k.ambito, AMBITOS),
+    seccion: deLaLista(k.seccion, [...seccionesDeLaFicha(activas), 'Servicios', 'País']),
+    impacto_balcarce: deLaLista(k.impacto_balcarce, IMPACTOS),
+    razon: deLaLista(k.razon, RAZONES),
+    importancia: deLaLista(k.importancia, IMPORTANCIAS),
+    es_publicidad: comoBooleano(k.es_publicidad),
+    es_chimento: comoBooleano(k.es_chimento),
+  };
+}
+
+/**
  * Igual que leerGrupo, pero con Groq (28/09): un segundo proveedor gratis
  * para cuando Gemini falla o se queda sin cupo. Mismo prompt, mismo esquema
  * contado en palabras (la API de Groq no fuerza un JSON Schema como la de
- * Gemini) y la misma validación (fichaValida): nunca decide distinto por
+ * Gemini: `formaDeLaFicha`, regla 193) y la misma validación (fichaValida): nunca decide distinto por
  * venir de otro modelo. Su API es la de OpenAI (mensajes de chat), así que
  * el pedido y la respuesta tienen otra forma.
  */
 export async function leerGrupoGroq(notas, { clave, fetchFn = fetch, modelo = MODELO_GROQ } = {}) {
-  const instruccion = `${pedidoPara(notas)}\n\nDevolvé un objeto JSON con esta forma exacta y nada más: {"fichas": [ … ]}, con una ficha por nota.`;
+  const instruccion = `${pedidoPara(notas)}\n\nDevolvé un objeto JSON con esta forma exacta y nada más, con una ficha por nota, `
+    + `estos nombres de campo tal cual y, en los que tienen opciones, sólo uno de esos valores:\n${formaDeLaFicha()}`;
   const res = await fetchFn('https://api.groq.com/openai/v1/chat/completions', {
     method: 'POST',
     // La clave va en el encabezado, nunca en la dirección (docs/10-REGLAS-Y-PRUEBAS.md, regla 16).
@@ -262,9 +323,11 @@ export async function leerGrupoGroq(notas, { clave, fetchFn = fetch, modelo = MO
   const lista = Array.isArray(obj) ? obj : Array.isArray(obj?.fichas) ? obj.fichas : (Object.values(obj ?? {}).find(Array.isArray) ?? []);
   const pedidos = new Set(notas.map((n) => n.id));
   const fichas = {};
-  for (const f of lista) {
+  for (const cruda of lista) {
+    const f = fichaDeGroq(cruda);
     const v = fichaValida(f);
-    if (v && pedidos.has(f.id)) fichas[f.id] = v;
+    // Se anota quién contestó (auditoría 2.0, 04 § 4): sin esto no se sabe cuántas veces se usa el respaldo.
+    if (v && pedidos.has(f.id)) fichas[f.id] = { ...v, ia: 'groq' };
   }
   return fichas;
 }
@@ -475,7 +538,7 @@ const MODELO_GROQ_PAREJAS = 'openai/gpt-oss-20b';
 
 const INSTRUCCION_PAREJAS = `Cada par son dos notas de un medio de Balcarce, publicadas con poco tiempo de diferencia.
 Para cada par decidí si cuentan EXACTAMENTE el mismo hecho: el mismo suceso o la misma noticia, aunque estén escritas con otras palabras o con distinto detalle.
-NO es el mismo hecho si son dos noticias distintas sobre el mismo tema (la pole y la carrera, una práctica y otra, dos partidos), si es un anuncio y su resultado, o si cambia la persona, el lugar, la fecha o la cifra principal.
+NO es el mismo hecho si son dos noticias distintas sobre el mismo tema (la pole y la carrera, una práctica y otra, dos partidos), si es un anuncio y su resultado (una dice que algo VA a pasar —una charla, una cirugía, un partido, un acto— y la otra cuenta cómo salió o que ya pasó), o si cambia la persona, el lugar, la fecha o la cifra principal.
 Ante la duda, mismo = false.
 Devolvé un objeto JSON {"pares":[{"clave":"…","mismo":true|false}]} con una entrada por cada par, con la clave que se te dio.`;
 

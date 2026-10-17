@@ -259,14 +259,62 @@ export function vigenteEnPortada(nota, ahora = Date.now(), horas = HORAS_EN_PORT
  * 28 (Hernán), y con la fecha corriéndose sola nunca salía de la portada. Una
  * nota puede envejecer, nunca rejuvenecer. Devuelve ISO, o la de la ingesta si
  * no hay ninguna fecha válida.
+ *
+ * Desde el 17/10 (regla 194) las fuentes de más de `horas` (HORAS_DE_UN_HECHO)
+ * antes de `visto` no cuentan si hay otras de cerca: son notas viejas de otro
+ * hecho que el cruce pegó. Y generar-datos no le pasa como `fechaAnterior` una
+ * fecha que ya era un error (fechaEnvejecidaPorError, conFechaSinError).
  */
-export function fechaDeLaNota(nota, { fechaAnterior = null, visto = null } = {}) {
-  const candidatas = [
-    nota?.fecha, fechaAnterior, visto,
-    ...(nota?.origenes ?? []).map((o) => o?.fecha),
-  ].map((f) => (f ? new Date(f).getTime() : NaN)).filter(Number.isFinite);
+export function fechaDeLaNota(nota, { fechaAnterior = null, visto = null, horas = HORAS_DE_UN_HECHO } = {}) {
+  const t = (f) => (f ? new Date(f).getTime() : NaN);
+  const deLasFuentes = [nota?.fecha, ...(nota?.origenes ?? []).map((o) => o?.fecha)].map(t).filter(Number.isFinite);
+  // Regla 194 (17/10/2026): una fuente mucho más vieja que la primera vez que vimos la nota es una nota vieja que el cruce le
+  // pegó, no la fecha del hecho («El Concejo Deliberativo Estudiantil cierra su quinta edición», vista el 14/10, figuraba del
+  // 30/04 por una nota vieja del Concejo; en el archivo había 80 así). Si hay alguna fuente de cerca, ésas mandan; si TODAS son
+  // viejas, la nota es vieja de verdad (la vimos tarde) y conserva su fecha: llega tarde y no se estrena.
+  const vista = t(visto);
+  const cercanas = Number.isFinite(vista) ? deLasFuentes.filter((x) => x >= vista - horas * HORA) : deLasFuentes;
+  const candidatas = [...(cercanas.length ? cercanas : deLasFuentes), t(fechaAnterior), vista].filter(Number.isFinite);
   if (!candidatas.length) return nota?.fecha ?? null;
   return new Date(Math.min(...candidatas)).toISOString();
+}
+
+/**
+ * Cuántas horas antes de la primera vez que vimos una nota puede ser una fuente y seguir contando para su fecha (regla 194). Es
+ * lo que el cruce coherente deja durar a un mismo hecho (`CRUCE.coherente.horasEnDesarrollo`, ingesta/cruce.mjs; una prueba
+ * controla que digan lo mismo): más atrás, es otra nota pegada. Más cerca SÍ envejece, también lo ya publicado: El Diario
+ * Balcarce que republica dos días después lo que Infórmese contó el 13/10 («Pato Naranja y Pato Negro clasifican…») es una
+ * noticia del 13/10, y está bien que salga de la portada.
+ */
+export const HORAS_DE_UN_HECHO = 48;
+
+/** Desde cuándo una nota automática no se estrena vieja (llegaTarde, 28/09/2026 a las 13 de Balcarce): antes no vale la cuenta. */
+export const DESDE_QUE_NO_SE_ESTRENA_VIEJA = '2026-09-28T16:00:00.000Z';
+
+/**
+ * ¿La fecha con la que figura una nota ya publicada es un error del cruce? (regla 194). Sólo si salió SOLA (automática, sin una
+ * persona: lo de una persona se respeta), con fecha de la fuente (no «sin hora»), después de que existiera llegaTarde, y su
+ * fecha quedó más de HORAS_DE_UN_HECHO antes de la primera vez que la vimos. Así no se pudo haber estrenado (se estrena con el
+ * hecho de menos de 24 horas, 12 desde octubre), y el cruce no junta un mismo hecho más largo que eso: envejeció después, por
+ * una nota vieja de OTRO hecho que se le pegó. Es la única excepción a «nunca rejuvenece»: no rejuvenece una nota, le saca una
+ * fecha que nunca fue la suya.
+ */
+export function fechaEnvejecidaPorError(nota) {
+  if (!nota || nota.propia || nota.sinFecha || nota.como !== 'automatica') return false;
+  if (nota.publicadaPor && nota.publicadaPor !== 'ia') return false;
+  const fecha = Date.parse(nota.fecha ?? '');
+  const visto = Date.parse(nota.visto ?? '');
+  if (!Number.isFinite(fecha) || !Number.isFinite(visto) || visto < Date.parse(DESDE_QUE_NO_SE_ESTRENA_VIEJA)) return false;
+  return fecha < visto - HORAS_DE_UN_HECHO * HORA;
+}
+
+/**
+ * Una nota ya publicada con la fecha corregida si era un error del cruce (fechaEnvejecidaPorError): pasa a la primera vez que la
+ * vimos, que es a lo sumo HORAS_PARA_ESTRENAR más nueva que la de verdad (su fuente es de antes de que la viéramos y de no más
+ * de esas horas antes, o no se habría estrenado). Las demás, iguales (el mismo objeto).
+ */
+export function conFechaSinError(nota) {
+  return fechaEnvejecidaPorError(nota) ? { ...nota, fecha: new Date(Date.parse(nota.visto)).toISOString() } : nota;
 }
 
 /** Horas que puede tener un hecho para publicarse por primera vez

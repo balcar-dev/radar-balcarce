@@ -160,7 +160,8 @@ test('generar-datos usa las parejas sin IA en la fusión y suma las fuentes de l
   const fuente = fs.readFileSync(path.join(RAIZ, 'web', 'scripts', 'generar-datos.mjs'), 'utf8');
   assert.match(fuente, /parejasConLoPublicado\(\s*\[\.\.\.deLaIngesta\.map\(conOrigenes\), \.\.\.\(archivoAnterior\.notas \?\? \[\]\), \.\.\.retiradasParaComparar\],\s*\{ yaPublicadas: yaSalieron, retiradas: RETIRADAS_A_MANO, entrePublicadas: true \}/);
   assert.match(fuente, /const parejasSinIA = \[\.\.\.repetidasSinIA\.parejas, \.\.\.repetidasSinIA\.entrePublicadas\]/, 'regla 175: también entre dos ya publicadas');
-  assert.match(fuente, /preferidas: \[\.\.\.parejasSinIA, \.\.\.conLaPublicadaPrimero\(parejasConfirmadas, yaSalieron\)\]/, 'M2: con lo ya publicado queda siempre la que ya estaba');
+  // (y, desde el 17/10, el ancla de cada pareja por significado: regla 195)
+  assert.match(fuente, /preferidas: \[\.\.\.parejasSinIA, \.\.\.conLaPublicadaPrimero\(parejasConfirmadas, yaSalieron\), \.\.\.anclasDeSignificado\]/, 'M2: con lo ya publicado queda siempre la que ya estaba');
   assert.match(fuente, /fotosParaLaQueQueda\(fusion/, 'M2: la foto de la nueva pasa a la que queda');
   assert.match(fuente, /igual a una nota retirada \(\$\{esperan\.get\(n\.id\)\}\)/, 'M3: la que se parece a una retirada espera a una persona');
   assert.match(fuente, /confirmadas: \[\.\.\.parejasConfirmadas, \.\.\.parejasSinIA\]/);

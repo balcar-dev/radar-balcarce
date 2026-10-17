@@ -96,7 +96,7 @@ próxima regla es la 189: la 186 son las fotos con chicos de los organismos, la 
   la página dura 180 días en teoría, pero el tope es de 3.700 notas (a ~46 por día, unos 80 días: medido el 15/10, 15.900 archivos de los 20.000 de Cloudflare); lo raspado de más de 72 horas no entra. Los
   números viven en `ingesta/criterio.mjs` **y** en `web/lib/archivo.js`.
 - **Una nota tiene una sola fecha**, que envejece y nunca rejuvenece (`fechaReal`,
-  `fechaDeLaNota`), y **una sola dirección**, fija desde que sale. La misma noticia que
+  `fechaDeLaNota`; una nota vieja de otro hecho que el cruce pega, de más de 48 h antes de verla, no la envejece: regla 194), y **una sola dirección**, fija desde que sale. La misma noticia que
   vuelve con otra dirección se une a la que ya estaba y redirige (`web/lib/repetidas.js`).
 - **"De acá" tiene una sola definición** (`esDeAca`): lo que toca la zona; si no, lo de un
   medio de Balcarce o lo que dice Balcarce **en el título**. Un medio de acá que copia una
@@ -157,7 +157,7 @@ próxima regla es la 189: la 186 son las fotos con chicos de los organismos, la 
 | Que una palabra mande una nota a otra sección | `REGLAS_SECCION` (`ingesta/fuentes.mjs`); si es ambigua, también `PALABRAS_DEBILES` (`ingesta/ingesta.mjs`) |
 | Que algo espere a una persona o no salga nunca | `REGLAS_SEMAFORO` (`ingesta/fuentes.mjs`: `rojo` —no sin preguntar—, `nunca`, `amarillo`, `cotizacion`, `internacional`, `promocional`); lo que lo de Balcarce suelta: `AMARILLO_QUE_SE_SUELTA_*` (regla 96) |
 | Qué es "de acá" o "la zona" | `esDeAca` (`ingesta/ingesta.mjs`), `PALABRAS_LOCALES` y `PALABRAS_ZONA` (`ingesta/fuentes.mjs`) |
-| Cómo se juntan las notas del mismo hecho | `CRUCE` y el cruce coherente, que no encadena (`CRUCE.coherente`, `CRUCE_COHERENTE`, regla 184: `docs/flujo/CRUCE-COHERENTE.md`) (`ingesta/cruce.mjs`), `agruparRepetidas` y `quitarRepetidas` (`ingesta/lectura-ia.mjs`), y las que vuelven con otra dirección, `web/lib/repetidas.js` |
+| Cómo se juntan las notas del mismo hecho | `CRUCE` y el cruce coherente, que no encadena (`CRUCE.coherente`, `CRUCE_COHERENTE`, regla 184: `docs/flujo/CRUCE-COHERENTE.md`) (`ingesta/cruce.mjs`), `agruparRepetidas` y `quitarRepetidas` (`ingesta/lectura-ia.mjs`), y las que vuelven con otra dirección, `web/lib/repetidas.js`; lo de acá con otras palabras, la huella de significado (`ingesta/huellas-significado.mjs`, regla 195: `docs/flujo/REPETIDAS-2-0.md`) |
 | Cualquier número del criterio | `ingesta/criterio.mjs` **y** la tabla "Los números" de `CRITERIO-EDITORIAL.md` |
 | Cómo decide la lectura con IA | `ingesta/lectura-ia.mjs`; lo que sabe de Balcarce, `ingesta/perfil-balcarce.md` (va tal cual a la IA) |
 | Cómo escribe la IA | `CRITERIO-EDITORIAL.md` § 4 y § 12; medir un cambio con `reels/comparar-instruccion.mjs` |

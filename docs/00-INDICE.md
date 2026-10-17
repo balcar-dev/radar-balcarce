@@ -45,7 +45,7 @@ los pasos 1 a 8; las redes y la vigilancia corren aparte.
 | # | Paso | Qué pasa | Dónde se cuenta |
 |---|---|---|---|
 | 1 | Ingesta | Se bajan y se leen los feeds (RSS, Atom, índices, páginas), con sus fechas; el filtro de entrada deja afuera otro país, policiales y consejos de afuera | `docs/02-INGESTA.md` |
-| 2 | Cruce | Se juntan las notas que cuentan el mismo hecho (memoria de 36 h; desde el 16/10 sin encadenar noticias distintas, regla 184, `docs/flujo/CRUCE-COHERENTE.md`); lo de un organismo o medio de Balcarce entra siempre (regla 180); de afuera queda lo que cuentan varios medios (de 2 a 4 según la sección: `ingesta/criterio.mjs`), dice Balcarce o toca la zona | `docs/02-INGESTA.md` (pasos 9 a 13) |
+| 2 | Cruce | Se juntan las notas que cuentan el mismo hecho (memoria de 36 h, lo de acá 72 h desde el 17/10; desde el 16/10 sin encadenar noticias distintas, regla 184, `docs/flujo/CRUCE-COHERENTE.md`); lo de un organismo o medio de Balcarce entra siempre (regla 180); de afuera queda lo que cuentan varios medios (de 2 a 4 según la sección: `ingesta/criterio.mjs`), dice Balcarce o toca la zona | `docs/02-INGESTA.md` (pasos 9 a 13) |
 | 3 | Selección | Sección, puntaje, semáforo (rojo, amarillo, verde), "de acá", medios que pide lo de afuera, cupos | `docs/03-SELECCION.md` |
 | 4 | Lectura con IA | Una ficha por nota: saca, cambia la sección, junta repetidas; nunca destraba | `docs/03-SELECCION.md` (paso 8) |
 | 5 | Redacción | Gemini escribe título, bajada y cuerpo con el texto completo de hasta 4 fuentes (regla 174) y `CRITERIO-EDITORIAL.md` § 12 | `docs/04-REDACCION.md` |
@@ -120,6 +120,7 @@ cómo funciona algo que ya anda), **para decidir** (propuesta o página con caja
 | `docs/flujo/FLUJO-NUEVO-SIMULACION.html` | La simulación del flujo nuevo con la corrida real del 16/10 | para decidir |
 | `docs/flujo/INFORME-DE-HOY.html` | Cómo llegó la información el 16/10, cómo anduvo cada fuente y cómo quedarían las secciones; diez preguntas (se rehace con `docs/flujo/generar-informe-del-dia.mjs`) | para decidir |
 | `docs/flujo/CRUCE-COHERENTE.md` | El cruce que ya no encadena noticias distintas (regla 184, interruptor `CRUCE_COHERENTE`) y cómo se midió | vigente |
+| `docs/flujo/REPETIDAS-2-0.md` | Lo de acá que no sale repetido (memoria de acá, huella de significado, parejas entre secciones, tope repartido) y la fecha que no envejece por una nota vieja pegada (reglas 193 a 196), con la medición; `medir-repetidas-2-0.mjs` la repite | vigente |
 | `docs/flujos/NOTA-DESDE-MAIL.md` | Los pasos para armar una nota desde un mail de prensa | vigente (lo sigue Claude) |
 | `docs/flujos/IMAGENES-CON-GEMINI-WEB.md` | Cómo se ilustran con Gemini web las notas sin foto y cómo convive con el relleno automático de Cloudflare (regla 185) | vigente |
 | `docs/secciones/MAPA-DE-SECCIONES.md` (y `.html`) | De 11 a 17 secciones: el mapa propuesto, con el clasificador nuevo en sombra (`ingesta/secciones-nuevas.mjs`) | para decidir |

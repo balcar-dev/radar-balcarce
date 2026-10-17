@@ -13,7 +13,7 @@ import {
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
 import { menorPorEdad } from './menores.mjs';
 import { sinFenomenoClimatico, sinExencionesDelAmarillo, sinSorteosDeportivos, tituloConArgentino } from './exenciones.mjs';
-import { agruparConDetalle, leerMemoria, guardarMemoria, desdeLaMemoria } from './cruce.mjs';
+import { agruparConDetalle, leerMemoria, guardarMemoria, desdeLaMemoria, MEMORIA_DE_ACA } from './cruce.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
 import { decodificar, decodificarPagina } from './articulo.mjs';
 import { enlaceNormalizado } from './repetidas-publicadas.mjs';
@@ -1566,10 +1566,13 @@ export async function ingestar({
   const enEstaCorrida = new Set(todas.flatMap((n) => [n.enlace, enlaceNormalizado(n.enlace)]).filter(Boolean));
   const memoriaAntes = memoria ? leerMemoria(memoria) : [];
   const deAntes = memoriaAntes.filter((m) => !enEstaCorrida.has(m.enlace) && !enEstaCorrida.has(enlaceNormalizado(m.enlace))).map(desdeLaMemoria);
-  deAntes.forEach(marcarDeAfuera);
+  // Las marcas de afuera (Balcarce en el título, una figura, la zona), sólo a lo de afuera, como en la corrida (lo de acá de la
+  // memoria, regla 195, se mira como lo de acá de siempre).
+  deAntes.filter((n) => n.alcance !== 'local').forEach(marcarDeAfuera);
   const conjunto = [...todas, ...deAntes];
   const { grupos, deUnSoloMedio, deOtraCiudad, revisados, partidos } = armarHistorias(conjunto, { idsConocidos, idsUnidos });
-  if (memoria) guardarMemoria(memoria, memoriaAntes, todas.filter((n) => n.alcance !== 'local'));
+  // Desde el 17/10 (regla 195) también lo de acá, 72 horas (CRUCE.horasDeMemoriaDeAca); MEMORIA_DE_ACA=no lo apaga.
+  if (memoria) guardarMemoria(memoria, memoriaAntes, MEMORIA_DE_ACA ? todas : todas.filter((n) => n.alcance !== 'local'));
   log(`
   cruce: ${conjunto.length} notas (${deAntes.length} de la memoria) · ${grupos.length} historias · ${deUnSoloMedio} de afuera con un solo medio y ${deOtraCiudad} de otra ciudad de la zona no entran`);
   if (revisados) log(`  cruce coherente (regla 184): ${revisados} grupos encadenados revisados, ${partidos} partidos en hechos distintos`);
@@ -1591,6 +1594,9 @@ export function armarHistorias(conjunto, { idsConocidos = null, idsUnidos = null
   for (const indices of cruce.grupos) {
     const ns = indices.map((i) => conjunto[i]);
     const locales = ns.filter((n) => n.alcance === 'local');
+    // Lo de acá que sólo está en la memoria (regla 195) sirve para que se le sume lo que llega después, no para volver a
+    // aparecer: si ya no está en el feed, queda como siempre (lo publicado sigue en el archivo).
+    if (ns.every((n) => n.deLaMemoria && n.alcance === 'local')) continue;
     const medios = [...new Set(ns.map((n) => n.medio))];
     const importaAca = ns.some((n) => n.nombraBalcarce || n.deLaZona);
     if (!locales.length && !importaAca && medios.length < 2) {
