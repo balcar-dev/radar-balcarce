@@ -17574,14 +17574,29 @@
   "ausenteDesde": "2026-10-17T04:01:44.345Z"
  },
  "4gdhzi": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/4gdhzi.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Diputados piden que el embajador chileno explique la ruta a Malvinas",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T03:31:20.114Z",
-  "intentos": 2,
-  "fuentes": 3,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.clarin.com/politica/diputados-peronistas-piden-embajador-chile-explique-apoyo-punta-arenas-malvinas_0_pqbgGQCBlN.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/10/16/QuGkd2_pU_2000x1500__1.jpg",
+  "razon": "Es la única imagen que muestra claramente a la persona (probablemente el diputado) en el recinto, con buen encuadre y nitidez, sin marcas de agua ni menores.",
+  "cuando": "2026-10-17T05:01:26.183Z",
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.",
+  "vision": {
+   "proveedor": "groq",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Diputado de cabello cano hablando en el recinto del Congreso, con traje y corbata."
+  },
+  "huella": "cd726261676f4955"
  },
  "1ax3e8b": {
   "intentado": true,
@@ -17651,8 +17666,8 @@
   "origen": "ninguna",
   "titulo": "Ministro chileno critica a Javier Milei por la obra pública y luego se disculpa",
   "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T03:31:20.114Z",
-  "intentos": 2,
+  "cuando": "2026-10-17T05:01:26.183Z",
+  "intentos": 3,
   "fuentes": 4,
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
@@ -17800,8 +17815,8 @@
   "origen": "ninguna",
   "titulo": "Rafael Grossi avanza en la carrera para la secretaría general de la ONU",
   "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T03:31:20.114Z",
-  "intentos": 1,
+  "cuando": "2026-10-17T05:01:26.183Z",
+  "intentos": 2,
   "fuentes": 3,
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
@@ -17863,7 +17878,8 @@
    "corresponde": "si",
    "descripcion": "Fachada del edificio del Gobierno de la Provincia de Buenos Aires."
   },
-  "huella": "7071f937361e3232"
+  "huella": "7071f937361e3232",
+  "ausenteDesde": "2026-10-17T05:01:34.541Z"
  },
  "dhznnq": {
   "intentado": true,

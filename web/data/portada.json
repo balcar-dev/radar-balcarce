@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-17T04:31:38.068Z",
+  "generado": "2026-10-17T05:01:34.555Z",
   "notas": [
     {
       "id": "rwxsr5",
@@ -430,9 +430,7 @@
       "medios": [
         "Agencia DIB",
         "La Brújula 24",
-        "El Eco de Tandil",
-        "El Día",
-        "El Marplatense"
+        "El Eco de Tandil"
       ],
       "enlace": "https://dib.com.ar/politica/kicillof-cerro-un-aumento-del-6-los-estatales-mientras-que-los-docentes-analizan-una-respuesta-n56570",
       "teniaImagenLaFuente": true,
@@ -791,7 +789,11 @@
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "diputados-piden-que-el-embajador-chileno-explique-la-ruta-a-malvinas"
+      "slug": "diputados-piden-que-el-embajador-chileno-explique-la-ruta-a-malvinas",
+      "foto": {
+        "archivo": "fotos-notas/4gdhzi.jpg",
+        "credito": "Foto: Clarín"
+      }
     },
     {
       "id": "10pra4l",
@@ -936,6 +938,69 @@
         "sugeridoPorIA": null
       },
       "slug": "el-banco-central-registra-una-baja-mensual-en-la-mora-de-las-familias"
+    },
+    {
+      "id": "1ufokdk",
+      "titulo": "El dólar mayorista finaliza la semana con una suba y cotiza a $1.518",
+      "copete": "El tipo de cambio mayorista subió cinco pesos en la última jornada hábil y el minorista alcanzó los $1.535. El Banco Central acumuló compras por 68 millones de dólares.",
+      "cuerpo": "El dólar mayorista aumentó cinco pesos en la última jornada hábil y cotizó a $1.518, según informó la Agencia Noticias Argentinas el viernes 16 de octubre. El tipo de cambio avanzó 0,33% en un escenario internacional más adverso tras mantenerse sin cambios en $1.513 durante los días previos. \n\nEl dólar oficial o minorista finalizó la semana a $1.535 en el Banco Nación, mientras que el dólar blue operó sin modificaciones en $1.545. Por su parte, el Banco Central adquirió 68 millones de dólares en el mercado y las reservas alcanzaron los 50.236 millones.",
+      "guion": "El dólar mayorista finaliza la semana con una suba y cotiza a $1.518.",
+      "seccion": "Economía",
+      "medios": [
+        "Noticias Argentinas (NA)",
+        "El Eco de Tandil"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/el-dolar-pego-un-salto-sobre-el-cierre-de-la-semana-y-finalizo-en--1-518_a6ad27f7ff8e83a89472853ce",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T20:25:55.699Z",
+      "sinFecha": false,
+      "visto": "2026-10-17T04:01:04.212Z",
+      "relevancia": 37,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El dólar mayorista subió a $1.518.",
+        "El minorista llegó a $1.535 en el Banco Nación.",
+        "El Banco Central compró 68 millones de dólares.",
+        "Las reservas superaron los 50.000 millones."
+      ],
+      "seSabe": [
+        "El dólar mayorista cerró la semana a $1.518, según la Agencia Noticias Argentinas.",
+        "El tipo de cambio minorista cotizó a $1.535 en el Banco Nación.",
+        "El dólar blue se mantuvo estable en $1.545.",
+        "El Banco Central compró 68 millones de dólares el viernes."
+      ],
+      "textoRedes": "El dólar mayorista subió cinco pesos y cerró la semana a $1.518. El tipo de cambio minorista cotizó a $1.535 en el Banco Nación.",
+      "etiquetas": [
+        "dolar",
+        "banco central",
+        "cotizacion"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/el-dolar-pego-un-salto-sobre-el-cierre-de-la-semana-y-finalizo-en--1-518_a6ad27f7ff8e83a89472853ce",
+          "fecha": "2026-10-16T20:25:55.699Z",
+          "oficial": false,
+          "aporte": "Detalló las cotizaciones de los distintos tipos de cambio y las compras del Banco Central."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/economia/el-dolar-pego-un-salto-al-cierre-de-la-semana",
+          "fecha": "2026-10-16T21:10:59.000Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre el cierre cambiario de la semana."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": null
+      },
+      "slug": "el-dolar-mayorista-finaliza-la-semana-con-una-suba-y-cotiza-a-1-518"
     },
     {
       "id": "1ifa1zl",
@@ -1781,16 +1846,16 @@
       "guion": "Rafael Grossi avanza en la carrera para la secretaría general de la ONU.",
       "seccion": "Argentina",
       "medios": [
-        "Clarín",
+        "El Día",
         "C5N",
         "Infobae"
       ],
       "enlace": "https://www.infobae.com/america/agencias/2026/10/16/panama-respaldara-al-argentino-rafael-grossi-para-la-secretaria-general-de-la-onu/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-16T18:02:09.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T03:01:14.154Z",
-      "relevancia": 42,
+      "relevancia": 36,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4376,6 +4441,93 @@
       "slug": "lautaro-martinez-recuerda-su-agonico-gol-a-inglaterra-y-se-emociona"
     },
     {
+      "id": "al99go",
+      "titulo": "Estudiantes y Flamengo empatan sin goles en la ida de la copa",
+      "copete": "El conjunto platense igualó con el equipo brasileño en el estadio Jorge Luis Hirschi por las semifinales del certamen continental. El encuentro dejó polémica por una sanción arbitral.",
+      "cuerpo": "Estudiantes y Flamengo empataron 0 a 0 en el estadio Jorge Luis Hirschi por el partido de ida de las semifinales de la Copa Libertadores. Durante el segundo tiempo, el árbitro paraguayo Juan Gabriel Benítez amonestó al mediocampista Lucas Paquetá tras un golpe con el codo sobre Ezequiel Piovi a los 62 minutos.\n\nLa decisión generó los reclamos de los futbolistas locales y del cuerpo técnico, lo que derivó en una tarjeta amarilla para el entrenador Alexander Medina por sus protestas. El sistema de videoarbitraje, a cargo del ecuatoriano Ulises Mereles, no convocó al juez principal para revisar la jugada en el campo.\n\nLa serie se definirá el próximo jueves a las 21.30 en el estadio Maracaná de Río de Janeiro. El conjunto brasileño contará con el mediocampista para el encuentro de vuelta.",
+      "guion": "Estudiantes y Flamengo empatan sin goles en la ida de la copa",
+      "seccion": "Fútbol",
+      "medios": [
+        "Infobae",
+        "TyC Sports",
+        "0221",
+        "El Día"
+      ],
+      "enlace": "https://www.eldia.com/deportes/video-era-roja-a-paqueta-el-codazo-a-piovi-que-se-sanciono-con-amarilla-deportes_1792115820",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T02:00:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T03:01:31.781Z",
+      "relevancia": 36,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Estudiantes y Flamengo empataron 0 a 0 en La Plata.",
+        "El partido correspondió a la ida de las semifinales de la Copa Libertadores.",
+        "El árbitro amonestó a Lucas Paquetá por un golpe a Ezequiel Piovi.",
+        "La revancha se jugará el próximo jueves en el estadio Maracaná."
+      ],
+      "seSabe": [
+        "El encuentro terminó sin goles en el estadio Jorge Luis Hirschi.",
+        "El árbitro Juan Gabriel Benítez amonestó a Lucas Paquetá.",
+        "El VAR no intervino para revisar la jugada.",
+        "El técnico Alexander Medina recibió una tarjeta amarilla por protestar."
+      ],
+      "noConfirmado": [
+        "No hay confirmación oficial sobre si la acción ameritaba tarjeta roja según los criterios de los organismos arbitrales."
+      ],
+      "textoRedes": "Estudiantes y Flamengo empataron sin goles en el partido de ida por las semifinales de la Copa Libertadores en el estadio Jorge Luis Hirschi. La serie se definirá la próxima semana en Río de Janeiro.",
+      "etiquetas": [
+        "Estudiantes",
+        "Flamengo",
+        "Copa Libertadores",
+        "Fútbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/deportes/video-era-roja-a-paqueta-el-codazo-a-piovi-que-se-sanciono-con-amarilla-deportes_1792115820",
+          "fecha": "2026-10-16T02:00:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó el debate generado entre los hinchas por la falta de revisión del VAR."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/16/la-polemica-en-estudiantes-flamengo-el-brutal-codazo-de-paqueta-a-piovi-que-debio-ser-sancionado-con-roja/",
+          "fecha": "2026-10-16T02:31:24.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles de la jugada, los nombres de los árbitros y el desarrollo del partido."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/copa-libertadores/codazo-lucas-paqueta-flamengo-estudiantes-copa-libertadores-id766610.html",
+          "fecha": "2026-10-16T02:26:02.000Z",
+          "oficial": false,
+          "aporte": "Detalló la amonestación al director técnico Alexander Medina y el horario de la revancha."
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/estudiantes/video-todo-estudiantes-pidio-roja-lucas-paqueta-un-codazo-n135898",
+          "fecha": "2026-10-16T02:17:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre los reclamos de los jugadores y del público en el estadio."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "estudiantes-y-flamengo-empatan-sin-goles-en-la-ida-de-la-copa",
+      "foto": {
+        "archivo": "fotos-notas/al99go.jpg",
+        "credito": "Foto: 0221"
+      }
+    },
+    {
       "id": "ddz0um",
       "titulo": "Ignacio Fernández se emociona hasta las lágrimas al recordar a Diego Maradona",
       "copete": "El mediocampista de Gimnasia y Esgrima La Plata lloró al hablar sobre la imagen del astro en la cinta de capitán, tras el triunfo agónico por 2 a 1 ante Huracán.",
@@ -4390,9 +4542,9 @@
         "Olé",
         "Radio Mitre",
         "El Día",
+        "0221",
         "Doble Amarilla",
         "Los Andes (Mendoza)",
-        "0221",
         "El Gráfico"
       ],
       "enlace": "https://www.ole.com.ar/gimnasia-y-esgrima/nacho-fernandez-lloro-recordar-maradona_3_b0rU2ghW9N.html",
@@ -6299,164 +6451,6 @@
         "archivo": "fotos-notas/1vrfi9w.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
-    },
-    {
-      "id": "1uvhput",
-      "titulo": "Leonel Flores visita un club de barrio para donar comida",
-      "copete": "El delantero de Boca se acercó al Club Santa María Futsal en Monte Chingolo durante la noche del miércoles. Donó alimentos y compartió un encuentro con los vecinos.",
-      "cuerpo": "La presencia del deportista generó gran repercusión en el lugar. Quienes organizaron la actividad y los vecinos publicaron las imágenes en redes sociales recién después de que el futbolista se retirara del predio, con la intención de preservar la tranquilidad de la jornada y evitar aglomeraciones.\n\nDurante el recorrido, el atacante le firmó la indumentaria a un fanático de la zona apodado Leito Silva en la puerta de su domicilio. Los mensajes difundidos destacaron su gesto solidario y su vínculo con el ámbito barrial.",
-      "guion": "Leonel Flores visita un club de barrio para donar comida",
-      "seccion": "Fútbol",
-      "medios": [
-        "Infobae",
-        "TN (Todo Noticias)",
-        "El Destape",
-        "TyC Sports",
-        "Olé",
-        "Radio Mitre",
-        "Noticias Argentinas (NA)",
-        "Doble Amarilla",
-        "C5N",
-        "Minuto Uno"
-      ],
-      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/15/leonel-flores-el-jugador-de-boca-y-la-seleccion-que-visito-una-olla-popular-en-monte-chingolo-y-revoluciono-el-barrio/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T16:55:32.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T21:05:59.806Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Leonel Flores visitó el Club Santa María Futsal",
-        "El delantero donó alimentos y compartió con los vecinos",
-        "Las fotos se publicaron después de su partida"
-      ],
-      "seSabe": [
-        "Leonel Flores concurrió al Club Santa María Futsal en Monte Chingolo el miércoles por la noche.",
-        "El futbolista entregó donaciones de comida junto a su pareja Cami Espinoza.",
-        "Las imágenes del encuentro se difundieron en Instagram una vez que el jugador se retiró."
-      ],
-      "textoRedes": "El delantero de Boca Leonel Flores visitó el Club Santa María Futsal en Monte Chingolo para donar alimentos y compartir un encuentro con los vecinos.",
-      "etiquetas": [
-        "Leonel Flores",
-        "Monte Chingolo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/15/leonel-flores-el-jugador-de-boca-y-la-seleccion-que-visito-una-olla-popular-en-monte-chingolo-y-revoluciono-el-barrio/",
-          "fecha": "2026-10-15T16:55:32.000Z",
-          "oficial": false,
-          "aporte": "Detalló la visita del jugador al club de Monte Chingolo, la donación y la modalidad de difusión en redes."
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/deportes/leonel-flores-crack-boca-seleccion-argentina-fue-olla-popular-lanus-20261015172640",
-          "fecha": "2026-10-15T20:26:40.624Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/boca-juniors/el-gesto-solidario-de-leo-flores-participo-de-una-olla-popular-en-monte-chingolo-id766419.html",
-          "fecha": "2026-10-15T18:23:53.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/boca-juniors/gran-gesto-leo-flores-participo-olla-popular-monte-chingolo_0_vhNaJfrcfM.html",
-          "fecha": "2026-10-15T17:27:45.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/el-gesto-solidario-leonel-flores-participo-una-olla-popular-monte-chingolo-n6334247",
-          "fecha": "2026-10-15T20:11:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "leonel-flores-visita-un-club-de-barrio-para-donar-comida",
-      "foto": {
-        "archivo": "fotos-notas/1uvhput.jpg",
-        "credito": "Foto: Olé"
-      }
-    },
-    {
-      "id": "1o2y75j",
-      "titulo": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
-      "copete": "El balcarceño de 59 años forma parte de la primera camada de guardavidas argentinos que viajó a Europa en 2002 para trabajar en las playas catalanas.",
-      "cuerpo": "Fernando de la Torre divide su rutina desde hace veinticuatro años entre Balcarce y Tarragona. El profesor de Educación Física y guardavidas de 59 años viajó por primera vez a Europa en 2002, en medio de la crisis económica nacional, para trabajar durante la temporada estival.\n\nEn aquel entonces formó parte de un grupo de unos 370 trabajadores de la costa atlántica bonaerense, con procedencia en distritos como Mar del Plata, Miramar, Necochea y Balcarce, convocados ante las nuevas exigencias de seguridad en las costas españolas.\n\nCon el transcurso de los años, aquella experiencia temporal se transformó en su estilo de vida actual, donde continúa desempeñando tareas junto a jóvenes profesionales en Cataluña y mantiene a la montaña como otra de sus actividades centrales.",
-      "guion": "Fernando de la Torre repasa sus veinticuatro años entre Balcarce y España",
-      "seccion": "Balcarce",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/45090-fernando-de-la-torre-24-anos-entre-balcarce-y-espana-el-trabajo-la-montana-y-los-aprendizajes-de-una-vida-en-movimiento/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T16:33:19.652Z",
-      "sinFecha": true,
-      "visto": "2026-10-15T16:33:19.652Z",
-      "relevancia": 63,
-      "local": true,
-      "deUnMedioDeAca": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Tiene 59 años y divide su vida entre Balcarce y España.",
-        "Viajó a Europa en 2002 como parte de una camada de guardavidas argentinos.",
-        "Trabaja en la provincia de Tarragona, en la región de Cataluña.",
-        "También se desempeña como profesor de Educación Física y montañista."
-      ],
-      "seSabe": [
-        "Fernando de la Torre tiene 59 años y su vida transcurre entre Balcarce y España.",
-        "Viajó por primera vez en 2002 para desempeñarse como guardavidas.",
-        "Integró un contingente de aproximadamente 370 argentinos de la costa bonaerense.",
-        "Desarrolla su actividad laboral principalmente en Tarragona."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El balcarceño Fernando de la Torre repasa sus veinticuatro años de vida y trabajo entre Balcarce y España tras sumarse en 2002 a la primera camada de guardavidas argentinos en Europa.",
-      "etiquetas": [
-        "Fernando de la Torre",
-        "Balcarce",
-        "España",
-        "guardavidas",
-        "Tarragona"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45090-fernando-de-la-torre-24-anos-entre-balcarce-y-espana-el-trabajo-la-montana-y-los-aprendizajes-de-una-vida-en-movimiento/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalla la trayectoria del balcarceño Fernando de la Torre y su experiencia como guardavidas en España durante 24 años."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "fernando-de-la-torre-repasa-sus-veinticuatro-anos-entre-balcarce-y",
-      "foto": {
-        "archivo": "fotos-notas/1o2y75j.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
     }
   ],
   "secciones": [
@@ -6481,60 +6475,47 @@
   "clima": {
     "ahora": {
       "temp": 8,
-      "sensacion": 5,
-      "humedad": 89,
-      "viento": 13,
+      "sensacion": null,
+      "humedad": 88,
+      "viento": 14,
       "rumbo": "S",
-      "cielo": "Nublado",
-      "esDeDia": false
+      "cielo": "Nublado"
     },
     "dias": [
       {
         "fecha": "2026-10-17",
         "dia": "sáb",
         "max": 11,
-        "min": 5,
-        "lluvia": 12,
-        "codigo": 51,
-        "viento": 20,
-        "milimetros": 1,
-        "cielo": "Llovizna leve"
+        "min": 7,
+        "lluvia": null,
+        "cielo": "Nublado"
       },
       {
         "fecha": "2026-10-18",
         "dia": "dom",
         "max": 12,
         "min": 5,
-        "lluvia": 4,
-        "codigo": 3,
-        "viento": 15,
-        "milimetros": 0,
-        "cielo": "Nublado"
+        "lluvia": null,
+        "cielo": "Parcialmente nublado"
       },
       {
         "fecha": "2026-10-19",
         "dia": "lun",
-        "max": 16,
+        "max": 15,
         "min": 5,
-        "lluvia": 0,
-        "codigo": 3,
-        "viento": 17,
-        "milimetros": 0,
-        "cielo": "Nublado"
+        "lluvia": null,
+        "cielo": "Parcialmente nublado"
       },
       {
         "fecha": "2026-10-20",
         "dia": "mar",
         "max": 16,
         "min": 4,
-        "lluvia": 3,
-        "codigo": 3,
-        "viento": 18,
-        "milimetros": 0,
-        "cielo": "Nublado"
+        "lluvia": null,
+        "cielo": "Despejado"
       }
     ],
-    "fuente": "Open-Meteo"
+    "fuente": "MET Noruega"
   },
   "avisosClima": [],
   "farmacias": {
