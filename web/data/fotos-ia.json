@@ -1,13 +1,4 @@
 {
- "1ixp88o": {
-  "archivo": "fotos-notas/1ixp88o-ia.jpg",
-  "credito": "Ilustración generada con IA",
-  "medio": "Ilustración generada con IA",
-  "origen": "ia",
-  "cuando": "2026-10-16T13:59:55.964Z",
-  "titulo": "El abogado de Virginia Aparicio visita una radio local para hablar del caso",
-  "prompt": "Prompt de bodegón sin personas de Hernán Accomo (docs/flujos/IMAGENES-CON-GEMINI-WEB.md) con la nota entera; generada en Gemini web y revisada a mano"
- },
  "1jdsdep": {
   "archivo": "fotos-notas/1jdsdep-ia.jpg",
   "credito": "Ilustración generada con IA",
@@ -15,43 +6,14 @@
   "origen": "ia",
   "cuando": "2026-10-16T13:59:56.220Z",
   "titulo": "La Dirección de Juventud firma un acuerdo para vender entradas online",
-  "prompt": "Prompt de bodegón sin personas de Hernán Accomo (docs/flujos/IMAGENES-CON-GEMINI-WEB.md) con la nota entera; generada en Gemini web y revisada a mano"
- },
- "aa7nni": {
-  "archivo": "fotos-notas/aa7nni-ia.jpg",
-  "credito": "Ilustración generada con IA",
-  "medio": "Ilustración generada con IA",
-  "origen": "ia",
-  "cuando": "2026-10-16T14:34:50.992Z",
-  "titulo": "Reprograman la Caravana de la Alegría para noviembre",
-  "prompt": "Prompt de bodegón sin personas de Hernán Accomo (docs/flujos/IMAGENES-CON-GEMINI-WEB.md) con la nota entera; generada en Gemini web y revisada a mano"
- },
- "u0hcbv": {
-  "archivo": "fotos-notas/u0hcbv-ia.jpg",
-  "credito": "Ilustración generada con IA",
-  "medio": "Ilustración generada con IA",
-  "origen": "ia",
-  "cuando": "2026-10-16T14:34:51.093Z",
-  "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
-  "prompt": "Prompt de bodegón sin personas de Hernán Accomo (docs/flujos/IMAGENES-CON-GEMINI-WEB.md) con la nota entera; generada en Gemini web y revisada a mano"
- },
- "lf9d6b": {
-  "archivo": "fotos-notas/lf9d6b-ia.jpg",
-  "credito": "Ilustración generada con IA",
-  "medio": "Ilustración generada con IA",
-  "origen": "ia",
-  "cuando": "2026-10-16T14:34:51.192Z",
-  "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
-  "prompt": "Prompt de bodegón sin personas de Hernán Accomo (docs/flujos/IMAGENES-CON-GEMINI-WEB.md) con la nota entera; generada en Gemini web y revisada a mano"
- },
- "1eb747m": {
-  "archivo": "fotos-notas/1eb747m-ia.jpg",
-  "credito": "Ilustración generada con IA",
-  "medio": "Ilustración generada con IA",
-  "origen": "ia",
-  "cuando": "2026-10-16T14:34:51.292Z",
-  "titulo": "La Estudiantina 2026 arranca el lunes con propuestas deportivas y culturales",
-  "prompt": "Prompt de bodegón sin personas de Hernán Accomo (docs/flujos/IMAGENES-CON-GEMINI-WEB.md) con la nota entera; generada en Gemini web y revisada a mano"
+  "prompt": "Prompt de bodegón sin personas de Hernán Accomo (docs/flujos/IMAGENES-CON-GEMINI-WEB.md) con la nota entera; generada en Gemini web y revisada a mano",
+  "control": {
+   "ok": true,
+   "motivo": null,
+   "razon": "revisada a ojo en la auditoría del 16/10/2026: sin texto, sin marcas, sin gente",
+   "cuando": "2026-10-17T02:40:29.781Z",
+   "por": "auditoría de fotos del 16/10/2026 (Claude), con web/scripts/arreglar-fotos-17-10.mjs"
+  }
  },
  "1edq6ii": {
   "archivo": "fotos-notas/1edq6ii-ia.jpg",
@@ -95,17 +57,6 @@
   "titulo": "Trenes Argentinos compra cuarenta y tres formaciones para el AMBA",
   "modelo": "sdxl",
   "prompt": "Candid photojournalistic close-up still life of heavy steel railroad spikes, a worn brass conductor's punch, and a greasy metal wrench scattered on a weathered wooden workbench, soft natural daylight, blurred industrial train depot background with bokeh, authentic news archive aesthetic, no people, no text, no logos, natural neutral daylight, true-to-life colors, blank paper, no writing, no letters, no signs, no logos, no people",
-  "automatica": true
- },
- "q9ik7h": {
-  "archivo": "fotos-notas/q9ik7h-ia.jpg",
-  "credito": "Ilustración generada con IA",
-  "medio": "Ilustración generada con IA",
-  "origen": "ia",
-  "cuando": "2026-10-16T20:23:58.411Z",
-  "titulo": "Luciano Nakis apunta a Gabriel Milito como técnico de Independiente",
-  "modelo": "sdxl",
-  "prompt": "Candid photojournalistic close-up still life of worn leather football cleats, a classic leather soccer ball, and a tactical whiteboard with abstract magnetic markers on a scratched wooden locker room bench, sunlit warm daylight, blurred background of a stadium pitch, no people, no text, no logos, 16:9 aspect ratio, bright warm sunny daylight, vivid clean cheerful colors, blank paper, no writing, no letters, no signs, no logos, no people",
   "automatica": true
  },
  "1ax3e8b": {
