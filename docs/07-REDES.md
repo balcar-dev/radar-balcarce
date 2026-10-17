@@ -275,6 +275,23 @@ clima nunca se sacan.
    arranca con la primera nota, la más fuerte, y cierra con la lista. **La tapa**
    del reel (el cuadro 0, lo que muestran Instagram y Facebook antes del play) es
    la lista completa. Si la animación falla, sale la placa quieta.
+   **Con movimiento** (18/10, regla 300): el repaso es una escena dibujada cuadro
+   a cuadro (`escenaDelRepaso`) y todas las piezas arrancan ya con contenido.
+   Cómo se ve el repaso: la tapa 0,5 s y una transición de 10 cuadros a la
+   primera nota; entre nota y nota, la foto nueva se desliza y se aclara sobre la
+   anterior, el titular entra palabra por palabra, el "2 de 4" rueda y las
+   rayitas de arriba se llenan; sobre cada foto, una deriva lenta (zoom de 1,04 a
+   1,11 y paneo de unos píxeles, que alterna entre notas). La regla 90 vale para el
+   texto: lo escrito entra una vez y queda quieto; lo que deriva es la foto, ya
+   dibujada por resvg (no hay `zoompan`). Los subtítulos (fila 1660) y el crédito
+   de la foto nunca quedan tapados. **Cuánto cuesta:** se dibujan sólo los cuadros
+   distintos (30 por segundo donde algo entra, 15 en la deriva lenta), ffmpeg lee
+   la secuencia directo (sin video intermedio) y las escenas de servicio pasan de
+   20 a 30 cuadros por segundo. Medido el 18/10 en una PC de 4 núcleos, con voz
+   falsa y datos reales de `portada.json`: repaso de 48,6 s de audio, 78 s de
+   armado (antes, 79 s); clima de la mañana, 51 s (antes, 50 s); farmacia, 55 s
+   (antes, 42 s); efeméride, 72 s (antes, 48 s). El `timeout-minutes: 25`
+   alcanza de sobra.
 5. **La medida de verdad.** Se mide lo que dura el archivo. Si pasa de **58
    segundos** (`PODCAST_VOZ.segundosMaximoHistoria`; Meta acepta 60), la
    historia sube una copia cortada con fundido (`recortarParaHistoria`,
@@ -578,6 +595,13 @@ código lo lee de ahí, sin copias:
   (nunca nombrar un medio, nunca ".ar", nunca "en vivo", el saludo de su hora);
   la usan las pruebas (`pruebas/redes-criterio.test.mjs`) sobre los bancos de
   frases, no cada pieza al publicarla.
+- **La línea editorial del día** (18/10, regla 301; `redes/linea-del-dia.mjs`): el día de piezas es una historia contada en capítulos. Todas comparten
+  estructura (gancho de 3 segundos, cuerpo, un enlace hacia lo que viene, lo ya contado retomado por tema sin repetir el titular, y el **mismo llamado en toda la
+  fecha**), un trato (vos de locutor, ustedes para desear; nunca tuteo) y su voz. Se aplica en el plan (`aplicarLineaDelDia`, `reels/plan.mjs`) después de la
+  memoria del día; cada frase que se suma se pesa contra el tope de su pieza (repaso 55 s, clima y farmacia 25) y, si no cabe, no se suma. Un día completo con
+  datos reales, en [`redes/GUION-DEL-DIA-EJEMPLO.md`](redes/GUION-DEL-DIA-EJEMPLO.md); para rehacerlo, `node reels/guion-del-dia.mjs` (no cuesta nada). Una
+  consecuencia a tener presente: el guion de una pieza ya no depende sólo de la fecha, también de qué piezas hay en el plan y cuáles salieron; una pieza
+  que se reintenta después de que salió otra puede cambiar una frase de enlace y pedir un audio nuevo (el contador de voz lo cuenta, regla 208).
 - Dos reglas de fondo: **la voz no lee la placa** (la placa muestra el dato, la
   voz cuenta qué significa) y **la fuente no se nombra nunca en redes**.
 - La voz de verdad se comprueba a mano con el workflow **Auditar voz**
@@ -589,7 +613,10 @@ código lo lee de ahí, sin copias:
 - Las voces se crean con el workflow **Crear voces** (`reels/crear-voces.mjs`) y
   viven en el proyecto de Google de la clave de redes. Vencen al año; el
   vigilante avisa 30 días antes (`08-INFRAESTRUCTURA`; el paso a paso para
-  crearlas de nuevo, en `11-OPERACION`).
+  crearlas de nuevo, en `11-OPERACION`). **Para pasar a la clave paga** (18/10,
+  regla 302), el procedimiento, la prueba de parecido (`reels/parecido-de-voz.mjs`:
+  ritmo, tono, rango, brillo, pausas y duración) y cuántos audios gasta cada paso
+  están en [`redes/VOCES-NUEVAS.md`](redes/VOCES-NUEVAS.md).
 
 ## El libro: `web/data/redes.json`
 
@@ -689,7 +716,9 @@ anteriores cuenta las historias por el libro y lo dice.
 | `reels/voz.mjs` | `paraLeer` (los símbolos en palabras) y `enCarteles` (los carteles de subtítulos) | `reel.mjs` | — | — |
 | `reels/alinear.mjs`, `reels/tiempos.mjs` | Cuándo arranca cada palabra del subtítulo | `voz-gemini.mjs` | el audio | — |
 | `reels/duracion.mjs` | El máximo de una historia (58 s) y el recorte | `reel.mjs` | — | — |
-| `reels/crear-voces.mjs` | Crear, listar y borrar las voces propias | "Crear voces" | `GEMINI_API_KEY_REDES` | audios de prueba (artefacto) |
+| `reels/crear-voces.mjs` | Crear, listar y borrar las voces propias; `referencia`, `recrear` con versiones y `comparar` (regla 302) | "Crear voces" | `GEMINI_API_KEY_REDES` | audios de prueba (artefacto), `reels/referencias-de-voz/` |
+| `reels/parecido-de-voz.mjs`, `reels/texto-de-comparacion.mjs` | Cuánto se parece una voz a otra y cuál elegir (sin Gemini, cuesta 0); el texto fijo de la prueba | `crear-voces.mjs`, la línea de comandos | ffmpeg | `comparacion.md` |
+| `redes/linea-del-dia.mjs`, `reels/guion-del-dia.mjs` | La línea editorial del día: enlaces, ganchos de continuidad, lo retomado y el llamado; y el guion del día entero para revisarlo | `reels/plan.mjs` | `redes/guiones.mjs` | `p.linea` de cada pieza |
 | `reels/auditar-voz.mjs`, `redes/auditoria-voz.mjs` | La auditoría de la voz real | "Auditar voz" | `GEMINI_API_KEY_REDES` | — |
 | `web/lib/tarjeta.js` | Las tarjetas de cada nota (compartir e Instagram) | las rutas de Next al compilar | la nota, `reels/marca/fuentes/`, la foto del banco | PNG estáticos del sitio |
 | `web/lib/tarjeta-diseno.js` | Medidas, colores, cuentas y `FOTO_EN_INSTAGRAM` | `tarjeta.js`, `publicar.mjs` | `banco-fotos.json` | — |
@@ -794,8 +823,8 @@ vuelve a pedir: la historia de un reel que sí salió, o una red secundaria que 
 - **Que el contador de voz vea todo lo que gasta voz**: "Auditar voz", "Probar Gemini", "Crear voces" y "Fijar
   piezas" usan la misma clave pero no restauran ni guardan la memoria de voces (`.cache/voz`, `VOZ_CACHE`), así
   que sus audios no se cuentan. Hace falta sumarles los dos pasos de caché que tienen `redes.yml` y `piezas.yml`.
-- **"Redes" puede tardar un poco más a la hora de un repaso**: la secuencia del repaso dibuja unos 350 cuadros
-  (en la PC, 2 minutos; en GitHub, del orden de uno). El `timeout-minutes: 25` alcanza; si algún día no, la
+- **"Redes" puede tardar un poco más a la hora de un repaso**: la secuencia del repaso dibuja unos 800 cuadros
+  distintos (regla 300; en una PC de 4 núcleos, unos 80 segundos; en GitHub, del orden de uno o dos minutos). El `timeout-minutes: 25` alcanza; si algún día no, la
   pieza sale con la lista quieta.
 
 ## El video, como módulo aparte (`radarbalcarce/radar-balcarce-render`)

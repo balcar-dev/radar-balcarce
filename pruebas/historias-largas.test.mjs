@@ -46,7 +46,9 @@ const NOCHE_25_09 = [
 test('16a · el caso real del 25/09: el podcast de la noche tenía 153 palabras, ~62,7 s, y ahora la historia cabe', () => {
   const fecha = AR('2026-09-25', '20:36');
   const antes = repasoConPresupuesto(NOCHE_25_09, { momento: 'noche', fecha, presupuesto: Infinity }).guion; // sin tope, como salía antes
-  assert.equal(antes.split(/\s+/).length, 153);
+  // Eran 153 palabras con la frase de entrada de ese día; desde la línea editorial (18/10, regla 301) la entrada de la noche es otra y da 151: lo que
+  // importa es que siga siendo un guion de unas 150 palabras.
+  assert.ok(Math.abs(antes.split(/\s+/).length - 153) <= 3, `${antes.split(/\s+/).length} palabras`);
   // El video real duró 62,7 s: la estimación de ahora peca de larga (65,4), nunca de corta.
   const estimadoAntes = segundosDePodcast(antes);
   assert.ok(estimadoAntes >= 62.7, `estimó ${estimadoAntes.toFixed(1)} s y el video real duró 62,7`);

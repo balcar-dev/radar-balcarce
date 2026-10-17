@@ -89,6 +89,27 @@ mismo texto (así se puede probar), y días distintos suenan distinto
 - Opinión: se cuenta el dato, no se dice si está bien o mal.
 - "En vivo" o "minuto a minuto": las piezas son un repaso de lo ya publicado.
 
+### La línea editorial del día (18/10, regla 301)
+
+El día de piezas es **una sola historia contada en capítulos** (`redes/linea-del-dia.mjs`; un día completo de ejemplo, en
+[`docs/redes/GUION-DEL-DIA-EJEMPLO.md`](docs/redes/GUION-DEL-DIA-EJEMPLO.md)). Todas comparten estructura, voz y trato:
+
+1. **Gancho de 3 segundos** (8 palabras o menos): el saludo de la franja o, si ya se saludó hace poco, una frase de continuidad propia de ese
+   momento ("Seguimos con lo que arrancamos a la mañana.", "Ahora, cómo sigue la noche.", "Ya casi cerramos el día."), no el puente genérico.
+2. **Cuerpo:** lo propio de la pieza.
+3. **Un enlace hacia lo que viene**, sólo si esa pieza está en el plan de hoy y todavía no salió, con su hora dicha: "Recordá que a las nueve de la
+   noche cerramos con el repaso del día."
+4. **Lo ya contado, retomado sin repetirlo:** una historia o un repaso nombra el *tema* de un repaso anterior ("lo del fútbol", "lo de acá"), que sale de
+   la sección de sus notas, nunca su titular; el repaso de la mañana abre con "Ayer te contamos…" si el libro tiene el de anoche.
+5. **Cierre con el mismo llamado en toda la fecha:** el deseo de la franja y la misma frase de firma en todas las piezas del día; ese día todas dicen
+   "Radar Balcarce punto com" o ninguna (sigue siendo 1 de cada 3 días; los repasos, siempre).
+
+**Trato único:** vos rioplatense de locutor para hablarle a una persona ("guardá el dato", "anotá") y ustedes para desearle algo a todos ("que tengan una
+linda tarde"). Nunca tuteo ("guarda", "tienes", "tú") ni jerga forzada ("che", "boludo"): `revisarTexto` lo detecta.
+
+**Cuánto entra:** cada frase que se suma se pesa contra el tope de su pieza (el repaso 55 s, el clima y la farmacia 25, un día como hoy 45); si no cabe,
+se prueba otra variante más corta y, si ninguna entra, no se suma. Todo es determinístico (la fecha elige la variante) y no usa IA ni cupo de voz.
+
 ## 3. Las piezas
 
 Lo común a todas:

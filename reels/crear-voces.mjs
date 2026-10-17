@@ -17,6 +17,14 @@
 //   node reels/crear-voces.mjs            crea los candidatos y los prueba
 //   node reels/crear-voces.mjs listar     lista las voces propias del proyecto
 //
+// Para volver a crear las dos voces con la clave paga (18/10/2026, regla 302; el procedimiento entero, en docs/redes/VOCES-NUEVAS.md):
+//   node reels/crear-voces.mjs referencia   2 audios con las voces de AHORA (los ids de CRITERIO-REDES.md § 6) y el texto de comparación: la referencia. Se corre
+//                                           ANTES de cambiar la clave (esas voces viven en el proyecto de la clave de hoy). Quedan en reels/salida/voces/ y se
+//                                           guardan en reels/referencias-de-voz/ (locutora.mp3, locutor.mp3, referencias.json)
+//   VERSIONES=2 node reels/crear-voces.mjs recrear   crea VERSIONES versiones (2 a 6; por defecto 2) de la locutora y del locutor con las mismas descripciones, dice
+//                                           el texto de comparación con cada una (2 audios del cupo por versión: la muestra que Google devuelve al crearla y ese texto) y las compara con la referencia (reels/parecido-de-voz.mjs)
+//   node reels/crear-voces.mjs comparar     NO llama a Gemini (cuesta 0): compara los audios de reels/salida/voces/ con la referencia
+//
 // Clave: GEMINI_API_KEY_REDES (gratis; el cupo de voz es de 10 audios por día,
 // compartido con Redes, Piezas y Auditar voz). Sin dependencias fuera de ffmpeg-static.
 
@@ -26,16 +34,23 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import ffmpeg from 'ffmpeg-static';
 import { claveRedes } from './claves.mjs';
+import { TEXTO_DE_COMPARACION, palabrasDelTexto, VERSIONES_POR_DEFECTO, VERSIONES_MAXIMAS } from './texto-de-comparacion.mjs';
+import { compararArchivos, tablaDeComparacion } from './parecido-de-voz.mjs';
+import { VOCES, componerIndicacion, INDICACIONES } from '../redes/prompt-redes.mjs';
 
 const correr = promisify(execFile);
 const RAIZ_API = 'https://generativelanguage.googleapis.com/v1beta';
 const MODELO = 'gemini-3.8-flash-tts';
 const SALIDA = path.join(import.meta.dirname, 'salida', 'voces');
 
-const PODCAST = 'Buenas noches Balcarce, cómo estuvo el día. Repasamos lo que dejó este lunes. Para arrancar: El Fangio volvió a rugir después de 15 años. '
-  + 'Otra que se comenta: la mala suerte de Ariel Durán en Balcarce. También: Movimiento 245, un espacio de contención y recuperación que funciona en Balcarce. '
-  + 'Por último: Argentina contra Bolivia, cuándo juegan, entradas y las claves de un Kempes con aforo reducido. Que tengan una buena noche. '
-  + 'Todo lo demás lo encontrás en Radar Balcarce punto com.';
+// El texto de la prueba es siempre el mismo (reels/texto-de-comparacion.mjs): así los audios de días distintos se pueden comparar.
+const PODCAST = TEXTO_DE_COMPARACION;
+// El estilo con el que habla de verdad la pieza de la noche (el texto de comparación es un repaso de la noche): para comparar voces hay que hablarles igual.
+const ESTILO_DE_PRODUCCION = componerIndicacion(INDICACIONES.noche);
+// Dónde se guarda la referencia (el audio de las voces de ahora, dicho una vez con el texto de comparación) para compararla cuando haya clave nueva.
+const REFERENCIAS = process.env.REFERENCIAS_DE_VOZ ?? path.join(import.meta.dirname, 'referencias-de-voz');
+// Las dos voces propias y su descripción de origen (CRITERIO-REDES.md § 2): la locutora C y el locutor A.
+const DE_PRODUCCION = [{ rol: 'locutora', base: 'mujer-c' }, { rol: 'locutor', base: 'hombre-a' }];
 const MUESTRA = 'Buen día, Balcarce. Hoy amanece nublado, con 11 grados y una sensación térmica de 8. Todas las noticias de hoy, en Radar Balcarce punto com.';
 const ESTILO = 'calm, confident and warm, steady pace, like a local radio announcer';
 
@@ -48,6 +63,34 @@ const CANDIDATOS = [
   { id: 'hombre-b', genero: 'male', nombre: 'Radar Balcarce · locutor B', descripcion: `Locutor de radio local argentino, hombre de unos 35 años, voz media, cercana, cálida y amable, con una sonrisa leve. ${COMUN}` },
   { id: 'hombre-c', genero: 'male', nombre: 'Radar Balcarce · locutor C', descripcion: `Locutor de radio local argentino, hombre de unos 50 años, voz grave, serena y pausada, con mucho oficio. ${COMUN}` },
 ];
+
+/** Compara los audios de `carpeta` (<base>-v<n>-podcast.mp3) con la referencia de cada voz. Devuelve { rol: { ranking, ganadora } }. No llama a Gemini. */
+async function compararConLaReferencia(carpeta = SALIDA) {
+  const salida = {};
+  const md = ['# Comparación de las voces nuevas con las de ahora', '', `Texto: el de reels/texto-de-comparacion.mjs (${palabrasDelTexto(TEXTO_DE_COMPARACION)} palabras). La decisión final es de oído.`, ''];
+  for (const { rol, base } of DE_PRODUCCION) {
+    const referencia = path.join(REFERENCIAS, `${rol}.mp3`);
+    const candidatas = fs.existsSync(carpeta) ? fs.readdirSync(carpeta).filter((a) => a.startsWith(`${base}-v`) && a.endsWith('-podcast.mp3')).sort().map((a) => path.join(carpeta, a)) : [];
+    if (!fs.existsSync(referencia)) { console.log(`${rol}: falta la referencia (${referencia}); se hace con "referencia" antes de cambiar la clave.`); continue; }
+    if (!candidatas.length) { console.log(`${rol}: no hay candidatas (${base}-v*-podcast.mp3) en ${carpeta}`); continue; }
+    const r = await compararArchivos(referencia, candidatas, { palabras: palabrasDelTexto(TEXTO_DE_COMPARACION), mismoTexto: true });
+    salida[rol] = { ranking: r.ranking, ganadora: r.ganadora?.nombre ?? null };
+    const titulo = `## ${rol === 'locutora' ? 'La locutora' : 'El locutor'}`;
+    console.log(`\n${titulo.replace('## ', '')}\n${tablaDeComparacion(r.ranking, r.ref)}`);
+    md.push(titulo, '', tablaDeComparacion(r.ranking, r.ref), '', `La más parecida: **${r.ganadora?.nombre ?? 'ninguna'}**. Escuchar las dos primeras antes de elegir.`, '');
+  }
+  if (Object.keys(salida).length) {
+    fs.mkdirSync(carpeta, { recursive: true });
+    fs.writeFileSync(path.join(carpeta, 'comparacion.json'), JSON.stringify(salida, null, 2));
+    fs.writeFileSync(path.join(carpeta, 'comparacion.md'), `${md.join('\n')}\n`);
+  }
+  return salida;
+}
+
+if (process.argv[2] === 'comparar') {
+  await compararConLaReferencia(process.argv[3] ? path.resolve(process.argv[3]) : SALIDA);
+  process.exit(0);
+}
 
 const clave = claveRedes();
 if (!clave) { console.log('Falta GEMINI_API_KEY_REDES.'); process.exit(1); }
@@ -141,6 +184,36 @@ if (process.argv[2] === 'listar') {
   process.exit(0);
 }
 
+if (process.argv[2] === 'referencia') {
+  // Las voces de AHORA dicen el texto de comparación, con el estilo de producción: es lo que las voces nuevas tienen que imitar. 2 audios (uno por voz).
+  // Hay que correrlo con la clave de HOY: esas voces (los ids de CRITERIO-REDES.md § 6) viven en el proyecto de esa clave.
+  fs.mkdirSync(REFERENCIAS, { recursive: true });
+  const hechas = [];
+  for (const { rol } of DE_PRODUCCION) {
+    const idVoz = VOCES[rol];
+    const gen = await api('POST', '/interactions', {
+      model: MODELO,
+      input: [{ type: 'user_input', content: [{ type: 'text', text: PODCAST, annotations: [{ type: 'speech_metadata', style: ESTILO_DE_PRODUCCION }] }] }],
+      response_format: { type: 'audio' },
+      generation_config: { speech_config: [{ voice: idVoz }] },
+    });
+    const audio = gen.ok ? buscarAudio(gen.json) : null;
+    if (!audio) { console.log(`${rol}: ERROR ${gen.estado ?? ''} ${gen.error ?? 'sin audio'}`); process.exit(1); }
+    const wav = Buffer.from(audio.data, 'base64');
+    const segundos = segundosDeWav(wav);
+    await aMp3(wav, path.join(SALIDA, `referencia-${rol}.mp3`));
+    await aMp3(wav, path.join(REFERENCIAS, `${rol}.mp3`));
+    const palabras = palabrasDelTexto(PODCAST);
+    hechas.push({ rol, idVoz, segundos: Number(segundos.toFixed(1)), palabras, palabrasPorSegundo: Number((palabras / segundos).toFixed(2)), dia: new Date().toISOString().slice(0, 10) });
+    console.log(`${rol}: ${segundos.toFixed(1)} s · ${(palabras / segundos).toFixed(2)} pal/s`);
+    await dormir(3000);
+  }
+  fs.writeFileSync(path.join(REFERENCIAS, 'referencias.json'), JSON.stringify(hechas, null, 2));
+  fs.copyFileSync(path.join(REFERENCIAS, 'referencias.json'), path.join(SALIDA, 'referencias.json'));
+  console.log('\nListo: la referencia quedó en reels/referencias-de-voz/ (hay que guardarla en el repositorio antes de cambiar la clave) y en los artefactos de la corrida.');
+  process.exit(0);
+}
+
 if (['dialogo', 'dialogo2', 'dialogo3'].includes(process.argv[2])) {
   const version2 = process.argv[2] === 'dialogo2';
   const version3 = process.argv[2] === 'dialogo3';
@@ -223,8 +296,10 @@ const creadas = [];
 // clave que ya no anda (la paga, suspendida el 29/09). Con una clave de OTRO proyecto esos identificadores no existen: se crean de nuevo,
 // dos versiones de cada una, con las mismas descripciones, y se prueban con el mismo podcast. Voice Design no
 // devuelve dos veces la misma voz: por eso son dos versiones para elegir la más parecida a la aprobada.
+// VERSIONES (18/10, regla 302): cuántas versiones de cada voz se crean (2 a 6, por defecto 2): cada una gasta 2 audios del cupo (la muestra de Google al crearla y el texto de comparación).
+const versiones = Math.max(2, Math.min(VERSIONES_MAXIMAS, Number(process.env.VERSIONES) || VERSIONES_POR_DEFECTO));
 const paraCrear = process.argv[2] === 'recrear'
-  ? ['mujer-c', 'hombre-a'].flatMap((base) => [1, 2].map((n) => ({ ...CANDIDATOS.find((c) => c.id === base), id: `${base}-v${n}` })))
+  ? DE_PRODUCCION.map((d) => d.base).flatMap((base) => Array.from({ length: versiones }, (_, i) => i + 1).map((n) => ({ ...CANDIDATOS.find((c) => c.id === base), id: `${base}-v${n}` })))
   : CANDIDATOS;
 for (const c of paraCrear) {
   console.log(`\n== ${c.id} ==`);
@@ -247,7 +322,7 @@ for (const c of paraCrear) {
   // El podcast entero con esa voz, por la Interactions API.
   const gen = await api('POST', '/interactions', {
     model: MODELO,
-    input: [{ type: 'user_input', content: [{ type: 'text', text: PODCAST, annotations: [{ type: 'speech_metadata', style: ESTILO }] }] }],
+    input: [{ type: 'user_input', content: [{ type: 'text', text: PODCAST, annotations: [{ type: 'speech_metadata', style: process.argv[2] === 'recrear' ? ESTILO_DE_PRODUCCION : ESTILO }] }] }],
     response_format: { type: 'audio' },
     generation_config: { speech_config: [{ voice: idVoz }] },
   });
@@ -264,3 +339,5 @@ for (const c of paraCrear) {
 }
 fs.writeFileSync(path.join(SALIDA, 'voces-creadas.json'), JSON.stringify(creadas, null, 2));
 console.log(`\nListo: ${creadas.filter((c) => !c.error).length} de ${creadas.length} voces creadas y probadas.`);
+// Con la referencia guardada, las candidatas se comparan solas (cuenta local, sin Gemini): la tabla queda en la corrida (comparacion.md).
+if (process.argv[2] === 'recrear') await compararConLaReferencia(SALIDA);

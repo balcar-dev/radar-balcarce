@@ -45,13 +45,18 @@ function variantes(banco, semilla, ranura, n) {
   return Array.from({ length: Math.min(n, banco.length) }, (_, i) => banco[(inicio + i) % banco.length]);
 }
 
+/** El día de una semilla ("2026-10-17|clima-manana" → "2026-10-17"). */
+const diaDeLaSemilla = (semilla) => String(semilla).split('|')[0];
+
 /** ¿Esta pieza dice hoy la dirección en voz alta? Los podcasts, siempre (si el
- *  criterio lo dice); el clima, la farmacia y los semanales, 1 de cada N días. */
+ *  criterio lo dice); el clima, la farmacia y los semanales, 1 de cada N días.
+ *  Desde el 18/10 (regla 301) lo decide el DÍA y no la pieza: un día en que se dice, la dicen todas, y un día en que no, ninguna: el llamado
+ *  del cierre es el mismo en todo el día. */
 export function diceLaDireccion(semilla, { podcast = false, forzar } = {}) {
   if (forzar !== undefined && forzar !== null) return Boolean(forzar);
   if (podcast) return VOZ.direccionEnPodcasts === 1;
   const cada = VOZ.direccionUnaDeCada;
-  return cada > 0 && hash(`${semilla}|direccion`) % cada === 0;
+  return cada > 0 && hash(`${diaDeLaSemilla(semilla)}|direccion`) % cada === 0;
 }
 
 /** Cuántos segundos tarda la locutora en decir un texto. */
@@ -84,7 +89,7 @@ export const SALUDOS = {
     'Buenas tardes, Balcarce.',
     'Muy buenas tardes, Balcarce.',
     'Buenas tardes, Balcarce, ¿cómo va el día?',
-    'Buenas tardes, Balcarce, seguimos.',
+    'Buenas tardes, Balcarce, ¿cómo viene la tarde?',
   ],
   noche: [
     'Buenas noches, Balcarce.',
@@ -161,7 +166,7 @@ export const CIERRES_HUMANOS = {
   ],
 };
 
-const FIRMAS_SIN_DIRECCION = [
+export const FIRMAS_SIN_DIRECCION = [
   'Radar Balcarce.',
   'Te lo contó Radar Balcarce.',
   'Seguimos en Radar Balcarce.',
@@ -173,11 +178,19 @@ export const firmasConDireccion = (D, tipo) => (tipo === 'podcast'
   : [`Más información en ${D}.`, `Seguimos en ${D}.`, `Todo lo demás, en ${D}.`, `Te esperamos en ${D}.`]);
 
 /** La firma: "Radar Balcarce." o, cuando toca, la dirección dicha ("… Radar
- *  Balcarce punto com."). Nunca otra cosa. */
+ *  Balcarce punto com."). Nunca otra cosa. Desde el 18/10 (regla 301) es el LLAMADO DEL DÍA: la frase se elige con la fecha y no con la pieza, así
+ *  todas las piezas de un día cierran igual (los repasos con su variante de "las notas completas", el resto con la general). */
 function firma(semilla, { conDireccion = false, tipo = 'general' } = {}) {
+  const delDia = `${diaDeLaSemilla(semilla)}|llamado`;
   return conDireccion
-    ? variante(firmasConDireccion(SITIO_DICHO, tipo), semilla, 'firma')
-    : variante(FIRMAS_SIN_DIRECCION, semilla, 'firma');
+    ? variante(firmasConDireccion(SITIO_DICHO, tipo), delDia, 'firma')
+    : variante(FIRMAS_SIN_DIRECCION, delDia, 'firma');
+}
+
+/** El llamado con el que cierra hoy cualquier pieza (la última oración): lo mismo en todo el día. `podcast` para los repasos. */
+export function llamadoDelDia(fecha = new Date(), { podcast = false, direccion } = {}) {
+  const s = semillaDe('llamado', fecha);
+  return firma(s, { conDireccion: diceLaDireccion(s, { podcast, forzar: direccion }), tipo: podcast ? 'podcast' : 'general' });
 }
 
 const cierre = (semilla, momento, opciones) => `${variante(CIERRES_HUMANOS[momento], semilla, 'cierre')} ${firma(semilla, opciones)}`;
@@ -491,16 +504,18 @@ const INTROS = {
     'Las noticias para arrancar el día.',
     'Te cuento lo más importante para arrancar el día.',
     'Estas son las notas para empezar la mañana.',
-    'Vamos con lo que tenés que saber esta mañana.',
+    'Vamos con lo que tenés que saber hoy.',
   ],
+  // La línea editorial del día (18/10, regla 301): la entrada de cada repaso engancha con el anterior. A la tarde se retoma lo de la mañana; a la
+  // noche se cierra el día. Frases cortas y fijas por momento (la fecha sólo elige la variante), de 8 palabras o menos.
   tarde: [
-    'Repasamos lo que fue pasando hoy.',
-    'Un repaso de lo que se viene comentando.',
-    'Vamos con las novedades de la tarde.',
-    'Esto es lo que se fue sumando desde la mañana.',
+    'Seguimos con lo que arrancamos a la mañana.',
+    'Retomamos lo que contamos a la mañana.',
+    'Esto se fue sumando desde la mañana.',
+    'Vamos con lo que pasó desde la mañana.',
   ],
   noche: (dia) => [
-    `Este es el repaso de este ${dia}.`,
+    `Cerramos este ${dia} con lo que faltaba.`,
     `Cerramos este ${dia} con lo más fuerte del día.`,
     `Repasamos lo que dejó este ${dia}.`,
     `Así se va este ${dia}.`,
@@ -607,6 +622,10 @@ export function revisarTexto(texto, { tipo = 'voz', momento } = {}) {
     mal(repiteBalcarceAlPrincipio(t), 'repite "Balcarce" en las dos primeras frases');
     mal(/[!¡]/.test(t), 'tiene signos de exclamación');
     mal(/radarbalcarce|\.com\b/i.test(t), 'escribe la dirección en vez de decirla');
+    // El trato (18/10, regla 301): vos rioplatense de locutor para hablarle a una persona y ustedes para desear algo a todos; nunca tuteo ("tienes",
+    // "guarda el dato", "tú") ni un voseo forzado de jerga ("che", "boludo").
+    mal(/\b(tú|tienes|puedes|quieres|sabes|recuerda|escríbenos|cuéntanos|abrígate|llévate|guarda el dato|anota el dato)\b/i.test(t), 'tutea (el trato es de vos)');
+    mal(/\b(che|boludo|pibe|loco|bárbaro)\b/i.test(t), 'usa jerga forzada');
     mal(/punto com/i.test(t) && !/Radar Balcarce punto com/i.test(t), 'dice "punto com" sin "Radar Balcarce" adelante');
     mal(/punto com(?![.]|$)/i.test(t), 'agrega algo después de "punto com"');
     if (momento) {

@@ -11,9 +11,11 @@ import { promisify } from 'node:util';
 import ffmpeg from 'ffmpeg-static';
 import { paraLeer, enCarteles } from './voz.mjs';
 import { aPng } from './placa.mjs';
-import { FPS, partirSvg, renderizarEntrada, renderizarEscena } from './animacion.mjs';
+import {
+  FPS, partirSvg, renderizarEntrada, renderizarEscena, renderizarLinea,
+} from './animacion.mjs';
 import { decirGemini } from './voz-gemini.mjs';
-import { placasConTiempos } from './escenas/repaso.mjs';
+import { placasConTiempos, escenaDelRepaso } from './escenas/repaso.mjs';
 import { componerIndicacion, vozDePieza } from '../redes/prompt-redes.mjs';
 import {
   HISTORIA_MAXIMA, duracionDeLaSalida, pasaDelMaximo, argumentosDeRecorte,
@@ -165,11 +167,23 @@ async function armarBaseDeEscena({ nombre, escena, total, dir }) {
   return base;
 }
 
+/**
+ * El video base del repaso con movimiento (regla 300): sólo se dibujan los cuadros distintos (reels/animacion.mjs, `lineaDeTiempo`) y ffmpeg los repite
+ * lo que haga falta (vínculos, no copias) para tener los 30 por segundo. No hay un video intermedio: el armado final lee la secuencia directamente (una pasada
+ * de x264 menos: en un video con movimiento son unos 45 segundos). Devuelve el patrón de la secuencia (`…f%05d.png`) o lanza.
+ */
+async function armarBaseDeSecuencia({
+  nombre, escena, total, dir,
+}) {
+  const { secuencia } = await renderizarLinea(escena, dir, `${nombre}-a0-`, { duracion: total, linea: escena.linea(total) });
+  return secuencia;
+}
+
 /** Los cuadros y el video intermedio de la animación se borran: sólo queda el reel. */
 function limpiarAnimacion(dir, nombre) {
   try {
     for (const f of fs.readdirSync(dir)) {
-      if (f.startsWith(`${nombre}-a`) && f.endsWith('.png') && /-a\d+-\d{3,4}\.png$/.test(f)) fs.rmSync(path.join(dir, f));
+      if (f.startsWith(`${nombre}-a`) && /-a\d+-f?\d{3,5}\.png$/.test(f)) fs.rmSync(path.join(dir, f));
       if (f.startsWith(`${nombre}-s`) && /-s\d+\.png$/.test(f)) fs.rmSync(path.join(dir, f));
     }
     fs.rmSync(path.join(dir, `${nombre}-base.mp4`), { force: true });
@@ -265,18 +279,28 @@ export async function armarReel({
   const conTiempos = animar && secuencia ? placasConTiempos(secuencia, voz.palabras, { retardo, total }) : null;
   if (animar && secuencia && !conTiempos) console.log(`  (la secuencia de ${nombre} no se pudo ubicar en la voz y sale con la placa de siempre)`);
   if (conTiempos) {
+    // Primero, con movimiento (regla 300): transiciones, deriva de la foto, titular por palabras. Si algo no encaja, la entrada de siempre.
     try {
-      const placas = [];
-      for (const [i, p] of conTiempos.entries()) {
-        const pngDeLaPlaca = i === 0 ? png : path.join(dir, `${nombre}-s${i}.png`);
-        if (i === 0) await aPng(p.svg, png); else await aPng(p.svg, pngDeLaPlaca);
-        placas.push({ svg: p.svg, png: pngDeLaPlaca, desde: p.desde });
-      }
-      base = await armarBaseAnimada({ nombre, total, dir, placas, tapa: secuencia.tapa ?? null });
+      const escenaRepaso = escenaDelRepaso({ placas: conTiempos, tapa: secuencia.tapa ?? svg, total });
+      if (escenaRepaso) base = await armarBaseDeSecuencia({ nombre, escena: escenaRepaso, total, dir });
     } catch (e) {
-      console.log(`  (la secuencia de ${nombre} no se pudo armar y sale con la placa de siempre: ${String(e.message).slice(0, 120)})`);
+      console.log(`  (el repaso de ${nombre} no se pudo armar con movimiento y sale con la entrada de siempre: ${String(e.message).slice(0, 120)})`);
       base = null;
-      await aPng(svg, png);
+    }
+    if (!base) {
+      try {
+        const placas = [];
+        for (const [i, p] of conTiempos.entries()) {
+          const pngDeLaPlaca = i === 0 ? png : path.join(dir, `${nombre}-s${i}.png`);
+          if (i === 0) await aPng(p.svg, png); else await aPng(p.svg, pngDeLaPlaca);
+          placas.push({ svg: p.svg, png: pngDeLaPlaca, desde: p.desde });
+        }
+        base = await armarBaseAnimada({ nombre, total, dir, placas, tapa: secuencia.tapa ?? null });
+      } catch (e) {
+        console.log(`  (la secuencia de ${nombre} no se pudo armar y sale con la placa de siempre: ${String(e.message).slice(0, 120)})`);
+        base = null;
+        await aPng(svg, png);
+      }
     }
   } else if (animar && escena) {
     try {
@@ -297,13 +321,14 @@ export async function armarReel({
     }
   }
   const armarFinal = (conBase) => {
+    const deSecuencia = conBase && base.includes('%05d');
     const entradas = conBase
-      ? ['-i', path.basename(base), '-f', 'lavfi', '-t', total.toFixed(2), '-i', `color=c=${ROJO_DE_LA_BARRA}:s=1080x14:r=${FPS}`, '-i', path.basename(mp3)]
+      ? [...(deSecuencia ? ['-framerate', String(FPS)] : []), '-i', path.basename(base), '-f', 'lavfi', '-t', total.toFixed(2), '-i', `color=c=${ROJO_DE_LA_BARRA}:s=1080x14:r=${FPS}`, '-i', path.basename(mp3)]
       : dosPlacas
         ? ['-loop', '1', '-t', corte.toFixed(2), '-i', path.basename(png), '-loop', '1', '-t', (total - corte).toFixed(2), '-i', path.basename(png2), '-i', path.basename(mp3)]
         : ['-loop', '1', '-i', path.basename(png), '-i', path.basename(mp3)];
     const origen = conBase
-      ? `[0:v][1:v]overlay=x='-w+w*t/${total.toFixed(2)}':y=H-h:eof_action=pass`
+      ? `${deSecuencia ? '[0:v]scale=1080:1920,setsar=1[b0];[b0]' : '[0:v]'}[1:v]overlay=x='-w+w*t/${total.toFixed(2)}':y=H-h:eof_action=pass`
       : dosPlacas ? '[0:v][1:v]concat=n=2:v=1:a=0' : '[0:v]null';
     // loudnorm (R-4 de Herramientas, 8/10/2026): todas las voces al mismo volumen (-16 LUFS), para que ninguna pieza suene más fuerte que otra.
     const audio = `[${conBase || dosPlacas ? 2 : 1}:a]${VOLUMEN_PAREJO},adelay=${ms}|${ms},apad=pad_dur=1.2[a]`;

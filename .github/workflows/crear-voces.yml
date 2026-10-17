@@ -9,6 +9,10 @@
 # los modos gastan audios del cupo gratis de voz (10 por día, compartido con
 # Redes, Piezas y Auditar voz): no correrlo de más.
 #
+# Para pasar a la clave paga de Google (18/10/2026, regla 302; docs/redes/VOCES-NUEVAS.md): 1) con la clave de HOY, "referencia" (2 audios) y guardar lo que deja
+# en reels/referencias-de-voz/; 2) cambiar el secreto GEMINI_API_KEY_REDES; 3) "recrear" con `versiones` (2 por defecto): crea las voces nuevas, dice el mismo
+# texto con cada una y las compara con la referencia (comparacion.md en los artefactos); "comparar" repite esa comparación sin llamar a Gemini (cuesta 0).
+#
 # SECRETO: GEMINI_API_KEY_REDES.
 
 name: Crear voces
@@ -17,9 +21,9 @@ on:
   workflow_dispatch:
     inputs:
       modo:
-        description: 'crear = crea los seis candidatos y los prueba; recrear = vuelve a crear la locutora C y el locutor A (dos versiones de cada uno) en el proyecto de la clave; dialogo = una charla entre las dos voces; dialogo2 = la misma charla con un estilo por intervención, pausas y un "mhm"; dialogo3 = un noticiero con dos lectores que se turnan las notas, sin charla; listar = la biblioteca de Google; borrar = quita una voz propia (las dos de producción piden confirmación). Gasto de voz: crear ≈ 12 audios, recrear ≈ 8, dialogo ≈ 8 a 10, listar y borrar 0; el cupo gratis es de 10 por día'
+        description: 'crear = crea los seis candidatos y los prueba; referencia = 2 audios con las voces de AHORA y el texto de comparación (correr ANTES de cambiar la clave); recrear = vuelve a crear la locutora C y el locutor A (`versiones` de cada uno) en el proyecto de la clave, las prueba con el mismo texto y las compara con la referencia; comparar = compara con la referencia lo que ya hay en reels/salida/voces, sin llamar a Gemini (0 audios); dialogo = una charla entre las dos voces; dialogo2 = la misma charla con un estilo por intervención, pausas y un "mhm"; dialogo3 = un noticiero con dos lectores que se turnan las notas, sin charla; listar = la biblioteca de Google; borrar = quita una voz propia (las dos de producción piden confirmación). Gasto de voz: crear ≈ 12, referencia = 2, recrear = 2 por versión (8 con las 2 de siempre), dialogo ≈ 8 a 10, listar, comparar y borrar 0; el cupo gratis es de 10 por día'
         type: choice
-        options: [crear, recrear, dialogo, dialogo2, dialogo3, listar, borrar]
+        options: [crear, referencia, recrear, comparar, dialogo, dialogo2, dialogo3, listar, borrar]
         default: dialogo
       idioma:
         description: 'Sólo para listar: el código de idioma de la biblioteca (es-AR, es-US…); escribir todas para ver toda'
@@ -33,6 +37,10 @@ on:
         description: 'Para dialogo: el id del locutor (voice_…)'
         type: string
         default: 'voice_cdljkn0jpmk6'
+      versiones:
+        description: 'Sólo para recrear: cuántas versiones de cada voz se crean (2 a 6); cada una gasta 2 audios del cupo'
+        type: string
+        default: '2'
       borrar_id:
         description: 'Sólo para borrar: el id de la voz que se quita (voice_…); si es una de producción, agregar :borrar-de-produccion al final'
         type: string
@@ -65,11 +73,14 @@ jobs:
           EXTRA: ${{ github.event.inputs.modo == 'borrar' && github.event.inputs.borrar_id || github.event.inputs.idioma }}
           VOZ_MUJER: ${{ github.event.inputs.voz_mujer }}
           VOZ_HOMBRE: ${{ github.event.inputs.voz_hombre }}
+          VERSIONES: ${{ github.event.inputs.versiones }}
 
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: voces-propias
-          path: reels/salida/voces/
+          path: |
+            reels/salida/voces/
+            reels/referencias-de-voz/
           retention-days: 7
           if-no-files-found: ignore

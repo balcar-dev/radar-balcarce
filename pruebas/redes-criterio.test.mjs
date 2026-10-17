@@ -542,7 +542,8 @@ test('todas las piezas del plan hablan según su horario y cumplen el criterio',
     assert.equal(p.indicacion, INDICACIONES[momento], `${nombre}: la indicación de voz tiene que ser la de su momento`);
     debeCumplir(p.guion, momento, nombre);
     // La memoria del día (8/10): la farmacia de las 19 ya saludó, así que el clima de las 20 y el repaso de las 21 empiezan con un puente.
-    if (['clima-noche', 'podcast'].includes(nombre)) assert.match(p.guion, /^(Seguimos|Vamos con otra cosa|Sigamos con lo de hoy|Una más para ustedes)\./, `${nombre}: puente en vez de saludo`);
+    // Desde el 18/10 (regla 301) el puente es la frase de continuidad de su capítulo del día (redes/linea-del-dia.mjs).
+    if (['clima-noche', 'podcast'].includes(nombre)) assert.match(p.guion, /^(Seguimos|Vamos con otra cosa|Sigamos con lo de hoy|Una más para ustedes|Ahora, cómo sigue la noche|Y ahora, cómo sigue la noche|Llegamos al final del día|Ya casi cerramos el día|Se termina el día)\./, `${nombre}: puente en vez de saludo`);
     else assert.match(p.guion, empiezaCon[momento], nombre);
   }
   for (const p of piezas.filter((x) => x.tipo === 'reel')) {
