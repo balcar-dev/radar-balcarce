@@ -56,7 +56,7 @@ export function ejecutarReal(comando, args, {
   cwd = RAIZ, env = process.env, minutos = MINUTOS_MAXIMOS, capturar = false,
 } = {}) {
   return new Promise((resolver) => {
-    const hijo = spawn(comando, args, { cwd, env, stdio: capturar ? ['inherit', 'pipe', 'inherit'] : 'inherit', shell: false });
+    const hijo = spawn(comando, args, { cwd, env, stdio: capturar ? ['inherit', 'pipe', 'inherit'] : 'inherit', shell: process.platform === 'win32' /* npm y npx son .cmd en Windows (el ensayo en la PC); en Workers Builds, Linux, sin shell */ });
     let visto = '';
     if (capturar) hijo.stdout.on('data', (d) => { process.stdout.write(d); visto = (visto + d).slice(-400000); });
     const reloj = setTimeout(() => { hijo.kill('SIGKILL'); }, minutos * 60000);
