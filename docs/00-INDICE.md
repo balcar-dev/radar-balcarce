@@ -136,6 +136,8 @@ cómo funciona algo que ya anda), **para decidir** (propuesta o página con caja
 | `docs/redes/ARCHIVO-DE-PIEZAS.md` | Dónde se guardan para siempre los videos, audios y placas (R2, depósito `radar-piezas`; la variable `R2_PIEZAS` se cargó el 15/10, aunque el documento diga «apagado») | vigente |
 | `docs/redes/PLAN-REELS-OTRAS-REDES.md` | Publicar los reels en TikTok, YouTube, etc. (el esqueleto `redes/destinos.mjs` se sacó el 17/10; queda en el historial) | para decidir |
 | `docs/redes/AUTOMATIZAR-REDES-ALTERNATIVAS.md` | Alternativas para automatizar TikTok, YouTube, X, Threads y el canal de WhatsApp | investigación (15/10) |
+| `docs/redes/GUION-DEL-DIA-EJEMPLO.md` | Un día completo de guiones con la línea editorial del día (enlaces entre piezas, ganchos, llamado único), armado con datos reales; se rehace con `node reels/guion-del-dia.mjs` (regla 301) | vigente (18/10) |
+| `docs/redes/VOCES-NUEVAS.md` | Cómo recrear las dos voces propias con la clave paga de Google: la referencia, la prueba de parecido, cuántos audios gasta cada paso (regla 302) | listo para usar (18/10) |
 | `docs/redes/FORMATOS-POR-RED.md` | Qué se puede publicar en cada red, con qué medidas y qué enlaces | investigación (16/10) |
 | `docs/etapa-1-fuentes/LISTA-ELEGIDA.md` | La lista de fuentes elegida el 15/10 (Balcarce + 50 del país + 10 de la zona), ya aplicada | vigente |
 | `docs/etapa-1-fuentes/ANALISIS.md` | Qué aportaba cada una de las 254 fuentes y tres listas posibles | foto del 15/10 (superada por la lista elegida) |

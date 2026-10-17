@@ -35,6 +35,7 @@ import { datosDeLaWeb } from '../redes/datos.mjs';
 import {
   guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, comoNombre, conMemoriaDelDia, cierreDePodcast,
 } from '../redes/guiones.mjs';
+import { conLineaEditorialDelDia } from '../redes/linea-del-dia.mjs';
 import { secuenciaDelRepaso, fotoParaElRepaso } from './escenas/repaso.mjs';
 import { entradaDelManifiesto } from './pedido.mjs';
 import { INDICACIONES, momentoDeHora } from '../redes/prompt-redes.mjs';
@@ -509,6 +510,8 @@ export function planDelDia(datos, {
     piezas.push({
       tipo: 'reel', hora: ronda.hora, nombre: ronda.nombre, ...(esNoche ? {} : { notaId: elegidas[0].id }),
       notaIds: elegidas.map((n) => n.id),
+      // Las secciones de lo que cuenta (la línea editorial del día retoma el tema, nunca el titular: redes/linea-del-dia.mjs).
+      secciones: elegidas.map((n) => n.seccion),
       items: elegidas.map((n) => ({ titulo: n.titulo, enlace: enlaceDeNota(n, SITIO) })),
       titulo: ronda.titulo, momento: ronda.momento, indicacion: INDICACIONES[ronda.momento],
       motivo: esNoche
@@ -546,6 +549,23 @@ export function planDelDia(datos, {
     if (p) { p.fueraDeTecho = true; p.motivo = `${p.motivo} · no sale: el día ya tiene ${REGLAS.historiasMaximasPorDia} historias`; }
   }
 
+  // La línea editorial del día (18/10, regla 301; redes/linea-del-dia.mjs): enlaces entre las piezas, el gancho de continuidad por momento, lo ya contado
+  // retomado por tema y el mismo llamado en todas. Se aplica después de la memoria del día, con lo que salió hoy y lo que cerró ayer (el libro).
+  const aplicarLineaDelDia = () => {
+    const seccionDe = new Map(publicables.map((n) => [n.id, n.seccion]));
+    const deLaPieza = (dia, nombre) => {
+      const v = libro?.instagram?.[`${dia}/${nombre}`];
+      return [v?.notaId, ...(v?.notaIds ?? [])].filter(Boolean).map((id) => seccionDe.get(id)).filter(Boolean);
+    };
+    const hoy = diaAR(fecha);
+    const repasosDeHoy = [
+      ...PODCASTS.filter((r) => hechas.has(r.nombre)).map((r) => ({ nombre: r.nombre, hora: r.hora, secciones: deLaPieza(hoy, r.nombre) })),
+      ...piezas.filter((p) => NOMBRES_DE_PODCAST.includes(p.nombre) && !hechas.has(p.nombre)).map((p) => ({ nombre: p.nombre, hora: p.hora, secciones: p.secciones ?? [] })),
+    ];
+    const deAyer = deLaPieza(diaAR(new Date(fecha.getTime() - 86400e3)), 'podcast');
+    return conLineaEditorialDelDia(piezas, { fecha, yaSalieron: hechas, repasosDeHoy, ayer: deAyer.length ? { secciones: deAyer } : null });
+  };
+
   // Si la web lleva horas congelada, portada.json es de hace rato: el clima, el aviso de clima y la farmacia hablarían de ayer ("Buen día"
   // con la temperatura de la madrugada, o la farmacia que ya no es de turno). Esas piezas no se arman hasta que la portada se renueve (C-15).
   const edadHoras = datos.generado ? (fecha.getTime() - Date.parse(datos.generado)) / 3600e3 : 0;
@@ -555,11 +575,13 @@ export function planDelDia(datos, {
     }
     console.warn(`  la portada tiene ${edadHoras.toFixed(1)} horas: no se arman el clima ni la farmacia hasta que la web se renueve.`);
     conMemoriaDelDia(piezas, momentoDeHora, { fecha });
+    aplicarLineaDelDia();
     return { piezas, turno, portadaVieja: true };
   }
 
   // La locución con memoria del día (8/10): la primera pieza de cada franja saluda y las que salen enseguida empiezan con un puente.
   conMemoriaDelDia(piezas, momentoDeHora, { fecha });
+  aplicarLineaDelDia();
   return { piezas, turno };
 }
 

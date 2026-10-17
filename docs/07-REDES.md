@@ -584,6 +584,13 @@ código lo lee de ahí, sin copias:
   (nunca nombrar un medio, nunca ".ar", nunca "en vivo", el saludo de su hora);
   la usan las pruebas (`pruebas/redes-criterio.test.mjs`) sobre los bancos de
   frases, no cada pieza al publicarla.
+- **La línea editorial del día** (18/10, regla 301; `redes/linea-del-dia.mjs`): el día de piezas es una historia contada en capítulos. Todas comparten
+  estructura (gancho de 3 segundos, cuerpo, un enlace hacia lo que viene, lo ya contado retomado por tema sin repetir el titular, y el **mismo llamado en toda la
+  fecha**), un trato (vos de locutor, ustedes para desear; nunca tuteo) y su voz. Se aplica en el plan (`aplicarLineaDelDia`, `reels/plan.mjs`) después de la
+  memoria del día; cada frase que se suma se pesa contra el tope de su pieza (repaso 55 s, clima y farmacia 25) y, si no cabe, no se suma. Un día completo con
+  datos reales, en [`redes/GUION-DEL-DIA-EJEMPLO.md`](redes/GUION-DEL-DIA-EJEMPLO.md); para rehacerlo, `node reels/guion-del-dia.mjs` (no cuesta nada). Una
+  consecuencia a tener presente: el guion de una pieza ya no depende sólo de la fecha, también de qué piezas hay en el plan y cuáles salieron; una pieza
+  que se reintenta después de que salió otra puede cambiar una frase de enlace y pedir un audio nuevo (el contador de voz lo cuenta, regla 208).
 - Dos reglas de fondo: **la voz no lee la placa** (la placa muestra el dato, la
   voz cuenta qué significa) y **la fuente no se nombra nunca en redes**.
 - La voz de verdad se comprueba a mano con el workflow **Auditar voz**
@@ -595,7 +602,10 @@ código lo lee de ahí, sin copias:
 - Las voces se crean con el workflow **Crear voces** (`reels/crear-voces.mjs`) y
   viven en el proyecto de Google de la clave de redes. Vencen al año; el
   vigilante avisa 30 días antes (`08-INFRAESTRUCTURA`; el paso a paso para
-  crearlas de nuevo, en `11-OPERACION`).
+  crearlas de nuevo, en `11-OPERACION`). **Para pasar a la clave paga** (18/10,
+  regla 302), el procedimiento, la prueba de parecido (`reels/parecido-de-voz.mjs`:
+  ritmo, tono, rango, brillo, pausas y duración) y cuántos audios gasta cada paso
+  están en [`redes/VOCES-NUEVAS.md`](redes/VOCES-NUEVAS.md).
 
 ## El libro: `web/data/redes.json`
 
@@ -691,7 +701,9 @@ anteriores cuenta las historias por el libro y lo dice.
 | `reels/voz.mjs` | `paraLeer` (los símbolos en palabras) y `enCarteles` (los carteles de subtítulos) | `reel.mjs` | — | — |
 | `reels/alinear.mjs`, `reels/tiempos.mjs` | Cuándo arranca cada palabra del subtítulo | `voz-gemini.mjs` | el audio | — |
 | `reels/duracion.mjs` | El máximo de una historia (58 s) y el recorte | `reel.mjs` | — | — |
-| `reels/crear-voces.mjs` | Crear, listar y borrar las voces propias | "Crear voces" | `GEMINI_API_KEY_REDES` | audios de prueba (artefacto) |
+| `reels/crear-voces.mjs` | Crear, listar y borrar las voces propias; `referencia`, `recrear` con versiones y `comparar` (regla 302) | "Crear voces" | `GEMINI_API_KEY_REDES` | audios de prueba (artefacto), `reels/referencias-de-voz/` |
+| `reels/parecido-de-voz.mjs`, `reels/texto-de-comparacion.mjs` | Cuánto se parece una voz a otra y cuál elegir (sin Gemini, cuesta 0); el texto fijo de la prueba | `crear-voces.mjs`, la línea de comandos | ffmpeg | `comparacion.md` |
+| `redes/linea-del-dia.mjs`, `reels/guion-del-dia.mjs` | La línea editorial del día: enlaces, ganchos de continuidad, lo retomado y el llamado; y el guion del día entero para revisarlo | `reels/plan.mjs` | `redes/guiones.mjs` | `p.linea` de cada pieza |
 | `reels/auditar-voz.mjs`, `redes/auditoria-voz.mjs` | La auditoría de la voz real | "Auditar voz" | `GEMINI_API_KEY_REDES` | — |
 | `web/lib/tarjeta.js` | Las tarjetas de cada nota (compartir e Instagram) | las rutas de Next al compilar | la nota, `reels/marca/fuentes/`, la foto del banco | PNG estáticos del sitio |
 | `web/lib/tarjeta-diseno.js` | Medidas, colores, cuentas y `FOTO_EN_INSTAGRAM` | `tarjeta.js`, `publicar.mjs` | `banco-fotos.json` | — |
