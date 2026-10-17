@@ -1,6 +1,8 @@
 # Audio en la página y podcast general
 
-*17/10/2026. Respuesta a la pregunta de Hernán: "los podcasts se pueden escuchar desde la página misma, cuando hacemos el resumen de las
+*17/10/2026 (al final del día: el prototipo del reproductor, `web/lib/audio-de-nota.js` y `web/components/reproductor-de-audio.js`,
+y el generador del feed, `web/scripts/podcast-feed.mjs`, se borraron en la limpieza final porque nada los usaba; si se retoma este
+plan se recuperan del historial de git, del commit anterior a «Limpieza final (2)»). Respuesta a la pregunta de Hernán: "los podcasts se pueden escuchar desde la página misma, cuando hacemos el resumen de las
 cuatro noticias... No sé si vale la pena, o mejor cuando tengamos un podcast más generalista (10 minutos), que después a su vez
 separemos en reels". Es un **informe y un plan**: no se publicó nada, no se tocó ninguna página y no se creó ningún depósito. Lo único
 nuevo en el código es un prototipo **apagado y sin conectar** (§ 7). Lo que sale de internet y no es de la documentación oficial está

@@ -11,7 +11,7 @@ import {
 } from '../panel/cifrado.mjs';
 import * as navegador from '../web/public/panel/cifrado.js';
 import {
-  problemaDeDecision, leerDecisionesCelular, unirDecisiones, paraDecidir, notasParaEscribir,
+  problemaDeDecision, leerDecisionesCelular, paraDecidir, notasParaEscribir,
   papeleraAlDia, paraLaPapelera,
 } from '../panel/celular-datos.mjs';
 import { buscarNota, conBorrador, idValido, BORRADORES } from '../panel/celular.mjs';
@@ -99,23 +99,6 @@ test('leerDecisionesCelular saltea lo que no vale y completa el guion', () => {
   assert.deepEqual(Object.keys(redes), ['a']);
 });
 
-test('las decisiones del celular van encima de las de la PC: gana la más nueva', () => {
-  const pc = {
-    a: { estado: 'automatica', por: 'ia', cuando: '2026-09-30T00:00:00Z' },
-    b: { estado: 'publicada', por: 'Andrés', cuando: '2026-09-30T00:00:00Z' },
-    c: { estado: 'publicada', por: 'Andrés', cuando: '2026-09-28T00:00:00Z' },
-  };
-  const celular = {
-    a: { estado: 'descartada', por: 'Hernán', cuando: AHORA },
-    b: { estado: 'descartada', por: 'Hernán', cuando: AHORA },
-    c: { estado: 'descartada', por: 'Hernán', cuando: AHORA },
-  };
-  const todas = unirDecisiones(pc, celular);
-  assert.equal(todas.a.estado, 'descartada', 'lo que guardó la máquina no gana nunca');
-  assert.equal(todas.b.estado, 'publicada', 'la de la PC era más nueva');
-  assert.equal(todas.c.estado, 'descartada');
-});
-
 test('el archivo del repositorio que escribe el celular está bien armado (si no, la web se congela)', () => {
   const json = JSON.parse(leer('web/data/celular-decisiones.json'));
   for (const [id, d] of Object.entries(json.notas ?? {})) assert.equal(problemaDeDecision(d), null, `la decisión de ${id} no vale`);
@@ -140,7 +123,7 @@ test('para decidir: sólo lo de acá, cinco por día, las de más puntaje; lo qu
     ...[1, 2, 3, 4, 5, 6].map((i) => nota({ id: `aca${i}`, relevancia: 40 + i })),
     nota({ id: 'ayer', fecha: '2026-09-28T18:00:00Z', relevancia: 1 }),
     nota({ id: 'marcada', local: false, alcance: 'pais', semaforo: 'verde' }),
-  ], { marcada: { estado: 'pendiente', por: 'Andrés', cuando: AHORA } }, { ahora });
+  ], { marcada: { estado: 'descartada', por: 'Andrés', cuando: AHORA, desdeElCelular: true } }, { ahora });
   const ids = lista.map((n) => n.id).sort();
   assert.ok(!ids.includes('afuera'), 'lo de afuera que nadie miró no va al celular');
   assert.ok(ids.includes('marcada'), 'lo que marcó una persona, sí');
@@ -155,25 +138,22 @@ test('para decidir: lo amarillo de estos días con lo que contó cada medio; nun
     nota({ id: 'a' }),
     nota({ id: 'b', semaforo: 'rojo' }),
     nota({ id: 'c', motivo: 'de afuera y poco contada (1 medio; Argentina pide 3)' }),
-    nota({ id: 'd' }),
     nota({ id: 'e', semaforo: 'verde' }),
     nota({ id: 'f', fecha: '2026-09-20T18:00:00Z' }),
-    nota({ id: 'g', semaforo: 'verde' }),
     nota({ id: 'h' }),
+    nota({ id: 'i' }),
   ], {
-    // Descartada en la PC: no vuelve. Descartada en el celular: queda marcada, para poder deshacerlo.
-    d: { estado: 'descartada', por: 'Hernán', cuando: AHORA },
-    g: { estado: 'pendiente', por: 'Andrés', cuando: AHORA },
+    // Descartada en el celular: queda marcada, para poder deshacerlo. Publicada por una persona: ya no espera.
     h: { estado: 'descartada', por: 'Hernán', cuando: AHORA, desdeElCelular: true },
+    i: { estado: 'publicada', por: 'Hernán', cuando: AHORA, desdeElCelular: true },
   }, { ahora, fichas: { a: { ambito: 'balcarce', impacto: 'directo', importancia: 'alta', porque: 'Pasa acá.', razon: 'local', publicidad: false } } });
-  assert.deepEqual(lista.map((n) => n.id).sort(), ['a', 'g', 'h']);
+  assert.deepEqual(lista.map((n) => n.id).sort(), ['a', 'h']);
   const a = lista.find((n) => n.id === 'a');
   assert.deepEqual(a.fuentes, [{ medio: 'Medio', enlace: 'https://medio.com/a', fecha: null, oficial: false, resumen: 'r' }]);
   assert.equal(a.resumen, 'Un resumen');
   assert.deepEqual(a.ficha, { ambito: 'balcarce', impacto: 'directo', importancia: 'alta', porque: 'Pasa acá.', razon: 'local' });
   assert.ok(!('origenes' in a) && !('fuentesTexto' in a), 'viaja lo que hace falta para decidir, no la nota entera');
   assert.equal(lista.find((n) => n.id === 'h').decision.estado, 'descartada');
-  assert.equal(lista.find((n) => n.id === 'g').motivo, 'marcada "pendiente" en el panel de la PC');
 });
 
 test('lo que espera a una persona no lo escribe la IA sola: sólo si una persona lo pide (29/09, Hernán; regla 68)', () => {

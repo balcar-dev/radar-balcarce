@@ -4,6 +4,8 @@
 ni de los criterios. Nada de esto está decidido: las reglas de hoy se usan como evidencia, no como punto de
 partida obligatorio.*
 
+*17/10/2026: Los programas de `herramientas/` y las planillas del semáforo (`semaforo-por-dia.csv`, `semaforo-una-corrida.csv`) se borraron en la limpieza final (eran de una sola medición; quedan en el historial de git). Los resultados son los de este documento.*
+
 **Cómo leerlo.** Cada parte tiene lo mismo: (1) cómo funciona hoy, con notas reales y números; (2) qué sale
 mal; (3) dos o tres opciones con costo por mes y riesgo; (4) una recomendación; (5) la pregunta exacta para
 ustedes. Al final están la tabla de modelos con su costo, todas las preguntas juntas y lo que **NO SE PUDO

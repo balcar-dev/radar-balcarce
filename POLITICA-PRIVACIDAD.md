@@ -1,6 +1,6 @@
 # Política de privacidad: lo interno
 
-*Actualizado el 29/09/2026.* **El texto público vive en un solo lugar: la página
+*Actualizado el 17/10/2026.* **El texto público vive en un solo lugar: la página
 `/politica-de-privacidad`** (`web/app/politica-de-privacidad/page.js`). Si hay que
 cambiar lo que lee el público, se cambia ahí. Acá queda lo interno: qué se hace con
 lo que manda la gente, qué ven otros servicios de cada lector y qué guarda el
@@ -11,20 +11,19 @@ panel del celular. El marco legal (ley 25.326), en `INVESTIGACION.md`, sección 
 No hay formulario en el sitio. La gente escribe por **WhatsApp** (2266 51-1612) o
 por **correo** (`contacto@radarbalcarce.com`), desde el pie de cada página, la
 tarjeta "¿Viste algo en el barrio?" y las invitaciones de la web
-(`web/components/piezas.js`). Lo que sirve se carga **a mano** en el buzón del
-panel de la PC (pestaña Buzón), con uno de cuatro tipos: dato, reclamo, opinión o
-seguimiento (`panel/buzon.mjs`, con la regla de cada uno).
+(`web/components/piezas.js`). Lo que llega se trata con uno de cuatro tipos: dato,
+reclamo, opinión o seguimiento.
 
 ## Qué se guarda y dónde
 
-- Cada entrada guarda el texto, el tipo, el nombre y el teléfono de contacto (si
-  los dio), si pidió anonimato, quién la cargó y cuándo (`panel/servidor.mjs`,
-  `/api/buzon`).
-- Vive **sólo en la PC del panel** (`panel/datos/`, fuera de git). No va a GitHub
-  ni a la web: `web/data/decisiones.json` exporta sólo lo que decidió una persona
-  y los textos recientes de la IA, nunca el buzón, el historial ni los contactos.
-- La copia de seguridad (`panel/respaldo.mjs`) sí lo incluye; por eso la carpeta
-  de respaldo no va a GitHub. Se guardan las últimas 14 copias.
+- Lo que manda la gente **se queda donde llegó** (el WhatsApp del medio y el correo):
+  no se copia al repositorio, que es público. Hasta el 17/10/2026 se podía cargar en
+  el buzón del panel de la PC (en esa PC, fuera de git); ese panel se retiró sin
+  haberse usado. Si en esa PC quedó la carpeta `panel/datos/` o `respaldos/`, se
+  borra a mano.
+- Los contactos propios del panel del celular (a quién se le escribió para pedir
+  fechas) viajan **cifrados** (`web/data/contactos-celular.json`, `panel/cifrado.mjs`):
+  en el repositorio no se lee ningún nombre ni teléfono.
 
 ## Qué se hace con eso
 
@@ -34,9 +33,9 @@ seguimiento (`panel/buzon.mjs`, con la regla de cada uno).
   pidió anonimato, se respeta. La opinión va siempre firmada con nombre real.
 - **Un reclamo nunca sale de un solo lado**: antes se le pide su versión a la otra
   parte y se anota en la entrada (`respuestaOtraParte`).
-- **Si alguien pide que borremos sus datos**, se borra la entrada desde el panel
-  (pestaña Buzón → Borrar). Una nota ya publicada no se borra por eso: se resuelve
-  aparte. Las copias viejas del respaldo se van renovando solas.
+- **Si alguien pide que borremos sus datos**, se borran el mensaje y, si lo hay, su
+  contacto propio en el celular. Una nota ya publicada no se borra por eso: se
+  resuelve aparte.
 
 ## Qué ven otros servicios de cada lector
 

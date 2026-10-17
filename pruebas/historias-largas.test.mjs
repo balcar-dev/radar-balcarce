@@ -24,7 +24,7 @@ import { publicarPiezas, INTENTOS_HISTORIA } from '../redes/publicar-piezas.mjs'
 import {
   cronogramaDelDia, diaRotativoDeUtiles, historiasQueSobran, EXTRAS_DE_HISTORIAS, claveDePieza,
 } from '../redes/piezas.mjs';
-import { toca, horariosDe } from '../panel/horarios.mjs';
+import { toca, horariosDe } from '../redes/horarios.mjs';
 import { tocaHoy, diaDeEstaSemana } from '../ingesta/utiles.mjs';
 import { planDelDia, REGLAS } from '../reels/plan.mjs';
 import { evaluar, aAvisar, redesPrendidas, TEXTO_REDES_APAGADAS, LIMITES } from '../redes/vigilar.mjs';

@@ -20,7 +20,6 @@ import { execFileSync } from 'node:child_process';
 export const NO_CAMBIAN_EL_SITIO = [
   /^docs\//,
   /^pruebas\//,
-  /^pruebas-modelos\//,
   /^\.github\//,
   /^\.claude\//,
   /^infra\//,

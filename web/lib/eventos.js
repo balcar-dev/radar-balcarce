@@ -8,19 +8,16 @@
 // La ficha NO la escribe una IA. Se arma con los datos del evento (esta
 // plantilla). La descripción que trae el municipio NO se muestra ni se copia
 // (es texto de otro, con mayúsculas y frases de venta): sólo se usa para
-// detectar qué hay (detallesDeEvento) y se dice con nuestras palabras. Sólo la
-// descripción que escribió una persona desde el panel se muestra.
+// detectar qué hay (detallesDeEvento) y se dice con nuestras palabras.
 //
-// De dónde salen los eventos (todos con fecha confirmada, nunca aproximada):
-//
-//   municipio   la API de balcarce.gob.ar (ingesta/agenda.mjs), en cada
-//               corrida de "Actualizar la web";
-//   panel       los que una persona cargó y PUBLICÓ en la pestaña Agenda
-//               (web/data/eventos-panel.json, lo sube panel/sincronizar.mjs).
+// De dónde salen los eventos (todos con fecha confirmada, nunca aproximada): la
+// API de balcarce.gob.ar (ingesta/agenda.mjs), en cada corrida de "Actualizar la
+// web". (Hasta el 17/10 también podían venir del panel de la PC, que se retiró
+// sin haber cargado nunca ninguno.)
 //
 // El calendario anual (ingesta/agenda.mjs, CALENDARIO_ANUAL) no tiene página
-// propia: es un "vuelve por esta época". Cuando alguien confirma la fecha, la
-// carga en el panel ligada a esa fiesta y ahí sí tiene página.
+// propia: es un "vuelve por esta época". Cuando el municipio publica la fecha,
+// el evento tiene su página (confirmacionDeAnual).
 //
 // Todo lo de acá es de una entrada y una salida, sin leer archivos: lo usan
 // generar-datos, las páginas y las pruebas, sin red.
@@ -242,13 +239,6 @@ export function entradaDe(e) {
  * escribió o la revisó va a la vista (criterio del 25/09).
  */
 export function firmaDeEvento(e = {}) {
-  if (e.origen === 'panel') {
-    return {
-      texto: 'Ficha cargada por la redacción',
-      explicacion: `La cargó y la publicó una persona de la redacción, con los datos que nos pasó ${e.organizador ? nombreDeEvento(e.organizador) : 'la organización'}.`,
-      autor: 'Radar Balcarce (cargado por la redacción)',
-    };
-  }
   const fuente = !e.fuente ? 'la Municipalidad de Balcarce'
     : /^(municipalidad|subsecretar|secretar|direcci)/i.test(e.fuente) ? `la ${e.fuente}` : e.fuente;
   return {
@@ -293,27 +283,13 @@ export function detallesDeEvento(e = {}) {
   }).map(([nombre]) => nombre);
 }
 
-/** Lo que se muestra de la descripción: nada si es la que copió la máquina de
- *  la fuente (no se copia el texto de otro); sí si la escribió una persona de
- *  la redacción en el panel. */
-export function descripcionPropia(e = {}) {
-  return e.origen === 'panel' && e.descripcion ? String(e.descripcion) : null;
-}
-
-/** La primera oración de un texto (hasta 200 letras): para los datos de Google. */
-function primeraOracion(texto) {
-  const linea = String(texto).split('\n').map((l) => l.trim()).find(Boolean) ?? '';
-  const m = linea.match(/^.{20,200}?[.!?](?=\s|$)/);
-  return m ? m[0] : linea.slice(0, 200);
-}
-
 // ---------------------------------------------------------- listas y archivo
 
 const normal = (t) => sinTildes(t)
   .replace(/[^a-z0-9]+/g, ' ').trim();
 
 /** ¿Son el mismo evento contado dos veces? Mismo día y un nombre que
- *  contiene al otro (el municipio y el panel lo cargan distinto). */
+ *  contiene al otro (el municipio a veces lo carga dos veces, con otro nombre). */
 export function mismoEvento(a, b) {
   if (a.id === b.id) return true;
   if (partesDeFecha(a.desde)?.fecha !== partesDeFecha(b.desde)?.fecha) return false;
@@ -325,20 +301,14 @@ export function mismoEvento(a, b) {
 
 /**
  * Lo que va en las listas (la agenda, la portada, el sitemap): lo que todavía
- * no terminó, sin lo que la fuente retiró, sin repetir, por fecha. Si el
- * municipio y el panel tienen el mismo evento, queda el del panel: lo cargó
- * una persona, que suele tener más datos.
+ * no terminó, sin lo que la fuente retiró, sin repetir, por fecha.
  */
 export function proximos(eventos = [], ahora = Date.now()) {
   const vivos = eventos
     .filter((e) => !e.retirado && !yaPaso(e, ahora))
-    .sort((a, b) => (e2(a) - e2(b)) || (a.origen === 'panel' ? -1 : 1));
+    .sort((a, b) => e2(a) - e2(b));
   const salida = [];
-  for (const e of vivos) {
-    const igual = salida.findIndex((o) => mismoEvento(o, e));
-    if (igual < 0) salida.push(e);
-    else if (e.origen === 'panel' && salida[igual].origen !== 'panel') salida[igual] = e;
-  }
+  for (const e of vivos) if (!salida.some((o) => mismoEvento(o, e))) salida.push(e);
   return salida.sort((a, b) => e2(a) - e2(b));
 }
 const e2 = (e) => instante(e.desde) || 0;
@@ -349,7 +319,7 @@ const e2 = (e) => instante(e.desde) || 0;
 const CAMPOS = [
   'id', 'origen', 'slug', 'nombre', 'desde', 'hasta', 'todoElDia', 'lugar', 'direccion', 'localidad',
   'costo', 'organizador', 'organizadorUrl', 'web', 'url', 'fuente', 'descripcion', 'categorias', 'categoria',
-  'anualId', 'publicadoCuando', 'primeraVez', 'retirado', 'suspendido',
+  'primeraVez', 'retirado', 'suspendido',
 ];
 
 function soloCampos(e) {
@@ -365,8 +335,6 @@ function soloCampos(e) {
  *     agenda ANTES de que pase, queda marcado `retirado`: la página sigue
  *     (puede estar compartida) pero avisa y sale de las listas. Si la API no
  *     contestó (`municipio` null), no se toca nada de lo suyo.
- *   · Lo del panel es lo que una persona publicó. Si lo despublica o lo
- *     borra, sale (con `panel` null, porque no se pudo leer, no se toca).
  *   · Pasados DIAS_DESPUES días del final, la página se va.
  *   · El nombre de la dirección (`slug`) queda fijo desde la primera vez.
  */
@@ -383,7 +351,7 @@ export function aplicarSuspendidos(eventos = [], archivo = null) {
 }
 
 export function actualizarAgenda({
-  anterior = [], municipio = null, panel = null, ahora = Date.now(), dias = DIAS_DESPUES, retirar = true,
+  anterior = [], municipio = null, ahora = Date.now(), dias = DIAS_DESPUES,
 } = {}) {
   const cuando = new Date(Number(ahora)).toISOString();
   const porId = new Map();
@@ -405,17 +373,11 @@ export function actualizarAgenda({
     const hoy = new Set(municipio.map((e) => e.id));
     for (const e of municipio) sumar(e, 'municipio');
     for (const [id, e] of porId) {
-      if (!retirar || e.origen !== 'municipio' || hoy.has(id)) continue;
+      if (e.origen !== 'municipio' || hoy.has(id)) continue;
       // Si ya empezó, que no esté en la API es lo normal: la API sólo trae
       // lo que viene. Si todavía no empezó, lo sacaron.
       if (instante(e.desde) > Number(ahora)) porId.set(id, { ...e, retirado: true });
     }
-  }
-
-  if (Array.isArray(panel)) {
-    const hoy = new Set(panel.map((e) => e.id));
-    for (const e of panel) sumar(e, 'panel');
-    for (const [id, e] of porId) if (e.origen === 'panel' && !hoy.has(id)) porId.delete(id);
   }
 
   return [...porId.values()]
@@ -424,14 +386,11 @@ export function actualizarAgenda({
 }
 
 /**
- * La fecha confirmada de una fiesta del calendario anual, si ya hay una: el
- * evento que se cargó en el panel ligado a esa fiesta (`anualId`), o uno de
- * los próximos cuyo nombre la nombra (`clave`, en ingesta/agenda.mjs). Si no
- * hay, null: la web dice "fecha a confirmar", nunca un día inventado.
+ * La fecha confirmada de una fiesta del calendario anual, si ya hay una: uno
+ * de los próximos cuyo nombre la nombra (`clave`, en ingesta/agenda.mjs). Si
+ * no hay, null: la web dice "fecha a confirmar", nunca un día inventado.
  */
 export function confirmacionDeAnual(anual, lista = []) {
-  const deLaFiesta = lista.find((e) => e.anualId && e.anualId === anual.id);
-  if (deLaFiesta) return deLaFiesta;
   // Sin clave (una portada generada antes del 25/09), el nombre sin lo que
   // va entre paréntesis: "Tierras del Diablo (trail)" → "tierras del diablo".
   const clave = normal(anual.clave || String(anual.nombre ?? '').replace(/\([^)]*\)/g, ''));
@@ -579,7 +538,7 @@ export function fichaDeEvento(e, { base = '', url = '' } = {}) {
         addressCountry: 'AR',
       },
     },
-    description: descripcionPropia(e) ? primeraOracion(descripcionPropia(e)) : copeteDeEvento(e),
+    description: copeteDeEvento(e),
     url: url || undefined,
     image: url ? [`${url}/opengraph-image`] : undefined,
     inLanguage: 'es-AR',

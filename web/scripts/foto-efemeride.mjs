@@ -73,7 +73,7 @@ export const archivoDeLaFoto = (dia) => `efemeride-${dia}.jpg`;
  * Arma la foto de la nota de efemérides de un día (si no está ya en `carpeta`) y devuelve `{ archivo, credito }` para la nota, o null si no se
  * pudo (la nota se queda con la ilustración sin texto).
  */
-export async function fotoDeEfemeride(nota, { carpeta, base = BASE_DE_EFEMERIDE, ejecutar = correr, ffmpeg = null, soloLasQueEstan = false, dibujar = dibujarSvg } = {}) {
+export async function fotoDeEfemeride(nota, { carpeta, base = BASE_DE_EFEMERIDE, ejecutar = correr, ffmpeg = null, dibujar = dibujarSvg } = {}) {
   try {
     const textos = textosDeLaHoja({ dia: nota?.diaDeLaFoto, anio: nota?.anioDeLaFoto });
     if (!textos || !fs.existsSync(base)) return null;
@@ -81,7 +81,6 @@ export async function fotoDeEfemeride(nota, { carpeta, base = BASE_DE_EFEMERIDE,
     const destino = path.join(carpeta, nombre);
     const foto = { archivo: `fotos-notas/${nombre}`, credito: nota.foto?.credito };
     if (fs.existsSync(destino)) return foto;
-    if (soloLasQueEstan) return null;
     const exe = ffmpeg ?? await ffmpegDelProyecto();
     if (!exe) { console.warn('  efeméride: no hay ffmpeg para armar la foto'); return null; }
     const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'efemeride-'));

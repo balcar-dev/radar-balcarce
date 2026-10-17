@@ -1,8 +1,8 @@
 # Pendientes
 
-*Actualizado el 15/10/2026. Sólo lo que está abierto, una vez cada cosa. Lo hecho se saca de acá (queda en el
-historial de git y en `docs/historico/`); la lista anterior, con todo lo viejo, está en
-`docs/historico/propuestas-2026-10/PENDIENTES-HASTA-15-10.md`. Lo que se decidió y las preguntas abiertas viven en
+*Actualizado el 17/10/2026. Sólo lo que está abierto, una vez cada cosa. Lo hecho se saca de acá (queda en el
+historial de git; la lista anterior, con todo lo viejo, era `docs/historico/propuestas-2026-10/PENDIENTES-HASTA-15-10.md`,
+borrada el 17/10 con esa carpeta). Lo que se decidió y las preguntas abiertas viven en
 `docs/DECISIONES.md`. Cómo funciona cada cosa: `docs/00-INDICE.md`.*
 
 Cada pendiente dice **quién**: Hernán, Andrés, "los dos" o Claude. Lo que pide una cuenta, una clave, borrar algo
@@ -19,8 +19,7 @@ frenan alguna etapa están en `docs/DECISIONES.md` → "Preguntas abiertas".
 |---|---|
 | **Poner en marcha los informes diarios por mail** (regla 176; ya está el código, sin subir): después de subir los cambios, correr en Actions «Vigilante de Cloudflare» y «Reloj de Cloudflare», probar «Informe diario» a mano (primero con «enviar» apagado, después prendido) y confirmar que llegan a las 8:15 y a las 21:15 (`docs/11-OPERACION.md`, 12 bis) | Hernán o Andrés (los clics); Claude mira el primero |
 | **Etapa 1, fuentes**: reactivar las que se apagaron por bloqueo si andan (2261 Lobería, El Diario de Tandil, El Argentino Digital, Sendero Regional), sumar las verificadas, el motivo de cada fuente apagada en `FUENTES.md` y probar desde Cloudflare las que bloquean a GitHub | Claude; los dos aprueban |
-| **Elegir los modelos** de cada paso (con pruebas; `pruebas-modelos/`) y, con eso, crear las claves nuevas en cuentas de `radarbalcarce` | Claude prueba; los dos eligen; una persona pega las claves |
-| **Segunda tanda de limpieza**: revisar `prueba-whatsapp.yml`, `pruebas-otra-hora.yml`, `armado-vacio.yml`, los scripts que nadie llama y el panel de la PC; de a un grupo, con `npm test` y una corrida de "Actualizar la web" | Claude; los dos aprueban |
+| **Elegir los modelos** de cada paso (con pruebas; lo ya probado, en `docs/historico/PRUEBAS-DE-MODELOS.md`) y, con eso, crear las claves nuevas en cuentas de `radarbalcarce` | Claude prueba; los dos eligen; una persona pega las claves |
 | **Una prueba de los documentos** (`pruebas/docs.test.mjs`): que existan los enlaces relativos, que "la próxima regla" coincida con `docs/10`, sin números de feeds escritos a mano | Claude |
 | **Enchufar el registro de uso de la IA** (`redes/uso-ia.mjs`, regla 170) en `ingesta/lectura-ia.mjs`, fotos, voces y pistas: hoy sólo anota la redacción. En cada llamada, después de leer el JSON de la respuesta: `anotarUsoIA({ tarea: 'lectura', modelo, clave: 'clasificacion' o 'groq', respuesta: j })` (Gemini trae `usageMetadata`, Groq `usage`; los dos los entiende) y, si la llamada falla, `anotarUsoIA({ tarea, modelo, clave, error: res.status })`. Nunca lanza. Con 2 semanas de datos se puede calcular el costo equivalente a precio de lista | Claude |
 
@@ -28,7 +27,7 @@ frenan alguna etapa están en `docs/DECISIONES.md` → "Preguntas abiertas".
 
 Pasada de punta a punta, módulo por módulo, después de terminar la tanda de mejoras. Para cada herramienta, servicio, archivo y proceso: qué hace, por qué existe, si se usa de verdad (con evidencia), qué cuesta y qué conviene (mantener, reemplazar o apagar).
 - La base ya está hecha en las auditorías del 15/10: `docs/etapa-10-operacion/ANALISIS.md` (tabla herramienta/servicio), `docs/salud-tecnica/ANALISIS.md` (mapa de 13 módulos), `docs/auditoria-opus/ANALISIS.md`, `docs/criterio/`, `docs/analiticas/`, `docs/etapa-2-5/` y `docs/etapa-6-9/`.
-- Revisar con ojo de dueños: las redes (qué piezas rinden), el panel del celular y el de la PC, los workflows manuales, `comercial/`, `pruebas-modelos/`, `criterio-unico/`, las claves de IA y cada cuenta (cuáles se usan y cuáles no).
+- Revisar con ojo de dueños: las redes (qué piezas rinden), el panel del celular, los workflows manuales, `comercial/` y `motor/` (lo único armado y sin usar que quedó después de la limpieza del 17/10), las claves de IA y cada cuenta (cuáles se usan y cuáles no).
 - Después de esa pasada: la auditoría final con Opus sobre lo que quedó.
 - **Dos errores de escritura congelados en `web/data/correcciones.json`** (hallazgo B1 de la auditoría de Opus; no se tocaron porque lo de una persona no se edita sin decidir): en la nota `1b3umaz` dice "si el equipo se consagra **campen**" (debería ser "campeón") y en `woerbj` dice "La **Séleccion** Argentina" (debería ser "La Selección Argentina"). Como `correcciones.json` cuenta como escrito por una persona, ningún arreglo automático los toca. Decidir juntos: corregirlos a mano (con `motivo`, `cuando` y `por`) o dejarlos.
 
@@ -64,10 +63,9 @@ Respuesta completa en `docs/auditoria-opus/RESPUESTAS-OTRAS-IAS.md` (Grok y Meta
 
 **Cierre del 16/10 (commit 63418e00) — lo que quedó hecho, lo que quedó apagado y lo que falta:**
 - Hecho: la web se arma UNA vez por media hora (se sacó el `schedule` de respaldo de GitHub; sólo la dispara el Worker); comentarios y docs al día con el reloj de Cloudflare; Instagram sin links y reels de podcast con un solo link al repaso; archivo en R2 andando (`/_archivo/estado` ok=true).
-- Subido pero APAGADO (no prender sin que ustedes lo pidan): `SECCIONES_NUEVAS=Si` (Educación y Salud + menú «Más secciones»; mirar primero `docs/secciones/vista-previa/index.html`, regla 187), `FOTOS_MENORES_OFICIALES=Si` (fotos con chicos de la Municipalidad, el Concejo y la Facultad; la revisa Hernán primero, regla 186) y el prototipo de audio en la página.
+- Subido pero APAGADO (no prender sin que ustedes lo pidan): `SECCIONES_NUEVAS=Si` (Educación y Salud + menú «Más secciones»; mirar primero `docs/secciones/vista-previa/index.html`, regla 187), `FOTOS_MENORES_OFICIALES=Si` (fotos con chicos de la Municipalidad, el Concejo y la Facultad; la revisa Hernán primero, regla 186). El prototipo de audio en la página se borró el 17/10 (queda en git; el plan, en `docs/redes/AUDIO-EN-LA-PAGINA-Y-PODCAST-GENERAL.md`).
 - Por comprobar (Claude): la primera corrida automática de ilustraciones (20:20 UTC del 16/10, luego cada 2 h) y que mañana no haya corridas `schedule` de «Actualizar la web» (`gh run list --workflow=actualizar.yml`). Descartado: compilar el sitio una sola vez en lugar de dos (ahorra poco, riesgoso para el paso de R2).
 - Mañana (17/10): rehacer el panel de cero; decidir las páginas HTML de arriba. Antes del ~2/11: activar la ruta del archivo en R2 (tras los permisos del token) y decidir qué pasa con las fotos de las notas que salen del sitio.
-- Ordenar (menor): `docs/etapa-10-operacion/runs-14d.ndjson` (volcado de un análisis, sin subir; borrar o subir).
 
 ## Lo que quedó armado en la ventana autónoma del 15/10 (para mirar juntos)
 
@@ -125,7 +123,7 @@ Respuesta completa en `docs/auditoria-opus/RESPUESTAS-OTRAS-IAS.md` (Grok y Meta
 | Contar los créditos de búsqueda (Tavily) en el resumen diario | |
 | Actualizar las acciones de GitHub (Node 20 deprecado en `checkout`, `setup-node`, `cache` v4) | Probar en un workflow manual primero |
 | Arreglos chicos del sitio: `<title>` cortado con "…", botones de menos de 44 px, política de privacidad (Open-Meteo, DolarApi), podar `banco-fotos.json`, tres créditos de Wikimedia incompletos | |
-| Comentarios viejos en el código ("clave paga", `CANDIDATOS` de `ingesta/fuentes.mjs`) | |
+| Comentarios viejos en el código ("clave paga") | |
 | Fuentes locales que faltan: fútbol local (Liga Balcarceña, Regional Amateur), Policiales (Policía, bomberos, Defensa Civil), agenda con una semana de anticipación (municipio, clubes, Teatro, Sociedad Rural) | Entra en la etapa de fuentes |
 | Medir la originalidad de las notas de varias fuentes (cuánto se parece cada cuerpo a sus fuentes) | Entra en la etapa de redacción |
 | Conectar las escenas de deporte (F1, tabla de la Liga) cuando se decida cuándo salen | Falta decisión |

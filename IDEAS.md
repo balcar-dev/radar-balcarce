@@ -25,7 +25,7 @@ repasó el 29/09: es para discutirlo juntos, no una decisión.
 | 7 | Sistema | **Ser buen vecino con los medios** | Guardar el texto de cada nota ya leída (no volver a pedirla en cada corrida) y espaciar los pedidos al mismo sitio: menos riesgo de que nos bloqueen | Medio | Bajo |
 | 8 | Sistema | **Estadísticas en el panel** | La evolución de visitas y seguidores (`web/data/estadisticas.json`, que ya se guarda) sin esperar el WhatsApp; el panel del celular la puede leer de GitHub | Bajo | Bajo |
 | 9 | Web / SEO | **Alta en Google Noticias** (Publisher Center) | Un trámite manual: ya están "Quiénes somos", "Contacto", el sitemap de noticias y las notas con cuerpo | Alto | Bajo |
-| 10 | Contenido | **"En qué quedó"** | Cargar 3 o 4 promesas concretas del municipio ("asfaltar tal calle") en el buzón del panel de la PC (el tipo `seguimiento` existe; el buzón todavía no tiene ninguna entrada) y publicar una nota corta cada vez que se revisan, cada 4 a 6 semanas. Lo que un medio grande no sostiene | Alto | Bajo |
+| 10 | Contenido | **"En qué quedó"** | Cargar 3 o 4 promesas concretas del municipio ("asfaltar tal calle") (el buzón del panel de la PC, que tenía el tipo `seguimiento` sin ninguna entrada, se retiró el 17/10: habría que cargarlas en otro lado) y publicar una nota corta cada vez que se revisan, cada 4 a 6 semanas. Lo que un medio grande no sostiene | Alto | Bajo |
 | 11 | Sistema | **Unir a mano dos notas desde el celular** | Desde el 29/09 la misma noticia que vuelve a entrar con otro enlace se une sola (queda una y la otra redirige con 301: `web/lib/repetidas.js`, `web/data/fusionadas.json`), pero la regla es estricta (80 % de palabras en común, menos de 4 días). Un botón "Unir con…" en el panel del celular cubriría las que se escapan, con el mismo mecanismo | Medio | Bajo-medio |
 | 12 | Web / SEO | **Teléfonos y emergencias** | Hacer de `/util` la página de emergencias: las guardias del día juntas arriba (cooperativa, farmacia de turno, hospital), botones grandes para llamar y un título que Google encuentre. Es de lo más buscado en un pueblo | Alto | Bajo |
 | 13 | Web / SEO | **Compartir mejor desde el celular** | El botón nativo de compartir, el enlace sin `?fbclid`, un "Copiado" que se anuncie y un botón fijo de WhatsApp al pie de la nota (auditoría del 29/09: casi todos comparten desde el celular) | Medio | Bajo |
@@ -106,9 +106,9 @@ empezó, algo que vieron. Es la fuente que ningún medio de Balcarce tiene: todo
 escriben desde lo que ya está publicado en otro lado.
 
 Está casi resuelta: el WhatsApp del medio (2266 51-1612) ya está al pie de cada
-página, y el buzón del panel de la PC (`panel/buzon.mjs`) ya tiene el tipo
-`dato` con su regla (se verifica como cualquier nota y sale sólo si lo confirma
-una segunda fuente). Falta invitar a usarlo en serio (una lista o un canal de
+página, y la regla del tipo `dato` está escrita (se verifica como cualquier nota y
+sale sólo si lo confirma una segunda fuente; el buzón del panel de la PC, que la
+tenía, se retiró el 17/10). Falta invitar a usarlo en serio (una lista o un canal de
 difusión), alguien que lo mire todos los días y una regla chica de qué pasa al
 buzón: no todo lo que llega es una noticia. **Un dato sin verificar no es una
 nota**: nunca se publica sólo porque alguien lo mandó.
@@ -217,7 +217,7 @@ fuente.
 
 *Armado el 8/10/2026. Acá va **solo lo nuevo**: notas propias, secciones, formatos de redes, canales,
 servicios y planes comerciales. Lo que mejora o decide sobre algo que ya existe está en
-[`MEJORAS.md`](docs/historico/propuestas-2026-10/MEJORAS.md). Nada de esto está hecho ni aprobado.*
+`MEJORAS.md` (de `docs/historico/propuestas-2026-10/`, borrada el 17/10; queda en el historial de git). Nada de esto está hecho ni aprobado.*
 
 **Cómo leerlo**
 

@@ -1,24 +1,22 @@
 // Arma los datos de la web (web/data/) a partir de las noticias y de lo que
 // decidieron el semáforo y las personas.
 //
-// Por qué archivos estáticos y no una conexión en vivo al panel: la web es
-// HTML estático en Cloudflare Pages, que no puede leer los archivos de la PC.
-// GitHub Actions corre este script cada media hora, sube lo que cambió al repo
-// y después Cloudflare Pages compila y publica. En la PC hace lo mismo a mano,
-// con lo que ya tiene el panel.
+// Por qué archivos estáticos: la web es HTML estático en Cloudflare Pages.
+// "Actualizar la web" (GitHub Actions) corre este script cada media hora, guarda
+// lo que cambió en el repositorio, compila y publica.
 //
 // Qué hace, en orden:
 //
-//   1. Lee las noticias y las decisiones: en la PC, de panel/datos/; en la
-//      nube, corre la ingesta en el momento y lee web/data/decisiones.json.
+//   1. Corre la ingesta en el momento y lee las decisiones de las personas (el
+//      celular, web/data/celular-decisiones.json).
 //   2. Anota la primera vez que vio cada nota y fija su fecha (fechaReal).
-//   3. En la nube: la lectura con IA (fichas, repetidas) y, otra vez, los
-//      medios que pide lo de afuera y los cupos.
-//   4. En la nube: la reescritura con IA de lo que va a salir.
+//   3. La lectura con IA (fichas, repetidas) y, otra vez, los medios que pide
+//      lo de afuera y los cupos.
+//   4. La reescritura con IA de lo que va a salir.
 //   5. Decide qué nota se publica (notaPublicada): la decisión de una persona o
 //      el semáforo, que no llegue tarde, las correcciones a mano, lo que no se
 //      publica nunca y "sin cuerpo no se publica".
-//   6. En la nube: el banco de fotos.
+//   6. El banco de fotos.
 //   7. El archivo: lo que se retira y lo que se corrige de lo ya publicado.
 //   8. Las notas propias (el dólar del día y los repasos de los podcasts).
 //   9. La portada (sólo lo vigente, sin repetidas), el archivo y la agenda.
@@ -33,25 +31,19 @@
 //   web/data/agenda.json            los eventos con página (lib/eventos.js)
 //   web/data/intentos-ia.json       cuántas veces se le pidió cada nota a Gemini
 //   web/data/dolar-historia.json    la cotización de cada día hábil
-//   web/data/fichas.json            las fichas de la lectura con IA (en la nube)
+//   web/data/fichas.json            las fichas de la lectura con IA
 //   web/data/notas-por-dia.json     la estadística diaria de notas
 //   web/data/banco-fotos.json       el banco de fotos, y las fotos en
-//     + web/public/fotos-notas/     web/public/fotos-notas/ (en la nube)
+//     + web/public/fotos-notas/     web/public/fotos-notas/
 //   web/data/esperando-cuerpo.json  las notas que esperan cuerpo
 //   web/data/vistas.json            la primera vez que se vio cada nota
 //   web/data/celular-pendientes.json lo que espera a una persona, cifrado para
 //     + .cache/celular-notas.json    el celular; y las notas enteras, en la
-//                                    caché de Actions (en la nube; panel/celular-datos.mjs)
+//                                    caché de Actions (panel/celular-datos.mjs)
 //
-// Lee, además de las decisiones del panel de la PC, las del celular
-// (web/data/celular-decisiones.json) y las correcciones (correcciones.json).
+// Lee, además, las correcciones (correcciones.json) y las retiradas (retiradas.json).
 //
-// La lógica de "qué nota está publicada" es la misma que usa
-// panel/servidor.mjs en su función vista(): se repite acá a propósito para no
-// atar la web a que el servidor del panel esté corriendo. La web sólo
-// necesita el JSON, nunca el proceso.
-//
-//   node scripts/generar-datos.mjs
+//   node scripts/generar-datos.mjs   (en GitHub Actions; en la PC, ver más abajo)
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -87,7 +79,7 @@ import {
   cuandoArmarClima, entradaDelClima, sumarClimaAlHistorial, comoClimaJson, notasDelClima, notasDeEfemerides,
 } from '../lib/notas-propias.js';
 import {
-  leerDecisionesCelular, unirDecisiones, paraDecidir, notasParaEscribir, papeleraAlDia, paraLaPapelera,
+  leerDecisionesCelular, paraDecidir, notasParaEscribir, papeleraAlDia, paraLaPapelera,
 } from '../../panel/celular-datos.mjs';
 import { leerLlaves, cerrarCadaUno } from '../../panel/cifrado.mjs';
 import { previaDelDia } from '../../redes/previa.mjs';
@@ -105,19 +97,15 @@ import { notasDePistas } from '../lib/notas-de-pistas.js';
 import { seccionesNuevasActivas, SECCIONES_ETAPA_2 } from '../../ingesta/secciones-nuevas.mjs';
 
 const AQUI = import.meta.dirname;
-const DATOS_PANEL = path.join(AQUI, '..', '..', 'panel', 'datos');
 const SALIDA = path.join(AQUI, '..', 'data', 'portada.json');
 // Todo lo publicado, aunque ya no esté en la portada: ver lib/archivo.js.
 const ARCHIVO = path.join(AQUI, '..', 'data', 'archivo.json');
 // El libro de lo publicado en las redes: de ahí salen las direcciones de los
 // enlaces que ya están en Facebook.
 const LIBRO_REDES = path.join(AQUI, '..', 'data', 'redes.json');
-// Los eventos con página propia (/agenda/<nombre>-<id>): los del municipio y
-// los que se publicaron desde el panel, más los que ya pasaron hace menos de
-// 60 días. Ver lib/eventos.js.
+// Los eventos con página propia (/agenda/<nombre>-<id>): los del municipio,
+// más los que ya pasaron hace menos de 60 días. Ver lib/eventos.js.
 const AGENDA_WEB = path.join(AQUI, '..', 'data', 'agenda.json');
-// Lo que el panel publicó en la pestaña Agenda (lo sube panel/sincronizar.mjs).
-const EVENTOS_PANEL = path.join(AQUI, '..', 'data', 'eventos-panel.json');
 // Cuántas veces se le pidió cada nota a Gemini (reels/reescritura.mjs,
 // MAXIMO_DE_INTENTOS): { id: { intentos, ultimo, motivo } }, podado a 7 días.
 // Va versionado: es la única memoria entre corridas de lo que NO salió.
@@ -178,41 +166,36 @@ const CELULAR_ESTADO = path.join(AQUI, '..', 'data', 'celular-estado.json');
 // caché de Actions: no es pública.
 const PAPELERA = path.join(AQUI, '..', '..', '.cache', 'papelera.json');
 
-// Este script corre en dos lugares distintos:
-//
-//   · En la PC que tiene el panel, que es donde viven las decisiones.
-//   · En GitHub Actions, donde no hay panel: ahí se sale a buscar las
-//     noticias en el momento y las decisiones se leen del archivo que el
-//     panel exporta al repositorio (web/data/decisiones.json).
-//
-// El segundo caso es lo que permite que el sitio se actualice solo con la
-// computadora apagada.
-const enLaNube = !fs.existsSync(path.join(DATOS_PANEL, 'ultima.json'));
+// Corre en GitHub Actions ("Actualizar la web"). Desde el 17/10 no hay "modo PC": el panel de la PC, que guardaba las noticias
+// y las decisiones en panel/datos/, se retiró. En la PC no corre solo: haría la corrida entera (la ingesta, la lectura y la
+// redacción con IA, las fotos) y dejaría web/data/ cambiado. Para ver el sitio con los datos de GitHub alcanza con `git pull` y
+// `npm run build`; para correrlo igual en la PC, ARMAR_EN_LA_PC=1 (y lo que cambie en web/data/ no se sube).
+if (process.env.GITHUB_ACTIONS !== 'true' && process.env.ARMAR_EN_LA_PC !== '1') {
+  console.log('  generar-datos arma la web de verdad (ingesta, IA, fotos) y corre en GitHub Actions: en la PC no hace nada.');
+  console.log('  Para ver el sitio: git pull y npm run build. Para correrlo igual: ARMAR_EN_LA_PC=1 npm run datos (sin subir web/data/).');
+  process.exit(0);
+}
 
-let estado;
-let ultima;
-let agenda;
+const { ingestar } = await import('../../ingesta/ingesta.mjs');
+const { agendaCompleta } = await import('../../ingesta/agenda.mjs');
+// Los identificadores ya publicados: cuando otro medio se suma a una
+// historia, la nota no cambia de dirección (ingesta/cruce.mjs).
+const idsConocidos = new Set([...leerJson(SALIDA, { notas: [] }).notas ?? [], ...leerJson(ARCHIVO, { notas: [] }).notas ?? []]
+  .map((n) => n.id));
+let ultima = await ingestar({ silencioso: true, idsConocidos, idsUnidos: new Set(Object.keys(FUSIONADAS_ANTES?.notas ?? {})) });
+const agenda = await agendaCompleta().catch(() => null);
+// Las decisiones de las personas son las del celular (las del panel de la PC, web/data/decisiones.json, vacías desde el 28/09,
+// se dejaron de leer el 17/10).
+const estado = { decisiones: { ...CELULAR.notas } };
+console.log(`  ${ultima.notas.length} historias · ${Object.keys(estado.decisiones).length} decisiones desde el celular`);
 
-if (enLaNube) {
-  const { ingestar } = await import('../../ingesta/ingesta.mjs');
-  const { agendaCompleta } = await import('../../ingesta/agenda.mjs');
-  console.log('  sin panel a mano: se buscan las noticias ahora');
-  // Los identificadores ya publicados: cuando otro medio se suma a una
-  // historia, la nota no cambia de dirección (ingesta/cruce.mjs).
-  const idsConocidos = new Set([...leerJson(SALIDA, { notas: [] }).notas ?? [], ...leerJson(ARCHIVO, { notas: [] }).notas ?? []]
-    .map((n) => n.id));
-  ultima = await ingestar({ silencioso: true, idsConocidos, idsUnidos: new Set(Object.keys(FUSIONADAS_ANTES?.notas ?? {})) });
-  agenda = await agendaCompleta().catch(() => null);
-  const exportado = leerJson(path.join(AQUI, '..', 'data', 'decisiones.json'), { decisiones: {} });
-  estado = { decisiones: exportado.decisiones ?? {} };
-  console.log(`  ${ultima.notas.length} historias · ${Object.keys(estado.decisiones).length} decisiones del panel`);
-
-  // Una fuente que se vacía no avisa. Algunas se leen raspando el HTML de
-  // la página: el día que El Diario la rediseñe, esas notas dejan
-  // de entrar sin ningún error, y lo único que se nota es que el sitio
-  // tiene menos. Estas líneas ("::warning::") las muestra GitHub arriba de
-  // la corrida, donde se ve sin abrir el registro.
-  // W-10: si casi todas las fuentes fallaron, la corrida termina acá con error y la web queda como estaba (el vigilante avisa).
+// Una fuente que se vacía no avisa. Algunas se leen raspando el HTML de
+// la página: el día que El Diario la rediseñe, esas notas dejan
+// de entrar sin ningún error, y lo único que se nota es que el sitio
+// tiene menos. Estas líneas ("::warning::") las muestra GitHub arriba de
+// la corrida, donde se ve sin abrir el registro.
+// W-10: si casi todas las fuentes fallaron, la corrida termina acá con error y la web queda como estaba (el vigilante avisa).
+{
   const sana = ingestaSana(ultima.fuentes);
   if (!sana.ok && process.env.INGESTA_PERMITIR_VACIA !== '1') {
     console.log(`::error title=Ingesta casi vacía::${sana.motivo}`);
@@ -222,16 +205,6 @@ if (enLaNube) {
     if (f.estado === 'error') console.log(`::warning title=Fuente caída::${f.nombre}: ${f.error}`);
     else if (f.notas === 0) console.log(`::warning title=Fuente vacía::${f.nombre} no trajo ninguna nota`);
   }
-} else {
-  estado = leerJson(path.join(DATOS_PANEL, 'estado.json'), { decisiones: {} });
-  ultima = leerJson(path.join(DATOS_PANEL, 'ultima.json'), { notas: [] });
-  agenda = leerJson(path.join(DATOS_PANEL, 'agenda.json'), null);
-}
-// Las del celular, encima de las del panel de la PC (manda la más nueva).
-estado.decisiones = unirDecisiones(estado.decisiones ?? {}, CELULAR.notas);
-{
-  const n = Object.keys(CELULAR.notas).length;
-  if (n) console.log(`  ${n} decisiones desde el celular`);
 }
 
 // Cuándo vimos cada nota por primera vez.
@@ -333,7 +306,7 @@ const confirmadasDeLasFichas = (rep = {}) => [...confirmadasDe(rep.pares), ...an
 let parejasConfirmadas = confirmadasDeLasFichas(leerJson(FICHAS, {}).repetidas);
 // Las [ancla, nueva] de significado: en la unión, la nueva nunca es la que queda (como las de la regla 171).
 let anclasDeSignificado = anclasConfirmadas(leerJson(FICHAS, {}).repetidas?.significado);
-if (enLaNube) {
+{
   try {
     const {
       leerNotasNuevas, aplicarFichas, comoFichasJson, agruparRepetidas, quitarRepetidas, unirGrupos, candidatasParaAgrupar, LECTURA,
@@ -420,9 +393,7 @@ if (enLaNube) {
   }
 }
 
-// Reescritura automática, sin que nadie la mire: sólo en la nube. Es el único
-// lugar que la hace (el panel de la PC dejó de hacerla el 28/09: gastaba cupo
-// en textos que la web no usaba); en la PC, este script no le pide nada a Gemini.
+// Reescritura automática, sin que nadie la mire. Es el único lugar que la hace.
 //
 // `previas` es lo que ya se reescribió en una corrida anterior (la portada
 // de la vez pasada y, desde el 25/09, el archivo): así no se le vuelve a
@@ -436,7 +407,7 @@ const intentosAntes = leerJson(INTENTOS_IA, null);
 const intentos = podarIntentos(intentosAntes ?? {});
 // Cómo estaban al empezar, ya podados: al final se escriben sólo si cambiaron.
 const intentosAlEmpezar = JSON.stringify(intentos);
-if (enLaNube) {
+{
   const previas = previasDeLaPortada([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])]);
   // Lo que ya tiene el cuerpo escrito en correcciones.json no se le pide a
   // Gemini: sería gastar cupo en algo que después no se usa (27/09).
@@ -460,10 +431,10 @@ if (enLaNube) {
   if (nuevas) console.log(`  ${nuevas} notas reescritas con IA en esta corrida`);
 }
 
-// Los lunes, en la nube, la lista de retiradas pierde las de más de una semana
+// Los lunes, la lista de retiradas pierde las de más de una semana
 // (lib/archivo.js, podarRetiradas). Una vez por semana y no en cada corrida:
 // así el archivo cambia sólo ese día y no choca con lo que se cargue a mano.
-if (enLaNube && diaSemanaAR() === 1) {
+if (diaSemanaAR() === 1) {
   const ruta = path.join(AQUI, '..', 'data', 'retiradas.json');
   const { json, quitadas } = podarRetiradas(leerJson(ruta, null), {
     hoy: diaAR(), enLaIngesta: new Set((ultima.notas ?? []).map((n) => n.id)),
@@ -533,10 +504,9 @@ function notaPublicada(n) {
   // Que `guion` tenga algo es justamente la señal que usa <Firma> para decir
   // "esto lo redactó una IA": no hace falta un campo aparte para lo mismo.
   const auto = reescritas[n.id];
-  // De dónde sale el texto: lo de una persona manda siempre. Lo que escribió
-  // la IA desde el panel (una decisión "de la máquina"), sólo si tiene cuerpo
-  // de verdad; si no, lo que se reescribió acá, en la nube. Antes un cuerpo
-  // vacío guardado por el panel tapaba uno bueno escrito en la nube.
+  // De dónde sale el texto: lo de una persona manda siempre. Una decisión "de la
+  // máquina", sólo si tiene cuerpo de verdad; si no, lo que se reescribió acá.
+  // Antes un cuerpo vacío guardado en una decisión tapaba uno bueno escrito acá.
   const deLaDecision = humana || tieneCuerpo(d) || !auto ? d : undefined;
   // Si ni la IA ni una persona completaron "fuentesConsultadas" (una nota sin
   // reescribir, o corregida a mano sólo en título/copete/sección/cuerpo), se
@@ -668,14 +638,13 @@ let deLaIngesta = (ultima.notas ?? [])
 // ---------------------------------------------------------------- las fotos
 //
 // El banco de fotos, en vivo (28/09, CRITERIO-EDITORIAL.md, "Las fotos"):
-// sólo en la nube, sólo para lo que viene de las fuentes (las notas propias
+// sólo para lo que viene de las fuentes (las notas propias
 // no llevan foto de otro), y con memoria propia (web/data/banco-fotos.json)
 // para no volver a preguntar por una nota ya probada. Si algo falla acá, la
 // nota sigue publicándose igual, sin foto, como hasta ahora.
 //
-// Elegir fotos NUEVAS es sólo en la nube (gasta cupo de IA); poner las que YA
-// están en el banco, siempre (28/09): correr esto en la PC dejaba portada.json
-// sin ninguna foto.
+// Elegir fotos NUEVAS gasta cupo de IA; las que YA están en el banco se ponen
+// siempre, aunque elegir falle (28/09).
 // Las fotos que sumó una persona desde la pestaña Fotos del panel (2/10, web/scripts/foto-manual.mjs) mandan sobre las del
 // banco: las anota sólo el workflow "Panel del celular" y así no chocan con esta corrida. Sólo si el archivo está en disco.
 const FOTOS_MANUALES = path.join(AQUI, '..', 'data', 'fotos-manuales.json');
@@ -727,7 +696,7 @@ if (conRetirada.length) {
 }
 // Si dos notas son la misma noticia, la foto se busca en las fuentes de las dos (1/10).
 sumarFuentesDeParejas(deLaIngesta, [...parejasConfirmadas, ...parejasSinIA]);
-if (enLaNube) {
+{
   try {
     const { elegirFotosNuevas } = await import('./fotos-notas.mjs');
     const { claveClasificacion, claveGroq } = await import('../../reels/claves.mjs');
@@ -814,12 +783,10 @@ for (const a of archivoAnterior.notas ?? []) {
 // partir de datos que tenemos: los números de DolarApi y lo que esas notas
 // ya publicaron. Sin IA.
 //
-// La cotización se sale a buscar sólo en la nube: en la PC, escribir
-// dolar-historia.json dejaría un cambio suelto en el repositorio que trabaría
-// la sincronización del panel. La PC arma igual las notas con lo guardado.
+// La cotización se guarda en dolar-historia.json (una por día hábil).
 const historiaAntes = leerJson(HISTORIA_DOLAR, null);
 let historiaDolar = historiaAntes ?? { dias: [] };
-if (enLaNube) {
+{
   const toca = cuandoArmarDolar({ historia: historiaDolar });
   if (toca.armar) {
     const datos = await traerDolar();
@@ -838,10 +805,10 @@ if (!historiaAntes || JSON.stringify(historiaDolar) !== JSON.stringify(historiaA
 }
 
 // El clima del día (8/10, lib/notas-propias.js): una nota por día, a las 7:30 o después, con el pronóstico de lo que ya trae la portada; queda
-// congelada en clima-historia.json (sólo en la nube, por lo mismo que el dólar).
+// congelada en clima-historia.json (como el dólar).
 const climaAntes = leerJson(HISTORIA_CLIMA, null);
 let historiaClima = climaAntes ?? { dias: [] };
-if (enLaNube) {
+{
   const toca = cuandoArmarClima({ historia: historiaClima, clima: ultima.clima ?? null });
   if (toca.armar) {
     const entrada = entradaDelClima(ultima.clima, { consultado: new Date() });
@@ -856,10 +823,10 @@ if (!climaAntes || JSON.stringify(historiaClima) !== JSON.stringify(climaAntes))
 }
 
 // La Fórmula 1 (ingesta/f1.mjs): horarios en hora argentina los días del Gran Premio y el resultado
-// al terminar. Se consulta Jolpica sólo en la nube; si la API falla queda lo último guardado.
+// al terminar. Se consulta Jolpica; si la API falla queda lo último guardado.
 const f1Antes = leerJson(F1_JSON, null);
 let f1Datos = f1Antes;
-if (enLaNube) {
+{
   try { f1Datos = await traerF1({ antes: f1Antes }); } catch (e) { console.log(`  F1: no se pudo consultar (${e.message}); queda lo guardado`); }
 }
 let notasF1 = [];
@@ -868,13 +835,13 @@ try {
   notasF1 = notas;
   if (f1Datos) f1Datos = { ...f1Datos, notas: fechas };
 } catch (e) { console.log(`  F1: no se pudo armar la nota (${e.message})`); }
-if (enLaNube && f1Datos && JSON.stringify(f1Datos) !== JSON.stringify(f1Antes)) fs.writeFileSync(F1_JSON, comoF1Json(f1Datos), 'utf8');
+if (f1Datos && JSON.stringify(f1Datos) !== JSON.stringify(f1Antes)) fs.writeFileSync(F1_JSON, comoF1Json(f1Datos), 'utf8');
 
-// El fútbol (ingesta/futbol.mjs): los partidos de cada fecha con horarios, los resultados y las tablas. Se consulta ESPN sólo en la nube; si falla, queda lo
+// El fútbol (ingesta/futbol.mjs): los partidos de cada fecha con horarios, los resultados y las tablas. Se consulta ESPN; si falla, queda lo
 // último guardado. Sin IA: sólo datos, con la fuente citada.
 const futbolAntes = leerJson(FUTBOL_JSON, null);
 let futbolDatos = futbolAntes;
-if (enLaNube) {
+{
   try { futbolDatos = await traerFutbol({ antes: futbolAntes }); } catch (e) { console.log(`  Fútbol: no se pudo consultar (${e.message}); queda lo guardado`); }
 }
 let notasFutbol = [];
@@ -883,7 +850,7 @@ try {
   notasFutbol = notas;
   if (futbolDatos) futbolDatos = { ...futbolDatos, notas: fechas };
 } catch (e) { console.log(`  Fútbol: no se pudo armar la nota (${e.message})`); }
-if (enLaNube && futbolDatos && JSON.stringify(futbolDatos) !== JSON.stringify(futbolAntes)) fs.writeFileSync(FUTBOL_JSON, comoFutbolJson(futbolDatos), 'utf8');
+if (futbolDatos && JSON.stringify(futbolDatos) !== JSON.stringify(futbolAntes)) fs.writeFileSync(FUTBOL_JSON, comoFutbolJson(futbolDatos), 'utf8');
 
 // Las notas con página, para contar cada podcast: lo de esta corrida y el
 // archivo, sin lo que se acaba de retirar. Un repaso que ya no se puede armar
@@ -912,13 +879,13 @@ if (propias.length) console.log(`  notas propias: ${propias.map((n) => n.id).joi
 }
 
 // La nota de "Un día como hoy" lleva la ilustración fija con el año y la fecha escritos en la hoja del centro (web/scripts/foto-efemeride.mjs, 15/10).
-// Se arma una vez por día, sólo en la nube; si falla, queda la ilustración sin texto.
+// Se arma una vez por día; si falla, queda la ilustración sin texto.
 {
   const { fotoDeEfemeride } = await import('./foto-efemeride.mjs');
   let conFecha = 0;
   for (const n of propias) {
     if (n.propia !== 'efemeride') continue;
-    const foto = await fotoDeEfemeride(n, { carpeta: FOTOS_NOTAS, soloLasQueEstan: !enLaNube });
+    const foto = await fotoDeEfemeride(n, { carpeta: FOTOS_NOTAS });
     if (foto) { n.foto = foto; conFecha += 1; }
   }
   if (conFecha) console.log(`  efemérides con el año en la hoja: ${conFecha}`);
@@ -938,8 +905,8 @@ for (const n of propias) {
 }
 
 // Las notas propias que no tienen la foto de ninguna fuente (la F1: 3/10, Hernán) llevan una foto libre del lugar, de Wikimedia Commons
-// (web/scripts/foto-libre.mjs): una vez por nota, se guarda en el banco con su crédito y su licencia. Sólo en la nube; si falla, sale sin foto.
-if (enLaNube) {
+// (web/scripts/foto-libre.mjs): una vez por nota, se guarda en el banco con su crédito y su licencia. Si falla, sale sin foto.
+{
   const { buscarFotoLibre, bajarFotoLibre } = await import('./foto-libre.mjs');
   const { achicarFoto } = await import('./achicar-foto.mjs');
   // Dos notas del mismo lugar (los partidos y los resultados de la misma fecha) no llevan la misma foto (4/10, Hernán): cada una se queda con una que no usó otra.
@@ -977,8 +944,8 @@ if (enLaNube) {
   }
 }
 
-// Los escudos de los clubes de las notas de fútbol (web/scripts/escudos.mjs): se bajan una vez y quedan en web/public/escudos/. Sólo en la nube.
-if (enLaNube) {
+// Los escudos de los clubes de las notas de fútbol (web/scripts/escudos.mjs): se bajan una vez y quedan en web/public/escudos/.
+{
   const { idsDeEscudos, bajarEscudos } = await import('./escudos.mjs');
   const bajados = await bajarEscudos(idsDeEscudos(propias), path.join(AQUI, '..', 'public', 'escudos'));
   if (bajados) console.log(`  escudos de clubes bajados: ${bajados}`);
@@ -987,7 +954,7 @@ if (enLaNube) {
 // La misma noticia con otra dirección (lib/repetidas.js, 29/09): queda una y
 // la dirección de la otra redirige a ésa (fusionadas.json, generar-redirects.mjs).
 // La papelera (panel/celular-datos.mjs, 29/09): lo que retiró una persona (desde
-// el celular, desde el panel de la PC o en retiradas.json) se guarda como
+// el celular o en retiradas.json) se guarda como
 // estaba; si una persona la vuelve a aprobar, vuelve con la misma dirección.
 const humanas = Object.entries(estado.decisiones ?? {}).filter(([, d]) => decisionHumana(d));
 const RETIRADAS_POR_PERSONA = new Map([
@@ -998,15 +965,13 @@ const RETIRADAS_POR_PERSONA = new Map([
     .map(([id, d]) => [id, { cuando: d.cuando ?? null, por: d.por ?? null, motivo: d.motivo ?? null }]),
 ]);
 const VUELVEN = new Map(humanas.filter(([, d]) => d.estado === 'publicada').map(([id, d]) => [id, { cuando: d.cuando ?? null, por: d.por ?? null }]));
-const papeleraAntes = enLaNube ? leerJson(PAPELERA, { notas: {} }).notas ?? {} : {};
-const { papelera, restaurar } = enLaNube
-  ? papeleraAlDia({
-    papelera: papeleraAntes,
-    retiradas: RETIRADAS_POR_PERSONA,
-    vuelven: VUELVEN,
-    conPagina: new Map([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])].map((n) => [n.id, n])),
-  })
-  : { papelera: {}, restaurar: [] };
+const papeleraAntes = leerJson(PAPELERA, { notas: {} }).notas ?? {};
+const { papelera, restaurar } = papeleraAlDia({
+  papelera: papeleraAntes,
+  retiradas: RETIRADAS_POR_PERSONA,
+  vuelven: VUELVEN,
+  conPagina: new Map([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])].map((n) => [n.id, n])),
+});
 if (restaurar.length) console.log(`  papelera: ${restaurar.length} nota(s) vuelven a publicarse (una persona las volvió a aprobar)`);
 const conPaginaHoy = [...deLaIngesta, ...propias];
 // Las repetidas con otras palabras (1/10, Hernán: dos notas de la Cooperativa y dos del RENAPER). Los títulos de las
@@ -1017,7 +982,7 @@ const conPaginaHoy = [...deLaIngesta, ...propias];
 // acá también entre secciones, y además las parejas POR SIGNIFICADO de lo de acá (ingesta/huellas-significado.mjs): la huella
 // elige a quién preguntar y la IA confirma cada nueva contra su ancla (repetidas.significado). Un solo pedido por corrida, con
 // el tope del día repartido por hora (cupoDelMomento, regla 196).
-if (enLaNube) {
+{
   try {
     const { confirmarParejas, comoFichasJson, cupoDelMomento, LECTURA } = await import('../../ingesta/lectura-ia.mjs');
     const {
@@ -1103,7 +1068,7 @@ const pasaLaFoto = fotosParaLaQueQueda(fusion, {
 if (pasaLaFoto.size) {
   bancoDeFotos = { ...bancoDeFotos, ...Object.fromEntries([...pasaLaFoto].map(([queda, deLaFoto]) => [queda, { ...bancoDeFotos[deLaFoto] }])) };
   conFotosDelBanco(conPaginaHoy.filter((n) => pasaLaFoto.has(n.id)), bancoDeFotos);
-  if (enLaNube) {
+  {
     fs.mkdirSync(path.dirname(BANCO_FOTOS), { recursive: true });
     fs.writeFileSync(BANCO_FOTOS, `${JSON.stringify(bancoDeFotos, null, 1)}\n`, 'utf8');
   }
@@ -1136,9 +1101,8 @@ const publicadas = conLasUnidas(conPaginaHoy.filter((n) => !fusion.has(n.id)))
 
 // Lo que se MUESTRA (portada, secciones, temas, buscador, feed): sólo lo de
 // las últimas HORAS_EN_PORTADA (vigenteEnPortada, lib/archivo.js). El 25/09 la
-// portada tenía 43 notas de más de tres días, porque el panel las archiva sólo
-// cuando la PC está prendida. La página de cada una sigue existiendo: está en
-// el archivo.
+// portada tenía 43 notas de más de tres días. La página de cada una sigue
+// existiendo: está en el archivo.
 const vigentes = publicadas.filter((n) => vigenteEnPortada(n));
 // Ni dos notas con el mismo titular (o casi) en las listas: se queda la de más
 // relevancia y la otra sale de la portada, las secciones, el feed y el sitemap.
@@ -1187,8 +1151,8 @@ if (JSON.stringify(archivo) !== JSON.stringify(archivoAnterior.notas ?? [])) {
   fs.mkdirSync(path.dirname(ARCHIVO), { recursive: true });
   fs.writeFileSync(ARCHIVO, comoArchivoJson(archivo), 'utf8');
   console.log(`  archivo.json: ${archivo.length} notas con página (${retiradas.size} retiradas)`);
-  // Lo que salió por edad o por tope no se pierde: queda en web/data/historico/AAAA-MM.json (C-6). Sólo en la nube, que es la que sube.
-  const bajas = enLaNube ? bajasDelArchivo(archivoAnterior.notas ?? [], archivo, retiradas) : [];
+  // Lo que salió por edad o por tope no se pierde: queda en web/data/historico/AAAA-MM.json (C-6).
+  const bajas = bajasDelArchivo(archivoAnterior.notas ?? [], archivo, retiradas);
   const porMes = new Map();
   for (const n of bajas) porMes.set(mesDeLaNota(n), [...(porMes.get(mesDeLaNota(n)) ?? []), n]);
   for (const [mes, notasDelMes] of porMes) {
@@ -1201,8 +1165,8 @@ if (JSON.stringify(archivo) !== JSON.stringify(archivoAnterior.notas ?? [])) {
 
 // Las fotos que ya no tienen nota se borran (podarFotos): las de lo retirado a
 // mano siempre, y las de lo que ya no está en el archivo, la portada ni la
-// ingesta. Sólo en la nube, que es la que sube web/public/fotos-notas/.
-if (enLaNube && fs.existsSync(FOTOS_NOTAS)) {
+// ingesta.
+if (fs.existsSync(FOTOS_NOTAS)) {
   const quedan = new Set([...archivo, ...vigentes, ...deLaIngesta].map((n) => n.id));
   const { banco, borrar } = podarFotos({
     banco: bancoDeFotos, enDisco: fs.readdirSync(FOTOS_NOTAS), quedan, retiradas: RETIRADAS_A_MANO, ilustraciones: ilustracionesIA,
@@ -1216,19 +1180,14 @@ if (enLaNube && fs.existsSync(FOTOS_NOTAS)) {
 
 // ------------------------------------------------------------- la agenda
 //
-// Cada evento con fecha confirmada tiene su página, aunque la PC esté apagada:
-// los del municipio se traen en cada corrida y los del panel llegan por
-// eventos-panel.json. Si la API del municipio no contestó, lo suyo queda como
-// estaba (no se da por retirado). En la PC no se marca nada como retirado: la
-// copia de la agenda del panel puede tener horas y la que manda es la de
-// GitHub.
+// Cada evento con fecha confirmada tiene su página: los del municipio se traen
+// en cada corrida. Si la API del municipio no contestó, lo suyo queda como
+// estaba (no se da por retirado). (Hasta el 17/10 también se leían los que
+// cargaba el panel de la PC, eventos-panel.json: no hubo nunca ninguno.)
 const agendaAnterior = leerJson(AGENDA_WEB, { eventos: [] });
-const delPanel = leerJson(EVENTOS_PANEL, null);
 const eventosAgenda = aplicarSuspendidos(actualizarAgenda({
   anterior: agendaAnterior.eventos ?? [],
   municipio: agenda && agenda.municipioOk !== false ? (agenda.municipio ?? []) : null,
-  panel: delPanel ? (delPanel.eventos ?? []) : null,
-  retirar: enLaNube,
 }), leerJson(path.join(AQUI, '..', 'data', 'agenda-suspendidos.json'), null));
 // Se escribe siempre que falte: el workflow lo suma con `git add` y un archivo
 // que no existe hace fallar el paso entero.
@@ -1334,7 +1293,7 @@ function cambioQueImporta(antes, ahora) {
   if (JSON.stringify(antes?.notas) !== JSON.stringify(esperandoCuerpo)) fs.writeFileSync(ESPERANDO_CUERPO, texto, 'utf8');
 }
 
-// El panel del celular (29/09), sólo en la nube:
+// El panel del celular (29/09):
 //
 //   · lo que espera a una persona, con todo lo que hace falta para decidir, y la
 //     papelera: un sobre cifrado por nota para cada celular registrado
@@ -1342,7 +1301,7 @@ function cambioQueImporta(antes, ahora) {
 //     espera no lo escribe la IA sola: sólo si una persona lo pide (regla 68);
 //   · las notas enteras, en la caché de Actions, para el workflow "Panel del celular";
 //   · cuántas notas hay y lo que va a salir hoy en las redes (celular-estado.json).
-if (enLaNube) {
+{
   const llaves = leerLlaves(leerJson(CELULAR_LLAVES, null));
   const lista = paraDecidir(ultima.notas ?? [], estado.decisiones ?? {}, { fichas: leerJson(FICHAS, {}).fichas ?? {} });
   fs.mkdirSync(path.dirname(PAPELERA), { recursive: true });
@@ -1368,9 +1327,8 @@ if (enLaNube) {
   fs.writeFileSync(CELULAR_NOTAS, JSON.stringify({ generado: salida.generado, notas: notasParaEscribir(ultima.notas ?? []) }), 'utf8');
 }
 
-// Lo que el celular muestra aparte. Sólo en la nube: en la PC el libro de las
-// redes puede estar viejo.
-if (enLaNube) {
+// Lo que el celular muestra aparte.
+{
   const estadoCel = {
     portada: notas.length,
     archivo: archivo.length,

@@ -12,8 +12,7 @@ acá; los otros documentos remiten a éste.
   número de un lado y no del otro, `npm test` falla y la web no se publica.
 - **Cómo se cambia:** se edita este archivo (sin borrar las marcas `<!-- … -->`), se corre
   `npm test` y se sube a GitHub. "Actualizar la web" usa la versión nueva en la corrida
-  siguiente. El panel de la PC la muestra en la pestaña "Cómo escribe la IA" (si está
-  abierto, hay que reiniciarlo).
+  siguiente.
 
 Dónde se ve cada cosa en el código: `CLAUDE.md` ("Dónde tocar cada cosa") y `docs/`
 (empezar por `docs/00-INDICE.md`). Qué prueba cuida cada regla:

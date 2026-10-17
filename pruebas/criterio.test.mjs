@@ -241,12 +241,3 @@ test('EDITORIAL.md ya no existe y ningún documento lo nombra: el criterio es un
   }
   assert.match(leer('CLAUDE.md'), /CRITERIO-EDITORIAL\.md/);
 });
-
-test('el panel muestra el criterio del archivo en "Cómo escribe la IA"', () => {
-  const servidor = leer('panel/servidor.mjs');
-  assert.match(servidor, /instruccionEditorial: INSTRUCCION_EDITORIAL/);
-  assert.match(servidor, /criterioEditorial: CRITERIO_EDITORIAL/);
-  const html = leer('panel/panel.html');
-  assert.match(html, /D\.criterioEditorial/);
-  assert.match(html, /CRITERIO-EDITORIAL\.md/);
-});

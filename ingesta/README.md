@@ -5,8 +5,7 @@ medios, en `../FUENTES.md`), junta la misma noticia contada por varios medios, d
 afuera lo que no tiene respaldo, la clasifica, le pone el semáforo y le calcula el
 puntaje. Acá viven también la lectura con IA, el verificador y los números del
 criterio (`criterio.mjs`). **Sin dependencias**: sólo lo que trae Node (una prueba
-lo vigila). Corre sola en GitHub Actions cada media hora ("Actualizar la web") y en
-el panel de la PC, mientras está prendido.
+lo vigila). Corre sola en GitHub Actions cada media hora ("Actualizar la web").
 
 **Cómo funciona:** [`../docs/02-INGESTA.md`](../docs/02-INGESTA.md) (fuentes,
 fechas, filtro de entrada, cruce de medios), [`../docs/03-SELECCION.md`](../docs/03-SELECCION.md)
@@ -21,11 +20,7 @@ lo lee tal cual.
 ```bash
 npm run ingesta                                  # corre todo: deja ingesta/salida/portada.json y preview.html (no se versionan)
 npm run auditar                                  # qué está decidiendo el filtro hoy, y con qué palabra
-node ingesta/probar.mjs                          # prueba las fuentes candidatas (CANDIDATOS, en fuentes.mjs)
-node ingesta/probar.mjs https://medio.com/feed   # prueba una dirección suelta
+node ingesta/medir-fuentes.mjs                   # cuánto aporta cada fuente y si su feed responde hoy
+node ingesta/auditar-fuentes.mjs                 # cuánto aportó cada fuente en la semana y cuál se durmió (sin red)
 node ingesta/listar-fuentes.mjs                  # rehace ../FUENTES.md (después de tocar una fuente)
 ```
-
-Después de tocar algo de esta carpeta, **reiniciar el panel de la PC** si está
-prendido (cerrar su ventana y correr `ARRANCAR.bat`): Node carga el código al
-arrancar.

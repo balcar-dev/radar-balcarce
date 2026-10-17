@@ -145,7 +145,6 @@ test('por qué espera una nota, dicho para una persona: cada motivo que pone el 
     ['internacional: sin relación con Balcarce', 'extranjero', /otro país/],
     ['de un medio de acá sin nombrar Balcarce ni la zona: espera la lectura con IA', 'lectura', /copiada/],
     ['la sección es sólo de Balcarce y la zona', 'seccion-de-aca', /sólo para lo de Balcarce/],
-    ['marcada "pendiente" en el panel de la PC', 'pc', /panel de la PC/],
   ];
   for (const [motivo, tipo, explicacion] of casos) {
     assert.equal(tipoDeMotivo(motivo).tipo, tipo, motivo);

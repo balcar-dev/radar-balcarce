@@ -22,7 +22,7 @@ cuerpo y nadie retiró.
 | Color | Qué pasa |
 |---|---|
 | **Verde** | Sale sola (si después tiene cuerpo: `docs/04-REDACCION.md`) |
-| **Amarillo** | Espera a una persona, que decide en el panel del celular (o en el de la PC). Si nadie la aprueba, no sale. Desde el 17/10 (regla 200) al celular va sólo lo de acá, cinco por día; lo de afuera amarillo no va |
+| **Amarillo** | Espera a una persona, que decide en el panel del celular. Si nadie la aprueba, no sale. Desde el 17/10 (regla 200) al celular va sólo lo de acá, cinco por día; lo de afuera amarillo no va |
 | **Rojo** | No se publica nunca, ni aprobada |
 
 ---
@@ -397,10 +397,9 @@ también. A una nota que llega tarde tampoco se le pide texto a la IA.
 
 1. **¿Está retirada a mano?** (`web/data/retiradas.json`, paso 13): no sale.
 2. **¿Quién manda?** Si una persona decidió (`decisionHumana`: una decisión con
-   `por` y que no sea de la IA), manda esa decisión. Las del celular
-   (`web/data/celular-decisiones.json`) se ponen encima de las del panel de la PC
-   (`web/data/decisiones.json`) y, si las dos decidieron sobre la misma nota, gana
-   la más nueva (`unirDecisiones`, `panel/celular-datos.mjs`). Si nadie decidió,
+   `por` y que no sea de la IA), manda esa decisión. Las decisiones de las personas
+   son las del celular (`web/data/celular-decisiones.json`, `leerDecisionesCelular`,
+   `panel/celular-datos.mjs`). Si nadie decidió,
    el semáforo: verde = automática, rojo = bloqueada, amarillo = pendiente. Sólo
    "publicada" y "automática" siguen.
 3. **¿Llega tarde?** (paso 10), salvo que la haya publicado una persona o ya haya
@@ -442,7 +441,6 @@ los repasos sin pedirlo aparte (`docs/DECISIONES.md`).
 | Fichas de la IA | 3 días | `LECTURA.diasDeFichas` | Cuánto se recuerda una ficha |
 | Primera vista | 7 días | `DIAS_DE_VISTAS` | Cuánto se recuerda cuándo se vio |
 | Retiradas a mano | 7 días | `DIAS_DE_RETIRADAS` | Los lunes salen de la lista las más viejas que la ingesta ya no trae |
-| Panel de la PC: archivar lo no decidido | 72 h | `HORAS_PARA_ARCHIVAR` (`panel/servidor.mjs`) | En la PC, lo que nadie decidió se archiva (`docs/09-PANEL.md`) |
 
 `ingesta/criterio.mjs` guarda las 36, 12 y 6 horas, los 180 días y el tope de 3.700
 notas (con el archivo permanente en R2, decidido el 16/10 y todavía sin activar, lo
@@ -459,7 +457,7 @@ dirección de la otra redirige (`web/lib/repetidas.js`, `docs/06-WEB.md`).
 
 **Cuándo una nota pierde su página** (sale de `web/data/archivo.json`):
 
-- si una persona la bloqueó, la descartó o la retiró (desde un panel o en
+- si una persona la bloqueó, la descartó o la retiró (desde el panel del celular o en
   `retiradas.json`);
 - si hoy la ingesta la trae en rojo, o en amarillo **por lo que dice**
   (`pierdeLaPagina`, `web/lib/archivo.js`). La cotización del dólar y lo de afuera
@@ -488,8 +486,7 @@ Detalle en `docs/06-WEB.md`.
 en `web/data/correcciones.json` (con `deIA: true` si el texto lo escribió la IA y
 lo revisó la persona). Ningún workflow toca esos dos archivos.
 
-**Sin panel, a mano** (una persona o Claude, a pedido). El panel de la PC pisa
-`web/data/decisiones.json` cada vez que guarda: por eso hay dos archivos propios, y
+**Sin panel, a mano** (una persona o Claude, a pedido). Hay dos archivos propios, y
 cada entrada **tiene que decir `motivo`, `cuando` y `por`** (sin `motivo` no vale;
 sin `cuando` y `por` fallan las pruebas y la web se congela):
 
@@ -524,20 +521,20 @@ corrida siguiente de "Actualizar la web".
 | `ingesta/ingesta.mjs` | `clasificar`, `relevancia`, `semaforo`, `esDeAca`, `esDeUnMedioDeAca`, `mediosMinimosDe`, `contarMedios`, `exigirMedios`, `aplicarCupos`, `esPolicialDeAfuera`, `esEfemerideAjena`; `semaforoDelTexto` (las listas sobre cualquier texto) | `ingestar()`; `generar-datos.mjs`; `reels/reescritura.mjs` |
 | `ingesta/exenciones.mjs`, `ingesta/menores.mjs` | Las pocas frases que no frenan el amarillo, el sorteo deportivo, el título con un argentino (regla 172); el menor dicho por su edad | `ingesta.mjs` |
 | `ingesta/repetidas-publicadas.mjs` | La misma noticia contra lo ya publicado, sin IA (regla 171) y la misma fuente (`mismaFuente`, regla 175) | `generar-datos.mjs` |
-| `ingesta/seleccion-nueva.mjs`, `ingesta/comparar-seleccion.mjs`, `ingesta/secciones-nuevas.mjs` | La selección nueva y el mapa de 17 secciones, **en modo sombra**: miden con datos reales qué saldría, sin decidir nada (`docs/flujo/FLUJO-NUEVO.html`, `docs/secciones/`) | A mano |
+| `ingesta/secciones-nuevas.mjs` | El mapa de 17 secciones, por etapas detrás del interruptor `SECCIONES_NUEVAS` (regla 187; `docs/secciones/`). La selección nueva en sombra (`seleccion-nueva.mjs`, `comparar-seleccion.mjs`) se retiró el 17/10/2026: lo que proponía entró con las reglas 197 a 202 | `generar-datos.mjs`, a mano |
 | `ingesta/fuentes.mjs` | `REGLAS_SECCION`, `REGLAS_SEMAFORO` (rojo, nunca, amarillo, amarilloMuerte, promocional, cotizacion, internacional), `AMARILLO_MENORES`, `PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO`, `FIGURAS`, `TEMAS` | Todo el motor |
 | `ingesta/criterio.mjs` | Los números: `MEDIOS_DE_AFUERA`, `MEDIOS_POR_DEFECTO`, `MEDIOS_CON_FIGURA`, `CUPO_DE_AFUERA`, `CUPO_POR_DEFECTO`, `MUY_CONTADA`, `PUNTAJE`, `ESPERA_PERSONA`, `PORTADA` | Todo |
 | `ingesta/muy-contada.mjs` | `porQueEsMuyContada`, `marcarMuyContadas`, `mismoTema`, `noEsNoticiaAunqueLaCuentenTodos` (regla 197) | `aplicarCupos` |
 | `ingesta/no-es-nota.mjs` | `porQueNoEsNota`: el autobombo de los medios, el clima y las farmacias de otro medio, el comercio (regla 199) | `semaforo` |
 | `ingesta/lectura-ia.mjs` | Fichas (`leerNotasNuevas`, `aplicarFichas`, `mencionaAca`), repetidas (`agruparRepetidas`, `unirGrupos`, `quitarRepetidas`) | `generar-datos.mjs` (nube) |
 | `ingesta/perfil-balcarce.md` | Lo que la IA sabe de Balcarce | `lectura-ia.mjs` |
-| `ingesta/utiles.mjs` | `decisionHumana`: qué decisión es de una persona | `generar-datos.mjs`, `reels/reescritura.mjs`, paneles |
-| `panel/celular-datos.mjs` | Lee las decisiones del celular y las une con las de la PC (`leerDecisionesCelular`, `unirDecisiones`) | `generar-datos.mjs` |
-| `web/scripts/generar-datos.mjs` | Orquesta todo: lectura con IA, reescritura, `fechaReal`, `notaPublicada`, fotos, archivo | `actualizar.yml` (nube); a mano en la PC |
+| `ingesta/utiles.mjs` | `decisionHumana`: qué decisión es de una persona | `generar-datos.mjs`, `reels/reescritura.mjs`, el panel del celular |
+| `panel/celular-datos.mjs` | Lee las decisiones del celular (`leerDecisionesCelular`) | `generar-datos.mjs` |
+| `web/scripts/generar-datos.mjs` | Orquesta todo: lectura con IA, reescritura, `fechaReal`, `notaPublicada`, fotos, archivo | `actualizar.yml` (nube); en la PC sólo con `ARMAR_EN_LA_PC=1` |
 | `web/lib/archivo.js` | `HORAS_EN_PORTADA`, `HORAS_PARA_ESTRENAR`, `vigenteEnPortada`, `llegaTarde`, `fechaDeLaNota`, `pierdeLaPagina`, `esDeLoQueNuncaSePublica`, retiradas y correcciones | `generar-datos.mjs`, la web |
 | `web/lib/cuerpo.js` | `tieneCuerpo`, `tieneRespaldo` | `generar-datos.mjs`, la web, redes |
 | `web/lib/texto.js`, `web/lib/repetidas.js` | Las repetidas por titular (`sinNotasRepetidas`), las que volvieron con otra dirección, las parejas sospechosas y las uniones firmes (`unionesFirmes`) | `generar-datos.mjs` |
-| `web/data/celular-decisiones.json`, `correcciones.json`, `retiradas.json`, `decisiones.json` | Lo que decidió una persona: desde el celular, a mano o desde el panel de la PC | Los paneles, una persona o Claude |
+| `web/data/celular-decisiones.json`, `correcciones.json`, `retiradas.json` | Lo que decidió una persona: desde el celular o a mano | El panel del celular, una persona o Claude |
 
 ## Dónde se toca cada cosa
 
@@ -563,7 +560,6 @@ corrida siguiente de "Actualizar la web".
 | La IA saca algo que sí era de Balcarce | Aparece en "fuera (…)" del registro de "Actualizar la web" | Anotar el caso y ajustar `INSTRUCCION` o el perfil; mientras, publicarla desde el panel del celular |
 | Una nota de afuera ya publicada rebota en el cupo o en los medios | En una corrida pasa a amarilla y sale de las listas, pero **conserva la página**; si vuelve a verde, vuelve a las listas aunque tenga más de 12 horas (ya salió) | Nada; si importa, aprobarla desde el panel del celular |
 | `aplicarCupos` sólo baja | Una nota que quedó amarilla por el cupo en la ingesta no vuelve a verde aunque la IA saque otras de su sección | Se corrige sola en la corrida siguiente |
-| El panel de la PC y la nube archivan distinto | En la PC, lo no decidido se archiva a las 72 horas; la web deja de mostrarlo a las 36 | Nada: la web manda en lo que se ve |
 | La portada queda vacía de lo de afuera | "de afuera y poco contada" en muchas notas | Revisar que el cruce tenga memoria y que las fuentes estén vivas (`docs/02-INGESTA.md`) |
 
 Lo que falta, en `PENDIENTES.md`.

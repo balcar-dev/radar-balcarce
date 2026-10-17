@@ -1,6 +1,6 @@
 {
   "actualizado": "2026-09-25",
-  "nota": "Instituciones de Balcarce que organizan eventos, para pedirles las fechas. Sólo canales que publica la propia institución, con la dirección de donde salió cada dato (fuente) y la fecha en que se verificó. El repo es público: nunca un celular personal que no esté publicado como contacto de la institución. Cuándo se les escribió y si respondieron lo lleva el panel (panel/datos/), no este archivo. Meses: sólo los que tienen respaldo en una fuente; vacío si no se sabe.",
+  "nota": "Instituciones de Balcarce que organizan eventos, para pedirles las fechas. Sólo canales que publica la propia institución, con la dirección de donde salió cada dato (fuente) y la fecha en que se verificó. El repo es público: nunca un celular personal que no esté publicado como contacto de la institución. Cuándo se les escribió y si respondieron lo lleva el panel del celular (cifrado, en web/data/contactos-celular.json), no este archivo. Meses: sólo los que tienen respaldo en una fuente; vacío si no se sabe.",
   "contactos": [
     {
       "id": "municipio-balcarce",

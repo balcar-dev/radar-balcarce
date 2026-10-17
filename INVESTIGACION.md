@@ -226,8 +226,9 @@ De la investigación salieron cuatro cambios. **Los cuatro están aplicados:**
    IA y, en las fotos, la marca de menores (regla 73 de
    `docs/10-REGLAS-Y-PRUEBAS.md`).
 4. **La regla del reclamo** (secciones 1 a 3) está explicada en el código, al lado
-   de la regla (`panel/buzon.mjs`), para que nadie la lea como una traba
-   burocrática.
+   de la regla (estaba en `panel/buzon.mjs`, el buzón del panel de la PC, retirado el
+   17/10; hoy la regla está en `POLITICA-PRIVACIDAD.md`), para que nadie la lea como
+   una traba burocrática.
 
 **Zona gris (25/09):** los posteos de redes no nombran la fuente y enlazan a
 nuestra nota, donde sí se cita y se enlaza el original (regla 10 de

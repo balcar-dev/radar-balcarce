@@ -42,8 +42,8 @@ Dentro de `web/scripts/generar-datos.mjs`, después de decidir qué notas se
 publican (`docs/03-SELECCION.md`, paso 11) y antes de armar el archivo.
 **Elegir fotos nuevas es sólo en la nube** (en GitHub Actions: gasta cupo de
 IA). **Poner las que ya están en el banco** (`conFotosDelBanco`,
-`web/scripts/fotos-notas.mjs`) corre siempre, también en la PC (28/09: antes
-una corrida en la PC dejaba `portada.json` sin ninguna foto). Si elegir falla,
+`web/scripts/fotos-notas.mjs`) corre siempre, aunque no se elijan nuevas (28/09:
+antes una corrida sin elegir dejaba `portada.json` sin ninguna foto). Si elegir falla,
 las notas salen con lo que ya tenía el banco ("fotos: no se pudieron elegir
 nuevas (…); quedan las del banco").
 
@@ -323,7 +323,7 @@ Ver `docs/07-REDES.md`.
 
 | Archivo | Qué hace | Quién lo llama | Qué lee | Qué escribe |
 |---|---|---|---|---|
-| `web/scripts/fotos-notas.mjs` | A qué notas se les prueba foto (`elegirFotosNuevas`, `elegiblePorSeccion`, `TOPE_POR_CORRIDA`; sólo en la nube) y qué se guarda; `fotoDeLaWeb` y `conFotosDelBanco` (las ya guardadas, nube y PC) | `generar-datos.mjs` | El banco anterior | Devuelve el banco nuevo y los archivos |
+| `web/scripts/fotos-notas.mjs` | A qué notas se les prueba foto (`elegirFotosNuevas`, `elegiblePorSeccion`, `TOPE_POR_CORRIDA`; sólo en la nube) y qué se guarda; `fotoDeLaWeb` y `conFotosDelBanco` (las ya guardadas, en cada corrida) | `generar-datos.mjs` | El banco anterior | Devuelve el banco nuevo y los archivos |
 | `ingesta/fotos.mjs` | Candidatas (`og:image`), descarga, comparación con Gemini o Groq, red de seguridad contra la marca, persona pública y Wikimedia (`elegirFotoParaNota`) | `fotos-notas.mjs` | Las páginas de los medios, las APIs de Gemini, Groq y Wikimedia | — |
 | `web/scripts/generar-datos.mjs` | Dispara todo y escribe los archivos | `actualizar.yml` | `banco-fotos.json` | `web/data/banco-fotos.json`, `web/public/fotos-notas/`, el campo `foto` de cada nota |
 | `web/data/banco-fotos.json` | El banco: qué nota se probó y con qué resultado | — | — | — |
@@ -334,9 +334,8 @@ Ver `docs/07-REDES.md`.
 | `reels/claves.mjs` | `claveClasificacion` y `claveGroq` | `ingesta/fotos.mjs` | `.env`, variables | — |
 | `web/scripts/ilustrar-notas.mjs` | Las ilustraciones con IA para notas sin foto (reglas 182 y 185): filtros (`motivoParaSaltar`), tono (`tonoDeLaNota`), prompt con Gemini, imagen con el Worker de Cloudflare, control con visión, topes (`cupoAutomatico`); `revisar`, `aplicar` y `automatico` | `ilustrar-notas.yml` (el reloj de Cloudflare cada 2 h, o a mano) | `portada.json`, `archivo.json`, el banco, las manuales, `fotos-ia.json` | En la revisión, sólo el adjunto; al aplicar (a mano o en automático), `web/data/fotos-ia.json` y `web/public/fotos-notas/<id>-ia.jpg` |
 | `web/data/fotos-ia.json` | Las ilustraciones aplicadas (lo escribe sólo «Ilustrar notas sin foto») | — | — | — |
-| `web/scripts/achicar-foto.mjs` | Achicar para guardar (1.200 px) y para la IA (1.024 px, `achicarParaIA`); la huella (`huellaDeFoto`, `mismaFoto`) | `fotos-notas.mjs`, `ilustrar-notas.mjs`, el script del 17/10 | — | — |
+| `web/scripts/achicar-foto.mjs` | Achicar para guardar (1.200 px) y para la IA (1.024 px, `achicarParaIA`); la huella (`huellaDeFoto`, `mismaFoto`) | `fotos-notas.mjs`, `ilustrar-notas.mjs` | — | — |
 | `web/scripts/nombres-de-persona.mjs` | `nombresDePersona`: el control del prompt de las ilustraciones (antes en `ingesta/foto-ia.mjs`, que se borró) | `ilustrar-notas.mjs` | — | — |
-| `web/scripts/arreglar-fotos-17-10.mjs` | El arreglo de los datos de la auditoría del 16/10 (§ 14), a mano y una vez | Una persona en la PC | El banco, `fotos-ia.json`, el archivo, la portada | Con `--aplicar`: el banco, `fotos-ia.json`, `web/public/fotos-notas/` |
 | `ingesta/fotos-menores.mjs` | La excepción de la regla 186 (§ 13): `menorEnActividadOficial`, `esFuenteOficialParaMenores`, `nombraAUnMenor`, las listas `ACTIVIDADES` y `PROHIBIDAS`, el interruptor | `ingesta/fotos.mjs`, `web/scripts/fotos-notas.mjs` | La nota, `FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES` (`ingesta/fuentes.mjs`), `FOTOS_MENORES_OFICIALES` | — |
 
 ## Dónde se toca cada cosa
@@ -349,7 +348,7 @@ Ver `docs/07-REDES.md`.
 | Cambiar el modelo | `MODELO_GEMINI` y `MODELO_GROQ_VISION` (`ingesta/fotos.mjs`) |
 | Qué licencias de Wikimedia se aceptan | `WIKIMEDIA_LICENCIAS_LIBRES` (`ingesta/fotos.mjs`) |
 | Que una nota vuelva a probarse | Borrar su entrada de `web/data/banco-fotos.json` |
-| Sacar una foto que no debía salir | En la entrada del banco, sacar `archivo` y `credito` y poner `"intentado": true` y `"descartada": { "motivo": "…", "cuando": "…", "por": "…", "imagenOriginal": "…" }` (como hace `descartar` de `web/scripts/arreglar-fotos-17-10.mjs`), y borrar el archivo de `web/public/fotos-notas/`: no vuelve en esa nota ni en otra |
+| Sacar una foto que no debía salir | En la entrada del banco, sacar `archivo` y `credito` y poner `"intentado": true` y `"descartada": { "motivo": "…", "cuando": "…", "por": "…", "imagenOriginal": "…" }` (como quedaron las que sacó el arreglo del 17/10, § 14), y borrar el archivo de `web/public/fotos-notas/`: no vuelve en esa nota ni en otra |
 | Cuántos años puede tener una foto de Wikimedia | `ANTIGUEDAD_MAXIMA_WIKIMEDIA` (`ingesta/fotos.mjs`) |
 | Cuándo una foto es "la misma" | `DISTANCIA_DE_LA_MISMA_FOTO` (`web/scripts/achicar-foto.mjs`); cuándo dos notas son "del mismo tema", `mismoTema` (`web/scripts/fotos-notas.mjs`) |
 | Qué casos pide la segunda opinión | `esDudosa` y `PALABRAS_JUVENILES` (`ingesta/fotos.mjs`) |
@@ -550,27 +549,18 @@ sin sumar costos (sólo las claves gratis y Cloudflare). Lo que cambió:
 | Un solo camino de ilustración (Cloudflare); las de Gemini web se controlan igual; se borró el código muerto y los modelos sin uso del Worker | `ilustrar-notas.mjs`, `infra/imagenes-cloudflare/worker.mjs` | 206 |
 | `npm run auditar-fotos` separa la foto real de la ilustración y de lo sacado | `motivoDeLaNota` (`ingesta/auditar-fotos.mjs`) | 203 |
 
-**El arreglo de los datos** (`web/scripts/arreglar-fotos-17-10.mjs`). No lo corre ningún workflow: lo corre una persona en la PC, entre dos
-corridas de «Actualizar la web» (por ejemplo a los :12 o a los :42), con el repositorio al día:
-
-    git pull --rebase
-    node web/scripts/arreglar-fotos-17-10.mjs              mira y cuenta, no cambia nada
-    node web/scripts/arreglar-fotos-17-10.mjs --aplicar    cambia los datos y las fotos
-    git commit -m "Fotos: el arreglo de la auditoría del 16/10" -- web/data/banco-fotos.json web/data/fotos-ia.json web/public/fotos-notas
-    git push
-
-Qué hace, en orden: (1) saca las fotos que la auditoría vio mal (`DESCARTES`: la captura con «Activar Windows» `1vhit3n`, el flyer de la
+**El arreglo de los datos** (un script de una sola vez, `web/scripts/arreglar-fotos-17-10.mjs`, que se corrió el 17/10 y se borró ese
+mismo día; queda en el historial de git). Lo que hizo quedó en `web/data/banco-fotos.json` y `web/data/fotos-ia.json`. En orden: (1) sacó las fotos que la auditoría vio mal (`DESCARTES`: la captura con «Activar Windows» `1vhit3n`, el flyer de la
 rifa `66so6t`, la foto de stock `130eay0`, el pádel `1ge6irq` y el rugby del «Torneo Desarrollo» `11lwkfl`, `1mfnr70`, `1fi9fiz`, por edad
 dudosa) y las de Wikimedia viejas o de otra persona (`WIKIMEDIA_VIEJAS_O_EQUIVOCADAS`: Messi 2012, el F1 de 2016, otro Román González,
-otro Julián Álvarez, un paisaje para una diputada, retratos de 2006 a 2019), dejándolas `descartada` con su huella; (2) le pone la huella a
-cada foto del banco; (3) saca las repetidas de temas distintos (queda la de la nota más vieja); (4) vuelve a bajar las fotos de notas vivas
-que la poda borró de más, salvo las de `NO_RESTAURAR` (las dos de Virginia Aparicio: posible víctima, sin foto real por las dudas) y las que
-quedarían repetidas; (5) saca de `fotos-ia.json` las cinco de Gemini web que rompen las reglas y una automática con las tiras de Adidas
-(`ILUSTRACIONES_A_SACAR`), y anota el control de la que estaba bien. Se puede correr dos veces: lo hecho no se repite. `--sin-red` no baja
-nada. Las imágenes rotas del archivo las arregla el código en la próxima corrida.
+otro Julián Álvarez, un paisaje para una diputada, retratos de 2006 a 2019), dejándolas `descartada` con su huella; (2) le puso la huella a
+cada foto del banco; (3) sacó las repetidas de temas distintos (quedó la de la nota más vieja); (4) volvió a bajar las fotos de notas vivas
+que la poda borró de más, salvo las dos de Virginia Aparicio (posible víctima, sin foto real por las dudas) y las que quedarían repetidas;
+(5) sacó de `fotos-ia.json` las cinco de Gemini web que rompían las reglas y una automática con las tiras de Adidas, y anotó el control de la
+que estaba bien. Las imágenes rotas del archivo las arregla el código en cada corrida.
 
-Medido el 17/10 con los datos del 16/10 a la noche (sin aplicar): de 1.117 notas con página (sin las propias), **867 con foto real, 11 con
-ilustración y 239 con la placa** (9 con la imagen rota); después del arreglo, **832 con foto real, 5 con ilustración y 280 con la placa**.
+Medido el 17/10 con los datos del 16/10 a la noche, antes de aplicarlo: de 1.117 notas con página (sin las propias), **867 con foto real, 11 con
+ilustración y 239 con la placa** (9 con la imagen rota); lo esperado después del arreglo, **832 con foto real, 5 con ilustración y 280 con la placa**.
 Pierden la foto real 38 notas (7 de la auditoría, 17 de Wikimedia y 14 repetidas de otro tema) y la recuperan 3 (podadas de más); pierden la
 ilustración 6. Las notas de las últimas 24 horas que quedaron sin nada las ilustra sola la próxima corrida automática; para las demás,
 correr a mano «Ilustrar notas sin foto» con sus ids.

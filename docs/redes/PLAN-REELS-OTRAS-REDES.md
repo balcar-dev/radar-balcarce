@@ -40,7 +40,7 @@ elegido pone primero lo gratis, sin revisión y sin riesgo de cuenta.
 - **El libro** (`web/data/redes.json`) y su regla de no repetir; **los problemas** (`libro.problemas`); **el interruptor** `REDES_ACTIVAS`
   (`estaActivo`, `redes/elegir.mjs`); **el candado** `concurrency: redes`; **la simulación**; **el aviso de la voz** («Voz generada con
   inteligencia artificial.», regla 114).
-- **Qué piezas son reels** hoy (`redes/piezas.mjs`, `panel/horarios.mjs`): "Un día como hoy" 9:00, los tres repasos 10:00 / 15:00 / 21:00,
+- **Qué piezas son reels** hoy (`redes/piezas.mjs`, `redes/horarios.mjs`): "Un día como hoy" 9:00, los tres repasos 10:00 / 15:00 / 21:00,
   Participá o la agenda a las 12:00 de lunes a viernes, los teléfonos útiles los sábados 17:00 y el feriado 8:00. El clima de la mañana y
   de la noche y la farmacia son **historia** en Instagram (y reel sólo en Facebook).
 - **Dónde está el video en la corrida**: sólo en la máquina de GitHub mientras corre "Redes" (`reels/salida/*.mp4`); después queda 3 días

@@ -71,8 +71,8 @@ export function diaRotativoDeUtiles() {
 
 /**
  * Decide si HOY toca publicar la historia de números útiles: el día de
- * `diaRotativoDeUtiles`. Un día hábil por semana, que rota. (El panel puede
- * fijar un día a mano: ver `toca` en panel/horarios.mjs.)
+ * `diaRotativoDeUtiles`. Un día hábil por semana, que rota. (Las pruebas pueden
+ * fijar otro día: ver `toca` en redes/horarios.mjs.)
  */
 export function tocaHoy(fecha = new Date()) {
   return diaSemanaAR(fecha) === diaRotativoDeUtiles(fecha);

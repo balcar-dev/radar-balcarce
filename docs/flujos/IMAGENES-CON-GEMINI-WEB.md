@@ -16,8 +16,8 @@ gris de los términos de Google. Los dueños pidieron un solo camino claro y sin
 - **Un solo camino:** «Ilustrar notas sin foto» (`web/scripts/ilustrar-notas.mjs`), automático cada 2 horas con Cloudflare (SDXL, gratis) y el
   control con visión (`docs/05-FOTOS.md`, § 12).
 - **Las de Gemini web que ya estaban** pasan por el mismo control la próxima vez que su nota entra en una revisión: si pasan, quedan; si no,
-  se reemplazan por la automática o se sacan. Las cinco que la auditoría vio mal las saca el script del 17/10
-  (`web/scripts/arreglar-fotos-17-10.mjs`, `docs/05-FOTOS.md`, § 14).
+  se reemplazan por la automática o se sacan. Las cinco que la auditoría vio mal las sacó el arreglo del 17/10
+  (`docs/05-FOTOS.md`, § 14; el script, de una sola vez, ya se borró).
 
 ## Lo que tiene que hacer una persona
 

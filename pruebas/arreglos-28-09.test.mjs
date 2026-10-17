@@ -178,7 +178,7 @@ test('las fotos que ya están en el banco se ponen también en la PC; elegir nue
   assert.equal(notas[1].foto, undefined);
   assert.equal(notas[2].foto, undefined);
   assert.deepEqual(conFotosDelBanco([{ id: 'a' }], undefined), [{ id: 'a' }]);
-  // Fuera del `if (enLaNube)`: al comienzo de la línea, sin sangría.
+  // Al comienzo de la línea, sin sangría: corre siempre, aunque elegir fotos nuevas falle.
   // Desde el 16/10 (regla 182) con un tercer argumento: las ilustraciones con IA, con la prioridad más baja.
   assert.match(GENERAR, /^conFotosDelBanco\(deLaIngesta, bancoDeFotos(, conIlustraciones)?\);/m);
   assert.match(GENERAR, /const \{ elegirFotosNuevas \} = await import\('\.\/fotos-notas\.mjs'\);/);

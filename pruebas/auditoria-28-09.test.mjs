@@ -40,15 +40,9 @@ test('se borran las fotos de lo retirado a mano y de lo que ya no está en ning�
   assert.deepEqual(nuevo.sinFoto, banco.sinFoto);
 });
 
-test('la poda de fotos corre en la nube y el workflow sube las fotos borradas', () => {
-  assert.match(leer('web/scripts/generar-datos.mjs'), /enLaNube && fs\.existsSync\(FOTOS_NOTAS\)[\s\S]*podarFotos/);
+test('la poda de fotos corre en cada vuelta y el workflow sube las fotos borradas', () => {
+  assert.match(leer('web/scripts/generar-datos.mjs'), /if \(fs\.existsSync\(FOTOS_NOTAS\)\) \{[\s\S]*podarFotos/);
   assert.match(leer('.github/workflows/actualizar.yml'), /git add [^\n]*web\/public\/fotos-notas\//);
-});
-
-test('el panel de la PC no reescribe solo con IA (lo hace sólo la nube)', () => {
-  const servidor = leer('panel/servidor.mjs');
-  assert.doesNotMatch(servidor, /reescribirAutomaticas/);
-  assert.doesNotMatch(servidor, /reescribirPendientes\(\)/);
 });
 
 test('voz.mjs ya no habla: sin la voz de Edge ni su paquete (29/09), así no corre nada al importarlo', () => {

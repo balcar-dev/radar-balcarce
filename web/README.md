@@ -23,11 +23,13 @@ npm run build        # foto del dólar + redirecciones + next build (NO arma los
 
 Ojo:
 
-- `npm run datos` en la PC trabaja en "modo PC": lee lo que buscó el panel de la
-  PC (`../panel/datos/`), sin IA ni fotos nuevas, y deja modificados varios
-  archivos de `data/` (`portada.json`, `archivo.json` y otros). **No se suben**:
-  los arma GitHub. Antes de un `git pull`, `git checkout` de esos archivos (o, si
-  chocan, `git checkout --theirs`).
+- `npm run datos` arma la web de verdad (la ingesta, la lectura y la redacción
+  con IA, las fotos) y lo corre GitHub Actions ("Actualizar la web"). En la PC no
+  hace nada (desde el 17/10 no hay "modo PC": el panel de la PC se retiró); para
+  ver el sitio con los datos de GitHub alcanza con `git pull` y `npm run build`.
+  Para correrlo igual, `ARMAR_EN_LA_PC=1 npm run datos`: deja modificados varios
+  archivos de `data/` que **no se suben** (antes de un `git pull`, `git checkout`
+  de esos archivos o, si chocan, `git checkout --theirs`).
 - `npm run build` compila con lo que ya hay en `data/` (sin datos, arranca igual,
   con un aviso).
 - Para corregir o retirar una nota no se toca el código: el panel del celular o

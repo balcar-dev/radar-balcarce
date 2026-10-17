@@ -12,7 +12,7 @@ import {
   claveDeEvento, parteDeEvento, rutaDeEvento, claveDeRuta, nombreDeEvento, partesDeFecha, instante, terminaEl,
   yaPaso, tienePagina, cuandoEs, dondeEs, copeteDeEvento, entradaDe, firmaDeEvento, mismoEvento, proximos,
   actualizarAgenda, comoAgendaJson, rangoDeCalendario, enlaceGoogleCalendar, icsDeEvento, fichaDeEvento,
-  confirmacionDeAnual, DIAS_DESPUES, fuentesDeEvento, detallesDeEvento, descripcionPropia,
+  confirmacionDeAnual, DIAS_DESPUES, fuentesDeEvento, detallesDeEvento,
 } from '../web/lib/eventos.js';
 import { slugDe } from '../web/lib/ruta.js';
 
@@ -99,11 +99,6 @@ test('cada ficha dice quién la hizo en UNA línea corta, y lo mismo en los dato
   assert.ok(muni.texto.length <= 60);
   assert.match(muni.explicacion, /Se armó con los datos que publicó la Municipalidad de Balcarce/);
 
-  const panel = firmaDeEvento({ origen: 'panel', organizador: 'Club Pato' });
-  assert.equal(panel.texto, 'Ficha cargada por la redacción');
-  assert.match(panel.explicacion, /La cargó y la publicó una persona de la redacción, con los datos que nos pasó Club Pato/);
-  assert.ok(panel.texto.length <= 60);
-
   const ld = fichaDeEvento({ ...postre, ruta: '/agenda/x' }, { base: 'https://radarbalcarce.com', url: 'https://radarbalcarce.com/agenda/x' });
   assert.equal(ld.author.name, muni.autor);
   assert.ok(!/inteligencia artificial|revis/i.test(ld.author.name));
@@ -112,7 +107,7 @@ test('cada ficha dice quién la hizo en UNA línea corta, y lo mismo en los dato
   assert.match(p, /<PieConFuentes firma=\{firma\.texto\} explicacion=\{firma\.explicacion\} fuentes=\{fuentesDeEvento\(e\)\}/);
   assert.ok(!/className="firma-nota"/.test(p), 'sin párrafo de firma a la vista');
   assert.deepEqual(fuentesDeEvento(postre), [{ medio: 'Agenda de la Municipalidad de Balcarce', enlace: postre.url }]);
-  assert.deepEqual(fuentesDeEvento({ origen: 'panel' }), []);
+  assert.deepEqual(fuentesDeEvento({ origen: 'municipio' }), [], 'sin enlace, sin fuentes');
 });
 
 // ------------------------------------------- lo que NO va en la ficha (25/09)
@@ -170,9 +165,8 @@ test('los nombres de la agenda se escriben bien: tildes, mayúscula inicial, sig
 test('la descripción que copió la máquina de la fuente no sale en ninguna parte: ni página, ni .ics, ni Google', () => {
   const p = leer('web/app/agenda/[id]/page.js');
   assert.ok(!/Lo que cuenta/.test(p) && !/Texto de la agenda oficial/.test(p) && !/Ver en la agenda de/.test(p));
-  assert.ok(!/\be\.descripcion\b/.test(p), 'la página no toca la descripción cruda: pasa por descripcionPropia');
+  assert.ok(!/\be\.descripcion\b/.test(p), 'la página no toca la descripción cruda');
   for (const e of REALES) {
-    assert.equal(descripcionPropia(e), null);
     const salidas = [
       copeteDeEvento(e), JSON.stringify(fichaDeEvento(e, { url: 'https://radarbalcarce.com/agenda/x' })),
       icsDeEvento(e, { url: 'https://radarbalcarce.com/agenda/x' }), enlaceGoogleCalendar(e), JSON.stringify(firmaDeEvento(e)),
@@ -185,10 +179,6 @@ test('la descripción que copió la máquina de la fuente no sale en ninguna par
   }
   // Los datos para Google llevan el copete de plantilla, no la descripción.
   assert.equal(fichaDeEvento(REALES[0]).description, copeteDeEvento(REALES[0]));
-  // Sólo lo que escribió una persona de la redacción se muestra, y a Google va su primera oración.
-  const propia = { origen: 'panel', descripcion: 'Peña con folclore y empanadas. Trae tu silla.\nHay mesas para todos.' };
-  assert.equal(descripcionPropia(propia), propia.descripcion);
-  assert.equal(fichaDeEvento({ ...propia, nombre: 'Peña', desde: '2026-10-03' }).description, 'Peña con folclore y empanadas.');
 });
 
 test('"Qué hay": etiquetas con nuestras palabras, detectadas en la descripción y nunca copiadas', () => {
@@ -248,14 +238,12 @@ test('la lista de próximos: sin lo que pasó, sin lo retirado, por fecha y sin 
   const lista = [
     { id: 'muni-2', nombre: 'Tierras del Diablo', desde: '2026-10-11 06:00:00' },
     { id: 'muni-1', nombre: 'Fiesta del Postre', desde: '2026-10-09 12:30:00', origen: 'municipio' },
-    {
-      id: 'manual-1', nombre: '22° Fiesta del Postre', desde: '2026-10-09 12:30:00', origen: 'panel', descripcion: 'x',
-    },
+    { id: 'muni-5', nombre: '22° Fiesta del Postre', desde: '2026-10-09 12:30:00', origen: 'municipio' },
     { id: 'muni-3', nombre: 'Ya fue', desde: '2026-09-20 10:00:00' },
     { id: 'muni-4', nombre: 'Sacado', desde: '2026-10-01 10:00:00', retirado: true },
   ];
   const r = proximos(lista, AHORA);
-  assert.deepEqual(r.map((e) => e.id), ['manual-1', 'muni-2'], 'el del panel le gana al del municipio si es el mismo');
+  assert.deepEqual(r.map((e) => e.id), ['muni-1', 'muni-2'], 'el mismo evento cargado dos veces sale una sola');
   assert.ok(mismoEvento(lista[1], lista[2]));
   assert.ok(!mismoEvento(lista[0], lista[1]));
 });
@@ -280,20 +268,7 @@ test('con la API del municipio caída no se da nada por retirado, y en la PC tam
   const [antes] = actualizarAgenda({ municipio: [postre], ahora: AHORA });
   const [caida] = actualizarAgenda({ anterior: [antes], municipio: null, ahora: AHORA });
   assert.equal(caida.retirado, undefined);
-  const [enLaPc] = actualizarAgenda({ anterior: [antes], municipio: [], ahora: AHORA, retirar: false });
-  assert.equal(enLaPc.retirado, undefined);
-  assert.match(leer('web/scripts/generar-datos.mjs'), /retirar: enLaNube/);
   assert.match(leer('web/scripts/generar-datos.mjs'), /agenda\.municipioOk !== false/);
-});
-
-test('lo que el panel despublica o borra deja de tener página; si no se pudo leer, no se toca', () => {
-  const manual = {
-    id: 'manual-1', nombre: 'Peña', desde: '2026-10-10 21:00:00', organizador: 'Club',
-  };
-  const [publicado] = actualizarAgenda({ panel: [manual], ahora: AHORA });
-  assert.equal(publicado.origen, 'panel');
-  assert.equal(actualizarAgenda({ anterior: [publicado], panel: [], ahora: AHORA }).length, 0);
-  assert.equal(actualizarAgenda({ anterior: [publicado], panel: null, ahora: AHORA }).length, 1);
 });
 
 test('al archivo público va lo que se ve en la web, nada más: ni el afiche, ni quién avisó', () => {
@@ -365,8 +340,6 @@ test('una fiesta anual sólo se enlaza cuando hay un evento con fecha confirmada
   const anual = { id: 'fiesta-postre', clave: 'fiesta nacional del postre', mesAproximado: 7 };
   assert.equal(confirmacionDeAnual(anual, []), null, 'sin evento, "fecha a confirmar"');
   assert.equal(confirmacionDeAnual(anual, [postre])?.id, 'muni-22540', 'la reconoce por el nombre');
-  const cargada = { id: 'manual-9', nombre: 'La del Postre', anualId: 'fiesta-postre' };
-  assert.equal(confirmacionDeAnual(anual, [postre, cargada])?.id, 'manual-9', 'la ligada desde el panel manda');
   assert.equal(confirmacionDeAnual({ id: 'x', clave: 'postre' }, [{ nombre: 'Postres de la abuela' }]), null, 'palabra entera, no un pedazo');
   // Sin clave, sirve el nombre sin el paréntesis.
   assert.equal(confirmacionDeAnual({ id: 't', nombre: 'Tierras del Diablo (trail)' }, [{ id: 'muni-2', nombre: 'UTTD TIERRAS DEL DIABLO' }])?.id, 'muni-2');

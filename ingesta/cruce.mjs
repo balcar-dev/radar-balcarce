@@ -57,7 +57,7 @@ export const CRUCE = {
   // parecidas (es "gobierno", "hoy", "argentina"): no entra al índice.
   palabraComun: 0.05,
   // El cruce coherente (regla 184). Medido el 16/10 con la lectura de las 12:00
-  // (7.812 notas): docs/flujo/medir-cruce-coherente.mjs.
+  // (7.812 notas): scripts/medir/cruce-coherente.mjs.
   coherente: {
     // Un grupo con más notas que éstas se revisa (no se parte por tamaño: se
     // parte si al revisarlo no es coherente; la muerte de Confessore, 52 notas

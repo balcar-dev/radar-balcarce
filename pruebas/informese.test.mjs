@@ -18,7 +18,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { parsearFeed, enlaceAlternativo, paraPruebas } from '../ingesta/ingesta.mjs';
 import {
-  origenesDe, textoCompletoDe, revalidarExtras, conEnlacesDelLector, completarReescritura,
+  origenesDe, textosDeLasFuentes, revalidarExtras, conEnlacesDelLector, completarReescritura,
 } from '../reels/reescritura.mjs';
 import { fuentesDeLaNota, enlaceParaElLector } from '../web/lib/fuentes-de-la-nota.js';
 
@@ -77,17 +77,19 @@ test('el enlace alternativo se reconoce con los atributos en cualquier orden', (
 test('el texto completo se sigue bajando de la entrada del feed, que lo trae entero', async () => {
   const pedidos = [];
   const traer = async (url) => { pedidos.push(url); return 'texto'; };
-  const r = await textoCompletoDe({ enlace: PAGINA, enlaceFeed: FEED_XML }, traer);
-  assert.deepEqual(pedidos, [FEED_XML]);
-  assert.equal(r.numero, 1);
+  const r = await textosDeLasFuentes({ enlace: PAGINA, enlaceFeed: FEED_XML }, traer);
+  assert.equal(pedidos[0], FEED_XML);
+  assert.ok(!pedidos.includes(PAGINA), 'la página no se baja: la entrada del feed trae el texto entero');
+  assert.equal(r[0].indice, 0);
   // Y de otra fuente de Blogger que contó lo mismo, también de su entrada.
   const pedidos2 = [];
   const nota = {
     enlace: 'https://otro.com/x',
     origenes: [{ medio: 'Otro', enlace: 'https://otro.com/x' }, { medio: 'Infórmese', enlace: PAGINA, enlaceFeed: FEED_XML }],
   };
-  await textoCompletoDe(nota, async (url) => { pedidos2.push(url); return url === FEED_XML ? 'texto' : null; });
-  assert.deepEqual(pedidos2, ['https://otro.com/x', FEED_XML]);
+  await textosDeLasFuentes(nota, async (url) => { pedidos2.push(url); return url === FEED_XML ? 'texto' : null; });
+  assert.ok(pedidos2.includes('https://otro.com/x') && pedidos2.includes(FEED_XML), pedidos2.join(' '));
+  assert.ok(!pedidos2.includes(PAGINA));
 });
 
 test('las fuentes consultadas nuevas llevan la página, sin el enlace del feed', () => {

@@ -17,7 +17,7 @@ export const RAMA = 'main';
  *    día anterior; acepta hasta las 3). Y un segundo intento a los :30 de esas tres (9:30, 21:30 y 0:30): si el pedido de los :00 no llegó,
  *    la medición o el cierre no se pierden (si llegó, la segunda corrida no repite nada: el vigilante anota lo que ya hizo).
  *  - :05, :35 y :45, de 7 a 23 de Balcarce → el reloj de Redes (acción "reloj"). Las piezas van de las 7:00 a la medianoche y Facebook de 8
- *    a 22 (redes/piezas.mjs, panel/horarios.mjs); de madrugada no hay nada que publicar. Ya no arranca además al terminar cada "Actualizar".
+ *    a 22 (redes/piezas.mjs, redes/horarios.mjs); de madrugada no hay nada que publicar. Ya no arranca además al terminar cada "Actualizar".
  *  - :15 de las 11 UTC (8:15 en Balcarce) y de las 0 UTC (21:15) → el informe diario por mail (redes/informe-diario.mjs); segundo intento a
  *    los :30 de esas horas (el Worker del vigilante no manda dos mails con la misma clave).
  *  - :20 de las horas UTC pares de 10 a 2 (7, 9, 11… 23 en Balcarce) → "Ilustrar notas sin foto" en modo automático (regla 185).

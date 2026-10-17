@@ -5,6 +5,8 @@ nada de `docs/` fuera de esta carpeta. Nada de esto está decidido: cada regla d
 decisión (pedido de Andrés y Hernán del 15/10: "re-pensar todo el modelo de búsquedas, puntajes y
 semáforos", "no arrastrar nada viejo", "elegir el mejor modelo, no el más barato").*
 
+*17/10/2026: `medir-etapas.mjs` y sus planillas (`duplicadas-publicadas.csv`, `lecturas-por-grupo.csv`, `ruido-publicado.csv`, `medidas.json`) se borraron en la limpieza final (eran de una sola medición; quedan en el historial de git). Los resultados son los de este documento.* Los pares etiquetados a mano y el calibrador siguen, en `scripts/medir/` (`etiquetas-duplicadas.json`, `calibrar-repetidas.mjs`).
+
 ## Cómo se midió y cómo repetirlo
 
     node docs/etapa-2-5/medir-etapas.mjs
@@ -17,7 +19,7 @@ unidas, portada) y las listas de fuentes. Escribe únicamente en esta carpeta:
 | `medidas.json` | todas las cifras de este documento |
 | `lecturas-por-grupo.csv` | visitas por nota, cortadas por lugar, sección, tipo, cantidad de medios, si fue a redes |
 | `duplicadas-publicadas.csv` | los 127 pares de notas publicadas que se parecen (0,45 o más) |
-| `etiquetas-duplicadas.json` | cuáles de esos pares son de verdad el mismo hecho (los leyó Claude uno por uno) |
+| `scripts/medir/etiquetas-duplicadas.json` | cuáles de esos pares son de verdad el mismo hecho (los leyó Claude uno por uno) |
 | `ruido-publicado.csv` | títulos publicados que parecen ruido (búsqueda por palabras, con falsos avisos) |
 
 **Tres advertencias que valen para todo el documento:**
@@ -156,7 +158,7 @@ sólo miran la corrida, la nota del día siguiente salió como nueva.
 ### (2) Qué falla hoy (medido)
 
 Se compararon las 1.329 notas de medios publicadas (archivo + histórico), de a pares a menos de 72 horas,
-y Claude leyó los 127 pares con parecido 0,45 o más (`etiquetas-duplicadas.json`):
+y Claude leyó los 127 pares con parecido 0,45 o más (`scripts/medir/etiquetas-duplicadas.json`):
 
 | | Cantidad |
 |---|---|

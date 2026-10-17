@@ -9,8 +9,8 @@
 // Por eso acá va sólo el nombre de cada medio con el enlace a su nota. Las
 // claves, qué se sabe, qué falta confirmar, lo que aportó cada fuente, los
 // antecedentes y el nivel de verificación se siguen generando y guardando
-// (portada.json y archivo.json), pero son de uso interno: se ven en el panel
-// (panel/panel.html), no en la web, y tampoco van a los datos para Google.
+// (portada.json y archivo.json), pero son de uso interno: no se ven en la web
+// y tampoco van a los datos para Google.
 //
 // La atribución no es opcional (ley 11.723): toda nota tiene al menos la
 // fuente principal, aunque sea de antes de que existieran las fuentes

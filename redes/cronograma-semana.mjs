@@ -12,7 +12,7 @@
 
 import { cronogramaDelDia, PODCASTS } from './piezas.mjs';
 import { vozDePieza, VOCES } from './prompt-redes.mjs';
-import { horariosDe } from '../panel/horarios.mjs';
+import { horariosDe } from './horarios.mjs';
 import { feriadoDelDia } from './feriado.mjs';
 import { diaAR } from '../ingesta/zona.mjs';
 

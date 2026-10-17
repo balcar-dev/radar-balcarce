@@ -19,6 +19,6 @@ export function leerJsonEstricto(archivo, porDefecto = null) {
     throw new Error(`No se pudo leer ${archivo}: ${e.message}`);
   }
   try { return JSON.parse(texto); } catch (e) {
-    throw new Error(`${archivo} está roto (${e.message}). No sigo para no pisarlo con uno vacío; arreglalo o recuperalo (web/scripts/recuperar-archivo.mjs).`);
+    throw new Error(`${archivo} está roto (${e.message}). No sigo para no pisarlo con uno vacío; arreglalo o recuperalo de git (git checkout HEAD~1 -- el archivo) o del respaldo en R2.`);
   }
 }

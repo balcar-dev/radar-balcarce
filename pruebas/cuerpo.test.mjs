@@ -20,7 +20,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { verificar, similitud, depurarCuerpo } from '../ingesta/verificar.mjs';
 import {
-  reescribirAutomaticas, previasDeLaPortada, podarIntentos, textoCompletoDe, MAXIMO_DE_INTENTOS,
+  reescribirAutomaticas, previasDeLaPortada, podarIntentos, MAXIMO_DE_INTENTOS,
 } from '../reels/reescritura.mjs';
 import { tieneCuerpo, esperaCuerpo, palabrasDe, PALABRAS_MINIMAS_CUERPO } from '../web/lib/cuerpo.js';
 import { elegirParaFacebook, sePuedeSola } from '../redes/elegir.mjs';
@@ -281,7 +281,6 @@ test('si el texto de la nota principal no se puede bajar, se usa el de otra fuen
     enlace: 'https://a/1',
   };
   const traer = async (url) => (url === 'https://b/2' ? TEXTO_COMPLETO : null);
-  assert.deepEqual(await textoCompletoDe(nota, traer), { texto: TEXTO_COMPLETO, numero: 2 });
   const { pedidos } = await correr([bueno], { minimoDeMaterial: 60, traer, nota });
   // Desde el 15/10 (regla 174) la IA numera las fuentes por lo que aportan: la única con texto completo,
   // la de B, pasa a ser su Fuente 1 (la nota sigue teniendo la dirección de la de A).

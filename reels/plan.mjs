@@ -16,7 +16,7 @@ import { placaClima, placaFarmacia, placaRepaso, placaUtiles, placaAgenda, placa
 import { PIEZAS_PARTICIPA, IDS_PARTICIPA, guionParticipa, MAIL_REDACCION } from '../redes/participa.mjs';
 import { feriadoDelDia, fechaDeFeriado, datosParaContar, guionFeriado } from '../redes/feriado.mjs';
 import { NUMEROS, HORA_DE_CAMBIO, MINUTO_DE_CAMBIO } from '../ingesta/utiles.mjs';
-import { horariosDe, toca } from '../panel/horarios.mjs';
+import { horariosDe, toca } from '../redes/horarios.mjs';
 import { enlaceDeNota } from '../redes/elegir.mjs';
 import { fijaVigente } from './fijas.mjs';
 import { efemerideDelDia } from '../redes/efemeride.mjs';
@@ -111,7 +111,7 @@ export function hastaCuandoElTurno(hora = '19:00') {
 
 const F_AGENDA_WEB = path.join(import.meta.dirname, '..', 'web', 'data', 'agenda.json');
 
-/** Los horarios de las piezas fijas: los de fábrica (panel/horarios.mjs), o los que se pasen en `estado` (las pruebas apagan piezas así).
+/** Los horarios de las piezas fijas: los de fábrica (redes/horarios.mjs), o los que se pasen en `estado` (las pruebas apagan piezas así).
  *  Desde el 17/10 ya no se lee el estado.json del panel de la PC, que está en desuso. */
 function horariosConfigurados(estado) {
   const porId = {};
@@ -158,7 +158,7 @@ function leerLibro() {
  *  "modo PC" (los datos del panel de la PC, en desuso). */
 function leerDatos() {
   if (fs.existsSync(PORTADA_WEB)) return datosDeLaWeb(JSON.parse(fs.readFileSync(PORTADA_WEB, 'utf8')));
-  throw new Error('Todavía no hay datos: falta web/data/portada.json (cd web && npm run datos)');
+  throw new Error('Todavía no hay datos: falta web/data/portada.json (lo arma "Actualizar la web"; en la PC, git pull)');
 }
 
 // --- los guiones -----------------------------------------------------------
@@ -232,10 +232,10 @@ export function planDelDia(datos, {
 
   const piezas = [];
 
-  // Los horarios y los días son los de fábrica (panel/horarios.mjs). Si una
+  // Los horarios y los días son los de fábrica (redes/horarios.mjs). Si una
   // pieza está apagada o hoy no le toca, directamente no se arma.
   const cuando = horariosConfigurados(estado);
-  // `toca` (panel/horarios.mjs) es la MISMA función que usa el reloj de Redes:
+  // `toca` (redes/horarios.mjs) es la MISMA función que usa el reloj de Redes:
   // los teléfonos útiles salen los sábados.
   const tocaHoy = (id) => forzar.includes(id) || toca(cuando[id], fecha, { estado });
 

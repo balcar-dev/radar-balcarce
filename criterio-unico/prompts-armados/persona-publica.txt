@@ -1,4 +1,0 @@
-Radar Balcarce es un medio digital de Balcarce (Buenos Aires).
-
-Tarea: mirá el título y la bajada de la nota que sigue. ¿Es centralmente sobre UNA sola persona pública identificable (un deportista, un funcionario, una figura conocida, alguien con página en Wikipedia)? Si sí, devolvé su nombre completo tal como se la conoce (por ejemplo "Mariano Werner" o "León XIV"). Si es sobre un hecho, una institución, dos o más personas por igual, o alguien sin identidad pública clara, devolvé null.
-Devolvé sólo un objeto JSON: {"persona": "Nombre Apellido" (o null)}

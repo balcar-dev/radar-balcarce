@@ -101,20 +101,6 @@ export function leerDecisionesCelular(json) {
   return { notas, redes };
 }
 
-/**
- * Las decisiones del panel de la PC (web/data/decisiones.json) con las del
- * celular encima. Si las dos decidieron sobre la misma nota, manda la más
- * nueva; una del celular siempre gana a lo que guardó la máquina (`por: 'ia'`).
- */
-export function unirDecisiones(dePC = {}, delCelular = {}) {
-  const todas = { ...dePC };
-  for (const [id, d] of Object.entries(delCelular)) {
-    const antes = todas[id];
-    if (!decisionHumana(antes) || Date.parse(d.cuando) >= Date.parse(antes.cuando ?? 0)) todas[id] = d;
-  }
-  return todas;
-}
-
 // Lo amarillo que no es para una persona: relleno de afuera que el filtro ya dejó
 // afuera por cantidad de medios o por cupo, y la cotización del dólar. Son decenas
 // por corrida y casi nunca se aprueban (lo mismo que avisa el WhatsApp,
@@ -157,8 +143,10 @@ export function paraDecidir(notas = [], decisiones = {}, {
     if (!n?.id || n.semaforo === 'rojo') continue;
     const d = decisiones?.[n.id];
     const humana = decisionHumana(d);
-    const descartadaEnElCelular = humana && d.desdeElCelular && d.estado === 'descartada';
-    const esperando = humana ? (d.estado === 'pendiente' || descartadaEnElCelular) : n.semaforo === 'amarillo';
+    // Lo que una persona descartó desde el celular queda en la lista, marcado, para poder deshacerlo. (Hasta el 17/10 también
+    // lo que el panel de la PC, retirado, dejaba "pendiente".)
+    const descartadaEnElCelular = humana && d.estado === 'descartada';
+    const esperando = humana ? descartadaEnElCelular : n.semaforo === 'amarillo';
     if (!esperando || (!humana && RELLENO.test(n.motivo ?? ''))) continue;
     if (!humana && !paraUnaPersona.has(n.id)) continue;
     if (!enVentana(n)) continue;
@@ -168,7 +156,7 @@ export function paraDecidir(notas = [], decisiones = {}, {
       titulo: recortar(n.titulo, 200),
       resumen: recortar(n.resumenFuente, 900),
       seccion: n.seccion ?? null,
-      motivo: humana && d.estado === 'pendiente' ? 'marcada "pendiente" en el panel de la PC' : (n.motivo ?? 'sin regla automática'),
+      motivo: n.motivo ?? 'sin regla automática',
       fecha: n.fecha ?? null,
       local: !!n.local,
       fuentes: (n.origenes ?? []).filter((o) => o?.enlace).slice(0, 6).map((o) => ({
@@ -203,8 +191,7 @@ export const DIAS_EN_LA_PAPELERA = 30;
 
 /**
  * La papelera (29/09; Hernán: "si las retiro de la web, ¿a dónde vuelven?"). Una
- * nota que retira una persona (desde el celular, desde el panel de la PC o en
- * retiradas.json) pierde su página, y hasta ahora no había cómo recuperarla una
+ * nota que retira una persona (desde el celular o en retiradas.json) pierde su página, y hasta ahora no había cómo recuperarla una
  * vez que la ingesta la dejaba de traer. Acá se guarda tal como estaba
  * publicada, y si una persona la vuelve a publicar, vuelve a su página con la
  * misma dirección.

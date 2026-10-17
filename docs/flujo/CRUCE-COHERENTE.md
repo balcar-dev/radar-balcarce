@@ -1,7 +1,7 @@
 # El cruce coherente (regla 184)
 
 *16/10/2026. Código: `ingesta/cruce.mjs` (`agruparPorHecho`, `CRUCE.coherente`, `CRUCE_COHERENTE`). Medición:
-`docs/flujo/medir-cruce-coherente.mjs`. Pruebas: `pruebas/cruce-grupos-coherentes.test.mjs`, con casos reales en
+`scripts/medir/cruce-coherente.mjs`. Pruebas: `pruebas/cruce-grupos-coherentes.test.mjs`, con casos reales en
 `pruebas/datos-fijos/cruce-coherente.json`.*
 
 ## En pocas palabras
@@ -120,7 +120,7 @@ línea: "cruce coherente (regla 184): N grupos encadenados revisados, M partidos
   `CRUCE_COHERENTE=no node …`. Apagado, el cruce es **idéntico** al de antes (comprobado nota por nota con la lectura
   de las 11:43).
 - Medir con la última lectura guardada (`.cache/informe-del-dia-*.json`, la que deja
-  `docs/flujo/generar-informe-del-dia.mjs`): `node docs/flujo/medir-cruce-coherente.mjs --ejemplos`. Para calibrar:
+  `scripts/medir/informe-del-dia.mjs`): `node scripts/medir/cruce-coherente.mjs --ejemplos`. Para calibrar:
   `--horas=30 --promedio=0.22 --resto=0.2 --max=25`. Lo publicado se lee de origin/main (`--ref=disco` para el disco).
 
 ## Riesgos

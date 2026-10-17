@@ -19,7 +19,7 @@
 
 import { yaPublicada, ponerOrigen } from './elegir.mjs';
 import { diaAR, minutoDelDiaAR, diaSemanaAR, minutosDeHora } from '../ingesta/zona.mjs';
-import { horariosDe, toca } from '../panel/horarios.mjs';
+import { horariosDe, toca } from './horarios.mjs';
 import { diaRotativoDeUtiles } from '../ingesta/utiles.mjs';
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
 import { avisosDelClima } from '../ingesta/alertas.mjs';
@@ -192,7 +192,7 @@ export const SERVICIOS_CON_PAGINA = [
 
 // Los teléfonos útiles rotan de lunes a viernes, una semana distinta cada vez
 // (ingesta/utiles.mjs). Esa regla es la única: la usan también reels/plan.mjs y
-// el panel, vía `toca` de panel/horarios.mjs. Se re-exporta con el nombre de
+// el cronograma, vía `toca` de redes/horarios.mjs. Se re-exporta con el nombre de
 // siempre.
 export { diaRotativoDeUtiles };
 
@@ -233,7 +233,7 @@ export function historiasQueSobran(nombres, techo = CONTRATO_DIARIO.historiasMax
  * Todas las piezas del día con su hora, sin saber todavía qué nota va en cada
  * una. Es la lista que el reloj recorre.
  *
- * Las fijas (clima, farmacia, útiles…) toman su horario de panel/horarios.mjs;
+ * Las fijas (clima, farmacia, útiles…) toman su horario de redes/horarios.mjs;
  * en GitHub no hay panel, así que valen los de fábrica. Los podcasts tienen los
  * suyos arriba (PODCASTS).
  *
@@ -242,7 +242,7 @@ export function historiasQueSobran(nombres, techo = CONTRATO_DIARIO.historiasMax
  * contrato, el vigilante) no lo trae: el aviso no es parte del contrato.
  */
 export function cronogramaDelDia(fecha = new Date(), { estado = {}, clima = null } = {}) {
-  // `toca` (panel/horarios.mjs) es la única que decide qué día sale cada pieza,
+  // `toca` (redes/horarios.mjs) es la única que decide qué día sale cada pieza,
   // la misma que usa reels/plan.mjs: si alguien fijó los días de los útiles a
   // mano desde el panel, manda eso; si no, rotan solos.
   const fijas = horariosDe(estado)

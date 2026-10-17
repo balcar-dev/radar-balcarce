@@ -1,6 +1,6 @@
 # 13 · Un día como hoy y los feriados
 
-*Actualizado el 16/10/2026. Cómo se arma la base mensual de efemérides, qué se
+*Actualizado el 17/10/2026. Cómo se arma la base mensual de efemérides, qué se
 muestra en la pestaña "Fechas" del panel del celular y cómo se afina el criterio
 con lo que se elige. Desde el 1/10 "Un día como hoy" sale todos los días a las
 9:00 con lo que se preparó y se revisó antes (sección "Lo que sale cada día",
@@ -137,10 +137,10 @@ flojo (una compañía de aviación holandesa de principal). Para eso está la pe
 
 - **Si hay dudas, no se usa.** Cada principal y cada "sí" se verifica contra una fuente independiente (tres
   verificadores con búsqueda en la web, 1/10): lo que sale mal o no se confirma no entra como principal ni
-  como "sí" (`--errores=` de `combinar-auditorias.mjs`). Lo que está bien pero con mal redactado (por ejemplo
+  como "sí". Lo que está bien pero con mal redactado (por ejemplo
   "se anuncia" el Nobel, no "recibe") queda con un aviso ⚠ en el motivo.
 - **Famosos que ya murieron:** la marca "puede estar vivo" del feed se equivoca con ellos; se revisan contra
-  otras fuentes y entran (`--ya-murieron=`). Una persona que fue menor en el hecho pero hoy es adulta o murió
+  otras fuentes y entran. Una persona que fue menor en el hecho pero hoy es adulta o murió
   (el debut de Maradona a los 15) no es un problema.
 - **Nada de fundaciones de empresas o ciudades de afuera**, ni política o economía de otros países.
 - **La pieza del día** (nota + reel/historia con voz, a las 9:00): una principal con su placa y "Además, un
@@ -180,15 +180,6 @@ flojo (una compañía de aviación holandesa de principal). Para eso está la pe
   `docs/DECISIONES.md`: lo armado y revisado de antemano sale salvo que una persona lo saque o pida cambios en
   "Mes armado".)*
 
-## Compararlo con otra IA
-
-`node ingesta/exportar-efemerides.mjs --salida=carpeta` escribe todo el mes en texto y
-un archivo por semana, con un contexto para dárselo a otra IA: quiénes somos, para qué
-es, qué buscamos y qué evitamos, y en qué formato contestar (un renglón por día con la
-principal, los "sí", los "opcional" y los "no"). Las candidatas van ordenadas por año y
-**sin nuestro puntaje**, para no condicionar. La respuesta se compara con lo que se
-eligió en el panel: ahí se ven las diferencias de criterio.
-
 ## Cada cuánto se regenera
 
 `node ingesta/generar-efemerides.mjs --desde=AAAA-MM-DD --dias=31` tarda unos 10
@@ -203,15 +194,16 @@ verificados.
 
 ## La propuesta por consenso de auditorías (1/10)
 
-Para armar el mes se exportan las candidatas (`ingesta/exportar-efemerides.mjs`) y se le pasan a tres IA con
-enfoques distintos: editor local, audiencia y video, y riesgo y exactitud (la que puede vetar). Cada una
-contesta un renglón por día. `node ingesta/combinar-auditorias.mjs A.txt B.txt RIESGO.txt --errores=ids
---ya-murieron=ids` las junta (`ingesta/combinar-auditorias.mjs`): una principal vale 5, un "sí" 3 y un
-"opcional" 1; veta la de riesgo o dos que digan "no"; lo que tiene un error de datos no es principal ni "sí";
-una fecha patria habla sola. Escribe `propuesta` en `efemerides-candidatas.json`.
+Para armar el mes de octubre se exportaron las candidatas y se les pasaron a tres IA con enfoques distintos:
+editor local, audiencia y video, y riesgo y exactitud (la que podía vetar). Cada una contestó un renglón por
+día, y un script las juntó: una principal valía 5, un "sí" 3 y un "opcional" 1; vetaba la de riesgo o dos que
+dijeran "no"; lo que tenía un error de datos no era principal ni "sí"; una fecha patria hablaba sola. Escribió
+`propuesta` en `efemerides-candidatas.json`. Los dos programas de esa auditoría a mano
+(`ingesta/exportar-efemerides.mjs` y `ingesta/combinar-auditorias.mjs`) se borraron el 17/10/2026; quedan en
+el historial de git.
 
-**Ojo:** correr `generar-efemerides.mjs` de nuevo reescribe la propuesta con la de reglas. Si pasa, volver a
-combinar las auditorías. Las auditorías de octubre de 2026 dejaron anotados datos dudosos de varias candidatas
+**Ojo:** correr `generar-efemerides.mjs` de nuevo reescribe la propuesta con la de reglas. Las auditorías de
+octubre de 2026 dejaron anotados datos dudosos de varias candidatas
 (el "primer automóvil de 1866", fechas de las sondas Venera, la fecha de fundación del Observatorio de La
 Plata); están marcadas "dato a confirmar" en la revisión del mes.
 

@@ -829,11 +829,6 @@ main { padding: 24px 0 10px; }
 .botones-evento .boton { flex: 1 1 200px; }
 .aviso-evento { background: var(--crema); border-left: 4px solid var(--rojo); border-radius: 8px; padding: 12px 14px; margin-top: 18px; font-size: 14.5px; line-height: 1.55; }
 .aviso-evento a { color: var(--rojo); font-weight: 600; }
-.descripcion-evento { margin-top: 28px; }
-.descripcion-evento h2 { font-size: 20px; }
-.descripcion-evento p { font-size: 16px; line-height: 1.7; margin-top: 12px; color: var(--texto); }
-.descripcion-evento p.mini { font-size: 13px; color: var(--suave); }
-.descripcion-evento p.mini a { color: var(--rojo); }
 
 /* ------------------------------------------------------------------- buzón */
 

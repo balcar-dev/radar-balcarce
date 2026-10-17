@@ -5,7 +5,6 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { aligerarViejas, DIAS_CON_ANALISIS } from '../web/lib/archivo.js';
-import { vaALaWeb, DIAS_DE_TEXTOS_DE_LA_IA } from '../panel/notas.mjs';
 
 const leer = (f) => fs.readFileSync(new URL(`../${f}`, import.meta.url), 'utf8');
 const existe = (f) => fs.existsSync(new URL(`../${f}`, import.meta.url));
@@ -23,16 +22,6 @@ test('el archivo guarda sólo lo que ve el lector en las notas de más de unos d
   assert.deepEqual(a.fuentesConsultadas, [{ medio: 'M', enlace: 'https://m' }]);
   assert.equal(b, nueva, 'la de hace un día queda entera: la reescritura todavía la puede usar');
   assert.ok(DIAS_CON_ANALISIS * 24 > 72, 'tiene que ser más que lo que dura una nota en la ingesta');
-});
-
-test('del panel de la PC se exporta sólo lo que decide una persona y los textos recientes de la IA', () => {
-  const ahora = Date.parse('2026-09-29T20:00:00Z');
-  assert.equal(vaALaWeb({ estado: 'descartada', por: 'Andrés', cuando: '2026-09-01T00:00:00Z' }, ahora), true);
-  assert.equal(vaALaWeb({ estado: 'automatica', por: 'ia', cuando: '2026-09-29T10:00:00Z', cuerpo: 'x' }, ahora), true);
-  assert.equal(vaALaWeb({ estado: 'automatica', por: 'ia', cuando: '2026-09-20T10:00:00Z', cuerpo: 'x' }, ahora), false);
-  assert.equal(vaALaWeb({ estado: 'automatica', por: 'ia', cuando: '2026-09-29T10:00:00Z' }, ahora), false, 'sin cuerpo no le sirve a nadie');
-  assert.equal(DIAS_DE_TEXTOS_DE_LA_IA, 3);
-  assert.ok(leer('web/data/decisiones.json').length < 200_000, 'decisiones.json volvió a crecer');
 });
 
 test('no vuelve lo que se sacó por no usarse (29/09)', () => {

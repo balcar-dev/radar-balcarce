@@ -10,8 +10,7 @@ import {
   mensajeParaContacto, numeroDeWhatsApp, enlaceWhatsApp, enlaceMail, armarContactos, filtrarContactos, colaDeEnvio, contactoPropio, conHistorial,
   htmlDeContactos, htmlDeUnContacto, htmlDeCola, haceDias,
 } from '../web/public/panel/contactos.js';
-import { mensajeAgenda } from '../ingesta/agenda.mjs';
-import { numeroDeWhatsApp as numeroDeLaPC, enlaceWhatsApp as enlaceDeLaPC } from '../panel/agenda.mjs';
+import { mensajeAgenda, CONTACTOS, CANALES } from '../ingesta/agenda.mjs';
 import { crearLlaves, abrir, cerrar } from '../web/public/panel/cifrado.js';
 import { abrir as abrirEnNode } from '../panel/cifrado.mjs';
 import { formatear, ARCHIVOS } from '../web/public/panel/github.js';
@@ -22,18 +21,40 @@ const AHORA = new Date('2026-10-03T15:00:00Z');
 const hace = (d) => new Date(AHORA - d * 864e5).toISOString();
 const esc = (t) => String(t ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-test('el mensaje es el mismo que arma el panel de la PC', () => {
+test('el mensaje es el mismo que arma ingesta/agenda.mjs', () => {
   assert.equal(mensajeParaContacto({ quien: 'Municipalidad' }), mensajeAgenda({ quien: 'Municipalidad' }));
   assert.equal(mensajeParaContacto(), mensajeAgenda());
 });
 
-test('los teléfonos: los publicados se leen igual que en la PC y se aceptan los formatos de acá', () => {
+// Hasta el 17/10 esto vivía en agenda-panel.test.mjs, con el panel de la PC (retirado): la base pública de instituciones sigue siendo la del celular.
+test('la base de contactos: cada uno con quién es, qué organiza, un canal, la fuente y la fecha', () => {
+  assert.ok(CONTACTOS.length >= 30, `hay ${CONTACTOS.length}`);
+  const ids = new Set();
+  for (const c of CONTACTOS) {
+    assert.ok(/^[a-z0-9-]+$/.test(c.id), `id raro: ${c.id}`);
+    assert.ok(!ids.has(c.id), `id repetido: ${c.id}`);
+    ids.add(c.id);
+    assert.ok(c.quien, `${c.id} sin nombre`);
+    assert.ok(c.organiza, `${c.id} sin decir qué organiza`);
+    assert.match(c.fuente, /^https:\/\//, `${c.id}: la fuente tiene que ser una dirección`);
+    assert.match(c.verificado, /^\d{4}-\d{2}-\d{2}$/, `${c.id}: falta la fecha de verificación`);
+    assert.ok(Object.keys(c.canales).length >= 1, `${c.id} sin ningún canal`);
+    for (const k of Object.keys(c.canales)) assert.ok(CANALES.includes(k), `${c.id}: canal desconocido ${k}`);
+    for (const m of c.meses) assert.ok(Number.isInteger(m) && m >= 1 && m <= 12, `${c.id}: mes ${m}`);
+    if (c.canales.whatsapp) assert.ok(numeroDeWhatsApp(c.canales.whatsapp), `${c.id}: WhatsApp mal escrito`);
+    if (c.canales.mail) assert.ok(enlaceMail(c.canales.mail, 'x'), `${c.id}: mail mal escrito`);
+  }
+  // El celular guarda a quién se le escribió por id: los de siempre siguen con el mismo.
+  for (const id of ['deportes-municipio', 'perfil-extremo', 'grupo-hets', 'turismo-municipio']) assert.ok(ids.has(id), id);
+});
+
+test('los teléfonos: los publicados se leen y se aceptan los formatos de acá', () => {
   const contactos = JSON.parse(leer('ingesta/contactos-agenda.json')).contactos;
   const conWa = contactos.filter((c) => c.canales?.whatsapp);
   assert.ok(conWa.length >= 5);
   for (const c of conWa) {
-    assert.equal(numeroDeWhatsApp(c.canales.whatsapp), numeroDeLaPC(c.canales.whatsapp), c.quien);
-    assert.equal(enlaceWhatsApp(c.canales.whatsapp, 'Hola ñ'), enlaceDeLaPC(c.canales.whatsapp, 'Hola ñ'));
+    assert.match(numeroDeWhatsApp(c.canales.whatsapp) ?? '', /^549\d{10}$/, c.quien);
+    assert.ok(enlaceWhatsApp(c.canales.whatsapp, 'Hola ñ').startsWith(`https://wa.me/${numeroDeWhatsApp(c.canales.whatsapp)}?text=`), c.quien);
   }
   for (const [entrada, salida] of [['2266 51-1612', '5492266511612'], ['02266 15-511612', '5492266511612'], ['+54 9 2266 511612', '5492266511612'], ['542266511612', '5492266511612']]) assert.equal(numeroDeWhatsApp(entrada), salida, entrada);
   for (const mal of ['', 'abc', '123', null]) assert.equal(numeroDeWhatsApp(mal), null);

@@ -1,8 +1,8 @@
 # 11 · Operación: el manual de uso diario
 
-*Escrito el 28/09/2026 para Hernán y Andrés. Actualizado el 16/10/2026, verificado contra el código, los
-workflows y el reloj de Cloudflare de ese día; el 17/10, lo de la subida del sitio, los horarios del reloj y los
-workflows que se borraron (reglas 189 a 191). Es un manual de tareas: cada sección dice qué hacer, paso
+*Escrito el 28/09/2026 para Hernán y Andrés. Actualizado el 17/10/2026: el 16/10 se verificó contra el código, los
+workflows y el reloj de Cloudflare de ese día; el 17/10 se sumó lo de la subida del sitio, los horarios del reloj y los
+workflows que se borraron (reglas 189 a 191) y el retiro del panel de la PC. Es un manual de tareas: cada sección dice qué hacer, paso
 a paso, y qué va a pasar después. Por qué funciona así está en los otros
 documentos: las redes en [`07-REDES.md`](07-REDES.md), dónde corre cada cosa
 en [`08-INFRAESTRUCTURA.md`](08-INFRAESTRUCTURA.md), el panel en `09-PANEL`,
@@ -19,8 +19,6 @@ lo que falta, en [`PENDIENTES.md`](../PENDIENTES.md).*
 | Facebook | La página "Radar Balcarce" (se busca por el nombre; su ID para la API está en `docs/07-REDES.md`) | Cualquiera |
 | **El panel del celular** (el de todos los días) | https://radarbalcarce.com/panel/ (instalado como app desde Chrome) | Quien tenga una llave de GitHub cargada en su celular |
 | El modo de prueba del panel del celular | https://radarbalcarce.com/panel/?demo | Cualquiera (notas inventadas, no guarda nada) |
-| El panel de la PC (**en desuso desde el 8/10**) | http://localhost:4321 | Hernán y Andrés, con su usuario y contraseña |
-| El panel de la PC, desde afuera | La dirección del túnel de Tailscale, en `panel/datos/DIRECCION-DEL-PANEL.txt`, en la PC (no va al repositorio, que es público) | Igual |
 | El código y las corridas | https://github.com/radarbalcarce/radar-balcarce (pestaña **Actions**) | Público desde el 25/09 (sigue público: privado costaría minutos de Actions). Dueña: `radarbalcarce@gmail.com`; colaboradores: `balcardev`, Andrés (`agerace`) y Hernán (`hernanaccomo-pixel`). Hasta el 15/10/2026 fue `balcar-dev/radar-balcarce` |
 | Cloudflare (la web, el dominio, las estadísticas) | https://dash.cloudflare.com | `radarbalcarce@gmail.com` |
 | El reloj (Worker `radar-balcarce-reloj`) y el vigilante que manda los mails (Worker `radar-balcarce-vigilante`) | https://dash.cloudflare.com → Workers y Pages | `radarbalcarce@gmail.com` |
@@ -47,8 +45,7 @@ interruptor de las redes.
 | Dónde | Qué se hace ahí | Se puede desde el celular |
 |---|---|---|
 | **El panel del celular** (radarbalcarce.com/panel/) | Decidir lo que espera, corregir, cambiar de sección, reescribir con IA, retirar y volver a publicar, mandar una nota a las redes, ver lo que sale hoy en las redes, pistas y notas propias, fotos, contactos, efemérides, revisión y números, actualizar la web | Sí: es para eso. Con la PC apagada |
-| **GitHub** (github.com/radarbalcarce/radar-balcarce; se entra con la cuenta de GitHub de cada uno) | Ver si algo falló (pestaña **Actions**), correr un workflow a mano (**Run workflow**), corregir o retirar una nota editando un archivo, prender o apagar las redes (**Settings**) | Sí, desde el navegador |
-| **El panel de la PC** (en desuso desde el 8/10; http://localhost:4321 en la PC; afuera, la dirección de `panel/datos/DIRECCION-DEL-PANEL.txt`) | Cargar avisos, la agenda a mano, el buzón (lo que el celular no hace) | Sí, si la PC está prendida |
+| **GitHub** (github.com/radarbalcarce/radar-balcarce; se entra con la cuenta de GitHub de cada uno) | Ver si algo falló (pestaña **Actions**), correr un workflow a mano (**Run workflow**), corregir o retirar una nota editando un archivo, cargar un aviso publicitario (`web/data/avisos.json`), prender o apagar las redes (**Settings**) | Sí, desde el navegador |
 | **El mail** (`radarbalcarce@gmail.com`) | Leer los informes de las 8:15 y 21:15 y los avisos del vigilante (desde el 15/10 llegan por mail; el WhatsApp quedó de respaldo) | Sí |
 | **Cloudflare, Workers** (dash.cloudflare.com, cuenta `radarbalcarce@gmail.com`) | Ver que el reloj `radar-balcarce-reloj` despierte a GitHub (sus ejecuciones: :00 y :30 siempre; :05, :35 y :45 de 7 a 23; :15 a las 8 y 21; :20 cada dos horas; :23 cada tres; :41 de 7 a 23) y que el vigilante `radar-balcarce-vigilante` corra (a los :12 y :42). Los trabajos viejos de cron-job.org están pausados, por si hay que volver | Sí |
 | **Claude** (una sesión de Claude Code sobre la carpeta del proyecto) | Cualquier cambio de código, escribir cuerpos, repasos editoriales, mirar la web publicada | Según dónde esté abierta la sesión |
@@ -129,8 +126,7 @@ sigue es cómo hacerlo sin el panel, desde GitHub.
 
 Sirve para cambiar el **título**, la **bajada** (se llama `copete`), la
 **sección** o el **cuerpo** de una nota que ya está en la web, sin el panel.
-Manda sobre lo que escriba la IA en todas las corridas siguientes, aunque el
-panel esté prendido, y **la dirección de la nota no cambia** (los enlaces que
+Manda sobre lo que escriba la IA en todas las corridas siguientes y **la dirección de la nota no cambia** (los enlaces que
 ya circulan siguen andando).
 
 1. **Encontrar el identificador de la nota.** Es lo que va después del último
@@ -175,7 +171,7 @@ horas). Lo que sigue es cómo hacerlo desde GitHub.
 
 Para una nota que no tendría que haber salido: la saca de la portada, de las
 secciones y del archivo, y **la página deja de existir**, aunque la ingesta la
-vuelva a traer. Vale aunque el panel esté prendido. También queda en la
+vuelva a traer. También queda en la
 papelera del celular (que la guarda 30 días y la muestra 24 horas). Si la nota
 ya estaba en el archivo permanente de R2, la retirada también la saca de ahí en
 el próximo despliegue.
@@ -205,10 +201,6 @@ el próximo despliegue.
   retira).
 - **Con el panel del celular** se hace lo mismo con "Retirar de la web"
   (`09-PANEL`); `retiradas.json` es el camino sin panel.
-
-**No editar `web/data/decisiones.json` a mano:** si el panel de la PC (en
-desuso) estuviera prendido, lo reescribe entero cada vez que guarda su estado,
-con lo que tiene en memoria, y el cambio se pierde.
 
 ## 3. Escribir el cuerpo de una nota que espera
 
@@ -309,27 +301,16 @@ Limitaciones que conviene saber:
 - "Redes" y "Piezas" nunca corren a la vez: si una está corriendo, la otra
   espera.
 
-## 7. Reiniciar el panel de la PC
+## 7. Mirar la web en la PC
 
-(En desuso desde el 8/10/2026: sólo hace falta si se lo vuelve a usar para
-avisos, agenda a mano o buzón.)
+El panel de la PC (puerto 4321) se retiró el 17/10/2026: nunca se usó; queda en el
+historial de git. Los datos de la web los arma sólo GitHub Actions.
 
-**Cuándo:** después de cualquier cambio en `ingesta/`, `panel/` o `reels/`
-(Node lee el código una sola vez, al arrancar: si no se reinicia, sigue
-trabajando con la versión vieja), después de prender la PC, o si el panel no
-responde. Ojo: el panel trae solo los cambios de GitHub al sincronizar, así
-que el código del disco puede estar al día y el panel igual correr la versión
-vieja hasta reiniciarlo.
-
-1. Cerrar la ventana negra que se llama **"Radar Balcarce - PANEL"**.
-2. Doble clic en **`ARRANCAR.bat`** (en la carpeta del proyecto).
-3. Se abre otra ventana negra (no cerrarla: es el panel) y, a los 5 segundos,
-   el navegador en http://localhost:4321.
-
-Si Claude está trabajando en la PC, puede reiniciarlo él. Para cambiar una
-contraseña del panel, la persona corre en la PC `node panel/clave.mjs
-<usuario> "<contraseña nueva>"` (nunca se escribe en un chat). Para cerrar el
-panel a internet: `tailscale funnel --https=443 off`.
+- **Para ver el sitio en la PC:** `git pull` y después `cd web && npm run build`
+  (compila con lo que ya armó la nube).
+- `cd web && npm run datos` en la PC no hace nada: sale con un aviso. Sólo con
+  `ARMAR_EN_LA_PC=1 npm run datos` hace la corrida entera (con IA y fotos, gasta
+  cupo) y deja `web/data/` cambiado: **eso no se sube**.
 
 ## 8. Si algo dejó de salir: el orden para mirar
 
@@ -342,8 +323,8 @@ panel a internet: `tailscale funnel --https=443 off`.
 3. **GitHub → Actions:** ¿hay una corrida en rojo? Abrirla y leer el paso rojo.
    Un aviso amarillo de "Vigilancia" no es una falla: es lo que encontró.
 4. **`REDES_ACTIVAS`** dice `Si` (tarea 5). Hoy (16/10) dice `Si`.
-5. **¿La PC está prendida?** Sólo importa para el panel de la PC (en desuso) y
-   para las ilustraciones con Gemini web de las 10:00 y las 18:00.
+5. **¿La PC está prendida?** Sólo importa para las ilustraciones con Gemini web
+   de las 10:00 y las 18:00.
 6. **Si se publica pero nadie lo ve en Facebook:** Actions → **Ver Facebook**
    (muestra lo que Meta tiene publicado) y mirar la página desde una cuenta que
    no sea administradora.
@@ -492,16 +473,19 @@ Son tres espacios en la web: después de la nota de apertura (`apertura`), al
 lado del clima y la farmacia (`clima`) y abajo de todo (`pie`). Reglas y
 precios: `PUBLICIDAD.md`.
 
-1. En el **panel de la PC** (PC prendida; está en desuso, pero los avisos
-   todavía se cargan sólo ahí o a mano, abajo), pestaña **Avisos**.
-2. Elegir el espacio y completar comercio, texto y, si hay, logo.
-3. Guardar. El panel lo sube solo a GitHub a los pocos segundos y aparece en
-   la web con la próxima "Actualizar la web".
-4. Para sacarlo: dejar vacío el nombre del comercio.
+Desde el 17/10/2026 (se retiró el panel de la PC) se editan a mano en
+`web/data/avisos.json`, en GitHub o con Claude:
 
-Sin la PC, se puede editar `web/data/avisos.json` en GitHub (cada espacio es
-`null` o `{"nombre": "…", "texto": "…", "logo": "…"}`), con el mismo cuidado
-de los `.json`. El panel no lo pisa: lo lee del archivo cada vez.
+1. Abrir `web/data/avisos.json` en GitHub y tocar el lápiz (Edit).
+2. En el espacio que corresponde (`apertura`, `clima` o `pie`), cambiar `null`
+   por `{"nombre": "…", "texto": "…", "logo": "…"}` (el logo, si hay), con el
+   mismo cuidado de los `.json`.
+3. Guardar (Commit changes, directo en `main`) diciendo en el mensaje del commit
+   **quién lo cargó y cuándo** (por ejemplo, "Aviso de la Panadería X en el pie,
+   cargado por Hernán el 20/10"). Aparece en la web con la próxima "Actualizar
+   la web".
+4. Para sacarlo: volver a poner `null` en ese espacio (también con quién y
+   cuándo en el commit).
 
 ## 14. Cómo pedirle algo a Claude
 
@@ -524,8 +508,8 @@ empezar: sabe las reglas, las cuentas y dónde está cada cosa.
 **Lo que Claude hace:** cambia código y documentos; corre `npm test` antes de
 commitear; commitea sólo los archivos que tocó (`git commit -- archivos`: los
 workflows commitean `web/data/` cada media hora, y así no se mezclan); corre
-workflows a mano; escribe cuerpos, correcciones y retiradas (firmados en `por`);
-reinicia el panel de la PC, si se está usando, cuando tocó `ingesta/`, `panel/` o `reels/`. Un cambio de
+workflows a mano; escribe cuerpos, correcciones y retiradas (firmados en `por`)
+y carga los avisos publicitarios (tarea 13). Un cambio de
 criterio editorial lo hace en `CRITERIO-EDITORIAL.md` (y sus números en
 `ingesta/criterio.mjs`); **la lista roja del semáforo no la toca sin
 preguntar**.
@@ -551,7 +535,6 @@ borrar publicaciones; aceptar términos; pagar.
 | Pagar el plan Workers Paid de Cloudflare (US$ 5 por mes) | Cloudflare → Billing | Todos los meses (ya contratado) |
 | Borrar el proyecto de Vercel y limpiar el DNS que quedó | Vercel y Cloudflare | Pendiente |
 | Activar o reactivar CallMeBot (si cambia el número del teléfono) | WhatsApp | Cuando haga falta (hoy es sólo el respaldo del mail) |
-| Cambiar contraseñas del panel de la PC (en desuso) | En la PC: `node panel/clave.mjs` | Cuando haga falta |
 | Decidir las notas amarillas | El panel del celular | Todos los días |
 | Aceptar términos, pagar, crear cuentas | Cada servicio | — |
 
@@ -564,12 +547,10 @@ La lista completa y al día de lo pendiente: `PENDIENTES.md`.
 | `web/data/correcciones.json` | Títulos, bajadas, secciones y cuerpos corregidos | Una persona o Claude | `generar-datos.mjs` (`correccionesAMano`) | **Sí** (tareas 1 y 3) |
 | `web/data/retiradas.json` | Notas sacadas de la web | Una persona o Claude | `generar-datos.mjs` (`idsRetiradosAMano`) | **Sí** (tarea 2) |
 | `web/data/esperando-cuerpo.json` | Las notas automáticas que no salen por falta de cuerpo | "Actualizar la web" | Personas y Claude | No: se lee |
-| `web/data/avisos.json` | Los tres avisos | El panel de la PC | La web | Mejor desde el panel de la PC (tarea 13) |
-| `web/data/decisiones.json` | Lo que decidió el panel de la PC (en desuso) | El panel de la PC | "Actualizar la web" | **No** (el panel de la PC lo pisa) |
+| `web/data/avisos.json` | Los tres avisos | Una persona o Claude | La web | **Sí**, con quién y cuándo en el commit (tarea 13) |
 | `web/data/celular-decisiones.json` | Lo que decide el panel del celular | El panel del celular | "Actualizar la web" | **No**: se decide desde el celular |
 | `web/data/redes.json` | El libro de las redes | "Redes" y "Piezas" | Casi todo | **No** (si se borra una entrada, puede repetirse una publicación) |
 | `web/data/portada.json`, `archivo.json` y el resto de `web/data/` | Lo que arma "Actualizar la web" | Los workflows | La web, las redes, el vigilante | **No** |
-| `ARRANCAR.bat` | Levanta el panel | Doble clic | — | No |
 | `.env` (sólo en la PC) | Claves para trabajar en la PC | Una persona | `reels/claves.mjs` | Sólo una persona |
 
 ## Dónde se toca cada cosa
@@ -593,7 +574,7 @@ La lista completa y al día de lo pendiente: `PENDIENTES.md`.
 | Ver el cierre del día contra Meta sin mandar nada | Actions → Vigilancia → `probar-cierre` |
 | Auditar lo publicado en redes | Un día: Actions → Vigilancia → `probar-cierre`; la semana: la "Auditoría" de los lunes (o a mano). "Auditar redes" se borró el 17/10 |
 | Ver las estadísticas ahora | Panel del celular → pestaña **Números** (las mide la vigilancia) |
-| Cargar un aviso | Panel de la PC → Avisos, o `web/data/avisos.json` (tarea 13) |
+| Cargar un aviso | `web/data/avisos.json`, a mano (tarea 13) |
 | Cambiar una regla, un número o el diseño | Pedírselo a Claude (tarea 14); la tabla completa, en `CLAUDE.md` |
 
 ## Qué puede fallar al operar y cómo se nota
@@ -602,17 +583,15 @@ La lista completa y al día de lo pendiente: `PENDIENTES.md`.
 |---|---|---|
 | Un `.json` quedó mal escrito | "Actualizar la web" en rojo en "Núcleo legal de las pruebas" y un mail «Falló el núcleo legal…»; a los 100 minutos, "La web no se actualiza" | Abrir la corrida, ver qué prueba falló, arreglar el archivo (o pedírselo a Claude) |
 | Una corrección sin `motivo` | No pasa nada: el código la ignora (y la prueba falla) | Agregar el motivo |
-| Se editó `decisiones.json` con el panel prendido | El cambio desaparece a los 10 minutos | Usar `retiradas.json` o `correcciones.json`, o el panel |
 | Se corrigió una nota que ya estaba en Facebook | La red sigue mostrando lo viejo | Editar o borrar el posteo a mano |
 | Se retiró una nota que estaba en Facebook | El enlace del posteo da "no encontrada" | Borrar el posteo a mano |
 | Se corrió Piezas con `solo` vacío | La corrida termina en rojo con "Sin piezas elegidas" y no arma nada (no gasta) | Escribir el nombre, o marcar `todas` si de verdad se quieren todas |
 | Una corrección o retirada sin `cuando` o sin `por` | El código sólo exige `motivo`, pero el núcleo legal de las pruebas pide los tres: "Actualizar la web" falla, llega un mail y la web se congela | Completar los tres campos |
-| Se cambió código de `ingesta/`, `panel/` o `reels/` y no se reinició el panel de la PC (si se usa) | El panel de la PC sigue haciendo lo de antes | Tarea 7 |
+| Se corrió `npm run datos` en la PC con `ARMAR_EN_LA_PC=1` | `web/data/` queda cambiado en la PC | No subirlo: `git checkout -- web/data/` (tarea 7) |
 
 ## Lo que sigue abierto
 
-En `PENDIENTES.md`: la pestaña Calendario del panel de la PC no cambia las horas
-de lo que publica GitHub (las reales son las de fábrica de `panel/horarios.mjs`)
-y, si hiciera falta volver a cron-job.org, ver que sus tres trabajos pausados
+En `PENDIENTES.md`: los horarios de las redes se cambian en el código
+(`HISTORIAS_FIJAS`, `redes/horarios.mjs`) y, si hiciera falta volver a cron-job.org, ver que sus tres trabajos pausados
 tengan la dirección nueva. La Auditoría de los lunes ya corre sola (28/09, 5/10
 —falló—, 12/10).

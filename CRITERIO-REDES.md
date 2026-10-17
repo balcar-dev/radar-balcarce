@@ -99,7 +99,7 @@ Lo común a todas:
 - **La dirección dicha:** los tres repasos la dicen **siempre** al cerrar. El clima, la
   farmacia y las semanales, **1 de cada 3 días** (lo decide la fecha, no el azar); los
   otros días cierran con "Radar Balcarce".
-- Los horarios están en el código (`redes/piezas.mjs`, `panel/horarios.mjs`) y en
+- Los horarios están en el código (`redes/piezas.mjs`, `redes/horarios.mjs`) y en
   `docs/07-REDES.md`.
 
 ### Clima de la mañana · 7:00 · 10 a 20 segundos

@@ -10,7 +10,7 @@ const tipos = (r) => r.problemas.map((p) => p.tipo);
 
 // ------------------------------------------------------------ la copia flexible
 
-// Resumen real de la Municipalidad (9/10/2026, pruebas-modelos/historias.json).
+// Resumen real de la Municipalidad (9/10/2026, de las pruebas de modelos: docs/historico/PRUEBAS-DE-MODELOS.md).
 const POSTRE = {
   titulo: 'FIESTA NACIONAL DEL POSTRE: CONFIRMACIÓN DE LA NUEVA FECHA PARA LA 22ª EDICIÓN',
   resumen: 'La Subsecretaría de Turismo informa a la comunidad y a los visitantes que la vigésima segunda edición de la Fiesta Nacional del Postre ya tiene nueva fecha de realización tras la postergación del evento previsto para este fin de semana, el cual debió aplazarse debido a las condiciones climáticas adversas. El tradicional evento se llevará a cabo los días 30 y 31 de octubre y 1 de noviembre . Desde el área organizativa se invita a todos a sumarse a esta nueva reprogramación.',

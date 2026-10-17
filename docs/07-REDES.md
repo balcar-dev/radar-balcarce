@@ -174,9 +174,8 @@ para la siguiente. Si no toca nada, la corrida termina en segundos.
 | Clima de la noche (`clima-noche`) | historia (en Facebook, además reel) | 20:00 | 24:00 | Todos |
 | Podcast de la noche (`podcast`) | reel + historia | 21:00 | 24:00 | Todos, con 2 notas o más |
 
-- Las horas de las historias fijas son las **de fábrica** de `HISTORIAS_FIJAS`
-  (`panel/horarios.mjs`): la pestaña Calendario del panel de la PC no llega a
-  GitHub (`PENDIENTES.md`, D7). Las de los podcasts, `PODCASTS` y `HORAS_REELS`
+- Las horas de las historias fijas son las de `HISTORIAS_FIJAS`
+  (`redes/horarios.mjs`; se cambian ahí, en el código). Las de los podcasts, `PODCASTS` y `HORAS_REELS`
   (`redes/piezas.mjs`). Las ventanas, `VENTANAS` (2 horas si una pieza no tiene
   la suya, `VENTANA_MINUTOS`). Desde el 29/09 cada pieza sale dentro de su parte
   del día (mañana hasta las 12:59, tarde hasta las 18:59, noche desde las 19),
@@ -191,7 +190,7 @@ para la siguiente. Si no toca nada, la corrida termina en segundos.
   clima, sólo historia.
 - **Los útiles salen los sábados a las 17:00**, fijos (1/10/2026; antes rotaban de lunes a viernes:
   `diaRotativoDeUtiles`, `ingesta/utiles.mjs`, aplicada por `toca` de
-  `panel/horarios.mjs`, la única que decide qué día sale cada pieza).
+  `redes/horarios.mjs`, la única que decide qué día sale cada pieza).
 - **El aviso de clima** sale apenas se detecta: `avisoDeClima` toma el primero
   de gravedad alta de `avisosDelClima` (`ingesta/alertas.mjs`): helada de −2° o
   menos, tormenta con granizo o viento de 60 km/h o más, hoy o mañana. "Posible
@@ -210,8 +209,8 @@ reloj, con `GEMINI_API_KEY_REDES`.
 farmacia. Como sale de lo ya publicado, **una pieza nunca habla de algo que el
 semáforo frenó**. La agenda sale de la agenda publicada (`web/data/agenda.json`,
 `eventosProximos` en `reels/plan.mjs`). También lee el libro y la historia del
-dólar. Desde el 17/10 no hay "modo PC": el plan no lee nada del panel de la PC
-(en desuso), ni sus datos ni sus horarios.
+dólar. (Hasta el 17/10 había un "modo PC" que leía los datos y los horarios del
+panel de la PC; ese panel se retiró ese día: nunca se usó; queda en el historial de git.)
 
 **5b. El plan del día** (`planDelDia`) arma cada pieza con su guion (lo que
 dice la voz), su placa, su color de acento y su hora. Techo de **8 historias
@@ -658,7 +657,7 @@ anteriores cuenta las historias por el libro y lo dice.
 | `redes/elegir.mjs` | Qué se publica: reglas de Facebook (`vaAFacebookPorLoQueEs`), texto del posteo, hashtags, qué notas cuenta cada podcast y su guion con presupuesto, el interruptor | `publicar.mjs`, `reels/plan.mjs`, contrato, avisos | `ingesta/criterio.mjs`, `web/lib/cuerpo.js` | — (funciones puras) |
 | `redes/espejo.mjs` | Qué espejos reintentar | `publicar.mjs` | el libro y la portada | — |
 | `redes/reloj.mjs` | ¿Toca alguna pieza ahora? (sin farmacia de turno en la web, no la pide) | `redes.yml` | `redes.json`, el clima y la farmacia de `portada.json` | `hay` y `solo` |
-| `redes/piezas.mjs` | Cronograma, ventanas, podcasts, aviso de clima, pie de los reels (con los enlaces a `/clima` y `/farmacias`), techo de historias | reloj, plan, publicar-piezas, contrato, vigilante | `panel/horarios.mjs`, `ingesta/utiles.mjs`, `ingesta/alertas.mjs` | — |
+| `redes/piezas.mjs` | Cronograma, ventanas, podcasts, aviso de clima, pie de los reels (con los enlaces a `/clima` y `/farmacias`), techo de historias | reloj, plan, publicar-piezas, contrato, vigilante | `redes/horarios.mjs`, `ingesta/utiles.mjs`, `ingesta/alertas.mjs` | — |
 | `redes/publicar-piezas.mjs` | Sube los videos: Instagram manda, Facebook con reintentos, la historia de cada reel; completa direcciones | `publicar.mjs` | manifiesto y videos | el libro |
 | `redes/datos.mjs` | Traduce `portada.json` a los datos del plan | `reels/plan.mjs` | `portada.json` | — |
 | `redes/meta.mjs` | Habla con Meta (Graph v23.0): posteo, foto, video, dirección pública, verificación; `PAGINA_DE_FACEBOOK`. Token en el encabezado, nunca en la dirección | todo lo que publica o lee Meta | `META_TOKEN` | — |
@@ -703,7 +702,7 @@ las estadísticas y las auditorías están en su tabla.
 | La hora de un podcast | `HORAS_REELS`, `redes/piezas.mjs` |
 | Que una nota de una pista o de un mail entre al próximo repaso | `aprobadaParaRedes` y `paraElRepaso` en su entrada de `web/data/notas-de-pistas.json` (12 horas) |
 | El texto de los reels y de los posteos (enlaces, "link en la bio") | `pieDePieza` y `enlaceDelRepaso` (`redes/piezas.mjs`); `mensajeDeNota` (`redes/elegir.mjs`) |
-| La hora de una historia fija (clima, farmacia, útiles, agenda) | Los valores de fábrica de `HISTORIAS_FIJAS`, `panel/horarios.mjs` |
+| La hora de una historia fija (clima, farmacia, útiles, agenda) | `HISTORIAS_FIJAS`, `redes/horarios.mjs` |
 | Hasta cuándo vale una pieza | `VENTANAS`, `redes/piezas.mjs` |
 | Los umbrales del aviso de clima | `UMBRALES`, `ingesta/alertas.mjs` |
 | Cómo se ve el repaso (la placa de cada nota, la foto, la tapa) | `placaDeNotaDelRepaso` y `secuenciaDelRepaso` (`reels/escenas/repaso.mjs`); la lista, `placaRepaso` (`reels/placa.mjs`) |
@@ -827,7 +826,7 @@ exista, todo sigue en `reels/` como hoy.
 Mientras el cupo de voz sea el gratis (10 audios por día), las piezas que no cambian se arman UNA vez y
 se reutilizan dos semanas: **las cuatro de participá** (lunes noticias, martes evento, miércoles reclamos,
 viernes nota). Cuestan un audio la primera vez y después ninguno: el día de una semana normal baja a 7 u 8
-audios (`redes/cronograma-semana.mjs` y `reels/hoja-cronograma.mjs` lo dibujan).
+audios (`redes/cronograma-semana.mjs` lo escribe).
 
 - Se arman con el workflow **"Fijar piezas"** (`fijar-piezas.yml`): `piezas`, `desde` (primer día en que
   valen) y `dias` (14). Gasta un audio por pieza: conviene un día de poco uso y de a dos.
@@ -840,7 +839,7 @@ audios (`redes/cronograma-semana.mjs` y `reels/hoja-cronograma.mjs` lo dibujan).
 
 ## El cronograma de las redes de un vistazo (1/10/2026)
 
-Horarios acordados con Hernán el 1/10 (todos en `panel/horarios.mjs` y `redes/piezas.mjs`; una prueba los controla):
+Horarios acordados con Hernán el 1/10 (todos en `redes/horarios.mjs` y `redes/piezas.mjs`; una prueba los controla):
 
 | Hora | Pieza | Voz |
 |---|---|---|
@@ -855,8 +854,7 @@ Horarios acordados con Hernán el 1/10 (todos en `panel/horarios.mjs` y `redes/p
 | 20:00 | Clima de la noche | locutora |
 | 21:00 | Repaso de la última hora (reel e historia) | locutor |
 
-- **Para verlo:** `node reels/cronograma-html.mjs --desde=AAAA-MM-DD --dias=8 --fijas=participa-noticias,…` arma una página con una pestaña por día y la
-  grilla de 7 a 21 (las horas vacías se ven rayadas); `node reels/hoja-cronograma.mjs` lo dibuja como imagen y `node redes/cronograma-semana.mjs` lo escribe en texto.
-  Los tres usan las mismas funciones que el reloj, así que muestran lo que va a pasar.
+- **Para verlo:** `node redes/cronograma-semana.mjs` lo escribe en texto, con las mismas funciones que el reloj, así que muestra lo que
+  va a pasar. (La página y la imagen del cronograma, `reels/cronograma-html.mjs` y `reels/hoja-cronograma.mjs`, se borraron el 17/10/2026.)
 - **Audios por día** (el cupo gratis es de 10): con las cuatro de participá fijas, entre 7 y 8; el feriado, 8. Quedan 2 de margen para un aviso de clima o un reintento, y desde el 17/10 el contador los cuida (regla 208).
 - **Un día como hoy** se prepara una semana por vez y se revisa (`PENDIENTES.md` 0c2): cada semana se arma la siguiente, y si nadie toca nada sale como está.

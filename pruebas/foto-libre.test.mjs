@@ -69,7 +69,7 @@ test('las notas de F1 llevan el circuito para buscarle la foto, y generar-datos 
   const gen = leer('web/scripts/generar-datos.mjs');
   assert.ok(gen.includes("const lugarDeLaFoto = n.propia === 'f1' ? n.circuitoF1 : "), 'la F1 usa el circuito (y el fútbol, el estadio)');
   assert.match(gen, /await import\('\.\/foto-libre\.mjs'\)/);
-  assert.match(gen, /if \(enLaNube\) \{\n  const \{ buscarFotoLibre, bajarFotoLibre \}/.test(gen.replace(/\r\n/g, '\n')) ? /./ : /if \(enLaNube\)/, 'sólo en la nube');
+  assert.match(gen.replace(/\r\n/g, '\n'), /^\{\n  const \{ buscarFotoLibre, bajarFotoLibre \}/m);
   assert.match(gen, /no hubo una foto libre buena/);
   assert.match(gen, /< 6 \* 3600e3/, 'si no hubo foto, se vuelve a probar a las 6 horas');
   assert.match(leer('web/scripts/foto-libre.mjs'), /Wikimedia Commons/);

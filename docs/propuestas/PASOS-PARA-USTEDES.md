@@ -47,7 +47,7 @@ y el permiso del punto 1b, falta esto, a mano:
 
 **Qué NO hace todavía:** las fotos siguen también en el repositorio y se siguen subiendo con el sitio, porque las tarjetas para compartir
 (Instagram, Facebook) se arman en la compilación leyendo el archivo local. Sacarlas del repositorio es la etapa siguiente
-([plan](../historico/propuestas-2026-10/registro/AUDITORIA-EXTERNA-4-ARQUITECTURA-2026-10-08.md)), y se hace después de ver que todo anda con `FOTOS_BASE`.
+(el plan era `AUDITORIA-EXTERNA-4-ARQUITECTURA-2026-10-08.md`, borrado el 17/10 con `docs/historico/propuestas-2026-10/`; queda en git), y se hace después de ver que todo anda con `FOTOS_BASE`.
 
 ## 3. Lo que no hace falta que hagan
 

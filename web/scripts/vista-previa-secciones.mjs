@@ -8,7 +8,7 @@
 //   cd web && node scripts/vista-previa-secciones.mjs --sin-compilar  sólo arma las capturas con el web/out que ya hay
 //                                                                     (tiene que haberse compilado con SECCIONES_NUEVAS=si)
 //
-// Usa los datos que haya en web/data: para ver lo último, traer antes los de GitHub (git pull) o correr `npm run datos`
+// Usa los datos que haya en web/data: para ver lo último, traer antes los de GitHub (git pull)
 // (y después `git checkout -- web/data`, ver CLAUDE.md). Al terminar borra web/out: es una compilación de prueba y no
 // tiene que subirse por error.
 //

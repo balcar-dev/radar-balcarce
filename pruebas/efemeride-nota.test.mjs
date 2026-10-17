@@ -118,8 +118,6 @@ test('la foto de cada día se arma una vez, sin ffmpeg no rompe y la nota se que
     let llamadas = 0;
     const dibujar = async (svg, destino) => { fs.writeFileSync(destino, 'png'); };
     const ejecutar = async (exe, args) => { llamadas += 1; fs.writeFileSync(args[args.length - 1], Buffer.alloc(30000, 1)); };
-    assert.equal(await fotoDeEfemeride(nota, { carpeta, base, ejecutar, dibujar, ffmpeg: 'ffmpeg', soloLasQueEstan: true }), null, 'en la PC no se arma una nueva');
-    assert.equal(llamadas, 0);
     const foto = await fotoDeEfemeride(nota, { carpeta, base, ejecutar, dibujar, ffmpeg: 'ffmpeg' });
     assert.deepEqual(foto, { archivo: 'fotos-notas/efemeride-2026-10-14.jpg', credito: nota.foto.credito });
     assert.equal(llamadas, 1);
@@ -130,5 +128,5 @@ test('la foto de cada día se arma una vez, sin ffmpeg no rompe y la nota se que
     assert.deepEqual(podarFotos({ banco: {}, enDisco: ['efemeride-2026-10-14.jpg', 'efemeride-fondo.jpg', 'vieja.jpg'], quedan: new Set() }).borrar, ['vieja.jpg']);
   } finally { fs.rmSync(carpeta, { recursive: true, force: true }); }
   const g = fs.readFileSync(new URL('../web/scripts/generar-datos.mjs', import.meta.url), 'utf8');
-  assert.match(g, /n\.propia !== 'efemeride'[\s\S]{0,80}fotoDeEfemeride\(n, \{ carpeta: FOTOS_NOTAS, soloLasQueEstan: !enLaNube \}\)/);
+  assert.match(g, /n\.propia !== 'efemeride'[\s\S]{0,80}fotoDeEfemeride\(n, \{ carpeta: FOTOS_NOTAS \}\)/);
 });
