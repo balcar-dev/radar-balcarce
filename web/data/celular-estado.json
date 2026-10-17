@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T09:32:01.173Z",
+ "generado": "2026-10-17T10:02:15.500Z",
  "portada": 79,
- "archivo": 1212,
+ "archivo": 1214,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-17T09:32:01.209Z",
+  "generado": "2026-10-17T10:02:15.539Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 45,
     "notas": [
      {
       "id": "rwxsr5",
@@ -106,11 +106,6 @@
       "id": "1w9aja0",
       "titulo": "La organización designa los árbitros para la primera fecha del torneo",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "1mfnr70",
-      "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
-      "seccion": "Deportes"
      },
      {
       "id": "1e6e9wy",
@@ -136,17 +131,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 40,
+    "segundos": 32,
     "notas": [
-     {
-      "id": "n6v2wu",
-      "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1edq6ii",
       "titulo": "Una vecina dona un riñón a su hija y transitan la recuperación",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "1mfnr70",
+      "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
+      "seccion": "Deportes"
      }
     ]
    }

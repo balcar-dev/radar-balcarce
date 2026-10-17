@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-17T09:32:01.173Z",
+  "generado": "2026-10-17T10:02:15.500Z",
   "notas": [
     {
       "id": "ey70ps",
@@ -16,7 +16,7 @@
       "fecha": "2026-10-17T07:00:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T09:31:27.066Z",
-      "relevancia": 47,
+      "relevancia": 37,
       "local": false,
       "deFuenteEspecializada": true,
       "publicadaPor": null,
@@ -201,6 +201,92 @@
       "foto": {
         "archivo": "fotos-notas/rwxsr5.jpg",
         "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "3cvzzz",
+      "titulo": "Boca vence a Talleres y escala a la cima de la Tabla Anual",
+      "copete": "El conjunto dirigido por Rodolfo Arruabarrena superó por 2 a 1 al equipo cordobés en la Bombonera con tantos de Miguel Merentiel y Leonel Flores. Matías Galarza había adelantado a la visita.",
+      "cuerpo": "Boca superó por 2 a 1 a Talleres en la Bombonera y trepó a lo más alto de la Tabla Anual del fútbol argentino. El conjunto cordobés se había puesto en ventaja a los 11 minutos del primer tiempo gracias a un remate desde afuera del área de Matías Galarza.\n\nEl equipo local reaccionó antes del descanso con una anotación de Miguel Merentiel a los 18 minutos, tras una asistencia de Lautaro Blanco. En el inicio del complemento, a los 4 minutos, Leonel Flores marcó el tanto de la victoria con una definición desde la izquierda.\n\nCon este resultado, el director técnico Rodolfo Arruabarrena enfocará ahora los entrenamientos en el encuentro del martes en Brasil ante Vasco da Gama por la revancha de la Copa Sudamericana.",
+      "guion": "Boca vence a Talleres y escala a la cima de la Tabla Anual.",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "TyC Sports",
+        "Olé",
+        "El Día",
+        "El Eco de Tandil"
+      ],
+      "enlace": "https://www.ole.com.ar/futbol-primera/boca-vs-talleres-partido-torneo-clausura-2026-horario-tv-vivo-minuto-minuto_0_ZRlcYSWJ8q.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-17T02:35:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-17T10:01:28.003Z",
+      "relevancia": 45,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Boca derrotó 2 a 1 a Talleres en condición de local.",
+        "Miguel Merentiel y Leonel Flores anotaron los goles del conjunto ganador.",
+        "El equipo quedó en lo más alto de la Tabla Anual."
+      ],
+      "seSabe": [
+        "El partido finalizó con victoria de Boca por 2 a 1.",
+        "Los goles del vencedor fueron de Miguel Merentiel y Leonel Flores.",
+        "Matías Galarza convirtió para Talleres."
+      ],
+      "noConfirmado": [
+        "La evolución física de los jugadores convocados para el compromiso internacional del próximo martes."
+      ],
+      "textoRedes": "Boca se impuso por 2 a 1 ante Talleres en la Bombonera con goles de Miguel Merentiel y Leonel Flores, alcanzando el primer puesto en la Tabla Anual.",
+      "etiquetas": [
+        "Boca",
+        "Talleres",
+        "Tabla Anual",
+        "Miguel Merentiel",
+        "Leonel Flores"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/futbol-primera/boca-vs-talleres-partido-torneo-clausura-2026-horario-tv-vivo-minuto-minuto_0_ZRlcYSWJ8q.html",
+          "fecha": "2026-10-17T02:35:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó la formación inicial de los equipos, el historial de enfrentamientos y la tabla de posiciones del torneo."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/boca-juniors/otra-vuelta-boca-triunfo-talleres-punta-tabla-anual-battaglia-id766920.html",
+          "fecha": "2026-10-17T03:36:44.000Z",
+          "oficial": false,
+          "aporte": "Detalló el rendimiento táctico del equipo, los regresos en el plantel y la importancia de la victoria para el torneo anual."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/deportes/boca-lo-supo-dar-vuelta-a-tiempo-deportes_1792214123",
+          "fecha": "2026-10-17T05:15:00.000Z",
+          "oficial": false,
+          "aporte": "Narró el desarrollo minuto a minuto de las jugadas del encuentro y los autores de los goles."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/boca-lo-dio-vuelta-y-paso-a-liderar-en-la-tabla-anual",
+          "fecha": "2026-10-17T09:45:44.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": null
+      },
+      "slug": "boca-vence-a-talleres-y-escala-a-la-cima-de-la-tabla-anual",
+      "foto": {
+        "archivo": "fotos-notas/3cvzzz.jpg",
+        "credito": "Foto: TyC Sports"
       }
     },
     {
@@ -664,6 +750,79 @@
       "slug": "santilli-pide-acuerdos-a-gobernadores-y-cuestiona-a-kicillof"
     },
     {
+      "id": "1t5zb3r",
+      "titulo": "La soja registra su quinta baja consecutiva en Chicago y se sostiene en Rosario",
+      "copete": "El grano cerró a US$463,43 por tonelada en el mercado estadounidense tras acumular cinco jornadas en baja. En la plaza local, las cotizaciones se mantuvieron sin cambios.",
+      "cuerpo": "El precio internacional de la soja acumuló cinco ruedas consecutivas en baja en la Bolsa de Chicago, en Estados Unidos, y se ubicó en su menor valor en siete semanas. Durante la última jornada, el grano perdió US$0,92 y cerró a US$463,43 por tonelada para el contrato de noviembre, según informaron las fuentes del mercado. Con este retroceso, la oleaginosa completó una pérdida semanal del 2,38%.\n\nEugenio Irazuegui, analista de Zeni, explicó que el movimiento responde al avance de la cosecha estadounidense y a la atención de los operadores puesta en la producción sudamericana. En tanto, la molienda de soja en Estados Unidos cayó un 4,5% en septiembre respecto de agosto y alcanzó los 5,34 millones de toneladas.\n\nA nivel local, la soja disponible en el mercado de Rosario se mantuvo en los $560.000 por tonelada, sin registrar variaciones diarias ni semanales, mientras que la entrega a noviembre operó en US$370.",
+      "guion": "La soja registra su quinta baja consecutiva en Chicago y se sostiene en Rosario.",
+      "seccion": "Agro",
+      "medios": [
+        "La Nación",
+        "TN (Todo Noticias)"
+      ],
+      "enlace": "https://tn.com.ar/campo/2026/10/16/la-soja-tuvo-su-quinta-caida-consecutiva-en-chicago-pero-se-mantuvo-en-los-560-mil-por-tonelada-en-rosario/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T22:59:40.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-17T10:01:28.003Z",
+      "relevancia": 41,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La soja acumuló cinco jornadas de bajas consecutivas en Chicago.",
+        "El contrato de noviembre cerró a US$463,43 por tonelada en Estados Unidos.",
+        "La baja responde al avance de cosecha norteamericana y proyecciones en Brasil.",
+        "En el mercado de Rosario, el grano se mantuvo a $560.000 por tonelada."
+      ],
+      "seSabe": [
+        "El precio de la soja bajó US$0,92 por tonelada en Chicago el viernes y cerró a US$463,43 para noviembre.",
+        "La molienda estadounidense de septiembre cayó un 4,5% mensual hasta los 5,34 millones de toneladas.",
+        "La Conab proyectó una cosecha de 181,6 millones de toneladas en Brasil.",
+        "El grano se mantuvo a $560.000 por tonelada en el segmento disponible de Rosario."
+      ],
+      "noConfirmado": [
+        "No se precisó cómo evolucionarán los precios internacionales en las próximas semanas frente al clima en Estados Unidos."
+      ],
+      "textoRedes": "La soja acumuló cinco caídas consecutivas en Chicago y cerró a US$463,43 por tonelada. En el mercado de Rosario, el grano se mantuvo sin variaciones en $560.000 por tonelada.",
+      "etiquetas": [
+        "soja",
+        "Chicago",
+        "Rosario",
+        "mercados",
+        "granos",
+        "cotizaciones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/16/la-soja-tuvo-su-quinta-caida-consecutiva-en-chicago-pero-se-mantuvo-en-los-560-mil-por-tonelada-en-rosario/",
+          "fecha": "2026-10-16T22:59:40.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre el mantenimiento del precio en Rosario a $560.000 y el valor del dólar exportador."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/la-soja-cayo-por-quinta-jornada-consecutiva-en-chicago-y-llego-a-su-menor-precio-en-siete-semanas-nid16102026/",
+          "fecha": "2026-10-17T09:34:49.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre el mercado de Chicago, la baja semanal del 2,38% y las declaraciones de analistas de Zeni, Grassi y AZ Group."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": null
+      },
+      "slug": "la-soja-registra-su-quinta-baja-consecutiva-en-chicago-y-se-sostiene",
+      "foto": {
+        "archivo": "fotos-notas/1t5zb3r.jpg",
+        "credito": "Foto: La Nación"
+      }
+    },
+    {
       "id": "1itm824",
       "titulo": "Los lentes inteligentes de Meta graban charlas sin la orden de voz",
       "copete": "Algunos anteojos Ray-Ban de Meta registraron conversaciones y crearon transcripciones sin que los usuarios pronunciaran la orden correspondiente. La empresa confirmó el inconveniente y aseguró que ya fue solucionado.",
@@ -835,7 +994,7 @@
       "fecha": "2026-10-16T21:37:27.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T00:01:19.897Z",
-      "relevancia": 78,
+      "relevancia": 71,
       "local": true,
       "deUnMedioDeAca": true,
       "publicadaPor": null,
@@ -1075,8 +1234,8 @@
         "Infobae",
         "Clarín",
         "TN (Todo Noticias)",
-        "Ámbito",
-        "Diario Popular"
+        "Diario Popular",
+        "Ámbito"
       ],
       "enlace": "https://www.clarin.com/economia/agosto-morosidad-familias-leve-baja-marco-128_0_ksSwdDjX91.html",
       "teniaImagenLaFuente": true,
@@ -1691,10 +1850,10 @@
       "guion": "Daniel Bertoni baja su candidatura a la presidencia de Independiente.",
       "seccion": "Fútbol",
       "medios": [
-        "Clarín",
         "Olé",
         "Noticias Argentinas (NA)",
-        "Doble Amarilla"
+        "Doble Amarilla",
+        "Clarín"
       ],
       "enlace": "https://www.dobleamarilla.com.ar/rosca/elecciones-en-independiente--bertoni-baja-su-candidatura-presidencial-y-se-suma-al-espacio-de-nakis_a6ad285fe92e07c35a4eb6d30",
       "teniaImagenLaFuente": true,
@@ -2513,11 +2672,11 @@
         "La Nación",
         "TN (Todo Noticias)",
         "Crónica",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
         "El Marplatense",
-        "Clarín",
-        "Diario Popular"
+        "Clarín"
       ],
       "enlace": "https://noticiasargentinas.com/politica/rematan-bienes-de-austral-construcciones-en-la-pagina-de-la-corte-suprema_a6ad262aef8e83a89472053e9",
       "teniaImagenLaFuente": true,
@@ -2856,6 +3015,69 @@
         "archivo": "fotos-notas/1edq6ii-ia.jpg",
         "credito": "Ilustración generada con IA"
       }
+    },
+    {
+      "id": "1mfnr70",
+      "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
+      "copete": "Los planteles superior de Pato Naranja y Pato Negro ganaron sus compromisos en la última fecha y avanzaron a la instancia decisiva del Torneo Desarrollo de la Unión de Rugby de Mar del Plata.",
+      "cuerpo": "El Club Social y Campo de Pato consiguió armar dos planteles de primera división tras un extenso período y ambos se metieron entre los cuatro mejores conjuntos de la zona en el Torneo Desarrollo, organizado por la Unión de Rugby de Mar del Plata.\n\nDurante la jornada de cierre de la etapa regular, disputada en el predio ubicado sobre la avenida San Martín, Pato Naranja superó a Villa Gesell por 13 a 8 y Pato Negro derrotó a Gnomos del Partido de la Costa por 36 a 24.\n\nDesde la entidad deportiva indicaron que ambos conjuntos se enfrentarán entre sí en una de las semifinales que se jugará en condición de local, mientras que el partido definitorio del certamen también se llevará a cabo en la ciudad.",
+      "guion": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
+      "seccion": "Deportes",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/rugby-de-campo-de-pato-en-hecho-historico-514",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-16T17:28:34.829Z",
+      "sinFecha": true,
+      "visto": "2026-10-16T17:28:34.829Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "según informó el Club Social y Campo de Pato, la institución logró conformar dos equipos de primera división después de mucho tiempo",
+        "de acuerdo con la entidad, ambos planteles se clasificaron entre los cuatro mejores de la zona en el Torneo Desarrollo de la Unión de Rugby de Mar del Plata",
+        "según los datos oficiales del club, en la última fecha Pato Naranja le ganó a Villa Gesell por 13 a 8 y Pato Negro venció a Gnomos del Partido de la Costa por 36 a 24",
+        "la institución confirmó que las semifinales y la final del torneo se disputarán en el predio de la avenida San Martín",
+        "según los registros de la entidad, los equipos locales se enfrentarán entre sí en la próxima instancia"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Campo de Pato logró clasificar a sus dos equipos de primera división a las semifinales del Torneo Desarrollo de la Unión de Rugby de Mar del Plata tras ganar sus respectivos encuentros en el predio local.",
+      "etiquetas": [
+        "rugby",
+        "Campo de Pato",
+        "Torneo Desarrollo",
+        "deportes",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/rugby-de-campo-de-pato-en-hecho-historico-514",
+          "fecha": "2026-10-16T12:00:07.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la clasificación de los dos equipos de primera división de Campo de Pato a las semifinales del Torneo Desarrollo y los resultados de la última fecha."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1czdwgt",
+          "titulo": "Campo de Pato gana en el Torneo Desarrollo de rugby",
+          "fecha": "2026-09-24T20:51:53.604Z",
+          "ruta": "/nota/campo-de-pato-gana-en-el-torneo-desarrollo-en-balcarce-1czdwgt"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "campo-de-pato-mete-a-sus-dos-equipos-en-semifinales-de-rugby"
     },
     {
       "id": "1qtfiwu",
@@ -3514,14 +3736,14 @@
         "A24",
         "iProfesional",
         "Crónica",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "Clarín",
         "C5N",
         "Ámbito",
         "Minuto Uno",
         "Radio Mitre",
-        "elDiarioAR",
-        "Diario Popular"
+        "elDiarioAR"
       ],
       "enlace": "https://www.clarin.com/politica/altos-funcionarios-trump-visitaran-argentina-avanzar-millonario-proyecto-infraestructura-ampliar-inversiones_0_NIwA6uB3Ms.html",
       "teniaImagenLaFuente": true,
@@ -4424,6 +4646,7 @@
         "Crónica",
         "Canal 26",
         "Noticias Argentinas (NA)",
+        "El Eco de Tandil",
         "Clarín",
         "0223 (Mar del Plata)",
         "Radio Mitre",
@@ -4436,8 +4659,13 @@
       "fecha": "2026-10-16T12:38:30.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T14:10:11.487Z",
-      "relevancia": 62,
+      "relevancia": 63,
       "local": false,
+      "muyContada": {
+        "medios": 12,
+        "porque": "12 medios",
+        "desde": "2026-10-17T03:01:14.154Z"
+      },
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
@@ -4747,20 +4975,21 @@
       "guion": "Jennifer Lasa gana en el campeonato argentino de powerlifting",
       "seccion": "Deportes",
       "medios": [
-        "Municipalidad de Balcarce",
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)"
+        "Radio Gabal (FM 104.1)",
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/16/nueva-victoria-de-lasa-en-powerlifting/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-16T12:01:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T12:31:08.052Z",
-      "relevancia": 67,
+      "relevancia": 83,
       "local": true,
       "oficial": true,
       "deUnMedioDeAca": true,
-      "muyContadaDeAca": 3,
+      "muyContadaDeAca": 4,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
@@ -4815,70 +5044,6 @@
         "archivo": "fotos-notas/1h2xfr3.jpg",
         "credito": "Foto: Radio Gabal (FM 104.1)"
       }
-    },
-    {
-      "id": "1mfnr70",
-      "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
-      "copete": "Los planteles superior de Pato Naranja y Pato Negro ganaron sus compromisos en la última fecha y avanzaron a la instancia decisiva del Torneo Desarrollo de la Unión de Rugby de Mar del Plata.",
-      "cuerpo": "El Club Social y Campo de Pato consiguió armar dos planteles de primera división tras un extenso período y ambos se metieron entre los cuatro mejores conjuntos de la zona en el Torneo Desarrollo, organizado por la Unión de Rugby de Mar del Plata.\n\nDurante la jornada de cierre de la etapa regular, disputada en el predio ubicado sobre la avenida San Martín, Pato Naranja superó a Villa Gesell por 13 a 8 y Pato Negro derrotó a Gnomos del Partido de la Costa por 36 a 24.\n\nDesde la entidad deportiva indicaron que ambos conjuntos se enfrentarán entre sí en una de las semifinales que se jugará en condición de local, mientras que el partido definitorio del certamen también se llevará a cabo en la ciudad.",
-      "guion": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/rugby-de-campo-de-pato-en-hecho-historico-514",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-16T12:00:07.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T17:28:34.829Z",
-      "relevancia": 71,
-      "local": true,
-      "deUnMedioDeAca": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "seSabe": [
-        "según informó el Club Social y Campo de Pato, la institución logró conformar dos equipos de primera división después de mucho tiempo",
-        "de acuerdo con la entidad, ambos planteles se clasificaron entre los cuatro mejores de la zona en el Torneo Desarrollo de la Unión de Rugby de Mar del Plata",
-        "según los datos oficiales del club, en la última fecha Pato Naranja le ganó a Villa Gesell por 13 a 8 y Pato Negro venció a Gnomos del Partido de la Costa por 36 a 24",
-        "la institución confirmó que las semifinales y la final del torneo se disputarán en el predio de la avenida San Martín",
-        "según los registros de la entidad, los equipos locales se enfrentarán entre sí en la próxima instancia"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Campo de Pato logró clasificar a sus dos equipos de primera división a las semifinales del Torneo Desarrollo de la Unión de Rugby de Mar del Plata tras ganar sus respectivos encuentros en el predio local.",
-      "etiquetas": [
-        "rugby",
-        "Campo de Pato",
-        "Torneo Desarrollo",
-        "deportes",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/rugby-de-campo-de-pato-en-hecho-historico-514",
-          "fecha": "2026-10-16T12:00:07.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la clasificación de los dos equipos de primera división de Campo de Pato a las semifinales del Torneo Desarrollo y los resultados de la última fecha."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1czdwgt",
-          "titulo": "Campo de Pato gana en el Torneo Desarrollo de rugby",
-          "fecha": "2026-09-24T20:51:53.604Z",
-          "ruta": "/nota/campo-de-pato-gana-en-el-torneo-desarrollo-en-balcarce-1czdwgt"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "campo-de-pato-mete-a-sus-dos-equipos-en-semifinales-de-rugby"
     },
     {
       "id": "ahqycd",
@@ -5117,11 +5282,11 @@
       "seccion": "Política",
       "medios": [
         "A24",
-        "Crónica",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
         "La Nueva",
-        "Diario Popular",
+        "Crónica",
         "La Capital (Rosario)"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-finaliza-su-viaje-en-estados-unidos-y-se-prepara-para-su-visita-a-espana_a6ad1525c88153cda2d050c06",
@@ -5129,7 +5294,7 @@
       "fecha": "2026-10-16T10:19:51.649Z",
       "sinFecha": false,
       "visto": "2026-10-16T15:01:01.945Z",
-      "relevancia": 48,
+      "relevancia": 44,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -5967,6 +6132,7 @@
         "iProfesional",
         "Crónica",
         "Canal 26",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
         "La Tecla",
@@ -5978,7 +6144,6 @@
         "La Nueva",
         "La Brújula 24",
         "La Gaceta (Tucumán)",
-        "Diario Popular",
         "Los Andes (Mendoza)"
       ],
       "enlace": "https://noticiasargentinas.com/economia/la-inflacion-mayorista-fue-de-3-2--en-septiembre-y-acumulo-una-suba-de-29-2--en-doce-meses_a6ad2741ff8e83a8947249edf",
@@ -6726,186 +6891,14 @@
         "archivo": "fotos-notas/1lkffhb.jpg",
         "credito": "Foto: Clarín"
       }
-    },
-    {
-      "id": "z7cv8i",
-      "titulo": "Diego Santilli celebra la falta de quórum en Diputados para el DNU",
-      "copete": "El jefe de Gabinete destacó que la oposición no lograra habilitar el debate sobre el decreto y respaldó el vínculo con los gobernadores provinciales. Además, confió en avanzar con la reforma electoral.",
-      "cuerpo": "El jefe de Gabinete de la Nación, Diego Santilli, celebró que los bloques opositores no alcanzaran el número necesario de legisladores en la Cámara de Diputados para debatir el rechazo al DNU 70/23. Sostuvo que impedir el debate legislativo equivale a trabajar a favor de los ciudadanos y calificó a la norma como un pilar fundamental de la gestión nacional junto con la Ley Bases.\n\nDurante una entrevista radial, el funcionario nacional destacó el respaldo de los mandatarios provinciales y cuestionó los costos de organizar elecciones primarias, al asegurar que el Congreso aprobará la suspensión de las PASO. Entre los gobernadores cuyos legisladores no aportaron al quórum opositor se encuentran Maximiliano Pullaro, Osvaldo Jaldo, Rolando Figueroa, Carlos Sadir, Marcelo Orrego e Ignacio Torres. Asimismo, en materia presupuestaria, Santilli defendió los fondos destinados a las universidades y afirmó que la administración central aplicó un incremento del 270% en las partidas del sector durante 2024 en comparación con el ejercicio anterior.",
-      "guion": "Diego Santilli celebra la falta de quórum en Diputados para el DNU",
-      "seccion": "Política",
-      "medios": [
-        "Radio Mitre",
-        "elDiarioAR",
-        "Crónica"
-      ],
-      "enlace": "https://radiomitre.cienradios.com/videos/diego-santilli-celebro-que-diputados-no-haya-dado-quorum-para-el-rechazo-del-dnu-7023-habria-sido-algo-espantoso-para-la-sociedad-argentina/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T21:41:41.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-17T00:01:19.897Z",
-      "relevancia": 30,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Santilli celebró que la oposición no reuniera quórum en la Cámara baja.",
-        "El funcionario defendió el impacto del DNU 70/23 y la Ley Bases.",
-        "El Gobierno confía en avanzar con la suspensión de las PASO en el Congreso.",
-        "Se registró un incremento del 270% en las partidas universitarias para 2024."
-      ],
-      "seSabe": [
-        "La oposición no alcanzó el quórum en la Cámara de Diputados para debatir el DNU 70/23, según informó el Gobierno.",
-        "Diego Santilli defendió la vigencia del decreto y la derogación de la anterior ley de alquileres.",
-        "El Ejecutivo nacional destacó el acompañamiento de gobernadores provinciales en el ámbito parlamentario.",
-        "El jefe de Gabinete ratificó que las partidas universitarias aumentaron un 270% en 2024 frente al año previo."
-      ],
-      "noConfirmado": [
-        "No se precisó el número exacto de legisladores presentes al momento de la sesión fallida.",
-        "No se detalló el cronograma legislativo exacto para el tratamiento de la suspensión de las PASO."
-      ],
-      "textoRedes": "El jefe de Gabinete, Diego Santilli, celebró que la oposición no lograra quórum en Diputados para debatir el DNU y defendió los acuerdos con los mandatarios provinciales.",
-      "etiquetas": [
-        "Diego Santilli",
-        "Diputados",
-        "DNU",
-        "Gobierno nacional",
-        "Politica"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/videos/diego-santilli-celebro-que-diputados-no-haya-dado-quorum-para-el-rechazo-del-dnu-7023-habria-sido-algo-espantoso-para-la-sociedad-argentina/",
-          "fecha": "2026-10-16T12:16:48.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Página/12",
-          "enlace": "https://www.pagina12.com.ar/2026/10/16/para-santilli-no-dar-quorum-es-trabajar-a-favor-de-los-argentinos/",
-          "fecha": "2026-10-16T14:33:31.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/politica-y-economia/santilli-celebro-el-respaldo-de-los-gobernadores-al-dnu-70-no-dar-quorum-es-trabajar-a-favor-de-los-argentinos-politica-y-economia_1792161840",
-          "fecha": "2026-10-16T15:09:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los nombres de los gobernadores provinciales cuyos legisladores no contribuyeron al quórum opositor."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/diego-santilli-destaco-la-sesion-caida-por-el-dnu-70-23/",
-          "fecha": "2026-10-16T14:11:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó las declaraciones principales de Diego Santilli sobre el quórum, el DNU, las universidades y la reforma electoral."
-        },
-        {
-          "medio": "elDiarioAR",
-          "enlace": "https://www.eldiarioar.com/politica/santilli-celebro-diputados-no-haya-dado-quorum-rechazo-dnu-70-habria-sido-espantoso-sociedad-argentina_1_13592011.html",
-          "fecha": "2026-10-16T14:19:20.000Z",
-          "oficial": false,
-          "aporte": "Amplió las declaraciones sobre la estrategia política, los cuestionamientos al kirchnerismo y la defensa del oficialismo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1t2w69h",
-          "titulo": "Diego Santilli cuestiona a Kicillof y defiende el rumbo económico",
-          "fecha": "2026-10-02T17:07:29.000Z",
-          "ruta": "/nota/diego-santilli-cuestiona-a-kicillof-y-defiende-el-rumbo-economico-1t2w69h"
-        },
-        {
-          "id": "1mphhlq",
-          "titulo": "Diego Santilli llega a Balcarce por el automovilismo",
-          "fecha": "2026-09-25T13:40:13.000Z",
-          "ruta": "/nota/diego-santilli-llega-a-balcarce-por-el-automovilismo-1mphhlq"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "diego-santilli-celebra-la-falta-de-quorum-en-diputados-para-el-dnu",
-      "foto": {
-        "archivo": "fotos-notas/z7cv8i.jpg",
-        "credito": "Foto: Radio Mitre"
-      }
-    },
-    {
-      "id": "n6v2wu",
-      "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
-      "copete": "El gremio concretó el jueves una medida de fuerza con una adhesión estimada en el 90% en el distrito. Reclamaron subas salariales, medidas contra la violencia escolar y la restitución del FONID.",
-      "cuerpo": "UDOCBA llevó adelante un paro docente el jueves con una adhesión que rondó el 90% en Balcarce, según un relevamiento preliminar de los delegados gremiales. Sandra Gimaray, secretaria general de la seccional local, explicó que la medida respondió a la falta de soluciones ante las problemáticas del sector educativo.\n\nDurante la protesta, el sindicato exigió una convocatoria urgente a paritarias provinciales, la aplicación efectiva de protocolos de resguardo ante la violencia en las escuelas y el cese de la sobrecarga laboral fuera del horario de trabajo. Asimismo, manifestaron su preocupación por las deficiencias en las prestaciones de IOMA.\n\nA nivel nacional, el gremio demandó la restitución del Fondo Nacional de Incentivo Docente, cuya eliminación implicó una pérdida cercana al 15% por cargo, y la apertura de la paritaria docente. También rechazaron la Ley de Libertad Educativa y defendieron la continuidad del Instituto de Previsión Social.",
-      "guion": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/udocba-reclama-mejoras-salariales-frenar-la-sobrecarga-laboral-y-combatir-la-violencia-en-las-escuelas-45",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T21:32:31.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T21:36:16.918Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Paro docente de UDOCBA con adhesión estimada en el 90% en Balcarce.",
-        "Reclaman aumentos salariales, paritarias y protocolos contra la violencia escolar.",
-        "Exigen la restitución del FONID a nivel nacional y cuestionan deficiencias en IOMA."
-      ],
-      "seSabe": [
-        "El gremio UDOCBA realizó un paro docente el jueves.",
-        "La adhesión en Balcarce rondó el 90% según estimaciones preliminares del sindicato.",
-        "Sandra Gimaray ejerce como secretaria general de UDOCBA Balcarce."
-      ],
-      "noConfirmado": [
-        "Los datos definitivos de adhesión al paro en los turnos tarde y noche.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "UDOCBA concretó un paro docente con una adhesión estimada en el 90% en Balcarce. El gremio reclamó mejoras salariales, medidas ante la violencia escolar, restitución del FONID y soluciones en IOMA.",
-      "etiquetas": [
-        "UDOCBA",
-        "paro docente",
-        "Balcarce",
-        "educación",
-        "FONID"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/udocba-reclama-mejoras-salariales-frenar-la-sobrecarga-laboral-y-combatir-la-violencia-en-las-escuelas-45",
-          "fecha": "2026-10-15T21:32:31.000Z",
-          "oficial": false,
-          "aporte": "Detalló los motivos del paro docente, el porcentaje de adhesión en Balcarce y los reclamos provinciales y nacionales del gremio."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "udocba-concreta-paro-docente-con-alto-acatamiento-y-reclama-mejoras",
-      "foto": {
-        "archivo": "fotos-notas/n6v2wu.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
     }
   ],
   "secciones": [
     "Salud",
     "Agro",
+    "Cultura y agenda",
     "Fútbol",
     "Política",
-    "Cultura y agenda",
     "Tecnología",
     "Economía",
     "Argentina",
@@ -6924,7 +6917,7 @@
     "ahora": {
       "temp": 7,
       "sensacion": 4,
-      "humedad": 86,
+      "humedad": 85,
       "viento": 14,
       "rumbo": "S",
       "cielo": "Nublado",

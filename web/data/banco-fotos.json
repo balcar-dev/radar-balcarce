@@ -17334,11 +17334,10 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Luciano Nakis apunta a Gabriel Milito como técnico de Independiente",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T04:01:35.346Z",
-  "intentos": 4,
-  "fuentes": 5,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "razon": "Ninguna de las fotos corresponde al tema de la nota sobre Luciano Nakis y Gabriel Milito; las fotos A y B muestran a Sergio Agüero y las fotos C, D y E muestran a Luciano Nakis hablando en un atril pero ninguna menciona o involucra a Gabriel Milito.",
+  "cuando": "2026-10-17T10:02:00.259Z",
+  "intentos": 5,
+  "fuentes": 5
  },
  "mhaxsk": {
   "archivo": "fotos-notas/mhaxsk.jpg",
@@ -18152,5 +18151,65 @@
   "cuando": "2026-10-17T09:31:51.680Z",
   "intentos": 1,
   "fuentes": 1
+ },
+ "3cvzzz": {
+  "archivo": "fotos-notas/3cvzzz.jpg",
+  "medio": "TyC Sports",
+  "credito": "Foto: TyC Sports",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Boca vence a Talleres y escala a la cima de la Tabla Anual",
+  "enlace": "https://www.tycsports.com/boca-juniors/otra-vuelta-boca-triunfo-talleres-punta-tabla-anual-battaglia-id766920.html",
+  "imagenOriginal": "https://media.tycsports.com/files/2026/10/17/996772/boca_1440x810.webp?v=1",
+  "razon": "Es la única foto limpia de marcas añadidas, sin menores reconocibles y con excelente calidad y encuadre del festejo.",
+  "cuando": "2026-10-17T10:02:00.259Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": true,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Jugador de Boca festejando un gol en pleno partido.",
+   "segunda": {
+    "proveedor": "groq",
+    "marca": false,
+    "menor": false,
+    "jovenes": false,
+    "deArchivo": false,
+    "grafica": false,
+    "stock": false,
+    "corresponde": "si",
+    "descripcion": "Jugador de Boca Juniors celebrando un gol en el estadio La Bombonera."
+   },
+   "dudosa": "la primera IA vio gente muy joven"
+  },
+  "huella": "5eef37c5d199ea2e"
+ },
+ "1t5zb3r": {
+  "archivo": "fotos-notas/1t5zb3r.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La soja registra su quinta baja consecutiva en Chicago y se sostiene en Rosario",
+  "enlace": "https://www.lanacion.com.ar/economia/campo/la-soja-cayo-por-quinta-jornada-consecutiva-en-chicago-y-llego-a-su-menor-precio-en-siete-semanas-nid16102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/los-operadores-estimaron-las-cosechas-de-soja-en-DWRAVY4YDRDXJEU7DSADQH6AOQ.jpg?auth=e2f253c433903563a9be0193f30cf1adb0a4a2c3c59067f4422a8862e150ffcd&width=1200&height=800&quality=70&smart=true",
+  "razon": "La foto B muestra una cosechadora recolectando soja en el campo, ilustrando adecuadamente la nota sobre el mercado de granos sin marcas de agua ni menores.",
+  "cuando": "2026-10-17T10:02:00.259Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Cosechadora trabajando en un campo de soja y descargando en un tractor con acoplado tolva."
+  },
+  "huella": "0c6266c20a095123"
  }
 }
