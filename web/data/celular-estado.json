@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T19:31:59.412Z",
- "portada": 77,
- "archivo": 1239,
+ "generado": "2026-10-17T20:02:50.643Z",
+ "portada": 84,
+ "archivo": 1244,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-17T19:31:59.773Z",
+  "generado": "2026-10-17T20:02:50.859Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -53,7 +53,7 @@
     "que": "Los teléfonos útiles",
     "voz": "locutor",
     "ventana": 60,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -104,8 +104,8 @@
      },
      {
       "id": "rwxsr5",
-      "titulo": "El INTA Balcarce participa de una investigación global sobre suelo",
-      "seccion": "Agro"
+      "titulo": null,
+      "seccion": null
      },
      {
       "id": "1w9aja0",
@@ -185,6 +185,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "u6k0o2",
+     "titulo": "Emiliano Martínez sufre fractura de mandíbula y será operado",
+     "seccion": "Fútbol",
+     "marcada": false
+    },
     {
      "id": "quke5a",
      "titulo": "Atlético de Madrid derrota al Espanyol con un tanto agónico",
