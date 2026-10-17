@@ -35,7 +35,7 @@ const PORTADA = path.join(RAIZ, 'web', 'data', 'portada.json');
  *  no se gasta el cupo de voz (10 audios por día) en piezas que no se van a
  *  publicar. */
 export function estadoDelReloj({
-  ahora = new Date(), libro, clima = null, activo = true,
+  ahora = new Date(), libro, clima = null, activo = true, hayFarmacia = true,
 } = {}) {
   const hora = new Intl.DateTimeFormat('es-AR', {
     hour: '2-digit', minute: '2-digit', timeZone: 'America/Argentina/Buenos_Aires',
@@ -43,10 +43,15 @@ export function estadoDelReloj({
   if (!activo) {
     return { hora, tocan: [], textoResumen: `${hora} en Balcarce · las redes están apagadas (REDES_ACTIVAS): no se arma ninguna pieza.` };
   }
-  const tocan = slotsQueTocan({ ahora, libro, clima }).slice(0, POR_CORRIDA);
+  // Sin farmacia de turno en la web (portada.json), la pieza no se puede armar: no se la pide (17/10, regla 210; el 12/10 el reloj la
+  // pidió veinte veces y cada corrida instaló todo para nada). Si la web la recupera, la vuelta siguiente la pide.
+  const todas = slotsQueTocan({ ahora, libro, clima });
+  const sinFarmacia = !hayFarmacia && todas.some((p) => p.nombre === 'farmacia');
+  const tocan = todas.filter((p) => hayFarmacia || p.nombre !== 'farmacia').slice(0, POR_CORRIDA);
+  const nota = sinFarmacia ? ' (la farmacia no: la web no tiene farmacia de turno para hoy)' : '';
   const textoResumen = tocan.length
-    ? `${hora} en Balcarce · tocan: ${tocan.map((p) => `${p.nombre} (${p.hora})`).join(', ')}`
-    : `${hora} en Balcarce · no hay ninguna pieza para publicar ahora.`;
+    ? `${hora} en Balcarce · tocan: ${tocan.map((p) => `${p.nombre} (${p.hora})`).join(', ')}${nota}`
+    : `${hora} en Balcarce · no hay ninguna pieza para publicar ahora.${nota}`;
   return { hora, tocan, textoResumen };
 }
 
@@ -59,9 +64,14 @@ if (process.argv[1] && process.argv[1].endsWith('reloj.mjs')) {
   // El clima publicado: el mismo que usa reels/plan.mjs en GitHub (vía
   // redes/datos.mjs), así el reloj pide el mismo aviso que el plan arma.
   let clima = null;
-  try { clima = JSON.parse(fs.readFileSync(PORTADA, 'utf8')).clima ?? null; } catch { /* sin portada, sin aviso */ }
+  let hayFarmacia = true;
+  try {
+    const portada = JSON.parse(fs.readFileSync(PORTADA, 'utf8'));
+    clima = portada.clima ?? null;
+    hayFarmacia = Boolean(portada.farmacias?.hoy);
+  } catch { /* sin portada, sin aviso */ }
 
-  const { tocan, textoResumen } = estadoDelReloj({ libro, clima, activo: estaActivo(process.env.REDES_ACTIVAS) });
+  const { tocan, textoResumen } = estadoDelReloj({ libro, clima, hayFarmacia, activo: estaActivo(process.env.REDES_ACTIVAS) });
   console.log(`  ${textoResumen}`);
 
   if (process.env.GITHUB_OUTPUT) {

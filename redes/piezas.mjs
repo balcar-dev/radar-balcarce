@@ -180,8 +180,21 @@ function pieDeReel(pieza, red = null) {
   if (pieza.nombre === 'podcast') {
     return `El repaso del día en Balcarce.\n\nLas notas, con la fuente, en ${SITIO}`;
   }
+  // El clima y la farmacia, cuando salen como reel en Facebook (17/10/2026, regla 210): el enlace a SU página (/clima, /farmacias), no
+  // "Más en radarbalcarce.com". A las 19 y las 20 casi nadie llegaba a la web desde esas piezas. Instagram, sin enlaces (no los toma).
+  const servicio = SERVICIOS_CON_PAGINA.find((s) => s.es(pieza.nombre));
+  if (servicio && red !== 'instagram') {
+    const url = `https://${SITIO}${servicio.camino}`;
+    return `${pieza.titulo}\n\n${servicio.frase}: ${red ? ponerOrigen(url, { fuente: red, campana: 'servicio', contenido: pieza.nombre }) : url}`;
+  }
   return `${pieza.titulo}\n\nMás en ${SITIO}`;
 }
+
+/** Las piezas de servicio que tienen su página en el sitio, con la frase del enlace (regla 210). */
+export const SERVICIOS_CON_PAGINA = [
+  { es: (n) => n === 'clima-manana' || n === 'clima-noche' || String(n ?? '').startsWith('aviso-'), camino: '/clima', frase: 'El pronóstico de toda la semana, acá' },
+  { es: (n) => n === 'farmacia', camino: '/farmacias', frase: 'Las farmacias de turno de toda la semana, con dirección, acá' },
+];
 
 // Los teléfonos útiles rotan de lunes a viernes, una semana distinta cada vez
 // (ingesta/utiles.mjs). Esa regla es la única: la usan también reels/plan.mjs y
