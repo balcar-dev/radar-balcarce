@@ -33,6 +33,9 @@ export async function shaDeBlob(contenido) {
   return [...new Uint8Array(await crypto.subtle.digest('SHA-1', todo))].map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
+/** Con quién firman los robots sus commits: el correo interno de la cuenta balcar-dev, que GitHub reconoce. NO cambiarlo (CLAUDE.md). */
+export const AUTOR_DE_LOS_ROBOTS = { name: 'Radar Balcarce', email: '272334999+balcar-dev@users.noreply.github.com' };
+
 export class ErrorDeGithub extends Error {
   constructor(mensaje, estado) { super(mensaje); this.estado = estado; }
 }
@@ -105,7 +108,7 @@ export function crearGithub({ token, repo, rama = 'main', fetchFn = fetch, agent
      * cuando se leyó, base?: su contenido de entonces }]. `unir(ruta, nuestro, ajeno, base)` (por archivo, en `cambio.unir`): si alguien
      * más cambió ese archivo desde que se leyó (su SHA ya no es `baseSha`), devuelve el texto unido; sin eso, ganan los archivos propios. Devuelve { sha, padre (el commit sobre el que se apoyó), archivos, intentos } o { sha: null, archivos: 0 } si no había nada.
      */
-    async commitear({ mensaje, cambios, intentos = 4, autor = null }) {
+    async commitear({ mensaje, cambios, intentos = 4, autor = AUTOR_DE_LOS_ROBOTS }) {
       const aplicables = cambios.filter((c) => c && c.ruta);
       if (!aplicables.length) return { sha: null, archivos: 0, intentos: 0 };
       const blobs = new Map(); // ruta → sha del blob ya subido (los blobs no cambian entre intentos)
@@ -142,7 +145,7 @@ export function crearGithub({ token, repo, rama = 'main', fetchFn = fetch, agent
         }
         const arbolNuevo = await pedir('POST', '/git/trees', { cuerpo: { base_tree: commitActual.tree.sha, tree: entradas } });
         if (arbolNuevo.sha === commitActual.tree.sha) return { sha: cabeza, padre: cabeza, archivos: 0, intentos: intento }; // no cambiaba nada
-        const commit = await pedir('POST', '/git/commits', { cuerpo: { message: mensaje, tree: arbolNuevo.sha, parents: [cabeza], ...(autor ? { author: autor, committer: autor } : {}) } });
+        const commit = await pedir('POST', '/git/commits', { cuerpo: { message: mensaje, tree: arbolNuevo.sha, parents: [cabeza], ...(autor ? { author: { ...autor, date: new Date().toISOString() }, committer: { ...autor, date: new Date().toISOString() } } : {}) } });
         try {
           await pedir('PATCH', `/git/refs/heads/${rama}`, { cuerpo: { sha: commit.sha, force: false } });
           return { sha: commit.sha, padre: cabeza, archivos: entradas.length, intentos: intento };

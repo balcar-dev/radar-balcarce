@@ -36,6 +36,7 @@ import {
   guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, comoNombre, conMemoriaDelDia, cierreDePodcast,
 } from '../redes/guiones.mjs';
 import { secuenciaDelRepaso, fotoParaElRepaso } from './escenas/repaso.mjs';
+import { entradaDelManifiesto } from './pedido.mjs';
 import { INDICACIONES, momentoDeHora } from '../redes/prompt-redes.mjs';
 import { revisarTexto } from '../redes/guiones.mjs';
 import { nombreDeEvento } from '../web/lib/eventos.js';
@@ -585,7 +586,14 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
     // Se carga acá y no arriba del archivo: armar los videos necesita
     // ffmpeg, que son ochenta megas, y leer el plan del día no. Con el
     // import arriba, las pruebas obligaban a instalarlo en GitHub Actions.
-    const { armarReel } = await import('./reel.mjs');
+    const { armarReel: armarReelLocal } = await import('./reel.mjs');
+    // 18/10/2026 (el video en un repositorio aparte, docs/07-REDES.md): con RENDER_REMOTO=Si la pieza no se arma acá. Se pide la voz a Gemini, se arma el pedido,
+    // se sube a R2 y se despierta al repositorio público de render (reels/render-remoto.mjs); el video lo publica el Worker de tareas cuando el render lo deja
+    // listo. Sin la variable, todo igual que siempre.
+    const remoto = /^\s*(si|sí|true|1)\s*$/i.test(String(process.env.RENDER_REMOTO ?? ''));
+    const render = remoto ? await import('./render-remoto.mjs') : null;
+    const armarReel = remoto ? render.armarReelRemoto : armarReelLocal;
+    const enviadas = [];
     // Una pieza armada de antemano (reels/fijas/, vigente hoy) se sube tal cual: no pide la voz de nuevo.
     // `--sin-fijas` fuerza armarla de cero (para fijar una nueva).
     const sinFijas = process.argv.includes('--sin-fijas');
@@ -621,7 +629,11 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
           continue;
         }
         let r;
-        if (fija) {
+        if (fija && remoto) {
+          // Una fija ya es un video armado: no necesita render, se sube a R2 y el Worker de tareas la publica en su hora.
+          const { dependenciasDelEntorno } = render;
+          r = await render.subirPiezaFija({ p, archivoMp4: fija.ruta, duracion: fija.duracion ?? 0, hasta: fija.hasta, r2: dependenciasDelEntorno().r2 });
+        } else if (fija) {
           fs.mkdirSync(SALIDA, { recursive: true });
           const destino = path.join(SALIDA, `${p.nombre}.mp4`);
           fs.copyFileSync(fija.ruta, destino);
@@ -636,9 +648,14 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
           }
           r = await armarReel({ ...p, reservarVoz: reservaPara(p.nombre, pendientes) }, SALIDA);
         }
+        if (r.pendiente) {
+          // Mandada al render: todavía no hay video. No entra al manifiesto ni a las piezas armadas; la publica el Worker de tareas cuando el render la deja lista.
+          enviadas.push({ nombre: p.nombre, huella: r.huella });
+          console.log(`\x1b[32menviada\x1b[0m ${p.nombre} al render (${r.huella}) · ${r.vozUsada ?? 'voz de Gemini'}`);
+          continue;
+        }
         const entrada = {
-          nombre: p.nombre, tipo: p.tipo, hora: p.hora, titulo: p.titulo, notaId: p.notaId ?? null,
-          notaIds: p.notaIds ?? [], items: p.items ?? [], ...(p.reelEnFacebook ? { reelEnFacebook: true } : {}),
+          ...entradaDelManifiesto(p),
           archivo: path.basename(r.mp4), duracion: Number(r.duracion.toFixed(1)),
           // Si el video pasa de lo que acepta una historia, las historias suben
           // esta versión recortada; el reel sube entero (redes/publicar-piezas.mjs).
@@ -665,6 +682,7 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
     // hizo fallar Redes en cada vuelta desde las 10:05.
     fs.mkdirSync(SALIDA, { recursive: true });
     fs.writeFileSync(path.join(SALIDA, 'piezas.json'), JSON.stringify(manifiesto, null, 2));
+    if (remoto) fs.writeFileSync(path.join(SALIDA, 'enviadas.json'), JSON.stringify(enviadas, null, 2));
   } else {
     console.log('\n  Para armar los videos:  node reels/plan.mjs --generar\n');
   }

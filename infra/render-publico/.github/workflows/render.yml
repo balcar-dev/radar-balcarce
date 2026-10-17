@@ -1,0 +1,61 @@
+# El render de video de Radar Balcarce (18/10/2026). Este repositorio es PÚBLICO y NO tiene ningún secreto: los minutos de Actions de un repositorio
+# público son gratis y sin tope, y el video (resvg + ffmpeg) es lo más pesado que hace el sistema.
+#
+# Lo despierta el repositorio principal con un `repository_dispatch` (tipo «render»). El aviso trae direcciones FIRMADAS Y TEMPORALES (una hora) de R2:
+# una para bajar el pedido, otra para bajar la voz y una para subir cada archivo del resultado. Nada más abre nada. Ver README.md.
+#
+# Qué NO hace este workflow, a propósito: no usa `secrets.*` (no hay), no corre código de pull requests ajenos (no escucha `pull_request`), no tiene
+# permiso de escritura sobre este repositorio (`contents: read`) y no imprime ninguna dirección (las enmascara apenas arranca el programa).
+
+name: Render
+
+on:
+  repository_dispatch:
+    types: [render]
+  # A mano, para probar con una carpeta de ejemplo: no necesita ninguna dirección. Sube nada: deja el video como adjunto de la corrida.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Un video a la vez por pieza (la huella es única por pedido): si el principal insiste, se espera en vez de pisarse.
+concurrency:
+  group: render-${{ github.event.client_payload.huella || github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    # El video más largo (un repaso de 5 notas) tarda unos 3 minutos. Veinte corta una corrida colgada.
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Instalar
+        run: |
+          n=0; until npm ci --no-audit --no-fund; do n=$((n+1)); [ $n -ge 3 ] && exit 1; echo "npm ci falló (intento $n), se reintenta"; sleep 20; done
+
+      # El aviso entra por una variable de entorno y nunca pegado en un comando.
+      - name: Armar el video y subirlo
+        if: github.event_name == 'repository_dispatch'
+        run: node render.mjs
+        env:
+          PAYLOAD: ${{ toJSON(github.event.client_payload) }}
+
+      - name: Prueba de humo (a mano)
+        if: github.event_name == 'workflow_dispatch'
+        run: npm test
+
+      - name: Guardar el video de la prueba
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: humo
+          path: reels/salida/*.mp4
+          retention-days: 3
+          if-no-files-found: ignore

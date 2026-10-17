@@ -1,0 +1,85 @@
+# Piezas de redes (18/10/2026, mudanza a Cloudflare): arma el PEDIDO de las piezas de video que tocan y se lo manda al repositorio público de render.
+#
+# Reemplaza a la mitad de «Redes» que necesitaba instalar y gastar minutos: antes cada pieza armaba el video acá (resvg + ffmpeg, unos 2 minutos por pieza y
+# 14 piezas por día); ahora acá sólo se hace lo que necesita secretos —pedir la voz a Gemini, con su cupo de 10 audios por día— y se arma el pedido
+# (reels/pedido.mjs): el video lo dibuja el repositorio público radarbalcarce/radar-balcarce-render, donde los minutos son gratis. El resultado vuelve por
+# R2 y lo publica el Worker de tareas de Cloudflare en su vuelta siguiente (infra/tareas-cloudflare/redes.mjs).
+#
+# LO DISPARA el Worker de tareas (acción «redes»: estadoDelReloj dice qué piezas tocan y las pide con `solo`), sólo con `redes.yml` en la variable NUBE del reloj.
+# Sin la nube, «Redes» (redes.yml) sigue armando y publicando todo como siempre y este workflow no corre nunca. A mano (Actions → Piezas de redes →
+# Run workflow) sirve para pedir una pieza que no salió.
+#
+# SECRETOS: GEMINI_API_KEY_REDES (la voz), R2_ACCESS_KEY_ID y R2_SECRET_ACCESS_KEY (subir el pedido y firmar las direcciones temporales del render),
+# CLOUDFLARE_ACCOUNT_ID, RENDER_GITHUB_TOKEN (un token de grano fino SÓLO para el repositorio de render, con «Contents: lectura y escritura»).
+# VARIABLES: R2_RENDER (radar-render). Guarda la memoria de voces en la caché de Actions, igual que «Redes»: un audio ya pedido no se paga dos veces.
+
+name: Piezas de redes
+run-name: Piezas de redes · ${{ inputs.solo }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      solo:
+        description: 'Las piezas a armar, separadas por comas (por ejemplo: clima-manana,noticia1)'
+        required: true
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: redes-piezas
+  cancel-in-progress: false
+
+jobs:
+  armar:
+    runs-on: ubuntu-24.04
+    # Armar el pedido tarda ~1 minuto (la voz de Gemini es lo más lento). Diez corta una corrida colgada.
+    timeout-minutes: 10
+    env:
+      TZ: America/Argentina/Buenos_Aires
+    steps:
+      # Siempre la última versión de main: el plan lee la portada y el libro tal como los dejó la última vuelta.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      # Hace falta: reels/ usa resvg (las placas) y ffmpeg (convertir y medir la voz).
+      - name: Instalar
+        run: |
+          n=0; until npm ci --no-audit --no-fund; do n=$((n+1)); [ $n -ge 3 ] && exit 1; echo "npm ci falló (intento $n), se reintenta"; sleep 20; done
+
+      # La memoria de voces (C-16): un texto con la misma voz y el mismo estilo se pide UNA vez al día (reels/voz-gemini.mjs).
+      - name: Restaurar la memoria de voces
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/voz
+          key: voz-${{ github.run_id }}
+          restore-keys: |
+            voz-
+
+      # El pedido de cada pieza va a R2 y despierta al render. NO espera el video.
+      - name: Armar los pedidos y mandarlos al render
+        run: node reels/plan.mjs --generar "--solo=$SOLO"
+        env:
+          SOLO: ${{ inputs.solo }}
+          RENDER_REMOTO: 'Si'
+          GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
+          VOZ_CACHE: ${{ github.workspace }}/.cache/voz
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_RENDER: ${{ vars.R2_RENDER }}
+          RENDER_GITHUB_TOKEN: ${{ secrets.RENDER_GITHUB_TOKEN }}
+
+      - name: Guardar la memoria de voces
+        if: always() && hashFiles('.cache/voz/*.json') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/voz
+          key: voz-${{ hashFiles('.cache/voz/*.json') }}

@@ -1,0 +1,57 @@
+# El Worker de tareas de Radar Balcarce (ver worker.mjs y LEEME.md). No tiene horarios: lo despierta el reloj (infra/reloj-cloudflare/) por un binding de servicio.
+name = "radar-balcarce-tareas"
+main = "entrada.mjs"
+compatibility_date = "2026-10-01"
+# El programa de cada tarea usa node:fs, node:path y process.env: con nodejs_compat (y una fecha de 2025-09-01 o más) hay un sistema de archivos
+# en memoria con /tmp escribible, por pedido (docs: developers.cloudflare.com/workers/runtime-apis/nodejs/fs/).
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+# Una tarea espera a una IA o a Meta, pero parsear los JSON de web/data/ y armar los mensajes también suma. 2 minutos de CPU de sobra (el tope del plan Paid es 5).
+[limits]
+cpu_ms = 120000
+
+# Los programas de redes/, panel/ y web/scripts/ calculan su carpeta con `import.meta.dirname`, que en un Worker no existe: se reemplaza al empaquetar
+# por una carpeta de /tmp. Es sólo el valor de arranque; el corredor avisa la de verdad con RADAR_RAIZ (redes/raiz.mjs).
+[define]
+"import.meta.dirname" = '"/tmp/radar/redes"'
+"import.meta.url" = '"file:///tmp/radar/redes/modulo.mjs"'
+
+# Los dos criterios viajan adentro del paquete como texto (arranque.mjs): hay que decirle a Wrangler que un .md se importa como texto.
+[[rules]]
+type = "Text"
+globs = ["**/*.md"]
+fallthrough = true
+
+# Programas de Node que no corren en un Worker y que nuestro código sólo toca si están (siempre dentro de un try): se reemplazan por uno vacío.
+[alias]
+"ffmpeg-static" = "./alias/ffmpeg-static.mjs"
+"@resvg/resvg-js" = "./alias/resvg.mjs"
+
+# Los candados y el estado de cada tarea (qué salió, cuándo). El workflow «Desplegar Workers de Cloudflare» crea el KV si no existe y reemplaza el marcador.
+[[kv_namespaces]]
+binding = "ESTADO"
+id = "REEMPLAZADO_POR_EL_WORKFLOW"
+
+# La memoria entre corridas de las tareas que la necesitan (el cupo de ilustraciones del día), bajo memoria/<tarea>/.
+[[r2_buckets]]
+binding = "MEMORIA"
+bucket_name = "radar-tareas"
+
+# Los pedidos de video armados y los videos listos del repositorio público de render (redes.mjs): pedidos/<huella>/…, listos/<huella>/…, publicados/<huella>.
+[[r2_buckets]]
+binding = "RENDER"
+bucket_name = "radar-render"
+
+# El depósito del motor: de ahí el informe diario lee cómo salieron las últimas vueltas (infra/motor-cloudflare/).
+[[r2_buckets]]
+binding = "MOTOR"
+bucket_name = "radar-motor"
+
+# El Worker que genera las imágenes (infra/imagenes-cloudflare/): se llama por binding, no por su dirección pública.
+[[services]]
+binding = "IMAGENES"
+service = "radar-balcarce-imagenes"
+
+# Secretos y variables: ver worker.mjs. Se cargan con `wrangler secret put` o en el panel de Cloudflare, nunca acá.
+# (REDES_ACTIVAS, R2_ARCHIVO y WORKFLOWS_EN_LA_NUBE son variables y se editan en el panel; el workflow despliega con --keep-vars para no pisarlas.)

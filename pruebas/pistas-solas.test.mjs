@@ -62,7 +62,7 @@ test('una pista que toca menores o víctimas nunca sale sola, aunque la cubran m
 test('la corrida de pistas sólo intenta salir sola con la clave de búsqueda y no cuando se mira una sola pista', async () => {
   const fs = await import('node:fs');
   const t = fs.readFileSync(new URL('../panel/revisar-pistas.mjs', import.meta.url), 'utf8');
-  assert.match(t, /!solo && process\.env\.TAVILY_API_KEY/);
+  assert.match(t, /!solo && (process\.env|entorno)\.TAVILY_API_KEY/);
   assert.match(fs.readFileSync(new URL('../.github/workflows/pistas.yml', import.meta.url), 'utf8'), /TAVILY_API_KEY/);
 });
 

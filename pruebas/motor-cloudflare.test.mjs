@@ -11,7 +11,7 @@ import {
 import {
   restaurarCache, guardarCache, tomarCandado, soltarCandado, anotarVuelta, CLAVE_DEL_CANDADO, CLAVE_DEL_ESTADO,
 } from '../infra/motor-cloudflare/estado-r2.mjs';
-import { vuelta, configurar, fechaCorta, MINUTOS_MAXIMOS } from '../infra/motor-cloudflare/vuelta.mjs';
+import { vuelta, configurar, fechaCorta, MINUTOS_MAXIMOS, anotacionesDe } from '../infra/motor-cloudflare/vuelta.mjs';
 import motorWorker, { estadoDelMotor } from '../infra/motor-cloudflare/worker.mjs';
 import { crearGithub, shaDeBlob } from '../infra/compartido/github.mjs';
 import { githubFalso } from './ayudas/github-falso.mjs';
@@ -207,7 +207,7 @@ function escenario({ nucleoFalla = false, generarFalla = false, compilarFalla = 
       escribir(raiz, 'web/public/fotos-notas/nueva.jpg', Buffer.from([1, 2, 3]));
       fs.rmSync(path.join(raiz, 'web/public/fotos-notas/vieja.jpg'));
       escribir(raiz, '.cache/cruce-memoria.json', '{"n":1}');
-      return { codigo: 0 };
+      return { codigo: 0, anotaciones: [{ title: 'Fuente caída', message: 'Radio Gabal: HTTP 503' }, { title: 'Fuente vacía', message: 'El Diario no trajo ninguna nota' }] };
     }
     if (/run build/.test(linea)) { if (compilarFalla) return { codigo: 1 }; escribir(raiz, 'web/out/index.html', '<html></html>'); return { codigo: 0 }; }
     if (/pages deploy/.test(linea) && ajenos) return { codigo: 0 };
@@ -247,7 +247,13 @@ test('una vuelta buena hace lo mismo que el workflow, en el mismo orden, y guard
   assert.equal(e.github.leer('web/public/fotos-notas/sobrevive.jpg'), 'sobrevive');
   // R2: memoria guardada, estado anotado, candado soltado
   assert.equal(r2.texto('motor/cache/cruce-memoria.json'), '{"n":1}');
-  assert.equal(JSON.parse(r2.texto(CLAVE_DEL_ESTADO)).ok, true);
+  const estado = JSON.parse(r2.texto(CLAVE_DEL_ESTADO));
+  assert.equal(estado.ok, true);
+  // los avisos de fuentes caídas quedan en el estado (en GitHub los leía el informe diario de las anotaciones de la corrida) y las vueltas se recuerdan
+  assert.deepEqual(estado.anotaciones, [{ title: 'Fuente caída', message: 'Radio Gabal: HTTP 503' }, { title: 'Fuente vacía', message: 'El Diario no trajo ninguna nota' }]);
+  assert.equal(estado.historial.length, 1);
+  assert.equal(estado.historial[0].ok, true);
+  assert.ok(e.comandos.find((c) => /generar-datos/.test(c.args)), 'se pidió capturar la salida del armado');
   assert.equal(r2.texto(CLAVE_DEL_CANDADO), null);
   assert.equal(JSON.parse(r2.texto('motor/minutos/2026-10.json')).vueltas, 1);
 });
@@ -384,4 +390,21 @@ test('wrangler.toml del motor no lleva secretos ni rutas, y sus archivos no tien
     const c = leer(`infra/motor-cloudflare/${f}`);
     assert.doesNotMatch(c, /ghp_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{12,}|AIza[0-9A-Za-z_-]{30,}/, `${f} no lleva una clave escrita`);
   }
+});
+
+test('los avisos «::warning title=…::…» del armado se leen como las anotaciones de GitHub, y el estado recuerda las vueltas y las anotaciones de la última que armó', async () => {
+  assert.deepEqual(anotacionesDe('hola\n::warning title=Fuente caída::Radio Gabal: HTTP 503\r\n  otra línea\n::warning title=Fuente vacía::El Diario no trajo ninguna nota\n::error::no cuenta'), [
+    { title: 'Fuente caída', message: 'Radio Gabal: HTTP 503' }, { title: 'Fuente vacía', message: 'El Diario no trajo ninguna nota' },
+  ]);
+  assert.deepEqual(anotacionesDe(''), []);
+  const { cliente, texto } = r2Falso();
+  const t = new Date('2026-10-18T13:00:00Z');
+  await anotarVuelta(cliente, { id: 'v1', ok: true, segundos: 200, ahora: t, anotaciones: [{ title: 'Fuente caída', message: 'A: mal' }] });
+  // una vuelta que falló antes de armar los datos (anotaciones null): se conservan las de la anterior
+  await anotarVuelta(cliente, { id: 'v2', ok: false, motivo: 'núcleo legal', segundos: 10, ahora: new Date(t.getTime() + 1800e3), anotaciones: null });
+  const e = JSON.parse(texto(CLAVE_DEL_ESTADO));
+  assert.deepEqual(e.anotaciones, [{ title: 'Fuente caída', message: 'A: mal' }]);
+  assert.deepEqual(e.historial.map((v) => v.ok), [true, false]);
+  for (let i = 0; i < 120; i += 1) await anotarVuelta(cliente, { id: `v${i}`, ok: true, segundos: 1, ahora: new Date(t.getTime() + (i + 2) * 1800e3) });
+  assert.equal(JSON.parse(texto(CLAVE_DEL_ESTADO)).historial.length, 96, 'sólo se recuerdan 96 vueltas (dos días)');
 });

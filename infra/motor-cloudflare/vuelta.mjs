@@ -41,13 +41,27 @@ const RAIZ = path.join(import.meta.dirname, '..', '..');
 
 const si = (v) => /^\s*(si|sí|true|1)\s*$/i.test(String(v ?? ''));
 
-/** Un comando de verdad. Devuelve { codigo }. Nunca tira por un código de salida: quien llama decide. */
-export function ejecutarReal(comando, args, { cwd = RAIZ, env = process.env, minutos = MINUTOS_MAXIMOS } = {}) {
+/** Los avisos `::warning title=Fuente caída::Nombre: error` que imprime el armado, como { title, message } (el formato de las anotaciones de GitHub). */
+export function anotacionesDe(texto) {
+  const salida = [];
+  for (const linea of String(texto).split(/\r?\n/)) {
+    const m = linea.match(/^::warning title=([^:]*)::(.*)$/);
+    if (m) salida.push({ title: m[1].trim(), message: m[2].trim() });
+  }
+  return salida.slice(0, 100);
+}
+
+/** Un comando de verdad. Devuelve { codigo } (y `anotaciones` si se pidió `capturar`). Nunca tira por un código de salida: quien llama decide. */
+export function ejecutarReal(comando, args, {
+  cwd = RAIZ, env = process.env, minutos = MINUTOS_MAXIMOS, capturar = false,
+} = {}) {
   return new Promise((resolver) => {
-    const hijo = spawn(comando, args, { cwd, env, stdio: 'inherit', shell: false });
+    const hijo = spawn(comando, args, { cwd, env, stdio: capturar ? ['inherit', 'pipe', 'inherit'] : 'inherit', shell: false });
+    let visto = '';
+    if (capturar) hijo.stdout.on('data', (d) => { process.stdout.write(d); visto = (visto + d).slice(-400000); });
     const reloj = setTimeout(() => { hijo.kill('SIGKILL'); }, minutos * 60000);
     hijo.on('error', (e) => { clearTimeout(reloj); console.error(`No se pudo correr ${comando}: ${e.message}`); resolver({ codigo: 127 }); });
-    hijo.on('close', (codigo) => { clearTimeout(reloj); resolver({ codigo: codigo ?? 1 }); });
+    hijo.on('close', (codigo) => { clearTimeout(reloj); resolver({ codigo: codigo ?? 1, ...(capturar ? { anotaciones: anotacionesDe(visto) } : {}) }); });
   });
 }
 
@@ -93,10 +107,13 @@ export async function vuelta({
   let tenemosElCandado = false;
   let resultado = { ok: false, pasos };
 
-  const correr = async (nombre, comando, args, { cwd = raiz, extra = {}, puedeFallar = false } = {}) => {
+  let anotaciones = null;
+  const correr = async (nombre, comando, args, { cwd = raiz, extra = {}, puedeFallar = false, capturar = false } = {}) => {
     const t0 = ahora().getTime();
     log(`\n▶ ${nombre}`);
-    const { codigo } = await ejecutar(comando, args, { cwd, env: { ...entorno, ...extra }, minutos: Math.max(1, MINUTOS_MAXIMOS - (t0 - inicio) / 60000) });
+    const salida = await ejecutar(comando, args, { cwd, env: { ...entorno, ...extra }, minutos: Math.max(1, MINUTOS_MAXIMOS - (t0 - inicio) / 60000), capturar });
+    const { codigo } = salida;
+    if (capturar && Array.isArray(salida.anotaciones)) anotaciones = salida.anotaciones;
     pasos[nombre] = { ok: codigo === 0, segundos: Math.round((ahora().getTime() - t0) / 1000) };
     if (codigo !== 0) {
       log(`✖ ${nombre} salió con código ${codigo}${puedeFallar ? ' (no frena la vuelta)' : ''}`);
@@ -156,7 +173,7 @@ export async function vuelta({
     const antes = fotografiar(raiz);
     // El commit con el que empezó esta vuelta: lo que entre después es lo que "entró mientras se armaba" (paso 8).
     const cabezaAlInicio = env.WORKERS_CI_COMMIT_SHA || (gh && !cfg.simular ? await gh.cabeza().catch(() => null) : null);
-    await correr('Buscar noticias y armar los datos', 'node', ['scripts/generar-datos.mjs'], { cwd: web });
+    await correr('Buscar noticias y armar los datos', 'node', ['scripts/generar-datos.mjs'], { cwd: web, capturar: true });
     if (deposito && !cfg.simular) log(`Memoria guardada: ${await guardarCache(deposito, raiz, memoria)} archivo(s) nuevo(s) o cambiados.`);
 
     // 6. Compilar el sitio UNA vez y revisar el SEO.
@@ -230,7 +247,7 @@ export async function vuelta({
   } finally {
     if (deposito && !cfg.simular && tenemosElCandado) {
       const segundos = (ahora().getTime() - inicio) / 1000;
-      try { await anotarVuelta(deposito, { id: cfg.id, ok: resultado.ok, motivo: resultado.motivo ?? null, segundos, pasos, ahora: ahora() }); } catch (e) { log(`(no se pudo anotar la vuelta en R2: ${e.message})`); }
+      try { await anotarVuelta(deposito, { id: cfg.id, ok: resultado.ok, motivo: resultado.motivo ?? null, segundos, pasos, ahora: ahora(), anotaciones }); } catch (e) { log(`(no se pudo anotar la vuelta en R2: ${e.message})`); }
       await soltarCandado(deposito, { id: cfg.id });
     }
     log(`\nVuelta ${resultado.omitida ? 'saltada' : resultado.ok ? 'terminada' : 'fallida'} en ${resultado.segundos ?? Math.round((ahora().getTime() - inicio) / 1000)} s.`);

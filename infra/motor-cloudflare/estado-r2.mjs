@@ -80,13 +80,23 @@ export async function soltarCandado(r2, { id }) {
   } catch { /* si no se puede soltar, vence solo */ }
 }
 
-/** Anota cómo terminó la vuelta y suma sus minutos al mes. */
-export async function anotarVuelta(r2, { id, ok, motivo = null, segundos, pasos = {}, ahora = new Date() }) {
+/** Cuántas vueltas se recuerdan en el estado (dos días a una cada media hora): el informe diario cuenta cuántas salieron bien y cuántas mal. */
+export const VUELTAS_QUE_SE_RECUERDAN = 96;
+
+/**
+ * Anota cómo terminó la vuelta y suma sus minutos al mes. `anotaciones` son los avisos `::warning title=…::…` que imprimió el armado (fuentes caídas o vacías):
+ * en GitHub los mostraba la API de anotaciones y de ahí los leía el informe diario; ahora quedan acá.
+ */
+export async function anotarVuelta(r2, {
+  id, ok, motivo = null, segundos, pasos = {}, ahora = new Date(), anotaciones = null,
+}) {
   const estado = { id, ok, motivo, segundos: Math.round(segundos), cuando: ahora.toISOString(), pasos };
-  if (ok) estado.ultimaBuena = ahora.toISOString();
-  else {
-    try { estado.ultimaBuena = JSON.parse(await r2.leerTexto(CLAVE_DEL_ESTADO) ?? 'null')?.ultimaBuena ?? null; } catch { estado.ultimaBuena = null; }
-  }
+  let previo = null;
+  try { previo = JSON.parse(await r2.leerTexto(CLAVE_DEL_ESTADO) ?? 'null'); } catch { previo = null; }
+  estado.ultimaBuena = ok ? ahora.toISOString() : (previo?.ultimaBuena ?? null);
+  // Las anotaciones de la última vuelta que llegó a armar los datos; si ésta no llegó, quedan las de la anterior.
+  estado.anotaciones = Array.isArray(anotaciones) ? anotaciones : (previo?.anotaciones ?? null);
+  estado.historial = [...(Array.isArray(previo?.historial) ? previo.historial : []), { cuando: ahora.toISOString(), ok, segundos: Math.round(segundos) }].slice(-VUELTAS_QUE_SE_RECUERDAN);
   await r2.guardar(CLAVE_DEL_ESTADO, JSON.stringify(estado), 'application/json');
   const mes = mesDe(ahora);
   let registro = registroVacio(mes);
