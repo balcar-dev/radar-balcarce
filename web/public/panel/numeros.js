@@ -4,6 +4,7 @@
 //
 //   web/data/estadisticas.json   `dias` (el detalle de la web día por día) y `puntos` (las mediciones de las 9 y las 21)
 //   web/data/notas-por-dia.json  cuántas notas se publicaron por día y sección
+//   web/data/estadistica-seleccion.json  cómo cae la selección: qué llega, qué sale y por qué no sale el resto (regla 260)
 //   web/data/portada.json y archivo.json   qué es cada nota (sección, medios, de acá o de afuera)
 //   web/data/redes.json          lo publicado en Facebook e Instagram
 //
@@ -172,6 +173,50 @@ export function evolucionDeSeguidores(puntos, red, desdeDia) {
   return { ahora: ultimo[red].seguidores, antes: primero[red].seguidores, desde: primero.cuando };
 }
 
+// ------------------------------------------------------------- la selección
+
+const MOTIVOS_DE_LA_SELECCION = [
+  ['unMedio', 'un solo medio'], ['pocasFuentes', 'pocas fuentes'], ['semaforo', 'el semáforo'], ['ia', 'la IA'], ['repetida', 'repetidas'],
+  ['sinCuerpo', 'sin cuerpo'], ['otros', 'otros'],
+];
+
+/**
+ * Un resumen chico de cómo cae la selección (web/data/estadistica-seleccion.json, regla 260): por día cuántas historias llegan y cuántas salen,
+ * por qué no salen las demás y qué secciones tuvieron días sin notas. null si todavía no hay días medidos.
+ */
+export function resumenDeLaSeleccion(seleccion, { hoy, dias = 7 } = {}) {
+  const lista = ultimosDias(hoy, dias).filter((d) => seleccion?.dias?.[d]);
+  if (!lista.length) return null;
+  const suma = (f) => lista.reduce((t, d) => t + (Number(f(seleccion.dias[d])) || 0), 0);
+  const motivos = MOTIVOS_DE_LA_SELECCION.map(([clave, texto]) => ({
+    clave, texto, cuantas: suma((d) => Object.values(d.secciones ?? {}).reduce((t, s) => t + (s.quedaronAfuera?.[clave] ?? 0), 0)),
+  }));
+  const secciones = new Set(lista.flatMap((d) => Object.keys(seleccion.dias[d].secciones ?? {})));
+  const sinNotas = [...secciones].map((s) => ({ seccion: s, dias: lista.filter((d) => !(seleccion.dias[d].secciones?.[s]?.publicadas > 0)).length }))
+    .filter((x) => x.dias > 0).sort((a, b) => b.dias - a.dias);
+  return {
+    dias: lista.length,
+    llegan: suma((d) => d.llegaron) / lista.length, salen: suma((d) => d.publicadas) / lista.length,
+    deAca: suma((d) => d.deAcaPublicadas) / lista.length, deAfuera: suma((d) => d.deAfueraPublicadas) / lista.length,
+    motivos, sinNotas,
+  };
+}
+
+/** El bloque "Cómo cae la selección" de la pestaña. Vacío si no hay números todavía. */
+export function htmlDeLaSeleccion(seleccion, { hoy, rango = 7 } = {}) {
+  const r = resumenDeLaSeleccion(seleccion, { hoy, dias: rango });
+  if (!r) return '';
+  const dec = (n) => (Math.round(n * 10) / 10).toLocaleString('es-AR');
+  const motivos = r.motivos.filter((m) => m.cuantas).map((m) => `${esc(m.texto)} <strong>${n0(m.cuantas / r.dias)}</strong>`).join(' · ');
+  const sin = r.sinNotas.map((x) => `${esc(x.seccion)} (${x.dias} de ${r.dias})`).join(', ');
+  return `<h2>Cómo cae la selección</h2><div class="caja"><ul class="lista-simple">
+    <li>Por día llegan <strong>${n0(r.llegan)}</strong> historias y salen <strong>${dec(r.salen)}</strong> (${dec(r.deAca)} de acá y ${dec(r.deAfuera)} de afuera).</li>
+    ${motivos ? `<li>Las que no salen, por día: ${motivos}.</li>` : ''}
+    <li>${sin ? `Secciones con días sin notas: ${sin}.` : 'Todas las secciones tuvieron notas todos los días.'}</li></ul>
+    <p class="estado">Promedio de ${r.dias} ${r.dias === 1 ? 'día medido' : 'días medidos'}. <a href="estadistica-seleccion.html" target="_blank" rel="noopener">Ver el reporte completo</a>
+    (cuántas notas habría con otro mínimo). Los mínimos se cambian en GitHub, Settings, Secrets and variables, Actions, Variables: MINIMO_NACIONAL y MINIMO_AREAS_CHICAS.</p></div>`;
+}
+
 // ------------------------------------------------------------------- salud
 
 /** Lo que dicen las últimas corridas de un workflow de GitHub Actions. */
@@ -231,6 +276,7 @@ const tarjeta = (titulo, valor, pie = '') => `<div class="tile"><div class="tile
  * @param {object} o
  * @param {object} o.estadisticas  web/data/estadisticas.json
  * @param {object} o.produccion    web/data/notas-por-dia.json
+ * @param {object} [o.seleccion]   web/data/estadistica-seleccion.json (regla 260)
  * @param {Map}    o.indice        id → nota (indiceDeNotas)
  * @param {object} o.libro         web/data/redes.json
  * @param {object} o.corridas      { actualizar, redes, vigilancia } → resumenDeCorridas, si se pudieron traer
@@ -239,7 +285,7 @@ const tarjeta = (titulo, valor, pie = '') => `<div class="tile"><div class="tile
  * @param {(id:string)=>string} o.enlace  la dirección de una nota
  * @param {{esperan:number, sinCuerpo:number}} o.espera
  */
-export function htmlDeNumeros({ estadisticas, produccion, indice, libro, corridas, rango = 7, hoy, enlace, espera = {}, haceCuanto = () => '' }) {
+export function htmlDeNumeros({ estadisticas, produccion, seleccion = null, indice, libro, corridas, rango = 7, hoy, enlace, espera = {}, haceCuanto = () => '' }) {
   const dias = ultimosDias(hoy, rango);
   const lista = dias.map((d) => datosDelDia(estadisticas, d));
   const previos = ultimosDias(new Date(Date.parse(`${dias[0]}T12:00:00Z`) - DIA_MS).toISOString().slice(0, 10), rango).map((d) => datosDelDia(estadisticas, d));
@@ -365,6 +411,9 @@ export function htmlDeNumeros({ estadisticas, produccion, indice, libro, corrida
     html += `<h2>Cuántas notas salen</h2><div class="caja">${graficoDeBarras(prod, dias.map((d) => etiquetaDeDia(d).replace(/^\S+ /, '')), { resaltar: prod.length - 1, titulo: 'Notas publicadas por día' })}
       <p class="estado">${n0(suma(prod))} notas publicadas en ${rango} días, ${(suma(prod) / rango).toFixed(1).replace('.', ',')} por día${t.vistas ? ` · ${(t.vistas / Math.max(1, suma(prod))).toFixed(1).replace('.', ',')} vistas por nota publicada` : ''}.</p></div>`;
   }
+
+  // --- la selección (regla 260)
+  html += htmlDeLaSeleccion(seleccion, { hoy, rango });
 
   // --- salud
   const filaCorrida = (nombre, r) => (r ? `<li>${esc(nombre)}: ${r.fallas ? `<span class="est mal">${r.fallas} con falla de las últimas ${r.total}</span>${r.ultimaFalla ? ` (la última, ${esc(haceCuanto(r.ultimaFalla))})` : ''}` : `<span class="est ok">sin fallas en las últimas ${r.total}</span>`}</li>` : '');

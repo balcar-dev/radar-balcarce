@@ -63,7 +63,7 @@ Hoy: **${activas.length} feeds activos de ${medios.size} medios** (${todas.lengt
 4. **Qué queda:**
    - todo lo de los medios de Balcarce;
    - de afuera, lo que dice Balcarce en el título o toca la zona (la ruta 226, la 55, la papa);
-   - de afuera, lo que cuentan ${POPULARIDAD.mediosPorDefecto} medios distintos, o ${POPULARIDAD.mediosEnAreasChicas} en las áreas donde suele haber poco (${areasChicas}) y cuando el día va flojo para el ritmo de ${POPULARIDAD.notasPorDia} notas (\`POPULARIDAD\`, en \`ingesta/criterio.mjs\`). Con un solo medio sale sólo una fuente **especializada** (ciencia, salud, educación, tecnología) que la lectura con IA considere de interés. Sin cupos.
+   - de afuera, lo que cuentan ${POPULARIDAD.minimoNacional} medios distintos, o ${POPULARIDAD.minimoAreasChicas} en las áreas chicas (${areasChicas}); los dos números se cambian con las variables de GitHub \`MINIMO_NACIONAL\` y \`MINIMO_AREAS_CHICAS\` (\`POPULARIDAD\`, en \`ingesta/criterio.mjs\`). Nunca con un solo medio, y sin cupos.
    - Lo que cuentan **sólo** medios de otras ciudades de la zona (Mar del Plata, Tandil, Necochea…) no se trae.
 5. **El peso** sirve para ordenar (qué va primero, qué va a las redes), no para decidir si sale. Lo de Balcarce pesa más a propósito.
 6. **"Oficial"** es un organismo público (la Municipalidad, el Gobierno de la Provincia): da verificación alta y sale solo si dice Balcarce en el título o toca la zona.

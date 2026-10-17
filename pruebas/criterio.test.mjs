@@ -97,7 +97,7 @@ test('los que usan los números los toman del criterio (o dicen lo mismo)', () =
   assert.equal(fuentes.POPULARIDAD, criterio.POPULARIDAD);
   assert.equal(fuentes.AREAS_CHICAS, criterio.AREAS_CHICAS);
   assert.equal(fuentes.SECCIONES_SOLO_DE_ACA, criterio.SECCIONES_SOLO_DE_ACA);
-  assert.equal(fuentes.SECCIONES_SIN_FRONTERAS, criterio.SECCIONES_SIN_FRONTERAS);
+  assert.ok(!('SECCIONES_SIN_FRONTERAS' in fuentes) && !('SECCIONES_SIN_FRONTERAS' in criterio), 'la ciencia y la tecnología ya no tienen excepción (regla 260)');
   assert.ok(!('PISO_DE_AFUERA' in fuentes), 'el piso de puntaje ya no existe (27/09)');
   for (const viejo of ['CUPO_DE_AFUERA', 'CUPO_POR_DEFECTO', 'MEDIOS_DE_AFUERA', 'MEDIOS_POR_DEFECTO', 'MEDIOS_CON_FIGURA']) {
     assert.ok(!(viejo in fuentes) && !(viejo in criterio), `${viejo} ya no existe (Hernán, 17/10: no hay ningún cupo de nada)`);
@@ -231,8 +231,13 @@ test('las frases de relleno son las mismas en el código, en el documento y en l
   assert.ok(a >= 0 && b > a, 'falta la lista de relleno entre sus marcas');
   const delDocumento = [...DOC.slice(a, b).matchAll(/`([^`]+)`/g)].map((m) => m[1]);
   assert.deepEqual(delDocumento, criterio.RELLENO, 'la lista del documento y RELLENO de ingesta/criterio.mjs no dicen lo mismo');
+  // La instrucción de la IA (achicada en la regla 263) nombra sólo las más comunes: el verificador (RELLENO) saca o rechaza todas las demás.
   const { reglas } = leerCriterio();
-  for (const frase of criterio.RELLENO) assert.ok(reglas.includes(`"${frase}"`), `la instrucción de la IA no le prohíbe "${frase}"`);
+  const lasMasComunes = ['cabe destacar', 'en el marco de', 'fuentes consultadas', 'pudo saber', 'hito histórico', 'dijo presente', 'sin dudas', 'una gran noticia'];
+  for (const frase of lasMasComunes) {
+    assert.ok(criterio.RELLENO.includes(frase), `"${frase}" no es una frase de relleno del código`);
+    assert.ok(reglas.includes(`"${frase}"`), `la instrucción de la IA no le prohíbe "${frase}"`);
+  }
   for (const frase of criterio.RELLENO) assert.equal(frase, frase.toLowerCase(), `en minúscula: ${frase}`);
 });
 

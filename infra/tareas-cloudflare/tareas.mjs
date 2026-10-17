@@ -87,7 +87,7 @@ export const TAREAS = {
     nombre: 'informe-diario', workflow: 'informe-diario.yml',
     lee: [
       'web/data/portada.json', 'web/data/redes.json', 'web/data/notas-por-dia.json', 'web/data/estadisticas.json', 'web/data/uso-ia.json',
-      'web/data/vigilancia.json', 'web/data/esperando-cuerpo.json', 'web/data/archivo.json', 'web/data/efemerides-piezas.json',
+      'web/data/vigilancia.json', 'web/data/esperando-cuerpo.json', 'web/data/archivo.json', 'web/data/efemerides-piezas.json', 'web/data/estadistica-seleccion.json',
       'web/data/feriados-piezas.json', 'web/data/efemerides-elegidas.json', 'reels/fijas/vigencia.json', 'web/data/revision-archivo.json',
     ],
     escribe: [],

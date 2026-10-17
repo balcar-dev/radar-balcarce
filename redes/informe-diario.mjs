@@ -24,6 +24,7 @@ import path from 'node:path';
 import { diaAR, horaAR, horaCortaAR } from '../ingesta/zona.mjs';
 import { leerJson } from '../ingesta/json.mjs';
 import { cuentaDelDia, promedioAnterior } from '../ingesta/estadistica-diaria.mjs';
+import { seccionesSinNotas } from '../ingesta/estadistica-seleccion.mjs';
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
 import { contratoDelDia } from './contrato.mjs';
 import { enlaceDeNota } from './elegir.mjs';
@@ -37,6 +38,8 @@ import { TOPE_DE_CLOUDFLARE, archivosEstimados } from '../web/scripts/contar-arc
 
 export const SITIO = 'https://radarbalcarce.com';
 export const PANEL = `${SITIO}/panel/`;
+/** El reporte de cómo cae la selección: lo rehace «Actualizar la web» en cada vuelta (scripts/medir/estadistica-seleccion.mjs). */
+export const ESTADISTICA_DE_LA_SELECCION = `${PANEL}estadistica-seleccion.html`;
 export const REPOSITORIO = 'radarbalcarce/radar-balcarce';
 export const ESTADO_DEL_VIGILANTE = 'https://radar-balcarce-vigilante.radarbalcarce.workers.dev/estado';
 export const MOMENTOS = ['manana', 'noche'];
@@ -126,6 +129,7 @@ export function leerArchivos(raiz = path.join(import.meta.dirname, '..')) {
     portada: d('portada.json'),
     libro: d('redes.json', {}),
     historia: d('notas-por-dia.json', { dias: {} }),
+    seleccion: d('estadistica-seleccion.json', null),
     estadisticas: d('estadisticas.json'),
     usoIA: d('uso-ia.json'),
     vigilancia: d('vigilancia.json'),
@@ -173,6 +177,17 @@ export function seccionPublicacion({ momento, dia, ahora, datos, sitio = SITIO }
     if (previo && previo.promedio >= 10 && cuenta.publicadas < previo.promedio * LIMITES_DEL_INFORME.fraccionDePocasNotas && (!esHoy || horaAR(ahora) >= 18)) {
       atencion.push({ nivel: 'media', t: `Salieron pocas notas ${esHoy ? 'hoy' : 'ayer'}: ${num(cuenta.publicadas)}, cuando lo normal ronda las ${num(previo.promedio)}. Puede ser un día quieto o un problema de las fuentes (ver «Salud»).` });
     }
+  }
+
+  // La selección (regla 260, ingesta/estadistica-seleccion.mjs): cuánto llegó, cuánto salió (de acá y de afuera) y qué secciones se quedaron
+  // sin notas; el enlace lleva al reporte con todas las tablas (se rehace en cada vuelta de «Actualizar la web»).
+  const sel = datos.seleccion?.dias?.[dia];
+  if (sel) {
+    const sin = seccionesSinNotas(datos.seleccion, dia);
+    lineas.push({
+      t: `La selección: ${plural(sel.publicadas ?? 0, 'nota', 'notas')} (${num(sel.deAcaPublicadas ?? 0)} de acá y ${num(sel.deAfueraPublicadas ?? 0)} de afuera) de ${num(sel.llegaron ?? 0)} historias que llegaron.${sin.length ? ` Sin notas${esHoy ? ' hasta ahora' : ''}: ${sin.map((s) => (s === 'Tecnología' ? 'Tecnología e IA' : s)).join(', ')}.` : ' Todas las secciones tuvieron notas.'}`,
+      url: ESTADISTICA_DE_LA_SELECCION, sub: true,
+    });
   }
 
   const principales = principalesDelDia(portada, dia, sitio);

@@ -11,7 +11,7 @@
 //      celular, web/data/celular-decisiones.json).
 //   2. Anota la primera vez que vio cada nota y fija su fecha (fechaReal).
 //   3. La lectura con IA (fichas, repetidas) y, otra vez, la popularidad que
-//      pide lo de afuera (medios y ritmo del día; no hay cupos desde el 17/10).
+//      pide lo de afuera (3 medios, 2 en las áreas chicas; no hay cupos desde el 17/10).
 //   4. La reescritura con IA de lo que va a salir.
 //   5. Decide qué nota se publica (notaPublicada): la decisión de una persona o
 //      el semáforo, que no llegue tarde, las correcciones a mano, lo que no se
@@ -33,6 +33,8 @@
 //   web/data/dolar-historia.json    la cotización de cada día hábil
 //   web/data/fichas.json            las fichas de la lectura con IA
 //   web/data/notas-por-dia.json     la estadística diaria de notas
+//   web/data/estadistica-seleccion.json  dónde cayó cada historia que llegó, por día y sección (regla 260)
+//     + web/public/panel/estadistica-seleccion.html   su reporte (un artefacto del sitio, no se versiona)
 //   web/data/banco-fotos.json       el banco de fotos, y las fotos en
 //     + web/public/fotos-notas/     web/public/fotos-notas/
 //   web/data/esperando-cuerpo.json  las notas que esperan cuerpo
@@ -68,8 +70,13 @@ import {
 } from '../lib/archivo.js';
 import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
 import {
-  esperaSoloPorCantidad, semaforoDelTexto, esEfemerideAjena, esDeUnMedioDeAca, esDeAca, cuantosMediosDeAca,
+  esperaSoloPorCantidad, semaforoDelTexto, esEfemerideAjena, esDeUnMedioDeAca, esDeAca, cuantosMediosDeAca, contarMedios, MOTIVO_POCO_CONTADA,
 } from '../../ingesta/ingesta.mjs';
+import { MOTIVO_ESPERA_LECTURA } from '../../ingesta/lectura-ia.mjs';
+import {
+  observarCorrida, anotarCorrida, contarUnSoloMedio, leerEstado as leerEstadisticaDeLaSeleccion, comoJson as comoEstadisticaDeLaSeleccionJson,
+} from '../../ingesta/estadistica-seleccion.mjs';
+import { reporteHtml as reporteDeLaSeleccionHtml } from '../../scripts/medir/estadistica-seleccion.mjs';
 import { MUY_CONTADA } from '../../ingesta/criterio.mjs';
 import { conFotosDelBanco, podarFotos, esIlustracionDeNota, ilustracionPermitida, fotoConMenorPermitida, fotoDelArchivoAlDia } from './fotos-notas.mjs';
 import { idsRetiradosPorLaRevision, parejasDeLaRevision } from '../lib/revision-archivo.js';
@@ -96,7 +103,7 @@ import { traerF1, notasDeF1, comoF1Json } from '../../ingesta/f1.mjs';
 import { traerFutbol, notasDeFutbol, comoFutbolJson } from '../../ingesta/futbol.mjs';
 import { notasDePistas } from '../lib/notas-de-pistas.js';
 import { SECCIONES_SUMADAS } from '../../ingesta/secciones-nuevas.mjs';
-import { ritmoDelDia, publicadasHoy } from '../../ingesta/popularidad.mjs';
+import { minimoNacional, minimoAreasChicas } from '../../ingesta/popularidad.mjs';
 
 const AQUI = import.meta.dirname;
 const SALIDA = path.join(AQUI, '..', 'data', 'portada.json');
@@ -192,13 +199,16 @@ const { agendaCompleta } = await import('../../ingesta/agenda.mjs');
 // historia, la nota no cambia de dirección (ingesta/cruce.mjs).
 const notasDeAntes = [...leerJson(SALIDA, { notas: [] }).notas ?? [], ...leerJson(ARCHIVO, { notas: [] }).notas ?? []];
 const idsConocidos = new Set(notasDeAntes.map((n) => n.id));
-// El ritmo del día (regla 211, ingesta/popularidad.mjs): se buscan unas 100 noticias por día. Si a esta hora lleva menos de lo que
-// corresponde, lo genérico de afuera pide 2 medios y no 3 hasta que alcance. Cuenta lo que salió antes de esta corrida.
-const RITMO = ritmoDelDia({ publicadas: publicadasHoy(notasDeAntes) });
-console.log(`  ritmo del día: ${RITMO.publicadasHoy} noticias hoy, ${RITMO.esperadas} esperadas a esta hora${RITMO.vaFaltando ? ' → va faltando: lo genérico de afuera pide 2 medios' : ''}`);
+// Los medios que pide lo de afuera (reglas 215 y 260, ingesta/popularidad.mjs): 3, o 2 en las áreas chicas. Se regulan con las
+// variables de GitHub MINIMO_NACIONAL y MINIMO_AREAS_CHICAS; el registro lo dice para que se vea en la corrida cuál rigió.
+console.log(`  popularidad: lo nacional pide ${minimoNacional()} medios y las áreas chicas ${minimoAreasChicas()}`);
 let ultima = await ingestar({
-  silencioso: true, idsConocidos, idsUnidos: new Set(Object.keys(FUSIONADAS_ANTES?.notas ?? {})), vaFaltando: RITMO.vaFaltando,
+  silencioso: true, idsConocidos, idsUnidos: new Set(Object.keys(FUSIONADAS_ANTES?.notas ?? {})),
 });
+// Lo que llegó del cruce, antes de la lectura con IA: para la estadística de la selección (regla 260, ingesta/estadistica-seleccion.mjs).
+const delCruce = (ultima.notas ?? []).map((n) => ({
+  id: n.id, seccion: n.seccion, medios: contarMedios(n.medios), deAca: esDeAca(n) || esDeUnMedioDeAca(n) || n.alcance === 'local',
+}));
 const agenda = await agendaCompleta().catch(() => null);
 // Las decisiones de las personas son las del celular (las del panel de la PC, web/data/decisiones.json, vacías desde el 28/09,
 // se dejaron de leer el 17/10).
@@ -332,10 +342,8 @@ let anclasDeSignificado = anclasConfirmadas(leerJson(FICHAS, {}).repetidas?.sign
     const { aplicarPopularidad, MOTIVO_POCO_CONTADA } = await import('../../ingesta/ingesta.mjs');
     const fichasAntes = leerJson(FICHAS, {});
     // Lo de un medio de acá se lee primero (regla 198): si el cupo diario de la lectura se acaba, lo que espera a la IA
-    // (MOTIVO_ESPERA_LECTURA) es lo de acá, y lo de acá entra todo. Después, las fuentes especializadas de un solo medio (regla 211):
-    // sólo salen si la IA dice que les interesa, así que sin ficha no salen. Lo demás, por puntaje.
-    const prioridadDeLectura = (n) => (n.alcance === 'local' ? 2 : n.especializada && n.semaforo === 'amarillo' ? 1 : 0);
-    const primeroLoDeAca = [...(ultima.notas ?? [])].sort((a, b) => prioridadDeLectura(b) - prioridadDeLectura(a));
+    // (MOTIVO_ESPERA_LECTURA) es lo de acá, y lo de acá entra todo. Lo demás, por puntaje.
+    const primeroLoDeAca = [...(ultima.notas ?? [])].sort((a, b) => (b.alcance === 'local' ? 1 : 0) - (a.alcance === 'local' ? 1 : 0));
     const { archivo: fichas, cuenta } = await leerNotasNuevas(primeroLoDeAca, { guardado: fichasAntes, registro: console.log });
     if (cuenta.sinClave) console.log('  lectura con IA: sin clave, se decide como siempre');
     const { notas: conFichas, cambios } = aplicarFichas(ultima.notas ?? [], fichas.fichas, {
@@ -394,10 +402,9 @@ let anclasDeSignificado = anclasConfirmadas(leerJson(FICHAS, {}).repetidas?.sign
     // a los que pide su sección, y con la sección que corrigió la IA el mínimo
     // puede ser otro: la regla se vuelve a mirar, en los dos sentidos. Lo que
     // la IA dijo que no es de acá también la cumple.
-    // La popularidad (regla 211): sin cupo. Lo ya publicado no se baja por cantidad (si el ritmo del día cambia, una nota que salió con 2
-    // medios no desaparece de las listas), una fuente especializada que la IA marcó de interés sale con un solo medio, y lo muy
-    // contado (regla 197) va primero en su sección.
-    aplicarPopularidad(notas.sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0)), { publicadas: yaSalieron, fecha: fechaReal, vaFaltando: RITMO.vaFaltando });
+    // La popularidad (reglas 215 y 260): sin cupo. Lo ya publicado no se baja por cantidad (si se sube el mínimo, una nota que salió
+    // con 2 medios no desaparece de las listas) y lo muy contado (regla 197) va primero en su sección.
+    aplicarPopularidad(notas.sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0)), { publicadas: yaSalieron, fecha: fechaReal });
     ultima = { ...ultima, notas };
     console.log(`  lectura con IA: ${cuenta.nuevas} fichas nuevas en ${cuenta.pedidos} pedidos (${fichas.pedidosHoy ?? 0} hoy${cuenta.groq ? `, ${cuenta.groq} con Groq de respaldo` : ''})`
       + ` · sacó ${cambios.sacadas.length}, ${cambios.dejanDeSerLocales.length} dejaron de ser de Balcarce,`
@@ -587,9 +594,6 @@ function notaPublicada(n) {
     // Lo que cuenta un organismo o un medio de Balcarce nombrando algo de acá sale con un solo medio aunque la IA diga
     // que el hecho es de la región, y también conserva la página (regla 180, esDeUnMedioDeAca y tieneRespaldo).
     ...(esDeUnMedioDeAca(n) ? { deUnMedioDeAca: true } : {}),
-    // Una fuente especializada (ciencia, tecnología, salud, educación) que la lectura con IA marcó de interés sale con un solo medio
-    // (regla 211) y conserva la página: sin esta marca, tieneRespaldo (lib/cuerpo.js) la sacaría por tener un solo medio.
-    ...(n.interesDeLaIA ? { deFuenteEspecializada: true } : {}),
     // Lo de afuera que cuenta medio país (regla 197): va primera en su sección unas horas (web/lib/datos.js).
     ...(n.muyContada ? { muyContada: { medios: n.muyContada.medios, porque: n.muyContada.porque, desde: muyContadaDesde.get(n.id) ?? ahoraISO } } : {}),
     // Lo de acá que cuentan tres medios de Balcarce o más (regla 198): la primera candidata a la nota grande y a Facebook.
@@ -1282,6 +1286,35 @@ const NOTAS_POR_DIA = path.join(AQUI, '..', 'data', 'notas-por-dia.json');
   const texto = comoNotasPorDiaJson(anotarDia(historia, cuenta));
   if (!fs.existsSync(NOTAS_POR_DIA) || fs.readFileSync(NOTAS_POR_DIA, 'utf8') !== texto) fs.writeFileSync(NOTAS_POR_DIA, texto, 'utf8');
   console.log(`  hoy: ${cuenta.publicadas} notas publicadas (${cuenta.deBalcarce} de Balcarce) · ${Object.entries(cuenta.porSeccion).map(([s, n]) => `${s} ${n}`).join(', ') || 'ninguna'}`);
+}
+
+// La estadística de la selección (regla 260): dónde cayó cada historia que llegó (publicada, la IA la sacó, pocas fuentes, semáforo,
+// repetida, sin cuerpo, un solo medio…), por día y por sección. Se suma a web/data/estadistica-seleccion.json (60 días) y se rehace el
+// reporte web/public/panel/estadistica-seleccion.html (no se sube al repositorio: lo arma el sitio). Si algo falla acá, la corrida sigue.
+const ESTADISTICA_SELECCION = path.join(AQUI, '..', 'data', 'estadistica-seleccion.json');
+const REPORTE_SELECCION = path.join(AQUI, '..', 'public', 'panel', 'estadistica-seleccion.html');
+try {
+  const ahora = new Date();
+  const finales = ultima.notas ?? [];
+  const observaciones = observarCorrida({
+    delCruce,
+    finales: finales.map((n) => ({ id: n.id, seccion: n.seccion, semaforo: n.semaforo, motivo: n.motivo, medios: contarMedios(n.medios) })),
+    publicadas: new Set(deLaIngesta.map((n) => n.id)),
+    sacadasPorLaIA, repetidas: repetidasFuera, sinCuerpo: new Set(esperandoCuerpo.map((e) => e.id)),
+    yaSalieron, motivos: { pocoContada: MOTIVO_POCO_CONTADA, esperaLectura: MOTIVO_ESPERA_LECTURA },
+    vistaDe: (id) => vistas[id] ?? null, ahora,
+  });
+  // Lo de afuera con un solo medio (miles por vuelta) se cuenta por día de la nota y sección, no una por una.
+  const solos = Array.isArray(ultima.deUnSoloMedio) ? contarUnSoloMedio(ultima.deUnSoloMedio, { ahora }) : null;
+  const nuevo = anotarCorrida(leerEstadisticaDeLaSeleccion(fs.existsSync(ESTADISTICA_SELECCION) ? fs.readFileSync(ESTADISTICA_SELECCION, 'utf8') : ''), observaciones, { ahora, solos });
+  const textoSeleccion = comoEstadisticaDeLaSeleccionJson(nuevo);
+  if (!fs.existsSync(ESTADISTICA_SELECCION) || fs.readFileSync(ESTADISTICA_SELECCION, 'utf8') !== textoSeleccion) fs.writeFileSync(ESTADISTICA_SELECCION, textoSeleccion, 'utf8');
+  fs.mkdirSync(path.dirname(REPORTE_SELECCION), { recursive: true });
+  fs.writeFileSync(REPORTE_SELECCION, reporteDeLaSeleccionHtml(nuevo, { hasta: diaAR(ahora) }), 'utf8');
+  const hoyEnLaSeleccion = nuevo.dias[diaAR(ahora)];
+  console.log(`  selección de hoy: ${hoyEnLaSeleccion?.llegaron ?? 0} historias llegaron, ${hoyEnLaSeleccion?.publicadas ?? 0} publicadas`);
+} catch (e) {
+  console.log(`  estadística de la selección: no se pudo (${e.message})`);
 }
 
 // ¿Cambió algo que justifique volver a publicar?

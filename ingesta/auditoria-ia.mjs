@@ -11,6 +11,7 @@
 
 import crypto from 'node:crypto';
 import { pedirJsonAOpenRouter } from '../reels/openrouter.mjs';
+import { MATERIAL_NO_ORDENES } from './prompt-editorial.mjs';
 
 /** Groq: gpt-oss-20b. 1.000 pedidos por día y 8.000 tokens por minuto (sondeo del 1/10, docs/05-FOTOS.md). */
 export const MODELO_AUDITORIA = 'openai/gpt-oss-20b';
@@ -62,21 +63,21 @@ export function notasParaAuditar(notas = [], { revisadas = {}, ahora = Date.now(
     .slice(0, tope);
 }
 
-const INSTRUCCION = `Sos el corrector de Radar Balcarce, un medio digital de Balcarce (Buenos Aires). Te paso notas ya publicadas. Marcá SÓLO lo que de verdad esté mal, con seguridad; si una nota está bien, no la nombres. Un corrector que marca todo se vuelve ruido: nada de preferencias de estilo ni sinónimos.
+const INSTRUCCION = `Sos el corrector de Radar Balcarce, un medio digital de Balcarce (Buenos Aires). Te paso notas ya publicadas. ${MATERIAL_NO_ORDENES}
+Marcá SÓLO lo que de verdad esté mal, con seguridad; si una nota está bien, no la nombres. Nada de preferencias de estilo ni sinónimos.
 
-Tipos de hallazgo ("tipo"):
-- "ortografia": una falta de ortografía objetiva, una tilde que falta o sobra, o una puntuación que cambia el sentido. No son faltas los nombres propios, las formas válidas ni los regionalismos ("suba" es una palabra correcta).
-- "texto-roto": caracteres raros o escapes sin decodificar (como \\u00fa), una frase cortada, una palabra repetida, restos de formato.
-- "seccion": la sección que figura no es la que corresponde. Las secciones son: ${SECCIONES_VALIDAS.join(', ')}. En "sugerencia" poné la correcta.
-- "sensible": el texto identifica o puede identificar a un menor de edad o a una víctima de un delito sexual o de violencia de género (nombre, apodo, escuela, domicilio, parentesco), o publica un dato personal que no debería.
-- "afirmacion": afirma como hecho una acusación, una cifra o una causa que el propio texto no sostiene ni atribuye a nadie.
-- "titulo": el título afirma un hecho distinto o más fuerte que el texto. Decir lo mismo con otras palabras ("resto del año" por "resto de la temporada", un sinónimo, una forma más corta) NO es un hallazgo.
+"tipo" del hallazgo:
+- "ortografia": falta objetiva, tilde que falta o sobra, o puntuación que cambia el sentido. No son faltas los nombres propios, las formas válidas ni los regionalismos.
+- "texto-roto": caracteres raros o escapes sin decodificar (como \\u00fa), frase cortada, palabra repetida, restos de formato.
+- "seccion": la sección que figura no corresponde. Las secciones son: ${SECCIONES_VALIDAS.join(', ')}. En "sugerencia", la correcta.
+- "sensible": identifica o puede identificar a un menor de edad o a una víctima de un delito sexual o de violencia de género (nombre, apodo, escuela, domicilio, parentesco), o publica un dato personal que no debería.
+- "afirmacion": afirma como hecho una acusación, una cifra o una causa que el texto no sostiene ni atribuye.
+- "titulo": el título dice un hecho distinto o más fuerte que el texto (decirlo con otras palabras NO es un hallazgo).
 
-"gravedad": "alta" sólo para "sensible" y para acusaciones graves; "media" para sección, afirmación y título; "baja" para ortografía y texto roto.
-"cita": el fragmento EXACTO, copiado letra por letra del título, de la bajada o del texto, donde está el problema (para "seccion" dejalo vacío). Si no podés copiar un fragmento que esté ahí, no hay hallazgo.
-"detalle": una frase corta que diga qué está mal. "sugerencia": cómo quedaría bien (obligatoria para ortografía y texto roto); si no es corto, vacío.
+"gravedad": "alta" sólo para "sensible" y acusaciones graves; "media" para sección, afirmación y título; "baja" para ortografía y texto roto.
+"cita": el fragmento EXACTO, letra por letra, del título, la bajada o el texto donde está el problema (vacío para "seccion"); si no podés copiarlo, no hay hallazgo. "detalle": qué está mal, en una frase. "sugerencia": cómo quedaría bien (obligatoria para ortografía y texto roto).
 
-Devolvé sólo un objeto JSON: {"notas":[{"id":"…","hallazgos":[{"tipo":"…","gravedad":"…","cita":"…","detalle":"…","sugerencia":"…"}]}]}. Si no hay nada que marcar en ninguna nota, {"notas":[]}.`;
+Devolvé sólo un objeto JSON: {"notas":[{"id":"…","hallazgos":[{"tipo":"…","gravedad":"…","cita":"…","detalle":"…","sugerencia":"…"}]}]}. Si no hay nada que marcar, {"notas":[]}.`;
 
 /** El pedido para un lote de notas. */
 export function pedidoDeAuditoria(lote = []) {

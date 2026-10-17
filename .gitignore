@@ -15,6 +15,9 @@ web/out/
 # public/_redirects lo escribe scripts/generar-redirects.mjs en cada build,
 # a partir de portada.json: no es código, es un artefacto más, como .next/.
 web/public/_redirects
+# El reporte de la estadística de la selección (regla 260) lo rehace generar-datos en cada vuelta a partir de
+# web/data/estadistica-seleccion.json: es un artefacto del sitio, no se versiona.
+web/public/panel/estadistica-seleccion.html
 # La foto del dólar la guarda scripts/foto-dolar.mjs al principio de cada
 # build: también es un artefacto (si se versionara, ensuciaría el árbol en
 # Actions y trabaría el `git pull --rebase` de "Actualizar la web").

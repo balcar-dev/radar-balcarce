@@ -82,7 +82,7 @@ siempre que la lectura esté andando y la nota nunca haya salido
 copió una radio de acá). Después
 junta las repetidas (`agruparRepetidas`, `quitarRepetidas`, quedándose con la
 ya publicada) y vuelve a aplicar la popularidad que pide lo de afuera
-(`aplicarPopularidad`: los medios, el ritmo del día y lo muy contado; sin cupos desde el 17/10). Guarda las fichas en
+(`aplicarPopularidad`: los medios y lo muy contado; sin cupos desde el 17/10). Guarda las fichas en
 `web/data/fichas.json`. Si algo falla, sigue "como siempre", sin la IA. El
 detalle es de `docs/03-SELECCION.md`.
 

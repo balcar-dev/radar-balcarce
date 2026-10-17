@@ -563,7 +563,6 @@ export const FUENTES_NACIONALES = [
   // propósito: que un medio de Balcarce no se vuelva una copia de Infobae.
   {
     id: 'infobae-tecno',
-    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
     nombre: 'Infobae · Tecnología',
     medio: 'Infobae',
     url: 'https://www.infobae.com/arc/outboundfeeds/rss/category/tecno/?outputType=xml',
@@ -575,7 +574,6 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'clarin-tecno',
-    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
     grupo: 'Grupo Clarín',
     nombre: 'Clarín · Tecnología',
     medio: 'Clarín',
@@ -588,7 +586,6 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'ambito-tecno',
-    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
     nombre: 'Ámbito · Tecnología',
     medio: 'Ámbito',
     url: 'https://www.ambito.com/rss/pages/tecnologia.xml',
@@ -749,7 +746,6 @@ export const FUENTES_NACIONALES = [
   // que no habla de tecnología se clasifica por lo que dice.
   {
     id: 'lanacion-tecnologia',
-    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
     nota: 'Apagada el 15/10/2026 (fuera de la lista elegida); vuelve el 17/10 (regla 215): tecnología es una de las áreas donde suele haber poco. Probada: 21 notas, unas 3 por día.',
     nombre: 'La Nación · Tecnología',
     medio: 'La Nación',
@@ -762,7 +758,6 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'hipertextual',
-    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
     activa: false, // medio de España: no va por ahora (Hernán, 27/09)
     nombre: 'Hipertextual',
     medio: 'Hipertextual',
@@ -776,7 +771,6 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'xataka',
-    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
     activa: false, // medio de España: no va por ahora (Hernán, 27/09)
     nombre: 'Xataka',
     medio: 'Xataka',
@@ -788,13 +782,11 @@ export const FUENTES_NACIONALES = [
     temas: ['tecnologia', 'ia'],
     nota: 'Medio de tecnología en castellano (no es argentino). La edición argentina (xataka.com.ar/feed) da 404.',
   },
-  // Ciencia y tecnología de España, APAGADAS (decisión del 27/09: sin medios de España) y probadas el 17/10/2026 con el lector de la ingesta. La
-  // simulación del criterio de popularidad (scripts/medir/simular-popularidad.mjs `--con-apagadas=…`) dice cuántas notas por día sumarían a
-  // Ciencia y a Tecnología e IA: si Hernán las quiere, se prenden sacando `activa: false`.
+  // Ciencia y tecnología de España, APAGADAS (decisión del 27/09: sin medios de España) y probadas el 17/10/2026 con el lector de la ingesta.
+  // Si Hernán las quiere, se prenden sacando `activa: false` (el 17/10 pidió NO prender las de España: regla 260).
   {
     id: 'elpais-ciencia',
     activa: false, // medio de España: no va por ahora (decisión del 27/09)
-    especializada: true,
     nombre: 'El País · Ciencia',
     medio: 'El País',
     url: 'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/ciencia/portada',
@@ -809,7 +801,6 @@ export const FUENTES_NACIONALES = [
   {
     id: 'elpais-tecnologia',
     activa: false, // medio de España: no va por ahora (decisión del 27/09)
-    especializada: true,
     nombre: 'El País · Tecnología',
     medio: 'El País',
     url: 'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/tecnologia/portada',
@@ -824,7 +815,6 @@ export const FUENTES_NACIONALES = [
   {
     id: 'muyinteresante',
     activa: false, // medio de España: no va por ahora (decisión del 27/09)
-    especializada: true,
     nombre: 'Muy Interesante',
     medio: 'Muy Interesante',
     url: 'https://www.muyinteresante.com/feed',
@@ -841,7 +831,6 @@ export const FUENTES_NACIONALES = [
   // es la agencia de noticias científicas de la Fundación Instituto Leloir (Argentina).
   {
     id: 'fayerwayer',
-    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
     // Apagada el 15/10/2026 (fuera de la lista elegida); vuelve el 17/10 (regla 215): tecnología, IA y espacio en castellano de Chile.
     nombre: 'FayerWayer',
     medio: 'FayerWayer',
@@ -855,7 +844,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'agenciacyta',
-    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
+    activa: false, // apagada el 17/10/2026 (regla 260): no publica hace 10 días (0 notas en la semana)
     nombre: 'Agencia CyTA',
     medio: 'Agencia CyTA',
     url: 'https://www.agenciacyta.org.ar/feed/',
@@ -869,13 +858,12 @@ export const FUENTES_NACIONALES = [
   // --- Ciencia, salud y educación (altas del 17/10/2026, regla 215) -------------------------------------------------------
   // Hernán: "me interesa mucho que haya notas de tecnología, IA, química, biología, investigación, educación, culturales… Todas
   // las secciones tienen que tener notas todos los días". Todas probadas el 17/10 con el lector de la ingesta (responden, traen
-  // notas con fecha). Son `especializada`: de un solo medio salen si la lectura con IA las considera de interés. Ninguna lleva la
-  // marca `oficial` a propósito (como INTA): con ella saldrían solas, sin que las cuente nadie. Sin medios de España (27/09).
+  // notas con fecha). Ninguna lleva la marca `oficial` a propósito (como INTA): con ella saldrían solas, sin que las cuente nadie.
+  // Desde la regla 260 (17/10) ninguna sale con un solo medio: valen como un medio más para llegar a 2 o 3. Sin medios de España (27/09).
   // CONICET (conicet.gov.ar/feed/) responde HTTP 500 y su API pide usuario: no se puede leer; Agencia CyTA y la Secretaría de
   // Innovación, Ciencia y Tecnología cubren lo mismo.
   {
     id: 'perfil-ciencia',
-    especializada: true,
     nombre: 'Perfil · Ciencia',
     medio: 'Perfil',
     url: 'https://www.perfil.com/feed/ciencia',
@@ -888,7 +876,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'jgm-ciencia',
-    especializada: true,
+    activa: false, // apagada el 17/10/2026 (regla 260): 1 nota en 72 horas y en la semana
     nombre: 'Secretaría de Innovación, Ciencia y Tecnología',
     medio: 'Secretaría de Innovación, Ciencia y Tecnología',
     url: 'https://www.argentina.gob.ar/jefatura/innovacion-ciencia-y-tecnologia/noticias/rss',
@@ -902,7 +890,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'conae',
-    especializada: true,
+    activa: false, // apagada el 17/10/2026 (regla 260): 3 notas en total en el feed; 1 en 72 horas
     nombre: 'CONAE',
     medio: 'CONAE',
     url: 'https://www.argentina.gob.ar/ciencia/conae/noticias/rss',
@@ -916,7 +904,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'inti',
-    especializada: true,
+    activa: false, // apagada el 17/10/2026 (regla 260): 6 notas en el feed; 1 en 72 horas y en la semana
     nombre: 'INTI',
     medio: 'INTI',
     url: 'https://www.argentina.gob.ar/inti/noticias/rss',
@@ -930,7 +918,6 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'infobae-salud',
-    especializada: true,
     nombre: 'Infobae · Salud',
     medio: 'Infobae',
     url: 'https://www.infobae.com/arc/outboundfeeds/rss/category/salud/?outputType=xml',
@@ -943,7 +930,6 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'perfil-salud',
-    especializada: true,
     nombre: 'Perfil · Salud',
     medio: 'Perfil',
     url: 'https://www.perfil.com/feed/salud',
@@ -956,7 +942,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'anmat',
-    especializada: true,
+    activa: false, // apagada el 17/10/2026 (regla 260): 0 notas en 72 horas y 2 en la semana
     nombre: 'ANMAT',
     medio: 'ANMAT',
     url: 'https://www.argentina.gob.ar/anmat/noticias/rss',
@@ -970,7 +956,6 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'infobae-educacion',
-    especializada: true,
     nombre: 'Infobae · Educación',
     medio: 'Infobae',
     url: 'https://www.infobae.com/arc/outboundfeeds/rss/category/educacion/?outputType=xml',
@@ -983,7 +968,6 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'perfil-educacion',
-    especializada: true,
     nombre: 'Perfil · Educación',
     medio: 'Perfil',
     url: 'https://www.perfil.com/feed/educacion',
@@ -996,7 +980,6 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'unlp',
-    especializada: true,
     nombre: 'Universidad Nacional de La Plata',
     medio: 'Universidad Nacional de La Plata',
     url: 'https://unlp.edu.ar/feed/',
@@ -1010,7 +993,6 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'unr',
-    especializada: true,
     nombre: 'Universidad Nacional de Rosario',
     medio: 'Universidad Nacional de Rosario',
     url: 'https://unr.edu.ar/feed/',
@@ -1024,7 +1006,6 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'unicen',
-    especializada: true,
     nombre: 'UNICEN',
     medio: 'UNICEN',
     url: 'https://www.unicen.edu.ar/noticias/feed/',
@@ -1038,7 +1019,6 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'uncuyo',
-    especializada: true,
     nombre: 'Universidad Nacional de Cuyo',
     medio: 'Universidad Nacional de Cuyo',
     url: 'https://www.uncuyo.edu.ar/prensa/rss',
@@ -1052,7 +1032,6 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'itsitio',
-    especializada: true,
     nombre: 'IT Sitio',
     medio: 'IT Sitio',
     url: 'https://www.itsitio.com/ar/feed/',
@@ -1066,7 +1045,6 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'senasa',
-    especializada: true,
     nombre: 'SENASA',
     medio: 'SENASA',
     url: 'https://www.argentina.gob.ar/senasa/noticias/rss',
@@ -1119,7 +1097,6 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'inta',
-    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
     nombre: 'INTA · Noticias',
     medio: 'INTA',
     url: 'https://www.argentina.gob.ar/inta/noticias/rss',
@@ -1816,5 +1793,5 @@ export const FARMACIAS_A_MANO = {
 // hay cupo por sección): son números del criterio editorial, y viven en ingesta/criterio.mjs, con el porqué de cada uno, y en la
 // tabla "Los números" de CRITERIO-EDITORIAL.md. Se cambian ahí.
 export {
-  POPULARIDAD, AREAS_CHICAS, SECCIONES_SOLO_DE_ACA, SECCIONES_SIN_FRONTERAS,
+  POPULARIDAD, AREAS_CHICAS, SECCIONES_SOLO_DE_ACA,
 } from './criterio.mjs';

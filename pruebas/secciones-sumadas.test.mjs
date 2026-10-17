@@ -237,9 +237,10 @@ test('la IA puede elegir las tres, con sus líneas del mapa, y no se lleva lo de
   assert.doesNotMatch(texto, /escuelas, salud local/, 'Balcarce ya no se lleva las escuelas y la salud');
   assert.doesNotMatch(texto, /\(sociedad, clima, salud, educación, grandes hechos\)/);
   assert.match(lectura.pedidoPara([]), /· Salud: /);
-  // Y le dice qué es de interés en estas áreas (regla 215): lo que usa la popularidad de las fuentes especializadas.
-  assert.match(texto, /"importancia": qué tan relevante es la noticia en sí, no qué tan cerca está de Balcarce. En ciencia, tecnología e IA, educación y salud: "alta" o "media" si cuenta un descubrimiento/);
-  assert.match(texto, /también si pasa afuera del país: la ciencia y la tecnología no tienen frontera/);
+  // La importancia es la de la noticia en sí. Desde la regla 260 ya no hay una definición aparte para ciencia y tecnología (servía al
+  // "interés de la IA" de las fuentes especializadas, que se sacó) ni "no tienen frontera".
+  assert.match(texto, /"importancia": qué tan relevante es la noticia en sí, no qué tan cerca está de Balcarce\./);
+  assert.doesNotMatch(texto, /no tienen frontera|descubrimiento, un avance|guía de uso/);
   for (const seccion of ['Educación', 'Salud', 'Ciencia']) {
     const ficha = { id: 'a', ambito: 'balcarce', seccion, impacto_balcarce: 'directo', razon: 'local', importancia: 'media', es_publicidad: false, es_chimento: false, por_que_interesa: 'x' };
     assert.equal(lectura.fichaValida(ficha).seccion, seccion);
@@ -256,13 +257,15 @@ test('la IA puede elegir las tres, con sus líneas del mapa, y no se lleva lo de
   assert.equal(c.seccion, 'Policiales');
 });
 
-test('la ciencia y la tecnología no tienen frontera: del extranjero sólo con un argentino, salvo en Ciencia y Tecnología e IA', () => {
+test('la ciencia y la tecnología tampoco tienen frontera (regla 260): del extranjero sólo con un argentino, en todas las secciones', () => {
   const ficha = (seccion, extra = {}) => ({ ambito: 'internacional', seccion, impacto: 'nulo', razon: 'ninguna', importancia: 'media', cuando: '2026-10-15T00:00:00Z', ...extra });
   const de = (seccion, titulo, medios = ['Infobae', 'Perfil']) => ({ id: 'a', titulo, seccion, semaforo: 'verde', alcance: 'pais', local: false, medios });
-  // Un descubrimiento del exterior contado por dos medios sale en Ciencia y en Tecnología…
-  assert.equal(lectura.aplicarFichas([de('Argentina', 'Descubrieron una estrella verde')], { a: ficha('Ciencia') }).notas.length, 1);
-  assert.equal(lectura.aplicarFichas([de('Tecnología', 'Tesla presentó su auto volador')], { a: ficha('Tecnología') }).notas.length, 1);
-  // …pero la política del exterior, no (el rojo y la lista de lo internacional siguen igual).
+  // Hasta la regla 260 un descubrimiento del exterior salía en Ciencia y en Tecnología; ahora, sin un argentino, no.
+  assert.equal(lectura.aplicarFichas([de('Argentina', 'Descubrieron una estrella verde')], { a: ficha('Ciencia') }).notas.length, 0);
+  assert.equal(lectura.aplicarFichas([de('Tecnología', 'Tesla presentó su auto volador')], { a: ficha('Tecnología') }).notas.length, 0);
+  // Con un argentino en el título, sí.
+  assert.equal(lectura.aplicarFichas([de('Tecnología', 'Una argentina crea un chip que cabe en un dedal')], { a: ficha('Tecnología') }).notas.length, 1);
+  // Y la política del exterior, tampoco (el rojo y la lista de lo internacional siguen igual).
   const fuera = lectura.aplicarFichas([de('Política', 'Cumbre de líderes en Asia', ['Infobae', 'Perfil', 'Clarín'])], { a: ficha('Política') });
   assert.equal(fuera.notas.length, 0);
   assert.equal(fuera.cambios.sacadas[0].motivo, 'es del extranjero');
@@ -304,63 +307,53 @@ test('el panel ofrece las catorce; las redes siguen con #Balcarce y las etiqueta
 
 // ------------------------------------------------------------------ las fuentes que alimentan las áreas
 
-test('una fuente especializada de un solo medio sale si la IA la considera de interés, con la página que no se pierde', () => {
+test('con un solo medio no sale nada, tampoco la ciencia: la IA no destraba y el extranjero sólo con un argentino (regla 260)', () => {
   const unica = (extra = {}) => ({
     id: 'z1', titulo: 'Crean una enzima que degrada plásticos en pocas horas', seccion: 'Ciencia', semaforo: 'amarillo', alcance: 'pais', local: false, medios: ['Perfil'],
-    especializada: true, motivo: 'de afuera y poco contada (1 medio; Ciencia pide 2)', ...extra,
+    motivo: 'de afuera y poco contada (1 medio; Ciencia pide 2)', ...extra,
   });
-  const ficha = (extra = {}) => ({ ambito: 'internacional', seccion: 'Ciencia', impacto: 'nulo', razon: 'ninguna', importancia: 'media', cuando: '2026-10-15T00:00:00Z', ...extra });
-  // Sin ficha todavía: espera (no hay quién diga que le interesa).
-  const sinFicha = [unica()];
-  exigirMedios(sinFicha);
-  assert.equal(sinFicha[0].semaforo, 'amarillo');
-  // Con la ficha en media o alta: sale con un solo medio.
-  for (const importancia of ['media', 'alta']) {
-    const { notas } = lectura.aplicarFichas([unica()], { z1: ficha({ importancia }) });
-    assert.equal(notas[0].interesDeLaIA, true, importancia);
-    exigirMedios(notas);
-    assert.equal(notas[0].semaforo, 'verde', importancia);
-    assert.match(notas[0].motivo, /fuente especializada de Ciencia con el interés de la IA/);
-    // La página no se pierde por tener un solo medio: el archivo la guarda con la marca que pone generar-datos.
-    assert.equal(tieneRespaldo({ medios: ['Perfil'], deFuenteEspecializada: true }), true);
-  }
-  assert.equal(tieneRespaldo({ medios: ['Perfil'] }), false, 'sin la marca, un solo medio no alcanza');
-  // Con importancia baja (una guía de uso, una oferta, una curiosidad): no sale; la IA la saca como cualquier nota sin relación con Balcarce
-  // que no llega a los medios que pide su área.
-  const baja = lectura.aplicarFichas([unica()], { z1: ficha({ importancia: 'baja' }) });
-  assert.equal(baja.notas.length, 0);
-  assert.match(baja.cambios.sacadas[0].motivo, /no tiene relación con Balcarce/);
-  // Pero si la cuentan dos medios, en un área chica llega por la popularidad aunque la IA la ponga en baja.
-  const dos = lectura.aplicarFichas([unica({ medios: ['Perfil', 'Infobae'], semaforo: 'verde', motivo: 'sección Ciencia' })], { z1: ficha({ importancia: 'baja' }) });
+  const ficha = (extra = {}) => ({ ambito: 'internacional', seccion: 'Ciencia', impacto: 'nulo', razon: 'ninguna', importancia: 'alta', cuando: '2026-10-15T00:00:00Z', ...extra });
+  // Aunque la IA diga "alta": el interés ya no destraba nada. Con un solo medio espera (y del extranjero sin un argentino, la IA la saca).
+  const nacional = lectura.aplicarFichas([unica({ ambito: undefined })], { z1: ficha({ ambito: 'nacional' }) }).notas;
+  assert.equal(nacional[0].interesDeLaIA, undefined);
+  exigirMedios(nacional);
+  assert.equal(nacional[0].semaforo, 'amarillo');
+  const mundo = lectura.aplicarFichas([unica()], { z1: ficha() });
+  assert.equal(mundo.notas.length, 0, 'la ciencia del mundo ya no tiene excepción: sin un argentino, es del extranjero');
+  assert.equal(mundo.cambios.sacadas[0].motivo, 'es del extranjero');
+  // Con un argentino en el título sigue entrando a la lectura.
+  assert.equal(lectura.aplicarFichas([unica({ titulo: 'Un equipo argentino crea una enzima que degrada plásticos' })], { z1: ficha() }).notas.length, 1);
+  // Con dos medios, en un área chica llega por la popularidad aunque la IA la ponga en baja; con uno, no.
+  const dos = lectura.aplicarFichas([unica({ medios: ['Perfil', 'Infobae'], semaforo: 'verde', motivo: 'sección Ciencia' })], { z1: ficha({ ambito: 'nacional', importancia: 'baja' }) });
   assert.equal(dos.notas.length, 1);
-  // Chimento y publicidad no salen aunque sean de una fuente especializada.
-  assert.equal(lectura.aplicarFichas([unica()], { z1: { ...ficha(), chimento: true } }).notas.length, 0);
-  assert.equal(lectura.aplicarFichas([unica()], { z1: { ...ficha(), publicidad: true } }).notas.length, 0);
-  // Sólo en las áreas chicas: una fuente especializada que cae en Argentina o Política no sale con un solo medio.
-  const fuera = lectura.aplicarFichas([unica({ seccion: 'Argentina' })], { z1: ficha({ seccion: 'Argentina' }) }).notas;
-  exigirMedios(fuera);
-  assert.ok(fuera.length === 0 || fuera[0].semaforo === 'amarillo', 'o la IA la saca o espera: nunca sale con un solo medio');
-  // Una fuente común (sin la marca) con un solo medio no sale aunque la IA diga que le interesa.
-  const comun = lectura.aplicarFichas([unica({ especializada: false })], { z1: ficha({ importancia: 'alta' }) }).notas;
-  exigirMedios(comun);
-  assert.equal(comun[0].semaforo, 'amarillo');
+  const uno = lectura.aplicarFichas([unica()], { z1: ficha({ ambito: 'nacional', importancia: 'baja' }) });
+  assert.equal(uno.notas.length, 0);
+  assert.match(uno.cambios.sacadas[0].motivo, /no tiene relación con Balcarce/);
+  // Chimento y publicidad no salen.
+  assert.equal(lectura.aplicarFichas([unica()], { z1: { ...ficha({ ambito: 'nacional' }), chimento: true } }).notas.length, 0);
+  assert.equal(lectura.aplicarFichas([unica()], { z1: { ...ficha({ ambito: 'nacional' }), publicidad: true } }).notas.length, 0);
+  // Las ya publicadas con un solo medio el 17/10 (antes de la regla 260) conservan su página.
+  assert.equal(tieneRespaldo({ medios: ['Perfil'], deFuenteEspecializada: true }), true);
+  assert.equal(tieneRespaldo({ medios: ['Perfil'] }), false, 'sin la marca, un solo medio no alcanza');
 });
 
-test('las fuentes especializadas están marcadas y las nuevas responden con el lector de la ingesta (probadas el 17/10)', async () => {
+test('las fuentes de las áreas chicas responden y sus secciones tienen con qué alimentarse; sin medios de España (probadas el 17/10)', async () => {
   const { TODAS_LAS_FUENTES } = await import('../ingesta/ingesta.mjs');
   const activas = TODAS_LAS_FUENTES.filter((f) => f.activa !== false);
-  const especializadas = activas.filter((f) => f.especializada);
-  assert.ok(especializadas.length >= 20, `sólo ${especializadas.length} fuentes especializadas`);
-  // Cada sección que Hernán quiere con notas todos los días tiene fuentes propias.
-  const deSeccion = (s) => especializadas.filter((f) => f.seccion === s).map((f) => f.id);
-  assert.ok(deSeccion('Ciencia').length >= 4, deSeccion('Ciencia').join());
-  assert.ok(deSeccion('Salud').length >= 3, deSeccion('Salud').join());
-  assert.ok(deSeccion('Educación').length >= 6, deSeccion('Educación').join());
+  assert.ok(activas.every((f) => f.especializada === undefined), 'el campo especializada se sacó (regla 260)');
+  const deSeccion = (s) => activas.filter((f) => f.seccion === s && f.alcance !== 'local').map((f) => f.id);
+  assert.ok(deSeccion('Ciencia').length >= 1, deSeccion('Ciencia').join());
+  assert.ok(deSeccion('Salud').length >= 4, deSeccion('Salud').join());
+  assert.ok(deSeccion('Educación').length >= 5, deSeccion('Educación').join());
   assert.ok(deSeccion('Tecnología').length >= 8, deSeccion('Tecnología').join());
-  for (const f of especializadas) {
-    assert.ok(!f.oficial, `${f.id}: sin la marca oficial a propósito (con ella saldría sola, sin que la cuente nadie)`);
-    assert.ok(f.url && f.peso && f.alcance, f.id);
+  assert.ok(deSeccion('Cultura y agenda').length >= 6, deSeccion('Cultura y agenda').join());
+  // Ninguna lleva la marca oficial por las dudas (con ella saldría sola, sin que la cuente nadie), salvo las que ya eran de organismos.
+  for (const id of ['perfil-ciencia', 'perfil-salud', 'perfil-educacion', 'infobae-salud', 'infobae-educacion']) {
+    assert.ok(!TODAS_LAS_FUENTES.find((f) => f.id === id).oficial, id);
   }
-  // Sin medios de España (decisión del 27/09): los de tecnología de allá siguen apagados.
-  for (const id of ['hipertextual', 'xataka']) assert.equal(TODAS_LAS_FUENTES.find((f) => f.id === id).activa, false, id);
+  // Sin medios de España (decisión del 27/09, ratificada el 17/10): los cuatro de allá siguen apagados.
+  for (const id of ['hipertextual', 'xataka', 'elpais-ciencia', 'elpais-tecnologia', 'muy-interesante']) {
+    const f = TODAS_LAS_FUENTES.find((x) => x.id === id);
+    assert.ok(!f || f.activa === false, id);
+  }
 });

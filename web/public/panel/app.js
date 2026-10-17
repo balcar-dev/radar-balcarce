@@ -1069,13 +1069,13 @@ async function abrirNumeros() {
   try {
     const c = E.cliente;
     const traerCorridas = async (w) => { try { return resumenDeCorridas(await c.corridas(w)); } catch { return null; } };
-    const [estadisticas, produccion, archivo, actualizar, redes, vigilancia] = await Promise.all([
-      leerSiHay(c, ARCHIVOS.estadisticas, { puntos: [], dias: {} }), leerSiHay(c, ARCHIVOS.produccion, { dias: {} }),
+    const [estadisticas, produccion, seleccion, archivo, actualizar, redes, vigilancia] = await Promise.all([
+      leerSiHay(c, ARCHIVOS.estadisticas, { puntos: [], dias: {} }), leerSiHay(c, ARCHIVOS.produccion, { dias: {} }), leerSiHay(c, ARCHIVOS.seleccion, null),
       E.archivo ? Promise.resolve(E.archivo) : leerSiHay(c, ARCHIVOS.archivo, { notas: [] }).then((j) => j.notas ?? []),
       traerCorridas('actualizar.yml'), traerCorridas('redes.yml'), traerCorridas('vigilancia.yml'),
     ]);
     E.archivo = archivo;
-    E.numeros = { estadisticas, produccion, corridas: { actualizar, redes, vigilancia } };
+    E.numeros = { estadisticas, produccion, seleccion, corridas: { actualizar, redes, vigilancia } };
     vistaNumeros();
   } catch (e) {
     aviso(explicarError(e), { ms: 9000 });
