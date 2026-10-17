@@ -12,10 +12,9 @@ import {
 } from '../web/lib/archivo.js';
 import { firmaCorta, quienEscribio, autorDeNota } from '../web/components/metadatos.js';
 import {
-  paraPruebas, exigirMedios, aplicarCupos, esperaSoloPorCantidad, MOTIVO_POCO_CONTADA,
+  paraPruebas, exigirMedios, esperaSoloPorCantidad, MOTIVO_POCO_CONTADA,
 } from '../ingesta/ingesta.mjs';
 import { REGLAS_SEMAFORO } from '../ingesta/fuentes.mjs';
-import { CUPO_DE_AFUERA, CUPO_POR_DEFECTO } from '../ingesta/criterio.mjs';
 import { conFotosDelBanco, elegirFotosNuevas } from '../web/scripts/fotos-notas.mjs';
 import { buscarFotoWikimedia, creditoDeFoto, textoPlano } from '../ingesta/fotos.mjs';
 
@@ -126,30 +125,26 @@ test('la nota publicada lleva `oficial`, que es lo que mira tieneRespaldo en el 
   assert.deepEqual(quedan, ['o']);
 });
 
-// ------------------------- 5. el cupo y los medios no le sacan la página
+// ------------------------- 5. los medios no le sacan la página (el cupo se sacó el 17/10, regla 215)
 
 const deAfuera = (id, extra = {}) => ({
   id, titulo: `Nota ${id}`, semaforo: 'verde', seccion: 'Deportes', medios: ['A', 'B', 'C', 'D'], alcance: 'pais', local: false, relevancia: 50, ...extra,
 });
 
-test('lo ya publicado que hoy espera sólo por el cupo o por los medios conserva la página; el rojo y el amarillo por contenido, no (28/09)', () => {
+test('lo ya publicado que hoy espera sólo por los medios (o por el cupo viejo) conserva la página; el rojo y el amarillo por contenido, no (28/09)', () => {
   // Pocos medios (exigirMedios).
   const [poca] = exigirMedios([deAfuera('p', { seccion: 'Política', medios: ['A'] })]);
   assert.equal(poca.semaforo, 'amarillo');
   assert.equal(esperaSoloPorCantidad(poca), true);
 
-  // El cupo de la sección (aplicarCupos).
-  const cupo = CUPO_DE_AFUERA.Deportes ?? CUPO_POR_DEFECTO;
-  const muchas = aplicarCupos(Array.from({ length: cupo + 2 }, (_, i) => deAfuera(`d${i}`)));
-  const pasadas = muchas.filter((n) => n.semaforo === 'amarillo');
-  assert.equal(pasadas.length, 2);
-  assert.ok(pasadas.every(esperaSoloPorCantidad), JSON.stringify(pasadas.map((n) => n.motivo)));
-  // Una sección con cupo 0 para lo de afuera, si la hay, también es cupo.
-  const seccionSinCupo = Object.keys(CUPO_DE_AFUERA).find((s) => CUPO_DE_AFUERA[s] === 0);
-  if (seccionSinCupo) {
-    const [sola] = aplicarCupos([deAfuera('s', { seccion: seccionSinCupo })]);
-    assert.equal(esperaSoloPorCantidad(sola), true, sola.motivo);
-  }
+  // Policiales es sólo de acá: lo de afuera espera aunque lo cuenten cuatro medios (antes, "cupo 0").
+  const [sola] = exigirMedios([deAfuera('s', { seccion: 'Policiales' })]);
+  assert.equal(sola.semaforo, 'amarillo');
+  assert.equal(esperaSoloPorCantidad(sola), true, sola.motivo);
+  // Y el motivo del cupo de antes (17/10, regla 215) sigue contando como "cantidad" en lo que quedó guardado.
+  const delCupoViejo = { semaforo: 'amarillo', motivo: 'pasó el cupo de Deportes de afuera (10 a la vez)' };
+  assert.equal(esperaSoloPorCantidad(delCupoViejo), true);
+  const pasadas = [sola, delCupoViejo];
 
   const conserva = (n) => esperaSoloPorCantidad(n);
   assert.equal(pierdeLaPagina(poca, { conserva }), false);

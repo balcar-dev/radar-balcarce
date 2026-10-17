@@ -1,6 +1,6 @@
 # Criterio editorial de Radar Balcarce
 
-*Actualizado el 17/10/2026 (lo de Balcarce entra todo; lo nacional, por popularidad).* Éste es **el** criterio editorial del medio: qué se publica,
+*Actualizado el 17/10/2026 (lo de Balcarce entra todo; lo nacional, por popularidad y sin cupos: regla 215).* Éste es **el** criterio editorial del medio: qué se publica,
 cómo se escribe, cómo se trabaja con las fuentes y cómo se verifica. Hay uno solo y está
 acá; los otros documentos remiten a éste.
 
@@ -65,7 +65,7 @@ medios de España y de chimentos están apagados.
 55, Napaleofú, Los Pinos, la papa; decir "sudeste bonaerense" no alcanza desde el 29/09);
 si no, lo de un medio de Balcarce o lo que
 dice Balcarce **en el título**, siempre que la IA no haya dicho que no es de Balcarce.
-Nombrarla al pasar en el texto no alcanza. Lo de acá no pide medios ni ocupa cupo, y **lo
+Nombrarla al pasar en el texto no alcanza. Lo de acá no pide medios ni tiene tope, y **lo
 que toca la zona sale solo aunque lo cuente un solo medio**.
 
 **Lo copiado de afuera por un medio de acá es de afuera.** Un medio de Balcarce que
@@ -74,33 +74,54 @@ afuera (Malvinas, un incendio en Misiones): se rige por lo de afuera (`historiaD
 Lo que cuentan **sólo** medios de otras ciudades de la zona (Mar del Plata, Tandil,
 Necochea) no se trae, salvo que diga Balcarce en el título o toque la zona.
 
-**Lo de afuera se mide en medios, no en puntaje.** Una nota que no es de Balcarce sale
-sola sólo si la cuentan los medios distintos que pide su sección: 3 por defecto; Fútbol y
-Deportes, 4; Economía, Tecnología, Agro y Automovilismo, 2; lo que nombra a una figura
-argentina, 2. **Nunca con uno solo**; una fuente oficial alcanza sola. Si no llega,
-espera a una persona con el motivo "de afuera y poco contada (N medios; Sección pide M)".
-Además, cada sección tiene un **cupo** de lo de afuera (cuántas pueden salir solas a la
-vez). El cupo cuenta sólo lo que todavía se puede estrenar (el hecho de menos de 12
-horas) y lo ya publicado que sigue a la vista, no notas de días atrás. Los números, en
-la sección 11. Se mira en la ingesta y otra vez después de la lectura con IA: si al
-juntar repetidas una nota llega a los medios que pide, sale, y lo que esperaba por el
-cupo vuelve a competir.
+**Lo de afuera se publica por popularidad, sin cupos** (17/10/2026, regla 215; Hernán: "no hay
+ningún cupo de nada: tiene que entrar todo lo nacional en base a las notas más relevantes, las
+que más fuentes tienen a la vez"). La popularidad es **cuántos medios distintos cuentan lo
+mismo** (los del mismo dueño cuentan uno). No hay un máximo de notas por sección ni por día; los
+únicos límites son técnicos (los cupos gratis de las IA y el tope de páginas del sitio). Reemplaza
+a los viejos mínimos por sección (Fútbol y Deportes 4; Economía, Tecnología, Agro y
+Automovilismo 2; con una figura 2) y a los cupos de 6 a 15. Una nota que no es de Balcarce sale
+sola así:
 
-**Lo de Balcarce entra todo; lo nacional, por popularidad** (17/10/2026, Hernán). Lo de
-acá no compite con lo nacional: no pide medios ni ocupa cupo, sin repetir, sin el
-autobombo de los medios y sin publicidad (más abajo). Lo de afuera entra según cuántos
-medios lo cuentan y que sea de interés. **Muy contada** (`ingesta/muy-contada.mjs`): una
-historia de afuera que cuentan **8 medios distintos o más** (los del mismo dueño cuentan
-uno), o que junta **5 en sus primeras 3 horas** (4 si empezó de noche, de 20 a 7), con el
-hecho de menos de 24 horas. **Sale aunque el cupo de su sección esté lleno, va primera en
-su sección durante 6 horas** y no salen más de 2 del mismo tema a la vez (las de más
-medios). No cuentan "dónde ver", "a qué hora juega", el "en vivo", la cotización del dólar
-ni el pronóstico, aunque los cuenten todos; lo que el semáforo frena (menores, víctimas,
-acusados, chimentos, el extranjero sin un argentino) sigue frenado. Y **muy contada de
-acá**: lo de Balcarce que cuentan 3 medios de acá o más (lo que más se lee del sitio) es
-la primera candidata a la nota grande de la tapa y a Facebook. El **puntaje** suma 8 cada
-vez que se duplican los medios (2 medios 8, 4 medios 16, 8 medios 24, 32 medios 40), sin
-tope: una historia de 30 medios vale más que una de 5.
+- **Por defecto, con 3 medios:** tres medios que cuentan lo mismo son la noticia del día.
+- **En las áreas donde suele haber poco, con 2:** Tecnología e IA, Ciencia, Salud, Educación,
+  Cultura (con los espectáculos), Agro y Automovilismo. Si una sección no tiene notas todos los
+  días, no vale la pena tenerla.
+- **Una fuente especializada de esas áreas** (una agencia de ciencia, una universidad, un
+  ministerio, un medio de tecnología: `especializada` en `FUENTES.md`) alcanza con **un solo
+  medio si la lectura con IA la considera de interés** (importancia media o alta: un
+  descubrimiento, un avance, una investigación, un lanzamiento o un cambio con consecuencias
+  reales; no una guía de uso, una oferta, un truco ni una curiosidad sin respaldo) y pasa el
+  **control de calidad**: sin pronósticos del tiempo de otras ciudades, sin "dónde ver", sin
+  "en vivo", sin chimentos ni publicidad. El mismo control vale para todo lo que sale con menos
+  de 3 medios.
+- **El ritmo del día:** se buscan unas **100 noticias por día** (con lo de Balcarce adentro),
+  repartidas de las 7 a las 23. Si a esa hora lleva menos de lo que corresponde (100 por las
+  horas pasadas, sobre 16), el mínimo de lo genérico baja de 3 a 2 hasta que alcance, y vuelve a
+  3. **Nunca baja de 2** fuera de las fuentes especializadas. Si sobra, **no se saca nada**: no hay
+  tope hacia arriba.
+- **Nunca con un solo medio** fuera de esas fuentes; una fuente oficial alcanza sola. Lo que no
+  llega espera con el motivo "de afuera y poco contada (N medios; Sección pide M)" y no va al
+  celular. **Lo que ya salió no se baja** si después cambia el ritmo.
+- **Del extranjero, sólo con un argentino** (Trump, Gaza, la Fórmula 1 sin un argentino: no). La
+  única excepción es la ciencia y la tecnología (`SECCIONES_SIN_FRONTERAS`): un descubrimiento
+  o un producto del mundo es noticia. **Policiales de afuera no sale nunca**: la sección es de acá.
+- Se mira en la ingesta y otra vez después de la lectura con IA: si al juntar repetidas una nota
+  llega a los medios que pide, sale. En una sección, **más medios es más arriba**: cada vez que
+  se duplican los medios que cuentan una nota, vale 2 horas más nueva al ordenar la lista.
+
+**Lo de Balcarce entra todo** (Hernán, 16/10 y 17/10). Lo de acá no compite con lo nacional: no
+pide medios, no tiene tope, sin repetir, sin el autobombo de los medios y sin publicidad (más
+abajo). **Muy contada** (`ingesta/muy-contada.mjs`): una historia de afuera que cuentan **8 medios
+distintos o más** (los del mismo dueño cuentan uno), o que junta **5 en sus primeras 3 horas** (4
+si empezó de noche, de 20 a 7), con el hecho de menos de 24 horas. **Va primera en su sección
+durante 6 horas** y no salen más de 2 del mismo tema a la vez (las de más medios). No cuentan
+"dónde ver", "a qué hora juega", el "en vivo", la cotización del dólar ni el pronóstico, aunque los
+cuenten todos; lo que el semáforo frena (menores, víctimas, acusados, chimentos, el extranjero
+sin un argentino) sigue frenado. Y **muy contada de acá**: lo de Balcarce que cuentan 3 medios de
+acá o más (lo que más se lee del sitio) es la primera candidata a la nota grande de la tapa y a
+Facebook. El **puntaje** suma 8 cada vez que se duplican los medios (2 medios 8, 4 medios 16, 8
+medios 24, 32 medios 40), sin tope: una historia de 30 medios vale más que una de 5.
 
 **Una IA lee cada nota antes de decidir** (`ingesta/lectura-ia.mjs`). Con el perfil de
 Balcarce (`ingesta/perfil-balcarce.md`) y la ciudad del medio arma una ficha: de dónde es
@@ -129,16 +150,27 @@ de adentro de cada nota y lo de más de 72 horas no se trae.
 | Sección | ¿Sale sola? |
 |---|---|
 | Balcarce | Sí |
+| Política | Sí en la web; **en las redes, nunca sin una persona** |
+| Policiales | Sí en la web; **en las redes, nunca sin una persona** |
+| Educación | Sí (escuelas, docentes, universidades, becas; desde el 17/10) |
+| Salud | Sí (hospitales, vacunas, brotes, PAMI e IOMA; desde el 17/10) |
 | Fútbol | Sí (de la liga de Balcarce a la Selección) |
 | Deportes | Sí (todos los demás deportes) |
 | Automovilismo | Sí |
 | Agro | Sí |
-| Cultura y agenda | Sí |
-| Tecnología | Sí (se confirma con el título: si no nombra nada de tecnología, se clasifica por lo que dice) |
 | Economía | Sí |
-| Política | Sí en la web; **en las redes, nunca sin una persona** |
-| Policiales | Sí en la web; **en las redes, nunca sin una persona** |
+| Ciencia | Sí (química, biología, física, espacio, investigación, ambiente como ciencia; desde el 17/10) |
+| Tecnología e IA | Sí (la clave sigue siendo Tecnología; se confirma con el título: si no nombra nada de tecnología, se clasifica por lo que dice) |
+| Cultura y agenda | Sí (se lee "Cultura"; con los espectáculos, sin chimentos) |
 | Argentina | Sí: lo nacional que no es de otra sección, contado por tres medios o más |
+
+Son **catorce**: las once de siempre más Educación, Salud y Ciencia, que se sumaron el
+17/10/2026 (regla 215; antes estaban detrás del interruptor `SECCIONES_NUEVAS`, que se sacó), y
+"Tecnología" se lee "Tecnología e IA". La sección de una nota la decide, en este orden, el
+feed (si trae sección y el título la confirma), las palabras del título y la bajada, y la IA.
+Educación, Salud y Ciencia nunca se llevan una nota de Política o Policiales. Cada sección tiene
+que tener notas todos los días: si en una semana una no tuvo ninguna, no se ofrece en el menú y
+se revisan sus fuentes.
 
 No hay sección Servicios, Región ni Provincia: los cortes, trámites y obras de acá van a
 Balcarce; la farmacia, el clima y el dólar son servicios del sitio, no notas.
@@ -199,7 +231,7 @@ que lo decidan Hernán y Andrés.**
 | Color | Qué pasa | Cuándo |
 |---|---|---|
 | **Rojo** | No se publica nunca, ni por error | Identifica o puede identificar a un menor o a una víctima de violencia de género o de un delito sexual (menor de edad, abuso sexual, violación, femicidio, grooming, suicidio…). También las listas de sepelios (`REGLAS_SEMAFORO.nunca`), las efemérides de otro medio y lo que no es nota (el autobombo de un medio, el pronóstico o las farmacias de otro medio, la publicidad de un comercio: motivo "no es nota"; una persona igual puede publicarlo) |
-| **Amarillo** | Espera a una persona (en el panel del celular sólo lo de acá, hasta 5 por día; lo de afuera no va al celular desde el 17/10/2026, regla 200: si no sale solo, no sale) | Acusa a alguien (denuncia, detenido, imputado), habla de una muerte o de un herido (en Policiales, en Balcarce, en lo de acá o de la zona y en lo que cuenta un solo medio), involucra a un chico, parece promoción, es de afuera y la cuentan menos medios de los que pide su sección, pasó el cupo de su sección, es la cotización del dólar, o tiene **verificación baja** (sección 5) |
+| **Amarillo** | Espera a una persona (en el panel del celular sólo lo de acá, hasta 5 por día; lo de afuera no va al celular desde el 17/10/2026, regla 200: si no sale solo, no sale) | Acusa a alguien (denuncia, detenido, imputado), habla de una muerte o de un herido (en Policiales, en Balcarce, en lo de acá o de la zona y en lo que cuenta un solo medio), involucra a un chico, parece promoción, es de afuera y la cuentan menos medios de los que pide la popularidad (sección 2), es la cotización del dólar, o tiene **verificación baja** (sección 5) |
 | **Verde** | Sale sola | Todo lo demás |
 
 **Qué mira.** En el **título y el comienzo del resumen**, las listas enteras. En el
@@ -768,8 +800,8 @@ voces de los videos también son de IA.
   dirección de la nota no cambia.
 - **Se saca una nota:** si una persona la retira o la descarta (desde el celular, o en
   `web/data/retiradas.json`), o el semáforo la pasa a rojo o a amarillo por lo que dice,
-  sale de las listas y su página deja de existir. El amarillo sólo por el cupo o por los
-  medios que la cuentan la saca de las listas pero le deja la página. Si ya había salido
+  sale de las listas y su página deja de existir. El amarillo sólo por los medios que la
+  cuentan la saca de las listas pero le deja la página (y lo que ya salió no se baja por cantidad). Si ya había salido
   en Facebook o Instagram, allá se borra a mano.
 - **El enlace no se rompe:** la dirección de una nota queda fija desde que sale aunque
   cambie el titular, y la página dura 180 días aunque salga de la portada (con el tope de 3.700 notas, a unas 46 por día, son unos 80). Si la misma
@@ -836,25 +868,15 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Días que dura la página de una nota | 180 | `PORTADA.diasDeArchivo` |
 | Notas con página como máximo (por el tope de 20.000 archivos de Cloudflare; a unas 46 por día se llena y manda antes que los 180 días) | 3700 | `PORTADA.maximoDeNotas` |
 | Nota del dólar: cuánto tiene que moverse el blue o el oficial contra el día anterior para salir (%) | 2 | `NOTA_DEL_DOLAR.movimientoMinimo` |
-| Medios que tienen que contar lo de afuera: Fútbol | 4 | `MEDIOS_DE_AFUERA.Fútbol` |
-| Medios que tienen que contar lo de afuera: Deportes | 4 | `MEDIOS_DE_AFUERA.Deportes` |
-| Medios que tienen que contar lo de afuera: Economía | 2 | `MEDIOS_DE_AFUERA.Economía` |
-| Medios que tienen que contar lo de afuera: Tecnología | 2 | `MEDIOS_DE_AFUERA.Tecnología` |
-| Medios que tienen que contar lo de afuera: Agro | 2 | `MEDIOS_DE_AFUERA.Agro` |
-| Medios que tienen que contar lo de afuera: Automovilismo | 2 | `MEDIOS_DE_AFUERA.Automovilismo` |
-| Medios que tienen que contar lo de afuera: el resto de las secciones | 3 | `MEDIOS_POR_DEFECTO` |
-| Medios que tienen que contar lo de afuera que nombra a una figura argentina | 2 | `MEDIOS_CON_FIGURA` |
-| Cupo de lo de afuera: Fútbol | 10 | `CUPO_DE_AFUERA.Fútbol` |
-| Cupo de lo de afuera: Argentina | 12 | `CUPO_DE_AFUERA.Argentina` |
-| Cupo de lo de afuera: Deportes | 10 | `CUPO_DE_AFUERA.Deportes` |
-| Cupo de lo de afuera: Economía | 12 | `CUPO_DE_AFUERA.Economía` |
-| Cupo de lo de afuera: Tecnología | 8 | `CUPO_DE_AFUERA.Tecnología` |
-| Cupo de lo de afuera: Política | 8 | `CUPO_DE_AFUERA.Política` |
-| Cupo de lo de afuera: Policiales | 0 | `CUPO_DE_AFUERA.Policiales` |
-| Cupo de lo de afuera: Automovilismo | 6 | `CUPO_DE_AFUERA.Automovilismo` |
-| Cupo de lo de afuera: Cultura y agenda | 8 | `CUPO_DE_AFUERA.Cultura y agenda` |
-| Cupo de lo de afuera: el resto de las secciones | 15 | `CUPO_POR_DEFECTO` |
-| Muy contada: medios distintos que la cuentan (sale sin cupo; sobre 50 medios del país) | 8 | `MUY_CONTADA.medios` |
+| Medios que tienen que contar lo de afuera: por defecto (sin cupos desde el 17/10) | 3 | `POPULARIDAD.mediosPorDefecto` |
+| Medios que tienen que contar lo de afuera en las áreas donde suele haber poco (Tecnología e IA, Ciencia, Salud, Educación, Cultura, Agro, Automovilismo) | 2 | `POPULARIDAD.mediosEnAreasChicas` |
+| Medios que alcanzan a una fuente especializada de esas áreas si la IA la considera de interés | 1 | `POPULARIDAD.mediosDeUnaFuenteEspecializada` |
+| Medios que tienen que contar lo genérico si el día va flojo para el ritmo | 2 | `POPULARIDAD.mediosSiVaFaltando` |
+| Noticias por día que se buscan, con lo de Balcarce adentro (el ritmo; no hay tope hacia arriba) | 100 | `POPULARIDAD.notasPorDia` |
+| Ritmo del día: desde la hora (de Balcarce) | 7 | `POPULARIDAD.ritmoDesdeHora` |
+| Ritmo del día: hasta la hora (de Balcarce) | 23 | `POPULARIDAD.ritmoHastaHora` |
+| Orden de una sección: horas más nueva que vale una nota cada vez que se duplican los medios | 2 | `POPULARIDAD.horasPorDuplicarMedios` |
+| Muy contada: medios distintos que la cuentan (va primera en su sección; sobre 50 medios del país) | 8 | `MUY_CONTADA.medios` |
 | Muy contada: medios en sus primeras horas, de día | 5 | `MUY_CONTADA.mediosRapidos` |
 | Muy contada: medios en sus primeras horas, de noche | 4 | `MUY_CONTADA.mediosRapidosDeNoche` |
 | Muy contada: cuántas son "las primeras horas" | 3 | `MUY_CONTADA.horasRapidas` |

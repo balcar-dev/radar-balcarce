@@ -30,7 +30,7 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import {
-  TODAS_LAS_FUENTES, MEMORIA_DEL_CRUCE, exigirMedios, aplicarCupos, contarMedios, parsearFeed, semaforoDelTexto,
+  TODAS_LAS_FUENTES, MEMORIA_DEL_CRUCE, aplicarPopularidad, contarMedios, parsearFeed, semaforoDelTexto,
   esViejaSinSalir, paraPruebas,
 } from '../../ingesta/ingesta.mjs';
 import { FUENTES_CRUCE } from '../../ingesta/fuentes-cruce.mjs';
@@ -41,7 +41,7 @@ import { diaAR, horaAR, ZONA } from '../../ingesta/zona.mjs';
 import { SECCIONES_NUEVAS, seccionNueva } from '../../ingesta/secciones-nuevas.mjs';
 import { informe as informeSecciones, muestra as muestraSecciones } from '../../ingesta/secciones-nuevas-sombra.mjs';
 import { simularLista, mediosDelRegistro } from '../../ingesta/auditar-fuentes.mjs';
-import { MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO } from '../../ingesta/criterio.mjs';
+import { mediosMinimos } from '../../ingesta/popularidad.mjs';
 import { armarDatos } from '../../docs/etapa-1-fuentes/generar-revision.mjs';
 import { VERIFICACION_LOCAL } from '../../docs/etapa-1-fuentes/afinar.mjs';
 
@@ -247,8 +247,7 @@ export function analizar({ corrida, leer, dia, ahora = Date.now(), revision }) {
   const sacadasIA = new Map(cambios.sacadas.map((c) => [c.id, c.motivo]));
   const { notas: sinRepetidas, repetidas } = quitarRepetidas(conFichas, fichasArchivo.repetidas?.grupos ?? [], { publicadas: idsReales });
   const repetidasIds = new Set(repetidas.map((r) => r.id));
-  exigirMedios(sinRepetidas);
-  aplicarCupos(sinRepetidas.sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0)));
+  aplicarPopularidad(sinRepetidas.sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0)));
   const filtro = new Map(sinRepetidas.map((n) => [n.id, n]));
 
   const momentoDe = (h) => (h.cuando === 'sin fecha en la fuente' ? (Date.parse(vistas[h.id] ?? '') || generado) : Date.parse(h.fecha));
@@ -409,7 +408,7 @@ export function analizar({ corrida, leer, dia, ahora = Date.now(), revision }) {
   const conCorta = simularLista(pubHoyF, nombresCorta, { grupoDe, esDeBalcarce });
   const seCaenConCorta = pubHoyF.filter((n) => {
     if (n.local || n.medios.some(esDeBalcarce)) return false;
-    const min = MEDIOS_DE_AFUERA[n.seccion] ?? MEDIOS_POR_DEFECTO;
+    const min = mediosMinimos(n.seccion);
     const voces = (lista) => new Set(lista.map((m) => grupoDe(m) ?? m)).size;
     return voces(n.medios.filter((m) => activosNombres.has(m))) >= min && voces(n.medios.filter((m) => nombresCorta.has(m))) < min;
   }).map((n) => porId.get(n.id));
@@ -418,7 +417,7 @@ export function analizar({ corrida, leer, dia, ahora = Date.now(), revision }) {
   const vocesCon = (lista, conjunto) => new Set(lista.filter((m) => conjunto.has(m)).map((m) => grupoDe(m) ?? m)).size;
   const historiasAfueraHoy = deHoy.filter((x) => !x.h.local && ['salio', 'salio-antes', 'verde-pendiente', 'espera-cuerpo', 'cupo'].includes(x.cat))
     .map((x) => {
-      const min = MEDIOS_DE_AFUERA[x.seccion] ?? MEDIOS_POR_DEFECTO;
+      const min = mediosMinimos(x.seccion);
       return { x, min, todos: vocesCon(x.h.medios ?? [], activosNombres), corta: vocesCon(x.h.medios ?? [], nombresCorta) };
     });
   historiasAfueraHoy.seCaen = historiasAfueraHoy.filter((y) => y.todos >= y.min && y.corta < y.min);

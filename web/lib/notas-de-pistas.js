@@ -13,7 +13,7 @@ export const RELEVANCIA_DE_PISTA = 95;
 /** Cuánto tiempo sigue existiendo la nota (como las demás: 180 días). */
 export const DIAS_DE_UNA_NOTA_DE_PISTA = 180;
 
-const SECCIONES = ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo', 'Agro', 'Economía', 'Cultura y agenda', 'Tecnología', 'Argentina'];
+const SECCIONES = ['Balcarce', 'Política', 'Policiales', 'Educación', 'Salud', 'Ciencia', 'Fútbol', 'Deportes', 'Automovilismo', 'Agro', 'Economía', 'Cultura y agenda', 'Tecnología', 'Argentina'];
 export const SECCIONES_DE_PISTAS = SECCIONES;
 
 /** El id de la nota: "np" y lo que sea de la pista, sólo letras y números (la dirección de una nota usa lo que va después del último guion). */

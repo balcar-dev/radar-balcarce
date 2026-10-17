@@ -80,9 +80,9 @@ test('el resumen de las 21 dice el total, y el detalle va en un bloque propio qu
   const plan = planDeAvisos({ ahora: alas21, estado: {}, portada: { notas }, historia: {} });
   const informe = plan.secciones.find((s) => s.clave === 'informe');
   assert.ok(informe, 'a las 21 sale el informe');
-  assert.match(informe.texto, /📰 Hoy: 66 notas \(0 de Balcarce\)/);
-  assert.match(informe.texto, /Argentina 11/);
-  assert.ok(informe.texto.length < 250, `breve: ${informe.texto.length} caracteres con las once secciones`);
+  assert.match(informe.texto, /📰 Hoy: 105 notas \(0 de Balcarce\)/);
+  assert.match(informe.texto, /Argentina 14/);
+  assert.ok(informe.texto.length < 250, `breve: ${informe.texto.length} caracteres con las catorce secciones`);
   assert.ok(informe.texto.length < LARGO_MAXIMO);
 
   // Si no entró junto al resumen, sale en la corrida siguiente; una vez dado, no se repite.

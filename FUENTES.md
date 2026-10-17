@@ -2,7 +2,7 @@
 
 *Este documento lo escribe `node ingesta/listar-fuentes.mjs` a partir del código. No se edita a mano: una prueba controla que diga lo mismo que `ingesta/fuentes.mjs` y `ingesta/fuentes-cruce.mjs`. Para sumar, sacar o apagar una fuente se toca una de esas dos listas y se vuelve a correr el programa.*
 
-Hoy: **103 feeds activos de 71 medios** (265 configurados).
+Hoy: **120 feeds activos de 82 medios** (283 configurados).
 
 ## Cómo se usan
 
@@ -12,9 +12,9 @@ Hoy: **103 feeds activos de 71 medios** (265 configurados).
 4. **Qué queda:**
    - todo lo de los medios de Balcarce;
    - de afuera, lo que dice Balcarce en el título o toca la zona (la ruta 226, la 55, la papa);
-   - de afuera, lo que cuentan los medios que pide su sección: Fútbol 4, Deportes 4, Economía 2, Tecnología 2, Agro 2, Automovilismo 2; el resto, 3; lo que nombra a una figura argentina, 2 (`MEDIOS_DE_AFUERA`, en `ingesta/criterio.mjs`). Nunca con un solo medio.
+   - de afuera, lo que cuentan 3 medios distintos, o 2 en las áreas donde suele haber poco (Tecnología e IA, Ciencia, Salud, Educación, Cultura y agenda, Agro, Automovilismo) y cuando el día va flojo para el ritmo de 100 notas (`POPULARIDAD`, en `ingesta/criterio.mjs`). Con un solo medio sale sólo una fuente **especializada** (ciencia, salud, educación, tecnología) que la lectura con IA considere de interés. Sin cupos.
    - Lo que cuentan **sólo** medios de otras ciudades de la zona (Mar del Plata, Tandil, Necochea…) no se trae.
-5. **El peso** sirve para ordenar (qué va primero, qué entra en el cupo de cada sección), no para decidir si sale. Lo de Balcarce pesa más a propósito.
+5. **El peso** sirve para ordenar (qué va primero, qué va a las redes), no para decidir si sale. Lo de Balcarce pesa más a propósito.
 6. **"Oficial"** es un organismo público (la Municipalidad, el Gobierno de la Provincia): da verificación alta y sale solo si dice Balcarce en el título o toca la zona.
 7. **"Sección fija"**: el feed ya viene separado por tema y se le cree (salvo Tecnología, que se confirma con el título).
 8. **"Cómo se lee"**: RSS o Atom (la lista de notas del medio), índice de noticias (el que cada sitio arma para Google, trae todo el día) o la página misma cuando el medio no tiene feed.
@@ -81,7 +81,7 @@ Cuentan como un medio más cuando cuentan lo mismo que los demás; solos, sólo 
 | Sendero Regional | Sendero Regional | varias ciudades del sudeste | RSS | — | 10 |  | apagada | https://senderomultimedios.com.ar/feed |
 | Sendero Regional | Sendero Regional · general | Necochea, Lobería, San Cayetano, Balcarce y Tandil | RSS | — | 11 |  | apagada | https://www.senderomultimedios.com.ar/feed/ |
 
-## De la provincia (11 feeds activos de 11 medios)
+## De la provincia (12 feeds activos de 12 medios)
 
 | Medio | Feed | Ciudad | Cómo se lee | Sección fija | Peso | Oficial | Activa | Dirección |
 |---|---|---|---|---|---|---|---|---|
@@ -115,9 +115,10 @@ Cuentan como un medio más cuando cuentan lo mismo que los demás; solos, sólo 
 | Letra P | Letra P · general | CABA / La Plata (política) | RSS | — | 10 |  | sí | https://www.letrap.com.ar/rss/pages/home.xml |
 | Los Andes (Mendoza) | Los Andes (Mendoza) · índice de noticias | Mendoza | índice de noticias | — | 10 |  | sí | https://www.losandes.com.ar/sitemap-news.xml |
 | Realpolitik | Realpolitik · general | La Plata | RSS | — | 10 |  | apagada | https://www.realpolitik.com.ar/rss |
+| Universidad Nacional de La Plata | Universidad Nacional de La Plata | La Plata | RSS | Educación | 12 |  | sí | https://unlp.edu.ar/feed/ |
 | Zona Norte Diario | Zona Norte Diario · general | San Isidro / zona norte | RSS | — | 10 |  | apagada | https://www.zonanortediario.com.ar/feed/ |
 
-## Nacionales (66 feeds activos de 38 medios)
+## Nacionales (82 feeds activos de 48 medios)
 
 | Medio | Feed | Ciudad | Cómo se lee | Sección fija | Peso | Oficial | Activa | Dirección |
 |---|---|---|---|---|---|---|---|---|
@@ -138,6 +139,7 @@ Cuentan como un medio más cuando cuentan lo mismo que los demás; solos, sólo 
 | Ámbito | Ámbito · índice de noticias | CABA | índice de noticias | — | 8 |  | sí | https://www.ambito.com/sitemap-news.xml |
 | Ámbito | Ámbito · politica | CABA | RSS | Política | 8 |  | apagada | https://www.ambito.com/rss/pages/politica.xml |
 | Ámbito | Ámbito · Tecnología | nacional | RSS | Tecnología | 13 |  | sí | https://www.ambito.com/rss/pages/tecnologia.xml |
+| ANMAT | ANMAT | CABA | RSS | Salud | 12 |  | sí | https://www.argentina.gob.ar/anmat/noticias/rss |
 | Autoblog Argentina | Autoblog Argentina · autos | CABA | RSS | Automovilismo | 8 |  | apagada | https://www.autoblog.com.ar/feed/ |
 | Básquet Plus | Básquet Plus · básquet | CABA | RSS | Deportes | 8 |  | apagada | https://basquetplus.com/rss.xml |
 | Bichos de Campo | Bichos de Campo | nacional | RSS | Agro | 12 |  | apagada | https://bichosdecampo.com/feed/ |
@@ -165,6 +167,7 @@ Cuentan como un medio más cuando cuentan lo mismo que los demás; solos, sólo 
 | Clarín | Clarín · Rural | nacional | RSS | Agro | 12 |  | sí | https://www.clarin.com/rss/rural/ |
 | Clarín | Clarín · sociedad | CABA | RSS | — | 8 |  | apagada | https://www.clarin.com/rss/sociedad/ |
 | Clarín | Clarín · Tecnología | nacional | RSS | Tecnología | 14 |  | sí | https://www.clarin.com/rss/tecnologia/ |
+| CONAE | CONAE | CABA | RSS | Ciencia | 12 |  | sí | https://www.argentina.gob.ar/ciencia/conae/noticias/rss |
 | Córdoba Competición | Córdoba Competición | CABA | RSS | Automovilismo | 8 |  | sí | https://cordobacompeticion.com/feed/ |
 | Crónica | Crónica · general | CABA | RSS | — | 8 |  | sí | https://www.cronica.com.ar/files/rss/ultimas-noticias.xml |
 | Diario Popular | Diario Popular · deportes | CABA | RSS | Deportes | 8 |  | apagada | https://www.diariopopular.com.ar/rss/pages/deportes.xml |
@@ -189,12 +192,14 @@ Cuentan como un medio más cuando cuentan lo mismo que los demás; solos, sólo 
 | El Destape | El Destape · tecnología | CABA | RSS | Tecnología | 8 |  | apagada | https://www.eldestapeweb.com/adjuntos/177/rss/tecnologia.xml |
 | El Economista | El Economista | CABA | RSS | Economía | 8 |  | sí | https://eleconomista.com.ar/feed/ |
 | El Gráfico | El Gráfico | CABA | RSS | Deportes | 8 |  | sí | https://www.elgrafico.com.ar/rss |
+| El País | El País · Ciencia | Madrid | RSS | Ciencia | 12 |  | apagada | https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/ciencia/portada |
+| El País | El País · Tecnología | Madrid | RSS | Tecnología | 12 |  | apagada | https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/tecnologia/portada |
 | elDiarioAR | elDiarioAR · general | CABA | RSS | — | 8 |  | sí | https://www.eldiarioar.com/rss/ |
 | ESA | ESA · ciencia espacial | CABA | RSS | Tecnología | 8 |  | apagada | https://www.esa.int/rssfeed/Our_Activities/Space_Science |
 | ESPN Argentina | ESPN Argentina · Fórmula 1 | CABA | RSS | Automovilismo | 8 |  | apagada | https://www.espn.com.ar/espn/rss/f1/news |
 | ESPN Argentina | ESPN Argentina · general | CABA | RSS | Deportes | 8 |  | apagada | https://www.espn.com.ar/espn/rss/news |
 | ESPN Argentina | ESPN Argentina · rugby | CABA | RSS | Deportes | 8 |  | apagada | https://www.espn.com.ar/espn/rss/rugby/news |
-| FayerWayer | FayerWayer | nacional | RSS | Tecnología | 11 |  | apagada | https://www.fayerwayer.com/feed |
+| FayerWayer | FayerWayer | nacional | RSS | Tecnología | 11 |  | sí | https://www.fayerwayer.com/feed |
 | Google | Google · blog en castellano | CABA | RSS | Tecnología | 8 |  | apagada | https://blog.google/intl/es-419/rss/ |
 | Google DeepMind | Google DeepMind | CABA | RSS | Tecnología | 8 |  | apagada | https://deepmind.google/blog/rss.xml |
 | Hipertextual | Hipertextual | nacional | RSS | Tecnología | 11 |  | apagada | https://hipertextual.com/feed |
@@ -203,12 +208,15 @@ Cuentan como un medio más cuando cuentan lo mismo que los demás; solos, sólo 
 | Infobae | Infobae · Cultura | nacional | RSS | Cultura y agenda | 13 |  | sí | https://www.infobae.com/arc/outboundfeeds/rss/category/cultura/?outputType=xml |
 | Infobae | Infobae · deportes | CABA | RSS | Deportes | 8 |  | sí | https://www.infobae.com/arc/outboundfeeds/rss/category/deportes/?outputType=xml |
 | Infobae | Infobae · Economía | nacional | RSS | Economía | 14 |  | sí | https://www.infobae.com/arc/outboundfeeds/rss/category/economia/?outputType=xml |
+| Infobae | Infobae · Educación | nacional | RSS | Educación | 12 |  | sí | https://www.infobae.com/arc/outboundfeeds/rss/category/educacion/?outputType=xml |
 | Infobae | Infobae · Política | nacional | RSS | Política | 13 |  | sí | https://www.infobae.com/arc/outboundfeeds/rss/category/politica/?outputType=xml |
+| Infobae | Infobae · Salud | nacional | RSS | Salud | 12 |  | sí | https://www.infobae.com/arc/outboundfeeds/rss/category/salud/?outputType=xml |
 | Infobae | Infobae · sociedad | CABA | RSS | — | 8 |  | apagada | https://www.infobae.com/arc/outboundfeeds/rss/category/sociedad/?outputType=xml |
 | Infobae | Infobae · Tecnología | nacional | RSS | Tecnología | 14 |  | sí | https://www.infobae.com/arc/outboundfeeds/rss/category/tecno/?outputType=xml |
 | Infobae | Infobae · Teleshow | nacional | RSS | Cultura y agenda | 12 |  | apagada | https://www.infobae.com/arc/outboundfeeds/rss/category/teleshow/?outputType=xml |
 | Infocampo | Infocampo | nacional | RSS | Agro | 12 |  | sí | https://www.infocampo.com.ar/feed/ |
 | INTA | INTA · Noticias | nacional | RSS | Agro | 12 |  | sí | https://www.argentina.gob.ar/inta/noticias/rss |
+| INTI | INTI | CABA | RSS | Ciencia | 12 |  | sí | https://www.argentina.gob.ar/inti/noticias/rss |
 | iProfesional | iProfesional · economia | CABA | RSS | Economía | 8 |  | apagada | https://www.iprofesional.com/rss/economia |
 | iProfesional | iProfesional · economia 2 | CABA | RSS | Economía | 8 |  | apagada | https://www.iprofesional.com/rss/finanzas |
 | iProfesional | iProfesional · economia 2 3 | CABA | RSS | Economía | 8 |  | apagada | https://www.iprofesional.com/rss/negocios |
@@ -218,6 +226,7 @@ Cuentan como un medio más cuando cuentan lo mismo que los demás; solos, sólo 
 | iProUP | iProUP · finanzas | CABA | RSS | Economía | 8 |  | apagada | https://www.iproup.com/rss/finanzas |
 | iProUP | iProUP · general | CABA | RSS | Tecnología | 8 |  | apagada | https://www.iproup.com/rss/home |
 | iProUP | iProUP · índice de noticias | CABA | índice de noticias | Tecnología | 8 |  | sí | https://www.iproup.com/sitemap-news.xml |
+| IT Sitio | IT Sitio | CABA | RSS | Tecnología | 11 |  | sí | https://www.itsitio.com/ar/feed/ |
 | La Capital (Rosario) | La Capital (Rosario) · Ovación | CABA | RSS | Deportes | 8 |  | apagada | https://www.lacapital.com.ar/rss/pages/ovacion.xml |
 | La Nación | La Nación | nacional | RSS | — | 8 |  | sí | https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml |
 | La Nación | La Nación · automovilismo | CABA | RSS | Deportes | 8 |  | apagada | https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/deportes/automovilismo/ |
@@ -230,7 +239,7 @@ Cuentan como un medio más cuando cuentan lo mismo que los demás; solos, sólo 
 | La Nación | La Nación · Política | nacional | RSS | Política | 13 |  | sí | https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/politica/ |
 | La Nación | La Nación · rugby | CABA | RSS | Deportes | 8 |  | apagada | https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/deportes/rugby/ |
 | La Nación | La Nación · sociedad | CABA | RSS | — | 8 |  | apagada | https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/sociedad/ |
-| La Nación | La Nación · Tecnología | nacional | RSS | Tecnología | 14 |  | apagada | https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/tecnologia/ |
+| La Nación | La Nación · Tecnología | nacional | RSS | Tecnología | 14 |  | sí | https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/tecnologia/ |
 | La Nación | La Nación · tenis | CABA | RSS | Deportes | 8 |  | apagada | https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/deportes/tenis/ |
 | La Página Millonaria | La Página Millonaria · índice de noticias | CABA | índice de noticias | Fútbol | 8 |  | apagada | https://lapaginamillonaria.com/sitemaps/news |
 | La Página Millonaria | La Página Millonaria · river | CABA | RSS | Fútbol | 8 |  | apagada | https://lapaginamillonaria.com/rss/feed |
@@ -248,6 +257,7 @@ Cuentan como un medio más cuando cuentan lo mismo que los demás; solos, sólo 
 | Motorsport | Motorsport · Fórmula 1 | nacional | RSS | — | 15 |  | sí | https://es.motorsport.com/rss/f1/news/ |
 | Motorsport | Motorsport · MotoGP | nacional | RSS | — | 14 |  | sí | https://es.motorsport.com/rss/motogp/news/ |
 | Mundo Ascenso | Mundo Ascenso | CABA | RSS | Fútbol | 8 |  | apagada | https://www.mundoascenso.com.ar/rss.xml |
+| Muy Interesante | Muy Interesante | Madrid | RSS | Ciencia | 11 |  | apagada | https://www.muyinteresante.com/feed |
 | NASA | NASA · ciencia | CABA | RSS | Tecnología | 8 |  | apagada | https://science.nasa.gov/feed/ |
 | Noticias Agropecuarias | Noticias Agropecuarias | CABA | RSS | Agro | 8 |  | sí | https://www.noticiasagropecuarias.com/feed/ |
 | Noticias Argentinas (NA) | Noticias Argentinas (NA) · general | CABA | RSS | — | 8 |  | apagada | https://noticiasargentinas.com/rss.xml |
@@ -272,11 +282,14 @@ Cuentan como un medio más cuando cuentan lo mismo que los demás; solos, sólo 
 | Página/12 | Página/12 · general | CABA | RSS | — | 8 |  | apagada | https://www.pagina12.com.ar/arc/outboundfeeds/rss/portada |
 | Página/12 | Página/12 · politica | CABA | RSS | Política | 8 |  | sí | https://www.pagina12.com.ar/arc/outboundfeeds/rss/secciones/el-pais/notas |
 | Página/12 | Página/12 · sociedad | CABA | RSS | — | 8 |  | sí | https://www.pagina12.com.ar/arc/outboundfeeds/rss/secciones/sociedad/notas |
+| Perfil | Perfil · Ciencia | nacional | RSS | Ciencia | 12 |  | sí | https://www.perfil.com/feed/ciencia |
 | Perfil | Perfil · cultura | CABA | RSS | Cultura y agenda | 8 |  | apagada | https://www.perfil.com/feed/cultura |
 | Perfil | Perfil · deportes | CABA | RSS | Deportes | 8 |  | sí | https://www.perfil.com/feed/deportes |
 | Perfil | Perfil · Economía | nacional | RSS | Economía | 13 |  | sí | https://www.perfil.com/feed/economia |
+| Perfil | Perfil · Educación | nacional | RSS | Educación | 12 |  | sí | https://www.perfil.com/feed/educacion |
 | Perfil | Perfil · general | CABA | RSS | — | 8 |  | sí | https://www.perfil.com/feed |
 | Perfil | Perfil · politica | CABA | RSS | Política | 8 |  | sí | https://www.perfil.com/feed/politica |
+| Perfil | Perfil · Salud | nacional | RSS | Salud | 12 |  | sí | https://www.perfil.com/feed/salud |
 | Perfil | Perfil · sociedad | CABA | RSS | — | 8 |  | apagada | https://www.perfil.com/feed/sociedad |
 | Perfil | Perfil · tecnología | CABA | RSS | Tecnología | 8 |  | sí | https://www.perfil.com/feed/tecnologia |
 | Pick and Roll | Pick and Roll · básquet | CABA | RSS | Deportes | 8 |  | apagada | https://www.pickandroll.com.ar/feed/ |
@@ -285,6 +298,8 @@ Cuentan como un medio más cuando cuentan lo mismo que los demás; solos, sólo 
 | Radio Mitre | Radio Mitre · índice de noticias | CABA | índice de noticias | — | 8 |  | apagada | https://radiomitre.cienradios.com/arc/outboundfeeds/news-sitemap/?outputType=xml |
 | Radio Mitre | Radio Mitre · politica | CABA | RSS | Política | 8 |  | apagada | https://radiomitre.cienradios.com/arc/outboundfeeds/rss/category/politica/?outputType=xml |
 | Radio Mitre | Radio Mitre · sociedad | CABA | RSS | — | 8 |  | sí | https://radiomitre.cienradios.com/arc/outboundfeeds/rss/category/sociedad/?outputType=xml |
+| Secretaría de Innovación, Ciencia y Tecnología | Secretaría de Innovación, Ciencia y Tecnología | CABA | RSS | Ciencia | 12 |  | sí | https://www.argentina.gob.ar/jefatura/innovacion-ciencia-y-tecnologia/noticias/rss |
+| SENASA | SENASA | CABA | RSS | Agro | 12 |  | sí | https://www.argentina.gob.ar/senasa/noticias/rss |
 | Servicio Meteorológico Nacional (avisos) | Servicio Meteorológico Nacional (avisos) · avisos a muy corto plazo | CABA | RSS | — | 8 |  | apagada | https://ssl.smn.gob.ar/feeds/avisocorto_GeoRSS.xml |
 | Solo Ascenso | Solo Ascenso · índice de noticias | CABA | índice de noticias | Fútbol | 8 |  | apagada | https://soloascenso.com.ar/sitemap-news.xml |
 | Solotc | Solotc · turismo carretera | CABA | RSS | Automovilismo | 8 |  | sí | https://www.solotc.com.ar/feed/ |
@@ -302,6 +317,9 @@ Cuentan como un medio más cuando cuentan lo mismo que los demás; solos, sólo 
 | Todo Agro | Todo Agro | CABA | RSS | Agro | 8 |  | apagada | https://www.todoagro.com.ar/feed/ |
 | TyC Sports | TyC Sports · índice de noticias | CABA | índice de noticias | — | 8 |  | sí | https://www.tycsports.com/sitemap_news_48hs.xml |
 | UAR (Unión Argentina de Rugby) | UAR (Unión Argentina de Rugby) · rugby | CABA | RSS | Deportes | 8 |  | apagada | https://uar.com.ar/feed/ |
+| UNICEN | UNICEN | Tandil | RSS | Educación | 12 |  | sí | https://www.unicen.edu.ar/noticias/feed/ |
+| Universidad Nacional de Cuyo | Universidad Nacional de Cuyo | Mendoza | RSS | Educación | 12 |  | sí | https://www.uncuyo.edu.ar/prensa/rss |
+| Universidad Nacional de Rosario | Universidad Nacional de Rosario | Rosario | RSS | Educación | 12 |  | sí | https://unr.edu.ar/feed/ |
 | Vavel Argentina | Vavel Argentina · general | CABA | RSS | Fútbol | 8 |  | apagada | https://www.vavel.com/ar/feed/index.rss2 |
 | Vavel Argentina | Vavel Argentina · índice de noticias | CABA | índice de noticias | Fútbol | 8 |  | apagada | https://www.vavel.com/ar/sitemap/news.xml |
 | Xataka | Xataka | nacional | RSS | Tecnología | 11 |  | apagada | https://www.xataka.com/feedburner.xml |

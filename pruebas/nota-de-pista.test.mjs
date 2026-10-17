@@ -117,9 +117,9 @@ test('una entrada incompleta, retirada o vencida no se publica y no rompe a las 
 });
 
 test('las secciones de las pistas son las de la web, y el panel y la nube arman el mismo id', async () => {
-  const datos = leer('web/lib/datos.js');
-  for (const s of SECCIONES_DE_PISTAS) assert.ok(datos.includes(`'${s}'`) || datos.includes(`"${s}"`), s);
-  assert.equal(SECCIONES_DE_PISTAS.length, 11);
+  const { SECCIONES: DE_LA_WEB } = await import('../web/lib/datos.js');
+  assert.deepEqual([...SECCIONES_DE_PISTAS].sort(), DE_LA_WEB.map((s) => s.nombre).sort(), 'las mismas que las del sitio');
+  assert.equal(SECCIONES_DE_PISTAS.length, 14, 'las once de siempre y Educación, Salud y Ciencia');
   for (const id of ['pista1abc', 'pistaZ9Y8', 'abc-123', '', null]) assert.equal(idDelPanel(id), idDeNotaDePista(id), String(id));
 });
 

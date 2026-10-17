@@ -16,6 +16,7 @@ export const RANGOS = [7, 14, 30];
 const COLOR = {
   Balcarce: 'balcarce', Política: 'politica', Policiales: 'policiales', Fútbol: 'futbol', Deportes: 'deportes', Automovilismo: 'automovilismo',
   Agro: 'agro', Economía: 'economia', 'Cultura y agenda': 'cultura', Tecnología: 'tecnologia', Argentina: 'pais',
+  Educación: 'educacion', Salud: 'salud', Ciencia: 'ciencia',
 };
 const DIA_MS = 86400e3;
 const NOMBRES_DE_DIA = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];

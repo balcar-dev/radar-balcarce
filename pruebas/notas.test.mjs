@@ -6,9 +6,8 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { paraPruebas, aplicarCupos } from '../ingesta/ingesta.mjs';
+import { paraPruebas, aplicarPopularidad } from '../ingesta/ingesta.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
-import { CUPO_DE_AFUERA } from '../ingesta/fuentes.mjs';
 
 const {
   normalizar, sentenciar, esDeBalcarce, figuraQueNombra,
@@ -348,15 +347,16 @@ test('lo de afuera que cuentan pocos medios espera, por más puntaje que tenga',
   // cuentan: el puntaje viejo frenaba a Ailín Pérez (9 medios) y dejaba pasar
   // notas de dos.
   const afuera = nota({ titulo: 'Boca derrota a San Lorenzo', alcance: 'pais', local: false });
-  const s = semaforo(afuera, 'Fútbol', 3);
+  const s = semaforo(afuera, 'Fútbol', 2);
   assert.equal(s.color, 'amarillo');
-  assert.equal(s.motivo, 'de afuera y poco contada (3 medios; Fútbol pide 4)');
-  assert.equal(semaforo(afuera, 'Fútbol', 4).color, 'verde', 'con los medios, el puntaje no frena');
+  assert.equal(s.motivo, 'de afuera y poco contada (2 medios; Fútbol pide 3)');
+  assert.equal(semaforo(afuera, 'Fútbol', 3).color, 'verde', 'con los medios, el puntaje no frena');
 });
 
-test('lo que nombra a una figura argentina pide dos medios', () => {
+test('lo que nombra a una figura argentina pide lo mismo que el resto (desde el 17/10 la figura sólo suma puntaje)', () => {
   const messi = nota({ titulo: 'Messi metió dos goles en Inter Miami', alcance: 'pais', local: false, figura: 'Messi' });
-  assert.equal(semaforo(messi, 'Fútbol', 2).color, 'verde');
+  assert.equal(semaforo(messi, 'Fútbol', 3).color, 'verde');
+  assert.equal(semaforo(messi, 'Fútbol', 2).color, 'amarillo');
   assert.equal(semaforo(messi, 'Fútbol', 1).color, 'amarillo', 'nunca con un solo medio');
 });
 
@@ -423,67 +423,75 @@ test('la política de todos los días ya no espera', () => {
   assert.notEqual(semaforo(nota({ titulo: 'Denuncian al intendente por irregularidades', local: true }), 'Política').color, 'verde');
 });
 
-test('Economía y Tecnología también salen solas, con dos medios', () => {
-  const e = nota({ titulo: 'El dólar cerró en alza', alcance: 'pais', local: false });
-  assert.equal(semaforo(e, 'Economía', 2).color, 'verde');
+test('Economía sale sola con tres medios y Tecnología, con dos (es un área donde suele haber poco)', () => {
+  const e = nota({ titulo: 'El BCRA cerró la semana con reservas en alza', alcance: 'pais', local: false });
+  assert.equal(semaforo(e, 'Economía', 3).color, 'verde');
+  assert.equal(semaforo(e, 'Economía', 2).color, 'amarillo');
   const t = nota({ titulo: 'Nueva herramienta de inteligencia artificial', alcance: 'pais', local: false });
   assert.equal(semaforo(t, 'Tecnología', 2).color, 'verde');
 });
 
-// ------------------------------------ medios y cupos por sección
+// ------------------------------------ la popularidad de lo de afuera (regla 215, sin cupos)
 
-test('Fútbol y Deportes piden más medios que las secciones flacas', () => {
-  // Son un tercio de todo lo que entra y no definen a un medio de Balcarce.
-  // Tres medios alcanzan en Economía; en Fútbol, no.
+test('lo de afuera pide 3 medios; 2 en las áreas donde suele haber poco; con uno solo no sale (regla 215)', () => {
   const afuera = (titulo) => nota({ titulo, alcance: 'pais', local: false });
-  assert.equal(semaforo(afuera('Boca ganó en la Bombonera'), 'Fútbol', 3).color, 'amarillo');
-  assert.equal(semaforo(afuera('El BCRA subió la tasa'), 'Economía', 2).color, 'verde');
-  assert.ok(mediosMinimosDe('Fútbol') > mediosMinimosDe('Economía'));
-  assert.ok(mediosMinimosDe('Deportes') > mediosMinimosDe('Argentina'));
+  // Fútbol y Deportes ya no piden 4: piden lo mismo que el resto (3).
+  assert.equal(semaforo(afuera('Boca ganó en la Bombonera'), 'Fútbol', 2).color, 'amarillo');
+  assert.equal(semaforo(afuera('Boca ganó en la Bombonera'), 'Fútbol', 3).color, 'verde');
+  // Economía tampoco es un área chica: pide 3.
+  assert.equal(semaforo(afuera('El BCRA subió la tasa'), 'Economía', 2).color, 'amarillo');
+  assert.equal(semaforo(afuera('El BCRA subió la tasa'), 'Economía', 3).color, 'verde');
+  // Las áreas donde suele haber poco piden 2.
+  for (const s of ['Tecnología', 'Ciencia', 'Salud', 'Educación', 'Cultura y agenda', 'Agro', 'Automovilismo']) {
+    assert.equal(mediosMinimosDe(s), 2, s);
+    assert.equal(semaforo(afuera('Una novedad sólida de la semana'), s, 2).color, 'verde', s);
+  }
+  for (const s of ['Economía', 'Argentina', 'Política', 'Fútbol', 'Deportes']) assert.equal(mediosMinimosDe(s), 3, s);
   for (const s of ['Economía', 'Tecnología', 'Agro', 'Automovilismo', 'Argentina', 'Política', 'Fútbol', 'Deportes', 'Cultura y agenda']) {
     assert.ok(mediosMinimosDe(s) >= 2, `${s}: de afuera nunca con un solo medio`);
+    assert.equal(semaforo(afuera('Una nota con un solo medio'), s, 1).color, 'amarillo', `${s}: un solo medio espera`);
   }
+  // Si el día va flojo para el ritmo, lo genérico baja a 2; las áreas chicas ya estaban ahí y nada baja a 1.
+  assert.equal(mediosMinimosDe('Política', {}, { vaFaltando: true }), 2);
+  assert.equal(mediosMinimosDe('Fútbol', {}, { vaFaltando: true }), 2);
+  assert.equal(mediosMinimosDe('Salud', {}, { vaFaltando: true }), 2);
+  assert.equal(semaforo(afuera('Una nota con un solo medio'), 'Política', 1, { vaFaltando: true }).color, 'amarillo');
+  // Una figura argentina ya no baja el mínimo (era 2): lo cuenta el puntaje, no la puerta.
+  assert.equal(semaforo(nota({ titulo: 'Messi vuelve a jugar', alcance: 'pais', local: false, figura: 'messi' }), 'Fútbol', 2).color, 'amarillo');
 });
 
-test('el cupo se queda con las de más puntaje', () => {
-  // Un domingo de fútbol tiene treinta notas arriba del piso, y la portada
-  // de Balcarce sería la de Olé.
-  const portada = Array.from({ length: 25 }, (_, i) => ({
-    id: 'd' + i, seccion: 'Deportes', semaforo: 'verde', local: false, nombraBalcarce: false,
-    relevancia: 90 - i,
+test('sin cupos: treinta notas de afuera de una misma sección con tres medios salen todas, en cualquier orden de puntaje', () => {
+  // Hasta el 17/10 un domingo de fútbol dejaba salir 10 y el resto esperaba "por cupo".
+  const portada = Array.from({ length: 30 }, (_, i) => ({
+    id: 'd' + i, seccion: 'Deportes', semaforo: 'verde', local: false, nombraBalcarce: false, medios: ['A', 'B', 'C'], relevancia: 90 - i,
   }));
-  aplicarCupos(portada);
-  const salen = portada.filter((n) => n.semaforo === 'verde');
-  assert.equal(salen.length, 10);
-  assert.equal(salen[0].id, 'd0', 'tienen que ser las de más puntaje');
-  assert.match(portada[24].motivo, /cupo/);
+  aplicarPopularidad(portada);
+  assert.equal(portada.filter((n) => n.semaforo === 'verde').length, 30);
+  assert.ok(portada.every((n) => !/cupo/.test(n.motivo ?? '')));
 });
 
-test('lo de Balcarce no tiene cupo, ni siquiera en automovilismo', () => {
+test('lo de Balcarce entra todo, ni siquiera el automovilismo tiene tope', () => {
   const portada = [
     ...Array.from({ length: 30 }, (_, i) => ({ id: 'l' + i, seccion: 'Deportes', semaforo: 'verde', local: true, relevancia: 80 })),
     ...Array.from({ length: 30 }, (_, i) => ({ id: 'a' + i, seccion: 'Automovilismo', semaforo: 'verde', local: true, relevancia: 60 })),
   ];
-  aplicarCupos(portada);
+  aplicarPopularidad(portada);
   assert.equal(portada.filter((n) => n.semaforo === 'verde').length, 60);
 });
 
-test('el automovilismo de afuera tiene cupo desde el 25/09', () => {
-  // Ese día la portada tenía 45 notas de fierros (22 de afuera) contra 40 de
-  // Balcarce: la sección más grande del medio de Balcarce era la Fórmula 1.
+test('el automovilismo de afuera ya no tiene cupo, pero pide dos medios (25/09: 22 de afuera contra 40 de Balcarce)', () => {
   const portada = Array.from({ length: 30 }, (_, i) => ({
-    id: 'a' + i, seccion: 'Automovilismo', semaforo: 'verde', local: false, nombraBalcarce: false, relevancia: 90 - i,
+    id: 'a' + i, seccion: 'Automovilismo', semaforo: 'verde', local: false, nombraBalcarce: false, relevancia: 90 - i, medios: i < 25 ? ['Olé', 'TyC Sports'] : ['Olé'],
   }));
-  aplicarCupos(portada);
+  aplicarPopularidad(portada);
   const salen = portada.filter((n) => n.semaforo === 'verde');
-  assert.equal(salen.length, CUPO_DE_AFUERA.Automovilismo);
-  assert.ok(salen.length > 0, 'la sección no puede quedar vacía');
-  assert.equal(salen[0].id, 'a0', 'se quedan las de más puntaje');
+  assert.equal(salen.length, 25, 'salen todas las que cuentan dos medios; las de un solo medio esperan');
+  assert.ok(portada.slice(25).every((n) => n.semaforo === 'amarillo' && /poco contada/.test(n.motivo)));
 });
 
-test('con los cupos del 25/09, Balcarce es la sección con más notas', () => {
-  // La portada del 25/09 a la noche, contada por sección: lo local y lo de
-  // afuera. Con los cupos nuevos, lo de afuera no puede pasar a Balcarce.
+test('cada sección recibe lo que cuentan sus medios: ninguna se queda vacía por el tamaño de otra', () => {
+  // La portada del 25/09 a la noche, contada por sección: lo local y lo de afuera. Sin cupos, nada de afuera con los medios que pide se
+  // pierde, y lo de acá sigue entero.
   const hoy = {
     Balcarce: { local: 40, afuera: 0 },
     Automovilismo: { local: 23, afuera: 22 },
@@ -495,37 +503,19 @@ test('con los cupos del 25/09, Balcarce es la sección con más notas', () => {
   };
   const portada = Object.entries(hoy).flatMap(([seccion, { local, afuera }]) => [
     ...Array.from({ length: local }, (_, i) => ({ id: `${seccion}-l${i}`, seccion, semaforo: 'verde', local: true, relevancia: 70 })),
-    ...Array.from({ length: afuera }, (_, i) => ({ id: `${seccion}-a${i}`, seccion, semaforo: 'verde', local: false, relevancia: 60 - i })),
+    ...Array.from({ length: afuera }, (_, i) => ({ id: `${seccion}-a${i}`, seccion, semaforo: 'verde', local: false, relevancia: 60 - i, medios: ['A', 'B', 'C'] })),
   ]);
-  aplicarCupos(portada);
+  aplicarPopularidad(portada);
   const por = {};
   for (const n of portada.filter((x) => x.semaforo === 'verde')) por[n.seccion] = (por[n.seccion] ?? 0) + 1;
-  const [primera] = Object.entries(por).sort((a, b) => b[1] - a[1]);
-  assert.equal(primera[0], 'Balcarce', JSON.stringify(por));
-  for (const s of Object.keys(hoy)) assert.ok(por[s] > 0, `${s} quedó vacía`);
+  for (const [s, { local, afuera }] of Object.entries(hoy)) assert.equal(por[s], local + afuera, `${s}: sale todo (${JSON.stringify(por)})`);
 });
 
-test('semana del autódromo y de F1 (25/09 a la madrugada): Balcarce sigue primera', () => {
-  const hoy = {
-    Balcarce: { local: 24, afuera: 0 },
-    Automovilismo: { local: 16, afuera: 12 },
-    Política: { local: 12, afuera: 5 },
-  };
-  const portada = Object.entries(hoy).flatMap(([seccion, { local, afuera }]) => [
-    ...Array.from({ length: local }, (_, i) => ({ id: `${seccion}-l${i}`, seccion, semaforo: 'verde', local: true, relevancia: 70 })),
-    ...Array.from({ length: afuera }, (_, i) => ({ id: `${seccion}-a${i}`, seccion, semaforo: 'verde', local: false, relevancia: 60 - i })),
-  ]);
-  aplicarCupos(portada);
-  const por = {};
-  for (const n of portada.filter((x) => x.semaforo === 'verde')) por[n.seccion] = (por[n.seccion] ?? 0) + 1;
-  assert.ok(por.Balcarce > por.Automovilismo, JSON.stringify(por));
-  assert.ok(por.Automovilismo >= 16 + 1, 'lo del autódromo sale entero y algo de la F1 también');
-});
-
-test('el cupo no toca lo que ya esperaba', () => {
-  const portada = [{ id: 'x', seccion: 'Deportes', semaforo: 'amarillo', local: false, relevancia: 99, motivo: 'otro' }];
-  aplicarCupos(portada);
+test('la popularidad no toca lo que ya esperaba por otro motivo', () => {
+  const portada = [{ id: 'x', seccion: 'Deportes', semaforo: 'amarillo', local: false, relevancia: 99, motivo: 'otro', medios: ['A', 'B', 'C', 'D'] }];
+  aplicarPopularidad(portada);
   assert.equal(portada[0].motivo, 'otro');
+  assert.equal(portada[0].semaforo, 'amarillo');
 });
 
 // ------------------------------------------------- lo que no es una nota

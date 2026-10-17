@@ -22,7 +22,9 @@ import { fichaDeFuente, FUENTES, FUENTES_NACIONALES, CONEXION_ARGENTINA, PALABRA
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
 import { diaAR, minutoDelDiaAR } from './zona.mjs';
 import { sinTildes } from '../web/lib/texto.js';
-import { seccionesNuevasActivas, SECCIONES_ETAPA_2, TEXTO_PARA_LA_FICHA, esDeLaEtapa2 } from './secciones-nuevas.mjs';
+import { SECCIONES_SUMADAS, TEXTO_PARA_LA_FICHA, esSumada } from './secciones-nuevas.mjs';
+import { AREAS_CHICAS, SECCIONES_SIN_FRONTERAS } from './criterio.mjs';
+import { mediosMinimos, IMPORTANCIAS_DE_INTERES } from './popularidad.mjs';
 
 /** ¿El título nombra a Balcarce o a una localidad del partido? San Agustín y
  *  Los Pinos, con respaldo (regla 179): en un medio de acá alcanzan solas. */
@@ -39,15 +41,16 @@ const MODELO = MODELO_DE_TEXTO;
 // TEXTO: la lectura no manda imágenes.
 const MODELO_GROQ = 'openai/gpt-oss-120b';
 
-/** Las once de siempre, en el orden en que se le nombran a la IA. */
+/** Las secciones de siempre, en el orden en que se le nombran a la IA. */
 const LAS_ONCE = ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo',
   'Economía', 'Agro', 'Tecnología', 'Cultura y agenda', 'Argentina'];
 /**
- * Las secciones que puede elegir: las de la web, sin inventar ninguna. Con el interruptor SECCIONES_NUEVAS
- * prendido (regla 187) se suman Educación y Salud, después de Policiales; apagado, las once de siempre.
+ * Las secciones que puede elegir: las de la web, sin inventar ninguna. Desde el 17/10/2026 (regla 211) son catorce: las once de
+ * siempre más Educación, Salud y Ciencia (SECCIONES_SUMADAS), después de Policiales. El interruptor SECCIONES_NUEVAS de la regla
+ * 187 se sacó.
  */
-export function seccionesDeLaFicha(activas = seccionesNuevasActivas()) {
-  return activas ? [...LAS_ONCE.slice(0, 3), ...SECCIONES_ETAPA_2, ...LAS_ONCE.slice(3)] : [...LAS_ONCE];
+export function seccionesDeLaFicha() {
+  return [...LAS_ONCE.slice(0, 3), ...SECCIONES_SUMADAS, ...LAS_ONCE.slice(3)];
 }
 export const SECCIONES_DE_LA_FICHA = seccionesDeLaFicha();
 export const AMBITOS = ['balcarce', 'region', 'provincia', 'nacional', 'internacional'];
@@ -81,6 +84,9 @@ export const LECTURA = {
   resumenMaximo: 500,
 };
 
+/** El texto de la sección de la ficha, el mismo que el del mapa de secciones (ingesta/secciones-nuevas.mjs). */
+const lineaDe = (s) => `  · ${s}: ${TEXTO_PARA_LA_FICHA[s]}`;
+
 const INSTRUCCION = `Sos el editor de selección de Radar Balcarce, un medio digital de Balcarce, provincia de Buenos Aires.
 Con el perfil de Balcarce que sigue, decidí para cada nota qué valor tiene para una persona que vive en Balcarce.
 
@@ -93,35 +99,28 @@ Reglas:
 - Si no es de Balcarce, decí en una frase concreta por qué le interesaría a un vecino de Balcarce. Si no hay una razón concreta, el impacto es "nulo" y la razón "ninguna". No inventes vínculos con Balcarce.
 - "impacto_balcarce": "directo" si pasa en Balcarce o cambia algo concreto acá; "indirecto" si toca la zona o una actividad de la ciudad (campo, papa, automovilismo); "nulo" si no.
 - "razon": local (pasó acá), servicio (cambia algo práctico para los vecinos: tarifas, trámites, salud, clima, rutas), actividad (automovilismo, campo, papa), provincia (medida provincial con efecto acá), nacional (noticia nacional importante), popular (tema del que habla todo el país) o ninguna.
+- "importancia": qué tan relevante es la noticia en sí, no qué tan cerca está de Balcarce. En ciencia, tecnología e IA, educación y salud: "alta" o "media" si cuenta un descubrimiento, un avance, una investigación, un lanzamiento o un cambio con consecuencias reales (también si pasa afuera del país: la ciencia y la tecnología no tienen frontera); "baja" si es una guía de uso, una oferta, un truco, una curiosidad sin respaldo o una promoción.
 - "seccion", qué va en cada una:
-  · Balcarce: lo que pasa en la ciudad y no tiene una sección más precisa (vecinos, instituciones, obras, escuelas, salud local), y también lo práctico para el vecino: cortes de luz o agua, trámites, horarios de atención, tarifas y subsidios de servicios públicos, vencimientos, alertas.
+  · Balcarce: lo que pasa en la ciudad y no tiene una sección más precisa (vecinos, instituciones, obras), y también lo práctico para el vecino: cortes de luz o agua, trámites, horarios de atención, tarifas y subsidios de servicios públicos, vencimientos, alertas.
   · Política: el Concejo, el intendente, el gobierno provincial y nacional, leyes, elecciones.
   · Policiales: delitos, accidentes, incendios, bomberos, policía.
+${SECCIONES_SUMADAS.filter((s) => s !== 'Ciencia').map(lineaDe).join('\n')}
   · Fútbol: el fútbol, de la liga de Balcarce a la Selección y los clubes argentinos.
   · Deportes: todos los demás deportes (básquet, hockey, rugby, tenis, boxeo, UFC, ajedrez, atletismo…), salvo el automovilismo.
   · Automovilismo: autos de carrera (TC, Turismo Nacional, Fórmula 1, MotoGP, karting, rally), el autódromo Juan Manuel Fangio y Fangio. Nunca Deportes.
   · Economía: precios, inflación, dólar, empleo, empresas, combustibles.
   · Agro: campo, papa, ganadería, INTA, clima para el productor.
-  · Tecnología: tecnología, ciencia, inteligencia artificial.
+${lineaDe('Ciencia')}
+${lineaDe('Tecnología')}
   · Cultura y agenda: espectáculos, música, teatro, cine, libros, muestras, actividades.
-  · Argentina: lo nacional que no entra en ninguna de las anteriores (sociedad, clima, salud, educación, grandes hechos).
+  · Argentina: lo nacional que no entra en ninguna de las anteriores (sociedad, clima, grandes hechos).
 - "es_publicidad": true si promociona un comercio, producto o servicio sin ser noticia.
 - "es_chimento": true si es farándula o la vida privada de famosos (romances, casamientos, separaciones, peleas, internaciones, fiestas o viajes de gente de la tele, la música o las redes). La muerte de una figura, un premio, un estreno o una obra no son chimento.
 - Devolvé una ficha por nota, con el mismo "id".`;
 
-/**
- * La instrucción que lee la IA. Apagado el interruptor SECCIONES_NUEVAS, es la de siempre, letra por letra
- * (una prueba lo controla). Prendido (regla 187), suma las líneas de Educación y Salud del mapa nuevo
- * (TEXTO_PARA_LA_FICHA de ingesta/secciones-nuevas.mjs) y se las saca a Balcarce ("escuelas, salud local") y a
- * Argentina ("salud, educación").
- */
-export function instruccion(activas = seccionesNuevasActivas()) {
-  if (!activas) return INSTRUCCION;
-  const lineas = SECCIONES_ETAPA_2.map((s) => `  · ${s}: ${TEXTO_PARA_LA_FICHA[s]}`).join('\n');
-  return INSTRUCCION
-    .replace('(vecinos, instituciones, obras, escuelas, salud local)', '(vecinos, instituciones, obras)')
-    .replace(/( {2}· Policiales: [^\n]*\n)/, `$1${lineas}\n`)
-    .replace('(sociedad, clima, salud, educación, grandes hechos)', '(sociedad, clima, grandes hechos)');
+/** La instrucción que lee la IA (desde el 17/10/2026, con Educación, Salud y Ciencia siempre). */
+export function instruccion() {
+  return INSTRUCCION;
 }
 
 let perfilCacheado = null;
@@ -168,19 +167,19 @@ export function entradaDeNota(nota) {
 }
 
 /** El pedido completo para un grupo de notas. */
-export function pedidoPara(notas, { activas = seccionesNuevasActivas() } = {}) {
-  return `${instruccion(activas)}\n\n--- PERFIL DE BALCARCE ---\n${perfilDeBalcarce()}\n\n--- NOTAS ---\n${JSON.stringify(notas.map(entradaDeNota), null, 1)}`;
+export function pedidoPara(notas) {
+  return `${instruccion()}\n\n--- PERFIL DE BALCARCE ---\n${perfilDeBalcarce()}\n\n--- NOTAS ---\n${JSON.stringify(notas.map(entradaDeNota), null, 1)}`;
 }
 
 /** El esquema que Gemini tiene que respetar: listas cerradas, sin campos libres de más. */
-export const esquema = (activas = seccionesNuevasActivas()) => ({
+export const esquema = () => ({
   type: 'ARRAY',
   items: {
     type: 'OBJECT',
     properties: {
       id: { type: 'STRING' },
       ambito: { type: 'STRING', enum: AMBITOS },
-      seccion: { type: 'STRING', enum: seccionesDeLaFicha(activas) },
+      seccion: { type: 'STRING', enum: seccionesDeLaFicha() },
       impacto_balcarce: { type: 'STRING', enum: IMPACTOS },
       razon: { type: 'STRING', enum: RAZONES },
       importancia: { type: 'STRING', enum: IMPORTANCIAS },
@@ -198,9 +197,9 @@ export const ESQUEMA = esquema();
 
 /** Una ficha válida, o null si algo no está en su lista. No se corrige nada:
  *  lo que no cierra se descarta y se vuelve a pedir en otra corrida. */
-export function fichaValida(f, { activas = seccionesNuevasActivas() } = {}) {
+export function fichaValida(f) {
   if (!f || typeof f !== 'object' || !f.id) return null;
-  if (!AMBITOS.includes(f.ambito) || !(seccionesDeLaFicha(activas).includes(f.seccion) || ['Servicios', 'País'].includes(f.seccion)) || !IMPACTOS.includes(f.impacto_balcarce)
+  if (!AMBITOS.includes(f.ambito) || !(seccionesDeLaFicha().includes(f.seccion) || ['Servicios', 'País'].includes(f.seccion)) || !IMPACTOS.includes(f.impacto_balcarce)
     || !RAZONES.includes(f.razon) || !IMPORTANCIAS.includes(f.importancia)) return null;
   return {
     ambito: f.ambito,
@@ -252,8 +251,8 @@ export async function leerGrupo(notas, { clave, fetchFn = fetch } = {}) {
  * `importancia`, ni `por_que_interesa`: el modelo inventaba los nombres y `fichaValida` descartaba TODAS las fichas, así
  * que el respaldo de la lectura no respaldaba nada.
  */
-export function formaDeLaFicha(activas = seccionesNuevasActivas()) {
-  const { properties, required } = esquema(activas).items;
+export function formaDeLaFicha() {
+  const { properties, required } = esquema().items;
   const campos = required.map((c) => {
     const p = properties[c];
     const valores = p.enum ? p.enum.map((v) => `"${v}"`).join(' | ') : p.type === 'BOOLEAN' ? 'true | false' : c === 'id' ? 'el mismo "id" de la nota' : 'una frase';
@@ -271,7 +270,7 @@ const comoBooleano = (v) => (v === true || v === 'true' ? true : v === false || 
  * mayúsculas («ámbito» → «ambito»), los valores de las listas cerradas como están en la lista («Región» → «region») y los
  * sí/no como booleanos. No completa nada: lo que falta sigue faltando y `fichaValida` la descarta, como a una de Gemini.
  */
-export function fichaDeGroq(f, { activas = seccionesNuevasActivas() } = {}) {
+export function fichaDeGroq(f) {
   if (!f || typeof f !== 'object') return f;
   const k = {};
   for (const [campo, v] of Object.entries(f)) k[sinTildes(campo).trim().replace(/[\s-]+/g, '_')] = v;
@@ -279,7 +278,7 @@ export function fichaDeGroq(f, { activas = seccionesNuevasActivas() } = {}) {
     ...k,
     ...(k.id != null ? { id: String(k.id) } : {}),
     ambito: deLaLista(k.ambito, AMBITOS),
-    seccion: deLaLista(k.seccion, [...seccionesDeLaFicha(activas), 'Servicios', 'País']),
+    seccion: deLaLista(k.seccion, [...seccionesDeLaFicha(), 'Servicios', 'País']),
     impacto_balcarce: deLaLista(k.impacto_balcarce, IMPACTOS),
     razon: deLaLista(k.razon, RAZONES),
     importancia: deLaLista(k.importancia, IMPORTANCIAS),
@@ -439,7 +438,9 @@ export async function leerNotasNuevas(notas, {
  * ficha a su nota, con límites que no se negocian:
  *
  *   · El semáforo manda: lo rojo o amarillo sigue igual. La IA sólo puede
- *     endurecer (sacar una nota o mandarla a esperar), nunca destrabar.
+ *     endurecer (sacar una nota o mandarla a esperar), nunca destrabar. Única
+ *     excepción (regla 211): una fuente especializada de un solo medio que la
+ *     propia ficha marca de interés (`interesDeLaIA`) puede salir.
  *   · Sin ficha, la nota sigue como la decidió el sistema de siempre.
  *
  * Con ficha:
@@ -476,16 +477,15 @@ export function mencionaAca(nota) {
 const FICHAS_CON_FUTBOL = '2026-09-28T00:00:00Z';
 
 export function aplicarFichas(notas, fichas = {}, {
-  esperarSinFicha = false, yaPublicadas = new Set(), nuevas = seccionesNuevasActivas(),
+  esperarSinFicha = false, yaPublicadas = new Set(),
 } = {}) {
   const cambios = { sacadas: [], dejanDeSerLocales: [], otraSeccion: [], aEsperar: [] };
   // Las fichas viejas pueden decir "Servicios", que ya no existe (27/09).
-  // Educación y Salud (regla 187): sólo con el interruptor SECCIONES_NUEVAS prendido (una ficha guardada mientras
-  // estuvo prendido no cuenta si se apagó: la nota queda en su sección) y nunca se llevan una nota de Política o
-  // Policiales, que esperan a una persona en todas las piezas de redes.
+  // Educación, Salud y Ciencia (regla 187, activas desde la 211) nunca se llevan una nota de Política o Policiales, que esperan
+  // a una persona en todas las piezas de redes.
   const seccionDe = (f, n) => {
     const s = { Servicios: 'Balcarce', País: 'Argentina' }[f.seccion] ?? f.seccion;
-    if (esDeLaEtapa2(s) && (!nuevas || ['Política', 'Policiales'].includes(n.seccion))) return n.seccion;
+    if (esSumada(s) && ['Política', 'Policiales'].includes(n.seccion)) return n.seccion;
     return s;
   };
   const salida = [];
@@ -517,8 +517,16 @@ export function aplicarFichas(notas, fichas = {}, {
     // cubren muchos medios o es muy importante no se saca por "no ser de acá".
     const palabrasDelTitulo = new Set(sinTildes(n.titulo ?? '').split(/[^a-z0-9ñ]+/));
     const conexionArgentina = CONEXION_ARGENTINA.some((p) => palabrasDelTitulo.has(sinTildes(p)));
-    const nacionalQueImporta = (n.medios?.length ?? 1) >= 3 || f.importancia === 'alta'
-      || ['nacional', 'popular', 'servicio'].includes(f.razon);
+    // La popularidad manda (regla 211): lo que cuentan tantos medios como pide el área donde suele haber poco (Tecnología e IA,
+    // Ciencia, Salud, Educación, Cultura, Agro, Automovilismo) no se saca por "no tener relación con Balcarce": ya llegó a lo
+    // que se pide. Tampoco una fuente especializada que la propia ficha marca de interés (alta o media).
+    const seccionDeLaIA = seccionDe(f, n);
+    const medios = n.medios?.length ?? 1;
+    const deAreaChica = AREAS_CHICAS.includes(seccionDeLaIA);
+    const interesDeLaFuente = !!n.especializada && deAreaChica && IMPORTANCIAS_DE_INTERES.includes(f.importancia);
+    const llegaPorSuArea = deAreaChica && (medios >= mediosMinimos(seccionDeLaIA) || interesDeLaFuente);
+    const nacionalQueImporta = medios >= 3 || f.importancia === 'alta'
+      || ['nacional', 'popular', 'servicio'].includes(f.razon) || llegaPorSuArea;
     const caso = { id: n.id, titulo: n.titulo, porque: f.porque };
 
     let motivo = null;
@@ -527,7 +535,8 @@ export function aplicarFichas(notas, fichas = {}, {
     // Del extranjero, sólo si un argentino se destaca en algo o le importa a
     // Balcarce (Hernán, 27/09): una figura argentina (Colapinto, Messi) o la
     // conexión argentina en el título. La Fórmula 1 sin un argentino, no.
-    else if (f.ambito === 'internacional' && !n.figura && !conexionArgentina) motivo = 'es del extranjero';
+    // Única excepción (regla 211): la ciencia y la tecnología (SECCIONES_SIN_FRONTERAS) no tienen frontera.
+    else if (f.ambito === 'internacional' && !n.figura && !conexionArgentina && !SECCIONES_SIN_FRONTERAS.includes(seccionDeLaIA)) motivo = 'es del extranjero';
     // De un medio de acá sólo se saca si ni siquiera nombra a Balcarce en el
     // título ("precios sugeridos para alquilar en Mar del Plata", 27/09).
     else if (f.impacto === 'nulo' && !deFierros && !conexionArgentina && !nacionalQueImporta
@@ -535,6 +544,11 @@ export function aplicarFichas(notas, fichas = {}, {
     // Lo de la zona sí entra (28/09): ver esPolicialDeAfuera, ingesta/ingesta.mjs.
     else if (f.seccion === 'Policiales' && !esLocal && !n.deLaZona) motivo = 'policial que no es de Balcarce';
     if (motivo) { cambios.sacadas.push({ ...caso, motivo }); continue; }
+
+    // Una fuente especializada de un solo medio sale si la IA la considera de interés (importancia media o alta) y no es chimento
+    // ni publicidad (ya salieron arriba): `exigirMedios` (ingesta/ingesta.mjs) la destraba después, con el control de calidad.
+    // Es la única vez que la ficha destraba algo, y sólo lo que esperaba exactamente por tener un solo medio (regla 211).
+    if (interesDeLaFuente) n.interesDeLaIA = true;
 
     // Tenía la llave de la fuente o del título pero la IA dice que el hecho no
     // es de acá: se rige por lo de afuera (esDeAca, ingesta/ingesta.mjs).
@@ -557,7 +571,7 @@ export function aplicarFichas(notas, fichas = {}, {
     if (seccion !== n.seccion) {
       cambios.otraSeccion.push({ ...caso, antes: n.seccion, ahora: seccion });
       // La sección de antes queda guardada: si el interruptor se apaga, la web vuelve a mostrarla ahí (regla 187).
-      if (esDeLaEtapa2(seccion)) n.seccionAntes = n.seccion;
+      if (esSumada(seccion)) n.seccionAntes = n.seccion;
       n.seccion = seccion;
     }
     salida.push(n);

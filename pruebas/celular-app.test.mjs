@@ -6,7 +6,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {
-  crearCliente, SECCIONES, ARCHIVOS, comoRenglones, formatear, aBase64, deBase64,
+  crearCliente, SECCIONES, SECCIONES_SUMADAS, seccionesDelPanel, ARCHIVOS, comoRenglones, formatear, aBase64, deBase64,
   conDecision, sinDecision, conRedes, conCorreccion, conLlave, sinRetirada, corridaConMarca, haceCuanto,
 } from '../web/public/panel/github.js';
 import {
@@ -22,8 +22,10 @@ import { crearLlaves } from '../web/public/panel/cifrado.js';
 const leer = (f) => fs.readFileSync(new URL(`../${f}`, import.meta.url), 'utf8');
 const CUERPO = Array.from({ length: 80 }, (_, i) => `palabra${i}`).join(' ');
 
-test('las secciones del celular son las once de la web', () => {
-  assert.deepEqual(SECCIONES, DE_LA_WEB.map((s) => s.nombre));
+test('las secciones del celular son las de la web (las once y, desde el 17/10, Educación, Salud y Ciencia)', () => {
+  assert.deepEqual(seccionesDelPanel(), DE_LA_WEB.map((s) => s.nombre));
+  assert.equal(DE_LA_WEB.length, 14);
+  assert.deepEqual(SECCIONES, DE_LA_WEB.map((s) => s.nombre).filter((s) => !SECCIONES_SUMADAS.includes(s)), 'las once de siempre');
 });
 
 test('el celular escribe correcciones y decisiones con una nota por renglón, como el repositorio', () => {

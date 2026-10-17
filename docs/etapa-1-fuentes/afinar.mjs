@@ -4,7 +4,7 @@
 // ingesta/fuentes*.mjs (las activaciones las deciden ellos con la página).
 
 import { leerPublicadas, simularLista, mediosDelRegistro, minimoDe } from '../../ingesta/auditar-fuentes.mjs';
-import { MEDIOS_DE_AFUERA } from '../../ingesta/criterio.mjs';
+import { AREAS_CHICAS } from '../../ingesta/criterio.mjs';
 
 /** (B) Quién es cada fuente "de Balcarce" y dónde está su redacción. Comprobado en sus sitios el 15 y 16/10/2026
  *  (pie de página, contacto, "quiénes somos", teléfono 02266). `veredicto`: 'si' (de Balcarce), 'mezcla' (de
@@ -95,7 +95,7 @@ export function elegirCorta(medios, { notas = leerPublicadas(), registro } = {})
   // 2 y 3. Protegidos por aporte único o por sección
   const protegidoPorAporte = (m) => (m.unica30 ?? 0) >= 3 || (m.grupo === 'zona' && datoDeAca(m) >= 5);
   const secciones = new Map([...S].map((n) => [n, seccionesDe(notas, n)]));
-  const todasLasSecciones = [...new Set([...Object.keys(MEDIOS_DE_AFUERA), ...notas.map((n) => n.seccion).filter(Boolean)])].filter((s) => s !== 'Balcarce');
+  const todasLasSecciones = [...new Set([...AREAS_CHICAS, ...notas.map((n) => n.seccion).filter(Boolean)])].filter((s) => s !== 'Balcarce');
   const cuantosCubren = (s, conj) => [...conj].filter((n) => (secciones.get(n) ?? []).includes(s)).length;
   const dejaCortaUnaSeccion = (nombre) => (secciones.get(nombre) ?? []).find((s) => {
     const ahora = cuantosCubren(s, S);

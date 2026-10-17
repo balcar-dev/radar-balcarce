@@ -42,8 +42,9 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 213: del 189 al 210 son los arreglos de Radar 2.0 del 17/10, por tandas y con huecos;
-la 211, las fotos con chicos de las fuentes de Balcarce, y la 212, la revisión del archivo entero por tandas.)
+próxima regla es la 241: del 189 al 210 son los arreglos de Radar 2.0 del 17/10, por tandas y con huecos; la 211, las fotos con chicos de las
+fuentes de Balcarce; la 212, la revisión del archivo entero por tandas; la 215 a la 218, lo nacional por popularidad sin cupos, las secciones nuevas
+siempre activas, las fuentes de ciencia, salud, educación y tecnología, y el orden por popularidad; la 230 a la 235, la mudanza a Cloudflare; la 240, OpenRouter.)
 
 - **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Una prueba lo
   vigila (sigue los imports en cadena).
@@ -109,20 +110,22 @@ la 211, las fotos con chicos de las fuentes de Balcarce, y la 212, la revisión 
   medio de Balcarce o lo que dice Balcarce **en el título**. Un medio de acá que copia una
   noticia de afuera no la hace de Balcarce (`historiaDeAca`), y lo de un medio de acá que
   no nombra nada de acá espera a la IA (`mencionaAca`).
-- **Lo de afuera se mide en medios**: Fútbol y Deportes 4; Economía, Tecnología, Agro y Automovilismo
-  2; el resto 3; con una figura, 2. Con uno solo ni pasa el cruce. Del extranjero, sólo con un argentino.
+- **Lo de afuera se publica por popularidad, sin cupos ni topes** (regla 211, Hernán 17/10): 3 medios
+  distintos; 2 en las áreas donde suele haber poco (Tecnología e IA, Ciencia, Salud, Educación, Cultura,
+  Agro, Automovilismo) y, en cualquier sección, si el día va flojo para las ~100 notas diarias
+  (`ritmoDelDia`); 1 si es de una fuente `especializada` que la IA considera de interés (`ingesta/popularidad.mjs`,
+  `POPULARIDAD` en `ingesta/criterio.mjs`). Lo que ya salió no se baja. Del extranjero, sólo con un
+  argentino (salvo ciencia y tecnología); Policiales de afuera, nunca.
 - **Las listas de sepelios no se publican nunca**, ni aprobadas por una persona.
 - **Las palabras clave cortas engañan** ("gol" encontraba "golpe"): las ambiguas van en
   `PALABRAS_DEBILES` y sólo deciden desde el titular.
-- **Las secciones son once**: Balcarce, Política, Policiales, Fútbol, Deportes,
-  Automovilismo, Agro, Economía, Cultura y agenda, Tecnología y Argentina. **Trece con el
-  interruptor `SECCIONES_NUEVAS`** (variable de GitHub, apagada; regla 187): suma Educación y
-  Salud (etapa 2 de `docs/secciones/MAPA-DE-SECCIONES.md`) y el menú con "Más secciones".
-  Apagado, el sitio sale igual que antes (una prueba lo compara). Prendido, las notas se
-  muestran en la sección nueva al armar el sitio (`conSeccionDelSitio`, sin tocar los datos ni
-  la dirección), la IA puede elegirlas (nunca se lleva una de Política o Policiales) y el panel
-  las ofrece. Verla sin prenderla: `cd web && npm run vista-previa-secciones`
-  (→ `docs/secciones/vista-previa/`).
+- **Las secciones son catorce** (desde el 17/10, regla 211; el interruptor `SECCIONES_NUEVAS` se sacó):
+  Balcarce, Política, Policiales, Educación, Salud, Fútbol, Deportes, Automovilismo, Agro, Economía,
+  Ciencia, Cultura y agenda (se lee "Cultura"), Tecnología (se lee "Tecnología e IA") y Argentina, con el
+  menú "Más secciones". La sección de una nota la decide el feed (si el título la confirma), las palabras
+  (`seccionSumada`, `ingesta/secciones-nuevas.mjs`, que nunca se lleva una de Política o Policiales) y la
+  IA. Cada sección tiene que tener notas todos los días: si no, no vale la pena tenerla (menos Policiales,
+  que es sólo de acá).
 - **Los títulos automáticos se arreglan sin inventar** (`arreglarEscritura`,
   `tituloAutomatico`); lo de una persona no se toca.
 - **Las redes tienen un interruptor**: la variable de GitHub `REDES_ACTIVAS` ("Si"); apagado,
@@ -155,7 +158,11 @@ la 211, las fotos con chicos de las fuentes de Balcarce, y la 212, la revisión 
   dispara "Panel del celular" (`panel.yml`), que lee las notas de la caché de Actions. Su
   página tiene su propia CSP en `web/public/_headers`: no cargar nada de afuera ahí.
 
-## Estado (15/10/2026)
+## Estado (17/10/2026)
+
+- **Sin cupos desde el 17/10** (regla 211): lo nacional sale por cuántos medios lo cuentan; Educación, Salud y Ciencia son
+  secciones de siempre; hay 15 fuentes nuevas de ciencia, salud, educación y tecnología. Para ver el efecto, la primera
+  semana mirar en el registro de "Actualizar la web" el "ritmo del día" y cuántas notas salen con un solo medio.
 
 - **Todo andando en la nube** (web, redes con voz y escenas animadas, vigilancia, panel del
   celular). El 15/10 el repositorio se mudó y el reloj pasó al Worker: mirar que dispare.
@@ -178,6 +185,7 @@ la 211, las fotos con chicos de las fuentes de Balcarce, y la 212, la revisión 
 | Qué es "de acá" o "la zona" | `esDeAca` (`ingesta/ingesta.mjs`), `PALABRAS_LOCALES` y `PALABRAS_ZONA` (`ingesta/fuentes.mjs`) |
 | Cómo se juntan las notas del mismo hecho | `CRUCE` y el cruce coherente, que no encadena (`CRUCE.coherente`, `CRUCE_COHERENTE`, regla 184: `docs/flujo/CRUCE-COHERENTE.md`) (`ingesta/cruce.mjs`), `agruparRepetidas` y `quitarRepetidas` (`ingesta/lectura-ia.mjs`), y las que vuelven con otra dirección, `web/lib/repetidas.js`; lo de acá con otras palabras, la huella de significado (`ingesta/huellas-significado.mjs`, regla 195: `docs/flujo/REPETIDAS-2-0.md`) |
 | Cualquier número del criterio | `ingesta/criterio.mjs` **y** la tabla "Los números" de `CRITERIO-EDITORIAL.md` |
+| Cuántos medios pide lo de afuera, qué áreas piden menos, las ~100 notas por día, qué fuente puede salir sola con interés de la IA | `POPULARIDAD`, `AREAS_CHICAS` (`ingesta/criterio.mjs`), `ingesta/popularidad.mjs`, `especializada` en la fuente; medir con `node scripts/medir/simular-popularidad.mjs` (regla 211) |
 | Cómo decide la lectura con IA | `ingesta/lectura-ia.mjs`; lo que sabe de Balcarce, `ingesta/perfil-balcarce.md` (va tal cual a la IA) |
 | Cómo escribe la IA | `CRITERIO-EDITORIAL.md` § 4 y § 12; medir un cambio con `reels/comparar-instruccion.mjs` |
 | El verificador o los arreglos que no inventan | `ingesta/verificar.mjs` (`verificar`, `arreglarEscritura`, `diceEnVivo`) |
@@ -198,7 +206,7 @@ la 211, las fotos con chicos de las fuentes de Balcarce, y la 212, la revisión 
 | Ilustrar con IA las notas sin foto (automático cada 2 h de 7 a 23 por el reloj de Cloudflare, o a mano: revisar y después aplicar; reglas 182, 185 y 206: un solo camino, Cloudflare gratis; Gemini web quedó desactivado el 17/10) | Workflow «Ilustrar notas sin foto» (`ilustrar-notas.yml`), `web/scripts/ilustrar-notas.mjs` (filtros `motivoParaSaltar`, tono, prompt, topes y `cupoAutomatico`), `web/data/fotos-ia.json` (lo escribe ese workflow; prioridad más baja en `conFotosDelBanco`) |
 | La firma de las notas | `quienEscribio`, `firmaCorta` (`web/components/metadatos.js`) |
 | Las fotos | `web/scripts/fotos-notas.mjs`, `ingesta/fotos.mjs`, `web/scripts/achicar-foto.mjs` |
-| Una sección nueva, su nombre o su color | `SECCIONES` (`web/lib/datos.js`), `--s-*` (`web/app/globals.css`), `REGLAS_SECCION`, `SECCIONES_DE_LA_FICHA` (`ingesta/lectura-ia.mjs`), `SECCIONES` de `web/public/panel/github.js`; las del mapa de 17, por etapas detrás de `SECCIONES_NUEVAS`: `SECCIONES_ETAPA_2` y `seccionDeLaEtapa2` (`ingesta/secciones-nuevas.mjs`), `seccionesDelSitio` y `navegacionDelSitio` (`web/lib/datos.js`), `COLOR_SECCION` + `CRITERIO-REDES.md` § 8 (regla 187) |
+| Una sección nueva, su nombre o su color | `SECCIONES` (`web/lib/datos.js`), `--s-*` (`web/app/globals.css`), `REGLAS_SECCION`, `SECCIONES_DE_LA_FICHA` (`ingesta/lectura-ia.mjs`), `SECCIONES` de `web/public/panel/github.js`; las del mapa de 17, activas Educación, Salud y Ciencia: `SECCIONES_SUMADAS` y `seccionSumada` (`ingesta/secciones-nuevas.mjs`), `seccionesDelSitio` y `navegacionDelSitio` (`web/lib/datos.js`), `COLOR_SECCION` + `CRITERIO-REDES.md` § 8 y `--s-*` (reglas 187 y 211) |
 | La tapa, las secciones o "Seguí leyendo" | `armarTapa` (`web/lib/datos.js`), `web/lib/seguir-leyendo.js` |
 | La nota del dólar o la de cada podcast | `web/lib/notas-propias.js` |
 | Las notas de F1 (horarios, clasificación, resultado; Jolpica) y de fútbol (Liga, Copa Argentina, Libertadores y Sudamericana con equipos argentinos; ESPN) | `ingesta/f1.mjs`, `ingesta/futbol.mjs`, `web/data/f1.json`, `web/data/futbol.json`; la foto libre, `web/scripts/foto-libre.mjs` |

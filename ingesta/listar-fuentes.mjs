@@ -17,7 +17,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { FUENTES, FUENTES_NACIONALES, fichaDeFuente } from './fuentes.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
-import { MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA } from './criterio.mjs';
+import { POPULARIDAD, AREAS_CHICAS } from './criterio.mjs';
 
 export const ARCHIVO = path.join(import.meta.dirname, '..', 'FUENTES.md');
 
@@ -47,7 +47,7 @@ export function registroDeFuentes() {
   const medios = new Set(activas.map((f) => f.medio));
   const grupo = (alcance) => todas.filter((f) => f.alcance === alcance);
   const cuenta = (xs) => `${xs.filter((f) => f.activa !== false).length} feeds activos de ${new Set(xs.filter((f) => f.activa !== false).map((f) => f.medio)).size} medios`;
-  const pide = Object.entries(MEDIOS_DE_AFUERA).map(([s, n]) => `${s} ${n}`).join(', ');
+  const areasChicas = AREAS_CHICAS.map((s) => (s === 'Tecnología' ? 'Tecnología e IA' : s)).join(', ');
 
   return `# Las fuentes de Radar Balcarce
 
@@ -63,9 +63,9 @@ Hoy: **${activas.length} feeds activos de ${medios.size} medios** (${todas.lengt
 4. **Qué queda:**
    - todo lo de los medios de Balcarce;
    - de afuera, lo que dice Balcarce en el título o toca la zona (la ruta 226, la 55, la papa);
-   - de afuera, lo que cuentan los medios que pide su sección: ${pide}; el resto, ${MEDIOS_POR_DEFECTO}; lo que nombra a una figura argentina, ${MEDIOS_CON_FIGURA} (\`MEDIOS_DE_AFUERA\`, en \`ingesta/criterio.mjs\`). Nunca con un solo medio.
+   - de afuera, lo que cuentan ${POPULARIDAD.mediosPorDefecto} medios distintos, o ${POPULARIDAD.mediosEnAreasChicas} en las áreas donde suele haber poco (${areasChicas}) y cuando el día va flojo para el ritmo de ${POPULARIDAD.notasPorDia} notas (\`POPULARIDAD\`, en \`ingesta/criterio.mjs\`). Con un solo medio sale sólo una fuente **especializada** (ciencia, salud, educación, tecnología) que la lectura con IA considere de interés. Sin cupos.
    - Lo que cuentan **sólo** medios de otras ciudades de la zona (Mar del Plata, Tandil, Necochea…) no se trae.
-5. **El peso** sirve para ordenar (qué va primero, qué entra en el cupo de cada sección), no para decidir si sale. Lo de Balcarce pesa más a propósito.
+5. **El peso** sirve para ordenar (qué va primero, qué va a las redes), no para decidir si sale. Lo de Balcarce pesa más a propósito.
 6. **"Oficial"** es un organismo público (la Municipalidad, el Gobierno de la Provincia): da verificación alta y sale solo si dice Balcarce en el título o toca la zona.
 7. **"Sección fija"**: el feed ya viene separado por tema y se le cree (salvo Tecnología, que se confirma con el título).
 8. **"Cómo se lee"**: RSS o Atom (la lista de notas del medio), índice de noticias (el que cada sitio arma para Google, trae todo el día) o la página misma cuando el medio no tiene feed.

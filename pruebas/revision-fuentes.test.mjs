@@ -42,6 +42,7 @@ test('también están las apagadas, y la lista elegida da 11 de Balcarce, 50 del
   assert.equal(p.balcarce, 11);
   assert.equal(p.pais, 50);
   assert.equal(p.zona, 10);
+  assert.equal(p.sumadas, 11, 'las 11 fuentes especializadas que se sumaron el 17/10 (regla 215) no estaban en LISTA-ELEGIDA.md');
   assert.equal(p.otras, 0, 'una activa quedó fuera de LISTA-ELEGIDA.md');
   // lo que queda en la pantalla principal más lo descartado de cada grupo es la lista entera
   const d = datos.medios.filter((m) => m.descartada && m.activo);

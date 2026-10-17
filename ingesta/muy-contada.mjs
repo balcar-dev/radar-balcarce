@@ -14,13 +14,15 @@
 //     son aunque los cuenten todos. Lo demás que no es noticia (chimentos, lo del extranjero sin un argentino,
 //     lo frenado por el semáforo) ya no llega verde: esto sólo mira lo que el semáforo dejó salir.
 //
-// Qué gana: sale aunque el cupo de su sección esté lleno (aplicarCupos, ingesta/ingesta.mjs) y va primera en su
-// sección durante 6 horas (web/lib/datos.js). Como mucho 2 del mismo tema a la vez (la marcha universitaria eran
-// cinco historias): las de más medios. Policiales de afuera sigue sin salir (cupo 0, la sección es de acá).
+// Qué gana: va primera en su sección durante 6 horas (web/lib/datos.js). Hasta el 17/10 también salía aunque el cupo de
+// su sección estuviera lleno; desde la regla 215 no hay cupo (sale todo lo que llega a la popularidad que pide,
+// ingesta/popularidad.mjs) y ésta es la parte de la popularidad que se ve: lo que cuenta medio país va arriba. Como mucho
+// 2 del mismo tema a la vez (la marcha universitaria eran cinco historias): las de más medios. Policiales de afuera sigue
+// sin salir (la sección es de acá: SECCIONES_SOLO_DE_ACA).
 //
 // Sin dependencias: sólo lo que trae Node.
 
-import { MUY_CONTADA, CUPO_DE_AFUERA, CUPO_POR_DEFECTO } from './criterio.mjs';
+import { MUY_CONTADA, SECCIONES_SOLO_DE_ACA } from './criterio.mjs';
 import { horaAR } from './zona.mjs';
 import { REGLAS_SEMAFORO } from './fuentes.mjs';
 
@@ -109,9 +111,9 @@ export function mismoTema(a, b) {
 
 /**
  * Marca las muy contadas de la portada (`muyContada: { medios, porque }`) y les saca la marca a las que ya no lo son.
- * Sólo lo de afuera (`esDeAca` dice qué no lo es), sólo lo verde y sólo de secciones con cupo de afuera (Policiales
+ * Sólo lo de afuera (`esDeAca` dice qué no lo es), sólo lo verde y sólo de secciones que no son de acá (Policiales
  * de afuera no sale solo). Como mucho MUY_CONTADA.porTema del mismo tema: las de más medios; la que queda afuera
- * del tope sigue como cualquier otra (compite por el cupo). Modifica la portada y la devuelve.
+ * del tope sigue como cualquier otra (sale igual, pero no va arriba). Modifica la portada y la devuelve.
  */
 export function marcarMuyContadas(portada, {
   ahora = Date.now(), fecha = fechaDe, contar = contarNombres, esDeAca = () => false,
@@ -120,7 +122,7 @@ export function marcarMuyContadas(portada, {
   for (const n of portada) {
     delete n.muyContada;
     if (n.semaforo !== 'verde' || n.oficial || n.propia || esDeAca(n)) continue;
-    if ((CUPO_DE_AFUERA[n.seccion] ?? CUPO_POR_DEFECTO) === 0) continue;
+    if (SECCIONES_SOLO_DE_ACA.includes(n.seccion)) continue;
     const mc = porQueEsMuyContada(n, { ahora, fecha, contar });
     if (mc) candidatas.push([n, mc]);
   }

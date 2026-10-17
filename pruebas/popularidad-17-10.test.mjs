@@ -1,8 +1,8 @@
 // Reglas 197 a 202 (17/10/2026, Hernán: "lo de Balcarce entra todo; lo nacional, por popularidad"). La auditoría que
 // las pide, con las mediciones: docs/auditoria-2-0/02-FUENTES-CRITERIO-REPETIDAS.md y 06-PROMPTS-Y-AGENTES.md.
 //
-//   197  lo muy contado de afuera sale sin cupo, va primero en su sección 6 horas, 2 por tema; el puntaje por medios
-//        sin tope; el cupo cuenta sólo lo que se puede estrenar y lo publicado a la vista;
+//   197  lo muy contado de afuera va primero en su sección 6 horas, 2 por tema; el puntaje por medios sin tope (el cupo
+//        de afuera que esta regla arreglaba se sacó el mismo día con la regla 215: no hay cupos);
 //   198  lo de Balcarce entra todo (ningún cupo lo frena) y lo que cuentan 3 medios de acá va primero a la tapa y a Facebook;
 //   199  lo que no es nota (el autobombo de los medios, el clima y las farmacias de otro medio, el comercio) y la lista
 //        de promociones corregida con los casos reales;
@@ -17,11 +17,11 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {
-  aplicarCupos, exigirMedios, paraPruebas, puntosPorMedios, cuantosMediosDeAca, contarMedios,
+  aplicarPopularidad, exigirMedios, paraPruebas, puntosPorMedios, cuantosMediosDeAca, contarMedios,
 } from '../ingesta/ingesta.mjs';
 import { porQueEsMuyContada, marcarMuyContadas, mismoTema, noEsNoticiaAunqueLaCuentenTodos } from '../ingesta/muy-contada.mjs';
 import { porQueNoEsNota } from '../ingesta/no-es-nota.mjs';
-import { MUY_CONTADA, CUPO_DE_AFUERA } from '../ingesta/criterio.mjs';
+import { MUY_CONTADA } from '../ingesta/criterio.mjs';
 import { exageraLaDecision, verificar } from '../ingesta/verificar.mjs';
 import {
   semaforoDeLaReescritura, sinLosTextos, reescribir, reescribirAutomaticas, TEMPERATURA_DE_LA_REDACCION,
@@ -124,46 +124,40 @@ test('regla 197: como mucho 2 muy contadas del mismo tema, las de más medios (l
   assert.ok(diputados.muyContada, 'otro tema no se toca');
 });
 
-test('regla 197: lo muy contado sale aunque el cupo de su sección esté lleno, y no ocupa lugar', () => {
-  // Caso real (16/10 a las 12): "Diputados: los aliados de Milei no dieron quórum" (25 medios) esperaba "por cupo" en Política.
-  const cupo = CUPO_DE_AFUERA.Política;
-  const llenas = Array.from({ length: cupo }, (_, i) => ({ ...deAfuera(`p${i}`, { titulo: `Otra nota política número ${i} sobre el presupuesto provincial`, horas: 1 }), relevancia: 90 }));
+test('regla 215: ya no hay cupo; una nota que llega a los medios que pide sale aunque haya treinta en su sección', () => {
+  // Caso real (16/10 a las 12): "Diputados: los aliados de Milei no dieron quórum" (25 medios) esperaba "por cupo" en Política,
+  // y hasta el 17/10 cada sección dejaba salir de 6 a 15 notas de afuera a la vez.
+  const llenas = Array.from({ length: 30 }, (_, i) => ({ ...deAfuera(`p${i}`, { titulo: `Otra nota política número ${i} sobre el presupuesto provincial`, horas: 1 }), relevancia: 90 }));
   const quorum = { ...deAfuera('q', { titulo: 'Diputados: los aliados de Milei no dieron quórum para tratar el DNU', medios: NACIONALES.slice(0, 12), horas: 2, cada: 0.1 }), relevancia: 60 };
   const otra = { ...deAfuera('o', { titulo: 'El oficialismo prepara cambios en el Gabinete nacional', horas: 1 }), relevancia: 55 };
-  const portada = [...llenas, quorum, otra];
-  aplicarCupos(portada, { ahora: AHORA });
+  const poco = { ...deAfuera('poco', { titulo: 'Un dato aislado de la política provincial', medios: NACIONALES.slice(0, 2), horas: 1 }), relevancia: 99 };
+  const portada = [...llenas, quorum, otra, poco];
+  aplicarPopularidad(portada, { ahora: AHORA });
   assert.equal(quorum.semaforo, 'verde');
-  assert.ok(quorum.muyContada);
-  assert.ok(llenas.every((n) => n.semaforo === 'verde'), 'la muy contada no le sacó el lugar a ninguna');
-  assert.equal(otra.semaforo, 'amarillo', 'la que no es muy contada sigue esperando por el cupo');
+  assert.ok(quorum.muyContada, 'además va primera en su sección');
+  assert.ok(llenas.every((n) => n.semaforo === 'verde'), 'ninguna le saca el lugar a otra');
+  assert.equal(otra.semaforo, 'verde', 'la que cuentan tres medios sale: no hay tope');
+  assert.equal(poco.semaforo, 'amarillo', 'pero con dos medios, en Política (que pide 3), todavía no');
+  assert.ok(!/cupo/.test(poco.motivo ?? ''), 'espera por los medios, nunca por el cupo');
 });
 
-test('regla 197: el cupo cuenta sólo lo que se puede estrenar y lo publicado a la vista (16/10: en Economía, 10 de 12 lugares eran de notas de 28 a 56 horas)', () => {
-  const cupo = CUPO_DE_AFUERA.Economía;
-  // Notas de 28 a 56 horas que nunca salieron: ya no se pueden estrenar, no ocupan lugar.
-  const viejas = Array.from({ length: cupo }, (_, i) => ({ ...deAfuera(`v${i}`, { titulo: `Una nota económica vieja ${i}`, seccion: 'Economía', horas: 28 + i * 2 }), relevancia: 95 }));
-  // Caso real: entraba "por cupo" a las 12 del 16/10 y ahora sale.
-  const fresca = { ...deAfuera('f', { titulo: 'El dato que expone el desafío de la economía: aumentaron 11% las horas trabajadas', seccion: 'Economía', medios: NACIONALES.slice(0, 2), horas: 10 }), relevancia: 40 };
-  aplicarCupos([...viejas, fresca], { ahora: AHORA });
-  assert.equal(fresca.semaforo, 'verde');
-  // Pero lo ya publicado que sigue a la vista (menos de 36 horas) sí ocupa su lugar.
-  const publicadas = Array.from({ length: cupo }, (_, i) => ({ ...deAfuera(`u${i}`, { titulo: `Una nota económica ya publicada ${i}`, seccion: 'Economía', horas: 20 }), relevancia: 95 }));
-  const otraFresca = { ...fresca, id: 'f2', semaforo: 'verde', motivo: 'sección Economía' };
-  aplicarCupos([...publicadas, otraFresca], { ahora: AHORA, publicadas: new Set(publicadas.map((n) => n.id)) });
-  assert.equal(otraFresca.semaforo, 'amarillo');
-});
-
-test('regla 197: lo que esperaba sólo por el cupo vuelve a competir en la segunda pasada (después de la lectura con IA)', () => {
-  const cupo = CUPO_DE_AFUERA.Tecnología;
-  const notas = Array.from({ length: cupo + 1 }, (_, i) => ({ ...deAfuera(`t${i}`, { titulo: `Nota de tecnología ${i}`, seccion: 'Tecnología' }), relevancia: 90 - i }));
-  aplicarCupos(notas, { ahora: AHORA });
-  const ultima = notas[cupo];
-  assert.equal(ultima.semaforo, 'amarillo');
-  // La IA sacó una de las de arriba: el lugar se libera y la que esperaba sale.
-  const sinUna = notas.slice(1);
-  aplicarCupos(sinUna, { ahora: AHORA });
-  assert.equal(ultima.semaforo, 'verde');
-  assert.equal(ultima.motivo, 'sección Tecnología', 'vuelve con su motivo de antes');
+test('regla 215: lo que ya salió no se baja por cantidad, y lo que había quedado esperando por el cupo de antes vuelve a su motivo', () => {
+  // Una nota de afuera ya publicada con 2 medios (salió cuando el día iba flojo): si el ritmo cambia, no desaparece de las listas.
+  const publicada = deAfuera('pub', { titulo: 'Una nota política publicada con dos medios', medios: NACIONALES.slice(0, 2) });
+  const nueva = deAfuera('nueva', { titulo: 'Otra nota política con dos medios', medios: NACIONALES.slice(0, 2) });
+  exigirMedios([publicada, nueva], { publicadas: new Set(['pub']) });
+  assert.equal(publicada.semaforo, 'verde');
+  assert.equal(nueva.semaforo, 'amarillo');
+  // Y la ya publicada que la ingesta había frenado vuelve.
+  const frenada = { ...publicada, semaforo: 'amarillo', motivo: 'de afuera y poco contada (2 medios; Política pide 3)' };
+  exigirMedios([frenada], { publicadas: new Set(['pub']) });
+  assert.equal(frenada.semaforo, 'verde');
+  // Datos guardados con el cupo viejo: vuelven a su motivo y se miran de nuevo con los medios.
+  const delCupo = { ...deAfuera('cupo', { titulo: 'Una con cupo viejo' }), semaforo: 'amarillo', motivo: 'pasó el cupo de Política de afuera (8 a la vez)', motivoAntesDelCupo: 'sección Política' };
+  exigirMedios([delCupo]);
+  assert.equal(delCupo.semaforo, 'verde');
+  assert.equal(delCupo.motivo, 'sección Política');
+  assert.equal(delCupo.motivoAntesDelCupo, undefined);
 });
 
 test('regla 197: lo muy contado de afuera se escribe con IA antes que el resto de lo de afuera (sin cuerpo no sale)', async () => {
@@ -176,7 +170,7 @@ test('regla 197: lo muy contado de afuera se escribe con IA antes que el resto d
 
 test('regla 197: Policiales de afuera no sale por muy contada (la sección es de acá)', () => {
   const policial = deAfuera('pol', { titulo: 'Detuvieron a una banda en Rosario', seccion: 'Policiales', medios: NACIONALES });
-  aplicarCupos([policial], { ahora: AHORA });
+  aplicarPopularidad([policial], { ahora: AHORA });
   assert.equal(policial.semaforo, 'amarillo');
   assert.equal(policial.muyContada, undefined);
 });
@@ -201,12 +195,11 @@ test('regla 197: en la web, la muy contada va primera en su sección durante 6 h
 
 // ============================================================ 198 · lo de Balcarce entra todo
 
-test('regla 198: ningún cupo frena lo de acá, por más notas que haya en una sección', () => {
+test('regla 198: nada frena lo de acá, por más notas que haya en una sección', () => {
   const muchas = Array.from({ length: 40 }, (_, i) => ({
     id: `b${i}`, titulo: `Nota de Balcarce ${i}`, seccion: 'Política', semaforo: 'verde', motivo: 'sección Política', relevancia: 60, alcance: 'local', local: true, medios: ['Radio Gabal (FM 104.1)'], fecha: haceHoras(1),
   }));
-  exigirMedios(muchas);
-  aplicarCupos(muchas, { ahora: AHORA });
+  aplicarPopularidad(muchas, { ahora: AHORA });
   assert.ok(muchas.every((n) => n.semaforo === 'verde'));
   // Y la lectura con IA lee primero lo de acá: si se acaba su cupo del día, lo que espera es lo de afuera.
   assert.match(leer('web/scripts/generar-datos.mjs'), /primeroLoDeAca[\s\S]*leerNotasNuevas\(primeroLoDeAca/);

@@ -401,15 +401,16 @@ que esta tabla diga lo mismo que el código.
 | Balcarce | #B91C1C | Lo de acá; participá con noticias; una efeméride de Balcarce |
 | Política | #3730A3 | Política (nunca sale sola) |
 | Policiales | #831843 | Policiales (nunca sale sola) |
-| Educación | #1D4BE0 | Educación: escuelas, docentes, la Facultad (sección nueva, con el interruptor SECCIONES_NUEVAS) |
-| Salud | #004E5C | Salud: hospital, vacunas, PAMI, IOMA (sección nueva, con el interruptor SECCIONES_NUEVAS) |
+| Educación | #1D4BE0 | Educación: escuelas, docentes, la Facultad y las universidades (sección nueva desde el 17/10) |
+| Salud | #004E5C | Salud: hospital, vacunas, PAMI, IOMA (sección nueva desde el 17/10) |
+| Ciencia | #772E9E | Ciencia: química, biología, espacio, investigación (sección nueva desde el 17/10) |
 | Fútbol | #7C3AED | Fútbol y el resumen de los lunes |
 | Deportes | #0F766E | Deportes |
 | Automovilismo | #B45309 | Automovilismo y Fangio |
 | Agro | #5A6B0A | Agro y campo |
 | Economía | #8A6500 | Economía, los descuentos de hoy y "Tu plata" |
 | Cultura y agenda | #9D2C8F | Cultura, la agenda, "Un día como hoy" y "Tu nota" |
-| Tecnología | #0B6FB8 | Tecnología y las novedades de IA |
+| Tecnología | #0B6FB8 | Tecnología e IA (se lee «Tecnología e IA»; la clave sigue siendo Tecnología) y las novedades de IA |
 | Argentina | #4B5563 | Lo nacional que no es de otra sección |
 | Región | #4B5563 | Lo de otras ciudades de la zona (el mismo gris que Argentina) |
 | Feriados | #1E3A6E | Feriados y fechas patrias; sólo esas piezas |

@@ -16,10 +16,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {
-  ingestar, exigirMedios, aplicarCupos, esDeAca, esDeUnMedioDeAca, esViejaSinSalir, paraPruebas, MOTIVO_POCO_CONTADA,
+  ingestar, exigirMedios, esDeAca, esDeUnMedioDeAca, esViejaSinSalir, paraPruebas, MOTIVO_POCO_CONTADA,
 } from '../ingesta/ingesta.mjs';
 import { aplicarFichas, mencionaAca, MOTIVO_ESPERA_LECTURA } from '../ingesta/lectura-ia.mjs';
-import { CUPO_DE_AFUERA } from '../ingesta/criterio.mjs';
 import { tieneRespaldo } from '../web/lib/cuerpo.js';
 
 const { idDe } = paraPruebas;
@@ -147,18 +146,19 @@ test('por el camino real: la AZK (medio de acá, "balcarceños" en la bajada) si
   assert.ok(t.motivo.startsWith(MOTIVO_POCO_CONTADA), t.motivo);
 });
 
-test('el cupo de afuera no se lo come lo de un medio de acá que nombra algo de acá', () => {
-  const cupo = CUPO_DE_AFUERA.Automovilismo;
-  const deAfuera = Array.from({ length: cupo }, (_, i) => ({
+test('los medios que pide lo de afuera no frenan lo de un medio de acá que nombra algo de acá (y ya no hay cupo)', () => {
+  const deAfuera = Array.from({ length: 12 }, (_, i) => ({
     id: `f${i}`, titulo: `Turismo Carretera ${i}`, seccion: 'Automovilismo', semaforo: 'verde', relevancia: 90 - i, alcance: 'pais', medios: ['Olé', 'TyC Sports'],
   }));
   const azk = {
     id: 'rs24vh', titulo: AZK.titulo, seccion: 'Automovilismo', semaforo: 'verde', relevancia: 40, alcance: 'local', local: false, noEsDeAcaSegunLaIA: true, nombraAca: true, medios: ['El Diario Balcarce'],
   };
   const otra = { id: 'f99', titulo: 'Una más de afuera', seccion: 'Automovilismo', semaforo: 'verde', relevancia: 30, alcance: 'pais', medios: ['Olé', 'TyC Sports'] };
-  aplicarCupos([...deAfuera, azk, otra]);
+  const sola = { id: 'f98', titulo: 'Una de afuera con un solo medio', seccion: 'Automovilismo', semaforo: 'verde', relevancia: 30, alcance: 'pais', medios: ['Olé'] };
+  exigirMedios([...deAfuera, azk, otra, sola]);
   assert.equal(azk.semaforo, 'verde', azk.motivo);
-  assert.equal(otra.semaforo, 'amarillo', 'el cupo sigue valiendo para lo de afuera');
+  assert.equal(otra.semaforo, 'verde', 'sin cupo: la que cuentan dos medios sale aunque haya muchas');
+  assert.equal(sola.semaforo, 'amarillo', 'la de afuera con un solo medio sigue esperando');
 });
 
 test('lo que contó un medio de acá nombrando algo de acá conserva la página con un solo medio (tieneRespaldo)', () => {

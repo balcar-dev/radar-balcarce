@@ -165,86 +165,66 @@ export const PORTADA = {
   maximoDeNotas: 3700,
 };
 
-// Cuántos medios distintos tienen que contar una nota de AFUERA para que
-// salga sola, por sección (27/09, con el cruce de medios).
+// LO NACIONAL SALE POR POPULARIDAD (regla 215, 17/10/2026). Hernán: "dejá todos los criterios que tenemos antes de lado.
+// NO HAY NINGÚN CUPO DE NADA. Tiene que entrar todo lo nacional solo en base a las notas más relevantes, las que más
+// fuentes tienen a la vez, y en todo caso que entre en las áreas donde suele haber poco. La idea es que tengamos unas 100
+// notas por día y SIN TOPE de Balcarce."
 //
-// Hasta el cruce se usaba un piso de PUNTAJE (38 a 62 según la sección). El
-// puntaje sale del peso de la fuente, la frescura, si trae foto y si trae el
-// texto entero: servía cuando cada nota venía de un solo medio y no había otra
-// forma de saber si importaba. Con el cruce sí la hay, y es la que pidieron
-// Hernán y Andrés ("que sea popular y esté medido"): cuántos medios cuentan lo
-// mismo. El 27/09 el piso viejo frenaba a Ailín Pérez en UFC (la contaban 9
-// medios) y a los Juegos Suramericanos (17), y dejaba pasar notas de dos.
+// Hasta el 17/10 lo de afuera tenía dos controles por sección: cuántos medios lo cuentan (Fútbol y Deportes 4; Economía,
+// Tecnología, Agro y Automovilismo 2; el resto 3; con una figura 2) y un cupo de notas a la vez (de 6 a 15). Los dos se
+// reemplazan por uno solo, que se explica en una línea: la popularidad, o sea cuántos medios DISTINTOS cuentan lo mismo
+// (los del mismo dueño cuentan uno). Medido el viernes 16/10 con la lectura guardada: de afuera, 3 medios o más son unas
+// 90 historias por día, que con lo de Balcarce son las ~100 notas que se buscan.
 //
-//   · Por defecto, 3: tres medios distintos que cuentan lo mismo es la noticia
-//     del día, no la nota suelta de un diario.
-//   · Fútbol y Deportes piden 4: son un tercio de todo lo que entra, y un medio
-//     de Balcarce no puede ser Olé. Quedan la Selección, Messi, los grandes,
-//     lo que cuenta todo el país.
-//   · Economía, Tecnología y Agro piden 2: las cubren pocos medios (los
-//     especializados) y cada una ya tiene su cupo. Automovilismo también pide
-//     2: Balcarce es tierra de fierros y tiene cupo propio.
-//   · Lo que nombra a una figura argentina (Messi, Colapinto) pide 2.
+//   · Por defecto, `mediosPorDefecto` (3): tres medios distintos que cuentan lo mismo es la noticia del día.
+//   · En las áreas donde suele haber poco (AREAS_CHICAS: Tecnología e IA, Ciencia, Salud, Educación, Cultura, Agro,
+//     Automovilismo), `mediosEnAreasChicas` (2): son pocos los medios que las cubren y Hernán quiere notas de ellas todos
+//     los días ("si no, no vale la pena tener la sección").
+//   · Una fuente ESPECIALIZADA de esas áreas (CONICET, una agencia de ciencia, una universidad, un ministerio, un medio de
+//     tecnología: campo `especializada` de la fuente) alcanza con `mediosDeUnaFuenteEspecializada` (1) si la lectura con IA
+//     la considera de interés (importancia media o alta) y pasa el control de calidad (ingesta/popularidad.mjs: sin
+//     pronósticos, sin "dónde ver", sin chimentos ni publicidad).
+//   · El ritmo (ritmoDelDia): se busca `notasPorDia` (100) noticias publicadas por día, repartidas entre las
+//     `ritmoDesdeHora` y las `ritmoHastaHora` (hora de Balcarce). Si a esa hora lleva menos de lo que corresponde, el
+//     mínimo de lo "genérico" baja de 3 a `mediosSiVaFaltando` (2) hasta que alcance, y vuelve a 3. Nunca baja de 2 fuera
+//     de las fuentes especializadas. Si sobra, no hay tope: no se saca nada por llegar a 100.
 //
-// Lo de Balcarce (medios de acá, o Balcarce en el título) no pide nada. Nada
-// de afuera sale con un solo medio, en ninguna sección: es la regla de las
-// dos fuentes. El puntaje sigue sirviendo para ORDENAR (qué va primero, qué
-// entra en el cupo, qué va a Facebook), no para decidir si sale.
-export const MEDIOS_DE_AFUERA = {
-  Fútbol: 4,
-  Deportes: 4,
-  Economía: 2,
-  Tecnología: 2,
-  Agro: 2,
-  Automovilismo: 2,
+// Lo de Balcarce (esDeAca, esDeUnMedioDeAca), lo oficial y las notas propias no piden medios, como siempre. Nada de afuera
+// sale con un solo medio salvo una fuente especializada con el interés de la IA. El extranjero sigue igual (sólo con un
+// argentino, salvo SECCIONES_SIN_FRONTERAS) y Policiales de afuera sigue en cero (SECCIONES_SOLO_DE_ACA). El puntaje sigue
+// sirviendo para ORDENAR (qué va primero, qué va a Facebook), no para decidir si sale.
+export const POPULARIDAD = {
+  mediosPorDefecto: 3,
+  mediosEnAreasChicas: 2,
+  mediosDeUnaFuenteEspecializada: 1,
+  mediosSiVaFaltando: 2,
+  notasPorDia: 100,
+  ritmoDesdeHora: 7,
+  ritmoHastaHora: 23,
+  // Cuántas horas más "nueva" vale una nota cada vez que se duplican los medios que la cuentan, al ordenar una sección
+  // (web/lib/datos.js, `ordenPorPopularidad`): más medios = más arriba, sin que una vieja le gane a lo del momento.
+  horasPorDuplicarMedios: 2,
 };
-export const MEDIOS_POR_DEFECTO = 3;
-export const MEDIOS_CON_FIGURA = 2;
 
-// Cuántas notas de AFUERA salen solas por sección, como máximo, a la vez.
-//
-// Con los medios no alcanza: un domingo de fútbol tiene treinta historias que
-// cuentan cuatro medios o más, y la portada de Balcarce sería la de Olé. El
-// cupo se queda con las de más puntaje (que suma los medios y la frescura) y
-// manda el resto a esperar. Lo de Balcarce no tiene cupo.
-//
-// Automovilismo no tenía cupo hasta el 25/09, y la portada de ese día tenía
-// 45 notas de fierros (22 de afuera: F1, TC nacional) contra 40 de Balcarce.
-// Un medio de Balcarce no puede tener más Fórmula 1 que Balcarce. Con 12,
-// lo de afuera baja a la mitad y lo local (el autódromo, los pilotos de acá)
-// sigue sin cupo, como siempre: ese día habrían quedado 23 + 12 = 35.
-// Tecnología y Política bajan de 12 a 8: ese día tenían 6 y 4 de afuera, así
-// que no se vacían, pero un día de mucha noticia nacional ya no tapan lo local.
-// Automovilismo bajó otra vez, de 12 a 6, esa misma madrugada: con la portada
-// de 72 h quedaban 16 locales (semana del autódromo) + 12 de afuera (semana de
-// F1) = 28, contra 24 de Balcarce. Con 6, las mejores de la F1 siguen saliendo.
-// Fútbol y Argentina (27/09, secciones nuevas): Fútbol, como Deportes, del que
-// se separó; Argentina, como Economía.
-export const CUPO_DE_AFUERA = {
-  Fútbol: 10,
-  Argentina: 12,
-  Deportes: 10,
-  Economía: 12,
-  Tecnología: 8,
-  Política: 8,
-  // 26/09: Policiales es sólo de Balcarce y la zona. Lo de afuera no sale solo.
-  Policiales: 0,
-  Automovilismo: 6,
-  // 26/09: Cultura y agenda tenía el cupo de todas (15); con los espectáculos de
-  // los diarios nacionales, la agenda de Balcarce quedaría tapada por la farándula.
-  'Cultura y agenda': 8,
-};
-export const CUPO_POR_DEFECTO = 15;
+/** Las áreas donde suele haber poco: piden 2 medios y no 3 (claves de sección; Espectáculos va dentro de Cultura y agenda). */
+export const AREAS_CHICAS = ['Tecnología', 'Ciencia', 'Salud', 'Educación', 'Cultura y agenda', 'Agro', 'Automovilismo'];
+
+/** Secciones que son sólo de Balcarce y la zona: lo de afuera no sale solo (antes, cupo 0). */
+export const SECCIONES_SOLO_DE_ACA = ['Policiales'];
+
+/** Secciones sin frontera: la ciencia y la tecnología del mundo son noticia aunque no nombren a un argentino (la regla del
+ *  extranjero no las saca). Vacía, vuelve a regir en todas. Es la única excepción a "del extranjero, sólo con un argentino". */
+export const SECCIONES_SIN_FRONTERAS = ['Ciencia', 'Tecnología'];
 
 // "Muy contada": lo de afuera que cuenta medio país (regla 197, 17/10/2026; Hernán: "lo de Balcarce entra
 // todo; lo nacional, según su popularidad", docs/auditoria-2-0/02-FUENTES-CRITERIO-REPETIDAS.md § 2.5).
 // Una historia de afuera es muy contada si la cuentan `medios` medios distintos o más (los del mismo dueño
 // cuentan uno), o si junta `mediosRapidos` en sus primeras `horasRapidas` horas (`mediosRapidosDeNoche` si
 // empezó de `nocheDesde` a `nocheHasta`, cuando se publica menos). Sólo si el hecho tiene menos de
-// `horasDelHecho` horas y alguna de sus notas es de las últimas `horasDeLaUltimaNota`. Sale aunque el cupo
-// de su sección esté lleno (no ocupa lugar), va primera en su sección durante `horasPrimeraEnSuSeccion`
-// horas y no puede haber más de `porTema` del mismo tema a la vez. Medido sobre 50 medios del país: si la
-// lista de fuentes cambia mucho, el 8 significa otra cosa y hay que volver a mirarlo.
+// `horasDelHecho` horas y alguna de sus notas es de las últimas `horasDeLaUltimaNota`. Va primera en su sección
+// durante `horasPrimeraEnSuSeccion` horas y no puede haber más de `porTema` del mismo tema a la vez (ya no
+// "sale aunque el cupo esté lleno": desde la regla 215 no hay cupo; lo que gana es el lugar). Medido sobre 50
+// medios del país: si la lista de fuentes cambia mucho, el 8 significa otra cosa y hay que volver a mirarlo.
 // Lo de acá no lo necesita para salir: entra todo. Pero lo que cuentan `mediosDeAca` medios de Balcarce o
 // más es "muy contada de acá" (lo que más se lee del sitio): primera candidata a la nota grande y a Facebook.
 export const MUY_CONTADA = {
@@ -332,7 +312,7 @@ export const CONTRATO_DIARIO = {
 };
 
 /** Todos los números juntos, por nombre: es lo que la prueba compara con la
- *  tabla del documento (`TITULO.maximo`, `CUPO_DE_AFUERA.Deportes`…). */
+ *  tabla del documento (`TITULO.maximo`, `POPULARIDAD.notasPorDia`…). */
 export const NUMEROS_DEL_CRITERIO = {
   TITULO,
   BAJADA,
@@ -344,11 +324,7 @@ export const NUMEROS_DEL_CRITERIO = {
   REESCRITURA,
   PORTADA,
   NOTA_DEL_DOLAR,
-  MEDIOS_DE_AFUERA,
-  MEDIOS_POR_DEFECTO,
-  MEDIOS_CON_FIGURA,
-  CUPO_DE_AFUERA,
-  CUPO_POR_DEFECTO,
+  POPULARIDAD,
   MUY_CONTADA,
   PUNTAJE,
   ESPERA_PERSONA,

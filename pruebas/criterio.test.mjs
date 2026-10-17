@@ -93,12 +93,15 @@ test('los que usan los números los toman del criterio (o dicen lo mismo)', () =
   assert.equal(PALABRAS_MINIMAS_DE_MATERIAL, REESCRITURA.palabrasMinimasDeMaterial);
   assert.equal(DIAS_DE_INTENTOS, REESCRITURA.diasDeIntentos);
   assert.equal(REESCRITURAS_POR_CORRIDA, REESCRITURA.porCorrida);
-  // Los medios que pide y el cupo de lo de afuera: fuentes.mjs los reexporta, son los mismos.
-  assert.equal(fuentes.MEDIOS_DE_AFUERA, criterio.MEDIOS_DE_AFUERA);
-  assert.equal(fuentes.CUPO_DE_AFUERA, criterio.CUPO_DE_AFUERA);
-  assert.equal(fuentes.MEDIOS_POR_DEFECTO, criterio.MEDIOS_POR_DEFECTO);
+  // La popularidad de lo de afuera: fuentes.mjs la reexporta, es la misma. No hay cupos (regla 215) ni mínimos por sección.
+  assert.equal(fuentes.POPULARIDAD, criterio.POPULARIDAD);
+  assert.equal(fuentes.AREAS_CHICAS, criterio.AREAS_CHICAS);
+  assert.equal(fuentes.SECCIONES_SOLO_DE_ACA, criterio.SECCIONES_SOLO_DE_ACA);
+  assert.equal(fuentes.SECCIONES_SIN_FRONTERAS, criterio.SECCIONES_SIN_FRONTERAS);
   assert.ok(!('PISO_DE_AFUERA' in fuentes), 'el piso de puntaje ya no existe (27/09)');
-  assert.equal(fuentes.CUPO_POR_DEFECTO, criterio.CUPO_POR_DEFECTO);
+  for (const viejo of ['CUPO_DE_AFUERA', 'CUPO_POR_DEFECTO', 'MEDIOS_DE_AFUERA', 'MEDIOS_POR_DEFECTO', 'MEDIOS_CON_FIGURA']) {
+    assert.ok(!(viejo in fuentes) && !(viejo in criterio), `${viejo} ya no existe (Hernán, 17/10: no hay ningún cupo de nada)`);
+  }
   // Las redes.
   for (const k of Object.keys(FACEBOOK)) assert.equal(REGLAS_FACEBOOK[k], FACEBOOK[k], `Facebook: ${k}`);
   // Desde el 28/09 las piezas sólo usan el piso de los podcasts: las historias

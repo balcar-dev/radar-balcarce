@@ -9,7 +9,7 @@
 // sección donde está la persona queda marcada y centrada. Los servicios
 // (Agenda, Clima, Farmacias, Dólar, Teléfonos) van al final, en verde.
 //
-// Con `mas` (sólo con el interruptor SECCIONES_NUEVAS, regla 187; ver
+// Con `mas` (siempre desde el 17/10/2026, reglas 187 y 211; ver
 // docs/secciones/PROTOTIPO-MENU.html) la barra lleva las ocho secciones fuertes y
 // un botón "Más secciones" (en el celular, "Secciones", fijo a la derecha) que
 // abre un panel con todas, agrupadas. Es un <button> con aria-expanded y

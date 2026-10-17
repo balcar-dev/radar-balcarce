@@ -15,11 +15,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  esDeAca, exigirMedios, aplicarCupos, paraPruebas,
+  esDeAca, exigirMedios, aplicarPopularidad, paraPruebas,
 } from '../ingesta/ingesta.mjs';
 import { aplicarFichas } from '../ingesta/lectura-ia.mjs';
 import { decodificar } from '../ingesta/articulo.mjs';
-import { CUPO_DE_AFUERA } from '../ingesta/criterio.mjs';
 import { REGLAS_SECCION, TEMAS } from '../ingesta/fuentes.mjs';
 
 const { semaforo, PALABRAS_DEBILES } = paraPruebas;
@@ -28,7 +27,7 @@ const { semaforo, PALABRAS_DEBILES } = paraPruebas;
 const leida = (titulo, extra = {}) => ({
   titulo, cuerpo: 'Resumen de la nota, sin nada raro.', categorias: [], alcance: 'pais', peso: 12, fecha: new Date(), ...extra,
 });
-/** Una nota de la portada, como la ven exigirMedios y aplicarCupos. */
+/** Una nota de la portada, como la ven exigirMedios y aplicarPopularidad. */
 const dePortada = (id, extra = {}) => ({
   id, titulo: `Nota ${id}`, seccion: 'Argentina', semaforo: 'verde', motivo: 'sección Argentina', local: false, nombraBalcarce: false, medios: ['Un medio'], ...extra,
 });
@@ -60,36 +59,33 @@ test('Balcarce en el título de OTRO medio de la historia: el semáforo y exigir
   const portada = [dePortada('a', { nombraBalcarce: true, local: false })];
   exigirMedios(portada);
   assert.equal(portada[0].semaforo, 'verde', 'exigirMedios ya no la frena (antes sí)');
-  aplicarCupos(portada);
+  aplicarPopularidad(portada);
   assert.equal(portada[0].semaforo, 'verde');
 });
 
-test('lo de la zona no ocupa el cupo de lo de afuera (antes el cupo lo bajaba)', () => {
-  // Policiales tiene cupo 0 de afuera: "la sección es sólo de Balcarce y la zona".
-  assert.equal(CUPO_DE_AFUERA.Policiales, 0);
+test('lo de la zona sale en Policiales (sección sólo de Balcarce y la zona) y no pide los medios de lo de afuera', () => {
+  // Policiales de afuera no sale solo: "la sección es sólo de Balcarce y la zona". Lo de la zona, sí.
   const zona = [dePortada('z', { seccion: 'Policiales', deLaZona: true })];
-  aplicarCupos(zona);
+  aplicarPopularidad(zona);
   assert.equal(zona[0].semaforo, 'verde', 'lo de la zona sale en Policiales');
+  const afuera = [dePortada('a', { seccion: 'Policiales', medios: ['A', 'B', 'C', 'D'] })];
+  aplicarPopularidad(afuera);
+  assert.equal(afuera[0].semaforo, 'amarillo', 'lo de afuera, ni con cuatro medios');
 
-  // Y no le quita lugar a lo de afuera: con el cupo lleno, sigue saliendo.
-  const cupo = CUPO_DE_AFUERA.Tecnología;
+  // Y sin cupo, lo de la zona y lo de afuera salen juntos: no hay un lugar que se disputen.
   const portada = [
-    dePortada('z', { seccion: 'Tecnología', deLaZona: true }),
-    ...Array.from({ length: cupo }, (_, i) => dePortada(`t${i}`, { seccion: 'Tecnología', medios: ['A', 'B'] })),
-    dePortada('sobra', { seccion: 'Tecnología', medios: ['A', 'B'] }),
+    dePortada('z', { seccion: 'Tecnología', deLaZona: true, medios: ['A'] }),
+    ...Array.from({ length: 30 }, (_, i) => dePortada(`t${i}`, { seccion: 'Tecnología', medios: ['A', 'B'] })),
   ];
-  aplicarCupos(portada);
-  assert.equal(portada.filter((n) => n.semaforo === 'verde').length, cupo + 1);
-  assert.equal(portada[0].semaforo, 'verde');
-  assert.equal(portada.at(-1).semaforo, 'amarillo');
+  aplicarPopularidad(portada);
+  assert.ok(portada.every((n) => n.semaforo === 'verde'));
 });
 
-test('lo de la zona con un medio: verde en el semáforo, en exigirMedios y en el cupo', () => {
+test('lo de la zona con un medio: verde en el semáforo y en la popularidad', () => {
   const n = leida('Repavimentan la ruta 226 entre Tandil y Mar del Plata', { alcance: 'region', deLaZona: true });
   assert.equal(semaforo(n, 'Argentina', 1).color, 'verde');
   const portada = [dePortada('r', { deLaZona: true, medios: ['0223'] })];
-  exigirMedios(portada);
-  aplicarCupos(portada);
+  aplicarPopularidad(portada);
   assert.equal(portada[0].semaforo, 'verde');
 });
 
@@ -122,7 +118,7 @@ test('la IA confirma que es de acá: nada cambia', () => {
   assert.equal(notas[0].semaforo, 'verde');
 });
 
-test('las tres reglas eximen exactamente a las mismas notas', () => {
+test('el semáforo, los medios que pide lo de afuera y Policiales eximen exactamente a las mismas notas', () => {
   const casos = [
     { alcance: 'local', local: true },
     { nombraBalcarce: true },
@@ -137,13 +133,13 @@ test('las tres reglas eximen exactamente a las mismas notas', () => {
     // exigirMedios: sólo lo de acá sigue verde con un medio.
     const p1 = [dePortada('x', c)];
     exigirMedios(p1);
-    // aplicarCupos: Policiales tiene cupo 0, sólo lo de acá sigue verde.
-    const p2 = [dePortada('x', { ...c, seccion: 'Policiales' })];
-    aplicarCupos(p2);
+    // Policiales (sólo de acá): lo de afuera no sale solo ni con cuatro medios.
+    const p2 = [dePortada('x', { ...c, seccion: 'Policiales', medios: ['A', 'B', 'C', 'D'] })];
+    exigirMedios(p2);
     const etiqueta = JSON.stringify(c);
     assert.equal(sem, deAca, `semáforo ${etiqueta}`);
     assert.equal(p1[0].semaforo === 'verde', deAca, `exigirMedios ${etiqueta}`);
-    assert.equal(p2[0].semaforo === 'verde', deAca, `aplicarCupos ${etiqueta}`);
+    assert.equal(p2[0].semaforo === 'verde', deAca, `Policiales ${etiqueta}`);
   }
 });
 

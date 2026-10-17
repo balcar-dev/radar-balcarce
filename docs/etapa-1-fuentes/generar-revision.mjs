@@ -19,7 +19,7 @@ import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { FUENTES, FUENTES_NACIONALES } from '../../ingesta/fuentes.mjs';
 import { FUENTES_CRUCE } from '../../ingesta/fuentes-cruce.mjs';
-import { MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA } from '../../ingesta/criterio.mjs';
+import { POPULARIDAD, AREAS_CHICAS } from '../../ingesta/criterio.mjs';
 import { BALCARCE_FONDO, COMO, FECHA_INVESTIGACION } from './balcarce-fondo.mjs';
 import { VERIFICACION_LOCAL, OTRAS_QUE_SE_DICEN_DE_BALCARCE, CRITERIO_CORTA, OBJETIVO, elegirCorta } from './afinar.mjs';
 import { auditarFuentes, leerPublicadas, visitasPorNota } from '../../ingesta/auditar-fuentes.mjs';
@@ -325,6 +325,8 @@ export function armarDatos({ raiz = RAIZ, ahora = new Date() } = {}) {
     let grupo;
     if (!activo) grupo = 'apagadas';
     else if (enLista) grupo = enLista.grupo;
+    // Las fuentes de ciencia, salud, educación y tecnología que se sumaron el 17/10 (regla 215) no estaban en la lista del 15/10.
+    else if (activos.some((f) => f.especializada)) grupo = 'sumadas';
     else grupo = 'otras';
     const filaApagada = !activo ? apagadasLista.find((a) => a.nombres.some((n) => mismoMedio(n, nombre))) : null;
 
@@ -452,7 +454,7 @@ export function armarDatos({ raiz = RAIZ, ahora = new Date() } = {}) {
   filasFondo.sort((a, b) => a.orden - b.orden);
 
   // orden: grupo, y adentro por subgrupo y nombre (los de Balcarce, por notas)
-  const ORDEN = ['balcarce', 'pais', 'zona', 'otras', 'apagadas'];
+  const ORDEN = ['balcarce', 'pais', 'zona', 'sumadas', 'otras', 'apagadas'];
   medios.sort((a, b) => {
     const g = ORDEN.indexOf(a.grupo) - ORDEN.indexOf(b.grupo);
     if (g) return g;
@@ -518,7 +520,7 @@ export function armarDatos({ raiz = RAIZ, ahora = new Date() } = {}) {
     medios,
     filasFondo,
     resumen,
-    criterio: { MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA },
+    criterio: { POPULARIDAD, AREAS_CHICAS },
     afinado,
     auditoria,
     candidatas,
@@ -598,6 +600,7 @@ const NOMBRE_GRUPO = {
   balcarce: ['Balcarce a fondo', 'Todo lo de Balcarce y su partido: lo que se lee hoy y lo que se podría leer, investigado el 15/10. Los de acá entran todos.'],
   pais: ['Nacionales elegidos', 'Los 50 mejores medios del país (incluye los de provincia y otras provincias, deportes, agro y economía).'],
   zona: ['Tandil y Mar del Plata', 'Los 10 mejores de la zona.'],
+  sumadas: ['Sumadas el 17/10', 'Fuentes especializadas de ciencia, salud, educación y tecnología (regla 215): con un solo medio salen si la IA las considera de interés.'],
   otras: ['Otras activas', 'Activas que no están en la lista elegida (debería estar vacío).'],
   apagadas: ['Apagadas', 'Están en el registro con activa: false. No se leen, pero se pueden prender de nuevo.'],
   descartadas: ['Descartadas', 'Las de afuera que Claude sacó de la pantalla principal: apagadas, caídas, de mismo dueño o que no aportan.'],
@@ -779,7 +782,7 @@ function htmlResumen(d) {
   const r = d.resumen;
   const c = d.criterio;
   const tarjeta = (g, n, extra) => `<div class="tarjeta"><div class="t-num">${n}</div><div class="t-nom">${esc(NOMBRE_GRUPO[g][0])}</div><div class="chico">${extra}</div></div>`;
-  const cond = Object.entries(c.MEDIOS_DE_AFUERA).map(([s, n]) => `${esc(s)} ${n}`).join(', ');
+  const cond = c.AREAS_CHICAS.map((s) => esc(s)).join(', ');
   return `<section class="resumen" aria-label="Resumen">
   <div class="tarjetas">
     <div class="tarjeta tarjeta-total"><div class="t-num">${r.corta.deAfuera + r.corta.balcarce}</div><div class="t-nom">Versión corta (recomendada)</div><div class="chico">${r.corta.deAfuera} medios de afuera + ${r.corta.balcarce} de Balcarce; salen ${r.corta.salen} de la de 63</div></div>
@@ -787,6 +790,7 @@ function htmlResumen(d) {
     <div class="tarjeta tarjeta-balcarce"><div class="t-num">${r.balcarceFondo.filas}</div><div class="t-nom">Balcarce a fondo</div><div class="chico">${r.balcarceFondo.enUso} se leen hoy · ${r.balcarceFondo.nuevas} candidatas nuevas · ${r.balcarceFondo.porComo.feed} con feed · ${r.balcarceFondo.porComo.pagina} con página</div></div>
     ${tarjeta('pais', r.porGrupo.pais, `de ${r.porGrupoLista.pais} elegidos · ${r.feedsPorGrupo.pais} direcciones`)}
     ${tarjeta('zona', r.porGrupo.zona, `de ${r.porGrupoLista.zona} elegidos · ${r.feedsPorGrupo.zona} ${r.feedsPorGrupo.zona === 1 ? 'dirección' : 'direcciones'}`)}
+    ${r.porGrupo.sumadas ? tarjeta('sumadas', r.porGrupo.sumadas, 'especializadas, sumadas el 17/10') : ''}
     ${r.porGrupo.otras ? tarjeta('otras', r.porGrupo.otras, 'fuera de la lista elegida') : ''}
     <div class="tarjeta"><div class="t-num">${r.feedsCruce}</div><div class="t-nom">Direcciones de cruce</div><div class="chico">de ${r.feedsActivos} activas (las otras ${r.feedsFuente} son de fuentes.mjs). ${r.mediosSoloCruce} medios se leen sólo por direcciones de cruce</div></div>
     <div class="tarjeta tarjeta-desc"><div class="t-num">${r.descartadas.total}</div><div class="t-nom">Descartadas</div><div class="chico">${r.descartadas.porTipo.apagada} ya apagadas · ${r.descartadas.porTipo.dueno} de mismo dueño · ${r.descartadas.porTipo['sin-aporte']} sin aporte · ${r.descartadas.porTipo.caida} caídas. Abajo del todo, por si querés rescatar alguna</div></div>
@@ -799,7 +803,7 @@ function htmlResumen(d) {
       <li><b>Una fuente</b> es un medio u organismo cuyas noticias leemos cada media hora. Cada uno se lee por una o más direcciones: un feed (RSS o Atom), un índice de noticias o, si no hay otra, raspando la portada.</li>
       <li><b>Las fuentes de Balcarce</b> (medios de acá, Municipalidad, Concejo, Facultad) entran siempre: lo que publican puede salir solo.</li>
       <li><b>Una fuente de cruce</b> es la dirección de un medio de afuera (del país, de la provincia, de Tandil o Mar del Plata) que no se lee para copiarle, sino para contar cuántos medios distintos cuentan lo mismo. En el código esas están en <code>fuentes-cruce.mjs</code>; desde el 27/9 las de afuera que están en <code>fuentes.mjs</code> cumplen el mismo papel.</li>
-      <li>Una noticia de afuera sale sólo si la cuentan varios: ${esc(String(c.MEDIOS_POR_DEFECTO))} medios en general, ${esc(cond)}; si nombra a una figura argentina alcanza con ${esc(String(c.MEDIOS_CON_FIGURA))}. Con uno solo, ni pasa.</li>
+      <li>Una noticia de afuera sale sólo si la cuentan varios: ${esc(String(c.POPULARIDAD.mediosPorDefecto))} medios en general y ${esc(String(c.POPULARIDAD.mediosEnAreasChicas))} en las áreas donde suele haber poco (${cond}). Con uno solo sale sólo una fuente especializada que la IA considere de interés.</li>
       <li>Los medios del mismo dueño (Grupo Clarín, los del sistema eleco) cuentan como uno solo: por eso la tabla muestra quién es hermano de quién.</li>
     </ol>
   </div>
@@ -1264,13 +1268,13 @@ function htmlParaQue(d) {
   const a = d.auditoria;
   const marcadas = a.filas.filter((f) => f.marcas.length);
   const c = d.criterio;
-  const cond = Object.entries(c.MEDIOS_DE_AFUERA).map(([s, n]) => `${esc(s)} ${n}`).join(', ');
+  const cond = c.AREAS_CHICAS.map((s) => esc(s)).join(', ');
   return `<section class="explica para-que" id="para-que" data-solo="para-que" aria-label="Para qué se usa cada cosa">
   <h2>Para qué se usa cada cosa</h2>
   <dl>
     <dt>Una fuente</dt><dd>Un medio o un organismo (la Municipalidad, el Concejo) cuyas noticias el robot lee solo, cada media hora. Cada fuente se lee por una o más <b>direcciones</b> (por ejemplo, Radio Gabal tiene una por sección).</dd>
     <dt>Fuente de Balcarce</dt><dd>Lo que publica es de acá: puede salir sola, sin que la confirme nadie más (salvo que el semáforo la frene: un menor, una víctima, un policial o la política esperan a una persona).</dd>
-    <dt>Fuente de cruce</dt><dd>Un medio de afuera que se lee sobre todo para <b>confirmar</b>: si varios medios distintos cuentan lo mismo, el hecho es real y es noticia; cuantos más lo cuentan, más importa. No siempre se usa para escribir: la nota se escribe con lo mejor de los que la contaron. Una noticia de afuera sale sola sólo si la cuentan ${esc(String(c.MEDIOS_POR_DEFECTO))} medios distintos (${esc(cond)}; con una figura argentina, ${esc(String(c.MEDIOS_CON_FIGURA))}). Con uno solo, ni pasa.</dd>
+    <dt>Fuente de cruce</dt><dd>Un medio de afuera que se lee sobre todo para <b>confirmar</b>: si varios medios distintos cuentan lo mismo, el hecho es real y es noticia; cuantos más lo cuentan, más importa. No siempre se usa para escribir: la nota se escribe con lo mejor de los que la contaron. Una noticia de afuera sale sola sólo si la cuentan ${esc(String(c.POPULARIDAD.mediosPorDefecto))} medios distintos (${esc(String(c.POPULARIDAD.mediosEnAreasChicas))} en ${esc(cond)}). Con uno solo sale sólo una fuente especializada que la IA considere de interés.</dd>
     <dt>Feed</dt><dd>Una dirección que el propio medio publica <b>para que otros programas lean sus notas</b>: una lista ordenada con título, fecha, resumen y a veces el texto y la foto. Puede ser RSS, Atom o un "índice de noticias" (el que los medios arman para Google). Es lo que preferimos: el medio lo ofrece para eso, trae la fecha y casi nunca se rompe.</dd>
     <dt>Leer la página (scraping o raspado)</dt><dd>Cuando un medio no tiene feed, el robot baja su portada como la vería una persona y busca los enlaces a las notas con un patrón. Hace falta con medios de acá que no tienen feed (La Vanguardia, El Diario Balcarce). <b>Riesgos:</b> si el medio cambia el diseño, se rompe sin avisar (deja de traer notas o trae cualquier cosa: el 20/09 salió publicado el "quiénes somos" de El Diario); la portada no dice la hora (las notas de La Vanguardia nunca parecen "recién salidas"); se puede colar texto ajeno (el sitio de Acción 5 tiene spam de apuestas escondido); pesa más para el sitio y algunos lo bloquean. Por eso, siempre que hay feed, va feed; la página, sólo para lo de Balcarce que no tiene otra.</dd>
     <dt>Peso</dt><dd>Cuánto suma la fuente al puntaje de una nota. Los de Balcarce van de 24 a 30 y los de afuera de 8 a 16: así una nota de acá siempre le gana a una de afuera parecida.</dd>
@@ -1325,7 +1329,7 @@ function htmlCandidatas(d) {
 
 /** La página entera, lista para escribir en un archivo. */
 export function generarHTML(d) {
-  const principales = ['pais', 'zona', 'otras'].filter((g) => d.medios.some((m) => m.grupo === g && !m.descartada));
+  const principales = ['pais', 'zona', 'sumadas', 'otras'].filter((g) => d.medios.some((m) => m.grupo === g && !m.descartada));
   const filasBalcarce = d.filasFondo.map((x) => (x.medio ? htmlFila(x.medio) : htmlFilaFondo(x.fondo)));
   const tbodyBalcarce = `<tbody class="grupo" id="g-balcarce" data-grupo="balcarce">
   <tr class="encabezado-grupo"><td colspan="8">${esc(NOMBRE_GRUPO.balcarce[0])} · ${filasBalcarce.length} fuentes<span class="chico">${esc(NOMBRE_GRUPO.balcarce[1])}</span></td></tr>

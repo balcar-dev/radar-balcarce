@@ -19,8 +19,7 @@ export const BALCARCE = {
 //   (es Balcarce) y las nacionales tampoco (es "nacional"): ver fichaDeFuente.
 // Desde el cruce de medios (27/09) todas las fuentes de afuera cumplen el
 //   mismo papel: todo lo que traen entra al cruce, y lo que sale es lo que
-//   cuentan los medios que pide su sección (ingesta/criterio.mjs,
-//   MEDIOS_DE_AFUERA). Ya no hay fuentes "de señal" ni un máximo de notas por
+//   cuentan varios medios distintos (ingesta/criterio.mjs, POPULARIDAD). Ya no hay fuentes "de señal" ni un máximo de notas por
 //   fuente (`uso` y `maxItems`, que decidían eso antes del cruce).
 export const FUENTES = [
   {
@@ -203,7 +202,7 @@ export const FUENTES = [
 
 // --- Nacionales y temáticas, ya probadas y vivas -------------------------
 // Entra todo al cruce; de afuera sale lo que dice Balcarce en el título y lo
-// que cuentan los medios que pide su sección (MEDIOS_DE_AFUERA).
+// que cuentan varios medios distintos (POPULARIDAD, ingesta/criterio.mjs).
 export const FUENTES_NACIONALES = [
   {
     id: 'infobae',
@@ -564,6 +563,7 @@ export const FUENTES_NACIONALES = [
   // propósito: que un medio de Balcarce no se vuelva una copia de Infobae.
   {
     id: 'infobae-tecno',
+    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
     nombre: 'Infobae · Tecnología',
     medio: 'Infobae',
     url: 'https://www.infobae.com/arc/outboundfeeds/rss/category/tecno/?outputType=xml',
@@ -575,6 +575,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'clarin-tecno',
+    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
     grupo: 'Grupo Clarín',
     nombre: 'Clarín · Tecnología',
     medio: 'Clarín',
@@ -587,6 +588,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'ambito-tecno',
+    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
     nombre: 'Ámbito · Tecnología',
     medio: 'Ámbito',
     url: 'https://www.ambito.com/rss/pages/tecnologia.xml',
@@ -747,8 +749,8 @@ export const FUENTES_NACIONALES = [
   // que no habla de tecnología se clasifica por lo que dice.
   {
     id: 'lanacion-tecnologia',
-    activa: false,
-    nota: 'apagada 15/10/2026: fuera de la lista elegida',
+    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
+    nota: 'Apagada el 15/10/2026 (fuera de la lista elegida); vuelve el 17/10 (regla 215): tecnología es una de las áreas donde suele haber poco. Probada: 21 notas, unas 3 por día.',
     nombre: 'La Nación · Tecnología',
     medio: 'La Nación',
     url: 'https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/tecnologia/',
@@ -760,6 +762,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'hipertextual',
+    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
     activa: false, // medio de España: no va por ahora (Hernán, 27/09)
     nombre: 'Hipertextual',
     medio: 'Hipertextual',
@@ -773,6 +776,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'xataka',
+    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
     activa: false, // medio de España: no va por ahora (Hernán, 27/09)
     nombre: 'Xataka',
     medio: 'Xataka',
@@ -784,12 +788,61 @@ export const FUENTES_NACIONALES = [
     temas: ['tecnologia', 'ia'],
     nota: 'Medio de tecnología en castellano (no es argentino). La edición argentina (xataka.com.ar/feed) da 404.',
   },
+  // Ciencia y tecnología de España, APAGADAS (decisión del 27/09: sin medios de España) y probadas el 17/10/2026 con el lector de la ingesta. La
+  // simulación del criterio de popularidad (scripts/medir/simular-popularidad.mjs `--con-apagadas=…`) dice cuántas notas por día sumarían a
+  // Ciencia y a Tecnología e IA: si Hernán las quiere, se prenden sacando `activa: false`.
+  {
+    id: 'elpais-ciencia',
+    activa: false, // medio de España: no va por ahora (decisión del 27/09)
+    especializada: true,
+    nombre: 'El País · Ciencia',
+    medio: 'El País',
+    url: 'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/ciencia/portada',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Ciencia',
+    ciudad: 'Madrid',
+    peso: 12,
+    temas: ['ciencia'],
+    nota: 'Probada 17/10/2026: 40 notas, la última de hace horas. Medio de España.',
+  },
+  {
+    id: 'elpais-tecnologia',
+    activa: false, // medio de España: no va por ahora (decisión del 27/09)
+    especializada: true,
+    nombre: 'El País · Tecnología',
+    medio: 'El País',
+    url: 'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/tecnologia/portada',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Tecnología',
+    ciudad: 'Madrid',
+    peso: 12,
+    temas: ['tecnologia', 'ia'],
+    nota: 'Probada 17/10/2026: 21 notas, la última de ayer. Medio de España.',
+  },
+  {
+    id: 'muyinteresante',
+    activa: false, // medio de España: no va por ahora (decisión del 27/09)
+    especializada: true,
+    nombre: 'Muy Interesante',
+    medio: 'Muy Interesante',
+    url: 'https://www.muyinteresante.com/feed',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Ciencia',
+    ciudad: 'Madrid',
+    peso: 11,
+    temas: ['ciencia'],
+    nota: 'Probada 17/10/2026: 20 notas, unas 6 por día; trae también notas de compras y ofertas (la IA las saca). Medio de España.',
+  },
   // Más Tecnología (1/10, Hernán: "sigue vacía, llenarla de IA, robots, SpaceX y ciencia"). Sin medios de
   // España (decisión del 27/09): FayerWayer es de Chile y escribe para toda Latinoamérica; Agencia CyTA
   // es la agencia de noticias científicas de la Fundación Instituto Leloir (Argentina).
   {
     id: 'fayerwayer',
-    activa: false, // apagada 15/10/2026: fuera de la lista elegida
+    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
+    // Apagada el 15/10/2026 (fuera de la lista elegida); vuelve el 17/10 (regla 215): tecnología, IA y espacio en castellano de Chile.
     nombre: 'FayerWayer',
     medio: 'FayerWayer',
     url: 'https://www.fayerwayer.com/feed',
@@ -802,6 +855,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'agenciacyta',
+    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
     nombre: 'Agencia CyTA',
     medio: 'Agencia CyTA',
     url: 'https://www.agenciacyta.org.ar/feed/',
@@ -811,6 +865,218 @@ export const FUENTES_NACIONALES = [
     peso: 12,
     temas: ['tecnologia', 'ciencia'],
     nota: 'Ciencia argentina (Fundación Instituto Leloir). Sale poco (unas pocas notas por mes): suma, no alcanza sola.',
+  },
+  // --- Ciencia, salud y educación (altas del 17/10/2026, regla 215) -------------------------------------------------------
+  // Hernán: "me interesa mucho que haya notas de tecnología, IA, química, biología, investigación, educación, culturales… Todas
+  // las secciones tienen que tener notas todos los días". Todas probadas el 17/10 con el lector de la ingesta (responden, traen
+  // notas con fecha). Son `especializada`: de un solo medio salen si la lectura con IA las considera de interés. Ninguna lleva la
+  // marca `oficial` a propósito (como INTA): con ella saldrían solas, sin que las cuente nadie. Sin medios de España (27/09).
+  // CONICET (conicet.gov.ar/feed/) responde HTTP 500 y su API pide usuario: no se puede leer; Agencia CyTA y la Secretaría de
+  // Innovación, Ciencia y Tecnología cubren lo mismo.
+  {
+    id: 'perfil-ciencia',
+    especializada: true,
+    nombre: 'Perfil · Ciencia',
+    medio: 'Perfil',
+    url: 'https://www.perfil.com/feed/ciencia',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Ciencia',
+    peso: 12,
+    temas: ['ciencia'],
+    nota: 'Alta 17/10/2026. Ciencia en castellano: 70 notas, unas 3 por día. El título de la nota decide si de verdad es ciencia.',
+  },
+  {
+    id: 'jgm-ciencia',
+    especializada: true,
+    nombre: 'Secretaría de Innovación, Ciencia y Tecnología',
+    medio: 'Secretaría de Innovación, Ciencia y Tecnología',
+    url: 'https://www.argentina.gob.ar/jefatura/innovacion-ciencia-y-tecnologia/noticias/rss',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Ciencia',
+    ciudad: 'CABA',
+    peso: 12,
+    temas: ['ciencia', 'tecnologia'],
+    nota: 'Alta 17/10/2026. Organismo público (sin la marca oficial a propósito). 12 notas, una cada dos días.',
+  },
+  {
+    id: 'conae',
+    especializada: true,
+    nombre: 'CONAE',
+    medio: 'CONAE',
+    url: 'https://www.argentina.gob.ar/ciencia/conae/noticias/rss',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Ciencia',
+    ciudad: 'CABA',
+    peso: 12,
+    temas: ['ciencia', 'espacio'],
+    nota: 'Alta 17/10/2026. Comisión Nacional de Actividades Espaciales: satélites y espacio. Publica poco (3 notas en tres semanas).',
+  },
+  {
+    id: 'inti',
+    especializada: true,
+    nombre: 'INTI',
+    medio: 'INTI',
+    url: 'https://www.argentina.gob.ar/inti/noticias/rss',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Ciencia',
+    ciudad: 'CABA',
+    peso: 12,
+    temas: ['ciencia', 'tecnologia'],
+    nota: 'Alta 17/10/2026. Instituto Nacional de Tecnología Industrial. 6 notas en tres semanas.',
+  },
+  {
+    id: 'infobae-salud',
+    especializada: true,
+    nombre: 'Infobae · Salud',
+    medio: 'Infobae',
+    url: 'https://www.infobae.com/arc/outboundfeeds/rss/category/salud/?outputType=xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Salud',
+    peso: 12,
+    temas: ['salud'],
+    nota: 'Alta 17/10/2026. Salud: 100 notas, unas 20 por día. Se le cree la sección sólo si el título habla de salud.',
+  },
+  {
+    id: 'perfil-salud',
+    especializada: true,
+    nombre: 'Perfil · Salud',
+    medio: 'Perfil',
+    url: 'https://www.perfil.com/feed/salud',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Salud',
+    peso: 12,
+    temas: ['salud'],
+    nota: 'Alta 17/10/2026. Salud: 70 notas, una por día.',
+  },
+  {
+    id: 'anmat',
+    especializada: true,
+    nombre: 'ANMAT',
+    medio: 'ANMAT',
+    url: 'https://www.argentina.gob.ar/anmat/noticias/rss',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Salud',
+    ciudad: 'CABA',
+    peso: 12,
+    temas: ['salud'],
+    nota: 'Alta 17/10/2026. Medicamentos, alimentos y productos médicos. Organismo público (sin la marca oficial a propósito). 14 notas en un mes.',
+  },
+  {
+    id: 'infobae-educacion',
+    especializada: true,
+    nombre: 'Infobae · Educación',
+    medio: 'Infobae',
+    url: 'https://www.infobae.com/arc/outboundfeeds/rss/category/educacion/?outputType=xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Educación',
+    peso: 12,
+    temas: ['educacion'],
+    nota: 'Alta 17/10/2026. Educación: 100 notas en un mes. Trae también notas de empleo y empresas: se le cree la sección sólo si el título habla de educación.',
+  },
+  {
+    id: 'perfil-educacion',
+    especializada: true,
+    nombre: 'Perfil · Educación',
+    medio: 'Perfil',
+    url: 'https://www.perfil.com/feed/educacion',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Educación',
+    peso: 12,
+    temas: ['educacion'],
+    nota: 'Alta 17/10/2026. Educación: 70 notas, unas 3 por semana.',
+  },
+  {
+    id: 'unlp',
+    especializada: true,
+    nombre: 'Universidad Nacional de La Plata',
+    medio: 'Universidad Nacional de La Plata',
+    url: 'https://unlp.edu.ar/feed/',
+    tipo: 'rss',
+    alcance: 'provincia',
+    seccion: 'Educación',
+    ciudad: 'La Plata',
+    peso: 12,
+    temas: ['educacion', 'universidad'],
+    nota: 'Alta 17/10/2026. Universidad pública bonaerense: 3 notas por día entre extensión, ciencia y gestión. Sin la marca oficial a propósito.',
+  },
+  {
+    id: 'unr',
+    especializada: true,
+    nombre: 'Universidad Nacional de Rosario',
+    medio: 'Universidad Nacional de Rosario',
+    url: 'https://unr.edu.ar/feed/',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Educación',
+    ciudad: 'Rosario',
+    peso: 12,
+    temas: ['educacion', 'universidad'],
+    nota: 'Alta 17/10/2026. Una nota por día.',
+  },
+  {
+    id: 'unicen',
+    especializada: true,
+    nombre: 'UNICEN',
+    medio: 'UNICEN',
+    url: 'https://www.unicen.edu.ar/noticias/feed/',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Educación',
+    ciudad: 'Tandil',
+    peso: 12,
+    temas: ['educacion', 'universidad'],
+    nota: 'Alta 17/10/2026. Universidad del Centro de la provincia (Tandil, Olavarría, Azul): 12 notas en una semana.',
+  },
+  {
+    id: 'uncuyo',
+    especializada: true,
+    nombre: 'Universidad Nacional de Cuyo',
+    medio: 'Universidad Nacional de Cuyo',
+    url: 'https://www.uncuyo.edu.ar/prensa/rss',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Educación',
+    ciudad: 'Mendoza',
+    peso: 12,
+    temas: ['educacion', 'universidad'],
+    nota: 'Alta 17/10/2026. 20 notas en dos semanas.',
+  },
+  {
+    id: 'itsitio',
+    especializada: true,
+    nombre: 'IT Sitio',
+    medio: 'IT Sitio',
+    url: 'https://www.itsitio.com/ar/feed/',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Tecnología',
+    ciudad: 'CABA',
+    peso: 11,
+    temas: ['tecnologia'],
+    nota: 'Alta 17/10/2026. Tecnología y empresas de tecnología de Argentina: unas 4 por día.',
+  },
+  {
+    id: 'senasa',
+    especializada: true,
+    nombre: 'SENASA',
+    medio: 'SENASA',
+    url: 'https://www.argentina.gob.ar/senasa/noticias/rss',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Agro',
+    ciudad: 'CABA',
+    peso: 12,
+    temas: ['agro'],
+    nota: 'Alta 17/10/2026. Sanidad animal y vegetal. Organismo público (sin la marca oficial a propósito, como INTA). 15 notas en diez días.',
   },
   // Agro: la papa, la carne y el clima de la pampa húmeda. INTA es organismo
   // público y Balcarce tiene una de sus estaciones más grandes.
@@ -853,6 +1119,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'inta',
+    especializada: true, // regla 215: con un solo medio sale si la lectura con IA la considera de interés
     nombre: 'INTA · Noticias',
     medio: 'INTA',
     url: 'https://www.argentina.gob.ar/inta/noticias/rss',
@@ -1545,10 +1812,9 @@ export const FARMACIAS_A_MANO = {
 };
 
 
-// Cuántos medios tienen que contar una nota de AFUERA para que salga sola y
-// cuántas de afuera salen solas por sección (el cupo): son números del
-// criterio editorial, y viven en ingesta/criterio.mjs, con el porqué de cada
-// uno, y en la tabla "Los números" de CRITERIO-EDITORIAL.md. Se cambian ahí.
+// Cuántos medios tienen que contar una nota de AFUERA para que salga sola (la popularidad; desde el 17/10/2026, regla 215, ya no
+// hay cupo por sección): son números del criterio editorial, y viven en ingesta/criterio.mjs, con el porqué de cada uno, y en la
+// tabla "Los números" de CRITERIO-EDITORIAL.md. Se cambian ahí.
 export {
-  MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA, CUPO_DE_AFUERA, CUPO_POR_DEFECTO,
+  POPULARIDAD, AREAS_CHICAS, SECCIONES_SOLO_DE_ACA, SECCIONES_SIN_FRONTERAS,
 } from './criterio.mjs';
