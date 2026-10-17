@@ -8,6 +8,25 @@ borrada el 17/10 con esa carpeta). Lo que se decidió y las preguntas abiertas v
 Cada pendiente dice **quién**: Hernán, Andrés, "los dos" o Claude. Lo que pide una cuenta, una clave, borrar algo
 publicado o una decisión de criterio lo hace una persona; Claude nunca.
 
+## Radar 2.0: lo que queda para autorizar o hacer (17/10, después de la auditoría y los arreglos)
+
+Hecho el 17/10 (reglas 188 a 210): una sola compilación por vuelta; el reloj dispara cada cosa sólo cuando tiene algo que hacer; redirecciones con tope; repetidas de Balcarce por significado contra lo publicado; fechas corregidas; lo nacional "muy contado" sale aunque el cupo esté lleno y lo de acá sin tope; autobombo, sorteos del medio, publicidad, clima y farmacias de otros medios no son nota; el semáforo de "murió" con la nota real; fotos controladas (corresponde, archivo, captura, repetida, Wikimedia vieja) y un solo camino de ilustración (Cloudflare); medición de redes arreglada, contador de voces y el repaso con la foto de cada nota; limpieza final (panel de la PC, ensayos, programas en docs/: de 1.958 a 1.710 archivos y de 34 a 12 MB). Detalle: `docs/auditoria-2-0/`.
+
+**Para autorizar (Hernán y Andrés):**
+- Limpiar el historial de GitHub (dejar una sola versión con el estado actual, con copia completa guardada antes en R2): borra las notas retiradas que hoy siguen en las versiones viejas. No tiene vuelta atrás en GitHub.
+- Ordenar las claves de Google (`docs/auditoria-2-0/09-CLAVES-DE-IA-ORDEN.md`): la facturación está en un proyecto que Radar no usa; proyectos de otras cosas en la cuenta del medio.
+- Prender `SECCIONES_NUEVAS` (Educación y Salud; vista previa en `docs/secciones/vista-previa/`) y decidir `FOTOS_MENORES_OFICIALES`.
+- Los dos bloques de portada propuestos ("Lo que se cuenta en todo el país" y "En los medios de Balcarce"): `docs/propuestas/EN-LOS-MEDIOS-DE-BALCARCE.md`.
+- Permiso del token de Cloudflare (Workers Routes: Edit + Zone: Read) para activar el archivo permanente (antes del ~2/11).
+- Pasar el robot a Cloudflare (motor como Workflow + D1/R2, video al repo público `radar-balcarce-render`) para que el principal pueda ser privado sin pagar: `docs/08-INFRAESTRUCTURA.md`, "Los minutos de GitHub".
+- Pedir permiso de fotos a los medios de Balcarce (investigación 07: un fallo de julio de 2026 por una sola foto).
+
+**A mano (una persona):** borrar en la PC `panel/datos/` y `respaldos/` (tienen claves) y dar de baja Tailscale; borrar el Worker `radar-balcarce-sondeo-fuentes` y el secreto `SONDEO_TOKEN`; revisar el aviso de cambio de contraseña de Instagram en el Gmail del medio y activar la verificación en dos pasos en Google, Meta, GitHub y Cloudflare.
+
+**Lo que mira Claude en los próximos días:** las uniones de repetidas en el registro de "Actualizar la web" (deshacer una mala: borrar su renglón de `fusionadas.json`); que la temperatura 0,3 de la redacción no aumente las copias (medir con `reels/comparar-instruccion.mjs`); que el reloj dispare Auditoría IA y Pistas; las primeras métricas de historias de Facebook (API v25).
+
+**Quedó sacado y se rehace cuando lo pidan:** el prototipo de audio en la página (los podcasts para escuchar desde la nota); el panel nuevo del celular se hace de cero.
+
 ## El rediseño (lo principal desde el 15/10)
 
 Se rehace todo desde cero, **una etapa por vez**: fuentes → entrada → duplicadas → clasificación → puntaje →
