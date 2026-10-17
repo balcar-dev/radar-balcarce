@@ -334,7 +334,9 @@ test('las etiquetas de sección se leen: blanco sobre el color de la sección, a
 test('el sitemap de noticias deja afuera las notas sin fecha real', () => {
   // Cuando la fuente no da hora, `fecha` es la primera vez que la vimos: el
   // 25/09 diecinueve notas salían con la misma hora de relleno.
-  assert.match(leer('app/sitemap-news.xml/route.js'), /\.filter\(\(n\) => !n\.sinFecha/);
+  // Desde el 17/10 (regla 250) la cuenta está en lib/sitemap-noticias.js y se prueba en pruebas/sitemaps-noticias.test.mjs.
+  assert.match(leer('app/sitemap-news.xml/route.js'), /xmlDeNoticias\(/);
+  assert.match(leer('lib/sitemap-noticias.js'), /\.filter\(\(n\) => n && n\.ruta && n\.titulo && !n\.sinFecha/);
 });
 
 // ------------------------------- el criterio de presentación (26/09)
@@ -367,10 +369,11 @@ test('ninguna página del sitio lleva la firma larga ni "en vivo" (fuente: el c�
 // ------- 29/09: la imagen para compartir de cada nota tiene que existir
 test('cada nota declara una tarjeta que existe: la propia si la tiene y, si no, la del sitio', () => {
   const pagina = leer('app/nota/[id]/page.js');
-  assert.match(pagina, /const imagen = tieneTarjetaPropia\(n\)/);
-  assert.match(pagina, /: TARJETA_DEL_SITIO;/);
-  assert.match(pagina, /images: \[imagen\]/, 'og:image declarada a mano');
-  assert.match(pagina, /images: \[imagen\.url\]/, 'twitter:image igual que og:image');
+  // 17/10/2026 (regla 251): la elige imagenesParaCompartir (lib/datos-estructurados.js): la tarjeta propia, o la foto de la nota archivada, o la del sitio.
+  assert.match(pagina, /tarjeta: tieneTarjetaPropia\(n\)/);
+  assert.match(pagina, /tarjetaDelSitio: TARJETA_DEL_SITIO/);
+  assert.match(pagina, /images: imagenes,/, 'og:image declarada a mano');
+  assert.match(pagina, /images: \[\{ url: imagen\.url, alt: imagen\.alt \}\]/, 'twitter:image igual que la primera og:image');
   assert.match(pagina, /<FichaDeNota nota=\{n\} conTarjeta=\{tieneTarjetaPropia\(n\)\} \/>/);
   assert.match(leer('components/ficha.js'), /enlace\(conTarjeta \? `\$\{nota\.ruta\}\/opengraph-image` : '\/opengraph-image'\)/);
   // La tarjeta apaisada es una ruta: con el archivo especial opengraph-image.js, Next declaraba la

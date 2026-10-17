@@ -172,7 +172,7 @@ test('la foto para el sitemap de imágenes sólo si vale la pena', () => {
 
 test('los sitemaps no ofrecen lo que lleva noindex', () => {
   assert.match(leer('web/app/sitemap.js'), /notas\.filter\(\(n\) => !noSeOfreceAGoogle\(n\)\)/);
-  assert.match(leer('web/app/sitemap-news.xml/route.js'), /\.filter\(\(n\) => !noSeOfreceAGoogle\(n\)\)/);
+  assert.match(leer('web/lib/sitemap-noticias.js'), /\.filter\(\(n\) => !noSeOfreceAGoogle\(n\)\)/);
   assert.match(leer('web/app/sitemap.js'), /images: \[foto\]/);
   assert.match(leer('web/scripts/revisar-seo.mjs'), /ofrece \$\{n\.ruta\}, que lleva noindex/);
 });

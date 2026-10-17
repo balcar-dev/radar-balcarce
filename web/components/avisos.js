@@ -20,7 +20,7 @@ export function Aviso({ slot }) {
     <aside className="aviso" aria-label="Espacio publicitario">
       <p className="aviso-etiqueta">Espacio publicitario</p>
       <div className="aviso-cuerpo">
-        {a.logo && <img src={a.logo} alt="" className="aviso-logo" />}
+        {a.logo && <img src={a.logo} alt="" width={40} height={40} loading="lazy" decoding="async" className="aviso-logo" />}
         <div>
           <p className="aviso-nombre">{a.nombre}</p>
           <p className="aviso-texto">{a.texto}</p>

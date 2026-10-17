@@ -12,6 +12,7 @@ import { sitio, enElDominioPropio, NOMBRE } from '@/lib/sitio';
 import { FichaDelSitio } from '@/components/ficha';
 import HorasVivas from '@/components/horas-vivas';
 import Navegacion from '@/components/navegacion';
+import { EnlacesDeCanales } from '@/components/canales';
 
 const DESCRIPCION = 'Lo que pasa en Balcarce, la región y el país. Actualizado todo el día, con la fuente siempre a la vista.';
 
@@ -193,14 +194,16 @@ export default function RaizLayout({ children }) {
               {' · '}
               <a href={REDES_SOCIALES.facebook} target="_blank" rel="noopener noreferrer me">Facebook</a>
             </div>,
+            <EnlacesDeCanales />,
             <div>
-              <a href="/agenda">Agenda</a> · <a href="/clima">Clima</a> · <a href="/farmacias">Farmacias</a> ·{' '}
+              <a href="/hoy">Lo de hoy</a> · <a href="/agenda">Agenda</a> · <a href="/clima">Clima</a> · <a href="/farmacias">Farmacias</a> ·{' '}
               <a href="/dolar">Dólar</a> ·{' '}
               <a href="/util">Teléfonos útiles</a> ·{' '}
               <a href="/politica-de-privacidad">Política de privacidad</a>
             </div>,
             <div>
-              <a href="/quienes-somos">Quiénes somos</a> · <a href="/contacto">Contacto y correcciones</a>
+              <a href="/quienes-somos">Quiénes somos</a> · <a href="/quienes-somos#como-trabajamos">Cómo trabajamos</a> ·{' '}
+              <a href="/contacto">Contacto y correcciones</a>
             </div>,
             ...pieSecciones,
             <div className="aclaracion" data-armada={actualizado || undefined}>

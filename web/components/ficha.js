@@ -2,11 +2,14 @@ import { sitio, enlace, NOMBRE } from '@/lib/sitio';
 import { autorDeNota, quienEscribio } from '@/components/metadatos';
 import { REDES_SOCIALES, WHATSAPP } from '@/lib/datos';
 import { fichaDeEvento } from '@/lib/eventos';
+import { canalesDelMedio } from '@/lib/canales';
 import { enlaceParaElLector } from '@/lib/fuentes-de-la-nota';
 import { fechaDeModificacion } from '@/lib/tiempo';
 import { urlDeFoto } from '@/lib/fotos';
 import { dimensionesDeFoto } from '@/lib/dimensiones-foto';
-import { politicasDelMedio, puntosDeContacto, camposExtraDeNota, principiosDeNota } from '@/lib/datos-estructurados';
+import {
+  politicasDelMedio, puntosDeContacto, camposExtraDeNota, principiosDeNota, editorDeNota, datosDeSeccion,
+} from '@/lib/datos-estructurados';
 
 // Los datos estructurados: lo mismo que ya está en la página, pero escrito
 // para que lo lea una máquina.
@@ -40,7 +43,8 @@ export function FichaDelSitio() {
         // WhatsApp y correo: los mismos que ya están en el pie del sitio.
         contactPoint: puntosDeContacto({ email: 'contacto@radarbalcarce.com', whatsapp: WHATSAPP.numero }),
         // Las cuentas del medio: Google las muestra junto al nombre.
-        sameAs: Object.values(REDES_SOCIALES),
+        // Y los canales (WhatsApp, Telegram, Bluesky) sólo si una persona cargó su dirección (lib/canales.js, regla 257).
+        sameAs: [...Object.values(REDES_SOCIALES), ...canalesDelMedio().map((c) => c.url)],
         // El logo lo piden Google Noticias y los resultados enriquecidos:
         // cuadrado, de al menos 112 px. Es el mismo ícono del manifiesto.
         logo: {
@@ -107,9 +111,12 @@ export function FichaDeNota({ nota, conTarjeta = true }) {
       tarjeta: enlace(conTarjeta ? `${nota.ruta}/opengraph-image` : '/opengraph-image'),
       urlFoto: (archivo) => { const u = urlDeFoto(archivo); return /^https?:/.test(u) ? u : enlace(u); },
       dimensiones: dimensionesDeFoto,
+      tarjetaPropia: conTarjeta,
     }),
     isAccessibleForFree: true,
-    publisher: { '@id': `${base}/#medio` },
+    // El editor completo (nombre, dirección y logo) y no sólo su `@id`: Google lo pide para Noticias y Discover, y una referencia suelta
+    // sólo vale si el otro bloque (FichaDelSitio) está leído junto con éste (17/10/2026, regla 251).
+    publisher: editorDeNota(base, NOMBRE),
     // Quién la escribió: lo mismo que dice la firma al pie de la nota (IA o
     // fuente, revisada por una persona o publicada sola). Ver
     // components/metadatos.js.
@@ -135,6 +142,12 @@ export function FichaDeNota({ nota, conTarjeta = true }) {
  */
 export function FichaDeEvento({ evento }) {
   const datos = fichaDeEvento(evento, { base: sitio(), url: enlace(evento.ruta) });
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: json(datos) }} />;
+}
+
+/** Una página de sección: la lista de notas que trae, para que un buscador entienda que es un índice y no una nota (17/10/2026). */
+export function FichaDeSeccion({ camino, nombre, descripcion, notas = [] }) {
+  const datos = datosDeSeccion({ base: sitio(), camino, nombre, descripcion, notas, enlace });
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: json(datos) }} />;
 }
 

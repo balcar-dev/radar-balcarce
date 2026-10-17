@@ -68,7 +68,7 @@ export function puntosDeContacto({ email, whatsapp }) {
  *   · foto diminuta o sin foto → sólo la tarjeta.
  * `dimensiones(archivo)` devuelve { ancho, alto } o null (se lee la cabecera del JPEG al compilar; si la foto está en otro lado, null).
  */
-export function imagenesDeNota({ nota, tarjeta, urlFoto, dimensiones = () => null }) {
+export function imagenesDeNota({ nota, tarjeta, urlFoto, dimensiones = () => null, tarjetaPropia = true }) {
   const archivo = nota?.foto?.archivo;
   const d = archivo ? dimensiones(archivo) : null;
   const decente = !!d && d.ancho >= 696 && d.ancho * d.alto >= 50000;
@@ -82,6 +82,8 @@ export function imagenesDeNota({ nota, tarjeta, urlFoto, dimensiones = () => nul
     }
     : null;
   const grande = decente && d.ancho >= 1200 && d.ancho / d.alto >= 1 && d.ancho / d.alto <= 2;
+  // Sin tarjeta propia (una nota archivada), la "tarjeta" es la del sitio, igual para todas: la foto de la nota, que es lo que vale, va primero (17/10/2026).
+  if (!tarjetaPropia && foto) return [foto, tarjeta];
   return [grande && foto, tarjeta, !grande && foto].filter(Boolean);
 }
 
@@ -104,9 +106,9 @@ export function palabrasDeNota(nota) {
 /**
  * Lo que se agrega al NewsArticle además de lo de siempre. Va aparte para poder probarlo sin React.
  */
-export function camposExtraDeNota({ nota, tarjeta, urlFoto, dimensiones }) {
+export function camposExtraDeNota({ nota, tarjeta, urlFoto, dimensiones, tarjetaPropia = true }) {
   return {
-    image: imagenesDeNota({ nota, tarjeta, urlFoto, dimensiones }),
+    image: imagenesDeNota({ nota, tarjeta, urlFoto, dimensiones, tarjetaPropia }),
     contentLocation: lugarDeNota(nota),
     wordCount: palabrasDeNota(nota),
   };
@@ -117,4 +119,67 @@ export function fotoParaElSitemap({ nota, urlFoto, dimensiones = () => null }) {
   const archivo = nota?.foto?.archivo;
   const d = archivo ? dimensiones(archivo) : null;
   return d && d.ancho >= 696 && d.ancho * d.alto >= 50000 ? urlFoto(archivo) : null;
+}
+
+/**
+ * Las imágenes que declara una nota para compartirse (Open Graph, `og:image`), 17/10/2026 (regla 251).
+ *
+ * WhatsApp, Facebook y Telegram usan la PRIMERA; las demás quedan declaradas para quien las prefiera (X usa una sola).
+ *   · La nota tiene tarjeta propia (la de la portada y las que salieron en redes, `tarjeta: true`): primero la tarjeta de 1200 × 630 con el
+ *     titular, que es lo que se diseñó para compartir; la foto sola, detrás, si es de 1200 px o más.
+ *   · No tiene tarjeta (una nota archivada) pero sí una foto decente: primero la FOTO, con su tamaño real. Antes esas notas compartían la
+ *     tarjeta del sitio, igual para todas, y la foto de la nota no se veía en ningún lado.
+ *   · Ni tarjeta ni foto: la del sitio.
+ * Devuelve [{ url, width, height, type, alt }] con direcciones sin armar del todo (empiezan en "/" o son absolutas): quien las usa las
+ * completa con `metadataBase`.
+ */
+export function imagenesParaCompartir({
+  nota, tarjeta = false, urlTarjeta, tarjetaDelSitio, urlFoto, dimensiones = () => null,
+}) {
+  const archivo = nota?.foto?.archivo;
+  const d = archivo ? dimensiones(archivo) : null;
+  const decente = !!d && d.ancho >= 696 && d.ancho * d.alto >= 50000;
+  const tipoFoto = /\.png$/i.test(String(archivo)) ? 'image/png' : /\.webp$/i.test(String(archivo)) ? 'image/webp' : 'image/jpeg';
+  const foto = decente ? { url: urlFoto(archivo), width: d.ancho, height: d.alto, type: tipoFoto, alt: nota.titulo } : null;
+  const propia = tarjeta ? { url: urlTarjeta, width: 1200, height: 630, type: 'image/png', alt: nota.titulo } : null;
+  if (propia) return [propia, ...(foto && d.ancho >= 1200 ? [foto] : [])];
+  return foto ? [foto, tarjetaDelSitio] : [tarjetaDelSitio];
+}
+
+/**
+ * La ficha de una página de sección para Google (`CollectionPage` con la lista de notas de esa página). Es lo que le dice a un buscador
+ * que "/seccion/salud" no es una nota más sino la lista de la sección, y qué notas trae. Sólo direcciones: el título de cada nota ya está
+ * en su propia página.
+ */
+export function datosDeSeccion({ base, camino, nombre, descripcion, notas = [], enlace }) {
+  const url = `${base}${camino}`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': url,
+    url,
+    name: nombre,
+    description: descripcion,
+    inLanguage: 'es-AR',
+    isPartOf: { '@id': `${base}/#sitio` },
+    publisher: { '@id': `${base}/#medio` },
+    ...(notas.length ? {
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: notas.length,
+        itemListElement: notas.map((n, i) => ({ '@type': 'ListItem', position: i + 1, url: enlace(n.ruta), name: n.titulo })),
+      },
+    } : {}),
+  };
+}
+
+/** El editor de la nota, completo: Google pide `publisher` con nombre y logo (un `@id` suelto solo vale si el otro bloque está en la misma página). */
+export function editorDeNota(base, nombre) {
+  return {
+    '@type': 'NewsMediaOrganization',
+    '@id': `${base}/#medio`,
+    name: nombre,
+    url: base,
+    logo: { '@type': 'ImageObject', url: `${base}/icon-512.png`, width: 512, height: 512 },
+  };
 }

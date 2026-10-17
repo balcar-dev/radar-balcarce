@@ -548,6 +548,12 @@ main { padding: 24px 0 10px; }
 .fila-nota .cuando-movil { display: block; margin-bottom: 4px; }
 @media (min-width: 620px) { .fila-nota .cuando-movil { display: none; } }
 
+/* /hoy (regla 255): cada nota con su etiqueta, su hora, el titular y una línea de bajada. */
+.nota-del-dia { padding: 14px 0; border-bottom: 1px solid var(--linea-suave); }
+.nota-del-dia:last-child { border-bottom: none; }
+.nota-del-dia h3 { font-size: 18px; font-weight: 600; line-height: 1.3; margin-top: 6px; }
+.nota-del-dia p { margin: 6px 0 0; font-size: 14.5px; line-height: 1.5; color: var(--texto); }
+
 /* ------------------------------------------------------------------ lateral */
 
 .lateral { display: flex; flex-direction: column; gap: 16px; }
@@ -950,13 +956,38 @@ a.telefono:hover { border-color: var(--rojo); color: inherit; }
   display: inline-flex; align-items: center; gap: 7px;
   height: 44px; padding: 0 16px; border-radius: 22px;
   border: 1px solid var(--linea); background: var(--papel); color: var(--texto);
-  font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+  font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none;
 }
 .boton-compartir:hover { border-color: var(--tinta); color: var(--tinta); }
 .boton-compartir.whatsapp { border-color: #1DA851; color: #12793A; }
 /* Al pasar el mouse, el verde oscuro del texto y no el #1DA851 del borde:
    con letra blanca ése daba 3,1:1 de contraste (hace falta 4,5:1). */
 .boton-compartir.whatsapp:hover { background: #12793A; border-color: #12793A; color: #FFFFFF; }
+
+/* La fuente original, a la vista debajo del cuerpo (17/10/2026, regla 254): una línea, sin caja. */
+.fuente-original { margin: 24px 0 0; font-size: 14.5px; line-height: 1.5; color: var(--texto); overflow-wrap: anywhere; }
+.fuente-original a { color: var(--rojo); font-weight: 600; }
+.fuente-original .mas-fuentes { color: var(--suave); font-size: 13px; }
+/* "Publicado" y "Actualizado" van en la misma línea y, en el celular, pasan a dos. */
+.fecha-actualizada { margin-left: 6px; }
+@media (max-width: 519px) { .fecha-actualizada { display: block; margin: 2px 0 0; } .fecha-actualizada .sep-fecha { display: none; } }
+/* ¿Hay un error? Chico y en gris, al lado de compartir (regla 256). */
+.avisar-error { margin: 14px 0 0; font-size: 13px; color: var(--suave); }
+.avisar-error a { color: inherit; text-decoration: underline; font-weight: 600; }
+/* El cartel del canal de WhatsApp (regla 257): sólo existe con WHATSAPP_CANAL_URL. Discreto: crema, sin animación, un botón. */
+.canal-nota {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px 16px; flex-wrap: wrap;
+  margin-top: 22px; padding: 14px 16px; border-radius: var(--radio-tarjeta); background: var(--crema); border: 1px solid var(--linea);
+}
+.canal-nota strong { display: block; font-size: var(--t-dato); color: var(--tinta); }
+.canal-nota span { display: block; margin-top: 2px; font-size: var(--t-texto); color: var(--texto); line-height: 1.4; }
+.canal-nota > div { flex: 1 1 240px; min-width: 0; }
+.boton-canal {
+  display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 22px;
+  background: #12793A; color: #FFFFFF; font-weight: 600; font-size: 14px; text-decoration: none; white-space: nowrap;
+}
+.boton-canal:hover { background: #0E5F2E; }
+.pie-canales { font-weight: 600; }
 
 /* La firma al pie de la nota: quién la escribió y quién la revisó. Va en
    gris y en cuerpo chico a propósito — es un dato honesto, no un aviso. */

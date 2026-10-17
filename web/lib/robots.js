@@ -55,7 +55,8 @@ function grupo(agentes, { permitir = true, senal = null } = {}) {
 
 /** El texto del robots.txt. Fuera del dominio propio (vistas previas) prohíbe indexar todo. */
 export function textoDeRobots({ base = sitio(), propio = enElDominioPropio(), entrenamiento = ENTRENAMIENTO_IA, respuestas = RESPUESTAS_IA } = {}) {
-  const mapas = [`Sitemap: ${base}/sitemap.xml`, `Sitemap: ${base}/sitemap-news.xml`];
+  // El índice (17/10/2026, regla 250) reúne los otros dos; se dicen los tres porque cada buscador lee el que prefiere.
+  const mapas = [`Sitemap: ${base}/sitemap-index.xml`, `Sitemap: ${base}/sitemap.xml`, `Sitemap: ${base}/sitemap-news.xml`];
   if (!propio) return ['User-agent: *', 'Disallow: /', '', `Sitemap: ${base}/sitemap.xml`, ''].join('\n');
   const senal = `search=yes, ai-input=${respuestas ? 'yes' : 'no'}, ai-train=${entrenamiento ? 'yes' : 'no'}`;
   return [

@@ -18,10 +18,33 @@ export function haceCuanto(fechaISO, ahora = Date.now()) {
  */
 export function fechaDeModificacion(nota) {
   const publicada = new Date(nota.fecha).getTime();
-  const modificada = new Date(nota.publicadaCuando ?? nota.fecha).getTime();
   if (!Number.isFinite(publicada)) return nota.publicadaCuando ?? nota.fecha;
-  if (!Number.isFinite(modificada) || modificada < publicada) return nota.fecha;
-  return nota.publicadaCuando ?? nota.fecha;
+  // La última vez que cambió algo: cuando salió, o cuando una persona la corrigió (`corregidaCuando`, 17/10/2026, regla 252), la que sea
+  // más tarde; y nunca antes de la de publicación.
+  let mejor = publicada;
+  let texto = nota.fecha;
+  for (const candidata of [nota.publicadaCuando, nota.corregidaCuando]) {
+    const t = new Date(candidata ?? '').getTime();
+    if (Number.isFinite(t) && t > mejor) { mejor = t; texto = candidata; }
+  }
+  return texto;
+}
+
+/** Media hora: una corrección más cercana a la publicación que esto es parte de salir, no una actualización que merezca decirse. */
+export const MINUTOS_PARA_ACTUALIZADA = 30;
+
+/**
+ * Cuándo se actualizó de verdad una nota, para mostrar "Actualizado" al lado de "Publicado" (17/10/2026, regla 252). Sólo cuenta lo que
+ * hizo una persona (`corregidaCuando`, la fecha de su corrección en web/data/correcciones.json) y sólo si pasó más de media hora desde
+ * que la nota salió. NO es `publicadaCuando` (cuándo se aprobó) ni una nueva versión de la fuente: la fecha de la nota, `fecha`, es una
+ * sola, envejece y nunca rejuvenece, así que "Actualizado" se suma a la fecha de la nota y jamás la reemplaza. Null si no corresponde.
+ */
+export function actualizadaCuando(nota, ahora = Date.now()) {
+  const publicada = new Date(nota?.fecha ?? '').getTime();
+  const t = new Date(nota?.corregidaCuando ?? '').getTime();
+  if (!Number.isFinite(publicada) || !Number.isFinite(t)) return null;
+  if (t - publicada < MINUTOS_PARA_ACTUALIZADA * 60e3 || t > Number(ahora) + 5 * 60e3) return null;
+  return new Date(t).toISOString();
 }
 
 // La fecha exacta de algo, en hora de Balcarce (1/10/2026, Hernán: "si alguien lee la noticia otro día,

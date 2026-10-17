@@ -70,6 +70,10 @@ jobs:
         run: npm run build
         env:
           SITIO: https://radarbalcarce.com
+          # Los canales propios (regla 257): sólo salen en el sitio si una persona carga la variable en GitHub; vacías, no aparece nada.
+          WHATSAPP_CANAL_URL: ${{ vars.WHATSAPP_CANAL_URL }}
+          TELEGRAM_CANAL_URL: ${{ vars.TELEGRAM_CANAL_URL }}
+          BLUESKY_URL: ${{ vars.BLUESKY_URL }}
           # De dónde salen las fotos de las notas: vacío = el propio sitio (web/lib/fotos.js).
           FOTOS_BASE: ${{ vars.FOTOS_BASE }}
           # Educación, Salud y el menú con "Más secciones" (regla 187): sólo con la variable en "Si"; vacía, el sitio de siempre.

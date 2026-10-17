@@ -13,7 +13,7 @@ export function ImagenDestacada({ nota }) {
   if (!nota?.foto?.archivo) return <PlacaSeccion seccion={nota?.seccion} />;
   return (
     <figure style={{ margin: 0 }}>
-      <img src={urlDeFoto(nota.foto.archivo)} alt="" width={1200} height={675} decoding="async" className="foto-destacada" />
+      <img src={urlDeFoto(nota.foto.archivo)} alt="" width={1200} height={675} decoding="async" fetchPriority="high" className="foto-destacada" />
     </figure>
   );
 }

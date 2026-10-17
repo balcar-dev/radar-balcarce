@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portada 2: dos propuestas más visuales</title>
+<meta name="description" content="Radar Balcarce: dos propuestas de portada para el celular, con la nota principal grande, Lo último con hora, bloques por sección que se deslizan y un bloque de servicio arriba. Es una propuesta: no se aplicó al sitio.">
+<style>
+/* Las letras del sitio, pedidas al propio sitio (las mismas de web/public/fuentes/, como en las otras vistas previas de docs/diseno/). */
+@font-face{font-family:"Source Serif 4";font-weight:600 900;font-display:swap;src:url("https://radarbalcarce.com/fuentes/source-serif-4-latin.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-weight:400 700;font-display:swap;src:url("https://radarbalcarce.com/fuentes/inter-latin.woff2") format("woff2")}
+
+/* Los colores del sitio: los mismos de web/app/globals.css. */
+:root{
+  --tinta:#14161A;--papel:#FFFFFF;--crema:#F4F1EA;--linea:#E4DFD2;--linea-suave:#EDE9DE;--suave:#6B6F6C;--texto:#3B403C;--rojo:#C7381C;--verde:#16615B;--ambar:#E8A33C;
+  --s-balcarce:#B91C1C;--s-politica:#3730A3;--s-policiales:#831843;--s-futbol:#7C3AED;--s-deportes:#0F766E;--s-automovilismo:#B45309;--s-agro:#5A6B0A;--s-economia:#8A6500;
+  --s-cultura:#9D2C8F;--s-tecnologia:#0B6FB8;--s-pais:#4B5563;--s-educacion:#1D4BE0;--s-salud:#004E5C;--s-ciencia:#772E9E;
+  --f-titulo:"Source Serif 4",Georgia,serif;--f-texto:"Inter",system-ui,sans-serif;
+  /* La página que envuelve las propuestas */
+  --fondo:#ECEBE6;--panel:#FFFFFF;--borde:#D6D3C9;--acento:#1F5FA8;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fondo);color:#1C1C1A;font:16px/1.55 var(--f-texto)}
+a{color:var(--acento)}
+.ancho{max-width:1240px;margin:0 auto;padding:0 16px}
+header.tope{padding:22px 0 6px}
+h1{font-size:1.6rem;line-height:1.2;margin:0 0 6px}
+h2{font-size:1.25rem;margin:30px 0 10px}
+h3{margin:0 0 6px}
+.sub{color:#55544F;max-width:80ch;margin:4px 0}
+.aviso{display:inline-block;margin-top:8px;padding:6px 12px;border-radius:8px;background:var(--panel);border:1px solid var(--borde);font-size:.9rem}
+.controles{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px;position:sticky;top:0;z-index:20;background:var(--fondo);padding:8px 0}
+.grupo{display:flex;border:1px solid var(--borde);border-radius:10px;overflow:hidden;background:var(--panel)}
+.grupo button{font:inherit;font-size:.92rem;min-height:44px;padding:6px 14px;border:0;border-right:1px solid var(--borde);background:transparent;color:inherit;cursor:pointer}
+.grupo button:last-child{border-right:0}
+.grupo button[aria-pressed="true"]{background:var(--acento);color:#fff;font-weight:700}
+button:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--acento);outline-offset:2px}
+
+/* ---------- las dos propuestas, lado a lado */
+.mesa{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:26px;justify-items:center;align-items:start}
+.mesa[data-vista="p1"] #col-2,.mesa[data-vista="p2"] #col-1{display:none}
+.mesa[data-vista="p1"],.mesa[data-vista="p2"]{grid-template-columns:1fr}
+.col{width:100%;display:flex;flex-direction:column;align-items:center;gap:8px}
+.col h2{margin:0;display:flex;align-items:center;gap:8px;font-size:1.1rem}
+.col h2 i{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;color:#fff;font-style:normal;font-size:.9rem;background:var(--rojo)}
+.lema{margin:0;color:#55544F;font-size:.92rem;text-align:center;max-width:46ch}
+.marco{width:393px;max-width:100%;height:780px;border:9px solid #2A2A2A;border-radius:30px;overflow:hidden;background:#fff}
+.mesa[data-ancho="escritorio"] .marco{width:100%;max-width:1140px;height:820px;border-width:1px;border-color:var(--borde);border-radius:12px}
+.pantalla{height:100%;overflow:auto;background:var(--papel);color:var(--texto);container-type:inline-size;font-size:15px;line-height:1.45;scroll-behavior:smooth}
+.pantalla a{color:inherit;text-decoration:none}
+.pantalla img{display:block}
+.pantalla h2,.pantalla h3,.pantalla p{margin:0}
+
+/* ---------- piezas comunes de las propuestas */
+.cab{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;background:var(--tinta);color:#F4F1EA}
+.cab .logo{font:900 22px/1 var(--f-titulo);letter-spacing:-.01em}
+.cab .logo span{color:#F4A58F}
+.cab small{font-size:12px;opacity:.8}
+.chapa{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12.5px;color:var(--suave)}
+.tag{display:inline-block;padding:2px 8px;border-radius:5px;background:var(--c,#4B5563);color:#fff;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.placa{display:grid;place-items:center;background:var(--c,#4B5563);color:#fff;font:700 13px var(--f-texto);letter-spacing:.06em;text-transform:uppercase}
+.foto{width:100%;height:auto;object-fit:cover;object-position:center 25%;background:var(--crema)}
+.ver{font-size:13px;font-weight:600;color:var(--rojo)}
+.cab-sec{display:flex;align-items:center;gap:10px;padding:0 14px}
+.cab-sec .barra{width:5px;height:22px;border-radius:2px;background:var(--c)}
+.cab-sec h3{font:700 19px/1.2 var(--f-titulo);color:var(--tinta);flex:1}
+.cab-sec small{color:var(--suave);font-size:12px}
+.carrusel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 14px 14px;scroll-padding:0 14px;-webkit-overflow-scrolling:touch}
+.carrusel::-webkit-scrollbar{height:6px}.carrusel::-webkit-scrollbar-thumb{background:var(--linea);border-radius:3px}
+.carrusel > a{scroll-snap-align:start;flex:none}
+.tira-hora{font-variant-numeric:tabular-nums;font-weight:700;color:var(--tinta)}
+
+/* ====== Propuesta 1: «Servicio primero» ====== */
+.p1 .servicio{background:var(--crema);border-bottom:1px solid var(--linea);padding:10px 0 12px}
+.p1 .servicio h3{font:600 11px var(--f-texto);letter-spacing:.07em;text-transform:uppercase;color:var(--suave);padding:0 14px 6px}
+.p1 .tira{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 14px 2px;scroll-padding:0 14px}
+.p1 .s{flex:none;width:72%;scroll-snap-align:start;background:#fff;border:1px solid var(--linea);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;border-top:4px solid var(--c)}
+.p1 .s small{font:600 10.5px var(--f-texto);letter-spacing:.07em;text-transform:uppercase;color:var(--suave)}
+.p1 .s b{font:700 20px/1.15 var(--f-texto);color:var(--tinta);font-variant-numeric:tabular-nums}
+.p1 .s span{font-size:12.5px;color:var(--texto)}
+.p1 .s i{font-style:normal;align-self:flex-start;margin-top:4px;font-size:12px;font-weight:700;color:var(--c)}
+.p1 .grande .foto{aspect-ratio:4/3;max-height:340px}
+.p1 .grande .c{padding:12px 14px 4px}
+.p1 .grande h2{font:900 27px/1.1 var(--f-titulo);letter-spacing:-.02em;color:var(--tinta);margin:8px 0 6px}
+.p1 .grande p{font-size:15px;color:var(--texto)}
+.p1 .ultimo{padding:14px 0 6px;border-top:8px solid var(--crema);margin-top:12px}
+.p1 .ultimo > h3{font:900 21px var(--f-titulo);padding:0 14px 4px;color:var(--tinta);display:flex;align-items:baseline;gap:8px}
+.p1 .ultimo > h3 small{font:600 12px var(--f-texto);color:var(--suave)}
+.p1 .ultimo ol{list-style:none;margin:0;padding:0 14px}
+.p1 .ultimo li{display:grid;grid-template-columns:46px 1fr 64px;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--linea-suave)}
+.p1 .ultimo li:last-child{border-bottom:0}
+.p1 .ultimo time{font-size:13px}
+.p1 .ultimo .t{font:600 16px/1.28 var(--f-titulo);color:var(--tinta)}
+.p1 .ultimo .t small{display:block;margin-top:3px;font:600 10.5px var(--f-texto);letter-spacing:.05em;text-transform:uppercase;color:var(--c)}
+.p1 .ultimo .mini{width:64px;height:64px;border-radius:8px;object-fit:cover}
+.p1 .sec{padding:16px 0 0;border-top:8px solid var(--crema)}
+.p1 .card{width:68%}
+.p1 .card .foto{aspect-ratio:16/10;border-radius:10px}
+.p1 .card .placa{aspect-ratio:16/10;border-radius:10px}
+.p1 .card h4{font:600 16px/1.28 var(--f-titulo);color:var(--tinta);margin:7px 0 3px}
+.p1 .card .chapa{font-size:12px}
+
+/* ====== Propuesta 2: «Hoy de un vistazo» ====== */
+.p2 .hoy{padding:12px 14px 4px}
+.p2 .hoy h3{font:600 11px var(--f-texto);letter-spacing:.07em;text-transform:uppercase;color:var(--suave);margin-bottom:8px}
+.p2 .mosaico{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.p2 .m{border-radius:12px;padding:10px 12px;color:#fff;background:var(--c);display:flex;flex-direction:column;gap:1px;min-height:84px}
+.p2 .m small{font:600 10.5px var(--f-texto);letter-spacing:.07em;text-transform:uppercase;opacity:.85}
+.p2 .m b{font:700 19px/1.15 var(--f-texto);font-variant-numeric:tabular-nums}
+.p2 .m span{font-size:12.5px;opacity:.95}
+.p2 .m.clima{grid-row:span 2;justify-content:space-between}
+.p2 .m.clima b{font-size:44px;line-height:1}
+.p2 .heroe{position:relative;margin:12px 0 0;color:#fff;background:var(--tinta)}
+.p2 .heroe .foto{aspect-ratio:4/5;max-height:430px;filter:saturate(1.02)}
+.p2 .heroe .velo{position:absolute;inset:auto 0 0 0;padding:70px 14px 14px;background:linear-gradient(to top,rgba(10,12,15,.92) 0%,rgba(10,12,15,.72) 55%,rgba(10,12,15,0) 100%)}
+.p2 .heroe h2{font:900 27px/1.1 var(--f-titulo);letter-spacing:-.02em;margin:8px 0 6px;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+.p2 .heroe p{font-size:14.5px;opacity:.95}
+.p2 .heroe .tag{background:var(--c)}
+.p2 .heroe .chapa{color:#fff;opacity:.9}
+.p2 .linea{padding:16px 14px 6px}
+.p2 .linea > h3{font:900 21px var(--f-titulo);color:var(--tinta);margin-bottom:6px}
+.p2 .linea ol{list-style:none;margin:0;padding:0 0 0 8px;border-left:2px solid var(--linea)}
+.p2 .linea li{position:relative;padding:4px 0 14px 18px}
+.p2 .linea li::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--c);border:2px solid #fff}
+.p2 .linea time{font:700 15px var(--f-texto);font-variant-numeric:tabular-nums;color:var(--tinta)}
+.p2 .linea .t{font:600 16px/1.28 var(--f-titulo);color:var(--tinta);display:block;margin-top:1px}
+.p2 .linea small{font:600 10.5px var(--f-texto);letter-spacing:.05em;text-transform:uppercase;color:var(--c);margin-left:6px}
+.p2 .saltar{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);backdrop-filter:blur(4px);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);display:flex;gap:8px;overflow-x:auto;padding:8px 14px}
+.p2 .saltar a{flex:none;padding:7px 12px;border-radius:18px;border:1px solid var(--linea);font-size:13px;font-weight:600;color:var(--tinta);background:#fff}
+.p2 .saltar a::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--c);margin-right:6px}
+.p2 .sec{padding:16px 0 4px}
+.p2 .card{width:46%}
+.p2 .card .foto,.p2 .card .placa{aspect-ratio:1/1;border-radius:14px}
+.p2 .card h4{font:600 15px/1.28 var(--f-titulo);color:var(--tinta);margin:7px 0 3px}
+.p2 .card .chapa{font-size:12px}
+.p2 .card:first-child{width:78%}
+.p2 .card:first-child .foto,.p2 .card:first-child .placa{aspect-ratio:4/3}
+.p2 .card:first-child h4{font-size:18px}
+
+/* ---------- escritorio (la pantalla ancha de la propuesta; mirá el interruptor «Escritorio») */
+@container (min-width: 820px){
+  .p1 .servicio .tira{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible}
+  .p1 .s{width:auto}
+  .p1 .cuerpo-dos{display:grid;grid-template-columns:1.55fr 1fr;gap:0 24px;padding:0 14px}
+  .p1 .cuerpo-dos .ultimo{border-top:0;margin-top:0;padding-top:14px}
+  .p1 .cuerpo-dos .grande .foto{max-height:420px}
+  .p1 .card{width:23%}
+  .p2 .mosaico{grid-template-columns:1.2fr 1fr 1fr}
+  .p2 .m.clima{grid-row:auto}
+  .p2 .dos{display:grid;grid-template-columns:1.4fr 1fr;gap:0 24px}
+  .p2 .heroe .foto{aspect-ratio:16/9;max-height:460px}
+  .p2 .card{width:21%}
+  .p2 .card:first-child{width:36%}
+}
+
+/* ---------- el texto de la propuesta, debajo */
+.nota{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px;margin-top:8px}
+.caja{background:var(--panel);border:1px solid var(--borde);border-radius:14px;padding:14px 18px}
+.caja ul{margin:6px 0 0;padding-left:20px}.caja li{margin:4px 0}
+.caja.fuerte{border:2px solid var(--acento)}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+.tabla-scroll{overflow-x:auto;border:1px solid var(--borde);border-radius:12px;background:var(--panel)}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--borde);vertical-align:top}
+th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:#55544F}
+tr:last-child td{border-bottom:0}
+.decision{background:var(--panel);border:1px solid var(--borde);border-radius:14px;padding:12px 16px;margin:10px 0}
+.decision p{margin:0 0 8px;font-weight:600}
+.decision label{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding-right:14px;cursor:pointer}
+.boton{font:inherit;min-height:44px;padding:8px 16px;border-radius:10px;border:1px solid var(--acento);background:var(--acento);color:#fff;font-weight:700;cursor:pointer}
+.boton.borde{background:transparent;color:var(--acento)}
+.copiado{margin-left:10px;color:#16615B;font-weight:600}
+footer.pie{padding:26px 0 50px;color:#55544F;font-size:.9rem}
+@media (prefers-reduced-motion:reduce){.pantalla{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="ancho">
+<header class="tope">
+  <h1>Portada 2: dos propuestas más visuales</h1>
+  <p class="sub">Dos formas de armar la portada del celular con lo que pidió Hernán: la nota principal grande con foto, «Lo último» con la hora, los bloques por sección que se deslizan hacia el costado y un bloque de <strong>Servicio</strong> (clima, farmacia y agenda) arriba. Usan los titulares, las fotos, el clima, la farmacia y la agenda reales del sitio (datos de <code>portada.json</code> del 17/10/2026, 04:05). Se pueden deslizar con el dedo o con el mouse.</p>
+  <p class="sub">Esto <strong>suma</strong> a <a href="COMPARACION.html">las dos direcciones de antes</a> (A, portal limpio; B, visual y colorida), no las repite: acá se mira sólo cómo ordenar la <em>portada</em> con un bloque de servicio arriba y carruseles por sección, y cuánto pesa cada camino.</p>
+  <span class="aviso">Es una propuesta: no se tocó el sitio ni el código. Un cambio grande de portada se consulta antes (regla de los cambios visibles).</span>
+</header>
+
+<div class="controles" role="group" aria-label="Qué ver">
+  <div class="grupo" id="g-vista">
+    <button type="button" data-v="juntas" aria-pressed="true">Las dos juntas</button>
+    <button type="button" data-v="p1" aria-pressed="false">Propuesta 1</button>
+    <button type="button" data-v="p2" aria-pressed="false">Propuesta 2</button>
+  </div>
+  <div class="grupo" id="g-ancho">
+    <button type="button" data-a="celular" aria-pressed="true">Celular</button>
+    <button type="button" data-a="escritorio" aria-pressed="false">Escritorio</button>
+  </div>
+</div>
+
+<main class="mesa" id="mesa" data-vista="juntas" data-ancho="celular">
+  <section class="col" id="col-1">
+    <h2><i>1</i> «Servicio primero»</h2>
+    <p class="lema">El bloque de servicio es una tira que se desliza, con el dato y un enlace cada uno. La nota principal va a todo el ancho y el título abajo, sobre fondo blanco.</p>
+    <div class="marco"><div class="pantalla p1" id="p1"></div></div>
+  </section>
+  <section class="col" id="col-2">
+    <h2><i>2</i> «Hoy de un vistazo»</h2>
+    <p class="lema">El servicio es un mosaico fijo de color (nada escondido detrás de un gesto). El título va sobre la foto, y «Lo último» es una línea de tiempo.</p>
+    <div class="marco"><div class="pantalla p2" id="p2"></div></div>
+  </section>
+</main>
+
+<h2>Qué cambiaría y por qué</h2>
+<div class="nota">
+  <div class="caja fuerte">
+    <h3>Lo que tienen en común</h3>
+    <ul>
+      <li><strong>Servicio arriba.</strong> Hoy el clima y la farmacia están en una columna a la derecha (en el celular, antes de la primera noticia, en tres pestañas). Acá son un bloque propio, a la vista sin tocar nada, y suman la <strong>agenda</strong>: es lo que la gente viene a buscar sin querer leer.</li>
+      <li><strong>Una sola foto con prioridad.</strong> La principal lleva <code>fetchpriority="high"</code>; todas las demás, <code>loading="lazy"</code> (ya es así en el código). Con carruseles hay muchas más imágenes en el HTML, pero sólo bajan las que se acercan a la pantalla.</li>
+      <li><strong>«Lo último» con hora</strong> en las dos: con 50 a 150 notas por día, lo que ordena es la hora.</li>
+      <li><strong>Los carruseles no esconden nada:</strong> cada sección tiene su «Ver todo →» siempre visible, la siguiente tarjeta asoma a la derecha (se nota que hay más), y todas las notas son enlaces comunes que Google lee. Se pueden recorrer con el teclado.</li>
+      <li><strong>Los de abajo del todo</strong> («Seguí leyendo», el buzón, los teléfonos) quedan como están.</li>
+    </ul>
+  </div>
+  <div class="caja">
+    <h3>Propuesta 1 · «Servicio primero»</h3>
+    <ul>
+      <li>Más cerca de lo que hay hoy: menos riesgo, se vuelve atrás fácil.</li>
+      <li>El título debajo de la foto se lee siempre, aunque la foto sea una ilustración repetida.</li>
+      <li>Las miniaturas de «Lo último» ayudan a ubicar, pero hoy bajan la foto de 1200 px entera (72 KB) para mostrarla a 64 px.</li>
+      <li>Pesa menos: una foto grande y miniaturas.</li>
+    </ul>
+  </div>
+  <div class="caja">
+    <h3>Propuesta 2 · «Hoy de un vistazo»</h3>
+    <ul>
+      <li>Más identidad y más color; el mosaico se parece a lo que ya se ve en las redes.</li>
+      <li>Los atajos por sección (la fila de botones que acompaña) evitan bajar toda la portada para llegar a Deportes.</li>
+      <li>El título sobre la foto <strong>exige</strong> un velo oscuro y fotos buenas: con las ilustraciones repetidas se nota. Se podría usar sólo para la principal.</li>
+      <li>Es más larga y pesa más: tarjetas cuadradas con foto en todas las secciones.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Lo que cuesta cada una (medido)</h2>
+<div class="tabla-scroll"><table>
+  <thead><tr><th>Qué se mira (celular de 393 px)</th><th>La portada de hoy</th><th>Propuesta 1</th><th>Propuesta 2</th></tr></thead>
+  <tbody>
+    <tr><td>Altura de la portada</td><td>7.118 px (12 secciones de a 3 notas)</td><td>3.888 px (8 secciones)</td><td>4.275 px (8 secciones)</td></tr>
+    <tr><td>Fotos en el HTML</td><td>5</td><td>20</td><td>17</td></tr>
+    <tr><td>Fotos que bajan en la primera pantalla</td><td>1</td><td>2 (la grande y una miniatura)</td><td>1 (la grande)</td></tr>
+    <tr><td>Peso aproximado de esas fotos (72 KB cada una)</td><td>~70 KB</td><td>~145 KB</td><td>~70 KB</td></tr>
+    <tr><td>Trabajo para aplicarla</td><td>—</td><td>2 sesiones</td><td>3 sesiones</td></tr>
+    <tr><td>Riesgo</td><td>—</td><td>Bajo</td><td>Mediano (el título sobre la foto)</td></tr>
+  </tbody>
+</table></div>
+<p class="sub">Las alturas y la cantidad de fotos se midieron con Chrome sin ventana sobre el sitio compilado del 17/10 (la portada de hoy) y sobre esta página (las propuestas, con las ocho primeras secciones de la portada: las otras cuatro sumarían unos 300 px cada una). El peso usa el promedio de las fotos del banco (72 KB, 1200 px): una miniatura baja hoy la foto entera. <strong>Antes de cualquiera de las dos conviene hacer las fotos en tres tamaños</strong> (240, 640 y 1200 px): es la mejora de velocidad más grande que queda y no cambia nada visible. Pero cada tamaño suma archivos, y Cloudflare Pages tiene un tope de 20.000 por despliegue (hoy ~15.900 con el archivo lleno): <em>tiene que esperar a que las fotos vivan en R2</em> (<code>FOTOS_BASE</code>), donde no cuentan para ese tope. Que los carruseles hagan la portada más corta no es obvio: cada sección ocupa más alto que tres renglones de texto, pero la portada de hoy es larga porque tiene doce secciones; con ocho y carruseles queda en poco más de la mitad (la comparación justa necesita las doce en las propuestas: unos 5.100 px).</p>
+
+<h2>Cómo se ligaría con lo otro que se está haciendo</h2>
+<div class="nota">
+  <div class="caja"><h3>/hoy</h3><p>La página de «Lo de hoy» ya existe y se comparte por WhatsApp. La portada podría tener un enlace chico «Lo de hoy, en una página →» al lado del título de «Lo último». No cambia la estructura.</p></div>
+  <div class="caja"><h3>Canal de WhatsApp</h3><p>Una franja discreta entre «Lo último» y las secciones («Recibí lo importante en tu WhatsApp»), que sólo aparece si está cargada la variable <code>WHATSAPP_CANAL_URL</code>.</p></div>
+  <div class="caja"><h3>Secciones</h3><p>Hoy la portada muestra 12 bloques. Con carruseles caben igual, pero se podría dejar 6 a 8 y el resto en «Más secciones» (menú). Eso es otra decisión: acá se muestran las 8 primeras.</p></div>
+</div>
+
+<h2>Mis decisiones</h2>
+<p class="sub">Marcá una opción en cada punto. Al final tocá <strong>Copiar mis decisiones</strong> y pegalo en el chat.</p>
+<div id="decisiones"></div>
+<p><button type="button" class="boton" id="copiar">Copiar mis decisiones</button><button type="button" class="boton borde" id="borrar" style="margin-left:8px">Borrar todo</button><span class="copiado" id="copiado" role="status"></span></p>
+<footer class="pie">Hecho el 17/10/2026 con datos de <code>web/data/portada.json</code>. Las fotos se piden al propio sitio (radarbalcarce.com/fotos-notas/). Nada de esto está en el sitio todavía.</footer>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  /* Los datos de la portada del 17/10/2026, copiados de web/data/portada.json: nota principal (p), lo último (u), bloques por sección (b), clima (cl, d), farmacia (fa) y agenda (ev). */
+  var D = {"g":"2026-10-17T07:02:54.236Z","p":{"t":"El INTA Balcarce participa de una investigación global sobre suelo","c":"Un estudio internacional relevó veinte establecimientos del sudeste bonaerense. Los resultados indican que…","s":"Agro","k":"Agro","h":"2026-10-17T02:40:23.000Z","f":"rwxsr5","m":1,"l":1},"u":[{"t":"Boca vence a Talleres con goles de Merentiel y Flores","c":"El conjunto de la ribera se impuso por dos a uno ante la T en condición de local y trepó a la cima de la…","s":"Fútbol","k":"Fútbol","h":"2026-10-17T01:02:03.000Z","f":"1r0oe4f","m":6,"l":0},{"t":"El Club de Pesca Balcarce impulsa operativos de control en Laguna La Brava","c":"Organismos provinciales y locales intensifican la fiscalización pesquera en la zona de la cola de la…","s":"Política","k":"Política","h":"2026-10-17T01:01:19.495Z","f":"1n6g7ka","m":1,"l":1},{"t":"Fallece Fernando Confessore, el histórico meteorólogo de TN","c":"El especialista en clima murió el viernes a la madrugada tras sufrir un infarto. Colegias y allegados lo…","s":"Cultura","k":"Cultura y agenda","h":"2026-10-17T00:56:15.000Z","f":null,"m":2,"l":0},{"t":"El repaso de la noche en Radar Balcarce: Museo Histórico Municipal, morosidad y fútbol","c":"Radar Balcarce publicó a las 21:06 de este viernes 16 de octubre el repaso de la noche en Instagram y…","s":"Cultura","k":"Cultura y agenda","h":"2026-10-17T00:06:36.597Z","f":"collage-repaso20261016noche","m":0,"l":0},{"t":"Santilli pide acuerdos a gobernadores y cuestiona a Kicillof","c":"El jefe de Gabinete reclamó consensos para avanzar con reformas económicas. Cuestionó la política…","s":"Política","k":"Política","h":"2026-10-16T23:59:37.000Z","f":null,"m":5,"l":0},{"t":"Los lentes inteligentes de Meta graban charlas sin la orden de voz","c":"Algunos anteojos Ray-Ban de Meta registraron conversaciones y crearon transcripciones sin que los usuarios…","s":"Tecnología e IA","k":"Tecnología","h":"2026-10-16T22:47:21.000Z","f":null,"m":1,"l":0}],"b":[{"s":"Balcarce","k":"Balcarce","n":[{"t":"Una vecina dona un riñón a su hija y transitan la recuperación","c":"Roxana se convirtió en la donante de su hija Valentina Verlotta tras años de tratamiento por insuficiencia…","s":"Balcarce","k":"Balcarce","h":"2026-10-16T18:00:38.301Z","f":"1edq6ii-ia","m":1,"l":1},{"t":"La Dirección de Juventud firma un acuerdo para vender entradas online","c":"El Teatro Municipal contará con una nueva plataforma de venta de localidades a partir de 2027. Permitirá…","s":"Balcarce","k":"Balcarce","h":"2026-10-16T13:07:25.000Z","f":"1jdsdep-ia","m":5,"l":1},{"t":"La Subsecretaría de Deporte mantiene las clases de yoga con vacantes","c":"La Subsecretaría de Deporte anunció que siguen las clases de yoga dictadas por Vilma Suárez en la sala Dr.…","s":"Balcarce","k":"Balcarce","h":"2026-10-16T17:05:07.863Z","f":"1qtfiwu","m":1,"l":1}]},{"s":"Política","k":"Política","n":[{"t":"Santilli pide acuerdos a gobernadores y cuestiona a Kicillof","c":"El jefe de Gabinete reclamó consensos para avanzar con reformas económicas. Cuestionó la política…","s":"Política","k":"Política","h":"2026-10-16T23:59:37.000Z","f":null,"m":5,"l":0},{"t":"El Club de Pesca Balcarce impulsa operativos de control en Laguna La Brava","c":"Organismos provinciales y locales intensifican la fiscalización pesquera en la zona de la cola de la…","s":"Política","k":"Política","h":"2026-10-17T01:01:19.495Z","f":"1n6g7ka","m":1,"l":1},{"t":"La CGT reclama unidad al peronismo y apunta contra el Gobierno","c":"La central obrera conmemoró el Día de la Lealtad con críticas a la gestión nacional y un llamado a dejar…","s":"Política","k":"Política","h":"2026-10-16T20:44:25.504Z","f":null,"m":4,"l":0}]},{"s":"Fútbol","k":"Fútbol","n":[{"t":"Daniel Bertoni baja su candidatura a la presidencia de Independiente","c":"El exjugador desistió de postularse para conducir el club de Avellaneda y acordó sumarse al espacio que…","s":"Fútbol","k":"Fútbol","h":"2026-10-16T20:21:51.579Z","f":"zbpvf9","m":4,"l":0},{"t":"Enzo Fernández analiza el futuro de la Selección sin Lionel Messi","c":"El mediocampista de 25 años valoró el legado del capitán tras su retiro y pidió la continuidad de Lionel…","s":"Fútbol","k":"Fútbol","h":"2026-10-16T20:21:31.000Z","f":"1ifa1zl-ia","m":4,"l":0},{"t":"La organización designa los árbitros para la primera fecha del torneo","c":"Se confirmaron los jueces que dirigirán los encuentros de la jornada inicial del certamen. Doce equipos…","s":"Fútbol","k":"Fútbol","h":"2026-10-16T21:37:27.000Z","f":"1w9aja0","m":1,"l":1}]},{"s":"Deportes","k":"Deportes","n":[{"t":"Max Verstappen choca al argentino Ezequiel Pérez Companc en Portugal","c":"El piloto neerlandés embistió el auto del argentino durante las prácticas del GT World Challenge Europe en…","s":"Deportes","k":"Deportes","h":"2026-10-16T12:38:30.000Z","f":null,"m":13,"l":0},{"t":"Jennifer Lasa gana en el campeonato argentino de powerlifting","c":"La deportista local se impuso en el torneo organizado por la Agrupación de Powerlifting Argentina en Mar…","s":"Deportes","k":"Deportes","h":"2026-10-16T12:01:00.000Z","f":"1h2xfr3","m":1,"l":1},{"t":"Campo de Pato mete a sus dos equipos en semifinales de rugby","c":"Los planteles superior de Pato Naranja y Pato Negro ganaron sus compromisos en la última fecha y avanzaron…","s":"Deportes","k":"Deportes","h":"2026-10-16T12:00:07.000Z","f":null,"m":1,"l":1}]},{"s":"Automovilismo","k":"Automovilismo","n":[{"t":"Saúl Eidilstein domina la primera clasificación del Turismo Pista","c":"Saúl Eidilstein se quedó con el mejor registro en el arranque de la fecha en Concepción del Uruguay. La…","s":"Automovilismo","k":"Automovilismo","h":"2026-10-16T20:09:06.000Z","f":"1qgpd66","m":2,"l":0},{"t":"Lando Norris califica a Franco Colapinto como un buen amigo","c":"El piloto británico de Fórmula 1 bajó la tensión con su colega argentino en una transmisión en streaming,…","s":"Automovilismo","k":"Automovilismo","h":"2026-10-15T21:05:10.000Z","f":"32f6mu","m":5,"l":0}]},{"s":"Agro","k":"Agro","n":[{"t":"El IPCVA y el Gobierno nacional realizan una misión comercial en Israel","c":"El Instituto de Promoción de la Carne Vacuna Argentina integró una delegación junto a PromArgentina para…","s":"Agro","k":"Agro","h":"2026-10-16T15:38:52.000Z","f":"1wg0k3x","m":2,"l":0},{"t":"El Senasa autoriza a fundaciones sanitarias a vender dispositivos de identificación animal","c":"El organismo oficial habilitó a los entes de lucha contra la aftosa a comercializar caravanas y brindar…","s":"Agro","k":"Agro","h":"2026-10-16T13:19:39.000Z","f":"1ledsc7","m":3,"l":0}]},{"s":"Economía","k":"Economía","n":[{"t":"La morosidad de las familias baja en agosto y llega al 12,81%","c":"El Banco Central informó que el retraso en los pagos de los hogares registró una leve merma durante el…","s":"Economía","k":"Economía","h":"2026-10-16T21:04:58.000Z","f":null,"m":5,"l":0},{"t":"El riesgo país sube a 648 puntos básicos y el dólar mayorista llega a 1518 pesos","c":"El indicador del banco JP Morgan registró una suba de 26 unidades y quedó cerca de su máximo anual. En…","s":"Economía","k":"Economía","h":"2026-10-16T19:23:05.000Z","f":"1ilkp5d","m":4,"l":0},{"t":"El Banco Central compra 642 millones de dólares y supera los 50.000 millones en reservas","c":"La autoridad monetaria cerró su mejor semana de adquisición de divisas desde julio. El saldo acumulado en…","s":"Economía","k":"Economía","h":"2026-10-16T20:52:12.000Z","f":"1idlalr","m":2,"l":0}]},{"s":"Educación","k":"Educación","n":[{"t":"La Base Aérea de Morón despide con un homenaje al meteorólogo Fernando Confessore","c":"La comunidad educativa y sus compañeros despidieron al especialista en meteorología de 58 años con una…","s":"Educación","k":"Educación","h":"2026-10-16T20:12:24.000Z","f":null,"m":4,"l":0},{"t":"Estudiantes y docentes marchan por el financiamiento universitario","c":"Una nueva movilización federal reunió a la comunidad académica y sindical en reclamo de fondos para las…","s":"Educación","k":"Educación","h":"2026-10-15T20:17:00.000Z","f":"4gc6sa","m":3,"l":0},{"t":"UDOCBA concreta paro docente con alto acatamiento y reclama mejoras","c":"El gremio concretó el jueves una medida de fuerza con una adhesión estimada en el 90% en el distrito.…","s":"Educación","k":"Educación","h":"2026-10-15T21:32:31.000Z","f":"n6v2wu","m":1,"l":1}]}],"cl":{"temp":7,"sensacion":5,"humedad":92,"viento":12,"rumbo":"S","cielo":"Nublado","esDeDia":false},"d":[{"fecha":"2026-10-17","dia":"sáb","max":11,"min":5,"lluvia":12,"codigo":51,"viento":20,"milimetros":1,"cielo":"Llovizna leve"},{"fecha":"2026-10-18","dia":"dom","max":12,"min":5,"lluvia":4,"codigo":3,"viento":15,"milimetros":0,"cielo":"Nublado"},{"fecha":"2026-10-19","dia":"lun","max":16,"min":5,"lluvia":0,"codigo":3,"viento":17,"milimetros":0,"cielo":"Nublado"}],"fa":[{"nombre":"Santa Inés","direccion":"Calle 17 N° 537","telefono":"42-4301"},{"nombre":"Del Patio","direccion":"Av. 39 N° 793","telefono":"42-2200"}],"ev":[{"n":"CAMINATA ROSA","d":"2026-10-24 15:00:00","l":"Plaza Libertad"},{"n":"PASEO DE PRIMAVERA EN SAN AGUSTÍN","d":"2026-11-07 14:00:00","l":"San Agustín"}]};
+  var FOTOS = 'https://radarbalcarce.com/fotos-notas/';
+  var COLOR = { 'Balcarce': '#B91C1C', 'Política': '#3730A3', 'Policiales': '#831843', 'Fútbol': '#7C3AED', 'Deportes': '#0F766E', 'Automovilismo': '#B45309', 'Agro': '#5A6B0A', 'Economía': '#8A6500', 'Educación': '#1D4BE0', 'Salud': '#004E5C', 'Ciencia': '#772E9E', 'Cultura y agenda': '#9D2C8F', 'Tecnología': '#0B6FB8', 'Argentina': '#4B5563' };
+  var DIAS = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+  var MESES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function col(k) { return COLOR[k] || '#4B5563'; }
+  /* La hora de Balcarce (UTC-3); si no es del día de la portada, "ayer". */
+  function bal(iso) { return new Date(new Date(iso).getTime() - 3 * 3600e3); }
+  function hora(iso) {
+    var d = bal(iso), g = bal(D.g);
+    var hh = ('0' + d.getUTCHours()).slice(-2) + ':' + ('0' + d.getUTCMinutes()).slice(-2);
+    return d.getUTCDate() === g.getUTCDate() ? hh : 'ayer ' + hh;
+  }
+  function soloHora(iso) { var d = bal(iso); return ('0' + d.getUTCHours()).slice(-2) + ':' + ('0' + d.getUTCMinutes()).slice(-2); }
+  function dia(iso) { var d = bal(iso); return d.getUTCDate() === bal(D.g).getUTCDate() ? 'hoy' : 'ayer'; }
+  function foto(n, clase, alt) {
+    if (!n.f) return '<div class="placa ' + (clase || '') + '" style="--c:' + col(n.k) + '" role="img" aria-label="' + esc(n.s) + '">' + esc(n.s) + '</div>';
+    return '<img class="foto ' + (clase || '') + '" src="' + FOTOS + n.f + '.jpg" alt="' + esc(alt || '') + '" loading="lazy" width="1200" height="900">';
+  }
+  function tag(n) { return '<span class="tag" style="--c:' + col(n.k) + '">' + esc(n.s) + '</span>'; }
+  function cab() { return '<div class="cab"><span class="logo">Radar <span>Balcarce</span></span><small>sáb 17 de octubre</small></div>'; }
+
+  function fechaAgenda(e) {
+    var m = /^(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2})/.exec(e.d); if (!m) return '';
+    var f = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+    return DIAS[f.getUTCDay()] + ' ' + (+m[3]) + ' ' + MESES[+m[2] - 1] + ' · ' + m[4] + ':' + m[5];
+  }
+  function nombre(s) { s = String(s).toLowerCase(); return s.charAt(0).toUpperCase() + s.slice(1); }
+  var hoyDia = D.d[0], f0 = D.fa[0], e0 = D.ev[0];
+
+  /* ---- Propuesta 1 ---- */
+  function p1() {
+    var h = cab();
+    h += '<section class="servicio" aria-label="Servicio"><h3>Servicio · hoy en Balcarce</h3><div class="tira" tabindex="0" role="region" aria-label="Clima, farmacia y agenda: deslizá para ver los tres">' +
+      '<a class="s" href="#" style="--c:#0B6FB8"><small>Clima</small><b>' + D.cl.temp + '° · ' + esc(D.cl.cielo) + '</b><span>Hoy ' + hoyDia.min + '° / ' + hoyDia.max + '° · lluvia ' + hoyDia.lluvia + ' %</span><i>Pronóstico →</i></a>' +
+      '<a class="s" href="#" style="--c:#16615B"><small>Farmacia de turno</small><b>' + esc(f0.nombre) + '</b><span>' + esc(f0.direccion) + ' · Tel. ' + esc(f0.telefono) + '</span><i>Llamar · Cómo llegar →</i></a>' +
+      '<a class="s" href="#" style="--c:#8A6500"><small>Agenda</small><b>' + esc(nombre(e0.n)) + '</b><span>' + fechaAgenda(e0) + ' · ' + esc(e0.l) + '</span><i>Toda la agenda →</i></a>' +
+      '</div></section>';
+    h += '<div class="cuerpo-dos"><article class="grande"><a href="#">' + foto(D.p, '', D.p.t).replace('loading="lazy" ', 'fetchpriority="high" ') +
+      '<div class="c"><div class="chapa">' + tag(D.p) + '<span class="tira-hora">' + hora(D.p.h) + '</span></div><h2>' + esc(D.p.t) + '</h2><p>' + esc(D.p.c) + '</p></div></a></article>';
+    h += '<section class="ultimo"><h3>Lo último <small>actualizado a las ' + soloHora(D.g) + '</small></h3><ol>';
+    D.u.forEach(function (n) {
+      h += '<li><time class="tira-hora" datetime="' + n.h + '">' + soloHora(n.h) + '</time><a class="t" href="#">' + esc(n.t) + '<small style="--c:' + col(n.k) + '">' + esc(n.s) + (dia(n.h) === 'ayer' ? ' · ayer' : '') + '</small></a>' +
+        (n.f ? '<img class="mini" src="' + FOTOS + n.f + '.jpg" alt="" loading="lazy" width="64" height="64">' : '<span class="placa mini" style="--c:' + col(n.k) + ';width:64px;height:64px;border-radius:8px"></span>') + '</li>';
+    });
+    h += '</ol></section></div>';
+    D.b.forEach(function (b) {
+      h += '<section class="sec" aria-label="' + esc(b.s) + '"><div class="cab-sec" style="--c:' + col(b.k) + '"><span class="barra"></span><h3>' + esc(b.s) + '</h3><a class="ver" href="#">Ver todo →</a></div>' +
+        '<div class="carrusel" tabindex="0" role="region" aria-label="' + esc(b.s) + ': deslizá para ver más">';
+      b.n.forEach(function (n) {
+        h += '<a class="card" href="#">' + foto(n, '', '') + '<h4>' + esc(n.t) + '</h4><div class="chapa"><span class="tira-hora">' + hora(n.h) + '</span>' + (n.m > 1 ? '<span>· ' + n.m + ' medios</span>' : '') + '</div></a>';
+      });
+      h += '</div></section>';
+    });
+    return h;
+  }
+
+  /* ---- Propuesta 2 ---- */
+  function p2() {
+    var h = cab();
+    h += '<section class="hoy" aria-label="Servicio"><h3>Servicio · hoy en Balcarce</h3><div class="mosaico">' +
+      '<a class="m clima" href="#" style="--c:#0B6FB8"><small>Clima ahora</small><b>' + D.cl.temp + '°</b><span>' + esc(D.cl.cielo) + ' · mín ' + hoyDia.min + '° máx ' + hoyDia.max + '°</span></a>' +
+      '<a class="m" href="#" style="--c:#16615B"><small>Farmacia de turno</small><b>' + esc(f0.nombre) + '</b><span>' + esc(f0.direccion) + '</span></a>' +
+      '<a class="m" href="#" style="--c:#8A6500"><small>Agenda</small><b>' + esc(nombre(e0.n)) + '</b><span>' + fechaAgenda(e0) + '</span></a>' +
+      '</div></section>';
+    h += '<div class="dos"><article class="heroe"><a href="#">' + foto(D.p, '', D.p.t).replace('loading="lazy" ', 'fetchpriority="high" ') +
+      '<div class="velo"><div class="chapa"><span class="tag" style="--c:' + col(D.p.k) + '">' + esc(D.p.s) + '</span><span class="tira-hora" style="color:#fff">' + hora(D.p.h) + '</span></div><h2>' + esc(D.p.t) + '</h2><p>' + esc(D.p.c) + '</p></div></a></article>';
+    h += '<section class="linea"><h3>Lo último</h3><ol>';
+    D.u.forEach(function (n) {
+      h += '<li style="--c:' + col(n.k) + '"><time datetime="' + n.h + '">' + soloHora(n.h) + '</time><small>' + esc(n.s) + '</small><a class="t" href="#">' + esc(n.t) + '</a></li>';
+    });
+    h += '</ol></section></div>';
+    h += '<nav class="saltar" aria-label="Saltar a una sección">';
+    D.b.forEach(function (b, i) { h += '<a href="#p2-s' + i + '" style="--c:' + col(b.k) + '">' + esc(b.s) + '</a>'; });
+    h += '</nav>';
+    D.b.forEach(function (b, i) {
+      h += '<section class="sec" id="p2-s' + i + '" aria-label="' + esc(b.s) + '"><div class="cab-sec" style="--c:' + col(b.k) + '"><span class="barra"></span><h3>' + esc(b.s) + '</h3><small>' + b.n.length + ' notas</small><a class="ver" href="#">Ver todo →</a></div>' +
+        '<div class="carrusel" tabindex="0" role="region" aria-label="' + esc(b.s) + ': deslizá para ver más">';
+      b.n.forEach(function (n) {
+        h += '<a class="card" href="#">' + foto(n, '', '') + '<h4>' + esc(n.t) + '</h4><div class="chapa"><span class="tira-hora">' + hora(n.h) + '</span></div></a>';
+      });
+      h += '</div></section>';
+    });
+    return h;
+  }
+
+  document.getElementById('p1').innerHTML = p1();
+  document.getElementById('p2').innerHTML = p2();
+  /* Dentro de la vista previa los enlaces no llevan a ningún lado; los atajos de la propuesta 2 sí se desplazan. */
+  Array.prototype.forEach.call(document.querySelectorAll('.pantalla a'), function (a) {
+    a.addEventListener('click', function (ev) {
+      var href = a.getAttribute('href');
+      if (href === '#') { ev.preventDefault(); return; }
+      if (href && href.charAt(0) === '#') {
+        ev.preventDefault();
+        var el = document.getElementById(href.slice(1)), cont = a.closest('.pantalla');
+        if (el && cont) cont.scrollTo({ top: el.offsetTop - 52, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* Los interruptores. También se pueden elegir desde la dirección: #p1, #p2, #escritorio y #largo (los teléfonos a su altura completa, para ver toda la portada de una vez). */
+  var mesa = document.getElementById('mesa');
+  (function () {
+    var h = location.hash.replace('#', '').split(',');
+    if (h.indexOf('p1') >= 0 || h.indexOf('p2') >= 0) mesa.setAttribute('data-vista', h.indexOf('p1') >= 0 ? 'p1' : 'p2');
+    if (h.indexOf('escritorio') >= 0) mesa.setAttribute('data-ancho', 'escritorio');
+    if (h.indexOf('largo') >= 0) { var s = document.createElement('style'); s.textContent = '.marco{height:auto!important}.pantalla{height:auto!important;overflow:visible!important}'; document.head.appendChild(s); }
+    Array.prototype.forEach.call(document.querySelectorAll('#g-vista button'), function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-v') === mesa.getAttribute('data-vista'))); });
+    Array.prototype.forEach.call(document.querySelectorAll('#g-ancho button'), function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-a') === mesa.getAttribute('data-ancho'))); });
+  })();
+  function interruptor(id, clave, atributo) {
+    var grupo = document.getElementById(id);
+    grupo.addEventListener('click', function (ev) {
+      var b = ev.target.closest('button'); if (!b) return;
+      mesa.setAttribute(atributo, b.getAttribute(clave));
+      Array.prototype.forEach.call(grupo.querySelectorAll('button'), function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+    });
+  }
+  interruptor('g-vista', 'data-v', 'data-vista');
+  interruptor('g-ancho', 'data-a', 'data-ancho');
+
+  /* Las decisiones */
+  var PUNTOS = [
+    ['servicio', 'El bloque de Servicio arriba', ['Tira que se desliza (propuesta 1)', 'Mosaico fijo de color (propuesta 2)', 'Dejarlo como está hoy']],
+    ['principal', 'La nota principal', ['Título debajo de la foto (propuesta 1)', 'Título sobre la foto (propuesta 2)', 'Sobre la foto sólo si la foto es buena']],
+    ['ultimo', '«Lo último»', ['Lista con hora y miniatura (propuesta 1)', 'Línea de tiempo sin fotos (propuesta 2)', '6 notas', '10 notas']],
+    ['carruseles', 'Las secciones con scroll lateral', ['Sí, todas', 'Sí, pero sólo las ocho de la barra', 'No: listas como hoy']],
+    ['atajos', 'La fila de atajos por sección (propuesta 2)', ['Sí', 'No']],
+    ['fotos', 'Hacer las fotos en tres tamaños primero (cuando vivan en R2)', ['Sí, antes que nada', 'No hace falta']],
+    ['hoy', 'Enlace chico a «Lo de hoy» al lado de «Lo último»', ['Sí', 'No']]
+  ];
+  var cont = document.getElementById('decisiones');
+  PUNTOS.forEach(function (p) {
+    var d = document.createElement('div'); d.className = 'decision';
+    d.innerHTML = '<p>' + esc(p[1]) + '</p>' + p[2].map(function (o, i) {
+      return '<label><input type="radio" name="' + p[0] + '" value="' + esc(o) + '"> ' + esc(o) + '</label>';
+    }).join('');
+    cont.appendChild(d);
+  });
+  function leer() { try { return JSON.parse(localStorage.getItem('portada2') || '{}'); } catch (e) { return {}; } }
+  function guardar(o) { try { localStorage.setItem('portada2', JSON.stringify(o)); } catch (e) { /* sin almacenamiento: no pasa nada */ } }
+  var guardado = leer();
+  Array.prototype.forEach.call(cont.querySelectorAll('input'), function (r) {
+    if (guardado[r.name] === r.value) r.checked = true;
+    r.addEventListener('change', function () { var o = leer(); o[r.name] = r.value; guardar(o); });
+  });
+  document.getElementById('copiar').addEventListener('click', function () {
+    var o = leer();
+    var t = 'Mis decisiones sobre la Portada 2:\n' + PUNTOS.map(function (p) { return '- ' + p[1] + ': ' + (o[p[0]] || 'sin marcar'); }).join('\n');
+    var aviso = document.getElementById('copiado');
+    function listo() { aviso.textContent = 'Copiado. Pegalo en el chat.'; setTimeout(function () { aviso.textContent = ''; }, 3000); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(listo, function () { aviso.textContent = 'No se pudo copiar. Seleccioná y copiá a mano.'; });
+    else aviso.textContent = 'Tu navegador no deja copiar solo.';
+  });
+  document.getElementById('borrar').addEventListener('click', function () {
+    guardar({}); Array.prototype.forEach.call(cont.querySelectorAll('input'), function (r) { r.checked = false; });
+  });
+})();
+</script>
+</body>
+</html>

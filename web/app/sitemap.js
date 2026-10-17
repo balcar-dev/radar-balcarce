@@ -37,6 +37,8 @@ export default function sitemap() {
 
   const fijas = [
     { url: base, lastModified: ultima, changeFrequency: 'hourly', priority: 1 },
+    // Lo de hoy en una sola página (17/10/2026, regla 255): cambia en cada armado.
+    { url: `${base}/hoy`, lastModified: ultima, changeFrequency: 'hourly', priority: 0.9 },
     { url: `${base}/farmacias`, lastModified: generado, changeFrequency: 'daily', priority: 0.8 },
     { url: `${base}/clima`, lastModified: generado, changeFrequency: 'hourly', priority: 0.7 },
     { url: `${base}/dolar`, lastModified: generado, changeFrequency: 'hourly', priority: 0.7 },
