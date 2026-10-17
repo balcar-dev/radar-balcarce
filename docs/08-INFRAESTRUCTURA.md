@@ -105,9 +105,9 @@ Aparte, lo que decide una persona en el panel del celular se escribe en el
 repositorio con su llave de GitHub, y "Escribir con IA" dispara "Panel del
 celular", que tarda un minuto (`09-PANEL`).
 
-## Los treinta workflows
+## Los treinta workflows (y dos de la mudanza)
 
-(Son los 30 archivos de `.github/workflows/` al 17/10/2026. Ese día se borraron seis que
+(Son los 30 archivos de `.github/workflows/` al 17/10/2026; el 18/10 se sumaron «Piezas de redes» y «Desplegar Workers de Cloudflare», que no corren solos. Ese día se borraron seis que
 no se usaban, con sus scripts: Prueba de WhatsApp, Probar imágenes con Workers AI
 (flux), Probar imagen desde la nota, Sondeo de fuentes desde Cloudflare (con su Worker
 `infra/sondeo-fuentes/`), Auditar redes y Fotos a R2 (nunca corrió). El 15/10 se borraron
@@ -143,6 +143,8 @@ Los que sólo corren a mano y no escriben nada en el repositorio están marcados
 | **Pruebas con otra hora** (`pruebas-otra-hora.yml`) | Lunes 8:43 UTC; a mano | Corre las pruebas como si fuera otra hora y otra fecha (`pruebas/hora-falsa.mjs`). Falló el 5 y el 12/10 (la memoria de voces); el 17/10 pasa | Ninguno | Nada | 40 min |
 | **Respaldo** (`respaldo.yml`) | Domingos 6:17 UTC (3:17 en Balcarce); a mano | Arma un paquete de git con todo el historial y una copia de datos y fotos (artefacto de 90 días); si hay GitLab (`GITLAB_TOKEN`, variable `GITLAB_REPO`) sube un espejo, y si hay R2 (variable `R2_RESPALDOS`) sube el paquete. **Hoy (16/10) sube a R2** (`radar-balcarce-respaldos`); **el espejo de GitLab no corre**: no están cargados ni `GITLAB_TOKEN` ni `GITLAB_REPO` | `GITLAB_TOKEN`, `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; variables `GITLAB_REPO`, `R2_RESPALDOS` | Nada | 40 min |
 | **Probar la restauración del respaldo** (`probar-restauracion.yml`) | A mano (opcional: `fecha`) | Baja de R2 el respaldo de ese día (junta las partes según el manifiesto y compara el sha256), rearma el repositorio desde el paquete, corre `git fsck`, compara el último commit con GitHub y abre el archivo de datos y fotos. Anduvo el 15/10 | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; variable `R2_RESPALDOS` | Nada | 20 min |
+| **Piezas de redes** (`redes-piezas.yml`, 18/10/2026) | Sólo a mano o por el Worker de tareas (acción «redes»), **y sólo con `redes.yml` en la lista `NUBE` del reloj**; hoy no corre | `npm ci`, la memoria de voces, `reels/plan.mjs --generar --solo=…` con `RENDER_REMOTO=Si`: pide la voz a Gemini, arma el pedido de video, lo sube a R2 y despierta al repositorio público de render; **no espera el video** | `GEMINI_API_KEY_REDES`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `CLOUDFLARE_ACCOUNT_ID`, `RENDER_GITHUB_TOKEN`; `R2_RENDER` | Nada (la memoria de voces va a la caché de Actions) | 10 min |
+| **Desplegar Workers de Cloudflare** (`desplegar-nube.yml`, 18/10/2026) | A mano: `que` (todo, tareas, motor, vigilante, reloj), `con_nube` y `nube` (qué workflows pasan a Cloudflare) | Crea los depósitos R2 y los KV, sube los Workers de la mudanza con wrangler 4.139.0 (`--keep-vars`) y carga sus secretos por `wrangler secret bulk` (`infra/compartido/secretos-para-wrangler.mjs`). Sin `con_nube` el reloj y el vigilante quedan como siempre | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` y los secretos de los Workers (`docs/etapa-10-operacion/PLAN-DE-CAMBIO.md`) | Nada | 15 min |
 | **Reloj de Cloudflare** (`reloj-cloudflare.yml`) | A mano (cuando cambia el reloj) | Sube el Worker `radar-balcarce-reloj` (`infra/reloj-cloudflare/`) con wrangler 4.139.0 y le carga el secreto | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `RELOJ_GITHUB_TOKEN` | Nada | 10 min |
 | **Vigilante de Cloudflare** (`vigilante-cloudflare.yml`) | A mano (cuando cambia el vigilante) | Sube el Worker `radar-balcarce-vigilante` (`infra/vigilante-cloudflare/`) con wrangler 4.139.0, crea su KV si falta y le carga los secretos | `CLOUDFLARE_API_TOKEN` (con «Workers KV Storage: Edit»), `CLOUDFLARE_ACCOUNT_ID`, `VIGILANTE_TOKEN`; opcional `VIGILANTE_GITHUB_TOKEN` (está cargado) | Nada | 10 min |
 | **Ilustrar notas sin foto** (`ilustrar-notas.yml`) | El reloj de Cloudflare a los :20 cada 2 horas, de 7:20 a 23:20 de Balcarce, con `automatico` = `true`; a mano: revisar (`horas`, `ids`) o aplicar (`aplicar`, `corrida`, `ids`) | `web/scripts/ilustrar-notas.mjs`: elige las notas sin foto real (salta muertes, sepelios, semáforo rojo y lo que ya tiene imagen), pide a Gemini el prompt y al Worker de imágenes la ilustración (SDXL, 1024 × 576), la hace mirar otra vez por Gemini y, en automático, guarda sólo las que pasan ese control. Hasta 12 llamadas al Worker por corrida y 20 por día. Nunca pisa una ilustración hecha con Gemini web. Regla 185; `docs/flujos/IMAGENES-CON-GEMINI-WEB.md` | `GEMINI_API_KEY_REDACCION`, `GEMINI_API_KEY_CLASIFICACION`, `VIGILANTE_TOKEN` (la contraseña del Worker) | `web/data/fotos-ia.json` y `web/public/fotos-notas/<id>-ia.jpg` (el paso que guarda hace fila con "Actualizar la web") | 30 min (guardar, 15) |
@@ -347,6 +349,8 @@ La cuenta de Cloudflare (`radarbalcarce@gmail.com`) tiene contratado el plan
 |---|---|---|---|
 | `radar-balcarce-reloj` (`infra/reloj-cloudflare/`) | El despertador (arriba) | **Andando** desde el 15/10 | «Reloj de Cloudflare» |
 | `radar-balcarce-vigilante` (`infra/vigilante-cloudflare/`) | Mira desde afuera a los :12 y :42 y manda todos los mails (`POST /avisar`) | **Andando** desde el 15/10 | «Vigilante de Cloudflare» |
+| `radar-balcarce-tareas` (`infra/tareas-cloudflare/`) | **Nuevo (18/10/2026, escrito y probado en Node; todavía no subido).** Vigilancia, auditoría IA, pistas, informe diario, ilustraciones y la parte de Redes que no necesita ffmpeg, en lugar de seis workflows | Sin subir: lo prende el reloj con `NUBE` | «Desplegar Workers de Cloudflare» |
+| `radar-balcarce-motor` (`infra/motor-cloudflare/`) | **Nuevo (18/10/2026).** El Worker al que se conecta Workers Builds: la vuelta de «Actualizar la web» corre en su compilación (6.000 minutos por mes incluidos) | Sin subir | «Desplegar Workers de Cloudflare» |
 | `radar-balcarce-imagenes` (`infra/imagenes-cloudflare/`) | Genera imágenes con Workers AI (SDXL y otros) en `…workers.dev/generar`, con `VIGILANTE_TOKEN` como contraseña. Lo usan «Ilustrar notas sin foto» y «Generar fondos del clima» | **Andando** desde el 16/10 | «Imágenes con Workers AI» |
 | `radar-balcarce-archivo` (`infra/archivo-cloudflare/`) | El archivo permanente: sirve desde el depósito `radar-archivo` las notas que ya salieron del sitio | **Subido sin ruta** (sólo en workers.dev) desde el 16/10, con la carga inicial hecha (1.165 notas). Cada vuelta de "Actualizar la web", antes de subir el sitio, guarda ahí las que están por salir. **Los lectores todavía no lo ven**: falta poner la ruta `radarbalcarce.com/nota/*` (el token de Cloudflare necesita «Zone → Workers Routes: Edit») | «Archivo permanente (producción)»; el de ensayo, `radar-balcarce-archivo-staging`, con «Archivo permanente (staging)» |
 | `radar-balcarce-sondeo-fuentes` | Fue una prueba de una vez (15/10): si los feeds contestan pedidos desde Cloudflare | **Su carpeta y su workflow se borraron el 17/10. Falta, a mano: borrarlo en Cloudflare** (Workers → `radar-balcarce-sondeo-fuentes` → Settings → Delete) | — |
@@ -358,6 +362,15 @@ desde el 15/10: los videos, audios y placas de las redes) y `radar-archivo`
 fotos**: `R2_FOTOS` y `FOTOS_BASE` no están cargadas, así que las fotos siguen
 saliendo del sitio (`web/public/fotos-notas/`); el workflow que las copiaba ("Fotos a R2")
 nunca se usó y se borró el 17/10.
+
+## La mudanza del robot a Cloudflare (18/10/2026, escrita y probada; sin prender)
+
+Para que el repositorio principal entre en los 2.000 minutos gratis de un repositorio privado (hoy ~14.400 facturables por mes) sin sumar costo, se escribió la mudanza completa: el motor ("Actualizar la web") a **Workers Builds**, las tareas chicas a **un Worker** y el video a un **repositorio público de render** sin secretos. **Está todo en archivos nuevos o detrás de un interruptor (la variable `NUBE` del reloj, vacía por defecto): hoy no cambia nada de lo que anda.**
+
+- Qué se eligió, con qué números, qué costó (US$ 0 nuevo), qué minutos quedan (~1.620 a 1.820 de 2.000) y qué quedó afuera: `docs/etapa-10-operacion/MIGRACION-A-CLOUDFLARE.md`.
+- Cómo se prende, paso a paso, qué se pega y cómo se vuelve atrás en minutos: `docs/etapa-10-operacion/PLAN-DE-CAMBIO.md`.
+- Reglas 230 a 235 (`docs/10-REGLAS-Y-PRUEBAS.md`).
+- Variables y secretos nuevos (los crea y los pega una persona): `RADAR_GITHUB_TOKEN`, `RENDER_GITHUB_TOKEN`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `MOTOR_DEPLOY_HOOK`, y las variables `R2_RENDER` e `INFORME_RESPALDO_EN_GITHUB`; en Cloudflare, depósitos R2 `radar-motor`, `radar-render` y `radar-tareas`.
 
 ## GitHub: el repositorio
 
@@ -627,6 +640,10 @@ límite de gasto en Google (`PENDIENTES.md`).
 |---|---|
 | Cambiar cada cuánto corre algo | El reloj de Cloudflare: `trabajosDelMinuto` (`infra/reloj-cloudflare/worker.mjs`) y, si hace falta despertarlo en otro minuto, `wrangler.toml`; después, **a mano**, el workflow «Reloj de Cloudflare». Los de lo que corre solo ya no tienen `schedule` de GitHub (salvo el informe diario y los semanales) |
 | Cambiar un Worker | Su carpeta en `infra/` y después su workflow (tabla "Los Workers de Cloudflare") |
+| Pasar un trabajo de GitHub a Cloudflare (o volver) | La variable `NUBE` del reloj y del vigilante: se cambia subiendo «Desplegar Workers de Cloudflare» (`docs/etapa-10-operacion/PLAN-DE-CAMBIO.md`) |
+| Qué guarda la vuelta del motor / cuántos minutos de Workers Builds gasta | `infra/motor-cloudflare/archivos.mjs` (igual a la línea `git add` de `actualizar.yml`) y `presupuesto.mjs` |
+| Qué lee y qué escribe una tarea del Worker de tareas | `infra/tareas-cloudflare/tareas.mjs` (`lee`, `escribe`): una prueba con los datos reales la controla |
+| El video de las redes (qué pide el principal y qué arma el render) | `reels/pedido.mjs`, `reels/render-remoto.mjs` y `infra/render-publico/` (se copia con `node scripts/sincronizar-render-publico.mjs`) |
 | Cómo se manda un aviso | `avisar` (`redes/avisar-por-mail.mjs`: mail primero, WhatsApp de respaldo) y `POST /avisar` (`infra/vigilante-cloudflare/worker.mjs`) |
 | Agregar o cambiar un secreto | GitHub → Settings → Secrets and variables → Actions (lo hace una persona) y, si un workflow nuevo lo necesita, el bloque `env:` de ese paso en el `.yml` |
 | Prender o apagar las redes | Variable `REDES_ACTIVAS` |
@@ -648,7 +665,10 @@ límite de gasto en Google (`PENDIENTES.md`).
 | Archivo | Qué hace | Quién lo llama | Qué lee | Qué escribe |
 |---|---|---|---|---|
 | `.github/workflows/*.yml` | Los treinta workflows (tabla de arriba) | El reloj de Cloudflare, GitHub, el panel del celular, una persona | secretos y variables | commits en `main`, artefactos |
-| `infra/*/worker.mjs` y `wrangler.toml` | Los Workers de Cloudflare (reloj, vigilante, imágenes, archivo) | Cloudflare | lo de cada uno | — |
+| `infra/*/worker.mjs` y `wrangler.toml` | Los Workers de Cloudflare (reloj, vigilante, imágenes, archivo y, desde el 18/10, tareas y motor) | Cloudflare | lo de cada uno | — |
+| `infra/compartido/github.mjs` y `r2-s3.mjs` | Guardar y leer en GitHub por la API (un commit de varios archivos) y hablar con R2 por S3 con firma, sin dependencias | el motor, el Worker de tareas, `reels/render-remoto.mjs` | — | commits en `main`, objetos de R2 |
+| `infra/motor-cloudflare/vuelta.mjs` | La vuelta de «Actualizar la web» como un programa (Workers Builds) | el deploy hook del reloj | fuentes, `web/data/`, claves de IA | `web/data/*.json`, el sitio en Pages, la memoria en R2 |
+| `infra/tareas-cloudflare/corredor.mjs` | Corre una tarea chica sobre una carpeta de `/tmp`: baja lo que lee, corre el programa de siempre y guarda lo que cambió | el reloj (binding) | los archivos que la tarea declara | un commit por tarea |
 | `redes/avisar-por-mail.mjs` | Manda un aviso: mail por el Worker vigilante y, si no sale, WhatsApp | vigilancia, auditorías, pistas, núcleo legal, archivo | `VIGILANTE_TOKEN`, `WHATSAPP_*` | — |
 | `redes/informe-diario.mjs` | Los informes de las 8:15 y 21:15 | `informe-diario.yml` | `web/data/`, la API de GitHub | — (manda el mail) |
 | `web/scripts/archivar-a-r2.mjs` | Guarda en R2 las notas que salen del sitio | `actualizar.yml` (cada vuelta), `cloudflare-deploy.yml` (a mano), los dos del archivo permanente |

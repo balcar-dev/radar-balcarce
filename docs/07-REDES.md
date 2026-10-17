@@ -783,9 +783,9 @@ vuelve a pedir: la historia de un reel que sí salió, o una red secundaria que 
   (en la PC, 2 minutos; en GitHub, del orden de uno). El `timeout-minutes: 25` alcanza; si algún día no, la
   pieza sale con la lista quieta.
 
-## El video, como módulo aparte a futuro (`radarbalcarce/radar-balcarce-render`)
+## El video, como módulo aparte (`radarbalcarce/radar-balcarce-render`)
 
-*Anotado el 17/10 a pedido de los dueños; no está implementado.* La idea: que lo que dibuja y arma los videos
+*Anotado el 17/10 a pedido de los dueños. **Escrito y probado el 18/10/2026, sin prender** (`infra/render-publico/`, `reels/pedido.mjs`, `reels/render-remoto.mjs`; reglas 230 a 235): hoy el video se sigue armando en «Redes» como siempre. El plan para prenderlo, en `docs/etapa-10-operacion/PLAN-DE-CAMBIO.md`.* La idea: que lo que dibuja y arma los videos
 (placas, escenas, subtítulos, ffmpeg) corra en un repositorio público aparte, **sin ningún secreto**, y que este
 repositorio le pase todo lo que necesita. Hoy la frontera ya casi existe: `armarReel` (`reels/reel.mjs`) recibe
 la voz por parámetro (`hablar`), así que no necesita saber de Gemini.
@@ -799,9 +799,9 @@ voz a Gemini (`GEMINI_API_KEY_REDES`), el contador del cupo, publicar en Meta (`
 |---|---|
 | `nombre`, `tipo` (`reel` o `historia`) | La pieza (`noticia1`, `clima-manana`…) |
 | `texto` | Lo que dice la voz, ya pasado por `paraLeer` |
-| `voz` | El audio ya generado (`voz.mp3`); el render lo alinea él mismo (`reels/alinear.mjs`, sólo ffmpeg) para sacar los tiempos de cada palabra |
+| `guion`, `voz` | `guion` es lo que `armarReel` espera y `texto` lo ya pasado por `paraLeer` (el render controla que coincidan). `voz` es `{ archivo: "voz.mp3", bytes, sha256 }`: el audio ya generado viaja aparte y el render controla su huella; lo alinea él mismo (`reels/alinear.mjs`, sólo ffmpeg) para sacar los tiempos de cada palabra |
 | `placa` | El SVG de respaldo (la placa quieta) |
-| `escena` | Opcional: `{ tipo: 'clima' \| 'farmacia' \| …, datos }`, lo que hoy arma `reels/escenas/del-plan.mjs` |
+| `escena` | Opcional: `{ fn, args }` (el descriptor que `reels/escenas/del-plan.mjs` le anota a cada escena): la función de `reels/escenas/registro.mjs` que la dibuja y sus datos, todo JSON |
 | `secuencia` | Opcional: `{ placas: [{ svg, marca }], tapa }` (el repaso); las fotos van adentro de los SVG (`data:`) o como archivos |
 | `segunda` | Opcional: el SVG de "Además…" ("Un día como hoy") |
 | `acento` | El color de la palabra que se dice en el subtítulo |
@@ -817,9 +817,15 @@ sirve de memoria (no se vuelve a dibujar lo que ya se dibujó).
 `reels/duracion.mjs` y la parte de video de `reels/reel.mjs`; dependencias, `@resvg/resvg-js` y `ffmpeg-static`.
 Ningún archivo de `web/data/` ni del libro: sólo lo que viene en el pedido, que ya es público.
 
-**Cómo se llamaría:** "Redes" sube los pedidos como artefacto y dispara el workflow del render
-(`repository_dispatch`); el render deja los videos como artefacto y "Redes" los baja y publica. Mientras no
-exista, todo sigue en `reels/` como hoy.
+**Cómo anda (escrito el 18/10/2026):** el Worker de tareas (`infra/tareas-cloudflare/redes.mjs`, en lugar de la mitad de «Redes»)
+sabe qué pieza toca y despierta a «Piezas de redes» (`redes-piezas.yml`), que pide la voz a Gemini, arma el pedido
+(`reels/pedido.mjs`), lo sube a un depósito R2 (`radar-render`) y dispara el render con un `repository_dispatch` que lleva
+**direcciones firmadas de una hora** (una para bajar el pedido, otra para la voz, una por cada archivo que tiene que dejar): el
+render no tiene ni una clave. El render (`infra/render-publico/render.mjs`) valida todo (nombre, texto, escena, huella de la voz,
+direcciones **https de R2**), arma el video con el mismo código de `reels/` y sube el resultado con el **manifiesto último**; el
+Worker de tareas lo ve en la vuelta siguiente del reloj, baja el video y lo publica con `redes/publicar.mjs --piezas`. La carpeta
+`infra/render-publico/` es una **copia** de `reels/` (más `render.mjs`, el workflow y la prueba de humo): una prueba falla si quedó
+vieja. Las piezas fijas (`reels/fijas/`) no pasan por el render: su video ya armado se sube a R2 con su manifiesto.
 
 ## Piezas fijas: armadas de antemano y reutilizadas (1/10/2026)
 

@@ -23,7 +23,7 @@ import { claveDePieza } from '../redes/piezas.mjs';
 import { r2Falso, bindingR2Falso } from './ayudas/r2-falso.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
-const leer = (r) => fs.readFileSync(path.join(RAIZ, r), 'utf8');
+const leer = (r) => fs.readFileSync(path.join(RAIZ, r), 'utf8').replace(/\r\n/g, '\n');
 const leerJson = (r) => JSON.parse(leer(r));
 const silencio = () => {};
 
@@ -45,7 +45,7 @@ test('infra/render-publico está al día con reels/ (si cambió un original, hay
 test('los archivos copiados son EXACTAMENTE los de reels/ (sólo cambia el final de línea) y lo que el render reemplaza es mínimo', async () => {
   for (const ruta of COPIAS) {
     const original = leer(ruta).replace(/\r\n/g, '\n');
-    const copia = fs.readFileSync(path.join(RAIZ, 'infra/render-publico', ruta), 'utf8');
+    const copia = fs.readFileSync(path.join(RAIZ, 'infra/render-publico', ruta), 'utf8').replace(/\r\n/g, '\n');
     assert.equal(copia, original, ruta);
   }
   const r = await reemplazos();

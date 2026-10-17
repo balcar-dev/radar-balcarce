@@ -4,6 +4,13 @@
 arriba. Una decisión no se borra: si se cambia, se anota la nueva y se dice cuál reemplaza. Lo que falta hacer
 está en `PENDIENTES.md`; las reglas numeradas con su prueba, en `docs/10-REGLAS-Y-PRUEBAS.md`.*
 
+## 18/10/2026
+
+| Qué | Por qué | Quién |
+|---|---|---|
+| **18/10: el robot sale de GitHub Actions hacia Cloudflare, sin costo nuevo y con vuelta atrás de un clic.** El motor ("Actualizar la web", 8.100 minutos) corre en **Workers Builds** (6.000 minutos incluidos en el plan que ya se paga) con un presupuesto que no se pasa de lo incluido (la web se arma ~38 veces por día en vez de 48; a 48 siempre costaría ~US$ 6 por mes: `MOTOR_SIN_TOPE`); las tareas chicas (vigilancia, auditoría IA, pistas, informe diario, ilustraciones y la parte de Redes sin ffmpeg) corren en **un Worker**; el video se arma en un **repositorio público sin secretos** (`radar-balcarce-render`, minutos ilimitados) que recibe un pedido con direcciones firmadas de una hora. Los datos **siguen en git** (guardados por la API de GitHub, sin gastar Actions): mover la verdad a R2 obligaba a rehacer el panel del celular y arriesgaba publicar fotos ya retiradas; la memoria, el candado y el contador de minutos sí viven en R2. Todo detrás de la variable `NUBE` del reloj (vacía = todo en GitHub). Escrito y probado en Node (117 pruebas nuevas, reglas 230 a 235); **nada se subió ni se prendió**. Minutos de GitHub que quedarían: ~1.620 a 1.820 de 2.000 (poco margen). Reemplaza, para el motor, el orden de `DISENO-MOTOR.md` (que queda como destino de largo plazo) | Orden de Hernán ("que se haga todo el cambio de una vez; no sumes nada que sume costo"): el repositorio público no puede ser permanente (los secretos están en un repositorio que cualquiera lee) y privado costaba unos US$ 75 a 100 por mes. Detalle, números y lo que quedó afuera: `docs/etapa-10-operacion/MIGRACION-A-CLOUDFLARE.md`; el plan de cambio: `PLAN-DE-CAMBIO.md` | Hernán (orden) · Claude (diseño y código) |
+| **18/10: preguntas abiertas de la mudanza** — (1) ¿Web cada ~38 minutos (gratis) o cada 30 (~US$ 6 por mes)? (2) El repositorio de render es público: ¿está bien que se vean los guiones y placas de lo que ya salió al aire? (alternativa: un Container de Cloudflare, ~US$ 2 por mes). (3) ¿Cuándo se pasa el principal a privado? (propuesta: tres días después de que todo esté en la nube sin errores). | Cambian plata o a quién le queda visible qué | Para Hernán y Andrés |
+
 ## 17/10/2026
 
 | Qué | Por qué | Quién |

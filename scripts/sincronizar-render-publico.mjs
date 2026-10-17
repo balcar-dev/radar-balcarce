@@ -29,6 +29,12 @@ export const CARPETA_DE_FUENTES = 'reels/marca/fuentes';
 /** Normaliza los finales de línea: el repositorio de render es todo LF. */
 const aLF = (texto) => texto.replace(/\r\n/g, '\n');
 
+/** Lo que hay en la carpeta, con los finales de línea de texto normalizados: en la PC de Windows git los entrega con CRLF, y eso no es estar viejo. Las tipografías son binarios y no se tocan. */
+const enLaCarpeta = (ruta) => {
+  const bytes = Buffer.from(fs.readFileSync(path.join(DESTINO, ruta)));
+  return ruta.endsWith('.ttf') ? bytes : Buffer.from(aLF(bytes.toString('utf8')), 'utf8');
+};
+
 /** Los reemplazos: archivos mínimos con el nombre de uno que el render no se lleva. `segundosMaximoHistoria` sale del criterio de verdad. */
 export async function reemplazos() {
   const { PODCAST_VOZ } = await import('../ingesta/criterio.mjs');
@@ -97,7 +103,7 @@ export async function controlar() {
   for (const [ruta, bytes] of await esperado()) {
     const destino = path.join(DESTINO, ruta);
     if (!fs.existsSync(destino)) faltan.push(ruta);
-    else if (!Buffer.from(fs.readFileSync(destino)).equals(bytes)) viejos.push(ruta);
+    else if (!enLaCarpeta(ruta).equals(bytes)) viejos.push(ruta);
   }
   return { viejos, faltan };
 }
@@ -107,7 +113,7 @@ export async function sincronizar() {
   for (const [ruta, bytes] of await esperado()) {
     const destino = path.join(DESTINO, ruta);
     fs.mkdirSync(path.dirname(destino), { recursive: true });
-    if (fs.existsSync(destino) && Buffer.from(fs.readFileSync(destino)).equals(bytes)) continue;
+    if (fs.existsSync(destino) && enLaCarpeta(ruta).equals(bytes)) continue;
     fs.writeFileSync(destino, bytes);
     cambiados += 1;
   }
