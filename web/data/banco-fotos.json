@@ -16715,10 +16715,11 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Reprograman la Caravana de la Alegría para noviembre",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-16T23:01:43.093Z",
-  "intentos": 3,
-  "fuentes": 3
+  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
+  "cuando": "2026-10-17T05:31:31.461Z",
+  "intentos": 4,
+  "fuentes": 3,
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
  "1kd7az5": {
   "medio": "La Nueva",
@@ -17466,10 +17467,11 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "La Corte Suprema remata camiones y obradores de Austral Construcciones",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-16T23:01:43.093Z",
-  "intentos": 3,
-  "fuentes": 5
+  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
+  "cuando": "2026-10-17T05:31:31.461Z",
+  "intentos": 4,
+  "fuentes": 5,
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
  "fgcjjj": {
   "intentado": true,
@@ -17710,8 +17712,8 @@
   "origen": "ninguna",
   "titulo": "Santilli pide acuerdos a gobernadores y cuestiona a Kicillof",
   "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T04:31:14.056Z",
-  "intentos": 2,
+  "cuando": "2026-10-17T05:31:31.461Z",
+  "intentos": 3,
   "fuentes": 5,
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
@@ -17730,8 +17732,8 @@
   "origen": "ninguna",
   "titulo": "La CGT reclama unidad al peronismo y apunta contra el Gobierno",
   "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T04:31:14.056Z",
-  "intentos": 2,
+  "cuando": "2026-10-17T05:31:31.461Z",
+  "intentos": 3,
   "fuentes": 4,
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
@@ -17739,9 +17741,9 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "La Base Aérea de Morón despide con un homenaje al meteorólogo Fernando Confessore",
-  "razon": "Groq también falló: HTTP 429: Request too large for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on output tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T04:31:14.056Z",
-  "intentos": 2,
+  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
+  "cuando": "2026-10-17T05:31:31.461Z",
+  "intentos": 3,
   "fuentes": 5,
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
@@ -17784,9 +17786,9 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "La Libertad Avanza reúne a más de 400 concejales en Avellaneda",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T04:31:14.056Z",
-  "intentos": 2,
+  "razon": "La única foto disponible es una captura de pantalla de televisión (con zócalo de 'Televisión Pública Noticias'), por lo que no puede ser elegida.",
+  "cuando": "2026-10-17T05:31:31.461Z",
+  "intentos": 3,
   "fuentes": 3,
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
@@ -17794,9 +17796,9 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Mediodía Noticias despide con profunda emoción a Fernando Confessore",
-  "razon": "Groq también falló: HTTP 429: Request too large for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on output tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T04:31:14.056Z",
-  "intentos": 2,
+  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
+  "cuando": "2026-10-17T05:31:31.461Z",
+  "intentos": 3,
   "fuentes": 3,
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
@@ -17850,8 +17852,8 @@
   "origen": "ninguna",
   "titulo": "El dólar mayorista finaliza la semana con una suba y cotiza a $1.518",
   "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T04:01:35.346Z",
-  "intentos": 1,
+  "cuando": "2026-10-17T05:31:31.461Z",
+  "intentos": 2,
   "fuentes": 2,
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
@@ -17886,9 +17888,34 @@
   "origen": "ninguna",
   "titulo": "El Banco Central registra una baja mensual en la mora de las familias",
   "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T04:31:14.056Z",
-  "intentos": 1,
+  "cuando": "2026-10-17T05:31:31.461Z",
+  "intentos": 2,
   "fuentes": 2,
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+ },
+ "13sxop4": {
+  "archivo": "fotos-notas/13sxop4.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Un intendente desafía a Milei con quita de tasas a cambio de IVA cero",
+  "enlace": "https://www.clarin.com/politica/intendente-desafio-milei-canje-impuestos-mauricio-macri-salio-respaldarlo-gran-propuesta_0_ClJZFENDun.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/03/15/_II0uiBS8_2000x1500__1.jpg",
+  "razon": "Es la única imagen completa y nítida que muestra al protagonista de la nota, sin marcas de agua ni menores.",
+  "cuando": "2026-10-17T05:31:31.461Z",
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.",
+  "vision": {
+   "proveedor": "groq",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Retrato de un hombre sonriendo frente a un fondo con logos de campaña."
+  },
+  "huella": "2065706367e3313d"
  }
 }
