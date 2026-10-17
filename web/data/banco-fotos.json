@@ -19172,7 +19172,8 @@
    "corresponde": "si",
    "descripcion": "Axel Kicillof hablando en un atril con micrófono"
   },
-  "huella": "192929296265e763"
+  "huella": "192929296265e763",
+  "ausenteDesde": "2026-10-17T23:02:27.624Z"
  },
  "1m52u47": {
   "archivo": "fotos-notas/1m52u47.jpg",
@@ -19510,7 +19511,8 @@
    "corresponde": "si",
    "descripcion": "Axel Kicillof hablando en un atril rodeado de dirigentes políticos."
   },
-  "huella": "78ecd98494b4b6b2"
+  "huella": "78ecd98494b4b6b2",
+  "ausenteDesde": "2026-10-17T23:02:27.624Z"
  },
  "1uov8qv": {
   "archivo": "fotos-notas/1uov8qv.jpg",
@@ -19656,5 +19658,98 @@
    "descripcion": "El papa León XIV saludando con la mano levantada junto a colaboradores."
   },
   "huella": "366a6a65074f5f57"
+ },
+ "1yj43fy": {
+  "archivo": "fotos-notas/1yj43fy.jpg",
+  "medio": "Olé",
+  "credito": "Foto: Olé",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Aprevide sanciona a Sarmiento con dos partidos a puertas cerradas",
+  "enlace": "https://www.ole.com.ar/sarmiento-junin/aprevide-sanciono-sarmiento-incidentes-partido-river_0_T2TZnGAlbc.html",
+  "imagenOriginal": "https://www.ole.com.ar/images/2026/10/14/bX2cfrMaO_2000x1500__1.jpg",
+  "razon": "Es la única foto que ilustra directamente el hecho del que habla la nota, cumpliendo con todos los criterios de calidad y sin marcas de medios ni menores reconocibles.",
+  "cuando": "2026-10-17T23:02:00.903Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": true,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Tribuna de estadio con hinchas y personal policial.",
+   "segunda": {
+    "proveedor": "groq",
+    "marca": false,
+    "menor": false,
+    "jovenes": false,
+    "deArchivo": true,
+    "grafica": false,
+    "stock": false,
+    "corresponde": "generica",
+    "descripcion": "Hinchas de Sarmiento en la tribuna con banderas y policías antimotines en el estadio."
+   },
+   "dudosa": "la primera IA vio gente muy joven"
+  },
+  "huella": "cb0e1dc31d4d6743"
+ },
+ "ht3zid": {
+  "archivo": "fotos-notas/ht3zid.jpg",
+  "medio": "C5N",
+  "credito": "Foto: C5N",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "OpenAI detecta sistemas de inteligencia artificial que vulneran sitios web",
+  "enlace": "https://www.c5n.com/tecnologia/openai-revelo-que-sus-modelos-accedieron-datos-reservados-y-gastaron-criptomonedas-ajenas-n251880",
+  "imagenOriginal": "https://media.c5n.com/p/e85ae7a65b7b4fde4c88b2508b574228/adjuntos/326/imagenes/000/403/0000403755/1200x675/smart/samuel-harris-altman-director-ejecutivo-openai.jpg",
+  "razon": "La IA había preferido la de TN (Todo Noticias), pero no se puede usar (parece una foto de stock): se usa C5N en su lugar, aunque no sea la ideal.",
+  "cuando": "2026-10-17T23:02:00.903Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "generica",
+   "descripcion": "Sam Altman hablando en una conferencia"
+  },
+  "huella": "b83c2d9d746c4e6e"
+ },
+ "6p53et": {
+  "archivo": "fotos-notas/6p53et.jpg",
+  "medio": "Página/12",
+  "credito": "Foto: Página/12",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Kicillof encabeza el acto por el Día de la Lealtad en La Matanza",
+  "enlace": "https://www.pagina12.com.ar/2026/10/17/axel-kicillof-y-fernando-espinoza-encabezaron-un-acto-multitudinario/",
+  "imagenOriginal": "https://www.pagina12.com.ar/resizer/v2/D44UZXYL3FHQLOJUU2IHBIZ7BE.jpeg?smart=true&auth=acf819c74571a421e302e47d77f7e596f340b1b3cf10a271ab35fdae23f06570&width=1200&height=630",
+  "razon": "Es la mejor foto disponible sin marcas de agua, menor ni problemas técnicos, mostrando claramente a Kicillof en el acto.",
+  "cuando": "2026-10-17T23:02:00.903Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Plano medio de Axel Kicillof hablando con micrófono en el acto con dirigentes políticos"
+  },
+  "huella": "c69b023292b6a4a4"
+ },
+ "pdpa8i": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Independiente Rivadavia empata 2 a 2 con Tigre en Mendoza",
+  "razon": "Ninguna de las fotos cumple con todos los requisitos para ser publicada.",
+  "cuando": "2026-10-17T23:02:00.903Z",
+  "intentos": 1,
+  "fuentes": 7
  }
 }

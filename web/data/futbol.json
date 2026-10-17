@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-17T22:32:18.947Z",
+ "consultado": "2026-10-17T23:02:24.554Z",
  "equipos": [
   "9739",
   "3",
@@ -900,8 +900,8 @@
     "id": "401841614",
     "competencia": "liga",
     "inicio": "2026-10-17T23:00:00.000Z",
-    "estado": "programado",
-    "minuto": "0'",
+    "estado": "en-juego",
+    "minuto": "2'",
     "local": {
      "id": "9785",
      "nombre": "Atlético Tucumán",
@@ -923,8 +923,8 @@
     "id": "401841616",
     "competencia": "liga",
     "inicio": "2026-10-17T23:00:00.000Z",
-    "estado": "programado",
-    "minuto": "0'",
+    "estado": "en-juego",
+    "minuto": "2'",
     "local": {
      "id": "21",
      "nombre": "Vélez Sarsfield",
