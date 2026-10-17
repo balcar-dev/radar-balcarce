@@ -17394,7 +17394,8 @@
   "imagenOriginal": "https://media.a24.com/p/eebe929d2985d12764962b940a0721b9/adjuntos/296/imagenes/009/833/0009833834/1200x675/smart/guillermo-lobo-fernando-confessore.jpg",
   "razon": "Tiene buena nitidez, encuadre adecuado y está libre de marcas de agua y menores.",
   "cuando": "2026-10-16T19:08:25.304Z",
-  "huella": "e5a12727276e3e3e"
+  "huella": "e5a12727276e3e3e",
+  "ausenteDesde": "2026-10-17T19:01:49.545Z"
  },
  "yqsuir": {
   "archivo": "fotos-notas/yqsuir.jpg",
@@ -17973,7 +17974,8 @@
    "corresponde": "si",
    "descripcion": "Conductor hablando y moviendo las manos en el estudio con imagen de fondo"
   },
-  "huella": "d3dcf4e4a8a1a98d"
+  "huella": "d3dcf4e4a8a1a98d",
+  "ausenteDesde": "2026-10-17T19:01:49.545Z"
  },
  "bfzt9z": {
   "intentado": true,
@@ -19252,5 +19254,29 @@
    "anio": 2024
   },
   "huella": "70c8848804831717"
+ },
+ "hlnzhq": {
+  "archivo": "fotos-notas/hlnzhq.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Capeccio arma un plan de gobierno sin definir su candidatura",
+  "enlace": "https://www.radiogabal.com.ar/index.php/politica/adelanto-capeccio-confirmo-que-trabaja-en-un-plan-de-gobierno-para-balcarce",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/Ignacio%20Capeccio%20Polemica.jpeg",
+  "razon": "Es la única foto disponible, cumple con todos los requisitos editoriales y de calidad.",
+  "cuando": "2026-10-17T19:01:43.219Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Capeccio sentado en una mesa hablando frente a un micrófono."
+  },
+  "huella": "3737ff21297b7bf9"
  }
 }
