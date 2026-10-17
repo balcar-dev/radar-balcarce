@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-17T06:31:50.499Z",
+ "generado": "2026-10-17T07:02:54.236Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -79,11 +79,6 @@
      "fecha": "2026-10-16T22:56:17.000Z"
     },
     {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/politica/santilli-los-que-tendrian-que-estar-preocupados-son-los-gobernadores-si-gana-kicillof-n1607140",
-     "fecha": "2026-10-16T16:41:00.000Z"
-    },
-    {
      "medio": "Diario Popular",
      "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
      "fecha": "2026-10-16T18:08:00.000Z"
@@ -132,6 +127,11 @@
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-16-11-48-0-para-santilli-los-gobernadores-deberian-estar-preocupados-por-un-eventual-regreso-del-kirchnerismo",
      "fecha": "2026-10-16T14:53:47.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/politica/santilli-los-que-tendrian-que-estar-preocupados-son-los-gobernadores-si-gana-kicillof-n1607140",
+     "fecha": "2026-10-16T16:41:00.000Z"
     }
    ],
    "intentos": 1,
@@ -141,7 +141,7 @@
   {
    "id": "8sfd4e",
    "titulo": "Los precios mayoristas no ceden: aumentaron en septiembre un 3,2%",
-   "copete": "El INDEC informó que los precios mayoristas aumentaron 3,2% en septiembre , una aceleración de 1,1 puntos porcentuales frente a agosto, cuando el índice había subido 2,1%. En los primeros nueve meses de 2026, el indicador acumuló un avance de 22,8% y registró una variación…",
+   "copete": "",
    "seccion": "Economía",
    "fecha": "2026-10-16T19:04:00.000Z",
    "fuentes": [
@@ -154,11 +154,6 @@
      "medio": "TN (Todo Noticias)",
      "enlace": "https://tn.com.ar/economia/2026/10/16/los-precios-mayoristas-aumentaron-un-32-en-septiembre-y-acumulan-un-alza-del-228-en-lo-que-va-del-ano/",
      "fecha": "2026-10-16T19:50:12.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/economia/indec-informo-que-los-precios-mayoristas-subieron-32-en-septiembre-y-aceleraron-frente-a-agosto/",
-     "fecha": "2026-10-16T23:08:49.000Z"
     },
     {
      "medio": "Infobrisas (Radio Brisas)",
@@ -174,11 +169,33 @@
      "medio": "Minuto Uno",
      "enlace": "https://www.minutouno.com/economia/los-precios-mayoristas-subieron-32-septiembre-acumularon-un-alza-del-228-2026-n6334737",
      "fecha": "2026-10-16T19:40:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/economia/indec-informo-que-los-precios-mayoristas-subieron-32-en-septiembre-y-aceleraron-frente-a-agosto/",
+     "fecha": "2026-10-16T23:08:49.000Z"
     }
    ],
    "intentos": 4,
    "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 4
+  },
+  {
+   "id": "7zwjs1",
+   "titulo": "Galicia redefine su atención con IA: qué cambiará en las sucursales",
+   "copete": "",
+   "seccion": "Tecnología",
+   "fecha": "2026-10-17T07:01:20.112Z",
+   "fuentes": [
+    {
+     "medio": "iProUP",
+     "enlace": "https://www.iproup.com/innovacion/72029-galicia-redefine-su-atencion-con-ia-que-cambiara-en-las-sucursales",
+     "fecha": "2026-10-17T09:15:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "sin material",
+   "maximo": 3
   }
  ]
 }
