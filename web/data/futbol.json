@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-17T18:31:58.909Z",
+ "consultado": "2026-10-17T19:01:47.143Z",
  "equipos": [
   "9739",
   "3",
@@ -792,8 +792,8 @@
     "id": "401841615",
     "competencia": "liga",
     "inicio": "2026-10-17T18:00:00.000Z",
-    "estado": "en-juego",
-    "minuto": "32'",
+    "estado": "entretiempo",
+    "minuto": "45'+2'",
     "local": {
      "id": "235",
      "nombre": "Banfield",
@@ -1618,7 +1618,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-17T17:03:25.353Z",
+ "tablaCuando": "2026-10-17T19:01:47.143Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",

@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T18:32:01.732Z",
- "portada": 92,
- "archivo": 1241,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-17T19:01:49.562Z",
+ "portada": 78,
+ "archivo": 1238,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-17T18:32:01.772Z",
+  "generado": "2026-10-17T19:01:50.079Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -177,15 +177,14 @@
      "id": "1kgatx3",
      "titulo": "Virginia Aparicio presenta los resultados del proyecto SPRINT sobre plaguicidas",
      "cuando": "2026-10-17T16:35:59.059Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "wrghr",
      "titulo": "Detallan la ubicación de cada centro de salud y sala",
-     "seccion": "Salud",
-     "marcada": false
-    },
+     "cuando": "2026-10-17T18:35:55.047Z"
+    }
+   ],
+   "cola": [
     {
      "id": "quke5a",
      "titulo": "Atlético de Madrid derrota al Espanyol con un tanto agónico",
@@ -193,8 +192,8 @@
      "marcada": false
     }
    ],
-   "cupo": 1,
-   "proximoDesde": "2026-10-17T18:05:59.059Z",
+   "cupo": 0,
+   "proximoDesde": "2026-10-17T20:05:55.047Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

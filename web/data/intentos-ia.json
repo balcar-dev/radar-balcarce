@@ -460,11 +460,6 @@
   "ultimo": "2026-10-13T04:32:02.109Z",
   "motivo": "con cuerpo"
  },
- "1cj5sd": {
-  "intentos": 1,
-  "ultimo": "2026-10-10T19:01:34.505Z",
-  "motivo": "con cuerpo"
- },
  "1cr7omj": {
   "intentos": 1,
   "ultimo": "2026-10-15T19:02:13.648Z",
@@ -719,13 +714,6 @@
   "ultimo": "2026-10-12T22:31:57.521Z",
   "motivo": "con cuerpo"
  },
- "1iq43uc": {
-  "intentos": 1,
-  "ultimo": "2026-10-10T18:31:59.976Z",
-  "motivo": "verificación baja: espera a una persona",
-  "baja": true,
-  "fuentes": 1
- },
  "1iqabic": {
   "intentos": 1,
   "ultimo": "2026-10-17T03:01:21.150Z",
@@ -971,11 +959,6 @@
   "ultimo": "2026-10-11T00:32:09.786Z",
   "motivo": "con cuerpo"
  },
- "1nhtdpr": {
-  "intentos": 1,
-  "ultimo": "2026-10-10T19:01:34.505Z",
-  "motivo": "con cuerpo"
- },
  "1nl7h8u": {
   "intentos": 1,
   "ultimo": "2026-10-16T17:34:54.263Z",
@@ -1059,11 +1042,6 @@
  "1pydk3w": {
   "intentos": 1,
   "ultimo": "2026-10-17T18:31:34.397Z",
-  "motivo": "con cuerpo"
- },
- "1qeim0": {
-  "intentos": 1,
-  "ultimo": "2026-10-10T18:31:59.976Z",
   "motivo": "con cuerpo"
  },
  "1qgpd66": {
@@ -1191,11 +1169,6 @@
   "ultimo": "2026-10-13T00:01:54.889Z",
   "motivo": "cuerpo: 3 problemas (nombre): el cuerpo nombra a \"cema\" y la fuente no; sin esas oraciones quedan 60 palabras"
  },
- "1v3fa4r": {
-  "intentos": 1,
-  "ultimo": "2026-10-10T18:31:59.976Z",
-  "motivo": "con cuerpo"
- },
  "1v9h1ps": {
   "intentos": 1,
   "ultimo": "2026-10-15T12:02:25.055Z",
@@ -1240,11 +1213,6 @@
   "intentos": 1,
   "ultimo": "2026-10-13T01:01:51.369Z",
   "motivo": "sin material"
- },
- "1vwpejn": {
-  "intentos": 1,
-  "ultimo": "2026-10-10T18:31:59.976Z",
-  "motivo": "con cuerpo"
  },
  "1w029fv": {
   "intentos": 3,
@@ -2173,6 +2141,11 @@
   "ultimo": "2026-10-16T20:31:22.663Z",
   "motivo": "con cuerpo"
  },
+ "hlnzhq": {
+  "intentos": 1,
+  "ultimo": "2026-10-17T19:01:33.543Z",
+  "motivo": "con cuerpo"
+ },
  "hp2pil": {
   "intentos": 1,
   "ultimo": "2026-10-11T23:08:16.877Z",
@@ -2726,6 +2699,13 @@
   "intentos": 1,
   "ultimo": "2026-10-13T21:31:54.790Z",
   "motivo": "con cuerpo"
+ },
+ "wlh8pm": {
+  "intentos": 1,
+  "ultimo": "2026-10-17T19:01:33.543Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
  },
  "wm8hav": {
   "intentos": 1,
