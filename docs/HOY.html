@@ -1,0 +1,187 @@
+<title>Radar Balcarce hoy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,700;8..60,800&family=Inter:wght@400;600;700&display=swap">
+<style>
+/* Layout: una sola columna de lectura con bandas por tema; los pasos del recorrido van en una línea que baja en el celular. */
+:root { --papel:#FFFFFF; --tinta:#14161A; --texto:#3B403C; --suave:#646964; --linea:#E4DFD2; --crema:#F6F3EC; --rojo:#C7381C; --verde:#16615B; --ambar:#A76A0F; --azul:#1E40AF;
+  --f-titulo:"Source Serif 4", Georgia, serif; --f-texto:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --papel:#121417; --tinta:#F2F0EA; --texto:#D4D2CB; --suave:#A3A69F; --linea:#2E3236; --crema:#1B1E22; --rojo:#F07A5C; --verde:#5CC2B5; --ambar:#E8B35A; --azul:#8FA8F5; color-scheme:dark } }
+:root[data-theme="dark"] { --papel:#121417; --tinta:#F2F0EA; --texto:#D4D2CB; --suave:#A3A69F; --linea:#2E3236; --crema:#1B1E22; --rojo:#F07A5C; --verde:#5CC2B5; --ambar:#E8B35A; --azul:#8FA8F5; color-scheme:dark }
+* { box-sizing:border-box }
+body { background:var(--papel); color:var(--texto); font:16px/1.6 var(--f-texto); padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); padding-block:0 64px }
+main { max-width:52rem; margin:0 auto }
+h1, h2, h3 { font-family:var(--f-titulo); color:var(--tinta); text-wrap:balance; line-height:1.15 }
+h1 { font-size:clamp(2rem, 5vw, 3rem); font-weight:800; margin:0 }
+h2 { font-size:1.45rem; font-weight:800; margin:0 0 .6rem }
+h3 { font-size:1.05rem; font-weight:700; margin:1rem 0 .3rem }
+header { border-bottom:3px solid var(--tinta); padding-block:36px 18px }
+.volanta { font:700 .75rem/1 var(--f-texto); letter-spacing:.12em; text-transform:uppercase; color:var(--rojo); margin:0 0 .6rem }
+.bajada { font:400 1.12rem/1.5 var(--f-titulo); margin:.7rem 0 0 }
+nav.indice { display:flex; flex-wrap:wrap; gap:6px 14px; padding-block:12px; border-bottom:1px solid var(--linea); font-size:.9rem }
+nav.indice a { color:var(--tinta); text-decoration:none; border-bottom:1px solid var(--linea) }
+section { padding-block:30px; border-bottom:1px solid var(--linea) }
+p { margin:0 0 .8rem } ul, ol { padding-left:1.2rem; margin:0 0 .8rem } li { margin-bottom:.35rem } strong { color:var(--tinta) }
+a { color:var(--azul) } code { font-size:.85em; background:var(--crema); padding:1px 5px; word-break:break-all }
+.recorrido { display:grid; gap:0; border-left:3px solid var(--tinta); margin:12px 0 }
+.paso { padding:8px 0 8px 14px; position:relative; min-width:0 }
+.paso::before { content:""; position:absolute; left:-9px; top:16px; width:15px; height:15px; background:var(--papel); border:3px solid var(--tinta) }
+.paso b { color:var(--tinta) }
+.tabla { overflow-x:auto; margin:10px 0 }
+table { border-collapse:collapse; width:100%; font-size:.9rem; min-width:34rem }
+th, td { text-align:left; vertical-align:top; padding:8px 10px; border-bottom:1px solid var(--linea) }
+th { font:700 .72rem/1.3 var(--f-texto); letter-spacing:.08em; text-transform:uppercase; color:var(--suave) }
+.e { display:inline-block; font:700 .68rem/1 var(--f-texto); letter-spacing:.06em; text-transform:uppercase; padding:4px 7px; border:1px solid currentColor; white-space:nowrap }
+.on { color:var(--verde) } .off { color:var(--suave) } .ojo { color:var(--rojo) } .dec { color:var(--ambar) }
+.nota { border-left:3px solid var(--ambar); padding-left:12px; font-size:.95rem }
+:focus-visible { outline:2px solid var(--rojo); outline-offset:2px }
+</style>
+<main>
+<header>
+  <p class="volanta">Radar Balcarce · sábado 17 de octubre de 2026</p>
+  <h1>Cómo funciona hoy, y todo lo que falta</h1>
+  <p class="bajada">Un solo documento con el estado del sitio, lo que cambió estos dos días, lo que está apagado a propósito y la lista de lo que hay que hacer, ordenada por quién la hace. Sin cupo de Claude hasta el jueves 22/10: lo que sigue se puede hacer con DeepSeek (acceso directo del escritorio).</p>
+</header>
+<nav class="indice" aria-label="Índice"><a href="#recorrido">El recorrido</a><a href="#criterio">Qué se publica</a><a href="#sitio">El sitio</a><a href="#redes">Redes</a><a href="#maquinas">Dónde corre</a><a href="#apagado">Apagado</a><a href="#falta">Lo que falta</a><a href="#archivos">Los archivos</a></nav>
+
+<section id="recorrido">
+  <h2>El recorrido de una nota, cada media hora</h2>
+  <div class="recorrido">
+    <div class="paso"><b>0 · Reloj.</b> Un Worker de Cloudflare (<code>radar-balcarce-reloj</code>) despierta a GitHub a los :00 y :30. Cada tarea (redes, vigilancia, auditoría, pistas, ilustraciones, revisión del archivo) se pide solo cuando le toca.</div>
+    <div class="paso"><b>1 · Fuentes.</b> 124 feeds RSS de 76 medios (locales, nacionales, ciencia y salud de los grandes). Se leen las últimas 72 horas.</div>
+    <div class="paso"><b>2 · Cruce.</b> Junta la misma noticia contada por varios medios, sin encadenar temas distintos; lo de Balcarce se recuerda 72 horas y se compara por significado contra lo ya publicado.</div>
+    <div class="paso"><b>3 · Criterio.</b> Semáforo (rojo, amarillo, verde, «nunca»), sección, «no es nota» (autobombo, sorteos del medio, pronósticos y farmacias de otros) y la regla de popularidad (abajo).</div>
+    <div class="paso"><b>4 · Lectura con IA.</b> Gemini (respaldo Groq, y OpenRouter si tiene clave) decide sección, interés y repetidas.</div>
+    <div class="paso"><b>5 · Redacción con IA y verificación.</b> Se reescribe con las 4 fuentes y se verifica contra ellas; sin cuerpo de 70 palabras no se publica; Política y Policiales esperan a una persona.</div>
+    <div class="paso"><b>6 · Foto.</b> La de la fuente sin marca y con crédito, controlada (¿corresponde?, ¿es de archivo?, ¿captura o flyer?, ¿chicos?, ¿repetida?); si no, ilustración con IA sin personas (Cloudflare, gratis); si no, placa.</div>
+    <div class="paso"><b>7 · Armado y subida.</b> Se compila el sitio UNA vez y se sube a Cloudflare Pages; el archivo permanente en R2 guarda las notas que están por salir.</div>
+    <div class="paso"><b>8 · Redes.</b> Facebook e Instagram, con reels con voz; sólo lo de Balcarce y lo más contado del país.</div>
+    <div class="paso"><b>9 · Vigilancia.</b> Mail de aviso si algo falla; informes a las 8:15 y 21:15 con lo publicado, redes, visitas y la estadística de selección.</div>
+  </div>
+</section>
+
+<section id="criterio">
+  <h2>Qué se publica (el criterio, en seis líneas)</h2>
+  <ol>
+    <li><strong>Lo de Balcarce entra todo</strong>, sin tope, si pasa el semáforo y no es repetida ni autobombo.</li>
+    <li><strong>Lo nacional entra con 3 medios distintos</strong> (<code>MINIMO_NACIONAL</code>); los del mismo dueño cuentan uno.</li>
+    <li><strong>Tecnología e IA, Ciencia, Salud, Educación y Cultura entran con 2</strong> (<code>MINIMO_AREAS_CHICAS</code>).</li>
+    <li><strong>No hay cupos ni topes.</strong> Lo muy contado (8 medios o más) va primero.</li>
+    <li>Del extranjero, sólo con un argentino. Policiales de afuera, nunca.</li>
+    <li>Las dos variables se cambian en GitHub (Settings → Variables), valores de 2 a 10; vacío vale 3 y 2.</li>
+  </ol>
+  <p><strong>Catorce secciones, todas activas:</strong> Balcarce, Política, Policiales, Fútbol, Deportes, Automovilismo, Agro, Economía, Cultura y agenda, Tecnología e IA, Ciencia, Salud, Educación y Argentina. Con los datos del viernes 16/10, salen unas 100 a 140 notas por día, de 15 a 20 de Balcarce.</p>
+  <p class="nota">Esta semana la estadística de selección (<code>radarbalcarce.com/panel/estadistica-seleccion.html</code> y el informe de las 8:15 y 21:15) muestra dónde cae cada nota. El lunes se decide con datos si se baja algún mínimo o se suma Agro y Automovilismo a las áreas chicas.</p>
+</section>
+
+<section id="sitio">
+  <h2>El sitio</h2>
+  <ul>
+    <li><strong>Nuevo:</strong> página <code>/hoy</code>, sitemap de noticias con índice, datos estructurados completos, botones para compartir por WhatsApp, «Publicado» y «Actualizado», enlace a la fuente original, «Cómo trabajamos», revisión automática de velocidad antes de publicar.</li>
+    <li><strong>La firma de IA</strong> («Redacción con IA, verificada contra las fuentes») ahora va adentro del desplegable «Fuentes (N)», no arriba.</li>
+    <li><strong>Sin cambios visibles grandes:</strong> menú, navegación y portada siguen igual hasta que elijan una de las dos portadas de <code>docs/diseno/VISTA-PREVIA-PORTADA-2.html</code>.</li>
+    <li><strong>Revisión de todas las notas viejas</strong>, por tandas, desde el jueves 22/10 (texto, foto, título y sección, con el mismo criterio que las nuevas).</li>
+  </ul>
+</section>
+
+<section id="redes">
+  <h2>Redes</h2>
+  <div class="tabla"><table>
+    <thead><tr><th>Red</th><th>Hoy</th><th>Qué falta</th></tr></thead>
+    <tbody>
+      <tr><td>Facebook</td><td><span class="e on">Automático</span> 53 seguidores, trae el 74 % de las visitas</td><td>Elegir cuántos posteos por día (propuesta: 8)</td></tr>
+      <tr><td>Instagram</td><td><span class="e on">Automático</span> reels con voz; sin enlaces (va a la bio)</td><td>7 seguidores: decidir cuánto esfuerzo ponerle</td></tr>
+      <tr><td>X, Threads, TikTok, YouTube, canal de WhatsApp</td><td><span class="e off">Cuentas creadas, sin publicar</span></td><td>Textos por red ya listos; subir a mano o con Buffer; TikTok Studio programa desde la PC</td></tr>
+      <tr><td>Telegram, Bluesky</td><td><span class="e ojo">Sin cuenta</span></td><td>Crearlas (páginas abiertas en el Chrome); después se automatizan gratis</td></tr>
+    </tbody>
+  </table></div>
+  <p>A Facebook e Instagram sólo va lo de Balcarce y lo de afuera que cuenten <strong>5 medios o más</strong>. Hashtags fijos: <code>#Balcarce #RadarBalcarce</code>, y después 1 a 3 de la nota.</p>
+</section>
+
+<section id="maquinas">
+  <h2>Dónde corre cada cosa y cuánto cuesta</h2>
+  <div class="tabla"><table>
+    <thead><tr><th>Pieza</th><th>Dónde</th><th>Costo</th></tr></thead>
+    <tbody>
+      <tr><td>Sitio y archivo de notas</td><td>Cloudflare Pages y R2</td><td>incluido</td></tr>
+      <tr><td>Reloj, vigilante, ilustraciones</td><td>Workers de Cloudflare</td><td>US$ 5 por mes (Workers Paid)</td></tr>
+      <tr><td>El robot (leer, escribir, armar, redes)</td><td>GitHub Actions, repositorio <strong>público</strong> (minutos gratis)</td><td>0</td></tr>
+      <tr><td>Voces</td><td>Gemini, 10 audios por día gratis; con clave paga, ~US$ 3 a 4 por mes</td><td>0 hoy</td></tr>
+      <tr><td>Respaldo de las IA</td><td>Groq y OpenRouter (cuenta con US$ 10 de crédito)</td><td>0 hoy</td></tr>
+    </tbody>
+  </table></div>
+  <p>La mudanza completa a Cloudflare está <strong>escrita y probada, apagada</strong> (variable <code>NUBE</code> vacía): <code>docs/etapa-10-operacion/PLAN-DE-CAMBIO.md</code>. Con eso el repositorio principal podría pasar a privado sin pagar.</p>
+</section>
+
+<section id="apagado">
+  <h2>Lo que está listo pero apagado, a propósito</h2>
+  <div class="tabla"><table>
+    <thead><tr><th>Qué</th><th>Cómo se prende</th></tr></thead>
+    <tbody>
+      <tr><td>Fotos con chicos de fuentes de Balcarce (deportes, escuela, cultura; nada policial)</td><td>Variable <code>FOTOS_MENORES_OFICIALES</code> = <code>Si</code></td></tr>
+      <tr><td>Respaldo OpenRouter para las IA</td><td>Secreto <code>OPENROUTER_API_KEY</code> en GitHub</td></tr>
+      <tr><td>Enlaces cortos para Facebook (de 178 a 36 caracteres, con conteo por red)</td><td>Variable <code>ENLACES_CORTOS</code> + subir el Worker y poner la ruta</td></tr>
+      <tr><td>Botones de WhatsApp, Telegram y Bluesky en el sitio</td><td>Variables <code>WHATSAPP_CANAL_URL</code>, <code>TELEGRAM_CANAL_URL</code>, <code>BLUESKY_URL</code></td></tr>
+      <tr><td>Mudanza del robot a Cloudflare</td><td>Plan de 11 pasos; necesita tokens y llaves nuevas</td></tr>
+      <tr><td>Revisión del archivo</td><td>Arranca sola el 22/10 (se frena con <code>REVISION_DEL_ARCHIVO</code> = <code>no</code>)</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="falta">
+  <h2>Lo que falta, por quién lo hace</h2>
+
+  <h3>Hernán y Andrés (una sola lista, con enlaces: <code>docs/PASOS-PARA-HERNAN-Y-ANDRES.html</code>)</h3>
+  <ol>
+    <li>Pegar la clave de OpenRouter en GitHub (<code>OPENROUTER_API_KEY</code>; puede ser la que ya está en la PC).</li>
+    <li>Crear la variable <code>FOTOS_MENORES_OFICIALES</code> = <code>Si</code>.</li>
+    <li>Crear las cuentas de <strong>Bluesky</strong> y <strong>Telegram</strong> (y crear el bot con <code>@BotFather</code>).</li>
+    <li>Sumarle al token de Cloudflare los permisos de rutas, R2, KV, Scripts y Pages (antes del 2/11, para el archivo permanente).</li>
+    <li>Para la mudanza: dos tokens de GitHub, la llave de R2 y la variable <code>R2_RENDER</code>. Cuando estén, avisar con una palabra.</li>
+    <li>Ordenar las claves de Google (la facturación está en un proyecto que Radar no usa) y, cuando quieran las voces nuevas, cargar la clave paga como <code>GEMINI_API_KEY_REDES</code>.</li>
+    <li>En la PC: borrar <code>panel\datos</code> y <code>respaldos</code> (tienen claves). Dejar Tailscale si quieren control remoto.</li>
+    <li>Revisar el aviso de cambio de contraseña de Instagram que apareció en el Gmail del medio, y activar la verificación en dos pasos en Google, Meta, GitHub y Cloudflare.</li>
+  </ol>
+
+  <h3>Decisiones (una sola vez cada una)</h3>
+  <ol>
+    <li>¿Cuántos posteos por día en Facebook (propuesta: 8) y la barra de 5 medios para lo de afuera?</li>
+    <li>¿Subimos el acortador de enlaces y ponemos la ruta?</li>
+    <li>¿Limpiamos el historial de GitHub (una sola versión con el estado actual, con copia previa en R2)? No tiene vuelta atrás en GitHub.</li>
+    <li>¿Cuándo se pasa el repositorio principal a privado, después de la mudanza?</li>
+    <li>Elegir una de las dos portadas de la vista previa (cuando quieran cambios visuales).</li>
+    <li>¿Agro y Automovilismo con 2 medios, como las áreas chicas? (se decide el lunes con la estadística).</li>
+    <li>Confirmar la promesa de «Cómo trabajamos»: si alguien pide que no usemos algo, se revisa y «si corresponde» se saca.</li>
+  </ol>
+
+  <h3>Yo, con DeepSeek o cuando vuelva el cupo (jueves 22/10)</h3>
+  <ol>
+    <li>Mirar la estadística de selección toda la semana y ajustar los mínimos con datos.</li>
+    <li>Mirar que no se junten notas distintas por significado y que la IA más corta no empeore las notas.</li>
+    <li>Hacer la mudanza a Cloudflare, paso a paso, cuando estén las llaves.</li>
+    <li>Animaciones del repaso, guiones con continuidad entre reels e historias, y las voces nuevas con la clave paga (un agente lo está terminando).</li>
+    <li>Leer las respuestas de las IA sobre posicionamiento en buscadores e IA, y sobre cómo postear en Facebook, y anotarlas.</li>
+    <li>Rehacer el panel del celular de cero (pendiente desde antes).</li>
+    <li>Páginas por barrio y calle, y fotos en formato más liviano cuando estén en R2.</li>
+  </ol>
+</section>
+
+<section id="archivos">
+  <h2>Los archivos, juntos</h2>
+  <p>Todo vive en el repositorio <a href="https://github.com/radarbalcarce/radar-balcarce">radarbalcarce/radar-balcarce</a>, carpeta <code>docs/</code>. Los que más se usan:</p>
+  <div class="tabla"><table>
+    <thead><tr><th>Para qué</th><th>Archivo</th></tr></thead>
+    <tbody>
+      <tr><td>Lo que hay que hacer, con enlaces</td><td><code>docs/PASOS-PARA-HERNAN-Y-ANDRES.html</code></td></tr>
+      <tr><td>Retomar con otra sesión (DeepSeek)</td><td><code>docs/TRASPASO.md</code> y <code>scripts\claude-con-openrouter.cmd</code></td></tr>
+      <tr><td>Mapa del proyecto y reglas</td><td><code>CLAUDE.md</code>, <code>docs/00-INDICE.md</code>, <code>docs/10-REGLAS-Y-PRUEBAS.md</code></td></tr>
+      <tr><td>Criterio de qué se publica y cómo escribe la IA</td><td><code>CRITERIO-EDITORIAL.md</code>, <code>docs/03-SELECCION.md</code></td></tr>
+      <tr><td>Redes: criterio, textos y tabla de cuentas</td><td><code>CRITERIO-REDES.md</code>, <code>docs/redes/TABLA-DE-REDES.html</code>, <code>docs/redes/FORMATOS-POR-RED.md</code></td></tr>
+      <tr><td>Auditoría completa (6 informes + medios parecidos + ideas de otras IA + claves)</td><td><code>docs/auditoria-2-0/RADAR-2-0.html</code> y los <code>01</code> a <code>09</code></td></tr>
+      <tr><td>Mudanza a Cloudflare</td><td><code>docs/etapa-10-operacion/MIGRACION-A-CLOUDFLARE.md</code> y <code>PLAN-DE-CAMBIO.md</code></td></tr>
+      <tr><td>Infraestructura, costos y vencimientos</td><td><code>docs/08-INFRAESTRUCTURA.md</code>, <code>docs/11-OPERACION.md</code></td></tr>
+      <tr><td>Secciones por día y vista previa de portada</td><td><code>docs/secciones/SECCIONES-POR-DIA.html</code>, <code>docs/diseno/VISTA-PREVIA-PORTADA-2.html</code></td></tr>
+      <tr><td>Cómo funciona todo, en detalle (anterior)</td><td><code>docs/COMO-FUNCIONA-HOY.html</code></td></tr>
+    </tbody>
+  </table></div>
+</section>
+</main>
