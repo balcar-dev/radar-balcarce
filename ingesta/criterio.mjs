@@ -236,6 +236,45 @@ export const CUPO_DE_AFUERA = {
 };
 export const CUPO_POR_DEFECTO = 15;
 
+// "Muy contada": lo de afuera que cuenta medio país (regla 197, 17/10/2026; Hernán: "lo de Balcarce entra
+// todo; lo nacional, según su popularidad", docs/auditoria-2-0/02-FUENTES-CRITERIO-REPETIDAS.md § 2.5).
+// Una historia de afuera es muy contada si la cuentan `medios` medios distintos o más (los del mismo dueño
+// cuentan uno), o si junta `mediosRapidos` en sus primeras `horasRapidas` horas (`mediosRapidosDeNoche` si
+// empezó de `nocheDesde` a `nocheHasta`, cuando se publica menos). Sólo si el hecho tiene menos de
+// `horasDelHecho` horas y alguna de sus notas es de las últimas `horasDeLaUltimaNota`. Sale aunque el cupo
+// de su sección esté lleno (no ocupa lugar), va primera en su sección durante `horasPrimeraEnSuSeccion`
+// horas y no puede haber más de `porTema` del mismo tema a la vez. Medido sobre 50 medios del país: si la
+// lista de fuentes cambia mucho, el 8 significa otra cosa y hay que volver a mirarlo.
+// Lo de acá no lo necesita para salir: entra todo. Pero lo que cuentan `mediosDeAca` medios de Balcarce o
+// más es "muy contada de acá" (lo que más se lee del sitio): primera candidata a la nota grande y a Facebook.
+export const MUY_CONTADA = {
+  medios: 8,
+  mediosRapidos: 5,
+  mediosRapidosDeNoche: 4,
+  horasRapidas: 3,
+  nocheDesde: 20,
+  nocheHasta: 7,
+  horasDelHecho: 24,
+  horasDeLaUltimaNota: 12,
+  horasPrimeraEnSuSeccion: 6,
+  porTema: 2,
+  mediosDeAca: 3,
+};
+
+// El puntaje por cantidad de medios (regla 197): `porDuplicarMedios` puntos cada vez que se duplican (2
+// medios +8, 4 +16, 8 +24, 16 +32, 32 +40), sin tope. Hasta el 17/10 eran +10 por medio con tope de +40:
+// desde los 5 medios daba lo mismo, y una historia de 34 medios competía igual que una de 5.
+export const PUNTAJE = {
+  porDuplicarMedios: 8,
+};
+
+// Lo que espera a una persona en el panel del celular (regla 200): sólo lo de acá, y como mucho
+// `deAcaPorDia` notas por día (las de más puntaje). Lo de afuera que no sale solo, no sale: desde el 8/10
+// nadie lo miraba (18 decisiones en total contra unas 33 notas por día esperando).
+export const ESPERA_PERSONA = {
+  deAcaPorDia: 5,
+};
+
 /** Secciones que no salen solas a ninguna red: las decide una persona. */
 export const SECCIONES_QUE_ESPERAN_PERSONA = ['Policiales', 'Política'];
 
@@ -310,6 +349,9 @@ export const NUMEROS_DEL_CRITERIO = {
   MEDIOS_CON_FIGURA,
   CUPO_DE_AFUERA,
   CUPO_POR_DEFECTO,
+  MUY_CONTADA,
+  PUNTAJE,
+  ESPERA_PERSONA,
   FACEBOOK,
   PIEZAS,
   CONTRATO_DIARIO,

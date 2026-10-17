@@ -347,6 +347,9 @@ const dormir = (ms) => new Promise((r) => { setTimeout(r, ms); });
 // la mataba, sin publicar nada de esa corrida.
 export const ESPERA_MAXIMA_GEMINI = 60_000;
 
+/** Cuánto improvisa el modelo al redactar (0 = nada). Regla 202. */
+export const TEMPERATURA_DE_LA_REDACCION = 0.3;
+
 /** Un pedido a Gemini con una clave puntual. Devuelve la respuesta cruda
  *  (fetch Response) o lanza si se agotaron los reintentos por saturación.
  *  La clave va en el encabezado `x-goog-api-key` y no en la dirección
@@ -359,7 +362,10 @@ async function pedir({ prompt, entrada, clave, fetchFn, intentos }) {
       headers: { 'content-type': 'application/json', 'x-goog-api-key': clave },
       body: JSON.stringify({
         contents: [{ parts: [{ text: `${prompt}\n\n---\n\n${entrada}` }] }],
-        generationConfig: { responseMimeType: 'application/json', temperature: 0.6 },
+        // 0,3 desde el 17/10/2026 (regla 202; era 0,6): en un texto que tiene que ser fiel a la fuente, 0,6 improvisaba
+        // de más y dejaba letras rotas ("miéércoles", "polêcutemica") que hubo que corregir a mano
+        // (docs/auditoria-2-0/06-PROMPTS-Y-AGENTES.md § 1).
+        generationConfig: { responseMimeType: 'application/json', temperature: TEMPERATURA_DE_LA_REDACCION },
       }),
       signal: AbortSignal.timeout(ESPERA_MAXIMA_GEMINI),
     });
@@ -454,16 +460,21 @@ export async function reescribir(nota, {
   anotarUsoIA({ tarea: 'redaccion', modelo: MODELO, clave: usada, respuesta: j });
   const texto = j.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') ?? '';
   const salida = limpiarJson(texto);
-  if (!salida.titulo || !salida.guion) throw new Error('la respuesta no trae título o guion');
+  if (!salida.titulo) throw new Error('la respuesta no trae título');
 
   // El título va entero, aunque pase del máximo: cortarlo acá dejaba títulos
   // colgados ("…de toda la cadena productiva del país,"), y el verificador ya
   // rechaza lo que pasa del máximo (TITULO.maximo) para que la IA lo vuelva a escribir.
+  // El guion ya no se le pide a la IA (regla 202, 17/10/2026): las redes arman su texto con el título
+  // (redes/guiones.mjs) y ninguna pieza usaba el que escribía la IA, pero la nota se rechazaba si faltaba o si traía
+  // un número dicho en palabras que la fuente daba en cifras (5 rechazos medidos). Es el título con un punto, como el
+  // del respaldo mecánico: sigue siendo la señal de que la redactó la IA (la firma, redes/elegir.mjs).
+  const titulo = salida.titulo.trim();
   return {
-    titulo: salida.titulo.trim(),
+    titulo,
     copete: (salida.copete ?? '').trim(),
     cuerpo: (salida.cuerpo ?? '').trim(),
-    guion: salida.guion.trim(),
+    guion: guionNoticia({ titulo }),
     ...extrasDeLaRespuesta(salida),
     deIA: true,
   };
@@ -623,6 +634,13 @@ export function semaforoDeLaReescritura(nota, escrito = null) {
     peor ??= conDonde;
   }
   return peor;
+}
+
+/** La nota sin los textos de sus fuentes (el completo, los resúmenes de cada medio): lo que decide las exenciones del
+ *  semáforo (la sección, de dónde es, cuántos medios la cuentan, si es oficial) sin volver a mirar esos textos. */
+export function sinLosTextos(nota = {}) {
+  const { textoDeLaFuente, fuentesTexto, entradaAmpliada, ...resto } = nota ?? {};
+  return { ...resto, origenes: (nota?.origenes ?? []).map(({ resumen, ...o }) => o) };
 }
 
 /**
@@ -1116,7 +1134,10 @@ export function ordenarParaReescribir(notas, previas = {}) {
     vistos[n.seccion] = (vistos[n.seccion] ?? 0) + 1;
     lugar.set(n, (ocupados[n.seccion] ?? 0) + vistos[n.seccion]);
   }
-  deAfuera.sort((a, b) => (lugar.get(a) - lugar.get(b)) || porPuntaje(a, b));
+  // Lo muy contado de afuera (regla 197) se escribe antes que el resto de lo de afuera: sin cuerpo no sale, y es lo
+  // que medio país está contando.
+  const muy = (n) => Number(!!n.muyContada);
+  deAfuera.sort((a, b) => (muy(b) - muy(a)) || (lugar.get(a) - lugar.get(b)) || porPuntaje(a, b));
   return [...locales, ...deAfuera];
 }
 
@@ -1149,8 +1170,8 @@ export function ordenarParaReescribir(notas, previas = {}) {
  *     que no cuadra (depurarCuerpo) y, si lo que queda pasa y tiene 70
  *     palabras o más, se usa; si no, un segundo pedido con la corrección, y
  *     lo mismo;
- *   · si falla el título, la bajada o el guion, la nota no se usa (como
- *     siempre);
+ *   · si falla el título o la bajada, la nota no se usa (como siempre; el
+ *     guion es el título desde el 17/10, regla 202);
  *   · cada nota se intenta como mucho MAXIMO_DE_INTENTOS veces, en corridas
  *     distintas: los intentos se anotan en `intentos` (que se cambia, a
  *     propósito: quien llama lo guarda en web/data/intentos-ia.json).
@@ -1307,7 +1328,9 @@ export async function reescribirAutomaticas(notas, {
      *  arregla sin inventar (arreglarEscritura): una etiqueta adelante, una
      *  coma al final, "este sábado", "cabe destacar que", una tilde suelta. */
     const evaluar = (respuesta) => {
-      const x = { ...respuesta, ...arreglarEscritura(respuesta, { hoy: new Date(Number(ahora)) }).nuevo };
+      const arreglada = { ...respuesta, ...arreglarEscritura(respuesta, { hoy: new Date(Number(ahora)) }).nuevo };
+      // El guion es el título ya arreglado (regla 202).
+      const x = { ...arreglada, guion: guionNoticia(arreglada) };
       const control = comprobar(x);
       const cabeza = sinNegacionQueEstaEnElCuerpo(comprobar({ ...x, cuerpo: '' }), control);
       if (!cabeza.ok) return { ok: false, problemas: control.problemas, motivo: `título o bajada: ${motivoCorto(cabeza.problemas)}` };
@@ -1371,8 +1394,14 @@ export async function reescribirAutomaticas(notas, {
       registro(`  partes descartadas · nota ${nota.id} · ${descartados.map((d) => `${d.campo}: ${motivoCorto(d.problemas)}`).join(' · ')}`);
     }
 
-    // Lo que escribió la IA, todo, por el semáforo antes de publicarse.
-    const loEscrito = semaforoDeLaReescritura({}, { ...r, ...extras });
+    // Lo que escribió la IA, todo, por el semáforo antes de publicarse. Con la nota de verdad (regla 201, 17/10/2026):
+    // hasta acá iba una nota vacía, y con eso laMuerteFrena creía que la contaba un solo medio y frenaba cualquier
+    // "murió" o "falleció" del título aunque la noticia la contaran 30 medios ("Murió Fernando Confessore, el
+    // reconocido meteorólogo, a los 58 años", 16/10: cinco intentos y no salió, como otras diez en cuatro días). Así
+    // valen las mismas exenciones ya decididas que en la ingesta y en lo ya escrito (la muerte frena sólo donde puede
+    // ser alguien de acá o lo cuenta un solo medio, 28/09; lo de acá espera menos, 2/10). Sin los textos de las
+    // fuentes: ya se miraron antes de pedirle nada a la IA (deLaFuente, más arriba).
+    const loEscrito = semaforoDeLaReescritura(sinLosTextos(nota), { ...r, ...extras });
     if (loEscrito) { frenada(nota, loEscrito); anotarIntento(nota, `semáforo: ${loEscrito.motivo}`); continue; }
 
     // Criterio de editor: con verificación BAJA no sale sola.

@@ -8,8 +8,11 @@ import { fileURLToPath } from 'node:url';
 import {
   NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, AMARILLO_SOLO_EN_EL_PRINCIPIO, REGLAS_SEMAFORO, MOTIVO_COTIZACION, AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA, AMARILLO_QUE_SE_SUELTA_SI_LA_CONFIRMAN,
   MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO, SECCIONES_QUE_NO_ENTRAN, CONEXION_ARGENTINA, TITULO_HOROSCOPO, TITULO_LOTERIA,
-  nombraLocalidadDudosa,
+  nombraLocalidadDudosa, INSTITUCIONES_QUE_SORTEAN,
 } from './fuentes.mjs';
+import { PORTADA, PUNTAJE } from './criterio.mjs';
+import { marcarMuyContadas } from './muy-contada.mjs';
+import { porQueNoEsNota } from './no-es-nota.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
 import { menorPorEdad } from './menores.mjs';
 import { sinFenomenoClimatico, sinExencionesDelAmarillo, sinSorteosDeportivos, tituloConArgentino } from './exenciones.mjs';
@@ -763,6 +766,12 @@ export const contarMedios = (nombres) => new Set((nombres ?? []).filter(Boolean)
 /** Cuántos medios distintos cuentan esta nota (un grupo cuenta una vez). */
 export const cuantosMedios = (nota) => contarMedios(nota?.medios ?? [nota?.medio]);
 
+/** Los medios de Balcarce (las fuentes de acá, organismos incluidos). */
+const MEDIOS_DE_ACA = new Set(TODAS_LAS_FUENTES.filter((f) => f.alcance === 'local' && f.medio).map((f) => f.medio));
+/** Cuántos medios de Balcarce distintos cuentan esta nota (regla 198: con MUY_CONTADA.mediosDeAca o más es
+ *  "muy contada de acá", la primera candidata a la nota grande y a Facebook). */
+export const cuantosMediosDeAca = (nota) => contarMedios((nota?.medios ?? [nota?.medio]).filter((m) => MEDIOS_DE_ACA.has(m)));
+
 /** El comienzo del motivo con que espera lo de afuera que cuentan pocos medios. */
 export const MOTIVO_POCO_CONTADA = 'de afuera y poco contada';
 const motivoPocoContada = (medios, seccion, minimo) => `${MOTIVO_POCO_CONTADA} (${medios} ${medios === 1 ? 'medio' : 'medios'}; ${seccion} pide ${minimo})`;
@@ -836,6 +845,33 @@ export function esEfemerideAjena(nota = {}) {
   return porEnlace || /^(efemerides?\b|un dia como hoy\b|hoy es\b.*\befemeride|calendario de efemerides)/.test(titulo);
 }
 
+/**
+ * ¿Parece una promoción y no una noticia? Devuelve la palabra que lo dice, o null (regla 199, 17/10/2026; las tres
+ * listas y los casos reales, en REGLAS_SEMAFORO de ingesta/fuentes.mjs). Se mira el título y los primeros 600
+ * caracteres, como siempre:
+ *   · en cualquier medio, las frases que no se leen de otra forma ("ganá tu entrada", "participá del sorteo");
+ *   · de afuera, "sorteo" o "sortea" sólo junto a un premio o a "ganá"/"participá" (el de la sala de la Corte, el del
+ *     fixture o el del Mundial no son una rifa; ver también sinSorteosDeportivos);
+ *   · de un medio de Balcarce, además, "sorteo", "publicidad", "suscribite"…, salvo que el sorteo sea de una
+ *     institución (Bomberos, un club, un merendero: INSTITUCIONES_QUE_SORTEAN) o lo cuente un organismo (el sorteo
+ *     de viviendas del Municipio es noticia). El sorteo del propio medio ni llega acá: no es nota (no-es-nota.mjs).
+ */
+function pareceDePromocion(nota) {
+  const crudo = normalizar(`${nota.titulo ?? ''} ${String(nota.cuerpo ?? '').slice(0, 600)}`);
+  const siempre = (REGLAS_SEMAFORO.promocional ?? []).find((p) => contiene(crudo, p));
+  if (siempre) return siempre;
+  // El sorteo de un fixture, de zonas o de jueces no es una rifa (regla 172): ver sinSorteosDeportivos.
+  const texto = sinSorteosDeportivos(crudo);
+  const sorteo = ['sorteo', 'sortea'].find((p) => contiene(texto, p));
+  if (nota.alcance !== 'local') {
+    return sorteo && (REGLAS_SEMAFORO.sorteoConPremio ?? []).some((p) => contiene(texto, p)) ? sorteo : null;
+  }
+  if (nota.oficial) return null;
+  const deUnaInstitucion = INSTITUCIONES_QUE_SORTEAN.some((p) => contiene(texto, p));
+  const SORTEOS = new Set(['sorteo', 'sortea', 'participá del', 'participa del']);
+  return (REGLAS_SEMAFORO.promocionalDeAca ?? []).find((p) => contiene(texto, p) && !(deUnaInstitucion && SORTEOS.has(p))) ?? null;
+}
+
 /** El color de una nota recién leída: { color, motivo }. El puntaje no entra
  *  (desde el 27/09 lo de afuera se mide en medios, no en puntaje). */
 function semaforo(nota, seccion, medios = cuantosMedios(nota)) {
@@ -853,6 +889,10 @@ function semaforo(nota, seccion, medios = cuantosMedios(nota)) {
   if ((REGLAS_SEMAFORO.nunca ?? []).some((p) => contiene(normalizar(String(nota.titulo ?? '')), p))) {
     return { color: 'rojo', motivo: 'lista de sepelios: no se publica' };
   }
+  // Lo que un medio de Balcarce publica de sí mismo (su audiencia, su programación, sus sorteos) y el clima o las farmacias
+  // de otro medio no son una nota de Radar (regla 199, ingesta/no-es-nota.mjs). Como la efeméride de otro medio: no sale.
+  const noEsNota = porQueNoEsNota(nota);
+  if (noEsNota) return { color: 'rojo', motivo: noEsNota.motivo };
   if (sensible) return sensible;
   // La cotización del dólar no sale como nota: está en /dolar. Sólo el título.
   const delTitulo = normalizar(String(nota.titulo ?? ''));
@@ -865,16 +905,13 @@ function semaforo(nota, seccion, medios = cuantosMedios(nota)) {
     && (REGLAS_SEMAFORO.internacional ?? []).some((p) => contiene(delTitulo, p))) {
     return { color: 'amarillo', motivo: MOTIVO_INTERNACIONAL };
   }
-  // El sorteo de un fixture, de zonas o de jueces no es una rifa (regla 172): ver sinSorteosDeportivos.
-  const texto = sinSorteosDeportivos(normalizar(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`));
   // Acá había una regla para el policial de otro lugar con violencia o
   // acusados (26/09, REGLAS_SEMAFORO.policialDeAfuera). Desde el 27/09 no se
   // alcanza nunca: esPolicialDeAfuera saca antes de llegar al semáforo todo
   // policial que no es de un medio de acá ni dice Balcarce en el título, que
   // es justo lo que esa regla miraba. Se sacó el 28/09.
-  for (const p of REGLAS_SEMAFORO.promocional ?? []) {
-    if (contiene(texto, p)) return { color: 'amarillo', motivo: `parece promoción, no noticia: "${p}"` };
-  }
+  const promocion = pareceDePromocion(nota);
+  if (promocion) return { color: 'amarillo', motivo: `parece promoción, no noticia: "${promocion}"` };
   if (nota.oficial) return { color: 'verde', motivo: 'comunicado oficial' };
 
   // Lo de afuera sale solo si lo cuentan bastantes medios (27/09, el cruce):
@@ -918,16 +955,22 @@ function limpiarCopete(cuerpo, titulo, medio) {
   return `${corte.slice(0, ultimoEspacio > 200 ? ultimoEspacio : 280).replace(/[\s,.;:]+$/, '')}…`;
 }
 
-function relevancia(nota, seccion, medios) {
+/** Lo que suma la cantidad de medios al puntaje: PUNTAJE.porDuplicarMedios cada vez que se duplican (2 medios +8,
+ *  4 +16, 8 +24, 16 +32, 32 +40), sin tope (regla 197). Hasta el 17/10 eran +10 por medio con tope de +40: desde los
+ *  5 medios daba lo mismo, y en el cupo una nota fresca de 3 medios le ganaba a la de 34 que había sumado una nota
+ *  de ayer (8 + 0 + 40 + 6 = 54 contra 8 + 25 + 20 + 6 = 59). */
+export const puntosPorMedios = (medios) => (medios > 1 ? PUNTAJE.porDuplicarMedios * Math.log2(medios) : 0);
+
+function relevancia(nota, seccion, medios, ahora = Date.now()) {
   let p = nota.peso;
   if (esDeBalcarce(nota)) p += 25;
   // Sin fecha real no se premia la frescura: si no sabemos cuándo salió, no
   // puede competir con una nota que sí tiene hora.
-  const horas = nota.fechaEstimada ? 24 : (Date.now() - nota.fecha.getTime()) / 3600000;
+  const horas = nota.fechaEstimada ? 24 : (ahora - nota.fecha.getTime()) / 3600000;
   if (horas < 3) p += 25; else if (horas < 12) p += 15; else if (horas < 24) p += 8;
-  // Cada medio que cuenta lo mismo suma, con tope: con el cruce, un tema del
-  // día lo cuentan 20 medios y sin tope todo lo nacional daría 100.
-  if (medios > 1) p += Math.min(40, 10 * (medios - 1));
+  // Cada vez que se duplican los medios que cuentan lo mismo, suma lo mismo: la diferencia entre 2 y 4 medios pesa
+  // tanto como entre 16 y 32, y una historia de 30 medios vale más que una de 5 (regla 197).
+  p += puntosPorMedios(medios);
   if (nota.imagen) p += 6;
   if (nota.textoCompleto) p += 4;
   // Que un medio nacional nombre a Balcarce es noticia en Balcarce.
@@ -1346,17 +1389,52 @@ async function cruzarFarmacias(turnosColegio, {
 /**
  * Baja a "amarillo" las notas de afuera que se pasan del cupo de su sección.
  * Recibe la portada ya ordenada de más a menos puntaje, y la modifica.
+ *
+ * Desde el 17/10/2026 (regla 197):
+ *   · Se puede llamar más de una vez (la ingesta y, después de la lectura con IA, generar-datos): lo que esperaba
+ *     SÓLO por el cupo vuelve a competir antes de contar. Antes, lo que la ingesta mandaba a esperar por el cupo no
+ *     volvía aunque la IA sacara después a las que le ganaban el lugar.
+ *   · El cupo cuenta sólo lo que todavía se puede estrenar (el hecho de menos de PORTADA.horasParaEstrenar) y lo ya
+ *     publicado que sigue a la vista (`publicadas`, de menos de PORTADA.horas). El 16/10 a las 12, en Economía, 10 de
+ *     los 12 lugares los tenían notas de 28 a 56 horas que ya no podían salir; en Cultura y agenda, una de 262 horas.
+ *     Lo que no cuenta tampoco se toca: si ya no se puede estrenar, la web no lo publica igual (llegaTarde).
+ *   · Lo muy contado (marcarMuyContadas, ingesta/muy-contada.mjs) sale aunque el cupo esté lleno y no ocupa lugar.
+ *     Policiales de afuera, no: su cupo es 0 porque la sección es de acá.
+ *
+ * @param {object[]} portada
+ * @param {{ ahora?: number, publicadas?: Set<string>|null, fecha?: (n) => string }} [o]
+ *   `publicadas`: los identificadores ya publicados (sin eso, cuenta sólo lo que se puede estrenar);
+ *   `fecha`: la fecha de cada nota (generar-datos pasa la suya, fechaReal).
  */
-export function aplicarCupos(portada) {
+export function aplicarCupos(portada, { ahora = Date.now(), publicadas = null, fecha = (n) => n.fecha } = {}) {
+  // Lo de acá no entra en la cuenta (esDeAca: Balcarce y la zona), ni lo que cuenta un organismo o un medio de
+  // Balcarce nombrando algo de acá aunque la IA diga que el hecho es de la región (esDeUnMedioDeAca, regla 180).
+  const deAca = (n) => esDeAca(n) || esDeUnMedioDeAca(n);
+  for (const n of portada) {
+    // Lo de un medio de acá no vuelve solo: si esperaba, pudo ser también por la lectura con IA (MOTIVO_ESPERA_LECTURA).
+    if (n.semaforo === 'amarillo' && esperaPorElCupo(n) && n.alcance !== 'local') {
+      n.semaforo = 'verde';
+      n.motivo = n.motivoAntesDelCupo ?? `sección ${n.seccion}`;
+      delete n.motivoAntesDelCupo;
+    }
+  }
+  marcarMuyContadas(portada, { ahora, fecha, contar: contarMedios, esDeAca: deAca });
+  const edad = (n) => ahora - Date.parse(fecha(n) ?? '');
+  const cuentaParaElCupo = (n) => {
+    const e = edad(n);
+    if (!Number.isFinite(e) || e <= PORTADA.horasParaEstrenar * 3600e3) return true;
+    return !!publicadas?.has(n.id) && e <= PORTADA.horas * 3600e3;
+  };
   const usados = {};
   for (const n of portada) {
     if (n.semaforo !== 'verde') continue;
-    // Lo de acá no entra en la cuenta (esDeAca: Balcarce y la zona), ni lo que cuenta un organismo o un medio de
-    // Balcarce nombrando algo de acá aunque la IA diga que el hecho es de la región (esDeUnMedioDeAca, regla 180).
-    if (esDeAca(n) || esDeUnMedioDeAca(n)) continue;
-    usados[n.seccion] = (usados[n.seccion] ?? 0) + 1;
+    if (deAca(n)) continue;
     const cupo = CUPO_DE_AFUERA[n.seccion] ?? CUPO_POR_DEFECTO;
+    if (n.muyContada && cupo > 0) continue;
+    if (!cuentaParaElCupo(n)) continue;
+    usados[n.seccion] = (usados[n.seccion] ?? 0) + 1;
     if (usados[n.seccion] > cupo) {
+      n.motivoAntesDelCupo = n.motivo;
       n.semaforo = 'amarillo';
       n.motivo = cupo === 0
         ? `${n.seccion} de afuera: ${MOTIVO_SECCION_DE_ACA}`
@@ -1365,6 +1443,9 @@ export function aplicarCupos(portada) {
   }
   return portada;
 }
+
+/** ¿Espera sólo por el cupo de su sección (no por los medios ni por lo que dice)? */
+const esperaPorElCupo = (n) => String(n?.motivo ?? '').startsWith(MOTIVO_CUPO) || String(n?.motivo ?? '').endsWith(MOTIVO_SECCION_DE_ACA);
 
 /** Cómo empiezan (o qué dicen) los motivos del cupo de lo de afuera. */
 export const MOTIVO_CUPO = 'pasó el cupo de';
@@ -1576,7 +1657,7 @@ export async function ingestar({
   log(`
   cruce: ${conjunto.length} notas (${deAntes.length} de la memoria) · ${grupos.length} historias · ${deUnSoloMedio} de afuera con un solo medio y ${deOtraCiudad} de otra ciudad de la zona no entran`);
   if (revisados) log(`  cruce coherente (regla 184): ${revisados} grupos encadenados revisados, ${partidos} partidos en hechos distintos`);
-  return seguirConLasHistorias({ grupos, estadoFuentes, todas, t0, escribirArchivos });
+  return seguirConLasHistorias({ grupos, estadoFuentes, todas, t0, escribirArchivos, idsConocidos });
 }
 
 /**
@@ -1651,7 +1732,7 @@ export function armarHistorias(conjunto, { idsConocidos = null, idsUnidos = null
 }
 
 /** Lo que sigue al cruce en `ingestar` (paso 3 en adelante). */
-async function seguirConLasHistorias({ grupos, estadoFuentes, todas, t0, escribirArchivos }) {
+async function seguirConLasHistorias({ grupos, estadoFuentes, todas, t0, escribirArchivos, idsConocidos = null }) {
   // 3. Clasificar, semáforo y relevancia
   //
   // Policiales, sólo de Balcarce (Hernán, 27/09): lo que el sistema clasifica
@@ -1729,7 +1810,9 @@ async function seguirConLasHistorias({ grupos, estadoFuentes, todas, t0, escribi
   // y DESPUÉS los cupos: al revés, los lugares de cada sección se los llevaban
   // notas que después quedaban frenadas.
   exigirMedios(portada);
-  aplicarCupos(portada);
+  aplicarCupos(portada, { publicadas: idsConocidos });
+  const muyContadas = portada.filter((n) => n.muyContada);
+  if (muyContadas.length) log(`\n  muy contadas (regla 197, salen sin cupo): ${muyContadas.map((n) => `${n.titulo.slice(0, 50)} (${n.muyContada.porque})`).join(' · ')}`);
 
   // 4. Clima y farmacias
   let clima = null; let farmacias = null;

@@ -17,6 +17,7 @@
 import { enlaceDeNota, temaParecido } from './elegir.mjs';
 import { diaAR, horaCortaAR as horaCorta } from '../ingesta/zona.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
+import { idsParaUnaPersona } from '../panel/celular-datos.mjs';
 import { LARGO_MAXIMO } from './whatsapp.mjs';
 import { contratoDelDia, textoContrato, contratoCompleto } from './contrato.mjs';
 import { cuentaDelDia, textoDelDia } from '../ingesta/estadistica-diaria.mjs';
@@ -67,6 +68,14 @@ const SOBRE_PERSONAS = /v[ií]ctima|niñ[oa]|nen[ea]|adolescent|menor|beb[eéa]|
 export function pendientesDeLaIngesta(notas = [], decisiones = {}, ahora = new Date(), horas = 72) {
   const desde = ahora.getTime() - horas * 3600e3;
   const lista = [];
+  // Como en el panel: lo de más de tres días se archiva solo.
+  const enVentana = (n) => {
+    const t = new Date(n.fecha).getTime();
+    return n.cuando === 'sin fecha en la fuente' || !Number.isFinite(t) || t >= desde;
+  };
+  // Lo mismo que va al celular (regla 200): de lo que no miró nadie, sólo lo de acá y con tope por día.
+  const paraUnaPersona = idsParaUnaPersona((notas ?? []).filter((n) => n?.id && n.semaforo === 'amarillo'
+    && !decisionHumana(decisiones?.[n.id]) && !MOTIVOS_DE_RELLENO.test(n.motivo ?? '') && enVentana(n)));
   for (const n of notas ?? []) {
     if (!n?.id || n.semaforo === 'rojo') continue;
     const d = decisiones?.[n.id];
@@ -74,9 +83,8 @@ export function pendientesDeLaIngesta(notas = [], decisiones = {}, ahora = new D
     const esperando = humana ? d.estado === 'pendiente' : n.semaforo === 'amarillo';
     if (!esperando) continue;
     if (!humana && MOTIVOS_DE_RELLENO.test(n.motivo ?? '')) continue;
-    // Como en el panel: lo de más de tres días se archiva solo.
-    const t = new Date(n.fecha).getTime();
-    if (n.cuando !== 'sin fecha en la fuente' && Number.isFinite(t) && t < desde) continue;
+    if (!humana && !paraUnaPersona.has(n.id)) continue;
+    if (!enVentana(n)) continue;
     const motivo = humana ? 'marcada "pendiente" en el panel' : (n.motivo ?? 'sin regla automática');
     const delicada = n.seccion === 'Policiales' || SOBRE_PERSONAS.test(motivo);
     lista.push({

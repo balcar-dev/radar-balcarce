@@ -1287,12 +1287,26 @@ export const REGLAS_SEMAFORO = {
   // bloquea (a veces un sorteo del club sí interesa), pero nunca sale solo:
   // el 18/09 la portada abrió con "Ganá tu entrada para el TC", que es una
   // promoción de una radio, no una noticia nuestra.
-  promocional: ['sorteo', 'sortea', 'sortearemos', 'ganá tu entrada', 'gana tu entrada',
-    'participá del', 'participa del', 'regala las entradas', 'promoción exclusiva',
-    'promocion exclusiva', 'suscribite', 'seguinos en', 'auspicia', 'publicidad',
-    // 8/10: un medio contando su propia sede, teléfono y mail ("El Diario Balcarce detalla su rol periodístico")
-    // es una presentación del medio, no una noticia (regla 142).
-    'rol periodístico', 'rol periodistico', 'vías de contacto', 'vias de contacto', 'sede legal'],
+  //
+  // Desde el 17/10/2026 (regla 199) son tres listas. En la semana del 9 al 16/10 la lista de antes frenó 10 notas
+  // de afuera y LAS 10 ERAN NOTICIAS: "La ANMAT prohibió una marca de lavandina" ("publicidad"), "Dispersión de
+  // precios: un mismo producto puede costar…" ("publicidad"), "La Corte Suprema confirmó que Bariloche no puede
+  // delegar…" ("publicidad"), "Apuestas Online: los ejes del proyecto para regular…" ("publicidad"), "«Gildus», el
+  // increíble videojuego que hicieron en Formosa" ("participá del"), "El particular regalo de Benín a Messi" y "El
+  // desconocido gesto de Messi con los empleados de la AFA" ("sorteo"), "Juan Manuel Cerúndolo enfrentará a
+  // Carlos Alcaraz" ("sortea")… Y el autobombo de los medios de acá salía igual (ver ingesta/no-es-nota.mjs).
+  //   · `promocional`: lo que es promoción en cualquier medio (frases que no se leen de otra forma);
+  //   · `promocionalDeAca`: lo que sólo frena en lo de un medio de Balcarce, donde sí suele ser un sorteo o un
+  //     aviso; un sorteo o una rifa de una INSTITUCIÓN (INSTITUCIONES_QUE_SORTEAN) es noticia y no frena;
+  //   · `sorteoConPremio`: de afuera, "sorteo" o "sortea" frenan sólo junto a un premio o a "ganá"/"participá"
+  //     (el sorteo de una Smart TV sí; el de la sala de la Corte o el del Mundial, no).
+  // "rol periodístico", "vías de contacto" y "sede legal" (regla 142) pasaron a ingesta/no-es-nota.mjs: el medio
+  // que habla de sí mismo no es nota (rojo, "no es nota"), no espera a nadie.
+  promocional: ['sortearemos', 'ganá tu entrada', 'gana tu entrada', 'participá del sorteo', 'participa del sorteo',
+    'regala las entradas', 'promoción exclusiva', 'promocion exclusiva'],
+  promocionalDeAca: ['sorteo', 'sortea', 'participá del', 'participa del', 'suscribite', 'seguinos en', 'auspicia', 'publicidad'],
+  sorteoConPremio: ['ganá', 'gana', 'ganar', 'participá', 'participa', 'premio', 'premios', 'entradas', 'camiseta', 'camisetas',
+    'moto', 'auto', '0 km', 'smart', 'bicicleta', 'voucher', 'vouchers', 'órdenes de compra', 'orden de compra', 'cena', 'cenas'],
   // La cotización del dólar NO es una nota: es un número que cambia cada hora
   // y el sitio lo muestra en /dolar. El 25/09 salían dos o tres por día ("El
   // dólar minorista y el dólar blue cotizan este viernes", "Dólar hoy y dólar
@@ -1321,6 +1335,14 @@ export const REGLAS_SEMAFORO = {
     // gobernador de EE.UU.: si vuelve a pasar con otro estado, se agrega acá.
     'newsom', 'california'],
 };
+
+/** Las instituciones que hacen rifas, bonos y sorteos para juntar fondos (regla 199): su sorteo es noticia del pueblo
+ *  ("Bomberos vende los últimos números de la rifa anual", "El Merendero Doña Norma lanza su tercera campaña solidaria
+ *  con rifa", "Amigos Unidos organiza un encuentro con siete millones en premios"). Se buscan como palabras enteras. */
+export const INSTITUCIONES_QUE_SORTEAN = ['bomberos', 'club', 'merendero', 'cooperadora', 'escuela', 'jardín', 'jardin', 'hospital',
+  'parroquia', 'iglesia', 'asociación', 'asociacion', 'fundación', 'fundacion', 'biblioteca', 'sociedad de fomento', 'fomentista',
+  'comisión', 'comision', 'rotary', 'rotario', 'club de leones', 'lalcec', 'cáritas', 'caritas', 'centro de jubilados', 'hogar',
+  'comedor', 'scouts', 'instituto', 'colegio', 'liga', 'cooperativa', 'bono contribución', 'bono contribucion'];
 
 /** El motivo con que queda amarilla una nota internacional sin relación con Balcarce. */
 export const MOTIVO_INTERNACIONAL = 'internacional: sin relación con Balcarce';

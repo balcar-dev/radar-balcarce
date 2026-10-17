@@ -111,10 +111,15 @@ export const loAproboUnaPersona = (n) => n?.como === 'publicada';
 export function vaAFacebookPorLoQueEs(n, reglas = REGLAS_FACEBOOK) {
   if (esNotaPropia(n) || esperaCuerpo(n)) return false;
   if (aprobadaParaLasRedes(n)) return true;
+  // Lo de acá que cuentan tres medios de Balcarce o más (`muyContadaDeAca`, regla 198) no pide la relevancia mínima:
+  // es lo que más se lee del sitio. Política y Policiales siguen esperando a una persona.
   return esParaLasRedes(n) && !loAproboUnaPersona(n)
-    && (n.relevancia ?? 0) >= reglas.relevanciaMinima
+    && ((n.relevancia ?? 0) >= reglas.relevanciaMinima || muyContadaDeAca(n))
     && !reglas.seccionesQueEsperanPersona.includes(n.seccion);
 }
+
+/** ¿Es de acá y la cuentan tres medios de Balcarce o más? (generar-datos la marca; regla 198) */
+export const muyContadaDeAca = (n) => Boolean(n?.muyContadaDeAca) && esParaLasRedes(n);
 
 /**
  * Lo que puede salir en Facebook para completar los cinco del día cuando no alcanzan las de Balcarce (12/10, Hernán): lo de afuera de mayor
@@ -172,9 +177,11 @@ export function elegirParaFacebook({ notas, libro = libroNuevo(), ahora = new Da
     return Boolean(n.foto?.archivo) || aprobadaParaLasRedes(n) || edad >= (reglas.horasEsperandoFoto ?? 0) * 60;
   });
 
-  // Lo que aprobó una persona para las redes va primero; después lo de Balcarce, y sólo si no hay, lo de afuera de mayor puntaje; dentro de cada grupo, con foto y por relevancia.
+  // Lo que aprobó una persona para las redes va primero; después lo de Balcarce que cuentan tres medios de acá o más (regla 198),
+  // después el resto de lo de Balcarce y sólo si no hay, lo de afuera de mayor puntaje; dentro de cada grupo, con foto y por relevancia.
   const deAca = (n) => Number(esParaLasRedes(n));
-  candidatas.sort((a, b) => (Number(aprobadaParaLasRedes(b)) - Number(aprobadaParaLasRedes(a))) || (deAca(b) - deAca(a)) || (Number(Boolean(b.foto?.archivo)) - Number(Boolean(a.foto?.archivo))) || ((b.relevancia ?? 0) - (a.relevancia ?? 0)));
+  const muyDeAca = (n) => Number(muyContadaDeAca(n));
+  candidatas.sort((a, b) => (Number(aprobadaParaLasRedes(b)) - Number(aprobadaParaLasRedes(a))) || (muyDeAca(b) - muyDeAca(a)) || (deAca(b) - deAca(a)) || (Number(Boolean(b.foto?.archivo)) - Number(Boolean(a.foto?.archivo))) || ((b.relevancia ?? 0) - (a.relevancia ?? 0)));
   return candidatas.slice(0, Math.min(cupo, reglas.porCorrida));
 }
 

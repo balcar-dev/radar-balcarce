@@ -1,6 +1,6 @@
 # Criterio editorial de Radar Balcarce
 
-*Actualizado el 29/09/2026.* Éste es **el** criterio editorial del medio: qué se publica,
+*Actualizado el 17/10/2026 (lo de Balcarce entra todo; lo nacional, por popularidad).* Éste es **el** criterio editorial del medio: qué se publica,
 cómo se escribe, cómo se trabaja con las fuentes y cómo se verifica. Hay uno solo y está
 acá; los otros documentos remiten a éste.
 
@@ -81,8 +81,27 @@ Deportes, 4; Economía, Tecnología, Agro y Automovilismo, 2; lo que nombra a un
 argentina, 2. **Nunca con uno solo**; una fuente oficial alcanza sola. Si no llega,
 espera a una persona con el motivo "de afuera y poco contada (N medios; Sección pide M)".
 Además, cada sección tiene un **cupo** de lo de afuera (cuántas pueden salir solas a la
-vez). Los números, en la sección 11. Se mira en la ingesta y otra vez después de la
-lectura con IA: si al juntar repetidas una nota llega a los medios que pide, sale.
+vez). El cupo cuenta sólo lo que todavía se puede estrenar (el hecho de menos de 12
+horas) y lo ya publicado que sigue a la vista, no notas de días atrás. Los números, en
+la sección 11. Se mira en la ingesta y otra vez después de la lectura con IA: si al
+juntar repetidas una nota llega a los medios que pide, sale, y lo que esperaba por el
+cupo vuelve a competir.
+
+**Lo de Balcarce entra todo; lo nacional, por popularidad** (17/10/2026, Hernán). Lo de
+acá no compite con lo nacional: no pide medios ni ocupa cupo, sin repetir, sin el
+autobombo de los medios y sin publicidad (más abajo). Lo de afuera entra según cuántos
+medios lo cuentan y que sea de interés. **Muy contada** (`ingesta/muy-contada.mjs`): una
+historia de afuera que cuentan **8 medios distintos o más** (los del mismo dueño cuentan
+uno), o que junta **5 en sus primeras 3 horas** (4 si empezó de noche, de 20 a 7), con el
+hecho de menos de 24 horas. **Sale aunque el cupo de su sección esté lleno, va primera en
+su sección durante 6 horas** y no salen más de 2 del mismo tema a la vez (las de más
+medios). No cuentan "dónde ver", "a qué hora juega", el "en vivo", la cotización del dólar
+ni el pronóstico, aunque los cuenten todos; lo que el semáforo frena (menores, víctimas,
+acusados, chimentos, el extranjero sin un argentino) sigue frenado. Y **muy contada de
+acá**: lo de Balcarce que cuentan 3 medios de acá o más (lo que más se lee del sitio) es
+la primera candidata a la nota grande de la tapa y a Facebook. El **puntaje** suma 8 cada
+vez que se duplican los medios (2 medios 8, 4 medios 16, 8 medios 24, 32 medios 40), sin
+tope: una historia de 30 medios vale más que una de 5.
 
 **Una IA lee cada nota antes de decidir** (`ingesta/lectura-ia.mjs`). Con el perfil de
 Balcarce (`ingesta/perfil-balcarce.md`) y la ciudad del medio arma una ficha: de dónde es
@@ -167,7 +186,8 @@ elige cada foto, en `docs/05-FOTOS.md`.
 | **"En vivo", "minuto a minuto", "en directo"** en el título, la bajada, el guion o el texto para redes ("música en vivo" sí). Las páginas viejas que lo dicen en el título se retiran solas | Radar Balcarce no hace coberturas en vivo: cuenta lo que pasó |
 | **Una nota automática sin cuerpo** | Una nota de dos renglones no es una nota (sección 4) |
 | **El nombre del medio de origen en el título, el guion, las placas o las redes** | La atribución va en la nota de la web, con el enlace al original |
-| **Lo que parece promoción y no noticia** (sorteos, "ganá tu entrada") | No se bloquea, pero nunca sale solo |
+| **Lo que parece promoción y no noticia** ("ganá tu entrada", el sorteo de un comercio). De afuera, "sorteo" frena sólo junto a un premio; de un medio de acá, sí frena, salvo que sea la rifa o el sorteo de una institución (Bomberos, un club, un merendero), que es noticia | No se bloquea, pero nunca sale solo |
+| **Lo que un medio de Balcarce publica de sí mismo** (su audiencia, su aniversario, su programación, las entrevistas que va a hacer, sus sorteos), **el pronóstico o el cronograma de farmacias de otro medio** y **la publicidad de un comercio** (`ingesta/no-es-nota.mjs`, regla 199). Lo que alguien dijo en un programa sí es noticia, y una alerta del clima también | No es una nota de Radar: no se publica ni va a las redes (el sitio tiene su clima y su farmacia; el comercio, para la agenda comercial) |
 | **Las listas de sepelios** (nombres de personas fallecidas), ni aprobadas por una persona | Decisión de Hernán, 27/09: es sensible y no hay fuente oficial (`REGLAS_SEMAFORO.nunca`, `nuncaSePublica`) |
 | **Fúnebres, comentarios de lectores y transmisiones en vivo largas** | Decisión vigente (`docs/10-REGLAS-Y-PRUEBAS.md`) |
 
@@ -179,8 +199,8 @@ que lo decidan Hernán y Andrés.**
 
 | Color | Qué pasa | Cuándo |
 |---|---|---|
-| **Rojo** | No se publica nunca, ni por error | Identifica o puede identificar a un menor o a una víctima de violencia de género o de un delito sexual (menor de edad, abuso sexual, violación, femicidio, grooming, suicidio…). También las listas de sepelios (`REGLAS_SEMAFORO.nunca`) |
-| **Amarillo** | Espera a una persona (en el panel del celular) | Acusa a alguien (denuncia, detenido, imputado), habla de una muerte o de un herido (en Policiales, en Balcarce, en lo de acá o de la zona y en lo que cuenta un solo medio), involucra a un chico, parece promoción, es de afuera y la cuentan menos medios de los que pide su sección, pasó el cupo de su sección, es la cotización del dólar, o tiene **verificación baja** (sección 5) |
+| **Rojo** | No se publica nunca, ni por error | Identifica o puede identificar a un menor o a una víctima de violencia de género o de un delito sexual (menor de edad, abuso sexual, violación, femicidio, grooming, suicidio…). También las listas de sepelios (`REGLAS_SEMAFORO.nunca`), las efemérides de otro medio y lo que no es nota (el autobombo de un medio, el pronóstico o las farmacias de otro medio, la publicidad de un comercio: motivo "no es nota"; una persona igual puede publicarlo) |
+| **Amarillo** | Espera a una persona (en el panel del celular sólo lo de acá, hasta 5 por día; lo de afuera no va al celular desde el 17/10/2026, regla 200: si no sale solo, no sale) | Acusa a alguien (denuncia, detenido, imputado), habla de una muerte o de un herido (en Policiales, en Balcarce, en lo de acá o de la zona y en lo que cuenta un solo medio), involucra a un chico, parece promoción, es de afuera y la cuentan menos medios de los que pide su sección, pasó el cupo de su sección, es la cotización del dólar, o tiene **verificación baja** (sección 5) |
 | **Verde** | Sale sola | Todo lo demás |
 
 **Qué mira.** En el **título y el comienzo del resumen**, las listas enteras. En el
@@ -377,9 +397,21 @@ prueba controla que diga lo mismo que ésta.
 
 ### El guion para la voz
 
-**Es el título, dicho tal cual**, y nada más: unos diez segundos. Sólo cambia
-lo que no se puede leer en voz alta (las siglas como se pronuncian, los
-números en palabras). La fuente no se nombra.
+**Es el título, dicho tal cual**, y nada más: unos diez segundos. La fuente no
+se nombra. Desde el 17/10/2026 (regla 202) **no lo escribe la IA**: lo arma el
+sistema con el título (el mismo que usan las redes, `guionNoticia`). Antes se
+le pedía, ninguna pieza lo usaba y la nota se rechazaba si faltaba o si traía
+un número en palabras que la fuente daba en cifras.
+
+### Los verbos de una decisión
+
+"Aprueba", "sanciona", "confirma", "habilita", "prohíbe", "completa" o
+"inaugura" en el título van sólo si la fuente dice que eso ya pasó. Un pedido,
+un proyecto o un "se estudia" se dice "pide", "propone", "analiza". El
+27/09 salió "El Concejo aprueba reducir las tasas a taxis y remises" y el
+Concejo sólo había pedido que se estudie. Desde el 17/10/2026 (regla 202) el
+verificador rechaza el título que dice "aprueba" (o los otros) cuando la fuente
+no lo dice, o cuando la fuente habla de un pedido o un proyecto y el título no.
 
 ### Los dos tonos
 
@@ -411,7 +443,10 @@ panel y para las redes (sección 7).
 | Lo que aportó cada fuente | Una frase por fuente, sin nombrar al medio | Una por fuente |
 | Texto para redes | El posteo de Facebook: qué pasó y, si la fuente lo dice, por qué le importa a Balcarce. Sin nombrar al medio, sin hashtags, enlaces ni emojis | Hasta 280 caracteres |
 | Etiquetas | De qué trata la nota, sin "#". Van a Google y dos o tres como hashtags en Facebook | De 3 a 8 |
-| Nivel sugerido | ALTA, MEDIA o BAJA. **Es sólo una sugerencia**: el nivel lo calcula el sistema (sección 5) | — |
+
+El nivel de verificación lo calcula el sistema (sección 5): desde el 17/10/2026
+ya no se le pide a la IA que sugiera uno (regla 202; se calculaba igual y se
+descartaba).
 
 ### Los títulos en mayúsculas
 
@@ -569,7 +604,7 @@ medio" pasaba sin que nadie lo mirara).
 
 **Qué pasa cuando algo no pasa:**
 
-1. **Si falla el título, la bajada o el guion**, esa escritura no se usa.
+1. **Si falla el título o la bajada**, esa escritura no se usa (el guion es el título).
 2. **Si falla el cuerpo, se sacan sólo las oraciones** con el dato que no
    cuadra. Si lo que queda pasa y tiene 70 palabras o más, se usa.
 3. **Si no alcanza, se le pide de nuevo una vez**, diciéndole qué falló ("usá
@@ -820,6 +855,19 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Cupo de lo de afuera: Automovilismo | 6 | `CUPO_DE_AFUERA.Automovilismo` |
 | Cupo de lo de afuera: Cultura y agenda | 8 | `CUPO_DE_AFUERA.Cultura y agenda` |
 | Cupo de lo de afuera: el resto de las secciones | 15 | `CUPO_POR_DEFECTO` |
+| Muy contada: medios distintos que la cuentan (sale sin cupo; sobre 50 medios del país) | 8 | `MUY_CONTADA.medios` |
+| Muy contada: medios en sus primeras horas, de día | 5 | `MUY_CONTADA.mediosRapidos` |
+| Muy contada: medios en sus primeras horas, de noche | 4 | `MUY_CONTADA.mediosRapidosDeNoche` |
+| Muy contada: cuántas son "las primeras horas" | 3 | `MUY_CONTADA.horasRapidas` |
+| Muy contada: la noche empieza a la hora | 20 | `MUY_CONTADA.nocheDesde` |
+| Muy contada: la noche termina a la hora | 7 | `MUY_CONTADA.nocheHasta` |
+| Muy contada: horas que puede tener el hecho | 24 | `MUY_CONTADA.horasDelHecho` |
+| Muy contada: horas que puede tener su nota más nueva | 12 | `MUY_CONTADA.horasDeLaUltimaNota` |
+| Muy contada: horas que va primera en su sección | 6 | `MUY_CONTADA.horasPrimeraEnSuSeccion` |
+| Muy contada: cuántas del mismo tema a la vez, como mucho | 2 | `MUY_CONTADA.porTema` |
+| Muy contada de acá: medios de Balcarce que la cuentan (primera para la nota grande y Facebook) | 3 | `MUY_CONTADA.mediosDeAca` |
+| Puntaje: lo que suma cada vez que se duplican los medios (sin tope) | 8 | `PUNTAJE.porDuplicarMedios` |
+| Lo de acá que espera a una persona en el celular: notas por día, como mucho | 5 | `ESPERA_PERSONA.deAcaPorDia` |
 | Facebook: notas por día, como máximo | 5 | `FACEBOOK.porDia` |
 | Facebook: relevancia mínima | 75 | `FACEBOOK.relevanciaMinima` |
 | Facebook: relevancia mínima para completar los cinco con lo de afuera | 0 | `FACEBOOK.relevanciaMinimaDeRelleno` |
@@ -875,7 +923,7 @@ B. Contrastás las fuentes que recibís, numeradas (Fuente 1, Fuente 2…): son 
 C. Priorizás lo local: si la noticia es de afuera, contás qué tiene que ver con Balcarce sólo si las fuentes lo dicen.
 D. Cada dato importante va atribuido a quien lo dio, y se prefiere la fuente primaria (el organismo, el club, la Policía, la persona que habló) antes que el medio que lo reprodujo. Si hay una fuente oficial, su versión va primero.
 E. Cuidás las fechas: no mezclás lo que pasó antes con lo de ahora, ni presentás como actual algo que la fuente cuenta como histórico.
-F. Los ANTECEDENTES, si vienen, son notas que Radar Balcarce publicó antes sobre el mismo tema, cada una con su fecha. Sirven sólo de contexto: lo que saques de ahí va en el cuerpo, en las claves o en lo que se sabe, dicho como anterior y con su fecha o su momento ("en agosto", "a principios de mes", "como se había informado"). Nunca en el título, la bajada, el guion ni el texto para redes, y nunca como si fuera de hoy. Si un antecedente y la fuente de hoy no coinciden, manda la fuente de hoy.
+F. Los ANTECEDENTES, si vienen, son notas que Radar Balcarce publicó antes sobre el mismo tema, cada una con su fecha. Sirven sólo de contexto: lo que saques de ahí va en el cuerpo, en las claves o en lo que se sabe, dicho como anterior y con su fecha o su momento ("en agosto", "a principios de mes", "como se había informado"). Nunca en el título, la bajada ni el texto para redes, y nunca como si fuera de hoy. Si un antecedente y la fuente de hoy no coinciden, manda la fuente de hoy.
 G. Nunca presentás como propio de Radar Balcarce lo que informó otro medio: nada de "pudo saber este medio" ni "confirmó Radar Balcarce".
 H. Si recibiste una sola fuente, no inventás una "ampliación": la nota cuenta lo que esa fuente dice, y los datos importantes van atribuidos a ella (regla 16).
 
@@ -893,8 +941,8 @@ Después la escribís, con estas reglas fijas:
    El análisis de los pasos A a H se usa PARA ESCRIBIR el cuerpo, no para contarlo aparte: lo que confirman varias fuentes va dicho como hecho; lo que dice una sola, atribuido a esa fuente ("según informó el municipio", "de acuerdo con un medio local"); lo que las fuentes cuentan distinto, con las dos versiones atribuidas; y lo que no se pudo confirmar, dicho como no confirmado ("todavía no se informó…", "no trascendió…"). El lector no ve tu análisis: ve una nota mejor escrita gracias a él.
 {{TONO}}
 6. Los números van como los da la fuente. Podés redondear ("unos 3.500" por 3.480) o comparar ("el triple que el año pasado", si la fuente da los dos datos) antes que dar un porcentaje con decimales, pero nunca pasás a otra cifra: si la fuente dice 1,7 millones, no es "un millón y medio".
-7. El guion para la voz ES EL TÍTULO, dicho tal cual, y nada más. Nada de contexto, nada de cierre, nada de "la nota completa en...". Sólo cambiás algo si el título no se puede leer en voz alta: las siglas se escriben como se pronuncian y los números van en palabras (catorce, no 14). La pieza tiene que durar unos diez segundos: si el título es largo, acortalo al hecho central en vez de agregarle nada.
-8. La fuente NO se nombra nunca en el guion de voz, en el título ni en el texto para redes: eso va aparte, en la atribución de la nota. En el cuerpo sí podés referirte a ella en general ("según informó el municipio"), nunca citar el nombre del medio que la publicó.
+7. Los verbos de una decisión (aprueba, sanciona, confirma, habilita, prohíbe, completa, inaugura) van sólo si la fuente dice que eso ya se decidió o se hizo. Un proyecto, un pedido de informes, una propuesta o un "se estudia" se dicen así: "pide", "propone", "presenta un proyecto para", "analiza". Así no: "El Concejo aprueba reducir la tasa", cuando la fuente dice que se pidió estudiarlo.
+8. La fuente NO se nombra nunca en el título ni en el texto para redes: eso va aparte, en la atribución de la nota. En el cuerpo sí podés referirte a ella en general ("según informó el municipio"), nunca citar el nombre del medio que la publicó.
 9. Nunca inventás un dato, una cifra, un nombre, un día o una cita que no esté en lo que recibiste — en ninguna parte de lo que devolvés. Si un dato no se puede verificar con las fuentes recibidas, no lo afirmás: va en lo que falta confirmar. Si dos fuentes se contradicen en un dato (una hora, un número), no elegís una al azar ni inventás uno propio para "resolver" la diferencia: mostrás las dos versiones atribuidas ("un medio habla de… y otro de…"), o usás la de la fuente oficial si la hay, y la diferencia va en lo que falta confirmar. Si la fuente dice que algo no está confirmado ("podría", "se analiza", "no hay confirmación oficial", "según trascendió"), la nota lo dice igual, en el cuerpo y, si es el hecho central, también en la bajada: nunca lo presentás más seguro de lo que es. Tampoco lo agrandás con adjetivos que la fuente no usa ("un fuerte impacto", "una profunda crisis"). Los términos técnicos y los nombres de los organismos van como los da la fuente: la "cuenta corriente" no es "la balanza de pagos".
 10. Si la nota original ACUSA a alguien de algo (un delito, una falta, una irregularidad) y todavía no hay una condena o una confirmación oficial: SIEMPRE atribuís la acusación a quien la hizo ("según la denuncia de...", "de acuerdo con la Policía...", "según fuentes judiciales...") y usás el modo condicional ("habría", no "hizo"). Nunca lo escribís como un hecho afirmado por vos, ni en el copete ni en el cuerpo. Esto no es sólo estilo: es lo que en Argentina protege a un medio de una demanda por calumnias o injurias (doctrina Campillay).
 11. Presentás a cada persona con su cargo la primera vez que aparece ("el intendente Fulano Pérez", "la concejal Mengana Gómez") y después por el apellido. No usás "ayer", "hoy" ni "mañana" si la fuente no dice el día: ponés el día de la semana que la fuente trae, o nada. Tampoco "este lunes", "este sábado" ni "este fin de semana": la nota se lee días después y "este viernes" parece el que viene. Va "el sábado" o, si la fuente da el número, "el sábado 26".
@@ -909,7 +957,7 @@ Después la escribís, con estas reglas fijas:
 20. La nota se tiene que entender sin haber leído nada antes, y se tiene que leer fácil. Con lo que den las fuentes, el cuerpo dice: qué pasó, con quién, cuándo y dónde (en la primera oración); a quién le importa en Balcarce y por qué, sólo si la fuente lo dice (regla 15); de dónde viene, con un antecedente si lo da la fuente o los antecedentes, con su fecha; y qué sigue, si se sabe. Una sigla se explica la primera vez, salvo las que todos conocen (AFA, ANSES). Oraciones cortas, un dato por oración: si una oración tiene más de dos comas, la partís en dos. Sujeto, verbo y predicado, en ese orden, y en voz activa ("El Concejo aprobó la ordenanza", no "Fue aprobada por parte del Concejo la ordenanza"). Palabras de todos los días: "empezó" y no "dio inicio", "hubo" y no "se registró la presencia de". Sin cierres que resuman o valoren. Tiene que sonar a un periodista del pueblo que cuenta bien lo que pasó, no a un texto armado por una máquina.
 21. Si la nota anuncia algo que va a pasar o que cambia algo práctico (un corte, un cambio de horario, un trámite, un evento, un partido), el cuerpo tiene TODOS los datos prácticos que da la fuente: el día con su fecha, la hora de inicio y la de fin, el lugar, a quién afecta (las calles, los barrios, los usuarios), qué hay que hacer o llevar y cuánto cuesta. Si la fuente dice que hay una lista (de calles, de requisitos) y no te llegó, decís dónde se consulta si la fuente lo dice, sin inventarla. Nunca cambiás un dato concreto por una frase vaga: si la fuente da las fechas y los estadios, no escribís "se confirmaron las fechas y las sedes" sin decir cuáles.
 
-Además del título, la bajada, el cuerpo y el guion, devolvés:
+Además del título, la bajada y el cuerpo, devolvés:
 
 - claves: de 3 a 5 puntos cortos, de una línea cada uno, con lo esencial de la nota.
 - seSabe: los datos confirmados por las fuentes, uno por punto, atribuidos cuando corresponde ("según la Municipalidad…").
@@ -917,14 +965,13 @@ Además del título, la bajada, el cuerpo y el guion, devolvés:
 - aportes: por cada fuente que usaste, {"fuente": su número, "aporte": qué información aportó, en una frase}. Sin nombrar al medio: el nombre ya se muestra al lado.
 - textoRedes: el texto para el posteo de Facebook, hasta 280 caracteres: qué pasó y, sólo si la fuente lo dice, por qué le importa a Balcarce. Sin nombrar al medio de origen, sin hashtags, sin enlaces y sin emojis (el enlace a la nota y los hashtags se agregan aparte).
 - etiquetas: de 3 a 8 palabras o frases cortas que digan de qué trata la nota, sin "#".
-- nivel: cómo evaluás la verificación, ALTA (hay una fuente oficial o varias fuentes independientes), MEDIA (una sola fuente confiable, sin confirmación independiente) o BAJA (información preliminar, declaraciones de parte sin verificar o evidencia insuficiente). Es sólo una sugerencia: el nivel que se publica lo calcula el sistema.
 
 Todo eso sigue las mismas reglas que el cuerpo: nada que no esté en lo que recibiste, nada copiado, ningún menor ni víctima identificable, y las acusaciones siempre atribuidas y en condicional.
 
 Antes que nada, en el campo "datos" anotás de 3 a 10 datos concretos que vas a usar (quién, qué, cuándo, dónde, cuánto, qué dijo alguien), uno por punto y cada uno con el número de la fuente de donde sale ("F1: …"). Si la fuente los da, entre esos datos van SIEMPRE: la fecha y la hora de lo que va a pasar, el lugar, las cifras centrales y los nombres de quienes hablan o deciden. Ese campo es tu borrador: no se publica. Después escribís todo lo demás usando SÓLO esos datos y con palabras tuyas.
 
 Devolvés SOLO un JSON con esta forma exacta, sin texto alrededor:
-{"datos": ["F1: ..."], "titulo": "...", "copete": "...", "cuerpo": "...", "guion": "...", "claves": ["..."], "seSabe": ["..."], "noConfirmado": ["..."], "aportes": [{"fuente": 1, "aporte": "..."}], "textoRedes": "...", "etiquetas": ["..."], "nivel": "MEDIA"}
+{"datos": ["F1: ..."], "titulo": "...", "copete": "...", "cuerpo": "...", "claves": ["..."], "seSabe": ["..."], "noConfirmado": ["..."], "aportes": [{"fuente": 1, "aporte": "..."}], "textoRedes": "...", "etiquetas": ["..."]}
 <!-- PROMPT:REGLAS:FIN -->
 
 ### El tono de todos los días (va en el lugar de `{{TONO}}`)

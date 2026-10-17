@@ -13,4 +13,5 @@ decidido, en [`../DECISIONES.md`](../DECISIONES.md). Si algo de acá y el códig
 | [`CRONOGRAMA-REDES.md`](CRONOGRAMA-REDES.md) | Qué sale en las redes, a qué hora y en qué formato | Generado (`node redes/cronograma-semana.mjs`); foto del 9/10, rehacer antes de usar |
 | [`CLAVES-DE-IA.md`](CLAVES-DE-IA.md) | Las claves y servicios de IA: qué hay y qué se podría sumar | Del 9/10; las claves se vuelven a crear cuando se elijan los modelos |
 | [`DISENOS-A-ARMAR.md`](DISENOS-A-ARMAR.md) | 2 a 4 diseños de reels y web para elegir más adelante | Sin empezar, a propósito (después del rediseño) |
+| [`EN-LOS-MEDIOS-DE-BALCARCE.md`](EN-LOS-MEDIOS-DE-BALCARCE.md) | Dos bloques nuevos de la tapa: "En los medios de Balcarce" (lo que publican los medios de acá y no es nota, con su enlace) y "Lo que se cuenta en todo el país" (las muy contadas); y lo que quedó de las reglas 197 a 202 | Sin hacer: cambian la portada, lo deciden Hernán y Andrés |
 | [`material/`](material/) | Páginas y videos de ejemplo de la auditoría del 8/10 (para abrir en la PC) | Referencia |
