@@ -16479,7 +16479,8 @@
   "imagenOriginal": "https://cdn-4.motorsport.com/images/amp/YBVjp4zY/s6/rafael-camara-haas-f1-team-2.jpg",
   "razon": "Es una foto nítida, con excelente encuadre del protagonista, sin marcas de agua ni menores reconocibles.",
   "cuando": "2026-10-15T21:32:00.960Z",
-  "huella": "92c28975b29a56de"
+  "huella": "92c28975b29a56de",
+  "ausenteDesde": "2026-10-17T17:03:28.378Z"
  },
  "n6v2wu": {
   "archivo": "fotos-notas/n6v2wu.jpg",
@@ -18521,13 +18522,40 @@
   "huella": "330bc3271d1d0413"
  },
  "19nga6r": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/19nga6r.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Santiago Gilligan busca sumar sus primeros minutos en la Serie A de Italia",
-  "razon": "Segunda opinión no disponible (la nota habla de chicos o de categorías juveniles; groq: HTTP 429: Request too large for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `): la foto de El Diario Balcarce no se usa todavía.",
-  "cuando": "2026-10-17T14:31:54.326Z",
-  "intentos": 2,
-  "fuentes": 1
+  "enlace": "https://eldiariobalcarce.com.ar/santiago-gilligan-busca-asentarse-en-la-serie-a-del-rugby-italiano-776",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-17-12-46-2Santiago_Gilligan.jpg",
+  "razon": "Es la única foto disponible, cumple con todos los requisitos de calidad, muestra al protagonista y no tiene marcas de medios ni menores.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Santiago Gilligan con la camiseta de su equipo de rugby sosteniendo un balón",
+   "segunda": {
+    "proveedor": "groq",
+    "marca": false,
+    "menor": false,
+    "jovenes": false,
+    "deArchivo": true,
+    "grafica": false,
+    "stock": false,
+    "corresponde": "si",
+    "descripcion": "Jugador de rugby posando con el balón en un campo de entrenamiento."
+   },
+   "dudosa": "la nota habla de chicos o de categorías juveniles"
+  },
+  "huella": "53ddcfce8be9ab8d"
  },
  "r3jsn4": {
   "intentado": true,
@@ -18711,14 +18739,28 @@
   "huella": "66cca785ddcacae3"
  },
  "4m5150": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/4m5150.jpg",
+  "medio": "Perfil",
+  "credito": "Foto: Perfil",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "La inteligencia artificial acelera la ingeniería inversa y enciende alertas",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T15:02:01.683Z",
-  "intentos": 1,
-  "fuentes": 1,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.perfil.com/noticias/columnistas/que-pasa-cuando-la-ia-aprende-a-hackear-todo-lo-que-nos-rodea-por-maximiliano-firtman.phtml",
+  "imagenOriginal": "https://fotos.perfil.com/2026/10/17/trim/1140/641/171026amodeianthropicbloombergg-2350470.jpg",
+  "razon": "Es una foto genérica adecuada y de buena calidad para ilustrar la nota de tecnología sin inconvenientes.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "generica",
+   "descripcion": "Hombre con anteojos conversando gesticulando."
+  },
+  "huella": "6d49090929695959"
  },
  "1bkouf2": {
   "intentado": true,
@@ -18800,5 +18842,134 @@
    "descripcion": "Bill Gates con casco y chaleco reflectante en la obra de construcción del reactor nuclear."
   },
   "huella": "525ac20222cacb48"
+ },
+ "104zrum": {
+  "archivo": "fotos-notas/104zrum.jpg",
+  "medio": "La Nueva",
+  "credito": "Foto: La Nueva",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Jorge Colina advierte que solo crece el cuentapropismo informal",
+  "enlace": "https://www.lanueva.com/nota/2026-10-17-13-33-0-lo-unico-que-crece-en-la-argentina-es-el-cuentapropismo-informal",
+  "imagenOriginal": "https://pxcdn.lanueva.com/102026/1792255033733.jpg?&cw=600&ch=365",
+  "razon": "La foto B ilustra adecuadamente la temática laboral sin marcas de agua superpuestas, a diferencia de la A.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "generica",
+   "descripcion": "Obreros trabajando en una construcción"
+  },
+  "huella": "54554d191d346d6d"
+ },
+ "s1injc": {
+  "archivo": "fotos-notas/s1injc.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Las cámaras de colectivos del AMBA advierten recortes de servicios",
+  "enlace": "https://tn.com.ar/economia/2026/10/17/las-empresas-de-colectivos-del-amba-advierten-por-posibles-recortes-en-los-servicios-que-le-exigen-al-gobierno/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/las-empresas-de-colectivos-del-amba-alertan-por-recortes-de-servicios-que-le-exigen-al-gobierno-foto-leandro-heredia-tn-U4QRX7VDCNGPXH5YHVOOPRZ6RI.jpg?auth=1864e6b9d0535551ada463a3b2e6089e25b73e22a95a74c0381de3039616e68c&width=1023",
+  "razon": "Es la foto con mejor encuadre y nitidez de un colectivo del AMBA en circulación, sin marcas agregadas.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Colectivo de la línea 9 circulando por la calle en zona urbana."
+  },
+  "huella": "03070bab237bf343"
+ },
+ "e2pox8": {
+  "archivo": "fotos-notas/e2pox8.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Partido Justicialista exige la libertad de Cristina Fernández",
+  "enlace": "https://www.clarin.com/politica/dia-lealtad-cristina-kirchner-hizo-sacar-comunicado-pj-compara-peron-cuestiona-regimen-visitas-siquiera-aplica-narcotraficantes_0_TmkLoDSO25.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/09/05/HsF7xv7Ca_2000x1500__1.jpg",
+  "razon": "La foto A muestra a Cristina Fernández de cuerpo entero en el balcón con buen encuadre y nitidez, sin marcas de agua ni menores.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Cristina Fernández asomada a un balcón con los brazos levantados."
+  },
+  "huella": "4149695961e8b8a0"
+ },
+ "12xnbwz": {
+  "archivo": "fotos-notas/12xnbwz.jpg",
+  "medio": "Campeones",
+  "credito": "Foto: Campeones",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Joaquín Cortina consigue la pole positión en Concepción del Uruguay",
+  "enlace": "https://campeones.com.ar/en-concepcion-del-uruguay-cortina-consigue-la-pole-de-tp-clase-1/",
+  "imagenOriginal": "https://campeones.com.ar/wp-content/uploads/2026/10/261017-TPC1-Cortina.jpg",
+  "razon": "La foto A tiene mejor encuadre del auto en pista sin marcas añadidas y cumple perfectamente con los requisitos.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Auto de competición en la pista doblando"
+  },
+  "huella": "1e00c8e580a92210"
+ },
+ "np0iti": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Ayala analiza el futuro de la Selección tras el retiro de Messi",
+  "razon": "La única foto disponible muestra a juveniles y no corresponde directamente al título de la nota sobre Ayala y Messi.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "intentos": 1,
+  "fuentes": 2
+ },
+ "1wpceph": {
+  "archivo": "fotos-notas/1wpceph.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Franco Colapinto corre el Gran Premio de Estados Unidos de Fórmula 1",
+  "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/17/gran-premio-de-estados-unidos-de-formula-1-cuando-corre-franco-colapinto-y-a-que-hora-es-la-carrera/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/franco-colapinto-volvera-a-correr-con-alpine-el-domingo-25-de-octubre-en-el-gran-premio-de-estados-unidos-foto-reuters-mike-segar-KSEDFLF3LRHUBJ6OEYCCLVXY4I.png?auth=2a926f4c6723d45d369c2b2ef8a488900ff48084fc302b2b4c8ad27f2337b942&width=1023",
+  "razon": "La foto A muestra el auto de Fórmula 1 en plena pista con excelente nitidez y encuadre lateral, sin marcas de medios ni personas.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Auto de Fórmula 1 circulando en pista con fondo difuminado por movimiento"
+  },
+  "huella": "639292aab6969802"
  }
 }

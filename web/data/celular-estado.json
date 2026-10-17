@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T16:31:44.487Z",
- "portada": 74,
- "archivo": 1229,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-17T17:03:28.389Z",
+ "portada": 82,
+ "archivo": 1232,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-17T16:31:44.507Z",
+  "generado": "2026-10-17T17:03:28.413Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,8 +126,19 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 38,
+    "notas": [
+     {
+      "id": "1ae6llz",
+      "titulo": "Dibu Martínez sufre un fuerte golpe en la cabeza y sale en camilla",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "1e6e9wy",
+      "titulo": "Docentes y estatales bonaerenses discuten una nueva oferta salarial",
+      "seccion": "Economía"
+     }
+    ]
    },
    {
     "nombre": "podcast",
@@ -156,11 +167,16 @@
      "id": "19nga6r",
      "titulo": "Santiago Gilligan busca sumar sus primeros minutos en la Serie A de Italia",
      "cuando": "2026-10-17T14:35:51.990Z"
+    },
+    {
+     "id": "1kgatx3",
+     "titulo": "Virginia Aparicio presenta los resultados del proyecto SPRINT sobre plaguicidas",
+     "cuando": "2026-10-17T16:35:59.059Z"
     }
    ],
    "cola": [],
-   "cupo": 2,
-   "proximoDesde": "2026-10-17T16:05:51.990Z",
+   "cupo": 1,
+   "proximoDesde": "2026-10-17T18:05:59.059Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
