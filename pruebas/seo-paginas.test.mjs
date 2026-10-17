@@ -237,9 +237,10 @@ test('la firma que ve el lector es una línea corta, coherente con el autor de l
   // La explicación larga existe (va al abrir el desplegable) y no en las propias.
   assert.match(explicacionDeFirma(auto), /inteligencia artificial/);
   assert.equal(explicacionDeFirma({ propia: true }), null);
-  // El componente: la firma va en el renglón del desplegable, y el párrafo largo no está en la página.
+  // El componente (17/10/2026, Hernán): arriba sólo "Fuentes (N)"; la firma va adentro del desplegable, y el párrafo largo no está en la página cerrada.
   const verificacion = leer('components/verificacion.js');
-  assert.match(verificacion, /<summary>[\s\S]*\{firma\}[\s\S]*Fuentes \(\{fuentes\.length\}\)[\s\S]*<\/summary>/);
+  assert.match(verificacion, /<summary>\s*<span className="fn-n">Fuentes \(\{fuentes\.length\}\)<\/span>\s*<\/summary>/);
+  assert.match(verificacion, /<p className="fn-explica">\s*<strong className="fn-firma">\{firma\}\.<\/strong>/);
   assert.ok(!/Salió sin revisión humana/.test(leer('components/piezas.js') + verificacion + leer('components/metadatos.js')));
 });
 

@@ -47,11 +47,11 @@ const ESTILO = `
 `;
 
 /**
- * El pie de la nota: una sola línea gris con la firma y las fuentes
- * ("Redacción con IA, verificada contra las fuentes · Fuentes (4)"). Al abrir
- * el desplegable, la explicación de la firma y el nombre de cada medio con su
- * enlace. La firma se dice siempre (regla del sitio: cada nota dice quién la
- * escribió), pero corta; lo interno ("salió sin revisión humana") no se dice.
+ * El pie de la nota: una sola línea gris, "Fuentes (4)". Al abrir el desplegable, la firma
+ * ("Redacción con IA, verificada contra las fuentes"), su explicación y el nombre de cada medio con su enlace. La firma se dice
+ * siempre (regla del sitio: cada nota dice quién la escribió), pero adentro del desplegable y no arriba (17/10/2026, Hernán:
+ * "cuanto menos cosas así tan visibles, mejor; cuando la gente aprieta en Fuentes ya sabe"); lo interno ("salió sin revisión
+ * humana") no se dice. Sin fuentes, la línea con la firma sola.
  */
 export default function FuentesDeLaNota({ nota }) {
   return (
@@ -83,15 +83,11 @@ export function PieConFuentes({ firma, explicacion, fuentes }) {
     <details className="fuentes-nota">
       <style dangerouslySetInnerHTML={{ __html: ESTILO }} />
       <summary>
-        <span className="fn-firma">{firma}</span>
-        <span className="fn-sep" aria-hidden="true">·</span>
         <span className="fn-n">Fuentes ({fuentes.length})</span>
       </summary>
-      {explicacion && (
-        <p className="fn-explica">
-          {explicacion} <a href="/quienes-somos">Cómo trabajamos</a>
-        </p>
-      )}
+      <p className="fn-explica">
+        <strong className="fn-firma">{firma}.</strong>{explicacion ? ` ${explicacion}` : ''} <a href="/quienes-somos">Cómo trabajamos</a>
+      </p>
       <ul>
         {fuentes.map((f, i) => (
           <li key={f.enlace ?? f.medio}>
