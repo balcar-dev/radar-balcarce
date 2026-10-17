@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-17T15:02:19.802Z",
+ "generado": "2026-10-17T15:31:41.706Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -52,11 +52,6 @@
      "fecha": "2026-10-16T18:52:15.000Z"
     },
     {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/politica/santilli-los-que-deberian-estar-preocupados-el-regreso-del-kirchnerismo-son-los-gobernadores-n56559",
-     "fecha": "2026-10-16T17:53:00.000Z"
-    },
-    {
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/politica/los-gobernadores-piden-mas-obras-y-santilli-lanzo-una-advertencia-deberian-estar-preocupados-si-nid16102026/",
      "fecha": "2026-10-16T22:56:17.000Z"
@@ -65,11 +60,6 @@
      "medio": "A24",
      "enlace": "https://www.a24.com/politica/santilli-los-que-tendrian-que-estar-preocupados-son-los-gobernadores-si-gana-kicillof-n1607140",
      "fecha": "2026-10-16T16:41:00.000Z"
-    },
-    {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
-     "fecha": "2026-10-16T18:08:00.000Z"
     },
     {
      "medio": "Noticias Argentinas (NA)",
@@ -115,11 +105,38 @@
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-16-11-48-0-para-santilli-los-gobernadores-deberian-estar-preocupados-por-un-eventual-regreso-del-kirchnerismo",
      "fecha": "2026-10-16T14:53:47.000Z"
+    },
+    {
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/politica/santilli-los-que-deberian-estar-preocupados-el-regreso-del-kirchnerismo-son-los-gobernadores-n56559",
+     "fecha": "2026-10-16T17:53:00.000Z"
+    },
+    {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
+     "fecha": "2026-10-16T18:08:00.000Z"
     }
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
+  },
+  {
+   "id": "1trgeyq",
+   "titulo": "Gigantes cripto crean un grupo para evitar la amenaza cuántica",
+   "copete": "",
+   "seccion": "Tecnología",
+   "fecha": "2026-10-17T15:10:00.000Z",
+   "fuentes": [
+    {
+     "medio": "iProUP",
+     "enlace": "https://www.iproup.com/economia-digital/72429-gigantes-cripto-crean-un-grupo-para-evitar-la-amenaza-cuantica",
+     "fecha": "2026-10-17T15:10:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "sin material",
+   "maximo": 3
   },
   {
    "id": "43uic4",
