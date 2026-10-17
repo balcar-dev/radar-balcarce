@@ -1,0 +1,35 @@
+{
+  "_nota": "Respuestas de la API de Meta para las pruebas de redes/estadisticas-piezas.mjs (regla 207). Los dos errores son los textuales de los registros de Vigilancia del 16/10/2026; las respuestas buenas tienen la forma que documenta Meta (video_insights de reels, insights de un posteo, /{pagina}/stories). Los ids son de mentira.",
+  "instagramHistoriaPocas": {
+    "http": 400,
+    "cuerpo": { "error": { "message": "(#10) Not enough viewers for the media to show insights", "type": "OAuthException", "code": 10, "fbtrace_id": "A1b2C3" } }
+  },
+  "metricaInvalida": {
+    "http": 400,
+    "cuerpo": { "error": { "message": "(#100) The value must be a valid insights metric", "type": "OAuthException", "code": 100, "fbtrace_id": "D4e5F6" } }
+  },
+  "reelViejoSinDatos": { "http": 200, "cuerpo": { "data": [] } },
+  "reelDeFacebook": {
+    "blue_reels_play_count": 14,
+    "fb_reels_total_plays": 17,
+    "post_impressions_unique": 11,
+    "post_video_avg_time_watched": 9100,
+    "post_video_social_actions": { "COMMENT": 1, "SHARE": 0 },
+    "post_video_likes_by_reaction_type": { "REACTION_LIKE": 2 }
+  },
+  "historiaDeFacebook": {
+    "page_story_total_media_view_unique": 6,
+    "post_total_media_view_unique": 6,
+    "post_media_view": 8
+  },
+  "historiasDeLaPagina": {
+    "http": 200,
+    "cuerpo": {
+      "data": [
+        { "post_id": "1254237411116171_5550001", "status": "ARCHIVED", "creation_time": "1760050000", "media_type": "video", "media_id": "FBH1", "url": "https://www.facebook.com/stories/1254237411116171/5550001" },
+        { "post_id": "1254237411116171_5550002", "status": "ARCHIVED", "creation_time": "1760060000", "media_type": "video", "media_id": "FBH2", "url": "https://www.facebook.com/stories/1254237411116171/5550002" }
+      ],
+      "paging": { "cursors": { "before": "QVFI", "after": "QVFJ" } }
+    }
+  }
+}
