@@ -19027,8 +19027,7 @@
    "corresponde": "si",
    "descripcion": "Axel Kicillof hablando por micrófono en un acto."
   },
-  "huella": "32525266262525c9",
-  "ausenteDesde": "2026-10-17T21:32:00.614Z"
+  "huella": "32525266262525c9"
  },
  "quke5a": {
   "archivo": "fotos-notas/quke5a.jpg",
@@ -19112,7 +19111,8 @@
    "corresponde": "si",
    "descripcion": "Axel Kicillof hablando detrás de un atril en un acto político"
   },
-  "huella": "2ce9f03333a38386"
+  "huella": "2ce9f03333a38386",
+  "ausenteDesde": "2026-10-17T22:32:22.695Z"
  },
  "1c79rbp": {
   "archivo": "fotos-notas/1c79rbp.jpg",
@@ -19510,8 +19510,7 @@
    "corresponde": "si",
    "descripcion": "Axel Kicillof hablando en un atril rodeado de dirigentes políticos."
   },
-  "huella": "78ecd98494b4b6b2",
-  "ausenteDesde": "2026-10-17T21:32:00.614Z"
+  "huella": "78ecd98494b4b6b2"
  },
  "1uov8qv": {
   "archivo": "fotos-notas/1uov8qv.jpg",
@@ -19633,5 +19632,29 @@
    "descripcion": "El Papa León XIV saludando al salir de recibir el alta médica."
   },
   "huella": "8f8f058d8d8fcdcd"
+ },
+ "d8q9yx": {
+  "archivo": "fotos-notas/d8q9yx.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El cirujano confirma que el papa León XIV puede viajar a la Argentina",
+  "enlace": "https://www.lanacion.com.ar/el-mundo/el-cirujano-del-papa-hablo-sobre-el-viaje-a-la-argentina-no-hay-motivos-clinicos-para-no-realizarlo-nid17102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/leon-xiv-fue-dado-de-QNQ4MDUXGRCFFA45X3M6SMPWIM.JPG?auth=1ffbcf9856496cc04e3afc44c90ee978b388ca8cf6667348a20b7bfd350dd74b&width=1200&height=800&quality=70&smart=true",
+  "razon": "Es la foto más nítida, con excelente encuadre del papa León XIV saludando, sin marcas de agua ni menores.",
+  "cuando": "2026-10-17T22:31:51.325Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "El papa León XIV saludando con la mano levantada junto a colaboradores."
+  },
+  "huella": "366a6a65074f5f57"
  }
 }

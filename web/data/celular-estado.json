@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T22:02:00.853Z",
- "portada": 73,
- "archivo": 1240,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-17T22:32:22.711Z",
+ "portada": 72,
+ "archivo": 1242,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-17T22:02:01.047Z",
+  "generado": "2026-10-17T22:32:23.148Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -64,7 +64,7 @@
     "voz": "locutor",
     "ventana": 300,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-17T22:06:54.750Z"
    },
    {
     "nombre": "clima-noche",
@@ -152,19 +152,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 31,
-    "notas": [
-     {
-      "id": "1kx30ao",
-      "titulo": "Peregrinación une la Parroquia Santa María con Los Pinos",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1kgatx3",
-      "titulo": "Virginia Aparicio presenta los resultados del proyecto SPRINT sobre plaguicidas",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
@@ -197,15 +186,9 @@
    ],
    "cola": [
     {
-     "id": "1kx30ao",
-     "titulo": "Peregrinación une la Parroquia Santa María con Los Pinos",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "quke5a",
-     "titulo": "Atlético de Madrid derrota al Espanyol con un tanto agónico",
-     "seccion": "Fútbol",
+     "id": "d8q9yx",
+     "titulo": "El cirujano confirma que el papa León XIV puede viajar a la Argentina",
+     "seccion": "Argentina",
      "marcada": false
     }
    ],
