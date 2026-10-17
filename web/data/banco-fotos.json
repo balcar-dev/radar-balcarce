@@ -19278,5 +19278,41 @@
    "descripcion": "Capeccio sentado en una mesa hablando frente a un micrófono."
   },
   "huella": "3737ff21297b7bf9"
+ },
+ "1xx0gii": {
+  "archivo": "fotos-notas/1xx0gii.jpg",
+  "medio": "0221",
+  "credito": "Foto: 0221",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Los gremios docentes definen si aceptan el aumento salarial del gobierno bonaerense",
+  "enlace": "https://www.0221.com.ar/provincia/paritarias-bonaerenses-la-aceptacion-estatales-los-docentes-definen-si-aceptan-el-6-dos-cuotas-n135957",
+  "imagenOriginal": "https://media.0221.com.ar/p/def81b90c6458cee8402e2a9f836da62/adjuntos/357/imagenes/100/185/0100185276/1200x630/741x693:761x713/liliana-olivera-febjpeg.jpeg",
+  "razon": "La foto A muestra claramente a docentes manifestándose con pecheras gremiales, sin marcas de agua ni menores, y con excelente nitidez y encuadre.",
+  "cuando": "2026-10-17T19:31:50.762Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Docentes manifestándose con pecheras y banderas gremiales.",
+   "segunda": {
+    "proveedor": "groq",
+    "marca": false,
+    "menor": false,
+    "jovenes": false,
+    "deArchivo": false,
+    "grafica": false,
+    "stock": false,
+    "corresponde": "si",
+    "descripcion": "Docentes de la FEB marchan con banderas y megáfono en una protesta."
+   },
+   "dudosa": "la nota habla de chicos o de categorías juveniles"
+  },
+  "huella": "f6744c7c9c8c4444"
  }
 }

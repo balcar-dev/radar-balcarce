@@ -487,13 +487,6 @@
   "ultimo": "2026-10-16T17:34:54.263Z",
   "motivo": "con cuerpo"
  },
- "1d4xgqi": {
-  "intentos": 2,
-  "ultimo": "2026-10-10T19:31:42.103Z",
-  "motivo": "verificación baja: espera a una persona",
-  "baja": true,
-  "fuentes": 1
- },
  "1d8z7kh": {
   "intentos": 1,
   "ultimo": "2026-10-14T03:32:06.011Z",
@@ -1314,6 +1307,11 @@
  "1xwup7g": {
   "intentos": 1,
   "ultimo": "2026-10-11T23:08:16.877Z",
+  "motivo": "con cuerpo"
+ },
+ "1xx0gii": {
+  "intentos": 1,
+  "ultimo": "2026-10-17T19:31:37.256Z",
   "motivo": "con cuerpo"
  },
  "1xx1460": {
@@ -2488,11 +2486,6 @@
   "ultimo": "2026-10-17T13:01:53.081Z",
   "motivo": "con cuerpo"
  },
- "r7245w": {
-  "intentos": 1,
-  "ultimo": "2026-10-10T19:31:42.103Z",
-  "motivo": "con cuerpo"
- },
  "rb2qmr": {
   "intentos": 2,
   "ultimo": "2026-10-12T12:01:38.087Z",
@@ -2588,6 +2581,13 @@
   "ultimo": "2026-10-14T16:32:27.799Z",
   "motivo": "con cuerpo"
  },
+ "tlfbsi": {
+  "intentos": 1,
+  "ultimo": "2026-10-17T19:31:37.256Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
+ },
  "tlvcwh": {
   "intentos": 1,
   "ultimo": "2026-10-14T20:32:18.269Z",
@@ -2637,6 +2637,13 @@
   "intentos": 1,
   "ultimo": "2026-10-17T04:01:18.978Z",
   "motivo": "con cuerpo"
+ },
+ "vaxkhs": {
+  "intentos": 1,
+  "ultimo": "2026-10-17T19:31:37.256Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
  },
  "vdepn2": {
   "intentos": 1,
