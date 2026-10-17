@@ -15,7 +15,7 @@ import path from 'node:path';
 import { placaClima, placaFarmacia, placaRepaso, placaUtiles, placaAgenda, placaParticipa, placaEfemeride, COLOR_FERIADO, COLOR_SECCION, COLORES } from './placa.mjs';
 import { PIEZAS_PARTICIPA, IDS_PARTICIPA, guionParticipa, MAIL_REDACCION } from '../redes/participa.mjs';
 import { feriadoDelDia, fechaDeFeriado, datosParaContar, guionFeriado } from '../redes/feriado.mjs';
-import { NUMEROS, decisionHumana, HORA_DE_CAMBIO, MINUTO_DE_CAMBIO } from '../ingesta/utiles.mjs';
+import { NUMEROS, HORA_DE_CAMBIO, MINUTO_DE_CAMBIO } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
 import { enlaceDeNota } from '../redes/elegir.mjs';
 import { fijaVigente } from './fijas.mjs';
@@ -57,29 +57,11 @@ export const REGLAS = {
   historiasMaximasPorDia: CONTRATO_DIARIO.historiasMaximasPorDia,
 };
 
-/**
- * ¿Se puede contar esta nota en una pieza? Lo mismo que decide la web
- * (notaPublicada en web/scripts/generar-datos.mjs): si una persona decidió
- * (decisionHumana), manda lo que decidió; si no, sólo la verde, que sale sola.
- * La amarilla que nadie miró todavía espera, y la roja nunca.
- *
- * Sólo hace falta con los datos del panel (PC, panel/datos/ultima.json, que
- * trae todo lo que leyó la ingesta). En GitHub los datos son lo ya publicado
- * (web/data/portada.json, `yaPublicadas` en redes/datos.mjs): ya pasaron por
- * este filtro y no traen el semáforo.
- */
-export function esPublicable(nota, decisiones = {}) {
-  const d = decisiones?.[nota.id];
-  if (decisionHumana(d)) return d.estado === 'publicada' || d.estado === 'automatica';
-  return nota.semaforo === 'verde';
-}
-
 // El color de la placa de teléfonos útiles (el mismo que usa reels/placa.mjs). Se había
 // perdido en un refactor y, como los útiles sólo salían un día fijo que nadie
 // corría, nadie lo notó: el plan se caía con ReferenceError el día que tocaba.
 const COLOR_UTILES_ACENTO = '#8C2D18';
 
-const DATOS = path.join(import.meta.dirname, '..', 'panel', 'datos', 'ultima.json');
 const SALIDA = path.join(import.meta.dirname, 'salida');
 
 export const fechaLarga = (d = new Date()) => {
@@ -127,17 +109,10 @@ export function hastaCuandoElTurno(hora = '19:00') {
     : `De turno hasta hoy a las ${cambio}.`;
 }
 
-const F_AGENDA = path.join(import.meta.dirname, '..', 'panel', 'datos', 'agenda.json');
 const F_AGENDA_WEB = path.join(import.meta.dirname, '..', 'web', 'data', 'agenda.json');
-const F_ESTADO = path.join(import.meta.dirname, '..', 'panel', 'datos', 'estado.json');
 
-/** Lo que decidió el panel (estado.json). Sin panel, vacío: valen los de fábrica. */
-function leerEstado() {
-  try { return JSON.parse(fs.readFileSync(F_ESTADO, 'utf8')); } catch { return {}; }
-}
-
-/** Los horarios de las piezas fijas, como quedaron configurados en el panel
- *  (pestaña Calendario). Si no hay nada guardado, valen los de fábrica. */
+/** Los horarios de las piezas fijas: los de fábrica (panel/horarios.mjs), o los que se pasen en `estado` (las pruebas apagan piezas así).
+ *  Desde el 17/10 ya no se lee el estado.json del panel de la PC, que está en desuso. */
 function horariosConfigurados(estado) {
   const porId = {};
   for (const h of horariosDe(estado)) porId[h.id] = h;
@@ -146,15 +121,11 @@ function horariosConfigurados(estado) {
 
 /** Los eventos de los próximos días, listos para la placa: los de la agenda
  *  publicada en la web (web/data/agenda.json, los mismos que tienen página en
- *  /agenda), así la historia sale también desde GitHub con la PC apagada
- *  (29/09). Sin esa agenda, la copia del panel de la PC. Si no hay ninguna,
- *  devuelve vacío: la pieza simplemente no se arma. */
-export function eventosProximos(dias = 4, { web = F_AGENDA_WEB, pc = F_AGENDA, hoy: desde = new Date() } = {}) {
+ *  /agenda). Sin agenda, devuelve vacío: la pieza simplemente no se arma. */
+export function eventosProximos(dias = 4, { web = F_AGENDA_WEB, hoy: desde = new Date() } = {}) {
   let eventos = null;
-  try { eventos = JSON.parse(fs.readFileSync(web, 'utf8')).eventos; } catch { /* sin agenda en la web */ }
-  if (!Array.isArray(eventos)) {
-    try { eventos = JSON.parse(fs.readFileSync(pc, 'utf8')).municipio; } catch { return []; }
-  }
+  try { eventos = JSON.parse(fs.readFileSync(web, 'utf8')).eventos; } catch { return []; }
+  if (!Array.isArray(eventos)) return [];
   const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
   const hoy = new Date(desde); hoy.setHours(0, 0, 0, 0);
   const tope = new Date(hoy.getTime() + dias * 86400000);
@@ -183,11 +154,11 @@ function leerLibro() {
   try { return JSON.parse(fs.readFileSync(LIBRO_REDES, 'utf8')); } catch { return null; }
 }
 
-/** Con panel, lo que dejó el panel. Sin panel (GitHub), lo ya publicado en la web. */
+/** Lo ya publicado en la web (web/data/portada.json): una pieza nunca habla de algo que la web no muestra. Desde el 17/10 no hay
+ *  "modo PC" (los datos del panel de la PC, en desuso). */
 function leerDatos() {
-  if (fs.existsSync(DATOS)) return JSON.parse(fs.readFileSync(DATOS, 'utf8'));
   if (fs.existsSync(PORTADA_WEB)) return datosDeLaWeb(JSON.parse(fs.readFileSync(PORTADA_WEB, 'utf8')));
-  throw new Error('Todavía no hay datos. Corré primero:  node panel/servidor.mjs  o  node ingesta/ingesta.mjs');
+  throw new Error('Todavía no hay datos: falta web/data/portada.json (cd web && npm run datos)');
 }
 
 // --- los guiones -----------------------------------------------------------
@@ -244,7 +215,7 @@ export const EDAD_MAXIMA_DE_LA_PORTADA_HORAS = 2;
 const PIEZAS_QUE_ENVEJECEN = ['clima-manana', 'clima-noche', 'farmacia'];
 
 export function planDelDia(datos, {
-  libro = null, fecha = new Date(), estado = leerEstado(), eventos = null,
+  libro = null, fecha = new Date(), estado = {}, eventos = null,
   // Piezas que se piden aunque hoy no les toque (para armarlas de antemano: `--incluir=` y reels/fijas.mjs).
   forzar = [],
   banco = leerBanco(),
@@ -252,22 +223,20 @@ export function planDelDia(datos, {
   const hoy = fecha.getDate();
   const turno = datos.farmacias?.turnos?.find((t) => t.dia === hoy) ?? null;
 
-  // Sólo compiten por un podcast las notas que salieron solas (verdes) o que
-  // alguien aprobó, nunca las que están esperando decisión. Antes el filtro
-  // sólo sacaba las rojas: con los datos del panel (PC) podía contar una
-  // amarilla que nadie había mirado (28/09). Lo ya publicado (GitHub) pasó
-  // ese filtro en la web.
+  // Sólo compiten por un podcast las notas ya publicadas en la web (portada.json, `yaPublicadas`: pasaron el semáforo y lo que decidió
+  // una persona). Si alguna vez llegaran datos que no pasaron por la web, sólo la verde, que sale sola: la amarilla espera y la roja
+  // nunca (28/09). Lo que decidía una persona en el panel de la PC ya no se lee (17/10): esas decisiones llegan por la web.
   const publicables = datos.notas
-    .filter((n) => datos.yaPublicadas || esPublicable(n, estado?.decisiones))
+    .filter((n) => datos.yaPublicadas || n.semaforo === 'verde')
     .sort((a, b) => b.relevancia - a.relevancia);
 
   const piezas = [];
 
-  // Los horarios y los días salen del panel (pestaña Calendario). Si una
+  // Los horarios y los días son los de fábrica (panel/horarios.mjs). Si una
   // pieza está apagada o hoy no le toca, directamente no se arma.
   const cuando = horariosConfigurados(estado);
   // `toca` (panel/horarios.mjs) es la MISMA función que usa el reloj de Redes:
-  // los teléfonos útiles salen los sábados, o el día que fijó el panel.
+  // los teléfonos útiles salen los sábados.
   const tocaHoy = (id) => forzar.includes(id) || toca(cuando[id], fecha, { estado });
 
   // --- El aviso de clima: la única pieza que no espera su horario ---------

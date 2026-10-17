@@ -1,6 +1,6 @@
 # 07 · Las redes: Facebook e Instagram de punta a punta
 
-*Actualizado el 16/10/2026. Si algo de acá no coincide con el código, manda el
+*Actualizado el 17/10/2026. Si algo de acá no coincide con el código, manda el
 código.* Cómo suenan y qué dicen las piezas: [`CRITERIO-REDES.md`](../CRITERIO-REDES.md).
 Colores, letras y medidas: [`MEDIA-KIT.md`](../MEDIA-KIT.md) y
 [`FORMATOS.md`](../FORMATOS.md). Los workflows, las claves de IA y lo que
@@ -210,8 +210,8 @@ reloj, con `GEMINI_API_KEY_REDES`.
 farmacia. Como sale de lo ya publicado, **una pieza nunca habla de algo que el
 semáforo frenó**. La agenda sale de la agenda publicada (`web/data/agenda.json`,
 `eventosProximos` en `reels/plan.mjs`). También lee el libro y la historia del
-dólar. En la PC, si existe `panel/datos/ultima.json`, usa eso filtrado con
-`esPublicable` y los horarios guardados en el panel.
+dólar. Desde el 17/10 no hay "modo PC": el plan no lee nada del panel de la PC
+(en desuso), ni sus datos ni sus horarios.
 
 **5b. El plan del día** (`planDelDia`) arma cada pieza con su guion (lo que
 dice la voz), su placa, su color de acento y su hora. Techo de **8 historias
@@ -241,7 +241,11 @@ clima nunca se sacan.
    (`esCupoDelDia`), corta en el acto: esperar no lo arregla. **Si Gemini
    falla, la pieza no sale** (nunca con otra voz): `plan.mjs` la deja fuera del
    manifiesto y el reloj la vuelve a pedir en la vuelta siguiente mientras dure
-   su ventana.
+   su ventana. **El contador del cupo** (17/10, regla 208, `reels/cupo-voz.mjs`):
+   cada pedido se anota antes de hacerse y no se pide si dejaría sin audio a una
+   pieza más importante que falta hoy (ver "El cupo de voz", más abajo). **El
+   audio crudo** se guarda en la memoria apenas llega: si después falla la
+   conversión o la alineación, la vuelta siguiente lo termina sin volver a pedir.
 3. **Los subtítulos.** Gemini no dice cuándo arranca cada palabra: `alinear`
    (`reels/alinear.mjs`) busca los silencios del audio con ffmpeg,
    `reels/tiempos.mjs` reparte las palabras entre pausa y pausa según sus
@@ -250,8 +254,18 @@ clima nunca se sacan.
    agrupa de a 2 a 4. Van en tinta, con la palabra que se está diciendo en el
    color de acento, centrados en la fila 1660 (fuera de la zona de texto de la
    placa).
-4. **El video**, con ffmpeg: la placa con un zoom muy lento (hasta 1,035), 30
-   cuadros por segundo, la voz y un segundo y medio de cola. Sin música.
+4. **El video**, con ffmpeg, a 30 cuadros por segundo, con la voz, un segundo y
+   medio de cola y la barra roja de avance abajo. Sin música ni zoom (regla 90:
+   nada tiembla). Lo que se mueve: la **escena animada** de la pieza
+   (`reels/escenas/`: clima, farmacia, efeméride, feriado, participá, útiles,
+   agenda) o la **entrada animada** de su placa (`reels/animacion.mjs`). **El
+   repaso** (17/10, regla 209, `reels/escenas/repaso.mjs`) es una secuencia de
+   placas que sigue a la voz: una por nota, con su foto (o su ilustración; si no
+   tiene, la placa de su sección), su titular y "i de n", que entra cuando la voz
+   empieza la oración de esa nota (los tiempos salen de las palabras, paso 3);
+   arranca con la primera nota, la más fuerte, y cierra con la lista. **La tapa**
+   del reel (el cuadro 0, lo que muestran Instagram y Facebook antes del play) es
+   la lista completa. Si la animación falla, sale la placa quieta.
 5. **La medida de verdad.** Se mide lo que dura el archivo. Si pasa de **58
    segundos** (`PODCAST_VOZ.segundosMaximoHistoria`; Meta acepta 60), la
    historia sube una copia cortada con fundido (`recortarParaHistoria`,
@@ -260,6 +274,14 @@ clima nunca se sacan.
 
 Lo armado queda en `reels/salida/` (no va al repositorio) con un manifiesto,
 `reels/salida/piezas.json`. Si una pieza falla al armarse, las demás siguen.
+Si se arman varias juntas, **primero la más importante** (`porPrioridad`).
+
+**5d. Lo ya armado hoy** (17/10, regla 208, `reels/armadas.mjs`): cada video
+armado queda guardado en la memoria de voces (la caché de Actions) hasta que
+sale. Si la pieza no llegó a publicarse (Instagram la rechazó, se cortó la
+corrida), la vuelta siguiente sube **ese mismo video con su lista de notas**,
+sin pedir voz, salvo que alguna de sus notas ya no esté publicada. Lo que ya
+salió se borra de la memoria. `--de-nuevo` arma de cero.
 
 ### 6. Publicar las piezas
 
@@ -277,8 +299,9 @@ Lo armado queda en `reels/salida/` (no va al repositorio) con un manifiesto,
    Instagram queda.
 4. **Cada reel se sube también como historia** en las dos redes (el mismo
    video: no gasta otra voz). Hasta 3 intentos en la misma corrida; **entre
-   corridas no se reintenta** (el video no se guarda y armarlo de nuevo gasta
-   voz y podría elegir otras notas). Se anota en `libro.historiasDeReels`.
+   corridas el reloj no la reintenta** (el reel ya está en el libro, así que la
+   pieza no vuelve a pedirse): para eso está el botón "Reintentar" del celular.
+   Se anota en `libro.historiasDeReels`.
 5. **El libro se guarda después de cada publicación**: si algo se corta a la
    mitad, lo que salió no vuelve a salir.
 6. **El texto.** Las historias no llevan. Los reels llevan `pieDePieza`, que
@@ -291,6 +314,10 @@ Lo armado queda en `reels/salida/` (no va al repositorio) con un manifiesto,
    - **en Facebook, UN solo enlace**, el de la nota del propio repaso en la web
      ("Las notas, acá: …/nota/repaso<día><turno>", `enlaceDelRepaso`, con el
      origen `utm_campaign=repaso`).
+   - **El clima y la farmacia**, cuando salen como reel en Facebook (17/10,
+     regla 210, `SERVICIOS_CON_PAGINA`), llevan el enlace a su página:
+     `/clima` o `/farmacias`, con `utm_campaign=servicio`. Instagram, sin
+     enlaces.
 
    Nunca la fuente.
 7. **La dirección pública del podcast** (`permalink`) se le pide a Meta
@@ -349,15 +376,33 @@ normal gasta 7: el clima de la mañana, "Un día como hoy", los tres repasos, la
 farmacia y el clima de la noche. A veces se suman los útiles (los sábados), la
 agenda (los jueves con eventos), el feriado y un aviso de clima; las de
 participá no gastan mientras valga su versión armada de antemano ("Piezas
-fijas", más abajo). La historia de cada reel no gasta: es el mismo video, y
-rearmar una pieza que falló tampoco, por la memoria de voces (paso 5c).
+fijas", más abajo). La historia de cada reel no gasta: es el mismo video.
 
-Gastan de más: una pieza que Instagram rechazó y el reloj vuelve a armar con
-otro texto (con el mismo texto, la memoria de voces reusa el audio), un audio
-que duró de más (`vozDeMas`) y lo que se corre a mano con la misma clave:
-Piezas (un audio por pieza), Auditar voz (6 audios, 9 con `explorar`) y Crear
-voces (`crear` y `recrear`). Si el cupo se acaba, la pieza de ese día no sale:
-nunca con otra voz.
+**El contador** (17/10, regla 208, `reels/cupo-voz.mjs`). Cada pedido a la voz,
+también un reintento (audio vacío, error del servicio, "habló de más"), es un
+audio: se anota **antes** de pedirlo en `cupo-<día>.json`, en la memoria de
+voces (`VOZ_CACHE`, la caché de Actions de "Redes" y "Piezas"). El día es el de
+Google (se renueva a la medianoche de California, las 4 o 5 de Balcarce). Cada
+corrida que arma piezas dice "voz: N de 10 audios usados hoy, quedan M", y desde
+8 lo marca en amarillo. Si Google contesta que se acabó, el contador se pone en
+el tope y nadie vuelve a pedir ese día.
+
+**El orden de importancia**: 1) los tres repasos; 2) el clima de la mañana, el
+de la noche, la farmacia y los avisos de clima; 3) "Un día como hoy" y el
+feriado; 4) lo opcional (participá, útiles, agenda). Antes de pedir una voz, el
+plan mira qué piezas **más importantes** faltan hoy y siguen a tiempo
+(`pendientesDelDia`, sin las fijas) y les guarda un audio a cada una
+(`reservaPara`): si no alcanza, la pieza no se arma ("quedan 2 audios y se
+guardan para 2 piezas más importantes") y nunca sale con otra voz.
+
+**Lo que ya no gasta de más**: rearmar con el mismo texto (memoria de voces),
+un audio que llegó pero no se terminó (se guarda crudo) y una pieza armada que
+no salió (se sube el mismo video, paso 5d). Siguen gastando: un audio que duró
+de más (`vozDeMas`) y lo que se corre a mano con la misma clave fuera de "Redes"
+y "Piezas", que **todavía no pasa por el contador**: Auditar voz (6 audios, 9
+con `explorar`), Probar Gemini (1), Crear voces (`crear` y `recrear`) y Fijar
+piezas (uno por pieza). Si el cupo se acaba, la pieza de ese día no sale: nunca
+con otra voz.
 
 ## Qué sale cada día: el contrato
 
@@ -567,7 +612,8 @@ o ese posteo puede volver a salir.
 | **Lo que salió en redes** | cada corrida de Vigilancia | `redes/avisos.mjs` (`novedadesEnRedes`) | El libro desde la corrida anterior, agrupado (el mismo podcast en las dos redes es una línea) | Mail del vigilante (WhatsApp de respaldo) "📣 Salió en redes"; y los informes diarios de las 8:15 y 21:15 |
 | **El contrato del día** | cada corrida | `redes/contrato.mjs`, `redes/vigilar.mjs` (`problemasDelContrato`) | Faltas, duplicados en el libro, posteos sin espejo; con las redes apagadas, sólo lo dice una vez por día | Mail de problemas (cada 6 h por problema; WhatsApp de respaldo); el contrato de cada red va en los informes diarios por mail |
 | **El cierre del día** | desde las 23:30 (si se atrasa, hasta las 3:00 cierra el día anterior), una vez | `redes/vigilar.mjs` (`fechaDelCierre`, `cierreDelDia`) con `redes/auditar-redes.mjs` (`informeDelDia`) | El día contra lo que Meta tiene de verdad: faltantes, duplicados (dos iguales a menos de 30 minutos), libro sin Meta y Meta sin libro (tolerancia de 20 minutos) | Mail **sólo si hay discrepancias**; si todo cuadra, "✓ Cierre del día…" viaja en el próximo mensaje. Con las redes apagadas se saltea |
-| **Estadísticas** | 9 y 21 | `redes/estadisticas.mjs`, guarda `web/data/estadisticas.json` (sólo números, 120 mediciones) | Visitas de Cloudflare Web Analytics (aproximadas) y seguidores de Facebook e Instagram; vistas, alcance e interacciones sólo si `META_TOKEN` tiene `read_insights` e `instagram_manage_insights` (`PENDIENTES.md`) | Los informes diarios por mail (8:15 y 21:15; regla 176) |
+| **Estadísticas** | 9 y 21 | `redes/estadisticas.mjs`, guarda `web/data/estadisticas.json` (sólo números, 120 mediciones) | Visitas de Cloudflare Web Analytics (aproximadas) y seguidores de Facebook e Instagram; vistas, alcance e interacciones (`META_TOKEN` tiene `read_insights` e `instagram_manage_insights`) | Los informes diarios por mail (8:15 y 21:15; regla 176) |
+| **Los números de cada pieza** | cada corrida de Vigilancia, hasta 12 publicaciones | `redes/estadisticas-piezas.mjs`, guarda `web/data/estadisticas-piezas.json` | Cada publicación una vez: reels, posteos y fotos a las 24 h o más (hasta 8 días); las historias de Instagram entre 12 y 24 h. **Arreglado el 17/10 (regla 207)**: los reels de Facebook se miden con las métricas de reels (`blue_reels_play_count`, `fb_reels_total_plays`, `post_impressions_unique`…); las historias de Facebook por su **posteo** (`postId` en el libro, o `/{página}/stories` para las viejas) con `page_story_total_media_view_unique` (API v25) y las de un posteo de respaldo; las historias de Instagram que vieron menos de 5 personas quedan como `pocas` (Meta no las mide). Lo medido con la forma vieja se vuelve a medir una vez | `node redes/estadisticas-piezas.mjs` muestra el resumen de cuatro semanas (para decidir el 5/11 dónde sale cada pieza) |
 | **Auditar redes** | a mano | `redes/auditar-redes.mjs` (`auditar-redes.yml`) | Hoy, ayer, la semana (% de cumplimiento por red y pieza) y lo que devuelve Meta sin interpretar | El registro de la corrida |
 | **La semana del contrato** | lunes 9:00 | `redes/auditar-redes.mjs --semana`, dentro de `auditoria.yml` | Igual que la semana de arriba | El registro |
 | **Auditoría semanal** | lunes 9:00 | `redes/auditar.mjs` (`auditoria.yml`), guarda `web/data/auditoria.json` | Que la tarjeta de Instagram mida 1080 × 1350 y la de compartir 1200 × 630, los íconos, el SEO en vivo y que las medidas de `redes/formatos.mjs` no tengan más de 90 días | Mail si hay problemas; el vigilante avisa si no corre hace más de 10 días |
@@ -611,18 +657,21 @@ anteriores cuenta las historias por el libro y lo dice.
 | `redes/publicar.mjs` | El programa: `--verificar`, `--facebook`, `--piezas [--sin-horario] [--destino=…]`, `--enlaces` | los dos workflows | `portada.json`, `redes.json`, `reels/salida/piezas.json` | `redes.json` |
 | `redes/elegir.mjs` | Qué se publica: reglas de Facebook (`vaAFacebookPorLoQueEs`), texto del posteo, hashtags, qué notas cuenta cada podcast y su guion con presupuesto, el interruptor | `publicar.mjs`, `reels/plan.mjs`, contrato, avisos | `ingesta/criterio.mjs`, `web/lib/cuerpo.js` | — (funciones puras) |
 | `redes/espejo.mjs` | Qué espejos reintentar | `publicar.mjs` | el libro y la portada | — |
-| `redes/reloj.mjs` | ¿Toca alguna pieza ahora? | `redes.yml` | `redes.json`, el clima de `portada.json` | `hay` y `solo` |
-| `redes/piezas.mjs` | Cronograma, ventanas, podcasts, aviso de clima, color del día, pie de los reels, techo de historias | reloj, plan, publicar-piezas, contrato, vigilante | `panel/horarios.mjs`, `ingesta/utiles.mjs`, `ingesta/alertas.mjs` | — |
+| `redes/reloj.mjs` | ¿Toca alguna pieza ahora? (sin farmacia de turno en la web, no la pide) | `redes.yml` | `redes.json`, el clima y la farmacia de `portada.json` | `hay` y `solo` |
+| `redes/piezas.mjs` | Cronograma, ventanas, podcasts, aviso de clima, pie de los reels (con los enlaces a `/clima` y `/farmacias`), techo de historias | reloj, plan, publicar-piezas, contrato, vigilante | `panel/horarios.mjs`, `ingesta/utiles.mjs`, `ingesta/alertas.mjs` | — |
 | `redes/publicar-piezas.mjs` | Sube los videos: Instagram manda, Facebook con reintentos, la historia de cada reel; completa direcciones | `publicar.mjs` | manifiesto y videos | el libro |
 | `redes/datos.mjs` | Traduce `portada.json` a los datos del plan | `reels/plan.mjs` | `portada.json` | — |
 | `redes/meta.mjs` | Habla con Meta (Graph v23.0): posteo, foto, video, dirección pública, verificación; `PAGINA_DE_FACEBOOK`. Token en el encabezado, nunca en la dirección | todo lo que publica o lee Meta | `META_TOKEN` | — |
 | `redes/contrato.mjs` | El contrato del día y sus textos | vigilante, avisos, auditar-redes | libro, portada | — |
-| `redes/guiones.mjs` | Lo que dice la voz en cada pieza | plan, elegir, panel de la PC | `ingesta/criterio.mjs`, `prompt-redes.mjs` | — |
+| `redes/guiones.mjs` | Lo que dice la voz en cada pieza | plan, elegir | `ingesta/criterio.mjs`, `prompt-redes.mjs` | — |
 | `redes/prompt-redes.mjs` | Lee identidad, voces y estilos de `CRITERIO-REDES.md` | guiones, plan, reel, voz | `CRITERIO-REDES.md` | — |
-| `reels/plan.mjs` | El plan del día y, con `--generar`, los videos | los workflows | datos, libro, dólar, agenda publicada | `reels/salida/*.mp4`, `*.png`, `*.mp3`, `piezas.json` |
-| `reels/reel.mjs` | Arma un video: placa, voz, subtítulos, ffmpeg, recorte para historia | `plan.mjs` | la pieza | archivos en `reels/salida/` |
+| `reels/plan.mjs` | El plan del día y, con `--generar`, los videos (primero lo más importante, con la reserva del cupo y lo ya armado hoy) | los workflows | `portada.json`, libro, dólar, agenda publicada, banco de fotos | `reels/salida/*.mp4`, `*.png`, `*.mp3`, `piezas.json` |
+| `reels/reel.mjs` | Arma un video: placa o escena o secuencia, voz, subtítulos, ffmpeg, recorte para historia | `plan.mjs` | la pieza | archivos en `reels/salida/` |
+| `reels/escenas/repaso.mjs` | La secuencia del repaso: una placa por nota con su foto, la lista al final y de tapa, y cuándo entra cada una según la voz (regla 209) | `plan.mjs`, `reel.mjs` | `web/public/fotos-notas/`, `banco-fotos.json` | — |
+| `reels/cupo-voz.mjs` | El contador de audios del día y el orden de importancia (regla 208) | `voz-gemini.mjs`, `plan.mjs` | `VOZ_CACHE` | `cupo-<día>.json` en la memoria de voces |
+| `reels/armadas.mjs` | Lo ya armado hoy que no salió: se sube igual, sin voz (regla 208) | `plan.mjs` | `VOZ_CACHE` | `armada-<día>-<pieza>.*` en la memoria de voces |
 | `reels/placa.mjs` | Dibuja las placas (SVG) y las pasa a PNG | `plan.mjs`, `reel.mjs` | `reels/marca/fuentes/` | PNG |
-| `reels/voz-gemini.mjs` | La voz de Gemini: pedido, cupo del día, audio que dura de más | `reel.mjs`, Auditar voz | `GEMINI_API_KEY_REDES` (`reels/claves.mjs`) | mp3 |
+| `reels/voz-gemini.mjs` | La voz de Gemini: pedido, contador del cupo, memoria (también el audio crudo), audio que dura de más | `reel.mjs`, Auditar voz | `GEMINI_API_KEY_REDES` (`reels/claves.mjs`) | mp3 |
 | `reels/voz.mjs` | `paraLeer` (los símbolos en palabras) y `enCarteles` (los carteles de subtítulos) | `reel.mjs` | — | — |
 | `reels/alinear.mjs`, `reels/tiempos.mjs` | Cuándo arranca cada palabra del subtítulo | `voz-gemini.mjs` | el audio | — |
 | `reels/duracion.mjs` | El máximo de una historia (58 s) y el recorte | `reel.mjs` | — | — |
@@ -635,7 +684,6 @@ anteriores cuenta las historias por el libro y lo dice.
 | `redes/avisar-por-mail.mjs` | `avisar`: primero mail (Worker `radar-balcarce-vigilante`, `VIGILANTE_TOKEN`), WhatsApp sólo si el mail no sale (regla 173) | vigilante, auditorías, pistas, workflows | `VIGILANTE_TOKEN`, `WHATSAPP_*` | — |
 | `redes/informe-diario.mjs` | Los informes por mail de las 8:15 y las 21:15 (regla 176) | `informe-diario.yml` (lo dispara el reloj) | portada, libro, estadísticas, esperando cuerpo | — (manda el mail) |
 | `redes/archivar-piezas.mjs` | Copia las piezas a R2 (regla 178; `R2_PIEZAS` = `radar-piezas`, cargada el 15/10) | `redes.yml`, `piezas.yml`, `fijar-piezas.yml` | `reels/salida/`, el libro | el depósito de R2 |
-| `redes/destinos.mjs` | Esqueleto para mandar el mismo video a otras redes (Telegram, Bluesky, YouTube…): **sin ningún cliente real todavía** | — | — | — |
 
 El libro (`web/data/redes.json`) tiene su sección más arriba, y los archivos de
 las estadísticas y las auditorías están en su tabla.
@@ -655,10 +703,11 @@ las estadísticas y las auditorías están en su tabla.
 | La hora de un podcast | `HORAS_REELS`, `redes/piezas.mjs` |
 | Que una nota de una pista o de un mail entre al próximo repaso | `aprobadaParaRedes` y `paraElRepaso` en su entrada de `web/data/notas-de-pistas.json` (12 horas) |
 | El texto de los reels y de los posteos (enlaces, "link en la bio") | `pieDePieza` y `enlaceDelRepaso` (`redes/piezas.mjs`); `mensajeDeNota` (`redes/elegir.mjs`) |
-| La hora de una historia fija (clima, farmacia, útiles, agenda) | Los valores de fábrica de `HISTORIAS_FIJAS`, `panel/horarios.mjs` (la pestaña Calendario del panel de la PC no cambia lo que publica GitHub) |
+| La hora de una historia fija (clima, farmacia, útiles, agenda) | Los valores de fábrica de `HISTORIAS_FIJAS`, `panel/horarios.mjs` |
 | Hasta cuándo vale una pieza | `VENTANAS`, `redes/piezas.mjs` |
 | Los umbrales del aviso de clima | `UMBRALES`, `ingesta/alertas.mjs` |
-| El color de los podcasts de cada día | `COLORES_DEL_DIA`, `redes/piezas.mjs` |
+| Cómo se ve el repaso (la placa de cada nota, la foto, la tapa) | `placaDeNotaDelRepaso` y `secuenciaDelRepaso` (`reels/escenas/repaso.mjs`); la lista, `placaRepaso` (`reels/placa.mjs`) |
+| El orden de importancia de las piezas para el cupo de voz | `PRIORIDAD`, `reels/cupo-voz.mjs` |
 | El contrato (cuántas piezas por día, el techo, la hora del cierre) | `CONTRATO_DIARIO`, `ingesta/criterio.mjs` y su tabla; las piezas, `redes/contrato.mjs` |
 | Qué dice la voz, los saludos, los cierres, qué voz dice cada pieza | `CRITERIO-REDES.md` (identidad, voces y estilos) y `redes/guiones.mjs` (bancos de frases) |
 | El dibujo de una placa | `reels/placa.mjs` (y `MEDIA-KIT.md`) |
@@ -677,13 +726,15 @@ las estadísticas y las auditorías están en su tabla.
 | **Las redes están apagadas** (`REDES_ACTIVAS` no dice `Si`) | Aviso una vez por día: "Las redes están apagadas…"; y lo dicen los informes diarios por mail | Prenderlas si no fue a propósito |
 | **El token de Meta murió** (código 190) | Redes en rojo: "El token venció o lo revocaron" | Una persona genera otro y lo pega en `META_TOKEN` |
 | **Meta bloquea la API** ("API access blocked", pasó del 22 al 24/09 por "actividad inusual") | Fallan Redes y Piezas | Una persona confirma la cuenta en Meta; después, mirar que el reloj siga disparando |
-| **Falló Instagram al subir una pieza** | La pieza no sale en ninguna red; el reloj la vuelve a pedir mientras dure la ventana (gasta otro audio) | Nada, salvo que se repita: mirar el registro |
+| **Falló Instagram al subir una pieza** | La pieza no sale en ninguna red; el reloj la vuelve a pedir mientras dure la ventana y sube el mismo video (no gasta otro audio, regla 208) | Nada, salvo que se repita: mirar el registro |
 | **Falló Facebook después de Instagram** | Registro "falló (intento 3 de 3)"; el contrato marca la falta en Facebook | Una historia fija (clima, farmacia): Piezas con esa pieza, `publicar` y destino `facebook`. Un podcast: Piezas no sirve (no vuelve a armar un podcast que ya está en el libro de Instagram): bajar el video del artefacto de esa corrida de Redes (3 días) y subirlo a mano |
 | **No salió la historia de un podcast** | Aviso por mail: "no salió la historia de… (su reel sí salió y la historia no se reintenta)" | No hay forma automática. Si importa, bajar el `.mp4` del artefacto de esa corrida y subirlo a mano como historia; el libro no se entera y el contrato la sigue contando como falta |
 | **No salió una pieza fija** (clima, farmacia) | Aviso por mail: "No salió la pieza… y ya se cerró su ventana" | Mirar el registro de Redes (la voz, el cupo, `META_TOKEN`); publicarla con Piezas si todavía sirve y queda cupo de voz |
 | **No salió un podcast** | Aviso por mail de falta del reel | Si "ese día no había notas para contar", es normal |
 | **Gemini (voz) no contesta** | La pieza no sale en esa vuelta ("la pieza no sale con otra voz") y se reintenta en la siguiente | Si se repite toda la ventana: el vigilante avisa si Google rechaza la clave de redes (`clave-…`) o si una voz ya no existe (`voz-…`); si no, mirar el modelo de voz |
-| **Se acabó el cupo de voz del día** | Registro de Redes: "Gemini: se acabó el cupo del día (429)"; faltan piezas | Nada: vuelve al día siguiente. No correr Piezas, Auditar voz ni Crear voces un día de redes sin necesidad |
+| **Se acabó el cupo de voz del día** | Registro de Redes: "voz: 10 de 10 audios usados hoy" o "Gemini: se acabó el cupo del día (429)"; faltan piezas, primero las opcionales | Nada: vuelve al día siguiente. No correr Piezas, Auditar voz, Probar Gemini ni Crear voces un día de redes sin necesidad |
+| **Una pieza no se armó "para guardar el cupo"** | Registro de Redes: "sin voz: quedan N audio(s) de voz y se guardan para…" | Nada: es a propósito (regla 208); la pieza más importante que falta va a tener su audio |
+| **No hay farmacia de turno en la web** | El reloj dice "la farmacia no: la web no tiene farmacia de turno para hoy" | Mirar el Colegio y La Vanguardia; si ninguno la publica, ese día no sale (regla 210) |
 | **Una voz propia ya no existe o está por vencer** | Aviso por mail `voz-locutora`/`voz-locutor` (alta) o `vence-voz-…` (30 días antes, con la fecha de Google) | Crearla de nuevo (`11-OPERACION`) |
 | **Un posteo sin su foto en Instagram** | Aviso por mail: "N posteo(s) de Facebook de hoy no tienen su foto en el feed". Se reintenta solo 4 veces en 12 horas | Si no se arregla solo, mirar que exista la tarjeta `/nota/ID/instagram.png` |
 | **Un duplicado** | Aviso por mail de prioridad alta (libro) o en el cierre de las 23:30 (Meta) | Borrar la copia a mano en la red (una persona) |
@@ -709,6 +760,67 @@ fallaron al bajar `ffmpeg` (GitHub contestó 504). Después Instagram rechazó t
 panel) baja el video del artefacto `piezas-<corrida>` que "Redes" guarda tres días y lo sube con
 `redes/reintentar.mjs`, sin pedir la voz de nuevo (cupo: 10 audios por día). Comparte el candado `redes`.
 
+
+**Desde el 17/10 (regla 208)**, cuando la pieza entera no salió (Instagram, que manda, la rechazó), la vuelta
+siguiente del reloj sube el video ya armado que quedó en la memoria de voces (`reels/armadas.mjs`): ya no hace
+falta "Reintentar" para eso, ni se gasta otro audio. "Reintentar pieza" sigue sirviendo para lo que el reloj no
+vuelve a pedir: la historia de un reel que sí salió, o una red secundaria que falló.
+
+### Lo que falta y necesita tocar un workflow (17/10, propuesto; no se tocó)
+
+- **Juntar "Piezas" y "Reintentar pieza" adentro de "Redes"** (auditoría 2.0, § 3.4): en 15 días ninguno de los
+  dos corrió. Propuesta: `redes.yml` con dos acciones más, `armar` (los mismos `solo`, `todas`, `publicar` y
+  `destino` de `piezas.yml`) y `reintentar` (los `pieza`, `red`, `parte`, `dia` y `marca` de `reintentar.yml`,
+  con `permissions: actions: read` y el paso que baja el artefacto). Se puede sólo cuando el botón del celular
+  (`web/public/panel/`, que hoy dispara `reintentar.yml`) pase a pedir `redes.yml` con `accion=reintentar`; hasta
+  entonces, borrar `reintentar.yml` rompe el botón.
+- **La frase rota de `piezas.yml`** (renglones 8 y 9): dice "Si Gemini falla, la pieza sale igual con otra voz:
+  no sale y el reloj la vuelve a pedir…", que se contradice. Tiene que decir: "Si Gemini falla, la pieza no sale
+  (nunca con otra voz) y el reloj la vuelve a pedir en la vuelta siguiente".
+- **Que el contador de voz vea todo lo que gasta voz**: "Auditar voz", "Probar Gemini", "Crear voces" y "Fijar
+  piezas" usan la misma clave pero no restauran ni guardan la memoria de voces (`.cache/voz`, `VOZ_CACHE`), así
+  que sus audios no se cuentan. Hace falta sumarles los dos pasos de caché que tienen `redes.yml` y `piezas.yml`.
+- **"Redes" puede tardar un poco más a la hora de un repaso**: la secuencia del repaso dibuja unos 350 cuadros
+  (en la PC, 2 minutos; en GitHub, del orden de uno). El `timeout-minutes: 25` alcanza; si algún día no, la
+  pieza sale con la lista quieta.
+
+## El video, como módulo aparte a futuro (`radarbalcarce/radar-balcarce-render`)
+
+*Anotado el 17/10 a pedido de los dueños; no está implementado.* La idea: que lo que dibuja y arma los videos
+(placas, escenas, subtítulos, ffmpeg) corra en un repositorio público aparte, **sin ningún secreto**, y que este
+repositorio le pase todo lo que necesita. Hoy la frontera ya casi existe: `armarReel` (`reels/reel.mjs`) recibe
+la voz por parámetro (`hablar`), así que no necesita saber de Gemini.
+
+**Lo que queda acá (con secretos o con criterio):** elegir qué sale y cuándo (`redes/`), los guiones, pedir la
+voz a Gemini (`GEMINI_API_KEY_REDES`), el contador del cupo, publicar en Meta (`META_TOKEN`) y el libro.
+
+**Entrada del render, una por pieza (`pedido.json`, más los archivos que nombra):**
+
+| Campo | Qué es |
+|---|---|
+| `nombre`, `tipo` (`reel` o `historia`) | La pieza (`noticia1`, `clima-manana`…) |
+| `texto` | Lo que dice la voz, ya pasado por `paraLeer` |
+| `voz` | El audio ya generado (`voz.mp3`); el render lo alinea él mismo (`reels/alinear.mjs`, sólo ffmpeg) para sacar los tiempos de cada palabra |
+| `placa` | El SVG de respaldo (la placa quieta) |
+| `escena` | Opcional: `{ tipo: 'clima' \| 'farmacia' \| …, datos }`, lo que hoy arma `reels/escenas/del-plan.mjs` |
+| `secuencia` | Opcional: `{ placas: [{ svg, marca }], tapa }` (el repaso); las fotos van adentro de los SVG (`data:`) o como archivos |
+| `segunda` | Opcional: el SVG de "Además…" ("Un día como hoy") |
+| `acento` | El color de la palabra que se dice en el subtítulo |
+| `opciones` | `animar`, `historiaMaxima` (58 s), `fps` |
+
+**Salida:** `<nombre>.mp4` (el reel entero), `<nombre>-historia.mp4` (sólo si pasa de 58 s), `<nombre>.png` (la
+tapa), `<nombre>.ass` (los subtítulos) y una línea de manifiesto `{ nombre, archivo, duracion, archivoHistoria?,
+duracionHistoria?, huella }`, donde `huella` es el resumen del pedido: el mismo pedido da el mismo video, y eso
+sirve de memoria (no se vuelve a dibujar lo que ya se dibujó).
+
+**Lo que el render lleva consigo:** las tipografías (`reels/marca/fuentes/`), `reels/placa.mjs`,
+`reels/animacion.mjs`, `reels/escenas/`, `reels/voz.mjs`, `reels/alinear.mjs`, `reels/tiempos.mjs`,
+`reels/duracion.mjs` y la parte de video de `reels/reel.mjs`; dependencias, `@resvg/resvg-js` y `ffmpeg-static`.
+Ningún archivo de `web/data/` ni del libro: sólo lo que viene en el pedido, que ya es público.
+
+**Cómo se llamaría:** "Redes" sube los pedidos como artefacto y dispara el workflow del render
+(`repository_dispatch`); el render deja los videos como artefacto y "Redes" los baja y publica. Mientras no
+exista, todo sigue en `reels/` como hoy.
 
 ## Piezas fijas: armadas de antemano y reutilizadas (1/10/2026)
 
@@ -746,5 +858,5 @@ Horarios acordados con Hernán el 1/10 (todos en `panel/horarios.mjs` y `redes/p
 - **Para verlo:** `node reels/cronograma-html.mjs --desde=AAAA-MM-DD --dias=8 --fijas=participa-noticias,…` arma una página con una pestaña por día y la
   grilla de 7 a 21 (las horas vacías se ven rayadas); `node reels/hoja-cronograma.mjs` lo dibuja como imagen y `node redes/cronograma-semana.mjs` lo escribe en texto.
   Los tres usan las mismas funciones que el reloj, así que muestran lo que va a pasar.
-- **Audios por día** (el cupo gratis es de 10): con las cuatro de participá fijas, entre 7 y 8; el feriado, 8. Quedan 2 de margen para un aviso de clima o un reintento.
+- **Audios por día** (el cupo gratis es de 10): con las cuatro de participá fijas, entre 7 y 8; el feriado, 8. Quedan 2 de margen para un aviso de clima o un reintento, y desde el 17/10 el contador los cuida (regla 208).
 - **Un día como hoy** se prepara una semana por vez y se revisa (`PENDIENTES.md` 0c2): cada semana se arma la siguiente, y si nadie toca nada sale como está.

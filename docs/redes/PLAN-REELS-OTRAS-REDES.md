@@ -2,7 +2,9 @@
 
 *15/10/2026. Es un **plan**, no código en producción: no se creó ninguna cuenta, no se tocó ninguna clave y no se publicó nada. Lo único
 que se escribió en el repositorio es el esqueleto `redes/destinos.mjs` (con su prueba, `pruebas/destinos.test.mjs`), que arranca
-**apagado y simulando**. Todo lo que dice "según la documentación oficial" se leyó el 15/10/2026; lo que no se pudo confirmar en una
+**apagado y simulando**. *(17/10/2026: ese esqueleto se sacó del repositorio porque nadie lo usaba — pedido de los dueños: "que no
+quede nada que no se use". Queda en el historial de git: se busca el commit que borró `redes/destinos.mjs` y se lo recupera tal cual el
+día que se retome este plan.)* Todo lo que dice "según la documentación oficial" se leyó el 15/10/2026; lo que no se pudo confirmar en una
 fuente oficial está marcado con **(sin confirmar)** y figura en el § 9.*
 
 Hoy los reels salen por la API de Meta a **Facebook** (página) e **Instagram** (`@radarbalcarce`). La pregunta es si el **mismo video**

@@ -18,7 +18,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { planDelDia, esPublicable } from '../reels/plan.mjs';
+import * as plan from '../reels/plan.mjs';
+
+const { planDelDia, esPublicable } = plan;
 import {
   cronogramaDelDia, piezasQueTocan, avisoDeClima, ventanaDe, HORA_AVISO, VENTANA_AVISO, claveDePieza,
 } from '../redes/piezas.mjs';
@@ -116,40 +118,26 @@ for (const f of ['redes', 'piezas']) {
   });
 }
 
-// ---------------------------------------------------- 4. sólo lo publicable, también en la PC
+// ---------------------------------------------------- 4. sólo lo publicable
+// (17/10: sin el panel de la PC, que está en desuso, ya no hay "decisiones" que leer: las de una persona llegan por la web.)
 
 const notaPc = (id, titulo, extra = {}) => ({
   id, titulo, seccion: 'Balcarce', relevancia: 90, local: true, temas: [], semaforo: 'verde', ...extra,
 });
 
-test('4 · esPublicable: la verde sí, la amarilla sin decidir no, la roja no, y manda lo que decidió una persona', () => {
-  const decisiones = {
-    aprobada: { estado: 'publicada', por: 'Hernán' },
-    descartada: { estado: 'descartada', por: 'Andrés' },
-    deLaIa: { estado: 'automatica', por: 'ia' },
-  };
-  assert.equal(esPublicable(notaPc('v', 'x'), decisiones), true);
-  assert.equal(esPublicable(notaPc('a', 'x', { semaforo: 'amarillo' }), decisiones), false);
-  assert.equal(esPublicable(notaPc('r', 'x', { semaforo: 'rojo' }), decisiones), false);
-  assert.equal(esPublicable(notaPc('aprobada', 'x', { semaforo: 'amarillo' }), decisiones), true);
-  assert.equal(esPublicable(notaPc('descartada', 'x'), decisiones), false);
-  // Lo que guardó la máquina no es una decisión de una persona: manda el semáforo.
-  assert.equal(esPublicable(notaPc('deLaIa', 'x', { semaforo: 'amarillo' }), decisiones), false);
-});
-
-test('4 · con los datos del panel, una amarilla que nadie aprobó no entra a ningún podcast', () => {
+test('4 · con datos que no pasaron por la web, una amarilla o una roja no entran a ningún podcast: sólo la verde', () => {
   const notas = [
     notaPc('verde1', 'Inauguraron la biblioteca popular del barrio norte'),
     notaPc('verde2', 'Arrancó la vacunación antigripal en los hospitales'),
     notaPc('amarilla', 'Polémica por las cloacas del loteo nuevo', { semaforo: 'amarillo', relevancia: 99 }),
-    notaPc('aprobada', 'Premiaron a los bomberos voluntarios', { semaforo: 'amarillo' }),
+    notaPc('roja', 'Un caso que no se publica nunca', { semaforo: 'rojo', relevancia: 99 }),
   ];
-  const estado = { decisiones: { aprobada: { estado: 'publicada', por: 'Hernán' } } };
-  const { piezas } = planDelDia(datosDelDia({ notas }), { fecha: AR('2026-09-21', '09:00'), estado, eventos: [] });
+  const { piezas } = planDelDia(datosDelDia({ notas }), { fecha: AR('2026-09-21', '09:00'), estado: {}, eventos: [] });
   const contadas = new Set(piezas.flatMap((p) => p.notaIds ?? []));
   assert.ok(contadas.size > 0, 'no se armó ningún podcast');
-  assert.ok(!contadas.has('amarilla'), 'un podcast contó una amarilla que nadie aprobó');
-  assert.ok(contadas.has('aprobada'), 'la que aprobó una persona sí vale');
+  assert.ok(!contadas.has('amarilla'), 'un podcast contó una amarilla');
+  assert.ok(!contadas.has('roja'), 'un podcast contó una roja');
+  assert.equal(typeof esPublicable, 'undefined', 'ya no hay decisiones del panel de la PC');
 });
 
 test('4 · con lo ya publicado en la web (GitHub) no se vuelve a filtrar: las notas no traen semáforo', () => {

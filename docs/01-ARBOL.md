@@ -227,7 +227,6 @@ algunas, un `LEEME.md`.
 | `auditar-notas.mjs` | "Auditoría IA": lee las notas nuevas y avisa lo que esté mal (`ingesta/auditoria-ia.mjs`) | `auditoria-ia.yml` | Sí |
 | `avisar-por-mail.mjs` | Los avisos de GitHub salen por mail, por el vigilante de Cloudflare (`POST /avisar`, regla 173) | `vigilar.mjs`, `actualizar.yml`, `cloudflare-deploy.yml`, `informe-diario.mjs` y más | Sí |
 | `cronograma-semana.mjs` | El cronograma de las redes de varios días, como lo arma el reloj | `informe-diario.mjs`, `reels/cronograma-html.mjs`, `reels/hoja-cronograma.mjs` | Sí |
-| `destinos.mjs` | Los otros destinos de los reels (Telegram, YouTube, Bluesky…): esqueleto que simula, sin conectar | Nadie en producción | No |
 | `efemeride.mjs`, `feriado.mjs`, `participa.mjs` | Las piezas de "Un día como hoy", del feriado y de "participá" | `reels/plan.mjs`, `panel/horarios.mjs` | Sí |
 | `estadisticas-detalle.mjs`, `estadisticas-piezas.mjs` | El detalle diario de las visitas (horas, notas, de dónde llegan, aparatos, países) y los números de cada pieza de redes | `vigilar.mjs`, `estadisticas.mjs`, `informe-diario.mjs` | Sí |
 | `indexnow.mjs` | Le avisa a Bing (IndexNow) qué notas nuevas hay después de cada despliegue | `cloudflare-deploy.yml` | Sí |

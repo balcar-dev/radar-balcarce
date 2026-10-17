@@ -316,7 +316,7 @@ test('la agenda del jueves la arma también GitHub, con la agenda publicada en l
     { nombre: '22° FIESTA NACIONAL DEL POSTRE', lugar: 'SOCIEDAD RURAL DE BALCARCE', desde: '2026-10-09 12:30:00' },
     { nombre: 'CABALGATA', lugar: 'Estancia', desde: '2026-11-27 08:00:00' },
   ] }));
-  const eventos = eventosProximos(4, { web, pc: path.join(dir, 'no-existe.json'), hoy: new Date('2026-10-08T12:00:00-03:00') });
+  const eventos = eventosProximos(4, { web, hoy: new Date('2026-10-08T12:00:00-03:00') });
   assert.deepEqual(eventos.map((e) => [e.nombre, e.lugar, e.cuando]), [['22° Fiesta Nacional del Postre', 'Sociedad Rural de Balcarce', 'viernes 12:30']]);
 });
 

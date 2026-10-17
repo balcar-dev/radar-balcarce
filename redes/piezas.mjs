@@ -124,12 +124,6 @@ export const PODCASTS = [
 /** Los nombres de los podcasts, para preguntar "¿esta pieza es un podcast?". */
 export const NOMBRES_DE_PODCAST = PODCASTS.map((p) => p.nombre);
 
-/** Piezas fijas que sólo se pueden armar en la PC: sus datos no están en la
- *  web. Hasta que lo estén, GitHub no las espera (si no, las reintentaría en
- *  cada corrida sin poder armarlas nunca). Desde el 29/09 no queda ninguna: la
- *  agenda sale de la agenda publicada (web/data/agenda.json, reels/plan.mjs). */
-const SOLO_EN_LA_PC = [];
-
 // Desde el 30/09 el repaso lleva siempre el rojo de la marca (CRITERIO-REDES.md § 8): ya no rota un color por día.
 
 /** Lo que identifica a una pieza en el libro: el día y el nombre. */
@@ -252,7 +246,6 @@ export function cronogramaDelDia(fecha = new Date(), { estado = {}, clima = null
   // la misma que usa reels/plan.mjs: si alguien fijó los días de los útiles a
   // mano desde el panel, manda eso; si no, rotan solos.
   const fijas = horariosDe(estado)
-    .filter((h) => !SOLO_EN_LA_PC.includes(h.id))
     .filter((h) => toca(h, fecha, { estado }))
     .map((h) => ({ nombre: h.id, tipo: SALE_COMO_REEL(h.id) ? 'reel' : 'historia', hora: h.hora }));
   const aviso = avisoDeClima(clima, fecha);
