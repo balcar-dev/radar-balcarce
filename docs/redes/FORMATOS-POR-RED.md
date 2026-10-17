@@ -47,6 +47,51 @@ podemos automatizar todos o cuáles, y qué formato tienen de publicación: hist
 | **WhatsApp canal** | **No** | — | — | **A mano** |
 | Pinterest, LinkedIn | Sí, con revisión (nota § 4.9) | — | — | **No por ahora** |
 
+## 0b. El texto de cada red (17/10/2026): largo, enlace, hashtags y plantilla
+
+*Pedido de Hernán, 17/10: "revisá el formato del texto de lo que va en Facebook, en Instagram y en cada red social: no todas usan el mismo ni respetan los links. Los hashtags: 'Balcarce' y
+'Radar Balcarce' deberían ser FIJOS y después, según la nota, los que correspondan." Esta sección es la tabla; el código es `textoParaRed(red, entrada)` (`redes/texto-por-red.mjs`) y
+sus pruebas (`pruebas/texto-por-red.test.mjs`). Hoy sólo publican Facebook e Instagram; para las demás el texto queda listo, no hay ninguna cuenta ni se publica nada. Lo que no pude leer en la
+ayuda o la documentación oficial de cada red el 17/10/2026 está marcado **SIN VERIFICAR**; lo marcado "leído hoy" se leyó el 17/10 en la página que se cita.*
+
+### Los hashtags (regla 281)
+
+**Siempre `#Balcarce #RadarBalcarce`, primeros y en ese orden**, en Facebook, Instagram y el pie de los reels (también en las notas de afuera: es la marca). Después, de **1 a 3 de la nota**
+(las etiquetas que escribió la IA y verificó el verificador; si la nota no trae etiquetas, el tema de su sección: #Economía, #Fútbol…; en los reels, el tipo de pieza: #Noticias, #Clima,
+#FarmaciaDeTurno…). Sin repetir (ni "Balcarce" otra vez, ni con otra tilde). **Con los dos fijos son cinco como mucho: el tope que Instagram anunció en diciembre de 2025** (ver la fila de Instagram).
+Los otros hashtags que puede traer una nota quedan afuera; el tope sale de `POSTEO.hashtagsMaximo` (3) en `ingesta/criterio.mjs` y la tabla de `CRITERIO-REDES.md`.
+
+### La tabla
+
+| Red | Texto máximo | Hasta dónde conviene | ¿El enlace se ve tocable? | Hashtags | Plantilla de una nota |
+|---|---|---|---|---|---|
+| **Facebook** (posteo de nota, con foto) | 63.206 **SIN VERIFICAR** (lo dicen terceros; la ayuda de Meta no se pudo leer) | ~500 (en el celular se ve la parte de arriba y "Ver más": 240 a 480 según el aparato, **SIN VERIFICAR**, de terceros) | **Sí en el texto de un posteo.** En el pie de una *foto* se ve como texto con enlace: **SIN VERIFICAR** si Facebook lo hace tocable y si da tarjeta (no la da; la tarjeta es de los posteos "enlace"). Meta **prueba** un tope de 2 posteos con enlace por mes para páginas que no pagan; los publicadores quedaron afuera según la prensa (TechCrunch, 17/12/2025; sin novedades de 2026 en la búsqueda de hoy) | Sin tope oficial; usamos 5 (2 fijos + 3) | texto de la IA (280) o titular + bajada · "Seguí leyendo en Radar Balcarce: `radarbalcarce.com/r/f/<id>`" · `#Balcarce #RadarBalcarce #…` · "Foto: crédito" |
+| **Facebook** (reel) | pie del reel: igual que arriba | ~300 | Sí, UN enlace: el de la nota del repaso (`radarbalcarce.com/nota/repaso<día><turno>`) | 2 fijos + 1 de la pieza | título · lista de titulares (•) · "Las notas, acá: <enlace>" · "Voz generada con inteligencia artificial." · `#Balcarce #RadarBalcarce #Noticias` |
+| **Facebook** (historia) | sin texto | — | No (la API de historias no tiene pegatina de enlace: leído el 16/10) | — | sin texto |
+| **Instagram** (espejo de la nota) | 2.200 (leído el 16/10 en la referencia de la API) | ~500 | **No**: en el pie no se tocan (hay una prueba de Meta sólo para suscriptores; **SIN VERIFICAR**). Va "link en la bio" | **5**: Instagram anunció en diciembre de 2025 que baja de 30 a 5 por posteo (prensa: BetaNews, 19/12/2025; la fuente primaria —el anuncio de @creators— no se pudo leer: **SIN VERIFICAR**) | texto de la IA · "La nota completa, en radarbalcarce.com (link en la bio)" · hashtags · "Foto: crédito" |
+| **Instagram** (reel) | 2.200 | ~300 | No: "Todas las notas, en radarbalcarce.com (link en la bio)" | 2 fijos + 1 | igual que el reel de Facebook, sin enlace |
+| **Instagram** (historia) | sin texto | — | No (sin pegatina por API) | — | sin texto |
+| **Instagram** (carrusel) | 2.200 | — | No | 5 | **No se usa**: todo lo que va a Instagram es video con voz salvo el espejo de Facebook (regla de siempre) |
+| **Threads** | **500** (leído hoy en la referencia de publicar) | ~400 | **Sí.** Hasta 5 enlaces por posteo. La *tarjeta* de enlace (`link_attachment`) **sólo existe en posteos de puro texto**: no con foto ni video (leído hoy) | **Uno solo**: la etiqueta de tema (`topic_tag`, 1 a 50 caracteres, sin punto ni &); si el texto trae varios, vale el primero (leído hoy) | titular o texto de la IA · línea en blanco · `radarbalcarce.com/r/h/<id>` (la primera URL se vuelve tarjeta) · etiqueta de tema `Balcarce` en su campo, no en el texto |
+| **X** | **280**; cada enlace cuenta 23 y cada emoji 2 (leído el 16/10) | ~270 | Sí, pero **US$ 0,20 por posteo con enlace contra US$ 0,015 sin él** (13 veces más; precios leídos el 16/10) | La ayuda de X recomienda **no más de 2** por posteo (resumen del buscador; la página dio 403 al abrirla hoy: **SIN VERIFICAR** directo) | titular (recortado en una palabra entera) · `#Balcarce #RadarBalcarce` · **sin enlace** por defecto |
+| **Telegram** (canal) | **4.096** el texto; **1.024** el pie de una foto o video (leído hoy en el Bot API) | ~900 | **Sí**, y arma vista previa del primer enlace (`link_preview_options`) | Libres; usamos 5 | titular · texto de la IA o bajada · `radarbalcarce.com/r/t/<id>` · hashtags |
+| **Bluesky** | **300** "graphemes" (lo que ve una persona como una letra). **SIN VERIFICAR hoy**: la documentación redirige a otro dominio sin contenido y el esquema de GitHub dio 404; el valor es el del 16/10 | ~280 | Sí, pero **hay que declararlo**: el enlace y cada hashtag son "facetas" con posición en BYTES de UTF-8 (`facetasDeBluesky` las arma). La tarjeta con imagen la arma quien publica | Libres; usamos 2 fijos | titular · enlace · `#Balcarce #RadarBalcarce` · + facetas |
+| **TikTok** | **2.200** UTF-16 en el pie de un video (leído hoy); los `#` y `@` se reconocen por los espacios | ~400 | **No** en el pie (**SIN VERIFICAR**); "link en la bio" | Libres; usamos 5 | título · lista · "Más en radarbalcarce.com (link en la bio)" · aviso de la voz · hashtags |
+| **YouTube Shorts** | título **100** y descripción **5.000** (**SIN VERIFICAR** en la documentación de hoy) | ~800 | **No** en la descripción de un Short (desde 2023, según prensa; **SIN VERIFICAR**): se dice la dirección | **Hasta 3** se muestran arriba del título; **con más de 60 YouTube ignora todos** (leído hoy en su ayuda); van en el título o en la descripción | título "<pieza> · Radar Balcarce" · descripción con la lista y "Más en radarbalcarce.com" · aviso · `#Balcarce #RadarBalcarce #Noticias` |
+| **Canal de WhatsApp** | **SIN VERIFICAR** (no hay API ni encontré el límite en una página oficial) | ~700 | Sí (**SIN VERIFICAR** la vista previa) | No hacen falta (**SIN VERIFICAR**) | titular · bajada · `radarbalcarce.com/r/w/<id>` · va **a mano** |
+
+Dónde se leyó hoy (17/10/2026): Threads <https://developers.facebook.com/docs/threads/posts>; Telegram <https://core.telegram.org/bots/api>; TikTok
+<https://developers.tiktok.com/doc/content-posting-api-reference-direct-post>; YouTube <https://support.google.com/youtube/answer/6390658>; Instagram, Facebook, X y Bluesky, las del 16/10 (§ 10 de este
+archivo) más la búsqueda de hoy para el tope de 5 hashtags de Instagram y el de 2 enlaces de Facebook. La API de Meta para releer una página compartida (`POST /?id=<url>&scrape=true`) está en
+<https://developers.facebook.com/docs/graph-api/reference/url/>.
+
+### Qué hace el código con esto (regla 281)
+
+- **Facebook e Instagram** (lo que ya se publica): `mensajeDeNota` y `pieDePieza` arman el texto; ahora siempre cierran con los hashtags (también las notas sin `textoRedes`, que antes no llevaban ninguno).
+- **El resto**: `textoParaRed('<red>', { tipo: 'nota' | 'reel' | 'historia', nota, pieza })` devuelve `{ texto, titulo, descripcion, enlace, hashtags, etiquetaDeTema, facetas, largo, maximo, cabe, avisos }`; si no
+  entra, recorta en una palabra entera y avisa. TikTok y YouTube no publican notas (son de video). Una historia no lleva texto en ninguna. No publica nada ni habla con ninguna red.
+- **Los enlaces**: con `ENLACES_CORTOS` prendida salen como `radarbalcarce.com/r/<letra de la red>/<id>` (ver `ACORTADOR-DE-ENLACES.md`); apagada, con las UTM largas de siempre.
+
 ## 1. Cómo leer esto
 
 - **API oficial**: el robot le habla a la red directo, sin intermediario. Es lo que hoy hacemos con Meta.

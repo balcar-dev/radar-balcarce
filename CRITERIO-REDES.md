@@ -188,9 +188,11 @@ Lo común a todas:
 - **Cuándo:** cuando hay una nota fuerte de Balcarce, hasta 5 por día (las reglas están en
   `CRITERIO-EDITORIAL.md` § 9 y en `docs/07-REDES.md`).
 - **Cómo se arma:** el texto para redes (hasta 280 caracteres) o el titular y la bajada,
-  una línea con el enlace a **nuestra** nota que va cambiando de frase, y hasta tres
-  hashtags (`#Balcarce` si es de acá). El espejo de Instagram lleva la foto de la nota,
-  con el crédito en el texto del posteo.
+  una línea con el enlace a **nuestra** nota que va cambiando de frase (en Instagram, "link en la bio": ahí los enlaces no se tocan), y los hashtags:
+  **`#Balcarce #RadarBalcarce` siempre, primeros y en ese orden**, y hasta tres de la nota (sus etiquetas o el tema de su sección), sin repetir. Son cinco como mucho, el tope de Instagram.
+  Los pies de los reels llevan los dos fijos y uno del tipo de pieza (#Noticias, #Clima…). El espejo de Instagram lleva la foto de la nota, con el crédito en el texto del posteo.
+- **Qué va:** sólo **lo de Balcarce y lo más contado del país** (lo de afuera que cuentan cinco medios distintos o más; nada de otras ciudades que no sea eso). La barra es `FACEBOOK.mediosParaRedes` en la tabla de
+  `CRITERIO-EDITORIAL.md`. Los repasos piden lo mismo para lo de afuera.
 - **Lo que decide una persona:** Política y Policiales, y lo que salió en la web porque lo
   aprobó una persona, van a Facebook e Instagram **sólo si esa persona lo marca** desde el
   panel del celular ("También a Facebook e Instagram").
@@ -285,7 +287,7 @@ El código los toma de `ingesta/criterio.mjs` (la columna "Clave" dice cuál) y
 | Podcast: corte de seguridad de la historia (segundos; el máximo de Meta es 60) | 58 | `PODCAST_VOZ.segundosMaximoHistoria` |
 | Farmacia y semanales: segundos como mínimo | 6 | `PIEZA_FIJA_VOZ.segundosMinimo` |
 | Farmacia y semanales: segundos como máximo | 25 | `PIEZA_FIJA_VOZ.segundosMaximo` |
-| Posteo: hashtags como máximo | 3 | `POSTEO.hashtagsMaximo` |
+| Posteo: hashtags de la nota como máximo (además de los dos fijos, `#Balcarce #RadarBalcarce`) | 3 | `POSTEO.hashtagsMaximo` |
 <!-- NUMEROS_REDES:FIN -->
 
 **Cómo se usa la duración** (`repasoConPresupuesto`, `redes/elegir.mjs`): un repaso

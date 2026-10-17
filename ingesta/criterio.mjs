@@ -262,8 +262,11 @@ export const SECCIONES_QUE_ESPERAN_PERSONA = ['Policiales', 'Política'];
 export const FACEBOOK = {
   porDia: 5,
   relevanciaMinima: 75,
-  // 12/10, Hernán: tienen que salir cinco por día; si no alcanzan las de Balcarce, se sigue con lo de mayor puntaje (0 = sin piso).
-  relevanciaMinimaDeRelleno: 0,
+  // 17/10 (regla 280), Hernán: "sólo notas de Balcarce o, si no son de Balcarce, las más populares que tengamos". Lo de afuera sale sólo si lo
+  // cuentan tantos medios distintos o más (los del mismo dueño cuentan uno). Reemplaza al "relleno" del 12/10, que completaba los cinco
+  // del día con lo de afuera de mayor puntaje (y dejó pasar, el 17/10, la agenda de La Plata: 2 medios, otra ciudad). Medido sobre las notas de
+  // portada y archivo del 28/09 al 16/10: ver docs/redes/PROPUESTA-POSTEOS-POR-DIA.md.
+  mediosParaRedes: 5,
   desdeHora: 8,
   hastaHora: 22,
   minutosEntrePosteos: 90,
@@ -273,6 +276,9 @@ export const FACEBOOK = {
   // Una nota sin foto espera hasta tres horas a que aparezca (8/10, Hernán: lo de las
   // redes tiene que llevar foto, mayormente); pasado ese tiempo sale con la tarjeta de siempre.
   horasEsperandoFoto: 3,
+  // 17/10 (regla 283): una nota que sólo tiene una ilustración de IA puede esperar tanto a que llegue la foto real antes de salir en Facebook (Facebook
+  // guarda la imagen del posteo y no se puede cambiar después). 0 = no espera (propuesta, no regla: docs/redes/FOTO-CAMBIADA-DESPUES-DEL-POSTEO.md).
+  horasEsperandoFotoReal: 0,
 };
 
 /** Las piezas de video: los podcasts. (Las historias de una nota y el feed de

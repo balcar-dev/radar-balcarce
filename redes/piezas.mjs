@@ -17,7 +17,7 @@
 //
 // Sin red y sin reloj propio: se prueba entera.
 
-import { yaPublicada, ponerOrigen } from './elegir.mjs';
+import { yaPublicada, ponerOrigen, armarHashtags } from './elegir.mjs';
 import { diaAR, minutoDelDiaAR, diaSemanaAR, minutosDeHora } from '../ingesta/zona.mjs';
 import { horariosDe, toca } from './horarios.mjs';
 import { diaRotativoDeUtiles } from '../ingesta/utiles.mjs';
@@ -145,7 +145,28 @@ export const AVISO_DE_VOZ = 'Voz generada con inteligencia artificial.';
  */
 export function pieDePieza(pieza, red = null) {
   if (pieza.tipo !== 'reel') return '';
-  return `${pieDeReel(pieza, red)}\n\n${AVISO_DE_VOZ}`;
+  return `${pieDeReel(pieza, red)}\n\n${AVISO_DE_VOZ}\n\n${hashtagsDePieza(pieza).join(' ')}`;
+}
+
+/** El tema de cada tipo de pieza como hashtag (uno solo, después de los fijos). */
+const TEMA_DE_PIEZA = [
+  [(n) => ['noticia1', 'noticia2', 'podcast'].includes(n), 'Noticias'],
+  [(n) => n === 'clima-manana' || n === 'clima-noche' || esAviso(n), 'Clima'],
+  [(n) => n === 'farmacia', 'FarmaciaDeTurno'],
+  [(n) => n === 'efemeride', 'UnDíaComoHoy'],
+  [(n) => n === 'feriado', 'Feriado'],
+  [(n) => n === 'agenda', 'Agenda'],
+  [(n) => n === 'utiles', 'TeléfonosÚtiles'],
+  [(n) => String(n ?? '').startsWith('participa-'), 'Participá'],
+];
+
+/**
+ * Los hashtags del pie de una pieza con video (regla 281): `#Balcarce #RadarBalcarce` fijos, primeros, y uno del tipo de pieza (#Noticias, #Clima,
+ * #FarmaciaDeTurno…). Lo mismo para Facebook y para Instagram; el repaso no repite los de cada nota porque cuenta varias.
+ */
+export function hashtagsDePieza(pieza) {
+  const tema = TEMA_DE_PIEZA.find(([es]) => es(pieza?.nombre))?.[1];
+  return armarHashtags(tema ? [tema] : [], 1);
 }
 
 const TURNO_DEL_REPASO = { noticia1: 'manana', noticia2: 'tarde', podcast: 'noche' };

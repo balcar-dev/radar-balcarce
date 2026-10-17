@@ -13,7 +13,7 @@ import { libroNuevo } from '../redes/elegir.mjs';
 
 test('el reel de Facebook del clima y de la farmacia enlaza a /clima y /farmacias (con su origen); Instagram, sin enlaces', () => {
   const clima = pieDePieza({ tipo: 'reel', nombre: 'clima-noche', titulo: 'Cómo sigue el clima esta noche' }, 'facebook');
-  assert.match(clima, /^Cómo sigue el clima esta noche\n\nEl pronóstico de toda la semana, acá: https:\/\/radarbalcarce\.com\/clima\?utm_source=facebook&utm_medium=social&utm_campaign=servicio&utm_content=clima-noche\n\nVoz generada con inteligencia artificial\.$/);
+  assert.match(clima, /^Cómo sigue el clima esta noche\n\nEl pronóstico de toda la semana, acá: https:\/\/radarbalcarce\.com\/clima\?utm_source=facebook&utm_medium=social&utm_campaign=servicio&utm_content=clima-noche\n\nVoz generada con inteligencia artificial\.\n\n#Balcarce #RadarBalcarce #Clima$/);
   const farmacia = pieDePieza({ tipo: 'reel', nombre: 'farmacia', titulo: 'Farmacia de turno: Del Pueblo' }, 'facebook');
   assert.match(farmacia, /https:\/\/radarbalcarce\.com\/farmacias\?utm_source=facebook/);
   assert.match(pieDePieza({ tipo: 'reel', nombre: 'clima-manana', titulo: 'El clima de hoy' }), /https:\/\/radarbalcarce\.com\/clima\n/, 'sin red, el enlace limpio');

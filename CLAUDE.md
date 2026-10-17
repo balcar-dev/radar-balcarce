@@ -42,7 +42,7 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 258: del 189 al 210 son los arreglos de Radar 2.0 del 17/10, por tandas y con huecos; la 211, las fotos con chicos de las
+próxima regla es la 284 (la 280 a la 283, lo que va a Facebook e Instagram, los hashtags fijos, los enlaces cortos y la foto cambiada; las 258 a 279, de otras tandas): del 189 al 210 son los arreglos de Radar 2.0 del 17/10, por tandas y con huecos; la 211, las fotos con chicos de las
 fuentes de Balcarce; la 212, la revisión del archivo entero por tandas; la 215 a la 218, lo nacional por popularidad sin cupos, las secciones nuevas
 siempre activas, las fuentes de ciencia, salud, educación y tecnología, y el orden por popularidad; la 230 a la 235, la mudanza a Cloudflare; la 240, OpenRouter.)
 
@@ -210,7 +210,10 @@ siempre activas, las fuentes de ciencia, salud, educación y tecnología, y el o
 | La tapa, las secciones o "Seguí leyendo" | `armarTapa` (`web/lib/datos.js`), `web/lib/seguir-leyendo.js` |
 | La nota del dólar o la de cada podcast | `web/lib/notas-propias.js` |
 | Las notas de F1 (horarios, clasificación, resultado; Jolpica) y de fútbol (Liga, Copa Argentina, Libertadores y Sudamericana con equipos argentinos; ESPN) | `ingesta/f1.mjs`, `ingesta/futbol.mjs`, `web/data/f1.json`, `web/data/futbol.json`; la foto libre, `web/scripts/foto-libre.mjs` |
-| Qué va a las redes | `vaAFacebookPorLoQueEs`, `elegirParaFacebook`, `sePuedeSola`; en los repasos, `elegirParaPodcast` y `sePuedeEnUnRepaso` (`redes/elegir.mjs`) |
+| Qué va a las redes (sólo Balcarce y lo más contado del país: `FACEBOOK.mediosParaRedes`, regla 280) | `vaAFacebookPorLoQueEs`, `esPopularParaRedes`, `elegirParaFacebook`, `sePuedeSola`; en los repasos, `elegirParaPodcast` y `sePuedeEnUnRepaso` (`redes/elegir.mjs`); cuántos por día: `docs/redes/PROPUESTA-POSTEOS-POR-DIA.md` |
+| El texto de cada red y los hashtags fijos (`#Balcarce #RadarBalcarce`, regla 281) | `hashtagsDe`, `mensajeDeNota` (`redes/elegir.mjs`), `hashtagsDePieza`, `pieDePieza` (`redes/piezas.mjs`), `textoParaRed` (`redes/texto-por-red.mjs`); la tabla por red: `docs/redes/FORMATOS-POR-RED.md` |
+| Los enlaces cortos de las redes (`ENLACES_CORTOS`, apagado; regla 282) | `redes/enlaces-cortos.mjs`, `infra/enlaces-cloudflare/` (Worker y ruta); `docs/redes/ACORTADOR-DE-ENLACES.md` |
+| La foto de una nota que cambia después de salir en Facebook (regla 283) | `redes/foto-cambiada.mjs`, `releerEnlace` (`redes/meta.mjs`), `FACEBOOK.horasEsperandoFotoReal`; `docs/redes/FOTO-CAMBIADA-DESPUES-DEL-POSTEO.md` |
 | A qué hora sale una pieza | `HORAS_REELS`, `VENTANAS` (`redes/piezas.mjs`) y `HISTORIAS_FIJAS` (`redes/horarios.mjs`) |
 | Cómo suenan o qué dicen las piezas | `CRITERIO-REDES.md` y `redes/guiones.mjs` |
 | Las voces | `CRITERIO-REDES.md` § 6; crearlas, "Crear voces" (`reels/crear-voces.mjs`) |

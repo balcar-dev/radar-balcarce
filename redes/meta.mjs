@@ -145,6 +145,17 @@ export function crearCliente({
     return { id: j.post_id ?? j.id };
   }
 
+  /**
+   * Le pide a Facebook que vuelva a leer una página nuestra (el "Sharing Debugger" por API: `POST /?id=<url>&scrape=true`, referencia del nodo URL de la API de
+   * Meta). Sirve para que la vista previa de un ENLACE tome la imagen nueva; no cambia la foto de un posteo con foto (regla 283, redes/foto-cambiada.mjs).
+   * Cualquier token alcanza; se usa el de la página. Devuelve { ok } (la respuesta de Meta trae `success`).
+   */
+  async function releerEnlace({ enlace }) {
+    const p = await pagina();
+    const j = await pedir('/', { metodo: 'POST', conToken: p.tokenPagina, params: { id: enlace, scrape: 'true' } });
+    return { ok: j?.success !== false, id: j?.id ?? null };
+  }
+
   /** Lo último publicado en la página (texto, hora y id), con la misma forma que lo de Instagram: sirve para comprobar si algo ya salió antes de reintentarlo. */
   async function publicacionesRecientesDeFacebook({ limite = 25 } = {}) {
     const p = await pagina();
@@ -344,7 +355,7 @@ export function crearCliente({
   }
 
   return {
-    pedir, pagina, publicarEnFacebook, publicarFotoEnFacebook, publicacionesRecientesDeFacebook, publicarFotoEnInstagram, publicarVideoEnInstagram, publicarVideoEnFacebook,
+    pedir, pagina, publicarEnFacebook, publicarFotoEnFacebook, releerEnlace, publicacionesRecientesDeFacebook, publicarFotoEnInstagram, publicarVideoEnInstagram, publicarVideoEnFacebook,
     enlaceDePublicacion, publicacionesRecientesDeInstagram, verificar,
   };
 }
