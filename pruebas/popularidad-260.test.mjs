@@ -92,6 +92,10 @@ test('las variables de GitHub MINIMO_NACIONAL y MINIMO_AREAS_CHICAS cambian los 
       assert.equal(minimoAreasChicas(), 2, `"${rota}"`);
     });
   }
+  // El workflow las pasa al paso que arma los datos (si no, la variable de GitHub nunca llegaría a process.env).
+  const flujo = leer('../.github/workflows/actualizar.yml');
+  assert.match(flujo, /MINIMO_NACIONAL: \$\{\{ vars\.MINIMO_NACIONAL \}\}/);
+  assert.match(flujo, /MINIMO_AREAS_CHICAS: \$\{\{ vars\.MINIMO_AREAS_CHICAS \}\}/);
   // exigirMedios las respeta: con 4, tres medios de política esperan; con 2, salen.
   const tres = () => [afuera('p', 'Política', ['Infobae', 'Perfil', 'Clarín'])];
   const normal = tres(); exigirMedios(normal); assert.equal(normal[0].semaforo, 'verde');

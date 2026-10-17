@@ -144,6 +144,10 @@ jobs:
           # docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md, paso 7.
           TOPE_DE_NOTAS: ${{ vars.TOPE_DE_NOTAS }}
           R2_ARCHIVO: ${{ vars.R2_ARCHIVO }}
+          # Cuántos medios distintos tiene que contar lo de afuera para salir (reglas 215 y 260, 17/10/2026; ingesta/popularidad.mjs): lo nacional
+          # y las áreas chicas (Tecnología e IA, Ciencia, Salud, Educación, Cultura). Un número de 2 a 10; vacías o rotas valen los de siempre (3 y 2).
+          MINIMO_NACIONAL: ${{ vars.MINIMO_NACIONAL }}
+          MINIMO_AREAS_CHICAS: ${{ vars.MINIMO_AREAS_CHICAS }}
           # La excepción de las fotos con chicos de los organismos de Balcarce (regla 186, 17/10/2026; ingesta/fotos-menores.mjs). "Si" la
           # prende; vacía o cualquier otra cosa, APAGADA (como siempre: ninguna foto real con un menor). Apagarla también saca de la web las
           # fotos que ya habían entrado por ella. Cada foto aceptada queda en el log de este paso y en web/data/banco-fotos.json (`excepcion`).
