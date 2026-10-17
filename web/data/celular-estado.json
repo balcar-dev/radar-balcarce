@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T12:32:53.271Z",
- "portada": 75,
- "archivo": 1223,
- "esperandoCuerpo": 6,
+ "generado": "2026-10-17T13:02:28.579Z",
+ "portada": 79,
+ "archivo": 1226,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-17T12:32:53.291Z",
+  "generado": "2026-10-17T13:02:28.616Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -93,10 +93,15 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 53,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "19nga6r",
+      "titulo": "Santiago Gilligan busca sumar sus primeros minutos en la Serie A de Italia",
+      "seccion": "Deportes"
+     },
      {
       "id": "rwxsr5",
       "titulo": "El INTA Balcarce participa de una investigación global sobre suelo",
@@ -111,11 +116,6 @@
       "id": "1edq6ii",
       "titulo": "Una vecina dona un riñón a su hija y transitan la recuperación",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1e6e9wy",
-      "titulo": "Docentes y estatales bonaerenses discuten una nueva oferta salarial",
-      "seccion": "Economía"
      }
     ]
    },
@@ -126,8 +126,19 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 30,
+    "notas": [
+     {
+      "id": "1e6e9wy",
+      "titulo": "Docentes y estatales bonaerenses discuten una nueva oferta salarial",
+      "seccion": "Economía"
+     },
+     {
+      "id": "1mfnr70",
+      "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
+      "seccion": "Deportes"
+     }
+    ]
    },
    {
     "nombre": "podcast",
@@ -146,11 +157,23 @@
      "id": "dg5er4",
      "titulo": "La Plata concentra propuestas culturales y deportivas para el sábado",
      "cuando": "2026-10-17T11:05:51.200Z"
+    },
+    {
+     "id": "daz0ef",
+     "titulo": "Revelan la verdadera falla del auto de Carlos Reutemann en 1981",
+     "cuando": "2026-10-17T12:45:48.541Z"
     }
    ],
-   "cola": [],
-   "cupo": 4,
-   "proximoDesde": "2026-10-17T12:35:51.200Z",
+   "cola": [
+    {
+     "id": "19nga6r",
+     "titulo": "Santiago Gilligan busca sumar sus primeros minutos en la Serie A de Italia",
+     "seccion": "Deportes",
+     "marcada": false
+    }
+   ],
+   "cupo": 3,
+   "proximoDesde": "2026-10-17T14:15:48.541Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

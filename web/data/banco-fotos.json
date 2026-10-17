@@ -18510,5 +18510,47 @@
    "descripcion": "Tormenta eléctrica con rayos sobre la ciudad"
   },
   "huella": "330bc3271d1d0413"
+ },
+ "19nga6r": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Santiago Gilligan busca sumar sus primeros minutos en la Serie A de Italia",
+  "razon": "Segunda opinión no disponible (la nota habla de chicos o de categorías juveniles; groq: HTTP 429: Request too large for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `): la foto de El Diario Balcarce no se usa todavía.",
+  "cuando": "2026-10-17T13:02:08.406Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "r3jsn4": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Leonel Flores pide disculpas a los hinchas de Boca por un video viral",
+  "razon": "La segunda opinión (groq, porque la nota habla de chicos o de categorías juveniles) descartó la de Bolavip Argentina (no corresponde a la nota); la de La Nación (no corresponde a la nota): no se elige ninguna. (se probó una foto libre de \"Leonel Flores\" en Wikimedia Commons de los últimos 2 años, sin resultado)",
+  "cuando": "2026-10-17T13:02:08.406Z",
+  "intentos": 1,
+  "fuentes": 6
+ },
+ "tsc53o": {
+  "archivo": "fotos-notas/tsc53o.jpg",
+  "medio": "Bolavip Argentina",
+  "credito": "Foto: Bolavip Argentina",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Boca supera a Talleres y piensa en la Copa Sudamericana",
+  "enlace": "https://bolavip.com/ar/boca/merentiel-tras-la-victoria-de-boca-ante-talleres-no-hay-que-apresurar-a-paredes",
+  "imagenOriginal": "https://media.bolavip.com/wp-content/uploads/sites/18/2026/10/17074256/Miguel-Merentiel-1-1200x740.webp",
+  "razon": "La foto B muestra claramente a un jugador de Boca en primer plano sin marcas de televisión ni elementos extraños, siendo apta para la nota.",
+  "cuando": "2026-10-17T13:02:08.406Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Jugador de Boca con la cinta de capitán en el campo de juego."
+  },
+  "huella": "411d8e26a6a6b31b"
  }
 }
