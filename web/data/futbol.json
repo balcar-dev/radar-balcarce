@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-17T01:31:33.971Z",
+ "consultado": "2026-10-17T02:01:24.061Z",
  "equipos": [
   "9739",
   "3",
@@ -750,12 +750,12 @@
     "id": "401841627",
     "competencia": "liga",
     "inicio": "2026-10-17T00:30:00.000Z",
-    "estado": "entretiempo",
-    "minuto": "45'+1'",
+    "estado": "en-juego",
+    "minuto": "74'",
     "local": {
      "id": "5",
      "nombre": "Boca Juniors",
-     "goles": 1
+     "goles": 2
     },
     "visitante": {
      "id": "19",
@@ -774,6 +774,12 @@
       "equipo": "local",
       "jugador": "Miguel Merentiel",
       "minuto": "18'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Leonel Flores",
+      "minuto": "49'",
       "tipo": "gol"
      }
     ],
