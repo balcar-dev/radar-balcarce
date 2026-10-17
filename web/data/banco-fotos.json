@@ -18522,8 +18522,8 @@
   "origen": "ninguna",
   "titulo": "Santiago Gilligan busca sumar sus primeros minutos en la Serie A de Italia",
   "razon": "Segunda opinión no disponible (la nota habla de chicos o de categorías juveniles; groq: HTTP 429: Request too large for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `): la foto de El Diario Balcarce no se usa todavía.",
-  "cuando": "2026-10-17T13:02:08.406Z",
-  "intentos": 1,
+  "cuando": "2026-10-17T14:31:54.326Z",
+  "intentos": 2,
   "fuentes": 1
  },
  "r3jsn4": {
@@ -18615,5 +18615,29 @@
    "descripcion": "Jugadores de Boca festejando un gol juntos"
   },
   "huella": "ccf1c4d87ada2929"
+ },
+ "mp9n0b": {
+  "archivo": "fotos-notas/mp9n0b.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Aranaga pide autocrítica en el PJ local y defiende las internas partidarias",
+  "enlace": "https://www.radiogabal.com.ar/index.php/politica/el-peronismo-no-deberia-pedir-lealtad-sino-ofrecerla-aranaga-el-pj-el-2027-y-el-dia-de-la-lealtad-peronista",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/Aranaga_GABAL.jpeg",
+  "razon": "Es la única foto disponible, corresponde a la nota y cumple con todos los requisitos de calidad y formato.",
+  "cuando": "2026-10-17T14:31:54.326Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Retrato de Aranaga en el estudio de Radio Gabal con fondo verde."
+  },
+  "huella": "0717151416367c2a"
  }
 }
