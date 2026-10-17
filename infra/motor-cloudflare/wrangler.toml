@@ -1,0 +1,12 @@
+# El Worker del motor (ver worker.mjs y LEEME.md). Sólo existe para que Workers Builds tenga a qué conectarse; la vuelta corre en su compilación.
+name = "radar-balcarce-motor"
+main = "worker.mjs"
+compatibility_date = "2026-10-01"
+
+# El depósito donde la vuelta guarda su memoria, el candado, su último estado y los minutos del mes (estado-r2.mjs). Lo crea el workflow
+# «Desplegar Workers de Cloudflare» si no existe. El reloj (infra/reloj-cloudflare/) lo lee con el mismo nombre para saltearse vueltas.
+[[r2_buckets]]
+binding = "MOTOR"
+bucket_name = "radar-motor"
+
+# Secretos (con `wrangler secret put`, nunca acá): VIGILANTE_TOKEN (el mismo de los demás Workers).

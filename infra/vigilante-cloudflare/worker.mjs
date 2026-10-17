@@ -31,6 +31,8 @@ export const ENLACES = {
   workers: 'https://dash.cloudflare.com/?to=/:account/workers-and-pages',
   reloj: 'https://dash.cloudflare.com/?to=/:account/workers/services/view/radar-balcarce-reloj/production',
   vigilante: 'https://dash.cloudflare.com/?to=/:account/workers/services/view/radar-balcarce-vigilante/production',
+  motor: 'https://dash.cloudflare.com/?to=/:account/workers/services/view/radar-balcarce-motor/production',
+  tareas: 'https://dash.cloudflare.com/?to=/:account/workers/services/view/radar-balcarce-tareas/production',
   sitio: SITIO,
 };
 
@@ -210,6 +212,115 @@ export async function revisarGitHub({ fetchFn = fetch, token = null } = {}) {
   } catch {
     return { lectura: false, estado: 200, motivo: 'GitHub respondió algo ilegible', corridas: [] };
   }
+}
+
+// ---------------------------------------------------------------- la nube (18/10/2026, mudanza: docs/etapa-10-operacion/MIGRACION-A-CLOUDFLARE.md)
+// Con `NUBE` vacía (lo de siempre) nada de esto corre. Con el motor y las tareas en Cloudflare ya no quedan corridas de GitHub que mirar:
+// se le pregunta a los propios Workers (bindings de servicio TAREAS y MOTOR_WORKER, GET /estado con VIGILANTE_TOKEN) cuándo fue la última vez que cada
+// cosa salió bien. El vigilante sigue siendo de afuera: si esos Workers no contestan, es un aviso más.
+
+/** El workflow del motor (igual a MOTOR de infra/reloj-cloudflare/nube.mjs; este Worker no importa nada, y una prueba controla que digan lo mismo). */
+export const MOTOR = 'actualizar.yml';
+const TRABAJOS_DE_LA_NUBE = [MOTOR, 'vigilancia.yml', 'auditoria-ia.yml', 'pistas.yml', 'informe-diario.yml', 'ilustrar-notas.yml', 'redes.yml'];
+
+/** Los workflows que corren en Cloudflare, de la variable NUBE (igual a enLaNube del reloj). */
+export function enLaNube(env = {}) {
+  const crudo = String(env?.NUBE ?? '').trim();
+  if (!crudo) return new Set();
+  let lista;
+  try { const j = JSON.parse(crudo); lista = Array.isArray(j) ? j : crudo.split(','); } catch { lista = crudo.split(','); }
+  const todos = lista.map((x) => String(x).trim().toLowerCase()).filter(Boolean);
+  if (todos.includes('todo')) return new Set(TRABAJOS_DE_LA_NUBE);
+  return new Set(todos.filter((x) => TRABAJOS_DE_LA_NUBE.includes(x)));
+}
+
+/** Cada cuánto tiene que haber salido bien cada tarea (minutos) y si sólo se espera de día (7 a 23). Un poco más del doble de su ritmo. */
+export const RITMO_DE_LAS_TAREAS = {
+  redes: { minutos: 60, soloDeDia: true },          // :05, :35 y :45
+  'auditoria-ia': { minutos: 150, soloDeDia: true }, // cada hora (:41)
+  'ilustrar-notas': { minutos: 300, soloDeDia: true }, // cada 2 horas (:20)
+  pistas: { minutos: 450, soloDeDia: false },        // cada 3 horas (:23)
+  vigilancia: { minutos: 450, soloDeDia: false },    // cada 3 horas
+  'informe-diario': { minutos: 1560, soloDeDia: false }, // dos por día: sólo se mira que no pase un día entero
+};
+export const TAREA_DE_CADA_WORKFLOW = {
+  'redes.yml': 'redes', 'auditoria-ia.yml': 'auditoria-ia', 'ilustrar-notas.yml': 'ilustrar-notas', 'pistas.yml': 'pistas', 'vigilancia.yml': 'vigilancia', 'informe-diario.yml': 'informe-diario',
+};
+
+async function pedirEstado(servicio, ruta, token) {
+  if (!servicio) return { ok: false, motivo: 'no está el binding' };
+  try {
+    const r = await servicio.fetch(new Request(`https://interno${ruta}`, { headers: { 'x-token': token } }));
+    if (!r.ok) return { ok: false, motivo: `HTTP ${r.status}` };
+    return { ok: true, json: await r.json() };
+  } catch (e) { return { ok: false, motivo: String(e?.message ?? e).slice(0, 100) }; }
+}
+
+/** Le pregunta a los Workers del motor y de las tareas cómo vienen. Nunca tira. */
+export async function revisarLaNube({ env = {} } = {}) {
+  const nube = enLaNube(env);
+  if (!nube.size) return null;
+  const out = { nube: [...nube], motor: null, tareas: null };
+  if (nube.has(MOTOR)) out.motor = await pedirEstado(env.MOTOR_WORKER, '/estado', env.VIGILANTE_TOKEN);
+  if ([...nube].some((x) => x !== MOTOR)) out.tareas = await pedirEstado(env.TAREAS, '/estado', env.VIGILANTE_TOKEN);
+  return out;
+}
+
+/** Los problemas de la nube: el motor que no sale bien, o una tarea que no corre hace demasiado. Pura. */
+export function problemasDeLaNube({ ahora, nube }) {
+  const problemas = [];
+  if (!nube) return problemas;
+  const horaDeDia = esDeDia(ahora);
+  if (nube.nube.includes(MOTOR)) {
+    const m = nube.motor;
+    if (!m?.ok) {
+      problemas.push({
+        clave: 'motor-sin-estado', titulo: 'No se puede ver cómo viene el motor de la web',
+        texto: `El Worker del motor no contestó su estado (${m?.motivo ?? 'sin respuesta'}). La web se sigue vigilando por afuera (el mapa del sitio), pero no se sabe si las vueltas están saliendo bien.`,
+        mirar: [['El motor en Cloudflare', ENLACES.motor], ['El reloj de Cloudflare', ENLACES.reloj]],
+      });
+    } else {
+      const u = m.json?.ultima ?? null;
+      const min = u?.ultimaBuena ? minutosDesde(u.ultimaBuena, ahora) : null;
+      if (!u || min === null || min > LIMITES.horasSinCorridaBuena * 60) {
+        problemas.push({
+          clave: 'actualizar-vieja', titulo: `Hace ${min === null ? 'rato' : formatoEdad(min)} que la vuelta del motor no termina bien`,
+          texto: u?.ultimaBuena
+            ? `La última vuelta buena del motor terminó a las ${fechaHoraAR(new Date(u.ultimaBuena))} (hace ${formatoEdad(min)}); debería haber una cada media hora${u.ok === false ? `. La última falló: ${u.motivo ?? 'sin motivo'}` : ''}.`
+            : 'El motor no tiene ninguna vuelta buena anotada.',
+          mirar: [['El motor en Cloudflare (Workers Builds)', ENLACES.motor], ['El reloj de Cloudflare', ENLACES.reloj]],
+        });
+      }
+    }
+  }
+  const t = nube.tareas;
+  if (nube.nube.some((x) => x !== MOTOR)) {
+    if (!t?.ok) {
+      problemas.push({
+        clave: 'tareas-sin-estado', titulo: 'No se puede ver cómo vienen las tareas automáticas',
+        texto: `El Worker de tareas no contestó su estado (${t?.motivo ?? 'sin respuesta'}): vigilancia, auditoría, pistas, informe, ilustraciones y redes corren ahí.`,
+        mirar: [['El Worker de tareas', ENLACES.tareas], ['El reloj de Cloudflare', ENLACES.reloj]],
+      });
+    } else {
+      for (const archivo of nube.nube.filter((x) => x !== MOTOR)) {
+        const nombre = TAREA_DE_CADA_WORKFLOW[archivo];
+        const ritmo = RITMO_DE_LAS_TAREAS[nombre];
+        if (!nombre || !ritmo || (ritmo.soloDeDia && !horaDeDia)) continue;
+        const e = t.json?.tareas?.[nombre] ?? null;
+        const min = e?.ultimaBuena ? minutosDesde(e.ultimaBuena, ahora) : null;
+        if (min === null || min > ritmo.minutos) {
+          problemas.push({
+            clave: `tarea-${nombre}`, titulo: `La tarea «${nombre}» no sale bien hace ${min === null ? 'rato' : formatoEdad(min)}`,
+            texto: e?.ultimaBuena
+              ? `«${nombre}» salió bien por última vez a las ${fechaHoraAR(new Date(e.ultimaBuena))} (hace ${formatoEdad(min)}); lo normal es cada ${ritmo.minutos >= 120 ? `${Math.round(ritmo.minutos / 60)} horas` : `${ritmo.minutos} minutos`} como mucho${e.ok === false ? `. La última corrida falló: ${e.motivo ?? 'sin motivo'}` : ''}.`
+              : `«${nombre}» no tiene ninguna corrida buena anotada${e?.motivo ? ` (la última falló: ${e.motivo})` : ''}.`,
+            mirar: [['El Worker de tareas', ENLACES.tareas], ['El reloj de Cloudflare', ENLACES.reloj]],
+          });
+        }
+      }
+    }
+  }
+  return problemas;
 }
 
 // ---------------------------------------------------------------- lo que decide (puro)
@@ -549,8 +660,16 @@ export async function correr(env, ahora, deps = {}) {
   const enviar = deps.enviar ?? ((mail) => enviarPorCloudflare(env, { ...mail, ahora }));
 
   const previo = (await env.ESTADO.get(CLAVE_DEL_ESTADO, 'json')) ?? {};
-  const [web, github] = await Promise.all([revisarWeb({ fetchFn }), revisarGitHub({ fetchFn, token: env.GITHUB_TOKEN || null })]);
-  const { problemas, contadores } = evaluar({ ahora, web, github, contadores: previo.contadores });
+  const nubeActiva = enLaNube(env);
+  const [web, github, nube] = await Promise.all([
+    revisarWeb({ fetchFn }),
+    // Con el motor en Cloudflare, «Actualizar la web» ya no deja corridas en GitHub: no hay nada que leer ni que avisar de ahí.
+    nubeActiva.has(MOTOR) ? Promise.resolve({ lectura: true, estado: 200, motivo: null, corridas: [], omitida: true }) : revisarGitHub({ fetchFn, token: env.GITHUB_TOKEN || null }),
+    revisarLaNube({ env }),
+  ]);
+  const evaluado = evaluar({ ahora, web, github, contadores: previo.contadores });
+  const problemas = [...evaluado.problemas, ...problemasDeLaNube({ ahora, nube })];
+  const { contadores } = evaluado;
   const { alertas, envios } = decidir({ previo, problemas, ahora });
 
   // El resumen de respaldo (a las 22, sólo si el informe de la noche no llegó): lleva las notas de hoy, que salen del feed.
@@ -588,6 +707,7 @@ export async function correr(env, ahora, deps = {}) {
         ...(github.lectura ? (({ terminadas, buenas, malas, ultimaBuena }) => ({ terminadas, buenas, malas, ultimaBuena: ultimaBuena?.cuando ?? null }))(resumenDeCorridas(github.corridas)) : {}),
       },
       problemas: problemas.map((p) => p.clave),
+      ...(nube ? { nube: { motor: nube.motor ? { ok: nube.motor.ok, ultima: nube.motor.json?.ultima?.cuando ?? null, motivo: nube.motor.motivo ?? null } : null, tareas: nube.tareas ? { ok: nube.tareas.ok, motivo: nube.tareas.motivo ?? null } : null } } : {}),
       mails: envios.filter((e) => !fallidos.includes(e)).map((e) => e.tipo),
       mailsConError: errores,
     },

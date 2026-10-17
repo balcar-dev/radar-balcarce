@@ -19,10 +19,13 @@ import { conRevision, pistasParaRevisar, comoRenglones, avisoDePistas, PISTAS_AB
 import { leerVariable, claveRedaccion, claveClasificacion } from '../reels/claves.mjs';
 import { sacarPistasSolas } from './pistas-solas.mjs';
 import { avisar } from '../redes/avisar-por-mail.mjs';
+import { raizDelProyecto } from '../redes/raiz.mjs';
 
-const RAIZ = path.join(import.meta.dirname, '..');
-const DATOS = path.join(RAIZ, 'web', 'data');
-export const ARCHIVO_PISTAS = path.join(DATOS, 'pistas.json');
+// Los archivos que lee y escribe, relativos a la carpeta del proyecto (el corredor de tareas de Cloudflare los baja y los guarda: infra/tareas-cloudflare/).
+export const ARCHIVOS_QUE_LEE = ['web/data/pistas.json', 'web/data/celular-llaves.json', 'web/data/portada.json', 'web/data/archivo.json', 'web/data/notas-de-pistas.json'];
+export const ARCHIVOS_QUE_ESCRIBE = ['web/data/pistas.json', 'web/data/notas-de-pistas.json'];
+/** Dónde está pistas.json en una carpeta de proyecto. */
+export const archivoDePistas = (raiz) => path.join(raiz, 'web', 'data', 'pistas.json');
 
 /**
  * Una pasada entera, sin leer ni escribir nada (para probarla). Devuelve { libro, novedades, revisadas }.
@@ -46,22 +49,26 @@ export async function pasadaDePistas({
   return { libro: actual, novedades, revisadas };
 }
 
-async function main() {
-  const simular = process.argv.includes('--simular');
-  const solo = (process.argv.find((a) => a.startsWith('--id=')) ?? '').slice(5) || null;
+/** Una pasada de las pistas. `argv`, `env` y `raiz` entran por parámetro para correr igual en la terminal, en GitHub y en un Worker (sin `process.exit`). */
+export async function main({ argv = process.argv.slice(2), env: entorno = process.env, raiz = null } = {}) {
+  const RAIZ = raiz ?? raizDelProyecto(entorno, import.meta.dirname);
+  const DATOS = path.join(RAIZ, 'web', 'data');
+  const ARCHIVO_PISTAS = archivoDePistas(RAIZ);
+  const simular = argv.includes('--simular');
+  const solo = (argv.find((a) => a.startsWith('--id=')) ?? '').slice(5) || null;
   const libro = leerJson(ARCHIVO_PISTAS, { pistas: {} });
   const llaves = leerLlaves(leerJson(path.join(DATOS, 'celular-llaves.json'), null));
   if (!Object.keys(libro.pistas ?? {}).length) { console.log('No hay pistas abiertas.'); return; }
   if (!llaves.length) { console.log('No hay ningún celular registrado: no hay a quién mandarle el informe.'); return; }
   const notas = [...(leerJson(path.join(DATOS, 'portada.json'), null)?.notas ?? []), ...(leerJson(path.join(DATOS, 'archivo.json'), null)?.notas ?? [])];
-  const r = await pasadaDePistas({ libro, llaves, notas, clave: claveRedaccion() ?? claveClasificacion(), solo });
+  const r = await pasadaDePistas({ libro, llaves, notas, clave: claveRedaccion({ env: entorno }) ?? claveClasificacion({ env: entorno }), solo });
   console.log(`Pistas: ${r.revisadas.length} revisadas, ${r.novedades.length} con novedades (se siguen ${PISTAS_ABIERTAS.dias} días).`);
   for (const n of r.novedades) console.log(`  novedad (${n.id}): ${n.motivo}`);
   if (simular) return;
   // Las que ya cubren tres o más medios y pasan el verificador salen solas como notas propias (4/10, panel/pistas-solas.mjs).
   let libroFinal = r.libro;
   const novedadesDeSolas = [];
-  if (!solo && process.env.TAVILY_API_KEY) {
+  if (!solo && entorno.TAVILY_API_KEY) {
     const archivoDeNotas = path.join(DATOS, 'notas-de-pistas.json');
     const s = await sacarPistasSolas({ libro: libroFinal, notas: leerJson(archivoDeNotas, { notas: {} }), archivo: leerJson(path.join(DATOS, 'archivo.json'), { notas: [] }).notas ?? [] });
     for (const x of s.intentadas) console.log(`  salir sola (${x.id}): no salió, ${x.motivo}`);
@@ -76,7 +83,7 @@ async function main() {
   const texto = avisoDePistas([...r.novedades, ...novedadesDeSolas]);
   if (texto) {
     // Por mail (Worker de Cloudflare) y, si no sale, por WhatsApp (regla 173). `avisar` nunca tira.
-    const env = Object.fromEntries(['VIGILANTE_TOKEN', 'AVISOS_URL', 'WHATSAPP_TELEFONO', 'WHATSAPP_APIKEY'].map((n) => [n, leerVariable(n)]));
+    const env = Object.fromEntries(['VIGILANTE_TOKEN', 'AVISOS_URL', 'WHATSAPP_TELEFONO', 'WHATSAPP_APIKEY'].map((n) => [n, leerVariable(n, { env: entorno })]));
     const r = await avisar({ asunto: 'Pistas: novedades', texto, nivel: 'info' }, { env });
     if (!r.ok) console.log(`Aviso: no salió (${r.motivo})`);
   }

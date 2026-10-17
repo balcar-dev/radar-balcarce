@@ -1,0 +1,23 @@
+
+# ---------------------------------------------------------------------------------------------------------------------------------------
+# LA NUBE (18/10/2026). Esta parte NO está en wrangler.toml a propósito: la agrega el workflow «Desplegar Workers de Cloudflare» (desplegar-nube.yml)
+# cuando se elige subir el reloj «con la nube». Un reloj subido sin esta parte pide todo a GitHub, como siempre; con ella, lo que diga NUBE se lo
+# pide a Cloudflare (nube.mjs). Los Workers a los que apunta tienen que existir ANTES de subir esto (si no, Cloudflare rechaza el despliegue).
+# ---------------------------------------------------------------------------------------------------------------------------------------
+
+# El Worker de las tareas chicas (infra/tareas-cloudflare/): vigilancia, auditoría IA, pistas, informe diario, ilustraciones y redes.
+[[services]]
+binding = "TAREAS"
+service = "radar-balcarce-tareas"
+
+# El depósito del motor (infra/motor-cloudflare/): de ahí sale cuántos minutos de Workers Builds lleva gastados el mes.
+[[r2_buckets]]
+binding = "MOTOR"
+bucket_name = "radar-motor"
+
+[vars]
+# Los workflows que corren en Cloudflare, separados por comas. Vacía = todo en GitHub (la vuelta atrás). El workflow reemplaza el marcador.
+NUBE = "__NUBE__"
+
+# Secretos de la nube (con `wrangler secret put` o en el panel de Cloudflare, nunca acá): VIGILANTE_TOKEN (la contraseña de los Workers) y
+# MOTOR_DEPLOY_HOOK (la dirección secreta que despierta a Workers Builds: se crea al conectar el repositorio al Worker radar-balcarce-motor).

@@ -145,6 +145,8 @@ cómo funciona algo que ya anda), **para decidir** (propuesta o página con caja
 | `docs/etapa-6-9/ANALISIS.md` | Semáforo, redacción, fotos y redes: cómo andan y opciones | foto del 15/10 (la propuesta de recortar redes se descartó ese día) |
 | `docs/etapa-10-operacion/ANALISIS.md` | Sacar el robot de GitHub y llevarlo a Cloudflare: minutos medidos, fases, costos, pruebas | foto del 15/10 (desde ese día sólo corre el núcleo legal en cada vuelta y ya hay respaldo en R2) |
 | `docs/etapa-10-operacion/DISENO-MOTOR.md` | El diseño del motor nuevo en Cloudflare (D1, Workflows, R2) | para decidir (sólo diseño; el esquema está en `motor/`) |
+| `docs/etapa-10-operacion/MIGRACION-A-CLOUDFLARE.md` | La mudanza del robot a Cloudflare para entrar en los 2.000 minutos gratis de GitHub privado: qué se eligió (Workers Builds para el motor, un Worker para las tareas, un repositorio público para el video), con números, límites oficiales y lo que quedó afuera | **escrita y probada en Node el 18/10/2026; sin prender** |
+| `docs/etapa-10-operacion/PLAN-DE-CAMBIO.md` | El orden exacto de los pasos para prenderla, qué se pega y dónde, cómo se verifica cada paso y cómo se vuelve atrás en minutos | para ejecutar (a mano, una persona) |
 | `docs/salud-tecnica/ANALISIS.md` | Qué hace falta para que la página dure años | foto del 15/10 |
 | `docs/salud-tecnica/ARCHIVO-PERMANENTE.md` | El diseño del archivo permanente | superado por el de abajo |
 | `docs/salud-tecnica/ARCHIVO-PERMANENTE-IMPLEMENTACION.md` | El archivo permanente en R2: qué se construyó y cómo se activa (regla 183) | vigente (sin activar) |

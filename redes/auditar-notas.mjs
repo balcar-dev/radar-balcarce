@@ -14,14 +14,14 @@ import { pathToFileURL } from 'node:url';
 import { leerVariable, claveOpenRouter as leerClaveOpenRouter } from '../reels/claves.mjs';
 import { cerrar, leerLlaves } from '../panel/cifrado.mjs';
 import { avisar } from './avisar-por-mail.mjs';
+import { raizDelProyecto } from './raiz.mjs';
 import {
   notasParaAuditar, auditarNotas, guardarHallazgos, resumenParaWhatsApp, huellaDeNota, AUDITORIA, cambioMecanico, conCambiosGuardados,
 } from '../ingesta/auditoria-ia.mjs';
 
-const RAIZ = path.join(import.meta.dirname, '..');
-const ARCHIVO = path.join(RAIZ, 'web', 'data', 'auditoria-ia.json');
-// Lo que la auditoría corrigió sola (ortografía chica y segura): pares "antes → después" que la web aplica al armar cada nota.
-const ARCHIVO_CAMBIOS = path.join(RAIZ, 'web', 'data', 'correcciones-auditoria.json');
+// Los archivos que lee y escribe, relativos a la carpeta del proyecto (el corredor de tareas de Cloudflare los baja y los guarda: infra/tareas-cloudflare/).
+export const ARCHIVOS_QUE_LEE = ['web/data/portada.json', 'web/data/auditoria-ia.json', 'web/data/celular-llaves.json', 'web/data/correcciones-auditoria.json'];
+export const ARCHIVOS_QUE_ESCRIBE = ['web/data/auditoria-ia.json', 'web/data/correcciones-auditoria.json'];
 
 const leerJson = (f, defecto) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return defecto; } };
 
@@ -96,17 +96,22 @@ export async function correrAuditoria({
   };
 }
 
-async function main() {
-  const simular = process.argv.includes('--simular');
-  const clave = leerVariable('GROQ_API_KEY');
+/** Una vuelta de la auditoría. `argv`, `env` y `raiz` entran por parámetro para correr igual en la terminal, en GitHub y en un Worker (sin `process.exit`). */
+export async function main({ argv = process.argv.slice(2), env: entorno = process.env, raiz = null } = {}) {
+  const RAIZ = raiz ?? raizDelProyecto(entorno, import.meta.dirname);
+  const ARCHIVO = path.join(RAIZ, 'web', 'data', 'auditoria-ia.json');
+  // Lo que la auditoría corrigió sola (ortografía chica y segura): pares "antes → después" que la web aplica al armar cada nota.
+  const ARCHIVO_CAMBIOS = path.join(RAIZ, 'web', 'data', 'correcciones-auditoria.json');
+  const simular = argv.includes('--simular');
+  const clave = leerVariable('GROQ_API_KEY', { env: entorno });
   // Groq primero; los modelos gratis de OpenRouter, sólo de último respaldo (17/10/2026). Sin ninguna de las dos, no se audita.
-  const claveOpenRouter = leerClaveOpenRouter();
+  const claveOpenRouter = leerClaveOpenRouter({ env: entorno });
   if (!clave && !claveOpenRouter) { console.log('Sin GROQ_API_KEY: no se audita.'); return; }
   const portada = leerJson(path.join(RAIZ, 'web', 'data', 'portada.json'), { notas: [] });
   const estado = leerJson(ARCHIVO, {});
   const llaves = leerLlaves(leerJson(path.join(RAIZ, 'web', 'data', 'celular-llaves.json'), {}));
-  const r = await correrAuditoria({ portada, estado, llaves, clave, claveOpenRouter, corregir: !process.env.AUDITORIA_SIN_CORREGIR });
-  console.log(`Auditoría: ${r.leidas.length} notas leídas, ${r.hallazgos.length} hallazgos${r.cambios.length ? `, ${r.cambios.length} corregidos solos` : ''}${r.descartados ? ` (${r.descartados} descartados: la cita no estaba en la nota)` : ''}${r.fallas.length ? `, ${r.fallas.length} pedidos fallaron (${[...new Set(r.fallas)].join('; ')})` : ''}${r.openrouter?.length ? `, ${r.openrouter.length} pedidos con OpenRouter de respaldo (${[...new Set(r.openrouter)].join(', ')})` : ''}.`);
+  const r = await correrAuditoria({ portada, estado, llaves, clave, claveOpenRouter, corregir: !entorno.AUDITORIA_SIN_CORREGIR });
+  console.log(`Auditoría: ${r.leidas.length} notas leídas, ${r.hallazgos.length} hallazgos${r.cambios.length ? `, ${r.cambios.length} corregidos solos` : ''}${r.descartados ? ` (${r.descartados} descartados: la cita no estaba en la nota)` : ''}${r.fallas.length ? `, ${r.fallas.length} pedidos fallaron (${[...new Set(r.fallas)].join('; ')})` : ''}.`);
   for (const h of r.hallazgos) console.log(`  [${h.gravedad}] ${h.tipo}: ${h.detalle}`);
   for (const c of r.cambios) console.log(`  corregido (${c.campo}): "${c.antes}" → "${c.despues}"`);
   if (simular) return;
@@ -121,7 +126,7 @@ async function main() {
   }
   if (r.texto) {
     // Por mail (Worker de Cloudflare) y, si no sale, por WhatsApp (regla 173). `avisar` nunca tira.
-    const env = Object.fromEntries(['VIGILANTE_TOKEN', 'AVISOS_URL', 'WHATSAPP_TELEFONO', 'WHATSAPP_APIKEY'].map((n) => [n, leerVariable(n)]));
+    const env = Object.fromEntries(['VIGILANTE_TOKEN', 'AVISOS_URL', 'WHATSAPP_TELEFONO', 'WHATSAPP_APIKEY'].map((n) => [n, leerVariable(n, { env: entorno })]));
     const aviso = await avisar({ asunto: 'La auditoría de notas encontró algo grave', texto: r.texto, nivel: 'alta' }, { env });
     if (!aviso.ok) console.log(`Hay algo grave pero no se pudo avisar (${aviso.motivo}).`);
   }

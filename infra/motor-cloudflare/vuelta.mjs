@@ -1,0 +1,261 @@
+// La vuelta del motor, en Cloudflare (18/10/2026, mudanza a Cloudflare: docs/etapa-10-operacion/MIGRACION-A-CLOUDFLARE.md).
+//
+// Es lo que hace .github/workflows/actualizar.yml ("Actualizar la web"), pero como UN programa de Node que corre dentro de Workers Builds, la
+// máquina de compilación de Cloudflare (6.000 minutos por mes incluidos en el plan que ya se paga): lee las fuentes, arma los datos, escribe con IA,
+// verifica, compila Next y sube a Cloudflare Pages. Lo despierta el reloj (`radar-balcarce-reloj`) con un "deploy hook" de Workers Builds.
+//
+//   Build command de Workers Builds:   node infra/motor-cloudflare/vuelta.mjs
+//   Deploy command:                    node infra/motor-cloudflare/listo.mjs    (la vuelta ya subió el sitio; ese paso no hace nada)
+//
+// DIFERENCIAS CON EL WORKFLOW (todo lo demás es igual, paso por paso):
+//   · Los datos se guardan por la API de GitHub (infra/compartido/github.mjs), no con `git push`: no depende de que el clon traiga credenciales
+//     y no gasta minutos de Actions. El mismo mensaje de siempre, el mismo `main`, los mismos archivos (archivos.mjs).
+//   · La memoria entre vueltas (.cache/) y el candado van a R2 (estado-r2.mjs), no a la caché de Actions ni a `concurrency`.
+//   · Antes de empezar, si se pasó del presupuesto de minutos, el reloj ni la despierta (presupuesto.mjs).
+//
+// INTERRUPTORES: `MOTOR_SIMULAR=Si` (o --simular) hace todo menos guardar en GitHub, subir a Pages y escribir en R2 (ensayo). Sin las variables de
+// R2 corre igual, sin memoria ni candado, y lo dice. Lo que en GitHub eran `vars.*` y `secrets.*` son acá variables y secretos del build de
+// Workers Builds (lista exacta en docs/etapa-10-operacion/PLAN-DE-CAMBIO.md).
+//
+// Sólo Node 24 y los programas del proyecto. Sin dependencias propias.
+
+import fs from 'node:fs';
+import path from 'node:path';
+import { spawn } from 'node:child_process';
+import { pathToFileURL } from 'node:url';
+import { crearGithub } from '../compartido/github.mjs';
+import { clienteR2 } from '../compartido/r2-s3.mjs';
+import { fotografiar, cambiosDesde } from './archivos.mjs';
+import {
+  restaurarCache, guardarCache, tomarCandado, soltarCandado, anotarVuelta,
+} from './estado-r2.mjs';
+import { hayQueRecompilar } from '../../web/scripts/recompilar.mjs';
+import { avisar } from '../../redes/avisar-por-mail.mjs';
+
+export const VERSION_DE_WRANGLER = '4.139.0';
+export const REPOSITORIO = 'radarbalcarce/radar-balcarce';
+/** Workers Builds corta a los 20 minutos: la vuelta se rinde antes y lo dice. */
+export const MINUTOS_MAXIMOS = 18;
+
+const RAIZ = path.join(import.meta.dirname, '..', '..');
+
+const si = (v) => /^\s*(si|sí|true|1)\s*$/i.test(String(v ?? ''));
+
+/** Los avisos `::warning title=Fuente caída::Nombre: error` que imprime el armado, como { title, message } (el formato de las anotaciones de GitHub). */
+export function anotacionesDe(texto) {
+  const salida = [];
+  for (const linea of String(texto).split(/\r?\n/)) {
+    const m = linea.match(/^::warning title=([^:]*)::(.*)$/);
+    if (m) salida.push({ title: m[1].trim(), message: m[2].trim() });
+  }
+  return salida.slice(0, 100);
+}
+
+/** Un comando de verdad. Devuelve { codigo } (y `anotaciones` si se pidió `capturar`). Nunca tira por un código de salida: quien llama decide. */
+export function ejecutarReal(comando, args, {
+  cwd = RAIZ, env = process.env, minutos = MINUTOS_MAXIMOS, capturar = false,
+} = {}) {
+  return new Promise((resolver) => {
+    const hijo = spawn(comando, args, { cwd, env, stdio: capturar ? ['inherit', 'pipe', 'inherit'] : 'inherit', shell: process.platform === 'win32' /* npm y npx son .cmd en Windows (el ensayo en la PC); en Workers Builds, Linux, sin shell */ });
+    let visto = '';
+    if (capturar) hijo.stdout.on('data', (d) => { process.stdout.write(d); visto = (visto + d).slice(-400000); });
+    const reloj = setTimeout(() => { hijo.kill('SIGKILL'); }, minutos * 60000);
+    hijo.on('error', (e) => { clearTimeout(reloj); console.error(`No se pudo correr ${comando}: ${e.message}`); resolver({ codigo: 127 }); });
+    hijo.on('close', (codigo) => { clearTimeout(reloj); resolver({ codigo: codigo ?? 1, ...(capturar ? { anotaciones: anotacionesDe(visto) } : {}) }); });
+  });
+}
+
+/** El texto "18/10 10:00", en hora de Balcarce. */
+export function fechaCorta(ahora = new Date()) {
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'America/Argentina/Buenos_Aires', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false,
+  }).formatToParts(ahora).map((x) => [x.type, x.value]));
+  return `${p.day}/${p.month} ${String(Number(p.hour) % 24).padStart(2, '0')}:${p.minute}`;
+}
+
+/** Lo que la vuelta necesita, leído del entorno (variables y secretos del build). */
+export function configurar(env = process.env) {
+  const cuenta = env.CLOUDFLARE_ACCOUNT_ID;
+  const bucket = (env.R2_MOTOR ?? '').trim();
+  return {
+    simular: si(env.MOTOR_SIMULAR),
+    sitio: (env.SITIO ?? 'https://radarbalcarce.com').replace(/\/$/, ''),
+    proyecto: (env.CLOUDFLARE_PROJECT ?? '').trim() || 'radar-balcarce',
+    repo: (env.MOTOR_REPOSITORIO ?? '').trim() || REPOSITORIO,
+    token: env.RADAR_GITHUB_TOKEN,
+    r2: cuenta && bucket && env.R2_ACCESS_KEY_ID && env.R2_SECRET_ACCESS_KEY
+      ? { cuenta, bucket, accessKey: env.R2_ACCESS_KEY_ID, secretKey: env.R2_SECRET_ACCESS_KEY } : null,
+    archivoR2: (env.R2_ARCHIVO ?? '').trim(),
+    id: env.WORKERS_CI_BUILD_UUID || env.MOTOR_ID || `vuelta-${Date.now()}`,
+  };
+}
+
+/**
+ * Una vuelta entera. Todo lo de afuera entra por parámetro, así se prueba sin red, sin disco real y sin gastar nada.
+ * Devuelve { ok, omitida?, motivo?, pasos, segundos, commit? }; si algo salió mal, ok es false (el programa sale con error).
+ */
+export async function vuelta({
+  env = process.env, raiz = RAIZ, ejecutar = ejecutarReal, github = null, r2 = null, ahora = () => new Date(), log = console.log,
+} = {}) {
+  const cfg = configurar(env);
+  const inicio = ahora().getTime();
+  const pasos = {};
+  const entorno = { ...env, TZ: 'America/Argentina/Buenos_Aires', RADAR_MOTOR: 'cloudflare' };
+  const web = path.join(raiz, 'web');
+  const gh = github ?? (cfg.token && !cfg.simular ? crearGithub({ token: cfg.token, repo: cfg.repo }) : null);
+  const deposito = r2 ?? (cfg.r2 ? clienteR2(cfg.r2) : null);
+  let tenemosElCandado = false;
+  let resultado = { ok: false, pasos };
+
+  let anotaciones = null;
+  const correr = async (nombre, comando, args, { cwd = raiz, extra = {}, puedeFallar = false, capturar = false } = {}) => {
+    const t0 = ahora().getTime();
+    log(`\n▶ ${nombre}`);
+    const salida = await ejecutar(comando, args, { cwd, env: { ...entorno, ...extra }, minutos: Math.max(1, MINUTOS_MAXIMOS - (t0 - inicio) / 60000), capturar });
+    const { codigo } = salida;
+    if (capturar && Array.isArray(salida.anotaciones)) anotaciones = salida.anotaciones;
+    pasos[nombre] = { ok: codigo === 0, segundos: Math.round((ahora().getTime() - t0) / 1000) };
+    if (codigo !== 0) {
+      log(`✖ ${nombre} salió con código ${codigo}${puedeFallar ? ' (no frena la vuelta)' : ''}`);
+      if (!puedeFallar) throw new Error(`falló «${nombre}» (código ${codigo})`);
+    }
+    return codigo === 0;
+  };
+
+  try {
+    log(`Vuelta ${cfg.id}${cfg.simular ? ' · SIMULACRO (no guarda ni sube nada)' : ''}`);
+    if (!cfg.simular && !gh) throw new Error('falta RADAR_GITHUB_TOKEN (la llave de GitHub para guardar los datos): sin eso no se puede guardar nada');
+    if (!cfg.simular && !deposito) log('(sin las variables de R2: corre sin memoria entre vueltas ni candado; el cruce de medios se rearma solo con los índices)');
+
+    // 1. El candado, lo primero: si hay otra vuelta andando, esta termina en segundos y no gasta la compilación.
+    if (deposito && !cfg.simular) {
+      const c = await tomarCandado(deposito, { id: cfg.id, ahora: ahora() });
+      if (!c.ok) {
+        log(`Otra vuelta está andando: ${c.motivo}. Esta se saltea.`);
+        resultado = { ok: true, omitida: true, motivo: c.motivo, pasos, segundos: Math.round((ahora().getTime() - inicio) / 1000) };
+        return resultado;
+      }
+      tenemosElCandado = true;
+      if (c.tomado) log(`(${c.tomado})`);
+    }
+
+    // 2. Las dependencias (el armado usa resvg y ffmpeg de reels/ y react de web/lib). Workers Builds ya instala las de la raíz si encuentra el package.json.
+    const instalar = async (cwd, nombre) => {
+      if (fs.existsSync(path.join(cwd, 'node_modules'))) { pasos[nombre] = { ok: true, segundos: 0, saltado: true }; return; }
+      for (let intento = 1; intento <= 3; intento += 1) {
+        if (await correr(`${nombre}${intento > 1 ? ` (intento ${intento})` : ''}`, 'npm', ['ci', '--no-audit', '--no-fund'], { cwd, puedeFallar: intento < 3 })) return;
+      }
+    };
+    await instalar(raiz, 'Instalar');
+    await instalar(web, 'Instalar (web)');
+
+    // 3. El núcleo legal de las pruebas: si falla, no se arma ni se publica nada y se avisa (hallazgo M1 de la auditoría del 15/10/2026).
+    try {
+      await correr('Núcleo legal de las pruebas', 'npm', ['run', 'test:nucleo']);
+    } catch (e) {
+      if (!cfg.simular) {
+        const r = await avisar({
+          asunto: 'Falló el núcleo legal de las pruebas: la web no se actualiza',
+          texto: ['Radar Balcarce: falló una prueba del núcleo legal.', 'La web NO se actualizó en esta vuelta (queda como estaba) y no va a actualizarse hasta que se arregle.',
+            `Vuelta: ${cfg.id} (Cloudflare → Workers & Pages → radar-balcarce-motor → Builds)`].join('\n'),
+          clave: 'nucleo-legal-fallo', nivel: 'alta',
+        }, { env }).catch(() => ({ ok: false }));
+        log(r.ok ? `Aviso enviado por ${r.via}.` : 'El aviso no salió.');
+      }
+      throw e;
+    }
+
+    // 4. La memoria del cruce de medios y lo que el celular lee de las notas enteras (antes: actions/cache).
+    let memoria = new Map();
+    if (deposito) { memoria = await restaurarCache(deposito, raiz); log(`Memoria restaurada: ${memoria.size} archivo(s).`); }
+
+    // 5. Buscar noticias y armar los datos. La foto de los archivos de antes es lo que después permite saber qué cambió.
+    const antes = fotografiar(raiz);
+    // El commit con el que empezó esta vuelta: lo que entre después es lo que "entró mientras se armaba" (paso 8).
+    const cabezaAlInicio = env.WORKERS_CI_COMMIT_SHA || (gh && !cfg.simular ? await gh.cabeza().catch(() => null) : null);
+    await correr('Buscar noticias y armar los datos', 'node', ['scripts/generar-datos.mjs'], { cwd: web, capturar: true });
+    if (deposito && !cfg.simular) log(`Memoria guardada: ${await guardarCache(deposito, raiz, memoria)} archivo(s) nuevo(s) o cambiados.`);
+
+    // 6. Compilar el sitio UNA vez y revisar el SEO.
+    const compilar = async (cual) => {
+      await correr(cual, 'npm', ['run', 'build'], { cwd: web, extra: { SITIO: cfg.sitio } });
+      await correr(`${cual === 'Compilar el sitio' ? 'Revisar que el SEO siga en pie' : 'Revisar el SEO (otra vez)'}`, 'node', ['scripts/revisar-seo.mjs'], { cwd: web });
+    };
+    await compilar('Compilar el sitio');
+
+    // 7. Guardar los datos en main por la API. Si no se puede guardar, no se sube nada (como en el workflow).
+    let padre = null;
+    const cambios = cambiosDesde(raiz, antes);
+    log(`\n▶ Guardar si cambió algo: ${cambios.length} archivo(s) distintos.`);
+    if (cfg.simular) log('  (simulacro: no se guarda)');
+    else if (cambios.length) {
+      const r = await gh.commitear({ mensaje: `Datos de la portada · ${fechaCorta(ahora())}`, cambios });
+      padre = r.padre ?? null;
+      log(`  guardado${r.sha ? ` (${r.sha.slice(0, 7)})` : ''} en ${r.intentos} intento(s).`);
+    } else log('  Sin novedades en los datos: se sube igual lo compilado.');
+
+    // 8. ¿Entró algo mientras se armaba que el sitio lee? Entonces se recompila con eso antes de subir (regla 189).
+    if (!cfg.simular && gh) {
+      try {
+        const hasta = padre ?? await gh.cabeza();
+        if (cabezaAlInicio && cabezaAlInicio !== hasta) {
+          const { archivos, completo } = await gh.archivosEntre(cabezaAlInicio, hasta);
+          const propios = new Set(cambios.map((c) => c.ruta));
+          const ajenos = archivos.filter((a) => !propios.has(a.ruta));
+          const decision = completo ? hayQueRecompilar(ajenos.map((a) => a.ruta)) : { recompilar: true, porque: ['(demasiados archivos para comparar)'] };
+          if (decision.recompilar) {
+            log(`Entraron cambios que el sitio sí lee (${decision.porque.slice(0, 8).join(', ')}): se traen y se vuelve a compilar antes de subir.`);
+            let lock = false;
+            for (const a of ajenos.filter((x) => decision.porque.includes(x.ruta))) {
+              if (/(^|\/)package(-lock)?\.json$/.test(a.ruta)) lock = true;
+              if (a.estado === 'removed') { fs.rmSync(path.join(raiz, a.ruta), { force: true }); continue; }
+              const bytes = await gh.leerArchivo(a.ruta, hasta);
+              if (bytes) { fs.mkdirSync(path.dirname(path.join(raiz, a.ruta)), { recursive: true }); fs.writeFileSync(path.join(raiz, a.ruta), bytes); }
+            }
+            if (lock) { await correr('Instalar de nuevo', 'npm', ['ci', '--no-audit', '--no-fund'], { cwd: raiz }); await correr('Instalar de nuevo (web)', 'npm', ['ci', '--no-audit', '--no-fund'], { cwd: web }); }
+            await compilar('Volver a compilar con lo que entró');
+          } else log('Mientras se armaba sólo entró lo que el sitio no lee: se sube lo ya compilado.');
+        }
+      } catch (e) { log(`(no se pudo comparar con lo que entró en el medio: ${e.message}; se sube lo compilado)`); }
+    }
+
+    // 9. El archivo permanente (R2): no frena la subida.
+    if (cfg.archivoR2 && !cfg.simular) {
+      await correr('Archivar las notas por salir (R2)', 'node', ['web/scripts/archivar-a-r2.mjs', '--subir', '--borrar', '--produccion', `--bucket=${cfg.archivoR2}`, '--margen=auto', '--limite-segundos=360'], { puedeFallar: true });
+      if (pasos['Archivar las notas por salir (R2)']?.ok === false) {
+        await avisar({
+          asunto: 'Falló el archivo permanente (R2): el sitio se publicó igual',
+          texto: 'Radar Balcarce: falló el paso del archivo permanente (guardar en R2 las notas que están por salir del sitio). El sitio SÍ se publicó igual. Si sigue fallando se pueden perder páginas viejas, y lo retirado (menores, víctimas) podría no haberse borrado del archivo: mirar la vuelta en Workers Builds.',
+          clave: 'archivo-r2-fallo', nivel: 'alta',
+        }, { env }).catch(() => null);
+      }
+    }
+
+    // 10. Subir a Cloudflare Pages (Direct Upload: no cuenta contra los builds de Pages) y avisarle a Bing.
+    if (cfg.simular) log('\n▶ Subir a Cloudflare Pages: (simulacro: no se sube)');
+    else {
+      await correr('Subir a Cloudflare Pages', 'npx', ['--yes', `wrangler@${VERSION_DE_WRANGLER}`, 'pages', 'deploy', 'out', `--project-name=${cfg.proyecto}`, '--branch=main'], { cwd: web });
+      await correr('Avisar a Bing de las notas nuevas', 'node', ['redes/indexnow.mjs'], { puedeFallar: true });
+    }
+
+    resultado = { ok: true, pasos, segundos: Math.round((ahora().getTime() - inicio) / 1000), commit: padre };
+    return resultado;
+  } catch (e) {
+    log(`\n✖ La vuelta no terminó: ${e.message}`);
+    resultado = { ok: false, motivo: e.message, pasos, segundos: Math.round((ahora().getTime() - inicio) / 1000) };
+    return resultado;
+  } finally {
+    if (deposito && !cfg.simular && tenemosElCandado) {
+      const segundos = (ahora().getTime() - inicio) / 1000;
+      try { await anotarVuelta(deposito, { id: cfg.id, ok: resultado.ok, motivo: resultado.motivo ?? null, segundos, pasos, ahora: ahora(), anotaciones }); } catch (e) { log(`(no se pudo anotar la vuelta en R2: ${e.message})`); }
+      await soltarCandado(deposito, { id: cfg.id });
+    }
+    log(`\nVuelta ${resultado.omitida ? 'saltada' : resultado.ok ? 'terminada' : 'fallida'} en ${resultado.segundos ?? Math.round((ahora().getTime() - inicio) / 1000)} s.`);
+  }
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  if (process.argv.includes('--simular')) process.env.MOTOR_SIMULAR = 'Si';
+  const r = await vuelta();
+  process.exit(r.ok ? 0 : 1);
+}

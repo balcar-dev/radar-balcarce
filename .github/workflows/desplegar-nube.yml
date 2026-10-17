@@ -1,0 +1,175 @@
+name: Desplegar Workers de Cloudflare
+
+# Sube los Workers de la mudanza a Cloudflare (18/10/2026; docs/etapa-10-operacion/MIGRACION-A-CLOUDFLARE.md y PLAN-DE-CAMBIO.md):
+#   · tareas    infra/tareas-cloudflare/   vigilancia, auditoría IA, pistas, informe diario, ilustraciones y redes (reemplaza seis workflows)
+#   · motor     infra/motor-cloudflare/    el Worker al que se conecta Workers Builds (la vuelta de «Actualizar la web» corre en su compilación)
+#   · vigilante infra/vigilante-cloudflare/ el vigilante de siempre; «con la nube» además mira el estado del motor y de las tareas
+#   · reloj     infra/reloj-cloudflare/    el reloj de siempre; «con la nube» pide a Cloudflare lo que diga `nube` en vez de pedírselo a GitHub
+#
+# SÓLO A MANO, y no cambia nada de lo que anda hoy por sí solo: un Worker nuevo no hace nada hasta que el reloj le pide algo, y el reloj sin la nube
+# (con_nube apagado, o `nube` vacío) pide todo a GitHub como siempre. La vuelta atrás es subir el reloj con `nube` vacío (el último paso del plan).
+#
+# ORDEN: hay que subir «todo» o, de a uno, primero tareas y motor, después el vigilante y el reloj (los dos últimos apuntan a los primeros por binding, y
+# Cloudflare rechaza un binding a un Worker que no existe). «todo» ya va en ese orden.
+#
+# SECRETOS (Settings → Secrets and variables → Actions; los pega una persona, nunca en un chat): ver la tabla de PLAN-DE-CAMBIO.md. Los que están vacíos no se
+# cargan y el Worker conserva el que ya tenía. CLOUDFLARE_API_TOKEN necesita además «Workers R2 Storage: Edit» y «Workers KV Storage: Edit».
+# Las VARIABLES de los Workers (REDES_ACTIVAS, R2_ARCHIVO, NUBE…) se editan en el panel de Cloudflare: se despliega con --keep-vars para no pisarlas.
+
+on:
+  workflow_dispatch:
+    inputs:
+      que:
+        description: 'Qué subir'
+        type: choice
+        options: [todo, tareas, motor, vigilante, reloj]
+        default: todo
+      con_nube:
+        description: 'Reloj y vigilante «con la nube» (bindings a las tareas y al motor + la variable NUBE). Apagado = como siempre'
+        type: boolean
+        default: false
+      nube:
+        description: 'Qué workflows pasan a Cloudflare (separados por comas; vacío = ninguno). Ej: vigilancia.yml,auditoria-ia.yml,pistas.yml,informe-diario.yml,ilustrar-notas.yml,redes.yml,actualizar.yml'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: desplegar-nube
+  cancel-in-progress: false
+
+jobs:
+  subir:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      QUE: ${{ inputs.que }}
+      CON_NUBE: ${{ inputs.con_nube }}
+      NUBE: ${{ inputs.nube }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Revisar lo que se pidió
+        run: |
+          case "$QUE" in todo|tareas|motor|vigilante|reloj) ;; *) echo "«que» no es válido"; exit 1;; esac
+          # La lista de la nube va a un archivo de configuración: sólo letras minúsculas, puntos, guiones y comas.
+          printf '%s' "$NUBE" | grep -Eq '^[a-z0-9.,-]*$' || { echo "«nube» sólo puede llevar minúsculas, números, puntos, guiones y comas"; exit 1; }
+          if [ "$CON_NUBE" != "true" ] && [ -n "$NUBE" ]; then echo "Ojo: pusiste «nube» pero «con_nube» está apagado: no se usa."; fi
+
+      # Los depósitos de R2 de la mudanza (si ya existen, wrangler dice que existen y se sigue).
+      - name: Crear los depósitos de R2
+        if: env.QUE == 'todo' || env.QUE == 'tareas' || env.QUE == 'motor' || env.QUE == 'reloj'
+        run: |
+          for b in radar-motor radar-render radar-tareas; do
+            npx --yes wrangler@4.139.0 r2 bucket create "$b" || echo "(el depósito $b ya existía o no se pudo crear; si el despliegue falla por esto, crearlo a mano)"
+          done
+
+      # ------------------------------------------------------------------ tareas
+      - name: Buscar (o crear) el KV de las tareas
+        if: env.QUE == 'todo' || env.QUE == 'tareas'
+        working-directory: infra/tareas-cloudflare
+        run: |
+          TITULO="tareas-ESTADO"
+          buscar() {
+            npx --yes wrangler@4.139.0 kv namespace list | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{const l=JSON.parse(s.slice(s.indexOf('[')));const x=l.find(n=>n.title===process.argv[1]);process.stdout.write(x?x.id:'')})" "$TITULO"
+          }
+          ID=$(buscar)
+          if [ -z "$ID" ]; then npx --yes wrangler@4.139.0 kv namespace create "$TITULO"; ID=$(buscar); fi
+          test -n "$ID" || { echo "No se pudo encontrar ni crear el KV"; exit 1; }
+          sed "s/REEMPLAZADO_POR_EL_WORKFLOW/$ID/" wrangler.toml > wrangler.generado.toml
+
+      - name: Subir el Worker de tareas
+        if: env.QUE == 'todo' || env.QUE == 'tareas'
+        working-directory: infra/tareas-cloudflare
+        run: npx --yes wrangler@4.139.0 deploy --config wrangler.generado.toml --keep-vars
+
+      - name: Cargar los secretos de las tareas
+        if: env.QUE == 'todo' || env.QUE == 'tareas'
+        run: |
+          node infra/compartido/secretos-para-wrangler.mjs RADAR_GITHUB_TOKEN VIGILANTE_TOKEN META_TOKEN GEMINI_API_KEY_REDACCION GEMINI_API_KEY_CLASIFICACION GEMINI_API_KEY_REDES GROQ_API_KEY TAVILY_API_KEY CLOUDFLARE_ACCOUNT_ID CLOUDFLARE_ANALYTICS_TOKEN CLOUDFLARE_API_TOKEN WHATSAPP_TELEFONO WHATSAPP_APIKEY \
+            | npx --yes wrangler@4.139.0 secret bulk --config infra/tareas-cloudflare/wrangler.generado.toml
+        env:
+          RADAR_GITHUB_TOKEN: ${{ secrets.RADAR_GITHUB_TOKEN }}
+          VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          GEMINI_API_KEY_REDACCION: ${{ secrets.GEMINI_API_KEY_REDACCION }}
+          GEMINI_API_KEY_CLASIFICACION: ${{ secrets.GEMINI_API_KEY_CLASIFICACION }}
+          GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          CLOUDFLARE_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_ANALYTICS_TOKEN }}
+          WHATSAPP_TELEFONO: ${{ secrets.WHATSAPP_TELEFONO }}
+          WHATSAPP_APIKEY: ${{ secrets.WHATSAPP_APIKEY }}
+
+      # ------------------------------------------------------------------ motor
+      - name: Subir el Worker del motor
+        if: env.QUE == 'todo' || env.QUE == 'motor'
+        working-directory: infra/motor-cloudflare
+        run: npx --yes wrangler@4.139.0 deploy --keep-vars
+
+      - name: Cargar el secreto del motor
+        if: env.QUE == 'todo' || env.QUE == 'motor'
+        run: |
+          node infra/compartido/secretos-para-wrangler.mjs VIGILANTE_TOKEN \
+            | npx --yes wrangler@4.139.0 secret bulk --config infra/motor-cloudflare/wrangler.toml
+        env:
+          VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
+
+      # ------------------------------------------------------------------ vigilante
+      - name: Buscar (o crear) la memoria del vigilante
+        if: env.QUE == 'todo' || env.QUE == 'vigilante'
+        working-directory: infra/vigilante-cloudflare
+        run: |
+          TITULO="vigilante-ESTADO"
+          buscar() {
+            npx --yes wrangler@4.139.0 kv namespace list | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{const l=JSON.parse(s.slice(s.indexOf('[')));const x=l.find(n=>n.title===process.argv[1])||l.find(n=>n.title===process.argv[2]);process.stdout.write(x?x.id:'')})" "$TITULO" "ESTADO"
+          }
+          ID=$(buscar)
+          if [ -z "$ID" ]; then npx --yes wrangler@4.139.0 kv namespace create "$TITULO"; ID=$(buscar); fi
+          test -n "$ID" || { echo "No se pudo encontrar ni crear el KV"; exit 1; }
+          sed "s/REEMPLAZADO_POR_EL_WORKFLOW/$ID/" wrangler.toml > wrangler.generado.toml
+          if [ "$CON_NUBE" = "true" ]; then sed "s/__NUBE__/$NUBE/" nube.toml.parte >> wrangler.generado.toml; fi
+
+      - name: Subir el vigilante
+        if: env.QUE == 'todo' || env.QUE == 'vigilante'
+        working-directory: infra/vigilante-cloudflare
+        run: npx --yes wrangler@4.139.0 deploy --config wrangler.generado.toml --keep-vars
+
+      - name: Cargar los secretos del vigilante
+        if: env.QUE == 'todo' || env.QUE == 'vigilante'
+        run: |
+          node infra/compartido/secretos-para-wrangler.mjs VIGILANTE_TOKEN \
+            | npx --yes wrangler@4.139.0 secret bulk --config infra/vigilante-cloudflare/wrangler.generado.toml
+        env:
+          VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
+
+      # ------------------------------------------------------------------ reloj
+      - name: Armar la configuración del reloj
+        if: env.QUE == 'todo' || env.QUE == 'reloj'
+        working-directory: infra/reloj-cloudflare
+        run: |
+          cp wrangler.toml wrangler.generado.toml
+          if [ "$CON_NUBE" = "true" ]; then sed "s/__NUBE__/$NUBE/" nube.toml.parte >> wrangler.generado.toml; echo "Reloj CON la nube: $NUBE"; else echo "Reloj como siempre (todo a GitHub)."; fi
+
+      - name: Subir el reloj
+        if: env.QUE == 'todo' || env.QUE == 'reloj'
+        working-directory: infra/reloj-cloudflare
+        run: npx --yes wrangler@4.139.0 deploy --config wrangler.generado.toml --keep-vars
+
+      # GITHUB_TOKEN es el nombre que el reloj siempre usó para su llave (RELOJ_GITHUB_TOKEN en GitHub); VIGILANTE_TOKEN y MOTOR_DEPLOY_HOOK sólo hacen falta con la nube.
+      - name: Cargar los secretos del reloj
+        if: env.QUE == 'todo' || env.QUE == 'reloj'
+        run: |
+          GITHUB_TOKEN="$RELOJ_GITHUB_TOKEN" node infra/compartido/secretos-para-wrangler.mjs GITHUB_TOKEN VIGILANTE_TOKEN MOTOR_DEPLOY_HOOK \
+            | npx --yes wrangler@4.139.0 secret bulk --config infra/reloj-cloudflare/wrangler.generado.toml
+        env:
+          RELOJ_GITHUB_TOKEN: ${{ secrets.RELOJ_GITHUB_TOKEN }}
+          VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
+          MOTOR_DEPLOY_HOOK: ${{ secrets.MOTOR_DEPLOY_HOOK }}

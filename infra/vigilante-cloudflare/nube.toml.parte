@@ -1,0 +1,19 @@
+
+# ---------------------------------------------------------------------------------------------------------------------------------------
+# LA NUBE (18/10/2026). Esta parte NO está en wrangler.toml a propósito: la agrega el workflow «Desplegar Workers de Cloudflare» (desplegar-nube.yml) cuando
+# se elige subir el vigilante «con la nube». Sin ella, el vigilante hace lo de siempre (mirar la web y las corridas de GitHub). Con ella, y con la variable
+# NUBE (la misma lista que en el reloj), deja de mirar las corridas de lo que ya corre en Cloudflare y le pregunta su estado a esos Workers. Los Workers a
+# los que apunta tienen que existir ANTES de subir esto.
+# ---------------------------------------------------------------------------------------------------------------------------------------
+
+[[services]]
+binding = "TAREAS"
+service = "radar-balcarce-tareas"
+
+[[services]]
+binding = "MOTOR_WORKER"
+service = "radar-balcarce-motor"
+
+[vars]
+# Los workflows que corren en Cloudflare, separados por comas (los mismos que NUBE en el reloj). Vacía = el vigilante de siempre. El workflow reemplaza el marcador.
+NUBE = "__NUBE__"

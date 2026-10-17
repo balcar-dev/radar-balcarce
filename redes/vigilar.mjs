@@ -75,6 +75,7 @@ import {
   medir, tocaMedir, turnoDeMedicion, agregarPunto, textoEstadisticas, nombresDeCaminos, esIncoherente,
 } from './estadisticas.mjs';
 import { mezclarDias } from './estadisticas-detalle.mjs';
+import { raizDelProyecto } from './raiz.mjs';
 import { medirPiezas } from './estadisticas-piezas.mjs';
 
 /**
@@ -764,7 +765,11 @@ export async function observar({ sitio, repo, token, ahora = new Date(), env = p
 
   const corridas = {};
   if (token && repo) {
+    const enLaNube = new Set(String(env.WORKFLOWS_EN_LA_NUBE ?? '').split(',').map((x) => x.trim().toLowerCase()).filter(Boolean));
     for (const archivo of Object.keys(WORKFLOWS_VIGILADOS)) {
+      // 18/10/2026: lo que ya corre en Cloudflare (WORKFLOWS_EN_LA_NUBE, la misma lista que NUBE en el reloj) no deja corridas en GitHub: no se busca
+      // ni se avisa que "el reloj no corre"; de eso se ocupa el vigilante de Cloudflare, que mira el estado de la nube (infra/vigilante-cloudflare/).
+      if (enLaNube.has(archivo)) continue;
       const r = await pedir(`https://api.github.com/repos/${repo}/actions/workflows/${archivo}/runs?per_page=6`, {
         headers: { authorization: `Bearer ${token}`, accept: 'application/vnd.github+json' },
       });
@@ -814,27 +819,31 @@ export async function observar({ sitio, repo, token, ahora = new Date(), env = p
   };
 }
 
-async function main() {
-  const RAIZ = path.join(import.meta.dirname, '..');
+/**
+ * Una vuelta del vigilante. `argv`, `env` y `raiz` entran por parámetro para que corra igual en la línea de comandos, en GitHub y en un Worker de
+ * Cloudflare (infra/tareas-cloudflare/, 18/10/2026), donde no hay `process.argv` ni `process.exit`: termina con `return`.
+ */
+export async function main({ argv = process.argv.slice(2), env = process.env, raiz = null } = {}) {
+  const RAIZ = raiz ?? raizDelProyecto(env, import.meta.dirname);
   const ESTADO = path.join(RAIZ, 'web', 'data', 'vigilancia.json');
   const ESTADISTICAS = path.join(RAIZ, 'web', 'data', 'estadisticas.json');
   const ESTADISTICAS_DE_PIEZAS = path.join(RAIZ, 'web', 'data', 'estadisticas-piezas.json');
-  const sinAvisar = process.argv.includes('--sin-avisar');
+  const sinAvisar = argv.includes('--sin-avisar');
   // Manda UN WhatsApp con el resumen del día tal como saldría a las 21 (con
   // las estadísticas medidas en el momento), para ver cómo llega. No guarda
   // nada: ni el estado de los avisos ni la medición.
-  const probarResumen = process.argv.includes('--probar-resumen');
+  const probarResumen = argv.includes('--probar-resumen');
   // Corre el cierre del día de hoy contra Meta y muestra el informe y el
   // WhatsApp que saldría. No manda nada y no guarda nada.
-  const probarCierre = process.argv.includes('--probar-cierre');
+  const probarCierre = argv.includes('--probar-cierre');
 
-  const sitio = (process.env.SITIO ?? 'https://radarbalcarce.com').replace(/\/$/, '');
+  const sitio = (env.SITIO ?? 'https://radarbalcarce.com').replace(/\/$/, '');
   const ahora = new Date();
   const libro = leer(path.join(RAIZ, 'web', 'data', 'redes.json'), {});
   const estado = leer(ESTADO, { avisos: {} });
   estado.avisos ??= {};
 
-  const obs = await observar({ sitio, repo: process.env.GITHUB_REPOSITORY, token: process.env.GITHUB_TOKEN, ahora });
+  const obs = await observar({ sitio, repo: env.GITHUB_REPOSITORY, token: env.GITHUB_TOKEN, ahora, env });
   // Cuántas notas de las últimas 24 horas tienen cuerpo (de lo ya publicado).
   const portada = leer(path.join(RAIZ, 'web', 'data', 'portada.json'), { notas: [] });
   const desde = Date.now() - 24 * 3600e3;
@@ -842,7 +851,7 @@ async function main() {
   const cuerpos = { total: recientes.length, conCuerpo: recientes.filter((n) => n.cuerpo).length };
   const auditoria = leer(path.join(RAIZ, 'web', 'data', 'auditoria.json'), null);
   const contrato = contratoDelDia({ libro, ahora, portada });
-  const redesActivas = redesPrendidas();
+  const redesActivas = redesPrendidas(env);
   if (!redesActivas) console.log('  Las redes están apagadas (REDES_ACTIVAS): no se avisa pieza por pieza.');
   const diasArmados = Object.keys(leer(path.join(RAIZ, 'web', 'data', 'efemerides-piezas.json'), {})?.dias ?? {}).sort();
   const vigencias = Object.values(leer(path.join(RAIZ, 'reels', 'fijas', 'vigencia.json'), {})).map((v) => v?.hasta).filter(Boolean).sort();
@@ -861,7 +870,7 @@ async function main() {
   Saldría este WhatsApp (${c.texto.length} caracteres):
 
 ${c.texto}`);
-    process.exit(0);
+    return;
   }
 
   // Lo que tiene página: en el sitio (Cloudflare Pages, con su tope de archivos) y, aparte, en el archivo permanente (R2, sin tope).
@@ -872,9 +881,9 @@ ${c.texto}`);
   for (const p of problemas) console.log(`   [${p.nivel}] ${p.texto}`);
 
   // Los avisos salen por mail (Worker de Cloudflare, VIGILANTE_TOKEN) y, si el mail no sale o no hay token, por WhatsApp (regla 173).
-  const telefono = process.env.WHATSAPP_TELEFONO;
-  const apikey = process.env.WHATSAPP_APIKEY;
-  const puedeAvisar = !sinAvisar && (hayMail(process.env) || hayWhatsApp(process.env));
+  const telefono = env.WHATSAPP_TELEFONO;
+  const apikey = env.WHATSAPP_APIKEY;
+  const puedeAvisar = !sinAvisar && (hayMail(env) || hayWhatsApp(env));
   if (!sinAvisar && !puedeAvisar) console.log('  (no hay VIGILANTE_TOKEN ni WHATSAPP_TELEFONO / WHATSAPP_APIKEY: no se avisa por ningún lado)');
 
   let cambio = false;
@@ -885,7 +894,7 @@ ${c.texto}`);
   let textoStats = '';
   if (probarResumen || tocaMedir(ahora, estado)) {
     console.log('  Midiendo las estadísticas…');
-    const { punto, dias } = await medir({ env: process.env, ahora });
+    const { punto, dias } = await medir({ env, ahora });
     const turno = turnoDeMedicion(ahora);
     textoStats = textoEstadisticas({
       punto, puntos: historia.puntos, ahora, nombreDeCamino: nombresDeCaminos(portada.notas),
@@ -902,9 +911,9 @@ ${c.texto}`);
 
   // --- los números de cada pieza (8/10): cada publicación se mide una vez, cuando ya tiene números casi finales (redes/estadisticas-piezas.mjs).
   // Nunca frena nada: si Meta no da una métrica, se anota y se sigue.
-  if (redesActivas && process.env.META_TOKEN && !probarResumen && !sinAvisar) {
+  if (redesActivas && env.META_TOKEN && !probarResumen && !sinAvisar) {
     try {
-      const r = await medirPiezas({ token: process.env.META_TOKEN, libro, previo: leer(ESTADISTICAS_DE_PIEZAS, {}), ahora });
+      const r = await medirPiezas({ token: env.META_TOKEN, libro, previo: leer(ESTADISTICAS_DE_PIEZAS, {}), ahora });
       if (r.cambio) {
         fs.writeFileSync(ESTADISTICAS_DE_PIEZAS, `${JSON.stringify(r.archivo, null, 1)}\n`);
         cambio = true;
@@ -959,7 +968,7 @@ ${c.texto}`);
     // El asunto de un mensaje de problemas dice cuál es (si no, saldría un "hay un problema" pelado); los demás toman la primera línea del texto.
     const primero = problemas.find((p) => p.nivel === 'alta') ?? problemas[0];
     const asunto = incluidas[0] === 'problemas' && primero ? `${nivel === 'alta' ? 'Hay un problema' : 'Para mirar'}: ${recortar(primero.texto, 90)}` : undefined;
-    const r = await avisar({ asunto, texto, nivel }, { env: process.env });
+    const r = await avisar({ asunto, texto, nivel }, { env });
     if (r.ok) console.log(`  Aviso enviado por ${r.via === 'mail' ? 'mail' : 'WhatsApp (el mail no salió)'}.${r.via === 'whatsapp' ? ` Motivo del mail: ${sinSecretos(r.motivo, apikey, telefono)}` : ''}`);
     else console.log(`  No se pudo avisar: ${sinSecretos(r.motivo, apikey, telefono)}`);
     if (r.ok && !probarResumen) { plan.anotar(estado, incluidas); cambio = true; }
@@ -981,7 +990,6 @@ ${c.texto}`);
   // encontraba algo grave, y Actions pintaba de rojo "Vigilancia" como si
   // la que estuviera rota fuera ella (auditoría del 25/09).
   for (const p of problemas) console.log(anotacion(p));
-  process.exit(0);
 }
 
 
@@ -1001,7 +1009,7 @@ export function anotacion(problema) {
 // Si el que falla es el vigilante mismo (no pudo correr), eso sí termina con
 // error: es lo único que tiene que pintar de rojo esta corrida.
 if (process.argv[1] && process.argv[1].endsWith('vigilar.mjs')) {
-  await main().catch((e) => {
+  await main().then(() => process.exit(0), (e) => {
     console.error(`El vigilante no pudo terminar: ${e?.stack ?? e}`);
     process.exit(1);
   });

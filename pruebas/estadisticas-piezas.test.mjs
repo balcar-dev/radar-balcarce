@@ -114,7 +114,7 @@ test('el resumen junta por red, tipo y pieza y ordena por alcance', () => {
 
 test('el vigilante mide las piezas sin frenar nada y el workflow guarda el archivo', () => {
   const v = fs.readFileSync(new URL('../redes/vigilar.mjs', import.meta.url), 'utf8').replace(/\r\n/g, '\n');
-  assert.match(v, /medirPiezas\(\{ token: process\.env\.META_TOKEN, libro/);
+  assert.match(v, /medirPiezas\(\{ token: (process\.env|env)\.META_TOKEN, libro/);
   assert.match(v, /estadísticas por pieza\) no se pudo medir/);
   const w = fs.readFileSync(new URL('../.github/workflows/vigilancia.yml', import.meta.url), 'utf8');
   assert.match(w, /git add web\/data\/estadisticas-piezas\.json/);

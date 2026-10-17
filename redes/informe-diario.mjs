@@ -31,6 +31,7 @@ import { cronogramaDelDiaConVoz, CUPO_DE_VOZ_POR_DIA } from './cronograma-semana
 import { diaIncoherente } from './estadisticas-detalle.mjs';
 import { esIncoherente } from './estadisticas.mjs';
 import { avisarPorMail } from './avisar-por-mail.mjs';
+import { raizDelProyecto } from './raiz.mjs';
 import { WORKFLOWS_VIGILADOS, VENCIMIENTOS, DIAS_DE_AVISO_ANTES, redesPrendidas } from './vigilar.mjs';
 import { TOPE_DE_CLOUDFLARE, archivosEstimados } from '../web/scripts/contar-archivos.mjs';
 
@@ -744,16 +745,21 @@ export function fuentesDeLasAnotaciones(anotaciones = []) {
 /**
  * Consulta lo que no está en el repositorio: las corridas de GitHub (las de «Actualizar la web» y la última falla de cada tarea vigilada), las
  * anotaciones de la última corrida de «Actualizar la web» (fuentes caídas) y el /estado público del vigilante de Cloudflare. Nunca tira.
+ *
+ * 18/10/2026: con el motor en Cloudflare (`motor` = el motor/estado.json que escribe infra/motor-cloudflare/estado-r2.mjs: `historial` de vueltas y
+ * `anotaciones` de la última), «Actualizar la web» ya no deja corridas en GitHub: se cuentan del historial del motor. Las tareas que también se mudaron
+ * (WORKFLOWS_EN_LA_NUBE) no se buscan en GitHub.
  */
-export async function consultarEnVivo({ env = process.env, fetchFn = fetch, ahora = new Date() } = {}) {
+export async function consultarEnVivo({ env = process.env, fetchFn = fetch, ahora = new Date(), motor = null } = {}) {
   const repo = env.GITHUB_REPOSITORY || REPOSITORIO;
   const token = env.GITHUB_TOKEN || null;
   const api = `https://api.github.com/repos/${repo}`;
   const res = { omitido: false, github: { lectura: false, motivo: null }, fuentes: { leido: false, caidas: [], vacias: [], motivo: null }, vigilante: null };
 
+  const enLaNube = new Set(String(env.WORKFLOWS_EN_LA_NUBE ?? '').split(',').map((x) => x.trim().toLowerCase()).filter(Boolean));
   const [vig, actualizar] = await Promise.all([
     pedirJson(env.ESTADO_DEL_VIGILANTE || ESTADO_DEL_VIGILANTE, { fetchFn }),
-    pedirJson(`${api}/actions/workflows/actualizar.yml/runs?per_page=10&exclude_pull_requests=true`, { fetchFn, token }),
+    motor ? Promise.resolve({ ok: true, json: { workflow_runs: [] }, delMotor: true }) : pedirJson(`${api}/actions/workflows/actualizar.yml/runs?per_page=10&exclude_pull_requests=true`, { fetchFn, token }),
   ]);
   if (vig.ok && vig.json && !vig.json.sinDatos) res.vigilante = vig.json;
 
@@ -763,7 +769,7 @@ export async function consultarEnVivo({ env = process.env, fetchFn = fetch, ahor
     return res;
   }
   res.github.lectura = true;
-  const corridas = (actualizar.json.workflow_runs ?? []).map((c) => ({ id: c.id, estado: c.status, resultado: c.conclusion, cuando: c.updated_at ?? c.created_at, url: c.html_url }));
+  const corridas = (motor ? (motor.historial ?? []).slice().reverse().map((v, i) => ({ id: `motor-${i}`, status: 'completed', conclusion: v.ok ? 'success' : 'failure', updated_at: v.cuando, html_url: null })) : (actualizar.json.workflow_runs ?? [])).map((c) => ({ id: c.id, estado: c.status, resultado: c.conclusion, cuando: c.updated_at ?? c.created_at, url: c.html_url }));
   const terminadas = corridas.filter((c) => c.estado === 'completed' && ['success', 'failure', 'timed_out'].includes(c.resultado));
   res.github.actualizar = {
     terminadas: terminadas.length,
@@ -773,7 +779,7 @@ export async function consultarEnVivo({ env = process.env, fetchFn = fetch, ahor
   };
 
   // La última falla de cada tarea vigilada (las de «Actualizar la web» ya están contadas arriba).
-  const otras = Object.entries(WORKFLOWS_VIGILADOS).filter(([archivo]) => archivo !== 'actualizar.yml' && archivo !== 'informe-diario.yml');
+  const otras = Object.entries(WORKFLOWS_VIGILADOS).filter(([archivo]) => archivo !== 'actualizar.yml' && archivo !== 'informe-diario.yml' && !enLaNube.has(archivo));
   const lecturas = await Promise.all(otras.map(([archivo]) => pedirJson(`${api}/actions/workflows/${archivo}/runs?per_page=5&exclude_pull_requests=true`, { fetchFn, token })));
   res.github.conFalla = [];
   otras.forEach(([, nombre], i) => {
@@ -789,7 +795,12 @@ export async function consultarEnVivo({ env = process.env, fetchFn = fetch, ahor
     res.github.conFalla.unshift({ nombre: 'Actualizar la web', seguidas: seguidas < 0 ? terminadas.length : seguidas, url: terminadas[0].url });
   }
 
-  // Fuentes caídas: las anotaciones del job de la última corrida terminada de «Actualizar la web».
+  // Fuentes caídas: las anotaciones del job de la última corrida terminada de «Actualizar la web» (o, con el motor en Cloudflare, las que dejó la vuelta).
+  if (motor) {
+    const { caidas, vacias } = fuentesDeLasAnotaciones(motor.anotaciones ?? []);
+    res.fuentes = { leido: Array.isArray(motor.anotaciones), caidas, vacias, motivo: Array.isArray(motor.anotaciones) ? null : 'la última vuelta del motor no dejó sus avisos', deLaCorrida: motor.cuando ?? null };
+    return res;
+  }
   const ultima = terminadas[0];
   if (!ultima) { res.fuentes.motivo = 'no hay corridas terminadas'; return res; }
   const jobs = await pedirJson(`${api}/actions/runs/${ultima.id}/jobs?per_page=10`, { fetchFn, token });
@@ -815,25 +826,31 @@ export async function enviarInforme(informe, { env = process.env, fetchFn = fetc
   }, { env, fetchFn });
 }
 
-async function main() {
-  const arg = (n) => process.argv.find((a) => a.startsWith(`--${n}=`))?.slice(n.length + 3);
+/**
+ * El informe, de punta a punta. `argv`, `env` y `raiz` entran por parámetro para correr igual en la terminal, en GitHub y en un Worker de Cloudflare
+ * (infra/tareas-cloudflare/, 18/10/2026): ahí no hay `process.exit`, así que un problema es un error que se lanza.
+ */
+export async function main({ argv = process.argv.slice(2), env = process.env, raiz = null } = {}) {
+  const arg = (n) => argv.find((a) => a.startsWith(`--${n}=`))?.slice(n.length + 3);
   const ahora = arg('ahora') ? new Date(arg('ahora')) : new Date();
-  if (Number.isNaN(ahora.getTime())) { console.error('--ahora no es una fecha válida.'); process.exit(1); }
+  if (Number.isNaN(ahora.getTime())) throw new Error('--ahora no es una fecha válida.');
   const momento = arg('momento') ?? momentoDeLaHora(ahora);
-  if (!MOMENTOS.includes(momento)) { console.error(`--momento tiene que ser ${MOMENTOS.join(' o ')}.`); process.exit(1); }
-  const raiz = path.join(import.meta.dirname, '..');
-  const datos = leerArchivos(raiz);
-  const enVivo = process.argv.includes('--sin-red') ? { omitido: true } : await consultarEnVivo({ ahora });
-  const informe = armarInforme({ momento, ahora, datos, enVivo, redesActivas: redesPrendidas(), archivoActivo: Boolean(String(process.env.R2_ARCHIVO ?? '').trim()) });
+  if (!MOMENTOS.includes(momento)) throw new Error(`--momento tiene que ser ${MOMENTOS.join(' o ')}.`);
+  const carpeta = raiz ?? raizDelProyecto(env, import.meta.dirname);
+  const datos = leerArchivos(carpeta);
+  // Con el motor en Cloudflare, su estado (las últimas vueltas y sus avisos de fuentes) lo deja el corredor de tareas en .motor/estado.json.
+  const motor = leerJson(path.join(carpeta, '.motor', 'estado.json'), null);
+  const enVivo = argv.includes('--sin-red') ? { omitido: true } : await consultarEnVivo({ ahora, env, motor });
+  const informe = armarInforme({ momento, ahora, datos, enVivo, redesActivas: redesPrendidas(env), archivoActivo: Boolean(String(process.env.R2_ARCHIVO ?? '').trim()) });
 
   console.log(`ASUNTO: [Radar Balcarce] ${informe.asunto}\n`);
   console.log(informe.texto);
   if (arg('html')) { fs.writeFileSync(arg('html'), informe.html); console.log(`\n(La versión con formato quedó en ${arg('html')}.)`); }
   console.log(`\n(${informe.texto.length} caracteres de texto, ${informe.html.length} de formato.)`);
 
-  if (!process.argv.includes('--enviar')) { console.log('Simulacro: no se mandó nada. Con --enviar sale por mail.'); return; }
-  const r = await enviarInforme(informe);
-  if (!r.ok) { console.error(`El informe NO salió: ${r.motivo}`); process.exit(1); }
+  if (!argv.includes('--enviar')) { console.log('Simulacro: no se mandó nada. Con --enviar sale por mail.'); return; }
+  const r = await enviarInforme(informe, { env });
+  if (!r.ok) throw new Error(`El informe NO salió: ${r.motivo}`);
   console.log(r.repetido ? 'Ese informe ya se había mandado hace poco (el Worker no repite la misma clave en 6 horas): no se mandó otro.' : 'Informe enviado por mail.');
 }
 

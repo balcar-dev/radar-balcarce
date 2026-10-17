@@ -41,6 +41,9 @@ concurrency:
 
 jobs:
   informe:
+    # 18/10/2026 (mudanza a Cloudflare): con el informe en el Worker de tareas, el respaldo de GitHub (8:45 y 21:45) sobra y cuesta ~60 minutos por mes. Poniendo la variable
+    # INFORME_RESPALDO_EN_GITHUB en "No" las corridas del horario se saltean (un trabajo salteado no gasta minutos); a mano y desde el reloj siguen andando. Sin la variable, como siempre.
+    if: ${{ github.event_name != 'schedule' || vars.INFORME_RESPALDO_EN_GITHUB != 'No' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     env:

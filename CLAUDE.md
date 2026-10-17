@@ -164,6 +164,7 @@ la 211, las fotos con chicos de las fuentes de Balcarce, y la 212, la revisión 
 - **17/10, limpieza final**: se retiraron el panel de la PC y su "modo PC", los ensayos en sombra (selección nueva, feed de
   podcast, audio en la página, video de presentación), `pruebas-modelos/`, `criterio-unico/` y los programas de `docs/`
   (los que se usan, en `scripts/medir/`). Todo queda en el historial de git (`docs/DECISIONES.md`, 17/10).
+- **Mudanza a Cloudflare, escrita y probada en Node, sin prender (18/10):** el motor en Workers Builds, las tareas chicas en un Worker (`radar-balcarce-tareas`) y el video en un repositorio público sin secretos; todo detrás de la variable `NUBE` del reloj (vacía = todo en GitHub, como hoy). Qué se eligió, con qué números y cómo se prende: `docs/etapa-10-operacion/MIGRACION-A-CLOUDFLARE.md` y `PLAN-DE-CAMBIO.md` (reglas 230 a 235).
 - Lo que falta: **`PENDIENTES.md`**. Qué se decidió y las preguntas abiertas: **`docs/DECISIONES.md`**.
 
 ## Dónde tocar cada cosa
@@ -171,6 +172,7 @@ la 211, las fotos con chicos de las fuentes de Balcarce, y la 212, la revisión 
 | Quiero… | Dónde |
 |---|---|
 | Sumar, sacar o apagar una fuente, o cambiar un peso | `ingesta/fuentes.mjs` o `ingesta/fuentes-cruce.mjs` (`activa: false`); después, `node ingesta/listar-fuentes.mjs` |
+| Pasar un trabajo de GitHub a Cloudflare (o volver), el motor en Workers Builds, el Worker de tareas, el render público | `NUBE` en `infra/reloj-cloudflare/nube.mjs`; `infra/motor-cloudflare/`; `infra/tareas-cloudflare/tareas.mjs` (`lee`/`escribe`); `infra/render-publico/` (copia de `reels/`: `node scripts/sincronizar-render-publico.mjs`); cómo se sube: workflow «Desplegar Workers de Cloudflare» y `docs/etapa-10-operacion/PLAN-DE-CAMBIO.md` |
 | Que una palabra mande una nota a otra sección | `REGLAS_SECCION` (`ingesta/fuentes.mjs`); si es ambigua, también `PALABRAS_DEBILES` (`ingesta/ingesta.mjs`) |
 | Que algo espere a una persona o no salga nunca | `REGLAS_SEMAFORO` (`ingesta/fuentes.mjs`: `rojo` —no sin preguntar—, `nunca`, `amarillo`, `cotizacion`, `internacional`, `promocional`); lo que lo de Balcarce suelta: `AMARILLO_QUE_SE_SUELTA_*` (regla 96) |
 | Qué es "de acá" o "la zona" | `esDeAca` (`ingesta/ingesta.mjs`), `PALABRAS_LOCALES` y `PALABRAS_ZONA` (`ingesta/fuentes.mjs`) |

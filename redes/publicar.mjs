@@ -18,15 +18,23 @@ import { leerJson as leer, leerJsonEstricto } from '../ingesta/json.mjs';
 import { publicarPiezas, completarEnlaces } from './publicar-piezas.mjs';
 import { espejosPendientes, esLimiteDeMeta, posteoYaPublicado, comoSaleEnFacebook, ESPEJO } from './espejo.mjs';
 import { FOTO_EN_INSTAGRAM } from '../web/lib/tarjeta-diseno.js';
+import { raizDelProyecto } from './raiz.mjs';
 import {
   elegirParaFacebook, mensajeDeNota, enlaceDeNota, enlaceConOrigen, imagenDeNota, conCreditoDeFoto, libroNuevo, anotar, yaPublicada, estaActivo,
 } from './elegir.mjs';
 
-const RAIZ = path.join(import.meta.dirname, '..');
-const PORTADA = path.join(RAIZ, 'web', 'data', 'portada.json');
-const LIBRO = path.join(RAIZ, 'web', 'data', 'redes.json');
+// Los archivos que lee y escribe, relativos a la carpeta del proyecto (el corredor de tareas de Cloudflare los baja y los guarda: infra/tareas-cloudflare/).
+export const ARCHIVOS_QUE_LEE = ['web/data/portada.json', 'web/data/redes.json'];
+export const ARCHIVOS_QUE_ESCRIBE = ['web/data/redes.json'];
 
-const SITIO = process.env.SITIO ?? 'https://radarbalcarce.com';
+// Estas cinco se calculan al importar (la terminal y GitHub, como siempre) y `main` las vuelve a calcular con el entorno que reciba: en un Worker de
+// Cloudflare las variables no están a la vista al importar (infra/tareas-cloudflare/, 18/10/2026). Si no, REDES_ACTIVAS valdría siempre "apagado".
+let RAIZ = path.join(import.meta.dirname, '..');
+let PORTADA = path.join(RAIZ, 'web', 'data', 'portada.json');
+let LIBRO = path.join(RAIZ, 'web', 'data', 'redes.json');
+let ARGV = process.argv.slice(2);
+
+let SITIO = process.env.SITIO ?? 'https://radarbalcarce.com';
 // De qué red sale cada enlace (UTM, 15/10/2026: para saber qué posteo trae visitas). El libro sigue guardando el enlace limpio.
 const ORIGEN_FACEBOOK = { fuente: 'facebook' };
 const ORIGEN_INSTAGRAM = { fuente: 'instagram' };
@@ -34,13 +42,18 @@ const ORIGEN_INSTAGRAM = { fuente: 'instagram' };
 // del perfil de la página. El de la API sale de Configuración del negocio →
 // Páginas → "Identificador".
 const PAGINA = PAGINA_DE_FACEBOOK;
-const ACTIVO = estaActivo(process.env.REDES_ACTIVAS);
+let ACTIVO = estaActivo(process.env.REDES_ACTIVAS);
+
+/** Una salida con código (donde antes había un `process.exit`): un Worker no puede cerrar el proceso. `main` la convierte en su valor de retorno. */
+export class Salida extends Error {
+  constructor(codigo, mensaje = '') { super(mensaje || `salida ${codigo}`); this.codigo = codigo; }
+}
 
 function cliente() {
   const token = process.env.META_TOKEN;
   if (!token) {
     console.error('  Falta META_TOKEN. En GitHub: Settings → Secrets and variables → Actions.');
-    process.exit(1);
+    throw new Salida(1, 'falta META_TOKEN');
   }
   return { token, api: crearCliente({ token, paginaId: PAGINA }) };
 }
@@ -52,13 +65,14 @@ async function verificar() {
     console.log(`  Página:     ${v.pagina}`);
     console.log(`  Instagram:  ${v.instagram ? `@${v.instagram}` : 'NO VINCULADO'}`);
     console.log(`  Permisos:   ${v.permisos ? v.permisos.join(', ') : '(este token no los lista)'}`);
-    if (!v.instagram) process.exit(1);
+    if (!v.instagram) throw new Salida(1, 'Instagram no vinculado');
   } catch (e) {
+    if (e instanceof Salida) throw e;
     console.error(`  No anduvo: ${sinToken(e.message, token)}`);
     if (e instanceof ErrorMeta) {
       console.error(`  código: ${e.codigo} · subcódigo: ${e.subcodigo} · tipo: ${e.tipo} · http: ${e.http}`);
     }
-    process.exit(1);
+    throw new Salida(1, 'no anduvo');
   }
 }
 
@@ -196,7 +210,7 @@ async function facebook() {
     // principal.
     if (!yaPublicada(libro, 'instagramFeed', nota.id)) await espejar(nota, enlace);
   }
-  if (fallo) process.exit(1);
+  if (fallo) throw new Salida(1, 'algún posteo falló');
 }
 
 /** Los videos del día (historias y reels) a Instagram. */
@@ -211,19 +225,19 @@ async function piezas() {
   const libro = leerJsonEstricto(LIBRO, libroNuevo());
   // --destino=instagram | facebook | ambas (por defecto). La primera red de la
   // lista es la que manda: decide si la pieza está pendiente.
-  const destino = (process.argv.find((a) => a.startsWith('--destino=')) ?? '--destino=ambas').slice(10);
+  const destino = (ARGV.find((a) => a.startsWith('--destino=')) ?? '--destino=ambas').slice(10);
   const destinos = { ambas: ['instagram', 'facebook'], instagram: ['instagram'], facebook: ['facebook'] }[destino];
   if (!destinos) {
     console.error(`  Destino desconocido: ${destino}. Usá instagram, facebook o ambas.`);
-    process.exit(2);
+    throw new Salida(2, 'destino desconocido');
   }
   const r = await publicarPiezas({
     api, manifiesto, libro, activo: ACTIVO, destinos,
-    sinHorario: process.argv.includes('--sin-horario'),
+    sinHorario: ARGV.includes('--sin-horario'),
     leerVideo: (archivo) => fs.readFileSync(path.join(carpeta, archivo)),
     guardar: () => fs.writeFileSync(LIBRO, JSON.stringify(libro, null, 2)),
   });
-  if (r.fallos.length) process.exit(1);
+  if (r.fallos.length) throw new Salida(1, 'alguna pieza falló');
 }
 
 /**
@@ -249,18 +263,39 @@ async function enlaces() {
   }
 }
 
+/**
+ * La entrada para todos los lados (la terminal, GitHub y un Worker de Cloudflare): `argv` es lo que seguía a `node redes/publicar.mjs`. Devuelve el
+ * código de salida (0 = bien) en vez de cerrar el proceso. Vuelve a leer el entorno (`env`, `raiz`) antes de empezar.
+ */
+export async function main({ argv = process.argv.slice(2), env = process.env, raiz = null } = {}) {
+  ARGV = argv;
+  RAIZ = raiz ?? raizDelProyecto(env, import.meta.dirname);
+  PORTADA = path.join(RAIZ, 'web', 'data', 'portada.json');
+  LIBRO = path.join(RAIZ, 'web', 'data', 'redes.json');
+  SITIO = env.SITIO ?? 'https://radarbalcarce.com';
+  ACTIVO = estaActivo(env.REDES_ACTIVAS);
+  const modo = argv[0];
+  try {
+    if (modo === '--verificar') await verificar();
+    else if (modo === '--facebook') await facebook();
+    else if (modo === '--piezas') await piezas();
+    else if (modo === '--enlaces') await enlaces();
+    else {
+      console.log('Uso: node redes/publicar.mjs --verificar | --facebook | --enlaces | --piezas [--sin-horario] [--destino=ambas|instagram|facebook]');
+      return 2;
+    }
+  } catch (e) {
+    if (e instanceof Salida) return e.codigo;
+    throw e;
+  }
+  return 0;
+}
+
 // Sólo corre cuando esto se ejecuta directamente (node redes/publicar.mjs),
 // igual que reels/plan.mjs y compañía: así se puede importar (por ejemplo,
 // desde una prueba) sin que dispare una publicación real ni cierre el
 // proceso con process.exit().
 if (process.argv[1] && process.argv[1].endsWith('publicar.mjs')) {
-  const modo = process.argv[2];
-  if (modo === '--verificar') await verificar();
-  else if (modo === '--facebook') await facebook();
-  else if (modo === '--piezas') await piezas();
-  else if (modo === '--enlaces') await enlaces();
-  else {
-    console.log('Uso: node redes/publicar.mjs --verificar | --facebook | --enlaces | --piezas [--sin-horario] [--destino=ambas|instagram|facebook]');
-    process.exit(2);
-  }
+  const codigo = await main({ argv: process.argv.slice(2) });
+  if (codigo) process.exit(codigo);
 }

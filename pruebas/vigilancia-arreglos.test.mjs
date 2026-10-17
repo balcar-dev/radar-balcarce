@@ -48,7 +48,8 @@ test('el vigilante ya no termina con error por encontrar un problema', () => {
   const codigo = fs.readFileSync(path.join(import.meta.dirname, '..', 'redes', 'vigilar.mjs'), 'utf8');
   assert.ok(!/process\.exit\(problemas/.test(codigo), 'volvió el exit(1) por problemas');
   assert.match(codigo, /console\.log\(anotacion\(p\)\)/);
-  assert.match(codigo, /main\(\)\.catch/, 'si falla el vigilante mismo, sí tiene que terminar con error');
+  // (18/10/2026: main() ya no cierra el proceso —un Worker no puede—, devuelve; el que lo llama desde la terminal sale con 0 o, si falló, con 1.)
+  assert.match(codigo, /main\(\)\.then\(\(\) => process\.exit\(0\), \(e\) => \{[\s\S]*?process\.exit\(1\)/, 'si falla el vigilante mismo, sí tiene que terminar con error');
 });
 
 // -------------------------------------------------------- 3. el dominio
