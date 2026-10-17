@@ -294,7 +294,7 @@ export const CONTRATO_DIARIO = {
 };
 
 /** Todos los números juntos, por nombre: es lo que la prueba compara con la
- *  tabla del documento (`TITULO.maximo`, `POPULARIDAD.notasPorDia`…). */
+ *  tabla del documento (`TITULO.maximo`, `POPULARIDAD.minimoNacional`…). */
 export const NUMEROS_DEL_CRITERIO = {
   TITULO,
   BAJADA,

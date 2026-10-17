@@ -237,9 +237,10 @@ test('la IA puede elegir las tres, con sus líneas del mapa, y no se lleva lo de
   assert.doesNotMatch(texto, /escuelas, salud local/, 'Balcarce ya no se lleva las escuelas y la salud');
   assert.doesNotMatch(texto, /\(sociedad, clima, salud, educación, grandes hechos\)/);
   assert.match(lectura.pedidoPara([]), /· Salud: /);
-  // Y le dice qué es de interés en estas áreas (regla 215): lo que usa la popularidad de las fuentes especializadas.
-  assert.match(texto, /"importancia": qué tan relevante es la noticia en sí, no qué tan cerca está de Balcarce. En ciencia, tecnología e IA, educación y salud: "alta" o "media" si cuenta un descubrimiento/);
-  assert.match(texto, /también si pasa afuera del país: la ciencia y la tecnología no tienen frontera/);
+  // La importancia es la de la noticia en sí. Desde la regla 260 ya no hay una definición aparte para ciencia y tecnología (servía al
+  // "interés de la IA" de las fuentes especializadas, que se sacó) ni "no tienen frontera".
+  assert.match(texto, /"importancia": qué tan relevante es la noticia en sí, no qué tan cerca está de Balcarce\./);
+  assert.doesNotMatch(texto, /no tienen frontera|descubrimiento, un avance|guía de uso/);
   for (const seccion of ['Educación', 'Salud', 'Ciencia']) {
     const ficha = { id: 'a', ambito: 'balcarce', seccion, impacto_balcarce: 'directo', razon: 'local', importancia: 'media', es_publicidad: false, es_chimento: false, por_que_interesa: 'x' };
     assert.equal(lectura.fichaValida(ficha).seccion, seccion);

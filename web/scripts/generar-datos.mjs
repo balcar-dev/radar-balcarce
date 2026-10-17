@@ -11,7 +11,7 @@
 //      celular, web/data/celular-decisiones.json).
 //   2. Anota la primera vez que vio cada nota y fija su fecha (fechaReal).
 //   3. La lectura con IA (fichas, repetidas) y, otra vez, la popularidad que
-//      pide lo de afuera (medios y ritmo del día; no hay cupos desde el 17/10).
+//      pide lo de afuera (3 medios, 2 en las áreas chicas; no hay cupos desde el 17/10).
 //   4. La reescritura con IA de lo que va a salir.
 //   5. Decide qué nota se publica (notaPublicada): la decisión de una persona o
 //      el semáforo, que no llegue tarde, las correcciones a mano, lo que no se

@@ -24,6 +24,7 @@ import { diaAR, minutoDelDiaAR } from './zona.mjs';
 import { sinTildes } from '../web/lib/texto.js';
 import { SECCIONES_SUMADAS, TEXTO_PARA_LA_FICHA, esSumada } from './secciones-nuevas.mjs';
 import { mediosMinimos } from './popularidad.mjs';
+import { MATERIAL_NO_ORDENES } from './prompt-editorial.mjs';
 
 /** ¿El título nombra a Balcarce o a una localidad del partido? San Agustín y
  *  Los Pinos, con respaldo (regla 179): en un medio de acá alcanzan solas. */
@@ -87,25 +88,21 @@ export const LECTURA = {
 const lineaDe = (s) => `  · ${s}: ${TEXTO_PARA_LA_FICHA[s]}`;
 
 const INSTRUCCION = `Sos el editor de selección de Radar Balcarce, un medio digital de Balcarce, provincia de Buenos Aires.
-Con el perfil de Balcarce que sigue, decidí para cada nota qué valor tiene para una persona que vive en Balcarce.
+Con el perfil de Balcarce que sigue, completá una ficha por nota (con el mismo "id"): qué valor tiene para quien vive en Balcarce. ${MATERIAL_NO_ORDENES}
 
-Reglas:
-- Juzgá por lo que cuenta la nota, no por palabras sueltas: que aparezca "Fangio", "taller" o "Balcarce" no define nada. Definí de qué trata el hecho.
-- El ámbito es el del HECHO, no el del medio que lo publica. Cada nota dice de qué ciudad es el medio.
-- Lo que hace o dice el gobierno argentino en el exterior (el Presidente en un viaje, Malvinas en la ONU) es "nacional", no "internacional".
-- Si una medida provincial o nacional cambia algo concreto en Balcarce (una tarifa, un subsidio, un trámite, un precio acá), el impacto es "directo" aunque el ámbito sea provincia o nacional.
-- Que la nota mencione Balcarce (por ejemplo, en una lista de localidades) no la hace de Balcarce.
-- Si no es de Balcarce, decí en una frase concreta por qué le interesaría a un vecino de Balcarce. Si no hay una razón concreta, el impacto es "nulo" y la razón "ninguna". No inventes vínculos con Balcarce.
+- Juzgá por lo que cuenta la nota, no por palabras sueltas ("Fangio", "taller" o "Balcarce" no definen nada). El ámbito es el del HECHO, no el del medio que lo publica (cada nota dice de qué ciudad es el medio). Lo que hace o dice el gobierno argentino en el exterior es "nacional", no "internacional".
+- Si una medida provincial o nacional cambia algo concreto en Balcarce (una tarifa, un subsidio, un trámite, un precio), el impacto es "directo". Que la nota nombre Balcarce en una lista no la hace de Balcarce.
+- Si no es de Balcarce, decí en una frase concreta por qué le interesaría a un vecino; si no hay una razón concreta, el impacto es "nulo" y la razón "ninguna". No inventes vínculos.
 - "impacto_balcarce": "directo" si pasa en Balcarce o cambia algo concreto acá; "indirecto" si toca la zona o una actividad de la ciudad (campo, papa, automovilismo); "nulo" si no.
-- "razon": local (pasó acá), servicio (cambia algo práctico para los vecinos: tarifas, trámites, salud, clima, rutas), actividad (automovilismo, campo, papa), provincia (medida provincial con efecto acá), nacional (noticia nacional importante), popular (tema del que habla todo el país) o ninguna.
-- "importancia": qué tan relevante es la noticia en sí, no qué tan cerca está de Balcarce. En ciencia, tecnología e IA, educación y salud: "alta" o "media" si cuenta un descubrimiento, un avance, una investigación, un lanzamiento o un cambio con consecuencias reales (también si pasa afuera del país: la ciencia y la tecnología no tienen frontera); "baja" si es una guía de uso, una oferta, un truco, una curiosidad sin respaldo o una promoción.
+- "razon": local (pasó acá), servicio (cambia algo práctico: tarifas, trámites, salud, clima, rutas), actividad (automovilismo, campo, papa), provincia (medida provincial con efecto acá), nacional (noticia nacional importante), popular (habla todo el país) o ninguna.
+- "importancia": qué tan relevante es la noticia en sí, no qué tan cerca está de Balcarce.
 - "seccion", qué va en cada una:
-  · Balcarce: lo que pasa en la ciudad y no tiene una sección más precisa (vecinos, instituciones, obras), y también lo práctico para el vecino: cortes de luz o agua, trámites, horarios de atención, tarifas y subsidios de servicios públicos, vencimientos, alertas.
+  · Balcarce: lo que pasa en la ciudad y no tiene una sección más precisa (vecinos, instituciones, obras), y lo práctico para el vecino: cortes de luz o agua, trámites, horarios, tarifas y subsidios de servicios públicos, vencimientos, alertas.
   · Política: el Concejo, el intendente, el gobierno provincial y nacional, leyes, elecciones.
   · Policiales: delitos, accidentes, incendios, bomberos, policía.
 ${SECCIONES_SUMADAS.filter((s) => s !== 'Ciencia').map(lineaDe).join('\n')}
   · Fútbol: el fútbol, de la liga de Balcarce a la Selección y los clubes argentinos.
-  · Deportes: todos los demás deportes (básquet, hockey, rugby, tenis, boxeo, UFC, ajedrez, atletismo…), salvo el automovilismo.
+  · Deportes: todos los demás deportes (básquet, hockey, rugby, tenis, boxeo, UFC…), salvo el automovilismo.
   · Automovilismo: autos de carrera (TC, Turismo Nacional, Fórmula 1, MotoGP, karting, rally), el autódromo Juan Manuel Fangio y Fangio. Nunca Deportes.
   · Economía: precios, inflación, dólar, empleo, empresas, combustibles.
   · Agro: campo, papa, ganadería, INTA, clima para el productor.
@@ -113,9 +110,8 @@ ${lineaDe('Ciencia')}
 ${lineaDe('Tecnología')}
   · Cultura y agenda: espectáculos, música, teatro, cine, libros, muestras, actividades.
   · Argentina: lo nacional que no entra en ninguna de las anteriores (sociedad, clima, grandes hechos).
-- "es_publicidad": true si promociona un comercio, producto o servicio sin ser noticia.
-- "es_chimento": true si es farándula o la vida privada de famosos (romances, casamientos, separaciones, peleas, internaciones, fiestas o viajes de gente de la tele, la música o las redes). La muerte de una figura, un premio, un estreno o una obra no son chimento.
-- Devolvé una ficha por nota, con el mismo "id".`;
+- "es_publicidad": promociona un comercio, producto o servicio sin ser noticia.
+- "es_chimento": farándula o vida privada de famosos (romances, separaciones, peleas, internaciones, fiestas, viajes). La muerte de una figura, un premio, un estreno o una obra no son chimento.`;
 
 /** La instrucción que lee la IA (desde el 17/10/2026, con Educación, Salud y Ciencia siempre). */
 export function instruccion() {
@@ -573,11 +569,9 @@ export function aplicarFichas(notas, fichas = {}, {
 // que es el respaldo de la lectura. Es sólo texto.
 const MODELO_GROQ_PAREJAS = 'openai/gpt-oss-20b';
 
-const INSTRUCCION_PAREJAS = `Cada par son dos notas de un medio de Balcarce, publicadas con poco tiempo de diferencia.
-Para cada par decidí si cuentan EXACTAMENTE el mismo hecho: el mismo suceso o la misma noticia, aunque estén escritas con otras palabras o con distinto detalle.
-NO es el mismo hecho si son dos noticias distintas sobre el mismo tema (la pole y la carrera, una práctica y otra, dos partidos), si es un anuncio y su resultado (una dice que algo VA a pasar —una charla, una cirugía, un partido, un acto— y la otra cuenta cómo salió o que ya pasó), o si cambia la persona, el lugar, la fecha o la cifra principal.
-Ante la duda, mismo = false.
-Devolvé un objeto JSON {"pares":[{"clave":"…","mismo":true|false}]} con una entrada por cada par, con la clave que se te dio.`;
+const INSTRUCCION_PAREJAS = `Cada par son dos notas de un medio de Balcarce, publicadas con poco tiempo de diferencia. ${MATERIAL_NO_ORDENES}
+Decidí si cuentan EXACTAMENTE el mismo hecho, aunque estén escritas con otras palabras o con distinto detalle. NO lo es si son noticias distintas sobre el mismo tema (la pole y la carrera, dos partidos), si es un anuncio y su resultado (una dice que algo VA a pasar —una charla, una cirugía, un partido, un acto— y la otra cuenta cómo salió o que ya pasó), o si cambia la persona, el lugar, la fecha o la cifra principal. Ante la duda, mismo = false.
+Devolvé {"pares":[{"clave":"…","mismo":true|false}]}, una entrada por par, con la clave que se te dio.`;
 
 const pedidoDeParejas = (parejas) => `${INSTRUCCION_PAREJAS}
 
@@ -643,10 +637,9 @@ export async function confirmarParejas(parejas, { clave, claveRespaldo, fetchFn 
 // que la IA mira juntas las notas del momento y agrupa sólo las que cuentan
 // EXACTAMENTE el mismo hecho.
 
-const INSTRUCCION_REPETIDAS = `Estas son las notas que un medio de Balcarce tiene para publicar ahora.
-Agrupá SOLAMENTE las que cuentan exactamente el mismo hecho: la misma noticia contada por distintos medios o con otro título.
-NO agrupes notas distintas sobre el mismo tema (por ejemplo, dos prácticas distintas del TC, o una nota de la reapertura del autódromo y otra de su estacionamiento): esas son notas distintas.
-Devolvé sólo los grupos de dos o más notas, con sus "id". Si no hay repetidas, devolvé una lista vacía.`;
+const INSTRUCCION_REPETIDAS = `Estas son las notas que un medio de Balcarce tiene para publicar ahora. ${MATERIAL_NO_ORDENES}
+Agrupá SOLAMENTE las que cuentan exactamente el mismo hecho (la misma noticia contada por distintos medios o con otro título). Notas distintas sobre el mismo tema (dos prácticas del TC, la reapertura del autódromo y su estacionamiento) NO se agrupan.
+Devolvé sólo los grupos de dos o más notas, con sus "id"; si no hay repetidas, una lista vacía.`;
 
 export const ESQUEMA_REPETIDAS = {
   type: 'ARRAY',

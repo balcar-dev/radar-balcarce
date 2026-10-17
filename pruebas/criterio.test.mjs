@@ -231,8 +231,13 @@ test('las frases de relleno son las mismas en el código, en el documento y en l
   assert.ok(a >= 0 && b > a, 'falta la lista de relleno entre sus marcas');
   const delDocumento = [...DOC.slice(a, b).matchAll(/`([^`]+)`/g)].map((m) => m[1]);
   assert.deepEqual(delDocumento, criterio.RELLENO, 'la lista del documento y RELLENO de ingesta/criterio.mjs no dicen lo mismo');
+  // La instrucción de la IA (achicada en la regla 263) nombra sólo las más comunes: el verificador (RELLENO) saca o rechaza todas las demás.
   const { reglas } = leerCriterio();
-  for (const frase of criterio.RELLENO) assert.ok(reglas.includes(`"${frase}"`), `la instrucción de la IA no le prohíbe "${frase}"`);
+  const lasMasComunes = ['cabe destacar', 'en el marco de', 'fuentes consultadas', 'pudo saber', 'hito histórico', 'dijo presente', 'sin dudas', 'una gran noticia'];
+  for (const frase of lasMasComunes) {
+    assert.ok(criterio.RELLENO.includes(frase), `"${frase}" no es una frase de relleno del código`);
+    assert.ok(reglas.includes(`"${frase}"`), `la instrucción de la IA no le prohíbe "${frase}"`);
+  }
   for (const frase of criterio.RELLENO) assert.equal(frase, frase.toLowerCase(), `en minúscula: ${frase}`);
 });
 

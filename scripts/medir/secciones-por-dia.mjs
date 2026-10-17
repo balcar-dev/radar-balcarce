@@ -2,7 +2,7 @@
 // el clasificador del mapa manda a Educación, Salud, Ciencia o Tecnología e IA se cuentan ahí (conSeccionDelSitio), igual que las muestra
 // el sitio. Sirve para ver qué días quedaría vacía una sección (regla 215, Hernán: "todas las secciones tienen que tener notas todos los
 // días, si no, no vale la pena tenerlas"). Es un PISO: son las notas que salieron con el criterio de antes (cupos y mínimos por sección);
-// con el criterio nuevo (sin cupos, 2 medios en las áreas chicas, fuentes especializadas) salen más. Lee sólo web/data; no escribe nada.
+// con el criterio nuevo (sin cupos, 3 medios y 2 en las áreas chicas) salen más. Lee sólo web/data; no escribe nada.
 //
 //   node scripts/medir/secciones-por-dia.mjs                 los últimos 14 días
 //   node scripts/medir/secciones-por-dia.mjs --dias=21       otra cantidad

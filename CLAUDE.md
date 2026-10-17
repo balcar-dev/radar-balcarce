@@ -42,9 +42,10 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 258: del 189 al 210 son los arreglos de Radar 2.0 del 17/10, por tandas y con huecos; la 211, las fotos con chicos de las
+próxima regla es la 264: del 189 al 210 son los arreglos de Radar 2.0 del 17/10, por tandas y con huecos; la 211, las fotos con chicos de las
 fuentes de Balcarce; la 212, la revisión del archivo entero por tandas; la 215 a la 218, lo nacional por popularidad sin cupos, las secciones nuevas
-siempre activas, las fuentes de ciencia, salud, educación y tecnología, y el orden por popularidad; la 230 a la 235, la mudanza a Cloudflare; la 240, OpenRouter.)
+siempre activas, las fuentes de ciencia, salud, educación y tecnología, y el orden por popularidad; la 230 a la 235, la mudanza a Cloudflare; la 240, OpenRouter;
+la 260 a la 263, la selección en seis líneas con su estadística, las fuentes de las áreas chicas y las instrucciones de la IA más cortas.)
 
 - **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Una prueba lo
   vigila (sigue los imports en cadena).
@@ -110,12 +111,13 @@ siempre activas, las fuentes de ciencia, salud, educación y tecnología, y el o
   medio de Balcarce o lo que dice Balcarce **en el título**. Un medio de acá que copia una
   noticia de afuera no la hace de Balcarce (`historiaDeAca`), y lo de un medio de acá que
   no nombra nada de acá espera a la IA (`mencionaAca`).
-- **Lo de afuera se publica por popularidad, sin cupos ni topes** (regla 211, Hernán 17/10): 3 medios
-  distintos; 2 en las áreas donde suele haber poco (Tecnología e IA, Ciencia, Salud, Educación, Cultura,
-  Agro, Automovilismo) y, en cualquier sección, si el día va flojo para las ~100 notas diarias
-  (`ritmoDelDia`); 1 si es de una fuente `especializada` que la IA considera de interés (`ingesta/popularidad.mjs`,
-  `POPULARIDAD` en `ingesta/criterio.mjs`). Lo que ya salió no se baja. Del extranjero, sólo con un
-  argentino (salvo ciencia y tecnología); Policiales de afuera, nunca.
+- **Lo de afuera se publica por popularidad, sin cupos ni topes** (reglas 215 y 260, Hernán 17/10), en seis
+  líneas: Balcarce entra todo; lo nacional, con **3 medios** distintos (`MINIMO_NACIONAL`); en las áreas
+  chicas (Tecnología e IA, Ciencia, Salud, Educación, Cultura), con **2** (`MINIMO_AREAS_CHICAS`); sin cupos ni
+  topes; lo muy contado va primero; del extranjero, sólo con un argentino, y Policiales de afuera, nunca. Los
+  dos números se cambian con variables de GitHub, sin tocar código (`ingesta/popularidad.mjs`, `POPULARIDAD` en
+  `ingesta/criterio.mjs`). Nunca con un solo medio. Lo que ya salió no se baja. Cómo cae todo se mide en
+  `web/data/estadistica-seleccion.json` (regla 261): Hernán lo mira cada semana y regula.
 - **Las listas de sepelios no se publican nunca**, ni aprobadas por una persona.
 - **Las palabras clave cortas engañan** ("gol" encontraba "golpe"): las ambiguas van en
   `PALABRAS_DEBILES` y sólo deciden desde el titular.
@@ -160,9 +162,10 @@ siempre activas, las fuentes de ciencia, salud, educación y tecnología, y el o
 
 ## Estado (17/10/2026)
 
-- **Sin cupos desde el 17/10** (regla 211): lo nacional sale por cuántos medios lo cuentan; Educación, Salud y Ciencia son
-  secciones de siempre; hay 15 fuentes nuevas de ciencia, salud, educación y tecnología. Para ver el efecto, la primera
-  semana mirar en el registro de "Actualizar la web" el "ritmo del día" y cuántas notas salen con un solo medio.
+- **Sin cupos desde el 17/10** (reglas 215 y 260): lo nacional sale por cuántos medios lo cuentan (3, o 2 en las áreas
+  chicas); Educación, Salud y Ciencia son secciones de siempre. Esta primera semana no se toca nada: se mira la estadística
+  de la selección (`scripts/medir/estadistica-seleccion.mjs`, el informe diario y la pestaña Números) y el lunes se decide
+  si hace falta cambiar `MINIMO_NACIONAL` o `MINIMO_AREAS_CHICAS`.
 
 - **Todo andando en la nube** (web, redes con voz y escenas animadas, vigilancia, panel del
   celular). El 15/10 el repositorio se mudó y el reloj pasó al Worker: mirar que dispare.
@@ -185,7 +188,8 @@ siempre activas, las fuentes de ciencia, salud, educación y tecnología, y el o
 | Qué es "de acá" o "la zona" | `esDeAca` (`ingesta/ingesta.mjs`), `PALABRAS_LOCALES` y `PALABRAS_ZONA` (`ingesta/fuentes.mjs`) |
 | Cómo se juntan las notas del mismo hecho | `CRUCE` y el cruce coherente, que no encadena (`CRUCE.coherente`, `CRUCE_COHERENTE`, regla 184: `docs/flujo/CRUCE-COHERENTE.md`) (`ingesta/cruce.mjs`), `agruparRepetidas` y `quitarRepetidas` (`ingesta/lectura-ia.mjs`), y las que vuelven con otra dirección, `web/lib/repetidas.js`; lo de acá con otras palabras, la huella de significado (`ingesta/huellas-significado.mjs`, regla 195: `docs/flujo/REPETIDAS-2-0.md`) |
 | Cualquier número del criterio | `ingesta/criterio.mjs` **y** la tabla "Los números" de `CRITERIO-EDITORIAL.md` |
-| Cuántos medios pide lo de afuera, qué áreas piden menos, las ~100 notas por día, qué fuente puede salir sola con interés de la IA | `POPULARIDAD`, `AREAS_CHICAS` (`ingesta/criterio.mjs`), `ingesta/popularidad.mjs`, `especializada` en la fuente; medir con `node scripts/medir/simular-popularidad.mjs` (regla 211) |
+| Cuántos medios pide lo de afuera (3) y en las áreas chicas (2) | Las variables de GitHub `MINIMO_NACIONAL` y `MINIMO_AREAS_CHICAS` (sin tocar código); el valor de siempre y qué áreas son chicas, `POPULARIDAD` y `AREAS_CHICAS` (`ingesta/criterio.mjs` **y** la tabla del criterio), `ingesta/popularidad.mjs` (regla 260) |
+| Cómo cae la selección (qué llega, con cuántos medios, qué sale y por qué no; cuántas notas habría con otro mínimo) | `web/data/estadistica-seleccion.json` (`ingesta/estadistica-seleccion.mjs`), `node scripts/medir/estadistica-seleccion.mjs` (`--ahora` mide el momento sin IA), `web/public/panel/numeros.js`, la línea «La selección» de `redes/informe-diario.mjs` (regla 261) |
 | Cómo decide la lectura con IA | `ingesta/lectura-ia.mjs`; lo que sabe de Balcarce, `ingesta/perfil-balcarce.md` (va tal cual a la IA) |
 | Cómo escribe la IA | `CRITERIO-EDITORIAL.md` § 4 y § 12; medir un cambio con `reels/comparar-instruccion.mjs` |
 | El verificador o los arreglos que no inventan | `ingesta/verificar.mjs` (`verificar`, `arreglarEscritura`, `diceEnVivo`) |

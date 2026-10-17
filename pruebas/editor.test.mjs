@@ -75,7 +75,7 @@ const correr = (respuestas, extra = {}) => {
 
 // ----------------------------------------------------------------- el prompt
 
-test('la instrucción es la del editor digital y conserva las 20 reglas fijas', () => {
+test('la instrucción es la del editor digital y conserva sus 14 reglas fijas (achicada a la mitad en la regla 263)', () => {
   assert.match(INSTRUCCION_EDITORIAL, /Sos el editor digital de Radar Balcarce/);
   assert.match(INSTRUCCION_EDITORIAL, /Contrastás las fuentes/);
   assert.match(INSTRUCCION_EDITORIAL, /declaración de parte/);
@@ -85,16 +85,17 @@ test('la instrucción es la del editor digital y conserva las 20 reglas fijas', 
   assert.match(INSTRUCCION_EDITORIAL, /el sistema lo agrega solo/);
   assert.match(INSTRUCCION_EDITORIAL, /NUNCA pasa de 90/);
   assert.match(INSTRUCCION_EDITORIAL, /de 70 a 180 palabras/);
-  for (let i = 1; i <= 20; i += 1) assert.match(INSTRUCCION_EDITORIAL, new RegExp(`\\n${i}\\. `), `falta la regla ${i}`);
+  for (let i = 1; i <= 14; i += 1) assert.match(INSTRUCCION_EDITORIAL, new RegExp(`\\n${i}\\. `), `falta la regla ${i}`);
+  assert.doesNotMatch(INSTRUCCION_EDITORIAL, /\n15\. /, 'son 14');
   assert.match(INSTRUCCION_EDITORIAL, /doctrina Campillay/);
   assert.match(INSTRUCCION_EDITORIAL, /26\.061 y 26\.485/);
   for (const campo of ['claves', 'seSabe', 'noConfirmado', 'aportes', 'textoRedes', 'etiquetas']) {
     assert.match(INSTRUCCION_EDITORIAL, new RegExp(`"${campo}"`), `el JSON de salida no pide ${campo}`);
   }
-  // Desde el 17/10/2026 (regla 202) no se le pide el guion ni el nivel (los arma y lo calcula el sistema), y la regla 7
-  // es la de los verbos de una decisión ("aprueba" sólo si la fuente dice que se aprobó).
+  // Desde el 17/10/2026 (regla 202) no se le pide el guion ni el nivel (los arma y lo calcula el sistema), y la regla 6
+  // trae los verbos de una decisión ("aprueba" sólo si la fuente dice que se aprobó).
   assert.doesNotMatch(INSTRUCCION_EDITORIAL, /"guion"|"nivel"/);
-  assert.match(INSTRUCCION_EDITORIAL, /\n7\. Los verbos de una decisión/);
+  assert.match(INSTRUCCION_EDITORIAL, /\n6\. Los números van como los da la fuente[^\n]*Los verbos de una decisión/);
 });
 
 test('la IA recibe las fuentes numeradas, con medio y fecha, y los antecedentes marcados como anteriores', async () => {
@@ -483,5 +484,5 @@ test('el prompt pide usar el análisis para escribir el cuerpo, que es obligator
   assert.match(INSTRUCCION_EDITORIAL, /TODAS las fuentes/);
   assert.match(INSTRUCCION_EDITORIAL, /lo que confirman varias fuentes va dicho como hecho/);
   assert.match(INSTRUCCION_EDITORIAL, /con las dos versiones atribuidas/);
-  assert.match(INSTRUCCION_EDITORIAL, /Nunca "en vivo", "EN VIVO", "minuto a minuto", "en directo"/);
+  assert.match(INSTRUCCION_EDITORIAL, /Nunca "en vivo", "EN VIVO", "minuto a minuto" ni "en directo"/);
 });
