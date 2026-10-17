@@ -1,26 +1,24 @@
 // Imágenes con Workers AI de Cloudflare (16/10/2026). Un Worker chico que, con el token en el encabezado, genera UNA imagen y la devuelve.
 // Entra en las 10.000 «neuronas» diarias gratis del plan Workers que ya pagamos. Sin dependencias. Lo llaman los workflows de GitHub con el
 // secreto VIGILANTE_TOKEN (el workflow lo carga acá como TOKEN). Las reglas editoriales (qué notas pueden llevar una imagen generada, el prompt
-// sin nombres, la etiqueta «Ilustración generada con IA») viven en ingesta/foto-ia.mjs; este Worker sólo genera.
+// sin nombres, el control con visión, la etiqueta «Ilustración generada con IA») viven en web/scripts/ilustrar-notas.mjs; este Worker sólo genera.
 //
 //   GET  /            → «en hora» (no gasta nada)
 //   GET  /modelos     → los modelos que sabe usar
 //   POST /generar     → JSON { prompt, modelo?, ancho?, alto?, steps?, negativo? }, encabezado x-token → la imagen (image/jpeg o image/png)
 //
-// Modelos (todos de Workers AI): «flux» (flux-1-schnell: el más lindo, pero sólo cuadrado 1024), «sdxl-lightning», «dreamshaper», «sdxl»
-// (los tres con tamaño a elección y prompt negativo), «phoenix» (Leonardo: respeta mejor el texto y las indicaciones, pero cuesta 100 veces más).
+// Un solo modelo desde el 17/10/2026: «sdxl» (Stable Diffusion XL de Workers AI, con tamaño a elección y prompt negativo), el que usan las
+// ilustraciones de las notas y los fondos del clima. Los que se probaron el 16/10 y no se usaban (flux, sdxl-lightning, dreamshaper, phoenix)
+// se sacaron: con ellos el Worker aceptaba pedidos que nadie hace (phoenix cuesta 100 veces más).
 
 export const PROMPT_MAXIMO = 700;
 export const LADO = { minimo: 256, maximo: 2048 };
 
 /** Los modelos: `id` de Workers AI, cómo pedirle la imagen y de qué forma devuelve el resultado. */
 export const MODELOS = {
-  flux: { id: '@cf/black-forest-labs/flux-1-schnell', pasos: { normal: 6, maximo: 8 }, tamano: false, negativo: false },
-  'sdxl-lightning': { id: '@cf/bytedance/stable-diffusion-xl-lightning', pasos: { normal: 6, maximo: 20 }, tamano: true, negativo: true },
-  dreamshaper: { id: '@cf/lykon/dreamshaper-8-lcm', pasos: { normal: 8, maximo: 20 }, tamano: true, negativo: true },
   sdxl: { id: '@cf/stabilityai/stable-diffusion-xl-base-1.0', pasos: { normal: 20, maximo: 20 }, tamano: true, negativo: true },
-  phoenix: { id: '@cf/leonardo/phoenix-1.0', pasos: { normal: 25, maximo: 50 }, tamano: true, negativo: true },
 };
+export const MODELO_POR_DEFECTO = 'sdxl';
 
 /** Compara dos textos sin que el tiempo delate cuántas letras coinciden. */
 export function mismoToken(a, b) {
@@ -38,7 +36,6 @@ const lado = (v, normal) => { const n = Math.round(Number(v)); return Number.isF
 export function parametrosDe(clave, { prompt, ancho, alto, steps, negativo }) {
   const m = MODELOS[clave];
   const pasos = Math.min(m.pasos.maximo, Math.max(1, Math.round(Number(steps) || m.pasos.normal)));
-  if (clave === 'flux') return { prompt, steps: pasos };
   const p = { prompt, num_steps: pasos, width: lado(ancho, 1024), height: lado(alto, 576) };
   if (negativo) p.negative_prompt = String(negativo).slice(0, 300);
   return p;
@@ -76,7 +73,7 @@ export default {
     const prompt = String(cuerpo?.prompt ?? '').trim();
     if (!prompt) return json({ error: 'Falta el prompt.' }, 400);
     if (prompt.length > PROMPT_MAXIMO) return json({ error: `El prompt pasa de ${PROMPT_MAXIMO} caracteres.` }, 400);
-    const clave = String(cuerpo?.modelo ?? 'flux');
+    const clave = String(cuerpo?.modelo ?? MODELO_POR_DEFECTO);
     if (!MODELOS[clave]) return json({ error: `Modelo desconocido: ${clave.slice(0, 30)}.` }, 400);
     try {
       const r = await env.AI.run(MODELOS[clave].id, parametrosDe(clave, { prompt, ancho: cuerpo?.ancho, alto: cuerpo?.alto, steps: cuerpo?.steps, negativo: cuerpo?.negativo }));

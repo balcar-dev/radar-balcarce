@@ -121,16 +121,14 @@ cómo funciona algo que ya anda), **para decidir** (propuesta o página con caja
 | `docs/flujo/INFORME-DE-HOY.html` | Cómo llegó la información el 16/10, cómo anduvo cada fuente y cómo quedarían las secciones; diez preguntas (se rehace con `docs/flujo/generar-informe-del-dia.mjs`) | para decidir |
 | `docs/flujo/CRUCE-COHERENTE.md` | El cruce que ya no encadena noticias distintas (regla 184, interruptor `CRUCE_COHERENTE`) y cómo se midió | vigente |
 | `docs/flujos/NOTA-DESDE-MAIL.md` | Los pasos para armar una nota desde un mail de prensa | vigente (lo sigue Claude) |
-| `docs/flujos/IMAGENES-CON-GEMINI-WEB.md` | Cómo se ilustran con Gemini web las notas sin foto y cómo convive con el relleno automático de Cloudflare (regla 185) | vigente |
+| `docs/flujos/IMAGENES-CON-GEMINI-WEB.md` | El flujo de ilustrar con Gemini web: desactivado el 17/10/2026 (regla 206), por qué y qué hay que apagar | desactivado |
 | `docs/secciones/MAPA-DE-SECCIONES.md` (y `.html`) | De 11 a 17 secciones: el mapa propuesto, con el clasificador nuevo en sombra (`ingesta/secciones-nuevas.mjs`) | para decidir |
 | `docs/secciones/PROTOTIPO-MENU.html` | El menú y la portada con 17 secciones, dibujados | para decidir (cambio visible) |
 | `docs/panel/PLAN-NUEVO-PANEL.md` y `PROTOTIPO-PANEL.html` | Auditoría del panel del celular, diseño del nuevo y prototipo para tocar | para decidir |
 | `docs/seo/AUDITORIA-SEO-LLM.md` | SEO y asistentes de IA: estado real, problemas, plan, política de bots, `llms.txt`, servidor MCP | vigente (16/10) |
 | `docs/seo/AUDITORIA-FEEDS.md` | Si los feeds RSS de texto y de audio están bien armados | foto del 15/10 |
 | `docs/seo/SEARCH-CONSOLE-16-10.md` | Lo que dice Google: 1.085 páginas indexadas, 813 impresiones y 46 clics en 3 semanas | foto del 16/10 |
-| `docs/fotos/AUDITORIA-FOTOS.md` | Cuántas notas salen sin foto y por qué (88 % con foto en 14 días) | foto del 15/10 |
-| `docs/fotos/PROPUESTA-IMAGEN-IA.md` | Ilustraciones con la API de imágenes de Gemini (`ingesta/foto-ia.mjs`, apagado) | superada: se eligió Gemini web + Cloudflare (decisión del 16/10) |
-| `docs/fotos/PROPUESTA-STOCK.md` | Fotos de stock para que toda nota tenga foto (`ingesta/foto-stock.mjs`, apagado) | para decidir (sin conectar) |
+| `docs/historico/AUDITORIA-FOTOS-15-10.md` | Cuántas notas salían sin foto y por qué (88 % con foto en 14 días); la superó `docs/auditoria-2-0/03-FOTOS.md` | foto del 15/10 |
 | `docs/redes/ARCHIVO-DE-PIEZAS.md` | Dónde se guardan para siempre los videos, audios y placas (R2, depósito `radar-piezas`; la variable `R2_PIEZAS` se cargó el 15/10, aunque el documento diga «apagado») | vigente |
 | `docs/redes/PLAN-REELS-OTRAS-REDES.md` | Publicar los reels en TikTok, YouTube, etc. (`redes/destinos.mjs`, simula) | para decidir |
 | `docs/redes/AUTOMATIZAR-REDES-ALTERNATIVAS.md` | Alternativas para automatizar TikTok, YouTube, X, Threads y el canal de WhatsApp | investigación (15/10) |

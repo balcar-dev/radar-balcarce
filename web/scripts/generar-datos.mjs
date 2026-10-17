@@ -75,7 +75,7 @@ import {
 } from '../lib/archivo.js';
 import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
 import { esperaSoloPorCantidad, semaforoDelTexto, esEfemerideAjena, esDeUnMedioDeAca } from '../../ingesta/ingesta.mjs';
-import { conFotosDelBanco, podarFotos, esIlustracionDeNota, ilustracionPermitida, fotoConMenorPermitida } from './fotos-notas.mjs';
+import { conFotosDelBanco, podarFotos, esIlustracionDeNota, ilustracionPermitida, fotoConMenorPermitida, fotoDelArchivoAlDia } from './fotos-notas.mjs';
 import { actualizarAgenda, aplicarSuspendidos, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
 import {
@@ -1026,6 +1026,8 @@ if (pasaLaFoto.size) {
 const conLaFotoPasada = (n) => (pasaLaFoto.has(n?.id) && (!n.foto || esIlustracionDeNota(n.foto)) ? conFotosDelBanco([{ ...n }], bancoDeFotos)[0] : n);
 // Regla 186: una nota del archivo con una foto con chicos que entró por la excepción la pierde si se apagó FOTOS_MENORES_OFICIALES o si la
 // nota, como está hoy, ya no la permite (después le toca su ilustración, si tiene).
+// La foto de cada nota del archivo, al día con el banco (regla 203): sin imágenes rotas ni fotos que se sacaron.
+const conLaFotoAlDia = (n) => fotoDelArchivoAlDia(n, bancoDeFotos, { existe: (nombre) => fs.existsSync(path.join(FOTOS_NOTAS, nombre)) });
 const sinFotoConMenorBloqueada = (n) => {
   const b = bancoDeFotos[n?.id];
   if (!n?.foto?.archivo || !b?.excepcion || n.foto.archivo !== b.archivo || fotoConMenorPermitida(n)) return n;
@@ -1078,7 +1080,7 @@ const topeDeHoy = topeDeEstaVuelta(pedidoDelTope.tope, (archivoAnterior.notas ??
 if (topeDeHoy < MAXIMO_EN_ARCHIVO) console.log(`  tope de notas de esta vuelta: ${topeDeHoy} (se pidió ${pedidoDelTope.tope}; las que salen ya están en el archivo permanente)`);
 // Lo de más de unos días guarda sólo lo que ve el lector (aligerarViejas, 29/09).
 const archivo = aligerarViejas(actualizarArchivo({
-  archivo: conLasUnidas([...(archivoAnterior.notas ?? []), ...restaurar.filter((n) => !(archivoAnterior.notas ?? []).some((a) => a.id === n.id))]).map(conLaFotoPasada).map(sinFotoConMenorBloqueada).map(conLaIlustracion).map(sinServicios),
+  archivo: conLasUnidas([...(archivoAnterior.notas ?? []), ...restaurar.filter((n) => !(archivoAnterior.notas ?? []).some((a) => a.id === n.id))]).map(conLaFotoPasada).map(conLaFotoAlDia).map(sinFotoConMenorBloqueada).map(conLaIlustracion).map(sinServicios),
   // Las partes nuevas que hoy no están (una persona corrigió el texto, o la
   // reescritura se cayó) tampoco quedan de la vez anterior en el archivo: el
   // `undefined` pisa lo viejo al mezclar y no se escribe.

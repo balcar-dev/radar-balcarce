@@ -1,6 +1,7 @@
 # 05 · Las fotos: el banco de fotos y dónde se muestran
 
-*Escrito el 28/09/2026 contra el código de ese día. Si el código cambia, manda el código.*
+*Escrito el 28/09/2026 contra el código de ese día; puesto al día el 17/10/2026 con los controles de las reglas 203 a 206 (§ 14). Si el
+código cambia, manda el código.*
 
 Este documento cuenta cómo una nota ya publicada consigue una foto: de dónde
 sale, cómo se elige, cómo se evita una marca de agua, qué se guarda, dónde se
@@ -11,8 +12,10 @@ muestra y dónde no. El criterio (qué foto se puede usar y por qué) está en
 
 En cada corrida de "Actualizar la web", a hasta 10 notas publicadas que todavía
 no se probaron se les busca la foto principal de cada medio que las contó, una
-IA con visión elige la mejor **sin marca de agua** (o, si ninguna sirve y la
-nota es de una persona pública, se busca una foto libre en Wikimedia Commons),
+IA con visión elige la mejor **sin marca de agua, sin chicos, que corresponda a la nota y que no sea un flyer, una captura ni una foto de
+stock** (en los casos dudosos la mira además un segundo modelo; la misma foto no puede ilustrar dos notas de temas distintos; o, si
+ninguna sirve y la nota es de una persona pública que nombra el título, se busca una foto libre y reciente en Wikimedia Commons, que
+también mira la IA),
 se guarda en el banco propio con su crédito y se muestra en la página de la
 nota con el crédito debajo y en el espejo de Instagram (el crédito va en el
 texto del posteo) y en la tarjeta para compartir el enlace; los videos siguen
@@ -73,8 +76,11 @@ la nota original** y se toma la foto que el propio medio marca como principal
 WhatsApp y Facebook muestren su enlace). No se usa la imagen que traía el feed.
 
 Cada foto se baja (`descargarImagen`): 20 segundos como máximo, sólo si la
-respuesta es una imagen y pesa menos de 6 MB (`TAMANO_MAXIMO`). Una fuente
-cuya página o foto no se pudo bajar queda afuera de la comparación.
+respuesta es una imagen (o viene como "octet-stream" con bytes de imagen) y pesa menos de 6 MB (`TAMANO_MAXIMO`). Una fuente
+cuya página o foto no se pudo bajar queda afuera de la comparación. **Desde el 17/10 se le manda a la IA achicada** a 1.024 px en JPEG
+(`achicarParaIA`, `web/scripts/achicar-foto.mjs`; antes iba entera y Groq contestaba 413) y se guarda la original. A cada una se le
+calcula la **huella** (`huellaDeFoto`): si es la misma foto que ya ilustra otra nota de otro tema, o una que una persona sacó, queda
+afuera (`fotoRepetidaEnElBanco`, § 14).
 
 ### 4. La comparación con IA
 
@@ -104,13 +110,22 @@ cada una con una letra (A, B, C…) y el medio que la publicó. La instrucción
 - **marcar a los menores** (28/09): si aparece alguien que parece menor de 18 y
   se lo reconoce, aunque esté en un grupo o un equipo, la foto lleva `menor` y
   no se elige; ante la duda, es menor;
-- **nunca elegir una foto marcada**: si la mejor tiene marca o un menor, elegir
-  la mejor entre las que no tienen ninguna de las dos, aunque no sea la ideal;
+- **contestar, por cada foto** (17/10, regla 203): si **corresponde** a la nota (`si`, `generica`, `no`), si es **de archivo**, si es una
+  **gráfica** (flyer, afiche, placa con texto, captura de pantalla: el cartel «Activar Windows»), si es de **stock**, si hay gente muy
+  **joven**, y una **descripción** de una línea;
+- **nunca elegir una foto marcada**: si la mejor tiene marca, un menor, es una gráfica, es de stock o no corresponde, elegir
+  la mejor entre las que no tienen nada de eso, aunque no sea la ideal;
   dejar la elección vacía sólo si ninguna está libre.
 
-Devuelve la letra elegida, una frase con el porqué y, por cada foto, si tiene
-marca, si tiene un menor y qué vio. El código no confía: una foto con `menor`
-se trata igual que una con marca (`interpretarRespuesta`).
+Devuelve la letra elegida, una frase con el porqué y, por cada foto, lo de arriba. El código no confía: una foto con `menor`,
+`grafica`, `stock` o que no corresponde se trata igual que una con marca (`interpretarRespuesta`, `motivosDeDescarte`). Lo que dijo la
+IA de la elegida queda en la ficha (`vision`).
+
+**La segunda opinión** (17/10, regla 204, `conSegundaOpinion`): si la nota habla de chicos o de categorías juveniles (sub-N, U15, escuela,
+alumnos, «Torneo Desarrollo», inferiores…) o la primera IA vio o describe gente joven (`esDudosa`), la elegida la mira **el otro**
+modelo gratis (Groq si eligió Gemini, Gemini si eligió Groq). Si ve un menor, una marca, una gráfica o que no corresponde, esa foto no va y
+se prueba la siguiente que había aprobado la primera (dos como mucho). Si el otro modelo no puede contestar, en un caso dudoso **no** se
+publica: queda como falla («Segunda opinión no disponible…») y se reintenta.
 
 ### 5. La red de seguridad sobre la respuesta
 
@@ -127,8 +142,9 @@ se trata igual que una con marca (`interpretarRespuesta`).
 Si Gemini falla o se queda sin cupo, el mismo pedido va a **Groq**
 (`GROQ_API_KEY`) con un modelo con visión, `qwen/qwen3.8-27b`
 (`MODELO_GROQ_VISION`; Llama 4 Scout dejó de estar el 28/09). Groq acepta **como
-mucho 3 imágenes por pedido**, así que se comparan las tres primeras. Si las dos
-fallan, la nota queda sin foto. Nunca se usa la clave paga de redes.
+mucho 3 imágenes por pedido**, así que se comparan las tres primeras; si igual contesta 413, se prueba una vez con la primera sola. Si
+las dos fallan, la nota queda sin foto y se reintenta; **el error de Gemini queda guardado** (en la razón y en `errorGemini`: antes se
+perdía y no se sabía si era cupo). Nunca se usa la clave paga de redes.
 
 ### 7. Si ninguna foto sirve: Wikimedia Commons
 
@@ -140,12 +156,17 @@ con marca de agua, y una persona fácil de identificar):
    deportista, un funcionario, alguien con página en Wikipedia) y cómo se
    llama (`personaPublicaDeNota`). Si es sobre un hecho, una institución o
    varias personas, no se sigue.
-2. Se busca en Wikimedia Commons una foto con ese nombre en el título del
+2. **El título tiene que nombrar a esa persona** (17/10, regla 205, `nombraALaPersona`: «Grupo Cali explica la suspensión de su show»
+   salió con una foto de Messi).
+3. Se busca en Wikimedia Commons una foto con ese nombre en el título del
    archivo (`buscarFotoWikimedia`, sin clave y sin costo), y se toma la
-   primera que sea JPEG o PNG, de al menos 400 × 300 píxeles, y con una
+   primera que sea JPEG o PNG, de al menos 400 × 300 píxeles, con una
    **licencia libre** (CC0, CC BY, CC BY-SA o dominio público:
-   `WIKIMEDIA_LICENCIAS_LIBRES`). Lo que tiene "todos los derechos reservados"
-   se descarta.
+   `WIKIMEDIA_LICENCIAS_LIBRES`), **de no más de dos años** contados desde la nota (`ANTIGUEDAD_MAXIMA_WIKIMEDIA`, `anioDeLaFoto`: la
+   fecha de la toma, el año del nombre del archivo o la fecha de subida; sin fecha, no va) y **que no se haya usado antes**. Lo que tiene
+   "todos los derechos reservados" se descarta.
+4. Se baja la versión de 1.280 px y **la mira la IA** (`revisarUnaFoto`): sin menor, sin marca, que no sea una gráfica y que
+   **corresponda** (se ve a la persona como protagonista y no contradice la nota: un Fórmula 1 de 2016 para un choque de GT, no).
 
 De Commons se guarda también **el autor** (`extmetadata.Artist`, pasado a
 texto por `textoPlano`), y el crédito dice autor y licencia, como piden CC BY y
@@ -172,9 +193,10 @@ estaban en el banco se achicaron una vez (`web/scripts/achicar-fotos-existentes.
 
 **Las fotos que se quedan sin nota se borran** (28/09, `podarFotos`): en cada
 corrida de la nube, la de una nota retirada a mano (`retiradas.json`: puede
-haberse retirado por un menor o una víctima) y la de una nota que ya no está en
-el archivo, la portada ni la ingesta. La entrada del banco queda sin `archivo`
-y con `borrada: true`, para no volver a gastar cupo en esa nota. Ojo: el
+haberse retirado por un menor o una víctima), en el momento y con `retirada: true`; y la de una nota que ya no está en
+el archivo, la portada ni la ingesta, **recién si sigue faltando una semana** (17/10, regla 203: la primera vez queda `ausenteDesde`;
+seis notas vivas habían perdido su foto porque en una vuelta no figuraban). La entrada del banco queda sin `archivo`
+y con `borrada: true`; si la nota vuelve a publicarse (y no fue retirada a mano), se prueba de nuevo. Ojo: el
 repositorio es público y el historial de git guarda la foto borrada; si una
 foto no tenía que estar nunca, hay que pedir que la limpien del historial.
 
@@ -193,6 +215,11 @@ En `web/data/banco-fotos.json`, una entrada por nota:
 | `imagenOriginal` | La dirección original de la imagen |
 | `razon` | Por qué se eligió (lo que dijo la IA, o por qué se usó otra sin marca) |
 | `cuando` | Cuándo se probó |
+| `vision` | (17/10) Lo que vio la IA: `proveedor`, `marca`, `menor`, `jovenes`, `corresponde`, `deArchivo`, `grafica`, `stock`, `descripcion`; con la segunda opinión, `segunda` y `dudosa`; en Wikimedia, `anio` |
+| `huella` | (17/10) La huella de la foto, 16 letras (`huellaDeFoto`): para que no ilustre otra nota de otro tema |
+| `errorGemini` | (17/10) El error de Gemini, aunque después haya contestado Groq |
+| `descartada` | (17/10) Una persona (o la auditoría) la sacó: `motivo`, `cuando`, `por`, la `huella` y la `imagenOriginal`. No se vuelve a probar y esa foto no vuelve en ninguna nota |
+| `ausenteDesde`, `retirada`, `restaurada` | (17/10) La poda: desde cuándo falta la nota; que se retiró a mano; que el script del 17/10 la volvió a bajar |
 
 Las notas probadas **sin** foto quedan con `intentado: true`, el origen, el
 título, la razón y la fecha (o el error). Ejemplo real:
@@ -210,7 +237,9 @@ medio, 3 de Wikimedia), 38 sin ninguna que sirviera y 4 con error.
 
 `fotoDeLaWeb()` le pasa a la nota sólo `{ archivo, credito }` (campo `foto`).
 Viaja en `web/data/portada.json` y `web/data/archivo.json`, así la foto sigue
-en la página aunque la nota salga de la portada.
+en la página aunque la nota salga de la portada. **Desde el 17/10 (regla 203) la del archivo se pone al día con el banco en cada vuelta**
+(`fotoDelArchivoAlDia`): toma la dirección y el crédito que dice el banco, y si el banco ya no la tiene o el archivo no está, la nota queda
+sin foto (su ilustración o la placa). Nueve notas del archivo mostraban una imagen rota.
 
 En `web/app/nota/[id]/page.js`, **entre la bajada y el cuerpo**: la imagen a lo
 ancho de la columna (hasta 480 píxeles de alto, recortada por la página para
@@ -241,9 +270,8 @@ leyenda «Ilustración generada con IA» en el epígrafe. **Desde el 17/10 (regl
 Política (con tono sobrio): como la imagen nunca tiene personas, no identifica a
 nadie. Se saltan sólo las muertes, los velorios y los sepelios, el semáforo rojo
 y las notas propias que traen su imagen. Se hace sola cada 2 horas (Cloudflare,
-con un control con visión que descarta lo que no sirve) y, con la PC prendida,
-Gemini web la reemplaza con más calidad. Si después aparece una foto real, gana
-la foto.
+con un control con visión que descarta lo que no sirve); desde el 17/10 es el único camino (regla 206). Si después aparece una foto real,
+gana la foto.
 
 La nota destacada de una sección o de un tema lleva su foto, con el crédito
 debajo, o la placa (`ImagenDestacada`); hasta el 29/09 llevaba siempre la placa.
@@ -306,6 +334,9 @@ Ver `docs/07-REDES.md`.
 | `reels/claves.mjs` | `claveClasificacion` y `claveGroq` | `ingesta/fotos.mjs` | `.env`, variables | — |
 | `web/scripts/ilustrar-notas.mjs` | Las ilustraciones con IA para notas sin foto (reglas 182 y 185): filtros (`motivoParaSaltar`), tono (`tonoDeLaNota`), prompt con Gemini, imagen con el Worker de Cloudflare, control con visión, topes (`cupoAutomatico`); `revisar`, `aplicar` y `automatico` | `ilustrar-notas.yml` (el reloj de Cloudflare cada 2 h, o a mano) | `portada.json`, `archivo.json`, el banco, las manuales, `fotos-ia.json` | En la revisión, sólo el adjunto; al aplicar (a mano o en automático), `web/data/fotos-ia.json` y `web/public/fotos-notas/<id>-ia.jpg` |
 | `web/data/fotos-ia.json` | Las ilustraciones aplicadas (lo escribe sólo «Ilustrar notas sin foto») | — | — | — |
+| `web/scripts/achicar-foto.mjs` | Achicar para guardar (1.200 px) y para la IA (1.024 px, `achicarParaIA`); la huella (`huellaDeFoto`, `mismaFoto`) | `fotos-notas.mjs`, `ilustrar-notas.mjs`, el script del 17/10 | — | — |
+| `web/scripts/nombres-de-persona.mjs` | `nombresDePersona`: el control del prompt de las ilustraciones (antes en `ingesta/foto-ia.mjs`, que se borró) | `ilustrar-notas.mjs` | — | — |
+| `web/scripts/arreglar-fotos-17-10.mjs` | El arreglo de los datos de la auditoría del 16/10 (§ 14), a mano y una vez | Una persona en la PC | El banco, `fotos-ia.json`, el archivo, la portada | Con `--aplicar`: el banco, `fotos-ia.json`, `web/public/fotos-notas/` |
 | `ingesta/fotos-menores.mjs` | La excepción de la regla 186 (§ 13): `menorEnActividadOficial`, `esFuenteOficialParaMenores`, `nombraAUnMenor`, las listas `ACTIVIDADES` y `PROHIBIDAS`, el interruptor | `ingesta/fotos.mjs`, `web/scripts/fotos-notas.mjs` | La nota, `FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES` (`ingesta/fuentes.mjs`), `FOTOS_MENORES_OFICIALES` | — |
 
 ## Dónde se toca cada cosa
@@ -318,7 +349,11 @@ Ver `docs/07-REDES.md`.
 | Cambiar el modelo | `MODELO_GEMINI` y `MODELO_GROQ_VISION` (`ingesta/fotos.mjs`) |
 | Qué licencias de Wikimedia se aceptan | `WIKIMEDIA_LICENCIAS_LIBRES` (`ingesta/fotos.mjs`) |
 | Que una nota vuelva a probarse | Borrar su entrada de `web/data/banco-fotos.json` |
-| Sacar una foto que no debía salir | Borrar la entrada del banco y el archivo de `web/public/fotos-notas/`, **y** agregar la nota al banco con `"intentado": true` para que no se vuelva a elegir la misma |
+| Sacar una foto que no debía salir | En la entrada del banco, sacar `archivo` y `credito` y poner `"intentado": true` y `"descartada": { "motivo": "…", "cuando": "…", "por": "…", "imagenOriginal": "…" }` (como hace `descartar` de `web/scripts/arreglar-fotos-17-10.mjs`), y borrar el archivo de `web/public/fotos-notas/`: no vuelve en esa nota ni en otra |
+| Cuántos años puede tener una foto de Wikimedia | `ANTIGUEDAD_MAXIMA_WIKIMEDIA` (`ingesta/fotos.mjs`) |
+| Cuándo una foto es "la misma" | `DISTANCIA_DE_LA_MISMA_FOTO` (`web/scripts/achicar-foto.mjs`); cuándo dos notas son "del mismo tema", `mismoTema` (`web/scripts/fotos-notas.mjs`) |
+| Qué casos pide la segunda opinión | `esDudosa` y `PALABRAS_JUVENILES` (`ingesta/fotos.mjs`) |
+| Cuánto espera la poda | `HORAS_DE_GRACIA_DE_LA_PODA` (`web/scripts/fotos-notas.mjs`) |
 | Que el espejo de Instagram lleve (o no) la foto del banco | `FOTO_EN_INSTAGRAM` (`web/lib/tarjeta-diseno.js`; hoy `true`) |
 | Cómo se ve en la página | El bloque `{n.foto && …}` de `web/app/nota/[id]/page.js` |
 | Ilustrar con IA las notas sin foto | Workflow «Ilustrar notas sin foto» (§ 12; automático cada 2 h); qué se salta, `motivoParaSaltar` (`web/scripts/ilustrar-notas.mjs`) y `tocaUnaMuerte` (`web/scripts/fotos-notas.mjs`); el tono, `tonoDeLaNota` y `TONOS`; los topes, `TOPE_POR_CORRIDA`, `TOPE_POR_DIA` y `cupoAutomatico`; las horas, `HORAS_AUTOMATICAS` y `HORAS_ILUSTRAR_UTC` (`infra/reloj-cloudflare/worker.mjs`); con Gemini web, `docs/flujos/IMAGENES-CON-GEMINI-WEB.md` |
@@ -335,7 +370,9 @@ Ver `docs/07-REDES.md`.
 | La IA no ve una marca de agua | Una foto con el logo de otro medio en la página de una nota | Sacarla del banco (tabla de arriba) y anotar el caso |
 | El crédito de una foto de Wikimedia guardada antes del 28/09 | La página dice sólo "Foto: Wikimedia Commons" (lo nuevo ya lleva autor y licencia) | Completar a mano `credito` y `autor` de esas tres entradas del banco (`PENDIENTES.md`) |
 | **Una nota amarilla aprobada por una persona puede llevar la foto de un chico** | La exclusión de menores y víctimas depende del semáforo rojo; las notas amarillas por "niño", "adolescente" o "alumno de" que una persona publica desde el panel sí se prueban (sólo Policiales está excluida) | Mirar la foto al aprobar una nota así, o sumar la regla a `elegiblePorSeccion` |
-| La elegida no se pudo volver a bajar | Entrada con `"error":"no se pudo volver a bajar la elegida"`; esa nota no se vuelve a probar nunca | Borrar la entrada para que se reintente |
+| La elegida no se pudo guardar | Entrada con `"error":"no se pudo guardar la elegida (formato …)"` y su `imagenOriginal`; desde el 17/10 se guarda cualquier formato que ffmpeg pase a JPEG, y la nota se reintenta | Mirar el formato en la entrada |
+| La segunda opinión no estuvo | Razón «Segunda opinión no disponible…»: la nota es dudosa y el otro modelo no contestó | Se reintenta sola; si Groq no tiene cupo por días, esas notas quedan con su ilustración |
+| Una foto buena salió como «repetida» | Razón «…ya se usó o se sacó…»: comparte huella o dirección con otra nota que `mismoTema` cree de otro tema (dos títulos de la misma noticia con pocas palabras en común) | Es el lado seguro: la nota queda con su ilustración. Si importa, sumar la foto a mano desde el panel |
 | Una nota sin foto que después cuentan más medios | Se probó con los medios de ese momento y quedó `intentado`: no se vuelve a probar aunque aparezca una foto mejor | Borrar la entrada si importa |
 | Gemini y Groq sin cupo | "fotos: N notas nuevas probadas (0 con foto)"; entradas con la razón "Gemini falló…" o "Groq también falló…" | Desde el 29/09 se reintentan solas, hasta tres veces con una hora entre una y otra (`sePuedeReintentar`); si igual quedan, borrar esas entradas cuando vuelva el cupo |
 | La IA de fotos le gana cupo a la lectura con IA | Comparten `GEMINI_API_KEY_CLASIFICACION`: diez pedidos con imágenes por corrida se suman a los de las fichas | Si falta cupo, bajar `TOPE_POR_CORRIDA` |
@@ -402,7 +439,7 @@ que desde el 17/10 corre **solo cada 2 horas** y también se puede correr a mano
 todo: también escuelas, chicos, deporte infantil o juvenil, lo policial o judicial, figuras públicas, deportistas nombrados, lo que publicó una
 persona, **Policiales y Política** (con tono sobrio). **Se saltan** (con el motivo): las muertes, los velorios y los sepelios (`tocaUnaMuerte` y la
 lista de «nunca»), el semáforo rojo (abuso sexual, suicidio, femicidio, trata), las notas propias que traen su imagen (clima, efemérides,
-repasos, dólar, F1, fútbol; las de una pista sí) y lo que ya tiene foto o ilustración. **Una ilustración de Gemini web nunca se pisa.**
+repasos, dólar, F1, fútbol; las de una pista sí) y lo que ya tiene foto o una ilustración que pasó el control.
 
 **Cómo se hace.** Gemini (claves gratis: redacción para el prompt, clasificación para mirar la imagen, cada una de respaldo de la otra) lee la
 **nota completa** y escribe un prompt en inglés con el pedido de Hernán (un bodegón sin personas, superficie de trabajo gastada, sin logos ni
@@ -427,8 +464,11 @@ las que estén bien, o vacío para las que pasaron el control): no genera nada, 
 en `web/public/fotos-notas/<id>-ia.jpg` (1.200 px, JPEG) y la anota en `web/data/fotos-ia.json` (`archivo`, `credito` y `medio` «Ilustración
 generada con IA», `origen: "ia"`, `cuando`, el título, `modelo` y el prompt; `automatica: true` si fue el modo automático).
 
-**Con Gemini web** (la PC prendida, 10:00 y 18:00): mejor calidad, revisada por una persona; reemplaza a la automática y se anota con
-`modelo: 'gemini-web'`. Cómo conviven las dos: `docs/flujos/IMAGENES-CON-GEMINI-WEB.md`.
+**Gemini web, desactivado el 17/10/2026** (regla 206): 5 de sus 6 ilustraciones rompían las reglas (texto legible, marcas, gente). Queda **un
+solo camino**, el automático de Cloudflare. Las de Gemini web que ya estaban (o cualquiera sin `control` anotado: `ilustracionControlada`)
+pasan por el mismo control la próxima vez que su nota entra en una revisión: si pasan, quedan y se anota su control; si no, se reemplazan
+por una nueva o se sacan. Cada ilustración nueva guarda su `control`. La tarea programada de la PC que hacía las de Gemini web hay que
+apagarla a mano (`docs/flujos/IMAGENES-CON-GEMINI-WEB.md`).
 
 **Cuánto gasta.** Gemini, nada (claves gratis). El Worker, unas 212 neuronas por imagen (estimadas: Cloudflare no publica la tarifa de SDXL; se usa
 la de flux-schnell). Topes en el código: **12 llamadas por corrida y 20 por día** (cuentan las corridas de hoy, por su adjunto
@@ -490,3 +530,47 @@ la del Día del Sordo y la del juez Ariel Bilbao (su nombre en el título). Que 
 
 **La prueba**: `pruebas/fotos-menores-oficiales.test.mjs` (en el núcleo legal: corre en cada vuelta de «Actualizar la web»).
 
+
+## 14. Los controles del 17/10/2026 y el arreglo de los datos (reglas 203 a 206)
+
+La auditoría del 16/10 (`docs/auditoria-2-0/03-FOTOS.md`) encontró fotos mal puestas que una sola pasada de IA dejó pasar, fallas de código
+que dejaban notas con la placa, imágenes rotas en el archivo y código sin usar. Los dueños: "arreglá todo lo que puedas, borrá, mejorá",
+sin sumar costos (sólo las claves gratis y Cloudflare). Lo que cambió:
+
+| Qué | Dónde | Regla |
+|---|---|---|
+| La IA contesta si la foto corresponde, si es de archivo, si es una gráfica (flyer, captura, «Activar Windows»), si es de stock, si hay gente joven, y la describe; lo que vio queda en `vision` | `instruccion`, `motivosDeDescarte` (`ingesta/fotos.mjs`) | 203 |
+| Las fotos van a la IA achicadas; Groq con 413 prueba con una; el error de Gemini se guarda; cualquier formato que ffmpeg lea se guarda | `achicarParaIA`, `pedirAGroq`, `errorDeRespuesta`, `fotoParaGuardar` | 203 |
+| La poda espera una semana; lo podado de una nota que vuelve se reintenta | `podarFotos`, `sePuedeReintentar` | 203 |
+| El archivo toma la foto del banco en cada vuelta (sin imágenes rotas) | `fotoDelArchivoAlDia`, `generar-datos.mjs` | 203 |
+| Lo que una persona saca (`descartada`) no vuelve en esa nota ni en otra | `sePuedeReintentar`, `fotoRepetidaEnElBanco` | 203 |
+| La misma foto no ilustra dos notas de temas distintos (huella o dirección) | `huellaDeFoto`, `mismoTema`, `fotoRepetidaEnElBanco` | 204 |
+| Segunda opinión del otro modelo gratis en los casos dudosos | `esDudosa`, `conSegundaOpinion`, `revisarUnaFoto` | 204 |
+| Wikimedia: el título nombra a la persona, la foto no tiene más de dos años, no se repite y la mira la IA | `nombraALaPersona`, `buscarFotoWikimedia`, `elegirFotoParaNota` | 205 |
+| Un solo camino de ilustración (Cloudflare); las de Gemini web se controlan igual; se borró el código muerto y los modelos sin uso del Worker | `ilustrar-notas.mjs`, `infra/imagenes-cloudflare/worker.mjs` | 206 |
+| `npm run auditar-fotos` separa la foto real de la ilustración y de lo sacado | `motivoDeLaNota` (`ingesta/auditar-fotos.mjs`) | 203 |
+
+**El arreglo de los datos** (`web/scripts/arreglar-fotos-17-10.mjs`). No lo corre ningún workflow: lo corre una persona en la PC, entre dos
+corridas de «Actualizar la web» (por ejemplo a los :12 o a los :42), con el repositorio al día:
+
+    git pull --rebase
+    node web/scripts/arreglar-fotos-17-10.mjs              mira y cuenta, no cambia nada
+    node web/scripts/arreglar-fotos-17-10.mjs --aplicar    cambia los datos y las fotos
+    git commit -m "Fotos: el arreglo de la auditoría del 16/10" -- web/data/banco-fotos.json web/data/fotos-ia.json web/public/fotos-notas
+    git push
+
+Qué hace, en orden: (1) saca las fotos que la auditoría vio mal (`DESCARTES`: la captura con «Activar Windows» `1vhit3n`, el flyer de la
+rifa `66so6t`, la foto de stock `130eay0`, el pádel `1ge6irq` y el rugby del «Torneo Desarrollo» `11lwkfl`, `1mfnr70`, `1fi9fiz`, por edad
+dudosa) y las de Wikimedia viejas o de otra persona (`WIKIMEDIA_VIEJAS_O_EQUIVOCADAS`: Messi 2012, el F1 de 2016, otro Román González,
+otro Julián Álvarez, un paisaje para una diputada, retratos de 2006 a 2019), dejándolas `descartada` con su huella; (2) le pone la huella a
+cada foto del banco; (3) saca las repetidas de temas distintos (queda la de la nota más vieja); (4) vuelve a bajar las fotos de notas vivas
+que la poda borró de más, salvo las de `NO_RESTAURAR` (las dos de Virginia Aparicio: posible víctima, sin foto real por las dudas) y las que
+quedarían repetidas; (5) saca de `fotos-ia.json` las cinco de Gemini web que rompen las reglas y una automática con las tiras de Adidas
+(`ILUSTRACIONES_A_SACAR`), y anota el control de la que estaba bien. Se puede correr dos veces: lo hecho no se repite. `--sin-red` no baja
+nada. Las imágenes rotas del archivo las arregla el código en la próxima corrida.
+
+Medido el 17/10 con los datos del 16/10 a la noche (sin aplicar): de 1.117 notas con página (sin las propias), **867 con foto real, 11 con
+ilustración y 239 con la placa** (9 con la imagen rota); después del arreglo, **832 con foto real, 5 con ilustración y 280 con la placa**.
+Pierden la foto real 38 notas (7 de la auditoría, 17 de Wikimedia y 14 repetidas de otro tema) y la recuperan 3 (podadas de más); pierden la
+ilustración 6. Las notas de las últimas 24 horas que quedaron sin nada las ilustra sola la próxima corrida automática; para las demás,
+correr a mano «Ilustrar notas sin foto» con sus ids.

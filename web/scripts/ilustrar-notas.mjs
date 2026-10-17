@@ -4,7 +4,7 @@
 // 17/10 (regla 185, Hernán: "que TODAS las notas tengan, no te limites: la imagen no tiene por qué dibujar chicos"): como la ilustración NUNCA
 // lleva personas (sólo objetos), se ilustra casi todo, también escuelas, deportes infantiles, Policiales y Política (con tono sobrio). Se saltan
 // sólo las muertes, los velorios y los sepelios, el semáforo rojo, las notas propias que traen su imagen y lo que ya tiene foto o ilustración
-// (la de Gemini web, de más calidad, nunca se pisa). Lo demás lo cuidan el prompt (problemaDelPrompt) y el control con visión (mirarImagen).
+// (desde el 17/10, regla 206, una sin control —las de Gemini web— se vuelve a mirar). Lo demás lo cuidan el prompt (problemaDelPrompt) y el control con visión (mirarImagen).
 //
 // Tres modos (workflow "Ilustrar notas sin foto", .github/workflows/ilustrar-notas.yml):
 //
@@ -19,7 +19,7 @@
 //   2) APLICAR (a mano, aplicar = sí, con el número de la corrida de revisión):
 //        node web/scripts/ilustrar-notas.mjs aplicar --desde=revision
 //      Toma las imágenes de esa revisión (las de IDS, o si IDS está vacío las que pasaron el control), las vuelve a pasar por los filtros con los
-//      datos de ahora (si mientras tanto apareció una foto real o una ilustración de Gemini web, gana ésa), las guarda en
+//      datos de ahora (si mientras tanto apareció una foto real u otra ilustración, gana ésa), las guarda en
 //      web/public/fotos-notas/<id>-ia.jpg (1.200 px, JPEG) y las anota en web/data/fotos-ia.json. NO genera nada: no gasta ni una neurona.
 //   3) AUTOMÁTICO (AUTOMATICO=true; lo dispara el reloj de Cloudflare cada 2 horas de 7 a 23): revisar con el cupo repartido en el día
 //      (cupoAutomatico) y, en el job siguiente del workflow, `aplicar --automatico`, que aplica SÓLO las que pasaron el control (IDS no cuenta)
@@ -31,14 +31,20 @@
 //
 // Topes, para no gastar: 12 llamadas al Worker por corrida y 20 por día (cuentan las de las revisiones anteriores de hoy y lo ya aplicado hoy
 // con el Worker), un solo reintento por imagen. Las únicas claves que se leen son GEMINI_API_KEY_REDACCION y GEMINI_API_KEY_CLASIFICACION
-// (las dos gratis) y VIGILANTE_TOKEN (la contraseña del Worker). Ninguna se imprime.
+// (las dos gratis) y VIGILANTE_TOKEN (la contraseña del Worker). Ninguna se imprime. La clave paga de Gemini (la de las voces) nunca.
+//
+// 17/10/2026 (regla 206): UN solo camino de ilustración automática, éste. Las ilustraciones hechas a mano con Gemini web rompían las reglas
+// en 5 de 6 (texto legible, marcas, gente de fondo: auditoría del 16/10) y ese flujo quedó desactivado (docs/flujos/IMAGENES-CON-GEMINI-WEB.md).
+// Una ilustración que nunca pasó por el control con visión (`ilustracionControlada`: las de Gemini web, o cualquiera sin control anotado) ya
+// no "nunca se pisa": la revisión la mira con el mismo control que a las automáticas; si pasa, queda (y se anota su control); si no, se
+// reemplaza por una nueva o, si no se pudo hacer otra, se saca (la nota vuelve a la placa).
 
 import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { semaforoDelTexto } from '../../ingesta/ingesta.mjs';
 import { REGLAS_SEMAFORO } from '../../ingesta/fuentes.mjs';
-import { nombresDePersona } from '../../ingesta/foto-ia.mjs';
+import { nombresDePersona } from './nombres-de-persona.mjs';
 import { diaAR, horaAR } from '../../ingesta/zona.mjs';
 import { leerJson } from '../../ingesta/json.mjs';
 import { fotoParaGuardar, nombreDeFotoNueva, PESO_MINIMO_DE_UNA_FOTO } from './achicar-foto.mjs';
@@ -90,7 +96,7 @@ export function neuronasEstimadas({ ancho = ANCHO, alto = ALTO, pasos = PASOS } 
 }
 export const NEURONAS_GRATIS_POR_DIA = 10_000;
 
-/** El pedido de Hernán (el mismo de redes/probar-imagen-nota.mjs; una prueba controla que digan lo mismo). */
+/** El pedido de Hernán (16/10/2026). */
 export const PROMPT_DE_HERNAN = `Generá una imagen fotoperiodística y conceptual para ilustrar la nota periodística que te dejo abajo. Requisitos importantes:
 1. No debe aparecer ninguna persona en la imagen (completamente sin gente) para evitar confusiones de identidad.
 2. Debe ser un plano detalle o bodegón natural y espontáneo de los objetos y herramientas típicos de la actividad o profesión de la que habla la nota.
@@ -113,8 +119,15 @@ const plano = (t) => String(t ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').to
 const textoDe = (nota) => [nota?.titulo, nota?.copete, nota?.cuerpo].filter(Boolean).join('. ');
 const tieneArchivo = (e) => !!(e && e.archivo);
 
-/** ¿Esta entrada de fotos-ia.json se hizo a mano con Gemini web (docs/flujos/IMAGENES-CON-GEMINI-WEB.md)? Tiene más calidad: nunca se pisa. */
+/** ¿Esta entrada de fotos-ia.json se hizo a mano con Gemini web (docs/flujos/IMAGENES-CON-GEMINI-WEB.md, desactivado el 17/10/2026)? */
 export const esDeGeminiWeb = (e) => !!e && (e.modelo === 'gemini-web' || /gemini web/i.test(String(e.prompt ?? '')));
+
+/**
+ * ¿Esta ilustración ya pasó por el control con visión? Las que se anotan desde el 17/10/2026 guardan su `control`; las automáticas de antes
+ * (hechas por el Worker, `modelo: 'sdxl'`, que sólo se aplicaban si pasaban) cuentan como controladas. Las de Gemini web, sólo después de
+ * pasar el control (una persona las miraba, y 5 de 6 tenían texto, marcas o gente: regla 206).
+ */
+export const ilustracionControlada = (e) => !!e && (e.control?.ok === true || (!esDeGeminiWeb(e) && e.modelo === MODELO));
 
 /**
  * Por qué una nota NO lleva ilustración (el motivo, en castellano), o null si puede llevarla. Sólo mira la nota y los bancos; no usa la red.
@@ -130,7 +143,8 @@ export function motivoParaSaltar(nota, { banco = {}, manuales = {}, ilustracione
   if (tieneArchivo(banco[nota.id]) && elegiblePorSeccion(nota)) return 'ya tiene foto en el banco';
   if (tieneArchivo(manuales[nota.id])) return 'ya tiene una foto que sumó una persona';
   const il = ilustraciones[nota.id];
-  if (tieneArchivo(il)) return esDeGeminiWeb(il) ? 'ya tiene una ilustración de Gemini web (más calidad): no se pisa' : 'ya tiene una ilustración';
+  // Una ilustración sin control (las de Gemini web) no salta: la revisión la mira y, si no pasa, la reemplaza (regla 206).
+  if (tieneArchivo(il) && ilustracionControlada(il)) return 'ya tiene una ilustración';
   if (nota.semaforo === 'rojo') return 'semáforo rojo';
   const texto = textoDe(nota);
   const normal = plano(texto);
@@ -467,6 +481,9 @@ export async function revisar({
   registro(`${automatico ? 'Modo automático. ' : ''}Notas a ilustrar: ${candidatas.length} (se saltaron ${saltadas.length}). Llamadas al Worker usadas hoy: ${usadas} de ${TOPE_POR_DIA}; en esta corrida, hasta ${cupo}. Neuronas estimadas por imagen: ~${porImagen}.`);
   fs.mkdirSync(salida, { recursive: true });
   const hechas = [];
+  // Las ilustraciones que estaban sin control (regla 206): las que pasaron (se les anota el control) y las que no (se reemplazan o se sacan).
+  const revisadas = [];
+  const aSacar = [];
   let llamadas = 0;
   let sinPermiso = false;
   const anotarCuenta = () => {
@@ -476,10 +493,21 @@ export async function revisar({
   };
   anotarCuenta();
   for (const nota of candidatas) {
+    // Una ilustración sin control (de Gemini web, o vieja): primero se la mira, que no gasta neuronas. Si pasa, queda.
+    const anterior = ilustraciones[nota.id];
+    let reemplaza = null;
+    if (tieneArchivo(anterior) && !ilustracionControlada(anterior)) {
+      const ruta = path.join(rutas.carpeta, path.basename(anterior.archivo));
+      const control = fs.existsSync(ruta) ? await mirarImagen(fs.readFileSync(ruta), { claves: clavesDelControl, fetchFn, esperar }) : { ok: false, motivo: 'el archivo no está' };
+      registro(`  [${nota.id}] ilustración sin control (${esDeGeminiWeb(anterior) ? 'Gemini web' : 'sin control anotado'}): ${control.ok ? 'pasa' : control.motivo}`);
+      if (control.ok) { revisadas.push({ id: nota.id, titulo: nota.titulo, archivo: anterior.archivo, control }); continue; }
+      reemplaza = anterior.archivo;
+      aSacar.push({ id: nota.id, titulo: nota.titulo, archivo: anterior.archivo, motivo: control.motivo, razon: control.razon ?? null });
+    }
     if (sinPermiso) { saltadas.push({ id: nota.id, titulo: nota.titulo, seccion: nota.seccion, motivo: 'el Worker rechazó la contraseña (VIGILANTE_TOKEN): no se siguió' }); continue; }
     if (llamadas >= cupo) { saltadas.push({ id: nota.id, titulo: nota.titulo, seccion: nota.seccion, motivo: `sin cupo (tope de ${TOPE_POR_CORRIDA} por corrida y ${TOPE_POR_DIA} por día${automatico ? ', repartido en el día' : ''})` }); continue; }
     const tono = tonoDeLaNota(nota);
-    const item = { id: nota.id, titulo: nota.titulo, seccion: nota.seccion, fecha: nota.fecha ?? null, tono, prompt: null, archivo: null, control: null };
+    const item = { id: nota.id, titulo: nota.titulo, seccion: nota.seccion, fecha: nota.fecha ?? null, tono, prompt: null, archivo: null, control: null, ...(reemplaza ? { reemplaza } : {}) };
     let deGemini;
     try { deGemini = await pedirPrompt(nota, { claves: clavesDelPrompt, fetchFn, esperar }); } catch (e) {
       saltadas.push({ id: nota.id, titulo: nota.titulo, seccion: nota.seccion, motivo: `no se pudo escribir el prompt (${String(e?.message ?? e).slice(0, 80)})` });
@@ -512,8 +540,8 @@ export async function revisar({
   const resultado = {
     generado: ahora.toISOString(), dia, horas, ids, automatico, cupo, usadasAntes: usadas, llamadas,
     neuronasPorImagen: porImagen, neuronasEstimadas: llamadas * porImagen, modelo: MODELO, tamano: `${ANCHO}x${ALTO}`, pasos: PASOS, negativo: NEGATIVO,
-    resumen: `${hechas.filter((c) => c.archivo).length} imágenes (${listas.length} pasaron el control), ${saltadas.length} notas saltadas, ${llamadas} llamadas al Worker (~${llamadas * porImagen} neuronas de ${NEURONAS_GRATIS_POR_DIA} gratis por día).`,
-    paraAplicar: listas, candidatas: hechas, saltadas,
+    resumen: `${hechas.filter((c) => c.archivo).length} imágenes (${listas.length} pasaron el control), ${saltadas.length} notas saltadas, ${llamadas} llamadas al Worker (~${llamadas * porImagen} neuronas de ${NEURONAS_GRATIS_POR_DIA} gratis por día)${revisadas.length || aSacar.length ? `; ilustraciones sin control: ${revisadas.length} pasaron, ${aSacar.length} no` : ''}.`,
+    paraAplicar: listas, candidatas: hechas, saltadas, revisadas, aSacar,
   };
   fs.writeFileSync(path.join(salida, 'candidatas.json'), `${JSON.stringify(resultado, null, 1)}\n`, 'utf8');
   fs.writeFileSync(path.join(salida, 'index.html'), paginaDeRevision(resultado), 'utf8');
@@ -525,10 +553,12 @@ export async function revisar({
 // ------------------------------------------------------------------ aplicar
 
 /** La entrada de web/data/fotos-ia.json. El crédito es siempre la etiqueta. */
-export function entradaDeIlustracion({ archivo, nota, prompt, ahora = new Date(), automatico = false }) {
+export function entradaDeIlustracion({ archivo, nota, prompt, ahora = new Date(), automatico = false, control = null }) {
   return {
     archivo, credito: CREDITO_ILUSTRACION, medio: CREDITO_ILUSTRACION, origen: 'ia', cuando: ahora.toISOString(),
     titulo: nota?.titulo ?? null, modelo: MODELO, prompt: prompt ?? null, ...(automatico ? { automatica: true } : {}),
+    // Lo que dijo el control con visión (17/10/2026, regla 206): queda en la ficha para auditar.
+    ...(control ? { control: { ok: control.ok === true, motivo: control.motivo ?? null, razon: control.razon ?? null } } : {}),
   };
 }
 
@@ -557,10 +587,15 @@ export function aplicar({ desde, ids = [], automatico = false, informe = null, a
     .map((c) => ({ id: c.id, titulo: c.titulo ?? null, motivo: c.archivo ? (c.control?.motivo ?? 'no pasó el control') : (c.error ?? 'sin imagen') }));
   const no = (c, motivo) => { noAplicadas.push({ id: c.id, titulo: c.titulo ?? null, motivo }); registro(`  ${c.id}: no se aplica (${motivo})`); };
   fs.mkdirSync(rutas.carpeta, { recursive: true });
+  // Lo que había en el libro cuando se hizo la revisión: si mientras tanto llegó otra ilustración para esa nota, no se pisa a ciegas.
+  const cambioDesdeLaRevision = (c) => (libro[c.id]?.archivo ?? null) !== (c.reemplaza ?? null) && !!libro[c.id]?.archivo;
   for (const c of elegidas) {
     const nota = porId.get(c.id);
     if (!nota) { no(c, 'la nota ya no está publicada'); continue; }
-    const motivo = motivoParaSaltar(nota, { banco, manuales, ilustraciones: nuevo });
+    if (cambioDesdeLaRevision(c)) { no(c, `mientras tanto llegó otra ilustración (${libro[c.id].archivo})${esDeGeminiWeb(libro[c.id]) ? ' de Gemini web' : ''}: no se pisa`); continue; }
+    // La que se reemplaza (no pasó el control) no cuenta como "ya tiene una ilustración".
+    const sinLaAnterior = c.reemplaza ? Object.fromEntries(Object.entries(nuevo).filter(([id]) => id !== c.id)) : nuevo;
+    const motivo = motivoParaSaltar(nota, { banco, manuales, ilustraciones: sinLaAnterior });
     if (motivo) { no(c, motivo); continue; }
     if (quedan <= 0) { no(c, `tope de ${TOPE_POR_DIA} por día`); continue; }
     const origen = path.join(desde, path.basename(c.archivo));
@@ -570,23 +605,39 @@ export function aplicar({ desde, ids = [], automatico = false, informe = null, a
     const ocupados = [...fs.readdirSync(rutas.carpeta).filter((f) => f.startsWith(`${c.id}-ia`)), libro[c.id]?.archivo ?? ''];
     const nombre = `${nombreDeFotoNueva(`${c.id}-ia`, ocupados)}.jpg`;
     fs.writeFileSync(path.join(rutas.carpeta, nombre), bytes);
-    nuevo[c.id] = entradaDeIlustracion({ archivo: `fotos-notas/${nombre}`, nota, prompt: c.prompt, ahora, automatico });
+    nuevo[c.id] = entradaDeIlustracion({ archivo: `fotos-notas/${nombre}`, nota, prompt: c.prompt, ahora, automatico, control: c.control });
     aplicadas.push(c.id);
     quedan -= 1;
     registro(`  ${c.id}: guardada como fotos-notas/${nombre}${c.control?.ok ? '' : ` (pedida a mano; el control había dicho: ${c.control?.motivo ?? 'nada'})`}`);
   }
-  if (aplicadas.length) {
+  // Las ilustraciones sin control que la revisión miró (regla 206): la que pasó queda con su control anotado; la que no pasó y no se
+  // reemplazó, se saca (la nota vuelve a la placa; la poda borra el archivo). Sólo si el libro sigue teniendo la misma que se miró.
+  const revisadas = [];
+  for (const x of revision.revisadas ?? []) {
+    if (nuevo[x.id]?.archivo !== x.archivo) continue;
+    nuevo[x.id] = { ...nuevo[x.id], control: { ok: true, razon: x.control?.razon ?? null, cuando: ahora.toISOString() } };
+    revisadas.push(x.id);
+    registro(`  ${x.id}: la ilustración sin control pasó el control y queda`);
+  }
+  const sacadas = [];
+  for (const x of revision.aSacar ?? []) {
+    if (aplicadas.includes(x.id) || nuevo[x.id]?.archivo !== x.archivo) continue;
+    delete nuevo[x.id];
+    sacadas.push({ id: x.id, titulo: x.titulo ?? null, archivo: x.archivo, motivo: x.motivo ?? null });
+    registro(`  ${x.id}: se saca la ilustración ${x.archivo} (no pasó el control: ${x.motivo ?? 'sin motivo'}) y no hubo otra`);
+  }
+  if (aplicadas.length || revisadas.length || sacadas.length) {
     fs.mkdirSync(path.dirname(rutas.ilustraciones), { recursive: true });
     fs.writeFileSync(rutas.ilustraciones, `${JSON.stringify(nuevo, null, 1)}\n`, 'utf8');
   }
   const detalle = aplicadas.map((id) => ({ id, titulo: nuevo[id].titulo, archivo: nuevo[id].archivo, prompt: nuevo[id].prompt, control: revision.candidatas.find((c) => c.id === id)?.control?.razon ?? null }));
   if (informe) {
     fs.mkdirSync(informe, { recursive: true });
-    fs.writeFileSync(path.join(informe, 'aplicadas.json'), `${JSON.stringify({ cuando: ahora.toISOString(), automatico, aplicadas: detalle, noAplicadas }, null, 1)}\n`, 'utf8');
+    fs.writeFileSync(path.join(informe, 'aplicadas.json'), `${JSON.stringify({ cuando: ahora.toISOString(), automatico, aplicadas: detalle, noAplicadas, revisadas, sacadas }, null, 1)}\n`, 'utf8');
     for (const d of detalle) fs.copyFileSync(path.join(rutas.carpeta, path.basename(d.archivo)), path.join(informe, path.basename(d.archivo)));
   }
-  registro(`Aplicadas: ${aplicadas.length}.`);
-  return { aplicadas, noAplicadas, detalle, libro: nuevo };
+  registro(`Aplicadas: ${aplicadas.length}.${revisadas.length ? ` Sin control que pasaron: ${revisadas.length}.` : ''}${sacadas.length ? ` Sacadas: ${sacadas.length}.` : ''}`);
+  return { aplicadas, noAplicadas, detalle, libro: nuevo, revisadas, sacadas };
 }
 
 /**
@@ -649,7 +700,9 @@ async function principal() {
     const resultado = await revisar({ ...comunes(), ids, automatico: esAutomatico });
     resumenParaGitHub(resultado);
     // Para el workflow: si ninguna pasó el control, el job "Guardar" del modo automático ni arranca.
-    if (process.env.GITHUB_OUTPUT) { try { fs.appendFileSync(process.env.GITHUB_OUTPUT, `para_aplicar=${resultado.paraAplicar.length}\n`); } catch { /* no frena */ } }
+    // También cuenta lo que hay que anotar o sacar de las ilustraciones sin control (regla 206): eso también lo guarda el job "Guardar".
+    const paraGuardar = resultado.paraAplicar.length + (resultado.revisadas?.length ?? 0) + (resultado.aSacar?.length ?? 0);
+    if (process.env.GITHUB_OUTPUT) { try { fs.appendFileSync(process.env.GITHUB_OUTPUT, `para_aplicar=${paraGuardar}\n`); } catch { /* no frena */ } }
   } else if (accion === 'aplicar') {
     const r = aplicar({ desde: opcion('desde') || 'revision', ids, automatico: esAutomatico, informe: opcion('informe') || null });
     resumenDeAplicadas(r, esAutomatico);

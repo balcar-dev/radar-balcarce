@@ -329,9 +329,13 @@ test('regla 186: prendida, una nota que no la permite (nombres de chicos, salud,
 });
 
 test('regla 186: prendida, si hay una foto SIN chicos que sirve, se usa ésa y no queda como excepción', async () => {
+  // Es una nota de chicos (escuela): desde el 17/10/2026 (regla 204) la foto sin excepción la mira también Groq, que acá está de acuerdo.
+  const gemini = iaQueResponde({ elegida: 'B', razon: 'x', fotos: [{ letra: 'A', tiene_marca: false, menor: true }, { letra: 'B', tiene_marca: false, menor: false }] });
   const r = await elegirFoto(ESCUELA_DE_BASQUET, conDatos(ESCUELA_DE_BASQUET.fuentesConsultadas), {
-    clave: 'g', claveRespaldo: null, fotosMenoresOficiales: true,
-    fetchFn: iaQueResponde({ elegida: 'B', razon: 'x', fotos: [{ letra: 'A', tiene_marca: false, menor: true }, { letra: 'B', tiene_marca: false, menor: false }] }),
+    clave: 'g', claveRespaldo: 'r', fotosMenoresOficiales: true,
+    fetchFn: async (url, opciones) => (String(url).includes('api.groq.com')
+      ? { ok: true, json: async () => ({ choices: [{ message: { content: JSON.stringify({ menor: false, tiene_marca: false, grafica: false, corresponde: 'si' }) } }] }) }
+      : gemini(url, opciones)),
   });
   assert.equal(r.elegida.medio, 'Radio Gabal (FM 104.1)');
   assert.equal(r.elegida.excepcion, undefined);
