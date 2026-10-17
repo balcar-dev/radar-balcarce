@@ -18639,5 +18639,67 @@
    "descripcion": "Retrato de Aranaga en el estudio de Radio Gabal con fondo verde."
   },
   "huella": "0717151416367c2a"
+ },
+ "1kgatx3": {
+  "archivo": "fotos-notas/1kgatx3.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Virginia Aparicio presenta los resultados del proyecto SPRINT sobre plaguicidas",
+  "enlace": "https://www.diariolavanguardia.com/noticias/45106-mas-alla-de-la-ideologia-la-necesidad-de-un-debate-con-rigor/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66073.png",
+  "razon": "Es la única foto disponible, cumple con todos los requisitos de calidad y contenido sin marcas ni menores.",
+  "cuando": "2026-10-17T15:02:01.683Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Virginia Aparicio disertando en una presentación"
+  },
+  "huella": "060426e687474747"
+ },
+ "gfxquk": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Una serie de ficción populariza un truco con cerveza para el jardín",
+  "razon": "La segunda opinión (groq, porque la nota habla de chicos o de categorías juveniles) descartó la de La Nación (parece una foto de stock); la de Radio Mitre (parece una foto de stock): no se elige ninguna.",
+  "cuando": "2026-10-17T15:02:01.683Z",
+  "intentos": 1,
+  "fuentes": 2
+ },
+ "vltlkl": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Lanzan una campaña de concientización sobre el cáncer de mama",
+  "razon": "Ninguna de las opciones muestra una escena real del hecho, tratándose de fotos de estudio de tipo stock para una campaña.",
+  "cuando": "2026-10-17T15:02:01.683Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "1gd5mnh": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "La crecida de los ríos obliga a evacuar a 472 personas en Corrientes",
+  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
+  "cuando": "2026-10-17T15:02:01.683Z",
+  "intentos": 1,
+  "fuentes": 4,
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+ },
+ "4m5150": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "La inteligencia artificial acelera la ingeniería inversa y enciende alertas",
+  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
+  "cuando": "2026-10-17T15:02:01.683Z",
+  "intentos": 1,
+  "fuentes": 1,
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  }
 }

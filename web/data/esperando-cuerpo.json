@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-17T14:32:38.768Z",
+ "generado": "2026-10-17T15:02:19.802Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -120,55 +120,6 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
-  },
-  {
-   "id": "1gd5mnh",
-   "titulo": "Más de 400 personas abandonaron sus hogares en Corrientes tras la crecida de los ríos Paraná y Uruguay",
-   "copete": "La crecida de los ríos Paraná y Uruguay o bligó a 472 personas a salir de sus casas en Corrientes , entre evacuados y quienes se trasladaron por cuenta propia. El último relevamiento de Defensa Civil, difundido el viernes por la noche, registró 206 evacuados y 266 autoevacuados…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-17T07:08:45.000Z",
-   "fuentes": [
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/sociedad/2026/10/17/mas-de-400-personas-abandonaron-sus-hogares-en-corrientes-tras-la-crecida-de-los-rios-parana-y-uruguay/",
-     "fecha": "2026-10-17T07:08:45.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/sociedad/2026/10/17/mas-de-400-personas-dejaron-sus-casas-en-corrientes-por-la-crecida-de-los-rios-parana-y-uruguay/",
-     "fecha": "2026-10-17T14:01:46.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/sociedad/fuerte-crecida-de-los-rios-parana-y-uruguay-por-el-nino-472-personas-tuvieron-que-dejar-sus-hogares-en-corrientes/",
-     "fecha": "2026-10-17T10:54:04.000Z"
-    },
-    {
-     "medio": "La Gaceta (Tucumán)",
-     "enlace": "https://www.lagaceta.com.ar/nota/1158463/sociedad/crecida-rios-parana-uruguay-obligo-mas-400-personas-dejar-sus-casas-corrientes.html",
-     "fecha": "2026-10-17T11:25:00.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (promesa): el título dice 400 y el cuerpo no lo explica; sin esas oraciones quedan 149 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "4m5150",
-   "titulo": "Qué pasa cuando la IA aprende a hackear todo lo que nos rodea",
-   "copete": "La IA permite rescatar los aparatos que los fabricantes abandonan. Pero esa misma llave maestra puede abrir, infectar y controlar millones de dispositivos conectados en hogares, comercios y fábricas.",
-   "seccion": "Tecnología",
-   "fecha": "2026-10-17T05:01:31.000Z",
-   "fuentes": [
-    {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/columnistas/que-pasa-cuando-la-ia-aprende-a-hackear-todo-lo-que-nos-rodea-por-maximiliano-firtman.phtml",
-     "fecha": "2026-10-17T05:01:31.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 3 problemas (forma, numero): el cuerpo trae un escape sin decodificar (barra-u…): texto mal escrito, se vuelve a pedir; sin esas oraciones quedan 65 pal",
-   "maximo": 3
   },
   {
    "id": "43uic4",

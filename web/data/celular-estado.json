@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T14:32:38.768Z",
- "portada": 76,
- "archivo": 1224,
- "esperandoCuerpo": 6,
+ "generado": "2026-10-17T15:02:19.802Z",
+ "portada": 80,
+ "archivo": 1229,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-17T14:32:38.791Z",
+  "generado": "2026-10-17T15:02:19.839Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-17T12:07:11.409Z"
    },
    {
@@ -167,18 +167,16 @@
      "id": "daz0ef",
      "titulo": "Revelan la verdadera falla del auto de Carlos Reutemann en 1981",
      "cuando": "2026-10-17T12:45:48.541Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "19nga6r",
      "titulo": "Santiago Gilligan busca sumar sus primeros minutos en la Serie A de Italia",
-     "seccion": "Deportes",
-     "marcada": false
+     "cuando": "2026-10-17T14:35:51.990Z"
     }
    ],
-   "cupo": 3,
-   "proximoDesde": "2026-10-17T14:15:48.541Z",
+   "cola": [],
+   "cupo": 2,
+   "proximoDesde": "2026-10-17T16:05:51.990Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
