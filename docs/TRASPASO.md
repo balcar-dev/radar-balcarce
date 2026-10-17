@@ -18,9 +18,9 @@ leer primero `CLAUDE.md`, después este archivo y `PENDIENTES.md`. Última actua
 - Sitio: sitemap de noticias, `/hoy`, firma de IA adentro de "Fuentes", datos estructurados. Redes: hashtags fijos, lo que va a Facebook solo Balcarce o lo más contado.
 
 ## En curso (si se corta, retomar de acá)
-1. Agente de criterio simple + estadística de selección + fuentes de los grandes (Clarín, Infobae, La Nación) + instrucciones de la IA más cortas.
-2. Agente de animaciones del repaso, guiones con continuidad y procedimiento de voces nuevas.
-3. Preguntas a ChatGPT, Gemini y Meta AI abiertas en el Chrome (posicionamiento en IA, MCP, mejor forma de postear en Facebook): leer las respuestas y anotarlas en `docs/auditoria-2-0/08-IDEAS-DE-OTRAS-IA.md`.
+1. **Agente de animaciones del repaso, guiones con continuidad y voces nuevas**: trabaja en el worktree `.claude/worktrees/agent-ad2027a8ec13c274b` (rama `worktree-agent-ad2027a8ec13c274b`). Si terminó, juntarlo: `git merge --no-ff worktree-agent-ad2027a8ec13c274b`, resolver choques de números de regla (usó desde la 300), correr `npm test` y subir. Si no terminó, ver qué commits tiene con `git log` en esa rama y decidir si se junta tal cual.
+2. Respuestas de ChatGPT y Gemini abiertas en el Chrome sobre posicionamiento en buscadores y en IA, MCP y cómo postear en Facebook: leerlas y anotarlas en `docs/auditoria-2-0/08-IDEAS-DE-OTRAS-IA.md`.
+3. Estado completo y lista de pendientes, en un solo lugar: `docs/HOY.html`.
 
 ## Pendiente de Hernán y Andrés (una sola lista: `docs/PASOS-PARA-HERNAN-Y-ANDRES.html`)
 Clave de OpenRouter en GitHub; variable `FOTOS_MENORES_OFICIALES`; cuentas de Bluesky y Telegram; permisos del token de Cloudflare; dos tokens de GitHub y la llave de R2 (para la mudanza); ordenar las claves de Google; borrar `panel\datos` y `respaldos` en la PC.
