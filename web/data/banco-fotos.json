@@ -16731,11 +16731,10 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Reprograman la Caravana de la Alegría para noviembre",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:31:31.461Z",
-  "intentos": 4,
-  "fuentes": 3,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "razon": "Todas las fotos disponibles muestran menores de edad reconocibles, por lo que no pueden ser publicadas según la política del medio.",
+  "cuando": "2026-10-17T11:31:53.125Z",
+  "intentos": 5,
+  "fuentes": 3
  },
  "1kd7az5": {
   "medio": "La Nueva",
@@ -17498,11 +17497,10 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "La Corte Suprema remata camiones y obradores de Austral Construcciones",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:31:31.461Z",
-  "intentos": 4,
-  "fuentes": 5,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "razon": "Ninguna foto muestra los camiones y obradores de Austral Construcciones mencionados en la nota; hay retratos de personas o capturas genéricas de subastas. (la IA nombró a \"Lázaro Báez\", pero el título no: sin foto de Wikimedia)",
+  "cuando": "2026-10-17T11:31:53.125Z",
+  "intentos": 5,
+  "fuentes": 5
  },
  "fgcjjj": {
   "intentado": true,
@@ -17808,14 +17806,28 @@
   "huella": "8a0b0b0b4a25672b"
  },
  "1sf5zma": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1sf5zma.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Santilli pide acuerdos a gobernadores y cuestiona a Kicillof",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:31:31.461Z",
-  "intentos": 3,
-  "fuentes": 5,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://tn.com.ar/politica/2026/10/16/santilli-pidio-acuerdos-con-los-gobernadores-para-avanzar-con-las-reformas-y-cuestiono-a-kicillof-por-la-falta-de-inversiones/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/diego-santilli-en-el-cfi-foto-jefatura-de-gabinete-IJENJ7UZQFB4LKS5CTNYQGH37U.jpg?auth=4696c8eba5d8996cac038c794e906aa5eab7fc6bccb911ef39535a7879cc60d5&width=1023",
+  "razon": "Es la foto con mejor encuadre y calidad que corresponde a la nota y no tiene marcas ni problemas.",
+  "cuando": "2026-10-17T11:31:53.125Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Diego Santilli hablando con un micrófono en la mano sentado en un sillón."
+  },
+  "huella": "1b2b2e266969191a"
  },
  "1iqabic": {
   "intentado": true,
@@ -17828,24 +17840,64 @@
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
  "10pra4l": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/10pra4l.jpg",
+  "medio": "El Eco de Tandil",
+  "credito": "Foto: El Eco de Tandil",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "La CGT reclama unidad al peronismo y apunta contra el Gobierno",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:31:31.461Z",
-  "intentos": 3,
-  "fuentes": 4,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.eleco.com.ar/nacionales/la-cgt-celebro-el-17-de-octubre-y-reclamo-dejar-de-lado-los-egos-y-las-vanidades",
+  "imagenOriginal": "https://cdnartic.ar/_Mv7dwap3oCWRHpH72AO7zEDkC4=/1200x630/smart/filters:format(jpeg):quality(70)/https://cdn.eleco.com.ar/media/2026/10/cgt_1.webp",
+  "razon": "La foto C muestra claramente el evento de la CGT con mejor encuadre y sin la marca de agua del medio que tiene la foto A.",
+  "cuando": "2026-10-17T11:31:53.125Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Tres dirigentes sindicales haciendo el símbolo de la victoria junto a un atril de la CGT"
+  },
+  "huella": "86c6c2caca8ccccc"
  },
  "1jpywoz": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1jpywoz.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "La Base Aérea de Morón despide con un homenaje al meteorólogo Fernando Confessore",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:31:31.461Z",
-  "intentos": 3,
-  "fuentes": 5,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://tn.com.ar/videos/show/2026/10/16/la-base-aerea-de-moron-despidio-a-fernando-confessore-con-un-emotivo-homenaje-extranaremos-siempre-su-presencia/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/https%3A%2F%2Fthumbs.vodgc.net%2F1-14-323848282a0a1792178420928-1792178887.jpg?auth=61b3c55444c41555ad555da705153cec0a0e06979df899b39f72334e00560002&width=1023",
+  "razon": "Es la única foto nítida y centrada en el hecho sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-17T11:31:53.125Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Un oficial hablando en un atril con el escudo de la Fuerza Aérea frente a un grupo de personas.",
+   "segunda": {
+    "proveedor": "groq",
+    "marca": false,
+    "menor": false,
+    "jovenes": true,
+    "deArchivo": true,
+    "grafica": false,
+    "stock": false,
+    "corresponde": "si",
+    "descripcion": "Un oficial de la Fuerza Aérea habla en un atril durante un acto al aire libre, con una multitud de civiles y personal militar de pie detrás."
+   },
+   "dudosa": "la nota habla de chicos o de categorías juveniles"
+  },
+  "huella": "d538948e8c0c068e"
  },
  "1qgpd66": {
   "archivo": "fotos-notas/1qgpd66.jpg",
@@ -17893,14 +17945,28 @@
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
  "apovoe": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/apovoe.jpg",
+  "medio": "A24",
+  "credito": "Foto: A24",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Mediodía Noticias despide con profunda emoción a Fernando Confessore",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:31:31.461Z",
-  "intentos": 3,
-  "fuentes": 3,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.a24.com/primiciasya/el-desgarrador-llanto-luis-otero-al-aire-la-muerte-fernando-confessore-n1607250",
+  "imagenOriginal": "https://media.a24.com/p/d9377291a0def5c6a6bdd9bdd9c0fc9a/adjuntos/296/imagenes/009/833/0009833880/1200x675/smart/fer-confessore.jpg",
+  "razon": "Muestra claramente el estudio y a Fernando Confessore en un plano adecuado, sin marcas de agua ni menores.",
+  "cuando": "2026-10-17T11:31:53.125Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Conductor hablando y moviendo las manos en el estudio con imagen de fondo"
+  },
+  "huella": "d3dcf4e4a8a1a98d"
  },
  "bfzt9z": {
   "intentado": true,
