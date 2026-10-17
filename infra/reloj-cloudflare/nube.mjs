@@ -1,0 +1,78 @@
+// A quién le pide el reloj cada trabajo: a GitHub (como siempre) o a Cloudflare (18/10/2026, mudanza: docs/etapa-10-operacion/MIGRACION-A-CLOUDFLARE.md).
+//
+// Un solo interruptor, la variable `NUBE` del reloj: la lista de workflows (separados por comas) que ya corren en Cloudflare. Vacía o ausente,
+// el reloj pide TODO a GitHub, idéntico a antes de la mudanza. Para pasar un trabajo a Cloudflare se agrega su archivo a la lista; para volver
+// atrás se saca (o se vacía) y se vuelve a subir el reloj: en minutos, sin tocar ningún otro programa.
+//
+//   actualizar.yml       → el motor: se pide un build a Workers Builds con su "deploy hook" (secreto MOTOR_DEPLOY_HOOK), si el presupuesto de minutos
+//                          del mes lo permite (infra/motor-cloudflare/presupuesto.mjs; lee el registro del depósito R2 MOTOR)
+//   vigilancia.yml, auditoria-ia.yml, pistas.yml, informe-diario.yml, ilustrar-notas.yml, redes.yml
+//                        → el Worker `radar-balcarce-tareas` (binding de servicio TAREAS; infra/tareas-cloudflare/), con la contraseña VIGILANTE_TOKEN
+//
+// Sin dependencias.
+
+import { debeCorrer, mesDe, claveDelMes } from '../motor-cloudflare/presupuesto.mjs';
+
+export const MOTOR = 'actualizar.yml';
+
+/** Qué tarea del Worker de tareas hace cada workflow. */
+export const TAREA_DE = {
+  'vigilancia.yml': 'vigilancia',
+  'auditoria-ia.yml': 'auditoria-ia',
+  'pistas.yml': 'pistas',
+  'informe-diario.yml': 'informe-diario',
+  'ilustrar-notas.yml': 'ilustrar-notas',
+  'redes.yml': 'redes',
+};
+
+export const TRABAJOS_QUE_SE_PUEDEN_MUDAR = [MOTOR, ...Object.keys(TAREA_DE)];
+
+/** El conjunto de workflows que van a Cloudflare, de la variable NUBE ("actualizar.yml, vigilancia.yml" o JSON). Lo desconocido se ignora. */
+export function enLaNube(env = {}) {
+  const crudo = String(env?.NUBE ?? '').trim();
+  if (!crudo) return new Set();
+  let lista;
+  try { const j = JSON.parse(crudo); lista = Array.isArray(j) ? j : crudo.split(','); } catch { lista = crudo.split(','); }
+  const todos = lista.map((x) => String(x).trim().toLowerCase()).filter(Boolean);
+  if (todos.includes('todo')) return new Set(TRABAJOS_QUE_SE_PUEDEN_MUDAR);
+  return new Set(todos.filter((x) => TRABAJOS_QUE_SE_PUEDEN_MUDAR.includes(x)));
+}
+
+async function leerJson(deposito, clave) {
+  try { const o = await deposito.get(clave); return o ? JSON.parse(await o.text()) : null; } catch { return null; }
+}
+
+/** Pide una vuelta del motor (un build de Workers Builds), salvo que se haya pasado del presupuesto del mes. */
+export async function despertarMotor(env, { fetchFn = fetch, ahora = new Date() } = {}) {
+  if (!env.MOTOR_DEPLOY_HOOK) return { archivo: MOTOR, ok: false, estado: 0, motivo: 'falta el secreto MOTOR_DEPLOY_HOOK (el «deploy hook» de Workers Builds)' };
+  let decision = null;
+  if (env.MOTOR) {
+    const [registro, estado] = await Promise.all([leerJson(env.MOTOR, claveDelMes(mesDe(ahora))), leerJson(env.MOTOR, 'motor/estado.json')]);
+    decision = debeCorrer({ registro, ultimaVueltaBuena: estado?.ultimaBuena ?? null, ahora, sinTope: /^\s*(si|sí)\s*$/i.test(String(env.MOTOR_SIN_TOPE ?? '')) });
+    if (!decision.correr) return { archivo: MOTOR, ok: true, saltada: true, estado: 0, motivo: decision.motivo };
+  }
+  const r = await fetchFn(env.MOTOR_DEPLOY_HOOK, { method: 'POST' });
+  return { archivo: MOTOR, ok: r.status >= 200 && r.status < 300, estado: r.status, ...(decision ? { presupuesto: `${decision.gastado}/${decision.corresponde} min` } : {}) };
+}
+
+/** Pide una tarea al Worker de tareas por su binding de servicio. */
+export async function despertarTarea({ archivo, inputs }, env, { fetchFn = null } = {}) {
+  const tarea = TAREA_DE[archivo];
+  if (!tarea) return { archivo, ok: false, estado: 0, motivo: 'esa tarea no está en la nube' };
+  if (!env.TAREAS) return { archivo, ok: false, estado: 0, motivo: 'falta el binding TAREAS (el reloj se subió sin las partes de la nube)' };
+  if (!env.VIGILANTE_TOKEN) return { archivo, ok: false, estado: 0, motivo: 'falta el secreto VIGILANTE_TOKEN del reloj' };
+  const pedido = new Request('https://tareas.interno/correr', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', 'x-token': env.VIGILANTE_TOKEN },
+    body: JSON.stringify({ tarea, inputs: inputs ?? {}, desde: 'reloj' }),
+  });
+  const r = await (fetchFn ? fetchFn(pedido) : env.TAREAS.fetch(pedido));
+  let cuerpo = null;
+  try { cuerpo = await r.json(); } catch { cuerpo = null; }
+  return { archivo, ok: r.status >= 200 && r.status < 300 && cuerpo?.ok !== false, estado: r.status, ...(cuerpo?.motivo ? { motivo: String(cuerpo.motivo).slice(0, 160) } : {}) };
+}
+
+/** Despierta un trabajo en la nube (el motor o una tarea). */
+export function despertarEnLaNube(trabajo, env, deps = {}) {
+  return trabajo.archivo === MOTOR ? despertarMotor(env, deps) : despertarTarea(trabajo, env, deps);
+}

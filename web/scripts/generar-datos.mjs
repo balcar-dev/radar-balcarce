@@ -170,7 +170,8 @@ const PAPELERA = path.join(AQUI, '..', '..', '.cache', 'papelera.json');
 // y las decisiones en panel/datos/, se retiró. En la PC no corre solo: haría la corrida entera (la ingesta, la lectura y la
 // redacción con IA, las fotos) y dejaría web/data/ cambiado. Para ver el sitio con los datos de GitHub alcanza con `git pull` y
 // `npm run build`; para correrlo igual en la PC, ARMAR_EN_LA_PC=1 (y lo que cambie en web/data/ no se sube).
-if (process.env.GITHUB_ACTIONS !== 'true' && process.env.ARMAR_EN_LA_PC !== '1') {
+// 18/10/2026: la vuelta del motor en Cloudflare (infra/motor-cloudflare/vuelta.mjs, Workers Builds) también arma de verdad: RADAR_MOTOR=cloudflare.
+if (process.env.GITHUB_ACTIONS !== 'true' && process.env.RADAR_MOTOR !== 'cloudflare' && process.env.ARMAR_EN_LA_PC !== '1') {
   console.log('  generar-datos arma la web de verdad (ingesta, IA, fotos) y corre en GitHub Actions: en la PC no hace nada.');
   console.log('  Para ver el sitio: git pull y npm run build. Para correrlo igual: ARMAR_EN_LA_PC=1 npm run datos (sin subir web/data/).');
   process.exit(0);

@@ -4,6 +4,8 @@
 // Necesita UN secreto, GITHUB_TOKEN: un token de grano fino de la cuenta del repositorio, sólo para este repositorio, con "Actions: lectura y
 // escritura". Se carga una sola vez (docs/08-INFRAESTRUCTURA.md, "El reloj de Cloudflare"). Nunca se escribe en el código.
 
+import { enLaNube, despertarEnLaNube } from './nube.mjs';
+
 export const REPOSITORIO = 'radarbalcarce/radar-balcarce';
 export const RAMA = 'main';
 
@@ -83,15 +85,28 @@ export async function despertar({ archivo, inputs }, { token, fetchFn = fetch })
 
 export default {
   async scheduled(evento, env) {
-    if (!env.GITHUB_TOKEN) throw new Error('Falta el secreto GITHUB_TOKEN del reloj.');
     const cuando = new Date(evento.scheduledTime);
     const minuto = cuando.getUTCMinutes();
+    const trabajos = trabajosDelMinuto(minuto, cuando.getUTCHours());
+    // 18/10/2026: lo que figura en la variable NUBE se le pide a Cloudflare (infra/reloj-cloudflare/nube.mjs); lo demás, a GitHub, como siempre.
+    // Sin NUBE (lo de siempre) no cambia nada: todo a GitHub y el mismo error si falta la llave.
+    const nube = enLaNube(env);
+    const aGitHub = trabajos.filter((t) => !nube.has(t.archivo));
+    const aLaNube = trabajos.filter((t) => nube.has(t.archivo));
+    if (aGitHub.length && !env.GITHUB_TOKEN) throw new Error('Falta el secreto GITHUB_TOKEN del reloj.');
     const resultados = [];
-    for (const t of trabajosDelMinuto(minuto, cuando.getUTCHours())) resultados.push(await despertar(t, { token: env.GITHUB_TOKEN }));
-    const fallas = resultados.filter((x) => !x.ok);
+    for (const t of aGitHub) resultados.push(await despertar(t, { token: env.GITHUB_TOKEN }));
+    // Las de la nube salen juntas (una tarda minutos y no tiene por qué demorar a las otras); un error de una no tapa a las demás.
+    const enNube = await Promise.all(aLaNube.map((t) => despertarEnLaNube(t, env).catch((e) => ({ archivo: t.archivo, ok: false, estado: 0, motivo: String(e?.message ?? e).slice(0, 160) }))));
+    resultados.push(...enNube);
     console.log(JSON.stringify({ minuto, resultados }));
     // Un error hace que Cloudflare marque la ejecución como fallida (se ve en el panel del Worker).
-    if (fallas.length) throw new Error(`GitHub no aceptó: ${fallas.map((f) => `${f.archivo} (${f.estado})`).join(', ')}`);
+    const quejas = [];
+    const fallasDeGitHub = resultados.slice(0, aGitHub.length).filter((x) => !x.ok);
+    const fallasDeLaNube = enNube.filter((x) => !x.ok);
+    if (fallasDeGitHub.length) quejas.push(`GitHub no aceptó: ${fallasDeGitHub.map((f) => `${f.archivo} (${f.estado})`).join(', ')}`);
+    if (fallasDeLaNube.length) quejas.push(`la nube no aceptó: ${fallasDeLaNube.map((f) => `${f.archivo} (${f.estado || f.motivo})`).join(', ')}`);
+    if (quejas.length) throw new Error(quejas.join('; '));
   },
   // Para ver que está vivo (no despierta nada, no necesita el token).
   async fetch() { return new Response('Reloj de Radar Balcarce: en hora.', { status: 200, headers: { 'content-type': 'text/plain; charset=utf-8' } }); },
