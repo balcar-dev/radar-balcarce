@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-17T16:02:29.051Z",
+ "generado": "2026-10-17T16:31:44.487Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -87,14 +87,14 @@
      "fecha": "2026-10-16T15:48:28.000Z"
     },
     {
-     "medio": "El Economista",
-     "enlace": "https://eleconomista.com.ar/politica/deberian-estar-preocupados-santilli-lanzo-una-fuerte-advertencia-gobernadores-gana-kicillof-n98922",
-     "fecha": "2026-10-16T13:44:00.000Z"
-    },
-    {
      "medio": "Radio Mitre",
      "enlace": "https://radiomitre.cienradios.com/videos/diego-santilli-los-que-deberian-estar-preocupados-son-los-gobernadores-si-el-kirchnerismo-vuelve-y-gana-kicillof/",
      "fecha": "2026-10-16T13:52:11.000Z"
+    },
+    {
+     "medio": "El Economista",
+     "enlace": "https://eleconomista.com.ar/politica/deberian-estar-preocupados-santilli-lanzo-una-fuerte-advertencia-gobernadores-gana-kicillof-n98922",
+     "fecha": "2026-10-16T13:44:00.000Z"
     },
     {
      "medio": "La Gaceta (Tucumán)",
@@ -144,7 +144,7 @@
      "fecha": "2026-10-17T15:10:00.000Z"
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "sin material",
    "maximo": 3
   },
@@ -159,23 +159,6 @@
      "medio": "iProUP",
      "enlace": "https://www.iproup.com/finanzas/72426-cathie-wood-invierte-millones-en-ia-y-tecnologia-espacial",
      "fecha": "2026-10-17T11:20:00.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "sin material",
-   "maximo": 3
-  },
-  {
-   "id": "7zwjs1",
-   "titulo": "Galicia redefine su atención con IA: qué cambiará en las sucursales",
-   "copete": "",
-   "seccion": "Tecnología",
-   "fecha": "2026-10-17T07:01:20.112Z",
-   "fuentes": [
-    {
-     "medio": "iProUP",
-     "enlace": "https://www.iproup.com/innovacion/72029-galicia-redefine-su-atencion-con-ia-que-cambiara-en-las-sucursales",
-     "fecha": "2026-10-17T09:15:00.000Z"
     }
    ],
    "intentos": 3,

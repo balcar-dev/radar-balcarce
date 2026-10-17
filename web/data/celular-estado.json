@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T16:02:29.051Z",
- "portada": 76,
- "archivo": 1231,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-17T16:31:44.487Z",
+ "portada": 74,
+ "archivo": 1229,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-17T16:02:29.087Z",
+  "generado": "2026-10-17T16:31:44.507Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,19 +126,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 30,
-    "notas": [
-     {
-      "id": "1e6e9wy",
-      "titulo": "Docentes y estatales bonaerenses discuten una nueva oferta salarial",
-      "seccion": "Economía"
-     },
-     {
-      "id": "1mfnr70",
-      "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
-      "seccion": "Deportes"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    },
    {
     "nombre": "podcast",

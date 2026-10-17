@@ -16346,7 +16346,8 @@
   "imagenOriginal": "https://www.cronica.com.ar/files/image/1721/1721575/6ad11ed8d364f_600_315!.jpg?s=fe5656d4f517804a693a619a1312ae21&d=1792033200",
   "razon": "La foto B muestra claramente el trofeo de la Supercopa de manera nítida y sin marcas de agua ni menores.",
   "cuando": "2026-10-15T19:32:32.961Z",
-  "huella": "1e16373759513333"
+  "huella": "1e16373759513333",
+  "ausenteDesde": "2026-10-17T16:31:44.477Z"
  },
  "fpal84": {
   "medio": "La Nación",
@@ -16654,7 +16655,8 @@
   "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-15-22-0-59Lalcec__3_.JPG",
   "razon": "Es la única opción disponible, cumple con los requisitos de calidad, no tiene marcas de agua del medio ni menores de edad.",
   "cuando": "2026-10-16T03:06:06.531Z",
-  "huella": "02b6b6787173b3f2"
+  "huella": "02b6b6787173b3f2",
+  "ausenteDesde": "2026-10-17T16:31:44.477Z"
  },
  "w9mlsu": {
   "archivo": "fotos-notas/w9mlsu.jpg",
@@ -18639,7 +18641,8 @@
    "corresponde": "si",
    "descripcion": "Retrato de Aranaga en el estudio de Radio Gabal con fondo verde."
   },
-  "huella": "0717151416367c2a"
+  "huella": "0717151416367c2a",
+  "ausenteDesde": "2026-10-17T16:31:44.477Z"
  },
  "1kgatx3": {
   "archivo": "fotos-notas/1kgatx3.jpg",
@@ -18773,5 +18776,29 @@
    "descripcion": "Cristina Kirchner señalando hacia adelante"
   },
   "huella": "3128293929213134"
+ },
+ "15p2o2h": {
+  "archivo": "fotos-notas/15p2o2h.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Bill Gates inicia la construcción de un reactor nuclear comercial",
+  "enlace": "https://www.infobae.com/tecno/2026/10/17/bill-gates-inicia-la-construccion-de-un-reactor-nuclear-dara-energia-a-400000-hogares/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/46OURQ2XUJGNVPHSJP2J2XVYZY.jpg?auth=a7a7bbe82d2e26b312dfe00af0914f9b144a217fca7741123c25ba88745a5cc2&smart=true&width=1200&height=630&quality=85",
+  "razon": "Es la única opción disponible, cumple con los criterios de calidad y corresponde directamente al hecho.",
+  "cuando": "2026-10-17T16:31:41.442Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Bill Gates con casco y chaleco reflectante en la obra de construcción del reactor nuclear."
+  },
+  "huella": "525ac20222cacb48"
  }
 }
