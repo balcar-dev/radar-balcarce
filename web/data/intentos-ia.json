@@ -171,11 +171,6 @@
   "ultimo": "2026-10-16T03:06:00.556Z",
   "motivo": "con cuerpo"
  },
- "16s8yom": {
-  "intentos": 1,
-  "ultimo": "2026-10-10T00:02:03.806Z",
-  "motivo": "con cuerpo"
- },
  "16u2f62": {
   "intentos": 1,
   "ultimo": "2026-10-14T18:02:18.837Z",
@@ -899,6 +894,11 @@
   "ultimo": "2026-10-14T13:02:21.999Z",
   "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
+ "1n6g7ka": {
+  "intentos": 1,
+  "ultimo": "2026-10-17T00:31:23.782Z",
+  "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 49 palabras"
+ },
  "1n6j2j2": {
   "intentos": 1,
   "ultimo": "2026-10-11T00:32:09.786Z",
@@ -1504,11 +1504,6 @@
   "intentos": 1,
   "ultimo": "2026-10-13T21:31:54.790Z",
   "motivo": "con cuerpo"
- },
- "6grr5e": {
-  "intentos": 1,
-  "ultimo": "2026-10-10T00:02:03.806Z",
-  "motivo": "cuerpo corto (64 palabras)"
  },
  "6gwup5": {
   "intentos": 4,
@@ -2315,6 +2310,11 @@
   "intentos": 2,
   "ultimo": "2026-10-12T12:01:38.087Z",
   "motivo": "con cuerpo"
+ },
+ "rng086": {
+  "intentos": 1,
+  "ultimo": "2026-10-17T00:31:23.782Z",
+  "motivo": "cuerpo corto (68 palabras)"
  },
  "rvlfgq": {
   "intentos": 1,
