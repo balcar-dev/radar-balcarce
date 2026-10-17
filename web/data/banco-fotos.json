@@ -16668,14 +16668,28 @@
   "huella": "25666262b3d3111b"
  },
  "ddz0um": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/ddz0um.jpg",
+  "medio": "TyC Sports",
+  "credito": "Foto: TyC Sports",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Ignacio Fernández se emociona hasta las lágrimas al recordar a Diego Maradona",
-  "razon": "Groq también falló: HTTP 429: Request too large for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on output tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T04:31:14.056Z",
-  "intentos": 4,
-  "fuentes": 6,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.tycsports.com/liga-profesional-de-futbol/nacho-fernandez-se-quebro-al-recordar-a-maradona-id766606.html",
+  "imagenOriginal": "https://media.tycsports.com/files/2026/10/15/996463/nacho-fernandez-se-quebro-al-recordar-a-maradonb_862x485.webp",
+  "razon": "Es la única foto de la entrevista donde Ignacio Fernández se muestra emocionado con la mano en la cabeza, sin marcas añadidas por el medio, sin menores y con excelente nitidez.",
+  "cuando": "2026-10-17T10:31:48.980Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Primer plano de Ignacio Fernández con la mano en la frente conteniendo la emoción"
+  },
+  "huella": "33f9f9d134d9b4f6"
  },
  "3gzh4e": {
   "medio": "Olé",
@@ -17406,14 +17420,28 @@
   "huella": "152160721959310c"
  },
  "q299p0": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/q299p0.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Anses paga a jubilados y asignaciones con terminación 5",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T04:31:14.056Z",
-  "intentos": 4,
-  "fuentes": 4,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.infobae.com/economia/2026/10/16/anses-quienes-cobran-hoy-viernes-16-de-octubre-de-2026/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/VUZSSQY7K5DFHIK67KMTTJWGEU.jpg?auth=19a732901d2338a3cee68c5b3109917ce72eb6b8b9661462257fe5eccbc92cc0&smart=true&width=1200&height=630&quality=85",
+  "razon": "Es la única foto que corresponde perfectamente a la temática de jubilados y Anses, con buena calidad y sin problemas de marcas, menores o formato gráfico.",
+  "cuando": "2026-10-17T10:31:48.980Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Cartel institucional de ANSES al aire libre junto a un árbol"
+  },
+  "huella": "868e4ecede1e3e32"
  },
  "1wze6ju": {
   "archivo": "fotos-notas/1wze6ju.jpg",
@@ -18211,5 +18239,14 @@
    "descripcion": "Cosechadora trabajando en un campo de soja y descargando en un tractor con acoplado tolva."
   },
   "huella": "0c6266c20a095123"
+ },
+ "p3f4x9": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Robinho Quinto pide disculpas tras likear críticas a Martínez Quarta",
+  "razon": "La segunda opinión (groq, porque la nota habla de chicos o de categorías juveniles) descartó la de TyC Sports (no corresponde a la nota); la de Crónica (no corresponde a la nota): no se elige ninguna. (se probó una foto libre de \"Robinho Quinto\" en Wikimedia Commons de los últimos 2 años, sin resultado)",
+  "cuando": "2026-10-17T10:31:48.980Z",
+  "intentos": 1,
+  "fuentes": 3
  }
 }
