@@ -17979,14 +17979,28 @@
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
  "fzzf69": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/fzzf69.jpg",
+  "medio": "C5N",
+  "credito": "Foto: C5N",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Rafael Grossi avanza en la carrera para la secretaría general de la ONU",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T06:31:39.806Z",
-  "intentos": 3,
-  "fuentes": 3,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.c5n.com/mundo/carrera-la-secretaria-general-la-onu-el-argentino-rafael-grossi-sumo-apoyos-pero-enfrenta-dos-vetos-clave-n251836",
+  "imagenOriginal": "https://media.c5n.com/p/54a1f7811b4307b6168a6f61c8e657eb/adjuntos/326/imagenes/000/403/0000403656/1200x675/smart/rafael-grossi.jpg",
+  "razon": "La foto B es de archivo y la A es un logo gráfico, por lo que la C es la única opción válida.",
+  "cuando": "2026-10-17T12:32:14.384Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Rafael Grossi hablando en un atril."
+  },
+  "huella": "1111010028605067"
  },
  "vaow4u": {
   "archivo": "fotos-notas/qrho5d.jpg",
@@ -18017,11 +18031,10 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "El dólar mayorista finaliza la semana con una suba y cotiza a $1.518",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T06:31:39.806Z",
-  "intentos": 3,
-  "fuentes": 2,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "razon": "La mejor foto era la de El Eco de Tandil, pero no se puede usar (parece una foto de stock), y ninguna de las otras sirve: no se elige ninguna.",
+  "cuando": "2026-10-17T12:32:14.384Z",
+  "intentos": 4,
+  "fuentes": 2
  },
  "qrho5d": {
   "archivo": "fotos-notas/qrho5d.jpg",
@@ -18377,5 +18390,125 @@
    "descripcion": "Jugadores de la selección de hockey sobre patines abrazados festejando"
   },
   "huella": "fb63351c4a555632"
+ },
+ "daz0ef": {
+  "archivo": "fotos-notas/daz0ef.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Revelan la verdadera falla del auto de Carlos Reutemann en 1981",
+  "enlace": "https://www.infobae.com/deportes/2026/10/17/a-45-anos-del-dia-que-carlos-reutemann-perdio-el-titulo-de-f1-la-revelacion-sobre-la-verdadera-falla-que-tuvo-su-auto/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/TCNZUOVMEFDFZM3JM254H34ZNQ.jpg?auth=009d077d34eca324ead06800cd6073665cd814440c5d3fbf64ccaf4bd1f54212&smart=true&width=1200&height=630&quality=85",
+  "razon": "Muestra el auto de Carlos Reutemann en pista de forma clara y sin personas ajenas o marcas agregadas.",
+  "cuando": "2026-10-17T12:32:14.384Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Carlos Reutemann conduciendo su monoplaza en pista."
+  },
+  "huella": "e7eaaaf269240f0d"
+ },
+ "181owly": {
+  "archivo": "fotos-notas/181owly.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Desarrollan un motor en hilo flexible para integrar en la ropa",
+  "enlace": "https://www.infobae.com/tecno/2026/10/17/crean-un-motor-con-forma-de-hilo-que-podria-tejerse-en-la-ropa-y-asistir-el-movimiento-humano/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/VVHPJ5BTGJCTPFCWPKKYFAKHHY.jpg?auth=e1112cd6a1724d1bf01e989468bc3528eb88ea0d07c380db170f169e343b6051&smart=true&width=1200&height=630&quality=85",
+  "razon": "Es la única foto disponible, ilustra perfectamente el motor en hilo flexible sobre una mano y cumple con todos los requisitos de calidad y política.",
+  "cuando": "2026-10-17T12:32:14.384Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Mano con un hilo flexible conductor enroscado"
+  },
+  "huella": "610f1715357f7b3f"
+ },
+ "gqhyjb": {
+  "archivo": "fotos-notas/gqhyjb.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Boca vence a Talleres y Arruabarrena evalúa a Paredes para la Sudamericana",
+  "enlace": "https://www.infobae.com/deportes/2026/10/17/12-frases-de-arruabarrena-tras-la-victoria-de-boca-de-la-posible-titularidad-de-paredes-ante-vasco-a-un-pedido-de-perdon-a-un-periodista/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/F4NN44YHKVDGZO7MUDU7SJFPAI.JPG?auth=42f04b52ea633e1e6725b7fd1f08498f71d9c527cd59a4036342e0efbda72349&smart=true&width=1200&height=630&quality=85",
+  "razon": "Muestra claramente al director técnico Arruabarrena dándole indicaciones a Paredes en el campo de juego, cumpliendo con la temática central de la nota sin inconvenientes de menores, marcas añadidas o gráficos.",
+  "cuando": "2026-10-17T12:32:14.384Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "El DT Arruabarrena hablando con Paredes en el partido."
+  },
+  "huella": "3d0b950c45455ad9"
+ },
+ "1kblme4": {
+  "archivo": "fotos-notas/1kblme4.jpg",
+  "medio": "La Gaceta (Tucumán)",
+  "credito": "Foto: La Gaceta (Tucumán)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La CGT conmemora el 17 de octubre y recuerda el origen del peronismo",
+  "enlace": "https://www.lagaceta.com.ar/nota/1158371/opinion/dia-lealtad-de-se-trataba-eso.html",
+  "imagenOriginal": "https://img.lagaceta.com.ar/fotos/notas/2026/10/16/lealtad-peronista-cada-17-octubre-vuelve-poner-debate-identidad-historia-divisiones-internas-justicialismo-1158371-165950.jpg",
+  "razon": "Es una fotografía histórica nítida que ilustra perfectamente el origen del peronismo el 17 de octubre sin marcas añadidas ni menores reconocibles en primer plano.",
+  "cuando": "2026-10-17T12:32:14.384Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Vista general de la histórica concentración en la Plaza de Mayo el 17 de octubre"
+  },
+  "huella": "4d054d25a5a9b533"
+ },
+ "961i45": {
+  "archivo": "fotos-notas/961i45.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Servicio Meteorológico emite alertas amarillas por tormentas",
+  "enlace": "https://tn.com.ar/sociedad/2026/10/17/hay-alerta-amarilla-por-tormentas-en-4-provincias-del-sur-para-este-sabado-17-de-octubre/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/hay-alerta-amarilla-por-tormentas-fuertes-en-sectores-del-sur-argentino-foto-adobe-stock-EEA2Q7K2OZBDLKHFBLAWFEYVUI.jpg?auth=465c4ebe01635d8265563747538ae2739ddbd76c88d85ca15adab67c80362173&width=1023",
+  "razon": "Ilustra claramente una tormenta eléctrica sobre una ciudad, cumpliendo con los criterios y sin marcas ni menores.",
+  "cuando": "2026-10-17T12:32:14.384Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Tormenta eléctrica con rayos sobre la ciudad"
+  },
+  "huella": "330bc3271d1d0413"
  }
 }
