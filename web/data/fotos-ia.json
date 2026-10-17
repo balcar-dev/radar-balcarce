@@ -198,5 +198,37 @@
    "motivo": null,
    "razon": "Un teclado y un mouse sobre una mesa de madera."
   }
+ },
+ "p3f4x9": {
+  "archivo": "fotos-notas/p3f4x9-ia.jpg",
+  "credito": "Ilustración generada con IA",
+  "medio": "Ilustración generada con IA",
+  "origen": "ia",
+  "cuando": "2026-10-17T12:21:49.632Z",
+  "titulo": "Robinho Quinto pide disculpas tras likear críticas a Martínez Quarta",
+  "modelo": "sdxl",
+  "prompt": "Candid photojournalistic close-up still life of a classic leather soccer ball resting on a worn wooden stadium bench next to a generic blank white smartphone showing glowing abstract notification dots on its dark screen, sunlit green grass pitch background with soft bokeh, bright natural warm daylight, vibrant and cheerful colors, no people, no text, no logos, 16:9 aspect ratio, bright warm sunny daylight, vivid clean cheerful colors, blank paper, no writing, no letters, no signs, no logos, no people",
+  "automatica": true,
+  "control": {
+   "ok": true,
+   "motivo": null,
+   "razon": "Un balón de fútbol sobre una estructura de madera con un fondo verde borroso."
+  }
+ },
+ "c1ho07": {
+  "archivo": "fotos-notas/c1ho07-ia.jpg",
+  "credito": "Ilustración generada con IA",
+  "medio": "Ilustración generada con IA",
+  "origen": "ia",
+  "cuando": "2026-10-17T12:21:49.632Z",
+  "titulo": "Un estudio vincula el inicio de antipsicóticos con mayor riesgo de diabetes",
+  "modelo": "sdxl",
+  "prompt": "Candid photojournalistic close-up still life of a worn wooden medical desk with a digital glucometer, a strip of blank prescription pads, a simple metal pill organizer, and a traditional analog weighing scale, natural daylight, soft neutral tones, blurred clinic background with bokeh effect, realistic photojournalism style, no people, no text, no logos, 16:9 aspect ratio, natural neutral daylight, true-to-life colors, blank paper, no writing, no letters, no signs, no logos, no people",
+  "automatica": true,
+  "control": {
+   "ok": true,
+   "motivo": null,
+   "razon": "Un dispositivo electrónico o calculadora sobre una mesa de madera."
+  }
  }
 }
