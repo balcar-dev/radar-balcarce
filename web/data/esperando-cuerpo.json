@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-17T00:31:36.612Z",
+ "generado": "2026-10-17T01:02:19.952Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -89,8 +89,8 @@
      "fecha": "2026-10-17T00:10:28.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo corto (68 palabras)",
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"martes\" y la fuente no; sin esas oraciones quedan 25 palabras",
    "maximo": 3
   },
   {
@@ -154,6 +154,11 @@
      "medio": "Ámbito",
      "enlace": "https://www.ambito.com/politica/diego-santilli-los-gobernadores-deberian-estar-preocupados-un-eventual-regreso-del-kirchnerismo-n6334610",
      "fecha": "2026-10-16T16:29:00.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/diego-santilli-comparte-cumbre-gobernadores-abordar-obras-e-inversiones-n6334470",
+     "fecha": "2026-10-16T12:58:00.000Z"
     },
     {
      "medio": "La Gaceta (Tucumán)",
@@ -273,23 +278,6 @@
    "intentos": 5,
    "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 5
-  },
-  {
-   "id": "1n6g7ka",
-   "titulo": "El Ministerio de Desarrollo Agrario y el CPR Balcarce reforzaron los controles de pesca en Laguna La Brava",
-   "copete": "El Club de Pesca Balcarce gestionó la intervención de organismos provinciales y locales para intensificar la fiscalización en la zona de la cola de la laguna. Los operativos buscan garantizar el cumplimiento de la Ley Provincial 11.477, prevenir la pesca ilegal y proteger los…",
-   "seccion": "Política",
-   "fecha": "2026-10-17T00:31:13.977Z",
-   "fuentes": [
-    {
-     "medio": "Diario La Vanguardia",
-     "enlace": "https://www.diariolavanguardia.com/noticias/45105-el-ministerio-de-desarrollo-agrario-y-el-cpr-balcarce-reforzaron-los-controles-de-pesca-en-laguna-la-brava/",
-     "fecha": null
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 49 palabras",
-   "maximo": 3
   },
   {
    "id": "8sfd4e",
