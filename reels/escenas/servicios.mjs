@@ -28,8 +28,6 @@ function cruzVerde(t, cx, cy, escala) {
   return `${onda}<g transform="translate(${cx} ${cy}) scale(${s.toFixed(3)}) rotate(${((1 - e) * -90).toFixed(1)})"><circle r="150" fill="#E3F1E9"/><rect x="-42" y="-116" width="84" height="232" rx="18" fill="${VERDE}"/><rect x="-116" y="-42" width="232" height="84" rx="18" fill="${VERDE}"/></g>`;
 }
 
-const NUMERO_EN_LETRAS = { 1: 'una', 2: 'dos', 3: 'tres', 4: 'cuatro' };
-
 /**
  * La farmacia de turno. `farmacias`: [{ nombre, direccion, telefono }] (una, dos o tres); `hasta`: "De turno hasta mañana a las 8:30."
  */

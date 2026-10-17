@@ -131,7 +131,7 @@ cómo funciona algo que ya anda), **para decidir** (propuesta o página con caja
 | `docs/seo/SEARCH-CONSOLE-16-10.md` | Lo que dice Google: 1.085 páginas indexadas, 813 impresiones y 46 clics en 3 semanas | foto del 16/10 |
 | `docs/historico/AUDITORIA-FOTOS-15-10.md` | Cuántas notas salían sin foto y por qué (88 % con foto en 14 días); la superó `docs/auditoria-2-0/03-FOTOS.md` | foto del 15/10 |
 | `docs/redes/ARCHIVO-DE-PIEZAS.md` | Dónde se guardan para siempre los videos, audios y placas (R2, depósito `radar-piezas`; la variable `R2_PIEZAS` se cargó el 15/10, aunque el documento diga «apagado») | vigente |
-| `docs/redes/PLAN-REELS-OTRAS-REDES.md` | Publicar los reels en TikTok, YouTube, etc. (`redes/destinos.mjs`, simula) | para decidir |
+| `docs/redes/PLAN-REELS-OTRAS-REDES.md` | Publicar los reels en TikTok, YouTube, etc. (el esqueleto `redes/destinos.mjs` se sacó el 17/10; queda en el historial) | para decidir |
 | `docs/redes/AUTOMATIZAR-REDES-ALTERNATIVAS.md` | Alternativas para automatizar TikTok, YouTube, X, Threads y el canal de WhatsApp | investigación (15/10) |
 | `docs/redes/FORMATOS-POR-RED.md` | Qué se puede publicar en cada red, con qué medidas y qué enlaces | investigación (16/10) |
 | `docs/etapa-1-fuentes/LISTA-ELEGIDA.md` | La lista de fuentes elegida el 15/10 (Balcarce + 50 del país + 10 de la zona), ya aplicada | vigente |

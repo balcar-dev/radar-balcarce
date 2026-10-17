@@ -1,6 +1,6 @@
 # Criterio de las redes de Radar Balcarce
 
-*Actualizado el 29/09/2026.* Es **el documento único** de lo que sale en Instagram y
+*Actualizado el 17/10/2026.* Es **el documento único** de lo que sale en Instagram y
 Facebook: cómo suena la voz, qué dice cada pieza y qué no dice nunca. Hernán y Andrés
 lo pidieron así: cada pieza con su criterio, **siempre la misma voz** para cada pieza,
 siempre "Radar Balcarce" y siempre `radarbalcarce.com`.
@@ -13,8 +13,7 @@ Lo editorial de las notas (qué se publica y cómo se escribe) está en
 (sección 1), los números (sección 5) y las voces con su estilo (sección 6), entre las
 marcas `<!-- … -->`. No hay otra copia. Para cambiar algo se edita acá, sin borrar
 las marcas, y se corre `npm test`: si falta una parte o un número no coincide con el
-código, la prueba falla antes de publicar. El panel de la PC, si está abierto, hay que
-reiniciarlo para que lo lea.
+código, la prueba falla antes de publicar.
 
 ## 1. Quiénes somos, dicho siempre igual
 
@@ -46,9 +45,17 @@ voz** (el reparto de la sección 6) y a lo largo del día se alternan.
 - **No hay voz de respaldo** ("mejor nunca Elena", 28/09). Si Gemini no contesta, la
   pieza no sale en esa vuelta y se vuelve a pedir en la siguiente mientras dure su
   horario. Es preferible una historia que falta a una que suena a otro medio.
-- **El cupo es de 10 audios por día** (la clave de redes es gratis). Un día normal usa 6
-  y, algunos días, los útiles, la agenda o un aviso de clima. Si el cupo se acaba, lo
-  que falta ese día no sale.
+- **El cupo es de 10 audios por día** (la clave de redes es gratis). Un día normal usa 7
+  a 9: los tres repasos, los dos climas, la farmacia y la efeméride (Participá no gasta
+  mientras valga su video armado de antemano); algunos días, además, los útiles, la agenda,
+  el feriado o un aviso de clima.
+- **El cupo se cuenta** (17/10, regla 208): cada pedido a la voz, también un reintento, es
+  un audio y se anota antes de hacerlo. Las piezas tienen un orden de importancia: **el
+  repaso**, después **el clima y la farmacia**, después **la efeméride y el feriado**, y al
+  final lo opcional (Participá, los útiles, la agenda). Si pedir una voz dejaría sin audio a
+  una pieza más importante que todavía falta hoy, esa pieza no se arma (nunca con otra voz) y
+  la corrida dice por qué. Una pieza que se armó y no llegó a salir se vuelve a subir con el
+  mismo video, sin gastar otro audio. Si el cupo se acaba, lo que falta ese día no sale.
 - Al texto se le suma aparte un **estilo corto** según el momento del día (mañana, tarde
   o noche): cambia el ánimo, no la voz. Nadie elige otra voz ni cambia la velocidad a
   mano.
@@ -93,7 +100,7 @@ Lo común a todas:
   farmacia y las semanales, **1 de cada 3 días** (lo decide la fecha, no el azar); los
   otros días cierran con "Radar Balcarce".
 - Los horarios están en el código (`redes/piezas.mjs`, `panel/horarios.mjs`) y en
-  `docs/07-REDES.md`. La pestaña Calendario del panel de la PC no los cambia en GitHub.
+  `docs/07-REDES.md`.
 
 ### Clima de la mañana · 7:00 · 10 a 20 segundos
 
@@ -130,6 +137,9 @@ Lo común a todas:
   ni "e/"), "Guardá el dato, que te puede salvar una madrugada" y firma.
 - **No lleva:** hasta qué hora está abierta (eso va en la web), teléfonos, ni la fuente
   (el Colegio de Farmacéuticos, La Vanguardia o Radio Gabal no se nombran).
+- **Si el Colegio no publica la de hoy** (pasó el 12/10, feriado), se toma la de La
+  Vanguardia, salvo que Radio Gabal diga otra; si no hay ninguna confiable, ese día la pieza
+  no sale (mejor sin farmacia que con una dudosa).
 - **Bien:** "Buenas noches, Balcarce. Si esta noche necesitás una farmacia, la de turno
   es Del Pueblo, en Calle 17 número 1140. Guardá el dato, que te puede salvar una
   madrugada. Radar Balcarce."
@@ -157,6 +167,13 @@ Lo común a todas:
   son las mejores rankeadas" (Hernán).
 - **No lleva nunca:** Política ni Policiales, nada en rojo, las notas propias del sitio,
   la fuente de ninguna nota, ni nombres de víctimas o menores.
+- **Cómo se ve** (17/10, regla 209): el video sigue a la voz. Arranca con la primera nota,
+  que es la más fuerte, en grande; mientras la voz cuenta cada nota se ve **su foto** (la de
+  la web, o su ilustración; si no tiene, una placa con el color de su sección), su titular y
+  "2 de 4" arriba. La foto lleva su crédito **abajo, como epígrafe**, nunca encima. Al
+  despedirse, la lista completa, que es también **la tapa del reel** (lo que se ve en el
+  perfil antes de darle play). Una foto con chicos que entró por la excepción de la regla 186
+  no va a las redes.
 - **Bien (mañana):** "Buen día, Balcarce. Las noticias para arrancar el día. Para
   arrancar: Ferroviarios gana el Apertura. Cambiando de tema: Cortan el agua en el centro.
   Y para cerrar: Nueva muestra en el museo. Que tengan un buen día. Todo lo demás lo
@@ -209,7 +226,9 @@ Lo común a todas:
 
 - **Reel en Facebook e Instagram y, con el mismo video, historia:** los tres repasos, "Un día como hoy", el feriado, la agenda,
   los teléfonos útiles y las piezas de Participá.
-- **Historia en Instagram; en Facebook, historia y también reel:** el clima de la mañana, el de la noche y la farmacia de turno.
+- **Historia en Instagram; en Facebook, historia y también reel:** el clima de la mañana, el de la noche y la farmacia de turno. El
+  texto del reel de Facebook lleva el enlace a su página: `radarbalcarce.com/clima` o `radarbalcarce.com/farmacias` (17/10, regla 210).
+  Instagram, sin enlaces.
 - **Sólo historia:** los avisos de clima (no esperan nada).
 - Todo reel lleva en el posteo «Voz generada con inteligencia artificial.» (regla 114).
 
@@ -400,8 +419,8 @@ que esta tabla diga lo mismo que el código.
 <!-- COLORES:FIN -->
 
 **Colores reservados** (elegidos el 30/09 para que, cuando nazca una sección o una pieza nueva, ya tenga
-un color notorio y distinto de todos; están en `COLORES_RESERVADOS`, `reels/placa.mjs`): fucsia `#C0258F` y celeste `#0A7C99`.
-tabla de arriba. "Participá con reclamos" usa el color de Balcarce.
+un color notorio y distinto de todos; están en `COLORES_RESERVADOS`, `reels/placa.mjs`): fucsia `#C0258F` y celeste `#0A7C99`. Se
+suman a la tabla de arriba el día que se estrenan. "Participá con reclamos" usa el color de Balcarce.
 
 **Reglas de uso**
 
@@ -431,3 +450,8 @@ llevan una entrada animada, calculada cuadro a cuadro: cada bloque (rótulo, tí
 a uno, subiendo unos pocos píxeles y apareciendo, mientras la firma de abajo ya está; al terminar (menos de 2,3
 segundos) el cuadro es la placa quieta de siempre. Una barra roja avanza abajo durante toda la pieza. Los
 subtítulos de la voz van en la misma franja de siempre.
+
+**El repaso es una secuencia de placas** (17/10, regla 209, `reels/escenas/repaso.mjs`): una por nota (rótulo del repaso
+y "i de n" arriba con rayitas de avance, la foto en una caja de 936 x 585 con bordes redondeados, el crédito abajo en gris,
+el rótulo de la sección en su color y el titular grande) y, al final, la lista de siempre. Cada placa entra cuando la voz
+empieza la oración de su nota, con la misma entrada animada. La tapa del reel (el primer cuadro) es la lista.

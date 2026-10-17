@@ -13,7 +13,7 @@ import {
 import { PORTADA, PUNTAJE } from './criterio.mjs';
 import { marcarMuyContadas } from './muy-contada.mjs';
 import { porQueNoEsNota } from './no-es-nota.mjs';
-import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
+import { diaDeTurno, fechaEnBalcarce, comoISO } from './utiles.mjs';
 import { menorPorEdad } from './menores.mjs';
 import { sinFenomenoClimatico, sinExencionesDelAmarillo, sinSorteosDeportivos, tituloConArgentino } from './exenciones.mjs';
 import { agruparConDetalle, leerMemoria, guardarMemoria, desdeLaMemoria, MEMORIA_DE_ACA } from './cruce.mjs';
@@ -1270,21 +1270,61 @@ function controlDelCronograma({ mes, anio, turnos }, ahora = new Date()) {
   return avisos;
 }
 
+const DIAS_DE_LA_SEMANA = ['DOMINGO', 'LUNES', 'MARTES', 'MIERCOLES', 'JUEVES', 'VIERNES', 'SABADO'];
+
+/**
+ * Si el cronograma del Colegio no trae el turno de HOY, lo completa con La Vanguardia (17/10/2026, regla 210). El 12/10 (feriado) el
+ * Colegio publicó el 11 y el 13, sin el 12: la web no tuvo farmacia de turno ese día y la pieza de las 19 no salió (el reloj la pidió
+ * veinte veces). La Vanguardia publica la de hoy con su dirección; si Radio Gabal dice otra cosa para hoy, no se completa nada (mejor
+ * sin farmacia que con una dudosa). El turno completado lleva `fuente` y queda un aviso. Pura: se prueba sin red.
+ */
+export function completarTurnoDeHoy(turnos = [], { ahora = new Date(), vanguardia = [], gabal = [] } = {}) {
+  const delTurno = diaDeTurno(ahora);
+  const dia = delTurno.getDate();
+  const fecha = comoISO(delTurno);
+  if (turnos.some((t) => (t.fecha ? t.fecha === fecha : t.dia === dia))) return { turnos, aviso: null };
+  const deHoy = (vanguardia ?? []).filter((t) => t.dia === dia && t.nombre && t.direccion);
+  if (!deHoy.length) return { turnos, aviso: null };
+  const nombres = new Set(deHoy.map((t) => normalizar(t.nombre)));
+  const gabalHoy = (gabal ?? []).filter((t) => t.dia === dia);
+  if (gabalHoy.length && !gabalHoy.some((t) => nombres.has(normalizar(t.nombre)))) {
+    return { turnos, aviso: `el Colegio no trae la farmacia de hoy y La Vanguardia (${deHoy.map((t) => t.nombre).join(' y ')}) y Radio Gabal (${gabalHoy.map((t) => t.nombre).join(' y ')}) no coinciden: hoy no hay farmacia de turno publicada` };
+  }
+  const turno = {
+    dia,
+    diaSemana: DIAS_DE_LA_SEMANA[delTurno.getDay()],
+    farmacias: deHoy.map((t) => t.nombre.toUpperCase()),
+    detalle: deHoy.map((t) => ({ nombre: t.nombre.trim(), direccion: t.direccion, telefono: null })),
+    mes: delTurno.getMonth() + 1,
+    fecha,
+    fuente: 'La Vanguardia',
+  };
+  const salida = [...turnos, turno].sort((a, b) => String(a.fecha ?? '').localeCompare(String(b.fecha ?? '')));
+  return { turnos: salida, aviso: `el Colegio no trae la farmacia de hoy (${fecha}): se completó con La Vanguardia (${deHoy.map((t) => t.nombre).join(' y ')})${gabalHoy.length ? ', y Radio Gabal coincide' : ''}` };
+}
+
 async function traerFarmacias() {
   const html = await traer('https://www.colbalcarce.com/');
   const texto = sinEtiquetas(html);
   // Las direcciones salen de dos lados. El Colegio es el oficial y trae
   // teléfono, así que manda; La Vanguardia tapa los huecos. Se piden a la
-  // vez para no sumar espera.
-  const [oficial, enLaVanguardia] = await Promise.all([
+  // vez para no sumar espera. La Vanguardia y Radio Gabal se piden UNA vez
+  // y sirven también para el cruce y para completar el turno de hoy.
+  const [oficial, turnosVanguardia, turnosGabal] = await Promise.all([
     traerDirectorioFarmacias().catch(() => ({})),
-    turnosDeLaVanguardia().then(directorioDeLaVanguardia).catch(() => ({})),
+    turnosDeLaVanguardia().catch(() => null),
+    turnosDeGabal().catch(() => null),
   ]);
+  const enLaVanguardia = turnosVanguardia ? directorioDeLaVanguardia(turnosVanguardia) : {};
   const directorio = { ...enLaVanguardia, ...oficial };
 
-  const { mes, anio, turnos } = parsearCronograma(texto, directorio);
+  const leido = parsearCronograma(texto, directorio);
+  const { mes, anio } = leido;
+  const completado = completarTurnoDeHoy(leido.turnos, { vanguardia: turnosVanguardia ?? [], gabal: turnosGabal ?? [] });
+  const { turnos } = completado;
 
-  const avisos = controlDelCronograma({ mes, anio, turnos });
+  const avisos = controlDelCronograma({ mes, anio, turnos: leido.turnos });
+  if (completado.aviso) avisos.push(completado.aviso);
 
   // Una farmacia sin dirección se publica igual, pero avisando: es preferible
   // dar el nombre solo a inventar una calle.
@@ -1299,7 +1339,10 @@ async function traerFarmacias() {
   // fuentes independientes coinciden, el dato está confirmado de verdad; si
   // no coinciden, mejor saberlo antes de publicar que después de un llamado
   // de un vecino enojado.
-  const cruce = await cruzarFarmacias(turnos).catch((e) => ({ error: e.message, fuentes: [] }));
+  const cruce = await cruzarFarmacias(turnos, {
+    vanguardia: async () => { if (!turnosVanguardia) throw new Error('La Vanguardia no respondió'); return turnosVanguardia; },
+    gabalFn: async () => { if (!turnosGabal) throw new Error('Radio Gabal no respondió'); return turnosGabal; },
+  }).catch((e) => ({ error: e.message, fuentes: [] }));
   if (cruce.discrepancias?.length) {
     cruce.discrepancias.forEach((d) => avisos.push(d));
   }

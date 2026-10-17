@@ -653,7 +653,7 @@ test('los avisos de clima y las piezas de Participá nombran a "Radar Balcarce" 
 test('el plan corre el control de textos ANTES de pedir la voz, y sólo avisa (no frena la pieza)', () => {
   const plan = leer('reels/plan.mjs');
   const control = plan.indexOf('revisarTexto(p.guion');
-  const voz = plan.indexOf('r = await armarReel(p, SALIDA)');
+  const voz = plan.indexOf('r = await armarReel({ ...p, reservarVoz');
   assert.ok(control > 0 && voz > control, 'el control va antes de armarReel');
   assert.match(plan.slice(control, voz), /::warning::/);
   assert.doesNotMatch(plan.slice(control, voz), /throw|continue/);

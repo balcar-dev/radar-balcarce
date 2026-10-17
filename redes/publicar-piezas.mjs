@@ -184,6 +184,8 @@ export async function publicarPiezas({
           const r = await api[metodo]({ video, tipo, pie: pieDePieza(pieza, red) });
           anotar(libro, rubro, clave, {
             mediaId: r.id, nombre: pieza.nombre, tipo, notaId: pieza.notaId ?? null, notaIds: pieza.notaIds ?? [],
+            // El posteo de una historia de Facebook: es lo que se mide (redes/estadisticas-piezas.mjs, regla 207); el video solo da 0.
+            ...(r.postId ? { postId: r.postId } : {}),
           });
           // La dirección pública del podcast, para enlazarlo desde su nota en
           // la web. Si Meta todavía no la da, la completa la vuelta siguiente
@@ -213,7 +215,7 @@ export async function publicarPiezas({
                 try {
                   const rh = await api[metodo]({ video: videoHistoria, tipo: 'STORIES', pie: '' });
                   anotar(libro, 'historiasDeReels', claveHistoria, {
-                    mediaId: rh.id, nombre: pieza.nombre, red, notaId: pieza.notaId ?? null,
+                    mediaId: rh.id, nombre: pieza.nombre, red, notaId: pieza.notaId ?? null, ...(rh.postId ? { postId: rh.postId } : {}),
                   });
                   guardar();
                   if (limpiarProblema(libro, `${clave}/${red}/historia-del-reel`)) guardar(); // sólo si había un problema anotado

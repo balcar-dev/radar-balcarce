@@ -13,6 +13,7 @@ import { paraLeer, enCarteles } from './voz.mjs';
 import { aPng } from './placa.mjs';
 import { FPS, partirSvg, renderizarEntrada, renderizarEscena } from './animacion.mjs';
 import { decirGemini } from './voz-gemini.mjs';
+import { placasConTiempos } from './escenas/repaso.mjs';
 import { componerIndicacion, vozDePieza } from '../redes/prompt-redes.mjs';
 import {
   HISTORIA_MAXIMA, duracionDeLaSalida, pasaDelMaximo, argumentosDeRecorte,
@@ -121,14 +122,17 @@ const ROJO_DE_LA_BARRA = '0xC7381C';
  * placa quieta hasta que empieza la siguiente (o hasta el final). `placas`: [{ svg, png, desde }] en orden. Devuelve la ruta del mp4
  * o lanza (quien llama sigue con la placa quieta: la animación nunca frena una pieza).
  */
-async function armarBaseAnimada({ nombre, placas, total, dir }) {
+async function armarBaseAnimada({
+  nombre, placas, total, dir, tapa = null,
+}) {
   const entradas = [];
   const trozos = [];
   for (let i = 0; i < placas.length; i += 1) {
     const { svg, png, desde } = placas[i];
     const largo = (placas[i + 1]?.desde ?? total) - desde;
     const prefijo = `${nombre}-a${i}-`;
-    const hechos = await renderizarEntrada(svg, dir, prefijo, { poster: i === 0 });
+    // El cuadro 0 es la tapa del reel: la que se eligió (`tapa`, un SVG) o la primera placa ya entrada.
+    const hechos = await renderizarEntrada(svg, dir, prefijo, { poster: i === 0 ? (tapa ?? true) : false });
     const usados = Math.max(1, Math.min(hechos, Math.floor(largo * FPS)));
     entradas.push('-framerate', String(FPS), '-t', (usados / FPS).toFixed(3), '-i', `${prefijo}%03d.png`);
     trozos.push(`[${trozos.length}:v]`);
@@ -164,7 +168,10 @@ async function armarBaseDeEscena({ nombre, escena, total, dir }) {
 /** Los cuadros y el video intermedio de la animación se borran: sólo queda el reel. */
 function limpiarAnimacion(dir, nombre) {
   try {
-    for (const f of fs.readdirSync(dir)) if (f.startsWith(`${nombre}-a`) && f.endsWith('.png') && /-a\d+-\d{3,4}\.png$/.test(f)) fs.rmSync(path.join(dir, f));
+    for (const f of fs.readdirSync(dir)) {
+      if (f.startsWith(`${nombre}-a`) && f.endsWith('.png') && /-a\d+-\d{3,4}\.png$/.test(f)) fs.rmSync(path.join(dir, f));
+      if (f.startsWith(`${nombre}-s`) && /-s\d+\.png$/.test(f)) fs.rmSync(path.join(dir, f));
+    }
     fs.rmSync(path.join(dir, `${nombre}-base.mp4`), { force: true });
   } catch { /* si no se puede borrar, no pasa nada */ }
 }
@@ -185,6 +192,11 @@ export async function armarReel({
   animar = process.env.REELS_ANIMADOS !== 'no',
   // Una escena animada entera (reels/escenas/): si viene, reemplaza a la entrada de la placa y se mueve durante toda la pieza.
   escena = null,
+  // Una SECUENCIA de placas que sigue a la voz (el repaso, reels/escenas/repaso.mjs; regla 209): { placas: [{ svg, marca }], tapa }. Cada
+  // placa entra cuando la voz llega a su marca. Si no se puede ubicar, la pieza sale con `svg`, como antes.
+  secuencia = null,
+  // Cuántos audios del cupo hay que guardar para piezas más importantes que faltan hoy (reels/cupo-voz.mjs, regla 208; lo calcula el plan).
+  reservarVoz = 0,
 }, dir) {
   fs.mkdirSync(dir, { recursive: true });
   const png = path.join(dir, `${nombre}.png`);
@@ -213,8 +225,12 @@ export async function armarReel({
       voz: vozGemini,
       // El estilo de siempre más el del momento del día (mañana, tarde o noche).
       indicacion: componerIndicacion(indicacion),
+      pieza: nombre,
+      reservar: reservarVoz,
     });
   } catch (e) {
+    // Sin cupo (o guardado para una pieza más importante): no se pidió nada, y lo dice tal cual.
+    if (e.sinCupo) throw new Error(`sin voz: ${e.message.slice(0, 160)}. La pieza no sale con otra voz`);
     throw new Error(`Gemini no respondió (${e.message.slice(0, 80)}): la pieza no sale con otra voz, se reintenta en la próxima vuelta`);
   }
   if (!voz.palabras.length) throw new Error('la voz no devolvió tiempos de palabra');
@@ -245,7 +261,24 @@ export async function armarReel({
   const dosPlacas = Boolean(png2 && corte);
   // La entrada animada de cada placa y, encima, la barra de avance (8/10/2026). Si algo falla, la pieza sigue con la placa quieta.
   let base = null;
-  if (animar && escena) {
+  // La secuencia del repaso: cada placa con su momento, sacado de los tiempos de la voz.
+  const conTiempos = animar && secuencia ? placasConTiempos(secuencia, voz.palabras, { retardo, total }) : null;
+  if (animar && secuencia && !conTiempos) console.log(`  (la secuencia de ${nombre} no se pudo ubicar en la voz y sale con la placa de siempre)`);
+  if (conTiempos) {
+    try {
+      const placas = [];
+      for (const [i, p] of conTiempos.entries()) {
+        const pngDeLaPlaca = i === 0 ? png : path.join(dir, `${nombre}-s${i}.png`);
+        if (i === 0) await aPng(p.svg, png); else await aPng(p.svg, pngDeLaPlaca);
+        placas.push({ svg: p.svg, png: pngDeLaPlaca, desde: p.desde });
+      }
+      base = await armarBaseAnimada({ nombre, total, dir, placas, tapa: secuencia.tapa ?? null });
+    } catch (e) {
+      console.log(`  (la secuencia de ${nombre} no se pudo armar y sale con la placa de siempre: ${String(e.message).slice(0, 120)})`);
+      base = null;
+      await aPng(svg, png);
+    }
+  } else if (animar && escena) {
     try {
       base = await armarBaseDeEscena({ nombre, escena, total, dir });
     } catch (e) {
@@ -291,6 +324,7 @@ export async function armarReel({
     // Algo de la animación no encajó: la pieza sale igual, con la placa quieta.
     console.log(`  (el video animado de ${nombre} no se pudo juntar y sale con la placa quieta: ${String(e.message).slice(0, 120)})`);
     base = null;
+    if (conTiempos) await aPng(svg, png); // la placa quieta es la lista, no la primera nota
     await armarFinal(false);
   }
 

@@ -81,9 +81,9 @@ export async function reintentarPieza({
     try {
       const subido = await api[r.metodo]({ video, tipo, pie: tipo === 'REELS' ? pieDePieza(pieza, red) : '' });
       if (parte === 'historia-del-reel') {
-        anotar(libro, 'historiasDeReels', claveHistoria, { mediaId: subido.id, nombre, red, notaId: pieza.notaId ?? null });
+        anotar(libro, 'historiasDeReels', claveHistoria, { mediaId: subido.id, nombre, red, notaId: pieza.notaId ?? null, ...(subido.postId ? { postId: subido.postId } : {}) });
       } else {
-        anotar(libro, r.libro, clave, { mediaId: subido.id, nombre, tipo, notaId: pieza.notaId ?? null, notaIds: pieza.notaIds ?? [] });
+        anotar(libro, r.libro, clave, { mediaId: subido.id, nombre, tipo, notaId: pieza.notaId ?? null, notaIds: pieza.notaIds ?? [], ...(subido.postId ? { postId: subido.postId } : {}) });
       }
       limpiarProblema(libro, `${clave}/${red}/${parte}`);
       guardar();

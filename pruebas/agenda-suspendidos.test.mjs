@@ -31,7 +31,7 @@ test('las piezas de redes tampoco muestran un evento retirado', () => {
   try {
     const archivo = `${dir}/agenda.json`;
     fs.writeFileSync(archivo, JSON.stringify({ eventos: aplicarSuspendidos([{ ...postre, hasta: '2026-10-14 18:00:00', desde: '2026-10-13 12:00:00' }, otro], ARCHIVO) }));
-    const r = eventosProximos(4, { web: archivo, pc: `${dir}/no-existe.json`, hoy: new Date('2026-10-12T09:00:00-03:00') });
+    const r = eventosProximos(4, { web: archivo, hoy: new Date('2026-10-12T09:00:00-03:00') });
     assert.ok(!JSON.stringify(r).includes('POSTRE') && !JSON.stringify(r).includes('Postre'), 'el evento suspendido no va a la placa');
   } finally { fs.rmSync(dir, { recursive: true, force: true }); }
 });

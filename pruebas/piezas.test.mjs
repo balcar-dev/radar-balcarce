@@ -316,7 +316,7 @@ test('la agenda del jueves la arma también GitHub, con la agenda publicada en l
     { nombre: '22° FIESTA NACIONAL DEL POSTRE', lugar: 'SOCIEDAD RURAL DE BALCARCE', desde: '2026-10-09 12:30:00' },
     { nombre: 'CABALGATA', lugar: 'Estancia', desde: '2026-11-27 08:00:00' },
   ] }));
-  const eventos = eventosProximos(4, { web, pc: path.join(dir, 'no-existe.json'), hoy: new Date('2026-10-08T12:00:00-03:00') });
+  const eventos = eventosProximos(4, { web, hoy: new Date('2026-10-08T12:00:00-03:00') });
   assert.deepEqual(eventos.map((e) => [e.nombre, e.lugar, e.cuando]), [['22° Fiesta Nacional del Postre', 'Sociedad Rural de Balcarce', 'viernes 12:30']]);
 });
 
@@ -663,7 +663,9 @@ test('la primera corrida después de la hora de cada pieza la encuentra en venta
 test('los podcasts del plan llevan el rojo de la marca, no un color rotativo', async () => {
   const fs = await import('node:fs');
   const plan = fs.readFileSync(new URL('../reels/plan.mjs', import.meta.url), 'utf8');
-  assert.equal((plan.match(/color: COLORES.rojo/g) ?? []).length, 2, 'los dos tipos de podcast usan el rojo de la marca');
+  // Desde el 17/10 los tres repasos se arman en una sola vuelta (antes eran dos bloques): un solo lugar con el rojo de la marca.
+  assert.equal((plan.match(/color: COLORES.rojo/g) ?? []).length, 1, 'los podcasts usan el rojo de la marca');
+  assert.match(plan, /for \(const ronda of PODCASTS\)/);
   assert.ok(!/colorDelDia|COLORES_DEL_DIA/.test(plan));
 });
 

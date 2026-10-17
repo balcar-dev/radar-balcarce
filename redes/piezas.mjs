@@ -124,12 +124,6 @@ export const PODCASTS = [
 /** Los nombres de los podcasts, para preguntar "¿esta pieza es un podcast?". */
 export const NOMBRES_DE_PODCAST = PODCASTS.map((p) => p.nombre);
 
-/** Piezas fijas que sólo se pueden armar en la PC: sus datos no están en la
- *  web. Hasta que lo estén, GitHub no las espera (si no, las reintentaría en
- *  cada corrida sin poder armarlas nunca). Desde el 29/09 no queda ninguna: la
- *  agenda sale de la agenda publicada (web/data/agenda.json, reels/plan.mjs). */
-const SOLO_EN_LA_PC = [];
-
 // Desde el 30/09 el repaso lleva siempre el rojo de la marca (CRITERIO-REDES.md § 8): ya no rota un color por día.
 
 /** Lo que identifica a una pieza en el libro: el día y el nombre. */
@@ -180,8 +174,21 @@ function pieDeReel(pieza, red = null) {
   if (pieza.nombre === 'podcast') {
     return `El repaso del día en Balcarce.\n\nLas notas, con la fuente, en ${SITIO}`;
   }
+  // El clima y la farmacia, cuando salen como reel en Facebook (17/10/2026, regla 210): el enlace a SU página (/clima, /farmacias), no
+  // "Más en radarbalcarce.com". A las 19 y las 20 casi nadie llegaba a la web desde esas piezas. Instagram, sin enlaces (no los toma).
+  const servicio = SERVICIOS_CON_PAGINA.find((s) => s.es(pieza.nombre));
+  if (servicio && red !== 'instagram') {
+    const url = `https://${SITIO}${servicio.camino}`;
+    return `${pieza.titulo}\n\n${servicio.frase}: ${red ? ponerOrigen(url, { fuente: red, campana: 'servicio', contenido: pieza.nombre }) : url}`;
+  }
   return `${pieza.titulo}\n\nMás en ${SITIO}`;
 }
+
+/** Las piezas de servicio que tienen su página en el sitio, con la frase del enlace (regla 210). */
+export const SERVICIOS_CON_PAGINA = [
+  { es: (n) => n === 'clima-manana' || n === 'clima-noche' || String(n ?? '').startsWith('aviso-'), camino: '/clima', frase: 'El pronóstico de toda la semana, acá' },
+  { es: (n) => n === 'farmacia', camino: '/farmacias', frase: 'Las farmacias de turno de toda la semana, con dirección, acá' },
+];
 
 // Los teléfonos útiles rotan de lunes a viernes, una semana distinta cada vez
 // (ingesta/utiles.mjs). Esa regla es la única: la usan también reels/plan.mjs y
@@ -239,7 +246,6 @@ export function cronogramaDelDia(fecha = new Date(), { estado = {}, clima = null
   // la misma que usa reels/plan.mjs: si alguien fijó los días de los útiles a
   // mano desde el panel, manda eso; si no, rotan solos.
   const fijas = horariosDe(estado)
-    .filter((h) => !SOLO_EN_LA_PC.includes(h.id))
     .filter((h) => toca(h, fecha, { estado }))
     .map((h) => ({ nombre: h.id, tipo: SALE_COMO_REEL(h.id) ? 'reel' : 'historia', hora: h.hora }));
   const aviso = avisoDeClima(clima, fecha);
