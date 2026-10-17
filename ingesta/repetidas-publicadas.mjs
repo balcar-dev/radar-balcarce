@@ -15,7 +15,7 @@
 //
 // Es A PROPÓSITO estricto (Andrés y Hernán quieren MÁS notas, no menos): juntar dos noticias
 // distintas es peor que dejar pasar una repetida. Los umbrales se midieron sobre los 127 pares
-// etiquetados a mano (docs/etapa-2-5/calibrar-repetidas.mjs): con los de abajo, 0 uniones falsas
+// etiquetados a mano (scripts/medir/calibrar-repetidas.mjs): con los de abajo, 0 uniones falsas
 // (contando las dudosas como falsas). Nunca se juntan:
 //   · lo de acá con lo de afuera (el «ámbito»);
 //   · dos títulos con números y ninguno en común («630 puntos» y «642 puntos»; «2 a 1» y «3 a 0»);

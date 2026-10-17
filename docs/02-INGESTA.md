@@ -301,7 +301,7 @@ con un solo medio y Y de otra ciudad de la zona no entran" y, si el cruce cohere
 partió algo, "cruce coherente (regla 184): R grupos encadenados revisados, P
 partidos en hechos distintos". Un grupo hecho sólo de notas de la memoria sigue
 siendo una historia más. Todo esto (pasos 10 a 12) lo hace `armarHistorias`
-(`ingesta/ingesta.mjs`), que también usa `docs/flujo/medir-cruce-coherente.mjs`
+(`ingesta/ingesta.mjs`), que también usa `scripts/medir/cruce-coherente.mjs`
 para medir con una lectura guardada.
 
 ### 12. La nota principal de cada historia

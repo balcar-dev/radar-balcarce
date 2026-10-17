@@ -200,7 +200,7 @@ tope de US$ 25 de los documentos de diseño.
 
 - **A. Repetidas reales de Balcarce** (US$ 0 con Workers AI; < US$ 0,05 con Mercury).
   - Qué se hace: pasar por `bge-m3` y por los jueces los 127 pares de lo **ya publicado** que Claude etiquetó
-    (`docs/etapa-2-5/etiquetas-duplicadas.json`: 84 del mismo hecho).
+    (`scripts/medir/etiquetas-duplicadas.json`: 84 del mismo hecho).
   - Por qué hace falta: los 62 pares de la prueba se eligieron porque compartían palabras, y los errores reales de
     acá son de otro tipo. "La Liga suspende la fecha" y "Jardín 905" tenían títulos distintos y salieron con 27 horas
     de diferencia.
@@ -418,8 +418,8 @@ Impacto, esfuerzo y riesgo: alto, medio o bajo. Etapas:
 | Correcciones a mano | `web/data/correcciones.json` (156) |
 | Correcciones solas de la auditoría | `web/data/correcciones-auditoria.json` (8) |
 | Hallazgos de la auditoría | `web/data/auditoria-ia.json` → `contadores` (los hallazgos van cifrados) |
-| Pruebas de Mercury, Jev y los demás | `pruebas-modelos/TRASPASO.md`, `PLAN-DE-IMPLEMENTACION.md`, `comparacion-200.md`, `comparacion-pares.md`, `historias-estrella.md`, `duplicadas-significado.md`, `resultados-*.json` (precios por token) |
-| Repetidas publicadas | `docs/etapa-2-5/ANALISIS.md`, `etiquetas-duplicadas.json` |
+| Pruebas de Mercury, Jev y los demás | `docs/historico/PRUEBAS-DE-MODELOS.md` (el resumen; la carpeta `pruebas-modelos/`, con los `resultados-*.json` y los precios por token, se borró el 17/10 y queda en el historial de git) |
+| Repetidas publicadas | `docs/etapa-2-5/ANALISIS.md`, `scripts/medir/etiquetas-duplicadas.json` |
 | Costos por tarea del motor nuevo | `docs/etapa-10-operacion/DISENO-MOTOR.md` § 4 |
 | Neuronas de las ilustraciones | `web/scripts/ilustrar-notas.mjs` (`neuronasEstimadas`), `docs/05-FOTOS.md` |
 | Cupos de las claves | `docs/08-INFRAESTRUCTURA.md`, `reels/claves.mjs`, `LECTURA` en `ingesta/lectura-ia.mjs`, `REESCRITURA` en `ingesta/criterio.mjs` |

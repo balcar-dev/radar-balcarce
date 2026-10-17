@@ -2,6 +2,8 @@
 
 *Auditoría del 15/10/2026. Sólo se leyó, se midió y se escribió acá: no se tocó ningún archivo existente ni se hizo commit. Meta de los dueños (15/10): "mucho menos GitHub y mucho más Cloudflare, que la página dure años", repositorio privado más adelante, todo el proyecto dentro de un tope de unos US$ 25 por mes, con Cloudflare Workers Paid (US$ 5) ya contratado.*
 
+*17/10/2026: los programas de esta medición (`*.cjs`) y los datos crudos (`runs-14d.ndjson`, `pruebas-tiempos.csv`, `pruebas-inventario.txt`, `pruebas-cabeceras.txt`, `extra-redes-y-fallas.txt`) se borraron en la limpieza final (quedan en el historial de git). Quedan `pruebas-clasificadas.csv` y `pruebas-nucleo.txt`: respaldan el recorte de pruebas que todavía tienen que aprobar los dueños (`docs/COMO-FUNCIONA-HOY.html` § 13).*
+
 **Cómo leer las marcas.** **[MEDIDO]** salió de las corridas reales de GitHub (los números están en esta carpeta). **[DOCS 15/10]** lo confirmé hoy en la documentación oficial de Cloudflare o GitHub (la leyó un modelo chico que resume la página: conviene que una persona mire las cifras clave antes de firmar algo). **[NO VERIFICADO]** es memoria o suposición mía: hay que probarlo antes de apostar a eso.
 
 ---

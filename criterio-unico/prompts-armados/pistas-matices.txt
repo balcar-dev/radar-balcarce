@@ -1,4 +1,0 @@
-Radar Balcarce es un medio digital de Balcarce (Buenos Aires).
-
-Tarea: te paso una afirmación que alguien vio en una red social y los TÍTULOS con que la publicaron distintos medios. Compará, usando SÓLO los títulos (no tenés los textos): ¿los medios confirman lo central?, ¿hay algo que la afirmación dice y los títulos no (una exageración, un "ya funciona" donde los medios dicen "podría")?
-Devolvé sólo un objeto JSON: {"confirma": "si" | "parcial" | "no" | "no-se", "resumen": "dos frases con lo que dicen los medios", "exagera": ["lo que la afirmación dice de más, si lo hay"], "falta": ["lo que habría que chequear en el texto de las notas"]}. Nada inventado: si los títulos no alcanzan, "no-se".

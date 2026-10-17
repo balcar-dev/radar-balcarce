@@ -1707,7 +1707,7 @@ export async function ingestar({
  * Del conjunto del cruce (las notas de esta corrida más las de la memoria) a las historias: agrupa por hecho
  * (ingesta/cruce.mjs; con `coherente`, el cruce coherente de la regla 184), deja afuera lo de un solo medio de afuera y
  * lo que es sólo de otra ciudad de la zona, y elige la nota principal de cada historia (la ya publicada si hay una,
- * regla 175). Exportada para medir el cruce con una lectura guardada (docs/flujo/medir-cruce-coherente.mjs).
+ * regla 175). Exportada para medir el cruce con una lectura guardada (scripts/medir/cruce-coherente.mjs).
  * Cambia las notas principales (título cortado, fecha estimada, foto, cuerpo): a quien mide le conviene pasar copias.
  */
 export function armarHistorias(conjunto, { idsConocidos = null, idsUnidos = null, coherente, parametros } = {}) {

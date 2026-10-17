@@ -34,7 +34,7 @@ medios).
 
 **Repetidas.** Simulación de la capa nueva sobre lo de acá publicado del 29/09 al 16/10 (296 notas), en el orden en que salió
 cada una, con el código del motor y la IA de verdad (Gemini Flash-Lite gratis); una nota que se une ya no se publica
-(`docs/flujo/medir-repetidas-2-0.mjs`).
+(`scripts/medir/repetidas-2-0.mjs`).
 
 | | Resultado |
 |---|---|
@@ -49,7 +49,7 @@ cada una, con el código del motor y la IA de verdad (Gemini Flash-Lite gratis);
   paleta de Campo de Pato, el banco de fisiatría). La IA no es determinista del todo: con la nueva instrucción unió Tamangueyú
   completo (las tres notas) y la anterior dejaba una. **Se eligió la instrucción más estricta**: juntar dos noticias distintas
   es lo peor (Andrés y Hernán quieren más notas, no menos).
-- **El umbral.** Las 73 parejas etiquetadas «misma noticia» (`docs/etapa-2-5/etiquetas-duplicadas.json`) y los diez pares de
+- **El umbral.** Las 73 parejas etiquetadas «misma noticia» (`scripts/medir/etiquetas-duplicadas.json`) y los diez pares de
   los cinco casos tienen parecido **0,886 a 0,998**; dos notas distintas del mismo tema, 0,855 a 0,941. La huella sola no
   decide: elige a quién preguntar. Con 0,86 aparecía una unión de más y era falsa («Más de 1.400 vehículos…» / «…2.700
   millones», 0,872): por eso 0,88.
@@ -93,7 +93,7 @@ siempre no frena ninguna.
 - **Workers AI (bge-m3) no hizo falta.** Si un día Gemini deja de dar la huella gratis, la alternativa es sumarle una ruta
   `/huella` al Worker de imágenes (`infra/imagenes-cloudflare/`, mismo token) y recalibrar el umbral: otro modelo da otros
   números.
-- **Medir cada tanto**: `node docs/flujo/medir-repetidas-2-0.mjs --dias=7` (gasta cupo gratis: una huella por nota de acá y
+- **Medir cada tanto**: `node scripts/medir/repetidas-2-0.mjs --dias=7` (gasta cupo gratis: una huella por nota de acá y
   pocas preguntas) y leer cada unión.
 
 ## Riesgos

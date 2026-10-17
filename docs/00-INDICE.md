@@ -118,7 +118,7 @@ cómo funciona algo que ya anda), **para decidir** (propuesta o página con caja
 | `docs/flujo/GUIA-DEL-FLUJO.html` | Los trece pasos que hace el sistema con cada noticia, con un ejemplo real, los números y los prompts tal cual | vigente (16/10), para revisar juntos |
 | `docs/flujo/FLUJO-NUEVO.html` | El flujo nuevo pedido por Hernán: todo lo de Balcarce sale, lo nacional con 3 medios, tope de 150 por día | para decidir (sin conectar) |
 | `docs/flujo/FLUJO-NUEVO-SIMULACION.html` | La simulación del flujo nuevo con la corrida real del 16/10 | para decidir |
-| `docs/flujo/INFORME-DE-HOY.html` | Cómo llegó la información el 16/10, cómo anduvo cada fuente y cómo quedarían las secciones; diez preguntas (se rehace con `docs/flujo/generar-informe-del-dia.mjs`) | para decidir |
+| `docs/flujo/INFORME-DE-HOY.html` | Cómo llegó la información el 16/10, cómo anduvo cada fuente y cómo quedarían las secciones; diez preguntas (se rehace con `scripts/medir/informe-del-dia.mjs`) | para decidir |
 | `docs/flujo/CRUCE-COHERENTE.md` | El cruce que ya no encadena noticias distintas (regla 184, interruptor `CRUCE_COHERENTE`) y cómo se midió | vigente |
 | `docs/flujo/REPETIDAS-2-0.md` | Lo de acá que no sale repetido (memoria de acá, huella de significado, parejas entre secciones, tope repartido) y la fecha que no envejece por una nota vieja pegada (reglas 193 a 196), con la medición; `medir-repetidas-2-0.mjs` la repite | vigente |
 | `docs/flujos/NOTA-DESDE-MAIL.md` | Los pasos para armar una nota desde un mail de prensa | vigente (lo sigue Claude) |

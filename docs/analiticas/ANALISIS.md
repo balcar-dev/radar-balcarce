@@ -4,6 +4,8 @@
 tocó ningún archivo existente ni se hizo commit. Cada afirmación que no se pudo confirmar sin conectarse a
 Cloudflare, a Meta o a Google dice **SIN VERIFICAR**.*
 
+*17/10/2026: `diagnostico.mjs` y `diagnostico-salida.txt` se borraron en la limpieza final (eran de una sola medición; quedan en el historial de git). Los resultados son los de este documento.*
+
 **Cómo leerlo.** Las partes 1 a 5 responden los cinco pedidos. La parte 6 junta las preguntas para ustedes y la
 7, lo que no se pudo verificar. Los números salen de `web/data/estadisticas.json` y
 `web/data/estadisticas-piezas.json`; se pueden rehacer con `node docs/analiticas/diagnostico.mjs` (sólo lee;
