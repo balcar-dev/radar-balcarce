@@ -158,7 +158,7 @@ function leerLibro() {
  *  "modo PC" (los datos del panel de la PC, en desuso). */
 function leerDatos() {
   if (fs.existsSync(PORTADA_WEB)) return datosDeLaWeb(JSON.parse(fs.readFileSync(PORTADA_WEB, 'utf8')));
-  throw new Error('Todavía no hay datos: falta web/data/portada.json (cd web && npm run datos)');
+  throw new Error('Todavía no hay datos: falta web/data/portada.json (lo arma "Actualizar la web"; en la PC, git pull)');
 }
 
 // --- los guiones -----------------------------------------------------------

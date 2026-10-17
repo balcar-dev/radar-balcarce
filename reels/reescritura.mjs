@@ -1036,29 +1036,6 @@ export function podarIntentos(intentos = {}, ahora = Date.now(), dias = DIAS_DE_
 export const FALLA_DEL_SERVICIO = /falta GEMINI|no se pudo pedir|HTTP (40[123]|429|5\d\d)|fetch failed|abort|timeout|network|ECONN|ENOTFOUND|EAI_AGAIN/i;
 
 /**
- * El texto completo de la noticia: el de la nota principal y, si ése no se
- * pudo bajar, el de alguna de las otras fuentes que contaron lo mismo.
- * Devuelve { texto, numero } (el número de fuente, como la lee la IA) o
- * { texto: null }. Desde el 15/10 la reescritura automática y la del celular
- * usan textosDeLasFuentes + conEntradaAmpliada (regla 174); esto queda para el
- * panel de la PC, que no se usa.
- */
-export async function textoCompletoDe(nota, traer = traerTexto) {
-  // Si la fuente es un feed de Blogger, el texto se baja de la entrada del
-  // feed (`enlaceFeed`), que lo trae entero; el enlace es la página.
-  const dePrincipal = nota?.enlaceFeed ?? nota?.enlace;
-  const principal = await traer(dePrincipal);
-  if (principal) return { texto: principal, numero: 1 };
-  const otras = origenesDe(nota)
-    .map((o, i) => ({ enlace: o.enlaceFeed ?? o.enlace, numero: i + 1 }))
-    .filter((o) => o.enlace && o.enlace !== dePrincipal)
-    .slice(0, 3);
-  const textos = await Promise.all(otras.map((o) => traer(o.enlace)));
-  const i = textos.findIndex(Boolean);
-  return i >= 0 ? { texto: textos[i], numero: otras[i].numero } : { texto: null };
-}
-
-/**
  * Los textos completos de las fuentes de la noticia (15/10, regla 174): el de la
  * principal (como siempre, aunque no tenga enlace propio) y los de las demás, las
  * oficiales primero, hasta REESCRITURA.fuentesQueSeBajan, sin repetir un enlace.

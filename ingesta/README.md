@@ -20,7 +20,7 @@ lo lee tal cual.
 ```bash
 npm run ingesta                                  # corre todo: deja ingesta/salida/portada.json y preview.html (no se versionan)
 npm run auditar                                  # qué está decidiendo el filtro hoy, y con qué palabra
-node ingesta/probar.mjs                          # prueba las fuentes candidatas (CANDIDATOS, en fuentes.mjs)
-node ingesta/probar.mjs https://medio.com/feed   # prueba una dirección suelta
+node ingesta/medir-fuentes.mjs                   # cuánto aporta cada fuente y si su feed responde hoy
+node ingesta/auditar-fuentes.mjs                 # cuánto aportó cada fuente en la semana y cuál se durmió (sin red)
 node ingesta/listar-fuentes.mjs                  # rehace ../FUENTES.md (después de tocar una fuente)
 ```

@@ -898,20 +898,6 @@ export const FUENTES_OFICIALES_PARA_FOTOS_DE_MENORES = [
   { id: 'fca-unmdp', medio: 'Facultad de Ciencias Agrarias (UNMdP)', dominios: ['fca.mdp.edu.ar'] },
 ];
 
-// Candidatos a probar para región, provincia, país, deportes y automovilismo.
-// El probador dice cuáles están vivos; los que sirvan pasan a FUENTES.
-export const CANDIDATOS = [
-  // Pendientes de probar. 0223 y La Noticia 1 ya están activas en FUENTES.
-  // La Capital de Mar del Plata y El Retrato de Hoy devuelven 403 (bloquean
-  // lectores automáticos): habría que probarlas de nuevo desde GitHub.
-  // Carburando y ACTC (automovilismo) y Página 12 todavía no se probaron.
-  { id: 'lacapitalmdp', nombre: 'La Capital (MdP)', url: 'https://www.lacapitalmdp.com/feed/', alcance: 'region' },
-  { id: 'retratodehoy', nombre: 'El Retrato de Hoy', url: 'https://elretratodehoy.com.ar/feed/', alcance: 'region' },
-  { id: 'pagina12', nombre: 'Página 12', url: 'https://www.pagina12.com.ar/rss/portada', alcance: 'pais' },
-  { id: 'carburando', nombre: 'Carburando', url: 'https://carburando.com/feed/', alcance: 'pais' },
-  { id: 'actc', nombre: 'ACTC (Turismo Carretera)', url: 'https://www.actc.org.ar/feed/', alcance: 'pais' },
-];
-
 // Palabras que hacen que una noticia sea "de Balcarce" aunque venga de afuera.
 // OJO: acá sólo van nombres que no puedan aparecer por casualidad en una nota
 // nacional. "El Triunfo" y "Los Pinos" son lugares de Balcarce, pero también

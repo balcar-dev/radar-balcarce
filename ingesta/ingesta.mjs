@@ -24,7 +24,7 @@ import { sinTildes } from '../web/lib/texto.js';
 
 export const TODAS_LAS_FUENTES = [...FUENTES, ...FUENTES_NACIONALES, ...FUENTES_CRUCE];
 
-// Cuando corre desde el panel no queremos que escriba en la consola.
+// Cuando la corre otro programa (generar-datos.mjs, con `silencioso`) no queremos que escriba en la consola.
 let log = console.log;
 
 // Un identificador estable por nota, para que el panel recuerde qué aprobaste
@@ -2046,7 +2046,7 @@ export const paraPruebas = {
   motivoDeDescarte, esPolicialDeAfuera, marcarDeAfuera, laYaPublicada,
 };
 
-// Sólo corre cuando se lo invoca directo; si lo importa probar.mjs, no.
+// Sólo corre cuando se lo invoca directo (npm run ingesta); si lo importa otro programa, no.
 const esEjecutable = process.argv[1]
   && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
 

@@ -77,7 +77,6 @@ test('la lista de retiradas del repositorio está bien armada: cada una con moti
 import { titularNormalizado } from '../web/lib/texto.js';
 import { enlaceDeNota } from '../redes/elegir.mjs';
 import { redireccionesDeNotas } from '../web/scripts/generar-redirects.mjs';
-import { notasDelHistorial } from '../web/scripts/recuperar-archivo.mjs';
 
 const SITIO = 'https://radarbalcarce.com';
 const leer = (r) => fs.readFileSync(new URL(`../${r}`, import.meta.url), 'utf8');
@@ -263,16 +262,6 @@ test('el archivo guarda 180 días y tiene tope, con prioridad a lo que salió en
   assert.equal(r.length, 5);
   assert.ok(r.some((n) => n.id === 'fb'), 'se cayó una nota que está en Facebook');
   assert.deepEqual(r.slice(0, 4).map((n) => n.id), ['m0', 'm1', 'm2', 'm3']);
-});
-
-test('lo que salió de la portada antes del archivo se recupera del historial, en su última versión', () => {
-  const versiones = [
-    { notas: [{ id: 'a', titulo: 'Primera versión' }, { id: 'b', titulo: 'Otra' }] },
-    { notas: [{ id: 'a', titulo: 'Titular reescrito' }] },
-    null,
-  ];
-  const notas = notasDelHistorial(versiones);
-  assert.deepEqual(notas.map((n) => [n.id, n.titulo]), [['a', 'Titular reescrito'], ['b', 'Otra']]);
 });
 
 // ---------------------------------------------------------- 72 horas (25/09)

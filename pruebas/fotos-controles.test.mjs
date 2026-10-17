@@ -12,7 +12,6 @@ import {
   elegirFotosNuevas, podarFotos, sePuedeReintentar, fotoDelArchivoAlDia, fotoRepetidaEnElBanco, mismoTema, HORAS_DE_GRACIA_DE_LA_PODA,
 } from '../web/scripts/fotos-notas.mjs';
 import { huellaDePixeles, distanciaDeHuellas, mismaFoto, fotoParaGuardar } from '../web/scripts/achicar-foto.mjs';
-import { arreglar, DESCARTES, ILUSTRACIONES_A_SACAR, WIKIMEDIA_VIEJAS_O_EQUIVOCADAS } from '../web/scripts/arreglar-fotos-17-10.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
 
@@ -317,69 +316,6 @@ test('regla 205: sólo si el título nombra a la persona (Grupo Cali salió con 
   const r2 = await elegirFotoParaNota(verstappen, { clave: 'g', claveRespaldo: null, fetchFn });
   assert.equal(r2.elegida, null);
   assert.match(r2.razon, /no corresponde[\s\S]*Fórmula 1/);
-});
-
-// ------------------------------------------------------------------ el script de datos (arreglar-fotos-17-10.mjs)
-
-test('el script del 17/10: saca las fotos de la auditoría y las de Wikimedia viejas, veta su huella, saca la repetida, restaura la podada y las ilustraciones con texto', async () => {
-  const H = { messi: '1935171a9b4c062b', windows: '21d8869e134b4393', caputo: 'aaaa0000aaaa0000' };
-  const banco = {
-    '1vhit3n': { archivo: 'fotos-notas/1vhit3n.jpg', credito: 'Foto: Radio Gabal (FM 104.1)', titulo: 'El segundo llamado a licitación del matadero municipal queda desierto', cuando: '2026-10-16T16:11:18Z', imagenOriginal: 'https://www.radiogabal.com.ar/images/2026/mayo/Friogorifico%20Municipal.png' },
-    kzftcz: { archivo: 'fotos-notas/kzftcz.jpg', origen: 'wikimedia', titulo: 'La Messi Cup define fechas y cruces para su segunda edición', cuando: '2026-10-15T21:06:23Z', enlace: 'https://commons.wikimedia.org/wiki/File:Suisse_vs_Argentine_-_Granit_Xhaka_%26_Lionel_Messi.jpg' },
-    kr8nxa: { intentado: true, borrada: true, origen: 'wikimedia', titulo: 'Grupo Cali explica los motivos de la suspensión de su show', enlace: 'https://commons.wikimedia.org/wiki/File:Suisse_vs_Argentine_-_Granit_Xhaka_%26_Lionel_Messi.jpg' },
-    xz54n: { archivo: 'fotos-notas/xz54n.jpg', titulo: 'Javier Milei recibe un premio en Francia y ratifica el equilibrio fiscal', cuando: '2026-10-10T10:00:00Z' },
-    gkl1ue: { archivo: 'fotos-notas/gkl1ue.jpg', titulo: 'El Gobierno lanza un plan nacional de salud vascular', cuando: '2026-10-12T10:00:00Z' },
-    ha42x9: { intentado: true, borrada: true, titulo: 'El boleto de colectivo en el AMBA sube desde noviembre', medio: 'Radio Mitre', imagenOriginal: 'https://radiomitre/x.png' },
-    '1ixp88o': { intentado: true, borrada: true, titulo: 'El abogado de Virginia Aparicio visita una radio local', medio: 'X', imagenOriginal: 'https://x/y.jpg' },
-  };
-  const ilustraciones = {
-    aa7nni: { archivo: 'fotos-notas/aa7nni-ia.jpg', titulo: 'Reprograman la Caravana de la Alegría para noviembre', prompt: 'generada en Gemini web y revisada a mano' },
-    '1jdsdep': { archivo: 'fotos-notas/1jdsdep-ia.jpg', titulo: 'La Dirección de Juventud firma un acuerdo', prompt: 'generada en Gemini web y revisada a mano' },
-  };
-  const huellas = { '1vhit3n.jpg': H.windows, 'kzftcz.jpg': H.messi, 'xz54n.jpg': H.caputo, 'gkl1ue.jpg': H.caputo };
-  const notasVivas = ['1vhit3n', 'kzftcz', 'xz54n', 'gkl1ue', 'ha42x9', '1ixp88o'].map((id) => ({ id, titulo: banco[id].titulo }));
-  const opciones = {
-    banco, ilustraciones, notasVivas, ahora: new Date('2026-10-17T12:00:00Z'), enDisco: new Set(Object.keys(huellas)),
-    leerFoto: (f) => (huellas[f] ? Buffer.from(f) : null), huellaDe: async (b) => huellas[String(b)] ?? 'cccc0000cccc0000',
-    bajar: async () => ({ mime: 'image/png', base64: Buffer.alloc(5000, 3).toString('base64') }), achicar: async () => JPEG(800),
-  };
-  const r = await arreglar(opciones);
-  // 1. La captura de Windows y Messi: sin archivo, vetadas con su huella, y su archivo se borra.
-  assert.equal(r.banco['1vhit3n'].archivo, undefined);
-  assert.match(r.banco['1vhit3n'].descartada.motivo, /Activar Windows/);
-  assert.equal(r.banco['1vhit3n'].descartada.huella, H.windows);
-  assert.equal(sePuedeReintentar(r.banco['1vhit3n']), false, 'no vuelve a probarse');
-  assert.equal(r.banco.kzftcz.descartada.huella, H.messi);
-  assert.ok(r.banco.kr8nxa.descartada, 'la de Grupo Cali, que ya no tenía archivo, también queda vetada');
-  assert.ok(r.borrar.includes('1vhit3n.jpg') && r.borrar.includes('kzftcz.jpg'));
-  // Y esa foto no puede volver en otra nota.
-  assert.ok(fotoRepetidaEnElBanco(r.banco, { id: 'nueva', titulo: 'Otra cosa' }, { huella: H.messi }));
-  // 3. La misma foto en dos notas de otro tema: queda la más vieja.
-  assert.ok(r.banco.xz54n.archivo);
-  assert.match(r.banco.gkl1ue.descartada.motivo, /otro tema/);
-  // 4. La podada de más se restaura con otro nombre... salvo la de una posible víctima.
-  assert.equal(r.banco.ha42x9.archivo, 'fotos-notas/ha42x9.jpg');
-  assert.equal(r.banco.ha42x9.credito, 'Foto: Radio Mitre');
-  assert.equal(r.banco.ha42x9.borrada, undefined);
-  assert.ok(r.escribir['ha42x9.jpg']);
-  assert.equal(r.banco['1ixp88o'].archivo, undefined);
-  // 5. La ilustración de Gemini web con texto sale; la buena queda con su control.
-  assert.equal(r.ilustraciones.aa7nni, undefined);
-  assert.ok(r.borrar.includes('aa7nni-ia.jpg'));
-  assert.equal(r.ilustraciones['1jdsdep'].control.ok, true);
-  // Se puede correr otra vez: no cambia nada más.
-  const otraVez = await arreglar({ ...opciones, banco: r.banco, ilustraciones: r.ilustraciones, enDisco: new Set([...Object.keys(huellas).filter((f) => !r.borrar.includes(f)), ...Object.keys(r.escribir)]) });
-  assert.deepEqual(otraVez.banco, r.banco);
-  assert.deepEqual(otraVez.ilustraciones, r.ilustraciones);
-  assert.deepEqual(Object.keys(otraVez.escribir), []);
-  assert.equal(otraVez.informe.descartadas.length, 0);
-});
-
-test('el script del 17/10 trae los casos de la auditoría, cada uno con su motivo', () => {
-  for (const id of ['1vhit3n', '66so6t', '130eay0', '1ge6irq', '11lwkfl', '1mfnr70', '1fi9fiz']) assert.ok(DESCARTES[id]?.length > 10, id);
-  for (const id of ['lf9d6b', 'u0hcbv', '1ixp88o', 'aa7nni', '1eb747m']) assert.ok(ILUSTRACIONES_A_SACAR[id], id);
-  assert.ok(WIKIMEDIA_VIEJAS_O_EQUIVOCADAS['Suisse_vs_Argentine_-_Granit_Xhaka_&_Lionel_Messi.jpg']);
-  assert.ok(WIKIMEDIA_VIEJAS_O_EQUIVOCADAS['F1_-_Red_Bull_Racing_-_Max_Verstappen_(27965385544).jpg']);
 });
 
 // ------------------------------------------------------------------ regla 206: un solo camino

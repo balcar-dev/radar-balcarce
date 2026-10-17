@@ -51,8 +51,8 @@ const ANUNCIO = /\b(estara|estaran|dara|daran|hablara|hablaran|visitara|visitara
 /** El medio nombrándose sin su nombre. */
 const PROPIO_SIN_MARCA = /\b(nuestro programa|nuestros programas|nuestros estudios|nuestra radio|nuestra emisora|nuestra senal|nuestro canal|nuestros oyentes|este medio)\b|\bel diario (celebra|festeja|cumple)\b/;
 
-/** Las mismas dos señales sin la marca, con "una radio" o "el stream" (las de la selección nueva en sombra,
- *  ingesta/seleccion-nueva.mjs): "El abogado de Virginia Aparicio visita una radio local para hablar del caso". */
+/** Las mismas dos señales sin la marca, con "una radio" o "el stream" (vienen de la selección nueva que se ensayó en sombra
+ *  el 16/10): "El abogado de Virginia Aparicio visita una radio local para hablar del caso". */
 // Sin "programa" ni "llega a": "El Municipio llega a los barrios con el programa Envión" es noticia.
 const ANUNCIO_EN_UN_MEDIO = /\b(visita|visitara|estara|estaran|pasara por|invitad[oa]s? (a|en))\b.{0,40}\b(radio|estudios|stream|streaming|la fm)\b/;
 const UN_MEDIO_DE_SI = /\b(radio|fm|stream|streaming|canal|diario|portal|semanario)\b.{0,40}\b(record|cumple \d+|aniversario|audiencia|oyentes|seguidores|suscriptores|nueva programacion)\b/;
