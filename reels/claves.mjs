@@ -1,4 +1,4 @@
-// Las claves de las IA: cuatro, cada una con su cupo y su uso.
+// Las claves de las IA: cinco, cada una con su cupo y su uso.
 //
 // Van separadas a propósito. Cada clave tiene su propio cupo diario en Google,
 // y si comparten, un día de muchos reels se come la cuota con la que se
@@ -16,6 +16,9 @@
 //                                  de la redacción (reescribir, reels/reescritura.mjs)
 //   GROQ_API_KEY                   Groq, el respaldo gratis de la lectura con IA
 //                                  y de la comparación de fotos
+//   OPENROUTER_API_KEY             OpenRouter (17/10/2026): el ÚLTIMO respaldo de la lectura, la
+//                                  redacción y las auditorías, sólo con modelos gratis (:free) y con
+//                                  tope de pedidos por día (reels/openrouter.mjs). Sin ella, nada cambia
 //
 // Se leen de una variable de entorno o del archivo .env de la raíz. Nunca se
 // escriben en el código ni se muestran.
@@ -61,4 +64,12 @@ export const claveClasificacion = (o) => leerVariable('GEMINI_API_KEY_CLASIFICAC
  *  cuando Gemini se queda sin cupo o falla. Sin ella, la lectura sigue sólo
  *  con Gemini, como hasta ahora. */
 export const claveGroq = (o) => leerVariable('GROQ_API_KEY', o);
+
+/** OpenRouter (17/10/2026): el último respaldo, cuando fallan o se agotan Gemini y Groq. Sólo modelos gratis (`:free`):
+ *  reels/openrouter.mjs se niega a pedir uno que no lo sea. Sin esta clave, ese módulo no llama a nadie. */
+export const claveOpenRouter = (o) => variableDeOpenRouter('OPENROUTER_API_KEY', o);
+
+/** Las variables de OpenRouter (la clave, OPENROUTER_MODELOS, OPENROUTER_TOPE_DIARIO). Dentro de `node --test` sólo valen si la prueba
+ *  las pasa a mano (`{ env }`): una clave que alguien tenga en su entorno o en su .env no puede hacer que una prueba llame al respaldo. */
+export const variableDeOpenRouter = (nombre, o) => (o === undefined && process.env.NODE_TEST_CONTEXT ? null : leerVariable(nombre, o));
 

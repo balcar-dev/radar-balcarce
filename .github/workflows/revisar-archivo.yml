@@ -56,6 +56,7 @@ jobs:
           FOTOS_MENORES_OFICIALES: ${{ vars.FOTOS_MENORES_OFICIALES }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY_CLASIFICACION: ${{ secrets.GEMINI_API_KEY_CLASIFICACION }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
           WHATSAPP_TELEFONO: ${{ secrets.WHATSAPP_TELEFONO }}
           WHATSAPP_APIKEY: ${{ secrets.WHATSAPP_APIKEY }}
