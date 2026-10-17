@@ -19190,5 +19190,67 @@
    "descripcion": "Enzo Fernández vistiendo la camiseta del Manchester City"
   },
   "huella": "c7a44d1c8e8d4989"
+ },
+ "1pydk3w": {
+  "archivo": "fotos-notas/1pydk3w.jpg",
+  "medio": "0221",
+  "credito": "Foto: 0221",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Juan Sebastián Verón cuestiona la sanción de la AFA y la negativa por Marcos Rojo",
+  "enlace": "https://www.0221.com.ar/estudiantes/juan-sebastian-veron-apunto-contra-la-afa-y-conmebol-se-defendio-y-hablo-del-caso-marcos-rojo-n135964",
+  "imagenOriginal": "https://media.0221.com.ar/p/b26a189d387acf4589d377b0591a606c/adjuntos/357/imagenes/100/300/0100300178/1200x630/622x448:642x468/juan-sebastian-veron-asamblea-estudiantes-2.png",
+  "razon": "Muestra claramente a Juan Sebastián Verón hablando en el evento de la noticia, con buen encuadre, nitidez y sin marcas ni menores.",
+  "cuando": "2026-10-17T18:31:41.233Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Juan Sebastián Verón hablando ante un micrófono con otras personas de fondo.",
+   "segunda": {
+    "proveedor": "groq",
+    "marca": false,
+    "menor": false,
+    "jovenes": false,
+    "deArchivo": false,
+    "grafica": false,
+    "stock": false,
+    "corresponde": "si",
+    "descripcion": "Juan Sebastián Verón hablando en un micrófono durante una conferencia de prensa."
+   },
+   "dudosa": "la nota habla de chicos o de categorías juveniles"
+  },
+  "huella": "daa2a226a23b3b9b"
+ },
+ "1223qry": {
+  "archivo": "fotos-notas/1223qry.jpg",
+  "medio": "Wikimedia Commons",
+  "credito": "Foto: Lula Oficial / Wikimedia Commons (CC BY-SA 2.0)",
+  "licencia": "CC BY-SA 2.0",
+  "autor": "Lula Oficial",
+  "origen": "wikimedia",
+  "titulo": "Axel Kicillof pide organizar y asumir responsabilidades",
+  "enlace": "https://commons.wikimedia.org/wiki/File:13.08.2024_-_Governador_da_Prov%C3%ADncia_de_Buenos_Aires,_Axel_Kicillof_(53920733451)_(cropped).jpg",
+  "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/ab/13.08.2024_-_Governador_da_Prov%C3%ADncia_de_Buenos_Aires%2C_Axel_Kicillof_%2853920733451%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Axel Kicillof\" de Wikimedia Commons (CC BY-SA 2.0, 2024).",
+  "cuando": "2026-10-17T18:31:41.233Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Retrato de Axel Kicillof sonriendo con camisa celeste y saco oscuro",
+   "anio": 2024
+  },
+  "huella": "70c8848804831717"
  }
 }
