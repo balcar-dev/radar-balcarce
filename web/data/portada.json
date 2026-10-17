@@ -1,6 +1,64 @@
 {
-  "generado": "2026-10-17T07:32:03.835Z",
+  "generado": "2026-10-17T08:01:45.007Z",
   "notas": [
+    {
+      "id": "1b2v5n",
+      "titulo": "El cansancio persistente tras dormir bien responde a un desgaste mental",
+      "copete": "Especialistas en salud explican que el agotamiento emocional y cognitivo persiste aunque el cuerpo descanse. La mente continúa activa debido a la preocupación constante y la autoexigencia.",
+      "cuerpo": "Despertar sin energía a pesar de dormir las horas recomendadas puede deberse a un agotamiento emocional y cognitivo que no se resuelve únicamente con el descanso físico, según explicaron especialistas en salud. El malestar se alimenta de la preocupación constante, la autoexigencia y la necesidad de responder a múltiples demandas.\n\nLa psicóloga Agustina De Nardo, del equipo de Psicoterapia Cognitiva de INECO, señaló que anticipar problemas y repasar pendientes consume recursos atencionales. En la misma línea, la consultora psicológica Valeria Roca indicó que el desgaste surge al intentar llegar a todo y sostener expectativas ajenas, mientras que la psiquiatra Pía Lobo advirtió que la mente y el cuerpo no funcionan por separado.",
+      "guion": "El cansancio persistente tras dormir bien responde a un desgaste mental.",
+      "seccion": "Salud",
+      "seccionAntes": "Argentina",
+      "medios": [
+        "Infobae"
+      ],
+      "enlace": "https://www.infobae.com/salud/2026/10/17/no-siempre-es-falta-de-sueno-cinco-senales-de-alerta-cuando-el-cansancio-persiste-y-empieza-a-afectar-la-vida-cotidiana/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-17T05:00:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-17T08:01:17.792Z",
+      "relevancia": 37,
+      "local": false,
+      "deFuenteEspecializada": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El cansancio persistente puede deberse a un agotamiento emocional y cognitivo.",
+        "La mente continúa activa por la anticipación de problemas y la autoexigencia.",
+        "Las especialistas advierten que el descanso físico resulta insuficiente en estos casos."
+      ],
+      "seSabe": [
+        "El cansancio persistente a pesar de dormir bien responde a un agotamiento emocional y cognitivo, según la psicóloga Agustina De Nardo.",
+        "La consultora psicológica Valeria Roca señaló que el desgaste es multifactorial y se vincula con sostener expectativas.",
+        "La psiquiatra Pía Lobo afirmó que pensar todo el día en obligaciones consume gran cantidad de energía."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Especialistas explican por qué el cansancio persiste a pesar de dormir bien y cómo influyen la autoexigencia y la preocupación constante en el desgaste mental.",
+      "etiquetas": [
+        "cansancio",
+        "sueño",
+        "psicología"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/salud/2026/10/17/no-siempre-es-falta-de-sueno-cinco-senales-de-alerta-cuando-el-cansancio-persiste-y-empieza-a-afectar-la-vida-cotidiana/",
+          "fecha": "2026-10-17T05:00:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": null
+      },
+      "slug": "el-cansancio-persistente-tras-dormir-bien-responde-a-un-desgaste"
+    },
     {
       "id": "rwxsr5",
       "titulo": "El INTA Balcarce participa de una investigación global sobre suelo",
@@ -95,10 +153,7 @@
       "seccion": "Fútbol",
       "medios": [
         "Olé",
-        "Bolavip Argentina",
-        "TyC Sports",
-        "C5N",
-        "Doble Amarilla"
+        "Bolavip Argentina"
       ],
       "enlace": "https://www.ole.com.ar/futbol-primera/terrible-golazo-angulo-matias-galarza-boca_3_g7lLH2cTnp.html",
       "teniaImagenLaFuente": true,
@@ -961,8 +1016,8 @@
         "Infobae",
         "Clarín",
         "TN (Todo Noticias)",
-        "Ámbito",
-        "Diario Popular"
+        "Diario Popular",
+        "Ámbito"
       ],
       "enlace": "https://www.clarin.com/economia/agosto-morosidad-familias-leve-baja-marco-128_0_ksSwdDjX91.html",
       "teniaImagenLaFuente": true,
@@ -2399,11 +2454,11 @@
         "La Nación",
         "TN (Todo Noticias)",
         "Crónica",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
         "El Marplatense",
-        "Clarín",
-        "Diario Popular"
+        "Clarín"
       ],
       "enlace": "https://noticiasargentinas.com/politica/rematan-bienes-de-austral-construcciones-en-la-pagina-de-la-corte-suprema_a6ad262aef8e83a89472053e9",
       "teniaImagenLaFuente": true,
@@ -2599,8 +2654,8 @@
       "seccion": "Argentina",
       "medios": [
         "El Día",
-        "Infobae",
-        "C5N"
+        "C5N",
+        "Infobae"
       ],
       "enlace": "https://www.infobae.com/america/agencias/2026/10/16/panama-respaldara-al-argentino-rafael-grossi-para-la-secretaria-general-de-la-onu/",
       "teniaImagenLaFuente": false,
@@ -3400,14 +3455,14 @@
         "A24",
         "iProfesional",
         "Crónica",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "Ámbito",
+        "C5N",
         "Minuto Uno",
         "elDiarioAR",
         "Clarín",
-        "C5N",
-        "Radio Mitre",
-        "Diario Popular"
+        "Radio Mitre"
       ],
       "enlace": "https://www.clarin.com/politica/altos-funcionarios-trump-visitaran-argentina-avanzar-millonario-proyecto-infraestructura-ampliar-inversiones_0_NIwA6uB3Ms.html",
       "teniaImagenLaFuente": true,
@@ -4305,12 +4360,12 @@
         "Crónica",
         "Canal 26",
         "Noticias Argentinas (NA)",
+        "C5N",
         "Minuto Uno",
         "Clarín",
         "0223 (Mar del Plata)",
         "Radio Mitre",
-        "La Nueva",
-        "C5N"
+        "La Nueva"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/16/el-choque-de-verstappen-al-argentino-perez-companc-en-el-gt-world-challenge-el-gesto-desde-el-auto-y-la-sancion-que-podria-sufrir-el-neerlandes/",
       "teniaImagenLaFuente": true,
@@ -4996,11 +5051,11 @@
       "medios": [
         "A24",
         "Crónica",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
         "La Capital (Rosario)",
-        "La Nueva",
-        "Diario Popular"
+        "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-finaliza-su-viaje-en-estados-unidos-y-se-prepara-para-su-visita-a-espana_a6ad1525c88153cda2d050c06",
       "teniaImagenLaFuente": true,
@@ -5478,9 +5533,9 @@
         "Olé",
         "Radio Mitre",
         "0221",
-        "Doble Amarilla",
         "Los Andes (Mendoza)",
         "El Gráfico",
+        "Doble Amarilla",
         "El Día"
       ],
       "enlace": "https://www.ole.com.ar/gimnasia-y-esgrima/nacho-fernandez-lloro-recordar-maradona_3_b0rU2ghW9N.html",
@@ -5845,6 +5900,7 @@
         "iProfesional",
         "Crónica",
         "Canal 26",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
         "La Tecla",
@@ -5856,15 +5912,14 @@
         "El Cronista",
         "La Nueva",
         "La Brújula 24",
-        "La Gaceta (Tucumán)",
-        "Diario Popular"
+        "La Gaceta (Tucumán)"
       ],
       "enlace": "https://noticiasargentinas.com/economia/la-inflacion-mayorista-fue-de-3-2--en-septiembre-y-acumulo-una-suba-de-29-2--en-doce-meses_a6ad2741ff8e83a8947249edf",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-16T00:00:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T19:31:09.393Z",
-      "relevancia": 69,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -5991,9 +6046,9 @@
         "Infobrisas (Radio Brisas)",
         "El Eco de Tandil",
         "Ámbito",
+        "C5N",
         "Los Andes (Mendoza)",
         "El Cronista",
-        "C5N",
         "La Nueva",
         "La Gaceta (Tucumán)",
         "La Brújula 24",
@@ -6253,10 +6308,10 @@
       "medios": [
         "El Destape",
         "Ámbito",
+        "C5N",
         "Minuto Uno",
         "La Capital (Rosario)",
         "Infobae",
-        "C5N",
         "La Gaceta (Tucumán)"
       ],
       "enlace": "https://www.infobae.com/sociedad/2026/10/16/la-anmat-prohibio-un-dispositivo-de-depilacion-definitiva-por-irregularidades-sanitarias/",
@@ -6460,11 +6515,11 @@
         "A24",
         "El Marplatense",
         "Ámbito",
+        "C5N",
         "Minuto Uno",
         "Los Andes (Mendoza)",
         "Clarín",
         "La Nueva",
-        "C5N",
         "Radio Mitre"
       ],
       "enlace": "https://www.clarin.com/politica/milei-cerro-visita-washington-acto-antisemitismo-reunion-alto-funcionario-trump_0_KkhV5wypC4.html",
@@ -7098,118 +7153,15 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "la-messi-cup-define-fechas-y-cruces-para-su-segunda-edicion"
-    },
-    {
-      "id": "1jpdkrm",
-      "titulo": "La inflación de septiembre varía según cada provincia",
-      "copete": "El costo de vida alcanzó el 1,9% a nivel nacional en septiembre, aunque el incremento de precios mostró diferencias en las jurisdicciones con índices propios.",
-      "cuerpo": "La inflación alcanzó el 1,9% a nivel nacional en septiembre, pero el incremento de precios no fue uniforme en los diez distritos con mediciones propias, según un informe de la consultora Politikon Chaco.\n\nRío Negro lideró el índice con el 2,5%, seguida por Neuquén y Tucumán con el 2,1%, mientras que Jujuy igualó el promedio del país con el 1,9%. En el otro extremo, Córdoba registró la menor suba mensual con el 1,4%.\n\nEn cuanto al acumulado entre enero y septiembre, el indicador nacional llegó al 23,6%, por encima del 22% registrado en el mismo período de 2025, de acuerdo con los datos difundidos.",
-      "guion": "La inflación de septiembre varía según cada provincia.",
-      "seccion": "Economía",
-      "medios": [
-        "Perfil",
-        "TN (Todo Noticias)",
-        "Noticias Argentinas (NA)",
-        "Los Andes (Mendoza)",
-        "La Nueva"
-      ],
-      "enlace": "https://tn.com.ar/economia/2026/10/15/inflacion-en-las-provincias-donde-subieron-mas-los-precios-en-septiembre-y-cuales-quedaron-por-debajo-del-promedio-nacional/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T19:58:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T02:32:42.919Z",
-      "relevancia": 33,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La inflación nacional de septiembre se ubicó en el 1,9%.",
-        "Río Negro registró la mayor suba mensual con el 2,5%.",
-        "Córdoba presentó el menor incremento con el 1,4%."
-      ],
-      "seSabe": [
-        "La inflación nacional de septiembre fue del 1,9% según los datos relevados.",
-        "Río Negro registró la mayor suba mensual con el 2,5%.",
-        "Córdoba presentó el menor aumento mensual con el 1,4%."
-      ],
-      "textoRedes": "La inflación de septiembre llegó al 1,9% a nivel nacional, aunque las diez jurisdicciones con índices propios registraron variaciones heterogéneas entre el 2,5% de Río Negro y el 1,4% de Córdoba.",
-      "etiquetas": [
-        "inflacion",
-        "septiembre",
-        "precios",
-        "provincias"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/economia/2026/10/15/inflacion-en-las-provincias-donde-subieron-mas-los-precios-en-septiembre-y-cuales-quedaron-por-debajo-del-promedio-nacional/",
-          "fecha": "2026-10-15T19:58:37.000Z",
-          "oficial": false,
-          "aporte": "Reprodujo la misma información de la fuente tres sin aportar datos nuevos."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/cuales-fueron-las-provincias-con-mayor-y-menor-inflacion-que-el-promedio-nacional-de-septiembre_a6ad1373d88153cda2d007520",
-          "fecha": "2026-10-15T21:45:56.220Z",
-          "oficial": false,
-          "aporte": "Aportó los datos generales del índice nacional y la comparación de la velocidad de crecimiento con el mes previo."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-15-21-41-0-inflacion-en-las-provincias-donde-subieron-mas-los-precios-y-cuales-quedaron-por-debajo-del-promedio",
-          "fecha": "2026-10-16T02:02:07.000Z",
-          "oficial": false,
-          "aporte": "Aportó el listado completo de los diez distritos con IPC propio, el acumulado anual y la comparación interanual."
-        },
-        {
-          "medio": "Los Andes (Mendoza)",
-          "enlace": "https://www.losandes.com.ar/economia/que-provincias-tuvieron-mas-inflacion-que-el-promedio-nacional-septiembre-los-rubros-alza-n6010542",
-          "fecha": "2026-10-16T01:09:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó el detalle de las variaciones mensuales, la aceleración frente a agosto y los rubros con mayores aumentos por provincia."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1iw56bi",
-          "titulo": "El Indec ubica la canasta básica por debajo de la inflación en septiembre",
-          "fecha": "2026-09-24T03:00:00.000Z",
-          "ruta": "/nota/el-indec-ubica-la-canasta-basica-por-debajo-de-la-inflacion-en-1iw56bi"
-        },
-        {
-          "id": "gw45ft",
-          "titulo": "El Gobierno celebra una inflación de 1,9 por ciento en septiembre",
-          "fecha": "2026-10-13T20:24:38.245Z",
-          "ruta": "/nota/el-gobierno-celebra-una-inflacion-de-1-9-por-ciento-en-septiembre-gw45ft"
-        },
-        {
-          "id": "e5v4vp",
-          "titulo": "La inflación porteña llega al 1,8 por ciento en septiembre",
-          "fecha": "2026-10-08T14:00:00.000Z",
-          "ruta": "/nota/la-inflacion-portena-llega-al-1-8-por-ciento-en-septiembre-e5v4vp"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-inflacion-de-septiembre-varia-segun-cada-provincia",
-      "foto": {
-        "archivo": "fotos-notas/1jpdkrm.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
     }
   ],
   "secciones": [
+    "Salud",
     "Agro",
     "Fútbol",
     "Política",
     "Cultura y agenda",
     "Tecnología",
-    "Salud",
     "Economía",
     "Argentina",
     "Automovilismo",
@@ -7226,45 +7178,35 @@
   "clima": {
     "ahora": {
       "temp": 7,
-      "sensacion": 4,
-      "humedad": 92,
-      "viento": 12,
+      "sensacion": null,
+      "humedad": 89,
+      "viento": 14,
       "rumbo": "S",
-      "cielo": "Nublado",
-      "esDeDia": false
+      "cielo": "Nublado"
     },
     "dias": [
       {
         "fecha": "2026-10-17",
         "dia": "sáb",
         "max": 11,
-        "min": 6,
-        "lluvia": 12,
-        "codigo": 51,
-        "viento": 20,
-        "milimetros": 1,
-        "cielo": "Llovizna leve"
+        "min": 7,
+        "lluvia": null,
+        "cielo": "Nublado"
       },
       {
         "fecha": "2026-10-18",
         "dia": "dom",
         "max": 12,
         "min": 5,
-        "lluvia": 4,
-        "codigo": 3,
-        "viento": 15,
-        "milimetros": 0,
-        "cielo": "Nublado"
+        "lluvia": null,
+        "cielo": "Parcialmente nublado"
       },
       {
         "fecha": "2026-10-19",
         "dia": "lun",
-        "max": 16,
+        "max": 15,
         "min": 5,
-        "lluvia": 0,
-        "codigo": 3,
-        "viento": 17,
-        "milimetros": 0,
+        "lluvia": null,
         "cielo": "Nublado"
       },
       {
@@ -7272,14 +7214,11 @@
         "dia": "mar",
         "max": 16,
         "min": 4,
-        "lluvia": 3,
-        "codigo": 3,
-        "viento": 18,
-        "milimetros": 0,
-        "cielo": "Nublado"
+        "lluvia": null,
+        "cielo": "Despejado"
       }
     ],
-    "fuente": "Open-Meteo"
+    "fuente": "MET Noruega"
   },
   "avisosClima": [],
   "farmacias": {
@@ -7587,5 +7526,5 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     }
   ],
-  "esperandoCuerpo": 4
+  "esperandoCuerpo": 5
 }

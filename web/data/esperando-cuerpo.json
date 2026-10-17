@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-17T07:32:03.835Z",
+ "generado": "2026-10-17T08:01:45.007Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -84,6 +84,11 @@
      "fecha": "2026-10-16T16:41:00.000Z"
     },
     {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
+     "fecha": "2026-10-16T18:08:00.000Z"
+    },
+    {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/politica/para-santilli--los-gobernadores-deberian-estar--preocupados--por-un-eventual-regreso-del-kirchnerismo_a6ad22aa6c55c21457e903f0f",
      "fecha": "2026-10-16T13:53:48.393Z"
@@ -127,11 +132,6 @@
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-16-11-48-0-para-santilli-los-gobernadores-deberian-estar-preocupados-por-un-eventual-regreso-del-kirchnerismo",
      "fecha": "2026-10-16T14:53:47.000Z"
-    },
-    {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
-     "fecha": "2026-10-16T18:08:00.000Z"
     }
    ],
    "intentos": 1,
@@ -151,7 +151,24 @@
      "fecha": "2026-10-17T09:15:00.000Z"
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
+   "motivo": "sin material",
+   "maximo": 3
+  },
+  {
+   "id": "1ws0q27",
+   "titulo": "Mastercard lanza plataforma que conecta bancos con criptomonedas",
+   "copete": "",
+   "seccion": "Tecnología",
+   "fecha": "2026-10-16T21:00:00.000Z",
+   "fuentes": [
+    {
+     "medio": "iProUP",
+     "enlace": "https://www.iproup.com/economia-digital/72415-mastercard-lanza-plataforma-que-conecta-bancos-con-criptomonedas",
+     "fecha": "2026-10-16T21:00:00.000Z"
+    }
+   ],
+   "intentos": 1,
    "motivo": "sin material",
    "maximo": 3
   }
