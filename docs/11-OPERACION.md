@@ -595,3 +595,7 @@ En `PENDIENTES.md`: los horarios de las redes se cambian en el código
 (`HISTORIAS_FIJAS`, `redes/horarios.mjs`) y, si hiciera falta volver a cron-job.org, ver que sus tres trabajos pausados
 tengan la dirección nueva. La Auditoría de los lunes ya corre sola (28/09, 5/10
 —falló—, 12/10).
+
+## Si se acaban los tokens de Claude: seguir con DeepSeek
+
+Abrir Claude Code con **`scriptsclaude-con-openrouter.cmd`** (doble clic en una terminal o desde la carpeta del proyecto). Usa DeepSeek V4 Pro por OpenRouter con la clave `OPENROUTER_API_KEY` que ya está en la PC (no se guarda en ningún archivo). Dentro de Claude Code, `/status` tiene que mostrar la dirección de OpenRouter; si antes se entró con la cuenta de Anthropic, hacer `/logout` y volver a abrirlo con ese archivo. Cuesta unos US$ 0,21 por millón de tokens de entrada y 0,42 de salida: con US$ 10 alcanza para mucho trabajo. DeepSeek no es Claude: puede equivocarse más en cambios grandes, así que conviene pedirle tareas chicas y correr `npm test` antes de subir. Para el robot (las IA de las notas), OpenRouter ya es el último respaldo cuando está cargada la clave en GitHub (regla 240).
