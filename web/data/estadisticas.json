@@ -1908,6 +1908,40 @@
         "vistas": 92,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-17T12:00:43.522Z",
+      "web": {
+        "u12": {
+          "visitas": 16,
+          "vistas": 51
+        },
+        "a12": {
+          "visitas": 70,
+          "vistas": 120
+        },
+        "u24": {
+          "visitas": 75,
+          "vistas": 167
+        },
+        "a24": {
+          "visitas": 68,
+          "vistas": 118
+        },
+        "top": []
+      },
+      "facebook": {
+        "seguidores": 59,
+        "vistas": 5109,
+        "interacciones": 22
+      },
+      "instagram": {
+        "seguidores": 7,
+        "publicaciones": 184,
+        "alcance": 6,
+        "vistas": 10,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -3169,35 +3203,11 @@
       "visitas": 74,
       "vistas": 129,
       "notas": {
-        "8q3d25": 14,
-        "vt870i": 8,
-        "11lwkfl": 6,
-        "pel8ok": 5,
-        "mly1kv": 5,
-        "1ylxz2o": 5,
-        "1v9h1ps": 4,
-        "wzunxc": 4,
-        "1uvhput": 4,
-        "9s0dkq": 4,
-        "lf9d6b": 4,
-        "1hfz3co": 3,
-        "9y985f": 2,
-        "u0hcbv": 2,
-        "br4g49": 2,
-        "1s8weuc": 2,
-        "1e22az3": 2,
-        "1j6q0tv": 1
+        "11lwkfl": 100,
+        "1uvhput": 100
       },
       "paginas": {
-        "/": 19,
-        "/seccion/cultura": 9,
-        "/seccion/policiales": 6,
-        "/seccion/economia": 5,
-        "/seccion/argentina": 4,
-        "/seccion/agro": 4,
-        "/clima": 2,
-        "/agenda": 2,
-        "/seccion/balcarce": 1
+        "/": 100
       },
       "referentes": {
         "facebook.com": 64,
@@ -3215,6 +3225,83 @@
         "SE": 4,
         "TW": 1
       }
+    },
+    "2026-10-16": {
+      "visitas": 62,
+      "vistas": 119,
+      "dispositivos": {
+        "desktop": 69,
+        "mobile": 50
+      },
+      "paises": {
+        "AR": 67,
+        "US": 30,
+        "IE": 13,
+        "SE": 8,
+        "CN": 1
+      },
+      "horas": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        22,
+        32,
+        5,
+        8,
+        3,
+        0,
+        36,
+        8,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "2026-10-17": {
+      "visitas": 15,
+      "vistas": 50,
+      "paises": {
+        "AR": 43,
+        "IE": 4,
+        "US": 2,
+        "CA": 1
+      },
+      "horas": [
+        0,
+        36,
+        3,
+        0,
+        1,
+        0,
+        0,
+        6,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
     }
   }
 }

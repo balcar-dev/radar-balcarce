@@ -15643,7 +15643,8 @@
   "imagenOriginal": "https://www.radiogabal.com.ar/images/2025/octubre/Sol%20Di%20Geronimo%20en%20Necochea.jpeg",
   "razon": "La foto A muestra a Sol Di Gerónimo con buen encuadre y nitidez, sin marcas de agua ni menores reconocibles.",
   "cuando": "2026-10-14T23:02:43.555Z",
-  "huella": "86961317161222b3"
+  "huella": "86961317161222b3",
+  "ausenteDesde": "2026-10-17T16:02:29.037Z"
  },
  "wm8hav": {
   "intentado": true,
@@ -16345,7 +16346,8 @@
   "imagenOriginal": "https://www.cronica.com.ar/files/image/1721/1721575/6ad11ed8d364f_600_315!.jpg?s=fe5656d4f517804a693a619a1312ae21&d=1792033200",
   "razon": "La foto B muestra claramente el trofeo de la Supercopa de manera nítida y sin marcas de agua ni menores.",
   "cuando": "2026-10-15T19:32:32.961Z",
-  "huella": "1e16373759513333"
+  "huella": "1e16373759513333",
+  "ausenteDesde": "2026-10-17T16:31:44.477Z"
  },
  "fpal84": {
   "medio": "La Nación",
@@ -16477,7 +16479,8 @@
   "imagenOriginal": "https://cdn-4.motorsport.com/images/amp/YBVjp4zY/s6/rafael-camara-haas-f1-team-2.jpg",
   "razon": "Es una foto nítida, con excelente encuadre del protagonista, sin marcas de agua ni menores reconocibles.",
   "cuando": "2026-10-15T21:32:00.960Z",
-  "huella": "92c28975b29a56de"
+  "huella": "92c28975b29a56de",
+  "ausenteDesde": "2026-10-17T17:03:28.378Z"
  },
  "n6v2wu": {
   "archivo": "fotos-notas/n6v2wu.jpg",
@@ -16587,7 +16590,8 @@
   "imagenOriginal": "https://www.labrujula24.com/wp-content/uploads/2026/02/lautaro-martinez-1-1000x600.jpg",
   "razon": "La foto C muestra claramente a Lautaro con la camiseta de la selección y sin marcas de agua agregadas, a diferencia de A y B que tienen elementos superpuestos.",
   "cuando": "2026-10-16T02:01:43.662Z",
-  "huella": "674b4b3918181f1f"
+  "huella": "674b4b3918181f1f",
+  "ausenteDesde": "2026-10-17T14:02:28.138Z"
  },
  "1jpdkrm": {
   "archivo": "fotos-notas/1jpdkrm.jpg",
@@ -16652,7 +16656,8 @@
   "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-15-22-0-59Lalcec__3_.JPG",
   "razon": "Es la única opción disponible, cumple con los requisitos de calidad, no tiene marcas de agua del medio ni menores de edad.",
   "cuando": "2026-10-16T03:06:06.531Z",
-  "huella": "02b6b6787173b3f2"
+  "huella": "02b6b6787173b3f2",
+  "ausenteDesde": "2026-10-17T16:31:44.477Z"
  },
  "w9mlsu": {
   "archivo": "fotos-notas/w9mlsu.jpg",
@@ -16668,14 +16673,28 @@
   "huella": "25666262b3d3111b"
  },
  "ddz0um": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/ddz0um.jpg",
+  "medio": "TyC Sports",
+  "credito": "Foto: TyC Sports",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Ignacio Fernández se emociona hasta las lágrimas al recordar a Diego Maradona",
-  "razon": "Groq también falló: HTTP 429: Request too large for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on output tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T04:31:14.056Z",
-  "intentos": 4,
-  "fuentes": 6,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.tycsports.com/liga-profesional-de-futbol/nacho-fernandez-se-quebro-al-recordar-a-maradona-id766606.html",
+  "imagenOriginal": "https://media.tycsports.com/files/2026/10/15/996463/nacho-fernandez-se-quebro-al-recordar-a-maradonb_862x485.webp",
+  "razon": "Es la única foto de la entrevista donde Ignacio Fernández se muestra emocionado con la mano en la cabeza, sin marcas añadidas por el medio, sin menores y con excelente nitidez.",
+  "cuando": "2026-10-17T10:31:48.980Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Primer plano de Ignacio Fernández con la mano en la frente conteniendo la emoción"
+  },
+  "huella": "33f9f9d134d9b4f6"
  },
  "3gzh4e": {
   "medio": "Olé",
@@ -16717,11 +16736,10 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Reprograman la Caravana de la Alegría para noviembre",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:31:31.461Z",
-  "intentos": 4,
-  "fuentes": 3,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "razon": "Todas las fotos disponibles muestran menores de edad reconocibles, por lo que no pueden ser publicadas según la política del medio.",
+  "cuando": "2026-10-17T11:31:53.125Z",
+  "intentos": 5,
+  "fuentes": 3
  },
  "1kd7az5": {
   "medio": "La Nueva",
@@ -17137,7 +17155,8 @@
   "imagenOriginal": "https://fotos.perfil.com/2026/08/20/trim/1140/641/la-ciudad-desregulo-la-vtv-y-ya-se-pueden-inscribir-los-talleres-mecanicos-que-quieran-dar-el-servicio-2308183.jpg",
   "razon": "La foto B ilustra directamente el tema de la VTV al mostrar una inspección vehicular, sin marcas de agua ni menores.",
   "cuando": "2026-10-16T16:04:42.324Z",
-  "huella": "d8fce85870e0d836"
+  "huella": "d8fce85870e0d836",
+  "ausenteDesde": "2026-10-17T08:32:11.753Z"
  },
  "k4nvoi": {
   "archivo": "fotos-notas/k4nvoi.jpg",
@@ -17333,11 +17352,10 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Luciano Nakis apunta a Gabriel Milito como técnico de Independiente",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T04:01:35.346Z",
-  "intentos": 4,
-  "fuentes": 5,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "razon": "Ninguna de las fotos corresponde al tema de la nota sobre Luciano Nakis y Gabriel Milito; las fotos A y B muestran a Sergio Agüero y las fotos C, D y E muestran a Luciano Nakis hablando en un atril pero ninguna menciona o involucra a Gabriel Milito.",
+  "cuando": "2026-10-17T10:02:00.259Z",
+  "intentos": 5,
+  "fuentes": 5
  },
  "mhaxsk": {
   "archivo": "fotos-notas/mhaxsk.jpg",
@@ -17406,14 +17424,28 @@
   "huella": "152160721959310c"
  },
  "q299p0": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/q299p0.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Anses paga a jubilados y asignaciones con terminación 5",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T04:31:14.056Z",
-  "intentos": 4,
-  "fuentes": 4,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.infobae.com/economia/2026/10/16/anses-quienes-cobran-hoy-viernes-16-de-octubre-de-2026/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/VUZSSQY7K5DFHIK67KMTTJWGEU.jpg?auth=19a732901d2338a3cee68c5b3109917ce72eb6b8b9661462257fe5eccbc92cc0&smart=true&width=1200&height=630&quality=85",
+  "razon": "Es la única foto que corresponde perfectamente a la temática de jubilados y Anses, con buena calidad y sin problemas de marcas, menores o formato gráfico.",
+  "cuando": "2026-10-17T10:31:48.980Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Cartel institucional de ANSES al aire libre junto a un árbol"
+  },
+  "huella": "868e4ecede1e3e32"
  },
  "1wze6ju": {
   "archivo": "fotos-notas/1wze6ju.jpg",
@@ -17470,11 +17502,10 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "La Corte Suprema remata camiones y obradores de Austral Construcciones",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:31:31.461Z",
-  "intentos": 4,
-  "fuentes": 5,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "razon": "Ninguna foto muestra los camiones y obradores de Austral Construcciones mencionados en la nota; hay retratos de personas o capturas genéricas de subastas. (la IA nombró a \"Lázaro Báez\", pero el título no: sin foto de Wikimedia)",
+  "cuando": "2026-10-17T11:31:53.125Z",
+  "intentos": 5,
+  "fuentes": 5
  },
  "fgcjjj": {
   "intentado": true,
@@ -17607,9 +17638,9 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Atlético Tucumán y Rosario Central juegan el sábado por la noche",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-17T02:31:19.553Z",
-  "intentos": 3,
+  "razon": "Ninguna de las fotos corresponde al partido entre Atlético Tucumán y Rosario Central; muestran otros equipos o gráficos genéricos.",
+  "cuando": "2026-10-17T08:31:46.101Z",
+  "intentos": 4,
   "fuentes": 17
  },
  "1w9aja0": {
@@ -17635,13 +17666,41 @@
   "fuentes": 2
  },
  "z7cv8i": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/z7cv8i.jpg",
+  "medio": "Radio Mitre",
+  "credito": "Foto: Radio Mitre",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Diego Santilli celebra la falta de quórum en Diputados para el DNU",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-17T02:31:19.553Z",
-  "intentos": 3,
-  "fuentes": 5
+  "enlace": "https://radiomitre.cienradios.com/videos/diego-santilli-celebro-que-diputados-no-haya-dado-quorum-para-el-rechazo-del-dnu-7023-habria-sido-algo-espantoso-para-la-sociedad-argentina/",
+  "imagenOriginal": "https://radiomitre.cienradios.com/resizer/v2/QKOKCECRVZBTBE4ZQ2AIUTDXXY.jpg?smart=true&auth=0d93680b9e18c58cb131e21dab6feac5043dd9c5f2044b46f1b79cc1fd3893a6&width=1200&height=630",
+  "razon": "Es la única foto que cumple con todos los requisitos de calidad, nitidez y correspondencia sin presentar marcas de agua, menores de edad ni problemas de formato.",
+  "cuando": "2026-10-17T08:31:46.101Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Diego Santilli caminando con traje y corbata azul",
+   "segunda": {
+    "proveedor": "groq",
+    "marca": false,
+    "menor": false,
+    "jovenes": false,
+    "deArchivo": true,
+    "grafica": false,
+    "stock": false,
+    "corresponde": "si",
+    "descripcion": "Diego Santilli camina al aire libre con traje y corbata, acompañado por otros hombres."
+   },
+   "dudosa": "la nota habla de chicos o de categorías juveniles"
+  },
+  "huella": "a0a2a6b692a9cdcd",
+  "ausenteDesde": "2026-10-17T14:02:28.138Z"
  },
  "1n6g7ka": {
   "archivo": "fotos-notas/1n6g7ka.jpg",
@@ -17657,24 +17716,52 @@
   "huella": "67b0089b99d9d6d2"
  },
  "1ifa1zl": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1ifa1zl.jpg",
+  "medio": "TyC Sports",
+  "credito": "Foto: TyC Sports",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Enzo Fernández analiza el futuro de la Selección sin Lionel Messi",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T03:31:20.114Z",
-  "intentos": 3,
-  "fuentes": 4,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.tycsports.com/seleccion-argentina/enzo-fernandez-a-corazon-abierto-la-seleccion-post-messi-las-cargadas-con-companeros-ingleses-y-su-amor-por-river-id766806.html",
+  "imagenOriginal": "https://media.tycsports.com/files/2026/03/29/936318/enzo-fernandez_1440x810.webp",
+  "razon": "Es la única foto que muestra claramente a Enzo Fernández solo, cumple con todos los requisitos y no tiene marcas de agua agregadas por el medio.",
+  "cuando": "2026-10-17T09:31:51.680Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Enzo Fernández con la camiseta de la Selección celebrando en la cancha."
+  },
+  "huella": "020c2e4646551931"
  },
  "1te62vo": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1te62vo.jpg",
+  "medio": "La Gaceta (Tucumán)",
+  "credito": "Foto: La Gaceta (Tucumán)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Ministro chileno critica a Javier Milei por la obra pública y luego se disculpa",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:01:26.183Z",
-  "intentos": 3,
-  "fuentes": 4,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.lagaceta.com.ar/nota/1158414/politica/ministro-kast-apunto-contra-milei-cuestiono-postura-sobre-obra-publica-cada-vez-mas-loco.html",
+  "imagenOriginal": "https://img.lagaceta.com.ar/fotos/notas/2026/10/16/ministro-kast-apunto-contra-milei-cuestiono-postura-sobre-obra-publica-cada-vez-mas-loco-1158414-203233.jpg",
+  "razon": "Es una fotografía clara y limpia que muestra a los protagonistas de la nota sin marcas agregadas ni menores.",
+  "cuando": "2026-10-17T11:01:53.604Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Javier Milei y un funcionario posando en un salón oficial con banderas."
+  },
+  "huella": "8eaeaaae6b696949"
  },
  "rwxsr5": {
   "archivo": "fotos-notas/rwxsr5.jpg",
@@ -17725,14 +17812,28 @@
   "huella": "8a0b0b0b4a25672b"
  },
  "1sf5zma": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1sf5zma.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Santilli pide acuerdos a gobernadores y cuestiona a Kicillof",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:31:31.461Z",
-  "intentos": 3,
-  "fuentes": 5,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://tn.com.ar/politica/2026/10/16/santilli-pidio-acuerdos-con-los-gobernadores-para-avanzar-con-las-reformas-y-cuestiono-a-kicillof-por-la-falta-de-inversiones/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/diego-santilli-en-el-cfi-foto-jefatura-de-gabinete-IJENJ7UZQFB4LKS5CTNYQGH37U.jpg?auth=4696c8eba5d8996cac038c794e906aa5eab7fc6bccb911ef39535a7879cc60d5&width=1023",
+  "razon": "Es la foto con mejor encuadre y calidad que corresponde a la nota y no tiene marcas ni problemas.",
+  "cuando": "2026-10-17T11:31:53.125Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Diego Santilli hablando con un micrófono en la mano sentado en un sillón."
+  },
+  "huella": "1b2b2e266969191a"
  },
  "1iqabic": {
   "intentado": true,
@@ -17745,24 +17846,64 @@
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
  "10pra4l": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/10pra4l.jpg",
+  "medio": "El Eco de Tandil",
+  "credito": "Foto: El Eco de Tandil",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "La CGT reclama unidad al peronismo y apunta contra el Gobierno",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:31:31.461Z",
-  "intentos": 3,
-  "fuentes": 4,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.eleco.com.ar/nacionales/la-cgt-celebro-el-17-de-octubre-y-reclamo-dejar-de-lado-los-egos-y-las-vanidades",
+  "imagenOriginal": "https://cdnartic.ar/_Mv7dwap3oCWRHpH72AO7zEDkC4=/1200x630/smart/filters:format(jpeg):quality(70)/https://cdn.eleco.com.ar/media/2026/10/cgt_1.webp",
+  "razon": "La foto C muestra claramente el evento de la CGT con mejor encuadre y sin la marca de agua del medio que tiene la foto A.",
+  "cuando": "2026-10-17T11:31:53.125Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Tres dirigentes sindicales haciendo el símbolo de la victoria junto a un atril de la CGT"
+  },
+  "huella": "86c6c2caca8ccccc"
  },
  "1jpywoz": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1jpywoz.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "La Base Aérea de Morón despide con un homenaje al meteorólogo Fernando Confessore",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:31:31.461Z",
-  "intentos": 3,
-  "fuentes": 5,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://tn.com.ar/videos/show/2026/10/16/la-base-aerea-de-moron-despidio-a-fernando-confessore-con-un-emotivo-homenaje-extranaremos-siempre-su-presencia/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/https%3A%2F%2Fthumbs.vodgc.net%2F1-14-323848282a0a1792178420928-1792178887.jpg?auth=61b3c55444c41555ad555da705153cec0a0e06979df899b39f72334e00560002&width=1023",
+  "razon": "Es la única foto nítida y centrada en el hecho sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-17T11:31:53.125Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Un oficial hablando en un atril con el escudo de la Fuerza Aérea frente a un grupo de personas.",
+   "segunda": {
+    "proveedor": "groq",
+    "marca": false,
+    "menor": false,
+    "jovenes": true,
+    "deArchivo": true,
+    "grafica": false,
+    "stock": false,
+    "corresponde": "si",
+    "descripcion": "Un oficial de la Fuerza Aérea habla en un atril durante un acto al aire libre, con una multitud de civiles y personal militar de pie detrás."
+   },
+   "dudosa": "la nota habla de chicos o de categorías juveniles"
+  },
+  "huella": "d538948e8c0c068e"
  },
  "1qgpd66": {
   "archivo": "fotos-notas/1qgpd66.jpg",
@@ -17810,14 +17951,28 @@
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
  "apovoe": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/apovoe.jpg",
+  "medio": "A24",
+  "credito": "Foto: A24",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Mediodía Noticias despide con profunda emoción a Fernando Confessore",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T05:31:31.461Z",
-  "intentos": 3,
-  "fuentes": 3,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.a24.com/primiciasya/el-desgarrador-llanto-luis-otero-al-aire-la-muerte-fernando-confessore-n1607250",
+  "imagenOriginal": "https://media.a24.com/p/d9377291a0def5c6a6bdd9bdd9c0fc9a/adjuntos/296/imagenes/009/833/0009833880/1200x675/smart/fer-confessore.jpg",
+  "razon": "Muestra claramente el estudio y a Fernando Confessore en un plano adecuado, sin marcas de agua ni menores.",
+  "cuando": "2026-10-17T11:31:53.125Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Conductor hablando y moviendo las manos en el estudio con imagen de fondo"
+  },
+  "huella": "d3dcf4e4a8a1a98d"
  },
  "bfzt9z": {
   "intentado": true,
@@ -17830,14 +17985,28 @@
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
  "fzzf69": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/fzzf69.jpg",
+  "medio": "C5N",
+  "credito": "Foto: C5N",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Rafael Grossi avanza en la carrera para la secretaría general de la ONU",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T06:31:39.806Z",
-  "intentos": 3,
-  "fuentes": 3,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "enlace": "https://www.c5n.com/mundo/carrera-la-secretaria-general-la-onu-el-argentino-rafael-grossi-sumo-apoyos-pero-enfrenta-dos-vetos-clave-n251836",
+  "imagenOriginal": "https://media.c5n.com/p/54a1f7811b4307b6168a6f61c8e657eb/adjuntos/326/imagenes/000/403/0000403656/1200x675/smart/rafael-grossi.jpg",
+  "razon": "La foto B es de archivo y la A es un logo gráfico, por lo que la C es la única opción válida.",
+  "cuando": "2026-10-17T12:32:14.384Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Rafael Grossi hablando en un atril."
+  },
+  "huella": "1111010028605067"
  },
  "vaow4u": {
   "archivo": "fotos-notas/qrho5d.jpg",
@@ -17868,11 +18037,10 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "El dólar mayorista finaliza la semana con una suba y cotiza a $1.518",
-  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
-  "cuando": "2026-10-17T06:31:39.806Z",
-  "intentos": 3,
-  "fuentes": 2,
-  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+  "razon": "La mejor foto era la de El Eco de Tandil, pero no se puede usar (parece una foto de stock), y ninguna de las otras sirve: no se elige ninguna.",
+  "cuando": "2026-10-17T12:32:14.384Z",
+  "intentos": 4,
+  "fuentes": 2
  },
  "qrho5d": {
   "archivo": "fotos-notas/qrho5d.jpg",
@@ -17923,7 +18091,8 @@
    "corresponde": "si",
    "descripcion": "Detalle de manos escribiendo cuentas sobre un escritorio con tarjetas de crédito y calculadora."
   },
-  "huella": "460e0c9c9ed48e16"
+  "huella": "460e0c9c9ed48e16",
+  "ausenteDesde": "2026-10-17T14:02:28.138Z"
  },
  "13sxop4": {
   "archivo": "fotos-notas/13sxop4.jpg",
@@ -18090,6 +18259,717 @@
    "corresponde": "si",
    "descripcion": "Jugador de Boca disputando el balón con un rival de Talleres."
   },
-  "huella": "139bab5567664e93"
+  "huella": "139bab5567664e93",
+  "ausenteDesde": "2026-10-17T08:01:44.994Z"
+ },
+ "1b2v5n": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El cansancio persistente tras dormir bien responde a un desgaste mental",
+  "razon": "La única imagen disponible es una ilustración gráfica y no una fotografía real.",
+  "cuando": "2026-10-17T08:01:41.126Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "ey70ps": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Evitan errores frecuentes al medir la presión arterial en el hogar",
+  "razon": "La mejor foto era la de Infobae, pero no se puede usar (es un flyer, un afiche o una captura de pantalla, no una foto), y ninguna de las otras sirve: no se elige ninguna.",
+  "cuando": "2026-10-17T09:31:51.680Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "3cvzzz": {
+  "archivo": "fotos-notas/3cvzzz.jpg",
+  "medio": "TyC Sports",
+  "credito": "Foto: TyC Sports",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Boca vence a Talleres y escala a la cima de la Tabla Anual",
+  "enlace": "https://www.tycsports.com/boca-juniors/otra-vuelta-boca-triunfo-talleres-punta-tabla-anual-battaglia-id766920.html",
+  "imagenOriginal": "https://media.tycsports.com/files/2026/10/17/996772/boca_1440x810.webp?v=1",
+  "razon": "Es la única foto limpia de marcas añadidas, sin menores reconocibles y con excelente calidad y encuadre del festejo.",
+  "cuando": "2026-10-17T10:02:00.259Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": true,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Jugador de Boca festejando un gol en pleno partido.",
+   "segunda": {
+    "proveedor": "groq",
+    "marca": false,
+    "menor": false,
+    "jovenes": false,
+    "deArchivo": false,
+    "grafica": false,
+    "stock": false,
+    "corresponde": "si",
+    "descripcion": "Jugador de Boca Juniors celebrando un gol en el estadio La Bombonera."
+   },
+   "dudosa": "la primera IA vio gente muy joven"
+  },
+  "huella": "5eef37c5d199ea2e",
+  "ausenteDesde": "2026-10-17T12:01:48.930Z"
+ },
+ "1t5zb3r": {
+  "archivo": "fotos-notas/1t5zb3r.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La soja registra su quinta baja consecutiva en Chicago y se sostiene en Rosario",
+  "enlace": "https://www.lanacion.com.ar/economia/campo/la-soja-cayo-por-quinta-jornada-consecutiva-en-chicago-y-llego-a-su-menor-precio-en-siete-semanas-nid16102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/los-operadores-estimaron-las-cosechas-de-soja-en-DWRAVY4YDRDXJEU7DSADQH6AOQ.jpg?auth=e2f253c433903563a9be0193f30cf1adb0a4a2c3c59067f4422a8862e150ffcd&width=1200&height=800&quality=70&smart=true",
+  "razon": "La foto B muestra una cosechadora recolectando soja en el campo, ilustrando adecuadamente la nota sobre el mercado de granos sin marcas de agua ni menores.",
+  "cuando": "2026-10-17T10:02:00.259Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Cosechadora trabajando en un campo de soja y descargando en un tractor con acoplado tolva."
+  },
+  "huella": "0c6266c20a095123",
+  "ausenteDesde": "2026-10-17T14:02:28.138Z"
+ },
+ "p3f4x9": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Robinho Quinto pide disculpas tras likear críticas a Martínez Quarta",
+  "razon": "La segunda opinión (groq, porque la nota habla de chicos o de categorías juveniles) descartó la de TyC Sports (no corresponde a la nota); la de Crónica (no corresponde a la nota): no se elige ninguna. (se probó una foto libre de \"Robinho Quinto\" en Wikimedia Commons de los últimos 2 años, sin resultado)",
+  "cuando": "2026-10-17T10:31:48.980Z",
+  "intentos": 1,
+  "fuentes": 3
+ },
+ "dg5er4": {
+  "archivo": "fotos-notas/dg5er4.jpg",
+  "medio": "El Día",
+  "credito": "Foto: El Día",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Plata concentra propuestas culturales y deportivas para el sábado",
+  "enlace": "https://www.eldia.com/espectaculos/agenda-espectaculos_1792212089",
+  "imagenOriginal": "https://cdn1.eldia.com/102026/1792212656334.jpg?&cw=1200&ch=630",
+  "razon": "La foto A muestra una propuesta cultural adecuada para la nota, sin menores ni marcas de medios.",
+  "cuando": "2026-10-17T11:01:53.604Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Elenco teatral en una escena de comedia"
+  },
+  "huella": "1b9d9dccc94c4c0e"
+ },
+ "1yhd2y8": {
+  "archivo": "fotos-notas/1yhd2y8.jpg",
+  "medio": "Crónica",
+  "credito": "Foto: Crónica",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Selección Argentina avanza a la final del Mundial de hockey sobre patines",
+  "enlace": "https://www.cronica.com.ar/depo/polideportivo/mundial-de-hockey-sobre-patines-2026-argentina-le-gano-a-espana-por-penales-y-jugara-la-final-ante-francia/",
+  "imagenOriginal": "https://www.cronica.com.ar/files/image/1722/1722127/6ad350319d5ca_600_315!.jpg?s=d71b44eb16f90e597df89d722b6dac0b&d=1792206000",
+  "razon": "La foto C corresponde perfectamente a la nota, muestra el festejo de los jugadores de hockey sobre patines, no tiene marca de agua, menores, ni es gráfica o de stock.",
+  "cuando": "2026-10-17T11:01:53.604Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Jugadores de la selección de hockey sobre patines abrazados festejando"
+  },
+  "huella": "fb63351c4a555632"
+ },
+ "daz0ef": {
+  "archivo": "fotos-notas/daz0ef.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Revelan la verdadera falla del auto de Carlos Reutemann en 1981",
+  "enlace": "https://www.infobae.com/deportes/2026/10/17/a-45-anos-del-dia-que-carlos-reutemann-perdio-el-titulo-de-f1-la-revelacion-sobre-la-verdadera-falla-que-tuvo-su-auto/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/TCNZUOVMEFDFZM3JM254H34ZNQ.jpg?auth=009d077d34eca324ead06800cd6073665cd814440c5d3fbf64ccaf4bd1f54212&smart=true&width=1200&height=630&quality=85",
+  "razon": "Muestra el auto de Carlos Reutemann en pista de forma clara y sin personas ajenas o marcas agregadas.",
+  "cuando": "2026-10-17T12:32:14.384Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Carlos Reutemann conduciendo su monoplaza en pista."
+  },
+  "huella": "e7eaaaf269240f0d",
+  "ausenteDesde": "2026-10-17T13:31:52.093Z"
+ },
+ "181owly": {
+  "archivo": "fotos-notas/181owly.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Desarrollan un motor en hilo flexible para integrar en la ropa",
+  "enlace": "https://www.infobae.com/tecno/2026/10/17/crean-un-motor-con-forma-de-hilo-que-podria-tejerse-en-la-ropa-y-asistir-el-movimiento-humano/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/VVHPJ5BTGJCTPFCWPKKYFAKHHY.jpg?auth=e1112cd6a1724d1bf01e989468bc3528eb88ea0d07c380db170f169e343b6051&smart=true&width=1200&height=630&quality=85",
+  "razon": "Es la única foto disponible, ilustra perfectamente el motor en hilo flexible sobre una mano y cumple con todos los requisitos de calidad y política.",
+  "cuando": "2026-10-17T12:32:14.384Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Mano con un hilo flexible conductor enroscado"
+  },
+  "huella": "610f1715357f7b3f"
+ },
+ "gqhyjb": {
+  "archivo": "fotos-notas/gqhyjb.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Boca vence a Talleres y Arruabarrena evalúa a Paredes para la Sudamericana",
+  "enlace": "https://www.infobae.com/deportes/2026/10/17/12-frases-de-arruabarrena-tras-la-victoria-de-boca-de-la-posible-titularidad-de-paredes-ante-vasco-a-un-pedido-de-perdon-a-un-periodista/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/F4NN44YHKVDGZO7MUDU7SJFPAI.JPG?auth=42f04b52ea633e1e6725b7fd1f08498f71d9c527cd59a4036342e0efbda72349&smart=true&width=1200&height=630&quality=85",
+  "razon": "Muestra claramente al director técnico Arruabarrena dándole indicaciones a Paredes en el campo de juego, cumpliendo con la temática central de la nota sin inconvenientes de menores, marcas añadidas o gráficos.",
+  "cuando": "2026-10-17T12:32:14.384Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "El DT Arruabarrena hablando con Paredes en el partido."
+  },
+  "huella": "3d0b950c45455ad9",
+  "ausenteDesde": "2026-10-17T14:02:28.138Z"
+ },
+ "1kblme4": {
+  "archivo": "fotos-notas/1kblme4.jpg",
+  "medio": "La Gaceta (Tucumán)",
+  "credito": "Foto: La Gaceta (Tucumán)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La CGT conmemora el 17 de octubre y recuerda el origen del peronismo",
+  "enlace": "https://www.lagaceta.com.ar/nota/1158371/opinion/dia-lealtad-de-se-trataba-eso.html",
+  "imagenOriginal": "https://img.lagaceta.com.ar/fotos/notas/2026/10/16/lealtad-peronista-cada-17-octubre-vuelve-poner-debate-identidad-historia-divisiones-internas-justicialismo-1158371-165950.jpg",
+  "razon": "Es una fotografía histórica nítida que ilustra perfectamente el origen del peronismo el 17 de octubre sin marcas añadidas ni menores reconocibles en primer plano.",
+  "cuando": "2026-10-17T12:32:14.384Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Vista general de la histórica concentración en la Plaza de Mayo el 17 de octubre"
+  },
+  "huella": "4d054d25a5a9b533"
+ },
+ "961i45": {
+  "archivo": "fotos-notas/961i45.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Servicio Meteorológico emite alertas amarillas por tormentas",
+  "enlace": "https://tn.com.ar/sociedad/2026/10/17/hay-alerta-amarilla-por-tormentas-en-4-provincias-del-sur-para-este-sabado-17-de-octubre/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/hay-alerta-amarilla-por-tormentas-fuertes-en-sectores-del-sur-argentino-foto-adobe-stock-EEA2Q7K2OZBDLKHFBLAWFEYVUI.jpg?auth=465c4ebe01635d8265563747538ae2739ddbd76c88d85ca15adab67c80362173&width=1023",
+  "razon": "Ilustra claramente una tormenta eléctrica sobre una ciudad, cumpliendo con los criterios y sin marcas ni menores.",
+  "cuando": "2026-10-17T12:32:14.384Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Tormenta eléctrica con rayos sobre la ciudad"
+  },
+  "huella": "330bc3271d1d0413"
+ },
+ "19nga6r": {
+  "archivo": "fotos-notas/19nga6r.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Santiago Gilligan busca sumar sus primeros minutos en la Serie A de Italia",
+  "enlace": "https://eldiariobalcarce.com.ar/santiago-gilligan-busca-asentarse-en-la-serie-a-del-rugby-italiano-776",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-17-12-46-2Santiago_Gilligan.jpg",
+  "razon": "Es la única foto disponible, cumple con todos los requisitos de calidad, muestra al protagonista y no tiene marcas de medios ni menores.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Santiago Gilligan con la camiseta de su equipo de rugby sosteniendo un balón",
+   "segunda": {
+    "proveedor": "groq",
+    "marca": false,
+    "menor": false,
+    "jovenes": false,
+    "deArchivo": true,
+    "grafica": false,
+    "stock": false,
+    "corresponde": "si",
+    "descripcion": "Jugador de rugby posando con el balón en un campo de entrenamiento."
+   },
+   "dudosa": "la nota habla de chicos o de categorías juveniles"
+  },
+  "huella": "53ddcfce8be9ab8d"
+ },
+ "r3jsn4": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Leonel Flores pide disculpas a los hinchas de Boca por un video viral",
+  "razon": "La segunda opinión (groq, porque la nota habla de chicos o de categorías juveniles) descartó la de Bolavip Argentina (no corresponde a la nota); la de La Nación (no corresponde a la nota): no se elige ninguna. (se probó una foto libre de \"Leonel Flores\" en Wikimedia Commons de los últimos 2 años, sin resultado)",
+  "cuando": "2026-10-17T13:02:08.406Z",
+  "intentos": 1,
+  "fuentes": 6
+ },
+ "tsc53o": {
+  "archivo": "fotos-notas/tsc53o.jpg",
+  "medio": "Bolavip Argentina",
+  "credito": "Foto: Bolavip Argentina",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Boca supera a Talleres y piensa en la Copa Sudamericana",
+  "enlace": "https://bolavip.com/ar/boca/merentiel-tras-la-victoria-de-boca-ante-talleres-no-hay-que-apresurar-a-paredes",
+  "imagenOriginal": "https://media.bolavip.com/wp-content/uploads/sites/18/2026/10/17074256/Miguel-Merentiel-1-1200x740.webp",
+  "razon": "La foto B muestra claramente a un jugador de Boca en primer plano sin marcas de televisión ni elementos extraños, siendo apta para la nota.",
+  "cuando": "2026-10-17T13:02:08.406Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Jugador de Boca con la cinta de capitán en el campo de juego."
+  },
+  "huella": "411d8e26a6a6b31b"
+ },
+ "1b25lqu": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "OpenAI admite que modelos de IA vulneran sitios y gastan fondos ajenos",
+  "razon": "La mejor foto era la de Infobae, pero no se puede usar (parece una foto de stock), y ninguna de las otras sirve: no se elige ninguna.",
+  "cuando": "2026-10-17T14:02:03.797Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "1ae6llz": {
+  "archivo": "fotos-notas/1ae6llz.jpg",
+  "medio": "La Gaceta (Tucumán)",
+  "credito": "Foto: La Gaceta (Tucumán)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Dibu Martínez sufre un fuerte golpe en la cabeza y sale en camilla",
+  "enlace": "https://www.lagaceta.com.ar/nota/1158456/deportes/video-dibu-martinez-sufrio-durisimo-golpe-cabeza-lo-retiraron-camilla.html",
+  "imagenOriginal": "https://img.lagaceta.com.ar/fotos/notas/2026/10/17/martinez-golpeo-cabeza-contra-jarrad-branthwaite-foto-reuters-phil-noble-1158456-102823.jpg",
+  "razon": "Muestra claramente el momento del golpe en la cabeza al Dibu Martínez durante el partido, sin marcas agregadas, menores ni problemas de contenido.",
+  "cuando": "2026-10-17T14:02:03.797Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Dibu Martínez sufriendo el golpe en la cabeza durante una jugada aérea"
+  },
+  "huella": "dabbae3337aba98d"
+ },
+ "1yhn69m": {
+  "archivo": "fotos-notas/1yhn69m.jpg",
+  "medio": "C5N",
+  "credito": "Foto: C5N",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Boca viaja a Brasil con plantel completo y mantiene la duda de Paredes",
+  "enlace": "https://www.c5n.com/deportes/rodolfo-arruabarrena-confirmo-que-leandro-paredes-viajara-brasil-el-plantel-boca-jugara-n251853",
+  "imagenOriginal": "https://media.c5n.com/p/267eca60f53d2b52a05878ef1dbe48d8/adjuntos/326/imagenes/000/396/0000396233/1200x675/smart/aranda-paredes.jpg",
+  "razon": "Es la foto más limpia y representativa del plantel de Boca con sus figuras, sin menores ni marcas de agua.",
+  "cuando": "2026-10-17T14:02:03.797Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Jugadores de Boca festejando un gol juntos"
+  },
+  "huella": "ccf1c4d87ada2929"
+ },
+ "mp9n0b": {
+  "archivo": "fotos-notas/mp9n0b.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Aranaga pide autocrítica en el PJ local y defiende las internas partidarias",
+  "enlace": "https://www.radiogabal.com.ar/index.php/politica/el-peronismo-no-deberia-pedir-lealtad-sino-ofrecerla-aranaga-el-pj-el-2027-y-el-dia-de-la-lealtad-peronista",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/Aranaga_GABAL.jpeg",
+  "razon": "Es la única foto disponible, corresponde a la nota y cumple con todos los requisitos de calidad y formato.",
+  "cuando": "2026-10-17T14:31:54.326Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Retrato de Aranaga en el estudio de Radio Gabal con fondo verde."
+  },
+  "huella": "0717151416367c2a",
+  "ausenteDesde": "2026-10-17T16:31:44.477Z"
+ },
+ "1kgatx3": {
+  "archivo": "fotos-notas/1kgatx3.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Virginia Aparicio presenta los resultados del proyecto SPRINT sobre plaguicidas",
+  "enlace": "https://www.diariolavanguardia.com/noticias/45106-mas-alla-de-la-ideologia-la-necesidad-de-un-debate-con-rigor/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66073.png",
+  "razon": "Es la única foto disponible, cumple con todos los requisitos de calidad y contenido sin marcas ni menores.",
+  "cuando": "2026-10-17T15:02:01.683Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Virginia Aparicio disertando en una presentación"
+  },
+  "huella": "060426e687474747"
+ },
+ "gfxquk": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Una serie de ficción populariza un truco con cerveza para el jardín",
+  "razon": "La segunda opinión (groq, porque la nota habla de chicos o de categorías juveniles) descartó la de La Nación (parece una foto de stock); la de Radio Mitre (parece una foto de stock): no se elige ninguna.",
+  "cuando": "2026-10-17T15:02:01.683Z",
+  "intentos": 1,
+  "fuentes": 2
+ },
+ "vltlkl": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Lanzan una campaña de concientización sobre el cáncer de mama",
+  "razon": "Ninguna de las opciones muestra una escena real del hecho, tratándose de fotos de estudio de tipo stock para una campaña.",
+  "cuando": "2026-10-17T15:02:01.683Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "1gd5mnh": {
+  "archivo": "fotos-notas/1gd5mnh.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La crecida de los ríos obliga a evacuar a 472 personas en Corrientes",
+  "enlace": "https://www.infobae.com/sociedad/2026/10/17/mas-de-400-personas-abandonaron-sus-hogares-en-corrientes-tras-la-crecida-de-los-rios-parana-y-uruguay/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/MDFLF2JL4RFVBPIGEC7PHNPAVA.jpg?auth=ed78ddf66e8381e7e16c4bf8859e0176d062cd6272170b828ce10fa8183d513f&smart=true&width=1200&height=630&quality=85",
+  "razon": "Muestra claramente la asistencia a los evacuados en bote por la crecida, sin marcas ni menores.",
+  "cuando": "2026-10-17T16:02:04.135Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Personas transportando colchones en una lancha por la zona inundada"
+  },
+  "huella": "66cca785ddcacae3"
+ },
+ "4m5150": {
+  "archivo": "fotos-notas/4m5150.jpg",
+  "medio": "Perfil",
+  "credito": "Foto: Perfil",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La inteligencia artificial acelera la ingeniería inversa y enciende alertas",
+  "enlace": "https://www.perfil.com/noticias/columnistas/que-pasa-cuando-la-ia-aprende-a-hackear-todo-lo-que-nos-rodea-por-maximiliano-firtman.phtml",
+  "imagenOriginal": "https://fotos.perfil.com/2026/10/17/trim/1140/641/171026amodeianthropicbloombergg-2350470.jpg",
+  "razon": "Es una foto genérica adecuada y de buena calidad para ilustrar la nota de tecnología sin inconvenientes.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "generica",
+   "descripcion": "Hombre con anteojos conversando gesticulando."
+  },
+  "huella": "6d49090929695959"
+ },
+ "1bkouf2": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "La ciencia analiza si se pueden recuperar las horas de sueño perdidas",
+  "razon": "La única foto disponible es una ilustración gráfica y no una fotografía real.",
+  "cuando": "2026-10-17T16:02:04.135Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "mcgl08": {
+  "archivo": "fotos-notas/mcgl08.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Ciudadanos italianos tienen plazo hasta noviembre para votar en el COMITES",
+  "enlace": "https://eldiariobalcarce.com.ar/los-ciudadanos-italianos-tienen-tiempo-hasta-el-4-de-noviembre-para-inscribirse-y-votar-en-las-elecciones-del-comites-783",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-17-0-10-28Sociedad_Italiana.jpeg",
+  "razon": "Es la única foto disponible, corresponde a la nota y cumple con todos los requisitos de calidad sin marcas ni menores.",
+  "cuando": "2026-10-17T16:02:04.135Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Cuatro personas paradas frente al edificio de la Sociedad Italiana de Balcarce"
+  },
+  "huella": "60b9d2d2b2a92dec"
+ },
+ "6qfnj1": {
+  "archivo": "fotos-notas/6qfnj1.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Partido Justicialista reclama la liberación de Cristina Kirchner",
+  "enlace": "https://www.lanacion.com.ar/politica/dia-de-la-lealtad-el-pj-pidio-por-la-libertad-de-cristina-kirchner-y-el-fin-de-su-proscripcion-nid17102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/cristina-fernandez-de-TZLYPPXT4ZBY3BCJC4H74YD3FY.jpg?auth=ffd1e8b11401fc3d6cd4bda5f0f5e9f679f7b0725860196d24015d3ca2e804ad&width=1200&height=800&quality=70&smart=true",
+  "razon": "Es una fotografía nítida, de buena calidad, sin marcas agregadas y muestra claramente a Cristina Kirchner.",
+  "cuando": "2026-10-17T16:02:04.135Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Cristina Kirchner señalando hacia adelante"
+  },
+  "huella": "3128293929213134"
+ },
+ "15p2o2h": {
+  "archivo": "fotos-notas/15p2o2h.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Bill Gates inicia la construcción de un reactor nuclear comercial",
+  "enlace": "https://www.infobae.com/tecno/2026/10/17/bill-gates-inicia-la-construccion-de-un-reactor-nuclear-dara-energia-a-400000-hogares/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/46OURQ2XUJGNVPHSJP2J2XVYZY.jpg?auth=a7a7bbe82d2e26b312dfe00af0914f9b144a217fca7741123c25ba88745a5cc2&smart=true&width=1200&height=630&quality=85",
+  "razon": "Es la única opción disponible, cumple con los criterios de calidad y corresponde directamente al hecho.",
+  "cuando": "2026-10-17T16:31:41.442Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Bill Gates con casco y chaleco reflectante en la obra de construcción del reactor nuclear."
+  },
+  "huella": "525ac20222cacb48"
+ },
+ "104zrum": {
+  "archivo": "fotos-notas/104zrum.jpg",
+  "medio": "La Nueva",
+  "credito": "Foto: La Nueva",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Jorge Colina advierte que solo crece el cuentapropismo informal",
+  "enlace": "https://www.lanueva.com/nota/2026-10-17-13-33-0-lo-unico-que-crece-en-la-argentina-es-el-cuentapropismo-informal",
+  "imagenOriginal": "https://pxcdn.lanueva.com/102026/1792255033733.jpg?&cw=600&ch=365",
+  "razon": "La foto B ilustra adecuadamente la temática laboral sin marcas de agua superpuestas, a diferencia de la A.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "generica",
+   "descripcion": "Obreros trabajando en una construcción"
+  },
+  "huella": "54554d191d346d6d"
+ },
+ "s1injc": {
+  "archivo": "fotos-notas/s1injc.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Las cámaras de colectivos del AMBA advierten recortes de servicios",
+  "enlace": "https://tn.com.ar/economia/2026/10/17/las-empresas-de-colectivos-del-amba-advierten-por-posibles-recortes-en-los-servicios-que-le-exigen-al-gobierno/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/las-empresas-de-colectivos-del-amba-alertan-por-recortes-de-servicios-que-le-exigen-al-gobierno-foto-leandro-heredia-tn-U4QRX7VDCNGPXH5YHVOOPRZ6RI.jpg?auth=1864e6b9d0535551ada463a3b2e6089e25b73e22a95a74c0381de3039616e68c&width=1023",
+  "razon": "Es la foto con mejor encuadre y nitidez de un colectivo del AMBA en circulación, sin marcas agregadas.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Colectivo de la línea 9 circulando por la calle en zona urbana."
+  },
+  "huella": "03070bab237bf343"
+ },
+ "e2pox8": {
+  "archivo": "fotos-notas/e2pox8.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Partido Justicialista exige la libertad de Cristina Fernández",
+  "enlace": "https://www.clarin.com/politica/dia-lealtad-cristina-kirchner-hizo-sacar-comunicado-pj-compara-peron-cuestiona-regimen-visitas-siquiera-aplica-narcotraficantes_0_TmkLoDSO25.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/09/05/HsF7xv7Ca_2000x1500__1.jpg",
+  "razon": "La foto A muestra a Cristina Fernández de cuerpo entero en el balcón con buen encuadre y nitidez, sin marcas de agua ni menores.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Cristina Fernández asomada a un balcón con los brazos levantados."
+  },
+  "huella": "4149695961e8b8a0"
+ },
+ "12xnbwz": {
+  "archivo": "fotos-notas/12xnbwz.jpg",
+  "medio": "Campeones",
+  "credito": "Foto: Campeones",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Joaquín Cortina consigue la pole positión en Concepción del Uruguay",
+  "enlace": "https://campeones.com.ar/en-concepcion-del-uruguay-cortina-consigue-la-pole-de-tp-clase-1/",
+  "imagenOriginal": "https://campeones.com.ar/wp-content/uploads/2026/10/261017-TPC1-Cortina.jpg",
+  "razon": "La foto A tiene mejor encuadre del auto en pista sin marcas añadidas y cumple perfectamente con los requisitos.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Auto de competición en la pista doblando"
+  },
+  "huella": "1e00c8e580a92210"
+ },
+ "np0iti": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Ayala analiza el futuro de la Selección tras el retiro de Messi",
+  "razon": "La única foto disponible muestra a juveniles y no corresponde directamente al título de la nota sobre Ayala y Messi.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "intentos": 1,
+  "fuentes": 2
+ },
+ "1wpceph": {
+  "archivo": "fotos-notas/1wpceph.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Franco Colapinto corre el Gran Premio de Estados Unidos de Fórmula 1",
+  "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/17/gran-premio-de-estados-unidos-de-formula-1-cuando-corre-franco-colapinto-y-a-que-hora-es-la-carrera/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/franco-colapinto-volvera-a-correr-con-alpine-el-domingo-25-de-octubre-en-el-gran-premio-de-estados-unidos-foto-reuters-mike-segar-KSEDFLF3LRHUBJ6OEYCCLVXY4I.png?auth=2a926f4c6723d45d369c2b2ef8a488900ff48084fc302b2b4c8ad27f2337b942&width=1023",
+  "razon": "La foto A muestra el auto de Fórmula 1 en plena pista con excelente nitidez y encuadre lateral, sin marcas de medios ni personas.",
+  "cuando": "2026-10-17T17:02:17.203Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Auto de Fórmula 1 circulando en pista con fondo difuminado por movimiento"
+  },
+  "huella": "639292aab6969802"
  }
 }

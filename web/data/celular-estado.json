@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T07:32:03.835Z",
+ "generado": "2026-10-17T17:03:28.389Z",
  "portada": 82,
- "archivo": 1211,
- "esperandoCuerpo": 4,
+ "archivo": 1232,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-17T07:32:03.872Z",
+  "generado": "2026-10-17T17:03:28.413Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,8 +13,8 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
-    "salio": null
+    "momento": "cerrada",
+    "salio": "2026-10-17T10:06:48.991Z"
    },
    {
     "nombre": "efemeride",
@@ -23,8 +23,8 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "antes",
-    "salio": null
+    "momento": "cerrada",
+    "salio": "2026-10-17T12:07:11.409Z"
    },
    {
     "nombre": "noticia1",
@@ -33,8 +33,8 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
-    "salio": null
+    "momento": "cerrada",
+    "salio": "2026-10-17T13:07:32.466Z"
    },
    {
     "nombre": "noticia2",
@@ -93,10 +93,15 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "antes",
-    "salio": null,
-    "segundos": 54,
+    "momento": "cerrada",
+    "salio": "2026-10-17T13:07:32.466Z",
+    "segundos": null,
     "notas": [
+     {
+      "id": "19nga6r",
+      "titulo": "Santiago Gilligan busca sumar sus primeros minutos en la Serie A de Italia",
+      "seccion": "Deportes"
+     },
      {
       "id": "rwxsr5",
       "titulo": "El INTA Balcarce participa de una investigación global sobre suelo",
@@ -106,11 +111,6 @@
       "id": "1w9aja0",
       "titulo": "La organización designa los árbitros para la primera fecha del torneo",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "1mfnr70",
-      "titulo": "Campo de Pato mete a sus dos equipos en semifinales de rugby",
-      "seccion": "Deportes"
      },
      {
       "id": "1edq6ii",
@@ -126,17 +126,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 37,
+    "segundos": 38,
     "notas": [
+     {
+      "id": "1ae6llz",
+      "titulo": "Dibu Martínez sufre un fuerte golpe en la cabeza y sale en camilla",
+      "seccion": "Fútbol"
+     },
      {
       "id": "1e6e9wy",
       "titulo": "Docentes y estatales bonaerenses discuten una nueva oferta salarial",
       "seccion": "Economía"
-     },
-     {
-      "id": "n6v2wu",
-      "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -152,17 +152,31 @@
    }
   ],
   "facebook": {
-   "hoy": [],
-   "cola": [
+   "hoy": [
     {
-     "id": "rwxsr5",
-     "titulo": "El INTA Balcarce participa de una investigación global sobre suelo",
-     "seccion": "Agro",
-     "marcada": false
+     "id": "dg5er4",
+     "titulo": "La Plata concentra propuestas culturales y deportivas para el sábado",
+     "cuando": "2026-10-17T11:05:51.200Z"
+    },
+    {
+     "id": "daz0ef",
+     "titulo": "Revelan la verdadera falla del auto de Carlos Reutemann en 1981",
+     "cuando": "2026-10-17T12:45:48.541Z"
+    },
+    {
+     "id": "19nga6r",
+     "titulo": "Santiago Gilligan busca sumar sus primeros minutos en la Serie A de Italia",
+     "cuando": "2026-10-17T14:35:51.990Z"
+    },
+    {
+     "id": "1kgatx3",
+     "titulo": "Virginia Aparicio presenta los resultados del proyecto SPRINT sobre plaguicidas",
+     "cuando": "2026-10-17T16:35:59.059Z"
     }
    ],
-   "cupo": 5,
-   "proximoDesde": "2026-10-16T20:08:18.880Z",
+   "cola": [],
+   "cupo": 1,
+   "proximoDesde": "2026-10-17T18:05:59.059Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

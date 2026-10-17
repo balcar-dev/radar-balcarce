@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-17T07:32:03.835Z",
+ "generado": "2026-10-17T17:03:28.389Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -35,20 +35,25 @@
    "maximo": 3
   },
   {
-   "id": "rng086",
-   "titulo": "Los ciudadanos italianos tienen tiempo hasta el 4 de noviembre para inscribirse y votar en las elecciones del COMITES",
-   "copete": "La comunidad italiana de Balcarce se prepara para una nueva instancia electoral del COMITES (Comité de los Italianos en el Exterior), organismo que representa a los ciudadanos italianos residentes fuera de su país de origen. En ese marco, se inform",
-   "seccion": "Política",
-   "fecha": "2026-10-17T00:10:28.000Z",
+   "id": "14l7end",
+   "titulo": "Alexis Mac Allister fue clave en la remontada del Liverpool ante Brentford por la Premier League",
+   "copete": "El Liverpool consiguió una victoria fundamental ante Brentford por la Premier League y tuvo en Alexis Mac Allister a uno de sus grandes protagonistas. El mediocampista argentino se destacó en un encuentro que se presentó cuesta arriba para los Reds, aportó equilibrio cuando el…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-17T16:17:04.000Z",
    "fuentes": [
     {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/los-ciudadanos-italianos-tienen-tiempo-hasta-el-4-de-noviembre-para-inscribirse-y-votar-en-las-elecciones-del-comites-783",
-     "fecha": "2026-10-17T00:10:28.000Z"
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/depo/premierleague/alexis-mac-allister-remontada-liverpool-brentford-premier-league/",
+     "fecha": "2026-10-17T16:17:04.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/17/brentford-vs-liverpool-en-vivo-por-la-fecha-7-de-la-premier-league-hora-donde-ver-y-formaciones/",
+     "fecha": "2026-10-17T16:36:44.000Z"
     }
    ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (relleno): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 127 palabras",
    "maximo": 3
   },
   {
@@ -69,11 +74,6 @@
      "fecha": "2026-10-16T18:52:15.000Z"
     },
     {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/politica/santilli-los-que-deberian-estar-preocupados-el-regreso-del-kirchnerismo-son-los-gobernadores-n56559",
-     "fecha": "2026-10-16T17:53:00.000Z"
-    },
-    {
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/politica/los-gobernadores-piden-mas-obras-y-santilli-lanzo-una-advertencia-deberian-estar-preocupados-si-nid16102026/",
      "fecha": "2026-10-16T22:56:17.000Z"
@@ -82,6 +82,11 @@
      "medio": "A24",
      "enlace": "https://www.a24.com/politica/santilli-los-que-tendrian-que-estar-preocupados-son-los-gobernadores-si-gana-kicillof-n1607140",
      "fecha": "2026-10-16T16:41:00.000Z"
+    },
+    {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
+     "fecha": "2026-10-16T18:08:00.000Z"
     },
     {
      "medio": "Noticias Argentinas (NA)",
@@ -109,11 +114,6 @@
      "fecha": "2026-10-16T16:29:00.000Z"
     },
     {
-     "medio": "Los Andes (Mendoza)",
-     "enlace": "https://www.losandes.com.ar/politica/diego-santilli-dijo-que-los-gobernadores-deberian-estar-preocupados-un-posible-regreso-del-kirchnerismo-n6010629",
-     "fecha": "2026-10-16T21:51:00.000Z"
-    },
-    {
      "medio": "Radio Mitre",
      "enlace": "https://radiomitre.cienradios.com/videos/diego-santilli-los-que-deberian-estar-preocupados-son-los-gobernadores-si-el-kirchnerismo-vuelve-y-gana-kicillof/",
      "fecha": "2026-10-16T13:52:11.000Z"
@@ -129,14 +129,97 @@
      "fecha": "2026-10-16T14:53:47.000Z"
     },
     {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/politica/santilli-advirtio-el-regreso-del-kirchnerismo-el-reclamo-obra-publica-n924856",
-     "fecha": "2026-10-16T18:08:00.000Z"
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/politica/santilli-los-que-deberian-estar-preocupados-el-regreso-del-kirchnerismo-son-los-gobernadores-n56559",
+     "fecha": "2026-10-16T17:53:00.000Z"
+    },
+    {
+     "medio": "Los Andes (Mendoza)",
+     "enlace": "https://www.losandes.com.ar/politica/diego-santilli-dijo-que-los-gobernadores-deberian-estar-preocupados-un-posible-regreso-del-kirchnerismo-n6010629",
+     "fecha": "2026-10-16T21:51:00.000Z"
     }
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
+  },
+  {
+   "id": "1m52u47",
+   "titulo": "Por qué no juega Enzo Fernández hoy en Manchester City vs. Ipswich Town por la Premier League",
+   "copete": "",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-17T13:06:47.000Z",
+   "fuentes": [
+    {
+     "medio": "Bolavip Argentina",
+     "enlace": "https://bolavip.com/ar/futbol-internacional/por-que-no-juega-enzo-fernandez-hoy-en-manchester-city-vs-ipswich-town-por-la-premier-league",
+     "fecha": "2026-10-17T13:06:47.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/17/manchester-city-vs-ipswich-en-vivo-por-la-fecha-7-de-la-premier-league-hora-donde-ver-y-formaciones/",
+     "fecha": "2026-10-17T16:03:38.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (antecedente): el copete usa 11, que sale de una nota anterior, como si fuera de hoy",
+   "maximo": 3
+  },
+  {
+   "id": "1223qry",
+   "titulo": "Axel Kicillof, en el Día de la Lealtad: \"Cuenten conmigo para asumir las responsabilidades\"",
+   "copete": "",
+   "seccion": "Política",
+   "fecha": "2026-10-17T14:49:00.000Z",
+   "fuentes": [
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/politica/axel-kicillof-el-dia-la-lealtad-cuenten-conmigo-asumir-las-responsabilidades-n251858",
+     "fecha": "2026-10-17T14:49:00.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/politica/axel-kicillof-el-dia-la-lealtad-cuenten-conmigo-asumir-las-responsabilidades-que-haya-que-asumir-n6334879",
+     "fecha": "2026-10-17T15:04:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 2 problemas (nombre, promesa): el cuerpo nombra a \"ejecutivo\" y la fuente no; sin esas oraciones quedan 109 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "1trgeyq",
+   "titulo": "Gigantes cripto crean un grupo para evitar la amenaza cuántica",
+   "copete": "",
+   "seccion": "Tecnología",
+   "fecha": "2026-10-17T15:10:00.000Z",
+   "fuentes": [
+    {
+     "medio": "iProUP",
+     "enlace": "https://www.iproup.com/economia-digital/72429-gigantes-cripto-crean-un-grupo-para-evitar-la-amenaza-cuantica",
+     "fecha": "2026-10-17T15:10:00.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "sin material",
+   "maximo": 3
+  },
+  {
+   "id": "43uic4",
+   "titulo": "Cathie Wood invierte millones en IA y tecnología espacial",
+   "copete": "",
+   "seccion": "Tecnología",
+   "fecha": "2026-10-17T11:20:00.000Z",
+   "fuentes": [
+    {
+     "medio": "iProUP",
+     "enlace": "https://www.iproup.com/finanzas/72426-cathie-wood-invierte-millones-en-ia-y-tecnologia-espacial",
+     "fecha": "2026-10-17T11:20:00.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "sin material",
+   "maximo": 3
   },
   {
    "id": "7zwjs1",
@@ -151,7 +234,7 @@
      "fecha": "2026-10-17T09:15:00.000Z"
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "sin material",
    "maximo": 3
   }
