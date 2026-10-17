@@ -257,9 +257,15 @@ escriben sólo si cambiaron (o si faltan).
 2. **`npm run redirects`** (`web/scripts/generar-redirects.mjs`): escribe
    `web/public/_redirects`, que Cloudflare lee. Van primero las secciones que
    ya no existen (`SECCIONES_VIEJAS`: `/seccion/servicios` → Balcarce,
-   `/seccion/pais` → Argentina) y después `/nota/ID` → `/nota/titular-ID` de
-   las notas más nuevas, hasta 1.900 (`MAXIMO_REDIRECCIONES`; Cloudflare
-   acepta 2.000). Tampoco se versiona.
+   `/seccion/pais` → Argentina), después las repetidas que se unieron a otra
+   (`fusionadas.json`, las más nuevas primero) y al final `/nota/ID` →
+   `/nota/titular-ID` **sólo de las notas de antes del 25/09** (las únicas que
+   alguna vez tuvieron esa dirección). Entre todas, como mucho 1.950
+   (`MAXIMO_REDIRECCIONES`; Cloudflare acepta 2.000 e ignora sin avisar las que
+   sobran: regla 191). Hasta el 17/10 iba una por nota y se llenaba hacia el 26/10.
+   Tampoco se versiona. Después de `next build`, **`npm run redirects-paginas`**
+   arma una página chica de redirección (canónica + meta refresh) para cada
+   repetida que no haya entrado, si alguna vez pasa.
 3. **`next build`**: con `output: 'export'` (`web/next.config.mjs`) Next.js
    genera **todas** las páginas como archivos en `web/out/`, leyendo
    `web/data/` a través de `web/lib/datos.js`. Las imágenes para compartir se
@@ -310,34 +316,41 @@ Dentro de `actualizar.yml`, en orden (el detalle de cada paso, en
    en `web/data/` o en las fotos gana lo de esta corrida) y `git push`, con
    tres intentos.
 
-### D. Publicar: `.github/workflows/cloudflare-deploy.yml`
+### D. Publicar: al final de `actualizar.yml` (desde el 17/10/2026, regla 189)
 
-Cuando "Actualizar la web" **termina bien** (haya o no novedades), arranca
-solo "Cloudflare Pages":
+Hasta el 16/10, cuando "Actualizar la web" terminaba bien arrancaba sola "Cloudflare
+Pages" (`cloudflare-deploy.yml`), que **volvía a compilar** todo para subirlo. Desde el
+17/10 la subida es parte de la misma corrida, con lo que ya se compiló, y "Cloudflare
+Pages" queda sólo a mano, de rescate (hace lo mismo con lo que está en `main`).
+Después de guardar los datos en `main` (paso C, haya o no novedades):
 
-1. Baja el repositorio, instala `web/`.
-2. **Vuelve a compilar** (`npm run build` con `SITIO`). Es esta segunda
-   compilación la que se publica; por eso la foto del dólar publicada es la
-   de este momento.
-3. **Archiva en R2 las notas que están por salir del sitio** (paso «Archivar
+1. **¿Entró algo mientras se armaba?** El `git pull --rebase` del commit trae lo que
+   subieron los demás en esos minutos. `web/scripts/recompilar.mjs` compara el commit
+   compilado con lo que quedó en `main`: si entró algo que el sitio lee (una retirada o
+   una corrección del celular, el libro de redes, código), **vuelve a compilar** y a
+   revisar el SEO; si sólo entró lo que el sitio no lee (la vigilancia, las
+   estadísticas, documentos, pruebas), sigue con lo compilado. Lo que entre después
+   sale en la vuelta siguiente.
+2. **Archiva en R2 las notas que están por salir del sitio** (paso «Archivar
    las notas por salir (R2)», `web/scripts/archivar-a-r2.mjs`, regla 183).
    Sólo corre si existe la variable `R2_ARCHIVO`, **cargada el 16/10 a las 18:06
    UTC** (`radar-archivo`; ver "El archivo permanente", más abajo). Si falla, no frena: el sitio
    se sube igual y llega un mail.
-4. Sube `web/out/` a Cloudflare con
+3. Sube `web/out/` a Cloudflare con
    `npx wrangler@4.139.0 pages deploy out --branch=main` (proyecto
    `radar-balcarce`, o el de la variable `CLOUDFLARE_PROJECT`; secretos
    `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`). Es "subida directa":
    Cloudflare no compila nada, así no se gastan los 500 builds gratis por mes.
-5. Le avisa a Bing de las notas nuevas (`redes/indexnow.mjs`, IndexNow, desde el
+4. Le avisa a Bing de las notas nuevas (`redes/indexnow.mjs`, IndexNow, desde el
    8/10): sólo las que Google también puede ver. Si falla, no importa.
 
-Dos despliegues no corren a la vez: si llega uno nuevo, el anterior se cancela.
+Si no compiló o no se pudo guardar en `main`, no se sube nada. Si la subida falla, la
+corrida sale en rojo en "Subir a Cloudflare Pages" (los datos ya quedaron guardados) y la
+vuelta siguiente lo vuelve a intentar.
 
 Desde que "Actualizar la web" arranca hasta que la página nueva está en línea
-pasan unos 10 minutos: "Actualizar la web" tarda unos 8 y la compilación de
-"Cloudflare Pages", unos 2 y medio más (`docs/etapa-10-operacion/ANALISIS.md`;
-a fines de septiembre, con menos notas, eran 3 a 5 en total).
+pasan unos 4 a 5 minutos (con la compilación doble eran unos 6 y medio:
+`docs/auditoria-2-0/01-ARMADO-E-INFRA.md`).
 
 ### E. En el navegador del lector
 
@@ -630,9 +643,9 @@ lo único que cuenta**, y nunca lleva guiones.
   una persona cambien el título (`fijarSlug`). `slugsConocidos` la busca, en
   este orden, en el archivo y la portada anteriores y, si no, en el libro de
   redes (así se rescataron enlaces de Facebook anteriores al arreglo).
-- Si igual llega una dirección vieja: `/nota/ID` tiene una redirección fija
-  (`_redirects`, hasta 1.900), y cualquier otra la rescata la 404 con
-  `/nota/indice.json`.
+- Si igual llega una dirección vieja: la de una repetida y la `/nota/ID` de las notas
+  de antes del 25/09 tienen redirección fija (`_redirects`, como mucho 1.950: regla
+  191), y cualquier otra la rescata la 404 con `/nota/indice.json`.
 
 Pasó el 25/09: la IA reescribía el título después de publicar y los enlaces
 de Facebook daban 404.

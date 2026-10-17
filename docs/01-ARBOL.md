@@ -67,41 +67,36 @@ la caché de Actions), `web/.next/`, `web/out/`, `web/public/_redirects`,
 
 | Archivo | Qué hace | Quién lo llama | ¿En uso? |
 |---|---|---|---|
-| `actualizar.yml` | "Actualizar la web": el núcleo legal de las pruebas (si falla, no sigue y avisa por mail), ingesta, lectura y reescritura con IA, fotos, datos, compilar, revisar SEO, commit de `web/data/` | El reloj de Cloudflare a los :00 y :30; `schedule` 7 y 37 de respaldo; el panel del celular; a mano | Sí |
-| `cloudflare-deploy.yml` | "Cloudflare Pages": compila y sube `web/out` con wrangler; avisa a IndexNow; el paso del archivo permanente (corre desde el 16/10, con `R2_ARCHIVO` cargada) | Al terminar bien "Actualizar la web"; a mano | Sí |
-| `redes.yml` | "Redes": Facebook, el reloj, armar y subir piezas, completar direcciones, guardar el libro; al final, el archivo de piezas en R2 (`R2_PIEZAS` = `radar-piezas`, cargada el 15/10) | El reloj de Cloudflare a los :05, :35 y :45; al terminar "Actualizar la web"; a mano | Sí |
+| `actualizar.yml` | "Actualizar la web": el núcleo legal de las pruebas (si falla, no sigue y avisa por mail), ingesta, lectura y reescritura con IA, fotos, datos, compilar (una vez), revisar SEO, commit de `web/data/` y, desde el 17/10, la subida a Cloudflare (recompila sólo si entró algo que el sitio lee; regla 189) | El reloj de Cloudflare a los :00 y :30 (sin `schedule` de respaldo desde el 16/10); el panel del celular; a mano | Sí |
+| `cloudflare-deploy.yml` | "Cloudflare Pages": compila `main` y lo sube con wrangler, con el archivo permanente e IndexNow. **Sólo a mano, de rescate** desde el 17/10/2026: la subida de cada media hora la hace "Actualizar la web" con lo que ya compiló (regla 189) | A mano | A mano |
+| `redes.yml` | "Redes": Facebook, el reloj, armar y subir piezas, completar direcciones, guardar el libro; al final, el archivo de piezas en R2 (`R2_PIEZAS` = `radar-piezas`, cargada el 15/10) | El reloj de Cloudflare a los :05, :35 y :45, de 7 a 23 (desde el 17/10; ya no al terminar "Actualizar la web"); a mano | Sí |
 | `piezas.yml` | "Piezas": armar (y publicar) una pieza a mano | A mano | A mano |
 | `panel.yml` | "Panel del celular": la IA escribe una nota a pedido y deja el borrador cifrado | El panel del celular | Sí |
-| `vigilancia.yml` | "Vigilancia": `redes/vigilar.mjs` | El reloj de Cloudflare a los :00 y :30; `schedule` cada 3 h; a mano | Sí |
+| `vigilancia.yml` | "Vigilancia": `redes/vigilar.mjs` | El reloj de Cloudflare cada 3 horas, con reintento a las 9:30, 21:30 y 0:30 (desde el 17/10); a mano | Sí |
 | `informe-diario.yml` | "Informe diario": el mail de las 8:15 y el de las 21:15 (`redes/informe-diario.mjs`, regla 176) | El reloj de Cloudflare (:15, con segundo intento a los :30); `schedule` 8:45 y 21:45 de respaldo; a mano | Sí |
 | `pruebas.yml` | "Pruebas": `npm test` entero (ya no corre en cada vuelta de "Actualizar la web") | Al subir código (no datos ni fotos); lunes; a mano | Sí |
 | `ilustrar-notas.yml` | "Ilustrar notas sin foto": ilustraciones con IA sin personas para las notas sin foto; revisar, aplicar o automático (reglas 182 y 185) | El reloj de Cloudflare a los :20 cada 2 horas, de 7 a 23 (automático); a mano | Sí |
 | `auditoria.yml` | "Auditoría": medidas, íconos, SEO en vivo y la semana del contrato; guarda `web/data/auditoria.json` | Lunes 12:00 UTC; a mano | Sí |
-| `auditar-redes.yml` | "Auditar redes": el contrato contra Meta (hoy, ayer, semana, crudo) | A mano | A mano |
 | `auditar-voz.yml` | "Auditar voz": clips con la voz real y su transcripción (gasta cupo de voz) | A mano | A mano |
 | `crear-voces.yml` | "Crear voces": crea, recrea, lista o borra las voces propias (los modos de diálogo fueron pruebas descartadas) | A mano | A mano |
 | `ver-facebook.yml` | "Ver Facebook": qué hay publicado de verdad en la página | A mano | A mano |
-| `prueba-whatsapp.yml` | "Prueba de WhatsApp": un WhatsApp por CallMeBot (las viejas pruebas sueltas de estadísticas y de Gemini y los sondeos de Groq y de búsqueda se borraron el 15/10/2026) | A mano | A mano |
 | `probar-mail.yml` | "Probar el aviso por mail": un mail de prueba por el vigilante de Cloudflare | A mano | A mano |
 | `probar-gemini.yml` | "Probar las claves de Gemini": qué modelos ve cada clave, texto, voz e imagen (gasta centavos) | A mano | A mano |
 | `probar-restauracion.yml` | "Probar la restauración del respaldo": baja el último respaldo de R2 y comprueba que se puede volver a armar | A mano | A mano |
 | `reparar-estadisticas.yml` | "Reparar las estadísticas": rehace los días de `estadisticas.json` que quedaron en cero (simula salvo que se pida) | A mano | A mano |
 | `reintentar.yml` | "Reintentar pieza": vuelve a subir una parte de una pieza de redes que no salió, sin pedir la voz | El botón del panel del celular; a mano | Sí |
-| `auditoria-ia.yml` | "Auditoría IA": lee las notas nuevas con Groq y avisa lo que esté mal | `schedule` cada hora; a mano | Sí |
-| `pistas.yml` | "Pistas": vuelve a mirar las pistas abiertas | `schedule` cada 3 h; el panel del celular; a mano | Sí |
-| `fijar-piezas.yml` | "Fijar piezas": arma de antemano piezas con voz para reutilizarlas (`reels/fijas/`) | A mano (y una fecha fija al año) | A mano |
+| `auditoria-ia.yml` | "Auditoría IA": lee las notas nuevas con Groq y avisa lo que esté mal | El reloj de Cloudflare a los :41, de 7 a 23 (desde el 17/10; antes `schedule`); a mano | Sí |
+| `pistas.yml` | "Pistas": vuelve a mirar las pistas abiertas | El reloj de Cloudflare cada 3 h (desde el 17/10); el panel del celular; a mano | Sí |
+| `fijar-piezas.yml` | "Fijar piezas": arma de antemano piezas con voz para reutilizarlas (`reels/fijas/`) | Sólo a mano | A mano |
 | `armado-vacio.yml` | "Armado con datos vacíos": arma el sitio con datos vacíos o a medias | Al subir cambios al código de la web; lunes | Sí |
 | `pruebas-otra-hora.yml` | "Pruebas con otra hora": corre las pruebas como si fuera otra hora y otra fecha | Lunes; a mano | Sí |
 | `respaldo.yml` | "Respaldo": paquete de git, datos y fotos; espejo en GitLab y R2 si están | Domingos; a mano | Sí |
-| `fotos-a-r2.yml` | "Fotos a R2": copia las fotos de las notas a un depósito de Cloudflare R2 | A mano | A mano |
 | `reloj-cloudflare.yml` | "Reloj de Cloudflare": sube el Worker `radar-balcarce-reloj` y le carga el secreto | A mano | A mano |
 | `vigilante-cloudflare.yml` | "Vigilante de Cloudflare": sube el Worker `radar-balcarce-vigilante` (mira la web desde afuera y manda los mails) | A mano | A mano |
 | `imagenes-cloudflare.yml` | "Imágenes con Workers AI": sube el Worker de imágenes y genera tres de prueba | A mano | A mano |
 | `generar-fondos-clima.yml` | "Generar fondos del clima": las ilustraciones fijas de la nota del clima (regla 181) | A mano | A mano |
-| `probar-flux.yml`, `probar-imagen-nota.yml` | Pruebas de imágenes con Workers AI (flux) y del camino "nota → prompt → imagen"; dejan las imágenes como adjunto | A mano | A mano |
 | `archivo-staging.yml` | "Archivo permanente (staging)": el Worker del archivo en un nombre de ensayo, con un depósito de prueba | A mano | A mano |
 | `archivo-produccion.yml` | "Archivo permanente (producción)": la carga, la ruta o sacar notas del archivo permanente (regla 183); todavía sin activar | A mano | A mano |
-| `sondeo-fuentes-cloudflare.yml` | "Sondeo de fuentes desde Cloudflare": ¿los feeds que no contestan a GitHub contestan a Cloudflare? (`infra/sondeo-fuentes/`) | A mano | A mano |
 
 ## `infra/` — los Workers de Cloudflare (detalle en `docs/08-INFRAESTRUCTURA.md`)
 
@@ -114,8 +109,6 @@ algunas, un `LEEME.md`.
 | `vigilante-cloudflare/` | El vigilante independiente, `radar-balcarce-vigilante`: mira la web desde afuera de GitHub, recibe los avisos (`POST /avisar`) y los manda por mail; su resumen de las 22 es el respaldo del informe diario | `vigilante-cloudflare.yml` | Sí |
 | `imagenes-cloudflare/` | `radar-balcarce-imagenes`: genera una imagen con Workers AI (SDXL o flux), dentro de las neuronas gratis | `imagenes-cloudflare.yml` | Sí, a pedido (ilustraciones) |
 | `archivo-cloudflare/` | El archivo permanente: el Worker que sirve desde R2 las notas que salieron del sitio (`worker.mjs`), sus rutas (`ruta.mjs`) y la comprobación (`verificar.mjs`) | `archivo-staging.yml`, `archivo-produccion.yml` | No: listo, sin activar |
-| `mcp-cloudflare/` | El servidor MCP de sólo lectura para asistentes de IA | Ninguno todavía | No: escrito, sin activar |
-| `sondeo-fuentes/` | Un Worker de prueba que pide los feeds desde la red de Cloudflare; `cliente.mjs` lo llama, `generar-lista.mjs` arma `lista.json` | `sondeo-fuentes-cloudflare.yml` | A mano |
 
 ## `motor/` — el motor nuevo, sin tocar producción (15/10/2026)
 
@@ -202,7 +195,7 @@ algunas, un `LEEME.md`.
 
 | Archivo | Qué hace | Quién lo llama | ¿En uso? |
 |---|---|---|---|
-| `auditar-redes.mjs` | Compara el contrato y el libro con lo que Meta tiene publicado | `auditar-redes.yml`, `auditoria.yml`, `vigilar.mjs` (el cierre de las 23:30) | Sí |
+| `auditar-redes.mjs` | Compara el contrato y el libro con lo que Meta tiene publicado | `auditoria.yml`, `vigilar.mjs` (el cierre de las 23:30) | Sí |
 | `auditar.mjs` | La auditoría semanal de lo publicado; guarda `web/data/auditoria.json` | `auditoria.yml`; `vigilar.mjs` usa `auditoriaVencida` | Sí |
 | `auditoria-voz.mjs` | La parte pura de la auditoría de voz (qué clips y cómo se juzgan) | `reels/auditar-voz.mjs` | A mano |
 | `avisos.mjs` | Lo que dicen los avisos y cómo entra en un mensaje; `pendientesDeLaIngesta` | `vigilar.mjs`, `generar-datos.mjs` | Sí |
@@ -215,28 +208,27 @@ algunas, un `LEEME.md`.
 | `guiones.mjs` | Lo que dice la voz en cada pieza (bancos de frases) y `revisarTexto` | `reels/plan.mjs`, `elegir.mjs`, `panel/servidor.mjs`, `reels/reescritura.mjs` | Sí |
 | `meta.mjs` | Habla con Meta (Graph v23.0): posteo, foto, video, dirección pública, verificación; `PAGINA_DE_FACEBOOK`, el único identificador de la página | `publicar.mjs`, `auditar-redes.mjs`, `estadisticas.mjs`, `ver-facebook.mjs` | Sí |
 | `piezas.mjs` | Cronograma, ventanas, podcasts, aviso de clima, color del día, techo de historias | `reloj.mjs`, `publicar-piezas.mjs`, `reels/plan.mjs`, `contrato.mjs`, `vigilar.mjs` | Sí |
-| `probar-whatsapp.mjs` | Un WhatsApp de prueba, sin mostrar la clave | `prueba-whatsapp.yml` | A mano |
 | `prompt-redes.mjs` | Lee la identidad, las dos voces, el reparto de voces por pieza y el estilo de `CRITERIO-REDES.md` | `guiones.mjs`, `elegir.mjs`, `reels/plan.mjs`, `reels/reel.mjs`, `reels/voz-gemini.mjs` | Sí |
 | `publicar-piezas.mjs` | Sube los videos (Instagram manda, Facebook con reintentos, la historia de cada reel) y completa direcciones | `publicar.mjs` | Sí |
 | `publicar.mjs` | El programa de publicar: `--verificar`, `--facebook`, `--piezas`, `--enlaces` | `redes.yml`, `piezas.yml` | Sí |
 | `reloj.mjs` | ¿Toca alguna pieza ahora? (con el interruptor apagado, no) | `redes.yml` | Sí |
 | `ver-facebook.mjs` | Lista lo publicado de verdad en la página | `ver-facebook.yml` | A mano |
 | `vigilar.mjs` | El vigilante: revisa y avisa (por mail, con `avisar-por-mail.mjs`; el WhatsApp de respaldo); las claves de IA y las voces (`revisarClaves`); cierre de las 23:30. El resumen de las 21 lo reemplazó el informe diario | `vigilancia.yml` | Sí |
-| `whatsapp.mjs` | Manda el WhatsApp por CallMeBot sin mostrar la clave (desde el 15/10, sólo respaldo del mail) | `vigilar.mjs`, `avisos.mjs`, `auditar.mjs`, `estadisticas.mjs`, `probar-whatsapp.mjs` | Sí (respaldo) |
+| `whatsapp.mjs` | Manda el WhatsApp por CallMeBot sin mostrar la clave (desde el 15/10, sólo respaldo del mail) | `vigilar.mjs`, `avisos.mjs`, `auditar.mjs`, `estadisticas.mjs` | Sí (respaldo) |
 | `archivar-piezas.mjs` | Guarda en R2 lo que se armó para las redes (videos, audios, subtítulos, placas), sin poder frenar la publicación; prendido con `R2_PIEZAS` (regla 178) | `redes.yml`, `piezas.yml`, `fijar-piezas.yml` | Sí |
 | `auditar-notas.mjs` | "Auditoría IA": lee las notas nuevas y avisa lo que esté mal (`ingesta/auditoria-ia.mjs`) | `auditoria-ia.yml` | Sí |
-| `avisar-por-mail.mjs` | Los avisos de GitHub salen por mail, por el vigilante de Cloudflare (`POST /avisar`, regla 173) | `vigilar.mjs`, `actualizar.yml`, `cloudflare-deploy.yml`, `informe-diario.mjs` y más | Sí |
+| `avisar-por-mail.mjs` | Los avisos de GitHub salen por mail, por el vigilante de Cloudflare (`POST /avisar`, regla 173) | `vigilar.mjs`, `actualizar.yml`, `cloudflare-deploy.yml` (a mano), `informe-diario.mjs` y más | Sí |
 | `cronograma-semana.mjs` | El cronograma de las redes de varios días, como lo arma el reloj | `informe-diario.mjs`, `reels/cronograma-html.mjs`, `reels/hoja-cronograma.mjs` | Sí |
 | `destinos.mjs` | Los otros destinos de los reels (Telegram, YouTube, Bluesky…): esqueleto que simula, sin conectar | Nadie en producción | No |
 | `efemeride.mjs`, `feriado.mjs`, `participa.mjs` | Las piezas de "Un día como hoy", del feriado y de "participá" | `reels/plan.mjs`, `panel/horarios.mjs` | Sí |
 | `estadisticas-detalle.mjs`, `estadisticas-piezas.mjs` | El detalle diario de las visitas (horas, notas, de dónde llegan, aparatos, países) y los números de cada pieza de redes | `vigilar.mjs`, `estadisticas.mjs`, `informe-diario.mjs` | Sí |
-| `indexnow.mjs` | Le avisa a Bing (IndexNow) qué notas nuevas hay después de cada despliegue | `cloudflare-deploy.yml` | Sí |
+| `indexnow.mjs` | Le avisa a Bing (IndexNow) qué notas nuevas hay después de cada despliegue | `actualizar.yml` (y `cloudflare-deploy.yml`, a mano) | Sí |
 | `informe-diario.mjs` | El informe diario por mail, a las 8:15 y a las 21:15 (regla 176) | `informe-diario.yml` | Sí |
 | `previa.mjs`, `repasos.mjs` | Lo que va a salir hoy en las redes (para el panel) y qué notas cuenta cada repaso | `generar-datos.mjs`, `reels/plan.mjs` | Sí |
 | `reintentar.mjs` | Reintenta una parte de una pieza que no salió, con el video ya armado | `reintentar.yml` | Sí |
 | `reparar-estadisticas.mjs` | Rehace los días de `estadisticas.json` guardados con ceros falsos (regla 168) | `reparar-estadisticas.yml` | A mano |
 | `uso-ia.mjs` | Cuánta IA se usa por día: llamadas y tokens por tarea y por modelo (`web/data/uso-ia.json`) | `reels/reescritura.mjs` y más | Sí |
-| `probar-gemini.mjs`, `probar-flux.mjs`, `probar-imagen-nota.mjs` | Pruebas a mano de las claves de Gemini y de las imágenes con Workers AI | Sus workflows | A mano |
+| `probar-gemini.mjs` | Prueba a mano de las claves de Gemini (las de imágenes, `probar-flux.mjs` y `probar-imagen-nota.mjs`, se borraron el 17/10/2026) | `probar-gemini.yml` | A mano |
 
 ## `panel/` — los paneles, sin dependencias (`docs/09-PANEL.md`)
 
@@ -273,7 +265,7 @@ quedó en desuso el 8/10: el único que se usa es el del celular.
 |---|---|---|---|
 | `web/README.md` | Cómo correr la web en la PC; remite a `docs/06-WEB.md` | Personas | — |
 | `web/.gitignore` | Que no se suba ningún `.env` de la web | git | Sí |
-| `web/package.json` | Next 15 y React 18, `"type": "module"`; scripts `datos`, `dev`, `dolar`, `redirects`, `build`, `indexar`, `contar` (el `build` corre `dolar`, `redirects`, `next build`, `indexar` y `contar`) | `npm` en `actualizar.yml` y `cloudflare-deploy.yml` | Sí |
+| `web/package.json` | Next 15 y React 18, `"type": "module"`; scripts `datos`, `dev`, `dolar`, `redirects`, `redirects-paginas`, `build`, `indexar`, `contar` (el `build` corre `dolar`, `redirects`, `next build`, `redirects-paginas`, `indexar` y `contar`) | `npm` en `actualizar.yml` y `cloudflare-deploy.yml` | Sí |
 | `web/package-lock.json` | Las versiones exactas | `npm ci` | Sí |
 | `web/next.config.mjs` | Exportar el sitio como archivos (`output: 'export'`) | `next build` | Sí |
 | `web/jsconfig.json` | El atajo `@/` para importar desde la raíz de `web/` | Next | Sí |
@@ -363,7 +355,8 @@ quedó en desuso el 8/10: el único que se usa es el del celular.
 | `fotos-notas.mjs` | A qué notas probarles foto (nube) y poner las del banco (siempre) | `generar-datos.mjs` | Sí |
 | `achicar-foto.mjs` | Pasa la foto elegida a JPEG de hasta 1.200 px, calidad 7 (con el ffmpeg del proyecto) | `fotos-notas.mjs` | Sí |
 | `foto-dolar.mjs` | Guarda la foto del dólar en `web/data/dolar.json` | `npm run build` (script `dolar`) | Sí |
-| `generar-redirects.mjs` | Escribe `web/public/_redirects`: secciones viejas, repetidas unidas y `/nota/ID` | `npm run build` (script `redirects`) | Sí |
+| `generar-redirects.mjs` | Escribe `web/public/_redirects` sin pasar nunca de 1.950 (regla 191): secciones viejas, repetidas unidas y `/nota/ID` sólo de antes del 25/09; con `--paginas`, las páginas de redirección de lo que no entró | `npm run build` (scripts `redirects` y `redirects-paginas`) | Sí |
+| `recompilar.mjs` | ¿Entró a `main` algo que el sitio lee mientras se armaba? Entonces "Actualizar la web" recompila antes de subir (regla 189) | `actualizar.yml` | Sí |
 | `revisar-seo.mjs` | Revisa el HTML compilado y frena la subida si falta algo | `actualizar.yml` | Sí |
 | `auditar-seo-vivo.mjs` | Audita las páginas publicadas | `node web/scripts/auditar-seo-vivo.mjs [url]`; la auditoría semanal | A mano |
 | `hacer-iconos.mjs` | Dibuja los íconos del sitio (usa resvg) | A mano, una vez | A mano |
@@ -376,7 +369,7 @@ quedó en desuso el 8/10: el único que se usa es el del celular.
 | `foto-manual.mjs` | Suma a mano la foto de una nota (pestaña Fotos del panel) | `panel.yml` (`accion=foto`) | Sí |
 | `escudos.mjs` | Baja una vez los escudos de los clubes (ESPN) a `web/public/escudos/` | A mano | A mano |
 | `ilustrar-notas.mjs` | Las ilustraciones con IA para las notas sin foto: revisar, aplicar o automático (reglas 182 y 185); escribe `web/data/fotos-ia.json` | `ilustrar-notas.yml` | Sí |
-| `archivar-a-r2.mjs` | El exportador del archivo permanente: sube a R2 las notas con página y saca lo retirado (regla 183) | `cloudflare-deploy.yml` (con `R2_ARCHIVO`, desde el 16/10), `archivo-staging.yml`, `archivo-produccion.yml` | Sí (el Worker, todavía sin ruta) |
+| `archivar-a-r2.mjs` | El exportador del archivo permanente: sube a R2 las notas con página y saca lo retirado (regla 183) | `actualizar.yml` (cada vuelta, con `R2_ARCHIVO`), `cloudflare-deploy.yml` (a mano), `archivo-staging.yml`, `archivo-produccion.yml` | Sí (el Worker, todavía sin ruta) |
 | `armado-vacio.mjs` | Prueba de humo: arma el sitio con datos vacíos o a medias | `armado-vacio.yml` | Sí |
 | `podcast-feed.mjs` | El feed de podcast de los repasos, sin conectar | Nadie todavía | No |
 

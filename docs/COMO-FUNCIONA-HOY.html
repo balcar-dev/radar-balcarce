@@ -61,7 +61,7 @@ summary{cursor:pointer;font-weight:700;padding:8px 0}
 <body>
 <div class="wrap">
 
-<p class="mut chico">Radar Balcarce · documento para Hernán y Andrés · al 16/10/2026</p>
+<p class="mut chico">Radar Balcarce · documento para Hernán y Andrés · al 16/10/2026 (los horarios, los costos y la limpieza, puestos al día el 17/10)</p>
 <h1>Cómo funciona hoy Radar Balcarce</h1>
 <p class="mut">De punta a punta y sin tecnicismos: quién trabaja y cuándo, de dónde salen las noticias, cómo se arma una nota, qué sale en las redes, qué cuesta, qué pasa si algo falla y qué procesos sobran. Cada parte termina con un <b>«Dónde mirar»</b>. Si algo de acá no coincide con el sistema, manda el sistema.</p>
 
@@ -78,8 +78,8 @@ summary{cursor:pointer;font-weight:700;padding:8px 0}
 <li><b>El semáforo</b> frena lo delicado: lo rojo (menores, víctimas) no sale nunca solo; Política y Policiales esperan a una persona en las redes; las listas de sepelios no salen nunca.</li>
 <li><b>Salen unas 25 a 45 notas por día</b> (la mitad de Balcarce los días buenos). En el archivo hay 1.177 notas desde el 3/9.</li>
 <li><b>Las redes</b> publican por día hasta 5 posteos con foto en Facebook (espejados en Instagram), 3 repasos en video con voz, el clima, la farmacia y la efeméride. En Instagram, desde el 16/10, sin enlaces: se manda a la bio.</li>
-<li><b>Los avisos llegan por mail</b>: un vigilante en Cloudflare mira todo cada media hora, y a las 8:15 y a las 21:15 llega el informe del día. WhatsApp quedó de respaldo.</li>
-<li><b>Hoy se paga sólo Cloudflare (US$ 5 por mes) y el dominio.</b> GitHub es gratis porque el repositorio es público; si fuera privado, los minutos que usa el robot costarían unos US$ 140 por mes, y desde el 16/10 unos US$ 240, porque «Actualizar la web» empezó a correr dos veces por cada media hora (ver <a href="#costos">Costos</a>).</li>
+<li><b>Los avisos llegan por mail</b>: el vigilante de Cloudflare mira la web y «Actualizar la web» cada media hora; la «Vigilancia» de GitHub, desde el 17/10, cada 3 horas, lo que sólo ella sabe mirar (redes, claves, voces, contenido, estadísticas). A las 8:15 y a las 21:15 llega el informe del día. WhatsApp quedó de respaldo.</li>
+<li><b>Hoy se paga sólo Cloudflare (US$ 5 por mes) y el dominio.</b> GitHub es gratis porque el repositorio es público; si fuera privado, los minutos que usa el robot costarían unos US$ 140 por mes; desde el 17/10 (una sola compilación, y Redes y Vigilancia sólo cuando hay algo que hacer), unos US$ 100 (ver <a href="#costos">Costos</a>).</li>
 <li><b>Sobran cosas</b>: workflows de prueba de un solo día, el panel de la PC, <code>comercial/</code>, módulos «en sombra» que todavía no se conectaron, una compilación doble en cada vuelta y 238 pruebas que se pueden borrar sin perder nada de lo que no se negocia. El detalle, con qué hacer con cada uno, está en <a href="#sobra">Lo que sobra</a>.</li>
 </ol>
 
@@ -163,20 +163,19 @@ summary{cursor:pointer;font-weight:700;padding:8px 0}
 <div class="tabla"><table>
 <thead><tr><th>Cuándo (hora de Balcarce)</th><th>Qué se despierta</th><th>Qué hace</th><th>Dónde corre</th></tr></thead>
 <tbody>
-<tr><td>Cada media hora (:00 y :30)</td><td>«Actualizar la web»</td><td>Lee las fuentes, decide, escribe, verifica, arma el sitio (unos 4 minutos)</td><td>GitHub</td></tr>
-<tr><td>Al terminar cada «Actualizar»</td><td>«Cloudflare Pages» y «Redes»</td><td>Sube el sitio; mira si toca un posteo en Facebook</td><td>GitHub</td></tr>
-<tr><td>Cada media hora (:00 y :30)</td><td>«Vigilancia»</td><td>Mira la web, las corridas, las redes y las claves; guarda el estado</td><td>GitHub</td></tr>
-<tr><td>:05, :35 y :45</td><td>«Redes» (el reloj de redes)</td><td>Pregunta «¿toca alguna pieza?»; si toca, arma el video con voz y lo publica</td><td>GitHub</td></tr>
+<tr><td>Cada media hora (:00 y :30)</td><td>«Actualizar la web»</td><td>Lee las fuentes, decide, escribe, verifica, arma el sitio <b>una sola vez</b> y lo sube a Cloudflare (desde el 17/10; unos 4 minutos y medio)</td><td>GitHub → Cloudflare</td></tr>
+<tr><td>Cada 3 horas (0, 3, 6, 9, 12, 15, 18 y 21; otra vez a las 9:30, 21:30 y 0:30)</td><td>«Vigilancia»</td><td>Mira las corridas, las redes, las claves y las voces; mide las estadísticas de las 9 y las 21; cierra el día contra Meta (desde el 17/10; antes, cada media hora)</td><td>GitHub</td></tr>
+<tr><td>:05, :35 y :45, de 7 a 23</td><td>«Redes» (el reloj de redes)</td><td>Pregunta «¿toca alguna pieza o un posteo de Facebook?»; si toca, arma el video con voz y lo publica (desde el 17/10 ya no corre de madrugada ni al terminar cada «Actualizar»)</td><td>GitHub</td></tr>
 <tr><td>:12 y :42</td><td>Vigilante de Cloudflare</td><td>Vigila desde afuera de GitHub y manda los avisos por mail</td><td>Cloudflare</td></tr>
 <tr><td>8:15 y 21:15 (2.º intento a las :30)</td><td>«Informe diario»</td><td>El mail de la mañana (cómo cerró ayer) y el de la noche (cómo viene hoy)</td><td>GitHub → mail por Cloudflare</td></tr>
 <tr><td>Cada 2 horas, de 7:20 a 23:20</td><td>«Ilustrar notas sin foto»</td><td>Hace una ilustración con IA para las notas que quedaron sin foto (regla 185)</td><td>GitHub + Cloudflare</td></tr>
-<tr><td>A los :41 de cada hora</td><td>«Auditoría IA»</td><td>Relee lo publicado buscando errores; corrige sola sólo la ortografía chica</td><td>GitHub (su propio horario)</td></tr>
-<tr><td>Cada 3 horas</td><td>«Pistas»</td><td>Vuelve a mirar las pistas abiertas del panel</td><td>GitHub (su propio horario)</td></tr>
+<tr><td>A los :41, de 7 a 23</td><td>«Auditoría IA»</td><td>Relee lo publicado buscando errores; corrige sola sólo la ortografía chica</td><td>GitHub (desde el 17/10 la despierta el reloj: el horario propio de GitHub la corría una de cada cuatro horas)</td></tr>
+<tr><td>Cada 3 horas, a los :23</td><td>«Pistas»</td><td>Vuelve a mirar las pistas abiertas del panel</td><td>GitHub (desde el 17/10 la despierta el reloj)</td></tr>
 <tr><td>Domingos 3:17</td><td>«Respaldo»</td><td>Copia todo (historial, datos y fotos) a Cloudflare R2</td><td>GitHub → R2</td></tr>
 <tr><td>Lunes</td><td>«Auditoría», «Pruebas», «Pruebas con otra hora», «Armado con datos vacíos»</td><td>Controles semanales</td><td>GitHub</td></tr>
 <tr><td>Cuando alguien toca el celular</td><td>«Panel del celular»</td><td>Escribe con IA la nota pedida, publica lo aprobado, suma una foto a mano</td><td>GitHub</td></tr>
 </tbody></table></div>
-<p class="chico mut">Además, varios workflows tienen un horario propio de GitHub como respaldo por si el reloj de Cloudflare fallara (por ejemplo «Actualizar» a los :07 y :37, «Vigilancia» cada 3 horas). Ojo: desde el 15/10 GitHub cumple el de «Actualizar» casi siempre, así que hoy la web se arma unas 92 veces por día en vez de 48 (ver <a href="#costos">Costos</a>).</p>
+<p class="chico mut">Desde el 17/10 ninguno de estos tiene un horario propio de GitHub de respaldo (salvo el informe diario y los semanales): el de «Actualizar» (:07 y :37) hizo que el 15 y el 16/10 la web se armara unas 65 a 73 veces por día en vez de 48 (no 92: esa cuenta era de una tarde; en las dos semanas el promedio fue 55). Se sacó el 16/10 a la tarde. Si el reloj se para, se para todo y lo avisa el vigilante de Cloudflare por mail. <b>El reloj no se sube solo</b>: después de tocar <code>infra/reloj-cloudflare/</code> hay que correr a mano «Reloj de Cloudflare».</p>
 <div class="mirar"><b>Dónde mirar:</b> Cloudflare → Workers → <code>radar-balcarce-reloj</code> (si algo deja de salir, primero acá) · GitHub → Actions · el horario está en <code>infra/reloj-cloudflare/worker.mjs</code> (<code>trabajosDelMinuto</code>) · <code>docs/08-INFRAESTRUCTURA.md</code>.</div>
 
 <h2 id="fuentes">2 · Las fuentes</h2>
@@ -283,7 +282,7 @@ summary{cursor:pointer;font-weight:700;padding:8px 0}
 <h2 id="avisos">7 · Los informes por mail y los avisos</h2>
 <ul>
 <li><b>Informe de la mañana (8:15):</b> cómo cerró ayer. <b>Informe de la noche (21:15):</b> cómo viene hoy. Qué se publicó, qué espera a una persona, qué salió en redes, visitas y salud del sistema, con «lo que requiere atención» arriba. Llegan a <code>radarbalcarce@gmail.com</code>. El 16/10 se agregó un segundo intento a las :30 porque el disparo de los :15 no andaba; si llegan los dos, no se manda dos veces.</li>
-<li><b>Avisos cuando algo falla:</b> el <b>vigilante de Cloudflare</b> (<code>radar-balcarce-vigilante</code>, a los :12 y :42) y la «Vigilancia» de GitHub miran la web, las corridas, las redes, las claves de IA, las voces y los vencimientos. Los avisos van <b>primero por mail</b> (regla 173); el WhatsApp (CallMeBot, sin cupo desde principios de octubre) quedó de respaldo.</li>
+<li><b>Avisos cuando algo falla:</b> el <b>vigilante de Cloudflare</b> (<code>radar-balcarce-vigilante</code>, a los :12 y :42) mira lo urgente: que la web conteste y se actualice y que «Actualizar la web» no falle. La «Vigilancia» de GitHub (cada 3 horas desde el 17/10) mira lo que sólo ella puede: las corridas de los demás workflows, las redes, las claves de IA, las voces, el contenido y los vencimientos. Los avisos van <b>primero por mail</b> (regla 173); el WhatsApp (CallMeBot, sin cupo desde principios de octubre) quedó de respaldo.</li>
 <li>Si el informe de la noche no llega, a las 22 el Worker manda un resumen de respaldo.</li>
 </ul>
 <div class="mirar"><b>Dónde mirar:</b> el mail de <code>radarbalcarce@gmail.com</code> · <code>redes/informe-diario.mjs</code> · <code>redes/vigilar.mjs</code> · <code>infra/vigilante-cloudflare/</code> · <code>docs/11-OPERACION.md</code>.</div>
@@ -342,10 +341,11 @@ summary{cursor:pointer;font-weight:700;padding:8px 0}
 <tbody>
 <tr><td>1 al 14/10</td><td>301</td><td>~13.700 reales (~19.000 como cobra GitHub, redondeando cada corrida al minuto)</td><td>~US$ 136</td></tr>
 <tr><td>9 al 15/10</td><td>302</td><td>~14.600 reales (~19.800 redondeados)</td><td>~US$ 142</td></tr>
-<tr><td><b>Desde el 16/10</b></td><td>~400</td><td><b>~23.500 reales (~32.000 redondeados)</b></td><td><b>~US$ 240</b></td></tr>
+<tr><td>15 y 16/10 (con el horario doble de «Actualizar»)</td><td>~330</td><td>~16.000 reales (~22.000 redondeados)</td><td>~US$ 160</td></tr>
+<tr><td><b>Desde el 17/10</b> (una compilación; Redes, Vigilancia, Auditoría IA y Pistas por el reloj y sólo cuando hay algo que hacer)</td><td>~150</td><td><b>~11.000 reales (~14.500 redondeados)</b>, contando que la Auditoría IA y las ilustraciones ahora corren todas las veces que les tocan [estimado]</td><td>~US$ 100 (todavía lejos de los 2.000 gratis: ver <code>docs/08-INFRAESTRUCTURA.md</code>, «Los minutos de GitHub»)</td></tr>
 </tbody></table></div>
 <p class="chico mut">Cuenta: (minutos redondeados − 2.000 incluidos en GitHub Free) × US$ 0,008. No se pudo ver si la cuenta <code>radarbalcarce</code> es Free o Pro (Pro incluye 3.000).</p>
-<div class="caja amarilla"><b>Hallazgo del 16/10:</b> «Actualizar la web» tiene, además del reloj de Cloudflare, un horario propio de respaldo (:07 y :37) que desde la mudanza GitHub empezó a cumplir de verdad: hoy corre unas <b>92 veces por día en vez de 48</b>, y cada vuelta de más arrastra otra compilación y otra corrida de «Redes». No rompe nada (hoy es gratis), pero duplica el trabajo. Sacando ese horario de respaldo (o haciendo que salga solo si ya corrió hace menos de 20 minutos) se vuelve a ~15.000 minutos; uniendo además las dos compilaciones, a ~13.000. Es lo primero que conviene arreglar si algún día se pasa a privado.</div>
+<div class="caja amarilla"><b>Hallazgo del 16/10, ya arreglado:</b> «Actualizar la web» tenía, además del reloj de Cloudflare, un horario propio de respaldo (:07 y :37) que GitHub empezó a cumplir el 15/10: ese día y el 16 corrió unas 65 a 73 veces por día en vez de 48 (el «92 por día» que decía esta página era la cuenta de una tarde, no la tasa). Se sacó el 16/10 a las 16:32. El 17/10 se unieron además las dos compilaciones («Cloudflare Pages» quedó sólo a mano) y «Redes» y «Vigilancia» dejaron de correr de más.</div>
 <div class="mirar"><b>Dónde mirar:</b> Cloudflare → Billing · GitHub → Settings → Billing (de la cuenta <code>radarbalcarce</code>) · <code>docs/08-INFRAESTRUCTURA.md</code> («Lo que cuesta») · <code>docs/etapa-10-operacion/ANALISIS.md</code> (la medición completa del 15/10).</div>
 
 <h2 id="fallas">11 · Qué pasa si algo falla</h2>
@@ -365,12 +365,12 @@ summary{cursor:pointer;font-weight:700;padding:8px 0}
 <div class="mirar"><b>Dónde mirar:</b> <code>docs/11-OPERACION.md</code> («qué mirar cuando algo deja de salir») · <code>docs/08-INFRAESTRUCTURA.md</code> («Qué puede fallar»).</div>
 
 <h2 id="sobra">12 · Lo que existe y no se usa (o no vale la pena)</h2>
-<p>Se revisó todo el repositorio el 16/10: los 36 workflows con sus corridas reales (<code>gh run list</code>), quién importa cada uno de los 249 programas, las carpetas, los secretos y los datos. <b>No se borró nada.</b> Las marcas: <span class="tag t-ko">borrar</span> (no sirve y sacarlo no rompe nada de producción) · <span class="tag t-az">archivar</span> (pasarlo a <code>docs/historico/</code> o dejarlo sólo a mano) · <span class="tag t-pu">decidir ustedes</span> · <span class="tag t-ok">mantener</span>. «Riesgo» dice qué se rompería al sacarlo.</p>
+<p>Se revisó todo el repositorio el 16/10: los 36 workflows con sus corridas reales (<code>gh run list</code>), quién importa cada uno de los 249 programas, las carpetas, los secretos y los datos. Ese día no se borró nada; <b>el 17/10 se hizo la parte de los workflows</b> (quedan 30; lo que se hizo con cada uno está en la tabla). Las marcas: <span class="tag t-ko">borrar</span> (no sirve y sacarlo no rompe nada de producción) · <span class="tag t-az">archivar</span> (pasarlo a <code>docs/historico/</code> o dejarlo sólo a mano) · <span class="tag t-pu">decidir ustedes</span> · <span class="tag t-ok">mantener</span>. «Riesgo» dice qué se rompería al sacarlo.</p>
 
 <h3>Lo más importante</h3>
 <ol>
-<li><b>«Actualizar la web» corre el doble de veces de lo necesario</b> (92 por día en vez de 48) por su horario de respaldo. No es algo que sobre para borrar, pero es el desperdicio más grande: ver <a href="#costos">Costos</a>. Lo mismo, en chico, el horario de respaldo de «Vigilancia».</li>
-<li><b>El sitio se compila dos veces en cada vuelta</b> («Actualizar» y «Cloudflare Pages», unos 2 minutos cada una). Unirlas ahorra unos 4.000 minutos por mes.</li>
+<li><b>«Actualizar la web» corría de más</b> (65 a 73 por día el 15 y el 16/10, en vez de 48) por su horario de respaldo: <b>se sacó el 16/10</b>. También el de «Vigilancia» (17/10).</li>
+<li><b>El sitio se compilaba dos veces en cada vuelta</b> («Actualizar» y «Cloudflare Pages», unos 2 minutos y medio cada una): <b>unidas el 17/10</b> (regla 189), unos 4.000 minutos menos por mes.</li>
 <li><b>El panel de la PC</b> entero (11 programas, 81 pruebas, 3 archivos de datos vacíos desde el 23-29/09).</li>
 <li><b>Workflows de prueba de un solo día</b> que ya cumplieron (sondeos, pruebas de imágenes, WhatsApp).</li>
 <li><b>Módulos «en sombra» o apagados</b> que esperan una decisión de ustedes: no se borran hasta que decidan.</li>
@@ -380,23 +380,23 @@ summary{cursor:pointer;font-weight:700;padding:8px 0}
 <div class="tabla"><table>
 <thead><tr><th>Workflow</th><th>Evidencia</th><th>Qué hacer</th><th>Riesgo</th></tr></thead>
 <tbody>
-<tr><td>Horario de respaldo de «Actualizar la web» (:07 y :37)</td><td>Desde el 15/10 GitHub lo cumple: 32 vueltas extra el 16/10</td><td><span class="tag t-pu">decidir</span> sacarlo o que salga solo si ya corrió hace menos de 20 min</td><td>Bajo: si el reloj de Cloudflare cae, la web queda sin respaldo automático (el vigilante avisa)</td></tr>
-<tr><td>«Cloudflare Pages» (la segunda compilación)</td><td>Compila otra vez lo que «Actualizar» ya compiló (129 s + 155 s)</td><td><span class="tag t-pu">decidir</span> unir la subida dentro de «Actualizar»</td><td>Medio: es lo que publica la web; hay que probarlo en una corrida a mano</td></tr>
-<tr><td><code>prueba-whatsapp.yml</code></td><td>4 corridas, la última el 25/09; WhatsApp sin cupo; lo reemplaza «Probar el aviso por mail»</td><td><span class="tag t-ko">borrar</span></td><td>Ninguno</td></tr>
-<tr><td><code>probar-flux.yml</code> + <code>redes/probar-flux.mjs</code></td><td>1 corrida (16/10); se eligió otro modelo (SDXL)</td><td><span class="tag t-ko">borrar</span></td><td>Ninguno</td></tr>
-<tr><td><code>sondeo-fuentes-cloudflare.yml</code> + <code>infra/sondeo-fuentes/</code> + secreto <code>SONDEO_TOKEN</code></td><td>2 corridas (15/10); su propio LEEME dice «descartable»; ya dio su resultado (97 de 103 feeds andan)</td><td><span class="tag t-ko">borrar</span> (y el Worker en Cloudflare)</td><td>Se cae <code>sondeo-fuentes.test.mjs</code>: va junto</td></tr>
-<tr><td>Fantasma «Sondeo de fuentes (temporal)»</td><td>El archivo ya no existe; quedan 3 corridas del 8/10 en la lista de Actions</td><td><span class="tag t-ko">borrar</span> esas corridas</td><td>Ninguno</td></tr>
-<tr><td><code>fotos-a-r2.yml</code></td><td><b>Nunca corrió</b>; faltan <code>R2_FOTOS</code> y <code>FOTOS_BASE</code></td><td><span class="tag t-pu">decidir</span>: correrlo (gana lugar antes del tope de 3.700) o borrarlo</td><td>Ninguno si se borra</td></tr>
-<tr><td><code>pruebas-otra-hora.yml</code></td><td>3 corridas, falló 2 (la última, el 12/10) y nadie lo mira</td><td><span class="tag t-pu">decidir</span>: arreglarlo o borrarlo</td><td>Bajo</td></tr>
+<tr><td>Horario de respaldo de «Actualizar la web» (:07 y :37)</td><td>Desde el 15/10 GitHub lo cumple: 32 vueltas extra el 16/10</td><td><span class="tag t-ok">hecho</span> se sacó el 16/10 a la tarde</td><td>Bajo: si el reloj de Cloudflare cae, la web queda sin respaldo automático (el vigilante avisa)</td></tr>
+<tr><td>«Cloudflare Pages» (la segunda compilación)</td><td>Compila otra vez lo que «Actualizar» ya compiló (129 s + 155 s)</td><td><span class="tag t-ok">hecho</span> 17/10: la subida es parte de «Actualizar»; «Cloudflare Pages» queda a mano, de rescate (regla 189)</td><td>Medio: es lo que publica la web; hay que probarlo en una corrida a mano</td></tr>
+<tr><td><code>prueba-whatsapp.yml</code></td><td>4 corridas, la última el 25/09; WhatsApp sin cupo; lo reemplaza «Probar el aviso por mail»</td><td><span class="tag t-ok">hecho</span> borrado el 17/10</td><td>Ninguno</td></tr>
+<tr><td><code>probar-flux.yml</code> + <code>redes/probar-flux.mjs</code></td><td>1 corrida (16/10); se eligió otro modelo (SDXL)</td><td><span class="tag t-ok">hecho</span> borrado el 17/10</td><td>Ninguno</td></tr>
+<tr><td><code>sondeo-fuentes-cloudflare.yml</code> + <code>infra/sondeo-fuentes/</code> + secreto <code>SONDEO_TOKEN</code></td><td>2 corridas (15/10); su propio LEEME dice «descartable»; ya dio su resultado (97 de 103 feeds andan)</td><td><span class="tag t-ok">hecho</span> 17/10, en el repositorio; <b>falta, a mano</b>: borrar el Worker <code>radar-balcarce-sondeo-fuentes</code> en Cloudflare y el secreto <code>SONDEO_TOKEN</code> en GitHub</td><td>Se cae <code>sondeo-fuentes.test.mjs</code>: va junto</td></tr>
+<tr><td>Fantasma «Sondeo de fuentes (temporal)»</td><td>El archivo ya no existe; quedan 3 corridas del 8/10 en la lista de Actions</td><td><span class="tag t-ko">borrar</span> esas corridas (a mano, desde Actions)</td><td>Ninguno</td></tr>
+<tr><td><code>fotos-a-r2.yml</code></td><td><b>Nunca corrió</b>; faltan <code>R2_FOTOS</code> y <code>FOTOS_BASE</code></td><td><span class="tag t-ok">hecho</span> borrado el 17/10 (nunca se usó; <code>FOTOS_BASE</code> sigue siendo el único lugar donde cambiaría la dirección de las fotos)</td><td>Ninguno si se borra</td></tr>
+<tr><td><code>pruebas-otra-hora.yml</code></td><td>3 corridas, falló 2 (la última, el 12/10, por la memoria de voces); el 17/10 pasa (lo vigila «Vigilancia»)</td><td><span class="tag t-ok">mantener</span></td><td>Bajo</td></tr>
 <tr><td><code>archivo-staging.yml</code></td><td>2 corridas (16/10); el ensayo ya anduvo</td><td><span class="tag t-az">archivar</span> cuando producción esté firme</td><td>Bajo</td></tr>
-<tr><td><code>generar-fondos-clima.yml</code>, <code>probar-imagen-nota.yml</code>, <code>reparar-estadisticas.yml</code></td><td>1 a 3 corridas, todas del 16/10: tareas de un día</td><td><span class="tag t-az">archivar</span> (o borrar cuando se cierre lo de imágenes)</td><td>Ninguno (<code>probar-imagen-nota</code> lo nombra una prueba)</td></tr>
-<tr><td><code>auditar-redes.yml</code>, <code>auditar-voz.yml</code></td><td>Última corrida 26/09; «Auditoría» de los lunes ya hace lo de redes</td><td><span class="tag t-az">archivar</span></td><td>Bajo</td></tr>
+<tr><td><code>generar-fondos-clima.yml</code>, <code>probar-imagen-nota.yml</code>, <code>reparar-estadisticas.yml</code></td><td>1 a 3 corridas, todas del 16/10: tareas de un día</td><td><span class="tag t-ok">17/10</span> <code>probar-imagen-nota</code> borrado (su flujo ya está en «Ilustrar notas sin foto»); los otros dos se quedan a mano: el de los fondos es cómo se hacen candidatas nuevas (regla 181) y el de estadísticas hace falta hasta que se arregle la medición</td><td>Ninguno (<code>probar-imagen-nota</code> lo nombra una prueba)</td></tr>
+<tr><td><code>auditar-redes.yml</code>, <code>auditar-voz.yml</code></td><td>Última corrida 26/09; «Auditoría» de los lunes ya hace lo de redes</td><td><span class="tag t-ok">17/10</span> <code>auditar-redes</code> borrado (un día se mira con «Vigilancia» → <code>probar-cierre</code>); <code>auditar-voz</code> se queda a mano: es lo que pide la regla 32 y hace falta al rehacer las voces antes del 29/09/2027</td><td>Bajo</td></tr>
 <tr><td><code>piezas.yml</code>, <code>ver-facebook.yml</code></td><td>Última corrida 1/10 y 5/10: herramientas de rescate</td><td><span class="tag t-pu">decidir</span> (sirven en una emergencia)</td><td>Bajo; algunas pruebas los nombran</td></tr>
-<tr><td>Horario de <code>fijar-piezas.yml</code> (<code>30 8 10 10 *</code>)</td><td>Fijado al 10/10: se volvería a disparar cada 10 de octubre</td><td><span class="tag t-ko">borrar</span> sólo esa línea (el workflow queda a mano)</td><td>Hay que cambiar la prueba <code>piezas-fijas</code> que la controla</td></tr>
+<tr><td>Horario de <code>fijar-piezas.yml</code> (<code>30 8 10 10 *</code>)</td><td>Fijado al 10/10: se volvería a disparar cada 10 de octubre</td><td><span class="tag t-ok">hecho</span> 17/10 (queda sólo a mano)</td><td>Hay que cambiar la prueba <code>piezas-fijas</code> que la controla</td></tr>
 <tr><td><code>probar-gemini.yml</code>, <code>probar-mail.yml</code>, <code>probar-restauracion.yml</code>, <code>crear-voces.yml</code>, <code>reintentar.yml</code></td><td>Poco uso, pero sirven (diagnóstico, voces que vencen en 2027, botón del celular, simulacro de respaldo)</td><td><span class="tag t-ok">mantener</span></td><td>—</td></tr>
 <tr><td>Todos los demás (actualizar, cloudflare-deploy, redes, vigilancia, vigilante y reloj de Cloudflare, informe, ilustrar, auditoría IA, auditoría, pistas, panel, pruebas, armado vacío, respaldo, archivo de producción, imágenes)</td><td>Corren y sirven. <b>Ojo:</b> «Panel del celular» no corre desde el 8/10</td><td><span class="tag t-ok">mantener</span></td><td>—</td></tr>
 </tbody></table></div>
-<p class="chico mut">Pares que parecían duplicados y no lo son: «Auditoría» (semanal, mira el filtro y las redes) y «Auditoría IA» (cada hora, relee lo publicado); «Vigilancia» de GitHub y el vigilante de Cloudflare (se complementan; sólo sobra el horario de respaldo de la primera); «Redes» (el motor) y «Piezas»/«Fijar piezas» (herramientas a mano).</p>
+<p class="chico mut">Pares que parecían duplicados y no lo son: «Auditoría» (semanal, mira el filtro y las redes) y «Auditoría IA» (cada hora, relee lo publicado); «Vigilancia» de GitHub y el vigilante de Cloudflare (no se complementaban del todo: los dos avisaban lo mismo de la web, por canales distintos; desde el 17/10 el de Cloudflare se queda con lo urgente cada media hora y «Vigilancia», cada 3 horas, con lo que sólo ella sabe mirar); «Redes» (el motor) y «Piezas»/«Fijar piezas» (herramientas a mano).</p>
 
 <h3>Programas y carpetas</h3>
 <div class="tabla"><table>

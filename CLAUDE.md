@@ -22,7 +22,8 @@ escribir siempre en castellano rioplatense, claro y sin voseo forzado.
     docs/      la documentación: 00-INDICE a 13-EFEMERIDES, DECISIONES.md, propuestas/ (lo abierto) e historico/
 
 Flujo: fuentes → ingesta → cruce → sección, puntaje y semáforo → lectura con IA →
-reescritura con IA → verificación → `web/data/*.json` → Cloudflare Pages; después, redes
+reescritura con IA → verificación → `web/data/*.json` → una sola compilación → Cloudflare Pages, todo
+en "Actualizar la web" (regla 189; "Cloudflare Pages" quedó a mano, de rescate); después, redes
 y vigilancia. Todo en GitHub Actions, disparado por el Worker de Cloudflare
 `radar-balcarce-reloj` (`infra/reloj-cloudflare/`). **La web, las redes, la
 vigilancia y el panel del celular andan con la PC apagada.**
@@ -83,7 +84,7 @@ próxima regla es la 189: la 186 son las fotos con chicos de los organismos, la 
   en un reemplazo multilínea no encuentra nada. Para regex con `\b`, `\s`, `\d`: escribir
   un `.cjs` con Write, no `node -e` ni un heredoc (se comen las barras).
 - **GitHub Actions regenera `web/data/` cada media hora** (corre a los :00 y :30 UTC y
-  tarda ~8 minutos). Antes de `git push`, `git pull --rebase`; si choca en `web/data/`,
+  tarda ~5 minutos con la subida). Antes de `git push`, `git pull --rebase`; si choca en `web/data/`,
   `git checkout --theirs` sobre esos archivos y seguir. Commitear sólo los archivos
   tocados (`git commit -- archivos`). Correr `npm run datos` en la PC deja esos archivos
   cambiados: no subirlos. Subir `banco-fotos.json` o fotos sólo entre corridas.
@@ -134,7 +135,12 @@ próxima regla es la 189: la 186 son las fotos con chicos de los organismos, la 
 - **El turno de farmacia dura hasta las 8:30 del día siguiente** (la web no dice hasta qué
   hora). **Si Open-Meteo falla, el clima sale de `api.met.no`**, sin sensación térmica.
 - **El reloj es el Worker `radar-balcarce-reloj`** (desde el 15/10; cron-job.org, pausado):
-  si algo deja de salir, mirar Cloudflare → Workers → radar-balcarce-reloj.
+  si algo deja de salir, mirar Cloudflare → Workers → radar-balcarce-reloj. Desde el 17/10
+  (regla 190) cada cosa corre sólo cuando hace falta (`trabajosDelMinuto`): Redes de 7 a 23,
+  Vigilancia cada 3 horas, Auditoría IA y Pistas sin horario de GitHub. **No se sube solo**:
+  después de tocar `infra/reloj-cloudflare/`, correr a mano «Reloj de Cloudflare».
+- **`_redirects` tiene tope** (2.000 en Cloudflare; se escriben como mucho 1.950, regla 191):
+  no sumar redirecciones por nota; las cortas `/nota/ID` son sólo de antes del 25/09.
 - **El correo de los commits automáticos** es el noreply de GitHub: no cambiarlo.
 - **El panel del celular** (`web/public/panel/`) no tiene servidor: escribe con la llave de
   GitHub de quien lo usa; lo sensible viaja cifrado (`panel/cifrado.mjs`); pedirle a la IA
@@ -192,7 +198,8 @@ próxima regla es la 189: la 186 son las fotos con chicos de los organismos, la 
 | Qué vigila el vigilante o qué dice el WhatsApp | `redes/vigilar.mjs` (`evaluar`, `revisarClaves`, `VENCIMIENTOS`), `redes/avisos.mjs` |
 | Los informes diarios por mail (8:15 y 21:15: qué se publicó, qué espera, redes, visitas, salud; regla 176) | `redes/informe-diario.mjs`, `.github/workflows/informe-diario.yml`, el horario en `infra/reloj-cloudflare/` (`trabajosDelMinuto`) y el `html` de `POST /avisar` en `infra/vigilante-cloudflare/worker.mjs`; el resumen de las 22 del Worker es sólo el respaldo |
 | Qué archivos guarda "Actualizar la web" | La línea `git add` de `.github/workflows/actualizar.yml` (un archivo nuevo de `web/data/` que no esté ahí se pierde) |
-| La política hacia buscadores e IA (`robots.txt`, bots), los datos estructurados, los sitemaps, `llms.txt`, los datos para agentes y el servidor MCP (escrito, sin activar) | `web/lib/robots.js`, `web/lib/datos-estructurados.js`, `web/components/ficha.js`, `web/app/sitemap.js`, `web/app/llms.txt/route.js`, `web/lib/para-agentes.js` (`/agentes/*.json`), `infra/mcp-cloudflare/`; el estado, los trámites y las decisiones: `docs/seo/AUDITORIA-SEO-LLM.md` |
+| Qué obliga a recompilar antes de subir, y las redirecciones | `NO_CAMBIAN_EL_SITIO` (`web/scripts/recompilar.mjs`, regla 189); `planDeRedirecciones` (`web/scripts/generar-redirects.mjs`, regla 191) |
+| La política hacia buscadores e IA (`robots.txt`, bots), los datos estructurados, los sitemaps, `llms.txt`, y los datos para agentes (el servidor MCP escrito y sin activar se borró el 17/10) | `web/lib/robots.js`, `web/lib/datos-estructurados.js`, `web/components/ficha.js`, `web/app/sitemap.js`, `web/app/llms.txt/route.js`, `web/lib/para-agentes.js` (`/agentes/*.json`); el estado, los trámites y las decisiones: `docs/seo/AUDITORIA-SEO-LLM.md` |
 | Los avisos publicitarios, la agenda a mano | El panel de la PC (`PUBLICIDAD.md`, `panel/agenda.mjs`) |
 | Qué se decidió, por qué y quién; las preguntas abiertas | `docs/DECISIONES.md` (lo nuevo arriba) |
 
