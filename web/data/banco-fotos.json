@@ -17562,7 +17562,8 @@
   "imagenOriginal": "https://media.a24.com/p/b49d1d545f58670e675ee6fc9de2f547/adjuntos/296/imagenes/009/277/0009277962/1200x675/smart/banco-central-dolaresjpg.jpg",
   "razon": "La imagen de A24 es una composición gráfica que ilustra perfectamente el tema de la nota (reservas en dólares del Banco Central) sin mostrar personas, mientras que la foto de Infobae tiene un encuadre distorsionado y personas de fondo.",
   "cuando": "2026-10-16T22:01:35.827Z",
-  "huella": "ce6d86e6f37b3e96"
+  "huella": "ce6d86e6f37b3e96",
+  "ausenteDesde": "2026-10-17T17:32:30.116Z"
  },
  "1ilkp5d": {
   "archivo": "fotos-notas/1ilkp5d.jpg",
@@ -18913,7 +18914,8 @@
    "corresponde": "si",
    "descripcion": "Cristina Fernández asomada a un balcón con los brazos levantados."
   },
-  "huella": "4149695961e8b8a0"
+  "huella": "4149695961e8b8a0",
+  "ausenteDesde": "2026-10-17T17:32:30.116Z"
  },
  "12xnbwz": {
   "archivo": "fotos-notas/12xnbwz.jpg",
@@ -18971,5 +18973,77 @@
    "descripcion": "Auto de Fórmula 1 circulando en pista con fondo difuminado por movimiento"
   },
   "huella": "639292aab6969802"
+ },
+ "14l7end": {
+  "archivo": "fotos-notas/14l7end.jpg",
+  "medio": "Crónica",
+  "credito": "Foto: Crónica",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Liverpool vence a Brentford con gran actuación de Alexis Mac Allister",
+  "enlace": "https://www.cronica.com.ar/depo/premierleague/alexis-mac-allister-remontada-liverpool-brentford-premier-league/",
+  "imagenOriginal": "https://www.cronica.com.ar/files/image/1722/1722237/6ad3a3c07ab31_600_315!.jpg?s=d2ba21376170fe69fdd581251ee98dd6&d=1792206000",
+  "razon": "Muestra claramente a Alexis Mac Allister celebrando en el partido mencionado con excelente nitidez.",
+  "cuando": "2026-10-17T17:32:00.166Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Alexis Mac Allister celebrando con el balón en un partido."
+  },
+  "huella": "371156cecab3b263"
+ },
+ "12b46u9": {
+  "archivo": "fotos-notas/12b46u9.jpg",
+  "medio": "C5N",
+  "credito": "Foto: C5N",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Axel Kicillof encabeza el acto por el Día de la Lealtad",
+  "enlace": "https://www.c5n.com/politica/axel-kicillof-acto-dia-de-la-lealtad-la-matanza-sabado-17-octubre-2026",
+  "imagenOriginal": "https://media.c5n.com/p/c6257661e4db658a6e75bee732d9836a/adjuntos/326/videos/000/403/0000403715/1200x675/smart/el-discurso-kicillof-el-dia-la-lealtad-la-matanza.jpg",
+  "razon": "Muestra claramente a Axel Kicillof hablando en el acto sin marcas superpuestas ni menores.",
+  "cuando": "2026-10-17T17:32:00.166Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Axel Kicillof hablando por micrófono en un acto."
+  },
+  "huella": "32525266262525c9"
+ },
+ "quke5a": {
+  "archivo": "fotos-notas/quke5a.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Atlético de Madrid derrota al Espanyol con un tanto agónico",
+  "enlace": "https://www.lanacion.com.ar/deportes/futbol/atletico-de-madrid-le-gano-a-espanyol-con-un-golazo-agonico-y-sigue-al-acecho-de-barcelona-nid17102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/julian-alvarez-intenta-pasar-entre-alex-calatrava-5G62YK6Y3RCF3IY7JWMGRYSL54.JPG?auth=387fd3cc3ac78b597778f30f490677ca4314d3e93b5ff9ebbd0f557977ffea13&width=1200&height=800&quality=70&smart=true",
+  "razon": "La foto B muestra claramente una jugada en partido con buen encuadre y sin marcas ni menores.",
+  "cuando": "2026-10-17T17:32:00.166Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Jugadores disputando el balón en el partido"
+  },
+  "huella": "34142b9a4db22a53"
  }
 }
