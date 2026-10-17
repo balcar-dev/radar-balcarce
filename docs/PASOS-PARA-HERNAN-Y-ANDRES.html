@@ -1,0 +1,120 @@
+<title>Pasos para Hernán y Andrés</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,700;8..60,800&family=Inter:wght@400;600;700&display=swap">
+<style>
+/* Layout: una sola lista de pasos numerados, cada uno con su botón de enlace y su casilla; el celular manda. */
+:root { --papel:#FFFFFF; --tinta:#14161A; --texto:#3B403C; --suave:#646964; --linea:#E4DFD2; --crema:#F6F3EC; --rojo:#C7381C; --verde:#16615B; --azul:#1E40AF;
+  --f-titulo:"Source Serif 4", Georgia, serif; --f-texto:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --papel:#121417; --tinta:#F2F0EA; --texto:#D4D2CB; --suave:#A3A69F; --linea:#2E3236; --crema:#1B1E22; --rojo:#F07A5C; --verde:#5CC2B5; --azul:#8FA8F5; color-scheme:dark } }
+:root[data-theme="dark"] { --papel:#121417; --tinta:#F2F0EA; --texto:#D4D2CB; --suave:#A3A69F; --linea:#2E3236; --crema:#1B1E22; --rojo:#F07A5C; --verde:#5CC2B5; --azul:#8FA8F5; color-scheme:dark }
+* { box-sizing:border-box }
+body { background:var(--papel); color:var(--texto); font:16px/1.55 var(--f-texto); padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); padding-block:0 56px }
+main { max-width:46rem; margin:0 auto }
+h1, h2 { font-family:var(--f-titulo); color:var(--tinta); text-wrap:balance; line-height:1.15 }
+h1 { font-size:clamp(1.9rem, 5vw, 2.7rem); font-weight:800; margin:0 }
+h2 { font-size:1.35rem; font-weight:800; margin:34px 0 8px; padding-bottom:6px; border-bottom:3px solid var(--tinta) }
+header { padding-block:34px 14px }
+.volanta { font:700 .75rem/1 var(--f-texto); letter-spacing:.12em; text-transform:uppercase; color:var(--rojo); margin:0 0 .6rem }
+.bajada { font:400 1.1rem/1.5 var(--f-titulo); margin:.6rem 0 0 }
+.paso { display:grid; grid-template-columns:2rem 1fr; gap:4px 12px; padding:14px 0; border-bottom:1px solid var(--linea) }
+.paso input { width:1.3rem; height:1.3rem; margin-top:.2rem; accent-color:var(--verde) }
+.paso > div { min-width:0 }
+.paso h3 { margin:0 0 .25rem; font:700 1rem/1.35 var(--f-texto); color:var(--tinta) }
+.paso p { margin:0 0 .45rem; font-size:.95rem }
+a.boton { display:inline-block; font:700 .85rem/1 var(--f-texto); color:var(--azul); border:1px solid currentColor; padding:8px 11px; margin:2px 6px 2px 0; text-decoration:none; word-break:break-word }
+a.boton:hover, a.boton:focus-visible { background:var(--crema) }
+code { font-size:.85em; background:var(--crema); padding:1px 5px; word-break:break-all }
+.aviso { border-left:3px solid var(--rojo); padding-left:12px; font-size:.95rem; margin:14px 0 }
+.pegar { font-size:.85rem; color:var(--suave) }
+:focus-visible { outline:2px solid var(--rojo); outline-offset:2px }
+input:checked + div h3 { text-decoration:line-through; color:var(--suave) }
+</style>
+<main>
+<header>
+  <p class="volanta">Radar Balcarce · una sola lista</p>
+  <h1>Lo único que falta, y es de ustedes</h1>
+  <p class="bajada">Son cosas que hay que hacer con la cuenta de ustedes: crear una clave o una cuenta y pegarla en su lugar. Ninguna clave va en un chat. Con cada paso hecho, yo sigo con el resto.</p>
+</header>
+<p class="aviso">Todo se hace con <strong>radarbalcarce@gmail.com</strong>. Tocá cada casilla cuando termines un paso; queda marcada en este mismo teléfono o navegador.</p>
+
+<h2>1. Para que se prenda lo ya armado (10 minutos)</h2>
+
+<div class="paso"><input type="checkbox" id="p1" aria-label="Paso 1"><div>
+  <h3>Pegar la clave gratis de OpenRouter (respaldo de las IA)</h3>
+  <p>Crear una clave (Create Key; no hace falta cargar plata) y pegarla en GitHub con el nombre <code>OPENROUTER_API_KEY</code>. Ya hay una guardada en la PC de ustedes: pueden usar esa misma.</p>
+  <a class="boton" href="https://openrouter.ai/keys" target="_blank" rel="noopener">openrouter.ai/keys</a><a class="boton" href="https://github.com/radarbalcarce/radar-balcarce/settings/secrets/actions/new" target="_blank" rel="noopener">GitHub: nuevo secreto</a>
+</div></div>
+
+<div class="paso"><input type="checkbox" id="p2" aria-label="Paso 2"><div>
+  <h3>Prender las fotos con chicos de fuentes de Balcarce</h3>
+  <p>Crear la variable <code>FOTOS_MENORES_OFICIALES</code> con el valor <code>Si</code>. Para apagarla, se borra.</p>
+  <a class="boton" href="https://github.com/radarbalcarce/radar-balcarce/settings/variables/actions/new" target="_blank" rel="noopener">GitHub: nueva variable</a>
+</div></div>
+
+<div class="paso"><input type="checkbox" id="p3" aria-label="Paso 3"><div>
+  <h3>Crear la cuenta de Bluesky</h3>
+  <p>Nombre de usuario <code>radarbalcarce</code> (o el que esté libre). La bio y los tamaños de las imágenes están listos para copiar en la tabla de redes.</p>
+  <a class="boton" href="https://bsky.app" target="_blank" rel="noopener">bsky.app</a><a class="boton" href="https://github.com/radarbalcarce/radar-balcarce/blob/main/docs/redes/TABLA-DE-REDES.html" target="_blank" rel="noopener">Perfiles para copiar</a>
+</div></div>
+
+<div class="paso"><input type="checkbox" id="p4" aria-label="Paso 4"><div>
+  <h3>Crear el bot de Telegram</h3>
+  <p>Entrar a Telegram, buscar <code>@BotFather</code>, escribir <code>/newbot</code> y seguir los pasos. Después, crear un canal público <code>@radarbalcarce</code> y sumar el bot como administrador. El token que da BotFather se pega después en GitHub, no en un chat.</p>
+  <a class="boton" href="https://web.telegram.org/k/" target="_blank" rel="noopener">web.telegram.org</a>
+</div></div>
+
+<h2>2. Para activar el archivo permanente de notas (antes del 2/11)</h2>
+
+<div class="paso"><input type="checkbox" id="p5" aria-label="Paso 5"><div>
+  <h3>Sumarle permisos al token de Cloudflare</h3>
+  <p>Editar el token que ya está (<code>CLOUDFLARE_API_TOKEN</code>) y agregar estos permisos: <strong>Zone → Workers Routes: Edit</strong>, <strong>Zone → Zone: Read</strong>, <strong>Account → Workers R2 Storage: Edit</strong>, <strong>Workers KV Storage: Edit</strong>, <strong>Workers Scripts: Edit</strong> y <strong>Cloudflare Pages: Edit</strong>. Guardar. No hay que volver a pegarlo en GitHub si se edita el mismo token.</p>
+  <a class="boton" href="https://dash.cloudflare.com/profile/api-tokens" target="_blank" rel="noopener">Cloudflare: tokens</a>
+</div></div>
+
+<h2>3. Para pasar el robot a Cloudflare (media hora, una vez)</h2>
+<p>Esto deja el repositorio principal en los 2.000 minutos gratis de GitHub, para poder pasarlo a privado sin pagar. Hasta que yo lo prenda, nada cambia.</p>
+
+<div class="paso"><input type="checkbox" id="p6" aria-label="Paso 6"><div>
+  <h3>Crear dos tokens de GitHub (grano fino)</h3>
+  <p><strong>Uno</strong> para el repositorio <code>radarbalcarce/radar-balcarce</code> con <em>Contents: lectura y escritura</em> y <em>Actions: lectura y escritura</em>, sin vencimiento: pegarlo como secreto <code>RADAR_GITHUB_TOKEN</code>. <strong>Otro</strong> para <code>radarbalcarce/radar-balcarce-render</code> con <em>Contents: lectura y escritura</em>: pegarlo como secreto <code>RENDER_GITHUB_TOKEN</code>.</p>
+  <a class="boton" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub: nuevo token</a><a class="boton" href="https://github.com/radarbalcarce/radar-balcarce/settings/secrets/actions/new" target="_blank" rel="noopener">GitHub: nuevo secreto</a>
+</div></div>
+
+<div class="paso"><input type="checkbox" id="p7" aria-label="Paso 7"><div>
+  <h3>Crear la llave de R2 (dos valores)</h3>
+  <p>En Cloudflare → R2 → <em>Manage API tokens</em> → <em>Create API token</em> con permiso <em>Object Read &amp; Write</em>. Da dos valores: pegarlos como secretos <code>R2_ACCESS_KEY_ID</code> y <code>R2_SECRET_ACCESS_KEY</code>. Los depósitos <code>radar-motor</code> y <code>radar-render</code> los crea el proceso solo.</p>
+  <a class="boton" href="https://dash.cloudflare.com/?to=/:account/r2/api-tokens" target="_blank" rel="noopener">Cloudflare: llaves de R2</a>
+</div></div>
+
+<div class="paso"><input type="checkbox" id="p8" aria-label="Paso 8"><div>
+  <h3>Crear la variable del render</h3>
+  <p>Variable <code>R2_RENDER</code> con el valor <code>radar-render</code>.</p>
+  <a class="boton" href="https://github.com/radarbalcarce/radar-balcarce/settings/variables/actions/new" target="_blank" rel="noopener">GitHub: nueva variable</a>
+</div></div>
+
+<p>Cuando estén los pasos 5 a 8, avisame con una palabra («listo») y sigo yo: subo los programas a Cloudflare, hago el ensayo en seco, paso las tareas de a una, conecto la compilación del sitio y recién ahí apago los procesos viejos de GitHub. Cada paso tiene su vuelta atrás.</p>
+
+<h2>4. Cuando quieran (no bloquea nada)</h2>
+<div class="paso"><input type="checkbox" id="p9" aria-label="Paso 9"><div>
+  <h3>Ordenar las claves de Google</h3>
+  <p>La facturación está en un proyecto que Radar no usa. Lo hacemos juntos en el Chrome: la guía está lista.</p>
+  <a class="boton" href="https://aistudio.google.com/api-keys" target="_blank" rel="noopener">AI Studio</a>
+</div></div>
+<div class="paso"><input type="checkbox" id="p10" aria-label="Paso 10"><div>
+  <h3>Aceptar la edad y las cookies de Grok</h3>
+  <p>Hay una ventana abierta en el Chrome de la PC. Aceptándola, puedo seguir preguntándole ideas.</p>
+</div></div>
+<div class="paso"><input type="checkbox" id="p11" aria-label="Paso 11"><div>
+  <h3>En la PC: borrar <code>panel\datos</code> y <code>respaldos</code> y dar de baja Tailscale</h3>
+  <p>Son restos del panel viejo de la PC (tienen claves). En el Administrador de aplicaciones, desinstalar Tailscale.</p>
+</div></div>
+</main>
+<script>
+(function () {
+  var cajas = document.querySelectorAll('.paso input[type=checkbox]');
+  function leer() { try { return JSON.parse(localStorage.getItem('pasos-radar') || '{}'); } catch (e) { return {}; } }
+  function guardar(o) { try { localStorage.setItem('pasos-radar', JSON.stringify(o)); } catch (e) {} }
+  var estado = leer();
+  cajas.forEach(function (c) { if (estado[c.id]) c.checked = true; c.addEventListener('change', function () { var o = leer(); o[c.id] = c.checked; guardar(o); }); });
+})();
+</script>
