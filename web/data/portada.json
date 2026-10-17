@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-17T05:32:04.240Z",
+  "generado": "2026-10-17T06:01:23.430Z",
   "notas": [
     {
       "id": "rwxsr5",
@@ -16,7 +16,7 @@
       "fecha": "2026-10-17T02:40:23.000Z",
       "sinFecha": false,
       "visto": "2026-10-17T03:01:14.154Z",
-      "relevancia": 88,
+      "relevancia": 78,
       "local": true,
       "deUnMedioDeAca": true,
       "publicadaPor": null,
@@ -694,6 +694,105 @@
       "foto": {
         "archivo": "fotos-notas/1idlalr.jpg",
         "credito": "Foto: A24"
+      }
+    },
+    {
+      "id": "4gdhzi",
+      "titulo": "Diputados piden que el embajador chileno explique la ruta a Malvinas",
+      "copete": "Un grupo de legisladores nacionales reclama que el representante diplomático de Chile rinda cuentas en el Congreso sobre la conexión marítima hacia las islas prevista para noviembre.",
+      "cuerpo": "Diputados nacionales opositores presentaron un proyecto en el Congreso para citar al embajador de Chile en el país, Gonzalo Uriarte Herrera. La iniciativa busca que el diplomático informe sobre los alcances de la ruta marítima entre Punta Arenas y las Islas Malvinas y si se utilizará para abastecer proyectos hidrocarburíferos en la zona en disputa.\n\nEl texto fue elaborado por legisladores del espacio opositor, entre ellos el ex canciller Santiago Cafiero. En paralelo, el diputado Guillermo Michell propuso dejar sin efecto tratados bilaterales de protección de inversiones y doble imposición fiscal con el vecino país, según se informó en el ámbito legislativo.\n\nLa controversia surgió tras conocerse que una empresa chilena prevé iniciar en noviembre una conexión comercial regular mediante un buque de bandera de ese país. Como antecedente, a principios de octubre el canciller Pablo Quirno había manifestado que el Gobierno chileno se había comprometido a no brindar asistencia logística en las islas.",
+      "guion": "Diputados piden que el embajador chileno explique la ruta a Malvinas",
+      "seccion": "Política",
+      "medios": [
+        "Clarín",
+        "El Destape",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.clarin.com/politica/diputados-peronistas-piden-embajador-chile-explique-apoyo-punta-arenas-malvinas_0_pqbgGQCBlN.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T20:46:31.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T23:31:14.393Z",
+      "relevancia": 47,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Presentan un proyecto para citar al embajador de Chile en el Congreso.",
+        "Buscan explicaciones sobre la nueva ruta marítima hacia las Islas Malvinas.",
+        "Piden determinar si el servicio servirá para tareas hidrocarburíferas.",
+        "Proponen dejar sin efecto convenios bilaterales con el vecino país."
+      ],
+      "seSabe": [
+        "Un grupo de diputados nacionales presentó un proyecto de resolución para citar al embajador chileno Gonzalo Uriarte Herrera.",
+        "La iniciativa fue elaborada por legisladores opositores, incluidos Santiago Cafiero y Jorge Taiana.",
+        "El diputado Guillermo Michell propuso suspender convenios bilaterales con Chile.",
+        "Una naviera chilena prevé iniciar en noviembre una conexión marítima hacia las islas."
+      ],
+      "noConfirmado": [
+        "Todavía no se confirmó si el embajador asistirá a la Comisión de Relaciones Exteriores del Congreso."
+      ],
+      "textoRedes": "Diputados nacionales presentaron un proyecto para citar al embajador de Chile y pedir explicaciones sobre la nueva ruta marítima hacia las Islas Malvinas.",
+      "etiquetas": [
+        "Diputados",
+        "Chile",
+        "Malvinas",
+        "Congreso"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/diputados-peronistas-piden-embajador-chile-explique-apoyo-punta-arenas-malvinas_0_pqbgGQCBlN.html",
+          "fecha": "2026-10-16T20:46:31.000Z",
+          "oficial": false,
+          "aporte": "Detalló el proyecto de resolución elaborado por legisladores opositores y la propuesta de Guillermo Michell."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/politica/peronismo-exige-explicaciones-embajador-chile-conexion-logistica-podria-abastecer-explotacion-petrolera-malvinas-2026101620177",
+          "fecha": "2026-10-16T23:17:07.076Z",
+          "oficial": false,
+          "aporte": "Informó los nombres de los diputados firmantes y los puntos específicos de la citación al diplomático."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/malvinas--diputados-de-uxp-citan-al-embajador-de-chile-para-que-explique-la-nueva-ruta-aerea-de-punta-arenas-a-las-islas_a6ad2aaa1f8e83a89473649cf",
+          "fecha": "2026-10-16T23:20:29.463Z",
+          "oficial": false,
+          "aporte": "Aportó precisiones sobre los fundamentos del pedido de explicaciones en el ámbito legislativo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "tlydas",
+          "titulo": "Canciller afirma que Chile no da apoyo logístico en Malvinas",
+          "fecha": "2026-09-29T14:41:10.000Z",
+          "ruta": "/nota/canciller-afirma-que-chile-no-da-apoyo-logistico-en-malvinas-tlydas"
+        },
+        {
+          "id": "1izhgu3",
+          "titulo": "Un diputado presenta un proyecto para quitar beneficios a Chile por Malvinas",
+          "fecha": "2026-10-10T23:08:46.000Z",
+          "ruta": "/nota/un-diputado-presenta-un-proyecto-para-quitar-beneficios-a-chile-por-1izhgu3"
+        },
+        {
+          "id": "1dcn7h",
+          "titulo": "El canciller Pablo Quirno critica la postura británica sobre Malvinas ante el embajador",
+          "fecha": "2026-10-06T02:19:24.000Z",
+          "ruta": "/nota/el-canciller-pablo-quirno-critica-la-postura-britanica-sobre-malvinas-1dcn7h"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "diputados-piden-que-el-embajador-chileno-explique-la-ruta-a-malvinas",
+      "foto": {
+        "archivo": "fotos-notas/4gdhzi.jpg",
+        "credito": "Foto: Clarín"
       }
     },
     {
@@ -2642,8 +2741,8 @@
         "Ámbito",
         "C5N",
         "Minuto Uno",
-        "Clarín",
-        "elDiarioAR"
+        "elDiarioAR",
+        "Clarín"
       ],
       "enlace": "https://www.clarin.com/politica/altos-funcionarios-trump-visitaran-argentina-avanzar-millonario-proyecto-infraestructura-ampliar-inversiones_0_NIwA6uB3Ms.html",
       "teniaImagenLaFuente": true,
@@ -2767,7 +2866,7 @@
       "fecha": "2026-10-16T14:16:06.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T20:31:11.316Z",
-      "relevancia": 68,
+      "relevancia": 61,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2854,13 +2953,8 @@
       "fecha": "2026-10-16T14:12:19.000Z",
       "sinFecha": false,
       "visto": "2026-10-16T15:38:51.233Z",
-      "relevancia": 59,
+      "relevancia": 52,
       "local": false,
-      "muyContada": {
-        "medios": 6,
-        "porque": "5 medios en sus primeras 3 horas",
-        "desde": "2026-10-17T03:01:14.154Z"
-      },
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
@@ -3463,11 +3557,6 @@
       "visto": "2026-10-16T14:10:11.487Z",
       "relevancia": 62,
       "local": false,
-      "muyContada": {
-        "medios": 11,
-        "porque": "11 medios",
-        "desde": "2026-10-17T03:01:14.154Z"
-      },
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
@@ -5024,91 +5113,6 @@
       }
     },
     {
-      "id": "x3s2ug",
-      "titulo": "El Ministerio de Economía informa un superávit primario de un billón y medio en septiembre",
-      "copete": "El Gobierno registró un superávit financiero positivo el mes pasado y acumula un 1,2% del producto bruto interno en lo que va del año, según datos oficiales.",
-      "cuerpo": "El Ministerio de Economía informó que el Sector Público Nacional registró en septiembre un superávit primario de 1,4 billones de pesos y un saldo financiero positivo de 977.173 millones de pesos tras el pago de los intereses de la deuda. Los ingresos totales alcanzaron los 15,8 billones de pesos, mientras que los gastos corrientes se ubicaron en 14,3 billones.\n\nEl resultado primario del noveno mes marcó una baja en comparación con los 1,9 billones de pesos informados en agosto, de acuerdo con los registros difundidos.",
-      "guion": "El Ministerio de Economía informa un superávit primario de un billón y medio en septiembre",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "Perfil",
-        "Página/12",
-        "Crónica",
-        "Canal 26",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "Infobrisas (Radio Brisas)",
-        "El Eco de Tandil",
-        "Ámbito",
-        "C5N",
-        "Los Andes (Mendoza)",
-        "El Cronista",
-        "La Nueva",
-        "La Gaceta (Tucumán)",
-        "La Brújula 24",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.ambito.com/el-gobierno-logro-octubre-un-superavit-primario-14-billones-y-acumula-12-del-pbi-2026-n6334632",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-16T00:00:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T17:28:34.829Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El superávit primario de septiembre llegó a 1,4 billones de pesos.",
-        "El saldo financiero positivo fue de 977.173 millones de pesos.",
-        "El acumulado anual de superávit primario alcanza el 1,2% del PBI."
-      ],
-      "seSabe": [
-        "El Ministerio de Economía informó un superávit primario de 1,4 billones de pesos en septiembre.",
-        "El saldo financiero positivo de septiembre fue de 977.173 millones de pesos.",
-        "El superávit primario acumulado en los primeros nueve meses de 2026 llega al 1,2% del PBI."
-      ],
-      "noConfirmado": [
-        "Las fuentes presentan diferencias numéricas en el acumulado del superávit primario y en la variación de los ingresos y gastos interanuales."
-      ],
-      "textoRedes": "El Ministerio de Economía informó un superávit primario de 1,4 billones de pesos en septiembre y un saldo financiero positivo de 977.173 millones.",
-      "etiquetas": [
-        "economia",
-        "superavit",
-        "gobierno",
-        "nacional"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/el-gobierno-logro-octubre-un-superavit-primario-14-billones-y-acumula-12-del-pbi-2026-n6334632",
-          "fecha": "2026-10-16T16:13:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre ingresos totales, gastos corrientes, componentes del gasto y el análisis del IARAF."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/america/agencias/2026/10/16/el-superavit-fiscal-primario-de-argentina-crece-el-105-interanual-en-septiembre/",
-          "fecha": "2026-10-16T17:16:20.000Z",
-          "oficial": false,
-          "aporte": "Aportó la comparación mensual con agosto y las cifras del acumulado financiero e histórico."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-ministerio-de-economia-informa-un-superavit-primario-de-un-billon",
-      "foto": {
-        "archivo": "fotos-notas/x3s2ug.jpg",
-        "credito": "Foto: Ámbito"
-      }
-    },
-    {
       "id": "yqsuir",
       "titulo": "Amplían procesamientos por desmanejos en la Agencia de Discapacidad",
       "copete": "La Justicia federal sumó imputaciones a exfuncionarios y empresarios en una causa por compras irregulares de insumos médicos. El perjuicio estimado supera los 7.800 millones de pesos.",
@@ -5130,11 +5134,11 @@
         "Ámbito",
         "C5N",
         "Minuto Uno",
+        "elDiarioAR",
         "Clarín",
         "Infobae",
         "Perfil",
-        "La Gaceta (Tucumán)",
-        "elDiarioAR"
+        "La Gaceta (Tucumán)"
       ],
       "enlace": "https://www.lagaceta.com.ar/nota/1158339/politica/causa-andis-procesaron-24-personas-diferencia-precios-bajo-investigacion-supera-7800-millones.html",
       "teniaImagenLaFuente": true,
@@ -5278,6 +5282,91 @@
       "foto": {
         "archivo": "fotos-notas/yqsuir.jpg",
         "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
+      "id": "x3s2ug",
+      "titulo": "El Ministerio de Economía informa un superávit primario de un billón y medio en septiembre",
+      "copete": "El Gobierno registró un superávit financiero positivo el mes pasado y acumula un 1,2% del producto bruto interno en lo que va del año, según datos oficiales.",
+      "cuerpo": "El Ministerio de Economía informó que el Sector Público Nacional registró en septiembre un superávit primario de 1,4 billones de pesos y un saldo financiero positivo de 977.173 millones de pesos tras el pago de los intereses de la deuda. Los ingresos totales alcanzaron los 15,8 billones de pesos, mientras que los gastos corrientes se ubicaron en 14,3 billones.\n\nEl resultado primario del noveno mes marcó una baja en comparación con los 1,9 billones de pesos informados en agosto, de acuerdo con los registros difundidos.",
+      "guion": "El Ministerio de Economía informa un superávit primario de un billón y medio en septiembre",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "Infobae",
+        "Perfil",
+        "Página/12",
+        "Crónica",
+        "Canal 26",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "Infobrisas (Radio Brisas)",
+        "El Eco de Tandil",
+        "Ámbito",
+        "C5N",
+        "Los Andes (Mendoza)",
+        "El Cronista",
+        "La Nueva",
+        "La Gaceta (Tucumán)",
+        "La Brújula 24",
+        "Radio Mitre"
+      ],
+      "enlace": "https://www.ambito.com/el-gobierno-logro-octubre-un-superavit-primario-14-billones-y-acumula-12-del-pbi-2026-n6334632",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-16T00:00:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-16T17:28:34.829Z",
+      "relevancia": 59,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El superávit primario de septiembre llegó a 1,4 billones de pesos.",
+        "El saldo financiero positivo fue de 977.173 millones de pesos.",
+        "El acumulado anual de superávit primario alcanza el 1,2% del PBI."
+      ],
+      "seSabe": [
+        "El Ministerio de Economía informó un superávit primario de 1,4 billones de pesos en septiembre.",
+        "El saldo financiero positivo de septiembre fue de 977.173 millones de pesos.",
+        "El superávit primario acumulado en los primeros nueve meses de 2026 llega al 1,2% del PBI."
+      ],
+      "noConfirmado": [
+        "Las fuentes presentan diferencias numéricas en el acumulado del superávit primario y en la variación de los ingresos y gastos interanuales."
+      ],
+      "textoRedes": "El Ministerio de Economía informó un superávit primario de 1,4 billones de pesos en septiembre y un saldo financiero positivo de 977.173 millones.",
+      "etiquetas": [
+        "economia",
+        "superavit",
+        "gobierno",
+        "nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/el-gobierno-logro-octubre-un-superavit-primario-14-billones-y-acumula-12-del-pbi-2026-n6334632",
+          "fecha": "2026-10-16T16:13:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre ingresos totales, gastos corrientes, componentes del gasto y el análisis del IARAF."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/america/agencias/2026/10/16/el-superavit-fiscal-primario-de-argentina-crece-el-105-interanual-en-septiembre/",
+          "fecha": "2026-10-16T17:16:20.000Z",
+          "oficial": false,
+          "aporte": "Aportó la comparación mensual con agosto y las cifras del acumulado financiero e histórico."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-ministerio-de-economia-informa-un-superavit-primario-de-un-billon",
+      "foto": {
+        "archivo": "fotos-notas/x3s2ug.jpg",
+        "credito": "Foto: Ámbito"
       }
     },
     {
@@ -6303,143 +6392,6 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261015tarde.jpg",
         "credito": "Fotos: Puntonueve (FM 100.9) y Olé"
-      }
-    },
-    {
-      "id": "94s29q",
-      "titulo": "Federico Sturzenegger cuestiona al gobierno bonaerense por la suba de la VTV",
-      "copete": "El ministro nacional criticó el incremento del 17,6% en la Verificación Técnica Vehicular bonaerense y lo atribuyó a la falta de adhesión provincial a la desregulación.",
-      "cuerpo": "El ministro de Desregulación y Transformación, Federico Sturzenegger, cuestionó al gobierno de la provincia de Buenos Aires tras la actualización en la Verificación Técnica Vehicular. El funcionario nacional atribuyó el ajuste tarifario a la negativa de la administración bonaerense de adoptar la flexibilización de los controles técnicos impulsada por la Nación.\n\nEl incremento del 17,6% comenzó a aplicarse el 15 de octubre a través de la Resolución 361-MTRAGP-2026 del Ministerio de Transporte provincial. Para los vehículos particulares de hasta 2.500 kilos, el costo pasó de $ 97.057,65 a $ 114.105,99, IVA incluido.\n\nA través de su cuenta de X, el funcionario sostuvo que la medida nacional permite realizar las inspecciones en talleres particulares y concesionarias, y pidió recordar la decisión provincial en los comicios del próximo año.",
-      "guion": "Federico Sturzenegger cuestiona al gobierno bonaerense por la suba de la VTV",
-      "seccion": "Política",
-      "medios": [
-        "Infobae",
-        "Perfil",
-        "La Verdad",
-        "Infobrisas (Radio Brisas)",
-        "El Eco de Tandil",
-        "Clarín"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/10/16/la-chicana-de-sturzenegger-tras-la-suba-de-la-vtv-en-la-provincia-de-buenos-aires-para-recordar-el-ano-que-viene-cuando-votes/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T17:41:33.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-16T16:01:02.543Z",
-      "relevancia": 53,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La VTV en la provincia de Buenos Aires aumentó un 17,6%.",
-        "La tarifa para vehículos de hasta 2.500 kilos subió a $ 114.105,99.",
-        "Federico Sturzenegger cuestionó la medida y la vinculó con la normativa nacional."
-      ],
-      "seSabe": [
-        "El incremento de la VTV en territorio bonaerense es del 17,6%.",
-        "La tarifa básica para vehículos particulares de hasta 2.500 kilos se elevó a $ 114.105,99.",
-        "La actualización tarifaria rige desde el 15 de octubre por la resolución del Ministerio de Transporte provincial.",
-        "El ministro Federico Sturzenegger cuestionó al gobierno provincial por rechazar la desregulación nacional."
-      ],
-      "noConfirmado": [
-        "No se informaron las repercusiones oficiales de la administración bonaerense frente a las declaraciones del funcionario nacional."
-      ],
-      "textoRedes": "El ministro Federico Sturzenegger cuestionó al gobierno bonaerense por el aumento del 17,6% en la VTV y lo atribuyó a no adherir a la flexibilización nacional.",
-      "etiquetas": [
-        "VTV",
-        "Federico Sturzenegger",
-        "Provincia de Buenos Aires",
-        "Tarifas",
-        "Transporte"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/16/la-chicana-de-sturzenegger-tras-la-suba-de-la-vtv-en-la-provincia-de-buenos-aires-para-recordar-el-ano-que-viene-cuando-votes/",
-          "fecha": "2026-10-16T14:08:39.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre el porcentaje de aumento, los montos de la tarifa y los argumentos del ministro sobre la desregulación."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/economia/sturzenegger-apunto-contra-kicillof-aumento-vtv-en-provincia-buenos-aires-a40.phtml",
-          "fecha": "2026-10-16T14:45:54.000Z",
-          "oficial": false,
-          "aporte": "Aportó las declaraciones del funcionario nacional en su cuenta de red social y la mención al Ministerio de Transporte bonaerense."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "federico-sturzenegger-cuestiona-al-gobierno-bonaerense-por-la-suba-de",
-      "foto": {
-        "archivo": "fotos-notas/94s29q.jpg",
-        "credito": "Foto: Perfil"
-      }
-    },
-    {
-      "id": "1vrfi9w",
-      "titulo": "Proyecto 10 repasa su historia social",
-      "copete": "La organización comunitaria cumple más de dos décadas de labor en la ciudad. Sus representantes recordaron el origen en 2001 y su actual enfoque en el acompañamiento educativo.",
-      "cuerpo": "La organización Proyecto 10 cumple más de dos décadas de labor comunitaria en Balcarce con un enfoque orientado al acompañamiento educativo de estudiantes. Su presidenta, Laura Echarte, y la integrante Ana Albanese repasaron la trayectoria de la entidad en medios radiales.\n\nLa iniciativa surgió en 2001, en medio de un contexto de emergencia económica y social, impulsada por Quiqui Galindo ante la falta de alimentación adecuada en alumnos de escuelas públicas. Con la colaboración de Santiago Daguerre, Eugenio Gardela y empresas locales, la labor comenzó en la Escuela Primaria Nº 10 y luego se extendió a los establecimientos Nº 45 y Nº 8.\n\nEn aquella etapa inicial, las voluntarias preparaban cenas y brindaban asistencia a más de un centenar de chicos por escuela, además de promover hábitos de higiene y contención. Con el paso del tiempo, la institución transformó su asistencia alimentaria hacia la entrega de becas para facilitar las trayectorias educativas de los jóvenes.",
-      "guion": "Proyecto 10 repasa su historia social",
-      "seccion": "Balcarce",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/45091-proyecto-10-de-los-comedores-comunitarios-a-las-becas-mas-de-dos-decadas-de-compromiso-social-en-balcarce/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T17:33:31.543Z",
-      "sinFecha": true,
-      "visto": "2026-10-15T17:33:31.543Z",
-      "relevancia": 63,
-      "local": true,
-      "deUnMedioDeAca": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La ONG Proyecto 10 cumple más de dos décadas de labor en Balcarce.",
-        "Surgió en 2001 para brindar asistencia alimentaria en escuelas públicas.",
-        "La entidad adaptó su tarea y hoy otorga becas de estudio."
-      ],
-      "seSabe": [
-        "Proyecto 10 nació en 2001 en respuesta a una emergencia alimentaria.",
-        "La institución comenzó en la Escuela Primaria Nº 10 y se expandió a las Nº 45 y Nº 8.",
-        "La organización otorga actualmente becas para acompañar la educación de los jóvenes."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La organización Proyecto 10 repasa más de dos décadas de compromiso social en Balcarce. Nacida en 2001 como respuesta a una emergencia alimentaria en escuelas públicas, la entidad orienta hoy sus esfuerzos hacia el acompañamiento educativo mediante becas.",
-      "etiquetas": [
-        "Proyecto 10",
-        "comunidad",
-        "becas",
-        "historia social"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45091-proyecto-10-de-los-comedores-comunitarios-a-las-becas-mas-de-dos-decadas-de-compromiso-social-en-balcarce/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló el origen de Proyecto 10 en 2001, su labor en comedores escolares y su transición hacia el otorgamiento de becas educativas."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "proyecto-10-repasa-su-historia-social",
-      "foto": {
-        "archivo": "fotos-notas/1vrfi9w.jpg",
-        "credito": "Foto: Diario La Vanguardia"
       }
     }
   ],
