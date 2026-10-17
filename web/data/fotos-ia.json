@@ -102,5 +102,37 @@
   "modelo": "sdxl",
   "prompt": "Candid photojournalistic close-up still life of a worn captain's elastic armband, a scuffed leather football, and tied cleats resting on a weathered wooden bench bathed in warm, golden afternoon sunlight, with a vibrant green stadium pitch softly blurred in the bokeh background, authentic documentary feel, rich natural colors, cheerful atmosphere, no people, no text, no logos, bright warm sunny daylight, vivid clean cheerful colors, blank paper, no writing, no letters, no signs, no logos, no people",
   "automatica": true
+ },
+ "1tnpy82": {
+  "archivo": "fotos-notas/1tnpy82-ia.jpg",
+  "credito": "Ilustración generada con IA",
+  "medio": "Ilustración generada con IA",
+  "origen": "ia",
+  "cuando": "2026-10-17T02:45:47.631Z",
+  "titulo": "La Corte Suprema remata camiones y obradores de Austral Construcciones",
+  "modelo": "sdxl",
+  "prompt": "Candid photojournalistic close-up still life of a heavy ring of worn vehicle keys resting on top of a faded blank manila folder, beside a scratched generic yellow hardhat on an aged wooden office desk, illuminated by neutral diffused daylight, heavily blurred industrial warehouse background with bokeh, muted desaturated tones, authentic editorial archive style, no people, no text, no logos, soft even natural light, muted sober colors, calm neutral mood, blank paper, no writing, no letters, no signs, no logos, no people",
+  "automatica": true,
+  "control": {
+   "ok": true,
+   "motivo": null,
+   "razon": "Un casco de seguridad amarillo, planos y un manojo de llaves sobre una mesa de trabajo."
+  }
+ },
+ "aa7nni": {
+  "archivo": "fotos-notas/aa7nni-ia.jpg",
+  "credito": "Ilustración generada con IA",
+  "medio": "Ilustración generada con IA",
+  "origen": "ia",
+  "cuando": "2026-10-17T02:45:47.631Z",
+  "titulo": "Reprograman la Caravana de la Alegría para noviembre",
+  "modelo": "sdxl",
+  "prompt": "Candid photojournalistic close-up still life of colorful festive fabric pennants, a ball of natural jute twine, craft scissors, and a blank paper card resting on a weathered wooden picnic table, bathed in warm sunny afternoon light, with a deeply blurred bokeh background of a green rural school lawn, vivid cheerful colors, natural authentic newspaper archive photography, no people, no text, no logos, bright warm sunny daylight, vivid clean cheerful colors, blank paper, no writing, no letters, no signs, no logos, no people",
+  "automatica": true,
+  "control": {
+   "ok": true,
+   "motivo": null,
+   "razon": "Un bodegón al aire libre con un rollo de arpillera, una bolsita, tijeras y telas coloridas sobre una mesa de madera."
+  }
  }
 }
