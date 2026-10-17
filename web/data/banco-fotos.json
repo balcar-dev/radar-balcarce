@@ -17329,10 +17329,11 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Luciano Nakis apunta a Gabriel Milito como técnico de Independiente",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-16T21:31:37.230Z",
-  "intentos": 3,
-  "fuentes": 5
+  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
+  "cuando": "2026-10-17T04:01:35.346Z",
+  "intentos": 4,
+  "fuentes": 5,
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  },
  "mhaxsk": {
   "archivo": "fotos-notas/mhaxsk.jpg",
@@ -17567,7 +17568,8 @@
   "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/los-operadores-estimaron-las-cosechas-de-soja-en-DWRAVY4YDRDXJEU7DSADQH6AOQ.jpg?auth=e2f253c433903563a9be0193f30cf1adb0a4a2c3c59067f4422a8862e150ffcd&width=1200&height=800&quality=70&smart=true",
   "razon": "La imagen A ofrece un encuadre completo y de mayor nitidez que muestra la cosecha de soja en acción, ilustrando mejor el contexto agropecuario de la nota, mientras que la B es un primer plano abstracto.",
   "cuando": "2026-10-16T23:31:58.342Z",
-  "huella": "0c6266c20a095123"
+  "huella": "0c6266c20a095123",
+  "ausenteDesde": "2026-10-17T04:01:44.345Z"
  },
  "4gdhzi": {
   "intentado": true,
@@ -17785,6 +17787,26 @@
   "cuando": "2026-10-17T03:31:20.114Z",
   "intentos": 1,
   "fuentes": 3,
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+ },
+ "vaow4u": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "La Provincia acuerda un aumento salarial del seis por ciento con estatales",
+  "razon": "Segunda opinión no disponible (la nota habla de chicos o de categorías juveniles; gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this erro): la foto de Agencia DIB no se usa todavía.",
+  "cuando": "2026-10-17T04:01:35.346Z",
+  "intentos": 1,
+  "fuentes": 3,
+  "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+ },
+ "1ufokdk": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El dólar mayorista finaliza la semana con una suba y cotiza a $1.518",
+  "razon": "Groq también falló: HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3jr9tmme4prmmv5ha0panqq` service tier `on_demand` on input tokens pe (Gemini: HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.)",
+  "cuando": "2026-10-17T04:01:35.346Z",
+  "intentos": 1,
+  "fuentes": 2,
   "errorGemini": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
  }
 }
