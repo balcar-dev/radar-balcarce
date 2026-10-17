@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-16T23:32:11.653Z",
+ "generado": "2026-10-17T00:02:07.329Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -77,23 +77,6 @@
    "maximo": 4
   },
   {
-   "id": "1w9aja0",
-   "titulo": "Están los árbitros para la primera fecha del ‘Clausura’",
-   "copete": "Se conocieron este viernes las designaciones arbitrales correspondientes a la disputa de la 1ª fecha de la fase “Clausura” del Torneo Oficial 2026 , “Copa 75º Aniversario Asociación Bomberos Voluntarios” y “Copa Challenger Alejandro Mascareño”, y que protagonizan 12 equipos…",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-16T21:37:27.000Z",
-   "fuentes": [
-    {
-     "medio": "Acción 5 (Balcarce)",
-     "enlace": "https://accion5.com/oficial-estan-los-arbitros-para-la-primera-fecha-del-clausura-2/",
-     "fecha": "2026-10-16T21:37:27.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (numero, antecedente): el cuerpo dice 0 y la fuente no lo dice; sin esas oraciones quedan 60 palabras",
-   "maximo": 3
-  },
-  {
    "id": "1x4gtj1",
    "titulo": "Diego Santilli: “Los que deberían estar preocupados son los gobernadores si el kirchnerismo vuelve y gana Kicillof”",
    "copete": "El jefe de Gabinete, Diego Santilli , afirmó que los mandatarios provinciales deberían inquietarse ante la posibilidad de un regreso del kirchnerismo al poder con Axel Kicillof como figura central . En una entrevista con Radio Mitre , vinculó ese escenario con una eventual…",
@@ -166,11 +149,6 @@
      "fecha": "2026-10-16T11:30:00.000Z"
     },
     {
-     "medio": "Los Andes (Mendoza)",
-     "enlace": "https://www.losandes.com.ar/politica/diego-santilli-dijo-que-los-gobernadores-deberian-estar-preocupados-un-posible-regreso-del-kirchnerismo-n6010629",
-     "fecha": "2026-10-16T21:51:00.000Z"
-    },
-    {
      "medio": "Radio Mitre",
      "enlace": "https://radiomitre.cienradios.com/videos/diego-santilli-los-que-deberian-estar-preocupados-son-los-gobernadores-si-el-kirchnerismo-vuelve-y-gana-kicillof/",
      "fecha": "2026-10-16T13:52:11.000Z"
@@ -179,6 +157,11 @@
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-16-11-48-0-para-santilli-los-gobernadores-deberian-estar-preocupados-por-un-eventual-regreso-del-kirchnerismo",
      "fecha": "2026-10-16T14:53:47.000Z"
+    },
+    {
+     "medio": "Los Andes (Mendoza)",
+     "enlace": "https://www.losandes.com.ar/politica/diego-santilli-dijo-que-los-gobernadores-deberian-estar-preocupados-un-posible-regreso-del-kirchnerismo-n6010629",
+     "fecha": "2026-10-16T21:51:00.000Z"
     }
    ],
    "intentos": 1,
@@ -238,38 +221,6 @@
    "maximo": 5
   },
   {
-   "id": "f9bo89",
-   "titulo": "MasterChef Junior se estrena hoy por Telefe y HBO Max: a qué hora y quiénes son los jurados",
-   "copete": "Después de una década fuera de pantalla, MasterChef Junior vuelve a la televisión argentina. La nueva temporada se estrena este viernes 16 de octubre a las 21:30 por Telefe y HBO Max . En esta edición, chicos y chicas asumirán el desafío de cocinar y mostrar sus habilidades…",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-16T13:18:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Los Andes (Mendoza)",
-     "enlace": "https://www.losandes.com.ar/espectaculos/masterchef-junior-se-estrena-hoy-telefe-y-hbo-max-que-hora-y-quienes-son-los-jurados-n6010568",
-     "fecha": "2026-10-16T13:18:00.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/espectaculos/masterchef-junior-vuelve-a-la-pantalla-cuando-empieza-y-quienes-seran-los-jurados/",
-     "fecha": "2026-10-16T21:32:23.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/espectaculos/vuelve-masterchef-junior-con-un-ex-ganador-de-la-edicion-famosos_a6ad22825c55c21457e8fbbb6",
-     "fecha": "2026-10-16T13:45:00.000Z"
-    },
-    {
-     "medio": "La Capital (Rosario)",
-     "enlace": "https://www.lacapital.com.ar/zoom/vuelve-masterchef-junior-cuando-comienza-y-quienes-seran-los-jurados-n10287119.html",
-     "fecha": "2026-10-16T20:30:00.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "semáforo: necesita ojo humano: \"chicos de entre 8 y 13 anos\", en lo que escribió la IA",
-   "maximo": 3
-  },
-  {
    "id": "8sfd4e",
    "titulo": "Los precios mayoristas no ceden: aumentaron en septiembre un 3,2%",
    "copete": "El INDEC informó que los precios mayoristas aumentaron 3,2% en septiembre , una aceleración de 1,1 puntos porcentuales frente a agosto, cuando el índice había subido 2,1%. En los primeros nueve meses de 2026, el indicador acumuló un avance de 22,8% y registró una variación…",
@@ -305,28 +256,6 @@
    "intentos": 4,
    "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 4
-  },
-  {
-   "id": "1h6knvx",
-   "titulo": "Jornada financiera: cayeron las acciones argentinas y el riesgo país volvió a tocar máximos de 2026",
-   "copete": "Los principales indicadores de Wall Street negociaron con amplia baja en el cierre de la semana operativa. El Dow Jones de Industriales descontó la suba de la mañana y finalizó con una pérdida de 0,3%, menor en comparación al panel tecnológico Nasdaq que se hundió un 2,1 por…",
-   "seccion": "Economía",
-   "fecha": "2026-10-16T21:33:27.000Z",
-   "fuentes": [
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/economia/2026/10/16/jornada-financiera-cayeron-las-acciones-argentinas-y-el-riesgo-pais-volvio-a-tocar-maximos-de-2026/",
-     "fecha": "2026-10-16T21:33:27.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/economia/cayeron-las-acciones-argentinas-y-el-riesgo-pais-rozo-nuevos-maximos-del-ano-n251829",
-     "fecha": "2026-10-16T22:34:00.000Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "título o bajada: 3 problemas (fecha, numero): el copete menciona \"viernes\" y la fuente no",
-   "maximo": 3
   }
  ]
 }

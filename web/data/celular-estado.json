@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-16T23:32:11.653Z",
- "portada": 66,
- "archivo": 1195,
- "esperandoCuerpo": 8,
+ "generado": "2026-10-17T00:02:07.329Z",
+ "portada": 65,
+ "archivo": 1197,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-16T23:32:11.695Z",
+  "generado": "2026-10-17T00:02:07.378Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -83,7 +83,7 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    }
   ],
@@ -155,7 +155,7 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
     "segundos": 52,
     "notas": [
@@ -215,6 +215,12 @@
      "id": "1xyp583",
      "titulo": "El Museo Histórico Municipal expone el Proyecto Cruz del Centenario",
      "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "1w9aja0",
+     "titulo": "La organización designa los árbitros para la primera fecha del torneo",
+     "seccion": "Fútbol",
      "marcada": false
     },
     {

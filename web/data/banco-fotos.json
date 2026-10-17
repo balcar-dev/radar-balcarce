@@ -16349,5 +16349,35 @@
   "cuando": "2026-10-16T23:31:58.342Z",
   "intentos": 1,
   "fuentes": 17
+ },
+ "1w9aja0": {
+  "archivo": "fotos-notas/1w9aja0.jpg",
+  "medio": "Acción 5 (Balcarce)",
+  "credito": "Foto: Acción 5 (Balcarce)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La organización designa los árbitros para la primera fecha del torneo",
+  "enlace": "https://accion5.com/oficial-estan-los-arbitros-para-la-primera-fecha-del-clausura-2/",
+  "imagenOriginal": "https://accion5.com/wp-content/uploads/2026/10/martinez-.jpg",
+  "razon": "Es la única imagen nítida y completa que ilustra el hecho, mostrando al árbitro con su indumentaria oficial sin marcas de agua ni menores presentes.",
+  "cuando": "2026-10-17T00:01:51.571Z"
+ },
+ "1h6knvx": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El S&P Merval baja y el riesgo país llega a 648 puntos básicos",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-17T00:01:51.571Z",
+  "intentos": 1,
+  "fuentes": 2
+ },
+ "z7cv8i": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Diego Santilli celebra la falta de quórum en Diputados para el DNU",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-17T00:01:51.571Z",
+  "intentos": 1,
+  "fuentes": 5
  }
 }
