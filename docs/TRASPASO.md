@@ -18,7 +18,7 @@ leer primero `CLAUDE.md`, después este archivo y `PENDIENTES.md`. Última actua
 - Sitio: sitemap de noticias, `/hoy`, firma de IA adentro de "Fuentes", datos estructurados. Redes: hashtags fijos, lo que va a Facebook solo Balcarce o lo más contado.
 
 ## En curso (si se corta, retomar de acá)
-1. **Agente de animaciones del repaso, guiones con continuidad y voces nuevas**: trabaja en el worktree `.claude/worktrees/agent-ad2027a8ec13c274b` (rama `worktree-agent-ad2027a8ec13c274b`). Si terminó, juntarlo: `git merge --no-ff worktree-agent-ad2027a8ec13c274b`, resolver choques de números de regla (usó desde la 300), correr `npm test` y subir. Si no terminó, ver qué commits tiene con `git log` en esa rama y decidir si se junta tal cual.
+1. **Animaciones del repaso, guiones con continuidad y voces nuevas: terminado y subido** (reglas 300 a 302; `docs/redes/GUION-DEL-DIA-EJEMPLO.md`, `docs/redes/VOCES-NUEVAS.md`). Falta oírlo y verlo: el ejemplo renderizado está en el scratchpad de la sesión; rehacerlo con `node reels/guion-del-dia.mjs` y los scripts de reels. Voces: guardar la referencia de las voces actuales ANTES de cambiar la clave de Gemini.
 2. Respuestas de ChatGPT y Gemini abiertas en el Chrome sobre posicionamiento en buscadores y en IA, MCP y cómo postear en Facebook: leerlas y anotarlas en `docs/auditoria-2-0/08-IDEAS-DE-OTRAS-IA.md`.
 3. Estado completo y lista de pendientes, en un solo lugar: `docs/HOY.html`.
 
