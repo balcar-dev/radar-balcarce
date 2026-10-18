@@ -1942,6 +1942,53 @@
         "vistas": 10,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-18T00:00:45.344Z",
+      "web": {
+        "u12": {
+          "visitas": 19,
+          "vistas": 32
+        },
+        "a12": {
+          "visitas": 16,
+          "vistas": 51
+        },
+        "u24": {
+          "visitas": 35,
+          "vistas": 83
+        },
+        "a24": {
+          "visitas": 79,
+          "vistas": 177
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 11
+          },
+          {
+            "camino": "/nota/virginia-aparicio-presenta-los-resultados-del-proyecto-sprint-sobre-1kgatx3",
+            "vistas": 8
+          },
+          {
+            "camino": "/clima",
+            "vistas": 6
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 65,
+        "vistas": 5109,
+        "interacciones": 22
+      },
+      "instagram": {
+        "seguidores": 7,
+        "publicaciones": 192,
+        "alcance": 43,
+        "vistas": 88,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -3203,11 +3250,35 @@
       "visitas": 74,
       "vistas": 129,
       "notas": {
-        "11lwkfl": 100,
-        "1uvhput": 100
+        "8q3d25": 14,
+        "vt870i": 8,
+        "11lwkfl": 6,
+        "pel8ok": 5,
+        "mly1kv": 5,
+        "1ylxz2o": 5,
+        "1v9h1ps": 4,
+        "wzunxc": 4,
+        "1uvhput": 4,
+        "9s0dkq": 4,
+        "lf9d6b": 4,
+        "1hfz3co": 3,
+        "9y985f": 2,
+        "u0hcbv": 2,
+        "br4g49": 2,
+        "1s8weuc": 2,
+        "1e22az3": 2,
+        "1j6q0tv": 1
       },
       "paginas": {
-        "/": 100
+        "/": 19,
+        "/seccion/cultura": 9,
+        "/seccion/policiales": 6,
+        "/seccion/economia": 5,
+        "/seccion/argentina": 4,
+        "/seccion/agro": 4,
+        "/clima": 2,
+        "/agenda": 2,
+        "/seccion/balcarce": 1
       },
       "referentes": {
         "facebook.com": 64,
@@ -3265,15 +3336,52 @@
         1,
         0,
         0
-      ]
+      ],
+      "notas": {
+        "npazulcervantino": 13,
+        "1mfnr70": 10,
+        "1vqqg6": 9,
+        "ahqycd": 6,
+        "1kd7az5": 6,
+        "clima20261016": 4,
+        "1h2xfr3": 4,
+        "1ixp88o": 4,
+        "1ovxwze": 3,
+        "1m9svv0": 2,
+        "1ledsc7": 2,
+        "b04zc8": 2,
+        "10ephb3": 2,
+        "aa7nni": 2,
+        "u0hcbv": 2,
+        "x3s2ug": 2,
+        "5bzm11": 2,
+        "1jdsdep": 2,
+        "1xyp583": 1,
+        "hxjao4": 1,
+        "1ual5u4": 1
+      },
+      "paginas": {
+        "/": 24,
+        "/seccion/balcarce": 9,
+        "/seccion/tecnologia": 3,
+        "/seccion/politica": 2,
+        "/seccion/deportes": 1
+      },
+      "referentes": {
+        "facebook.com": 46,
+        "directo": 12,
+        "google.com": 4
+      }
     },
     "2026-10-17": {
-      "visitas": 15,
-      "vistas": 50,
+      "visitas": 34,
+      "vistas": 82,
       "paises": {
-        "AR": 43,
-        "IE": 4,
-        "US": 2,
+        "AR": 52,
+        "US": 17,
+        "IE": 9,
+        "SE": 2,
+        "ES": 1,
         "CA": 1
       },
       "horas": [
@@ -3286,22 +3394,65 @@
         0,
         6,
         4,
+        4,
+        0,
+        4,
+        1,
+        11,
+        3,
+        5,
+        2,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        2,
         0,
         0,
         0,
         0
-      ]
+      ],
+      "dispositivos": {
+        "mobile": 65,
+        "desktop": 17
+      },
+      "notas": {
+        "1kgatx3": 8,
+        "19nga6r": 6,
+        "wrghr": 5,
+        "npazulcervantino": 4,
+        "daz0ef": 3,
+        "1p0s5l3": 2,
+        "164o14u": 2,
+        "1jpywoz": 1,
+        "1xyp583": 1,
+        "1mfnr70": 1,
+        "bgdvlg": 1,
+        "1ovxwze": 1,
+        "repaso20261016noche": 1,
+        "1qtfiwu": 1,
+        "30azdn": 1
+      },
+      "paginas": {
+        "/": 11,
+        "/clima": 6,
+        "/seccion/politica-4": 3,
+        "/seccion/balcarce-12": 3,
+        "/seccion/politica-5": 3,
+        "/seccion/balcarce-10": 2,
+        "/contacto": 2,
+        "/farmacias": 2,
+        "/seccion/balcarce-3": 2,
+        "/seccion/balcarce-8": 2,
+        "/seccion/balcarce-7": 2,
+        "/seccion/balcarce-2": 2,
+        "/seccion/economia": 1,
+        "/seccion/balcarce-6": 1,
+        "/seccion/economia-2": 1
+      },
+      "referentes": {
+        "facebook.com": 18,
+        "directo": 12,
+        "google.com": 4
+      }
     }
   }
 }
