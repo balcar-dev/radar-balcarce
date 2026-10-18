@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-17T23:31:42.847Z",
+ "generado": "2026-10-18T00:01:52.900Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -32,28 +32,6 @@
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
-   "id": "ym6mpi",
-   "titulo": "Provincia también acordó con los docentes un aumento salarial del 6%",
-   "copete": "El Gobierno de la provincia de Buenos Aires alcanzó un nuevo acuerdo de aumento salarial para las y los trabajadores docentes y de la Ley 10430 del 6% escalonado, 3% en octubre y 3% en noviembre, sobre los salarios de septiembre. El acuerdo incluye el compromiso de reapertura de…",
-   "seccion": "Educación",
-   "fecha": "2026-10-17T23:06:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/politica/provincia-tambien-acordo-los-docentes-un-aumento-salarial-del-6-n56591",
-     "fecha": "2026-10-17T23:06:00.000Z"
-    },
-    {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/provincia-acordo-con-los-gremios-docentes-y-de-la-ley-10430-un-aumento-salarial/",
-     "fecha": "2026-10-17T23:10:05.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (antecedente): el copete usa 2, que sale de una nota anterior, como si fuera de hoy",
    "maximo": 3
   },
   {
@@ -173,7 +151,7 @@
   {
    "id": "1rwyna1",
    "titulo": "En vivo: Vélez, obligado a ganar, recibe a Gimnasia de Mendoza",
-   "copete": "El Fortín necesita los tres puntos para no perder el tren y luchar por el campeonato de la tabla anual. Enfrente, una de las revelaciones.",
+   "copete": "Todo listo para llevarles en vivo el partido entre Vélez y Gimnasia (Mendoza) por Torneo Clausura 2026 . La pelota comenzará a rodar a las 20:00 y aquí te iremos contando absolutamente todo lo que suceda en el estadio Estadio José Amalfitani de Ciudad Autónoma de Buenos Aires…",
    "seccion": "Fútbol",
    "fecha": "2026-10-17T14:00:00.000Z",
    "fuentes": [
@@ -183,22 +161,17 @@
      "fecha": "2026-10-17T14:00:00.000Z"
     },
     {
-     "medio": "TyC Sports",
-     "enlace": "https://www.tycsports.com/liga-profesional-de-futbol/velez-vs-gimnasia-mendoza-en-vivo-donde-ver-por-tv-y-online-id766856.html",
-     "fecha": "2026-10-17T22:00:06.000Z"
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/deportes/velez-vs-gimnasia-mendoza-vivo-hora-formaciones-ver-partido-torneo-clausura_0_dTmrBosHI0.html",
+     "fecha": "2026-10-17T17:43:32.000Z"
     },
     {
-     "medio": "Olé",
-     "enlace": "https://www.ole.com.ar/futbol-primera/torneo-clausura-velez-gimnasia-mendoza_0_MIwd85su2D.html",
-     "fecha": "2026-10-17T23:00:28.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/deportes/ni-magis-tv-ni-pelota-libre-como-ver-vivo-velez-vs-gimnasia-mendoza-internet-n6334272",
-     "fecha": "2026-10-17T22:30:00.000Z"
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/futbol/liga-profesional-de-futbol/velez-vs-gimnasia-mendoza-en-vivo-hoy-resultado-goles-y-minuto-a-minuto-del-torneo-clausura-2026/",
+     "fecha": "2026-10-17T23:57:00.000Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"liniers\" y la fuente no",
    "maximo": 3
   }

@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-17T23:31:42.847Z",
- "portada": 75,
- "archivo": 1243,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-18T00:01:52.900Z",
+ "portada": 74,
+ "archivo": 1245,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-17T23:31:43.044Z",
+  "generado": "2026-10-18T00:01:53.173Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -83,7 +83,7 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    }
   ],
@@ -150,7 +150,7 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
     "segundos": 37,
     "notas": [
@@ -205,12 +205,6 @@
      "id": "1kx30ao",
      "titulo": "Peregrinación une la Parroquia Santa María con Los Pinos",
      "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "d8q9yx",
-     "titulo": "El cirujano confirma que el papa León XIV puede viajar a la Argentina",
-     "seccion": "Argentina",
      "marcada": false
     }
    ],

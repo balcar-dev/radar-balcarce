@@ -19753,5 +19753,38 @@
   "cuando": "2026-10-17T23:02:00.903Z",
   "intentos": 1,
   "fuentes": 7
+ },
+ "ym6mpi": {
+  "archivo": "fotos-notas/ym6mpi.jpg",
+  "medio": "Agencia DIB",
+  "credito": "Foto: Agencia DIB",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Provincia acuerda aumento salarial del 6 por ciento con los docentes",
+  "enlace": "https://dib.com.ar/politica/provincia-tambien-acordo-los-docentes-un-aumento-salarial-del-6-n56591",
+  "imagenOriginal": "https://media.dib.com.ar/p/54a71647bc263b972a96657ff7c6e8a0/adjuntos/377/imagenes/100/033/0100033590/1200x675/375x154:395x174/docentes-paritarias-696x462jpg.jpg",
+  "razon": "Muestra la reunión de paritarias docentes con funcionarios y dirigentes gremiales, sin marcas ni menores.",
+  "cuando": "2026-10-18T00:01:43.095Z",
+  "vision": {
+   "proveedor": "gemini",
+   "marca": false,
+   "menor": false,
+   "jovenes": false,
+   "deArchivo": false,
+   "grafica": false,
+   "stock": false,
+   "corresponde": "si",
+   "descripcion": "Funcionarios y dirigentes gremiales docentes sentados en una mesa larga de reunión"
+  },
+  "huella": "2838f9d050f2e167"
+ },
+ "1ua2be4": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El Club Ateneo Popular de La Plata recibe un encuentro de BTS",
+  "razon": "Todas las fotos muestran menores de edad claramente reconocibles, lo cual infringe la política del medio.",
+  "cuando": "2026-10-18T00:01:43.095Z",
+  "intentos": 1,
+  "fuentes": 2
  }
 }
